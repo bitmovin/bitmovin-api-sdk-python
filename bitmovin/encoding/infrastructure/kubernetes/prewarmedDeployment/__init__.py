@@ -1,0 +1,1 @@
+from bitmovin.encoding.infrastructure.kubernetes.prewarmedDeployment.prewarmed_deployment_api import PrewarmedDeploymentApi

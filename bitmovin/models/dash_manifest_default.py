@@ -1,0 +1,155 @@
+# coding: utf-8
+
+from bitmovin.models.dash_manifest import DashManifest
+from bitmovin.models.dash_manifest_default_version import DashManifestDefaultVersion
+from bitmovin.models.dash_profile import DashProfile
+from bitmovin.models.encoding_output import EncodingOutput
+from bitmovin.models.manifest_type import ManifestType
+from bitmovin.models.utc_timing import UtcTiming
+from bitmovin.models.xml_namespace import XmlNamespace
+import pprint
+import six
+from datetime import datetime
+from enum import Enum
+
+
+class DashManifestDefault(DashManifest):
+    """
+    Attributes:
+      openapi_types (dict): The key is attribute name
+                            and the value is attribute type.
+      attribute_map (dict): The key is attribute name
+                            and the value is json key in definition.
+    """
+
+    @property
+    def openapi_types(self):
+        types = super(DashManifestDefault, self).openapi_types
+        types.update({
+            'encoding_id': 'str',
+            'version': 'DashManifestDefaultVersion'
+        })
+        return types
+
+    @property
+    def attribute_map(self):
+        attributes = super(DashManifestDefault, self).attribute_map
+        attributes.update({
+            'encoding_id': 'encodingId',
+            'version': 'version'
+        })
+        return attributes
+
+    def __init__(self, encoding_id=None, version=None, *args, **kwargs):
+        super(DashManifestDefault, self).__init__(*args, **kwargs)
+
+        self._encoding_id = None
+        self._version = None
+        self.discriminator = None
+
+        self.encoding_id = encoding_id
+        if version is not None:
+            self.version = version
+
+    @property
+    def encoding_id(self):
+        """Gets the encoding_id of this DashManifestDefault.
+
+        The id of the encoding to create a default manifest from
+
+        :return: The encoding_id of this DashManifestDefault.
+        :rtype: str
+        """
+        return self._encoding_id
+
+    @encoding_id.setter
+    def encoding_id(self, encoding_id):
+        """Sets the encoding_id of this DashManifestDefault.
+
+        The id of the encoding to create a default manifest from
+
+        :param encoding_id: The encoding_id of this DashManifestDefault.
+        :type: str
+        """
+
+        if encoding_id is not None:
+            if not isinstance(encoding_id, str):
+                raise TypeError("Invalid type for `encoding_id`, type has to be `str`")
+
+            self._encoding_id = encoding_id
+
+
+    @property
+    def version(self):
+        """Gets the version of this DashManifestDefault.
+
+        The version of the default manifest generator
+
+        :return: The version of this DashManifestDefault.
+        :rtype: DashManifestDefaultVersion
+        """
+        return self._version
+
+    @version.setter
+    def version(self, version):
+        """Sets the version of this DashManifestDefault.
+
+        The version of the default manifest generator
+
+        :param version: The version of this DashManifestDefault.
+        :type: DashManifestDefaultVersion
+        """
+
+        if version is not None:
+            if not isinstance(version, DashManifestDefaultVersion):
+                raise TypeError("Invalid type for `version`, type has to be `DashManifestDefaultVersion`")
+
+            self._version = version
+
+    def to_dict(self):
+        """Returns the model properties as a dict"""
+        result = super(DashManifestDefault, self).to_dict()
+
+        for attr, _ in six.iteritems(self.openapi_types):
+            value = getattr(self, attr)
+            if isinstance(value, list):
+                result[self.attribute_map.get(attr)] = list(map(
+                    lambda x: x.to_dict() if hasattr(x, "to_dict") else x,
+                    value
+                ))
+            elif hasattr(value, "to_dict"):
+                result[self.attribute_map.get(attr)] = value.to_dict()
+            elif isinstance(value, Enum):
+                result[self.attribute_map.get(attr)] = value.value
+            elif isinstance(value, dict):
+                result[self.attribute_map.get(attr)] = dict(map(
+                    lambda item: (item[0], item[1].to_dict())
+                    if hasattr(item[1], "to_dict") else item,
+                    value.items()
+                ))
+            else:
+                result[self.attribute_map.get(attr)] = value
+            if issubclass(DashManifestDefault, dict):
+                for key, value in self.items():
+                    result[key] = value
+
+        return result
+
+    def to_str(self):
+        """Returns the string representation of the model"""
+        return pprint.pformat(self.to_dict())
+
+    def __repr__(self):
+        """For `print` and `pprint`"""
+        return self.to_str()
+
+    def __eq__(self, other):
+        """Returns true if both objects are equal"""
+        if not isinstance(other, DashManifestDefault):
+            return False
+
+        return self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        """Returns true if both objects are not equal"""
+        return not self == other
