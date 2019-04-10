@@ -2,7 +2,7 @@
 from enum import Enum
 
 
-class MaxTransferUnitSize(Enum):
+class MaxTransformUnitSize(Enum):
     """
     allowed enum values
     """

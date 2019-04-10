@@ -10,6 +10,7 @@ from bitmovin.models.response_envelope import ResponseEnvelope
 from bitmovin.models.response_error import ResponseError
 from bitmovin.models.stream_mode import StreamMode
 from bitmovin.encoding.encodings.muxings.fmp4.fmp4_api import Fmp4Api
+from bitmovin.encoding.encodings.muxings.cmaf.cmaf_api import CmafApi
 from bitmovin.encoding.encodings.muxings.segmentedRaw.segmented_raw_api import SegmentedRawApi
 from bitmovin.encoding.encodings.muxings.ts.ts_api import TsApi
 from bitmovin.encoding.encodings.muxings.webm.webm_api import WebmApi
@@ -33,6 +34,13 @@ class MuxingsApi(BaseApi):
         )
 
         self.fmp4 = Fmp4Api(
+            api_key=api_key,
+            tenant_org_id=tenant_org_id,
+            base_url=base_url,
+            logger=logger
+        )
+
+        self.cmaf = CmafApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,

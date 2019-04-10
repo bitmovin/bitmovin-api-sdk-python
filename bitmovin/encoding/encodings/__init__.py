@@ -1,5 +1,6 @@
 from bitmovin.encoding.encodings.encodings_api import EncodingsApi
 from bitmovin.encoding.encodings.live.live_api import LiveApi
+from bitmovin.encoding.encodings.machineLearning.machine_learning_api import MachineLearningApi
 from bitmovin.encoding.encodings.customdata.customdata_api import CustomdataApi
 from bitmovin.encoding.encodings.streams.streams_api import StreamsApi
 from bitmovin.encoding.encodings.inputStreams.input_streams_api import InputStreamsApi

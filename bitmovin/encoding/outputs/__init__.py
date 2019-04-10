@@ -8,4 +8,5 @@ from bitmovin.encoding.outputs.gcs.gcs_api import GcsApi
 from bitmovin.encoding.outputs.azure.azure_api import AzureApi
 from bitmovin.encoding.outputs.ftp.ftp_api import FtpApi
 from bitmovin.encoding.outputs.sftp.sftp_api import SftpApi
+from bitmovin.encoding.outputs.akamaiMsl.akamai_msl_api import AkamaiMslApi
 from bitmovin.encoding.outputs.akamaiNetstorage.akamai_netstorage_api import AkamaiNetstorageApi

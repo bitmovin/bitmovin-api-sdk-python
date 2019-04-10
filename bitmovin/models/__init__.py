@@ -20,6 +20,9 @@ from bitmovin.models.adaptation_set_role import AdaptationSetRole
 from bitmovin.models.adaptive_quant_mode import AdaptiveQuantMode
 from bitmovin.models.aes_encryption_drm import AesEncryptionDrm
 from bitmovin.models.aes_encryption_method import AesEncryptionMethod
+from bitmovin.models.akamai_msl_output import AkamaiMslOutput
+from bitmovin.models.akamai_msl_stream_format import AkamaiMslStreamFormat
+from bitmovin.models.akamai_msl_version import AkamaiMslVersion
 from bitmovin.models.akamai_net_storage_input import AkamaiNetStorageInput
 from bitmovin.models.akamai_net_storage_output import AkamaiNetStorageOutput
 from bitmovin.models.analysis_details import AnalysisDetails
@@ -113,6 +116,7 @@ from bitmovin.models.chunk_length_mode import ChunkLengthMode
 from bitmovin.models.clear_key_drm import ClearKeyDrm
 from bitmovin.models.closed_captions_media_info import ClosedCaptionsMediaInfo
 from bitmovin.models.cloud_region import CloudRegion
+from bitmovin.models.cmaf_muxing import CmafMuxing
 from bitmovin.models.codec_config_type import CodecConfigType
 from bitmovin.models.codec_config_type_response import CodecConfigTypeResponse
 from bitmovin.models.codec_configuration import CodecConfiguration
@@ -142,6 +146,8 @@ from bitmovin.models.custom_web_player_build_domain import CustomWebPlayerBuildD
 from bitmovin.models.custom_xml_element import CustomXmlElement
 from bitmovin.models.daily_statistics import DailyStatistics
 from bitmovin.models.daily_statistics_per_label import DailyStatisticsPerLabel
+from bitmovin.models.dash_cmaf_drm_representation import DashCmafDrmRepresentation
+from bitmovin.models.dash_cmaf_representation import DashCmafRepresentation
 from bitmovin.models.dash_fmp4_drm_representation import DashFmp4DrmRepresentation
 from bitmovin.models.dash_fmp4_representation import DashFmp4Representation
 from bitmovin.models.dash_manifest import DashManifest
@@ -249,7 +255,7 @@ from bitmovin.models.kubernetes_cluster_patch import KubernetesClusterPatch
 from bitmovin.models.level_h264 import LevelH264
 from bitmovin.models.level_h265 import LevelH265
 from bitmovin.models.limit_references import LimitReferences
-from bitmovin.models.limit_transfer_unit_depth_recursion_mode import LimitTransferUnitDepthRecursionMode
+from bitmovin.models.limit_transform_unit_depth_recursion_mode import LimitTransformUnitDepthRecursionMode
 from bitmovin.models.link import Link
 from bitmovin.models.live_dash_manifest import LiveDashManifest
 from bitmovin.models.live_encoding import LiveEncoding
@@ -270,7 +276,7 @@ from bitmovin.models.manifest_type import ManifestType
 from bitmovin.models.manifest_type_response import ManifestTypeResponse
 from bitmovin.models.marlin_drm import MarlinDrm
 from bitmovin.models.max_ctu_size import MaxCtuSize
-from bitmovin.models.max_transfer_unit_size import MaxTransferUnitSize
+from bitmovin.models.max_transform_unit_size import MaxTransformUnitSize
 from bitmovin.models.media_info_type import MediaInfoType
 from bitmovin.models.media_info_type_response import MediaInfoTypeResponse
 from bitmovin.models.media_stream import MediaStream
@@ -296,6 +302,9 @@ from bitmovin.models.mv_prediction_mode import MvPredictionMode
 from bitmovin.models.notification import Notification
 from bitmovin.models.notification_state_entry import NotificationStateEntry
 from bitmovin.models.notification_states import NotificationStates
+from bitmovin.models.object_detection_bounding_box import ObjectDetectionBoundingBox
+from bitmovin.models.object_detection_configuration import ObjectDetectionConfiguration
+from bitmovin.models.object_detection_result import ObjectDetectionResult
 from bitmovin.models.opus_audio_configuration import OpusAudioConfiguration
 from bitmovin.models.opus_channel_layout import OpusChannelLayout
 from bitmovin.models.or_conjunction import OrConjunction
@@ -341,6 +350,7 @@ from bitmovin.models.progressive_ts_muxing_information_byte_ranges import Progre
 from bitmovin.models.progressive_webm_muxing import ProgressiveWebmMuxing
 from bitmovin.models.progressive_webm_muxing_information import ProgressiveWebmMuxingInformation
 from bitmovin.models.psnr_per_stream_mode import PsnrPerStreamMode
+from bitmovin.models.psnr_quality_metric import PsnrQualityMetric
 from bitmovin.models.quantization_group_size import QuantizationGroupSize
 from bitmovin.models.rai_unit import RaiUnit
 from bitmovin.models.rate_distortion_level_for_quantization import RateDistortionLevelForQuantization
@@ -373,6 +383,7 @@ from bitmovin.models.segmented_raw_muxing import SegmentedRawMuxing
 from bitmovin.models.segments_media_info import SegmentsMediaInfo
 from bitmovin.models.sftp_input import SftpInput
 from bitmovin.models.sftp_output import SftpOutput
+from bitmovin.models.sidecar_error_mode import SidecarErrorMode
 from bitmovin.models.sidecar_file import SidecarFile
 from bitmovin.models.signature_type import SignatureType
 from bitmovin.models.smooth_manifest_content_protection import SmoothManifestContentProtection
@@ -429,6 +440,7 @@ from bitmovin.models.thumbnail import Thumbnail
 from bitmovin.models.thumbnail_unit import ThumbnailUnit
 from bitmovin.models.time_based_trimming_input_stream import TimeBasedTrimmingInputStream
 from bitmovin.models.time_code import TimeCode
+from bitmovin.models.time_span import TimeSpan
 from bitmovin.models.timecode_track_trimming_input_stream import TimecodeTrackTrimmingInputStream
 from bitmovin.models.transfer_version import TransferVersion
 from bitmovin.models.transform_skip_mode import TransformSkipMode

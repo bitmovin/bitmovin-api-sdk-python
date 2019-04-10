@@ -7,6 +7,7 @@ from bitmovin.common.poscheck import poscheck_except
 from bitmovin.analytics.impressions.impressions_api import ImpressionsApi
 from bitmovin.analytics.queries.queries_api import QueriesApi
 from bitmovin.analytics.licenses.licenses_api import LicensesApi
+from bitmovin.analytics.outputs.outputs_api import OutputsApi
 
 
 class AnalyticsApi(BaseApi):
@@ -34,6 +35,13 @@ class AnalyticsApi(BaseApi):
         )
 
         self.licenses = LicensesApi(
+            api_key=api_key,
+            tenant_org_id=tenant_org_id,
+            base_url=base_url,
+            logger=logger
+        )
+
+        self.outputs = OutputsApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,

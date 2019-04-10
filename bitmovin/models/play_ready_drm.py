@@ -25,6 +25,7 @@ class PlayReadyDrm(Drm):
             'key': 'str',
             'key_seed': 'str',
             'la_url': 'str',
+            'pssh': 'str',
             'method': 'PlayReadyEncryptionMethod',
             'kid': 'str'
         })
@@ -37,17 +38,19 @@ class PlayReadyDrm(Drm):
             'key': 'key',
             'key_seed': 'keySeed',
             'la_url': 'laUrl',
+            'pssh': 'pssh',
             'method': 'method',
             'kid': 'kid'
         })
         return attributes
 
-    def __init__(self, key=None, key_seed=None, la_url=None, method=None, kid=None, *args, **kwargs):
+    def __init__(self, key=None, key_seed=None, la_url=None, pssh=None, method=None, kid=None, *args, **kwargs):
         super(PlayReadyDrm, self).__init__(*args, **kwargs)
 
         self._key = None
         self._key_seed = None
         self._la_url = None
+        self._pssh = None
         self._method = None
         self._kid = None
         self.discriminator = None
@@ -58,6 +61,8 @@ class PlayReadyDrm(Drm):
             self.key_seed = key_seed
         if la_url is not None:
             self.la_url = la_url
+        if pssh is not None:
+            self.pssh = pssh
         if method is not None:
             self.method = method
         if kid is not None:
@@ -67,7 +72,7 @@ class PlayReadyDrm(Drm):
     def key(self):
         """Gets the key of this PlayReadyDrm.
 
-        16 byte encryption key, 32 hexadecimal characters. Either key or keySeed is required.
+        16 byte encryption key, 32 hexadecimal characters. Either key or keySeed is required
 
         :return: The key of this PlayReadyDrm.
         :rtype: str
@@ -78,7 +83,7 @@ class PlayReadyDrm(Drm):
     def key(self, key):
         """Sets the key of this PlayReadyDrm.
 
-        16 byte encryption key, 32 hexadecimal characters. Either key or keySeed is required.
+        16 byte encryption key, 32 hexadecimal characters. Either key or keySeed is required
 
         :param key: The key of this PlayReadyDrm.
         :type: str
@@ -95,7 +100,7 @@ class PlayReadyDrm(Drm):
     def key_seed(self):
         """Gets the key_seed of this PlayReadyDrm.
 
-        Key seed to generate key. Either key or keySeed is required.
+        Key seed to generate key. Either key or keySeed is required
 
         :return: The key_seed of this PlayReadyDrm.
         :rtype: str
@@ -106,7 +111,7 @@ class PlayReadyDrm(Drm):
     def key_seed(self, key_seed):
         """Sets the key_seed of this PlayReadyDrm.
 
-        Key seed to generate key. Either key or keySeed is required.
+        Key seed to generate key. Either key or keySeed is required
 
         :param key_seed: The key_seed of this PlayReadyDrm.
         :type: str
@@ -145,6 +150,34 @@ class PlayReadyDrm(Drm):
                 raise TypeError("Invalid type for `la_url`, type has to be `str`")
 
             self._la_url = la_url
+
+
+    @property
+    def pssh(self):
+        """Gets the pssh of this PlayReadyDrm.
+
+        Base64 encoded pssh payload
+
+        :return: The pssh of this PlayReadyDrm.
+        :rtype: str
+        """
+        return self._pssh
+
+    @pssh.setter
+    def pssh(self, pssh):
+        """Sets the pssh of this PlayReadyDrm.
+
+        Base64 encoded pssh payload
+
+        :param pssh: The pssh of this PlayReadyDrm.
+        :type: str
+        """
+
+        if pssh is not None:
+            if not isinstance(pssh, str):
+                raise TypeError("Invalid type for `pssh`, type has to be `str`")
+
+            self._pssh = pssh
 
 
     @property

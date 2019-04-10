@@ -42,7 +42,8 @@ class Output(BitmovinResource):
         'LOCAL': 'LocalOutput',
         'S3': 'S3Output',
         'S3_ROLE_BASED': 'S3RoleBasedOutput',
-        'SFTP': 'SftpOutput'
+        'SFTP': 'SftpOutput',
+        'AKAMAI_MSL': 'AkamaiMslOutput'
     }
 
     def __init__(self, acl=None, *args, **kwargs):

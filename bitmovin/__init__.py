@@ -2,7 +2,7 @@
 
 from __future__ import absolute_import
 
-__version__ = "1.12.0alpha1"
+__version__ = "1.13.0alpha0"
 
 # import apis into sdk package
 from bitmovin.common import *
@@ -51,6 +51,12 @@ from bitmovin.analytics.queries.median.median_api import MedianApi
 from bitmovin.analytics.licenses.licenses_api import LicensesApi
 
 from bitmovin.analytics.licenses.domains.domains_api import DomainsApi
+
+from bitmovin.analytics.outputs.outputs_api import OutputsApi
+
+from bitmovin.analytics.outputs.s3RoleBased.s3_role_based_api import S3RoleBasedApi
+from bitmovin.analytics.outputs.s3RoleBased.s3_role_based_api import S3RoleBasedOutputListQueryParams
+from bitmovin.analytics.outputs.s3RoleBased.customdata.customdata_api import CustomdataApi
 
 from bitmovin.encoding.encoding_api import EncodingApi
 
@@ -161,6 +167,10 @@ from bitmovin.encoding.outputs.ftp.customdata.customdata_api import CustomdataAp
 from bitmovin.encoding.outputs.sftp.sftp_api import SftpApi
 from bitmovin.encoding.outputs.sftp.sftp_api import SftpOutputListQueryParams
 from bitmovin.encoding.outputs.sftp.customdata.customdata_api import CustomdataApi
+
+from bitmovin.encoding.outputs.akamaiMsl.akamai_msl_api import AkamaiMslApi
+from bitmovin.encoding.outputs.akamaiMsl.akamai_msl_api import AkamaiMslOutputListQueryParams
+from bitmovin.encoding.outputs.akamaiMsl.customdata.customdata_api import CustomdataApi
 
 from bitmovin.encoding.outputs.akamaiNetstorage.akamai_netstorage_api import AkamaiNetstorageApi
 from bitmovin.encoding.outputs.akamaiNetstorage.akamai_netstorage_api import AkamaiNetStorageOutputListQueryParams
@@ -290,6 +300,14 @@ from bitmovin.encoding.filters.type.type_api import TypeApi
 
 from bitmovin.encoding.encodings.live.live_api import LiveApi
 
+from bitmovin.encoding.encodings.machineLearning.machine_learning_api import MachineLearningApi
+
+from bitmovin.encoding.encodings.machineLearning.objectDetection.object_detection_api import ObjectDetectionApi
+from bitmovin.encoding.encodings.machineLearning.objectDetection.object_detection_api import ObjectDetectionConfigurationListQueryParams
+from bitmovin.encoding.encodings.machineLearning.objectDetection.customdata.customdata_api import CustomdataApi
+
+from bitmovin.encoding.encodings.machineLearning.objectDetection.results.results_api import ResultsApi
+from bitmovin.encoding.encodings.machineLearning.objectDetection.results.results_api import ObjectDetectionResultListQueryParams
 from bitmovin.encoding.encodings.customdata.customdata_api import CustomdataApi
 
 from bitmovin.encoding.encodings.streams.streams_api import StreamsApi
@@ -323,6 +341,10 @@ from bitmovin.encoding.encodings.muxings.muxings_api import MuxingListQueryParam
 from bitmovin.encoding.encodings.muxings.fmp4.fmp4_api import Fmp4Api
 from bitmovin.encoding.encodings.muxings.fmp4.fmp4_api import Fmp4MuxingListQueryParams
 from bitmovin.encoding.encodings.muxings.fmp4.customdata.customdata_api import CustomdataApi
+
+from bitmovin.encoding.encodings.muxings.cmaf.cmaf_api import CmafApi
+from bitmovin.encoding.encodings.muxings.cmaf.cmaf_api import CmafMuxingListQueryParams
+from bitmovin.encoding.encodings.muxings.cmaf.customdata.customdata_api import CustomdataApi
 
 from bitmovin.encoding.encodings.muxings.segmentedRaw.segmented_raw_api import SegmentedRawApi
 from bitmovin.encoding.encodings.muxings.segmentedRaw.segmented_raw_api import SegmentedRawMuxingListQueryParams
@@ -422,6 +444,36 @@ from bitmovin.encoding.encodings.muxings.fmp4.drm.cenc.cenc_api import CencApi
 from bitmovin.encoding.encodings.muxings.fmp4.drm.cenc.cenc_api import CencDrmListQueryParams
 from bitmovin.encoding.encodings.muxings.fmp4.drm.cenc.customdata.customdata_api import CustomdataApi
 
+from bitmovin.encoding.encodings.muxings.cmaf.drm.drm_api import DrmApi
+
+from bitmovin.encoding.encodings.muxings.cmaf.drm.widevine.widevine_api import WidevineApi
+from bitmovin.encoding.encodings.muxings.cmaf.drm.widevine.widevine_api import WidevineDrmListQueryParams
+from bitmovin.encoding.encodings.muxings.cmaf.drm.widevine.customdata.customdata_api import CustomdataApi
+
+from bitmovin.encoding.encodings.muxings.cmaf.drm.playready.playready_api import PlayreadyApi
+from bitmovin.encoding.encodings.muxings.cmaf.drm.playready.playready_api import PlayReadyDrmListQueryParams
+from bitmovin.encoding.encodings.muxings.cmaf.drm.playready.customdata.customdata_api import CustomdataApi
+
+from bitmovin.encoding.encodings.muxings.cmaf.drm.primetime.primetime_api import PrimetimeApi
+from bitmovin.encoding.encodings.muxings.cmaf.drm.primetime.primetime_api import PrimeTimeDrmListQueryParams
+from bitmovin.encoding.encodings.muxings.cmaf.drm.primetime.customdata.customdata_api import CustomdataApi
+
+from bitmovin.encoding.encodings.muxings.cmaf.drm.fairplay.fairplay_api import FairplayApi
+from bitmovin.encoding.encodings.muxings.cmaf.drm.fairplay.fairplay_api import FairPlayDrmListQueryParams
+from bitmovin.encoding.encodings.muxings.cmaf.drm.fairplay.customdata.customdata_api import CustomdataApi
+
+from bitmovin.encoding.encodings.muxings.cmaf.drm.marlin.marlin_api import MarlinApi
+from bitmovin.encoding.encodings.muxings.cmaf.drm.marlin.marlin_api import MarlinDrmListQueryParams
+from bitmovin.encoding.encodings.muxings.cmaf.drm.marlin.customdata.customdata_api import CustomdataApi
+
+from bitmovin.encoding.encodings.muxings.cmaf.drm.clearkey.clearkey_api import ClearkeyApi
+from bitmovin.encoding.encodings.muxings.cmaf.drm.clearkey.clearkey_api import ClearKeyDrmListQueryParams
+from bitmovin.encoding.encodings.muxings.cmaf.drm.clearkey.customdata.customdata_api import CustomdataApi
+
+from bitmovin.encoding.encodings.muxings.cmaf.drm.cenc.cenc_api import CencApi
+from bitmovin.encoding.encodings.muxings.cmaf.drm.cenc.cenc_api import CencDrmListQueryParams
+from bitmovin.encoding.encodings.muxings.cmaf.drm.cenc.customdata.customdata_api import CustomdataApi
+
 from bitmovin.encoding.encodings.muxings.ts.drm.drm_api import DrmApi
 
 from bitmovin.encoding.encodings.muxings.ts.drm.fairplay.fairplay_api import FairplayApi
@@ -496,6 +548,12 @@ from bitmovin.encoding.encodings.muxings.fmp4.captions.webvtt.webvtt_api import 
 
 from bitmovin.encoding.encodings.muxings.fmp4.captions.webvtt.customdata.customdata_api import CustomdataApi
 
+from bitmovin.encoding.encodings.muxings.cmaf.captions.captions_api import CaptionsApi
+
+from bitmovin.encoding.encodings.muxings.cmaf.captions.webvtt.webvtt_api import WebvttApi
+
+from bitmovin.encoding.encodings.muxings.cmaf.captions.webvtt.customdata.customdata_api import CustomdataApi
+
 from bitmovin.encoding.encodings.captions.webvtt.webvtt_api import WebvttApi
 from bitmovin.encoding.encodings.captions.webvtt.webvtt_api import WebVttExtractListQueryParams
 from bitmovin.encoding.encodings.captions.webvtt.customdata.customdata_api import CustomdataApi
@@ -503,6 +561,10 @@ from bitmovin.encoding.encodings.captions.webvtt.customdata.customdata_api impor
 from bitmovin.encoding.encodings.muxings.fmp4.captions.ttml.ttml_api import TtmlApi
 from bitmovin.encoding.encodings.muxings.fmp4.captions.ttml.ttml_api import TtmlEmbedListQueryParams
 from bitmovin.encoding.encodings.muxings.fmp4.captions.ttml.customdata.customdata_api import CustomdataApi
+
+from bitmovin.encoding.encodings.muxings.cmaf.captions.ttml.ttml_api import TtmlApi
+from bitmovin.encoding.encodings.muxings.cmaf.captions.ttml.ttml_api import TtmlEmbedListQueryParams
+from bitmovin.encoding.encodings.muxings.cmaf.captions.ttml.customdata.customdata_api import CustomdataApi
 
 from bitmovin.encoding.encodings.captions.ttml.ttml_api import TtmlApi
 from bitmovin.encoding.encodings.captions.ttml.ttml_api import TtmlExtractListQueryParams
@@ -532,6 +594,10 @@ from bitmovin.encoding.encodings.streams.sprites.sprites_api import SpritesApi
 from bitmovin.encoding.encodings.streams.sprites.sprites_api import SpriteListQueryParams
 from bitmovin.encoding.encodings.streams.sprites.customdata.customdata_api import CustomdataApi
 
+from bitmovin.encoding.encodings.streams.qc.qc_api import QcApi
+
+from bitmovin.encoding.encodings.streams.qc.psnr.psnr_api import PsnrApi
+from bitmovin.encoding.encodings.streams.qc.psnr.psnr_api import PsnrQualityMetricListQueryParams
 from bitmovin.encoding.encodings.keyframes.keyframes_api import KeyframesApi
 from bitmovin.encoding.encodings.keyframes.keyframes_api import KeyframeListQueryParams
 from bitmovin.encoding.manifests.manifests_api import ManifestsApi
@@ -566,10 +632,14 @@ from bitmovin.encoding.manifests.dash.periods.adaptationsets.representations.sid
 from bitmovin.encoding.manifests.dash.periods.adaptationsets.representations.sidecar.sidecar_api import DashSidecarRepresentationListQueryParams
 from bitmovin.encoding.manifests.dash.periods.adaptationsets.representations.fmp4.fmp4_api import Fmp4Api
 from bitmovin.encoding.manifests.dash.periods.adaptationsets.representations.fmp4.fmp4_api import DashFmp4RepresentationListQueryParams
+from bitmovin.encoding.manifests.dash.periods.adaptationsets.representations.cmaf.cmaf_api import CmafApi
+from bitmovin.encoding.manifests.dash.periods.adaptationsets.representations.cmaf.cmaf_api import DashCmafRepresentationListQueryParams
 from bitmovin.encoding.manifests.dash.periods.adaptationsets.representations.mp4.mp4_api import Mp4Api
 from bitmovin.encoding.manifests.dash.periods.adaptationsets.representations.mp4.mp4_api import DashMp4RepresentationListQueryParams
 from bitmovin.encoding.manifests.dash.periods.adaptationsets.representations.fmp4.drm.drm_api import DrmApi
 from bitmovin.encoding.manifests.dash.periods.adaptationsets.representations.fmp4.drm.drm_api import DashFmp4DrmRepresentationListQueryParams
+from bitmovin.encoding.manifests.dash.periods.adaptationsets.representations.cmaf.drm.drm_api import DrmApi
+from bitmovin.encoding.manifests.dash.periods.adaptationsets.representations.cmaf.drm.drm_api import DashCmafDrmRepresentationListQueryParams
 from bitmovin.encoding.manifests.dash.periods.adaptationsets.representations.mp4.drm.drm_api import DrmApi
 from bitmovin.encoding.manifests.dash.periods.adaptationsets.representations.mp4.drm.drm_api import DashMp4DrmRepresentationListQueryParams
 from bitmovin.encoding.manifests.dash.periods.adaptationsets.representations.webm.webm_api import WebmApi
@@ -582,6 +652,10 @@ from bitmovin.encoding.manifests.dash.periods.adaptationsets.representations.fmp
 from bitmovin.encoding.manifests.dash.periods.adaptationsets.representations.fmp4.contentprotection.contentprotection_api import ContentProtectionListQueryParams
 from bitmovin.encoding.manifests.dash.periods.adaptationsets.representations.fmp4.drm.contentprotection.contentprotection_api import ContentprotectionApi
 from bitmovin.encoding.manifests.dash.periods.adaptationsets.representations.fmp4.drm.contentprotection.contentprotection_api import ContentProtectionListQueryParams
+from bitmovin.encoding.manifests.dash.periods.adaptationsets.representations.cmaf.contentprotection.contentprotection_api import ContentprotectionApi
+from bitmovin.encoding.manifests.dash.periods.adaptationsets.representations.cmaf.contentprotection.contentprotection_api import ContentProtectionListQueryParams
+from bitmovin.encoding.manifests.dash.periods.adaptationsets.representations.cmaf.drm.contentprotection.contentprotection_api import ContentprotectionApi
+from bitmovin.encoding.manifests.dash.periods.adaptationsets.representations.cmaf.drm.contentprotection.contentprotection_api import ContentProtectionListQueryParams
 from bitmovin.encoding.manifests.hls.hls_api import HlsApi
 from bitmovin.encoding.manifests.hls.hls_api import HlsManifestListQueryParams
 from bitmovin.encoding.manifests.hls.default.default_api import DefaultApi
@@ -733,6 +807,9 @@ from bitmovin.models.adaptation_set_role import AdaptationSetRole
 from bitmovin.models.adaptive_quant_mode import AdaptiveQuantMode
 from bitmovin.models.aes_encryption_drm import AesEncryptionDrm
 from bitmovin.models.aes_encryption_method import AesEncryptionMethod
+from bitmovin.models.akamai_msl_output import AkamaiMslOutput
+from bitmovin.models.akamai_msl_stream_format import AkamaiMslStreamFormat
+from bitmovin.models.akamai_msl_version import AkamaiMslVersion
 from bitmovin.models.akamai_net_storage_input import AkamaiNetStorageInput
 from bitmovin.models.akamai_net_storage_output import AkamaiNetStorageOutput
 from bitmovin.models.analysis_details import AnalysisDetails
@@ -826,6 +903,7 @@ from bitmovin.models.chunk_length_mode import ChunkLengthMode
 from bitmovin.models.clear_key_drm import ClearKeyDrm
 from bitmovin.models.closed_captions_media_info import ClosedCaptionsMediaInfo
 from bitmovin.models.cloud_region import CloudRegion
+from bitmovin.models.cmaf_muxing import CmafMuxing
 from bitmovin.models.codec_config_type import CodecConfigType
 from bitmovin.models.codec_config_type_response import CodecConfigTypeResponse
 from bitmovin.models.codec_configuration import CodecConfiguration
@@ -855,6 +933,8 @@ from bitmovin.models.custom_web_player_build_domain import CustomWebPlayerBuildD
 from bitmovin.models.custom_xml_element import CustomXmlElement
 from bitmovin.models.daily_statistics import DailyStatistics
 from bitmovin.models.daily_statistics_per_label import DailyStatisticsPerLabel
+from bitmovin.models.dash_cmaf_drm_representation import DashCmafDrmRepresentation
+from bitmovin.models.dash_cmaf_representation import DashCmafRepresentation
 from bitmovin.models.dash_fmp4_drm_representation import DashFmp4DrmRepresentation
 from bitmovin.models.dash_fmp4_representation import DashFmp4Representation
 from bitmovin.models.dash_manifest import DashManifest
@@ -962,7 +1042,7 @@ from bitmovin.models.kubernetes_cluster_patch import KubernetesClusterPatch
 from bitmovin.models.level_h264 import LevelH264
 from bitmovin.models.level_h265 import LevelH265
 from bitmovin.models.limit_references import LimitReferences
-from bitmovin.models.limit_transfer_unit_depth_recursion_mode import LimitTransferUnitDepthRecursionMode
+from bitmovin.models.limit_transform_unit_depth_recursion_mode import LimitTransformUnitDepthRecursionMode
 from bitmovin.models.link import Link
 from bitmovin.models.live_dash_manifest import LiveDashManifest
 from bitmovin.models.live_encoding import LiveEncoding
@@ -983,7 +1063,7 @@ from bitmovin.models.manifest_type import ManifestType
 from bitmovin.models.manifest_type_response import ManifestTypeResponse
 from bitmovin.models.marlin_drm import MarlinDrm
 from bitmovin.models.max_ctu_size import MaxCtuSize
-from bitmovin.models.max_transfer_unit_size import MaxTransferUnitSize
+from bitmovin.models.max_transform_unit_size import MaxTransformUnitSize
 from bitmovin.models.media_info_type import MediaInfoType
 from bitmovin.models.media_info_type_response import MediaInfoTypeResponse
 from bitmovin.models.media_stream import MediaStream
@@ -1009,6 +1089,9 @@ from bitmovin.models.mv_prediction_mode import MvPredictionMode
 from bitmovin.models.notification import Notification
 from bitmovin.models.notification_state_entry import NotificationStateEntry
 from bitmovin.models.notification_states import NotificationStates
+from bitmovin.models.object_detection_bounding_box import ObjectDetectionBoundingBox
+from bitmovin.models.object_detection_configuration import ObjectDetectionConfiguration
+from bitmovin.models.object_detection_result import ObjectDetectionResult
 from bitmovin.models.opus_audio_configuration import OpusAudioConfiguration
 from bitmovin.models.opus_channel_layout import OpusChannelLayout
 from bitmovin.models.or_conjunction import OrConjunction
@@ -1054,6 +1137,7 @@ from bitmovin.models.progressive_ts_muxing_information_byte_ranges import Progre
 from bitmovin.models.progressive_webm_muxing import ProgressiveWebmMuxing
 from bitmovin.models.progressive_webm_muxing_information import ProgressiveWebmMuxingInformation
 from bitmovin.models.psnr_per_stream_mode import PsnrPerStreamMode
+from bitmovin.models.psnr_quality_metric import PsnrQualityMetric
 from bitmovin.models.quantization_group_size import QuantizationGroupSize
 from bitmovin.models.rai_unit import RaiUnit
 from bitmovin.models.rate_distortion_level_for_quantization import RateDistortionLevelForQuantization
@@ -1086,6 +1170,7 @@ from bitmovin.models.segmented_raw_muxing import SegmentedRawMuxing
 from bitmovin.models.segments_media_info import SegmentsMediaInfo
 from bitmovin.models.sftp_input import SftpInput
 from bitmovin.models.sftp_output import SftpOutput
+from bitmovin.models.sidecar_error_mode import SidecarErrorMode
 from bitmovin.models.sidecar_file import SidecarFile
 from bitmovin.models.signature_type import SignatureType
 from bitmovin.models.smooth_manifest_content_protection import SmoothManifestContentProtection
@@ -1142,6 +1227,7 @@ from bitmovin.models.thumbnail import Thumbnail
 from bitmovin.models.thumbnail_unit import ThumbnailUnit
 from bitmovin.models.time_based_trimming_input_stream import TimeBasedTrimmingInputStream
 from bitmovin.models.time_code import TimeCode
+from bitmovin.models.time_span import TimeSpan
 from bitmovin.models.timecode_track_trimming_input_stream import TimecodeTrackTrimmingInputStream
 from bitmovin.models.transfer_version import TransferVersion
 from bitmovin.models.transform_skip_mode import TransformSkipMode

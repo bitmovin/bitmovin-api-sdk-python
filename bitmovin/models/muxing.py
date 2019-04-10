@@ -50,6 +50,7 @@ class Muxing(BitmovinResource):
 
     discriminator_value_class_map = {
         'FMP4': 'Fmp4Muxing',
+        'CMAF': 'CmafMuxing',
         'MP4': 'Mp4Muxing',
         'TS': 'TsMuxing',
         'WEBM': 'WebmMuxing',

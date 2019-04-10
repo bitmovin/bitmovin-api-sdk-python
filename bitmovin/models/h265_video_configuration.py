@@ -7,9 +7,9 @@ from bitmovin.models.encoding_mode import EncodingMode
 from bitmovin.models.force_flush_mode import ForceFlushMode
 from bitmovin.models.level_h265 import LevelH265
 from bitmovin.models.limit_references import LimitReferences
-from bitmovin.models.limit_transfer_unit_depth_recursion_mode import LimitTransferUnitDepthRecursionMode
+from bitmovin.models.limit_transform_unit_depth_recursion_mode import LimitTransformUnitDepthRecursionMode
 from bitmovin.models.max_ctu_size import MaxCtuSize
-from bitmovin.models.max_transfer_unit_size import MaxTransferUnitSize
+from bitmovin.models.max_transform_unit_size import MaxTransformUnitSize
 from bitmovin.models.min_coding_unit_size import MinCodingUnitSize
 from bitmovin.models.motion_search import MotionSearch
 from bitmovin.models.pixel_format import PixelFormat
@@ -106,11 +106,11 @@ class H265VideoConfiguration(VideoConfiguration):
             'coding_unit_lossless': 'bool',
             'transform_skip': 'TransformSkipMode',
             'refine_rate_distortion_cost': 'bool',
-            'limit_transfer_unit_depth_recursion': 'LimitTransferUnitDepthRecursionMode',
+            'limit_transform_unit_depth_recursion': 'LimitTransformUnitDepthRecursionMode',
             'noise_reduction_intra': 'int',
             'noise_reduction_inter': 'int',
             'rate_distortion_penalty': 'RateDistortionPenaltyMode',
-            'maximum_transfer_unit_size': 'MaxTransferUnitSize',
+            'maximum_transform_unit_size': 'MaxTransformUnitSize',
             'dynamic_rate_distortion_strength': 'int',
             'ssim_rate_distortion_optimization': 'bool',
             'temporal_motion_vector_predictors': 'bool',
@@ -209,11 +209,11 @@ class H265VideoConfiguration(VideoConfiguration):
             'coding_unit_lossless': 'codingUnitLossless',
             'transform_skip': 'transformSkip',
             'refine_rate_distortion_cost': 'refineRateDistortionCost',
-            'limit_transfer_unit_depth_recursion': 'limitTransferUnitDepthRecursion',
+            'limit_transform_unit_depth_recursion': 'limitTransformUnitDepthRecursion',
             'noise_reduction_intra': 'noiseReductionIntra',
             'noise_reduction_inter': 'noiseReductionInter',
             'rate_distortion_penalty': 'rateDistortionPenalty',
-            'maximum_transfer_unit_size': 'maximumTransferUnitSize',
+            'maximum_transform_unit_size': 'maximumTransformUnitSize',
             'dynamic_rate_distortion_strength': 'dynamicRateDistortionStrength',
             'ssim_rate_distortion_optimization': 'ssimRateDistortionOptimization',
             'temporal_motion_vector_predictors': 'temporalMotionVectorPredictors',
@@ -244,7 +244,7 @@ class H265VideoConfiguration(VideoConfiguration):
         })
         return attributes
 
-    def __init__(self, preset_configuration=None, crf=None, profile=None, bframes=None, ref_frames=None, qp=None, max_bitrate=None, min_bitrate=None, bufsize=None, min_gop=None, max_gop=None, open_gop=None, min_keyframe_interval=None, max_keyframe_interval=None, level=None, rc_lookahead=None, b_adapt=None, max_ctu_size=None, tu_intra_depth=None, tu_inter_depth=None, motion_search=None, sub_me=None, motion_search_range=None, weight_prediction_on_p_slice=None, weight_prediction_on_b_slice=None, sao=None, master_display=None, max_content_light_level=None, max_average_light_level=None, hdr=None, scene_cut_threshold=None, adaptive_quantization_mode=None, enable_hlg_signaling=None, video_format=None, psy_rate_distortion_optimization=None, psy_rate_distortion_optimized_quantization=None, enable_hrd_signaling=None, cutree=None, min_coding_unit_size=None, lookahead_slices=None, limit_references=None, rectangular_motion_partitions_analysis=None, asymetric_motion_partitions_analysis=None, limit_modes=None, max_merge=None, early_skip=None, recursion_skip=None, fast_search_for_angular_intra_predictions=None, evaluation_of_intra_modes_in_b_slices=None, sign_hide=None, rate_distortion_level_for_mode_decision=None, rate_distortion_level_for_quantization=None, qp_min=None, qp_max=None, wavefront_parallel_processing=None, parallel_mode_decision=None, parallel_motion_estimation=None, slices=None, copy_picture=None, level_high_tier=None, skip_split_rate_distortion_analysis=None, coding_unit_lossless=None, transform_skip=None, refine_rate_distortion_cost=None, limit_transfer_unit_depth_recursion=None, noise_reduction_intra=None, noise_reduction_inter=None, rate_distortion_penalty=None, maximum_transfer_unit_size=None, dynamic_rate_distortion_strength=None, ssim_rate_distortion_optimization=None, temporal_motion_vector_predictors=None, analyze_source_frame_pixels=None, strong_intra_smoothing=None, constrained_intra_prediction=None, scenecut_bias=None, allowed_radl_before_idr=None, gop_lookahead=None, bframe_bias=None, force_flush=None, adaptive_quantization_strength=None, adaptive_quantization_motion=None, quantization_group_size=None, strict_cbr=None, qp_offset_chroma_cb=None, qp_offset_chroma_cr=None, ip_ratio=None, pb_ratio=None, quantizer_curve_compression_factor=None, qp_step=None, grain_optimized_rate_control=None, blur_quants=None, blur_complexity=None, sao_non_deblock=None, limit_sao=None, lowpass_dct=None, *args, **kwargs):
+    def __init__(self, preset_configuration=None, crf=None, profile=None, bframes=None, ref_frames=None, qp=None, max_bitrate=None, min_bitrate=None, bufsize=None, min_gop=None, max_gop=None, open_gop=None, min_keyframe_interval=None, max_keyframe_interval=None, level=None, rc_lookahead=None, b_adapt=None, max_ctu_size=None, tu_intra_depth=None, tu_inter_depth=None, motion_search=None, sub_me=None, motion_search_range=None, weight_prediction_on_p_slice=None, weight_prediction_on_b_slice=None, sao=None, master_display=None, max_content_light_level=None, max_average_light_level=None, hdr=None, scene_cut_threshold=None, adaptive_quantization_mode=None, enable_hlg_signaling=None, video_format=None, psy_rate_distortion_optimization=None, psy_rate_distortion_optimized_quantization=None, enable_hrd_signaling=None, cutree=None, min_coding_unit_size=None, lookahead_slices=None, limit_references=None, rectangular_motion_partitions_analysis=None, asymetric_motion_partitions_analysis=None, limit_modes=None, max_merge=None, early_skip=None, recursion_skip=None, fast_search_for_angular_intra_predictions=None, evaluation_of_intra_modes_in_b_slices=None, sign_hide=None, rate_distortion_level_for_mode_decision=None, rate_distortion_level_for_quantization=None, qp_min=None, qp_max=None, wavefront_parallel_processing=None, parallel_mode_decision=None, parallel_motion_estimation=None, slices=None, copy_picture=None, level_high_tier=None, skip_split_rate_distortion_analysis=None, coding_unit_lossless=None, transform_skip=None, refine_rate_distortion_cost=None, limit_transform_unit_depth_recursion=None, noise_reduction_intra=None, noise_reduction_inter=None, rate_distortion_penalty=None, maximum_transform_unit_size=None, dynamic_rate_distortion_strength=None, ssim_rate_distortion_optimization=None, temporal_motion_vector_predictors=None, analyze_source_frame_pixels=None, strong_intra_smoothing=None, constrained_intra_prediction=None, scenecut_bias=None, allowed_radl_before_idr=None, gop_lookahead=None, bframe_bias=None, force_flush=None, adaptive_quantization_strength=None, adaptive_quantization_motion=None, quantization_group_size=None, strict_cbr=None, qp_offset_chroma_cb=None, qp_offset_chroma_cr=None, ip_ratio=None, pb_ratio=None, quantizer_curve_compression_factor=None, qp_step=None, grain_optimized_rate_control=None, blur_quants=None, blur_complexity=None, sao_non_deblock=None, limit_sao=None, lowpass_dct=None, *args, **kwargs):
         super(H265VideoConfiguration, self).__init__(*args, **kwargs)
 
         self._preset_configuration = None
@@ -311,11 +311,11 @@ class H265VideoConfiguration(VideoConfiguration):
         self._coding_unit_lossless = None
         self._transform_skip = None
         self._refine_rate_distortion_cost = None
-        self._limit_transfer_unit_depth_recursion = None
+        self._limit_transform_unit_depth_recursion = None
         self._noise_reduction_intra = None
         self._noise_reduction_inter = None
         self._rate_distortion_penalty = None
-        self._maximum_transfer_unit_size = None
+        self._maximum_transform_unit_size = None
         self._dynamic_rate_distortion_strength = None
         self._ssim_rate_distortion_optimization = None
         self._temporal_motion_vector_predictors = None
@@ -472,16 +472,16 @@ class H265VideoConfiguration(VideoConfiguration):
             self.transform_skip = transform_skip
         if refine_rate_distortion_cost is not None:
             self.refine_rate_distortion_cost = refine_rate_distortion_cost
-        if limit_transfer_unit_depth_recursion is not None:
-            self.limit_transfer_unit_depth_recursion = limit_transfer_unit_depth_recursion
+        if limit_transform_unit_depth_recursion is not None:
+            self.limit_transform_unit_depth_recursion = limit_transform_unit_depth_recursion
         if noise_reduction_intra is not None:
             self.noise_reduction_intra = noise_reduction_intra
         if noise_reduction_inter is not None:
             self.noise_reduction_inter = noise_reduction_inter
         if rate_distortion_penalty is not None:
             self.rate_distortion_penalty = rate_distortion_penalty
-        if maximum_transfer_unit_size is not None:
-            self.maximum_transfer_unit_size = maximum_transfer_unit_size
+        if maximum_transform_unit_size is not None:
+            self.maximum_transform_unit_size = maximum_transform_unit_size
         if dynamic_rate_distortion_strength is not None:
             self.dynamic_rate_distortion_strength = dynamic_rate_distortion_strength
         if ssim_rate_distortion_optimization is not None:
@@ -2348,31 +2348,31 @@ class H265VideoConfiguration(VideoConfiguration):
 
 
     @property
-    def limit_transfer_unit_depth_recursion(self):
-        """Gets the limit_transfer_unit_depth_recursion of this H265VideoConfiguration.
+    def limit_transform_unit_depth_recursion(self):
+        """Gets the limit_transform_unit_depth_recursion of this H265VideoConfiguration.
 
-        Enables early exit from transfer unit depth recursion, for inter coded blocks. Default is DISABLED.
+        Enables early exit from transform unit depth recursion, for inter coded blocks. Default is DISABLED.
 
-        :return: The limit_transfer_unit_depth_recursion of this H265VideoConfiguration.
-        :rtype: LimitTransferUnitDepthRecursionMode
+        :return: The limit_transform_unit_depth_recursion of this H265VideoConfiguration.
+        :rtype: LimitTransformUnitDepthRecursionMode
         """
-        return self._limit_transfer_unit_depth_recursion
+        return self._limit_transform_unit_depth_recursion
 
-    @limit_transfer_unit_depth_recursion.setter
-    def limit_transfer_unit_depth_recursion(self, limit_transfer_unit_depth_recursion):
-        """Sets the limit_transfer_unit_depth_recursion of this H265VideoConfiguration.
+    @limit_transform_unit_depth_recursion.setter
+    def limit_transform_unit_depth_recursion(self, limit_transform_unit_depth_recursion):
+        """Sets the limit_transform_unit_depth_recursion of this H265VideoConfiguration.
 
-        Enables early exit from transfer unit depth recursion, for inter coded blocks. Default is DISABLED.
+        Enables early exit from transform unit depth recursion, for inter coded blocks. Default is DISABLED.
 
-        :param limit_transfer_unit_depth_recursion: The limit_transfer_unit_depth_recursion of this H265VideoConfiguration.
-        :type: LimitTransferUnitDepthRecursionMode
+        :param limit_transform_unit_depth_recursion: The limit_transform_unit_depth_recursion of this H265VideoConfiguration.
+        :type: LimitTransformUnitDepthRecursionMode
         """
 
-        if limit_transfer_unit_depth_recursion is not None:
-            if not isinstance(limit_transfer_unit_depth_recursion, LimitTransferUnitDepthRecursionMode):
-                raise TypeError("Invalid type for `limit_transfer_unit_depth_recursion`, type has to be `LimitTransferUnitDepthRecursionMode`")
+        if limit_transform_unit_depth_recursion is not None:
+            if not isinstance(limit_transform_unit_depth_recursion, LimitTransformUnitDepthRecursionMode):
+                raise TypeError("Invalid type for `limit_transform_unit_depth_recursion`, type has to be `LimitTransformUnitDepthRecursionMode`")
 
-            self._limit_transfer_unit_depth_recursion = limit_transfer_unit_depth_recursion
+            self._limit_transform_unit_depth_recursion = limit_transform_unit_depth_recursion
 
 
     @property
@@ -2443,7 +2443,7 @@ class H265VideoConfiguration(VideoConfiguration):
     def rate_distortion_penalty(self):
         """Gets the rate_distortion_penalty of this H265VideoConfiguration.
 
-        Penalty for 32x32 intra transfer units in non-I slices. Default DISABLED.
+        Penalty for 32x32 intra transform units in non-I slices. Default DISABLED.
 
         :return: The rate_distortion_penalty of this H265VideoConfiguration.
         :rtype: RateDistortionPenaltyMode
@@ -2454,7 +2454,7 @@ class H265VideoConfiguration(VideoConfiguration):
     def rate_distortion_penalty(self, rate_distortion_penalty):
         """Sets the rate_distortion_penalty of this H265VideoConfiguration.
 
-        Penalty for 32x32 intra transfer units in non-I slices. Default DISABLED.
+        Penalty for 32x32 intra transform units in non-I slices. Default DISABLED.
 
         :param rate_distortion_penalty: The rate_distortion_penalty of this H265VideoConfiguration.
         :type: RateDistortionPenaltyMode
@@ -2468,31 +2468,31 @@ class H265VideoConfiguration(VideoConfiguration):
 
 
     @property
-    def maximum_transfer_unit_size(self):
-        """Gets the maximum_transfer_unit_size of this H265VideoConfiguration.
+    def maximum_transform_unit_size(self):
+        """Gets the maximum_transform_unit_size of this H265VideoConfiguration.
 
-        Penalty for 32x32 intra transfer units in non-I slices. Default DISABLED.
+        Penalty for 32x32 intra transform units in non-I slices. Default DISABLED.
 
-        :return: The maximum_transfer_unit_size of this H265VideoConfiguration.
-        :rtype: MaxTransferUnitSize
+        :return: The maximum_transform_unit_size of this H265VideoConfiguration.
+        :rtype: MaxTransformUnitSize
         """
-        return self._maximum_transfer_unit_size
+        return self._maximum_transform_unit_size
 
-    @maximum_transfer_unit_size.setter
-    def maximum_transfer_unit_size(self, maximum_transfer_unit_size):
-        """Sets the maximum_transfer_unit_size of this H265VideoConfiguration.
+    @maximum_transform_unit_size.setter
+    def maximum_transform_unit_size(self, maximum_transform_unit_size):
+        """Sets the maximum_transform_unit_size of this H265VideoConfiguration.
 
-        Penalty for 32x32 intra transfer units in non-I slices. Default DISABLED.
+        Penalty for 32x32 intra transform units in non-I slices. Default DISABLED.
 
-        :param maximum_transfer_unit_size: The maximum_transfer_unit_size of this H265VideoConfiguration.
-        :type: MaxTransferUnitSize
+        :param maximum_transform_unit_size: The maximum_transform_unit_size of this H265VideoConfiguration.
+        :type: MaxTransformUnitSize
         """
 
-        if maximum_transfer_unit_size is not None:
-            if not isinstance(maximum_transfer_unit_size, MaxTransferUnitSize):
-                raise TypeError("Invalid type for `maximum_transfer_unit_size`, type has to be `MaxTransferUnitSize`")
+        if maximum_transform_unit_size is not None:
+            if not isinstance(maximum_transform_unit_size, MaxTransformUnitSize):
+                raise TypeError("Invalid type for `maximum_transform_unit_size`, type has to be `MaxTransformUnitSize`")
 
-            self._maximum_transfer_unit_size = maximum_transfer_unit_size
+            self._maximum_transform_unit_size = maximum_transform_unit_size
 
 
     @property

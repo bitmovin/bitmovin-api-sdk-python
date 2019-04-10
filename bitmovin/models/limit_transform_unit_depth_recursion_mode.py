@@ -2,7 +2,7 @@
 from enum import Enum
 
 
-class LimitTransferUnitDepthRecursionMode(Enum):
+class LimitTransformUnitDepthRecursionMode(Enum):
     """
     allowed enum values
     """

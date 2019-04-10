@@ -27,7 +27,7 @@ class BillableEncodingMinutes(object):
             'codec': 'CodecConfigType',
             'per_title_result_stream': 'StatisticsPerTitleStream',
             'psnr_mode': 'PsnrPerStreamMode',
-            'billable_minutes_details': 'list[BillableEncodingMinutesDetails]'
+            'billable_minutes': 'BillableEncodingMinutesDetails'
         }
         return types
 
@@ -38,17 +38,17 @@ class BillableEncodingMinutes(object):
             'codec': 'codec',
             'per_title_result_stream': 'perTitleResultStream',
             'psnr_mode': 'psnrMode',
-            'billable_minutes_details': 'billableMinutesDetails'
+            'billable_minutes': 'billableMinutes'
         }
         return attributes
 
-    def __init__(self, encoding_mode=None, codec=None, per_title_result_stream=None, psnr_mode=None, billable_minutes_details=None, *args, **kwargs):
+    def __init__(self, encoding_mode=None, codec=None, per_title_result_stream=None, psnr_mode=None, billable_minutes=None, *args, **kwargs):
 
         self._encoding_mode = None
         self._codec = None
         self._per_title_result_stream = None
         self._psnr_mode = None
-        self._billable_minutes_details = None
+        self._billable_minutes = None
         self.discriminator = None
 
         if encoding_mode is not None:
@@ -58,7 +58,8 @@ class BillableEncodingMinutes(object):
             self.per_title_result_stream = per_title_result_stream
         if psnr_mode is not None:
             self.psnr_mode = psnr_mode
-        self.billable_minutes_details = billable_minutes_details
+        if billable_minutes is not None:
+            self.billable_minutes = billable_minutes
 
     @property
     def encoding_mode(self):
@@ -165,31 +166,29 @@ class BillableEncodingMinutes(object):
 
 
     @property
-    def billable_minutes_details(self):
-        """Gets the billable_minutes_details of this BillableEncodingMinutes.
+    def billable_minutes(self):
+        """Gets the billable_minutes of this BillableEncodingMinutes.
 
-        Details about billable minutes for each resolution category
 
-        :return: The billable_minutes_details of this BillableEncodingMinutes.
-        :rtype: list[BillableEncodingMinutesDetails]
+        :return: The billable_minutes of this BillableEncodingMinutes.
+        :rtype: BillableEncodingMinutesDetails
         """
-        return self._billable_minutes_details
+        return self._billable_minutes
 
-    @billable_minutes_details.setter
-    def billable_minutes_details(self, billable_minutes_details):
-        """Sets the billable_minutes_details of this BillableEncodingMinutes.
+    @billable_minutes.setter
+    def billable_minutes(self, billable_minutes):
+        """Sets the billable_minutes of this BillableEncodingMinutes.
 
-        Details about billable minutes for each resolution category
 
-        :param billable_minutes_details: The billable_minutes_details of this BillableEncodingMinutes.
-        :type: list[BillableEncodingMinutesDetails]
+        :param billable_minutes: The billable_minutes of this BillableEncodingMinutes.
+        :type: BillableEncodingMinutesDetails
         """
 
-        if billable_minutes_details is not None:
-            if not isinstance(billable_minutes_details, list):
-                raise TypeError("Invalid type for `billable_minutes_details`, type has to be `list[BillableEncodingMinutesDetails]`")
+        if billable_minutes is not None:
+            if not isinstance(billable_minutes, BillableEncodingMinutesDetails):
+                raise TypeError("Invalid type for `billable_minutes`, type has to be `BillableEncodingMinutesDetails`")
 
-            self._billable_minutes_details = billable_minutes_details
+            self._billable_minutes = billable_minutes
 
     def to_dict(self):
         """Returns the model properties as a dict"""

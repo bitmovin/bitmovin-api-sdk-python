@@ -17,11 +17,11 @@ class BillableEncodingMinutesDetails(object):
     @property
     def openapi_types(self):
         types = {
-            'unknown': 'int',
-            'audio': 'int',
-            'sd': 'int',
-            'hd': 'int',
-            'uhd': 'int'
+            'unknown': 'float',
+            'audio': 'float',
+            'sd': 'float',
+            'hd': 'float',
+            'uhd': 'float'
         }
         return types
 
@@ -63,7 +63,7 @@ class BillableEncodingMinutesDetails(object):
         Only set if resolution information is not present.
 
         :return: The unknown of this BillableEncodingMinutesDetails.
-        :rtype: int
+        :rtype: float
         """
         return self._unknown
 
@@ -74,12 +74,12 @@ class BillableEncodingMinutesDetails(object):
         Only set if resolution information is not present.
 
         :param unknown: The unknown of this BillableEncodingMinutesDetails.
-        :type: int
+        :type: float
         """
 
         if unknown is not None:
-            if not isinstance(unknown, int):
-                raise TypeError("Invalid type for `unknown`, type has to be `int`")
+            if not isinstance(unknown, float):
+                raise TypeError("Invalid type for `unknown`, type has to be `float`")
 
             self._unknown = unknown
 
@@ -91,7 +91,7 @@ class BillableEncodingMinutesDetails(object):
         Billable minutes for audio. Available if stream is an audio stream.
 
         :return: The audio of this BillableEncodingMinutesDetails.
-        :rtype: int
+        :rtype: float
         """
         return self._audio
 
@@ -102,12 +102,12 @@ class BillableEncodingMinutesDetails(object):
         Billable minutes for audio. Available if stream is an audio stream.
 
         :param audio: The audio of this BillableEncodingMinutesDetails.
-        :type: int
+        :type: float
         """
 
         if audio is not None:
-            if not isinstance(audio, int):
-                raise TypeError("Invalid type for `audio`, type has to be `int`")
+            if not isinstance(audio, float):
+                raise TypeError("Invalid type for `audio`, type has to be `float`")
 
             self._audio = audio
 
@@ -119,7 +119,7 @@ class BillableEncodingMinutesDetails(object):
         Billable minutes for SD resolutions.
 
         :return: The sd of this BillableEncodingMinutesDetails.
-        :rtype: int
+        :rtype: float
         """
         return self._sd
 
@@ -130,12 +130,12 @@ class BillableEncodingMinutesDetails(object):
         Billable minutes for SD resolutions.
 
         :param sd: The sd of this BillableEncodingMinutesDetails.
-        :type: int
+        :type: float
         """
 
         if sd is not None:
-            if not isinstance(sd, int):
-                raise TypeError("Invalid type for `sd`, type has to be `int`")
+            if not isinstance(sd, float):
+                raise TypeError("Invalid type for `sd`, type has to be `float`")
 
             self._sd = sd
 
@@ -147,7 +147,7 @@ class BillableEncodingMinutesDetails(object):
         Billable minutes for HD resolutions.
 
         :return: The hd of this BillableEncodingMinutesDetails.
-        :rtype: int
+        :rtype: float
         """
         return self._hd
 
@@ -158,12 +158,12 @@ class BillableEncodingMinutesDetails(object):
         Billable minutes for HD resolutions.
 
         :param hd: The hd of this BillableEncodingMinutesDetails.
-        :type: int
+        :type: float
         """
 
         if hd is not None:
-            if not isinstance(hd, int):
-                raise TypeError("Invalid type for `hd`, type has to be `int`")
+            if not isinstance(hd, float):
+                raise TypeError("Invalid type for `hd`, type has to be `float`")
 
             self._hd = hd
 
@@ -175,7 +175,7 @@ class BillableEncodingMinutesDetails(object):
         Billable minutes for UHD resolutions.
 
         :return: The uhd of this BillableEncodingMinutesDetails.
-        :rtype: int
+        :rtype: float
         """
         return self._uhd
 
@@ -186,12 +186,12 @@ class BillableEncodingMinutesDetails(object):
         Billable minutes for UHD resolutions.
 
         :param uhd: The uhd of this BillableEncodingMinutesDetails.
-        :type: int
+        :type: float
         """
 
         if uhd is not None:
-            if not isinstance(uhd, int):
-                raise TypeError("Invalid type for `uhd`, type has to be `int`")
+            if not isinstance(uhd, float):
+                raise TypeError("Invalid type for `uhd`, type has to be `float`")
 
             self._uhd = uhd
 

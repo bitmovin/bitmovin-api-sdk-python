@@ -18,6 +18,7 @@ from bitmovin.encoding.encodings.streams.burnInSubtitles.burn_in_subtitles_api i
 from bitmovin.encoding.encodings.streams.captions.captions_api import CaptionsApi
 from bitmovin.encoding.encodings.streams.thumbnails.thumbnails_api import ThumbnailsApi
 from bitmovin.encoding.encodings.streams.sprites.sprites_api import SpritesApi
+from bitmovin.encoding.encodings.streams.qc.qc_api import QcApi
 from bitmovin.encoding.encodings.streams.stream_list_query_params import StreamListQueryParams
 
 
@@ -88,6 +89,13 @@ class StreamsApi(BaseApi):
         )
 
         self.sprites = SpritesApi(
+            api_key=api_key,
+            tenant_org_id=tenant_org_id,
+            base_url=base_url,
+            logger=logger
+        )
+
+        self.qc = QcApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,

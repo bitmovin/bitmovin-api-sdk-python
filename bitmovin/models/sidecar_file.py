@@ -2,6 +2,7 @@
 
 from bitmovin.models.bitmovin_resource import BitmovinResource
 from bitmovin.models.encoding_output import EncodingOutput
+from bitmovin.models.sidecar_error_mode import SidecarErrorMode
 import pprint
 import six
 from datetime import datetime
@@ -23,7 +24,8 @@ class SidecarFile(BitmovinResource):
         types.update({
             'input_id': 'str',
             'input_path': 'str',
-            'outputs': 'list[EncodingOutput]'
+            'outputs': 'list[EncodingOutput]',
+            'error_mode': 'SidecarErrorMode'
         })
         return types
 
@@ -33,22 +35,26 @@ class SidecarFile(BitmovinResource):
         attributes.update({
             'input_id': 'inputId',
             'input_path': 'inputPath',
-            'outputs': 'outputs'
+            'outputs': 'outputs',
+            'error_mode': 'errorMode'
         })
         return attributes
 
-    def __init__(self, input_id=None, input_path=None, outputs=None, *args, **kwargs):
+    def __init__(self, input_id=None, input_path=None, outputs=None, error_mode=None, *args, **kwargs):
         super(SidecarFile, self).__init__(*args, **kwargs)
 
         self._input_id = None
         self._input_path = None
         self._outputs = None
+        self._error_mode = None
         self.discriminator = None
 
         self.input_id = input_id
         self.input_path = input_path
         if outputs is not None:
             self.outputs = outputs
+        if error_mode is not None:
+            self.error_mode = error_mode
 
     @property
     def input_id(self):
@@ -130,6 +136,32 @@ class SidecarFile(BitmovinResource):
                 raise TypeError("Invalid type for `outputs`, type has to be `list[EncodingOutput]`")
 
             self._outputs = outputs
+
+
+    @property
+    def error_mode(self):
+        """Gets the error_mode of this SidecarFile.
+
+
+        :return: The error_mode of this SidecarFile.
+        :rtype: SidecarErrorMode
+        """
+        return self._error_mode
+
+    @error_mode.setter
+    def error_mode(self, error_mode):
+        """Sets the error_mode of this SidecarFile.
+
+
+        :param error_mode: The error_mode of this SidecarFile.
+        :type: SidecarErrorMode
+        """
+
+        if error_mode is not None:
+            if not isinstance(error_mode, SidecarErrorMode):
+                raise TypeError("Invalid type for `error_mode`, type has to be `SidecarErrorMode`")
+
+            self._error_mode = error_mode
 
     def to_dict(self):
         """Returns the model properties as a dict"""

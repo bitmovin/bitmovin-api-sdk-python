@@ -1,5 +1,6 @@
 from bitmovin.encoding.encodings.muxings.muxings_api import MuxingsApi
 from bitmovin.encoding.encodings.muxings.fmp4.fmp4_api import Fmp4Api
+from bitmovin.encoding.encodings.muxings.cmaf.cmaf_api import CmafApi
 from bitmovin.encoding.encodings.muxings.segmentedRaw.segmented_raw_api import SegmentedRawApi
 from bitmovin.encoding.encodings.muxings.ts.ts_api import TsApi
 from bitmovin.encoding.encodings.muxings.webm.webm_api import WebmApi
