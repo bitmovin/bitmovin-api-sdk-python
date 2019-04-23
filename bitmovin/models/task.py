@@ -238,7 +238,7 @@ class Task(BitmovinResponse):
     def created_at(self):
         """Gets the created_at of this Task.
 
-        Timestamp when the task was created, expressed in UTC: YYYY-MM-DDThh:mm:ssZ
+        Timestamp when the task was created, formatted in UTC: YYYY-MM-DDThh:mm:ssZ
 
         :return: The created_at of this Task.
         :rtype: datetime
@@ -249,7 +249,7 @@ class Task(BitmovinResponse):
     def created_at(self, created_at):
         """Sets the created_at of this Task.
 
-        Timestamp when the task was created, expressed in UTC: YYYY-MM-DDThh:mm:ssZ
+        Timestamp when the task was created, formatted in UTC: YYYY-MM-DDThh:mm:ssZ
 
         :param created_at: The created_at of this Task.
         :type: datetime
@@ -266,7 +266,7 @@ class Task(BitmovinResponse):
     def queued_at(self):
         """Gets the queued_at of this Task.
 
-        Timestamp when the task status changed to \"QUEUED\", expressed in UTC: YYYY-MM-DDThh:mm:ssZ
+        Timestamp when the task status changed to \"QUEUED\", formatted in UTC: YYYY-MM-DDThh:mm:ssZ
 
         :return: The queued_at of this Task.
         :rtype: datetime
@@ -277,7 +277,7 @@ class Task(BitmovinResponse):
     def queued_at(self, queued_at):
         """Sets the queued_at of this Task.
 
-        Timestamp when the task status changed to \"QUEUED\", expressed in UTC: YYYY-MM-DDThh:mm:ssZ
+        Timestamp when the task status changed to \"QUEUED\", formatted in UTC: YYYY-MM-DDThh:mm:ssZ
 
         :param queued_at: The queued_at of this Task.
         :type: datetime
@@ -294,7 +294,7 @@ class Task(BitmovinResponse):
     def running_at(self):
         """Gets the running_at of this Task.
 
-        Timestamp when the task status changed to to \"RUNNING\", expressed in UTC: YYYY-MM-DDThh:mm:ssZ
+        Timestamp when the task status changed to to \"RUNNING\", formatted in UTC: YYYY-MM-DDThh:mm:ssZ
 
         :return: The running_at of this Task.
         :rtype: datetime
@@ -305,7 +305,7 @@ class Task(BitmovinResponse):
     def running_at(self, running_at):
         """Sets the running_at of this Task.
 
-        Timestamp when the task status changed to to \"RUNNING\", expressed in UTC: YYYY-MM-DDThh:mm:ssZ
+        Timestamp when the task status changed to to \"RUNNING\", formatted in UTC: YYYY-MM-DDThh:mm:ssZ
 
         :param running_at: The running_at of this Task.
         :type: datetime
@@ -322,7 +322,7 @@ class Task(BitmovinResponse):
     def finished_at(self):
         """Gets the finished_at of this Task.
 
-        Timestamp when the task status changed to \"FINISHED\", expressed in UTC: YYYY-MM-DDThh:mm:ssZ
+        Timestamp when the task status changed to \"FINISHED\", formatted in UTC: YYYY-MM-DDThh:mm:ssZ
 
         :return: The finished_at of this Task.
         :rtype: datetime
@@ -333,7 +333,7 @@ class Task(BitmovinResponse):
     def finished_at(self, finished_at):
         """Sets the finished_at of this Task.
 
-        Timestamp when the task status changed to \"FINISHED\", expressed in UTC: YYYY-MM-DDThh:mm:ssZ
+        Timestamp when the task status changed to \"FINISHED\", formatted in UTC: YYYY-MM-DDThh:mm:ssZ
 
         :param finished_at: The finished_at of this Task.
         :type: datetime
@@ -350,7 +350,7 @@ class Task(BitmovinResponse):
     def error_at(self):
         """Gets the error_at of this Task.
 
-        Timestamp when the task status changed to \"ERROR\", expressed in UTC: YYYY-MM-DDThh:mm:ssZ
+        Timestamp when the task status changed to \"ERROR\", formatted in UTC: YYYY-MM-DDThh:mm:ssZ
 
         :return: The error_at of this Task.
         :rtype: datetime
@@ -361,7 +361,7 @@ class Task(BitmovinResponse):
     def error_at(self, error_at):
         """Sets the error_at of this Task.
 
-        Timestamp when the task status changed to \"ERROR\", expressed in UTC: YYYY-MM-DDThh:mm:ssZ
+        Timestamp when the task status changed to \"ERROR\", formatted in UTC: YYYY-MM-DDThh:mm:ssZ
 
         :param error_at: The error_at of this Task.
         :type: datetime

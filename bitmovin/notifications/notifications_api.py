@@ -11,7 +11,7 @@ from bitmovin.models.notification_state_entry import NotificationStateEntry
 from bitmovin.models.response_envelope import ResponseEnvelope
 from bitmovin.models.response_error import ResponseError
 from bitmovin.notifications.webhooks.webhooks_api import WebhooksApi
-from bitmovin.notifications.state.state_api import StateApi
+from bitmovin.notifications.states.states_api import StatesApi
 from bitmovin.notifications.emails.emails_api import EmailsApi
 from bitmovin.notifications.notification_state_entry_list_by_notification_id_query_params import NotificationStateEntryListByNotificationIdQueryParams
 from bitmovin.notifications.notification_list_query_params import NotificationListQueryParams
@@ -34,7 +34,7 @@ class NotificationsApi(BaseApi):
             logger=logger
         )
 
-        self.state = StateApi(
+        self.states = StatesApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,
@@ -83,7 +83,7 @@ class NotificationsApi(BaseApi):
         """List Notification State History (All Resources)"""
 
         return self.api_client.get(
-            '/notifications/{notification_id}/state',
+            '/notifications/{notification_id}/states',
             path_params={'notification_id': notification_id},
             query_params=query_params,
             pagination_response=True,

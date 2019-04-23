@@ -10,6 +10,7 @@ from bitmovin.models.response_envelope import ResponseEnvelope
 from bitmovin.models.response_error import ResponseError
 from bitmovin.encoding.statistics.encodings.liveStatistics.events.events_api import EventsApi
 from bitmovin.encoding.statistics.encodings.liveStatistics.streams.streams_api import StreamsApi
+from bitmovin.encoding.statistics.encodings.liveStatistics.srt.srt_api import SrtApi
 
 
 class LiveStatisticsApi(BaseApi):
@@ -30,6 +31,13 @@ class LiveStatisticsApi(BaseApi):
         )
 
         self.streams = StreamsApi(
+            api_key=api_key,
+            tenant_org_id=tenant_org_id,
+            base_url=base_url,
+            logger=logger
+        )
+
+        self.srt = SrtApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,

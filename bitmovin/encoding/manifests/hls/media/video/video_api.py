@@ -10,7 +10,6 @@ from bitmovin.models.response_envelope import ResponseEnvelope
 from bitmovin.models.response_error import ResponseError
 from bitmovin.models.standard_media_info import StandardMediaInfo
 from bitmovin.models.video_media_info import VideoMediaInfo
-from bitmovin.encoding.manifests.hls.media.video.iframe.iframe_api import IframeApi
 from bitmovin.encoding.manifests.hls.media.video.video_media_info_list_query_params import VideoMediaInfoListQueryParams
 
 
@@ -18,13 +17,6 @@ class VideoApi(BaseApi):
     @poscheck_except(2)
     def __init__(self, api_key: str, tenant_org_id: str = None, base_url: str = None, logger=None):
         super(VideoApi, self).__init__(
-            api_key=api_key,
-            tenant_org_id=tenant_org_id,
-            base_url=base_url,
-            logger=logger
-        )
-
-        self.iframe = IframeApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,

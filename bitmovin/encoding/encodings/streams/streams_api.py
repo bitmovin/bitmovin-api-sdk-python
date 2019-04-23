@@ -13,7 +13,6 @@ from bitmovin.encoding.encodings.streams.customdata.customdata_api import Custom
 from bitmovin.encoding.encodings.streams.input.input_api import InputApi
 from bitmovin.encoding.encodings.streams.inputs.inputs_api import InputsApi
 from bitmovin.encoding.encodings.streams.filters.filters_api import FiltersApi
-from bitmovin.encoding.encodings.streams.subtitles.subtitles_api import SubtitlesApi
 from bitmovin.encoding.encodings.streams.burnInSubtitles.burn_in_subtitles_api import BurnInSubtitlesApi
 from bitmovin.encoding.encodings.streams.captions.captions_api import CaptionsApi
 from bitmovin.encoding.encodings.streams.thumbnails.thumbnails_api import ThumbnailsApi
@@ -54,13 +53,6 @@ class StreamsApi(BaseApi):
         )
 
         self.filters = FiltersApi(
-            api_key=api_key,
-            tenant_org_id=tenant_org_id,
-            base_url=base_url,
-            logger=logger
-        )
-
-        self.subtitles = SubtitlesApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,

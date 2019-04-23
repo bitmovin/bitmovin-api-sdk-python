@@ -27,7 +27,7 @@ class AnalyticsQueryRequest(AnalyticsQueryTimeframe):
             'filters': 'list[AnalyticsFilter]',
             'order_by': 'list[AnalyticsOrderByEntry]',
             'dimension': 'str',
-            'interval': 'list[AnalyticsInterval]',
+            'interval': 'AnalyticsInterval',
             'group_by': 'list[str]',
             'limit': 'int',
             'offset': 'int'
@@ -62,8 +62,7 @@ class AnalyticsQueryRequest(AnalyticsQueryTimeframe):
         self._offset = None
         self.discriminator = None
 
-        if license_key is not None:
-            self.license_key = license_key
+        self.license_key = license_key
         if filters is not None:
             self.filters = filters
         if order_by is not None:
@@ -190,7 +189,7 @@ class AnalyticsQueryRequest(AnalyticsQueryTimeframe):
 
 
         :return: The interval of this AnalyticsQueryRequest.
-        :rtype: list[AnalyticsInterval]
+        :rtype: AnalyticsInterval
         """
         return self._interval
 
@@ -200,12 +199,12 @@ class AnalyticsQueryRequest(AnalyticsQueryTimeframe):
 
 
         :param interval: The interval of this AnalyticsQueryRequest.
-        :type: list[AnalyticsInterval]
+        :type: AnalyticsInterval
         """
 
         if interval is not None:
-            if not isinstance(interval, list):
-                raise TypeError("Invalid type for `interval`, type has to be `list[AnalyticsInterval]`")
+            if not isinstance(interval, AnalyticsInterval):
+                raise TypeError("Invalid type for `interval`, type has to be `AnalyticsInterval`")
 
             self._interval = interval
 
@@ -240,7 +239,7 @@ class AnalyticsQueryRequest(AnalyticsQueryTimeframe):
     def limit(self):
         """Gets the limit of this AnalyticsQueryRequest.
 
-        Maximum number of rows returned (max. 150)
+        Maximum number of rows returned (max. 200)
 
         :return: The limit of this AnalyticsQueryRequest.
         :rtype: int
@@ -251,7 +250,7 @@ class AnalyticsQueryRequest(AnalyticsQueryTimeframe):
     def limit(self, limit):
         """Sets the limit of this AnalyticsQueryRequest.
 
-        Maximum number of rows returned (max. 150)
+        Maximum number of rows returned (max. 200)
 
         :param limit: The limit of this AnalyticsQueryRequest.
         :type: int

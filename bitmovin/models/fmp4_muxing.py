@@ -29,6 +29,7 @@ class Fmp4Muxing(Muxing):
             'segment_naming_template': 'str',
             'init_segment_name': 'str',
             'init_segment_name_template': 'str',
+            'write_duration_per_sample': 'bool',
             'segments_muxed': 'int'
         })
         return types
@@ -42,11 +43,12 @@ class Fmp4Muxing(Muxing):
             'segment_naming_template': 'segmentNamingTemplate',
             'init_segment_name': 'initSegmentName',
             'init_segment_name_template': 'initSegmentNameTemplate',
+            'write_duration_per_sample': 'writeDurationPerSample',
             'segments_muxed': 'segmentsMuxed'
         })
         return attributes
 
-    def __init__(self, segment_length=None, segment_naming=None, segment_naming_template=None, init_segment_name=None, init_segment_name_template=None, segments_muxed=None, *args, **kwargs):
+    def __init__(self, segment_length=None, segment_naming=None, segment_naming_template=None, init_segment_name=None, init_segment_name_template=None, write_duration_per_sample=None, segments_muxed=None, *args, **kwargs):
         super(Fmp4Muxing, self).__init__(*args, **kwargs)
 
         self._segment_length = None
@@ -54,6 +56,7 @@ class Fmp4Muxing(Muxing):
         self._segment_naming_template = None
         self._init_segment_name = None
         self._init_segment_name_template = None
+        self._write_duration_per_sample = None
         self._segments_muxed = None
         self.discriminator = None
 
@@ -66,6 +69,8 @@ class Fmp4Muxing(Muxing):
             self.init_segment_name = init_segment_name
         if init_segment_name_template is not None:
             self.init_segment_name_template = init_segment_name_template
+        if write_duration_per_sample is not None:
+            self.write_duration_per_sample = write_duration_per_sample
         if segments_muxed is not None:
             self.segments_muxed = segments_muxed
 
@@ -207,6 +212,34 @@ class Fmp4Muxing(Muxing):
                 raise TypeError("Invalid type for `init_segment_name_template`, type has to be `str`")
 
             self._init_segment_name_template = init_segment_name_template
+
+
+    @property
+    def write_duration_per_sample(self):
+        """Gets the write_duration_per_sample of this Fmp4Muxing.
+
+        Writes the duration per sample into the sample entry in the Track Fragment Run Box. This could help to fix playback issues on legacy players. Enabling this flag increases the muxing overhead by 4 bytes per sample/frame.
+
+        :return: The write_duration_per_sample of this Fmp4Muxing.
+        :rtype: bool
+        """
+        return self._write_duration_per_sample
+
+    @write_duration_per_sample.setter
+    def write_duration_per_sample(self, write_duration_per_sample):
+        """Sets the write_duration_per_sample of this Fmp4Muxing.
+
+        Writes the duration per sample into the sample entry in the Track Fragment Run Box. This could help to fix playback issues on legacy players. Enabling this flag increases the muxing overhead by 4 bytes per sample/frame.
+
+        :param write_duration_per_sample: The write_duration_per_sample of this Fmp4Muxing.
+        :type: bool
+        """
+
+        if write_duration_per_sample is not None:
+            if not isinstance(write_duration_per_sample, bool):
+                raise TypeError("Invalid type for `write_duration_per_sample`, type has to be `bool`")
+
+            self._write_duration_per_sample = write_duration_per_sample
 
 
     @property

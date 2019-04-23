@@ -28,6 +28,16 @@ class LicensesApi(BaseApi):
             logger=logger
         )
 
+    def create(self, analytics_license, **kwargs):
+        """Create Analytics License"""
+
+        return self.api_client.post(
+            '/analytics/licenses',
+            analytics_license,
+            type=AnalyticsLicense,
+            **kwargs
+        )
+
     def get(self, license_id, **kwargs):
         """Get License"""
 

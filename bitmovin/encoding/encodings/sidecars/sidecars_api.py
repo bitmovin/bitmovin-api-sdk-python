@@ -10,6 +10,7 @@ from bitmovin.models.response_envelope import ResponseEnvelope
 from bitmovin.models.response_error import ResponseError
 from bitmovin.models.sidecar_file import SidecarFile
 from bitmovin.encoding.encodings.sidecars.customdata.customdata_api import CustomdataApi
+from bitmovin.encoding.encodings.sidecars.webvtt.webvtt_api import WebvttApi
 from bitmovin.encoding.encodings.sidecars.sidecar_file_list_query_params import SidecarFileListQueryParams
 
 
@@ -24,6 +25,13 @@ class SidecarsApi(BaseApi):
         )
 
         self.customdata = CustomdataApi(
+            api_key=api_key,
+            tenant_org_id=tenant_org_id,
+            base_url=base_url,
+            logger=logger
+        )
+
+        self.webvtt = WebvttApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,

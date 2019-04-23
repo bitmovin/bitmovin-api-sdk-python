@@ -12,6 +12,7 @@ from bitmovin.encoding.encodings.encodings_api import EncodingsApi
 from bitmovin.encoding.manifests.manifests_api import ManifestsApi
 from bitmovin.encoding.infrastructure.infrastructure_api import InfrastructureApi
 from bitmovin.encoding.statistics.statistics_api import StatisticsApi
+from bitmovin.encoding.errorDefinitions.error_definitions_api import ErrorDefinitionsApi
 
 
 class EncodingApi(BaseApi):
@@ -74,6 +75,13 @@ class EncodingApi(BaseApi):
         )
 
         self.statistics = StatisticsApi(
+            api_key=api_key,
+            tenant_org_id=tenant_org_id,
+            base_url=base_url,
+            logger=logger
+        )
+
+        self.errorDefinitions = ErrorDefinitionsApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,

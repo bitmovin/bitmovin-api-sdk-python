@@ -5,7 +5,6 @@ from __future__ import absolute_import
 from bitmovin.common import BaseApi
 from bitmovin.common.poscheck import poscheck_except
 from bitmovin.encoding.manifests.dash.periods.adaptationsets.representations.vtt.vtt_api import VttApi
-from bitmovin.encoding.manifests.dash.periods.adaptationsets.representations.sidecar.sidecar_api import SidecarApi
 from bitmovin.encoding.manifests.dash.periods.adaptationsets.representations.fmp4.fmp4_api import Fmp4Api
 from bitmovin.encoding.manifests.dash.periods.adaptationsets.representations.cmaf.cmaf_api import CmafApi
 from bitmovin.encoding.manifests.dash.periods.adaptationsets.representations.mp4.mp4_api import Mp4Api
@@ -23,13 +22,6 @@ class RepresentationsApi(BaseApi):
         )
 
         self.vtt = VttApi(
-            api_key=api_key,
-            tenant_org_id=tenant_org_id,
-            base_url=base_url,
-            logger=logger
-        )
-
-        self.sidecar = SidecarApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,

@@ -1,5 +1,5 @@
 from bitmovin.encoding.manifests.hls.media.media_api import MediaApi
-from bitmovin.encoding.manifests.hls.media.customTag.custom_tag_api import CustomTagApi
+from bitmovin.encoding.manifests.hls.media.customTags.custom_tags_api import CustomTagsApi
 from bitmovin.encoding.manifests.hls.media.type.type_api import TypeApi
 from bitmovin.encoding.manifests.hls.media.video.video_api import VideoApi
 from bitmovin.encoding.manifests.hls.media.audio.audio_api import AudioApi

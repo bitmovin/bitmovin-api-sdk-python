@@ -4,7 +4,7 @@ from __future__ import absolute_import
 
 from bitmovin.common import BaseApi
 from bitmovin.common.poscheck import poscheck_except
-from bitmovin.encoding.manifests.hls.media.customTag.custom_tag_api import CustomTagApi
+from bitmovin.encoding.manifests.hls.media.customTags.custom_tags_api import CustomTagsApi
 from bitmovin.encoding.manifests.hls.media.type.type_api import TypeApi
 from bitmovin.encoding.manifests.hls.media.video.video_api import VideoApi
 from bitmovin.encoding.manifests.hls.media.audio.audio_api import AudioApi
@@ -23,7 +23,7 @@ class MediaApi(BaseApi):
             logger=logger
         )
 
-        self.customTag = CustomTagApi(
+        self.customTags = CustomTagsApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,

@@ -46,7 +46,7 @@ class StreamInfos(object):
     def time(self):
         """Gets the time of this StreamInfos.
 
-        Timestamp of the event expressed in UTC: YYYY-MM-DDThh:mm:ssZ
+        Timestamp of the event formatted in UTC: YYYY-MM-DDThh:mm:ssZ
 
         :return: The time of this StreamInfos.
         :rtype: datetime
@@ -57,7 +57,7 @@ class StreamInfos(object):
     def time(self, time):
         """Sets the time of this StreamInfos.
 
-        Timestamp of the event expressed in UTC: YYYY-MM-DDThh:mm:ssZ
+        Timestamp of the event formatted in UTC: YYYY-MM-DDThh:mm:ssZ
 
         :param time: The time of this StreamInfos.
         :type: datetime

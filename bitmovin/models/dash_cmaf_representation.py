@@ -1,14 +1,14 @@
 # coding: utf-8
 
-from bitmovin.models.dash_fmp4_representation import DashFmp4Representation
 from bitmovin.models.dash_muxing_type import DashMuxingType
+from bitmovin.models.dash_segmented_representation import DashSegmentedRepresentation
 import pprint
 import six
 from datetime import datetime
 from enum import Enum
 
 
-class DashCmafRepresentation(DashFmp4Representation):
+class DashCmafRepresentation(DashSegmentedRepresentation):
     def __init__(self, *args, **kwargs):
         super(DashCmafRepresentation, self).__init__(*args, **kwargs)
         self.discriminator = None

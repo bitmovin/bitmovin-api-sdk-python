@@ -7,3 +7,4 @@ from bitmovin.encoding.encodings.encodings_api import EncodingsApi
 from bitmovin.encoding.manifests.manifests_api import ManifestsApi
 from bitmovin.encoding.infrastructure.infrastructure_api import InfrastructureApi
 from bitmovin.encoding.statistics.statistics_api import StatisticsApi
+from bitmovin.encoding.errorDefinitions.error_definitions_api import ErrorDefinitionsApi

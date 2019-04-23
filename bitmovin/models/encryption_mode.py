@@ -7,4 +7,4 @@ class EncryptionMode(Enum):
     allowed enum values
     """
     CTR = "CTR"
-    CBS = "CBS"
+    CBC = "CBC"

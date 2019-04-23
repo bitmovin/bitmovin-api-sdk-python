@@ -73,7 +73,7 @@ class CustomData(object):
     def created_at(self):
         """Gets the created_at of this CustomData.
 
-        Creation timestamp expressed in UTC: YYYY-MM-DDThh:mm:ssZ
+        Creation timestamp formatted in UTC: YYYY-MM-DDThh:mm:ssZ
 
         :return: The created_at of this CustomData.
         :rtype: datetime
@@ -84,7 +84,7 @@ class CustomData(object):
     def created_at(self, created_at):
         """Sets the created_at of this CustomData.
 
-        Creation timestamp expressed in UTC: YYYY-MM-DDThh:mm:ssZ
+        Creation timestamp formatted in UTC: YYYY-MM-DDThh:mm:ssZ
 
         :param created_at: The created_at of this CustomData.
         :type: datetime

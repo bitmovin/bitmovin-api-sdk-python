@@ -17,8 +17,8 @@ class AnalyticsQueryTimeframe(object):
     @property
     def openapi_types(self):
         types = {
-            'start': 'datetime',
-            'end': 'datetime'
+            'start': 'str',
+            'end': 'str'
         }
         return types
 
@@ -48,7 +48,7 @@ class AnalyticsQueryTimeframe(object):
         Start of timeframe which is queried
 
         :return: The start of this AnalyticsQueryTimeframe.
-        :rtype: datetime
+        :rtype: str
         """
         return self._start
 
@@ -59,12 +59,12 @@ class AnalyticsQueryTimeframe(object):
         Start of timeframe which is queried
 
         :param start: The start of this AnalyticsQueryTimeframe.
-        :type: datetime
+        :type: str
         """
 
         if start is not None:
-            if not isinstance(start, datetime):
-                raise TypeError("Invalid type for `start`, type has to be `datetime`")
+            if not isinstance(start, str):
+                raise TypeError("Invalid type for `start`, type has to be `str`")
 
             self._start = start
 
@@ -76,7 +76,7 @@ class AnalyticsQueryTimeframe(object):
         End of timeframe which is queried
 
         :return: The end of this AnalyticsQueryTimeframe.
-        :rtype: datetime
+        :rtype: str
         """
         return self._end
 
@@ -87,12 +87,12 @@ class AnalyticsQueryTimeframe(object):
         End of timeframe which is queried
 
         :param end: The end of this AnalyticsQueryTimeframe.
-        :type: datetime
+        :type: str
         """
 
         if end is not None:
-            if not isinstance(end, datetime):
-                raise TypeError("Invalid type for `end`, type has to be `datetime`")
+            if not isinstance(end, str):
+                raise TypeError("Invalid type for `end`, type has to be `str`")
 
             self._end = end
 

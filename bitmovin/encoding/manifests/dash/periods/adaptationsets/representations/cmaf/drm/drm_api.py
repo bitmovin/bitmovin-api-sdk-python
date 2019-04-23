@@ -7,7 +7,6 @@ from bitmovin.common.poscheck import poscheck_except
 
 from bitmovin.models.bitmovin_response import BitmovinResponse
 from bitmovin.models.dash_cmaf_drm_representation import DashCmafDrmRepresentation
-from bitmovin.models.dash_fmp4_drm_representation import DashFmp4DrmRepresentation
 from bitmovin.models.response_envelope import ResponseEnvelope
 from bitmovin.models.response_error import ResponseError
 from bitmovin.encoding.manifests.dash.periods.adaptationsets.representations.cmaf.drm.contentprotection.contentprotection_api import ContentprotectionApi

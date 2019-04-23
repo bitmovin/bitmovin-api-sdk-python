@@ -27,7 +27,8 @@ class PlayerLicense(BitmovinResponse):
             'impressions': 'int',
             'max_impressions': 'int',
             'third_party_licensing_enabled': 'bool',
-            'domains': 'list[Domain]'
+            'domains': 'list[Domain]',
+            'analytics_key': 'str'
         })
         return types
 
@@ -41,11 +42,12 @@ class PlayerLicense(BitmovinResponse):
             'impressions': 'impressions',
             'max_impressions': 'maxImpressions',
             'third_party_licensing_enabled': 'thirdPartyLicensingEnabled',
-            'domains': 'domains'
+            'domains': 'domains',
+            'analytics_key': 'analyticsKey'
         })
         return attributes
 
-    def __init__(self, name=None, created_at=None, license_key=None, impressions=None, max_impressions=None, third_party_licensing_enabled=None, domains=None, *args, **kwargs):
+    def __init__(self, name=None, created_at=None, license_key=None, impressions=None, max_impressions=None, third_party_licensing_enabled=None, domains=None, analytics_key=None, *args, **kwargs):
         super(PlayerLicense, self).__init__(*args, **kwargs)
 
         self._name = None
@@ -55,6 +57,7 @@ class PlayerLicense(BitmovinResponse):
         self._max_impressions = None
         self._third_party_licensing_enabled = None
         self._domains = None
+        self._analytics_key = None
         self.discriminator = None
 
         self.name = name
@@ -64,6 +67,8 @@ class PlayerLicense(BitmovinResponse):
         self.max_impressions = max_impressions
         self.third_party_licensing_enabled = third_party_licensing_enabled
         self.domains = domains
+        if analytics_key is not None:
+            self.analytics_key = analytics_key
 
     @property
     def name(self):
@@ -97,7 +102,7 @@ class PlayerLicense(BitmovinResponse):
     def created_at(self):
         """Gets the created_at of this PlayerLicense.
 
-        Creation timestamp expressed in UTC: YYYY-MM-DDThh:mm:ssZ
+        Creation timestamp formatted in UTC: YYYY-MM-DDThh:mm:ssZ
 
         :return: The created_at of this PlayerLicense.
         :rtype: datetime
@@ -108,7 +113,7 @@ class PlayerLicense(BitmovinResponse):
     def created_at(self, created_at):
         """Sets the created_at of this PlayerLicense.
 
-        Creation timestamp expressed in UTC: YYYY-MM-DDThh:mm:ssZ
+        Creation timestamp formatted in UTC: YYYY-MM-DDThh:mm:ssZ
 
         :param created_at: The created_at of this PlayerLicense.
         :type: datetime
@@ -259,6 +264,34 @@ class PlayerLicense(BitmovinResponse):
                 raise TypeError("Invalid type for `domains`, type has to be `list[Domain]`")
 
             self._domains = domains
+
+
+    @property
+    def analytics_key(self):
+        """Gets the analytics_key of this PlayerLicense.
+
+        Analytics License Key
+
+        :return: The analytics_key of this PlayerLicense.
+        :rtype: str
+        """
+        return self._analytics_key
+
+    @analytics_key.setter
+    def analytics_key(self, analytics_key):
+        """Sets the analytics_key of this PlayerLicense.
+
+        Analytics License Key
+
+        :param analytics_key: The analytics_key of this PlayerLicense.
+        :type: str
+        """
+
+        if analytics_key is not None:
+            if not isinstance(analytics_key, str):
+                raise TypeError("Invalid type for `analytics_key`, type has to be `str`")
+
+            self._analytics_key = analytics_key
 
     def to_dict(self):
         """Returns the model properties as a dict"""

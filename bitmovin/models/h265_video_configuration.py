@@ -97,8 +97,6 @@ class H265VideoConfiguration(VideoConfiguration):
             'qp_min': 'int',
             'qp_max': 'int',
             'wavefront_parallel_processing': 'bool',
-            'parallel_mode_decision': 'bool',
-            'parallel_motion_estimation': 'bool',
             'slices': 'int',
             'copy_picture': 'bool',
             'level_high_tier': 'bool',
@@ -200,8 +198,6 @@ class H265VideoConfiguration(VideoConfiguration):
             'qp_min': 'qpMin',
             'qp_max': 'qpMax',
             'wavefront_parallel_processing': 'wavefrontParallelProcessing',
-            'parallel_mode_decision': 'parallelModeDecision',
-            'parallel_motion_estimation': 'parallelMotionEstimation',
             'slices': 'slices',
             'copy_picture': 'copyPicture',
             'level_high_tier': 'levelHighTier',
@@ -244,7 +240,7 @@ class H265VideoConfiguration(VideoConfiguration):
         })
         return attributes
 
-    def __init__(self, preset_configuration=None, crf=None, profile=None, bframes=None, ref_frames=None, qp=None, max_bitrate=None, min_bitrate=None, bufsize=None, min_gop=None, max_gop=None, open_gop=None, min_keyframe_interval=None, max_keyframe_interval=None, level=None, rc_lookahead=None, b_adapt=None, max_ctu_size=None, tu_intra_depth=None, tu_inter_depth=None, motion_search=None, sub_me=None, motion_search_range=None, weight_prediction_on_p_slice=None, weight_prediction_on_b_slice=None, sao=None, master_display=None, max_content_light_level=None, max_average_light_level=None, hdr=None, scene_cut_threshold=None, adaptive_quantization_mode=None, enable_hlg_signaling=None, video_format=None, psy_rate_distortion_optimization=None, psy_rate_distortion_optimized_quantization=None, enable_hrd_signaling=None, cutree=None, min_coding_unit_size=None, lookahead_slices=None, limit_references=None, rectangular_motion_partitions_analysis=None, asymetric_motion_partitions_analysis=None, limit_modes=None, max_merge=None, early_skip=None, recursion_skip=None, fast_search_for_angular_intra_predictions=None, evaluation_of_intra_modes_in_b_slices=None, sign_hide=None, rate_distortion_level_for_mode_decision=None, rate_distortion_level_for_quantization=None, qp_min=None, qp_max=None, wavefront_parallel_processing=None, parallel_mode_decision=None, parallel_motion_estimation=None, slices=None, copy_picture=None, level_high_tier=None, skip_split_rate_distortion_analysis=None, coding_unit_lossless=None, transform_skip=None, refine_rate_distortion_cost=None, limit_transform_unit_depth_recursion=None, noise_reduction_intra=None, noise_reduction_inter=None, rate_distortion_penalty=None, maximum_transform_unit_size=None, dynamic_rate_distortion_strength=None, ssim_rate_distortion_optimization=None, temporal_motion_vector_predictors=None, analyze_source_frame_pixels=None, strong_intra_smoothing=None, constrained_intra_prediction=None, scenecut_bias=None, allowed_radl_before_idr=None, gop_lookahead=None, bframe_bias=None, force_flush=None, adaptive_quantization_strength=None, adaptive_quantization_motion=None, quantization_group_size=None, strict_cbr=None, qp_offset_chroma_cb=None, qp_offset_chroma_cr=None, ip_ratio=None, pb_ratio=None, quantizer_curve_compression_factor=None, qp_step=None, grain_optimized_rate_control=None, blur_quants=None, blur_complexity=None, sao_non_deblock=None, limit_sao=None, lowpass_dct=None, *args, **kwargs):
+    def __init__(self, preset_configuration=None, crf=None, profile=None, bframes=None, ref_frames=None, qp=None, max_bitrate=None, min_bitrate=None, bufsize=None, min_gop=None, max_gop=None, open_gop=None, min_keyframe_interval=None, max_keyframe_interval=None, level=None, rc_lookahead=None, b_adapt=None, max_ctu_size=None, tu_intra_depth=None, tu_inter_depth=None, motion_search=None, sub_me=None, motion_search_range=None, weight_prediction_on_p_slice=None, weight_prediction_on_b_slice=None, sao=None, master_display=None, max_content_light_level=None, max_average_light_level=None, hdr=None, scene_cut_threshold=None, adaptive_quantization_mode=None, enable_hlg_signaling=None, video_format=None, psy_rate_distortion_optimization=None, psy_rate_distortion_optimized_quantization=None, enable_hrd_signaling=None, cutree=None, min_coding_unit_size=None, lookahead_slices=None, limit_references=None, rectangular_motion_partitions_analysis=None, asymetric_motion_partitions_analysis=None, limit_modes=None, max_merge=None, early_skip=None, recursion_skip=None, fast_search_for_angular_intra_predictions=None, evaluation_of_intra_modes_in_b_slices=None, sign_hide=None, rate_distortion_level_for_mode_decision=None, rate_distortion_level_for_quantization=None, qp_min=None, qp_max=None, wavefront_parallel_processing=None, slices=None, copy_picture=None, level_high_tier=None, skip_split_rate_distortion_analysis=None, coding_unit_lossless=None, transform_skip=None, refine_rate_distortion_cost=None, limit_transform_unit_depth_recursion=None, noise_reduction_intra=None, noise_reduction_inter=None, rate_distortion_penalty=None, maximum_transform_unit_size=None, dynamic_rate_distortion_strength=None, ssim_rate_distortion_optimization=None, temporal_motion_vector_predictors=None, analyze_source_frame_pixels=None, strong_intra_smoothing=None, constrained_intra_prediction=None, scenecut_bias=None, allowed_radl_before_idr=None, gop_lookahead=None, bframe_bias=None, force_flush=None, adaptive_quantization_strength=None, adaptive_quantization_motion=None, quantization_group_size=None, strict_cbr=None, qp_offset_chroma_cb=None, qp_offset_chroma_cr=None, ip_ratio=None, pb_ratio=None, quantizer_curve_compression_factor=None, qp_step=None, grain_optimized_rate_control=None, blur_quants=None, blur_complexity=None, sao_non_deblock=None, limit_sao=None, lowpass_dct=None, *args, **kwargs):
         super(H265VideoConfiguration, self).__init__(*args, **kwargs)
 
         self._preset_configuration = None
@@ -302,8 +298,6 @@ class H265VideoConfiguration(VideoConfiguration):
         self._qp_min = None
         self._qp_max = None
         self._wavefront_parallel_processing = None
-        self._parallel_mode_decision = None
-        self._parallel_motion_estimation = None
         self._slices = None
         self._copy_picture = None
         self._level_high_tier = None
@@ -454,10 +448,6 @@ class H265VideoConfiguration(VideoConfiguration):
             self.qp_max = qp_max
         if wavefront_parallel_processing is not None:
             self.wavefront_parallel_processing = wavefront_parallel_processing
-        if parallel_mode_decision is not None:
-            self.parallel_mode_decision = parallel_mode_decision
-        if parallel_motion_estimation is not None:
-            self.parallel_motion_estimation = parallel_motion_estimation
         if slices is not None:
             self.slices = slices
         if copy_picture is not None:
@@ -2093,62 +2083,6 @@ class H265VideoConfiguration(VideoConfiguration):
                 raise TypeError("Invalid type for `wavefront_parallel_processing`, type has to be `bool`")
 
             self._wavefront_parallel_processing = wavefront_parallel_processing
-
-
-    @property
-    def parallel_mode_decision(self):
-        """Gets the parallel_mode_decision of this H265VideoConfiguration.
-
-        When enabled the encoder will distribute the analysis work of each CU (merge, inter, intra) across multiple worker threads. Default is disabled.
-
-        :return: The parallel_mode_decision of this H265VideoConfiguration.
-        :rtype: bool
-        """
-        return self._parallel_mode_decision
-
-    @parallel_mode_decision.setter
-    def parallel_mode_decision(self, parallel_mode_decision):
-        """Sets the parallel_mode_decision of this H265VideoConfiguration.
-
-        When enabled the encoder will distribute the analysis work of each CU (merge, inter, intra) across multiple worker threads. Default is disabled.
-
-        :param parallel_mode_decision: The parallel_mode_decision of this H265VideoConfiguration.
-        :type: bool
-        """
-
-        if parallel_mode_decision is not None:
-            if not isinstance(parallel_mode_decision, bool):
-                raise TypeError("Invalid type for `parallel_mode_decision`, type has to be `bool`")
-
-            self._parallel_mode_decision = parallel_mode_decision
-
-
-    @property
-    def parallel_motion_estimation(self):
-        """Gets the parallel_motion_estimation of this H265VideoConfiguration.
-
-        When enabled the encoder will distribute motion estimation across multiple worker threads when more than two references require motion searches for a given CU. Default is disabled.
-
-        :return: The parallel_motion_estimation of this H265VideoConfiguration.
-        :rtype: bool
-        """
-        return self._parallel_motion_estimation
-
-    @parallel_motion_estimation.setter
-    def parallel_motion_estimation(self, parallel_motion_estimation):
-        """Sets the parallel_motion_estimation of this H265VideoConfiguration.
-
-        When enabled the encoder will distribute motion estimation across multiple worker threads when more than two references require motion searches for a given CU. Default is disabled.
-
-        :param parallel_motion_estimation: The parallel_motion_estimation of this H265VideoConfiguration.
-        :type: bool
-        """
-
-        if parallel_motion_estimation is not None:
-            if not isinstance(parallel_motion_estimation, bool):
-                raise TypeError("Invalid type for `parallel_motion_estimation`, type has to be `bool`")
-
-            self._parallel_motion_estimation = parallel_motion_estimation
 
 
     @property

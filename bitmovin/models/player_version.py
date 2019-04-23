@@ -140,7 +140,7 @@ class PlayerVersion(BitmovinResponse):
     def created_at(self):
         """Gets the created_at of this PlayerVersion.
 
-        Creation timestamp expressed in UTC: YYYY-MM-DDThh:mm:ssZ
+        Creation timestamp formatted in UTC: YYYY-MM-DDThh:mm:ssZ
 
         :return: The created_at of this PlayerVersion.
         :rtype: datetime
@@ -151,7 +151,7 @@ class PlayerVersion(BitmovinResponse):
     def created_at(self, created_at):
         """Sets the created_at of this PlayerVersion.
 
-        Creation timestamp expressed in UTC: YYYY-MM-DDThh:mm:ssZ
+        Creation timestamp formatted in UTC: YYYY-MM-DDThh:mm:ssZ
 
         :param created_at: The created_at of this PlayerVersion.
         :type: datetime

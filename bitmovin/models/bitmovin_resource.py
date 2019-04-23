@@ -121,7 +121,7 @@ class BitmovinResource(BitmovinResponse):
     def created_at(self):
         """Gets the created_at of this BitmovinResource.
 
-        Creation timestamp expressed in UTC: YYYY-MM-DDThh:mm:ssZ
+        Creation timestamp formatted in UTC: YYYY-MM-DDThh:mm:ssZ
 
         :return: The created_at of this BitmovinResource.
         :rtype: datetime
@@ -132,7 +132,7 @@ class BitmovinResource(BitmovinResponse):
     def created_at(self, created_at):
         """Sets the created_at of this BitmovinResource.
 
-        Creation timestamp expressed in UTC: YYYY-MM-DDThh:mm:ssZ
+        Creation timestamp formatted in UTC: YYYY-MM-DDThh:mm:ssZ
 
         :param created_at: The created_at of this BitmovinResource.
         :type: datetime
@@ -149,7 +149,7 @@ class BitmovinResource(BitmovinResponse):
     def modified_at(self):
         """Gets the modified_at of this BitmovinResource.
 
-        Modified timestamp expressed in UTC: YYYY-MM-DDThh:mm:ssZ
+        Modified timestamp formatted in UTC: YYYY-MM-DDThh:mm:ssZ
 
         :return: The modified_at of this BitmovinResource.
         :rtype: datetime
@@ -160,7 +160,7 @@ class BitmovinResource(BitmovinResponse):
     def modified_at(self, modified_at):
         """Sets the modified_at of this BitmovinResource.
 
-        Modified timestamp expressed in UTC: YYYY-MM-DDThh:mm:ssZ
+        Modified timestamp formatted in UTC: YYYY-MM-DDThh:mm:ssZ
 
         :param modified_at: The modified_at of this BitmovinResource.
         :type: datetime

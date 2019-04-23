@@ -8,6 +8,7 @@ from bitmovin.common.poscheck import poscheck_except
 from bitmovin.models.player_license import PlayerLicense
 from bitmovin.models.response_envelope import ResponseEnvelope
 from bitmovin.models.response_error import ResponseError
+from bitmovin.player.licenses.analytics.analytics_api import AnalyticsApi
 from bitmovin.player.licenses.domains.domains_api import DomainsApi
 from bitmovin.player.licenses.thirdPartyLicensing.third_party_licensing_api import ThirdPartyLicensingApi
 from bitmovin.player.licenses.player_license_list_query_params import PlayerLicenseListQueryParams
@@ -17,6 +18,13 @@ class LicensesApi(BaseApi):
     @poscheck_except(2)
     def __init__(self, api_key: str, tenant_org_id: str = None, base_url: str = None, logger=None):
         super(LicensesApi, self).__init__(
+            api_key=api_key,
+            tenant_org_id=tenant_org_id,
+            base_url=base_url,
+            logger=logger
+        )
+
+        self.analytics = AnalyticsApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,
@@ -35,6 +43,16 @@ class LicensesApi(BaseApi):
             tenant_org_id=tenant_org_id,
             base_url=base_url,
             logger=logger
+        )
+
+    def create(self, player_license, **kwargs):
+        """Create Player License"""
+
+        return self.api_client.post(
+            '/player/licenses',
+            player_license,
+            type=PlayerLicense,
+            **kwargs
         )
 
     def get(self, license_id, **kwargs):

@@ -30,6 +30,10 @@ from bitmovin.models.analysis_start_request import AnalysisStartRequest
 from bitmovin.models.analytics_avg_query_request import AnalyticsAvgQueryRequest
 from bitmovin.models.analytics_column_label import AnalyticsColumnLabel
 from bitmovin.models.analytics_count_query_request import AnalyticsCountQueryRequest
+from bitmovin.models.analytics_export_status import AnalyticsExportStatus
+from bitmovin.models.analytics_export_task import AnalyticsExportTask
+from bitmovin.models.analytics_export_task_details import AnalyticsExportTaskDetails
+from bitmovin.models.analytics_export_task_output_target import AnalyticsExportTaskOutputTarget
 from bitmovin.models.analytics_filter import AnalyticsFilter
 from bitmovin.models.analytics_impression_details import AnalyticsImpressionDetails
 from bitmovin.models.analytics_interval import AnalyticsInterval
@@ -176,6 +180,7 @@ from bitmovin.models.eac3_audio_configuration import Eac3AudioConfiguration
 from bitmovin.models.email_notification import EmailNotification
 from bitmovin.models.email_notification_with_stream_conditions import EmailNotificationWithStreamConditions
 from bitmovin.models.encoding import Encoding
+from bitmovin.models.encoding_error_definition import EncodingErrorDefinition
 from bitmovin.models.encoding_error_email_notification import EncodingErrorEmailNotification
 from bitmovin.models.encoding_mode import EncodingMode
 from bitmovin.models.encoding_output import EncodingOutput
@@ -189,6 +194,7 @@ from bitmovin.models.encryption_mode import EncryptionMode
 from bitmovin.models.encryption_type import EncryptionType
 from bitmovin.models.enhanced_watermark_filter import EnhancedWatermarkFilter
 from bitmovin.models.error_details import ErrorDetails
+from bitmovin.models.error_retry_hint import ErrorRetryHint
 from bitmovin.models.fair_play_drm import FairPlayDrm
 from bitmovin.models.filter import Filter
 from bitmovin.models.filter_type import FilterType
@@ -329,6 +335,7 @@ from bitmovin.models.play_ready_drm import PlayReadyDrm
 from bitmovin.models.play_ready_encryption_method import PlayReadyEncryptionMethod
 from bitmovin.models.player_channel import PlayerChannel
 from bitmovin.models.player_license import PlayerLicense
+from bitmovin.models.player_license_analytics import PlayerLicenseAnalytics
 from bitmovin.models.player_license_key import PlayerLicenseKey
 from bitmovin.models.player_third_party_licensing import PlayerThirdPartyLicensing
 from bitmovin.models.player_third_party_licensing_error_action import PlayerThirdPartyLicensingErrorAction
@@ -397,6 +404,11 @@ from bitmovin.models.sprite import Sprite
 from bitmovin.models.sprite_unit import SpriteUnit
 from bitmovin.models.srt_input import SrtInput
 from bitmovin.models.srt_mode import SrtMode
+from bitmovin.models.srt_statistic_link import SrtStatisticLink
+from bitmovin.models.srt_statistic_recv import SrtStatisticRecv
+from bitmovin.models.srt_statistic_send import SrtStatisticSend
+from bitmovin.models.srt_statistic_window import SrtStatisticWindow
+from bitmovin.models.srt_statistics import SrtStatistics
 from bitmovin.models.standard_media_info import StandardMediaInfo
 from bitmovin.models.start_encoding_request import StartEncodingRequest
 from bitmovin.models.start_live_encoding_request import StartLiveEncodingRequest
@@ -478,6 +490,8 @@ from bitmovin.models.vtt_media_info import VttMediaInfo
 from bitmovin.models.watermark_filter import WatermarkFilter
 from bitmovin.models.web_vtt_embed import WebVttEmbed
 from bitmovin.models.web_vtt_extract import WebVttExtract
+from bitmovin.models.web_vtt_sidecar_file import WebVttSidecarFile
+from bitmovin.models.web_vtt_sidecar_file_segmentation import WebVttSidecarFileSegmentation
 from bitmovin.models.webhook import Webhook
 from bitmovin.models.webhook_encryption import WebhookEncryption
 from bitmovin.models.webhook_http_method import WebhookHttpMethod

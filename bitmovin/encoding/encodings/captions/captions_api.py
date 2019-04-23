@@ -4,9 +4,7 @@ from __future__ import absolute_import
 
 from bitmovin.common import BaseApi
 from bitmovin.common.poscheck import poscheck_except
-from bitmovin.encoding.encodings.captions.cea.cea_api import CeaApi
-from bitmovin.encoding.encodings.captions.webvtt.webvtt_api import WebvttApi
-from bitmovin.encoding.encodings.captions.ttml.ttml_api import TtmlApi
+from bitmovin.encoding.encodings.captions.extract.extract_api import ExtractApi
 from bitmovin.encoding.encodings.captions.scc.scc_api import SccApi
 
 
@@ -20,21 +18,7 @@ class CaptionsApi(BaseApi):
             logger=logger
         )
 
-        self.cea = CeaApi(
-            api_key=api_key,
-            tenant_org_id=tenant_org_id,
-            base_url=base_url,
-            logger=logger
-        )
-
-        self.webvtt = WebvttApi(
-            api_key=api_key,
-            tenant_org_id=tenant_org_id,
-            base_url=base_url,
-            logger=logger
-        )
-
-        self.ttml = TtmlApi(
+        self.extract = ExtractApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,
