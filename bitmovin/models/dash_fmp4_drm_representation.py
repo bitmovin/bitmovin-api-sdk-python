@@ -1,7 +1,8 @@
 # coding: utf-8
 
 from bitmovin.models.dash_fmp4_representation import DashFmp4Representation
-from bitmovin.models.dash_muxing_type import DashMuxingType
+from bitmovin.models.dash_representation_type import DashRepresentationType
+from bitmovin.models.dash_representation_type_mode import DashRepresentationTypeMode
 import pprint
 import six
 from datetime import datetime

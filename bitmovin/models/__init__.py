@@ -159,9 +159,10 @@ from bitmovin.models.dash_manifest_default import DashManifestDefault
 from bitmovin.models.dash_manifest_default_version import DashManifestDefaultVersion
 from bitmovin.models.dash_mp4_drm_representation import DashMp4DrmRepresentation
 from bitmovin.models.dash_mp4_representation import DashMp4Representation
-from bitmovin.models.dash_muxing_type import DashMuxingType
 from bitmovin.models.dash_profile import DashProfile
 from bitmovin.models.dash_representation import DashRepresentation
+from bitmovin.models.dash_representation_type import DashRepresentationType
+from bitmovin.models.dash_representation_type_mode import DashRepresentationTypeMode
 from bitmovin.models.dash_segmented_representation import DashSegmentedRepresentation
 from bitmovin.models.dash_sidecar_representation import DashSidecarRepresentation
 from bitmovin.models.dash_vtt_representation import DashVttRepresentation

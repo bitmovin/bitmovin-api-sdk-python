@@ -1,6 +1,7 @@
 # coding: utf-8
 
-from bitmovin.models.dash_muxing_type import DashMuxingType
+from bitmovin.models.dash_representation_type import DashRepresentationType
+from bitmovin.models.dash_representation_type_mode import DashRepresentationTypeMode
 from bitmovin.models.dash_segmented_representation import DashSegmentedRepresentation
 import pprint
 import six

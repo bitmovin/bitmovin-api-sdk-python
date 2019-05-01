@@ -2,7 +2,7 @@
 from enum import Enum
 
 
-class DashMuxingType(Enum):
+class DashRepresentationType(Enum):
     """
     allowed enum values
     """

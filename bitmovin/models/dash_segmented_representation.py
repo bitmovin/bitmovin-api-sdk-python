@@ -1,7 +1,8 @@
 # coding: utf-8
 
-from bitmovin.models.dash_muxing_type import DashMuxingType
 from bitmovin.models.dash_representation import DashRepresentation
+from bitmovin.models.dash_representation_type import DashRepresentationType
+from bitmovin.models.dash_representation_type_mode import DashRepresentationTypeMode
 import pprint
 import six
 from datetime import datetime
@@ -21,7 +22,8 @@ class DashSegmentedRepresentation(DashRepresentation):
     def openapi_types(self):
         types = super(DashSegmentedRepresentation, self).openapi_types
         types.update({
-            'type': 'DashMuxingType',
+            'type': 'DashRepresentationType',
+            'mode': 'DashRepresentationTypeMode',
             'segment_path': 'str',
             'start_segment_number': 'int',
             'end_segment_number': 'int',
@@ -35,6 +37,7 @@ class DashSegmentedRepresentation(DashRepresentation):
         attributes = super(DashSegmentedRepresentation, self).attribute_map
         attributes.update({
             'type': 'type',
+            'mode': 'mode',
             'segment_path': 'segmentPath',
             'start_segment_number': 'startSegmentNumber',
             'end_segment_number': 'endSegmentNumber',
@@ -43,10 +46,11 @@ class DashSegmentedRepresentation(DashRepresentation):
         })
         return attributes
 
-    def __init__(self, type=None, segment_path=None, start_segment_number=None, end_segment_number=None, start_keyframe_id=None, end_keyframe_id=None, *args, **kwargs):
+    def __init__(self, type=None, mode=None, segment_path=None, start_segment_number=None, end_segment_number=None, start_keyframe_id=None, end_keyframe_id=None, *args, **kwargs):
         super(DashSegmentedRepresentation, self).__init__(*args, **kwargs)
 
         self._type = None
+        self._mode = None
         self._segment_path = None
         self._start_segment_number = None
         self._end_segment_number = None
@@ -55,6 +59,8 @@ class DashSegmentedRepresentation(DashRepresentation):
         self.discriminator = None
 
         self.type = type
+        if mode is not None:
+            self.mode = mode
         self.segment_path = segment_path
         if start_segment_number is not None:
             self.start_segment_number = start_segment_number
@@ -71,7 +77,7 @@ class DashSegmentedRepresentation(DashRepresentation):
 
 
         :return: The type of this DashSegmentedRepresentation.
-        :rtype: DashMuxingType
+        :rtype: DashRepresentationType
         """
         return self._type
 
@@ -81,21 +87,47 @@ class DashSegmentedRepresentation(DashRepresentation):
 
 
         :param type: The type of this DashSegmentedRepresentation.
-        :type: DashMuxingType
+        :type: DashRepresentationType
         """
 
         if type is not None:
-            if not isinstance(type, DashMuxingType):
-                raise TypeError("Invalid type for `type`, type has to be `DashMuxingType`")
+            if not isinstance(type, DashRepresentationType):
+                raise TypeError("Invalid type for `type`, type has to be `DashRepresentationType`")
 
             self._type = type
+
+
+    @property
+    def mode(self):
+        """Gets the mode of this DashSegmentedRepresentation.
+
+
+        :return: The mode of this DashSegmentedRepresentation.
+        :rtype: DashRepresentationTypeMode
+        """
+        return self._mode
+
+    @mode.setter
+    def mode(self, mode):
+        """Sets the mode of this DashSegmentedRepresentation.
+
+
+        :param mode: The mode of this DashSegmentedRepresentation.
+        :type: DashRepresentationTypeMode
+        """
+
+        if mode is not None:
+            if not isinstance(mode, DashRepresentationTypeMode):
+                raise TypeError("Invalid type for `mode`, type has to be `DashRepresentationTypeMode`")
+
+            self._mode = mode
 
 
     @property
     def segment_path(self):
         """Gets the segment_path of this DashSegmentedRepresentation.
 
-        Path to segments
+        Path to segments. Will be used as the representation id if the type is set to TEMPLATE_ADAPTATION_SET
 
         :return: The segment_path of this DashSegmentedRepresentation.
         :rtype: str
@@ -106,7 +138,7 @@ class DashSegmentedRepresentation(DashRepresentation):
     def segment_path(self, segment_path):
         """Sets the segment_path of this DashSegmentedRepresentation.
 
-        Path to segments
+        Path to segments. Will be used as the representation id if the type is set to TEMPLATE_ADAPTATION_SET
 
         :param segment_path: The segment_path of this DashSegmentedRepresentation.
         :type: str

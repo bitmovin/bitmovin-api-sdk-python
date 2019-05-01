@@ -3,7 +3,7 @@
 from setuptools import setup, find_packages
 
 NAME = 'bitmovin'
-VERSION = '1.14.0alpha0'
+VERSION = '1.14.1alpha0'
 DESCRIPTION = 'Python-Client which enables you to seamlessly integrate the Bitmovin API into your projects. Using this API client requires an active account.'
 AUTHOR = 'Bitmovin Inc'
 EMAIL = 'support@bitmovin.com'
@@ -17,7 +17,7 @@ LICENSE = 'MIT'
 # prerequisite: setuptools
 # http://pypi.python.org/pypi/setuptools
 
-REQUIRES = ['urllib3 >= 1.15', 'six >= 1.10', 'certifi', 'python-dateutil', 'requests']
+REQUIRES = ['urllib3>=1.15,<1.25', 'six>=1.10', 'certifi', 'python-dateutil', 'requests']
 
 setup(
     name=NAME,
