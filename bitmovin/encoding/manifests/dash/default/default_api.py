@@ -7,6 +7,7 @@ from bitmovin.common.poscheck import poscheck_except
 
 from bitmovin.models.dash_manifest_default import DashManifestDefault
 from bitmovin.models.response_envelope import ResponseEnvelope
+from bitmovin.models.response_error import ResponseError
 
 
 class DefaultApi(BaseApi):

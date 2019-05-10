@@ -4,6 +4,7 @@ from bitmovin.models.domain import Domain
 import pprint
 import six
 from datetime import datetime
+from datetime import date as validation_date
 from enum import Enum
 
 

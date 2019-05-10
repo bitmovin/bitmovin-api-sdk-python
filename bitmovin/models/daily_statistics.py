@@ -5,6 +5,7 @@ from bitmovin.models.billable_encoding_minutes import BillableEncodingMinutes
 import pprint
 import six
 from datetime import datetime
+from datetime import date as validation_date
 from enum import Enum
 
 
@@ -20,11 +21,11 @@ class DailyStatistics(object):
     @property
     def openapi_types(self):
         types = {
-            'date': 'datetime',
+            'date': 'date',
             'bytes_encoded': 'int',
             'time_encoded': 'int',
             'billable_minutes': 'float',
-            'label': 'datetime',
+            'label': 'str',
             'billable_encoding_minutes': 'list[BillableEncodingMinutes]',
             'billable_transmuxing_minutes': 'float',
             'billable_feature_minutes': 'list[BillableEncodingFeatureMinutes]'
@@ -78,7 +79,7 @@ class DailyStatistics(object):
         Date for the shown data. Format: yyyy-MM-dd
 
         :return: The date of this DailyStatistics.
-        :rtype: datetime
+        :rtype: date
         """
         return self._date
 
@@ -89,12 +90,12 @@ class DailyStatistics(object):
         Date for the shown data. Format: yyyy-MM-dd
 
         :param date: The date of this DailyStatistics.
-        :type: datetime
+        :type: date
         """
 
         if date is not None:
-            if not isinstance(date, datetime):
-                raise TypeError("Invalid type for `date`, type has to be `datetime`")
+            if not isinstance(date, validation_date):
+                raise TypeError("Invalid type for `date`, type has to be `date`")
 
             self._date = date
 
@@ -190,7 +191,7 @@ class DailyStatistics(object):
         Label identifier.
 
         :return: The label of this DailyStatistics.
-        :rtype: datetime
+        :rtype: str
         """
         return self._label
 
@@ -201,12 +202,12 @@ class DailyStatistics(object):
         Label identifier.
 
         :param label: The label of this DailyStatistics.
-        :type: datetime
+        :type: str
         """
 
         if label is not None:
-            if not isinstance(label, datetime):
-                raise TypeError("Invalid type for `label`, type has to be `datetime`")
+            if not isinstance(label, str):
+                raise TypeError("Invalid type for `label`, type has to be `str`")
 
             self._label = label
 

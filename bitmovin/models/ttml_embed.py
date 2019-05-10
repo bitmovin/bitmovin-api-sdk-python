@@ -1,10 +1,11 @@
 # coding: utf-8
 
 from bitmovin.models.bitmovin_resource import BitmovinResource
-from bitmovin.models.input_stream import InputStream
+from bitmovin.models.stream_input import StreamInput
 import pprint
 import six
 from datetime import datetime
+from datetime import date as validation_date
 from enum import Enum
 
 
@@ -21,7 +22,7 @@ class TtmlEmbed(BitmovinResource):
     def openapi_types(self):
         types = super(TtmlEmbed, self).openapi_types
         types.update({
-            'input_stream': 'InputStream'
+            'input_stream': 'StreamInput'
         })
         return types
 
@@ -48,7 +49,7 @@ class TtmlEmbed(BitmovinResource):
         The input stream to extract the subtitle from
 
         :return: The input_stream of this TtmlEmbed.
-        :rtype: InputStream
+        :rtype: StreamInput
         """
         return self._input_stream
 
@@ -59,12 +60,12 @@ class TtmlEmbed(BitmovinResource):
         The input stream to extract the subtitle from
 
         :param input_stream: The input_stream of this TtmlEmbed.
-        :type: InputStream
+        :type: StreamInput
         """
 
         if input_stream is not None:
-            if not isinstance(input_stream, InputStream):
-                raise TypeError("Invalid type for `input_stream`, type has to be `InputStream`")
+            if not isinstance(input_stream, StreamInput):
+                raise TypeError("Invalid type for `input_stream`, type has to be `StreamInput`")
 
             self._input_stream = input_stream
 

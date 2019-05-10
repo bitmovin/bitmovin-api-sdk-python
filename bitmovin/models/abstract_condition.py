@@ -1,67 +1,24 @@
 # coding: utf-8
-
-from bitmovin.models.condition_type import ConditionType
 import pprint
 import six
 from datetime import datetime
+from datetime import date as validation_date
 from enum import Enum
 
 
 class AbstractCondition(object):
-    """
-    Attributes:
-      openapi_types (dict): The key is attribute name
-                            and the value is attribute type.
-      attribute_map (dict): The key is attribute name
-                            and the value is json key in definition.
-    """
+    discriminator_value_class_map = {
+        'CONDITION': 'Condition',
+        'AND': 'AndConjunction',
+        'OR': 'OrConjunction'
+    }
 
-    @property
-    def openapi_types(self):
-        types = {
-            'type': 'ConditionType'
-        }
-        return types
-
-    @property
-    def attribute_map(self):
-        attributes = {
-            'type': 'type'
-        }
-        return attributes
-
-    def __init__(self, type=None, *args, **kwargs):
-
-        self._type = None
-        self.discriminator = None
-
-        if type is not None:
-            self.type = type
-
-    @property
-    def type(self):
-        """Gets the type of this AbstractCondition.
-
-
-        :return: The type of this AbstractCondition.
-        :rtype: ConditionType
-        """
-        return self._type
-
-    @type.setter
-    def type(self, type):
-        """Sets the type of this AbstractCondition.
-
-
-        :param type: The type of this AbstractCondition.
-        :type: ConditionType
-        """
-
-        if type is not None:
-            if not isinstance(type, ConditionType):
-                raise TypeError("Invalid type for `type`, type has to be `ConditionType`")
-
-            self._type = type
+    def __init__(self, *args, **kwargs):
+        self.discriminator = 'type'
+    def get_real_child_model(self, data):
+        """Returns the real base class specified by the discriminator"""
+        discriminator_value = data[self.discriminator]
+        return self.discriminator_value_class_map.get(discriminator_value)
 
     def to_dict(self):
         """Returns the model properties as a dict"""

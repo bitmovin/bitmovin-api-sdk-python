@@ -8,6 +8,7 @@ from bitmovin.models.reupload_settings import ReuploadSettings
 import pprint
 import six
 from datetime import datetime
+from datetime import date as validation_date
 from enum import Enum
 
 

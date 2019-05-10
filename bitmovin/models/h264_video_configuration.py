@@ -22,6 +22,7 @@ from bitmovin.models.weighted_prediction_p_frames import WeightedPredictionPFram
 import pprint
 import six
 from datetime import datetime
+from datetime import date as validation_date
 from enum import Enum
 
 
@@ -1055,7 +1056,7 @@ class H264VideoConfiguration(VideoConfiguration):
     def scene_cut_threshold(self):
         """Gets the scene_cut_threshold of this H264VideoConfiguration.
 
-        Scene Change sensitivity. The higher the value, the more likely an I-Frame will be inserted. Set to 0 to disable it.
+        Scene change sensitivity. The higher the value, the more likely an I-frame will be inserted. Set to 0 to disable it which is advised for scenarios where fixed GOP is required, e.g., adaptive streaming outputs like DASH, HLS and Smooth. Having this setting enabled can improve quality for progressive output with an increased internal chunk length (see `internalChunkLength` of muxings).
 
         :return: The scene_cut_threshold of this H264VideoConfiguration.
         :rtype: int
@@ -1066,7 +1067,7 @@ class H264VideoConfiguration(VideoConfiguration):
     def scene_cut_threshold(self, scene_cut_threshold):
         """Sets the scene_cut_threshold of this H264VideoConfiguration.
 
-        Scene Change sensitivity. The higher the value, the more likely an I-Frame will be inserted. Set to 0 to disable it.
+        Scene change sensitivity. The higher the value, the more likely an I-frame will be inserted. Set to 0 to disable it which is advised for scenarios where fixed GOP is required, e.g., adaptive streaming outputs like DASH, HLS and Smooth. Having this setting enabled can improve quality for progressive output with an increased internal chunk length (see `internalChunkLength` of muxings).
 
         :param scene_cut_threshold: The scene_cut_threshold of this H264VideoConfiguration.
         :type: int

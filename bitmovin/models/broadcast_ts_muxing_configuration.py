@@ -7,6 +7,7 @@ from bitmovin.models.broadcast_ts_video_input_stream_configuration import Broadc
 import pprint
 import six
 from datetime import datetime
+from datetime import date as validation_date
 from enum import Enum
 
 

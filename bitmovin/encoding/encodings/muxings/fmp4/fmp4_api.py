@@ -11,7 +11,6 @@ from bitmovin.models.response_envelope import ResponseEnvelope
 from bitmovin.models.response_error import ResponseError
 from bitmovin.encoding.encodings.muxings.fmp4.customdata.customdata_api import CustomdataApi
 from bitmovin.encoding.encodings.muxings.fmp4.drm.drm_api import DrmApi
-from bitmovin.encoding.encodings.muxings.fmp4.captions.captions_api import CaptionsApi
 from bitmovin.encoding.encodings.muxings.fmp4.fmp4_muxing_list_query_params import Fmp4MuxingListQueryParams
 
 
@@ -33,13 +32,6 @@ class Fmp4Api(BaseApi):
         )
 
         self.drm = DrmApi(
-            api_key=api_key,
-            tenant_org_id=tenant_org_id,
-            base_url=base_url,
-            logger=logger
-        )
-
-        self.captions = CaptionsApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,

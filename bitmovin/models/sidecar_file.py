@@ -6,6 +6,7 @@ from bitmovin.models.sidecar_error_mode import SidecarErrorMode
 import pprint
 import six
 from datetime import datetime
+from datetime import date as validation_date
 from enum import Enum
 
 

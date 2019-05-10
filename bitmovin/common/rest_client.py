@@ -4,6 +4,8 @@ import sys
 
 import requests
 
+from datetime import datetime, date
+
 from bitmovin.common.bitmovin_api_logger_base import BitmovinApiLoggerBase
 from bitmovin.common.bitmovin_exception import RestException
 from bitmovin.common.bitmovin_exception import MissingArgumentException
@@ -13,7 +15,7 @@ class RestClient(object):
     HTTP_HEADERS = {
         'Content-Type': 'application/json',
         'X-Api-Client': 'bitmovin-api-sdk-python',
-        'X-Api-Client-Version': '1.14.1alpha0'
+        'X-Api-Client-Version': '1.14.3alpha0'
     }
 
     DELETE = 'DELETE'
@@ -136,7 +138,11 @@ class RestClient(object):
         return '/'.join(map(lambda x: str(x).strip('/'), args))
 
     def _default_to_dict(self, obj):
-        try:
+        if hasattr(obj, 'to_dict'):
             return obj.to_dict()
-        except:
+        if hasattr(obj, '__dict__'):
             return obj.__dict__
+        if isinstance(obj, datetime):
+            return obj.strftime('%Y-%m-%dT%H:%M:%SZ')
+        if isinstance(obj, date):
+            return obj.isoformat()

@@ -4,6 +4,7 @@ from bitmovin.models.player_third_party_licensing_error_action import PlayerThir
 import pprint
 import six
 from datetime import datetime
+from datetime import date as validation_date
 from enum import Enum
 
 

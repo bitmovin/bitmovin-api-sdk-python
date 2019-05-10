@@ -7,6 +7,7 @@ from bitmovin.models.analytics_query_timeframe import AnalyticsQueryTimeframe
 import pprint
 import six
 from datetime import datetime
+from datetime import date as validation_date
 from enum import Enum
 
 

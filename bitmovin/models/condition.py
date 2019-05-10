@@ -1,12 +1,11 @@
 # coding: utf-8
 
 from bitmovin.models.abstract_condition import AbstractCondition
-from bitmovin.models.condition_attribute import ConditionAttribute
 from bitmovin.models.condition_operator import ConditionOperator
-from bitmovin.models.condition_type import ConditionType
 import pprint
 import six
 from datetime import datetime
+from datetime import date as validation_date
 from enum import Enum
 
 
@@ -23,7 +22,7 @@ class Condition(AbstractCondition):
     def openapi_types(self):
         types = super(Condition, self).openapi_types
         types.update({
-            'attribute': 'ConditionAttribute',
+            'attribute': 'str',
             'operator': 'ConditionOperator',
             'value': 'str'
         })
@@ -55,9 +54,10 @@ class Condition(AbstractCondition):
     def attribute(self):
         """Gets the attribute of this Condition.
 
+        The attribute that should be used for the evaluation
 
         :return: The attribute of this Condition.
-        :rtype: ConditionAttribute
+        :rtype: str
         """
         return self._attribute
 
@@ -65,14 +65,15 @@ class Condition(AbstractCondition):
     def attribute(self, attribute):
         """Sets the attribute of this Condition.
 
+        The attribute that should be used for the evaluation
 
         :param attribute: The attribute of this Condition.
-        :type: ConditionAttribute
+        :type: str
         """
 
         if attribute is not None:
-            if not isinstance(attribute, ConditionAttribute):
-                raise TypeError("Invalid type for `attribute`, type has to be `ConditionAttribute`")
+            if not isinstance(attribute, str):
+                raise TypeError("Invalid type for `attribute`, type has to be `str`")
 
             self._attribute = attribute
 
@@ -81,6 +82,7 @@ class Condition(AbstractCondition):
     def operator(self):
         """Gets the operator of this Condition.
 
+        The operator that should be used for the evaluation
 
         :return: The operator of this Condition.
         :rtype: ConditionOperator
@@ -91,6 +93,7 @@ class Condition(AbstractCondition):
     def operator(self, operator):
         """Sets the operator of this Condition.
 
+        The operator that should be used for the evaluation
 
         :param operator: The operator of this Condition.
         :type: ConditionOperator

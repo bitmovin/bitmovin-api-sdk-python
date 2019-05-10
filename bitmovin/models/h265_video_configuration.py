@@ -26,6 +26,7 @@ from bitmovin.models.video_format import VideoFormat
 import pprint
 import six
 from datetime import datetime
+from datetime import date as validation_date
 from enum import Enum
 
 
@@ -1519,6 +1520,10 @@ class H265VideoConfiguration(VideoConfiguration):
         """
 
         if psy_rate_distortion_optimization is not None:
+            if psy_rate_distortion_optimization is not None and psy_rate_distortion_optimization > 5:
+                raise ValueError("Invalid value for `psy_rate_distortion_optimization`, must be a value less than or equal to `5`")
+            if psy_rate_distortion_optimization is not None and psy_rate_distortion_optimization < 0:
+                raise ValueError("Invalid value for `psy_rate_distortion_optimization`, must be a value greater than or equal to `0`")
             if not isinstance(psy_rate_distortion_optimization, float):
                 raise TypeError("Invalid type for `psy_rate_distortion_optimization`, type has to be `float`")
 
@@ -1547,6 +1552,10 @@ class H265VideoConfiguration(VideoConfiguration):
         """
 
         if psy_rate_distortion_optimized_quantization is not None:
+            if psy_rate_distortion_optimized_quantization is not None and psy_rate_distortion_optimized_quantization > 50:
+                raise ValueError("Invalid value for `psy_rate_distortion_optimized_quantization`, must be a value less than or equal to `50`")
+            if psy_rate_distortion_optimized_quantization is not None and psy_rate_distortion_optimized_quantization < 0:
+                raise ValueError("Invalid value for `psy_rate_distortion_optimized_quantization`, must be a value greater than or equal to `0`")
             if not isinstance(psy_rate_distortion_optimized_quantization, float):
                 raise TypeError("Invalid type for `psy_rate_distortion_optimized_quantization`, type has to be `float`")
 

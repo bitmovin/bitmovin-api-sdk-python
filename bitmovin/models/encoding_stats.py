@@ -7,6 +7,7 @@ from bitmovin.models.statistics_per_stream import StatisticsPerStream
 import pprint
 import six
 from datetime import datetime
+from datetime import date as validation_date
 from enum import Enum
 
 
@@ -22,7 +23,7 @@ class EncodingStats(object):
     @property
     def openapi_types(self):
         types = {
-            'date': 'datetime',
+            'date': 'date',
             'encoding_id': 'str',
             'bytes_encoded': 'int',
             'time_encoded': 'int',
@@ -99,7 +100,7 @@ class EncodingStats(object):
         Date, format. yyyy-MM-dd
 
         :return: The date of this EncodingStats.
-        :rtype: datetime
+        :rtype: date
         """
         return self._date
 
@@ -110,12 +111,12 @@ class EncodingStats(object):
         Date, format. yyyy-MM-dd
 
         :param date: The date of this EncodingStats.
-        :type: datetime
+        :type: date
         """
 
         if date is not None:
-            if not isinstance(date, datetime):
-                raise TypeError("Invalid type for `date`, type has to be `datetime`")
+            if not isinstance(date, validation_date):
+                raise TypeError("Invalid type for `date`, type has to be `date`")
 
             self._date = date
 

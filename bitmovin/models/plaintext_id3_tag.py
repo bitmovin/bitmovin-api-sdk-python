@@ -5,6 +5,7 @@ from bitmovin.models.id3_tag_position_mode import Id3TagPositionMode
 import pprint
 import six
 from datetime import datetime
+from datetime import date as validation_date
 from enum import Enum
 
 

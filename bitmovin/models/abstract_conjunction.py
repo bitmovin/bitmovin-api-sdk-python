@@ -1,10 +1,10 @@
 # coding: utf-8
 
 from bitmovin.models.abstract_condition import AbstractCondition
-from bitmovin.models.condition_type import ConditionType
 import pprint
 import six
 from datetime import datetime
+from datetime import date as validation_date
 from enum import Enum
 
 

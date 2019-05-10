@@ -11,7 +11,6 @@ from bitmovin.models.response_error import ResponseError
 from bitmovin.models.ts_muxing import TsMuxing
 from bitmovin.encoding.encodings.muxings.ts.customdata.customdata_api import CustomdataApi
 from bitmovin.encoding.encodings.muxings.ts.drm.drm_api import DrmApi
-from bitmovin.encoding.encodings.muxings.ts.captions.captions_api import CaptionsApi
 from bitmovin.encoding.encodings.muxings.ts.ts_muxing_list_query_params import TsMuxingListQueryParams
 
 
@@ -33,13 +32,6 @@ class TsApi(BaseApi):
         )
 
         self.drm = DrmApi(
-            api_key=api_key,
-            tenant_org_id=tenant_org_id,
-            base_url=base_url,
-            logger=logger
-        )
-
-        self.captions = CaptionsApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,

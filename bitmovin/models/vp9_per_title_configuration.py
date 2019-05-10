@@ -6,6 +6,7 @@ from bitmovin.models.per_title_fixed_resolution_and_bitrate_configuration import
 import pprint
 import six
 from datetime import datetime
+from datetime import date as validation_date
 from enum import Enum
 
 

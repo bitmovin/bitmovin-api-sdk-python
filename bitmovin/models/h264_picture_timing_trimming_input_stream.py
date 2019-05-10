@@ -1,13 +1,14 @@
 # coding: utf-8
 
-from bitmovin.models.basic_input_stream import BasicInputStream
+from bitmovin.models.input_stream import InputStream
 import pprint
 import six
 from datetime import datetime
+from datetime import date as validation_date
 from enum import Enum
 
 
-class H264PictureTimingTrimmingInputStream(BasicInputStream):
+class H264PictureTimingTrimmingInputStream(InputStream):
     """
     Attributes:
       openapi_types (dict): The key is attribute name

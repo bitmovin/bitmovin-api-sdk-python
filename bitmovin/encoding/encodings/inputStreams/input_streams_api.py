@@ -5,7 +5,7 @@ from __future__ import absolute_import
 from bitmovin.common import BaseApi
 from bitmovin.common.poscheck import poscheck_except
 
-from bitmovin.models.basic_input_stream import BasicInputStream
+from bitmovin.models.input_stream import InputStream
 from bitmovin.models.response_envelope import ResponseEnvelope
 from bitmovin.models.response_error import ResponseError
 from bitmovin.encoding.encodings.inputStreams.type.type_api import TypeApi
@@ -13,7 +13,7 @@ from bitmovin.encoding.encodings.inputStreams.audioMix.audio_mix_api import Audi
 from bitmovin.encoding.encodings.inputStreams.ingest.ingest_api import IngestApi
 from bitmovin.encoding.encodings.inputStreams.concatenation.concatenation_api import ConcatenationApi
 from bitmovin.encoding.encodings.inputStreams.trimming.trimming_api import TrimmingApi
-from bitmovin.encoding.encodings.inputStreams.basic_input_stream_list_query_params import BasicInputStreamListQueryParams
+from bitmovin.encoding.encodings.inputStreams.input_stream_list_query_params import InputStreamListQueryParams
 
 
 class InputStreamsApi(BaseApi):
@@ -67,11 +67,11 @@ class InputStreamsApi(BaseApi):
         return self.api_client.get(
             '/encoding/encodings/{encoding_id}/input-streams/{input_stream_id}',
             path_params={'encoding_id': encoding_id, 'input_stream_id': input_stream_id},
-            type=BasicInputStream,
+            type=InputStream,
             **kwargs
         )
 
-    def list(self, encoding_id, query_params: BasicInputStreamListQueryParams = None, **kwargs):
+    def list(self, encoding_id, query_params: InputStreamListQueryParams = None, **kwargs):
         """List All Input Streams"""
 
         return self.api_client.get(
@@ -79,6 +79,6 @@ class InputStreamsApi(BaseApi):
             path_params={'encoding_id': encoding_id},
             query_params=query_params,
             pagination_response=True,
-            type=BasicInputStream,
+            type=InputStream,
             **kwargs
         )

@@ -10,6 +10,7 @@ from bitmovin.models.stream_conditions_mode import StreamConditionsMode
 import pprint
 import six
 from datetime import datetime
+from datetime import date as validation_date
 from enum import Enum
 
 

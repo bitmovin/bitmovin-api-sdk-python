@@ -1,5 +1,5 @@
 import re
-from datetime import datetime
+from datetime import datetime, date
 from urllib.parse import urlencode
 
 from bitmovin.common.bitmovin_exception import BitmovinException
@@ -41,7 +41,7 @@ class ApiClient(object):
             raise MissingArgumentException()
 
         for k in path_params:
-            if isinstance(path_params[k], datetime):
+            if isinstance(path_params[k], date) or isinstance(path_params[k], datetime):
                 path_params[k] = path_params[k].isoformat()
 
             relative_url = relative_url.replace(

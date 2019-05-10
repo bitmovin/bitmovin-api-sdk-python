@@ -6,13 +6,14 @@ from bitmovin.models.bitmovin_resource import BitmovinResource
 from bitmovin.models.decoding_error_mode import DecodingErrorMode
 from bitmovin.models.encoding_output import EncodingOutput
 from bitmovin.models.ignoring import Ignoring
-from bitmovin.models.input_stream import InputStream
+from bitmovin.models.stream_input import StreamInput
 from bitmovin.models.stream_metadata import StreamMetadata
 from bitmovin.models.stream_mode import StreamMode
 from bitmovin.models.stream_per_title_settings import StreamPerTitleSettings
 import pprint
 import six
 from datetime import datetime
+from datetime import date as validation_date
 from enum import Enum
 
 
@@ -29,7 +30,7 @@ class Stream(BitmovinResource):
     def openapi_types(self):
         types = super(Stream, self).openapi_types
         types.update({
-            'input_streams': 'list[InputStream]',
+            'input_streams': 'list[StreamInput]',
             'outputs': 'list[EncodingOutput]',
             'create_quality_meta_data': 'bool',
             'codec_config_id': 'str',
@@ -109,7 +110,7 @@ class Stream(BitmovinResource):
 
 
         :return: The input_streams of this Stream.
-        :rtype: list[InputStream]
+        :rtype: list[StreamInput]
         """
         return self._input_streams
 
@@ -119,12 +120,12 @@ class Stream(BitmovinResource):
 
 
         :param input_streams: The input_streams of this Stream.
-        :type: list[InputStream]
+        :type: list[StreamInput]
         """
 
         if input_streams is not None:
             if not isinstance(input_streams, list):
-                raise TypeError("Invalid type for `input_streams`, type has to be `list[InputStream]`")
+                raise TypeError("Invalid type for `input_streams`, type has to be `list[StreamInput]`")
 
             self._input_streams = input_streams
 

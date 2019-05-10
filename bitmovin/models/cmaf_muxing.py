@@ -8,6 +8,7 @@ from bitmovin.models.stream_conditions_mode import StreamConditionsMode
 import pprint
 import six
 from datetime import datetime
+from datetime import date as validation_date
 from enum import Enum
 
 
@@ -134,7 +135,7 @@ class CmafMuxing(Muxing):
     def segment_naming_template(self):
         """Gets the segment_naming_template of this CmafMuxing.
 
-        Segment naming policy with placeholders which will be replaced during the encoding. The result will be saved in segmentNaming. {rand:4} gets replaced with an alphanumeric string of length specified after the colon. Defaults to 32. If this field is set, segmentNaming must not be specified.
+        Segment naming policy containing a placeholder of the format '{rand_chars:x}', which will be replaced by a random alphanumeric string of length x (default 32) on each (re)start of the encoding. The resulting string will be copied to the segmentNaming property. Intended to avoid re-use of segment names after restarting a live encoding. If segmentNamingTemplate is set, segmentNaming must not be set.
 
         :return: The segment_naming_template of this CmafMuxing.
         :rtype: str
@@ -145,7 +146,7 @@ class CmafMuxing(Muxing):
     def segment_naming_template(self, segment_naming_template):
         """Sets the segment_naming_template of this CmafMuxing.
 
-        Segment naming policy with placeholders which will be replaced during the encoding. The result will be saved in segmentNaming. {rand:4} gets replaced with an alphanumeric string of length specified after the colon. Defaults to 32. If this field is set, segmentNaming must not be specified.
+        Segment naming policy containing a placeholder of the format '{rand_chars:x}', which will be replaced by a random alphanumeric string of length x (default 32) on each (re)start of the encoding. The resulting string will be copied to the segmentNaming property. Intended to avoid re-use of segment names after restarting a live encoding. If segmentNamingTemplate is set, segmentNaming must not be set.
 
         :param segment_naming_template: The segment_naming_template of this CmafMuxing.
         :type: str
@@ -190,7 +191,7 @@ class CmafMuxing(Muxing):
     def init_segment_name_template(self):
         """Gets the init_segment_name_template of this CmafMuxing.
 
-        Segment naming policy with placeholders which will be replaced during the encoding, similar to segmentNamingTemplate. The result will be saved in initSegmentName. If this field is set, initSegmentName must not be specified and segmentNamingTemplate should be set. 
+        Segment naming policy containing a placeholder of the format '{rand_chars:x}', which will be replaced by a random alphanumeric string of length x (default 32) on each (re)start of the encoding. The resulting string will be copied to the initSegmentName property. Intended to avoid re-use of segment names after restarting a live encoding. If initSegmentNameTemplate is set, initSegmentName must not be set.
 
         :return: The init_segment_name_template of this CmafMuxing.
         :rtype: str
@@ -201,7 +202,7 @@ class CmafMuxing(Muxing):
     def init_segment_name_template(self, init_segment_name_template):
         """Sets the init_segment_name_template of this CmafMuxing.
 
-        Segment naming policy with placeholders which will be replaced during the encoding, similar to segmentNamingTemplate. The result will be saved in initSegmentName. If this field is set, initSegmentName must not be specified and segmentNamingTemplate should be set. 
+        Segment naming policy containing a placeholder of the format '{rand_chars:x}', which will be replaced by a random alphanumeric string of length x (default 32) on each (re)start of the encoding. The resulting string will be copied to the initSegmentName property. Intended to avoid re-use of segment names after restarting a live encoding. If initSegmentNameTemplate is set, initSegmentName must not be set.
 
         :param init_segment_name_template: The init_segment_name_template of this CmafMuxing.
         :type: str

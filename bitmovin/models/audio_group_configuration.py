@@ -5,6 +5,7 @@ from bitmovin.models.variant_stream_dropping_mode import VariantStreamDroppingMo
 import pprint
 import six
 from datetime import datetime
+from datetime import date as validation_date
 from enum import Enum
 
 

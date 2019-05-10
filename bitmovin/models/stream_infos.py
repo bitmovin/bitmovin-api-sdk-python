@@ -4,6 +4,7 @@ from bitmovin.models.stream_infos_details import StreamInfosDetails
 import pprint
 import six
 from datetime import datetime
+from datetime import date as validation_date
 from enum import Enum
 
 

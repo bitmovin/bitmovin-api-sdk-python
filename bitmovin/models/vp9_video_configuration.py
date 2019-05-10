@@ -11,6 +11,7 @@ from bitmovin.models.vp9_quality import Vp9Quality
 import pprint
 import six
 from datetime import datetime
+from datetime import date as validation_date
 from enum import Enum
 
 

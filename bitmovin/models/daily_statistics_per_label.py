@@ -4,6 +4,7 @@ from bitmovin.models.daily_statistics import DailyStatistics
 import pprint
 import six
 from datetime import datetime
+from datetime import date as validation_date
 from enum import Enum
 
 
@@ -19,7 +20,7 @@ class DailyStatisticsPerLabel(object):
     @property
     def openapi_types(self):
         types = {
-            'date': 'datetime',
+            'date': 'date',
             'labels': 'list[DailyStatistics]'
         }
         return types
@@ -48,7 +49,7 @@ class DailyStatisticsPerLabel(object):
         Date, format. yyyy-MM-dd
 
         :return: The date of this DailyStatisticsPerLabel.
-        :rtype: datetime
+        :rtype: date
         """
         return self._date
 
@@ -59,12 +60,12 @@ class DailyStatisticsPerLabel(object):
         Date, format. yyyy-MM-dd
 
         :param date: The date of this DailyStatisticsPerLabel.
-        :type: datetime
+        :type: date
         """
 
         if date is not None:
-            if not isinstance(date, datetime):
-                raise TypeError("Invalid type for `date`, type has to be `datetime`")
+            if not isinstance(date, validation_date):
+                raise TypeError("Invalid type for `date`, type has to be `date`")
 
             self._date = date
 

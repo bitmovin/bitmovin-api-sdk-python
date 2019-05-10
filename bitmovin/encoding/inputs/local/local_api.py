@@ -5,6 +5,7 @@ from __future__ import absolute_import
 from bitmovin.common import BaseApi
 from bitmovin.common.poscheck import poscheck_except
 
+from bitmovin.models.bitmovin_response import BitmovinResponse
 from bitmovin.models.local_input import LocalInput
 from bitmovin.models.response_envelope import ResponseEnvelope
 from bitmovin.models.response_error import ResponseError
@@ -45,7 +46,7 @@ class LocalApi(BaseApi):
         return self.api_client.delete(
             '/encoding/inputs/local/{input_id}',
             path_params={'input_id': input_id},
-            type=LocalInput,
+            type=BitmovinResponse,
             **kwargs
         )
 

@@ -1,6 +1,8 @@
 import re
 from enum import EnumMeta
 from importlib import import_module
+from dateutil.parser import parse
+
 
 from bitmovin.models import PaginationResponse
 
@@ -83,8 +85,10 @@ class BitmovinJsonDecoder(object):
                     model_instance.__setattr__(key, new_value)
                 except (NameError, AttributeError) as e:
                     # No model type that has to be special handled
-                    if type == 'datetime':
-                        from dateutil.parser import parse
+                    if type == 'date':
+                        new_value = parse(value).date()
+                        model_instance.__setattr__(key, new_value)
+                    elif type == 'datetime':
                         new_value = parse(value)
                         model_instance.__setattr__(key, new_value)
                     else:

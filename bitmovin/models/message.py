@@ -6,6 +6,7 @@ from bitmovin.models.message_type import MessageType
 import pprint
 import six
 from datetime import datetime
+from datetime import date as validation_date
 from enum import Enum
 
 

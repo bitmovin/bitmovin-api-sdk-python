@@ -6,6 +6,7 @@ from bitmovin.models.play_ready_encryption_method import PlayReadyEncryptionMeth
 import pprint
 import six
 from datetime import datetime
+from datetime import date as validation_date
 from enum import Enum
 
 

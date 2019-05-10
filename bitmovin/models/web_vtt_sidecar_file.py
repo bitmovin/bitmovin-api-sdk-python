@@ -7,6 +7,7 @@ from bitmovin.models.web_vtt_sidecar_file_segmentation import WebVttSidecarFileS
 import pprint
 import six
 from datetime import datetime
+from datetime import date as validation_date
 from enum import Enum
 
 

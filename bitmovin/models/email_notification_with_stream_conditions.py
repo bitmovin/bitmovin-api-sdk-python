@@ -1,10 +1,11 @@
 # coding: utf-8
 
+from bitmovin.models.abstract_condition import AbstractCondition
 from bitmovin.models.email_notification import EmailNotification
-from bitmovin.models.stream_condition import StreamCondition
 import pprint
 import six
 from datetime import datetime
+from datetime import date as validation_date
 from enum import Enum
 
 
@@ -21,7 +22,7 @@ class EmailNotificationWithStreamConditions(EmailNotification):
     def openapi_types(self):
         types = super(EmailNotificationWithStreamConditions, self).openapi_types
         types.update({
-            'conditions': 'list[StreamCondition]'
+            'conditions': 'list[AbstractCondition]'
         })
         return types
 
@@ -48,7 +49,7 @@ class EmailNotificationWithStreamConditions(EmailNotification):
 
 
         :return: The conditions of this EmailNotificationWithStreamConditions.
-        :rtype: list[StreamCondition]
+        :rtype: list[AbstractCondition]
         """
         return self._conditions
 
@@ -58,12 +59,12 @@ class EmailNotificationWithStreamConditions(EmailNotification):
 
 
         :param conditions: The conditions of this EmailNotificationWithStreamConditions.
-        :type: list[StreamCondition]
+        :type: list[AbstractCondition]
         """
 
         if conditions is not None:
             if not isinstance(conditions, list):
-                raise TypeError("Invalid type for `conditions`, type has to be `list[StreamCondition]`")
+                raise TypeError("Invalid type for `conditions`, type has to be `list[AbstractCondition]`")
 
             self._conditions = conditions
 

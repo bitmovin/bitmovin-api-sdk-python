@@ -7,6 +7,7 @@ from bitmovin.models.s3_signature_version import S3SignatureVersion
 import pprint
 import six
 from datetime import datetime
+from datetime import date as validation_date
 from enum import Enum
 
 

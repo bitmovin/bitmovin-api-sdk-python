@@ -6,6 +6,7 @@ from bitmovin.models.vp9_per_title_configuration import Vp9PerTitleConfiguration
 import pprint
 import six
 from datetime import datetime
+from datetime import date as validation_date
 from enum import Enum
 
 

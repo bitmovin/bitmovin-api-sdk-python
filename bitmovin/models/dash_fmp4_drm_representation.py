@@ -6,6 +6,7 @@ from bitmovin.models.dash_representation_type_mode import DashRepresentationType
 import pprint
 import six
 from datetime import datetime
+from datetime import date as validation_date
 from enum import Enum
 
 

@@ -6,6 +6,7 @@ from bitmovin.common import BaseApi
 from bitmovin.common.poscheck import poscheck_except
 
 from bitmovin.models.response_envelope import ResponseEnvelope
+from bitmovin.models.response_error import ResponseError
 from bitmovin.models.smooth_manifest_default import SmoothManifestDefault
 
 

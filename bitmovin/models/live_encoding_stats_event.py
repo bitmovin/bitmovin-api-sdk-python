@@ -4,6 +4,7 @@ from bitmovin.models.live_encoding_stats_event_details import LiveEncodingStatsE
 import pprint
 import six
 from datetime import datetime
+from datetime import date as validation_date
 from enum import Enum
 
 

@@ -1,6 +1,5 @@
 # coding: utf-8
 
-from bitmovin.models.input_stream import InputStream
 from bitmovin.models.stream_selection_mode import StreamSelectionMode
 import pprint
 import six
@@ -9,7 +8,7 @@ from datetime import date as validation_date
 from enum import Enum
 
 
-class IngestInputStream(InputStream):
+class StreamInput(object):
     """
     Attributes:
       openapi_types (dict): The key is attribute name
@@ -20,33 +19,33 @@ class IngestInputStream(InputStream):
 
     @property
     def openapi_types(self):
-        types = super(IngestInputStream, self).openapi_types
-        types.update({
+        types = {
             'input_id': 'str',
             'input_path': 'str',
             'selection_mode': 'StreamSelectionMode',
-            'position': 'int'
-        })
+            'position': 'int',
+            'input_stream_id': 'str'
+        }
         return types
 
     @property
     def attribute_map(self):
-        attributes = super(IngestInputStream, self).attribute_map
-        attributes.update({
+        attributes = {
             'input_id': 'inputId',
             'input_path': 'inputPath',
             'selection_mode': 'selectionMode',
-            'position': 'position'
-        })
+            'position': 'position',
+            'input_stream_id': 'inputStreamId'
+        }
         return attributes
 
-    def __init__(self, input_id=None, input_path=None, selection_mode=None, position=None, *args, **kwargs):
-        super(IngestInputStream, self).__init__(*args, **kwargs)
+    def __init__(self, input_id=None, input_path=None, selection_mode=None, position=None, input_stream_id=None, *args, **kwargs):
 
         self._input_id = None
         self._input_path = None
         self._selection_mode = None
         self._position = None
+        self._input_stream_id = None
         self.discriminator = None
 
         if input_id is not None:
@@ -57,25 +56,27 @@ class IngestInputStream(InputStream):
             self.selection_mode = selection_mode
         if position is not None:
             self.position = position
+        if input_stream_id is not None:
+            self.input_stream_id = input_stream_id
 
     @property
     def input_id(self):
-        """Gets the input_id of this IngestInputStream.
+        """Gets the input_id of this StreamInput.
 
         Id of input
 
-        :return: The input_id of this IngestInputStream.
+        :return: The input_id of this StreamInput.
         :rtype: str
         """
         return self._input_id
 
     @input_id.setter
     def input_id(self, input_id):
-        """Sets the input_id of this IngestInputStream.
+        """Sets the input_id of this StreamInput.
 
         Id of input
 
-        :param input_id: The input_id of this IngestInputStream.
+        :param input_id: The input_id of this StreamInput.
         :type: str
         """
 
@@ -88,22 +89,22 @@ class IngestInputStream(InputStream):
 
     @property
     def input_path(self):
-        """Gets the input_path of this IngestInputStream.
+        """Gets the input_path of this StreamInput.
 
         Path to media file
 
-        :return: The input_path of this IngestInputStream.
+        :return: The input_path of this StreamInput.
         :rtype: str
         """
         return self._input_path
 
     @input_path.setter
     def input_path(self, input_path):
-        """Sets the input_path of this IngestInputStream.
+        """Sets the input_path of this StreamInput.
 
         Path to media file
 
-        :param input_path: The input_path of this IngestInputStream.
+        :param input_path: The input_path of this StreamInput.
         :type: str
         """
 
@@ -116,22 +117,22 @@ class IngestInputStream(InputStream):
 
     @property
     def selection_mode(self):
-        """Gets the selection_mode of this IngestInputStream.
+        """Gets the selection_mode of this StreamInput.
 
         Specifies the algorithm how the stream in the input file will be selected
 
-        :return: The selection_mode of this IngestInputStream.
+        :return: The selection_mode of this StreamInput.
         :rtype: StreamSelectionMode
         """
         return self._selection_mode
 
     @selection_mode.setter
     def selection_mode(self, selection_mode):
-        """Sets the selection_mode of this IngestInputStream.
+        """Sets the selection_mode of this StreamInput.
 
         Specifies the algorithm how the stream in the input file will be selected
 
-        :param selection_mode: The selection_mode of this IngestInputStream.
+        :param selection_mode: The selection_mode of this StreamInput.
         :type: StreamSelectionMode
         """
 
@@ -144,22 +145,22 @@ class IngestInputStream(InputStream):
 
     @property
     def position(self):
-        """Gets the position of this IngestInputStream.
+        """Gets the position of this StreamInput.
 
         Position of the stream
 
-        :return: The position of this IngestInputStream.
+        :return: The position of this StreamInput.
         :rtype: int
         """
         return self._position
 
     @position.setter
     def position(self, position):
-        """Sets the position of this IngestInputStream.
+        """Sets the position of this StreamInput.
 
         Position of the stream
 
-        :param position: The position of this IngestInputStream.
+        :param position: The position of this StreamInput.
         :type: int
         """
 
@@ -169,9 +170,37 @@ class IngestInputStream(InputStream):
 
             self._position = position
 
+
+    @property
+    def input_stream_id(self):
+        """Gets the input_stream_id of this StreamInput.
+
+        Set this property instead of all others to reference an ingest, trimming or concatenation input stream
+
+        :return: The input_stream_id of this StreamInput.
+        :rtype: str
+        """
+        return self._input_stream_id
+
+    @input_stream_id.setter
+    def input_stream_id(self, input_stream_id):
+        """Sets the input_stream_id of this StreamInput.
+
+        Set this property instead of all others to reference an ingest, trimming or concatenation input stream
+
+        :param input_stream_id: The input_stream_id of this StreamInput.
+        :type: str
+        """
+
+        if input_stream_id is not None:
+            if not isinstance(input_stream_id, str):
+                raise TypeError("Invalid type for `input_stream_id`, type has to be `str`")
+
+            self._input_stream_id = input_stream_id
+
     def to_dict(self):
         """Returns the model properties as a dict"""
-        result = super(IngestInputStream, self).to_dict()
+        result = {}
 
         for attr, _ in six.iteritems(self.openapi_types):
             value = getattr(self, attr)
@@ -192,7 +221,7 @@ class IngestInputStream(InputStream):
                 ))
             else:
                 result[self.attribute_map.get(attr)] = value
-            if issubclass(IngestInputStream, dict):
+            if issubclass(StreamInput, dict):
                 for key, value in self.items():
                     result[key] = value
 
@@ -208,7 +237,7 @@ class IngestInputStream(InputStream):
 
     def __eq__(self, other):
         """Returns true if both objects are equal"""
-        if not isinstance(other, IngestInputStream):
+        if not isinstance(other, StreamInput):
             return False
 
         return self.__dict__ == other.__dict__

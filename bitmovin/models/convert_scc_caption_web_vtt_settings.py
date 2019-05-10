@@ -4,6 +4,7 @@ from bitmovin.models.convert_scc_position_mode import ConvertSccPositionMode
 import pprint
 import six
 from datetime import datetime
+from datetime import date as validation_date
 from enum import Enum
 
 

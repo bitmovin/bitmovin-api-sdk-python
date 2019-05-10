@@ -6,6 +6,7 @@ from bitmovin.models.input_path import InputPath
 import pprint
 import six
 from datetime import datetime
+from datetime import date as validation_date
 from enum import Enum
 
 

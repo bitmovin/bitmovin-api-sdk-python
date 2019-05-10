@@ -4,6 +4,7 @@ from bitmovin.models.stream_per_title_fixed_resolution_and_bitrate_settings impo
 import pprint
 import six
 from datetime import datetime
+from datetime import date as validation_date
 from enum import Enum
 
 
