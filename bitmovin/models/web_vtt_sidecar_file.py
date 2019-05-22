@@ -1,6 +1,5 @@
 # coding: utf-8
 
-from bitmovin.models.encoding_output import EncodingOutput
 from bitmovin.models.sidecar_error_mode import SidecarErrorMode
 from bitmovin.models.sidecar_file import SidecarFile
 from bitmovin.models.web_vtt_sidecar_file_segmentation import WebVttSidecarFileSegmentation

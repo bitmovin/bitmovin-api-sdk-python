@@ -20,7 +20,7 @@ class CustomdataApi(BaseApi):
             logger=logger
         )
 
-    def getCustomData(self, encoding_id, stream_id, **kwargs):
+    def get(self, encoding_id, stream_id, **kwargs):
         """Stream Custom Data"""
 
         return self.api_client.get(

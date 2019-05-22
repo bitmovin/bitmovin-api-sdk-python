@@ -26,6 +26,8 @@ class SrtStatistics(object):
             'id': 'str',
             'created_at': 'datetime',
             'encoding_id': 'str',
+            'srt_input_id': 'str',
+            'srt_input_selected': 'bool',
             'org_id': 'str',
             'user_id': 'str',
             'link': 'SrtStatisticLink',
@@ -41,6 +43,8 @@ class SrtStatistics(object):
             'id': 'id',
             'created_at': 'createdAt',
             'encoding_id': 'encodingId',
+            'srt_input_id': 'srtInputId',
+            'srt_input_selected': 'srtInputSelected',
             'org_id': 'orgId',
             'user_id': 'userId',
             'link': 'link',
@@ -50,11 +54,13 @@ class SrtStatistics(object):
         }
         return attributes
 
-    def __init__(self, id=None, created_at=None, encoding_id=None, org_id=None, user_id=None, link=None, window=None, recv=None, send=None, *args, **kwargs):
+    def __init__(self, id=None, created_at=None, encoding_id=None, srt_input_id=None, srt_input_selected=None, org_id=None, user_id=None, link=None, window=None, recv=None, send=None, *args, **kwargs):
 
         self._id = None
         self._created_at = None
         self._encoding_id = None
+        self._srt_input_id = None
+        self._srt_input_selected = None
         self._org_id = None
         self._user_id = None
         self._link = None
@@ -69,6 +75,10 @@ class SrtStatistics(object):
             self.created_at = created_at
         if encoding_id is not None:
             self.encoding_id = encoding_id
+        if srt_input_id is not None:
+            self.srt_input_id = srt_input_id
+        if srt_input_selected is not None:
+            self.srt_input_selected = srt_input_selected
         if org_id is not None:
             self.org_id = org_id
         if user_id is not None:
@@ -164,6 +174,62 @@ class SrtStatistics(object):
                 raise TypeError("Invalid type for `encoding_id`, type has to be `str`")
 
             self._encoding_id = encoding_id
+
+
+    @property
+    def srt_input_id(self):
+        """Gets the srt_input_id of this SrtStatistics.
+
+        UUID of the SRT input used to capture this statistics
+
+        :return: The srt_input_id of this SrtStatistics.
+        :rtype: str
+        """
+        return self._srt_input_id
+
+    @srt_input_id.setter
+    def srt_input_id(self, srt_input_id):
+        """Sets the srt_input_id of this SrtStatistics.
+
+        UUID of the SRT input used to capture this statistics
+
+        :param srt_input_id: The srt_input_id of this SrtStatistics.
+        :type: str
+        """
+
+        if srt_input_id is not None:
+            if not isinstance(srt_input_id, str):
+                raise TypeError("Invalid type for `srt_input_id`, type has to be `str`")
+
+            self._srt_input_id = srt_input_id
+
+
+    @property
+    def srt_input_selected(self):
+        """Gets the srt_input_selected of this SrtStatistics.
+
+        Whether the SRT input that generated this statistics was selected (i.e. actively used) at the time or not
+
+        :return: The srt_input_selected of this SrtStatistics.
+        :rtype: bool
+        """
+        return self._srt_input_selected
+
+    @srt_input_selected.setter
+    def srt_input_selected(self, srt_input_selected):
+        """Sets the srt_input_selected of this SrtStatistics.
+
+        Whether the SRT input that generated this statistics was selected (i.e. actively used) at the time or not
+
+        :param srt_input_selected: The srt_input_selected of this SrtStatistics.
+        :type: bool
+        """
+
+        if srt_input_selected is not None:
+            if not isinstance(srt_input_selected, bool):
+                raise TypeError("Invalid type for `srt_input_selected`, type has to be `bool`")
+
+            self._srt_input_selected = srt_input_selected
 
 
     @property

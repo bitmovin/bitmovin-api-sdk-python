@@ -1,6 +1,5 @@
 # coding: utf-8
 
-from bitmovin.models.account_api_key import AccountApiKey
 from bitmovin.models.bitmovin_resource import BitmovinResource
 import pprint
 import six

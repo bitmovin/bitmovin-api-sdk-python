@@ -20,7 +20,7 @@ class CustomdataApi(BaseApi):
             logger=logger
         )
 
-    def getCustomData(self, encoding_id, object_detection_id, **kwargs):
+    def get(self, encoding_id, object_detection_id, **kwargs):
         """Get the custom data of an object detection configuration"""
 
         return self.api_client.get(

@@ -1,11 +1,8 @@
 # coding: utf-8
 
 from bitmovin.models.broadcast_ts_muxing_configuration import BroadcastTsMuxingConfiguration
-from bitmovin.models.encoding_output import EncodingOutput
-from bitmovin.models.ignoring import Ignoring
 from bitmovin.models.internal_chunk_length import InternalChunkLength
 from bitmovin.models.muxing import Muxing
-from bitmovin.models.muxing_stream import MuxingStream
 from bitmovin.models.stream_conditions_mode import StreamConditionsMode
 import pprint
 import six

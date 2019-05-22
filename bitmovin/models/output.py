@@ -1,6 +1,5 @@
 # coding: utf-8
 
-from bitmovin.models.acl_entry import AclEntry
 from bitmovin.models.bitmovin_resource import BitmovinResource
 import pprint
 import six

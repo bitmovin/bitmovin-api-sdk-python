@@ -20,7 +20,7 @@ class CustomdataApi(BaseApi):
             logger=logger
         )
 
-    def getCustomData(self, encoding_id, muxing_id, drm_id, **kwargs):
+    def get(self, encoding_id, muxing_id, drm_id, **kwargs):
         """FairPlay DRM Custom Data of Progressive TS"""
 
         return self.api_client.get(

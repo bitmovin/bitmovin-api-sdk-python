@@ -1,7 +1,4 @@
 # coding: utf-8
-
-from bitmovin.models.link import Link
-from bitmovin.models.message import Message
 import pprint
 import six
 from datetime import datetime

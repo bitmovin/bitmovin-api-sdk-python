@@ -20,7 +20,7 @@ class CustomdataApi(BaseApi):
             logger=logger
         )
 
-    def getCustomData(self, infrastructure_id, **kwargs):
+    def get(self, infrastructure_id, **kwargs):
         """Kubernetes Cluster Custom Data"""
 
         return self.api_client.get(

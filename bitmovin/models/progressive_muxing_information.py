@@ -1,7 +1,4 @@
 # coding: utf-8
-
-from bitmovin.models.muxing_information_audio_track import MuxingInformationAudioTrack
-from bitmovin.models.muxing_information_video_track import MuxingInformationVideoTrack
 import pprint
 import six
 from datetime import datetime

@@ -1,7 +1,6 @@
 # coding: utf-8
 
 from bitmovin.models.bitmovin_resource import BitmovinResource
-from bitmovin.models.permission import Permission
 from bitmovin.models.policy import Policy
 import pprint
 import six

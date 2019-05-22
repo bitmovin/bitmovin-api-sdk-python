@@ -1,11 +1,8 @@
 # coding: utf-8
 
 from bitmovin.models.dash_profile import DashProfile
-from bitmovin.models.encoding_output import EncodingOutput
 from bitmovin.models.manifest import Manifest
 from bitmovin.models.manifest_type import ManifestType
-from bitmovin.models.utc_timing import UtcTiming
-from bitmovin.models.xml_namespace import XmlNamespace
 import pprint
 import six
 from datetime import datetime

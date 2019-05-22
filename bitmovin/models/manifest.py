@@ -1,7 +1,6 @@
 # coding: utf-8
 
 from bitmovin.models.bitmovin_resource import BitmovinResource
-from bitmovin.models.encoding_output import EncodingOutput
 from bitmovin.models.manifest_type import ManifestType
 import pprint
 import six

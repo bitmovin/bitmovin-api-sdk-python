@@ -9,5 +9,3 @@ class H264MotionEstimationMethod(Enum):
     DIA = "DIA"
     HEX = "HEX"
     UMH = "UMH"
-    ESA = "ESA"
-    TESA = "TESA"

@@ -1,11 +1,13 @@
 import json
 from bitmovin.models import ResponseErrorData
+from requests import Response
 
 
-class RestException(Exception):
-    def __init__(self, status=None, reason=None, http_resp=None):
+class BitmovinException(Exception):
+    def __init__(self, error_data=None, status_code=None, reason=None, http_resp=None):
+        # type: (ResponseErrorData, int, str, Response) -> None
         if http_resp is not None:
-            self.status = http_resp.status_code
+            self.status_code = http_resp.status_code
             self.reason = http_resp.reason
             if http_resp.text:
                 self.body = json.loads(http_resp.text)
@@ -13,35 +15,24 @@ class RestException(Exception):
                 self.body = None
             self.headers = http_resp.headers
         else:
-            self.status = status
+            self.status_code = status_code
             self.reason = reason
             self.body = None
             self.headers = None
 
+        if error_data is not None:
+            self.error_code = error_data.code
+            self.developer_message = error_data.developer_message
+            self.details = error_data.details
+
     def __str__(self):
-        """Custom error messages for exception"""
-        error_message = "({0})\n"\
-                        "Reason: {1}\n".format(self.status, self.reason)
+        error_message = "({0})\n" \
+                        "Reason: {1}\n".format(self.status_code, self.reason)
         if self.headers:
-            error_message += "HTTP response headers: {0}\n".format(
-                self.headers)
+            error_message += "HTTP response headers: {0}\n".format(self.headers)
 
         if self.body:
             error_message += "HTTP response body: {0}\n".format(self.body)
-
-        return error_message
-
-
-class BitmovinException(RestException):
-    def __init__(self, error_data: ResponseErrorData, status=None, reason=None, http_resp=None):
-        super(BitmovinException, self).__init__(status, reason, http_resp)
-        self.error_code = error_data.code
-        self.developer_message = error_data.developer_message
-        self.details = error_data.details
-
-    def __str__(self):
-        """Custom error messages for exception"""
-        error_message = super(BitmovinException, self).__str__()
 
         if self.error_code:
             error_message += "Error Code: {0}\n".format(self.error_code)

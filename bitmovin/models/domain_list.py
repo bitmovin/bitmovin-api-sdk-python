@@ -1,6 +1,4 @@
 # coding: utf-8
-
-from bitmovin.models.domain import Domain
 import pprint
 import six
 from datetime import datetime

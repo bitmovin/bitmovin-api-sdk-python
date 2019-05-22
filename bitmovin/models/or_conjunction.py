@@ -1,6 +1,5 @@
 # coding: utf-8
 
-from bitmovin.models.abstract_condition import AbstractCondition
 from bitmovin.models.abstract_conjunction import AbstractConjunction
 import pprint
 import six

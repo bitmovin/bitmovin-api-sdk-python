@@ -20,7 +20,7 @@ class CustomdataApi(BaseApi):
             logger=logger
         )
 
-    def getCustomData(self, encoding_id, captions_id, **kwargs):
+    def get(self, encoding_id, captions_id, **kwargs):
         """Convert SCC captions Custom Data"""
 
         return self.api_client.get(

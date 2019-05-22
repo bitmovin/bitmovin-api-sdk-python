@@ -1,7 +1,4 @@
 # coding: utf-8
-
-from bitmovin.models.billable_encoding_feature_minutes import BillableEncodingFeatureMinutes
-from bitmovin.models.billable_encoding_minutes import BillableEncodingMinutes
 import pprint
 import six
 from datetime import datetime

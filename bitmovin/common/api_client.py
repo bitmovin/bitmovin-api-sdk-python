@@ -4,7 +4,6 @@ from urllib.parse import urlencode
 
 from bitmovin.common.bitmovin_exception import BitmovinException
 from bitmovin.common.bitmovin_exception import MissingArgumentException
-from bitmovin.common.bitmovin_exception import RestException
 from bitmovin.common.rest_client import RestClient
 from bitmovin.common.bitmovin_json_decoder import BitmovinJsonDecoder
 from bitmovin.common.poscheck import poscheck, poscheck_except
@@ -65,7 +64,7 @@ class ApiClient(object):
         try:
             response = self.rest_client.request(method=method, payload=payload, relative_url=url)
             return response if raw_response else self.map_response_to_model(response, **kwargs)
-        except RestException as e:
+        except BitmovinException as e:
             self.handle_error(e)
 
     def delete(self, relative_url, **kwargs):
@@ -112,7 +111,8 @@ class ApiClient(object):
                 return BitmovinJsonDecoder.map_dict_to_model(response['data'], kwargs['type'])
 
     @staticmethod
-    def handle_error(e: RestException):
+    def handle_error(e):
+        # type(BitmovinException) -> None
         error_body = e.body
         if error_body is None or not isinstance(error_body, dict):
             raise e
@@ -120,6 +120,6 @@ class ApiClient(object):
         if 'status' in error_body and error_body['status'] == 'ERROR':
             if 'data' in error_body:
                 error_data = BitmovinJsonDecoder.map_dict_to_model(error_body['data'], ResponseErrorData)
-                raise BitmovinException(error_data=error_data, status=e.status, reason=e.reason)
+                raise BitmovinException(error_data=error_data, status_code=e.status_code, reason=e.reason)
             else:
                 raise e

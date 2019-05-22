@@ -1,6 +1,4 @@
 # coding: utf-8
-
-from bitmovin.models.acl_entry import AclEntry
 import pprint
 import six
 from datetime import datetime

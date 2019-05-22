@@ -1,7 +1,5 @@
 # coding: utf-8
 
-from bitmovin.models.billable_encoding_feature_minutes import BillableEncodingFeatureMinutes
-from bitmovin.models.billable_encoding_minutes import BillableEncodingMinutes
 from bitmovin.models.statistics import Statistics
 import pprint
 import six

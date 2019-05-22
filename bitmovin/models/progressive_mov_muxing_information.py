@@ -1,7 +1,5 @@
 # coding: utf-8
 
-from bitmovin.models.muxing_information_audio_track import MuxingInformationAudioTrack
-from bitmovin.models.muxing_information_video_track import MuxingInformationVideoTrack
 from bitmovin.models.progressive_muxing_information import ProgressiveMuxingInformation
 import pprint
 import six

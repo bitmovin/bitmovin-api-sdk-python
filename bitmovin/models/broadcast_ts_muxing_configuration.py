@@ -1,9 +1,7 @@
 # coding: utf-8
 
-from bitmovin.models.broadcast_ts_audio_input_stream_configuration import BroadcastTsAudioInputStreamConfiguration
 from bitmovin.models.broadcast_ts_program_configuration import BroadcastTsProgramConfiguration
 from bitmovin.models.broadcast_ts_transport_configuration import BroadcastTsTransportConfiguration
-from bitmovin.models.broadcast_ts_video_input_stream_configuration import BroadcastTsVideoInputStreamConfiguration
 import pprint
 import six
 from datetime import datetime

@@ -1,6 +1,5 @@
 # coding: utf-8
 
-from bitmovin.models.concatenation_input_configuration import ConcatenationInputConfiguration
 from bitmovin.models.input_stream import InputStream
 import pprint
 import six

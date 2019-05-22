@@ -5,7 +5,6 @@ from bitmovin.models.cenc_marlin import CencMarlin
 from bitmovin.models.cenc_play_ready import CencPlayReady
 from bitmovin.models.cenc_widevine import CencWidevine
 from bitmovin.models.drm import Drm
-from bitmovin.models.encoding_output import EncodingOutput
 from bitmovin.models.encryption_mode import EncryptionMode
 from bitmovin.models.iv_size import IvSize
 import pprint

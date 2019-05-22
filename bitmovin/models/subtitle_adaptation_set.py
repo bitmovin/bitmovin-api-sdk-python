@@ -1,9 +1,6 @@
 # coding: utf-8
 
-from bitmovin.models.accessibility import Accessibility
 from bitmovin.models.adaptation_set import AdaptationSet
-from bitmovin.models.adaptation_set_role import AdaptationSetRole
-from bitmovin.models.custom_attribute import CustomAttribute
 import pprint
 import six
 from datetime import datetime

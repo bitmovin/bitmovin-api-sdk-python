@@ -1,6 +1,5 @@
 # coding: utf-8
 
-from bitmovin.models.audio_group import AudioGroup
 from bitmovin.models.variant_stream_dropping_mode import VariantStreamDroppingMode
 import pprint
 import six

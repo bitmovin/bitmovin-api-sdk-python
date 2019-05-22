@@ -1,7 +1,6 @@
 # coding: utf-8
 
 from bitmovin.models.drm import Drm
-from bitmovin.models.encoding_output import EncodingOutput
 from bitmovin.models.play_ready_encryption_method import PlayReadyEncryptionMethod
 import pprint
 import six

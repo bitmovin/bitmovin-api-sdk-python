@@ -21,7 +21,8 @@ class Filter(BitmovinResource):
         'UNSHARP': 'UnsharpFilter',
         'SCALE': 'ScaleFilter',
         'INTERLACE': 'InterlaceFilter',
-        'AUDIO_VOLUME': 'AudioVolumeFilter'
+        'AUDIO_VOLUME': 'AudioVolumeFilter',
+        'EBU_R128_SINGLE_PASS': 'EbuR128SinglePassFilter'
     }
 
     def __init__(self, *args, **kwargs):

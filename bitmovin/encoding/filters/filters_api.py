@@ -16,6 +16,7 @@ from bitmovin.encoding.filters.rotate.rotate_api import RotateApi
 from bitmovin.encoding.filters.deinterlace.deinterlace_api import DeinterlaceApi
 from bitmovin.encoding.filters.audioMix.audio_mix_api import AudioMixApi
 from bitmovin.encoding.filters.denoiseHqdn3d.denoise_hqdn3d_api import DenoiseHqdn3dApi
+from bitmovin.encoding.filters.ebuR128SinglePass.ebu_r128_single_pass_api import EbuR128SinglePassApi
 from bitmovin.encoding.filters.text.text_api import TextApi
 from bitmovin.encoding.filters.interlace.interlace_api import InterlaceApi
 from bitmovin.encoding.filters.unsharp.unsharp_api import UnsharpApi
@@ -84,6 +85,13 @@ class FiltersApi(BaseApi):
         )
 
         self.denoiseHqdn3d = DenoiseHqdn3dApi(
+            api_key=api_key,
+            tenant_org_id=tenant_org_id,
+            base_url=base_url,
+            logger=logger
+        )
+
+        self.ebuR128SinglePass = EbuR128SinglePassApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,

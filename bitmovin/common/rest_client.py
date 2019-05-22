@@ -7,7 +7,7 @@ import requests
 from datetime import datetime, date
 
 from bitmovin.common.bitmovin_api_logger_base import BitmovinApiLoggerBase
-from bitmovin.common.bitmovin_exception import RestException
+from bitmovin.common.bitmovin_exception import BitmovinException
 from bitmovin.common.bitmovin_exception import MissingArgumentException
 
 
@@ -15,7 +15,7 @@ class RestClient(object):
     HTTP_HEADERS = {
         'Content-Type': 'application/json',
         'X-Api-Client': 'bitmovin-api-sdk-python',
-        'X-Api-Client-Version': '1.14.3alpha0'
+        'X-Api-Client-Version': '1.15.0alpha0'
     }
 
     DELETE = 'DELETE'
@@ -93,8 +93,10 @@ class RestClient(object):
 
         if not RestClient._check_response_header_json(response):
             self.logger.error('Response: {}'.format(response.text))
-            raise RestException(response.status_code, 'Response was not in JSON format -> [{}]: {}'.format(
-                response.status_code, response.text), response)
+            raise BitmovinException(status_code=response.status_code,
+                                    reason='Response was not in JSON format -> [{}]: {}'.format(
+                                        response.status_code, response.text),
+                                    http_resp=response)
         return response.json()
 
     def _serialize(self, object_):
@@ -116,7 +118,7 @@ class RestClient(object):
     @staticmethod
     def _check_response_and_throw_exception_if_not_successful(response):
         if not RestClient._check_response_success(response):
-            raise RestException(http_resp=response)
+            raise BitmovinException(http_resp=response)
 
     @staticmethod
     def _check_response_success(response):

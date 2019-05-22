@@ -2,9 +2,7 @@
 
 from bitmovin.models.bitmovin_response import BitmovinResponse
 from bitmovin.models.error_details import ErrorDetails
-from bitmovin.models.message import Message
 from bitmovin.models.status import Status
-from bitmovin.models.subtask import Subtask
 import pprint
 import six
 from datetime import datetime

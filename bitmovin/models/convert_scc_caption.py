@@ -2,7 +2,6 @@
 
 from bitmovin.models.bitmovin_resource import BitmovinResource
 from bitmovin.models.convert_scc_caption_web_vtt_settings import ConvertSccCaptionWebVttSettings
-from bitmovin.models.encoding_output import EncodingOutput
 from bitmovin.models.input_path import InputPath
 from bitmovin.models.stream_caption_output_format import StreamCaptionOutputFormat
 import pprint

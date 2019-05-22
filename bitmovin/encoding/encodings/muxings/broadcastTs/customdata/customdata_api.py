@@ -20,7 +20,7 @@ class CustomdataApi(BaseApi):
             logger=logger
         )
 
-    def getCustomData(self, encoding_id, muxing_id, **kwargs):
+    def get(self, encoding_id, muxing_id, **kwargs):
         """Broadcast TS Muxing Custom Data"""
 
         return self.api_client.get(

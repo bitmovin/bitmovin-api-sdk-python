@@ -2,7 +2,7 @@
 
 from __future__ import absolute_import
 
-__version__ = "1.14.3alpha0"
+__version__ = "1.15.0alpha0"
 
 # import apis into sdk package
 from bitmovin.common import *
@@ -281,6 +281,10 @@ from bitmovin.encoding.filters.audioMix.customdata.customdata_api import Customd
 from bitmovin.encoding.filters.denoiseHqdn3d.denoise_hqdn3d_api import DenoiseHqdn3dApi
 from bitmovin.encoding.filters.denoiseHqdn3d.denoise_hqdn3d_api import DenoiseHqdn3dFilterListQueryParams
 from bitmovin.encoding.filters.denoiseHqdn3d.customdata.customdata_api import CustomdataApi
+
+from bitmovin.encoding.filters.ebuR128SinglePass.ebu_r128_single_pass_api import EbuR128SinglePassApi
+from bitmovin.encoding.filters.ebuR128SinglePass.ebu_r128_single_pass_api import EbuR128SinglePassFilterListQueryParams
+from bitmovin.encoding.filters.ebuR128SinglePass.customdata.customdata_api import CustomdataApi
 
 from bitmovin.encoding.filters.text.text_api import TextApi
 from bitmovin.encoding.filters.text.text_api import TextFilterListQueryParams
@@ -657,7 +661,7 @@ from bitmovin.encoding.statistics.encodings.liveStatistics.events.events_api imp
 from bitmovin.encoding.statistics.encodings.liveStatistics.streams.streams_api import StreamsApi
 from bitmovin.encoding.statistics.encodings.liveStatistics.streams.streams_api import StreamInfosListQueryParams
 from bitmovin.encoding.statistics.encodings.liveStatistics.srt.srt_api import SrtApi
-from bitmovin.encoding.statistics.encodings.liveStatistics.srt.srt_api import SrtStatisticsListQueryParams
+from bitmovin.encoding.statistics.encodings.liveStatistics.srt.srt_api import SrtStatisticsListBySrtInputIdQueryParams,SrtStatisticsListQueryParams
 from bitmovin.encoding.statistics.labels.labels_api import LabelsApi
 from bitmovin.encoding.statistics.labels.labels_api import StatisticsPerLabelListByDateRangeQueryParams,StatisticsPerLabelListQueryParams
 from bitmovin.encoding.statistics.labels.daily.daily_api import DailyApi
@@ -795,6 +799,7 @@ from bitmovin.models.aws_cloud_region import AwsCloudRegion
 from bitmovin.models.azure_input import AzureInput
 from bitmovin.models.azure_output import AzureOutput
 from bitmovin.models.b_adapt import BAdapt
+from bitmovin.models.backup_srt_inputs import BackupSrtInputs
 from bitmovin.models.basic_media_info import BasicMediaInfo
 from bitmovin.models.billable_encoding_feature_minutes import BillableEncodingFeatureMinutes
 from bitmovin.models.billable_encoding_minutes import BillableEncodingMinutes
@@ -880,6 +885,7 @@ from bitmovin.models.domain_list import DomainList
 from bitmovin.models.drm import Drm
 from bitmovin.models.drm_type import DrmType
 from bitmovin.models.eac3_audio_configuration import Eac3AudioConfiguration
+from bitmovin.models.ebu_r128_single_pass_filter import EbuR128SinglePassFilter
 from bitmovin.models.email_notification import EmailNotification
 from bitmovin.models.email_notification_with_stream_conditions import EmailNotificationWithStreamConditions
 from bitmovin.models.encoding import Encoding

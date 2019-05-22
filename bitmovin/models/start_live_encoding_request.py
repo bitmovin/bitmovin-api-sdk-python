@@ -2,8 +2,6 @@
 
 from bitmovin.models.auto_restart_configuration import AutoRestartConfiguration
 from bitmovin.models.encoding_mode import EncodingMode
-from bitmovin.models.live_dash_manifest import LiveDashManifest
-from bitmovin.models.live_hls_manifest import LiveHlsManifest
 from bitmovin.models.reupload_settings import ReuploadSettings
 import pprint
 import six

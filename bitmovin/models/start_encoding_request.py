@@ -1,7 +1,6 @@
 # coding: utf-8
 
 from bitmovin.models.encoding_mode import EncodingMode
-from bitmovin.models.manifest_resource import ManifestResource
 from bitmovin.models.per_title import PerTitle
 from bitmovin.models.scheduling import Scheduling
 from bitmovin.models.trimming import Trimming

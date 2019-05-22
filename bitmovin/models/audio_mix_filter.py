@@ -1,6 +1,5 @@
 # coding: utf-8
 
-from bitmovin.models.audio_mix_channel import AudioMixChannel
 from bitmovin.models.audio_mix_channel_layout import AudioMixChannelLayout
 from bitmovin.models.filter import Filter
 import pprint

@@ -20,7 +20,7 @@ class CustomdataApi(BaseApi):
             logger=logger
         )
 
-    def getCustomData(self, encoding_id, stream_id, captions_id, **kwargs):
+    def get(self, encoding_id, stream_id, captions_id, **kwargs):
         """Embed SCC captions as 608/708 Custom Data"""
 
         return self.api_client.get(

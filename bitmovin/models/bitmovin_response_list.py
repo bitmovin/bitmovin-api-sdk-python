@@ -1,6 +1,4 @@
 # coding: utf-8
-
-from bitmovin.models.bitmovin_response import BitmovinResponse
 import pprint
 import six
 from datetime import datetime

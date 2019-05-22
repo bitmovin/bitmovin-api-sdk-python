@@ -4,9 +4,6 @@ from bitmovin.models.abstract_condition import AbstractCondition
 from bitmovin.models.applied_stream_settings import AppliedStreamSettings
 from bitmovin.models.bitmovin_resource import BitmovinResource
 from bitmovin.models.decoding_error_mode import DecodingErrorMode
-from bitmovin.models.encoding_output import EncodingOutput
-from bitmovin.models.ignoring import Ignoring
-from bitmovin.models.stream_input import StreamInput
 from bitmovin.models.stream_metadata import StreamMetadata
 from bitmovin.models.stream_mode import StreamMode
 from bitmovin.models.stream_per_title_settings import StreamPerTitleSettings

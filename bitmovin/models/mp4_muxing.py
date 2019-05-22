@@ -1,11 +1,8 @@
 # coding: utf-8
 
-from bitmovin.models.encoding_output import EncodingOutput
 from bitmovin.models.fragmented_mp4_muxing_manifest_type import FragmentedMp4MuxingManifestType
-from bitmovin.models.ignoring import Ignoring
 from bitmovin.models.internal_chunk_length import InternalChunkLength
 from bitmovin.models.muxing import Muxing
-from bitmovin.models.muxing_stream import MuxingStream
 from bitmovin.models.stream_conditions_mode import StreamConditionsMode
 from bitmovin.models.time_code import TimeCode
 import pprint

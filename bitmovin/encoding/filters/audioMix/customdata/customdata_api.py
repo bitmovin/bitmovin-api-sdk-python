@@ -20,7 +20,7 @@ class CustomdataApi(BaseApi):
             logger=logger
         )
 
-    def getCustomData(self, filter_id, **kwargs):
+    def get(self, filter_id, **kwargs):
         """Audio Mix Filter Custom Data"""
 
         return self.api_client.get(

@@ -78,6 +78,7 @@ from bitmovin.models.aws_cloud_region import AwsCloudRegion
 from bitmovin.models.azure_input import AzureInput
 from bitmovin.models.azure_output import AzureOutput
 from bitmovin.models.b_adapt import BAdapt
+from bitmovin.models.backup_srt_inputs import BackupSrtInputs
 from bitmovin.models.basic_media_info import BasicMediaInfo
 from bitmovin.models.billable_encoding_feature_minutes import BillableEncodingFeatureMinutes
 from bitmovin.models.billable_encoding_minutes import BillableEncodingMinutes
@@ -163,6 +164,7 @@ from bitmovin.models.domain_list import DomainList
 from bitmovin.models.drm import Drm
 from bitmovin.models.drm_type import DrmType
 from bitmovin.models.eac3_audio_configuration import Eac3AudioConfiguration
+from bitmovin.models.ebu_r128_single_pass_filter import EbuR128SinglePassFilter
 from bitmovin.models.email_notification import EmailNotification
 from bitmovin.models.email_notification_with_stream_conditions import EmailNotificationWithStreamConditions
 from bitmovin.models.encoding import Encoding

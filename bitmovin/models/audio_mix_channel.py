@@ -1,6 +1,4 @@
 # coding: utf-8
-
-from bitmovin.models.source_channel import SourceChannel
 import pprint
 import six
 from datetime import datetime

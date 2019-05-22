@@ -20,7 +20,7 @@ class CustomdataApi(BaseApi):
             logger=logger
         )
 
-    def getCustomData(self, input_id, **kwargs):
+    def get(self, input_id, **kwargs):
         """S3 Custom Data"""
 
         return self.api_client.get(

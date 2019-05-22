@@ -1,7 +1,6 @@
 # coding: utf-8
 
 from bitmovin.models.input import Input
-from bitmovin.models.rtmp_ingest_point import RtmpIngestPoint
 import pprint
 import six
 from datetime import datetime

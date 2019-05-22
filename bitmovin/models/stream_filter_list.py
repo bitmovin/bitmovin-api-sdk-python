@@ -1,6 +1,4 @@
 # coding: utf-8
-
-from bitmovin.models.stream_filter import StreamFilter
 import pprint
 import six
 from datetime import datetime

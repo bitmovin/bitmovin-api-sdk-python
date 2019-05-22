@@ -1,7 +1,6 @@
 # coding: utf-8
 
 from bitmovin.models.audio_mix_input_channel_layout import AudioMixInputChannelLayout
-from bitmovin.models.audio_mix_input_stream_channel import AudioMixInputStreamChannel
 from bitmovin.models.input_stream import InputStream
 import pprint
 import six

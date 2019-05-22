@@ -20,7 +20,7 @@ class CustomdataApi(BaseApi):
             logger=logger
         )
 
-    def getCustomData(self, manifest_id, **kwargs):
+    def get(self, manifest_id, **kwargs):
         """DASH Manifest Custom Data"""
 
         return self.api_client.get(

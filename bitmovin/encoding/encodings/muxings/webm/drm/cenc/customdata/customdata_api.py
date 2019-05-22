@@ -20,7 +20,7 @@ class CustomdataApi(BaseApi):
             logger=logger
         )
 
-    def getCustomData(self, encoding_id, muxing_id, drm_id, **kwargs):
+    def get(self, encoding_id, muxing_id, drm_id, **kwargs):
         """CENC DRM Custom Data of WebM"""
 
         return self.api_client.get(

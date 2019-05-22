@@ -3,10 +3,7 @@
 from bitmovin.models.dash_manifest import DashManifest
 from bitmovin.models.dash_manifest_default_version import DashManifestDefaultVersion
 from bitmovin.models.dash_profile import DashProfile
-from bitmovin.models.encoding_output import EncodingOutput
 from bitmovin.models.manifest_type import ManifestType
-from bitmovin.models.utc_timing import UtcTiming
-from bitmovin.models.xml_namespace import XmlNamespace
 import pprint
 import six
 from datetime import datetime

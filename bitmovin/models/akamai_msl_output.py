@@ -1,6 +1,5 @@
 # coding: utf-8
 
-from bitmovin.models.acl_entry import AclEntry
 from bitmovin.models.akamai_msl_stream_format import AkamaiMslStreamFormat
 from bitmovin.models.akamai_msl_version import AkamaiMslVersion
 from bitmovin.models.output import Output

@@ -27,7 +27,8 @@ class EnhancedWatermarkFilter(Filter):
             'right': 'float',
             'top': 'float',
             'bottom': 'float',
-            'unit': 'PositionUnit'
+            'unit': 'PositionUnit',
+            'opacity': 'float'
         })
         return types
 
@@ -40,11 +41,12 @@ class EnhancedWatermarkFilter(Filter):
             'right': 'right',
             'top': 'top',
             'bottom': 'bottom',
-            'unit': 'unit'
+            'unit': 'unit',
+            'opacity': 'opacity'
         })
         return attributes
 
-    def __init__(self, image=None, left=None, right=None, top=None, bottom=None, unit=None, *args, **kwargs):
+    def __init__(self, image=None, left=None, right=None, top=None, bottom=None, unit=None, opacity=None, *args, **kwargs):
         super(EnhancedWatermarkFilter, self).__init__(*args, **kwargs)
 
         self._image = None
@@ -53,6 +55,7 @@ class EnhancedWatermarkFilter(Filter):
         self._top = None
         self._bottom = None
         self._unit = None
+        self._opacity = None
         self.discriminator = None
 
         self.image = image
@@ -66,6 +69,8 @@ class EnhancedWatermarkFilter(Filter):
             self.bottom = bottom
         if unit is not None:
             self.unit = unit
+        if opacity is not None:
+            self.opacity = opacity
 
     @property
     def image(self):
@@ -231,6 +236,34 @@ class EnhancedWatermarkFilter(Filter):
                 raise TypeError("Invalid type for `unit`, type has to be `PositionUnit`")
 
             self._unit = unit
+
+
+    @property
+    def opacity(self):
+        """Gets the opacity of this EnhancedWatermarkFilter.
+
+        Opacity to apply on the watermark image. Valid values are from 0.0 (completely transparent) to 1.0 (not transparent at all)
+
+        :return: The opacity of this EnhancedWatermarkFilter.
+        :rtype: float
+        """
+        return self._opacity
+
+    @opacity.setter
+    def opacity(self, opacity):
+        """Sets the opacity of this EnhancedWatermarkFilter.
+
+        Opacity to apply on the watermark image. Valid values are from 0.0 (completely transparent) to 1.0 (not transparent at all)
+
+        :param opacity: The opacity of this EnhancedWatermarkFilter.
+        :type: float
+        """
+
+        if opacity is not None:
+            if not isinstance(opacity, float):
+                raise TypeError("Invalid type for `opacity`, type has to be `float`")
+
+            self._opacity = opacity
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -1,6 +1,5 @@
 # coding: utf-8
 
-from bitmovin.models.acl_entry import AclEntry
 from bitmovin.models.output import Output
 from bitmovin.models.transfer_version import TransferVersion
 import pprint

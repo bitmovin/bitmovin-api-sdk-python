@@ -20,7 +20,7 @@ class CustomdataApi(BaseApi):
             logger=logger
         )
 
-    def getCustomData(self, output_id, **kwargs):
+    def get(self, output_id, **kwargs):
         """Akamai NetStorage Output Custom Data"""
 
         return self.api_client.get(

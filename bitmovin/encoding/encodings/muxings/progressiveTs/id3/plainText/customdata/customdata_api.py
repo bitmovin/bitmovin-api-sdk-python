@@ -20,7 +20,7 @@ class CustomdataApi(BaseApi):
             logger=logger
         )
 
-    def getCustomData(self, encoding_id, muxing_id, id3_tag_id, **kwargs):
+    def get(self, encoding_id, muxing_id, id3_tag_id, **kwargs):
         """Plain Text ID3 Tag Custom Data of Progressive TS Muxing"""
 
         return self.api_client.get(

@@ -9,7 +9,6 @@ from bitmovin.models.h264_b_pyramid import H264BPyramid
 from bitmovin.models.h264_interlace_mode import H264InterlaceMode
 from bitmovin.models.h264_motion_estimation_method import H264MotionEstimationMethod
 from bitmovin.models.h264_nal_hrd import H264NalHrd
-from bitmovin.models.h264_partition import H264Partition
 from bitmovin.models.h264_sub_me import H264SubMe
 from bitmovin.models.h264_trellis import H264Trellis
 from bitmovin.models.level_h264 import LevelH264
@@ -1480,7 +1479,7 @@ class H264VideoConfiguration(VideoConfiguration):
     def psy_rate_distortion_optimization(self):
         """Gets the psy_rate_distortion_optimization of this H264VideoConfiguration.
 
-        Psychovisual Rate Distortion retains fine details like film grain at the expense of more blocking artifacts. Higher values make the video appear sharper and more detailed but with a higher risk of blocking artifacts. Needs to have subMe with RD_IP, RD_ALL, RD_REF_IP, RD_REF_ALL, QPRD or FULL_RD
+        Psychovisual Rate Distortion retains fine details like film grain at the expense of more blocking artifacts. Higher values make the video appear sharper and more detailed but with a higher risk of blocking artifacts. Needs to have subMe with RD_IP, RD_ALL, RD_REF_IP or RD_REF_ALL
 
         :return: The psy_rate_distortion_optimization of this H264VideoConfiguration.
         :rtype: float
@@ -1491,7 +1490,7 @@ class H264VideoConfiguration(VideoConfiguration):
     def psy_rate_distortion_optimization(self, psy_rate_distortion_optimization):
         """Sets the psy_rate_distortion_optimization of this H264VideoConfiguration.
 
-        Psychovisual Rate Distortion retains fine details like film grain at the expense of more blocking artifacts. Higher values make the video appear sharper and more detailed but with a higher risk of blocking artifacts. Needs to have subMe with RD_IP, RD_ALL, RD_REF_IP, RD_REF_ALL, QPRD or FULL_RD
+        Psychovisual Rate Distortion retains fine details like film grain at the expense of more blocking artifacts. Higher values make the video appear sharper and more detailed but with a higher risk of blocking artifacts. Needs to have subMe with RD_IP, RD_ALL, RD_REF_IP or RD_REF_ALL
 
         :param psy_rate_distortion_optimization: The psy_rate_distortion_optimization of this H264VideoConfiguration.
         :type: float

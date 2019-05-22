@@ -179,7 +179,7 @@ class EncodingsApi(BaseApi):
             '/encoding/encodings/{encoding_id}/start',
             start_encoding_request,
             path_params={'encoding_id': encoding_id},
-            type=StartEncodingRequest,
+            type=BitmovinResponse,
             **kwargs
         )
 

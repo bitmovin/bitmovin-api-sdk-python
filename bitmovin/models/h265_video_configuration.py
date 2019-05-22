@@ -1958,7 +1958,7 @@ class H265VideoConfiguration(VideoConfiguration):
     def rate_distortion_level_for_mode_decision(self):
         """Gets the rate_distortion_level_for_mode_decision of this H265VideoConfiguration.
 
-        Level of rate-distortion optimization in mode decision. The lower the value the faster the encode, the higher the value higher the compression efficiency. Valid range: 0 - 6
+        Level of rate-distortion optimization in mode decision. The lower the value the faster the encode, the higher the value higher the compression efficiency. Valid range: 0 - 4
 
         :return: The rate_distortion_level_for_mode_decision of this H265VideoConfiguration.
         :rtype: int
@@ -1969,7 +1969,7 @@ class H265VideoConfiguration(VideoConfiguration):
     def rate_distortion_level_for_mode_decision(self, rate_distortion_level_for_mode_decision):
         """Sets the rate_distortion_level_for_mode_decision of this H265VideoConfiguration.
 
-        Level of rate-distortion optimization in mode decision. The lower the value the faster the encode, the higher the value higher the compression efficiency. Valid range: 0 - 6
+        Level of rate-distortion optimization in mode decision. The lower the value the faster the encode, the higher the value higher the compression efficiency. Valid range: 0 - 4
 
         :param rate_distortion_level_for_mode_decision: The rate_distortion_level_for_mode_decision of this H265VideoConfiguration.
         :type: int

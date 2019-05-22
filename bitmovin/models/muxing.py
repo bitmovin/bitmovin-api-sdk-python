@@ -1,9 +1,6 @@
 # coding: utf-8
 
 from bitmovin.models.bitmovin_resource import BitmovinResource
-from bitmovin.models.encoding_output import EncodingOutput
-from bitmovin.models.ignoring import Ignoring
-from bitmovin.models.muxing_stream import MuxingStream
 from bitmovin.models.stream_conditions_mode import StreamConditionsMode
 import pprint
 import six

@@ -1,6 +1,5 @@
 # coding: utf-8
 
-from bitmovin.models.encoding_output import EncodingOutput
 from bitmovin.models.hls_manifest import HlsManifest
 from bitmovin.models.hls_manifest_default_version import HlsManifestDefaultVersion
 from bitmovin.models.hls_version import HlsVersion

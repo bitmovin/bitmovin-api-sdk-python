@@ -1,5 +1,6 @@
 # coding: utf-8
 
+from bitmovin.models.backup_srt_inputs import BackupSrtInputs
 from bitmovin.models.input import Input
 from bitmovin.models.srt_mode import SrtMode
 import pprint
@@ -28,7 +29,8 @@ class SrtInput(Input):
             'path': 'str',
             'latency': 'int',
             'passphrase': 'str',
-            'key_length': 'int'
+            'key_length': 'int',
+            'backup_srt_inputs': 'BackupSrtInputs'
         })
         return types
 
@@ -42,11 +44,12 @@ class SrtInput(Input):
             'path': 'path',
             'latency': 'latency',
             'passphrase': 'passphrase',
-            'key_length': 'keyLength'
+            'key_length': 'keyLength',
+            'backup_srt_inputs': 'backupSrtInputs'
         })
         return attributes
 
-    def __init__(self, mode=None, host=None, port=None, path=None, latency=None, passphrase=None, key_length=None, *args, **kwargs):
+    def __init__(self, mode=None, host=None, port=None, path=None, latency=None, passphrase=None, key_length=None, backup_srt_inputs=None, *args, **kwargs):
         super(SrtInput, self).__init__(*args, **kwargs)
 
         self._mode = None
@@ -56,6 +59,7 @@ class SrtInput(Input):
         self._latency = None
         self._passphrase = None
         self._key_length = None
+        self._backup_srt_inputs = None
         self.discriminator = None
 
         self.mode = mode
@@ -70,6 +74,8 @@ class SrtInput(Input):
             self.passphrase = passphrase
         if key_length is not None:
             self.key_length = key_length
+        if backup_srt_inputs is not None:
+            self.backup_srt_inputs = backup_srt_inputs
 
     @property
     def mode(self):
@@ -131,7 +137,7 @@ class SrtInput(Input):
     def port(self):
         """Gets the port of this SrtInput.
 
-        The port to connect to or listen on. Has to be 2088 if using LISTENER mode.
+        The port to connect to or listen on. Has to be one of [2088, 2089, 2090, 2091] when using LISTENER mode.
 
         :return: The port of this SrtInput.
         :rtype: int
@@ -142,7 +148,7 @@ class SrtInput(Input):
     def port(self, port):
         """Sets the port of this SrtInput.
 
-        The port to connect to or listen on. Has to be 2088 if using LISTENER mode.
+        The port to connect to or listen on. Has to be one of [2088, 2089, 2090, 2091] when using LISTENER mode.
 
         :param port: The port of this SrtInput.
         :type: int
@@ -265,6 +271,32 @@ class SrtInput(Input):
                 raise TypeError("Invalid type for `key_length`, type has to be `int`")
 
             self._key_length = key_length
+
+
+    @property
+    def backup_srt_inputs(self):
+        """Gets the backup_srt_inputs of this SrtInput.
+
+
+        :return: The backup_srt_inputs of this SrtInput.
+        :rtype: BackupSrtInputs
+        """
+        return self._backup_srt_inputs
+
+    @backup_srt_inputs.setter
+    def backup_srt_inputs(self, backup_srt_inputs):
+        """Sets the backup_srt_inputs of this SrtInput.
+
+
+        :param backup_srt_inputs: The backup_srt_inputs of this SrtInput.
+        :type: BackupSrtInputs
+        """
+
+        if backup_srt_inputs is not None:
+            if not isinstance(backup_srt_inputs, BackupSrtInputs):
+                raise TypeError("Invalid type for `backup_srt_inputs`, type has to be `BackupSrtInputs`")
+
+            self._backup_srt_inputs = backup_srt_inputs
 
     def to_dict(self):
         """Returns the model properties as a dict"""

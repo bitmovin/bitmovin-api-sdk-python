@@ -20,7 +20,7 @@ class CustomdataApi(BaseApi):
             logger=logger
         )
 
-    def getCustomData(self, encoding_id, muxing_id, **kwargs):
+    def get(self, encoding_id, muxing_id, **kwargs):
         """CMAF muxing custom data"""
 
         return self.api_client.get(

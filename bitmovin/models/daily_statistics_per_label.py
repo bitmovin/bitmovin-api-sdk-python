@@ -1,6 +1,4 @@
 # coding: utf-8
-
-from bitmovin.models.daily_statistics import DailyStatistics
 import pprint
 import six
 from datetime import datetime

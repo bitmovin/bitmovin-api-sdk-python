@@ -7,3 +7,5 @@ class AkamaiMslStreamFormat(Enum):
     allowed enum values
     """
     DASH = "DASH"
+    HLS = "HLS"
+    CMAF = "CMAF"

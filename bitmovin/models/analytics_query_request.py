@@ -1,8 +1,6 @@
 # coding: utf-8
 
-from bitmovin.models.analytics_filter import AnalyticsFilter
 from bitmovin.models.analytics_interval import AnalyticsInterval
-from bitmovin.models.analytics_order_by_entry import AnalyticsOrderByEntry
 from bitmovin.models.analytics_query_timeframe import AnalyticsQueryTimeframe
 import pprint
 import six

@@ -1,7 +1,6 @@
 # coding: utf-8
 
 from bitmovin.models.bitmovin_resource import BitmovinResource
-from bitmovin.models.encoding_output import EncodingOutput
 from bitmovin.models.sidecar_error_mode import SidecarErrorMode
 import pprint
 import six

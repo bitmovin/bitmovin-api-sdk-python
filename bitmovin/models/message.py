@@ -1,7 +1,6 @@
 # coding: utf-8
 
 from bitmovin.models.bitmovin_response import BitmovinResponse
-from bitmovin.models.link import Link
 from bitmovin.models.message_type import MessageType
 import pprint
 import six

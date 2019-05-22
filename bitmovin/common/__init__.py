@@ -3,7 +3,6 @@ from bitmovin.common.base_api import BaseApi
 from bitmovin.common.bitmovin_api_logger_base import BitmovinApiLoggerBase
 from bitmovin.common.bitmovin_api_logger import BitmovinApiLogger
 from bitmovin.common.bitmovin_exception import BitmovinException
-from bitmovin.common.bitmovin_exception import RestException
 from bitmovin.common.bitmovin_exception import MissingArgumentException
 from bitmovin.common.bitmovin_json_decoder import BitmovinJsonDecoder
 from bitmovin.common.rest_client import RestClient

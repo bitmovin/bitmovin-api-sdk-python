@@ -51,7 +51,7 @@ class ReuploadSettings(object):
     def dash_manifest_interval(self):
         """Gets the dash_manifest_interval of this ReuploadSettings.
 
-        Interval in seconds to reupload the DASH manifest (minimum value: 30)
+        Interval in seconds to reupload the DASH manifest. Valid values are either `null` to never reupload the dash manifest or at least `30`.
 
         :return: The dash_manifest_interval of this ReuploadSettings.
         :rtype: float
@@ -62,7 +62,7 @@ class ReuploadSettings(object):
     def dash_manifest_interval(self, dash_manifest_interval):
         """Sets the dash_manifest_interval of this ReuploadSettings.
 
-        Interval in seconds to reupload the DASH manifest (minimum value: 30)
+        Interval in seconds to reupload the DASH manifest. Valid values are either `null` to never reupload the dash manifest or at least `30`.
 
         :param dash_manifest_interval: The dash_manifest_interval of this ReuploadSettings.
         :type: float
@@ -81,7 +81,7 @@ class ReuploadSettings(object):
     def hls_manifest_interval(self):
         """Gets the hls_manifest_interval of this ReuploadSettings.
 
-        Interval in seconds to reupload the HLS master file. This is currently not used, as the master file will always be uploaded when one of the playlist files has changed (minimum value: 30)
+        Interval in seconds to reupload the HLS master file. Valid values are either `0` to never reupload the hls manifest or at least `30`. This is currently not used, as the master file will always be uploaded when one of the playlist files has changed.
 
         :return: The hls_manifest_interval of this ReuploadSettings.
         :rtype: float
@@ -92,15 +92,13 @@ class ReuploadSettings(object):
     def hls_manifest_interval(self, hls_manifest_interval):
         """Sets the hls_manifest_interval of this ReuploadSettings.
 
-        Interval in seconds to reupload the HLS master file. This is currently not used, as the master file will always be uploaded when one of the playlist files has changed (minimum value: 30)
+        Interval in seconds to reupload the HLS master file. Valid values are either `0` to never reupload the hls manifest or at least `30`. This is currently not used, as the master file will always be uploaded when one of the playlist files has changed.
 
         :param hls_manifest_interval: The hls_manifest_interval of this ReuploadSettings.
         :type: float
         """
 
         if hls_manifest_interval is not None:
-            if hls_manifest_interval is not None and hls_manifest_interval < 30:
-                raise ValueError("Invalid value for `hls_manifest_interval`, must be a value greater than or equal to `30`")
             if not isinstance(hls_manifest_interval, float):
                 raise TypeError("Invalid type for `hls_manifest_interval`, type has to be `float`")
 
@@ -111,7 +109,7 @@ class ReuploadSettings(object):
     def muxing_init_file_interval(self):
         """Gets the muxing_init_file_interval of this ReuploadSettings.
 
-        The interval in seconds to reupload the init file for segmented muxings (e.g. fMP4, WebM) (minimum value: 30)
+        The interval in seconds to reupload the init file for segmented muxings, e.g. fMP4, WebM. Valid values are either `null` to never reupload the init file for segmented muxings or at least `30`.
 
         :return: The muxing_init_file_interval of this ReuploadSettings.
         :rtype: float
@@ -122,7 +120,7 @@ class ReuploadSettings(object):
     def muxing_init_file_interval(self, muxing_init_file_interval):
         """Sets the muxing_init_file_interval of this ReuploadSettings.
 
-        The interval in seconds to reupload the init file for segmented muxings (e.g. fMP4, WebM) (minimum value: 30)
+        The interval in seconds to reupload the init file for segmented muxings, e.g. fMP4, WebM. Valid values are either `null` to never reupload the init file for segmented muxings or at least `30`.
 
         :param muxing_init_file_interval: The muxing_init_file_interval of this ReuploadSettings.
         :type: float

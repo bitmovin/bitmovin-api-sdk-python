@@ -1,6 +1,5 @@
 # coding: utf-8
 
-from bitmovin.models.encoding_output import EncodingOutput
 from bitmovin.models.manifest_type import ManifestType
 from bitmovin.models.smooth_manifest_default_version import SmoothManifestDefaultVersion
 from bitmovin.models.smooth_streaming_manifest import SmoothStreamingManifest

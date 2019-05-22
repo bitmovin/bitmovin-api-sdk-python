@@ -20,7 +20,7 @@ class CustomdataApi(BaseApi):
             logger=logger
         )
 
-    def getCustomData(self, configuration_id, **kwargs):
+    def get(self, configuration_id, **kwargs):
         """MP3 Codec Configuration Custom Data"""
 
         return self.api_client.get(

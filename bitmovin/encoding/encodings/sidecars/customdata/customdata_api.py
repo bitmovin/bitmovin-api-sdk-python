@@ -20,7 +20,7 @@ class CustomdataApi(BaseApi):
             logger=logger
         )
 
-    def getCustomData(self, encoding_id, sidecar_id, **kwargs):
+    def get(self, encoding_id, sidecar_id, **kwargs):
         """Sidecar Custom Data"""
 
         return self.api_client.get(
