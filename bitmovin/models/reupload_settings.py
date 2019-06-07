@@ -71,10 +71,10 @@ class ReuploadSettings(object):
         if dash_manifest_interval is not None:
             if dash_manifest_interval is not None and dash_manifest_interval < 30:
                 raise ValueError("Invalid value for `dash_manifest_interval`, must be a value greater than or equal to `30`")
-            if not isinstance(dash_manifest_interval, float):
+            if not isinstance(dash_manifest_interval, (float, int)):
                 raise TypeError("Invalid type for `dash_manifest_interval`, type has to be `float`")
 
-            self._dash_manifest_interval = dash_manifest_interval
+        self._dash_manifest_interval = dash_manifest_interval
 
 
     @property
@@ -99,10 +99,10 @@ class ReuploadSettings(object):
         """
 
         if hls_manifest_interval is not None:
-            if not isinstance(hls_manifest_interval, float):
+            if not isinstance(hls_manifest_interval, (float, int)):
                 raise TypeError("Invalid type for `hls_manifest_interval`, type has to be `float`")
 
-            self._hls_manifest_interval = hls_manifest_interval
+        self._hls_manifest_interval = hls_manifest_interval
 
 
     @property
@@ -129,10 +129,10 @@ class ReuploadSettings(object):
         if muxing_init_file_interval is not None:
             if muxing_init_file_interval is not None and muxing_init_file_interval < 30:
                 raise ValueError("Invalid value for `muxing_init_file_interval`, must be a value greater than or equal to `30`")
-            if not isinstance(muxing_init_file_interval, float):
+            if not isinstance(muxing_init_file_interval, (float, int)):
                 raise TypeError("Invalid type for `muxing_init_file_interval`, type has to be `float`")
 
-            self._muxing_init_file_interval = muxing_init_file_interval
+        self._muxing_init_file_interval = muxing_init_file_interval
 
     def to_dict(self):
         """Returns the model properties as a dict"""

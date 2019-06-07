@@ -84,7 +84,7 @@ class StreamPerTitleFixedResolutionAndBitrateSettings(object):
             if not isinstance(min_bitrate, int):
                 raise TypeError("Invalid type for `min_bitrate`, type has to be `int`")
 
-            self._min_bitrate = min_bitrate
+        self._min_bitrate = min_bitrate
 
 
     @property
@@ -112,7 +112,7 @@ class StreamPerTitleFixedResolutionAndBitrateSettings(object):
             if not isinstance(max_bitrate, int):
                 raise TypeError("Invalid type for `max_bitrate`, type has to be `int`")
 
-            self._max_bitrate = max_bitrate
+        self._max_bitrate = max_bitrate
 
 
     @property
@@ -140,7 +140,7 @@ class StreamPerTitleFixedResolutionAndBitrateSettings(object):
             if not isinstance(bitrate_selection_mode, BitrateSelectionMode):
                 raise TypeError("Invalid type for `bitrate_selection_mode`, type has to be `BitrateSelectionMode`")
 
-            self._bitrate_selection_mode = bitrate_selection_mode
+        self._bitrate_selection_mode = bitrate_selection_mode
 
 
     @property
@@ -165,10 +165,10 @@ class StreamPerTitleFixedResolutionAndBitrateSettings(object):
         """
 
         if low_complexity_boundary_for_max_bitrate is not None:
-            if not isinstance(low_complexity_boundary_for_max_bitrate, float):
+            if not isinstance(low_complexity_boundary_for_max_bitrate, (float, int)):
                 raise TypeError("Invalid type for `low_complexity_boundary_for_max_bitrate`, type has to be `float`")
 
-            self._low_complexity_boundary_for_max_bitrate = low_complexity_boundary_for_max_bitrate
+        self._low_complexity_boundary_for_max_bitrate = low_complexity_boundary_for_max_bitrate
 
 
     @property
@@ -193,10 +193,10 @@ class StreamPerTitleFixedResolutionAndBitrateSettings(object):
         """
 
         if high_complexity_boundary_for_max_bitrate is not None:
-            if not isinstance(high_complexity_boundary_for_max_bitrate, float):
+            if not isinstance(high_complexity_boundary_for_max_bitrate, (float, int)):
                 raise TypeError("Invalid type for `high_complexity_boundary_for_max_bitrate`, type has to be `float`")
 
-            self._high_complexity_boundary_for_max_bitrate = high_complexity_boundary_for_max_bitrate
+        self._high_complexity_boundary_for_max_bitrate = high_complexity_boundary_for_max_bitrate
 
     def to_dict(self):
         """Returns the model properties as a dict"""

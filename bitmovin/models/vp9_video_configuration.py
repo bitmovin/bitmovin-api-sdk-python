@@ -31,6 +31,7 @@ class Vp9VideoConfiguration(VideoConfiguration):
             'preset_configuration': 'PresetConfiguration',
             'crf': 'int',
             'lag_in_frames': 'int',
+            'error_resiliency_enabled': 'bool',
             'tile_columns': 'int',
             'tile_rows': 'int',
             'frame_parallel': 'bool',
@@ -39,7 +40,14 @@ class Vp9VideoConfiguration(VideoConfiguration):
             'qp_max': 'int',
             'rate_undershoot_pct': 'int',
             'rate_overshoot_pct': 'int',
+            'client_buffer_size': 'int',
+            'client_initial_buffer_size': 'int',
+            'bias_pct': 'int',
             'noise_sensitivity': 'bool',
+            'cpu_used': 'int',
+            'automatic_alt_ref_frames_enabled': 'bool',
+            'target_level': 'int',
+            'row_multi_threading_enabled': 'bool',
             'sharpness': 'int',
             'min_gop': 'int',
             'max_gop': 'int',
@@ -62,6 +70,7 @@ class Vp9VideoConfiguration(VideoConfiguration):
             'preset_configuration': 'presetConfiguration',
             'crf': 'crf',
             'lag_in_frames': 'lagInFrames',
+            'error_resiliency_enabled': 'errorResiliencyEnabled',
             'tile_columns': 'tileColumns',
             'tile_rows': 'tileRows',
             'frame_parallel': 'frameParallel',
@@ -70,7 +79,14 @@ class Vp9VideoConfiguration(VideoConfiguration):
             'qp_max': 'qpMax',
             'rate_undershoot_pct': 'rateUndershootPct',
             'rate_overshoot_pct': 'rateOvershootPct',
+            'client_buffer_size': 'clientBufferSize',
+            'client_initial_buffer_size': 'clientInitialBufferSize',
+            'bias_pct': 'biasPct',
             'noise_sensitivity': 'noiseSensitivity',
+            'cpu_used': 'cpuUsed',
+            'automatic_alt_ref_frames_enabled': 'automaticAltRefFramesEnabled',
+            'target_level': 'targetLevel',
+            'row_multi_threading_enabled': 'rowMultiThreadingEnabled',
             'sharpness': 'sharpness',
             'min_gop': 'minGop',
             'max_gop': 'maxGop',
@@ -86,12 +102,13 @@ class Vp9VideoConfiguration(VideoConfiguration):
         })
         return attributes
 
-    def __init__(self, preset_configuration=None, crf=None, lag_in_frames=None, tile_columns=None, tile_rows=None, frame_parallel=None, max_intra_rate=None, qp_min=None, qp_max=None, rate_undershoot_pct=None, rate_overshoot_pct=None, noise_sensitivity=None, sharpness=None, min_gop=None, max_gop=None, min_keyframe_interval=None, max_keyframe_interval=None, quality=None, lossless=None, static_thresh=None, aq_mode=None, arnr_max_frames=None, arnr_strength=None, arnr_type=None, *args, **kwargs):
+    def __init__(self, preset_configuration=None, crf=None, lag_in_frames=None, error_resiliency_enabled=None, tile_columns=None, tile_rows=None, frame_parallel=None, max_intra_rate=None, qp_min=None, qp_max=None, rate_undershoot_pct=None, rate_overshoot_pct=None, client_buffer_size=None, client_initial_buffer_size=None, bias_pct=None, noise_sensitivity=None, cpu_used=None, automatic_alt_ref_frames_enabled=None, target_level=None, row_multi_threading_enabled=None, sharpness=None, min_gop=None, max_gop=None, min_keyframe_interval=None, max_keyframe_interval=None, quality=None, lossless=None, static_thresh=None, aq_mode=None, arnr_max_frames=None, arnr_strength=None, arnr_type=None, *args, **kwargs):
         super(Vp9VideoConfiguration, self).__init__(*args, **kwargs)
 
         self._preset_configuration = None
         self._crf = None
         self._lag_in_frames = None
+        self._error_resiliency_enabled = None
         self._tile_columns = None
         self._tile_rows = None
         self._frame_parallel = None
@@ -100,7 +117,14 @@ class Vp9VideoConfiguration(VideoConfiguration):
         self._qp_max = None
         self._rate_undershoot_pct = None
         self._rate_overshoot_pct = None
+        self._client_buffer_size = None
+        self._client_initial_buffer_size = None
+        self._bias_pct = None
         self._noise_sensitivity = None
+        self._cpu_used = None
+        self._automatic_alt_ref_frames_enabled = None
+        self._target_level = None
+        self._row_multi_threading_enabled = None
         self._sharpness = None
         self._min_gop = None
         self._max_gop = None
@@ -121,6 +145,8 @@ class Vp9VideoConfiguration(VideoConfiguration):
             self.crf = crf
         if lag_in_frames is not None:
             self.lag_in_frames = lag_in_frames
+        if error_resiliency_enabled is not None:
+            self.error_resiliency_enabled = error_resiliency_enabled
         if tile_columns is not None:
             self.tile_columns = tile_columns
         if tile_rows is not None:
@@ -137,8 +163,22 @@ class Vp9VideoConfiguration(VideoConfiguration):
             self.rate_undershoot_pct = rate_undershoot_pct
         if rate_overshoot_pct is not None:
             self.rate_overshoot_pct = rate_overshoot_pct
+        if client_buffer_size is not None:
+            self.client_buffer_size = client_buffer_size
+        if client_initial_buffer_size is not None:
+            self.client_initial_buffer_size = client_initial_buffer_size
+        if bias_pct is not None:
+            self.bias_pct = bias_pct
         if noise_sensitivity is not None:
             self.noise_sensitivity = noise_sensitivity
+        if cpu_used is not None:
+            self.cpu_used = cpu_used
+        if automatic_alt_ref_frames_enabled is not None:
+            self.automatic_alt_ref_frames_enabled = automatic_alt_ref_frames_enabled
+        if target_level is not None:
+            self.target_level = target_level
+        if row_multi_threading_enabled is not None:
+            self.row_multi_threading_enabled = row_multi_threading_enabled
         if sharpness is not None:
             self.sharpness = sharpness
         if min_gop is not None:
@@ -189,7 +229,7 @@ class Vp9VideoConfiguration(VideoConfiguration):
             if not isinstance(preset_configuration, PresetConfiguration):
                 raise TypeError("Invalid type for `preset_configuration`, type has to be `PresetConfiguration`")
 
-            self._preset_configuration = preset_configuration
+        self._preset_configuration = preset_configuration
 
 
     @property
@@ -221,7 +261,7 @@ class Vp9VideoConfiguration(VideoConfiguration):
             if not isinstance(crf, int):
                 raise TypeError("Invalid type for `crf`, type has to be `int`")
 
-            self._crf = crf
+        self._crf = crf
 
 
     @property
@@ -253,7 +293,35 @@ class Vp9VideoConfiguration(VideoConfiguration):
             if not isinstance(lag_in_frames, int):
                 raise TypeError("Invalid type for `lag_in_frames`, type has to be `int`")
 
-            self._lag_in_frames = lag_in_frames
+        self._lag_in_frames = lag_in_frames
+
+
+    @property
+    def error_resiliency_enabled(self):
+        """Gets the error_resiliency_enabled of this Vp9VideoConfiguration.
+
+        Enables error resiliency feature
+
+        :return: The error_resiliency_enabled of this Vp9VideoConfiguration.
+        :rtype: bool
+        """
+        return self._error_resiliency_enabled
+
+    @error_resiliency_enabled.setter
+    def error_resiliency_enabled(self, error_resiliency_enabled):
+        """Sets the error_resiliency_enabled of this Vp9VideoConfiguration.
+
+        Enables error resiliency feature
+
+        :param error_resiliency_enabled: The error_resiliency_enabled of this Vp9VideoConfiguration.
+        :type: bool
+        """
+
+        if error_resiliency_enabled is not None:
+            if not isinstance(error_resiliency_enabled, bool):
+                raise TypeError("Invalid type for `error_resiliency_enabled`, type has to be `bool`")
+
+        self._error_resiliency_enabled = error_resiliency_enabled
 
 
     @property
@@ -285,7 +353,7 @@ class Vp9VideoConfiguration(VideoConfiguration):
             if not isinstance(tile_columns, int):
                 raise TypeError("Invalid type for `tile_columns`, type has to be `int`")
 
-            self._tile_columns = tile_columns
+        self._tile_columns = tile_columns
 
 
     @property
@@ -317,7 +385,7 @@ class Vp9VideoConfiguration(VideoConfiguration):
             if not isinstance(tile_rows, int):
                 raise TypeError("Invalid type for `tile_rows`, type has to be `int`")
 
-            self._tile_rows = tile_rows
+        self._tile_rows = tile_rows
 
 
     @property
@@ -345,7 +413,7 @@ class Vp9VideoConfiguration(VideoConfiguration):
             if not isinstance(frame_parallel, bool):
                 raise TypeError("Invalid type for `frame_parallel`, type has to be `bool`")
 
-            self._frame_parallel = frame_parallel
+        self._frame_parallel = frame_parallel
 
 
     @property
@@ -373,7 +441,7 @@ class Vp9VideoConfiguration(VideoConfiguration):
             if not isinstance(max_intra_rate, int):
                 raise TypeError("Invalid type for `max_intra_rate`, type has to be `int`")
 
-            self._max_intra_rate = max_intra_rate
+        self._max_intra_rate = max_intra_rate
 
 
     @property
@@ -405,7 +473,7 @@ class Vp9VideoConfiguration(VideoConfiguration):
             if not isinstance(qp_min, int):
                 raise TypeError("Invalid type for `qp_min`, type has to be `int`")
 
-            self._qp_min = qp_min
+        self._qp_min = qp_min
 
 
     @property
@@ -437,7 +505,7 @@ class Vp9VideoConfiguration(VideoConfiguration):
             if not isinstance(qp_max, int):
                 raise TypeError("Invalid type for `qp_max`, type has to be `int`")
 
-            self._qp_max = qp_max
+        self._qp_max = qp_max
 
 
     @property
@@ -469,7 +537,7 @@ class Vp9VideoConfiguration(VideoConfiguration):
             if not isinstance(rate_undershoot_pct, int):
                 raise TypeError("Invalid type for `rate_undershoot_pct`, type has to be `int`")
 
-            self._rate_undershoot_pct = rate_undershoot_pct
+        self._rate_undershoot_pct = rate_undershoot_pct
 
 
     @property
@@ -501,7 +569,99 @@ class Vp9VideoConfiguration(VideoConfiguration):
             if not isinstance(rate_overshoot_pct, int):
                 raise TypeError("Invalid type for `rate_overshoot_pct`, type has to be `int`")
 
-            self._rate_overshoot_pct = rate_overshoot_pct
+        self._rate_overshoot_pct = rate_overshoot_pct
+
+
+    @property
+    def client_buffer_size(self):
+        """Gets the client_buffer_size of this Vp9VideoConfiguration.
+
+        Client buffer size (ms)
+
+        :return: The client_buffer_size of this Vp9VideoConfiguration.
+        :rtype: int
+        """
+        return self._client_buffer_size
+
+    @client_buffer_size.setter
+    def client_buffer_size(self, client_buffer_size):
+        """Sets the client_buffer_size of this Vp9VideoConfiguration.
+
+        Client buffer size (ms)
+
+        :param client_buffer_size: The client_buffer_size of this Vp9VideoConfiguration.
+        :type: int
+        """
+
+        if client_buffer_size is not None:
+            if client_buffer_size is not None and client_buffer_size < 0:
+                raise ValueError("Invalid value for `client_buffer_size`, must be a value greater than or equal to `0`")
+            if not isinstance(client_buffer_size, int):
+                raise TypeError("Invalid type for `client_buffer_size`, type has to be `int`")
+
+        self._client_buffer_size = client_buffer_size
+
+
+    @property
+    def client_initial_buffer_size(self):
+        """Gets the client_initial_buffer_size of this Vp9VideoConfiguration.
+
+        Client initial buffer size (ms)
+
+        :return: The client_initial_buffer_size of this Vp9VideoConfiguration.
+        :rtype: int
+        """
+        return self._client_initial_buffer_size
+
+    @client_initial_buffer_size.setter
+    def client_initial_buffer_size(self, client_initial_buffer_size):
+        """Sets the client_initial_buffer_size of this Vp9VideoConfiguration.
+
+        Client initial buffer size (ms)
+
+        :param client_initial_buffer_size: The client_initial_buffer_size of this Vp9VideoConfiguration.
+        :type: int
+        """
+
+        if client_initial_buffer_size is not None:
+            if client_initial_buffer_size is not None and client_initial_buffer_size < 0:
+                raise ValueError("Invalid value for `client_initial_buffer_size`, must be a value greater than or equal to `0`")
+            if not isinstance(client_initial_buffer_size, int):
+                raise TypeError("Invalid type for `client_initial_buffer_size`, type has to be `int`")
+
+        self._client_initial_buffer_size = client_initial_buffer_size
+
+
+    @property
+    def bias_pct(self):
+        """Gets the bias_pct of this Vp9VideoConfiguration.
+
+        CBR/VBR bias (0=CBR, 100=VBR)
+
+        :return: The bias_pct of this Vp9VideoConfiguration.
+        :rtype: int
+        """
+        return self._bias_pct
+
+    @bias_pct.setter
+    def bias_pct(self, bias_pct):
+        """Sets the bias_pct of this Vp9VideoConfiguration.
+
+        CBR/VBR bias (0=CBR, 100=VBR)
+
+        :param bias_pct: The bias_pct of this Vp9VideoConfiguration.
+        :type: int
+        """
+
+        if bias_pct is not None:
+            if bias_pct is not None and bias_pct > 100:
+                raise ValueError("Invalid value for `bias_pct`, must be a value less than or equal to `100`")
+            if bias_pct is not None and bias_pct < 0:
+                raise ValueError("Invalid value for `bias_pct`, must be a value greater than or equal to `0`")
+            if not isinstance(bias_pct, int):
+                raise TypeError("Invalid type for `bias_pct`, type has to be `int`")
+
+        self._bias_pct = bias_pct
 
 
     @property
@@ -529,7 +689,127 @@ class Vp9VideoConfiguration(VideoConfiguration):
             if not isinstance(noise_sensitivity, bool):
                 raise TypeError("Invalid type for `noise_sensitivity`, type has to be `bool`")
 
-            self._noise_sensitivity = noise_sensitivity
+        self._noise_sensitivity = noise_sensitivity
+
+
+    @property
+    def cpu_used(self):
+        """Gets the cpu_used of this Vp9VideoConfiguration.
+
+        Controls the tradeoff between compression efficiency and encoding speed. Higher values indicate a faster encoding.
+
+        :return: The cpu_used of this Vp9VideoConfiguration.
+        :rtype: int
+        """
+        return self._cpu_used
+
+    @cpu_used.setter
+    def cpu_used(self, cpu_used):
+        """Sets the cpu_used of this Vp9VideoConfiguration.
+
+        Controls the tradeoff between compression efficiency and encoding speed. Higher values indicate a faster encoding.
+
+        :param cpu_used: The cpu_used of this Vp9VideoConfiguration.
+        :type: int
+        """
+
+        if cpu_used is not None:
+            if cpu_used is not None and cpu_used > 8:
+                raise ValueError("Invalid value for `cpu_used`, must be a value less than or equal to `8`")
+            if cpu_used is not None and cpu_used < 1:
+                raise ValueError("Invalid value for `cpu_used`, must be a value greater than or equal to `1`")
+            if not isinstance(cpu_used, int):
+                raise TypeError("Invalid type for `cpu_used`, type has to be `int`")
+
+        self._cpu_used = cpu_used
+
+
+    @property
+    def automatic_alt_ref_frames_enabled(self):
+        """Gets the automatic_alt_ref_frames_enabled of this Vp9VideoConfiguration.
+
+        Enable automatic alternate reference frames (2pass only)
+
+        :return: The automatic_alt_ref_frames_enabled of this Vp9VideoConfiguration.
+        :rtype: bool
+        """
+        return self._automatic_alt_ref_frames_enabled
+
+    @automatic_alt_ref_frames_enabled.setter
+    def automatic_alt_ref_frames_enabled(self, automatic_alt_ref_frames_enabled):
+        """Sets the automatic_alt_ref_frames_enabled of this Vp9VideoConfiguration.
+
+        Enable automatic alternate reference frames (2pass only)
+
+        :param automatic_alt_ref_frames_enabled: The automatic_alt_ref_frames_enabled of this Vp9VideoConfiguration.
+        :type: bool
+        """
+
+        if automatic_alt_ref_frames_enabled is not None:
+            if not isinstance(automatic_alt_ref_frames_enabled, bool):
+                raise TypeError("Invalid type for `automatic_alt_ref_frames_enabled`, type has to be `bool`")
+
+        self._automatic_alt_ref_frames_enabled = automatic_alt_ref_frames_enabled
+
+
+    @property
+    def target_level(self):
+        """Gets the target_level of this Vp9VideoConfiguration.
+
+        Target level (255: off, 0: only keep level stats; 10: level 1.0; 11: level 1.1; ... 62: level 6.2)
+
+        :return: The target_level of this Vp9VideoConfiguration.
+        :rtype: int
+        """
+        return self._target_level
+
+    @target_level.setter
+    def target_level(self, target_level):
+        """Sets the target_level of this Vp9VideoConfiguration.
+
+        Target level (255: off, 0: only keep level stats; 10: level 1.0; 11: level 1.1; ... 62: level 6.2)
+
+        :param target_level: The target_level of this Vp9VideoConfiguration.
+        :type: int
+        """
+
+        if target_level is not None:
+            if target_level is not None and target_level > 255:
+                raise ValueError("Invalid value for `target_level`, must be a value less than or equal to `255`")
+            if target_level is not None and target_level < 0:
+                raise ValueError("Invalid value for `target_level`, must be a value greater than or equal to `0`")
+            if not isinstance(target_level, int):
+                raise TypeError("Invalid type for `target_level`, type has to be `int`")
+
+        self._target_level = target_level
+
+
+    @property
+    def row_multi_threading_enabled(self):
+        """Gets the row_multi_threading_enabled of this Vp9VideoConfiguration.
+
+        Enable row based non-deterministic multi-threading
+
+        :return: The row_multi_threading_enabled of this Vp9VideoConfiguration.
+        :rtype: bool
+        """
+        return self._row_multi_threading_enabled
+
+    @row_multi_threading_enabled.setter
+    def row_multi_threading_enabled(self, row_multi_threading_enabled):
+        """Sets the row_multi_threading_enabled of this Vp9VideoConfiguration.
+
+        Enable row based non-deterministic multi-threading
+
+        :param row_multi_threading_enabled: The row_multi_threading_enabled of this Vp9VideoConfiguration.
+        :type: bool
+        """
+
+        if row_multi_threading_enabled is not None:
+            if not isinstance(row_multi_threading_enabled, bool):
+                raise TypeError("Invalid type for `row_multi_threading_enabled`, type has to be `bool`")
+
+        self._row_multi_threading_enabled = row_multi_threading_enabled
 
 
     @property
@@ -561,7 +841,7 @@ class Vp9VideoConfiguration(VideoConfiguration):
             if not isinstance(sharpness, int):
                 raise TypeError("Invalid type for `sharpness`, type has to be `int`")
 
-            self._sharpness = sharpness
+        self._sharpness = sharpness
 
 
     @property
@@ -589,7 +869,7 @@ class Vp9VideoConfiguration(VideoConfiguration):
             if not isinstance(min_gop, int):
                 raise TypeError("Invalid type for `min_gop`, type has to be `int`")
 
-            self._min_gop = min_gop
+        self._min_gop = min_gop
 
 
     @property
@@ -617,7 +897,7 @@ class Vp9VideoConfiguration(VideoConfiguration):
             if not isinstance(max_gop, int):
                 raise TypeError("Invalid type for `max_gop`, type has to be `int`")
 
-            self._max_gop = max_gop
+        self._max_gop = max_gop
 
 
     @property
@@ -642,10 +922,10 @@ class Vp9VideoConfiguration(VideoConfiguration):
         """
 
         if min_keyframe_interval is not None:
-            if not isinstance(min_keyframe_interval, float):
+            if not isinstance(min_keyframe_interval, (float, int)):
                 raise TypeError("Invalid type for `min_keyframe_interval`, type has to be `float`")
 
-            self._min_keyframe_interval = min_keyframe_interval
+        self._min_keyframe_interval = min_keyframe_interval
 
 
     @property
@@ -670,10 +950,10 @@ class Vp9VideoConfiguration(VideoConfiguration):
         """
 
         if max_keyframe_interval is not None:
-            if not isinstance(max_keyframe_interval, float):
+            if not isinstance(max_keyframe_interval, (float, int)):
                 raise TypeError("Invalid type for `max_keyframe_interval`, type has to be `float`")
 
-            self._max_keyframe_interval = max_keyframe_interval
+        self._max_keyframe_interval = max_keyframe_interval
 
 
     @property
@@ -699,7 +979,7 @@ class Vp9VideoConfiguration(VideoConfiguration):
             if not isinstance(quality, Vp9Quality):
                 raise TypeError("Invalid type for `quality`, type has to be `Vp9Quality`")
 
-            self._quality = quality
+        self._quality = quality
 
 
     @property
@@ -727,7 +1007,7 @@ class Vp9VideoConfiguration(VideoConfiguration):
             if not isinstance(lossless, bool):
                 raise TypeError("Invalid type for `lossless`, type has to be `bool`")
 
-            self._lossless = lossless
+        self._lossless = lossless
 
 
     @property
@@ -757,7 +1037,7 @@ class Vp9VideoConfiguration(VideoConfiguration):
             if not isinstance(static_thresh, int):
                 raise TypeError("Invalid type for `static_thresh`, type has to be `int`")
 
-            self._static_thresh = static_thresh
+        self._static_thresh = static_thresh
 
 
     @property
@@ -783,7 +1063,7 @@ class Vp9VideoConfiguration(VideoConfiguration):
             if not isinstance(aq_mode, Vp9AqMode):
                 raise TypeError("Invalid type for `aq_mode`, type has to be `Vp9AqMode`")
 
-            self._aq_mode = aq_mode
+        self._aq_mode = aq_mode
 
 
     @property
@@ -815,7 +1095,7 @@ class Vp9VideoConfiguration(VideoConfiguration):
             if not isinstance(arnr_max_frames, int):
                 raise TypeError("Invalid type for `arnr_max_frames`, type has to be `int`")
 
-            self._arnr_max_frames = arnr_max_frames
+        self._arnr_max_frames = arnr_max_frames
 
 
     @property
@@ -847,7 +1127,7 @@ class Vp9VideoConfiguration(VideoConfiguration):
             if not isinstance(arnr_strength, int):
                 raise TypeError("Invalid type for `arnr_strength`, type has to be `int`")
 
-            self._arnr_strength = arnr_strength
+        self._arnr_strength = arnr_strength
 
 
     @property
@@ -873,7 +1153,7 @@ class Vp9VideoConfiguration(VideoConfiguration):
             if not isinstance(arnr_type, Vp9ArnrType):
                 raise TypeError("Invalid type for `arnr_type`, type has to be `Vp9ArnrType`")
 
-            self._arnr_type = arnr_type
+        self._arnr_type = arnr_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

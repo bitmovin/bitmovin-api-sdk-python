@@ -48,8 +48,8 @@ class ProgressiveMuxingInformation(object):
         self._container_format = None
         self._container_bitrate = None
         self._duration = None
-        self._video_tracks = None
-        self._audio_tracks = None
+        self._video_tracks = list()
+        self._audio_tracks = list()
         self.discriminator = None
 
         if mime_type is not None:
@@ -92,7 +92,7 @@ class ProgressiveMuxingInformation(object):
             if not isinstance(mime_type, str):
                 raise TypeError("Invalid type for `mime_type`, type has to be `str`")
 
-            self._mime_type = mime_type
+        self._mime_type = mime_type
 
 
     @property
@@ -120,7 +120,7 @@ class ProgressiveMuxingInformation(object):
             if not isinstance(file_size, int):
                 raise TypeError("Invalid type for `file_size`, type has to be `int`")
 
-            self._file_size = file_size
+        self._file_size = file_size
 
 
     @property
@@ -148,7 +148,7 @@ class ProgressiveMuxingInformation(object):
             if not isinstance(container_format, str):
                 raise TypeError("Invalid type for `container_format`, type has to be `str`")
 
-            self._container_format = container_format
+        self._container_format = container_format
 
 
     @property
@@ -176,7 +176,7 @@ class ProgressiveMuxingInformation(object):
             if not isinstance(container_bitrate, int):
                 raise TypeError("Invalid type for `container_bitrate`, type has to be `int`")
 
-            self._container_bitrate = container_bitrate
+        self._container_bitrate = container_bitrate
 
 
     @property
@@ -201,10 +201,10 @@ class ProgressiveMuxingInformation(object):
         """
 
         if duration is not None:
-            if not isinstance(duration, float):
+            if not isinstance(duration, (float, int)):
                 raise TypeError("Invalid type for `duration`, type has to be `float`")
 
-            self._duration = duration
+        self._duration = duration
 
 
     @property
@@ -232,7 +232,7 @@ class ProgressiveMuxingInformation(object):
             if not isinstance(video_tracks, list):
                 raise TypeError("Invalid type for `video_tracks`, type has to be `list[MuxingInformationVideoTrack]`")
 
-            self._video_tracks = video_tracks
+        self._video_tracks = video_tracks
 
 
     @property
@@ -260,7 +260,7 @@ class ProgressiveMuxingInformation(object):
             if not isinstance(audio_tracks, list):
                 raise TypeError("Invalid type for `audio_tracks`, type has to be `list[MuxingInformationAudioTrack]`")
 
-            self._audio_tracks = audio_tracks
+        self._audio_tracks = audio_tracks
 
     def to_dict(self):
         """Returns the model properties as a dict"""

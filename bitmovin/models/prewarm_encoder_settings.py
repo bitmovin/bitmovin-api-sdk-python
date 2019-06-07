@@ -49,8 +49,10 @@ class PrewarmEncoderSettings(BitmovinResource):
         self._log_level = None
         self.discriminator = None
 
-        self.encoder_version = encoder_version
-        self.min_prewarmed = min_prewarmed
+        if encoder_version is not None:
+            self.encoder_version = encoder_version
+        if min_prewarmed is not None:
+            self.min_prewarmed = min_prewarmed
         if max_prewarmed is not None:
             self.max_prewarmed = max_prewarmed
         if log_level is not None:
@@ -81,7 +83,7 @@ class PrewarmEncoderSettings(BitmovinResource):
             if not isinstance(encoder_version, str):
                 raise TypeError("Invalid type for `encoder_version`, type has to be `str`")
 
-            self._encoder_version = encoder_version
+        self._encoder_version = encoder_version
 
 
     @property
@@ -109,7 +111,7 @@ class PrewarmEncoderSettings(BitmovinResource):
             if not isinstance(min_prewarmed, int):
                 raise TypeError("Invalid type for `min_prewarmed`, type has to be `int`")
 
-            self._min_prewarmed = min_prewarmed
+        self._min_prewarmed = min_prewarmed
 
 
     @property
@@ -137,7 +139,7 @@ class PrewarmEncoderSettings(BitmovinResource):
             if not isinstance(max_prewarmed, int):
                 raise TypeError("Invalid type for `max_prewarmed`, type has to be `int`")
 
-            self._max_prewarmed = max_prewarmed
+        self._max_prewarmed = max_prewarmed
 
 
     @property
@@ -163,7 +165,7 @@ class PrewarmEncoderSettings(BitmovinResource):
             if not isinstance(log_level, LogLevel):
                 raise TypeError("Invalid type for `log_level`, type has to be `LogLevel`")
 
-            self._log_level = log_level
+        self._log_level = log_level
 
     def to_dict(self):
         """Returns the model properties as a dict"""

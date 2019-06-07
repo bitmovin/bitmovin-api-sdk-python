@@ -51,7 +51,8 @@ class SftpInput(Input):
         self._password = None
         self.discriminator = None
 
-        self.host = host
+        if host is not None:
+            self.host = host
         if port is not None:
             self.port = port
         if passive is not None:
@@ -86,7 +87,7 @@ class SftpInput(Input):
             if not isinstance(host, str):
                 raise TypeError("Invalid type for `host`, type has to be `str`")
 
-            self._host = host
+        self._host = host
 
 
     @property
@@ -114,7 +115,7 @@ class SftpInput(Input):
             if not isinstance(port, int):
                 raise TypeError("Invalid type for `port`, type has to be `int`")
 
-            self._port = port
+        self._port = port
 
 
     @property
@@ -142,7 +143,7 @@ class SftpInput(Input):
             if not isinstance(passive, bool):
                 raise TypeError("Invalid type for `passive`, type has to be `bool`")
 
-            self._passive = passive
+        self._passive = passive
 
 
     @property
@@ -170,7 +171,7 @@ class SftpInput(Input):
             if not isinstance(username, str):
                 raise TypeError("Invalid type for `username`, type has to be `str`")
 
-            self._username = username
+        self._username = username
 
 
     @property
@@ -198,7 +199,7 @@ class SftpInput(Input):
             if not isinstance(password, str):
                 raise TypeError("Invalid type for `password`, type has to be `str`")
 
-            self._password = password
+        self._password = password
 
     def to_dict(self):
         """Returns the model properties as a dict"""

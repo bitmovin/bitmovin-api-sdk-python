@@ -79,10 +79,10 @@ class Trimming(object):
         """
 
         if offset is not None:
-            if not isinstance(offset, float):
+            if not isinstance(offset, (float, int)):
                 raise TypeError("Invalid type for `offset`, type has to be `float`")
 
-            self._offset = offset
+        self._offset = offset
 
 
     @property
@@ -107,10 +107,10 @@ class Trimming(object):
         """
 
         if duration is not None:
-            if not isinstance(duration, float):
+            if not isinstance(duration, (float, int)):
                 raise TypeError("Invalid type for `duration`, type has to be `float`")
 
-            self._duration = duration
+        self._duration = duration
 
 
     @property
@@ -138,7 +138,7 @@ class Trimming(object):
             if not isinstance(ignore_duration_if_input_too_short, bool):
                 raise TypeError("Invalid type for `ignore_duration_if_input_too_short`, type has to be `bool`")
 
-            self._ignore_duration_if_input_too_short = ignore_duration_if_input_too_short
+        self._ignore_duration_if_input_too_short = ignore_duration_if_input_too_short
 
 
     @property
@@ -166,7 +166,7 @@ class Trimming(object):
             if not isinstance(start_pic_timing, str):
                 raise TypeError("Invalid type for `start_pic_timing`, type has to be `str`")
 
-            self._start_pic_timing = start_pic_timing
+        self._start_pic_timing = start_pic_timing
 
 
     @property
@@ -194,7 +194,7 @@ class Trimming(object):
             if not isinstance(end_pic_timing, str):
                 raise TypeError("Invalid type for `end_pic_timing`, type has to be `str`")
 
-            self._end_pic_timing = end_pic_timing
+        self._end_pic_timing = end_pic_timing
 
     def to_dict(self):
         """Returns the model properties as a dict"""

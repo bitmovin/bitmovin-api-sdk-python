@@ -39,7 +39,8 @@ class DashVttRepresentation(BitmovinResource):
         self._vtt_url = None
         self.discriminator = None
 
-        self.vtt_url = vtt_url
+        if vtt_url is not None:
+            self.vtt_url = vtt_url
 
     @property
     def vtt_url(self):
@@ -66,7 +67,7 @@ class DashVttRepresentation(BitmovinResource):
             if not isinstance(vtt_url, str):
                 raise TypeError("Invalid type for `vtt_url`, type has to be `str`")
 
-            self._vtt_url = vtt_url
+        self._vtt_url = vtt_url
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -39,7 +39,8 @@ class AudioAdaptationSet(AdaptationSet):
         self._lang = None
         self.discriminator = None
 
-        self.lang = lang
+        if lang is not None:
+            self.lang = lang
 
     @property
     def lang(self):
@@ -66,7 +67,7 @@ class AudioAdaptationSet(AdaptationSet):
             if not isinstance(lang, str):
                 raise TypeError("Invalid type for `lang`, type has to be `str`")
 
-            self._lang = lang
+        self._lang = lang
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -60,20 +60,24 @@ class Sprite(BitmovinResource):
         self._sprite_name = None
         self._filename = None
         self._vtt_name = None
-        self._outputs = None
+        self._outputs = list()
         self._images_per_file = None
         self.discriminator = None
 
-        self.height = height
-        self.width = width
+        if height is not None:
+            self.height = height
+        if width is not None:
+            self.width = width
         if unit is not None:
             self.unit = unit
         if distance is not None:
             self.distance = distance
-        self.sprite_name = sprite_name
+        if sprite_name is not None:
+            self.sprite_name = sprite_name
         if filename is not None:
             self.filename = filename
-        self.vtt_name = vtt_name
+        if vtt_name is not None:
+            self.vtt_name = vtt_name
         if outputs is not None:
             self.outputs = outputs
         if images_per_file is not None:
@@ -104,7 +108,7 @@ class Sprite(BitmovinResource):
             if not isinstance(height, int):
                 raise TypeError("Invalid type for `height`, type has to be `int`")
 
-            self._height = height
+        self._height = height
 
 
     @property
@@ -132,7 +136,7 @@ class Sprite(BitmovinResource):
             if not isinstance(width, int):
                 raise TypeError("Invalid type for `width`, type has to be `int`")
 
-            self._width = width
+        self._width = width
 
 
     @property
@@ -158,7 +162,7 @@ class Sprite(BitmovinResource):
             if not isinstance(unit, SpriteUnit):
                 raise TypeError("Invalid type for `unit`, type has to be `SpriteUnit`")
 
-            self._unit = unit
+        self._unit = unit
 
 
     @property
@@ -183,10 +187,10 @@ class Sprite(BitmovinResource):
         """
 
         if distance is not None:
-            if not isinstance(distance, float):
+            if not isinstance(distance, (float, int)):
                 raise TypeError("Invalid type for `distance`, type has to be `float`")
 
-            self._distance = distance
+        self._distance = distance
 
 
     @property
@@ -214,7 +218,7 @@ class Sprite(BitmovinResource):
             if not isinstance(sprite_name, str):
                 raise TypeError("Invalid type for `sprite_name`, type has to be `str`")
 
-            self._sprite_name = sprite_name
+        self._sprite_name = sprite_name
 
 
     @property
@@ -242,7 +246,7 @@ class Sprite(BitmovinResource):
             if not isinstance(filename, str):
                 raise TypeError("Invalid type for `filename`, type has to be `str`")
 
-            self._filename = filename
+        self._filename = filename
 
 
     @property
@@ -270,7 +274,7 @@ class Sprite(BitmovinResource):
             if not isinstance(vtt_name, str):
                 raise TypeError("Invalid type for `vtt_name`, type has to be `str`")
 
-            self._vtt_name = vtt_name
+        self._vtt_name = vtt_name
 
 
     @property
@@ -296,7 +300,7 @@ class Sprite(BitmovinResource):
             if not isinstance(outputs, list):
                 raise TypeError("Invalid type for `outputs`, type has to be `list[EncodingOutput]`")
 
-            self._outputs = outputs
+        self._outputs = outputs
 
 
     @property
@@ -324,7 +328,7 @@ class Sprite(BitmovinResource):
             if not isinstance(images_per_file, int):
                 raise TypeError("Invalid type for `images_per_file`, type has to be `int`")
 
-            self._images_per_file = images_per_file
+        self._images_per_file = images_per_file
 
     def to_dict(self):
         """Returns the model properties as a dict"""

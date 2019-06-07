@@ -39,7 +39,8 @@ class LocalOutput(Output):
         self._path = None
         self.discriminator = None
 
-        self.path = path
+        if path is not None:
+            self.path = path
 
     @property
     def path(self):
@@ -66,7 +67,7 @@ class LocalOutput(Output):
             if not isinstance(path, str):
                 raise TypeError("Invalid type for `path`, type has to be `str`")
 
-            self._path = path
+        self._path = path
 
     def to_dict(self):
         """Returns the model properties as a dict"""

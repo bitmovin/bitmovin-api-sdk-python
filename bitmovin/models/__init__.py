@@ -49,6 +49,7 @@ from bitmovin.models.analytics_stddev_query_request import AnalyticsStddevQueryR
 from bitmovin.models.analytics_sum_query_request import AnalyticsSumQueryRequest
 from bitmovin.models.analytics_variance_query_request import AnalyticsVarianceQueryRequest
 from bitmovin.models.and_conjunction import AndConjunction
+from bitmovin.models.api_error_definition import ApiErrorDefinition
 from bitmovin.models.applied_stream_settings import AppliedStreamSettings
 from bitmovin.models.aspera_input import AsperaInput
 from bitmovin.models.audio_adaptation_set import AudioAdaptationSet

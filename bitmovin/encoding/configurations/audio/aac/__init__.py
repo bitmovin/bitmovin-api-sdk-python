@@ -1,2 +1,3 @@
 from bitmovin.encoding.configurations.audio.aac.aac_api import AacApi
 from bitmovin.encoding.configurations.audio.aac.customdata.customdata_api import CustomdataApi
+from bitmovin.encoding.configurations.audio.aac.aac_audio_configuration_list_query_params import AacAudioConfigurationListQueryParams

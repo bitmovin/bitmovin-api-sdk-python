@@ -31,7 +31,7 @@ class DomainList(object):
 
     def __init__(self, domains=None, *args, **kwargs):
 
-        self._domains = None
+        self._domains = list()
         self.discriminator = None
 
         if domains is not None:
@@ -60,7 +60,7 @@ class DomainList(object):
             if not isinstance(domains, list):
                 raise TypeError("Invalid type for `domains`, type has to be `list[Domain]`")
 
-            self._domains = domains
+        self._domains = domains
 
     def to_dict(self):
         """Returns the model properties as a dict"""

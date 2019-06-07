@@ -49,7 +49,7 @@ class Output(BitmovinResource):
     def __init__(self, acl=None, *args, **kwargs):
         super(Output, self).__init__(*args, **kwargs)
 
-        self._acl = None
+        self._acl = list()
         self.discriminator = 'type'
 
         if acl is not None:
@@ -78,7 +78,7 @@ class Output(BitmovinResource):
             if not isinstance(acl, list):
                 raise TypeError("Invalid type for `acl`, type has to be `list[AclEntry]`")
 
-            self._acl = acl
+        self._acl = acl
 
     def get_real_child_model(self, data):
         """Returns the real base class specified by the discriminator"""

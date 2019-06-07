@@ -37,8 +37,10 @@ class InputPath(object):
         self._input_path = None
         self.discriminator = None
 
-        self.input_id = input_id
-        self.input_path = input_path
+        if input_id is not None:
+            self.input_id = input_id
+        if input_path is not None:
+            self.input_path = input_path
 
     @property
     def input_id(self):
@@ -65,7 +67,7 @@ class InputPath(object):
             if not isinstance(input_id, str):
                 raise TypeError("Invalid type for `input_id`, type has to be `str`")
 
-            self._input_id = input_id
+        self._input_id = input_id
 
 
     @property
@@ -93,7 +95,7 @@ class InputPath(object):
             if not isinstance(input_path, str):
                 raise TypeError("Invalid type for `input_path`, type has to be `str`")
 
-            self._input_path = input_path
+        self._input_path = input_path
 
     def to_dict(self):
         """Returns the model properties as a dict"""

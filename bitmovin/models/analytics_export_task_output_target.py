@@ -37,8 +37,10 @@ class AnalyticsExportTaskOutputTarget(object):
         self._output_id = None
         self.discriminator = None
 
-        self.output_path = output_path
-        self.output_id = output_id
+        if output_path is not None:
+            self.output_path = output_path
+        if output_id is not None:
+            self.output_id = output_id
 
     @property
     def output_path(self):
@@ -65,7 +67,7 @@ class AnalyticsExportTaskOutputTarget(object):
             if not isinstance(output_path, str):
                 raise TypeError("Invalid type for `output_path`, type has to be `str`")
 
-            self._output_path = output_path
+        self._output_path = output_path
 
 
     @property
@@ -93,7 +95,7 @@ class AnalyticsExportTaskOutputTarget(object):
             if not isinstance(output_id, str):
                 raise TypeError("Invalid type for `output_id`, type has to be `str`")
 
-            self._output_id = output_id
+        self._output_id = output_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

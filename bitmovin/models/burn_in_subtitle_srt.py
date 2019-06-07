@@ -44,8 +44,10 @@ class BurnInSubtitleSrt(BitmovinResource):
         self._input = None
         self.discriminator = None
 
-        self.character_encoding = character_encoding
-        self.input = input
+        if character_encoding is not None:
+            self.character_encoding = character_encoding
+        if input is not None:
+            self.input = input
 
     @property
     def character_encoding(self):
@@ -72,7 +74,7 @@ class BurnInSubtitleSrt(BitmovinResource):
             if not isinstance(character_encoding, CaptionCharacterEncoding):
                 raise TypeError("Invalid type for `character_encoding`, type has to be `CaptionCharacterEncoding`")
 
-            self._character_encoding = character_encoding
+        self._character_encoding = character_encoding
 
 
     @property
@@ -100,7 +102,7 @@ class BurnInSubtitleSrt(BitmovinResource):
             if not isinstance(input, InputPath):
                 raise TypeError("Invalid type for `input`, type has to be `InputPath`")
 
-            self._input = input
+        self._input = input
 
     def to_dict(self):
         """Returns the model properties as a dict"""

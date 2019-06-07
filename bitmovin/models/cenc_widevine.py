@@ -34,7 +34,8 @@ class CencWidevine(object):
         self._pssh = None
         self.discriminator = None
 
-        self.pssh = pssh
+        if pssh is not None:
+            self.pssh = pssh
 
     @property
     def pssh(self):
@@ -61,7 +62,7 @@ class CencWidevine(object):
             if not isinstance(pssh, str):
                 raise TypeError("Invalid type for `pssh`, type has to be `str`")
 
-            self._pssh = pssh
+        self._pssh = pssh
 
     def to_dict(self):
         """Returns the model properties as a dict"""

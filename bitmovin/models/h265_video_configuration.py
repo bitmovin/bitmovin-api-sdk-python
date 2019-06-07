@@ -344,7 +344,8 @@ class H265VideoConfiguration(VideoConfiguration):
             self.preset_configuration = preset_configuration
         if crf is not None:
             self.crf = crf
-        self.profile = profile
+        if profile is not None:
+            self.profile = profile
         if bframes is not None:
             self.bframes = bframes
         if ref_frames is not None:
@@ -553,7 +554,7 @@ class H265VideoConfiguration(VideoConfiguration):
             if not isinstance(preset_configuration, PresetConfiguration):
                 raise TypeError("Invalid type for `preset_configuration`, type has to be `PresetConfiguration`")
 
-            self._preset_configuration = preset_configuration
+        self._preset_configuration = preset_configuration
 
 
     @property
@@ -582,10 +583,10 @@ class H265VideoConfiguration(VideoConfiguration):
                 raise ValueError("Invalid value for `crf`, must be a value less than or equal to `51`")
             if crf is not None and crf < 0:
                 raise ValueError("Invalid value for `crf`, must be a value greater than or equal to `0`")
-            if not isinstance(crf, float):
+            if not isinstance(crf, (float, int)):
                 raise TypeError("Invalid type for `crf`, type has to be `float`")
 
-            self._crf = crf
+        self._crf = crf
 
 
     @property
@@ -611,7 +612,7 @@ class H265VideoConfiguration(VideoConfiguration):
             if not isinstance(profile, ProfileH265):
                 raise TypeError("Invalid type for `profile`, type has to be `ProfileH265`")
 
-            self._profile = profile
+        self._profile = profile
 
 
     @property
@@ -643,7 +644,7 @@ class H265VideoConfiguration(VideoConfiguration):
             if not isinstance(bframes, int):
                 raise TypeError("Invalid type for `bframes`, type has to be `int`")
 
-            self._bframes = bframes
+        self._bframes = bframes
 
 
     @property
@@ -675,7 +676,7 @@ class H265VideoConfiguration(VideoConfiguration):
             if not isinstance(ref_frames, int):
                 raise TypeError("Invalid type for `ref_frames`, type has to be `int`")
 
-            self._ref_frames = ref_frames
+        self._ref_frames = ref_frames
 
 
     @property
@@ -707,7 +708,7 @@ class H265VideoConfiguration(VideoConfiguration):
             if not isinstance(qp, int):
                 raise TypeError("Invalid type for `qp`, type has to be `int`")
 
-            self._qp = qp
+        self._qp = qp
 
 
     @property
@@ -735,7 +736,7 @@ class H265VideoConfiguration(VideoConfiguration):
             if not isinstance(max_bitrate, int):
                 raise TypeError("Invalid type for `max_bitrate`, type has to be `int`")
 
-            self._max_bitrate = max_bitrate
+        self._max_bitrate = max_bitrate
 
 
     @property
@@ -763,7 +764,7 @@ class H265VideoConfiguration(VideoConfiguration):
             if not isinstance(min_bitrate, int):
                 raise TypeError("Invalid type for `min_bitrate`, type has to be `int`")
 
-            self._min_bitrate = min_bitrate
+        self._min_bitrate = min_bitrate
 
 
     @property
@@ -791,7 +792,7 @@ class H265VideoConfiguration(VideoConfiguration):
             if not isinstance(bufsize, int):
                 raise TypeError("Invalid type for `bufsize`, type has to be `int`")
 
-            self._bufsize = bufsize
+        self._bufsize = bufsize
 
 
     @property
@@ -819,7 +820,7 @@ class H265VideoConfiguration(VideoConfiguration):
             if not isinstance(min_gop, int):
                 raise TypeError("Invalid type for `min_gop`, type has to be `int`")
 
-            self._min_gop = min_gop
+        self._min_gop = min_gop
 
 
     @property
@@ -847,7 +848,7 @@ class H265VideoConfiguration(VideoConfiguration):
             if not isinstance(max_gop, int):
                 raise TypeError("Invalid type for `max_gop`, type has to be `int`")
 
-            self._max_gop = max_gop
+        self._max_gop = max_gop
 
 
     @property
@@ -875,7 +876,7 @@ class H265VideoConfiguration(VideoConfiguration):
             if not isinstance(open_gop, bool):
                 raise TypeError("Invalid type for `open_gop`, type has to be `bool`")
 
-            self._open_gop = open_gop
+        self._open_gop = open_gop
 
 
     @property
@@ -900,10 +901,10 @@ class H265VideoConfiguration(VideoConfiguration):
         """
 
         if min_keyframe_interval is not None:
-            if not isinstance(min_keyframe_interval, float):
+            if not isinstance(min_keyframe_interval, (float, int)):
                 raise TypeError("Invalid type for `min_keyframe_interval`, type has to be `float`")
 
-            self._min_keyframe_interval = min_keyframe_interval
+        self._min_keyframe_interval = min_keyframe_interval
 
 
     @property
@@ -928,10 +929,10 @@ class H265VideoConfiguration(VideoConfiguration):
         """
 
         if max_keyframe_interval is not None:
-            if not isinstance(max_keyframe_interval, float):
+            if not isinstance(max_keyframe_interval, (float, int)):
                 raise TypeError("Invalid type for `max_keyframe_interval`, type has to be `float`")
 
-            self._max_keyframe_interval = max_keyframe_interval
+        self._max_keyframe_interval = max_keyframe_interval
 
 
     @property
@@ -957,7 +958,7 @@ class H265VideoConfiguration(VideoConfiguration):
             if not isinstance(level, LevelH265):
                 raise TypeError("Invalid type for `level`, type has to be `LevelH265`")
 
-            self._level = level
+        self._level = level
 
 
     @property
@@ -989,7 +990,7 @@ class H265VideoConfiguration(VideoConfiguration):
             if not isinstance(rc_lookahead, int):
                 raise TypeError("Invalid type for `rc_lookahead`, type has to be `int`")
 
-            self._rc_lookahead = rc_lookahead
+        self._rc_lookahead = rc_lookahead
 
 
     @property
@@ -1017,7 +1018,7 @@ class H265VideoConfiguration(VideoConfiguration):
             if not isinstance(b_adapt, BAdapt):
                 raise TypeError("Invalid type for `b_adapt`, type has to be `BAdapt`")
 
-            self._b_adapt = b_adapt
+        self._b_adapt = b_adapt
 
 
     @property
@@ -1043,7 +1044,7 @@ class H265VideoConfiguration(VideoConfiguration):
             if not isinstance(max_ctu_size, MaxCtuSize):
                 raise TypeError("Invalid type for `max_ctu_size`, type has to be `MaxCtuSize`")
 
-            self._max_ctu_size = max_ctu_size
+        self._max_ctu_size = max_ctu_size
 
 
     @property
@@ -1069,7 +1070,7 @@ class H265VideoConfiguration(VideoConfiguration):
             if not isinstance(tu_intra_depth, TuIntraDepth):
                 raise TypeError("Invalid type for `tu_intra_depth`, type has to be `TuIntraDepth`")
 
-            self._tu_intra_depth = tu_intra_depth
+        self._tu_intra_depth = tu_intra_depth
 
 
     @property
@@ -1095,7 +1096,7 @@ class H265VideoConfiguration(VideoConfiguration):
             if not isinstance(tu_inter_depth, TuInterDepth):
                 raise TypeError("Invalid type for `tu_inter_depth`, type has to be `TuInterDepth`")
 
-            self._tu_inter_depth = tu_inter_depth
+        self._tu_inter_depth = tu_inter_depth
 
 
     @property
@@ -1121,7 +1122,7 @@ class H265VideoConfiguration(VideoConfiguration):
             if not isinstance(motion_search, MotionSearch):
                 raise TypeError("Invalid type for `motion_search`, type has to be `MotionSearch`")
 
-            self._motion_search = motion_search
+        self._motion_search = motion_search
 
 
     @property
@@ -1153,7 +1154,7 @@ class H265VideoConfiguration(VideoConfiguration):
             if not isinstance(sub_me, int):
                 raise TypeError("Invalid type for `sub_me`, type has to be `int`")
 
-            self._sub_me = sub_me
+        self._sub_me = sub_me
 
 
     @property
@@ -1185,7 +1186,7 @@ class H265VideoConfiguration(VideoConfiguration):
             if not isinstance(motion_search_range, int):
                 raise TypeError("Invalid type for `motion_search_range`, type has to be `int`")
 
-            self._motion_search_range = motion_search_range
+        self._motion_search_range = motion_search_range
 
 
     @property
@@ -1213,7 +1214,7 @@ class H265VideoConfiguration(VideoConfiguration):
             if not isinstance(weight_prediction_on_p_slice, bool):
                 raise TypeError("Invalid type for `weight_prediction_on_p_slice`, type has to be `bool`")
 
-            self._weight_prediction_on_p_slice = weight_prediction_on_p_slice
+        self._weight_prediction_on_p_slice = weight_prediction_on_p_slice
 
 
     @property
@@ -1241,7 +1242,7 @@ class H265VideoConfiguration(VideoConfiguration):
             if not isinstance(weight_prediction_on_b_slice, bool):
                 raise TypeError("Invalid type for `weight_prediction_on_b_slice`, type has to be `bool`")
 
-            self._weight_prediction_on_b_slice = weight_prediction_on_b_slice
+        self._weight_prediction_on_b_slice = weight_prediction_on_b_slice
 
 
     @property
@@ -1269,7 +1270,7 @@ class H265VideoConfiguration(VideoConfiguration):
             if not isinstance(sao, bool):
                 raise TypeError("Invalid type for `sao`, type has to be `bool`")
 
-            self._sao = sao
+        self._sao = sao
 
 
     @property
@@ -1297,7 +1298,7 @@ class H265VideoConfiguration(VideoConfiguration):
             if not isinstance(master_display, str):
                 raise TypeError("Invalid type for `master_display`, type has to be `str`")
 
-            self._master_display = master_display
+        self._master_display = master_display
 
 
     @property
@@ -1325,7 +1326,7 @@ class H265VideoConfiguration(VideoConfiguration):
             if not isinstance(max_content_light_level, str):
                 raise TypeError("Invalid type for `max_content_light_level`, type has to be `str`")
 
-            self._max_content_light_level = max_content_light_level
+        self._max_content_light_level = max_content_light_level
 
 
     @property
@@ -1353,7 +1354,7 @@ class H265VideoConfiguration(VideoConfiguration):
             if not isinstance(max_average_light_level, int):
                 raise TypeError("Invalid type for `max_average_light_level`, type has to be `int`")
 
-            self._max_average_light_level = max_average_light_level
+        self._max_average_light_level = max_average_light_level
 
 
     @property
@@ -1381,7 +1382,7 @@ class H265VideoConfiguration(VideoConfiguration):
             if not isinstance(hdr, bool):
                 raise TypeError("Invalid type for `hdr`, type has to be `bool`")
 
-            self._hdr = hdr
+        self._hdr = hdr
 
 
     @property
@@ -1411,7 +1412,7 @@ class H265VideoConfiguration(VideoConfiguration):
             if not isinstance(scene_cut_threshold, int):
                 raise TypeError("Invalid type for `scene_cut_threshold`, type has to be `int`")
 
-            self._scene_cut_threshold = scene_cut_threshold
+        self._scene_cut_threshold = scene_cut_threshold
 
 
     @property
@@ -1439,7 +1440,7 @@ class H265VideoConfiguration(VideoConfiguration):
             if not isinstance(adaptive_quantization_mode, AdaptiveQuantMode):
                 raise TypeError("Invalid type for `adaptive_quantization_mode`, type has to be `AdaptiveQuantMode`")
 
-            self._adaptive_quantization_mode = adaptive_quantization_mode
+        self._adaptive_quantization_mode = adaptive_quantization_mode
 
 
     @property
@@ -1467,7 +1468,7 @@ class H265VideoConfiguration(VideoConfiguration):
             if not isinstance(enable_hlg_signaling, bool):
                 raise TypeError("Invalid type for `enable_hlg_signaling`, type has to be `bool`")
 
-            self._enable_hlg_signaling = enable_hlg_signaling
+        self._enable_hlg_signaling = enable_hlg_signaling
 
 
     @property
@@ -1495,7 +1496,7 @@ class H265VideoConfiguration(VideoConfiguration):
             if not isinstance(video_format, VideoFormat):
                 raise TypeError("Invalid type for `video_format`, type has to be `VideoFormat`")
 
-            self._video_format = video_format
+        self._video_format = video_format
 
 
     @property
@@ -1524,10 +1525,10 @@ class H265VideoConfiguration(VideoConfiguration):
                 raise ValueError("Invalid value for `psy_rate_distortion_optimization`, must be a value less than or equal to `5`")
             if psy_rate_distortion_optimization is not None and psy_rate_distortion_optimization < 0:
                 raise ValueError("Invalid value for `psy_rate_distortion_optimization`, must be a value greater than or equal to `0`")
-            if not isinstance(psy_rate_distortion_optimization, float):
+            if not isinstance(psy_rate_distortion_optimization, (float, int)):
                 raise TypeError("Invalid type for `psy_rate_distortion_optimization`, type has to be `float`")
 
-            self._psy_rate_distortion_optimization = psy_rate_distortion_optimization
+        self._psy_rate_distortion_optimization = psy_rate_distortion_optimization
 
 
     @property
@@ -1556,10 +1557,10 @@ class H265VideoConfiguration(VideoConfiguration):
                 raise ValueError("Invalid value for `psy_rate_distortion_optimized_quantization`, must be a value less than or equal to `50`")
             if psy_rate_distortion_optimized_quantization is not None and psy_rate_distortion_optimized_quantization < 0:
                 raise ValueError("Invalid value for `psy_rate_distortion_optimized_quantization`, must be a value greater than or equal to `0`")
-            if not isinstance(psy_rate_distortion_optimized_quantization, float):
+            if not isinstance(psy_rate_distortion_optimized_quantization, (float, int)):
                 raise TypeError("Invalid type for `psy_rate_distortion_optimized_quantization`, type has to be `float`")
 
-            self._psy_rate_distortion_optimized_quantization = psy_rate_distortion_optimized_quantization
+        self._psy_rate_distortion_optimized_quantization = psy_rate_distortion_optimized_quantization
 
 
     @property
@@ -1587,7 +1588,7 @@ class H265VideoConfiguration(VideoConfiguration):
             if not isinstance(enable_hrd_signaling, bool):
                 raise TypeError("Invalid type for `enable_hrd_signaling`, type has to be `bool`")
 
-            self._enable_hrd_signaling = enable_hrd_signaling
+        self._enable_hrd_signaling = enable_hrd_signaling
 
 
     @property
@@ -1615,7 +1616,7 @@ class H265VideoConfiguration(VideoConfiguration):
             if not isinstance(cutree, bool):
                 raise TypeError("Invalid type for `cutree`, type has to be `bool`")
 
-            self._cutree = cutree
+        self._cutree = cutree
 
 
     @property
@@ -1643,7 +1644,7 @@ class H265VideoConfiguration(VideoConfiguration):
             if not isinstance(min_coding_unit_size, MinCodingUnitSize):
                 raise TypeError("Invalid type for `min_coding_unit_size`, type has to be `MinCodingUnitSize`")
 
-            self._min_coding_unit_size = min_coding_unit_size
+        self._min_coding_unit_size = min_coding_unit_size
 
 
     @property
@@ -1671,7 +1672,7 @@ class H265VideoConfiguration(VideoConfiguration):
             if not isinstance(lookahead_slices, int):
                 raise TypeError("Invalid type for `lookahead_slices`, type has to be `int`")
 
-            self._lookahead_slices = lookahead_slices
+        self._lookahead_slices = lookahead_slices
 
 
     @property
@@ -1699,7 +1700,7 @@ class H265VideoConfiguration(VideoConfiguration):
             if not isinstance(limit_references, LimitReferences):
                 raise TypeError("Invalid type for `limit_references`, type has to be `LimitReferences`")
 
-            self._limit_references = limit_references
+        self._limit_references = limit_references
 
 
     @property
@@ -1727,7 +1728,7 @@ class H265VideoConfiguration(VideoConfiguration):
             if not isinstance(rectangular_motion_partitions_analysis, bool):
                 raise TypeError("Invalid type for `rectangular_motion_partitions_analysis`, type has to be `bool`")
 
-            self._rectangular_motion_partitions_analysis = rectangular_motion_partitions_analysis
+        self._rectangular_motion_partitions_analysis = rectangular_motion_partitions_analysis
 
 
     @property
@@ -1755,7 +1756,7 @@ class H265VideoConfiguration(VideoConfiguration):
             if not isinstance(asymetric_motion_partitions_analysis, bool):
                 raise TypeError("Invalid type for `asymetric_motion_partitions_analysis`, type has to be `bool`")
 
-            self._asymetric_motion_partitions_analysis = asymetric_motion_partitions_analysis
+        self._asymetric_motion_partitions_analysis = asymetric_motion_partitions_analysis
 
 
     @property
@@ -1783,7 +1784,7 @@ class H265VideoConfiguration(VideoConfiguration):
             if not isinstance(limit_modes, bool):
                 raise TypeError("Invalid type for `limit_modes`, type has to be `bool`")
 
-            self._limit_modes = limit_modes
+        self._limit_modes = limit_modes
 
 
     @property
@@ -1811,7 +1812,7 @@ class H265VideoConfiguration(VideoConfiguration):
             if not isinstance(max_merge, int):
                 raise TypeError("Invalid type for `max_merge`, type has to be `int`")
 
-            self._max_merge = max_merge
+        self._max_merge = max_merge
 
 
     @property
@@ -1839,7 +1840,7 @@ class H265VideoConfiguration(VideoConfiguration):
             if not isinstance(early_skip, bool):
                 raise TypeError("Invalid type for `early_skip`, type has to be `bool`")
 
-            self._early_skip = early_skip
+        self._early_skip = early_skip
 
 
     @property
@@ -1867,7 +1868,7 @@ class H265VideoConfiguration(VideoConfiguration):
             if not isinstance(recursion_skip, bool):
                 raise TypeError("Invalid type for `recursion_skip`, type has to be `bool`")
 
-            self._recursion_skip = recursion_skip
+        self._recursion_skip = recursion_skip
 
 
     @property
@@ -1895,7 +1896,7 @@ class H265VideoConfiguration(VideoConfiguration):
             if not isinstance(fast_search_for_angular_intra_predictions, bool):
                 raise TypeError("Invalid type for `fast_search_for_angular_intra_predictions`, type has to be `bool`")
 
-            self._fast_search_for_angular_intra_predictions = fast_search_for_angular_intra_predictions
+        self._fast_search_for_angular_intra_predictions = fast_search_for_angular_intra_predictions
 
 
     @property
@@ -1923,7 +1924,7 @@ class H265VideoConfiguration(VideoConfiguration):
             if not isinstance(evaluation_of_intra_modes_in_b_slices, bool):
                 raise TypeError("Invalid type for `evaluation_of_intra_modes_in_b_slices`, type has to be `bool`")
 
-            self._evaluation_of_intra_modes_in_b_slices = evaluation_of_intra_modes_in_b_slices
+        self._evaluation_of_intra_modes_in_b_slices = evaluation_of_intra_modes_in_b_slices
 
 
     @property
@@ -1951,7 +1952,7 @@ class H265VideoConfiguration(VideoConfiguration):
             if not isinstance(sign_hide, bool):
                 raise TypeError("Invalid type for `sign_hide`, type has to be `bool`")
 
-            self._sign_hide = sign_hide
+        self._sign_hide = sign_hide
 
 
     @property
@@ -1979,7 +1980,7 @@ class H265VideoConfiguration(VideoConfiguration):
             if not isinstance(rate_distortion_level_for_mode_decision, int):
                 raise TypeError("Invalid type for `rate_distortion_level_for_mode_decision`, type has to be `int`")
 
-            self._rate_distortion_level_for_mode_decision = rate_distortion_level_for_mode_decision
+        self._rate_distortion_level_for_mode_decision = rate_distortion_level_for_mode_decision
 
 
     @property
@@ -2007,7 +2008,7 @@ class H265VideoConfiguration(VideoConfiguration):
             if not isinstance(rate_distortion_level_for_quantization, RateDistortionLevelForQuantization):
                 raise TypeError("Invalid type for `rate_distortion_level_for_quantization`, type has to be `RateDistortionLevelForQuantization`")
 
-            self._rate_distortion_level_for_quantization = rate_distortion_level_for_quantization
+        self._rate_distortion_level_for_quantization = rate_distortion_level_for_quantization
 
 
     @property
@@ -2035,7 +2036,7 @@ class H265VideoConfiguration(VideoConfiguration):
             if not isinstance(qp_min, int):
                 raise TypeError("Invalid type for `qp_min`, type has to be `int`")
 
-            self._qp_min = qp_min
+        self._qp_min = qp_min
 
 
     @property
@@ -2063,7 +2064,7 @@ class H265VideoConfiguration(VideoConfiguration):
             if not isinstance(qp_max, int):
                 raise TypeError("Invalid type for `qp_max`, type has to be `int`")
 
-            self._qp_max = qp_max
+        self._qp_max = qp_max
 
 
     @property
@@ -2091,7 +2092,7 @@ class H265VideoConfiguration(VideoConfiguration):
             if not isinstance(wavefront_parallel_processing, bool):
                 raise TypeError("Invalid type for `wavefront_parallel_processing`, type has to be `bool`")
 
-            self._wavefront_parallel_processing = wavefront_parallel_processing
+        self._wavefront_parallel_processing = wavefront_parallel_processing
 
 
     @property
@@ -2119,7 +2120,7 @@ class H265VideoConfiguration(VideoConfiguration):
             if not isinstance(slices, int):
                 raise TypeError("Invalid type for `slices`, type has to be `int`")
 
-            self._slices = slices
+        self._slices = slices
 
 
     @property
@@ -2147,7 +2148,7 @@ class H265VideoConfiguration(VideoConfiguration):
             if not isinstance(copy_picture, bool):
                 raise TypeError("Invalid type for `copy_picture`, type has to be `bool`")
 
-            self._copy_picture = copy_picture
+        self._copy_picture = copy_picture
 
 
     @property
@@ -2175,7 +2176,7 @@ class H265VideoConfiguration(VideoConfiguration):
             if not isinstance(level_high_tier, bool):
                 raise TypeError("Invalid type for `level_high_tier`, type has to be `bool`")
 
-            self._level_high_tier = level_high_tier
+        self._level_high_tier = level_high_tier
 
 
     @property
@@ -2203,7 +2204,7 @@ class H265VideoConfiguration(VideoConfiguration):
             if not isinstance(skip_split_rate_distortion_analysis, bool):
                 raise TypeError("Invalid type for `skip_split_rate_distortion_analysis`, type has to be `bool`")
 
-            self._skip_split_rate_distortion_analysis = skip_split_rate_distortion_analysis
+        self._skip_split_rate_distortion_analysis = skip_split_rate_distortion_analysis
 
 
     @property
@@ -2231,7 +2232,7 @@ class H265VideoConfiguration(VideoConfiguration):
             if not isinstance(coding_unit_lossless, bool):
                 raise TypeError("Invalid type for `coding_unit_lossless`, type has to be `bool`")
 
-            self._coding_unit_lossless = coding_unit_lossless
+        self._coding_unit_lossless = coding_unit_lossless
 
 
     @property
@@ -2259,7 +2260,7 @@ class H265VideoConfiguration(VideoConfiguration):
             if not isinstance(transform_skip, TransformSkipMode):
                 raise TypeError("Invalid type for `transform_skip`, type has to be `TransformSkipMode`")
 
-            self._transform_skip = transform_skip
+        self._transform_skip = transform_skip
 
 
     @property
@@ -2287,7 +2288,7 @@ class H265VideoConfiguration(VideoConfiguration):
             if not isinstance(refine_rate_distortion_cost, bool):
                 raise TypeError("Invalid type for `refine_rate_distortion_cost`, type has to be `bool`")
 
-            self._refine_rate_distortion_cost = refine_rate_distortion_cost
+        self._refine_rate_distortion_cost = refine_rate_distortion_cost
 
 
     @property
@@ -2315,7 +2316,7 @@ class H265VideoConfiguration(VideoConfiguration):
             if not isinstance(limit_transform_unit_depth_recursion, LimitTransformUnitDepthRecursionMode):
                 raise TypeError("Invalid type for `limit_transform_unit_depth_recursion`, type has to be `LimitTransformUnitDepthRecursionMode`")
 
-            self._limit_transform_unit_depth_recursion = limit_transform_unit_depth_recursion
+        self._limit_transform_unit_depth_recursion = limit_transform_unit_depth_recursion
 
 
     @property
@@ -2347,7 +2348,7 @@ class H265VideoConfiguration(VideoConfiguration):
             if not isinstance(noise_reduction_intra, int):
                 raise TypeError("Invalid type for `noise_reduction_intra`, type has to be `int`")
 
-            self._noise_reduction_intra = noise_reduction_intra
+        self._noise_reduction_intra = noise_reduction_intra
 
 
     @property
@@ -2379,7 +2380,7 @@ class H265VideoConfiguration(VideoConfiguration):
             if not isinstance(noise_reduction_inter, int):
                 raise TypeError("Invalid type for `noise_reduction_inter`, type has to be `int`")
 
-            self._noise_reduction_inter = noise_reduction_inter
+        self._noise_reduction_inter = noise_reduction_inter
 
 
     @property
@@ -2407,7 +2408,7 @@ class H265VideoConfiguration(VideoConfiguration):
             if not isinstance(rate_distortion_penalty, RateDistortionPenaltyMode):
                 raise TypeError("Invalid type for `rate_distortion_penalty`, type has to be `RateDistortionPenaltyMode`")
 
-            self._rate_distortion_penalty = rate_distortion_penalty
+        self._rate_distortion_penalty = rate_distortion_penalty
 
 
     @property
@@ -2435,7 +2436,7 @@ class H265VideoConfiguration(VideoConfiguration):
             if not isinstance(maximum_transform_unit_size, MaxTransformUnitSize):
                 raise TypeError("Invalid type for `maximum_transform_unit_size`, type has to be `MaxTransformUnitSize`")
 
-            self._maximum_transform_unit_size = maximum_transform_unit_size
+        self._maximum_transform_unit_size = maximum_transform_unit_size
 
 
     @property
@@ -2467,7 +2468,7 @@ class H265VideoConfiguration(VideoConfiguration):
             if not isinstance(dynamic_rate_distortion_strength, int):
                 raise TypeError("Invalid type for `dynamic_rate_distortion_strength`, type has to be `int`")
 
-            self._dynamic_rate_distortion_strength = dynamic_rate_distortion_strength
+        self._dynamic_rate_distortion_strength = dynamic_rate_distortion_strength
 
 
     @property
@@ -2495,7 +2496,7 @@ class H265VideoConfiguration(VideoConfiguration):
             if not isinstance(ssim_rate_distortion_optimization, bool):
                 raise TypeError("Invalid type for `ssim_rate_distortion_optimization`, type has to be `bool`")
 
-            self._ssim_rate_distortion_optimization = ssim_rate_distortion_optimization
+        self._ssim_rate_distortion_optimization = ssim_rate_distortion_optimization
 
 
     @property
@@ -2523,7 +2524,7 @@ class H265VideoConfiguration(VideoConfiguration):
             if not isinstance(temporal_motion_vector_predictors, bool):
                 raise TypeError("Invalid type for `temporal_motion_vector_predictors`, type has to be `bool`")
 
-            self._temporal_motion_vector_predictors = temporal_motion_vector_predictors
+        self._temporal_motion_vector_predictors = temporal_motion_vector_predictors
 
 
     @property
@@ -2551,7 +2552,7 @@ class H265VideoConfiguration(VideoConfiguration):
             if not isinstance(analyze_source_frame_pixels, bool):
                 raise TypeError("Invalid type for `analyze_source_frame_pixels`, type has to be `bool`")
 
-            self._analyze_source_frame_pixels = analyze_source_frame_pixels
+        self._analyze_source_frame_pixels = analyze_source_frame_pixels
 
 
     @property
@@ -2579,7 +2580,7 @@ class H265VideoConfiguration(VideoConfiguration):
             if not isinstance(strong_intra_smoothing, bool):
                 raise TypeError("Invalid type for `strong_intra_smoothing`, type has to be `bool`")
 
-            self._strong_intra_smoothing = strong_intra_smoothing
+        self._strong_intra_smoothing = strong_intra_smoothing
 
 
     @property
@@ -2607,7 +2608,7 @@ class H265VideoConfiguration(VideoConfiguration):
             if not isinstance(constrained_intra_prediction, bool):
                 raise TypeError("Invalid type for `constrained_intra_prediction`, type has to be `bool`")
 
-            self._constrained_intra_prediction = constrained_intra_prediction
+        self._constrained_intra_prediction = constrained_intra_prediction
 
 
     @property
@@ -2636,10 +2637,10 @@ class H265VideoConfiguration(VideoConfiguration):
                 raise ValueError("Invalid value for `scenecut_bias`, must be a value less than or equal to `100`")
             if scenecut_bias is not None and scenecut_bias < 0:
                 raise ValueError("Invalid value for `scenecut_bias`, must be a value greater than or equal to `0`")
-            if not isinstance(scenecut_bias, float):
+            if not isinstance(scenecut_bias, (float, int)):
                 raise TypeError("Invalid type for `scenecut_bias`, type has to be `float`")
 
-            self._scenecut_bias = scenecut_bias
+        self._scenecut_bias = scenecut_bias
 
 
     @property
@@ -2667,7 +2668,7 @@ class H265VideoConfiguration(VideoConfiguration):
             if not isinstance(allowed_radl_before_idr, int):
                 raise TypeError("Invalid type for `allowed_radl_before_idr`, type has to be `int`")
 
-            self._allowed_radl_before_idr = allowed_radl_before_idr
+        self._allowed_radl_before_idr = allowed_radl_before_idr
 
 
     @property
@@ -2695,7 +2696,7 @@ class H265VideoConfiguration(VideoConfiguration):
             if not isinstance(gop_lookahead, int):
                 raise TypeError("Invalid type for `gop_lookahead`, type has to be `int`")
 
-            self._gop_lookahead = gop_lookahead
+        self._gop_lookahead = gop_lookahead
 
 
     @property
@@ -2727,7 +2728,7 @@ class H265VideoConfiguration(VideoConfiguration):
             if not isinstance(bframe_bias, int):
                 raise TypeError("Invalid type for `bframe_bias`, type has to be `int`")
 
-            self._bframe_bias = bframe_bias
+        self._bframe_bias = bframe_bias
 
 
     @property
@@ -2755,7 +2756,7 @@ class H265VideoConfiguration(VideoConfiguration):
             if not isinstance(force_flush, ForceFlushMode):
                 raise TypeError("Invalid type for `force_flush`, type has to be `ForceFlushMode`")
 
-            self._force_flush = force_flush
+        self._force_flush = force_flush
 
 
     @property
@@ -2784,10 +2785,10 @@ class H265VideoConfiguration(VideoConfiguration):
                 raise ValueError("Invalid value for `adaptive_quantization_strength`, must be a value less than or equal to `3`")
             if adaptive_quantization_strength is not None and adaptive_quantization_strength < 0:
                 raise ValueError("Invalid value for `adaptive_quantization_strength`, must be a value greater than or equal to `0`")
-            if not isinstance(adaptive_quantization_strength, float):
+            if not isinstance(adaptive_quantization_strength, (float, int)):
                 raise TypeError("Invalid type for `adaptive_quantization_strength`, type has to be `float`")
 
-            self._adaptive_quantization_strength = adaptive_quantization_strength
+        self._adaptive_quantization_strength = adaptive_quantization_strength
 
 
     @property
@@ -2815,7 +2816,7 @@ class H265VideoConfiguration(VideoConfiguration):
             if not isinstance(adaptive_quantization_motion, bool):
                 raise TypeError("Invalid type for `adaptive_quantization_motion`, type has to be `bool`")
 
-            self._adaptive_quantization_motion = adaptive_quantization_motion
+        self._adaptive_quantization_motion = adaptive_quantization_motion
 
 
     @property
@@ -2843,7 +2844,7 @@ class H265VideoConfiguration(VideoConfiguration):
             if not isinstance(quantization_group_size, QuantizationGroupSize):
                 raise TypeError("Invalid type for `quantization_group_size`, type has to be `QuantizationGroupSize`")
 
-            self._quantization_group_size = quantization_group_size
+        self._quantization_group_size = quantization_group_size
 
 
     @property
@@ -2871,7 +2872,7 @@ class H265VideoConfiguration(VideoConfiguration):
             if not isinstance(strict_cbr, bool):
                 raise TypeError("Invalid type for `strict_cbr`, type has to be `bool`")
 
-            self._strict_cbr = strict_cbr
+        self._strict_cbr = strict_cbr
 
 
     @property
@@ -2903,7 +2904,7 @@ class H265VideoConfiguration(VideoConfiguration):
             if not isinstance(qp_offset_chroma_cb, int):
                 raise TypeError("Invalid type for `qp_offset_chroma_cb`, type has to be `int`")
 
-            self._qp_offset_chroma_cb = qp_offset_chroma_cb
+        self._qp_offset_chroma_cb = qp_offset_chroma_cb
 
 
     @property
@@ -2935,7 +2936,7 @@ class H265VideoConfiguration(VideoConfiguration):
             if not isinstance(qp_offset_chroma_cr, int):
                 raise TypeError("Invalid type for `qp_offset_chroma_cr`, type has to be `int`")
 
-            self._qp_offset_chroma_cr = qp_offset_chroma_cr
+        self._qp_offset_chroma_cr = qp_offset_chroma_cr
 
 
     @property
@@ -2960,10 +2961,10 @@ class H265VideoConfiguration(VideoConfiguration):
         """
 
         if ip_ratio is not None:
-            if not isinstance(ip_ratio, float):
+            if not isinstance(ip_ratio, (float, int)):
                 raise TypeError("Invalid type for `ip_ratio`, type has to be `float`")
 
-            self._ip_ratio = ip_ratio
+        self._ip_ratio = ip_ratio
 
 
     @property
@@ -2988,10 +2989,10 @@ class H265VideoConfiguration(VideoConfiguration):
         """
 
         if pb_ratio is not None:
-            if not isinstance(pb_ratio, float):
+            if not isinstance(pb_ratio, (float, int)):
                 raise TypeError("Invalid type for `pb_ratio`, type has to be `float`")
 
-            self._pb_ratio = pb_ratio
+        self._pb_ratio = pb_ratio
 
 
     @property
@@ -3020,10 +3021,10 @@ class H265VideoConfiguration(VideoConfiguration):
                 raise ValueError("Invalid value for `quantizer_curve_compression_factor`, must be a value less than or equal to `1`")
             if quantizer_curve_compression_factor is not None and quantizer_curve_compression_factor < 0.5:
                 raise ValueError("Invalid value for `quantizer_curve_compression_factor`, must be a value greater than or equal to `0.5`")
-            if not isinstance(quantizer_curve_compression_factor, float):
+            if not isinstance(quantizer_curve_compression_factor, (float, int)):
                 raise TypeError("Invalid type for `quantizer_curve_compression_factor`, type has to be `float`")
 
-            self._quantizer_curve_compression_factor = quantizer_curve_compression_factor
+        self._quantizer_curve_compression_factor = quantizer_curve_compression_factor
 
 
     @property
@@ -3051,7 +3052,7 @@ class H265VideoConfiguration(VideoConfiguration):
             if not isinstance(qp_step, int):
                 raise TypeError("Invalid type for `qp_step`, type has to be `int`")
 
-            self._qp_step = qp_step
+        self._qp_step = qp_step
 
 
     @property
@@ -3079,7 +3080,7 @@ class H265VideoConfiguration(VideoConfiguration):
             if not isinstance(grain_optimized_rate_control, bool):
                 raise TypeError("Invalid type for `grain_optimized_rate_control`, type has to be `bool`")
 
-            self._grain_optimized_rate_control = grain_optimized_rate_control
+        self._grain_optimized_rate_control = grain_optimized_rate_control
 
 
     @property
@@ -3104,10 +3105,10 @@ class H265VideoConfiguration(VideoConfiguration):
         """
 
         if blur_quants is not None:
-            if not isinstance(blur_quants, float):
+            if not isinstance(blur_quants, (float, int)):
                 raise TypeError("Invalid type for `blur_quants`, type has to be `float`")
 
-            self._blur_quants = blur_quants
+        self._blur_quants = blur_quants
 
 
     @property
@@ -3132,10 +3133,10 @@ class H265VideoConfiguration(VideoConfiguration):
         """
 
         if blur_complexity is not None:
-            if not isinstance(blur_complexity, float):
+            if not isinstance(blur_complexity, (float, int)):
                 raise TypeError("Invalid type for `blur_complexity`, type has to be `float`")
 
-            self._blur_complexity = blur_complexity
+        self._blur_complexity = blur_complexity
 
 
     @property
@@ -3163,7 +3164,7 @@ class H265VideoConfiguration(VideoConfiguration):
             if not isinstance(sao_non_deblock, bool):
                 raise TypeError("Invalid type for `sao_non_deblock`, type has to be `bool`")
 
-            self._sao_non_deblock = sao_non_deblock
+        self._sao_non_deblock = sao_non_deblock
 
 
     @property
@@ -3191,7 +3192,7 @@ class H265VideoConfiguration(VideoConfiguration):
             if not isinstance(limit_sao, bool):
                 raise TypeError("Invalid type for `limit_sao`, type has to be `bool`")
 
-            self._limit_sao = limit_sao
+        self._limit_sao = limit_sao
 
 
     @property
@@ -3219,7 +3220,7 @@ class H265VideoConfiguration(VideoConfiguration):
             if not isinstance(lowpass_dct, bool):
                 raise TypeError("Invalid type for `lowpass_dct`, type has to be `bool`")
 
-            self._lowpass_dct = lowpass_dct
+        self._lowpass_dct = lowpass_dct
 
     def to_dict(self):
         """Returns the model properties as a dict"""

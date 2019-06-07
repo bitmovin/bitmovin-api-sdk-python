@@ -79,10 +79,10 @@ class DenoiseHqdn3dFilter(Filter):
         """
 
         if luma_spatial is not None:
-            if not isinstance(luma_spatial, float):
+            if not isinstance(luma_spatial, (float, int)):
                 raise TypeError("Invalid type for `luma_spatial`, type has to be `float`")
 
-            self._luma_spatial = luma_spatial
+        self._luma_spatial = luma_spatial
 
 
     @property
@@ -107,10 +107,10 @@ class DenoiseHqdn3dFilter(Filter):
         """
 
         if chroma_spatial is not None:
-            if not isinstance(chroma_spatial, float):
+            if not isinstance(chroma_spatial, (float, int)):
                 raise TypeError("Invalid type for `chroma_spatial`, type has to be `float`")
 
-            self._chroma_spatial = chroma_spatial
+        self._chroma_spatial = chroma_spatial
 
 
     @property
@@ -135,10 +135,10 @@ class DenoiseHqdn3dFilter(Filter):
         """
 
         if luma_tmp is not None:
-            if not isinstance(luma_tmp, float):
+            if not isinstance(luma_tmp, (float, int)):
                 raise TypeError("Invalid type for `luma_tmp`, type has to be `float`")
 
-            self._luma_tmp = luma_tmp
+        self._luma_tmp = luma_tmp
 
 
     @property
@@ -163,10 +163,10 @@ class DenoiseHqdn3dFilter(Filter):
         """
 
         if chroma_tmp is not None:
-            if not isinstance(chroma_tmp, float):
+            if not isinstance(chroma_tmp, (float, int)):
                 raise TypeError("Invalid type for `chroma_tmp`, type has to be `float`")
 
-            self._chroma_tmp = chroma_tmp
+        self._chroma_tmp = chroma_tmp
 
     def to_dict(self):
         """Returns the model properties as a dict"""

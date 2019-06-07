@@ -4,3 +4,4 @@ from bitmovin.encoding.infrastructure.kubernetes.customdata.customdata_api impor
 from bitmovin.encoding.infrastructure.kubernetes.configuration.configuration_api import ConfigurationApi
 from bitmovin.encoding.infrastructure.kubernetes.agentDeployment.agent_deployment_api import AgentDeploymentApi
 from bitmovin.encoding.infrastructure.kubernetes.prewarmedDeployment.prewarmed_deployment_api import PrewarmedDeploymentApi
+from bitmovin.encoding.infrastructure.kubernetes.kubernetes_cluster_list_query_params import KubernetesClusterListQueryParams

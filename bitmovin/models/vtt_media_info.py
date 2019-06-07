@@ -45,8 +45,10 @@ class VttMediaInfo(BasicMediaInfo):
         self._forced = None
         self.discriminator = None
 
-        self.vtt_url = vtt_url
-        self.uri = uri
+        if vtt_url is not None:
+            self.vtt_url = vtt_url
+        if uri is not None:
+            self.uri = uri
         if forced is not None:
             self.forced = forced
 
@@ -75,7 +77,7 @@ class VttMediaInfo(BasicMediaInfo):
             if not isinstance(vtt_url, str):
                 raise TypeError("Invalid type for `vtt_url`, type has to be `str`")
 
-            self._vtt_url = vtt_url
+        self._vtt_url = vtt_url
 
 
     @property
@@ -103,7 +105,7 @@ class VttMediaInfo(BasicMediaInfo):
             if not isinstance(uri, str):
                 raise TypeError("Invalid type for `uri`, type has to be `str`")
 
-            self._uri = uri
+        self._uri = uri
 
 
     @property
@@ -131,7 +133,7 @@ class VttMediaInfo(BasicMediaInfo):
             if not isinstance(forced, bool):
                 raise TypeError("Invalid type for `forced`, type has to be `bool`")
 
-            self._forced = forced
+        self._forced = forced
 
     def to_dict(self):
         """Returns the model properties as a dict"""

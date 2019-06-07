@@ -67,7 +67,7 @@ class CencPlayReady(object):
             if not isinstance(la_url, str):
                 raise TypeError("Invalid type for `la_url`, type has to be `str`")
 
-            self._la_url = la_url
+        self._la_url = la_url
 
 
     @property
@@ -95,7 +95,7 @@ class CencPlayReady(object):
             if not isinstance(pssh, str):
                 raise TypeError("Invalid type for `pssh`, type has to be `str`")
 
-            self._pssh = pssh
+        self._pssh = pssh
 
     def to_dict(self):
         """Returns the model properties as a dict"""

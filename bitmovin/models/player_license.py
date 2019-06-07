@@ -56,17 +56,24 @@ class PlayerLicense(BitmovinResponse):
         self._impressions = None
         self._max_impressions = None
         self._third_party_licensing_enabled = None
-        self._domains = None
+        self._domains = list()
         self._analytics_key = None
         self.discriminator = None
 
-        self.name = name
-        self.created_at = created_at
-        self.license_key = license_key
-        self.impressions = impressions
-        self.max_impressions = max_impressions
-        self.third_party_licensing_enabled = third_party_licensing_enabled
-        self.domains = domains
+        if name is not None:
+            self.name = name
+        if created_at is not None:
+            self.created_at = created_at
+        if license_key is not None:
+            self.license_key = license_key
+        if impressions is not None:
+            self.impressions = impressions
+        if max_impressions is not None:
+            self.max_impressions = max_impressions
+        if third_party_licensing_enabled is not None:
+            self.third_party_licensing_enabled = third_party_licensing_enabled
+        if domains is not None:
+            self.domains = domains
         if analytics_key is not None:
             self.analytics_key = analytics_key
 
@@ -95,7 +102,7 @@ class PlayerLicense(BitmovinResponse):
             if not isinstance(name, str):
                 raise TypeError("Invalid type for `name`, type has to be `str`")
 
-            self._name = name
+        self._name = name
 
 
     @property
@@ -123,7 +130,7 @@ class PlayerLicense(BitmovinResponse):
             if not isinstance(created_at, datetime):
                 raise TypeError("Invalid type for `created_at`, type has to be `datetime`")
 
-            self._created_at = created_at
+        self._created_at = created_at
 
 
     @property
@@ -151,7 +158,7 @@ class PlayerLicense(BitmovinResponse):
             if not isinstance(license_key, str):
                 raise TypeError("Invalid type for `license_key`, type has to be `str`")
 
-            self._license_key = license_key
+        self._license_key = license_key
 
 
     @property
@@ -179,7 +186,7 @@ class PlayerLicense(BitmovinResponse):
             if not isinstance(impressions, int):
                 raise TypeError("Invalid type for `impressions`, type has to be `int`")
 
-            self._impressions = impressions
+        self._impressions = impressions
 
 
     @property
@@ -207,7 +214,7 @@ class PlayerLicense(BitmovinResponse):
             if not isinstance(max_impressions, int):
                 raise TypeError("Invalid type for `max_impressions`, type has to be `int`")
 
-            self._max_impressions = max_impressions
+        self._max_impressions = max_impressions
 
 
     @property
@@ -235,7 +242,7 @@ class PlayerLicense(BitmovinResponse):
             if not isinstance(third_party_licensing_enabled, bool):
                 raise TypeError("Invalid type for `third_party_licensing_enabled`, type has to be `bool`")
 
-            self._third_party_licensing_enabled = third_party_licensing_enabled
+        self._third_party_licensing_enabled = third_party_licensing_enabled
 
 
     @property
@@ -263,7 +270,7 @@ class PlayerLicense(BitmovinResponse):
             if not isinstance(domains, list):
                 raise TypeError("Invalid type for `domains`, type has to be `list[Domain]`")
 
-            self._domains = domains
+        self._domains = domains
 
 
     @property
@@ -291,7 +298,7 @@ class PlayerLicense(BitmovinResponse):
             if not isinstance(analytics_key, str):
                 raise TypeError("Invalid type for `analytics_key`, type has to be `str`")
 
-            self._analytics_key = analytics_key
+        self._analytics_key = analytics_key
 
     def to_dict(self):
         """Returns the model properties as a dict"""

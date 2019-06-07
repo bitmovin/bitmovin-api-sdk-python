@@ -117,7 +117,7 @@ class SrtStatistics(object):
             if not isinstance(id, str):
                 raise TypeError("Invalid type for `id`, type has to be `str`")
 
-            self._id = id
+        self._id = id
 
 
     @property
@@ -145,7 +145,7 @@ class SrtStatistics(object):
             if not isinstance(created_at, datetime):
                 raise TypeError("Invalid type for `created_at`, type has to be `datetime`")
 
-            self._created_at = created_at
+        self._created_at = created_at
 
 
     @property
@@ -173,7 +173,7 @@ class SrtStatistics(object):
             if not isinstance(encoding_id, str):
                 raise TypeError("Invalid type for `encoding_id`, type has to be `str`")
 
-            self._encoding_id = encoding_id
+        self._encoding_id = encoding_id
 
 
     @property
@@ -201,7 +201,7 @@ class SrtStatistics(object):
             if not isinstance(srt_input_id, str):
                 raise TypeError("Invalid type for `srt_input_id`, type has to be `str`")
 
-            self._srt_input_id = srt_input_id
+        self._srt_input_id = srt_input_id
 
 
     @property
@@ -229,7 +229,7 @@ class SrtStatistics(object):
             if not isinstance(srt_input_selected, bool):
                 raise TypeError("Invalid type for `srt_input_selected`, type has to be `bool`")
 
-            self._srt_input_selected = srt_input_selected
+        self._srt_input_selected = srt_input_selected
 
 
     @property
@@ -257,7 +257,7 @@ class SrtStatistics(object):
             if not isinstance(org_id, str):
                 raise TypeError("Invalid type for `org_id`, type has to be `str`")
 
-            self._org_id = org_id
+        self._org_id = org_id
 
 
     @property
@@ -285,7 +285,7 @@ class SrtStatistics(object):
             if not isinstance(user_id, str):
                 raise TypeError("Invalid type for `user_id`, type has to be `str`")
 
-            self._user_id = user_id
+        self._user_id = user_id
 
 
     @property
@@ -311,7 +311,7 @@ class SrtStatistics(object):
             if not isinstance(link, SrtStatisticLink):
                 raise TypeError("Invalid type for `link`, type has to be `SrtStatisticLink`")
 
-            self._link = link
+        self._link = link
 
 
     @property
@@ -337,7 +337,7 @@ class SrtStatistics(object):
             if not isinstance(window, SrtStatisticWindow):
                 raise TypeError("Invalid type for `window`, type has to be `SrtStatisticWindow`")
 
-            self._window = window
+        self._window = window
 
 
     @property
@@ -363,7 +363,7 @@ class SrtStatistics(object):
             if not isinstance(recv, SrtStatisticRecv):
                 raise TypeError("Invalid type for `recv`, type has to be `SrtStatisticRecv`")
 
-            self._recv = recv
+        self._recv = recv
 
 
     @property
@@ -389,7 +389,7 @@ class SrtStatistics(object):
             if not isinstance(send, SrtStatisticSend):
                 raise TypeError("Invalid type for `send`, type has to be `SrtStatisticSend`")
 
-            self._send = send
+        self._send = send
 
     def to_dict(self):
         """Returns the model properties as a dict"""

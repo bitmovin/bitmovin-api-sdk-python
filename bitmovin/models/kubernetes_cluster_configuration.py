@@ -37,8 +37,10 @@ class KubernetesClusterConfiguration(object):
         self._workers_per_encoding = None
         self.discriminator = None
 
-        self.parallel_encodings = parallel_encodings
-        self.workers_per_encoding = workers_per_encoding
+        if parallel_encodings is not None:
+            self.parallel_encodings = parallel_encodings
+        if workers_per_encoding is not None:
+            self.workers_per_encoding = workers_per_encoding
 
     @property
     def parallel_encodings(self):
@@ -65,7 +67,7 @@ class KubernetesClusterConfiguration(object):
             if not isinstance(parallel_encodings, int):
                 raise TypeError("Invalid type for `parallel_encodings`, type has to be `int`")
 
-            self._parallel_encodings = parallel_encodings
+        self._parallel_encodings = parallel_encodings
 
 
     @property
@@ -93,7 +95,7 @@ class KubernetesClusterConfiguration(object):
             if not isinstance(workers_per_encoding, int):
                 raise TypeError("Invalid type for `workers_per_encoding`, type has to be `int`")
 
-            self._workers_per_encoding = workers_per_encoding
+        self._workers_per_encoding = workers_per_encoding
 
     def to_dict(self):
         """Returns the model properties as a dict"""

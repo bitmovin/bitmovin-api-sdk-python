@@ -66,10 +66,10 @@ class Vp9PerTitleConfiguration(PerTitleConfiguration):
         """
 
         if target_quality_crf is not None:
-            if not isinstance(target_quality_crf, float):
+            if not isinstance(target_quality_crf, (float, int)):
                 raise TypeError("Invalid type for `target_quality_crf`, type has to be `float`")
 
-            self._target_quality_crf = target_quality_crf
+        self._target_quality_crf = target_quality_crf
 
     def to_dict(self):
         """Returns the model properties as a dict"""

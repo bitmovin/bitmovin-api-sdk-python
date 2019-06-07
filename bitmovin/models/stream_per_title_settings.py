@@ -64,7 +64,7 @@ class StreamPerTitleSettings(object):
             if not isinstance(fixed_resolution_and_bitrate_settings, StreamPerTitleFixedResolutionAndBitrateSettings):
                 raise TypeError("Invalid type for `fixed_resolution_and_bitrate_settings`, type has to be `StreamPerTitleFixedResolutionAndBitrateSettings`")
 
-            self._fixed_resolution_and_bitrate_settings = fixed_resolution_and_bitrate_settings
+        self._fixed_resolution_and_bitrate_settings = fixed_resolution_and_bitrate_settings
 
     def to_dict(self):
         """Returns the model properties as a dict"""

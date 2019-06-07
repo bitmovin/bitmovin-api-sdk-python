@@ -1,1 +1,2 @@
 from bitmovin.encoding.manifests.dash.periods.adaptationsets.subtitle.subtitle_api import SubtitleApi
+from bitmovin.encoding.manifests.dash.periods.adaptationsets.subtitle.subtitle_adaptation_set_list_query_params import SubtitleAdaptationSetListQueryParams

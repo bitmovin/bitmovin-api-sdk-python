@@ -59,17 +59,18 @@ class EncodingStats(object):
         self._time_encoded = None
         self._downloaded_size = None
         self._billable_minutes = None
-        self._billable_encoding_minutes = None
+        self._billable_encoding_minutes = list()
         self._billable_transmuxing_minutes = None
         self._billable_feature_minutes = None
-        self._streams = None
-        self._muxings = None
-        self._features = None
+        self._streams = list()
+        self._muxings = list()
+        self._features = list()
         self.discriminator = None
 
         if date is not None:
             self.date = date
-        self.encoding_id = encoding_id
+        if encoding_id is not None:
+            self.encoding_id = encoding_id
         if bytes_encoded is not None:
             self.bytes_encoded = bytes_encoded
         if time_encoded is not None:
@@ -80,11 +81,14 @@ class EncodingStats(object):
             self.billable_minutes = billable_minutes
         if billable_encoding_minutes is not None:
             self.billable_encoding_minutes = billable_encoding_minutes
-        self.billable_transmuxing_minutes = billable_transmuxing_minutes
+        if billable_transmuxing_minutes is not None:
+            self.billable_transmuxing_minutes = billable_transmuxing_minutes
         if billable_feature_minutes is not None:
             self.billable_feature_minutes = billable_feature_minutes
-        self.streams = streams
-        self.muxings = muxings
+        if streams is not None:
+            self.streams = streams
+        if muxings is not None:
+            self.muxings = muxings
         if features is not None:
             self.features = features
 
@@ -113,7 +117,7 @@ class EncodingStats(object):
             if not isinstance(date, validation_date):
                 raise TypeError("Invalid type for `date`, type has to be `date`")
 
-            self._date = date
+        self._date = date
 
 
     @property
@@ -141,7 +145,7 @@ class EncodingStats(object):
             if not isinstance(encoding_id, str):
                 raise TypeError("Invalid type for `encoding_id`, type has to be `str`")
 
-            self._encoding_id = encoding_id
+        self._encoding_id = encoding_id
 
 
     @property
@@ -169,7 +173,7 @@ class EncodingStats(object):
             if not isinstance(bytes_encoded, int):
                 raise TypeError("Invalid type for `bytes_encoded`, type has to be `int`")
 
-            self._bytes_encoded = bytes_encoded
+        self._bytes_encoded = bytes_encoded
 
 
     @property
@@ -197,7 +201,7 @@ class EncodingStats(object):
             if not isinstance(time_encoded, int):
                 raise TypeError("Invalid type for `time_encoded`, type has to be `int`")
 
-            self._time_encoded = time_encoded
+        self._time_encoded = time_encoded
 
 
     @property
@@ -225,7 +229,7 @@ class EncodingStats(object):
             if not isinstance(downloaded_size, int):
                 raise TypeError("Invalid type for `downloaded_size`, type has to be `int`")
 
-            self._downloaded_size = downloaded_size
+        self._downloaded_size = downloaded_size
 
 
     @property
@@ -250,10 +254,10 @@ class EncodingStats(object):
         """
 
         if billable_minutes is not None:
-            if not isinstance(billable_minutes, float):
+            if not isinstance(billable_minutes, (float, int)):
                 raise TypeError("Invalid type for `billable_minutes`, type has to be `float`")
 
-            self._billable_minutes = billable_minutes
+        self._billable_minutes = billable_minutes
 
 
     @property
@@ -281,7 +285,7 @@ class EncodingStats(object):
             if not isinstance(billable_encoding_minutes, list):
                 raise TypeError("Invalid type for `billable_encoding_minutes`, type has to be `list[BillableEncodingMinutes]`")
 
-            self._billable_encoding_minutes = billable_encoding_minutes
+        self._billable_encoding_minutes = billable_encoding_minutes
 
 
     @property
@@ -306,10 +310,10 @@ class EncodingStats(object):
         """
 
         if billable_transmuxing_minutes is not None:
-            if not isinstance(billable_transmuxing_minutes, float):
+            if not isinstance(billable_transmuxing_minutes, (float, int)):
                 raise TypeError("Invalid type for `billable_transmuxing_minutes`, type has to be `float`")
 
-            self._billable_transmuxing_minutes = billable_transmuxing_minutes
+        self._billable_transmuxing_minutes = billable_transmuxing_minutes
 
 
     @property
@@ -334,10 +338,10 @@ class EncodingStats(object):
         """
 
         if billable_feature_minutes is not None:
-            if not isinstance(billable_feature_minutes, float):
+            if not isinstance(billable_feature_minutes, (float, int)):
                 raise TypeError("Invalid type for `billable_feature_minutes`, type has to be `float`")
 
-            self._billable_feature_minutes = billable_feature_minutes
+        self._billable_feature_minutes = billable_feature_minutes
 
 
     @property
@@ -365,7 +369,7 @@ class EncodingStats(object):
             if not isinstance(streams, list):
                 raise TypeError("Invalid type for `streams`, type has to be `list[StatisticsPerStream]`")
 
-            self._streams = streams
+        self._streams = streams
 
 
     @property
@@ -393,7 +397,7 @@ class EncodingStats(object):
             if not isinstance(muxings, list):
                 raise TypeError("Invalid type for `muxings`, type has to be `list[StatisticsPerMuxing]`")
 
-            self._muxings = muxings
+        self._muxings = muxings
 
 
     @property
@@ -421,7 +425,7 @@ class EncodingStats(object):
             if not isinstance(features, list):
                 raise TypeError("Invalid type for `features`, type has to be `list[BillableEncodingFeatureMinutes]`")
 
-            self._features = features
+        self._features = features
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -49,8 +49,10 @@ class S3RoleBasedInput(Input):
         self._cloud_region = None
         self.discriminator = None
 
-        self.bucket_name = bucket_name
-        self.role_arn = role_arn
+        if bucket_name is not None:
+            self.bucket_name = bucket_name
+        if role_arn is not None:
+            self.role_arn = role_arn
         if external_id is not None:
             self.external_id = external_id
         if cloud_region is not None:
@@ -81,7 +83,7 @@ class S3RoleBasedInput(Input):
             if not isinstance(bucket_name, str):
                 raise TypeError("Invalid type for `bucket_name`, type has to be `str`")
 
-            self._bucket_name = bucket_name
+        self._bucket_name = bucket_name
 
 
     @property
@@ -109,7 +111,7 @@ class S3RoleBasedInput(Input):
             if not isinstance(role_arn, str):
                 raise TypeError("Invalid type for `role_arn`, type has to be `str`")
 
-            self._role_arn = role_arn
+        self._role_arn = role_arn
 
 
     @property
@@ -137,7 +139,7 @@ class S3RoleBasedInput(Input):
             if not isinstance(external_id, str):
                 raise TypeError("Invalid type for `external_id`, type has to be `str`")
 
-            self._external_id = external_id
+        self._external_id = external_id
 
 
     @property
@@ -163,7 +165,7 @@ class S3RoleBasedInput(Input):
             if not isinstance(cloud_region, AwsCloudRegion):
                 raise TypeError("Invalid type for `cloud_region`, type has to be `AwsCloudRegion`")
 
-            self._cloud_region = cloud_region
+        self._cloud_region = cloud_region
 
     def to_dict(self):
         """Returns the model properties as a dict"""

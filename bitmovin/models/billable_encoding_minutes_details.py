@@ -79,10 +79,10 @@ class BillableEncodingMinutesDetails(object):
         """
 
         if unknown is not None:
-            if not isinstance(unknown, float):
+            if not isinstance(unknown, (float, int)):
                 raise TypeError("Invalid type for `unknown`, type has to be `float`")
 
-            self._unknown = unknown
+        self._unknown = unknown
 
 
     @property
@@ -107,10 +107,10 @@ class BillableEncodingMinutesDetails(object):
         """
 
         if audio is not None:
-            if not isinstance(audio, float):
+            if not isinstance(audio, (float, int)):
                 raise TypeError("Invalid type for `audio`, type has to be `float`")
 
-            self._audio = audio
+        self._audio = audio
 
 
     @property
@@ -135,10 +135,10 @@ class BillableEncodingMinutesDetails(object):
         """
 
         if sd is not None:
-            if not isinstance(sd, float):
+            if not isinstance(sd, (float, int)):
                 raise TypeError("Invalid type for `sd`, type has to be `float`")
 
-            self._sd = sd
+        self._sd = sd
 
 
     @property
@@ -163,10 +163,10 @@ class BillableEncodingMinutesDetails(object):
         """
 
         if hd is not None:
-            if not isinstance(hd, float):
+            if not isinstance(hd, (float, int)):
                 raise TypeError("Invalid type for `hd`, type has to be `float`")
 
-            self._hd = hd
+        self._hd = hd
 
 
     @property
@@ -191,10 +191,10 @@ class BillableEncodingMinutesDetails(object):
         """
 
         if uhd is not None:
-            if not isinstance(uhd, float):
+            if not isinstance(uhd, (float, int)):
                 raise TypeError("Invalid type for `uhd`, type has to be `float`")
 
-            self._uhd = uhd
+        self._uhd = uhd
 
     def to_dict(self):
         """Returns the model properties as a dict"""

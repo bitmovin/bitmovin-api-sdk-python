@@ -53,7 +53,7 @@ class AwsAccountRegionSettings(BitmovinResource):
         self._max_money_to_spend_per_month = None
         self._security_group_id = None
         self._subnet_id = None
-        self._machine_types = None
+        self._machine_types = list()
         self._ssh_port = None
         self.discriminator = None
 
@@ -63,8 +63,10 @@ class AwsAccountRegionSettings(BitmovinResource):
             self.maximum_amount_of_coordinators_and_workers_in_region = maximum_amount_of_coordinators_and_workers_in_region
         if max_money_to_spend_per_month is not None:
             self.max_money_to_spend_per_month = max_money_to_spend_per_month
-        self.security_group_id = security_group_id
-        self.subnet_id = subnet_id
+        if security_group_id is not None:
+            self.security_group_id = security_group_id
+        if subnet_id is not None:
+            self.subnet_id = subnet_id
         if machine_types is not None:
             self.machine_types = machine_types
         if ssh_port is not None:
@@ -95,7 +97,7 @@ class AwsAccountRegionSettings(BitmovinResource):
             if not isinstance(limit_parallel_encodings, int):
                 raise TypeError("Invalid type for `limit_parallel_encodings`, type has to be `int`")
 
-            self._limit_parallel_encodings = limit_parallel_encodings
+        self._limit_parallel_encodings = limit_parallel_encodings
 
 
     @property
@@ -123,7 +125,7 @@ class AwsAccountRegionSettings(BitmovinResource):
             if not isinstance(maximum_amount_of_coordinators_and_workers_in_region, int):
                 raise TypeError("Invalid type for `maximum_amount_of_coordinators_and_workers_in_region`, type has to be `int`")
 
-            self._maximum_amount_of_coordinators_and_workers_in_region = maximum_amount_of_coordinators_and_workers_in_region
+        self._maximum_amount_of_coordinators_and_workers_in_region = maximum_amount_of_coordinators_and_workers_in_region
 
 
     @property
@@ -148,10 +150,10 @@ class AwsAccountRegionSettings(BitmovinResource):
         """
 
         if max_money_to_spend_per_month is not None:
-            if not isinstance(max_money_to_spend_per_month, float):
+            if not isinstance(max_money_to_spend_per_month, (float, int)):
                 raise TypeError("Invalid type for `max_money_to_spend_per_month`, type has to be `float`")
 
-            self._max_money_to_spend_per_month = max_money_to_spend_per_month
+        self._max_money_to_spend_per_month = max_money_to_spend_per_month
 
 
     @property
@@ -179,7 +181,7 @@ class AwsAccountRegionSettings(BitmovinResource):
             if not isinstance(security_group_id, str):
                 raise TypeError("Invalid type for `security_group_id`, type has to be `str`")
 
-            self._security_group_id = security_group_id
+        self._security_group_id = security_group_id
 
 
     @property
@@ -207,7 +209,7 @@ class AwsAccountRegionSettings(BitmovinResource):
             if not isinstance(subnet_id, str):
                 raise TypeError("Invalid type for `subnet_id`, type has to be `str`")
 
-            self._subnet_id = subnet_id
+        self._subnet_id = subnet_id
 
 
     @property
@@ -235,7 +237,7 @@ class AwsAccountRegionSettings(BitmovinResource):
             if not isinstance(machine_types, list):
                 raise TypeError("Invalid type for `machine_types`, type has to be `list[str]`")
 
-            self._machine_types = machine_types
+        self._machine_types = machine_types
 
 
     @property
@@ -267,7 +269,7 @@ class AwsAccountRegionSettings(BitmovinResource):
             if not isinstance(ssh_port, int):
                 raise TypeError("Invalid type for `ssh_port`, type has to be `int`")
 
-            self._ssh_port = ssh_port
+        self._ssh_port = ssh_port
 
     def to_dict(self):
         """Returns the model properties as a dict"""

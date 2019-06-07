@@ -38,11 +38,12 @@ class LiveEncodingStats(object):
     def __init__(self, status=None, events=None, statistics=None, *args, **kwargs):
 
         self._status = None
-        self._events = None
-        self._statistics = None
+        self._events = list()
+        self._statistics = list()
         self.discriminator = None
 
-        self.status = status
+        if status is not None:
+            self.status = status
         if events is not None:
             self.events = events
         if statistics is not None:
@@ -71,7 +72,7 @@ class LiveEncodingStats(object):
             if not isinstance(status, LiveEncodingStatus):
                 raise TypeError("Invalid type for `status`, type has to be `LiveEncodingStatus`")
 
-            self._status = status
+        self._status = status
 
 
     @property
@@ -99,7 +100,7 @@ class LiveEncodingStats(object):
             if not isinstance(events, list):
                 raise TypeError("Invalid type for `events`, type has to be `list[LiveEncodingStatsEvent]`")
 
-            self._events = events
+        self._events = events
 
 
     @property
@@ -127,7 +128,7 @@ class LiveEncodingStats(object):
             if not isinstance(statistics, list):
                 raise TypeError("Invalid type for `statistics`, type has to be `list[StreamInfos]`")
 
-            self._statistics = statistics
+        self._statistics = statistics
 
     def to_dict(self):
         """Returns the model properties as a dict"""

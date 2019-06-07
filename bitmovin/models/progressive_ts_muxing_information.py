@@ -36,7 +36,7 @@ class ProgressiveTsMuxingInformation(ProgressiveMuxingInformation):
     def __init__(self, byte_ranges=None, *args, **kwargs):
         super(ProgressiveTsMuxingInformation, self).__init__(*args, **kwargs)
 
-        self._byte_ranges = None
+        self._byte_ranges = list()
         self.discriminator = None
 
         if byte_ranges is not None:
@@ -67,7 +67,7 @@ class ProgressiveTsMuxingInformation(ProgressiveMuxingInformation):
             if not isinstance(byte_ranges, list):
                 raise TypeError("Invalid type for `byte_ranges`, type has to be `list[ProgressiveTsMuxingInformationByteRanges]`")
 
-            self._byte_ranges = byte_ranges
+        self._byte_ranges = byte_ranges
 
     def to_dict(self):
         """Returns the model properties as a dict"""

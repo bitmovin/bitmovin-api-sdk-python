@@ -83,10 +83,10 @@ class BroadcastTsTransportConfiguration(object):
                 raise ValueError("Invalid value for `muxrate`, must be a value less than or equal to `1000000000`")
             if muxrate is not None and muxrate < 0:
                 raise ValueError("Invalid value for `muxrate`, must be a value greater than or equal to `0`")
-            if not isinstance(muxrate, float):
+            if not isinstance(muxrate, (float, int)):
                 raise TypeError("Invalid type for `muxrate`, type has to be `float`")
 
-            self._muxrate = muxrate
+        self._muxrate = muxrate
 
 
     @property
@@ -114,7 +114,7 @@ class BroadcastTsTransportConfiguration(object):
             if not isinstance(stop_on_error, bool):
                 raise TypeError("Invalid type for `stop_on_error`, type has to be `bool`")
 
-            self._stop_on_error = stop_on_error
+        self._stop_on_error = stop_on_error
 
 
     @property
@@ -142,7 +142,7 @@ class BroadcastTsTransportConfiguration(object):
             if not isinstance(prevent_empty_adaption_fields_in_video, bool):
                 raise TypeError("Invalid type for `prevent_empty_adaption_fields_in_video`, type has to be `bool`")
 
-            self._prevent_empty_adaption_fields_in_video = prevent_empty_adaption_fields_in_video
+        self._prevent_empty_adaption_fields_in_video = prevent_empty_adaption_fields_in_video
 
 
     @property
@@ -171,10 +171,10 @@ class BroadcastTsTransportConfiguration(object):
                 raise ValueError("Invalid value for `pat_repetition_rate_per_sec`, must be a value less than or equal to `1000`")
             if pat_repetition_rate_per_sec is not None and pat_repetition_rate_per_sec < 0.001:
                 raise ValueError("Invalid value for `pat_repetition_rate_per_sec`, must be a value greater than or equal to `0.001`")
-            if not isinstance(pat_repetition_rate_per_sec, float):
+            if not isinstance(pat_repetition_rate_per_sec, (float, int)):
                 raise TypeError("Invalid type for `pat_repetition_rate_per_sec`, type has to be `float`")
 
-            self._pat_repetition_rate_per_sec = pat_repetition_rate_per_sec
+        self._pat_repetition_rate_per_sec = pat_repetition_rate_per_sec
 
 
     @property
@@ -203,10 +203,10 @@ class BroadcastTsTransportConfiguration(object):
                 raise ValueError("Invalid value for `pmt_repetition_rate_per_sec`, must be a value less than or equal to `1000`")
             if pmt_repetition_rate_per_sec is not None and pmt_repetition_rate_per_sec < 0.001:
                 raise ValueError("Invalid value for `pmt_repetition_rate_per_sec`, must be a value greater than or equal to `0.001`")
-            if not isinstance(pmt_repetition_rate_per_sec, float):
+            if not isinstance(pmt_repetition_rate_per_sec, (float, int)):
                 raise TypeError("Invalid type for `pmt_repetition_rate_per_sec`, type has to be `float`")
 
-            self._pmt_repetition_rate_per_sec = pmt_repetition_rate_per_sec
+        self._pmt_repetition_rate_per_sec = pmt_repetition_rate_per_sec
 
     def to_dict(self):
         """Returns the model properties as a dict"""

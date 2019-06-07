@@ -37,8 +37,10 @@ class Accessibility(object):
         self._scheme_id_uri = None
         self.discriminator = None
 
-        self.value = value
-        self.scheme_id_uri = scheme_id_uri
+        if value is not None:
+            self.value = value
+        if scheme_id_uri is not None:
+            self.scheme_id_uri = scheme_id_uri
 
     @property
     def value(self):
@@ -65,7 +67,7 @@ class Accessibility(object):
             if not isinstance(value, str):
                 raise TypeError("Invalid type for `value`, type has to be `str`")
 
-            self._value = value
+        self._value = value
 
 
     @property
@@ -93,7 +95,7 @@ class Accessibility(object):
             if not isinstance(scheme_id_uri, str):
                 raise TypeError("Invalid type for `scheme_id_uri`, type has to be `str`")
 
-            self._scheme_id_uri = scheme_id_uri
+        self._scheme_id_uri = scheme_id_uri
 
     def to_dict(self):
         """Returns the model properties as a dict"""

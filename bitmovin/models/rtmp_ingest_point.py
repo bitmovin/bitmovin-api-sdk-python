@@ -37,8 +37,10 @@ class RtmpIngestPoint(object):
         self._stream_key = None
         self.discriminator = None
 
-        self.application_name = application_name
-        self.stream_key = stream_key
+        if application_name is not None:
+            self.application_name = application_name
+        if stream_key is not None:
+            self.stream_key = stream_key
 
     @property
     def application_name(self):
@@ -65,7 +67,7 @@ class RtmpIngestPoint(object):
             if not isinstance(application_name, str):
                 raise TypeError("Invalid type for `application_name`, type has to be `str`")
 
-            self._application_name = application_name
+        self._application_name = application_name
 
 
     @property
@@ -93,7 +95,7 @@ class RtmpIngestPoint(object):
             if not isinstance(stream_key, str):
                 raise TypeError("Invalid type for `stream_key`, type has to be `str`")
 
-            self._stream_key = stream_key
+        self._stream_key = stream_key
 
     def to_dict(self):
         """Returns the model properties as a dict"""

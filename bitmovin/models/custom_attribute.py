@@ -37,7 +37,8 @@ class CustomAttribute(object):
         self._value = None
         self.discriminator = None
 
-        self.key = key
+        if key is not None:
+            self.key = key
         if value is not None:
             self.value = value
 
@@ -66,7 +67,7 @@ class CustomAttribute(object):
             if not isinstance(key, str):
                 raise TypeError("Invalid type for `key`, type has to be `str`")
 
-            self._key = key
+        self._key = key
 
 
     @property
@@ -94,7 +95,7 @@ class CustomAttribute(object):
             if not isinstance(value, str):
                 raise TypeError("Invalid type for `value`, type has to be `str`")
 
-            self._value = value
+        self._value = value
 
     def to_dict(self):
         """Returns the model properties as a dict"""

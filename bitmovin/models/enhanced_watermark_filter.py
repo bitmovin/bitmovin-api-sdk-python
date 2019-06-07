@@ -58,7 +58,8 @@ class EnhancedWatermarkFilter(Filter):
         self._opacity = None
         self.discriminator = None
 
-        self.image = image
+        if image is not None:
+            self.image = image
         if left is not None:
             self.left = left
         if right is not None:
@@ -97,7 +98,7 @@ class EnhancedWatermarkFilter(Filter):
             if not isinstance(image, str):
                 raise TypeError("Invalid type for `image`, type has to be `str`")
 
-            self._image = image
+        self._image = image
 
 
     @property
@@ -122,10 +123,10 @@ class EnhancedWatermarkFilter(Filter):
         """
 
         if left is not None:
-            if not isinstance(left, float):
+            if not isinstance(left, (float, int)):
                 raise TypeError("Invalid type for `left`, type has to be `float`")
 
-            self._left = left
+        self._left = left
 
 
     @property
@@ -150,10 +151,10 @@ class EnhancedWatermarkFilter(Filter):
         """
 
         if right is not None:
-            if not isinstance(right, float):
+            if not isinstance(right, (float, int)):
                 raise TypeError("Invalid type for `right`, type has to be `float`")
 
-            self._right = right
+        self._right = right
 
 
     @property
@@ -178,10 +179,10 @@ class EnhancedWatermarkFilter(Filter):
         """
 
         if top is not None:
-            if not isinstance(top, float):
+            if not isinstance(top, (float, int)):
                 raise TypeError("Invalid type for `top`, type has to be `float`")
 
-            self._top = top
+        self._top = top
 
 
     @property
@@ -206,10 +207,10 @@ class EnhancedWatermarkFilter(Filter):
         """
 
         if bottom is not None:
-            if not isinstance(bottom, float):
+            if not isinstance(bottom, (float, int)):
                 raise TypeError("Invalid type for `bottom`, type has to be `float`")
 
-            self._bottom = bottom
+        self._bottom = bottom
 
 
     @property
@@ -235,7 +236,7 @@ class EnhancedWatermarkFilter(Filter):
             if not isinstance(unit, PositionUnit):
                 raise TypeError("Invalid type for `unit`, type has to be `PositionUnit`")
 
-            self._unit = unit
+        self._unit = unit
 
 
     @property
@@ -260,10 +261,10 @@ class EnhancedWatermarkFilter(Filter):
         """
 
         if opacity is not None:
-            if not isinstance(opacity, float):
+            if not isinstance(opacity, (float, int)):
                 raise TypeError("Invalid type for `opacity`, type has to be `float`")
 
-            self._opacity = opacity
+        self._opacity = opacity
 
     def to_dict(self):
         """Returns the model properties as a dict"""

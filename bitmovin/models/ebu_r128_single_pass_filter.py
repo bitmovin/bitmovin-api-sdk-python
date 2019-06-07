@@ -74,10 +74,10 @@ class EbuR128SinglePassFilter(Filter):
         """
 
         if integrated_loudness is not None:
-            if not isinstance(integrated_loudness, float):
+            if not isinstance(integrated_loudness, (float, int)):
                 raise TypeError("Invalid type for `integrated_loudness`, type has to be `float`")
 
-            self._integrated_loudness = integrated_loudness
+        self._integrated_loudness = integrated_loudness
 
 
     @property
@@ -102,10 +102,10 @@ class EbuR128SinglePassFilter(Filter):
         """
 
         if loudness_range is not None:
-            if not isinstance(loudness_range, float):
+            if not isinstance(loudness_range, (float, int)):
                 raise TypeError("Invalid type for `loudness_range`, type has to be `float`")
 
-            self._loudness_range = loudness_range
+        self._loudness_range = loudness_range
 
 
     @property
@@ -130,10 +130,10 @@ class EbuR128SinglePassFilter(Filter):
         """
 
         if maximum_true_peak_level is not None:
-            if not isinstance(maximum_true_peak_level, float):
+            if not isinstance(maximum_true_peak_level, (float, int)):
                 raise TypeError("Invalid type for `maximum_true_peak_level`, type has to be `float`")
 
-            self._maximum_true_peak_level = maximum_true_peak_level
+        self._maximum_true_peak_level = maximum_true_peak_level
 
     def to_dict(self):
         """Returns the model properties as a dict"""

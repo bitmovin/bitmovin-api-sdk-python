@@ -34,7 +34,8 @@ class PlayerLicenseAnalytics(object):
         self._analytics_key = None
         self.discriminator = None
 
-        self.analytics_key = analytics_key
+        if analytics_key is not None:
+            self.analytics_key = analytics_key
 
     @property
     def analytics_key(self):
@@ -61,7 +62,7 @@ class PlayerLicenseAnalytics(object):
             if not isinstance(analytics_key, str):
                 raise TypeError("Invalid type for `analytics_key`, type has to be `str`")
 
-            self._analytics_key = analytics_key
+        self._analytics_key = analytics_key
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -2,7 +2,7 @@
 
 from __future__ import absolute_import
 
-__version__ = "1.15.0alpha0"
+__version__ = "1.16.0alpha0"
 
 # import apis into sdk package
 from bitmovin.common import *
@@ -651,9 +651,9 @@ from bitmovin.encoding.statistics.daily.daily_api import DailyStatisticsListQuer
 from bitmovin.encoding.statistics.encodings.encodings_api import EncodingsApi
 
 from bitmovin.encoding.statistics.encodings.live.live_api import LiveApi
-from bitmovin.encoding.statistics.encodings.live.live_api import EncodingStatisticsLiveListByDateRangeQueryParams,EncodingStatisticsLiveListQueryParams
+from bitmovin.encoding.statistics.encodings.live.live_api import EncodingStatisticsLiveListQueryParams,EncodingStatisticsLiveListByDateRangeQueryParams
 from bitmovin.encoding.statistics.encodings.vod.vod_api import VodApi
-from bitmovin.encoding.statistics.encodings.vod.vod_api import EncodingStatisticsVodListByDateRangeQueryParams,EncodingStatisticsVodListQueryParams
+from bitmovin.encoding.statistics.encodings.vod.vod_api import EncodingStatisticsVodListQueryParams,EncodingStatisticsVodListByDateRangeQueryParams
 from bitmovin.encoding.statistics.encodings.liveStatistics.live_statistics_api import LiveStatisticsApi
 
 from bitmovin.encoding.statistics.encodings.liveStatistics.events.events_api import EventsApi
@@ -661,15 +661,19 @@ from bitmovin.encoding.statistics.encodings.liveStatistics.events.events_api imp
 from bitmovin.encoding.statistics.encodings.liveStatistics.streams.streams_api import StreamsApi
 from bitmovin.encoding.statistics.encodings.liveStatistics.streams.streams_api import StreamInfosListQueryParams
 from bitmovin.encoding.statistics.encodings.liveStatistics.srt.srt_api import SrtApi
-from bitmovin.encoding.statistics.encodings.liveStatistics.srt.srt_api import SrtStatisticsListBySrtInputIdQueryParams,SrtStatisticsListQueryParams
+from bitmovin.encoding.statistics.encodings.liveStatistics.srt.srt_api import SrtStatisticsListQueryParams,SrtStatisticsListBySrtInputIdQueryParams
 from bitmovin.encoding.statistics.labels.labels_api import LabelsApi
-from bitmovin.encoding.statistics.labels.labels_api import StatisticsPerLabelListByDateRangeQueryParams,StatisticsPerLabelListQueryParams
+from bitmovin.encoding.statistics.labels.labels_api import StatisticsPerLabelListQueryParams,StatisticsPerLabelListByDateRangeQueryParams
 from bitmovin.encoding.statistics.labels.daily.daily_api import DailyApi
-from bitmovin.encoding.statistics.labels.daily.daily_api import DailyStatisticsPerLabelListByDateRangeQueryParams,DailyStatisticsPerLabelListQueryParams
+from bitmovin.encoding.statistics.labels.daily.daily_api import DailyStatisticsPerLabelListQueryParams,DailyStatisticsPerLabelListByDateRangeQueryParams
+from bitmovin.general.general_api import GeneralApi
+
+from bitmovin.general.errorDefinitions.error_definitions_api import ErrorDefinitionsApi
+from bitmovin.general.errorDefinitions.error_definitions_api import ApiErrorDefinitionListQueryParams
 from bitmovin.encoding.errorDefinitions.error_definitions_api import ErrorDefinitionsApi
 from bitmovin.encoding.errorDefinitions.error_definitions_api import EncodingErrorDefinitionListQueryParams
 from bitmovin.notifications.notifications_api import NotificationsApi
-from bitmovin.notifications.notifications_api import NotificationStateEntryListByNotificationIdQueryParams,NotificationListQueryParams
+from bitmovin.notifications.notifications_api import NotificationListQueryParams,NotificationStateEntryListByNotificationIdQueryParams
 from bitmovin.notifications.webhooks.webhooks_api import WebhooksApi
 
 from bitmovin.notifications.webhooks.encoding.encoding_api import EncodingApi
@@ -677,7 +681,7 @@ from bitmovin.notifications.webhooks.encoding.encoding_api import EncodingApi
 from bitmovin.notifications.webhooks.encoding.encodings.encodings_api import EncodingsApi
 
 from bitmovin.notifications.webhooks.encoding.encodings.finished.finished_api import FinishedApi
-from bitmovin.notifications.webhooks.encoding.encodings.finished.finished_api import WebhookListByEncodingIdQueryParams,WebhookListQueryParams
+from bitmovin.notifications.webhooks.encoding.encodings.finished.finished_api import WebhookListQueryParams,WebhookListByEncodingIdQueryParams
 from bitmovin.notifications.webhooks.encoding.encodings.finished.customdata.customdata_api import CustomdataApi
 
 from bitmovin.notifications.webhooks.encoding.encodings.error.error_api import ErrorApi
@@ -770,6 +774,7 @@ from bitmovin.models.analytics_stddev_query_request import AnalyticsStddevQueryR
 from bitmovin.models.analytics_sum_query_request import AnalyticsSumQueryRequest
 from bitmovin.models.analytics_variance_query_request import AnalyticsVarianceQueryRequest
 from bitmovin.models.and_conjunction import AndConjunction
+from bitmovin.models.api_error_definition import ApiErrorDefinition
 from bitmovin.models.applied_stream_settings import AppliedStreamSettings
 from bitmovin.models.aspera_input import AsperaInput
 from bitmovin.models.audio_adaptation_set import AudioAdaptationSet

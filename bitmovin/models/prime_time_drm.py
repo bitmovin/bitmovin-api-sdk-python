@@ -45,9 +45,12 @@ class PrimeTimeDrm(Drm):
         self._pssh = None
         self.discriminator = None
 
-        self.key = key
-        self.kid = kid
-        self.pssh = pssh
+        if key is not None:
+            self.key = key
+        if kid is not None:
+            self.kid = kid
+        if pssh is not None:
+            self.pssh = pssh
 
     @property
     def key(self):
@@ -74,7 +77,7 @@ class PrimeTimeDrm(Drm):
             if not isinstance(key, str):
                 raise TypeError("Invalid type for `key`, type has to be `str`")
 
-            self._key = key
+        self._key = key
 
 
     @property
@@ -102,7 +105,7 @@ class PrimeTimeDrm(Drm):
             if not isinstance(kid, str):
                 raise TypeError("Invalid type for `kid`, type has to be `str`")
 
-            self._kid = kid
+        self._kid = kid
 
 
     @property
@@ -130,7 +133,7 @@ class PrimeTimeDrm(Drm):
             if not isinstance(pssh, str):
                 raise TypeError("Invalid type for `pssh`, type has to be `str`")
 
-            self._pssh = pssh
+        self._pssh = pssh
 
     def to_dict(self):
         """Returns the model properties as a dict"""

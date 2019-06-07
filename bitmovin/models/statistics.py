@@ -37,8 +37,10 @@ class Statistics(object):
         self._time_encoded_total = None
         self.discriminator = None
 
-        self.bytes_encoded_total = bytes_encoded_total
-        self.time_encoded_total = time_encoded_total
+        if bytes_encoded_total is not None:
+            self.bytes_encoded_total = bytes_encoded_total
+        if time_encoded_total is not None:
+            self.time_encoded_total = time_encoded_total
 
     @property
     def bytes_encoded_total(self):
@@ -65,7 +67,7 @@ class Statistics(object):
             if not isinstance(bytes_encoded_total, int):
                 raise TypeError("Invalid type for `bytes_encoded_total`, type has to be `int`")
 
-            self._bytes_encoded_total = bytes_encoded_total
+        self._bytes_encoded_total = bytes_encoded_total
 
 
     @property
@@ -93,7 +95,7 @@ class Statistics(object):
             if not isinstance(time_encoded_total, int):
                 raise TypeError("Invalid type for `time_encoded_total`, type has to be `int`")
 
-            self._time_encoded_total = time_encoded_total
+        self._time_encoded_total = time_encoded_total
 
     def to_dict(self):
         """Returns the model properties as a dict"""

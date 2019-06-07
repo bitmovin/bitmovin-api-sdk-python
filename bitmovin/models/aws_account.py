@@ -45,9 +45,12 @@ class AwsAccount(BitmovinResource):
         self._account_number = None
         self.discriminator = None
 
-        self.access_key = access_key
-        self.secret_key = secret_key
-        self.account_number = account_number
+        if access_key is not None:
+            self.access_key = access_key
+        if secret_key is not None:
+            self.secret_key = secret_key
+        if account_number is not None:
+            self.account_number = account_number
 
     @property
     def access_key(self):
@@ -74,7 +77,7 @@ class AwsAccount(BitmovinResource):
             if not isinstance(access_key, str):
                 raise TypeError("Invalid type for `access_key`, type has to be `str`")
 
-            self._access_key = access_key
+        self._access_key = access_key
 
 
     @property
@@ -102,7 +105,7 @@ class AwsAccount(BitmovinResource):
             if not isinstance(secret_key, str):
                 raise TypeError("Invalid type for `secret_key`, type has to be `str`")
 
-            self._secret_key = secret_key
+        self._secret_key = secret_key
 
 
     @property
@@ -130,7 +133,7 @@ class AwsAccount(BitmovinResource):
             if not isinstance(account_number, str):
                 raise TypeError("Invalid type for `account_number`, type has to be `str`")
 
-            self._account_number = account_number
+        self._account_number = account_number
 
     def to_dict(self):
         """Returns the model properties as a dict"""

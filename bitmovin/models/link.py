@@ -37,7 +37,8 @@ class Link(object):
         self._title = None
         self.discriminator = None
 
-        self.href = href
+        if href is not None:
+            self.href = href
         if title is not None:
             self.title = title
 
@@ -66,7 +67,7 @@ class Link(object):
             if not isinstance(href, str):
                 raise TypeError("Invalid type for `href`, type has to be `str`")
 
-            self._href = href
+        self._href = href
 
 
     @property
@@ -94,7 +95,7 @@ class Link(object):
             if not isinstance(title, str):
                 raise TypeError("Invalid type for `title`, type has to be `str`")
 
-            self._title = title
+        self._title = title
 
     def to_dict(self):
         """Returns the model properties as a dict"""

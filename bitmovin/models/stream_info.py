@@ -34,7 +34,9 @@ class StreamInfo(BitmovinResource):
             'segment_path': 'str',
             'uri': 'str',
             'start_segment_number': 'int',
-            'end_segment_number': 'int'
+            'end_segment_number': 'int',
+            'force_frame_rate_attribute': 'bool',
+            'force_video_range_attribute': 'bool'
         })
         return types
 
@@ -54,11 +56,13 @@ class StreamInfo(BitmovinResource):
             'segment_path': 'segmentPath',
             'uri': 'uri',
             'start_segment_number': 'startSegmentNumber',
-            'end_segment_number': 'endSegmentNumber'
+            'end_segment_number': 'endSegmentNumber',
+            'force_frame_rate_attribute': 'forceFrameRateAttribute',
+            'force_video_range_attribute': 'forceVideoRangeAttribute'
         })
         return attributes
 
-    def __init__(self, audio=None, audio_groups=None, video=None, subtitles=None, closed_captions=None, encoding_id=None, stream_id=None, muxing_id=None, drm_id=None, segment_path=None, uri=None, start_segment_number=None, end_segment_number=None, *args, **kwargs):
+    def __init__(self, audio=None, audio_groups=None, video=None, subtitles=None, closed_captions=None, encoding_id=None, stream_id=None, muxing_id=None, drm_id=None, segment_path=None, uri=None, start_segment_number=None, end_segment_number=None, force_frame_rate_attribute=None, force_video_range_attribute=None, *args, **kwargs):
         super(StreamInfo, self).__init__(*args, **kwargs)
 
         self._audio = None
@@ -74,6 +78,8 @@ class StreamInfo(BitmovinResource):
         self._uri = None
         self._start_segment_number = None
         self._end_segment_number = None
+        self._force_frame_rate_attribute = None
+        self._force_video_range_attribute = None
         self.discriminator = None
 
         if audio is not None:
@@ -84,18 +90,28 @@ class StreamInfo(BitmovinResource):
             self.video = video
         if subtitles is not None:
             self.subtitles = subtitles
-        self.closed_captions = closed_captions
-        self.encoding_id = encoding_id
-        self.stream_id = stream_id
-        self.muxing_id = muxing_id
+        if closed_captions is not None:
+            self.closed_captions = closed_captions
+        if encoding_id is not None:
+            self.encoding_id = encoding_id
+        if stream_id is not None:
+            self.stream_id = stream_id
+        if muxing_id is not None:
+            self.muxing_id = muxing_id
         if drm_id is not None:
             self.drm_id = drm_id
-        self.segment_path = segment_path
-        self.uri = uri
+        if segment_path is not None:
+            self.segment_path = segment_path
+        if uri is not None:
+            self.uri = uri
         if start_segment_number is not None:
             self.start_segment_number = start_segment_number
         if end_segment_number is not None:
             self.end_segment_number = end_segment_number
+        if force_frame_rate_attribute is not None:
+            self.force_frame_rate_attribute = force_frame_rate_attribute
+        if force_video_range_attribute is not None:
+            self.force_video_range_attribute = force_video_range_attribute
 
     @property
     def audio(self):
@@ -122,7 +138,7 @@ class StreamInfo(BitmovinResource):
             if not isinstance(audio, str):
                 raise TypeError("Invalid type for `audio`, type has to be `str`")
 
-            self._audio = audio
+        self._audio = audio
 
 
     @property
@@ -150,7 +166,7 @@ class StreamInfo(BitmovinResource):
             if not isinstance(audio_groups, AudioGroupConfiguration):
                 raise TypeError("Invalid type for `audio_groups`, type has to be `AudioGroupConfiguration`")
 
-            self._audio_groups = audio_groups
+        self._audio_groups = audio_groups
 
 
     @property
@@ -178,7 +194,7 @@ class StreamInfo(BitmovinResource):
             if not isinstance(video, str):
                 raise TypeError("Invalid type for `video`, type has to be `str`")
 
-            self._video = video
+        self._video = video
 
 
     @property
@@ -206,7 +222,7 @@ class StreamInfo(BitmovinResource):
             if not isinstance(subtitles, str):
                 raise TypeError("Invalid type for `subtitles`, type has to be `str`")
 
-            self._subtitles = subtitles
+        self._subtitles = subtitles
 
 
     @property
@@ -234,7 +250,7 @@ class StreamInfo(BitmovinResource):
             if not isinstance(closed_captions, str):
                 raise TypeError("Invalid type for `closed_captions`, type has to be `str`")
 
-            self._closed_captions = closed_captions
+        self._closed_captions = closed_captions
 
 
     @property
@@ -262,7 +278,7 @@ class StreamInfo(BitmovinResource):
             if not isinstance(encoding_id, str):
                 raise TypeError("Invalid type for `encoding_id`, type has to be `str`")
 
-            self._encoding_id = encoding_id
+        self._encoding_id = encoding_id
 
 
     @property
@@ -290,7 +306,7 @@ class StreamInfo(BitmovinResource):
             if not isinstance(stream_id, str):
                 raise TypeError("Invalid type for `stream_id`, type has to be `str`")
 
-            self._stream_id = stream_id
+        self._stream_id = stream_id
 
 
     @property
@@ -318,7 +334,7 @@ class StreamInfo(BitmovinResource):
             if not isinstance(muxing_id, str):
                 raise TypeError("Invalid type for `muxing_id`, type has to be `str`")
 
-            self._muxing_id = muxing_id
+        self._muxing_id = muxing_id
 
 
     @property
@@ -346,7 +362,7 @@ class StreamInfo(BitmovinResource):
             if not isinstance(drm_id, str):
                 raise TypeError("Invalid type for `drm_id`, type has to be `str`")
 
-            self._drm_id = drm_id
+        self._drm_id = drm_id
 
 
     @property
@@ -374,7 +390,7 @@ class StreamInfo(BitmovinResource):
             if not isinstance(segment_path, str):
                 raise TypeError("Invalid type for `segment_path`, type has to be `str`")
 
-            self._segment_path = segment_path
+        self._segment_path = segment_path
 
 
     @property
@@ -402,7 +418,7 @@ class StreamInfo(BitmovinResource):
             if not isinstance(uri, str):
                 raise TypeError("Invalid type for `uri`, type has to be `str`")
 
-            self._uri = uri
+        self._uri = uri
 
 
     @property
@@ -430,7 +446,7 @@ class StreamInfo(BitmovinResource):
             if not isinstance(start_segment_number, int):
                 raise TypeError("Invalid type for `start_segment_number`, type has to be `int`")
 
-            self._start_segment_number = start_segment_number
+        self._start_segment_number = start_segment_number
 
 
     @property
@@ -458,7 +474,63 @@ class StreamInfo(BitmovinResource):
             if not isinstance(end_segment_number, int):
                 raise TypeError("Invalid type for `end_segment_number`, type has to be `int`")
 
-            self._end_segment_number = end_segment_number
+        self._end_segment_number = end_segment_number
+
+
+    @property
+    def force_frame_rate_attribute(self):
+        """Gets the force_frame_rate_attribute of this StreamInfo.
+
+        Force the addition of the frame rate attribute to all stream infos.
+
+        :return: The force_frame_rate_attribute of this StreamInfo.
+        :rtype: bool
+        """
+        return self._force_frame_rate_attribute
+
+    @force_frame_rate_attribute.setter
+    def force_frame_rate_attribute(self, force_frame_rate_attribute):
+        """Sets the force_frame_rate_attribute of this StreamInfo.
+
+        Force the addition of the frame rate attribute to all stream infos.
+
+        :param force_frame_rate_attribute: The force_frame_rate_attribute of this StreamInfo.
+        :type: bool
+        """
+
+        if force_frame_rate_attribute is not None:
+            if not isinstance(force_frame_rate_attribute, bool):
+                raise TypeError("Invalid type for `force_frame_rate_attribute`, type has to be `bool`")
+
+        self._force_frame_rate_attribute = force_frame_rate_attribute
+
+
+    @property
+    def force_video_range_attribute(self):
+        """Gets the force_video_range_attribute of this StreamInfo.
+
+        Force the addition of the video-range attribute to all stream infos.
+
+        :return: The force_video_range_attribute of this StreamInfo.
+        :rtype: bool
+        """
+        return self._force_video_range_attribute
+
+    @force_video_range_attribute.setter
+    def force_video_range_attribute(self, force_video_range_attribute):
+        """Sets the force_video_range_attribute of this StreamInfo.
+
+        Force the addition of the video-range attribute to all stream infos.
+
+        :param force_video_range_attribute: The force_video_range_attribute of this StreamInfo.
+        :type: bool
+        """
+
+        if force_video_range_attribute is not None:
+            if not isinstance(force_video_range_attribute, bool):
+                raise TypeError("Invalid type for `force_video_range_attribute`, type has to be `bool`")
+
+        self._force_video_range_attribute = force_video_range_attribute
 
     def to_dict(self):
         """Returns the model properties as a dict"""

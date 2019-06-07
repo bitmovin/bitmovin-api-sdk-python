@@ -67,7 +67,7 @@ class AnalyticsQueryTimeframe(object):
             if not isinstance(start, str):
                 raise TypeError("Invalid type for `start`, type has to be `str`")
 
-            self._start = start
+        self._start = start
 
 
     @property
@@ -95,7 +95,7 @@ class AnalyticsQueryTimeframe(object):
             if not isinstance(end, str):
                 raise TypeError("Invalid type for `end`, type has to be `str`")
 
-            self._end = end
+        self._end = end
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -84,7 +84,7 @@ class BroadcastTsInputStreamConfiguration(object):
             if not isinstance(stream_id, str):
                 raise TypeError("Invalid type for `stream_id`, type has to be `str`")
 
-            self._stream_id = stream_id
+        self._stream_id = stream_id
 
 
     @property
@@ -116,7 +116,7 @@ class BroadcastTsInputStreamConfiguration(object):
             if not isinstance(packet_identifier, int):
                 raise TypeError("Invalid type for `packet_identifier`, type has to be `int`")
 
-            self._packet_identifier = packet_identifier
+        self._packet_identifier = packet_identifier
 
 
     @property
@@ -144,7 +144,7 @@ class BroadcastTsInputStreamConfiguration(object):
             if not isinstance(start_with_discontinuity_indicator, bool):
                 raise TypeError("Invalid type for `start_with_discontinuity_indicator`, type has to be `bool`")
 
-            self._start_with_discontinuity_indicator = start_with_discontinuity_indicator
+        self._start_with_discontinuity_indicator = start_with_discontinuity_indicator
 
 
     @property
@@ -172,7 +172,7 @@ class BroadcastTsInputStreamConfiguration(object):
             if not isinstance(align_pes, bool):
                 raise TypeError("Invalid type for `align_pes`, type has to be `bool`")
 
-            self._align_pes = align_pes
+        self._align_pes = align_pes
 
 
     @property
@@ -198,7 +198,7 @@ class BroadcastTsInputStreamConfiguration(object):
             if not isinstance(set_rai_on_au, RaiUnit):
                 raise TypeError("Invalid type for `set_rai_on_au`, type has to be `RaiUnit`")
 
-            self._set_rai_on_au = set_rai_on_au
+        self._set_rai_on_au = set_rai_on_au
 
     def to_dict(self):
         """Returns the model properties as a dict"""

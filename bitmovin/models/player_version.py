@@ -48,10 +48,14 @@ class PlayerVersion(BitmovinResponse):
         self._created_at = None
         self.discriminator = None
 
-        self.version = version
-        self.cdn_url = cdn_url
-        self.download_url = download_url
-        self.created_at = created_at
+        if version is not None:
+            self.version = version
+        if cdn_url is not None:
+            self.cdn_url = cdn_url
+        if download_url is not None:
+            self.download_url = download_url
+        if created_at is not None:
+            self.created_at = created_at
 
     @property
     def version(self):
@@ -78,7 +82,7 @@ class PlayerVersion(BitmovinResponse):
             if not isinstance(version, str):
                 raise TypeError("Invalid type for `version`, type has to be `str`")
 
-            self._version = version
+        self._version = version
 
 
     @property
@@ -106,7 +110,7 @@ class PlayerVersion(BitmovinResponse):
             if not isinstance(cdn_url, str):
                 raise TypeError("Invalid type for `cdn_url`, type has to be `str`")
 
-            self._cdn_url = cdn_url
+        self._cdn_url = cdn_url
 
 
     @property
@@ -134,7 +138,7 @@ class PlayerVersion(BitmovinResponse):
             if not isinstance(download_url, str):
                 raise TypeError("Invalid type for `download_url`, type has to be `str`")
 
-            self._download_url = download_url
+        self._download_url = download_url
 
 
     @property
@@ -162,7 +166,7 @@ class PlayerVersion(BitmovinResponse):
             if not isinstance(created_at, datetime):
                 raise TypeError("Invalid type for `created_at`, type has to be `datetime`")
 
-            self._created_at = created_at
+        self._created_at = created_at
 
     def to_dict(self):
         """Returns the model properties as a dict"""

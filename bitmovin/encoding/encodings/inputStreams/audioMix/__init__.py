@@ -1,1 +1,2 @@
 from bitmovin.encoding.encodings.inputStreams.audioMix.audio_mix_api import AudioMixApi
+from bitmovin.encoding.encodings.inputStreams.audioMix.audio_mix_input_stream_list_query_params import AudioMixInputStreamListQueryParams

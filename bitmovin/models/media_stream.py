@@ -77,7 +77,7 @@ class MediaStream(BitmovinResponse):
             if not isinstance(position, int):
                 raise TypeError("Invalid type for `position`, type has to be `int`")
 
-            self._position = position
+        self._position = position
 
 
     @property
@@ -105,7 +105,7 @@ class MediaStream(BitmovinResponse):
             if not isinstance(duration, int):
                 raise TypeError("Invalid type for `duration`, type has to be `int`")
 
-            self._duration = duration
+        self._duration = duration
 
 
     @property
@@ -133,7 +133,7 @@ class MediaStream(BitmovinResponse):
             if not isinstance(codec, str):
                 raise TypeError("Invalid type for `codec`, type has to be `str`")
 
-            self._codec = codec
+        self._codec = codec
 
     def to_dict(self):
         """Returns the model properties as a dict"""

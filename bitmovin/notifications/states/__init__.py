@@ -1,1 +1,2 @@
 from bitmovin.notifications.states.states_api import StatesApi
+from bitmovin.notifications.states.notification_state_entry_list_query_params import NotificationStateEntryListQueryParams

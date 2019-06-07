@@ -81,10 +81,10 @@ class H265PerTitleConfiguration(PerTitleConfiguration):
         """
 
         if target_quality_crf is not None:
-            if not isinstance(target_quality_crf, float):
+            if not isinstance(target_quality_crf, (float, int)):
                 raise TypeError("Invalid type for `target_quality_crf`, type has to be `float`")
 
-            self._target_quality_crf = target_quality_crf
+        self._target_quality_crf = target_quality_crf
 
 
     @property
@@ -109,10 +109,10 @@ class H265PerTitleConfiguration(PerTitleConfiguration):
         """
 
         if codec_min_bitrate_factor is not None:
-            if not isinstance(codec_min_bitrate_factor, float):
+            if not isinstance(codec_min_bitrate_factor, (float, int)):
                 raise TypeError("Invalid type for `codec_min_bitrate_factor`, type has to be `float`")
 
-            self._codec_min_bitrate_factor = codec_min_bitrate_factor
+        self._codec_min_bitrate_factor = codec_min_bitrate_factor
 
 
     @property
@@ -137,10 +137,10 @@ class H265PerTitleConfiguration(PerTitleConfiguration):
         """
 
         if codec_max_bitrate_factor is not None:
-            if not isinstance(codec_max_bitrate_factor, float):
+            if not isinstance(codec_max_bitrate_factor, (float, int)):
                 raise TypeError("Invalid type for `codec_max_bitrate_factor`, type has to be `float`")
 
-            self._codec_max_bitrate_factor = codec_max_bitrate_factor
+        self._codec_max_bitrate_factor = codec_max_bitrate_factor
 
 
     @property
@@ -165,10 +165,10 @@ class H265PerTitleConfiguration(PerTitleConfiguration):
         """
 
         if codec_bufsize_factor is not None:
-            if not isinstance(codec_bufsize_factor, float):
+            if not isinstance(codec_bufsize_factor, (float, int)):
                 raise TypeError("Invalid type for `codec_bufsize_factor`, type has to be `float`")
 
-            self._codec_bufsize_factor = codec_bufsize_factor
+        self._codec_bufsize_factor = codec_bufsize_factor
 
     def to_dict(self):
         """Returns the model properties as a dict"""

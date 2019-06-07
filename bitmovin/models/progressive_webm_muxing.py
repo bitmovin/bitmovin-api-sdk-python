@@ -74,7 +74,7 @@ class ProgressiveWebmMuxing(Muxing):
             if not isinstance(filename, str):
                 raise TypeError("Invalid type for `filename`, type has to be `str`")
 
-            self._filename = filename
+        self._filename = filename
 
 
     @property
@@ -102,7 +102,7 @@ class ProgressiveWebmMuxing(Muxing):
             if not isinstance(internal_chunk_length, InternalChunkLength):
                 raise TypeError("Invalid type for `internal_chunk_length`, type has to be `InternalChunkLength`")
 
-            self._internal_chunk_length = internal_chunk_length
+        self._internal_chunk_length = internal_chunk_length
 
     def to_dict(self):
         """Returns the model properties as a dict"""

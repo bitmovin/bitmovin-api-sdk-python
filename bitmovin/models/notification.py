@@ -102,7 +102,7 @@ class Notification(BitmovinResponse):
             if not isinstance(resolve, bool):
                 raise TypeError("Invalid type for `resolve`, type has to be `bool`")
 
-            self._resolve = resolve
+        self._resolve = resolve
 
 
     @property
@@ -130,7 +130,7 @@ class Notification(BitmovinResponse):
             if not isinstance(resource_id, str):
                 raise TypeError("Invalid type for `resource_id`, type has to be `str`")
 
-            self._resource_id = resource_id
+        self._resource_id = resource_id
 
 
     @property
@@ -158,7 +158,7 @@ class Notification(BitmovinResponse):
             if not isinstance(triggered_at, datetime):
                 raise TypeError("Invalid type for `triggered_at`, type has to be `datetime`")
 
-            self._triggered_at = triggered_at
+        self._triggered_at = triggered_at
 
 
     @property
@@ -184,7 +184,7 @@ class Notification(BitmovinResponse):
             if not isinstance(type, str):
                 raise TypeError("Invalid type for `type`, type has to be `str`")
 
-            self._type = type
+        self._type = type
 
 
     @property
@@ -210,7 +210,7 @@ class Notification(BitmovinResponse):
             if not isinstance(event_type, str):
                 raise TypeError("Invalid type for `event_type`, type has to be `str`")
 
-            self._event_type = event_type
+        self._event_type = event_type
 
 
     @property
@@ -236,7 +236,7 @@ class Notification(BitmovinResponse):
             if not isinstance(category, str):
                 raise TypeError("Invalid type for `category`, type has to be `str`")
 
-            self._category = category
+        self._category = category
 
 
     @property
@@ -262,7 +262,7 @@ class Notification(BitmovinResponse):
             if not isinstance(resource_type, str):
                 raise TypeError("Invalid type for `resource_type`, type has to be `str`")
 
-            self._resource_type = resource_type
+        self._resource_type = resource_type
 
 
     @property
@@ -288,7 +288,7 @@ class Notification(BitmovinResponse):
             if not isinstance(muted, bool):
                 raise TypeError("Invalid type for `muted`, type has to be `bool`")
 
-            self._muted = muted
+        self._muted = muted
 
     def to_dict(self):
         """Returns the model properties as a dict"""

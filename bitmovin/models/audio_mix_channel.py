@@ -34,11 +34,13 @@ class AudioMixChannel(object):
     def __init__(self, channel_number=None, source_channels=None, *args, **kwargs):
 
         self._channel_number = None
-        self._source_channels = None
+        self._source_channels = list()
         self.discriminator = None
 
-        self.channel_number = channel_number
-        self.source_channels = source_channels
+        if channel_number is not None:
+            self.channel_number = channel_number
+        if source_channels is not None:
+            self.source_channels = source_channels
 
     @property
     def channel_number(self):
@@ -65,7 +67,7 @@ class AudioMixChannel(object):
             if not isinstance(channel_number, int):
                 raise TypeError("Invalid type for `channel_number`, type has to be `int`")
 
-            self._channel_number = channel_number
+        self._channel_number = channel_number
 
 
     @property
@@ -93,7 +95,7 @@ class AudioMixChannel(object):
             if not isinstance(source_channels, list):
                 raise TypeError("Invalid type for `source_channels`, type has to be `list[SourceChannel]`")
 
-            self._source_channels = source_channels
+        self._source_channels = source_channels
 
     def to_dict(self):
         """Returns the model properties as a dict"""

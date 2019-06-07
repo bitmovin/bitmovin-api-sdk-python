@@ -57,10 +57,14 @@ class SegmentsMediaInfo(BasicMediaInfo):
         self._end_segment_number = None
         self.discriminator = None
 
-        self.segment_path = segment_path
-        self.encoding_id = encoding_id
-        self.stream_id = stream_id
-        self.muxing_id = muxing_id
+        if segment_path is not None:
+            self.segment_path = segment_path
+        if encoding_id is not None:
+            self.encoding_id = encoding_id
+        if stream_id is not None:
+            self.stream_id = stream_id
+        if muxing_id is not None:
+            self.muxing_id = muxing_id
         if drm_id is not None:
             self.drm_id = drm_id
         if start_segment_number is not None:
@@ -93,7 +97,7 @@ class SegmentsMediaInfo(BasicMediaInfo):
             if not isinstance(segment_path, str):
                 raise TypeError("Invalid type for `segment_path`, type has to be `str`")
 
-            self._segment_path = segment_path
+        self._segment_path = segment_path
 
 
     @property
@@ -121,7 +125,7 @@ class SegmentsMediaInfo(BasicMediaInfo):
             if not isinstance(encoding_id, str):
                 raise TypeError("Invalid type for `encoding_id`, type has to be `str`")
 
-            self._encoding_id = encoding_id
+        self._encoding_id = encoding_id
 
 
     @property
@@ -149,7 +153,7 @@ class SegmentsMediaInfo(BasicMediaInfo):
             if not isinstance(stream_id, str):
                 raise TypeError("Invalid type for `stream_id`, type has to be `str`")
 
-            self._stream_id = stream_id
+        self._stream_id = stream_id
 
 
     @property
@@ -177,7 +181,7 @@ class SegmentsMediaInfo(BasicMediaInfo):
             if not isinstance(muxing_id, str):
                 raise TypeError("Invalid type for `muxing_id`, type has to be `str`")
 
-            self._muxing_id = muxing_id
+        self._muxing_id = muxing_id
 
 
     @property
@@ -205,7 +209,7 @@ class SegmentsMediaInfo(BasicMediaInfo):
             if not isinstance(drm_id, str):
                 raise TypeError("Invalid type for `drm_id`, type has to be `str`")
 
-            self._drm_id = drm_id
+        self._drm_id = drm_id
 
 
     @property
@@ -233,7 +237,7 @@ class SegmentsMediaInfo(BasicMediaInfo):
             if not isinstance(start_segment_number, int):
                 raise TypeError("Invalid type for `start_segment_number`, type has to be `int`")
 
-            self._start_segment_number = start_segment_number
+        self._start_segment_number = start_segment_number
 
 
     @property
@@ -261,7 +265,7 @@ class SegmentsMediaInfo(BasicMediaInfo):
             if not isinstance(end_segment_number, int):
                 raise TypeError("Invalid type for `end_segment_number`, type has to be `int`")
 
-            self._end_segment_number = end_segment_number
+        self._end_segment_number = end_segment_number
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -3,3 +3,4 @@ from bitmovin.encoding.manifests.smooth.default.default_api import DefaultApi
 from bitmovin.encoding.manifests.smooth.customdata.customdata_api import CustomdataApi
 from bitmovin.encoding.manifests.smooth.representations.representations_api import RepresentationsApi
 from bitmovin.encoding.manifests.smooth.contentprotection.contentprotection_api import ContentprotectionApi
+from bitmovin.encoding.manifests.smooth.smooth_streaming_manifest_list_query_params import SmoothStreamingManifestListQueryParams

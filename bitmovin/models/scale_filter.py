@@ -88,7 +88,7 @@ class ScaleFilter(Filter):
             if not isinstance(width, int):
                 raise TypeError("Invalid type for `width`, type has to be `int`")
 
-            self._width = width
+        self._width = width
 
 
     @property
@@ -116,7 +116,7 @@ class ScaleFilter(Filter):
             if not isinstance(height, int):
                 raise TypeError("Invalid type for `height`, type has to be `int`")
 
-            self._height = height
+        self._height = height
 
 
     @property
@@ -142,7 +142,7 @@ class ScaleFilter(Filter):
             if not isinstance(scaling_algorithm, ScalingAlgorithm):
                 raise TypeError("Invalid type for `scaling_algorithm`, type has to be `ScalingAlgorithm`")
 
-            self._scaling_algorithm = scaling_algorithm
+        self._scaling_algorithm = scaling_algorithm
 
 
     @property
@@ -170,7 +170,7 @@ class ScaleFilter(Filter):
             if not isinstance(sample_aspect_ratio_numerator, int):
                 raise TypeError("Invalid type for `sample_aspect_ratio_numerator`, type has to be `int`")
 
-            self._sample_aspect_ratio_numerator = sample_aspect_ratio_numerator
+        self._sample_aspect_ratio_numerator = sample_aspect_ratio_numerator
 
 
     @property
@@ -198,7 +198,7 @@ class ScaleFilter(Filter):
             if not isinstance(sample_aspect_ratio_denominator, int):
                 raise TypeError("Invalid type for `sample_aspect_ratio_denominator`, type has to be `int`")
 
-            self._sample_aspect_ratio_denominator = sample_aspect_ratio_denominator
+        self._sample_aspect_ratio_denominator = sample_aspect_ratio_denominator
 
     def to_dict(self):
         """Returns the model properties as a dict"""

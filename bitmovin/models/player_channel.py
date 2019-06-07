@@ -39,7 +39,8 @@ class PlayerChannel(BitmovinResponse):
         self._name = None
         self.discriminator = None
 
-        self.name = name
+        if name is not None:
+            self.name = name
 
     @property
     def name(self):
@@ -66,7 +67,7 @@ class PlayerChannel(BitmovinResponse):
             if not isinstance(name, str):
                 raise TypeError("Invalid type for `name`, type has to be `str`")
 
-            self._name = name
+        self._name = name
 
     def to_dict(self):
         """Returns the model properties as a dict"""

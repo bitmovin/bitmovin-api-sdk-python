@@ -43,7 +43,8 @@ class ProgressiveTsMuxingInformationByteRanges(object):
         self._duration = None
         self.discriminator = None
 
-        self.segment_number = segment_number
+        if segment_number is not None:
+            self.segment_number = segment_number
         if start_bytes is not None:
             self.start_bytes = start_bytes
         if end_bytes is not None:
@@ -76,7 +77,7 @@ class ProgressiveTsMuxingInformationByteRanges(object):
             if not isinstance(segment_number, int):
                 raise TypeError("Invalid type for `segment_number`, type has to be `int`")
 
-            self._segment_number = segment_number
+        self._segment_number = segment_number
 
 
     @property
@@ -104,7 +105,7 @@ class ProgressiveTsMuxingInformationByteRanges(object):
             if not isinstance(start_bytes, int):
                 raise TypeError("Invalid type for `start_bytes`, type has to be `int`")
 
-            self._start_bytes = start_bytes
+        self._start_bytes = start_bytes
 
 
     @property
@@ -132,7 +133,7 @@ class ProgressiveTsMuxingInformationByteRanges(object):
             if not isinstance(end_bytes, int):
                 raise TypeError("Invalid type for `end_bytes`, type has to be `int`")
 
-            self._end_bytes = end_bytes
+        self._end_bytes = end_bytes
 
 
     @property
@@ -157,10 +158,10 @@ class ProgressiveTsMuxingInformationByteRanges(object):
         """
 
         if duration is not None:
-            if not isinstance(duration, float):
+            if not isinstance(duration, (float, int)):
                 raise TypeError("Invalid type for `duration`, type has to be `float`")
 
-            self._duration = duration
+        self._duration = duration
 
     def to_dict(self):
         """Returns the model properties as a dict"""

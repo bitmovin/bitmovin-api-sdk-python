@@ -43,7 +43,8 @@ class LiveHlsManifest(object):
         self._insert_program_date_time = None
         self.discriminator = None
 
-        self.manifest_id = manifest_id
+        if manifest_id is not None:
+            self.manifest_id = manifest_id
         if timeshift is not None:
             self.timeshift = timeshift
         if live_edge_offset is not None:
@@ -76,7 +77,7 @@ class LiveHlsManifest(object):
             if not isinstance(manifest_id, str):
                 raise TypeError("Invalid type for `manifest_id`, type has to be `str`")
 
-            self._manifest_id = manifest_id
+        self._manifest_id = manifest_id
 
 
     @property
@@ -101,10 +102,10 @@ class LiveHlsManifest(object):
         """
 
         if timeshift is not None:
-            if not isinstance(timeshift, float):
+            if not isinstance(timeshift, (float, int)):
                 raise TypeError("Invalid type for `timeshift`, type has to be `float`")
 
-            self._timeshift = timeshift
+        self._timeshift = timeshift
 
 
     @property
@@ -129,10 +130,10 @@ class LiveHlsManifest(object):
         """
 
         if live_edge_offset is not None:
-            if not isinstance(live_edge_offset, float):
+            if not isinstance(live_edge_offset, (float, int)):
                 raise TypeError("Invalid type for `live_edge_offset`, type has to be `float`")
 
-            self._live_edge_offset = live_edge_offset
+        self._live_edge_offset = live_edge_offset
 
 
     @property
@@ -160,7 +161,7 @@ class LiveHlsManifest(object):
             if not isinstance(insert_program_date_time, bool):
                 raise TypeError("Invalid type for `insert_program_date_time`, type has to be `bool`")
 
-            self._insert_program_date_time = insert_program_date_time
+        self._insert_program_date_time = insert_program_date_time
 
     def to_dict(self):
         """Returns the model properties as a dict"""

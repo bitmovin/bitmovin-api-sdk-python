@@ -88,26 +88,42 @@ class StreamInfosDetails(object):
         self._bytes_backup_per_second_avg = None
         self.discriminator = None
 
-        self.id = id
-        self.media_type = media_type
+        if id is not None:
+            self.id = id
+        if media_type is not None:
+            self.media_type = media_type
         if width is not None:
             self.width = width
         if height is not None:
             self.height = height
-        self.rate = rate
-        self.codec = codec
-        self.samples_read_per_second_min = samples_read_per_second_min
-        self.samples_read_per_second_max = samples_read_per_second_max
-        self.samples_read_per_second_avg = samples_read_per_second_avg
-        self.samples_backup_per_second_min = samples_backup_per_second_min
-        self.samples_backup_per_second_max = samples_backup_per_second_max
-        self.samples_backup_per_second_avg = samples_backup_per_second_avg
-        self.bytes_read_per_second_min = bytes_read_per_second_min
-        self.bytes_read_per_second_max = bytes_read_per_second_max
-        self.bytes_read_per_second_avg = bytes_read_per_second_avg
-        self.bytes_backup_per_second_min = bytes_backup_per_second_min
-        self.bytes_backup_per_second_max = bytes_backup_per_second_max
-        self.bytes_backup_per_second_avg = bytes_backup_per_second_avg
+        if rate is not None:
+            self.rate = rate
+        if codec is not None:
+            self.codec = codec
+        if samples_read_per_second_min is not None:
+            self.samples_read_per_second_min = samples_read_per_second_min
+        if samples_read_per_second_max is not None:
+            self.samples_read_per_second_max = samples_read_per_second_max
+        if samples_read_per_second_avg is not None:
+            self.samples_read_per_second_avg = samples_read_per_second_avg
+        if samples_backup_per_second_min is not None:
+            self.samples_backup_per_second_min = samples_backup_per_second_min
+        if samples_backup_per_second_max is not None:
+            self.samples_backup_per_second_max = samples_backup_per_second_max
+        if samples_backup_per_second_avg is not None:
+            self.samples_backup_per_second_avg = samples_backup_per_second_avg
+        if bytes_read_per_second_min is not None:
+            self.bytes_read_per_second_min = bytes_read_per_second_min
+        if bytes_read_per_second_max is not None:
+            self.bytes_read_per_second_max = bytes_read_per_second_max
+        if bytes_read_per_second_avg is not None:
+            self.bytes_read_per_second_avg = bytes_read_per_second_avg
+        if bytes_backup_per_second_min is not None:
+            self.bytes_backup_per_second_min = bytes_backup_per_second_min
+        if bytes_backup_per_second_max is not None:
+            self.bytes_backup_per_second_max = bytes_backup_per_second_max
+        if bytes_backup_per_second_avg is not None:
+            self.bytes_backup_per_second_avg = bytes_backup_per_second_avg
 
     @property
     def id(self):
@@ -134,7 +150,7 @@ class StreamInfosDetails(object):
             if not isinstance(id, int):
                 raise TypeError("Invalid type for `id`, type has to be `int`")
 
-            self._id = id
+        self._id = id
 
 
     @property
@@ -162,7 +178,7 @@ class StreamInfosDetails(object):
             if not isinstance(media_type, MediaType):
                 raise TypeError("Invalid type for `media_type`, type has to be `MediaType`")
 
-            self._media_type = media_type
+        self._media_type = media_type
 
 
     @property
@@ -190,7 +206,7 @@ class StreamInfosDetails(object):
             if not isinstance(width, int):
                 raise TypeError("Invalid type for `width`, type has to be `int`")
 
-            self._width = width
+        self._width = width
 
 
     @property
@@ -218,7 +234,7 @@ class StreamInfosDetails(object):
             if not isinstance(height, int):
                 raise TypeError("Invalid type for `height`, type has to be `int`")
 
-            self._height = height
+        self._height = height
 
 
     @property
@@ -246,7 +262,7 @@ class StreamInfosDetails(object):
             if not isinstance(rate, int):
                 raise TypeError("Invalid type for `rate`, type has to be `int`")
 
-            self._rate = rate
+        self._rate = rate
 
 
     @property
@@ -274,7 +290,7 @@ class StreamInfosDetails(object):
             if not isinstance(codec, LiveEncodingCodec):
                 raise TypeError("Invalid type for `codec`, type has to be `LiveEncodingCodec`")
 
-            self._codec = codec
+        self._codec = codec
 
 
     @property
@@ -299,10 +315,10 @@ class StreamInfosDetails(object):
         """
 
         if samples_read_per_second_min is not None:
-            if not isinstance(samples_read_per_second_min, float):
+            if not isinstance(samples_read_per_second_min, (float, int)):
                 raise TypeError("Invalid type for `samples_read_per_second_min`, type has to be `float`")
 
-            self._samples_read_per_second_min = samples_read_per_second_min
+        self._samples_read_per_second_min = samples_read_per_second_min
 
 
     @property
@@ -327,10 +343,10 @@ class StreamInfosDetails(object):
         """
 
         if samples_read_per_second_max is not None:
-            if not isinstance(samples_read_per_second_max, float):
+            if not isinstance(samples_read_per_second_max, (float, int)):
                 raise TypeError("Invalid type for `samples_read_per_second_max`, type has to be `float`")
 
-            self._samples_read_per_second_max = samples_read_per_second_max
+        self._samples_read_per_second_max = samples_read_per_second_max
 
 
     @property
@@ -355,10 +371,10 @@ class StreamInfosDetails(object):
         """
 
         if samples_read_per_second_avg is not None:
-            if not isinstance(samples_read_per_second_avg, float):
+            if not isinstance(samples_read_per_second_avg, (float, int)):
                 raise TypeError("Invalid type for `samples_read_per_second_avg`, type has to be `float`")
 
-            self._samples_read_per_second_avg = samples_read_per_second_avg
+        self._samples_read_per_second_avg = samples_read_per_second_avg
 
 
     @property
@@ -383,10 +399,10 @@ class StreamInfosDetails(object):
         """
 
         if samples_backup_per_second_min is not None:
-            if not isinstance(samples_backup_per_second_min, float):
+            if not isinstance(samples_backup_per_second_min, (float, int)):
                 raise TypeError("Invalid type for `samples_backup_per_second_min`, type has to be `float`")
 
-            self._samples_backup_per_second_min = samples_backup_per_second_min
+        self._samples_backup_per_second_min = samples_backup_per_second_min
 
 
     @property
@@ -411,10 +427,10 @@ class StreamInfosDetails(object):
         """
 
         if samples_backup_per_second_max is not None:
-            if not isinstance(samples_backup_per_second_max, float):
+            if not isinstance(samples_backup_per_second_max, (float, int)):
                 raise TypeError("Invalid type for `samples_backup_per_second_max`, type has to be `float`")
 
-            self._samples_backup_per_second_max = samples_backup_per_second_max
+        self._samples_backup_per_second_max = samples_backup_per_second_max
 
 
     @property
@@ -439,10 +455,10 @@ class StreamInfosDetails(object):
         """
 
         if samples_backup_per_second_avg is not None:
-            if not isinstance(samples_backup_per_second_avg, float):
+            if not isinstance(samples_backup_per_second_avg, (float, int)):
                 raise TypeError("Invalid type for `samples_backup_per_second_avg`, type has to be `float`")
 
-            self._samples_backup_per_second_avg = samples_backup_per_second_avg
+        self._samples_backup_per_second_avg = samples_backup_per_second_avg
 
 
     @property
@@ -467,10 +483,10 @@ class StreamInfosDetails(object):
         """
 
         if bytes_read_per_second_min is not None:
-            if not isinstance(bytes_read_per_second_min, float):
+            if not isinstance(bytes_read_per_second_min, (float, int)):
                 raise TypeError("Invalid type for `bytes_read_per_second_min`, type has to be `float`")
 
-            self._bytes_read_per_second_min = bytes_read_per_second_min
+        self._bytes_read_per_second_min = bytes_read_per_second_min
 
 
     @property
@@ -495,10 +511,10 @@ class StreamInfosDetails(object):
         """
 
         if bytes_read_per_second_max is not None:
-            if not isinstance(bytes_read_per_second_max, float):
+            if not isinstance(bytes_read_per_second_max, (float, int)):
                 raise TypeError("Invalid type for `bytes_read_per_second_max`, type has to be `float`")
 
-            self._bytes_read_per_second_max = bytes_read_per_second_max
+        self._bytes_read_per_second_max = bytes_read_per_second_max
 
 
     @property
@@ -523,10 +539,10 @@ class StreamInfosDetails(object):
         """
 
         if bytes_read_per_second_avg is not None:
-            if not isinstance(bytes_read_per_second_avg, float):
+            if not isinstance(bytes_read_per_second_avg, (float, int)):
                 raise TypeError("Invalid type for `bytes_read_per_second_avg`, type has to be `float`")
 
-            self._bytes_read_per_second_avg = bytes_read_per_second_avg
+        self._bytes_read_per_second_avg = bytes_read_per_second_avg
 
 
     @property
@@ -551,10 +567,10 @@ class StreamInfosDetails(object):
         """
 
         if bytes_backup_per_second_min is not None:
-            if not isinstance(bytes_backup_per_second_min, float):
+            if not isinstance(bytes_backup_per_second_min, (float, int)):
                 raise TypeError("Invalid type for `bytes_backup_per_second_min`, type has to be `float`")
 
-            self._bytes_backup_per_second_min = bytes_backup_per_second_min
+        self._bytes_backup_per_second_min = bytes_backup_per_second_min
 
 
     @property
@@ -579,10 +595,10 @@ class StreamInfosDetails(object):
         """
 
         if bytes_backup_per_second_max is not None:
-            if not isinstance(bytes_backup_per_second_max, float):
+            if not isinstance(bytes_backup_per_second_max, (float, int)):
                 raise TypeError("Invalid type for `bytes_backup_per_second_max`, type has to be `float`")
 
-            self._bytes_backup_per_second_max = bytes_backup_per_second_max
+        self._bytes_backup_per_second_max = bytes_backup_per_second_max
 
 
     @property
@@ -607,10 +623,10 @@ class StreamInfosDetails(object):
         """
 
         if bytes_backup_per_second_avg is not None:
-            if not isinstance(bytes_backup_per_second_avg, float):
+            if not isinstance(bytes_backup_per_second_avg, (float, int)):
                 raise TypeError("Invalid type for `bytes_backup_per_second_avg`, type has to be `float`")
 
-            self._bytes_backup_per_second_avg = bytes_backup_per_second_avg
+        self._bytes_backup_per_second_avg = bytes_backup_per_second_avg
 
     def to_dict(self):
         """Returns the model properties as a dict"""

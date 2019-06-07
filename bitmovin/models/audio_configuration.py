@@ -42,7 +42,8 @@ class AudioConfiguration(CodecConfiguration):
         self._rate = None
         self.discriminator = None
 
-        self.bitrate = bitrate
+        if bitrate is not None:
+            self.bitrate = bitrate
         if rate is not None:
             self.rate = rate
 
@@ -71,7 +72,7 @@ class AudioConfiguration(CodecConfiguration):
             if not isinstance(bitrate, int):
                 raise TypeError("Invalid type for `bitrate`, type has to be `int`")
 
-            self._bitrate = bitrate
+        self._bitrate = bitrate
 
 
     @property
@@ -96,10 +97,10 @@ class AudioConfiguration(CodecConfiguration):
         """
 
         if rate is not None:
-            if not isinstance(rate, float):
+            if not isinstance(rate, (float, int)):
                 raise TypeError("Invalid type for `rate`, type has to be `float`")
 
-            self._rate = rate
+        self._rate = rate
 
     def to_dict(self):
         """Returns the model properties as a dict"""

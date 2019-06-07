@@ -97,7 +97,7 @@ class MuxingInformationAudioTrack(object):
             if not isinstance(index, int):
                 raise TypeError("Invalid type for `index`, type has to be `int`")
 
-            self._index = index
+        self._index = index
 
 
     @property
@@ -125,7 +125,7 @@ class MuxingInformationAudioTrack(object):
             if not isinstance(codec, str):
                 raise TypeError("Invalid type for `codec`, type has to be `str`")
 
-            self._codec = codec
+        self._codec = codec
 
 
     @property
@@ -153,7 +153,7 @@ class MuxingInformationAudioTrack(object):
             if not isinstance(codec_iso, str):
                 raise TypeError("Invalid type for `codec_iso`, type has to be `str`")
 
-            self._codec_iso = codec_iso
+        self._codec_iso = codec_iso
 
 
     @property
@@ -181,7 +181,7 @@ class MuxingInformationAudioTrack(object):
             if not isinstance(bit_rate, int):
                 raise TypeError("Invalid type for `bit_rate`, type has to be `int`")
 
-            self._bit_rate = bit_rate
+        self._bit_rate = bit_rate
 
 
     @property
@@ -207,7 +207,7 @@ class MuxingInformationAudioTrack(object):
             if not isinstance(rate, int):
                 raise TypeError("Invalid type for `rate`, type has to be `int`")
 
-            self._rate = rate
+        self._rate = rate
 
 
     @property
@@ -235,7 +235,7 @@ class MuxingInformationAudioTrack(object):
             if not isinstance(sample_rate, int):
                 raise TypeError("Invalid type for `sample_rate`, type has to be `int`")
 
-            self._sample_rate = sample_rate
+        self._sample_rate = sample_rate
 
 
     @property
@@ -263,7 +263,7 @@ class MuxingInformationAudioTrack(object):
             if not isinstance(channels, int):
                 raise TypeError("Invalid type for `channels`, type has to be `int`")
 
-            self._channels = channels
+        self._channels = channels
 
 
     @property
@@ -288,10 +288,10 @@ class MuxingInformationAudioTrack(object):
         """
 
         if duration is not None:
-            if not isinstance(duration, float):
+            if not isinstance(duration, (float, int)):
                 raise TypeError("Invalid type for `duration`, type has to be `float`")
 
-            self._duration = duration
+        self._duration = duration
 
     def to_dict(self):
         """Returns the model properties as a dict"""

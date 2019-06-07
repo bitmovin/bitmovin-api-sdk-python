@@ -91,7 +91,7 @@ class Mp4Muxing(Muxing):
             if not isinstance(filename, str):
                 raise TypeError("Invalid type for `filename`, type has to be `str`")
 
-            self._filename = filename
+        self._filename = filename
 
 
     @property
@@ -119,7 +119,7 @@ class Mp4Muxing(Muxing):
             if not isinstance(fragment_duration, int):
                 raise TypeError("Invalid type for `fragment_duration`, type has to be `int`")
 
-            self._fragment_duration = fragment_duration
+        self._fragment_duration = fragment_duration
 
 
     @property
@@ -145,7 +145,7 @@ class Mp4Muxing(Muxing):
             if not isinstance(time_code, TimeCode):
                 raise TypeError("Invalid type for `time_code`, type has to be `TimeCode`")
 
-            self._time_code = time_code
+        self._time_code = time_code
 
 
     @property
@@ -171,7 +171,7 @@ class Mp4Muxing(Muxing):
             if not isinstance(fragmented_mp4_muxing_manifest_type, FragmentedMp4MuxingManifestType):
                 raise TypeError("Invalid type for `fragmented_mp4_muxing_manifest_type`, type has to be `FragmentedMp4MuxingManifestType`")
 
-            self._fragmented_mp4_muxing_manifest_type = fragmented_mp4_muxing_manifest_type
+        self._fragmented_mp4_muxing_manifest_type = fragmented_mp4_muxing_manifest_type
 
 
     @property
@@ -199,7 +199,7 @@ class Mp4Muxing(Muxing):
             if not isinstance(internal_chunk_length, InternalChunkLength):
                 raise TypeError("Invalid type for `internal_chunk_length`, type has to be `InternalChunkLength`")
 
-            self._internal_chunk_length = internal_chunk_length
+        self._internal_chunk_length = internal_chunk_length
 
     def to_dict(self):
         """Returns the model properties as a dict"""

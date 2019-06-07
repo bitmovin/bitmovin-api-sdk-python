@@ -56,8 +56,10 @@ class MjpegVideoConfiguration(CodecConfiguration):
             self.width = width
         if height is not None:
             self.height = height
-        self.rate = rate
-        self.q_scale = q_scale
+        if rate is not None:
+            self.rate = rate
+        if q_scale is not None:
+            self.q_scale = q_scale
         if pixel_format is not None:
             self.pixel_format = pixel_format
 
@@ -86,7 +88,7 @@ class MjpegVideoConfiguration(CodecConfiguration):
             if not isinstance(width, int):
                 raise TypeError("Invalid type for `width`, type has to be `int`")
 
-            self._width = width
+        self._width = width
 
 
     @property
@@ -114,7 +116,7 @@ class MjpegVideoConfiguration(CodecConfiguration):
             if not isinstance(height, int):
                 raise TypeError("Invalid type for `height`, type has to be `int`")
 
-            self._height = height
+        self._height = height
 
 
     @property
@@ -139,10 +141,10 @@ class MjpegVideoConfiguration(CodecConfiguration):
         """
 
         if rate is not None:
-            if not isinstance(rate, float):
+            if not isinstance(rate, (float, int)):
                 raise TypeError("Invalid type for `rate`, type has to be `float`")
 
-            self._rate = rate
+        self._rate = rate
 
 
     @property
@@ -170,7 +172,7 @@ class MjpegVideoConfiguration(CodecConfiguration):
             if not isinstance(q_scale, int):
                 raise TypeError("Invalid type for `q_scale`, type has to be `int`")
 
-            self._q_scale = q_scale
+        self._q_scale = q_scale
 
 
     @property
@@ -196,7 +198,7 @@ class MjpegVideoConfiguration(CodecConfiguration):
             if not isinstance(pixel_format, PixelFormat):
                 raise TypeError("Invalid type for `pixel_format`, type has to be `PixelFormat`")
 
-            self._pixel_format = pixel_format
+        self._pixel_format = pixel_format
 
     def to_dict(self):
         """Returns the model properties as a dict"""

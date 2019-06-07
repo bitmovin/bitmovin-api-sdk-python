@@ -39,7 +39,8 @@ class StandardMediaInfo(SegmentsMediaInfo):
         self._uri = None
         self.discriminator = None
 
-        self.uri = uri
+        if uri is not None:
+            self.uri = uri
 
     @property
     def uri(self):
@@ -66,7 +67,7 @@ class StandardMediaInfo(SegmentsMediaInfo):
             if not isinstance(uri, str):
                 raise TypeError("Invalid type for `uri`, type has to be `str`")
 
-            self._uri = uri
+        self._uri = uri
 
     def to_dict(self):
         """Returns the model properties as a dict"""

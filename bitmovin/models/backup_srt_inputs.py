@@ -31,15 +31,16 @@ class BackupSrtInputs(object):
         }
         return attributes
 
-    def __init__(self, delay_threshold=30, srt_inputs=None, *args, **kwargs):
+    def __init__(self, delay_threshold=None, srt_inputs=None, *args, **kwargs):
 
         self._delay_threshold = None
-        self._srt_inputs = None
+        self._srt_inputs = list()
         self.discriminator = None
 
         if delay_threshold is not None:
             self.delay_threshold = delay_threshold
-        self.srt_inputs = srt_inputs
+        if srt_inputs is not None:
+            self.srt_inputs = srt_inputs
 
     @property
     def delay_threshold(self):
@@ -66,7 +67,7 @@ class BackupSrtInputs(object):
             if not isinstance(delay_threshold, int):
                 raise TypeError("Invalid type for `delay_threshold`, type has to be `int`")
 
-            self._delay_threshold = delay_threshold
+        self._delay_threshold = delay_threshold
 
 
     @property
@@ -92,7 +93,7 @@ class BackupSrtInputs(object):
             if not isinstance(srt_inputs, list):
                 raise TypeError("Invalid type for `srt_inputs`, type has to be `list[SrtInput]`")
 
-            self._srt_inputs = srt_inputs
+        self._srt_inputs = srt_inputs
 
     def to_dict(self):
         """Returns the model properties as a dict"""

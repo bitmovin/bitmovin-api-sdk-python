@@ -47,15 +47,17 @@ class AccountInformation(BitmovinResource):
         super(AccountInformation, self).__init__(*args, **kwargs)
 
         self._email = None
-        self._api_keys = None
+        self._api_keys = list()
         self._first_name = None
         self._last_name = None
         self._phone = None
         self._company = None
         self.discriminator = None
 
-        self.email = email
-        self.api_keys = api_keys
+        if email is not None:
+            self.email = email
+        if api_keys is not None:
+            self.api_keys = api_keys
         if first_name is not None:
             self.first_name = first_name
         if last_name is not None:
@@ -90,7 +92,7 @@ class AccountInformation(BitmovinResource):
             if not isinstance(email, str):
                 raise TypeError("Invalid type for `email`, type has to be `str`")
 
-            self._email = email
+        self._email = email
 
 
     @property
@@ -118,7 +120,7 @@ class AccountInformation(BitmovinResource):
             if not isinstance(api_keys, list):
                 raise TypeError("Invalid type for `api_keys`, type has to be `list[AccountApiKey]`")
 
-            self._api_keys = api_keys
+        self._api_keys = api_keys
 
 
     @property
@@ -146,7 +148,7 @@ class AccountInformation(BitmovinResource):
             if not isinstance(first_name, str):
                 raise TypeError("Invalid type for `first_name`, type has to be `str`")
 
-            self._first_name = first_name
+        self._first_name = first_name
 
 
     @property
@@ -174,7 +176,7 @@ class AccountInformation(BitmovinResource):
             if not isinstance(last_name, str):
                 raise TypeError("Invalid type for `last_name`, type has to be `str`")
 
-            self._last_name = last_name
+        self._last_name = last_name
 
 
     @property
@@ -202,7 +204,7 @@ class AccountInformation(BitmovinResource):
             if not isinstance(phone, str):
                 raise TypeError("Invalid type for `phone`, type has to be `str`")
 
-            self._phone = phone
+        self._phone = phone
 
 
     @property
@@ -230,7 +232,7 @@ class AccountInformation(BitmovinResource):
             if not isinstance(company, str):
                 raise TypeError("Invalid type for `company`, type has to be `str`")
 
-            self._company = company
+        self._company = company
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -190,7 +190,7 @@ class Av1VideoConfiguration(VideoConfiguration):
             if not isinstance(key_placement_mode, Av1KeyPlacementMode):
                 raise TypeError("Invalid type for `key_placement_mode`, type has to be `Av1KeyPlacementMode`")
 
-            self._key_placement_mode = key_placement_mode
+        self._key_placement_mode = key_placement_mode
 
 
     @property
@@ -216,7 +216,7 @@ class Av1VideoConfiguration(VideoConfiguration):
             if not isinstance(adaptive_quant_mode, Av1AdaptiveQuantMode):
                 raise TypeError("Invalid type for `adaptive_quant_mode`, type has to be `Av1AdaptiveQuantMode`")
 
-            self._adaptive_quant_mode = adaptive_quant_mode
+        self._adaptive_quant_mode = adaptive_quant_mode
 
 
     @property
@@ -248,7 +248,7 @@ class Av1VideoConfiguration(VideoConfiguration):
             if not isinstance(lag_in_frames, int):
                 raise TypeError("Invalid type for `lag_in_frames`, type has to be `int`")
 
-            self._lag_in_frames = lag_in_frames
+        self._lag_in_frames = lag_in_frames
 
 
     @property
@@ -276,7 +276,7 @@ class Av1VideoConfiguration(VideoConfiguration):
             if not isinstance(min_q, int):
                 raise TypeError("Invalid type for `min_q`, type has to be `int`")
 
-            self._min_q = min_q
+        self._min_q = min_q
 
 
     @property
@@ -304,7 +304,7 @@ class Av1VideoConfiguration(VideoConfiguration):
             if not isinstance(max_q, int):
                 raise TypeError("Invalid type for `max_q`, type has to be `int`")
 
-            self._max_q = max_q
+        self._max_q = max_q
 
 
     @property
@@ -336,7 +336,7 @@ class Av1VideoConfiguration(VideoConfiguration):
             if not isinstance(undershoot_pct, int):
                 raise TypeError("Invalid type for `undershoot_pct`, type has to be `int`")
 
-            self._undershoot_pct = undershoot_pct
+        self._undershoot_pct = undershoot_pct
 
 
     @property
@@ -368,7 +368,7 @@ class Av1VideoConfiguration(VideoConfiguration):
             if not isinstance(overshoot_pct, int):
                 raise TypeError("Invalid type for `overshoot_pct`, type has to be `int`")
 
-            self._overshoot_pct = overshoot_pct
+        self._overshoot_pct = overshoot_pct
 
 
     @property
@@ -396,7 +396,7 @@ class Av1VideoConfiguration(VideoConfiguration):
             if not isinstance(client_buffer_size, int):
                 raise TypeError("Invalid type for `client_buffer_size`, type has to be `int`")
 
-            self._client_buffer_size = client_buffer_size
+        self._client_buffer_size = client_buffer_size
 
 
     @property
@@ -424,7 +424,7 @@ class Av1VideoConfiguration(VideoConfiguration):
             if not isinstance(client_initial_buffer_size, int):
                 raise TypeError("Invalid type for `client_initial_buffer_size`, type has to be `int`")
 
-            self._client_initial_buffer_size = client_initial_buffer_size
+        self._client_initial_buffer_size = client_initial_buffer_size
 
 
     @property
@@ -452,7 +452,7 @@ class Av1VideoConfiguration(VideoConfiguration):
             if not isinstance(client_optimal_buffer_size, int):
                 raise TypeError("Invalid type for `client_optimal_buffer_size`, type has to be `int`")
 
-            self._client_optimal_buffer_size = client_optimal_buffer_size
+        self._client_optimal_buffer_size = client_optimal_buffer_size
 
 
     @property
@@ -484,7 +484,7 @@ class Av1VideoConfiguration(VideoConfiguration):
             if not isinstance(tile_columns, int):
                 raise TypeError("Invalid type for `tile_columns`, type has to be `int`")
 
-            self._tile_columns = tile_columns
+        self._tile_columns = tile_columns
 
 
     @property
@@ -516,7 +516,7 @@ class Av1VideoConfiguration(VideoConfiguration):
             if not isinstance(tile_rows, int):
                 raise TypeError("Invalid type for `tile_rows`, type has to be `int`")
 
-            self._tile_rows = tile_rows
+        self._tile_rows = tile_rows
 
 
     @property
@@ -544,7 +544,7 @@ class Av1VideoConfiguration(VideoConfiguration):
             if not isinstance(is_automatic_alt_ref_frames_enabled, bool):
                 raise TypeError("Invalid type for `is_automatic_alt_ref_frames_enabled`, type has to be `bool`")
 
-            self._is_automatic_alt_ref_frames_enabled = is_automatic_alt_ref_frames_enabled
+        self._is_automatic_alt_ref_frames_enabled = is_automatic_alt_ref_frames_enabled
 
 
     @property
@@ -572,7 +572,7 @@ class Av1VideoConfiguration(VideoConfiguration):
             if not isinstance(arnr_max_frames, int):
                 raise TypeError("Invalid type for `arnr_max_frames`, type has to be `int`")
 
-            self._arnr_max_frames = arnr_max_frames
+        self._arnr_max_frames = arnr_max_frames
 
 
     @property
@@ -600,7 +600,7 @@ class Av1VideoConfiguration(VideoConfiguration):
             if not isinstance(arnr_strength, int):
                 raise TypeError("Invalid type for `arnr_strength`, type has to be `int`")
 
-            self._arnr_strength = arnr_strength
+        self._arnr_strength = arnr_strength
 
 
     @property
@@ -628,7 +628,7 @@ class Av1VideoConfiguration(VideoConfiguration):
             if not isinstance(max_intra_rate, int):
                 raise TypeError("Invalid type for `max_intra_rate`, type has to be `int`")
 
-            self._max_intra_rate = max_intra_rate
+        self._max_intra_rate = max_intra_rate
 
 
     @property
@@ -656,7 +656,7 @@ class Av1VideoConfiguration(VideoConfiguration):
             if not isinstance(is_lossless, bool):
                 raise TypeError("Invalid type for `is_lossless`, type has to be `bool`")
 
-            self._is_lossless = is_lossless
+        self._is_lossless = is_lossless
 
 
     @property
@@ -684,7 +684,7 @@ class Av1VideoConfiguration(VideoConfiguration):
             if not isinstance(is_frame_parallel, bool):
                 raise TypeError("Invalid type for `is_frame_parallel`, type has to be `bool`")
 
-            self._is_frame_parallel = is_frame_parallel
+        self._is_frame_parallel = is_frame_parallel
 
 
     @property
@@ -712,7 +712,7 @@ class Av1VideoConfiguration(VideoConfiguration):
             if not isinstance(sharpness, int):
                 raise TypeError("Invalid type for `sharpness`, type has to be `int`")
 
-            self._sharpness = sharpness
+        self._sharpness = sharpness
 
 
     @property
@@ -740,7 +740,7 @@ class Av1VideoConfiguration(VideoConfiguration):
             if not isinstance(is_frame_boost_enabled, bool):
                 raise TypeError("Invalid type for `is_frame_boost_enabled`, type has to be `bool`")
 
-            self._is_frame_boost_enabled = is_frame_boost_enabled
+        self._is_frame_boost_enabled = is_frame_boost_enabled
 
 
     @property
@@ -768,7 +768,7 @@ class Av1VideoConfiguration(VideoConfiguration):
             if not isinstance(noise_sensitivity, bool):
                 raise TypeError("Invalid type for `noise_sensitivity`, type has to be `bool`")
 
-            self._noise_sensitivity = noise_sensitivity
+        self._noise_sensitivity = noise_sensitivity
 
 
     @property
@@ -796,7 +796,7 @@ class Av1VideoConfiguration(VideoConfiguration):
             if not isinstance(min_gf_interval, int):
                 raise TypeError("Invalid type for `min_gf_interval`, type has to be `int`")
 
-            self._min_gf_interval = min_gf_interval
+        self._min_gf_interval = min_gf_interval
 
 
     @property
@@ -824,7 +824,7 @@ class Av1VideoConfiguration(VideoConfiguration):
             if not isinstance(max_gf_interval, int):
                 raise TypeError("Invalid type for `max_gf_interval`, type has to be `int`")
 
-            self._max_gf_interval = max_gf_interval
+        self._max_gf_interval = max_gf_interval
 
 
     @property
@@ -852,7 +852,7 @@ class Av1VideoConfiguration(VideoConfiguration):
             if not isinstance(num_tile_groups, int):
                 raise TypeError("Invalid type for `num_tile_groups`, type has to be `int`")
 
-            self._num_tile_groups = num_tile_groups
+        self._num_tile_groups = num_tile_groups
 
 
     @property
@@ -880,7 +880,7 @@ class Av1VideoConfiguration(VideoConfiguration):
             if not isinstance(mtu_size, int):
                 raise TypeError("Invalid type for `mtu_size`, type has to be `int`")
 
-            self._mtu_size = mtu_size
+        self._mtu_size = mtu_size
 
     def to_dict(self):
         """Returns the model properties as a dict"""

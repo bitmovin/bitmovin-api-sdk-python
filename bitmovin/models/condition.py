@@ -46,9 +46,12 @@ class Condition(AbstractCondition):
         self._value = None
         self.discriminator = None
 
-        self.attribute = attribute
-        self.operator = operator
-        self.value = value
+        if attribute is not None:
+            self.attribute = attribute
+        if operator is not None:
+            self.operator = operator
+        if value is not None:
+            self.value = value
 
     @property
     def attribute(self):
@@ -75,7 +78,7 @@ class Condition(AbstractCondition):
             if not isinstance(attribute, str):
                 raise TypeError("Invalid type for `attribute`, type has to be `str`")
 
-            self._attribute = attribute
+        self._attribute = attribute
 
 
     @property
@@ -103,7 +106,7 @@ class Condition(AbstractCondition):
             if not isinstance(operator, ConditionOperator):
                 raise TypeError("Invalid type for `operator`, type has to be `ConditionOperator`")
 
-            self._operator = operator
+        self._operator = operator
 
 
     @property
@@ -131,7 +134,7 @@ class Condition(AbstractCondition):
             if not isinstance(value, str):
                 raise TypeError("Invalid type for `value`, type has to be `str`")
 
-            self._value = value
+        self._value = value
 
     def to_dict(self):
         """Returns the model properties as a dict"""

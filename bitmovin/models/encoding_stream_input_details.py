@@ -54,11 +54,11 @@ class EncodingStreamInputDetails(object):
         self._duration = None
         self._size = None
         self._bitrate = None
-        self._tags = None
-        self._video_streams = None
-        self._audio_streams = None
-        self._meta_streams = None
-        self._subtitle_streams = None
+        self._tags = list()
+        self._video_streams = list()
+        self._audio_streams = list()
+        self._meta_streams = list()
+        self._subtitle_streams = list()
         self.discriminator = None
 
         if format_name is not None:
@@ -107,7 +107,7 @@ class EncodingStreamInputDetails(object):
             if not isinstance(format_name, str):
                 raise TypeError("Invalid type for `format_name`, type has to be `str`")
 
-            self._format_name = format_name
+        self._format_name = format_name
 
 
     @property
@@ -132,10 +132,10 @@ class EncodingStreamInputDetails(object):
         """
 
         if start_time is not None:
-            if not isinstance(start_time, float):
+            if not isinstance(start_time, (float, int)):
                 raise TypeError("Invalid type for `start_time`, type has to be `float`")
 
-            self._start_time = start_time
+        self._start_time = start_time
 
 
     @property
@@ -160,10 +160,10 @@ class EncodingStreamInputDetails(object):
         """
 
         if duration is not None:
-            if not isinstance(duration, float):
+            if not isinstance(duration, (float, int)):
                 raise TypeError("Invalid type for `duration`, type has to be `float`")
 
-            self._duration = duration
+        self._duration = duration
 
 
     @property
@@ -191,7 +191,7 @@ class EncodingStreamInputDetails(object):
             if not isinstance(size, int):
                 raise TypeError("Invalid type for `size`, type has to be `int`")
 
-            self._size = size
+        self._size = size
 
 
     @property
@@ -219,7 +219,7 @@ class EncodingStreamInputDetails(object):
             if not isinstance(bitrate, int):
                 raise TypeError("Invalid type for `bitrate`, type has to be `int`")
 
-            self._bitrate = bitrate
+        self._bitrate = bitrate
 
 
     @property
@@ -247,7 +247,7 @@ class EncodingStreamInputDetails(object):
             if not isinstance(tags, list):
                 raise TypeError("Invalid type for `tags`, type has to be `list[str]`")
 
-            self._tags = tags
+        self._tags = tags
 
 
     @property
@@ -275,7 +275,7 @@ class EncodingStreamInputDetails(object):
             if not isinstance(video_streams, list):
                 raise TypeError("Invalid type for `video_streams`, type has to be `list[VideoStream]`")
 
-            self._video_streams = video_streams
+        self._video_streams = video_streams
 
 
     @property
@@ -303,7 +303,7 @@ class EncodingStreamInputDetails(object):
             if not isinstance(audio_streams, list):
                 raise TypeError("Invalid type for `audio_streams`, type has to be `list[AudioStream]`")
 
-            self._audio_streams = audio_streams
+        self._audio_streams = audio_streams
 
 
     @property
@@ -331,7 +331,7 @@ class EncodingStreamInputDetails(object):
             if not isinstance(meta_streams, list):
                 raise TypeError("Invalid type for `meta_streams`, type has to be `list[MediaStream]`")
 
-            self._meta_streams = meta_streams
+        self._meta_streams = meta_streams
 
 
     @property
@@ -359,7 +359,7 @@ class EncodingStreamInputDetails(object):
             if not isinstance(subtitle_streams, list):
                 raise TypeError("Invalid type for `subtitle_streams`, type has to be `list[SubtitleStream]`")
 
-            self._subtitle_streams = subtitle_streams
+        self._subtitle_streams = subtitle_streams
 
     def to_dict(self):
         """Returns the model properties as a dict"""

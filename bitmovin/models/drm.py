@@ -47,7 +47,7 @@ class Drm(BitmovinResource):
     def __init__(self, outputs=None, *args, **kwargs):
         super(Drm, self).__init__(*args, **kwargs)
 
-        self._outputs = None
+        self._outputs = list()
         self.discriminator = 'type'
 
         if outputs is not None:
@@ -76,7 +76,7 @@ class Drm(BitmovinResource):
             if not isinstance(outputs, list):
                 raise TypeError("Invalid type for `outputs`, type has to be `list[EncodingOutput]`")
 
-            self._outputs = outputs
+        self._outputs = outputs
 
     def get_real_child_model(self, data):
         """Returns the real base class specified by the discriminator"""

@@ -56,8 +56,10 @@ class S3RoleBasedOutput(Output):
         self._signature_version = None
         self.discriminator = None
 
-        self.bucket_name = bucket_name
-        self.role_arn = role_arn
+        if bucket_name is not None:
+            self.bucket_name = bucket_name
+        if role_arn is not None:
+            self.role_arn = role_arn
         if external_id is not None:
             self.external_id = external_id
         if md5_meta_tag is not None:
@@ -92,7 +94,7 @@ class S3RoleBasedOutput(Output):
             if not isinstance(bucket_name, str):
                 raise TypeError("Invalid type for `bucket_name`, type has to be `str`")
 
-            self._bucket_name = bucket_name
+        self._bucket_name = bucket_name
 
 
     @property
@@ -120,7 +122,7 @@ class S3RoleBasedOutput(Output):
             if not isinstance(role_arn, str):
                 raise TypeError("Invalid type for `role_arn`, type has to be `str`")
 
-            self._role_arn = role_arn
+        self._role_arn = role_arn
 
 
     @property
@@ -148,7 +150,7 @@ class S3RoleBasedOutput(Output):
             if not isinstance(external_id, str):
                 raise TypeError("Invalid type for `external_id`, type has to be `str`")
 
-            self._external_id = external_id
+        self._external_id = external_id
 
 
     @property
@@ -176,7 +178,7 @@ class S3RoleBasedOutput(Output):
             if not isinstance(md5_meta_tag, str):
                 raise TypeError("Invalid type for `md5_meta_tag`, type has to be `str`")
 
-            self._md5_meta_tag = md5_meta_tag
+        self._md5_meta_tag = md5_meta_tag
 
 
     @property
@@ -202,7 +204,7 @@ class S3RoleBasedOutput(Output):
             if not isinstance(cloud_region, AwsCloudRegion):
                 raise TypeError("Invalid type for `cloud_region`, type has to be `AwsCloudRegion`")
 
-            self._cloud_region = cloud_region
+        self._cloud_region = cloud_region
 
 
     @property
@@ -230,7 +232,7 @@ class S3RoleBasedOutput(Output):
             if not isinstance(signature_version, S3SignatureVersion):
                 raise TypeError("Invalid type for `signature_version`, type has to be `S3SignatureVersion`")
 
-            self._signature_version = signature_version
+        self._signature_version = signature_version
 
     def to_dict(self):
         """Returns the model properties as a dict"""

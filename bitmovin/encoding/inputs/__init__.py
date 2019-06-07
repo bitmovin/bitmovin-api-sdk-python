@@ -19,3 +19,4 @@ from bitmovin.encoding.inputs.tcp.tcp_api import TcpApi
 from bitmovin.encoding.inputs.udp.udp_api import UdpApi
 from bitmovin.encoding.inputs.udpMulticast.udp_multicast_api import UdpMulticastApi
 from bitmovin.encoding.inputs.zixi.zixi_api import ZixiApi
+from bitmovin.encoding.inputs.input_list_query_params import InputListQueryParams

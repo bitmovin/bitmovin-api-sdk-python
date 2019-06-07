@@ -64,7 +64,7 @@ class MediaInfoTypeResponse(object):
             if not isinstance(type, MediaInfoType):
                 raise TypeError("Invalid type for `type`, type has to be `MediaInfoType`")
 
-            self._type = type
+        self._type = type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

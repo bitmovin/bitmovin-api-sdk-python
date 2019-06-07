@@ -39,7 +39,8 @@ class CustomXmlElement(BitmovinResponse):
         self._data = None
         self.discriminator = None
 
-        self.data = data
+        if data is not None:
+            self.data = data
 
     @property
     def data(self):
@@ -66,7 +67,7 @@ class CustomXmlElement(BitmovinResponse):
             if not isinstance(data, str):
                 raise TypeError("Invalid type for `data`, type has to be `str`")
 
-            self._data = data
+        self._data = data
 
     def to_dict(self):
         """Returns the model properties as a dict"""

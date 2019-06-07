@@ -54,7 +54,8 @@ class BillableEncodingMinutes(object):
 
         if encoding_mode is not None:
             self.encoding_mode = encoding_mode
-        self.codec = codec
+        if codec is not None:
+            self.codec = codec
         if per_title_result_stream is not None:
             self.per_title_result_stream = per_title_result_stream
         if psnr_mode is not None:
@@ -85,7 +86,7 @@ class BillableEncodingMinutes(object):
             if not isinstance(encoding_mode, EncodingMode):
                 raise TypeError("Invalid type for `encoding_mode`, type has to be `EncodingMode`")
 
-            self._encoding_mode = encoding_mode
+        self._encoding_mode = encoding_mode
 
 
     @property
@@ -111,7 +112,7 @@ class BillableEncodingMinutes(object):
             if not isinstance(codec, CodecConfigType):
                 raise TypeError("Invalid type for `codec`, type has to be `CodecConfigType`")
 
-            self._codec = codec
+        self._codec = codec
 
 
     @property
@@ -137,7 +138,7 @@ class BillableEncodingMinutes(object):
             if not isinstance(per_title_result_stream, StatisticsPerTitleStream):
                 raise TypeError("Invalid type for `per_title_result_stream`, type has to be `StatisticsPerTitleStream`")
 
-            self._per_title_result_stream = per_title_result_stream
+        self._per_title_result_stream = per_title_result_stream
 
 
     @property
@@ -163,7 +164,7 @@ class BillableEncodingMinutes(object):
             if not isinstance(psnr_mode, PsnrPerStreamMode):
                 raise TypeError("Invalid type for `psnr_mode`, type has to be `PsnrPerStreamMode`")
 
-            self._psnr_mode = psnr_mode
+        self._psnr_mode = psnr_mode
 
 
     @property
@@ -189,7 +190,7 @@ class BillableEncodingMinutes(object):
             if not isinstance(billable_minutes, BillableEncodingMinutesDetails):
                 raise TypeError("Invalid type for `billable_minutes`, type has to be `BillableEncodingMinutesDetails`")
 
-            self._billable_minutes = billable_minutes
+        self._billable_minutes = billable_minutes
 
     def to_dict(self):
         """Returns the model properties as a dict"""

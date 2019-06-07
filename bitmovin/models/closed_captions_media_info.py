@@ -42,7 +42,8 @@ class ClosedCaptionsMediaInfo(SegmentsMediaInfo):
         self._forced = None
         self.discriminator = None
 
-        self.instream_id = instream_id
+        if instream_id is not None:
+            self.instream_id = instream_id
         if forced is not None:
             self.forced = forced
 
@@ -71,7 +72,7 @@ class ClosedCaptionsMediaInfo(SegmentsMediaInfo):
             if not isinstance(instream_id, str):
                 raise TypeError("Invalid type for `instream_id`, type has to be `str`")
 
-            self._instream_id = instream_id
+        self._instream_id = instream_id
 
 
     @property
@@ -99,7 +100,7 @@ class ClosedCaptionsMediaInfo(SegmentsMediaInfo):
             if not isinstance(forced, bool):
                 raise TypeError("Invalid type for `forced`, type has to be `bool`")
 
-            self._forced = forced
+        self._forced = forced
 
     def to_dict(self):
         """Returns the model properties as a dict"""

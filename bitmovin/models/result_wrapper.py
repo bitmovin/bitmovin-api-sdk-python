@@ -60,7 +60,7 @@ class ResultWrapper(object):
             if not isinstance(result, object):
                 raise TypeError("Invalid type for `result`, type has to be `object`")
 
-            self._result = result
+        self._result = result
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -73,7 +73,7 @@ class SmoothStreamingManifest(Manifest):
             if not isinstance(server_manifest_name, str):
                 raise TypeError("Invalid type for `server_manifest_name`, type has to be `str`")
 
-            self._server_manifest_name = server_manifest_name
+        self._server_manifest_name = server_manifest_name
 
 
     @property
@@ -101,7 +101,7 @@ class SmoothStreamingManifest(Manifest):
             if not isinstance(client_manifest_name, str):
                 raise TypeError("Invalid type for `client_manifest_name`, type has to be `str`")
 
-            self._client_manifest_name = client_manifest_name
+        self._client_manifest_name = client_manifest_name
 
     def to_dict(self):
         """Returns the model properties as a dict"""

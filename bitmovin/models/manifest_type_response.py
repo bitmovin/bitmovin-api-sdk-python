@@ -64,7 +64,7 @@ class ManifestTypeResponse(object):
             if not isinstance(type, ManifestType):
                 raise TypeError("Invalid type for `type`, type has to be `ManifestType`")
 
-            self._type = type
+        self._type = type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

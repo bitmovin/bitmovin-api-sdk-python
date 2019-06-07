@@ -44,7 +44,8 @@ class AnalyticsLicense(BitmovinResponse):
 
         if name is not None:
             self.name = name
-        self.license_key = license_key
+        if license_key is not None:
+            self.license_key = license_key
 
     @property
     def name(self):
@@ -71,7 +72,7 @@ class AnalyticsLicense(BitmovinResponse):
             if not isinstance(name, str):
                 raise TypeError("Invalid type for `name`, type has to be `str`")
 
-            self._name = name
+        self._name = name
 
 
     @property
@@ -99,7 +100,7 @@ class AnalyticsLicense(BitmovinResponse):
             if not isinstance(license_key, str):
                 raise TypeError("Invalid type for `license_key`, type has to be `str`")
 
-            self._license_key = license_key
+        self._license_key = license_key
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -69,10 +69,12 @@ class CencDrm(Drm):
         self._fair_play = None
         self.discriminator = None
 
-        self.key = key
+        if key is not None:
+            self.key = key
         if kid is not None:
             self.kid = kid
-        self.encryption_mode = encryption_mode
+        if encryption_mode is not None:
+            self.encryption_mode = encryption_mode
         if iv_size is not None:
             self.iv_size = iv_size
         if enable_piff_compatibility is not None:
@@ -111,7 +113,7 @@ class CencDrm(Drm):
             if not isinstance(key, str):
                 raise TypeError("Invalid type for `key`, type has to be `str`")
 
-            self._key = key
+        self._key = key
 
 
     @property
@@ -139,7 +141,7 @@ class CencDrm(Drm):
             if not isinstance(kid, str):
                 raise TypeError("Invalid type for `kid`, type has to be `str`")
 
-            self._kid = kid
+        self._kid = kid
 
 
     @property
@@ -167,7 +169,7 @@ class CencDrm(Drm):
             if not isinstance(encryption_mode, EncryptionMode):
                 raise TypeError("Invalid type for `encryption_mode`, type has to be `EncryptionMode`")
 
-            self._encryption_mode = encryption_mode
+        self._encryption_mode = encryption_mode
 
 
     @property
@@ -195,7 +197,7 @@ class CencDrm(Drm):
             if not isinstance(iv_size, IvSize):
                 raise TypeError("Invalid type for `iv_size`, type has to be `IvSize`")
 
-            self._iv_size = iv_size
+        self._iv_size = iv_size
 
 
     @property
@@ -223,7 +225,7 @@ class CencDrm(Drm):
             if not isinstance(enable_piff_compatibility, bool):
                 raise TypeError("Invalid type for `enable_piff_compatibility`, type has to be `bool`")
 
-            self._enable_piff_compatibility = enable_piff_compatibility
+        self._enable_piff_compatibility = enable_piff_compatibility
 
 
     @property
@@ -251,7 +253,7 @@ class CencDrm(Drm):
             if not isinstance(widevine, CencWidevine):
                 raise TypeError("Invalid type for `widevine`, type has to be `CencWidevine`")
 
-            self._widevine = widevine
+        self._widevine = widevine
 
 
     @property
@@ -279,7 +281,7 @@ class CencDrm(Drm):
             if not isinstance(play_ready, CencPlayReady):
                 raise TypeError("Invalid type for `play_ready`, type has to be `CencPlayReady`")
 
-            self._play_ready = play_ready
+        self._play_ready = play_ready
 
 
     @property
@@ -307,7 +309,7 @@ class CencDrm(Drm):
             if not isinstance(marlin, CencMarlin):
                 raise TypeError("Invalid type for `marlin`, type has to be `CencMarlin`")
 
-            self._marlin = marlin
+        self._marlin = marlin
 
 
     @property
@@ -335,7 +337,7 @@ class CencDrm(Drm):
             if not isinstance(fair_play, CencFairPlay):
                 raise TypeError("Invalid type for `fair_play`, type has to be `CencFairPlay`")
 
-            self._fair_play = fair_play
+        self._fair_play = fair_play
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -77,7 +77,7 @@ class BillableEncodingFeatureMinutes(object):
             if not isinstance(feature_type, str):
                 raise TypeError("Invalid type for `feature_type`, type has to be `str`")
 
-            self._feature_type = feature_type
+        self._feature_type = feature_type
 
 
     @property
@@ -102,10 +102,10 @@ class BillableEncodingFeatureMinutes(object):
         """
 
         if encoded_minutes is not None:
-            if not isinstance(encoded_minutes, float):
+            if not isinstance(encoded_minutes, (float, int)):
                 raise TypeError("Invalid type for `encoded_minutes`, type has to be `float`")
 
-            self._encoded_minutes = encoded_minutes
+        self._encoded_minutes = encoded_minutes
 
 
     @property
@@ -130,10 +130,10 @@ class BillableEncodingFeatureMinutes(object):
         """
 
         if feature_multiplier is not None:
-            if not isinstance(feature_multiplier, float):
+            if not isinstance(feature_multiplier, (float, int)):
                 raise TypeError("Invalid type for `feature_multiplier`, type has to be `float`")
 
-            self._feature_multiplier = feature_multiplier
+        self._feature_multiplier = feature_multiplier
 
 
     @property
@@ -158,10 +158,10 @@ class BillableEncodingFeatureMinutes(object):
         """
 
         if billable_minutes is not None:
-            if not isinstance(billable_minutes, float):
+            if not isinstance(billable_minutes, (float, int)):
                 raise TypeError("Invalid type for `billable_minutes`, type has to be `float`")
 
-            self._billable_minutes = billable_minutes
+        self._billable_minutes = billable_minutes
 
     def to_dict(self):
         """Returns the model properties as a dict"""

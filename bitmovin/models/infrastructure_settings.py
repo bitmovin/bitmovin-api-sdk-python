@@ -69,7 +69,7 @@ class InfrastructureSettings(object):
             if not isinstance(infrastructure_id, str):
                 raise TypeError("Invalid type for `infrastructure_id`, type has to be `str`")
 
-            self._infrastructure_id = infrastructure_id
+        self._infrastructure_id = infrastructure_id
 
 
     @property
@@ -95,7 +95,7 @@ class InfrastructureSettings(object):
             if not isinstance(cloud_region, CloudRegion):
                 raise TypeError("Invalid type for `cloud_region`, type has to be `CloudRegion`")
 
-            self._cloud_region = cloud_region
+        self._cloud_region = cloud_region
 
     def to_dict(self):
         """Returns the model properties as a dict"""

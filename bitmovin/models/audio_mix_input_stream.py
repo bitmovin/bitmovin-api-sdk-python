@@ -40,7 +40,7 @@ class AudioMixInputStream(InputStream):
         super(AudioMixInputStream, self).__init__(*args, **kwargs)
 
         self._channel_layout = None
-        self._audio_mix_channels = None
+        self._audio_mix_channels = list()
         self.discriminator = None
 
         if channel_layout is not None:
@@ -73,7 +73,7 @@ class AudioMixInputStream(InputStream):
             if not isinstance(channel_layout, AudioMixInputChannelLayout):
                 raise TypeError("Invalid type for `channel_layout`, type has to be `AudioMixInputChannelLayout`")
 
-            self._channel_layout = channel_layout
+        self._channel_layout = channel_layout
 
 
     @property
@@ -99,7 +99,7 @@ class AudioMixInputStream(InputStream):
             if not isinstance(audio_mix_channels, list):
                 raise TypeError("Invalid type for `audio_mix_channels`, type has to be `list[AudioMixInputStreamChannel]`")
 
-            self._audio_mix_channels = audio_mix_channels
+        self._audio_mix_channels = audio_mix_channels
 
     def to_dict(self):
         """Returns the model properties as a dict"""

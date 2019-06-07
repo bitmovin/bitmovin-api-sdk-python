@@ -88,7 +88,7 @@ class CropFilter(Filter):
             if not isinstance(left, int):
                 raise TypeError("Invalid type for `left`, type has to be `int`")
 
-            self._left = left
+        self._left = left
 
 
     @property
@@ -116,7 +116,7 @@ class CropFilter(Filter):
             if not isinstance(right, int):
                 raise TypeError("Invalid type for `right`, type has to be `int`")
 
-            self._right = right
+        self._right = right
 
 
     @property
@@ -144,7 +144,7 @@ class CropFilter(Filter):
             if not isinstance(top, int):
                 raise TypeError("Invalid type for `top`, type has to be `int`")
 
-            self._top = top
+        self._top = top
 
 
     @property
@@ -172,7 +172,7 @@ class CropFilter(Filter):
             if not isinstance(bottom, int):
                 raise TypeError("Invalid type for `bottom`, type has to be `int`")
 
-            self._bottom = bottom
+        self._bottom = bottom
 
 
     @property
@@ -198,7 +198,7 @@ class CropFilter(Filter):
             if not isinstance(unit, PositionUnit):
                 raise TypeError("Invalid type for `unit`, type has to be `PositionUnit`")
 
-            self._unit = unit
+        self._unit = unit
 
     def to_dict(self):
         """Returns the model properties as a dict"""

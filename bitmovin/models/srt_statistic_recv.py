@@ -100,7 +100,7 @@ class SrtStatisticRecv(object):
             if not isinstance(bytes, int):
                 raise TypeError("Invalid type for `bytes`, type has to be `int`")
 
-            self._bytes = bytes
+        self._bytes = bytes
 
 
     @property
@@ -126,7 +126,7 @@ class SrtStatisticRecv(object):
             if not isinstance(bytes_dropped, int):
                 raise TypeError("Invalid type for `bytes_dropped`, type has to be `int`")
 
-            self._bytes_dropped = bytes_dropped
+        self._bytes_dropped = bytes_dropped
 
 
     @property
@@ -152,7 +152,7 @@ class SrtStatisticRecv(object):
             if not isinstance(bytes_lost, int):
                 raise TypeError("Invalid type for `bytes_lost`, type has to be `int`")
 
-            self._bytes_lost = bytes_lost
+        self._bytes_lost = bytes_lost
 
 
     @property
@@ -175,10 +175,10 @@ class SrtStatisticRecv(object):
         """
 
         if mbit_rate is not None:
-            if not isinstance(mbit_rate, float):
+            if not isinstance(mbit_rate, (float, int)):
                 raise TypeError("Invalid type for `mbit_rate`, type has to be `float`")
 
-            self._mbit_rate = mbit_rate
+        self._mbit_rate = mbit_rate
 
 
     @property
@@ -204,7 +204,7 @@ class SrtStatisticRecv(object):
             if not isinstance(packets, int):
                 raise TypeError("Invalid type for `packets`, type has to be `int`")
 
-            self._packets = packets
+        self._packets = packets
 
 
     @property
@@ -230,7 +230,7 @@ class SrtStatisticRecv(object):
             if not isinstance(packets_belated, int):
                 raise TypeError("Invalid type for `packets_belated`, type has to be `int`")
 
-            self._packets_belated = packets_belated
+        self._packets_belated = packets_belated
 
 
     @property
@@ -256,7 +256,7 @@ class SrtStatisticRecv(object):
             if not isinstance(packets_dropped, int):
                 raise TypeError("Invalid type for `packets_dropped`, type has to be `int`")
 
-            self._packets_dropped = packets_dropped
+        self._packets_dropped = packets_dropped
 
 
     @property
@@ -282,7 +282,7 @@ class SrtStatisticRecv(object):
             if not isinstance(packets_lost, int):
                 raise TypeError("Invalid type for `packets_lost`, type has to be `int`")
 
-            self._packets_lost = packets_lost
+        self._packets_lost = packets_lost
 
 
     @property
@@ -308,7 +308,7 @@ class SrtStatisticRecv(object):
             if not isinstance(packets_retransmitted, int):
                 raise TypeError("Invalid type for `packets_retransmitted`, type has to be `int`")
 
-            self._packets_retransmitted = packets_retransmitted
+        self._packets_retransmitted = packets_retransmitted
 
     def to_dict(self):
         """Returns the model properties as a dict"""

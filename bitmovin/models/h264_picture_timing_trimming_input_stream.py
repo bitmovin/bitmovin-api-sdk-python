@@ -77,7 +77,7 @@ class H264PictureTimingTrimmingInputStream(InputStream):
             if not isinstance(input_stream_id, str):
                 raise TypeError("Invalid type for `input_stream_id`, type has to be `str`")
 
-            self._input_stream_id = input_stream_id
+        self._input_stream_id = input_stream_id
 
 
     @property
@@ -105,7 +105,7 @@ class H264PictureTimingTrimmingInputStream(InputStream):
             if not isinstance(start_pic_timing, str):
                 raise TypeError("Invalid type for `start_pic_timing`, type has to be `str`")
 
-            self._start_pic_timing = start_pic_timing
+        self._start_pic_timing = start_pic_timing
 
 
     @property
@@ -133,7 +133,7 @@ class H264PictureTimingTrimmingInputStream(InputStream):
             if not isinstance(end_pic_timing, str):
                 raise TypeError("Invalid type for `end_pic_timing`, type has to be `str`")
 
-            self._end_pic_timing = end_pic_timing
+        self._end_pic_timing = end_pic_timing
 
     def to_dict(self):
         """Returns the model properties as a dict"""

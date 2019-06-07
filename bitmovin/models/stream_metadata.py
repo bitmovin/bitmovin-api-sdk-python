@@ -62,7 +62,7 @@ class StreamMetadata(object):
             if not isinstance(language, str):
                 raise TypeError("Invalid type for `language`, type has to be `str`")
 
-            self._language = language
+        self._language = language
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -62,16 +62,17 @@ class Muxing(BitmovinResource):
     def __init__(self, streams=None, outputs=None, avg_bitrate=None, min_bitrate=None, max_bitrate=None, ignored_by=None, stream_conditions_mode=None, *args, **kwargs):
         super(Muxing, self).__init__(*args, **kwargs)
 
-        self._streams = None
-        self._outputs = None
+        self._streams = list()
+        self._outputs = list()
         self._avg_bitrate = None
         self._min_bitrate = None
         self._max_bitrate = None
-        self._ignored_by = None
+        self._ignored_by = list()
         self._stream_conditions_mode = None
         self.discriminator = 'type'
 
-        self.streams = streams
+        if streams is not None:
+            self.streams = streams
         if outputs is not None:
             self.outputs = outputs
         if avg_bitrate is not None:
@@ -108,7 +109,7 @@ class Muxing(BitmovinResource):
             if not isinstance(streams, list):
                 raise TypeError("Invalid type for `streams`, type has to be `list[MuxingStream]`")
 
-            self._streams = streams
+        self._streams = streams
 
 
     @property
@@ -134,7 +135,7 @@ class Muxing(BitmovinResource):
             if not isinstance(outputs, list):
                 raise TypeError("Invalid type for `outputs`, type has to be `list[EncodingOutput]`")
 
-            self._outputs = outputs
+        self._outputs = outputs
 
 
     @property
@@ -162,7 +163,7 @@ class Muxing(BitmovinResource):
             if not isinstance(avg_bitrate, int):
                 raise TypeError("Invalid type for `avg_bitrate`, type has to be `int`")
 
-            self._avg_bitrate = avg_bitrate
+        self._avg_bitrate = avg_bitrate
 
 
     @property
@@ -190,7 +191,7 @@ class Muxing(BitmovinResource):
             if not isinstance(min_bitrate, int):
                 raise TypeError("Invalid type for `min_bitrate`, type has to be `int`")
 
-            self._min_bitrate = min_bitrate
+        self._min_bitrate = min_bitrate
 
 
     @property
@@ -218,7 +219,7 @@ class Muxing(BitmovinResource):
             if not isinstance(max_bitrate, int):
                 raise TypeError("Invalid type for `max_bitrate`, type has to be `int`")
 
-            self._max_bitrate = max_bitrate
+        self._max_bitrate = max_bitrate
 
 
     @property
@@ -246,7 +247,7 @@ class Muxing(BitmovinResource):
             if not isinstance(ignored_by, list):
                 raise TypeError("Invalid type for `ignored_by`, type has to be `list[Ignoring]`")
 
-            self._ignored_by = ignored_by
+        self._ignored_by = ignored_by
 
 
     @property
@@ -274,7 +275,7 @@ class Muxing(BitmovinResource):
             if not isinstance(stream_conditions_mode, StreamConditionsMode):
                 raise TypeError("Invalid type for `stream_conditions_mode`, type has to be `StreamConditionsMode`")
 
-            self._stream_conditions_mode = stream_conditions_mode
+        self._stream_conditions_mode = stream_conditions_mode
 
     def get_real_child_model(self, data):
         """Returns the real base class specified by the discriminator"""

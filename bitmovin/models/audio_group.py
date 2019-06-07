@@ -37,8 +37,10 @@ class AudioGroup(object):
         self._priority = None
         self.discriminator = None
 
-        self.name = name
-        self.priority = priority
+        if name is not None:
+            self.name = name
+        if priority is not None:
+            self.priority = priority
 
     @property
     def name(self):
@@ -65,7 +67,7 @@ class AudioGroup(object):
             if not isinstance(name, str):
                 raise TypeError("Invalid type for `name`, type has to be `str`")
 
-            self._name = name
+        self._name = name
 
 
     @property
@@ -97,7 +99,7 @@ class AudioGroup(object):
             if not isinstance(priority, int):
                 raise TypeError("Invalid type for `priority`, type has to be `int`")
 
-            self._priority = priority
+        self._priority = priority
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -48,7 +48,8 @@ class HttpInput(Input):
         self._port = None
         self.discriminator = None
 
-        self.host = host
+        if host is not None:
+            self.host = host
         if username is not None:
             self.username = username
         if password is not None:
@@ -81,7 +82,7 @@ class HttpInput(Input):
             if not isinstance(host, str):
                 raise TypeError("Invalid type for `host`, type has to be `str`")
 
-            self._host = host
+        self._host = host
 
 
     @property
@@ -109,7 +110,7 @@ class HttpInput(Input):
             if not isinstance(username, str):
                 raise TypeError("Invalid type for `username`, type has to be `str`")
 
-            self._username = username
+        self._username = username
 
 
     @property
@@ -137,7 +138,7 @@ class HttpInput(Input):
             if not isinstance(password, str):
                 raise TypeError("Invalid type for `password`, type has to be `str`")
 
-            self._password = password
+        self._password = password
 
 
     @property
@@ -165,7 +166,7 @@ class HttpInput(Input):
             if not isinstance(port, int):
                 raise TypeError("Invalid type for `port`, type has to be `int`")
 
-            self._port = port
+        self._port = port
 
     def to_dict(self):
         """Returns the model properties as a dict"""

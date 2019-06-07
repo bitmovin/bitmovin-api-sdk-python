@@ -45,9 +45,12 @@ class AzureOutput(Output):
         self._container = None
         self.discriminator = None
 
-        self.account_name = account_name
-        self.account_key = account_key
-        self.container = container
+        if account_name is not None:
+            self.account_name = account_name
+        if account_key is not None:
+            self.account_key = account_key
+        if container is not None:
+            self.container = container
 
     @property
     def account_name(self):
@@ -74,7 +77,7 @@ class AzureOutput(Output):
             if not isinstance(account_name, str):
                 raise TypeError("Invalid type for `account_name`, type has to be `str`")
 
-            self._account_name = account_name
+        self._account_name = account_name
 
 
     @property
@@ -102,7 +105,7 @@ class AzureOutput(Output):
             if not isinstance(account_key, str):
                 raise TypeError("Invalid type for `account_key`, type has to be `str`")
 
-            self._account_key = account_key
+        self._account_key = account_key
 
 
     @property
@@ -130,7 +133,7 @@ class AzureOutput(Output):
             if not isinstance(container, str):
                 raise TypeError("Invalid type for `container`, type has to be `str`")
 
-            self._container = container
+        self._container = container
 
     def to_dict(self):
         """Returns the model properties as a dict"""

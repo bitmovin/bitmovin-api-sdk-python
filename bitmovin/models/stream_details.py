@@ -75,7 +75,7 @@ class StreamDetails(object):
             if not isinstance(id, str):
                 raise TypeError("Invalid type for `id`, type has to be `str`")
 
-            self._id = id
+        self._id = id
 
 
     @property
@@ -101,7 +101,7 @@ class StreamDetails(object):
             if not isinstance(codec, str):
                 raise TypeError("Invalid type for `codec`, type has to be `str`")
 
-            self._codec = codec
+        self._codec = codec
 
 
     @property
@@ -127,7 +127,7 @@ class StreamDetails(object):
             if not isinstance(duration, int):
                 raise TypeError("Invalid type for `duration`, type has to be `int`")
 
-            self._duration = duration
+        self._duration = duration
 
 
     @property
@@ -153,7 +153,7 @@ class StreamDetails(object):
             if not isinstance(position, int):
                 raise TypeError("Invalid type for `position`, type has to be `int`")
 
-            self._position = position
+        self._position = position
 
     def to_dict(self):
         """Returns the model properties as a dict"""

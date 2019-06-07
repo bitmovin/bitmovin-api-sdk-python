@@ -37,8 +37,10 @@ class StreamFilter(object):
         self._position = None
         self.discriminator = None
 
-        self.id = id
-        self.position = position
+        if id is not None:
+            self.id = id
+        if position is not None:
+            self.position = position
 
     @property
     def id(self):
@@ -65,7 +67,7 @@ class StreamFilter(object):
             if not isinstance(id, str):
                 raise TypeError("Invalid type for `id`, type has to be `str`")
 
-            self._id = id
+        self._id = id
 
 
     @property
@@ -93,7 +95,7 @@ class StreamFilter(object):
             if not isinstance(position, int):
                 raise TypeError("Invalid type for `position`, type has to be `int`")
 
-            self._position = position
+        self._position = position
 
     def to_dict(self):
         """Returns the model properties as a dict"""

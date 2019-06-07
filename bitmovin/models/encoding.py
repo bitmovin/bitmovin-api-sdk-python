@@ -50,7 +50,7 @@ class Encoding(BitmovinResource):
         self._encoder_version = None
         self._infrastructure_id = None
         self._infrastructure = None
-        self._labels = None
+        self._labels = list()
         self.discriminator = None
 
         if cloud_region is not None:
@@ -87,7 +87,7 @@ class Encoding(BitmovinResource):
             if not isinstance(cloud_region, CloudRegion):
                 raise TypeError("Invalid type for `cloud_region`, type has to be `CloudRegion`")
 
-            self._cloud_region = cloud_region
+        self._cloud_region = cloud_region
 
 
     @property
@@ -115,7 +115,7 @@ class Encoding(BitmovinResource):
             if not isinstance(encoder_version, str):
                 raise TypeError("Invalid type for `encoder_version`, type has to be `str`")
 
-            self._encoder_version = encoder_version
+        self._encoder_version = encoder_version
 
 
     @property
@@ -143,7 +143,7 @@ class Encoding(BitmovinResource):
             if not isinstance(infrastructure_id, str):
                 raise TypeError("Invalid type for `infrastructure_id`, type has to be `str`")
 
-            self._infrastructure_id = infrastructure_id
+        self._infrastructure_id = infrastructure_id
 
 
     @property
@@ -169,7 +169,7 @@ class Encoding(BitmovinResource):
             if not isinstance(infrastructure, InfrastructureSettings):
                 raise TypeError("Invalid type for `infrastructure`, type has to be `InfrastructureSettings`")
 
-            self._infrastructure = infrastructure
+        self._infrastructure = infrastructure
 
 
     @property
@@ -197,7 +197,7 @@ class Encoding(BitmovinResource):
             if not isinstance(labels, list):
                 raise TypeError("Invalid type for `labels`, type has to be `list[str]`")
 
-            self._labels = labels
+        self._labels = labels
 
     def to_dict(self):
         """Returns the model properties as a dict"""

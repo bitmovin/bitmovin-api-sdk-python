@@ -50,14 +50,17 @@ class DailyStatistics(object):
         self._time_encoded = None
         self._billable_minutes = None
         self._label = None
-        self._billable_encoding_minutes = None
+        self._billable_encoding_minutes = list()
         self._billable_transmuxing_minutes = None
-        self._billable_feature_minutes = None
+        self._billable_feature_minutes = list()
         self.discriminator = None
 
-        self.date = date
-        self.bytes_encoded = bytes_encoded
-        self.time_encoded = time_encoded
+        if date is not None:
+            self.date = date
+        if bytes_encoded is not None:
+            self.bytes_encoded = bytes_encoded
+        if time_encoded is not None:
+            self.time_encoded = time_encoded
         if billable_minutes is not None:
             self.billable_minutes = billable_minutes
         if label is not None:
@@ -94,7 +97,7 @@ class DailyStatistics(object):
             if not isinstance(date, validation_date):
                 raise TypeError("Invalid type for `date`, type has to be `date`")
 
-            self._date = date
+        self._date = date
 
 
     @property
@@ -122,7 +125,7 @@ class DailyStatistics(object):
             if not isinstance(bytes_encoded, int):
                 raise TypeError("Invalid type for `bytes_encoded`, type has to be `int`")
 
-            self._bytes_encoded = bytes_encoded
+        self._bytes_encoded = bytes_encoded
 
 
     @property
@@ -150,7 +153,7 @@ class DailyStatistics(object):
             if not isinstance(time_encoded, int):
                 raise TypeError("Invalid type for `time_encoded`, type has to be `int`")
 
-            self._time_encoded = time_encoded
+        self._time_encoded = time_encoded
 
 
     @property
@@ -175,10 +178,10 @@ class DailyStatistics(object):
         """
 
         if billable_minutes is not None:
-            if not isinstance(billable_minutes, float):
+            if not isinstance(billable_minutes, (float, int)):
                 raise TypeError("Invalid type for `billable_minutes`, type has to be `float`")
 
-            self._billable_minutes = billable_minutes
+        self._billable_minutes = billable_minutes
 
 
     @property
@@ -206,7 +209,7 @@ class DailyStatistics(object):
             if not isinstance(label, str):
                 raise TypeError("Invalid type for `label`, type has to be `str`")
 
-            self._label = label
+        self._label = label
 
 
     @property
@@ -234,7 +237,7 @@ class DailyStatistics(object):
             if not isinstance(billable_encoding_minutes, list):
                 raise TypeError("Invalid type for `billable_encoding_minutes`, type has to be `list[BillableEncodingMinutes]`")
 
-            self._billable_encoding_minutes = billable_encoding_minutes
+        self._billable_encoding_minutes = billable_encoding_minutes
 
 
     @property
@@ -259,10 +262,10 @@ class DailyStatistics(object):
         """
 
         if billable_transmuxing_minutes is not None:
-            if not isinstance(billable_transmuxing_minutes, float):
+            if not isinstance(billable_transmuxing_minutes, (float, int)):
                 raise TypeError("Invalid type for `billable_transmuxing_minutes`, type has to be `float`")
 
-            self._billable_transmuxing_minutes = billable_transmuxing_minutes
+        self._billable_transmuxing_minutes = billable_transmuxing_minutes
 
 
     @property
@@ -290,7 +293,7 @@ class DailyStatistics(object):
             if not isinstance(billable_feature_minutes, list):
                 raise TypeError("Invalid type for `billable_feature_minutes`, type has to be `list[BillableEncodingFeatureMinutes]`")
 
-            self._billable_feature_minutes = billable_feature_minutes
+        self._billable_feature_minutes = billable_feature_minutes
 
     def to_dict(self):
         """Returns the model properties as a dict"""

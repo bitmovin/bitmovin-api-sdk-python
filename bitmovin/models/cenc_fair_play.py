@@ -67,7 +67,7 @@ class CencFairPlay(object):
             if not isinstance(iv, str):
                 raise TypeError("Invalid type for `iv`, type has to be `str`")
 
-            self._iv = iv
+        self._iv = iv
 
 
     @property
@@ -95,7 +95,7 @@ class CencFairPlay(object):
             if not isinstance(uri, str):
                 raise TypeError("Invalid type for `uri`, type has to be `str`")
 
-            self._uri = uri
+        self._uri = uri
 
     def to_dict(self):
         """Returns the model properties as a dict"""

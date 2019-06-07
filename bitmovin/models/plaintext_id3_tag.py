@@ -43,8 +43,10 @@ class PlaintextId3Tag(Id3Tag):
         self._frame_id = None
         self.discriminator = None
 
-        self.text = text
-        self.frame_id = frame_id
+        if text is not None:
+            self.text = text
+        if frame_id is not None:
+            self.frame_id = frame_id
 
     @property
     def text(self):
@@ -71,7 +73,7 @@ class PlaintextId3Tag(Id3Tag):
             if not isinstance(text, str):
                 raise TypeError("Invalid type for `text`, type has to be `str`")
 
-            self._text = text
+        self._text = text
 
 
     @property
@@ -99,7 +101,7 @@ class PlaintextId3Tag(Id3Tag):
             if not isinstance(frame_id, str):
                 raise TypeError("Invalid type for `frame_id`, type has to be `str`")
 
-            self._frame_id = frame_id
+        self._frame_id = frame_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

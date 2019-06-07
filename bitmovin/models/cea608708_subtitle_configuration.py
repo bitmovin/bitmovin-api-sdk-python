@@ -62,7 +62,7 @@ class Cea608708SubtitleConfiguration(object):
             if not isinstance(passthrough_activated, bool):
                 raise TypeError("Invalid type for `passthrough_activated`, type has to be `bool`")
 
-            self._passthrough_activated = passthrough_activated
+        self._passthrough_activated = passthrough_activated
 
     def to_dict(self):
         """Returns the model properties as a dict"""

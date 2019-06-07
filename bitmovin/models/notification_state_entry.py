@@ -52,11 +52,16 @@ class NotificationStateEntry(BitmovinResponse):
         self._triggered_at = None
         self.discriminator = None
 
-        self.state = state
-        self.muted = muted
-        self.notification_id = notification_id
-        self.resource_id = resource_id
-        self.triggered_at = triggered_at
+        if state is not None:
+            self.state = state
+        if muted is not None:
+            self.muted = muted
+        if notification_id is not None:
+            self.notification_id = notification_id
+        if resource_id is not None:
+            self.resource_id = resource_id
+        if triggered_at is not None:
+            self.triggered_at = triggered_at
 
     @property
     def state(self):
@@ -81,7 +86,7 @@ class NotificationStateEntry(BitmovinResponse):
             if not isinstance(state, NotificationStates):
                 raise TypeError("Invalid type for `state`, type has to be `NotificationStates`")
 
-            self._state = state
+        self._state = state
 
 
     @property
@@ -109,7 +114,7 @@ class NotificationStateEntry(BitmovinResponse):
             if not isinstance(muted, bool):
                 raise TypeError("Invalid type for `muted`, type has to be `bool`")
 
-            self._muted = muted
+        self._muted = muted
 
 
     @property
@@ -137,7 +142,7 @@ class NotificationStateEntry(BitmovinResponse):
             if not isinstance(notification_id, str):
                 raise TypeError("Invalid type for `notification_id`, type has to be `str`")
 
-            self._notification_id = notification_id
+        self._notification_id = notification_id
 
 
     @property
@@ -165,7 +170,7 @@ class NotificationStateEntry(BitmovinResponse):
             if not isinstance(resource_id, str):
                 raise TypeError("Invalid type for `resource_id`, type has to be `str`")
 
-            self._resource_id = resource_id
+        self._resource_id = resource_id
 
 
     @property
@@ -191,7 +196,7 @@ class NotificationStateEntry(BitmovinResponse):
             if not isinstance(triggered_at, datetime):
                 raise TypeError("Invalid type for `triggered_at`, type has to be `datetime`")
 
-            self._triggered_at = triggered_at
+        self._triggered_at = triggered_at
 
     def to_dict(self):
         """Returns the model properties as a dict"""

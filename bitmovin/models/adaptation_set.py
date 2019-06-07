@@ -40,9 +40,9 @@ class AdaptationSet(BitmovinResponse):
     def __init__(self, custom_attributes=None, roles=None, accessibilities=None, *args, **kwargs):
         super(AdaptationSet, self).__init__(*args, **kwargs)
 
-        self._custom_attributes = None
-        self._roles = None
-        self._accessibilities = None
+        self._custom_attributes = list()
+        self._roles = list()
+        self._accessibilities = list()
         self.discriminator = None
 
         if custom_attributes is not None:
@@ -77,7 +77,7 @@ class AdaptationSet(BitmovinResponse):
             if not isinstance(custom_attributes, list):
                 raise TypeError("Invalid type for `custom_attributes`, type has to be `list[CustomAttribute]`")
 
-            self._custom_attributes = custom_attributes
+        self._custom_attributes = custom_attributes
 
 
     @property
@@ -105,7 +105,7 @@ class AdaptationSet(BitmovinResponse):
             if not isinstance(roles, list):
                 raise TypeError("Invalid type for `roles`, type has to be `list[AdaptationSetRole]`")
 
-            self._roles = roles
+        self._roles = roles
 
 
     @property
@@ -133,7 +133,7 @@ class AdaptationSet(BitmovinResponse):
             if not isinstance(accessibilities, list):
                 raise TypeError("Invalid type for `accessibilities`, type has to be `list[Accessibility]`")
 
-            self._accessibilities = accessibilities
+        self._accessibilities = accessibilities
 
     def to_dict(self):
         """Returns the model properties as a dict"""

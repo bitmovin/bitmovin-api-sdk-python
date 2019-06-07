@@ -39,11 +39,13 @@ class CustomPlayerBuildDetails(BitmovinResource):
         super(CustomPlayerBuildDetails, self).__init__(*args, **kwargs)
 
         self._player_version = None
-        self._domains = None
+        self._domains = list()
         self.discriminator = None
 
-        self.player_version = player_version
-        self.domains = domains
+        if player_version is not None:
+            self.player_version = player_version
+        if domains is not None:
+            self.domains = domains
 
     @property
     def player_version(self):
@@ -70,7 +72,7 @@ class CustomPlayerBuildDetails(BitmovinResource):
             if not isinstance(player_version, str):
                 raise TypeError("Invalid type for `player_version`, type has to be `str`")
 
-            self._player_version = player_version
+        self._player_version = player_version
 
 
     @property
@@ -98,7 +100,7 @@ class CustomPlayerBuildDetails(BitmovinResource):
             if not isinstance(domains, list):
                 raise TypeError("Invalid type for `domains`, type has to be `list[str]`")
 
-            self._domains = domains
+        self._domains = domains
 
     def to_dict(self):
         """Returns the model properties as a dict"""

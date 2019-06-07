@@ -39,7 +39,8 @@ class DashMp4DrmRepresentation(DashMp4Representation):
         self._drm_id = None
         self.discriminator = None
 
-        self.drm_id = drm_id
+        if drm_id is not None:
+            self.drm_id = drm_id
 
     @property
     def drm_id(self):
@@ -66,7 +67,7 @@ class DashMp4DrmRepresentation(DashMp4Representation):
             if not isinstance(drm_id, str):
                 raise TypeError("Invalid type for `drm_id`, type has to be `str`")
 
-            self._drm_id = drm_id
+        self._drm_id = drm_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

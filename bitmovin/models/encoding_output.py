@@ -37,11 +37,13 @@ class EncodingOutput(object):
 
         self._output_id = None
         self._output_path = None
-        self._acl = None
+        self._acl = list()
         self.discriminator = None
 
-        self.output_id = output_id
-        self.output_path = output_path
+        if output_id is not None:
+            self.output_id = output_id
+        if output_path is not None:
+            self.output_path = output_path
         if acl is not None:
             self.acl = acl
 
@@ -70,7 +72,7 @@ class EncodingOutput(object):
             if not isinstance(output_id, str):
                 raise TypeError("Invalid type for `output_id`, type has to be `str`")
 
-            self._output_id = output_id
+        self._output_id = output_id
 
 
     @property
@@ -98,7 +100,7 @@ class EncodingOutput(object):
             if not isinstance(output_path, str):
                 raise TypeError("Invalid type for `output_path`, type has to be `str`")
 
-            self._output_path = output_path
+        self._output_path = output_path
 
 
     @property
@@ -124,7 +126,7 @@ class EncodingOutput(object):
             if not isinstance(acl, list):
                 raise TypeError("Invalid type for `acl`, type has to be `list[AclEntry]`")
 
-            self._acl = acl
+        self._acl = acl
 
     def to_dict(self):
         """Returns the model properties as a dict"""

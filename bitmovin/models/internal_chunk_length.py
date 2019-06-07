@@ -39,7 +39,8 @@ class InternalChunkLength(object):
         self._custom_chunk_length = None
         self.discriminator = None
 
-        self.mode = mode
+        if mode is not None:
+            self.mode = mode
         if custom_chunk_length is not None:
             self.custom_chunk_length = custom_chunk_length
 
@@ -68,7 +69,7 @@ class InternalChunkLength(object):
             if not isinstance(mode, ChunkLengthMode):
                 raise TypeError("Invalid type for `mode`, type has to be `ChunkLengthMode`")
 
-            self._mode = mode
+        self._mode = mode
 
 
     @property
@@ -97,10 +98,10 @@ class InternalChunkLength(object):
                 raise ValueError("Invalid value for `custom_chunk_length`, must be a value less than or equal to `180`")
             if custom_chunk_length is not None and custom_chunk_length < 1:
                 raise ValueError("Invalid value for `custom_chunk_length`, must be a value greater than or equal to `1`")
-            if not isinstance(custom_chunk_length, float):
+            if not isinstance(custom_chunk_length, (float, int)):
                 raise TypeError("Invalid type for `custom_chunk_length`, type has to be `float`")
 
-            self._custom_chunk_length = custom_chunk_length
+        self._custom_chunk_length = custom_chunk_length
 
     def to_dict(self):
         """Returns the model properties as a dict"""

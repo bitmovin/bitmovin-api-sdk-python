@@ -49,12 +49,14 @@ class AesEncryptionDrm(Drm):
         self._method = None
         self.discriminator = None
 
-        self.key = key
+        if key is not None:
+            self.key = key
         if iv is not None:
             self.iv = iv
         if key_file_uri is not None:
             self.key_file_uri = key_file_uri
-        self.method = method
+        if method is not None:
+            self.method = method
 
     @property
     def key(self):
@@ -81,7 +83,7 @@ class AesEncryptionDrm(Drm):
             if not isinstance(key, str):
                 raise TypeError("Invalid type for `key`, type has to be `str`")
 
-            self._key = key
+        self._key = key
 
 
     @property
@@ -109,7 +111,7 @@ class AesEncryptionDrm(Drm):
             if not isinstance(iv, str):
                 raise TypeError("Invalid type for `iv`, type has to be `str`")
 
-            self._iv = iv
+        self._iv = iv
 
 
     @property
@@ -137,7 +139,7 @@ class AesEncryptionDrm(Drm):
             if not isinstance(key_file_uri, str):
                 raise TypeError("Invalid type for `key_file_uri`, type has to be `str`")
 
-            self._key_file_uri = key_file_uri
+        self._key_file_uri = key_file_uri
 
 
     @property
@@ -163,7 +165,7 @@ class AesEncryptionDrm(Drm):
             if not isinstance(method, AesEncryptionMethod):
                 raise TypeError("Invalid type for `method`, type has to be `AesEncryptionMethod`")
 
-            self._method = method
+        self._method = method
 
     def to_dict(self):
         """Returns the model properties as a dict"""

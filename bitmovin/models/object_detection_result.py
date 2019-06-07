@@ -83,7 +83,7 @@ class ObjectDetectionResult(BitmovinResponse):
             if not isinstance(detected_object, str):
                 raise TypeError("Invalid type for `detected_object`, type has to be `str`")
 
-            self._detected_object = detected_object
+        self._detected_object = detected_object
 
 
     @property
@@ -108,10 +108,10 @@ class ObjectDetectionResult(BitmovinResponse):
         """
 
         if timestamp is not None:
-            if not isinstance(timestamp, float):
+            if not isinstance(timestamp, (float, int)):
                 raise TypeError("Invalid type for `timestamp`, type has to be `float`")
 
-            self._timestamp = timestamp
+        self._timestamp = timestamp
 
 
     @property
@@ -136,10 +136,10 @@ class ObjectDetectionResult(BitmovinResponse):
         """
 
         if score is not None:
-            if not isinstance(score, float):
+            if not isinstance(score, (float, int)):
                 raise TypeError("Invalid type for `score`, type has to be `float`")
 
-            self._score = score
+        self._score = score
 
 
     @property
@@ -167,7 +167,7 @@ class ObjectDetectionResult(BitmovinResponse):
             if not isinstance(bounding_box, ObjectDetectionBoundingBox):
                 raise TypeError("Invalid type for `bounding_box`, type has to be `ObjectDetectionBoundingBox`")
 
-            self._bounding_box = bounding_box
+        self._bounding_box = bounding_box
 
     def to_dict(self):
         """Returns the model properties as a dict"""

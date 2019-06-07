@@ -37,8 +37,10 @@ class CustomPlayerBuildDownload(object):
         self._expires_at = None
         self.discriminator = None
 
-        self.download_link = download_link
-        self.expires_at = expires_at
+        if download_link is not None:
+            self.download_link = download_link
+        if expires_at is not None:
+            self.expires_at = expires_at
 
     @property
     def download_link(self):
@@ -65,7 +67,7 @@ class CustomPlayerBuildDownload(object):
             if not isinstance(download_link, str):
                 raise TypeError("Invalid type for `download_link`, type has to be `str`")
 
-            self._download_link = download_link
+        self._download_link = download_link
 
 
     @property
@@ -93,7 +95,7 @@ class CustomPlayerBuildDownload(object):
             if not isinstance(expires_at, datetime):
                 raise TypeError("Invalid type for `expires_at`, type has to be `datetime`")
 
-            self._expires_at = expires_at
+        self._expires_at = expires_at
 
     def to_dict(self):
         """Returns the model properties as a dict"""

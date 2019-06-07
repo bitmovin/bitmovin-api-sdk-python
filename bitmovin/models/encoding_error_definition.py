@@ -84,7 +84,7 @@ class EncodingErrorDefinition(object):
             if not isinstance(code, int):
                 raise TypeError("Invalid type for `code`, type has to be `int`")
 
-            self._code = code
+        self._code = code
 
 
     @property
@@ -112,7 +112,7 @@ class EncodingErrorDefinition(object):
             if not isinstance(category, str):
                 raise TypeError("Invalid type for `category`, type has to be `str`")
 
-            self._category = category
+        self._category = category
 
 
     @property
@@ -140,7 +140,7 @@ class EncodingErrorDefinition(object):
             if not isinstance(message, str):
                 raise TypeError("Invalid type for `message`, type has to be `str`")
 
-            self._message = message
+        self._message = message
 
 
     @property
@@ -168,7 +168,7 @@ class EncodingErrorDefinition(object):
             if not isinstance(description, str):
                 raise TypeError("Invalid type for `description`, type has to be `str`")
 
-            self._description = description
+        self._description = description
 
 
     @property
@@ -196,7 +196,7 @@ class EncodingErrorDefinition(object):
             if not isinstance(retry_hint, ErrorRetryHint):
                 raise TypeError("Invalid type for `retry_hint`, type has to be `ErrorRetryHint`")
 
-            self._retry_hint = retry_hint
+        self._retry_hint = retry_hint
 
     def to_dict(self):
         """Returns the model properties as a dict"""

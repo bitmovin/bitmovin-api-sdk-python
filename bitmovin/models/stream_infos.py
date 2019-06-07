@@ -34,10 +34,11 @@ class StreamInfos(object):
     def __init__(self, time=None, stream_infos=None, *args, **kwargs):
 
         self._time = None
-        self._stream_infos = None
+        self._stream_infos = list()
         self.discriminator = None
 
-        self.time = time
+        if time is not None:
+            self.time = time
         if stream_infos is not None:
             self.stream_infos = stream_infos
 
@@ -66,7 +67,7 @@ class StreamInfos(object):
             if not isinstance(time, datetime):
                 raise TypeError("Invalid type for `time`, type has to be `datetime`")
 
-            self._time = time
+        self._time = time
 
 
     @property
@@ -94,7 +95,7 @@ class StreamInfos(object):
             if not isinstance(stream_infos, list):
                 raise TypeError("Invalid type for `stream_infos`, type has to be `list[StreamInfosDetails]`")
 
-            self._stream_infos = stream_infos
+        self._stream_infos = stream_infos
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -43,8 +43,10 @@ class AudioVolumeFilter(Filter):
         self._unit = None
         self.discriminator = None
 
-        self.volume = volume
-        self.unit = unit
+        if volume is not None:
+            self.volume = volume
+        if unit is not None:
+            self.unit = unit
 
     @property
     def volume(self):
@@ -68,10 +70,10 @@ class AudioVolumeFilter(Filter):
         """
 
         if volume is not None:
-            if not isinstance(volume, float):
+            if not isinstance(volume, (float, int)):
                 raise TypeError("Invalid type for `volume`, type has to be `float`")
 
-            self._volume = volume
+        self._volume = volume
 
 
     @property
@@ -97,7 +99,7 @@ class AudioVolumeFilter(Filter):
             if not isinstance(unit, AudioVolumeUnit):
                 raise TypeError("Invalid type for `unit`, type has to be `AudioVolumeUnit`")
 
-            self._unit = unit
+        self._unit = unit
 
     def to_dict(self):
         """Returns the model properties as a dict"""

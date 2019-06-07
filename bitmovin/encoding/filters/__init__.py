@@ -13,3 +13,4 @@ from bitmovin.encoding.filters.interlace.interlace_api import InterlaceApi
 from bitmovin.encoding.filters.unsharp.unsharp_api import UnsharpApi
 from bitmovin.encoding.filters.scale.scale_api import ScaleApi
 from bitmovin.encoding.filters.type.type_api import TypeApi
+from bitmovin.encoding.filters.filter_list_query_params import FilterListQueryParams

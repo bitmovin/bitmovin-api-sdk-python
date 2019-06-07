@@ -40,7 +40,8 @@ class RawId3Tag(Id3Tag):
         self._bytes = None
         self.discriminator = None
 
-        self.bytes = bytes
+        if bytes is not None:
+            self.bytes = bytes
 
     @property
     def bytes(self):
@@ -67,7 +68,7 @@ class RawId3Tag(Id3Tag):
             if not isinstance(bytes, str):
                 raise TypeError("Invalid type for `bytes`, type has to be `str`")
 
-            self._bytes = bytes
+        self._bytes = bytes
 
     def to_dict(self):
         """Returns the model properties as a dict"""

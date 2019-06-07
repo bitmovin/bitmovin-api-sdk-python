@@ -40,7 +40,8 @@ class TtmlEmbed(BitmovinResource):
         self._input_stream = None
         self.discriminator = None
 
-        self.input_stream = input_stream
+        if input_stream is not None:
+            self.input_stream = input_stream
 
     @property
     def input_stream(self):
@@ -67,7 +68,7 @@ class TtmlEmbed(BitmovinResource):
             if not isinstance(input_stream, StreamInput):
                 raise TypeError("Invalid type for `input_stream`, type has to be `StreamInput`")
 
-            self._input_stream = input_stream
+        self._input_stream = input_stream
 
     def to_dict(self):
         """Returns the model properties as a dict"""

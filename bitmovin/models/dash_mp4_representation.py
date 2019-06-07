@@ -39,7 +39,8 @@ class DashMp4Representation(DashRepresentation):
         self._file_path = None
         self.discriminator = None
 
-        self.file_path = file_path
+        if file_path is not None:
+            self.file_path = file_path
 
     @property
     def file_path(self):
@@ -66,7 +67,7 @@ class DashMp4Representation(DashRepresentation):
             if not isinstance(file_path, str):
                 raise TypeError("Invalid type for `file_path`, type has to be `str`")
 
-            self._file_path = file_path
+        self._file_path = file_path
 
     def to_dict(self):
         """Returns the model properties as a dict"""

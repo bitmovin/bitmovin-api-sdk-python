@@ -37,8 +37,10 @@ class LiveEncoding(object):
         self._encoder_ip = None
         self.discriminator = None
 
-        self.stream_key = stream_key
-        self.encoder_ip = encoder_ip
+        if stream_key is not None:
+            self.stream_key = stream_key
+        if encoder_ip is not None:
+            self.encoder_ip = encoder_ip
 
     @property
     def stream_key(self):
@@ -65,7 +67,7 @@ class LiveEncoding(object):
             if not isinstance(stream_key, str):
                 raise TypeError("Invalid type for `stream_key`, type has to be `str`")
 
-            self._stream_key = stream_key
+        self._stream_key = stream_key
 
 
     @property
@@ -93,7 +95,7 @@ class LiveEncoding(object):
             if not isinstance(encoder_ip, str):
                 raise TypeError("Invalid type for `encoder_ip`, type has to be `str`")
 
-            self._encoder_ip = encoder_ip
+        self._encoder_ip = encoder_ip
 
     def to_dict(self):
         """Returns the model properties as a dict"""

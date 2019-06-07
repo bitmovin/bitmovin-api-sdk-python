@@ -43,9 +43,12 @@ class ResponseError(object):
         self._data = None
         self.discriminator = None
 
-        self.request_id = request_id
-        self.status = status
-        self.data = data
+        if request_id is not None:
+            self.request_id = request_id
+        if status is not None:
+            self.status = status
+        if data is not None:
+            self.data = data
 
     @property
     def request_id(self):
@@ -72,7 +75,7 @@ class ResponseError(object):
             if not isinstance(request_id, str):
                 raise TypeError("Invalid type for `request_id`, type has to be `str`")
 
-            self._request_id = request_id
+        self._request_id = request_id
 
 
     @property
@@ -100,7 +103,7 @@ class ResponseError(object):
             if not isinstance(status, ResponseStatus):
                 raise TypeError("Invalid type for `status`, type has to be `ResponseStatus`")
 
-            self._status = status
+        self._status = status
 
 
     @property
@@ -128,7 +131,7 @@ class ResponseError(object):
             if not isinstance(data, ResponseErrorData):
                 raise TypeError("Invalid type for `data`, type has to be `ResponseErrorData`")
 
-            self._data = data
+        self._data = data
 
     def to_dict(self):
         """Returns the model properties as a dict"""

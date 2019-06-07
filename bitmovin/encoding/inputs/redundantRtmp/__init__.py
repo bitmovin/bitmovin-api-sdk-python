@@ -1,1 +1,2 @@
 from bitmovin.encoding.inputs.redundantRtmp.redundant_rtmp_api import RedundantRtmpApi
+from bitmovin.encoding.inputs.redundantRtmp.redundant_rtmp_input_list_query_params import RedundantRtmpInputListQueryParams

@@ -8,8 +8,8 @@ from bitmovin.common.poscheck import poscheck_except
 from bitmovin.models.response_envelope import ResponseEnvelope
 from bitmovin.models.response_error import ResponseError
 from bitmovin.models.srt_statistics import SrtStatistics
-from bitmovin.encoding.statistics.encodings.liveStatistics.srt.srt_statistics_list_by_srt_input_id_query_params import SrtStatisticsListBySrtInputIdQueryParams
 from bitmovin.encoding.statistics.encodings.liveStatistics.srt.srt_statistics_list_query_params import SrtStatisticsListQueryParams
+from bitmovin.encoding.statistics.encodings.liveStatistics.srt.srt_statistics_list_by_srt_input_id_query_params import SrtStatisticsListBySrtInputIdQueryParams
 
 
 class SrtApi(BaseApi):

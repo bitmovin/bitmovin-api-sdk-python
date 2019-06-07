@@ -40,9 +40,12 @@ class EncodingStatistics(object):
         self._time_encoded = None
         self.discriminator = None
 
-        self.date = date
-        self.bytes_encoded = bytes_encoded
-        self.time_encoded = time_encoded
+        if date is not None:
+            self.date = date
+        if bytes_encoded is not None:
+            self.bytes_encoded = bytes_encoded
+        if time_encoded is not None:
+            self.time_encoded = time_encoded
 
     @property
     def date(self):
@@ -69,7 +72,7 @@ class EncodingStatistics(object):
             if not isinstance(date, datetime):
                 raise TypeError("Invalid type for `date`, type has to be `datetime`")
 
-            self._date = date
+        self._date = date
 
 
     @property
@@ -97,7 +100,7 @@ class EncodingStatistics(object):
             if not isinstance(bytes_encoded, int):
                 raise TypeError("Invalid type for `bytes_encoded`, type has to be `int`")
 
-            self._bytes_encoded = bytes_encoded
+        self._bytes_encoded = bytes_encoded
 
 
     @property
@@ -125,7 +128,7 @@ class EncodingStatistics(object):
             if not isinstance(time_encoded, int):
                 raise TypeError("Invalid type for `time_encoded`, type has to be `int`")
 
-            self._time_encoded = time_encoded
+        self._time_encoded = time_encoded
 
     def to_dict(self):
         """Returns the model properties as a dict"""

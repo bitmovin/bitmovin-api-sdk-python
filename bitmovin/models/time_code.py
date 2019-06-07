@@ -62,7 +62,7 @@ class TimeCode(object):
             if not isinstance(time_code_start, str):
                 raise TypeError("Invalid type for `time_code_start`, type has to be `str`")
 
-            self._time_code_start = time_code_start
+        self._time_code_start = time_code_start
 
     def to_dict(self):
         """Returns the model properties as a dict"""

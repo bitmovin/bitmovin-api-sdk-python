@@ -77,7 +77,7 @@ class TimecodeTrackTrimmingInputStream(InputStream):
             if not isinstance(input_stream_id, str):
                 raise TypeError("Invalid type for `input_stream_id`, type has to be `str`")
 
-            self._input_stream_id = input_stream_id
+        self._input_stream_id = input_stream_id
 
 
     @property
@@ -105,7 +105,7 @@ class TimecodeTrackTrimmingInputStream(InputStream):
             if not isinstance(start_time_code, str):
                 raise TypeError("Invalid type for `start_time_code`, type has to be `str`")
 
-            self._start_time_code = start_time_code
+        self._start_time_code = start_time_code
 
 
     @property
@@ -133,7 +133,7 @@ class TimecodeTrackTrimmingInputStream(InputStream):
             if not isinstance(end_time_code, str):
                 raise TypeError("Invalid type for `end_time_code`, type has to be `str`")
 
-            self._end_time_code = end_time_code
+        self._end_time_code = end_time_code
 
     def to_dict(self):
         """Returns the model properties as a dict"""

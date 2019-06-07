@@ -1,1 +1,2 @@
 from bitmovin.encoding.manifests.dash.periods.adaptationsets.contentprotection.contentprotection_api import ContentprotectionApi
+from bitmovin.encoding.manifests.dash.periods.adaptationsets.contentprotection.content_protection_list_query_params import ContentProtectionListQueryParams

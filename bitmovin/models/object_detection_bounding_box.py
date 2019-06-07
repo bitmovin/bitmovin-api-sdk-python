@@ -74,10 +74,10 @@ class ObjectDetectionBoundingBox(object):
         """
 
         if top_left_x is not None:
-            if not isinstance(top_left_x, float):
+            if not isinstance(top_left_x, (float, int)):
                 raise TypeError("Invalid type for `top_left_x`, type has to be `float`")
 
-            self._top_left_x = top_left_x
+        self._top_left_x = top_left_x
 
 
     @property
@@ -102,10 +102,10 @@ class ObjectDetectionBoundingBox(object):
         """
 
         if top_left_y is not None:
-            if not isinstance(top_left_y, float):
+            if not isinstance(top_left_y, (float, int)):
                 raise TypeError("Invalid type for `top_left_y`, type has to be `float`")
 
-            self._top_left_y = top_left_y
+        self._top_left_y = top_left_y
 
 
     @property
@@ -130,10 +130,10 @@ class ObjectDetectionBoundingBox(object):
         """
 
         if bottom_right_x is not None:
-            if not isinstance(bottom_right_x, float):
+            if not isinstance(bottom_right_x, (float, int)):
                 raise TypeError("Invalid type for `bottom_right_x`, type has to be `float`")
 
-            self._bottom_right_x = bottom_right_x
+        self._bottom_right_x = bottom_right_x
 
 
     @property
@@ -158,10 +158,10 @@ class ObjectDetectionBoundingBox(object):
         """
 
         if bottom_right_y is not None:
-            if not isinstance(bottom_right_y, float):
+            if not isinstance(bottom_right_y, (float, int)):
                 raise TypeError("Invalid type for `bottom_right_y`, type has to be `float`")
 
-            self._bottom_right_y = bottom_right_y
+        self._bottom_right_y = bottom_right_y
 
     def to_dict(self):
         """Returns the model properties as a dict"""

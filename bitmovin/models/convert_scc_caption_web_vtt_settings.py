@@ -72,7 +72,7 @@ class ConvertSccCaptionWebVttSettings(object):
             if not isinstance(position_mode, ConvertSccPositionMode):
                 raise TypeError("Invalid type for `position_mode`, type has to be `ConvertSccPositionMode`")
 
-            self._position_mode = position_mode
+        self._position_mode = position_mode
 
 
     @property
@@ -100,7 +100,7 @@ class ConvertSccCaptionWebVttSettings(object):
             if not isinstance(remove_flash, bool):
                 raise TypeError("Invalid type for `remove_flash`, type has to be `bool`")
 
-            self._remove_flash = remove_flash
+        self._remove_flash = remove_flash
 
 
     @property
@@ -128,7 +128,7 @@ class ConvertSccCaptionWebVttSettings(object):
             if not isinstance(remove_color, bool):
                 raise TypeError("Invalid type for `remove_color`, type has to be `bool`")
 
-            self._remove_color = remove_color
+        self._remove_color = remove_color
 
     def to_dict(self):
         """Returns the model properties as a dict"""

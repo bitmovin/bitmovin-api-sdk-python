@@ -51,9 +51,12 @@ class SmoothStreamingRepresentation(BitmovinResource):
         self._track_name = None
         self.discriminator = None
 
-        self.encoding_id = encoding_id
-        self.muxing_id = muxing_id
-        self.media_file = media_file
+        if encoding_id is not None:
+            self.encoding_id = encoding_id
+        if muxing_id is not None:
+            self.muxing_id = muxing_id
+        if media_file is not None:
+            self.media_file = media_file
         if language is not None:
             self.language = language
         if track_name is not None:
@@ -84,7 +87,7 @@ class SmoothStreamingRepresentation(BitmovinResource):
             if not isinstance(encoding_id, str):
                 raise TypeError("Invalid type for `encoding_id`, type has to be `str`")
 
-            self._encoding_id = encoding_id
+        self._encoding_id = encoding_id
 
 
     @property
@@ -112,7 +115,7 @@ class SmoothStreamingRepresentation(BitmovinResource):
             if not isinstance(muxing_id, str):
                 raise TypeError("Invalid type for `muxing_id`, type has to be `str`")
 
-            self._muxing_id = muxing_id
+        self._muxing_id = muxing_id
 
 
     @property
@@ -140,7 +143,7 @@ class SmoothStreamingRepresentation(BitmovinResource):
             if not isinstance(media_file, str):
                 raise TypeError("Invalid type for `media_file`, type has to be `str`")
 
-            self._media_file = media_file
+        self._media_file = media_file
 
 
     @property
@@ -168,7 +171,7 @@ class SmoothStreamingRepresentation(BitmovinResource):
             if not isinstance(language, str):
                 raise TypeError("Invalid type for `language`, type has to be `str`")
 
-            self._language = language
+        self._language = language
 
 
     @property
@@ -196,7 +199,7 @@ class SmoothStreamingRepresentation(BitmovinResource):
             if not isinstance(track_name, str):
                 raise TypeError("Invalid type for `track_name`, type has to be `str`")
 
-            self._track_name = track_name
+        self._track_name = track_name
 
     def to_dict(self):
         """Returns the model properties as a dict"""

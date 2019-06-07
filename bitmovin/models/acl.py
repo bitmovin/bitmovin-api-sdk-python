@@ -43,12 +43,15 @@ class Acl(BitmovinResource):
 
         self._resource = None
         self._policy = None
-        self._permissions = None
+        self._permissions = list()
         self.discriminator = None
 
-        self.resource = resource
-        self.policy = policy
-        self.permissions = permissions
+        if resource is not None:
+            self.resource = resource
+        if policy is not None:
+            self.policy = policy
+        if permissions is not None:
+            self.permissions = permissions
 
     @property
     def resource(self):
@@ -75,7 +78,7 @@ class Acl(BitmovinResource):
             if not isinstance(resource, str):
                 raise TypeError("Invalid type for `resource`, type has to be `str`")
 
-            self._resource = resource
+        self._resource = resource
 
 
     @property
@@ -101,7 +104,7 @@ class Acl(BitmovinResource):
             if not isinstance(policy, Policy):
                 raise TypeError("Invalid type for `policy`, type has to be `Policy`")
 
-            self._policy = policy
+        self._policy = policy
 
 
     @property
@@ -129,7 +132,7 @@ class Acl(BitmovinResource):
             if not isinstance(permissions, list):
                 raise TypeError("Invalid type for `permissions`, type has to be `list[Permission]`")
 
-            self._permissions = permissions
+        self._permissions = permissions
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -87,7 +87,7 @@ class BitmovinResource(BitmovinResponse):
             if not isinstance(name, str):
                 raise TypeError("Invalid type for `name`, type has to be `str`")
 
-            self._name = name
+        self._name = name
 
 
     @property
@@ -115,7 +115,7 @@ class BitmovinResource(BitmovinResponse):
             if not isinstance(description, str):
                 raise TypeError("Invalid type for `description`, type has to be `str`")
 
-            self._description = description
+        self._description = description
 
 
     @property
@@ -143,7 +143,7 @@ class BitmovinResource(BitmovinResponse):
             if not isinstance(created_at, datetime):
                 raise TypeError("Invalid type for `created_at`, type has to be `datetime`")
 
-            self._created_at = created_at
+        self._created_at = created_at
 
 
     @property
@@ -171,7 +171,7 @@ class BitmovinResource(BitmovinResponse):
             if not isinstance(modified_at, datetime):
                 raise TypeError("Invalid type for `modified_at`, type has to be `datetime`")
 
-            self._modified_at = modified_at
+        self._modified_at = modified_at
 
 
     @property
@@ -199,7 +199,7 @@ class BitmovinResource(BitmovinResponse):
             if not isinstance(custom_data, dict):
                 raise TypeError("Invalid type for `custom_data`, type has to be `dict(str, object)`")
 
-            self._custom_data = custom_data
+        self._custom_data = custom_data
 
     def to_dict(self):
         """Returns the model properties as a dict"""

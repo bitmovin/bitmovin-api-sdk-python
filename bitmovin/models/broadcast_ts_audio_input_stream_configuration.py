@@ -73,7 +73,7 @@ class BroadcastTsAudioInputStreamConfiguration(BroadcastTsInputStreamConfigurati
             if not isinstance(use_atsc_buffer_model, bool):
                 raise TypeError("Invalid type for `use_atsc_buffer_model`, type has to be `bool`")
 
-            self._use_atsc_buffer_model = use_atsc_buffer_model
+        self._use_atsc_buffer_model = use_atsc_buffer_model
 
 
     @property
@@ -101,7 +101,7 @@ class BroadcastTsAudioInputStreamConfiguration(BroadcastTsInputStreamConfigurati
             if not isinstance(language, str):
                 raise TypeError("Invalid type for `language`, type has to be `str`")
 
-            self._language = language
+        self._language = language
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -44,8 +44,10 @@ class AnalyticsFilter(object):
 
         if name is not None:
             self.name = name
-        self.operator = operator
-        self.value = value
+        if operator is not None:
+            self.operator = operator
+        if value is not None:
+            self.value = value
 
     @property
     def name(self):
@@ -70,7 +72,7 @@ class AnalyticsFilter(object):
             if not isinstance(name, str):
                 raise TypeError("Invalid type for `name`, type has to be `str`")
 
-            self._name = name
+        self._name = name
 
 
     @property
@@ -96,7 +98,7 @@ class AnalyticsFilter(object):
             if not isinstance(operator, AnalyticsOperator):
                 raise TypeError("Invalid type for `operator`, type has to be `AnalyticsOperator`")
 
-            self._operator = operator
+        self._operator = operator
 
 
     @property
@@ -124,7 +126,7 @@ class AnalyticsFilter(object):
             if not isinstance(value, str):
                 raise TypeError("Invalid type for `value`, type has to be `str`")
 
-            self._value = value
+        self._value = value
 
     def to_dict(self):
         """Returns the model properties as a dict"""

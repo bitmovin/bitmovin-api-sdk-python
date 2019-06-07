@@ -34,7 +34,7 @@ class Scheduling(object):
     def __init__(self, priority=None, prewarmed_instance_pool_ids=None, *args, **kwargs):
 
         self._priority = None
-        self._prewarmed_instance_pool_ids = None
+        self._prewarmed_instance_pool_ids = list()
         self.discriminator = None
 
         if priority is not None:
@@ -71,7 +71,7 @@ class Scheduling(object):
             if not isinstance(priority, int):
                 raise TypeError("Invalid type for `priority`, type has to be `int`")
 
-            self._priority = priority
+        self._priority = priority
 
 
     @property
@@ -99,7 +99,7 @@ class Scheduling(object):
             if not isinstance(prewarmed_instance_pool_ids, list):
                 raise TypeError("Invalid type for `prewarmed_instance_pool_ids`, type has to be `list[str]`")
 
-            self._prewarmed_instance_pool_ids = prewarmed_instance_pool_ids
+        self._prewarmed_instance_pool_ids = prewarmed_instance_pool_ids
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -8,3 +8,4 @@ from bitmovin.encoding.encodings.streams.captions.captions_api import CaptionsAp
 from bitmovin.encoding.encodings.streams.thumbnails.thumbnails_api import ThumbnailsApi
 from bitmovin.encoding.encodings.streams.sprites.sprites_api import SpritesApi
 from bitmovin.encoding.encodings.streams.qc.qc_api import QcApi
+from bitmovin.encoding.encodings.streams.stream_list_query_params import StreamListQueryParams

@@ -67,7 +67,7 @@ class AppliedStreamSettings(object):
             if not isinstance(width, int):
                 raise TypeError("Invalid type for `width`, type has to be `int`")
 
-            self._width = width
+        self._width = width
 
 
     @property
@@ -95,7 +95,7 @@ class AppliedStreamSettings(object):
             if not isinstance(height, int):
                 raise TypeError("Invalid type for `height`, type has to be `int`")
 
-            self._height = height
+        self._height = height
 
     def to_dict(self):
         """Returns the model properties as a dict"""

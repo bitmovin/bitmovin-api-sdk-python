@@ -1,2 +1,3 @@
 from bitmovin.encoding.outputs.local.local_api import LocalApi
 from bitmovin.encoding.outputs.local.customdata.customdata_api import CustomdataApi
+from bitmovin.encoding.outputs.local.local_output_list_query_params import LocalOutputListQueryParams

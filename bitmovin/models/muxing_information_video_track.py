@@ -127,7 +127,7 @@ class MuxingInformationVideoTrack(object):
             if not isinstance(index, int):
                 raise TypeError("Invalid type for `index`, type has to be `int`")
 
-            self._index = index
+        self._index = index
 
 
     @property
@@ -155,7 +155,7 @@ class MuxingInformationVideoTrack(object):
             if not isinstance(codec, str):
                 raise TypeError("Invalid type for `codec`, type has to be `str`")
 
-            self._codec = codec
+        self._codec = codec
 
 
     @property
@@ -183,7 +183,7 @@ class MuxingInformationVideoTrack(object):
             if not isinstance(codec_iso, str):
                 raise TypeError("Invalid type for `codec_iso`, type has to be `str`")
 
-            self._codec_iso = codec_iso
+        self._codec_iso = codec_iso
 
 
     @property
@@ -211,7 +211,7 @@ class MuxingInformationVideoTrack(object):
             if not isinstance(bit_rate, int):
                 raise TypeError("Invalid type for `bit_rate`, type has to be `int`")
 
-            self._bit_rate = bit_rate
+        self._bit_rate = bit_rate
 
 
     @property
@@ -239,7 +239,7 @@ class MuxingInformationVideoTrack(object):
             if not isinstance(rate, int):
                 raise TypeError("Invalid type for `rate`, type has to be `int`")
 
-            self._rate = rate
+        self._rate = rate
 
 
     @property
@@ -267,7 +267,7 @@ class MuxingInformationVideoTrack(object):
             if not isinstance(pixel_format, str):
                 raise TypeError("Invalid type for `pixel_format`, type has to be `str`")
 
-            self._pixel_format = pixel_format
+        self._pixel_format = pixel_format
 
 
     @property
@@ -295,7 +295,7 @@ class MuxingInformationVideoTrack(object):
             if not isinstance(frame_mode, str):
                 raise TypeError("Invalid type for `frame_mode`, type has to be `str`")
 
-            self._frame_mode = frame_mode
+        self._frame_mode = frame_mode
 
 
     @property
@@ -323,7 +323,7 @@ class MuxingInformationVideoTrack(object):
             if not isinstance(frame_width, int):
                 raise TypeError("Invalid type for `frame_width`, type has to be `int`")
 
-            self._frame_width = frame_width
+        self._frame_width = frame_width
 
 
     @property
@@ -351,7 +351,7 @@ class MuxingInformationVideoTrack(object):
             if not isinstance(frame_height, int):
                 raise TypeError("Invalid type for `frame_height`, type has to be `int`")
 
-            self._frame_height = frame_height
+        self._frame_height = frame_height
 
 
     @property
@@ -379,7 +379,7 @@ class MuxingInformationVideoTrack(object):
             if not isinstance(frame_rate, str):
                 raise TypeError("Invalid type for `frame_rate`, type has to be `str`")
 
-            self._frame_rate = frame_rate
+        self._frame_rate = frame_rate
 
 
     @property
@@ -404,10 +404,10 @@ class MuxingInformationVideoTrack(object):
         """
 
         if start_time is not None:
-            if not isinstance(start_time, float):
+            if not isinstance(start_time, (float, int)):
                 raise TypeError("Invalid type for `start_time`, type has to be `float`")
 
-            self._start_time = start_time
+        self._start_time = start_time
 
 
     @property
@@ -432,10 +432,10 @@ class MuxingInformationVideoTrack(object):
         """
 
         if duration is not None:
-            if not isinstance(duration, float):
+            if not isinstance(duration, (float, int)):
                 raise TypeError("Invalid type for `duration`, type has to be `float`")
 
-            self._duration = duration
+        self._duration = duration
 
 
     @property
@@ -463,7 +463,7 @@ class MuxingInformationVideoTrack(object):
             if not isinstance(number_of_frames, int):
                 raise TypeError("Invalid type for `number_of_frames`, type has to be `int`")
 
-            self._number_of_frames = number_of_frames
+        self._number_of_frames = number_of_frames
 
 
     @property
@@ -491,7 +491,7 @@ class MuxingInformationVideoTrack(object):
             if not isinstance(aspect_ratio, str):
                 raise TypeError("Invalid type for `aspect_ratio`, type has to be `str`")
 
-            self._aspect_ratio = aspect_ratio
+        self._aspect_ratio = aspect_ratio
 
     def to_dict(self):
         """Returns the model properties as a dict"""

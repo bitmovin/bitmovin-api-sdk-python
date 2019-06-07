@@ -34,7 +34,8 @@ class WebVttSidecarFileSegmentation(object):
         self._segment_length = None
         self.discriminator = None
 
-        self.segment_length = segment_length
+        if segment_length is not None:
+            self.segment_length = segment_length
 
     @property
     def segment_length(self):
@@ -58,10 +59,10 @@ class WebVttSidecarFileSegmentation(object):
         """
 
         if segment_length is not None:
-            if not isinstance(segment_length, float):
+            if not isinstance(segment_length, (float, int)):
                 raise TypeError("Invalid type for `segment_length`, type has to be `float`")
 
-            self._segment_length = segment_length
+        self._segment_length = segment_length
 
     def to_dict(self):
         """Returns the model properties as a dict"""

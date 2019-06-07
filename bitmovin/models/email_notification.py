@@ -36,10 +36,11 @@ class EmailNotification(Notification):
     def __init__(self, emails=None, *args, **kwargs):
         super(EmailNotification, self).__init__(*args, **kwargs)
 
-        self._emails = None
+        self._emails = list()
         self.discriminator = None
 
-        self.emails = emails
+        if emails is not None:
+            self.emails = emails
 
     @property
     def emails(self):
@@ -64,7 +65,7 @@ class EmailNotification(Notification):
             if not isinstance(emails, list):
                 raise TypeError("Invalid type for `emails`, type has to be `list[str]`")
 
-            self._emails = emails
+        self._emails = emails
 
     def to_dict(self):
         """Returns the model properties as a dict"""

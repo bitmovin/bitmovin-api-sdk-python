@@ -76,7 +76,7 @@ class PerTitle(object):
             if not isinstance(h264_configuration, H264PerTitleConfiguration):
                 raise TypeError("Invalid type for `h264_configuration`, type has to be `H264PerTitleConfiguration`")
 
-            self._h264_configuration = h264_configuration
+        self._h264_configuration = h264_configuration
 
 
     @property
@@ -104,7 +104,7 @@ class PerTitle(object):
             if not isinstance(h265_configuration, H265PerTitleConfiguration):
                 raise TypeError("Invalid type for `h265_configuration`, type has to be `H265PerTitleConfiguration`")
 
-            self._h265_configuration = h265_configuration
+        self._h265_configuration = h265_configuration
 
 
     @property
@@ -132,7 +132,7 @@ class PerTitle(object):
             if not isinstance(vp9_configuration, Vp9PerTitleConfiguration):
                 raise TypeError("Invalid type for `vp9_configuration`, type has to be `Vp9PerTitleConfiguration`")
 
-            self._vp9_configuration = vp9_configuration
+        self._vp9_configuration = vp9_configuration
 
     def to_dict(self):
         """Returns the model properties as a dict"""

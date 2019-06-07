@@ -52,14 +52,16 @@ class CustomTag(BitmovinResource):
         self._data = None
         self.discriminator = None
 
-        self.position_mode = position_mode
+        if position_mode is not None:
+            self.position_mode = position_mode
         if keyframe_id is not None:
             self.keyframe_id = keyframe_id
         if time is not None:
             self.time = time
         if segment is not None:
             self.segment = segment
-        self.data = data
+        if data is not None:
+            self.data = data
 
     @property
     def position_mode(self):
@@ -86,7 +88,7 @@ class CustomTag(BitmovinResource):
             if not isinstance(position_mode, PositionMode):
                 raise TypeError("Invalid type for `position_mode`, type has to be `PositionMode`")
 
-            self._position_mode = position_mode
+        self._position_mode = position_mode
 
 
     @property
@@ -114,7 +116,7 @@ class CustomTag(BitmovinResource):
             if not isinstance(keyframe_id, str):
                 raise TypeError("Invalid type for `keyframe_id`, type has to be `str`")
 
-            self._keyframe_id = keyframe_id
+        self._keyframe_id = keyframe_id
 
 
     @property
@@ -139,10 +141,10 @@ class CustomTag(BitmovinResource):
         """
 
         if time is not None:
-            if not isinstance(time, float):
+            if not isinstance(time, (float, int)):
                 raise TypeError("Invalid type for `time`, type has to be `float`")
 
-            self._time = time
+        self._time = time
 
 
     @property
@@ -170,7 +172,7 @@ class CustomTag(BitmovinResource):
             if not isinstance(segment, int):
                 raise TypeError("Invalid type for `segment`, type has to be `int`")
 
-            self._segment = segment
+        self._segment = segment
 
 
     @property
@@ -198,7 +200,7 @@ class CustomTag(BitmovinResource):
             if not isinstance(data, str):
                 raise TypeError("Invalid type for `data`, type has to be `str`")
 
-            self._data = data
+        self._data = data
 
     def to_dict(self):
         """Returns the model properties as a dict"""

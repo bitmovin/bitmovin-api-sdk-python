@@ -123,8 +123,10 @@ class TextFilter(Filter):
             self.timecode = timecode
         if text is not None:
             self.text = text
-        self.x = x
-        self.y = y
+        if x is not None:
+            self.x = x
+        if y is not None:
+            self.y = y
 
     @property
     def font(self):
@@ -149,7 +151,7 @@ class TextFilter(Filter):
             if not isinstance(font, TextFilterFont):
                 raise TypeError("Invalid type for `font`, type has to be `TextFilterFont`")
 
-            self._font = font
+        self._font = font
 
 
     @property
@@ -177,7 +179,7 @@ class TextFilter(Filter):
             if not isinstance(box, bool):
                 raise TypeError("Invalid type for `box`, type has to be `bool`")
 
-            self._box = box
+        self._box = box
 
 
     @property
@@ -205,7 +207,7 @@ class TextFilter(Filter):
             if not isinstance(box_border_width, int):
                 raise TypeError("Invalid type for `box_border_width`, type has to be `int`")
 
-            self._box_border_width = box_border_width
+        self._box_border_width = box_border_width
 
 
     @property
@@ -233,7 +235,7 @@ class TextFilter(Filter):
             if not isinstance(box_color, str):
                 raise TypeError("Invalid type for `box_color`, type has to be `str`")
 
-            self._box_color = box_color
+        self._box_color = box_color
 
 
     @property
@@ -261,7 +263,7 @@ class TextFilter(Filter):
             if not isinstance(line_spacing, int):
                 raise TypeError("Invalid type for `line_spacing`, type has to be `int`")
 
-            self._line_spacing = line_spacing
+        self._line_spacing = line_spacing
 
 
     @property
@@ -289,7 +291,7 @@ class TextFilter(Filter):
             if not isinstance(border_width, int):
                 raise TypeError("Invalid type for `border_width`, type has to be `int`")
 
-            self._border_width = border_width
+        self._border_width = border_width
 
 
     @property
@@ -317,7 +319,7 @@ class TextFilter(Filter):
             if not isinstance(fix_bounds, bool):
                 raise TypeError("Invalid type for `fix_bounds`, type has to be `bool`")
 
-            self._fix_bounds = fix_bounds
+        self._fix_bounds = fix_bounds
 
 
     @property
@@ -345,7 +347,7 @@ class TextFilter(Filter):
             if not isinstance(font_color, str):
                 raise TypeError("Invalid type for `font_color`, type has to be `str`")
 
-            self._font_color = font_color
+        self._font_color = font_color
 
 
     @property
@@ -373,7 +375,7 @@ class TextFilter(Filter):
             if not isinstance(font_size, int):
                 raise TypeError("Invalid type for `font_size`, type has to be `int`")
 
-            self._font_size = font_size
+        self._font_size = font_size
 
 
     @property
@@ -401,7 +403,7 @@ class TextFilter(Filter):
             if not isinstance(font_size_expression, str):
                 raise TypeError("Invalid type for `font_size_expression`, type has to be `str`")
 
-            self._font_size_expression = font_size_expression
+        self._font_size_expression = font_size_expression
 
 
     @property
@@ -429,7 +431,7 @@ class TextFilter(Filter):
             if not isinstance(alpha, int):
                 raise TypeError("Invalid type for `alpha`, type has to be `int`")
 
-            self._alpha = alpha
+        self._alpha = alpha
 
 
     @property
@@ -457,7 +459,7 @@ class TextFilter(Filter):
             if not isinstance(shadow_color, str):
                 raise TypeError("Invalid type for `shadow_color`, type has to be `str`")
 
-            self._shadow_color = shadow_color
+        self._shadow_color = shadow_color
 
 
     @property
@@ -485,7 +487,7 @@ class TextFilter(Filter):
             if not isinstance(shadow_x, int):
                 raise TypeError("Invalid type for `shadow_x`, type has to be `int`")
 
-            self._shadow_x = shadow_x
+        self._shadow_x = shadow_x
 
 
     @property
@@ -513,7 +515,7 @@ class TextFilter(Filter):
             if not isinstance(shadow_y, int):
                 raise TypeError("Invalid type for `shadow_y`, type has to be `int`")
 
-            self._shadow_y = shadow_y
+        self._shadow_y = shadow_y
 
 
     @property
@@ -541,7 +543,7 @@ class TextFilter(Filter):
             if not isinstance(timecode, str):
                 raise TypeError("Invalid type for `timecode`, type has to be `str`")
 
-            self._timecode = timecode
+        self._timecode = timecode
 
 
     @property
@@ -569,7 +571,7 @@ class TextFilter(Filter):
             if not isinstance(text, str):
                 raise TypeError("Invalid type for `text`, type has to be `str`")
 
-            self._text = text
+        self._text = text
 
 
     @property
@@ -597,7 +599,7 @@ class TextFilter(Filter):
             if not isinstance(x, str):
                 raise TypeError("Invalid type for `x`, type has to be `str`")
 
-            self._x = x
+        self._x = x
 
 
     @property
@@ -625,7 +627,7 @@ class TextFilter(Filter):
             if not isinstance(y, str):
                 raise TypeError("Invalid type for `y`, type has to be `str`")
 
-            self._y = y
+        self._y = y
 
     def to_dict(self):
         """Returns the model properties as a dict"""

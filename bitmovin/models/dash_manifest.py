@@ -46,8 +46,8 @@ class DashManifest(Manifest):
 
         self._profile = None
         self._manifest_name = None
-        self._namespaces = None
-        self._utc_timings = None
+        self._namespaces = list()
+        self._utc_timings = list()
         self.discriminator = None
 
         if profile is not None:
@@ -82,7 +82,7 @@ class DashManifest(Manifest):
             if not isinstance(profile, DashProfile):
                 raise TypeError("Invalid type for `profile`, type has to be `DashProfile`")
 
-            self._profile = profile
+        self._profile = profile
 
 
     @property
@@ -110,7 +110,7 @@ class DashManifest(Manifest):
             if not isinstance(manifest_name, str):
                 raise TypeError("Invalid type for `manifest_name`, type has to be `str`")
 
-            self._manifest_name = manifest_name
+        self._manifest_name = manifest_name
 
 
     @property
@@ -138,7 +138,7 @@ class DashManifest(Manifest):
             if not isinstance(namespaces, list):
                 raise TypeError("Invalid type for `namespaces`, type has to be `list[XmlNamespace]`")
 
-            self._namespaces = namespaces
+        self._namespaces = namespaces
 
 
     @property
@@ -166,7 +166,7 @@ class DashManifest(Manifest):
             if not isinstance(utc_timings, list):
                 raise TypeError("Invalid type for `utc_timings`, type has to be `list[UtcTiming]`")
 
-            self._utc_timings = utc_timings
+        self._utc_timings = utc_timings
 
     def to_dict(self):
         """Returns the model properties as a dict"""

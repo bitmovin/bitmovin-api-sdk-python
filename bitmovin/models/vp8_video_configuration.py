@@ -167,7 +167,7 @@ class Vp8VideoConfiguration(VideoConfiguration):
             if not isinstance(crf, int):
                 raise TypeError("Invalid type for `crf`, type has to be `int`")
 
-            self._crf = crf
+        self._crf = crf
 
 
     @property
@@ -199,7 +199,7 @@ class Vp8VideoConfiguration(VideoConfiguration):
             if not isinstance(lag_in_frames, int):
                 raise TypeError("Invalid type for `lag_in_frames`, type has to be `int`")
 
-            self._lag_in_frames = lag_in_frames
+        self._lag_in_frames = lag_in_frames
 
 
     @property
@@ -227,7 +227,7 @@ class Vp8VideoConfiguration(VideoConfiguration):
             if not isinstance(max_intra_rate, int):
                 raise TypeError("Invalid type for `max_intra_rate`, type has to be `int`")
 
-            self._max_intra_rate = max_intra_rate
+        self._max_intra_rate = max_intra_rate
 
 
     @property
@@ -259,7 +259,7 @@ class Vp8VideoConfiguration(VideoConfiguration):
             if not isinstance(qp_min, int):
                 raise TypeError("Invalid type for `qp_min`, type has to be `int`")
 
-            self._qp_min = qp_min
+        self._qp_min = qp_min
 
 
     @property
@@ -291,7 +291,7 @@ class Vp8VideoConfiguration(VideoConfiguration):
             if not isinstance(qp_max, int):
                 raise TypeError("Invalid type for `qp_max`, type has to be `int`")
 
-            self._qp_max = qp_max
+        self._qp_max = qp_max
 
 
     @property
@@ -323,7 +323,7 @@ class Vp8VideoConfiguration(VideoConfiguration):
             if not isinstance(rate_undershoot_pct, int):
                 raise TypeError("Invalid type for `rate_undershoot_pct`, type has to be `int`")
 
-            self._rate_undershoot_pct = rate_undershoot_pct
+        self._rate_undershoot_pct = rate_undershoot_pct
 
 
     @property
@@ -355,7 +355,7 @@ class Vp8VideoConfiguration(VideoConfiguration):
             if not isinstance(rate_overshoot_pct, int):
                 raise TypeError("Invalid type for `rate_overshoot_pct`, type has to be `int`")
 
-            self._rate_overshoot_pct = rate_overshoot_pct
+        self._rate_overshoot_pct = rate_overshoot_pct
 
 
     @property
@@ -381,7 +381,7 @@ class Vp8VideoConfiguration(VideoConfiguration):
             if not isinstance(cpu_used, int):
                 raise TypeError("Invalid type for `cpu_used`, type has to be `int`")
 
-            self._cpu_used = cpu_used
+        self._cpu_used = cpu_used
 
 
     @property
@@ -407,7 +407,7 @@ class Vp8VideoConfiguration(VideoConfiguration):
             if not isinstance(noise_sensitivity, Vp8NoiseSensitivity):
                 raise TypeError("Invalid type for `noise_sensitivity`, type has to be `Vp8NoiseSensitivity`")
 
-            self._noise_sensitivity = noise_sensitivity
+        self._noise_sensitivity = noise_sensitivity
 
 
     @property
@@ -439,7 +439,7 @@ class Vp8VideoConfiguration(VideoConfiguration):
             if not isinstance(sharpness, int):
                 raise TypeError("Invalid type for `sharpness`, type has to be `int`")
 
-            self._sharpness = sharpness
+        self._sharpness = sharpness
 
 
     @property
@@ -467,7 +467,7 @@ class Vp8VideoConfiguration(VideoConfiguration):
             if not isinstance(min_gop, int):
                 raise TypeError("Invalid type for `min_gop`, type has to be `int`")
 
-            self._min_gop = min_gop
+        self._min_gop = min_gop
 
 
     @property
@@ -495,7 +495,7 @@ class Vp8VideoConfiguration(VideoConfiguration):
             if not isinstance(max_gop, int):
                 raise TypeError("Invalid type for `max_gop`, type has to be `int`")
 
-            self._max_gop = max_gop
+        self._max_gop = max_gop
 
 
     @property
@@ -520,10 +520,10 @@ class Vp8VideoConfiguration(VideoConfiguration):
         """
 
         if min_keyframe_interval is not None:
-            if not isinstance(min_keyframe_interval, float):
+            if not isinstance(min_keyframe_interval, (float, int)):
                 raise TypeError("Invalid type for `min_keyframe_interval`, type has to be `float`")
 
-            self._min_keyframe_interval = min_keyframe_interval
+        self._min_keyframe_interval = min_keyframe_interval
 
 
     @property
@@ -548,10 +548,10 @@ class Vp8VideoConfiguration(VideoConfiguration):
         """
 
         if max_keyframe_interval is not None:
-            if not isinstance(max_keyframe_interval, float):
+            if not isinstance(max_keyframe_interval, (float, int)):
                 raise TypeError("Invalid type for `max_keyframe_interval`, type has to be `float`")
 
-            self._max_keyframe_interval = max_keyframe_interval
+        self._max_keyframe_interval = max_keyframe_interval
 
 
     @property
@@ -577,7 +577,7 @@ class Vp8VideoConfiguration(VideoConfiguration):
             if not isinstance(quality, Vp8Quality):
                 raise TypeError("Invalid type for `quality`, type has to be `Vp8Quality`")
 
-            self._quality = quality
+        self._quality = quality
 
 
     @property
@@ -607,7 +607,7 @@ class Vp8VideoConfiguration(VideoConfiguration):
             if not isinstance(static_thresh, int):
                 raise TypeError("Invalid type for `static_thresh`, type has to be `int`")
 
-            self._static_thresh = static_thresh
+        self._static_thresh = static_thresh
 
 
     @property
@@ -639,7 +639,7 @@ class Vp8VideoConfiguration(VideoConfiguration):
             if not isinstance(arnr_max_frames, int):
                 raise TypeError("Invalid type for `arnr_max_frames`, type has to be `int`")
 
-            self._arnr_max_frames = arnr_max_frames
+        self._arnr_max_frames = arnr_max_frames
 
 
     @property
@@ -671,7 +671,7 @@ class Vp8VideoConfiguration(VideoConfiguration):
             if not isinstance(arnr_strength, int):
                 raise TypeError("Invalid type for `arnr_strength`, type has to be `int`")
 
-            self._arnr_strength = arnr_strength
+        self._arnr_strength = arnr_strength
 
 
     @property
@@ -697,7 +697,7 @@ class Vp8VideoConfiguration(VideoConfiguration):
             if not isinstance(arnr_type, Vp8ArnrType):
                 raise TypeError("Invalid type for `arnr_type`, type has to be `Vp8ArnrType`")
 
-            self._arnr_type = arnr_type
+        self._arnr_type = arnr_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

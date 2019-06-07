@@ -39,8 +39,10 @@ class WebhookEncryption(object):
         self._key = None
         self.discriminator = None
 
-        self.type = type
-        self.key = key
+        if type is not None:
+            self.type = type
+        if key is not None:
+            self.key = key
 
     @property
     def type(self):
@@ -67,7 +69,7 @@ class WebhookEncryption(object):
             if not isinstance(type, EncryptionType):
                 raise TypeError("Invalid type for `type`, type has to be `EncryptionType`")
 
-            self._type = type
+        self._type = type
 
 
     @property
@@ -95,7 +97,7 @@ class WebhookEncryption(object):
             if not isinstance(key, str):
                 raise TypeError("Invalid type for `key`, type has to be `str`")
 
-            self._key = key
+        self._key = key
 
     def to_dict(self):
         """Returns the model properties as a dict"""

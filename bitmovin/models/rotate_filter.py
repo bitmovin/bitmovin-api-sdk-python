@@ -39,7 +39,8 @@ class RotateFilter(Filter):
         self._rotation = None
         self.discriminator = None
 
-        self.rotation = rotation
+        if rotation is not None:
+            self.rotation = rotation
 
     @property
     def rotation(self):
@@ -66,7 +67,7 @@ class RotateFilter(Filter):
             if not isinstance(rotation, int):
                 raise TypeError("Invalid type for `rotation`, type has to be `int`")
 
-            self._rotation = rotation
+        self._rotation = rotation
 
     def to_dict(self):
         """Returns the model properties as a dict"""

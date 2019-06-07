@@ -35,16 +35,17 @@ class RedundantRtmpInput(Input):
         })
         return attributes
 
-    def __init__(self, delay_threshold=30, ingest_points=None, *args, **kwargs):
+    def __init__(self, delay_threshold=None, ingest_points=None, *args, **kwargs):
         super(RedundantRtmpInput, self).__init__(*args, **kwargs)
 
         self._delay_threshold = None
-        self._ingest_points = None
+        self._ingest_points = list()
         self.discriminator = None
 
         if delay_threshold is not None:
             self.delay_threshold = delay_threshold
-        self.ingest_points = ingest_points
+        if ingest_points is not None:
+            self.ingest_points = ingest_points
 
     @property
     def delay_threshold(self):
@@ -71,7 +72,7 @@ class RedundantRtmpInput(Input):
             if not isinstance(delay_threshold, int):
                 raise TypeError("Invalid type for `delay_threshold`, type has to be `int`")
 
-            self._delay_threshold = delay_threshold
+        self._delay_threshold = delay_threshold
 
 
     @property
@@ -97,7 +98,7 @@ class RedundantRtmpInput(Input):
             if not isinstance(ingest_points, list):
                 raise TypeError("Invalid type for `ingest_points`, type has to be `list[RtmpIngestPoint]`")
 
-            self._ingest_points = ingest_points
+        self._ingest_points = ingest_points
 
     def to_dict(self):
         """Returns the model properties as a dict"""

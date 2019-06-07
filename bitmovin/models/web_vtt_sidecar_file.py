@@ -67,7 +67,7 @@ class WebVttSidecarFile(SidecarFile):
             if not isinstance(segmentation, WebVttSidecarFileSegmentation):
                 raise TypeError("Invalid type for `segmentation`, type has to be `WebVttSidecarFileSegmentation`")
 
-            self._segmentation = segmentation
+        self._segmentation = segmentation
 
     def to_dict(self):
         """Returns the model properties as a dict"""

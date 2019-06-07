@@ -39,7 +39,8 @@ class AccountApiKey(BitmovinResource):
         self._value = None
         self.discriminator = None
 
-        self.value = value
+        if value is not None:
+            self.value = value
 
     @property
     def value(self):
@@ -66,7 +67,7 @@ class AccountApiKey(BitmovinResource):
             if not isinstance(value, str):
                 raise TypeError("Invalid type for `value`, type has to be `str`")
 
-            self._value = value
+        self._value = value
 
     def to_dict(self):
         """Returns the model properties as a dict"""

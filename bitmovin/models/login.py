@@ -37,8 +37,10 @@ class Login(object):
         self._password = None
         self.discriminator = None
 
-        self.e_mail = e_mail
-        self.password = password
+        if e_mail is not None:
+            self.e_mail = e_mail
+        if password is not None:
+            self.password = password
 
     @property
     def e_mail(self):
@@ -65,7 +67,7 @@ class Login(object):
             if not isinstance(e_mail, str):
                 raise TypeError("Invalid type for `e_mail`, type has to be `str`")
 
-            self._e_mail = e_mail
+        self._e_mail = e_mail
 
 
     @property
@@ -93,7 +95,7 @@ class Login(object):
             if not isinstance(password, str):
                 raise TypeError("Invalid type for `password`, type has to be `str`")
 
-            self._password = password
+        self._password = password
 
     def to_dict(self):
         """Returns the model properties as a dict"""

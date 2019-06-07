@@ -36,7 +36,7 @@ class AbstractConjunction(AbstractCondition):
     def __init__(self, conditions=None, *args, **kwargs):
         super(AbstractConjunction, self).__init__(*args, **kwargs)
 
-        self._conditions = None
+        self._conditions = list()
         self.discriminator = None
 
         if conditions is not None:
@@ -67,7 +67,7 @@ class AbstractConjunction(AbstractCondition):
             if not isinstance(conditions, list):
                 raise TypeError("Invalid type for `conditions`, type has to be `list[AbstractCondition]`")
 
-            self._conditions = conditions
+        self._conditions = conditions
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -62,10 +62,12 @@ class SrtInput(Input):
         self._backup_srt_inputs = None
         self.discriminator = None
 
-        self.mode = mode
+        if mode is not None:
+            self.mode = mode
         if host is not None:
             self.host = host
-        self.port = port
+        if port is not None:
+            self.port = port
         if path is not None:
             self.path = path
         if latency is not None:
@@ -102,7 +104,7 @@ class SrtInput(Input):
             if not isinstance(mode, SrtMode):
                 raise TypeError("Invalid type for `mode`, type has to be `SrtMode`")
 
-            self._mode = mode
+        self._mode = mode
 
 
     @property
@@ -130,7 +132,7 @@ class SrtInput(Input):
             if not isinstance(host, str):
                 raise TypeError("Invalid type for `host`, type has to be `str`")
 
-            self._host = host
+        self._host = host
 
 
     @property
@@ -158,7 +160,7 @@ class SrtInput(Input):
             if not isinstance(port, int):
                 raise TypeError("Invalid type for `port`, type has to be `int`")
 
-            self._port = port
+        self._port = port
 
 
     @property
@@ -186,7 +188,7 @@ class SrtInput(Input):
             if not isinstance(path, str):
                 raise TypeError("Invalid type for `path`, type has to be `str`")
 
-            self._path = path
+        self._path = path
 
 
     @property
@@ -214,7 +216,7 @@ class SrtInput(Input):
             if not isinstance(latency, int):
                 raise TypeError("Invalid type for `latency`, type has to be `int`")
 
-            self._latency = latency
+        self._latency = latency
 
 
     @property
@@ -242,7 +244,7 @@ class SrtInput(Input):
             if not isinstance(passphrase, str):
                 raise TypeError("Invalid type for `passphrase`, type has to be `str`")
 
-            self._passphrase = passphrase
+        self._passphrase = passphrase
 
 
     @property
@@ -270,7 +272,7 @@ class SrtInput(Input):
             if not isinstance(key_length, int):
                 raise TypeError("Invalid type for `key_length`, type has to be `int`")
 
-            self._key_length = key_length
+        self._key_length = key_length
 
 
     @property
@@ -296,7 +298,7 @@ class SrtInput(Input):
             if not isinstance(backup_srt_inputs, BackupSrtInputs):
                 raise TypeError("Invalid type for `backup_srt_inputs`, type has to be `BackupSrtInputs`")
 
-            self._backup_srt_inputs = backup_srt_inputs
+        self._backup_srt_inputs = backup_srt_inputs
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -46,14 +46,15 @@ class StartLiveEncodingRequest(object):
     def __init__(self, stream_key=None, hls_manifests=None, dash_manifests=None, live_encoding_mode=None, reupload_settings=None, auto_restart_configuration=None, *args, **kwargs):
 
         self._stream_key = None
-        self._hls_manifests = None
-        self._dash_manifests = None
+        self._hls_manifests = list()
+        self._dash_manifests = list()
         self._live_encoding_mode = None
         self._reupload_settings = None
         self._auto_restart_configuration = None
         self.discriminator = None
 
-        self.stream_key = stream_key
+        if stream_key is not None:
+            self.stream_key = stream_key
         if hls_manifests is not None:
             self.hls_manifests = hls_manifests
         if dash_manifests is not None:
@@ -90,7 +91,7 @@ class StartLiveEncodingRequest(object):
             if not isinstance(stream_key, str):
                 raise TypeError("Invalid type for `stream_key`, type has to be `str`")
 
-            self._stream_key = stream_key
+        self._stream_key = stream_key
 
 
     @property
@@ -118,7 +119,7 @@ class StartLiveEncodingRequest(object):
             if not isinstance(hls_manifests, list):
                 raise TypeError("Invalid type for `hls_manifests`, type has to be `list[LiveHlsManifest]`")
 
-            self._hls_manifests = hls_manifests
+        self._hls_manifests = hls_manifests
 
 
     @property
@@ -146,7 +147,7 @@ class StartLiveEncodingRequest(object):
             if not isinstance(dash_manifests, list):
                 raise TypeError("Invalid type for `dash_manifests`, type has to be `list[LiveDashManifest]`")
 
-            self._dash_manifests = dash_manifests
+        self._dash_manifests = dash_manifests
 
 
     @property
@@ -174,7 +175,7 @@ class StartLiveEncodingRequest(object):
             if not isinstance(live_encoding_mode, EncodingMode):
                 raise TypeError("Invalid type for `live_encoding_mode`, type has to be `EncodingMode`")
 
-            self._live_encoding_mode = live_encoding_mode
+        self._live_encoding_mode = live_encoding_mode
 
 
     @property
@@ -202,7 +203,7 @@ class StartLiveEncodingRequest(object):
             if not isinstance(reupload_settings, ReuploadSettings):
                 raise TypeError("Invalid type for `reupload_settings`, type has to be `ReuploadSettings`")
 
-            self._reupload_settings = reupload_settings
+        self._reupload_settings = reupload_settings
 
 
     @property
@@ -230,7 +231,7 @@ class StartLiveEncodingRequest(object):
             if not isinstance(auto_restart_configuration, AutoRestartConfiguration):
                 raise TypeError("Invalid type for `auto_restart_configuration`, type has to be `AutoRestartConfiguration`")
 
-            self._auto_restart_configuration = auto_restart_configuration
+        self._auto_restart_configuration = auto_restart_configuration
 
     def to_dict(self):
         """Returns the model properties as a dict"""

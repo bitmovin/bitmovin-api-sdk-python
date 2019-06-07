@@ -39,8 +39,10 @@ class LiveEncodingStatsEvent(object):
         self._details = None
         self.discriminator = None
 
-        self.time = time
-        self.details = details
+        if time is not None:
+            self.time = time
+        if details is not None:
+            self.details = details
 
     @property
     def time(self):
@@ -67,7 +69,7 @@ class LiveEncodingStatsEvent(object):
             if not isinstance(time, datetime):
                 raise TypeError("Invalid type for `time`, type has to be `datetime`")
 
-            self._time = time
+        self._time = time
 
 
     @property
@@ -93,7 +95,7 @@ class LiveEncodingStatsEvent(object):
             if not isinstance(details, LiveEncodingStatsEventDetails):
                 raise TypeError("Invalid type for `details`, type has to be `LiveEncodingStatsEventDetails`")
 
-            self._details = details
+        self._details = details
 
     def to_dict(self):
         """Returns the model properties as a dict"""

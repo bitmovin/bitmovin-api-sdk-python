@@ -52,21 +52,23 @@ class AnalyticsQueryRequest(AnalyticsQueryTimeframe):
         super(AnalyticsQueryRequest, self).__init__(*args, **kwargs)
 
         self._license_key = None
-        self._filters = None
-        self._order_by = None
+        self._filters = list()
+        self._order_by = list()
         self._dimension = None
         self._interval = None
-        self._group_by = None
+        self._group_by = list()
         self._limit = None
         self._offset = None
         self.discriminator = None
 
-        self.license_key = license_key
+        if license_key is not None:
+            self.license_key = license_key
         if filters is not None:
             self.filters = filters
         if order_by is not None:
             self.order_by = order_by
-        self.dimension = dimension
+        if dimension is not None:
+            self.dimension = dimension
         if interval is not None:
             self.interval = interval
         if group_by is not None:
@@ -101,7 +103,7 @@ class AnalyticsQueryRequest(AnalyticsQueryTimeframe):
             if not isinstance(license_key, str):
                 raise TypeError("Invalid type for `license_key`, type has to be `str`")
 
-            self._license_key = license_key
+        self._license_key = license_key
 
 
     @property
@@ -127,7 +129,7 @@ class AnalyticsQueryRequest(AnalyticsQueryTimeframe):
             if not isinstance(filters, list):
                 raise TypeError("Invalid type for `filters`, type has to be `list[AnalyticsFilter]`")
 
-            self._filters = filters
+        self._filters = filters
 
 
     @property
@@ -153,7 +155,7 @@ class AnalyticsQueryRequest(AnalyticsQueryTimeframe):
             if not isinstance(order_by, list):
                 raise TypeError("Invalid type for `order_by`, type has to be `list[AnalyticsOrderByEntry]`")
 
-            self._order_by = order_by
+        self._order_by = order_by
 
 
     @property
@@ -179,7 +181,7 @@ class AnalyticsQueryRequest(AnalyticsQueryTimeframe):
             if not isinstance(dimension, str):
                 raise TypeError("Invalid type for `dimension`, type has to be `str`")
 
-            self._dimension = dimension
+        self._dimension = dimension
 
 
     @property
@@ -205,7 +207,7 @@ class AnalyticsQueryRequest(AnalyticsQueryTimeframe):
             if not isinstance(interval, AnalyticsInterval):
                 raise TypeError("Invalid type for `interval`, type has to be `AnalyticsInterval`")
 
-            self._interval = interval
+        self._interval = interval
 
 
     @property
@@ -231,7 +233,7 @@ class AnalyticsQueryRequest(AnalyticsQueryTimeframe):
             if not isinstance(group_by, list):
                 raise TypeError("Invalid type for `group_by`, type has to be `list[str]`")
 
-            self._group_by = group_by
+        self._group_by = group_by
 
 
     @property
@@ -259,7 +261,7 @@ class AnalyticsQueryRequest(AnalyticsQueryTimeframe):
             if not isinstance(limit, int):
                 raise TypeError("Invalid type for `limit`, type has to be `int`")
 
-            self._limit = limit
+        self._limit = limit
 
 
     @property
@@ -287,7 +289,7 @@ class AnalyticsQueryRequest(AnalyticsQueryTimeframe):
             if not isinstance(offset, int):
                 raise TypeError("Invalid type for `offset`, type has to be `int`")
 
-            self._offset = offset
+        self._offset = offset
 
     def to_dict(self):
         """Returns the model properties as a dict"""

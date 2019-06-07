@@ -100,7 +100,7 @@ class ZixiInput(Input):
             if not isinstance(host, str):
                 raise TypeError("Invalid type for `host`, type has to be `str`")
 
-            self._host = host
+        self._host = host
 
 
     @property
@@ -126,7 +126,7 @@ class ZixiInput(Input):
             if not isinstance(port, int):
                 raise TypeError("Invalid type for `port`, type has to be `int`")
 
-            self._port = port
+        self._port = port
 
 
     @property
@@ -152,7 +152,7 @@ class ZixiInput(Input):
             if not isinstance(stream, str):
                 raise TypeError("Invalid type for `stream`, type has to be `str`")
 
-            self._stream = stream
+        self._stream = stream
 
 
     @property
@@ -178,7 +178,7 @@ class ZixiInput(Input):
             if not isinstance(password, str):
                 raise TypeError("Invalid type for `password`, type has to be `str`")
 
-            self._password = password
+        self._password = password
 
 
     @property
@@ -204,7 +204,7 @@ class ZixiInput(Input):
             if not isinstance(latency, int):
                 raise TypeError("Invalid type for `latency`, type has to be `int`")
 
-            self._latency = latency
+        self._latency = latency
 
 
     @property
@@ -230,7 +230,7 @@ class ZixiInput(Input):
             if not isinstance(min_bitrate, int):
                 raise TypeError("Invalid type for `min_bitrate`, type has to be `int`")
 
-            self._min_bitrate = min_bitrate
+        self._min_bitrate = min_bitrate
 
 
     @property
@@ -256,7 +256,7 @@ class ZixiInput(Input):
             if not isinstance(decryption_type, str):
                 raise TypeError("Invalid type for `decryption_type`, type has to be `str`")
 
-            self._decryption_type = decryption_type
+        self._decryption_type = decryption_type
 
 
     @property
@@ -282,7 +282,7 @@ class ZixiInput(Input):
             if not isinstance(decryption_key, str):
                 raise TypeError("Invalid type for `decryption_key`, type has to be `str`")
 
-            self._decryption_key = decryption_key
+        self._decryption_key = decryption_key
 
     def to_dict(self):
         """Returns the model properties as a dict"""

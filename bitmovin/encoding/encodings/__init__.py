@@ -8,3 +8,4 @@ from bitmovin.encoding.encodings.muxings.muxings_api import MuxingsApi
 from bitmovin.encoding.encodings.captions.captions_api import CaptionsApi
 from bitmovin.encoding.encodings.sidecars.sidecars_api import SidecarsApi
 from bitmovin.encoding.encodings.keyframes.keyframes_api import KeyframesApi
+from bitmovin.encoding.encodings.encoding_list_query_params import EncodingListQueryParams

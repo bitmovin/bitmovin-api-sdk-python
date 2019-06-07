@@ -34,7 +34,8 @@ class MuxingStream(object):
         self._stream_id = None
         self.discriminator = None
 
-        self.stream_id = stream_id
+        if stream_id is not None:
+            self.stream_id = stream_id
 
     @property
     def stream_id(self):
@@ -59,7 +60,7 @@ class MuxingStream(object):
             if not isinstance(stream_id, str):
                 raise TypeError("Invalid type for `stream_id`, type has to be `str`")
 
-            self._stream_id = stream_id
+        self._stream_id = stream_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -2,3 +2,4 @@ from bitmovin.player.licenses.licenses_api import LicensesApi
 from bitmovin.player.licenses.analytics.analytics_api import AnalyticsApi
 from bitmovin.player.licenses.domains.domains_api import DomainsApi
 from bitmovin.player.licenses.thirdPartyLicensing.third_party_licensing_api import ThirdPartyLicensingApi
+from bitmovin.player.licenses.player_license_list_query_params import PlayerLicenseListQueryParams

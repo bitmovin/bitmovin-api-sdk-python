@@ -58,7 +58,8 @@ class AsperaInput(Input):
             self.min_bandwidth = min_bandwidth
         if max_bandwidth is not None:
             self.max_bandwidth = max_bandwidth
-        self.host = host
+        if host is not None:
+            self.host = host
         if username is not None:
             self.username = username
         if password is not None:
@@ -91,7 +92,7 @@ class AsperaInput(Input):
             if not isinstance(min_bandwidth, str):
                 raise TypeError("Invalid type for `min_bandwidth`, type has to be `str`")
 
-            self._min_bandwidth = min_bandwidth
+        self._min_bandwidth = min_bandwidth
 
 
     @property
@@ -119,7 +120,7 @@ class AsperaInput(Input):
             if not isinstance(max_bandwidth, str):
                 raise TypeError("Invalid type for `max_bandwidth`, type has to be `str`")
 
-            self._max_bandwidth = max_bandwidth
+        self._max_bandwidth = max_bandwidth
 
 
     @property
@@ -147,7 +148,7 @@ class AsperaInput(Input):
             if not isinstance(host, str):
                 raise TypeError("Invalid type for `host`, type has to be `str`")
 
-            self._host = host
+        self._host = host
 
 
     @property
@@ -175,7 +176,7 @@ class AsperaInput(Input):
             if not isinstance(username, str):
                 raise TypeError("Invalid type for `username`, type has to be `str`")
 
-            self._username = username
+        self._username = username
 
 
     @property
@@ -203,7 +204,7 @@ class AsperaInput(Input):
             if not isinstance(password, str):
                 raise TypeError("Invalid type for `password`, type has to be `str`")
 
-            self._password = password
+        self._password = password
 
 
     @property
@@ -231,7 +232,7 @@ class AsperaInput(Input):
             if not isinstance(token, str):
                 raise TypeError("Invalid type for `token`, type has to be `str`")
 
-            self._token = token
+        self._token = token
 
     def to_dict(self):
         """Returns the model properties as a dict"""

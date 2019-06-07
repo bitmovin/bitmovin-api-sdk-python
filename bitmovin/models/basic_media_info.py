@@ -54,15 +54,17 @@ class BasicMediaInfo(BitmovinResponse):
         self._name = None
         self._is_default = None
         self._autoselect = None
-        self._characteristics = None
+        self._characteristics = list()
         self.discriminator = None
 
-        self.group_id = group_id
+        if group_id is not None:
+            self.group_id = group_id
         if language is not None:
             self.language = language
         if assoc_language is not None:
             self.assoc_language = assoc_language
-        self.name = name
+        if name is not None:
+            self.name = name
         if is_default is not None:
             self.is_default = is_default
         if autoselect is not None:
@@ -95,7 +97,7 @@ class BasicMediaInfo(BitmovinResponse):
             if not isinstance(group_id, str):
                 raise TypeError("Invalid type for `group_id`, type has to be `str`")
 
-            self._group_id = group_id
+        self._group_id = group_id
 
 
     @property
@@ -123,7 +125,7 @@ class BasicMediaInfo(BitmovinResponse):
             if not isinstance(language, str):
                 raise TypeError("Invalid type for `language`, type has to be `str`")
 
-            self._language = language
+        self._language = language
 
 
     @property
@@ -151,7 +153,7 @@ class BasicMediaInfo(BitmovinResponse):
             if not isinstance(assoc_language, str):
                 raise TypeError("Invalid type for `assoc_language`, type has to be `str`")
 
-            self._assoc_language = assoc_language
+        self._assoc_language = assoc_language
 
 
     @property
@@ -179,7 +181,7 @@ class BasicMediaInfo(BitmovinResponse):
             if not isinstance(name, str):
                 raise TypeError("Invalid type for `name`, type has to be `str`")
 
-            self._name = name
+        self._name = name
 
 
     @property
@@ -207,7 +209,7 @@ class BasicMediaInfo(BitmovinResponse):
             if not isinstance(is_default, bool):
                 raise TypeError("Invalid type for `is_default`, type has to be `bool`")
 
-            self._is_default = is_default
+        self._is_default = is_default
 
 
     @property
@@ -235,7 +237,7 @@ class BasicMediaInfo(BitmovinResponse):
             if not isinstance(autoselect, bool):
                 raise TypeError("Invalid type for `autoselect`, type has to be `bool`")
 
-            self._autoselect = autoselect
+        self._autoselect = autoselect
 
 
     @property
@@ -263,7 +265,7 @@ class BasicMediaInfo(BitmovinResponse):
             if not isinstance(characteristics, list):
                 raise TypeError("Invalid type for `characteristics`, type has to be `list[str]`")
 
-            self._characteristics = characteristics
+        self._characteristics = characteristics
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -67,7 +67,7 @@ class Ignoring(object):
             if not isinstance(ignored_by, IgnoredBy):
                 raise TypeError("Invalid type for `ignored_by`, type has to be `IgnoredBy`")
 
-            self._ignored_by = ignored_by
+        self._ignored_by = ignored_by
 
 
     @property
@@ -95,7 +95,7 @@ class Ignoring(object):
             if not isinstance(ignored_by_description, str):
                 raise TypeError("Invalid type for `ignored_by_description`, type has to be `str`")
 
-            self._ignored_by_description = ignored_by_description
+        self._ignored_by_description = ignored_by_description
 
     def to_dict(self):
         """Returns the model properties as a dict"""

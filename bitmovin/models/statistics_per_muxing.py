@@ -51,12 +51,18 @@ class StatisticsPerMuxing(object):
         self._muxing_type = None
         self.discriminator = None
 
-        self.stream_id = stream_id
-        self.muxing_id = muxing_id
-        self.multiplicator = multiplicator
-        self.encoded_bytes = encoded_bytes
-        self.billable_minutes = billable_minutes
-        self.muxing_type = muxing_type
+        if stream_id is not None:
+            self.stream_id = stream_id
+        if muxing_id is not None:
+            self.muxing_id = muxing_id
+        if multiplicator is not None:
+            self.multiplicator = multiplicator
+        if encoded_bytes is not None:
+            self.encoded_bytes = encoded_bytes
+        if billable_minutes is not None:
+            self.billable_minutes = billable_minutes
+        if muxing_type is not None:
+            self.muxing_type = muxing_type
 
     @property
     def stream_id(self):
@@ -83,7 +89,7 @@ class StatisticsPerMuxing(object):
             if not isinstance(stream_id, str):
                 raise TypeError("Invalid type for `stream_id`, type has to be `str`")
 
-            self._stream_id = stream_id
+        self._stream_id = stream_id
 
 
     @property
@@ -111,7 +117,7 @@ class StatisticsPerMuxing(object):
             if not isinstance(muxing_id, str):
                 raise TypeError("Invalid type for `muxing_id`, type has to be `str`")
 
-            self._muxing_id = muxing_id
+        self._muxing_id = muxing_id
 
 
     @property
@@ -136,10 +142,10 @@ class StatisticsPerMuxing(object):
         """
 
         if multiplicator is not None:
-            if not isinstance(multiplicator, float):
+            if not isinstance(multiplicator, (float, int)):
                 raise TypeError("Invalid type for `multiplicator`, type has to be `float`")
 
-            self._multiplicator = multiplicator
+        self._multiplicator = multiplicator
 
 
     @property
@@ -167,7 +173,7 @@ class StatisticsPerMuxing(object):
             if not isinstance(encoded_bytes, int):
                 raise TypeError("Invalid type for `encoded_bytes`, type has to be `int`")
 
-            self._encoded_bytes = encoded_bytes
+        self._encoded_bytes = encoded_bytes
 
 
     @property
@@ -192,10 +198,10 @@ class StatisticsPerMuxing(object):
         """
 
         if billable_minutes is not None:
-            if not isinstance(billable_minutes, float):
+            if not isinstance(billable_minutes, (float, int)):
                 raise TypeError("Invalid type for `billable_minutes`, type has to be `float`")
 
-            self._billable_minutes = billable_minutes
+        self._billable_minutes = billable_minutes
 
 
     @property
@@ -221,7 +227,7 @@ class StatisticsPerMuxing(object):
             if not isinstance(muxing_type, MuxingType):
                 raise TypeError("Invalid type for `muxing_type`, type has to be `MuxingType`")
 
-            self._muxing_type = muxing_type
+        self._muxing_type = muxing_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

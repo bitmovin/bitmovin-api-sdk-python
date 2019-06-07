@@ -62,7 +62,7 @@ class RescheduleEncodingRequest(object):
             if not isinstance(infrastructure_id, str):
                 raise TypeError("Invalid type for `infrastructure_id`, type has to be `str`")
 
-            self._infrastructure_id = infrastructure_id
+        self._infrastructure_id = infrastructure_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

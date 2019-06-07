@@ -60,10 +60,10 @@ class StartEncodingRequest(object):
         self._tweaks = None
         self._handle_variable_input_fps = None
         self._encoding_mode = None
-        self._preview_dash_manifests = None
-        self._preview_hls_manifests = None
-        self._vod_dash_manifests = None
-        self._vod_hls_manifests = None
+        self._preview_dash_manifests = list()
+        self._preview_hls_manifests = list()
+        self._vod_dash_manifests = list()
+        self._vod_hls_manifests = list()
         self._per_title = None
         self.discriminator = None
 
@@ -113,7 +113,7 @@ class StartEncodingRequest(object):
             if not isinstance(trimming, Trimming):
                 raise TypeError("Invalid type for `trimming`, type has to be `Trimming`")
 
-            self._trimming = trimming
+        self._trimming = trimming
 
 
     @property
@@ -141,7 +141,7 @@ class StartEncodingRequest(object):
             if not isinstance(scheduling, Scheduling):
                 raise TypeError("Invalid type for `scheduling`, type has to be `Scheduling`")
 
-            self._scheduling = scheduling
+        self._scheduling = scheduling
 
 
     @property
@@ -169,7 +169,7 @@ class StartEncodingRequest(object):
             if not isinstance(tweaks, Tweaks):
                 raise TypeError("Invalid type for `tweaks`, type has to be `Tweaks`")
 
-            self._tweaks = tweaks
+        self._tweaks = tweaks
 
 
     @property
@@ -197,7 +197,7 @@ class StartEncodingRequest(object):
             if not isinstance(handle_variable_input_fps, bool):
                 raise TypeError("Invalid type for `handle_variable_input_fps`, type has to be `bool`")
 
-            self._handle_variable_input_fps = handle_variable_input_fps
+        self._handle_variable_input_fps = handle_variable_input_fps
 
 
     @property
@@ -225,7 +225,7 @@ class StartEncodingRequest(object):
             if not isinstance(encoding_mode, EncodingMode):
                 raise TypeError("Invalid type for `encoding_mode`, type has to be `EncodingMode`")
 
-            self._encoding_mode = encoding_mode
+        self._encoding_mode = encoding_mode
 
 
     @property
@@ -253,7 +253,7 @@ class StartEncodingRequest(object):
             if not isinstance(preview_dash_manifests, list):
                 raise TypeError("Invalid type for `preview_dash_manifests`, type has to be `list[ManifestResource]`")
 
-            self._preview_dash_manifests = preview_dash_manifests
+        self._preview_dash_manifests = preview_dash_manifests
 
 
     @property
@@ -281,7 +281,7 @@ class StartEncodingRequest(object):
             if not isinstance(preview_hls_manifests, list):
                 raise TypeError("Invalid type for `preview_hls_manifests`, type has to be `list[ManifestResource]`")
 
-            self._preview_hls_manifests = preview_hls_manifests
+        self._preview_hls_manifests = preview_hls_manifests
 
 
     @property
@@ -309,7 +309,7 @@ class StartEncodingRequest(object):
             if not isinstance(vod_dash_manifests, list):
                 raise TypeError("Invalid type for `vod_dash_manifests`, type has to be `list[ManifestResource]`")
 
-            self._vod_dash_manifests = vod_dash_manifests
+        self._vod_dash_manifests = vod_dash_manifests
 
 
     @property
@@ -337,7 +337,7 @@ class StartEncodingRequest(object):
             if not isinstance(vod_hls_manifests, list):
                 raise TypeError("Invalid type for `vod_hls_manifests`, type has to be `list[ManifestResource]`")
 
-            self._vod_hls_manifests = vod_hls_manifests
+        self._vod_hls_manifests = vod_hls_manifests
 
 
     @property
@@ -365,7 +365,7 @@ class StartEncodingRequest(object):
             if not isinstance(per_title, PerTitle):
                 raise TypeError("Invalid type for `per_title`, type has to be `PerTitle`")
 
-            self._per_title = per_title
+        self._per_title = per_title
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -45,7 +45,8 @@ class HlsManifestDefault(HlsManifest):
         self._version = None
         self.discriminator = None
 
-        self.encoding_id = encoding_id
+        if encoding_id is not None:
+            self.encoding_id = encoding_id
         if version is not None:
             self.version = version
 
@@ -74,7 +75,7 @@ class HlsManifestDefault(HlsManifest):
             if not isinstance(encoding_id, str):
                 raise TypeError("Invalid type for `encoding_id`, type has to be `str`")
 
-            self._encoding_id = encoding_id
+        self._encoding_id = encoding_id
 
 
     @property
@@ -102,7 +103,7 @@ class HlsManifestDefault(HlsManifest):
             if not isinstance(version, HlsManifestDefaultVersion):
                 raise TypeError("Invalid type for `version`, type has to be `HlsManifestDefaultVersion`")
 
-            self._version = version
+        self._version = version
 
     def to_dict(self):
         """Returns the model properties as a dict"""

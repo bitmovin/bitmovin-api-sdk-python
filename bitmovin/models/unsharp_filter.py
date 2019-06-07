@@ -92,7 +92,7 @@ class UnsharpFilter(Filter):
             if not isinstance(luma_matrix_horizontal_size, int):
                 raise TypeError("Invalid type for `luma_matrix_horizontal_size`, type has to be `int`")
 
-            self._luma_matrix_horizontal_size = luma_matrix_horizontal_size
+        self._luma_matrix_horizontal_size = luma_matrix_horizontal_size
 
 
     @property
@@ -120,7 +120,7 @@ class UnsharpFilter(Filter):
             if not isinstance(luma_matrix_vertical_size, int):
                 raise TypeError("Invalid type for `luma_matrix_vertical_size`, type has to be `int`")
 
-            self._luma_matrix_vertical_size = luma_matrix_vertical_size
+        self._luma_matrix_vertical_size = luma_matrix_vertical_size
 
 
     @property
@@ -145,10 +145,10 @@ class UnsharpFilter(Filter):
         """
 
         if luma_effect_strength is not None:
-            if not isinstance(luma_effect_strength, float):
+            if not isinstance(luma_effect_strength, (float, int)):
                 raise TypeError("Invalid type for `luma_effect_strength`, type has to be `float`")
 
-            self._luma_effect_strength = luma_effect_strength
+        self._luma_effect_strength = luma_effect_strength
 
 
     @property
@@ -176,7 +176,7 @@ class UnsharpFilter(Filter):
             if not isinstance(chroma_matrix_horizontal_size, int):
                 raise TypeError("Invalid type for `chroma_matrix_horizontal_size`, type has to be `int`")
 
-            self._chroma_matrix_horizontal_size = chroma_matrix_horizontal_size
+        self._chroma_matrix_horizontal_size = chroma_matrix_horizontal_size
 
 
     @property
@@ -204,7 +204,7 @@ class UnsharpFilter(Filter):
             if not isinstance(chroma_matrix_vertical_size, int):
                 raise TypeError("Invalid type for `chroma_matrix_vertical_size`, type has to be `int`")
 
-            self._chroma_matrix_vertical_size = chroma_matrix_vertical_size
+        self._chroma_matrix_vertical_size = chroma_matrix_vertical_size
 
 
     @property
@@ -229,10 +229,10 @@ class UnsharpFilter(Filter):
         """
 
         if chroma_effect_strength is not None:
-            if not isinstance(chroma_effect_strength, float):
+            if not isinstance(chroma_effect_strength, (float, int)):
                 raise TypeError("Invalid type for `chroma_effect_strength`, type has to be `float`")
 
-            self._chroma_effect_strength = chroma_effect_strength
+        self._chroma_effect_strength = chroma_effect_strength
 
     def to_dict(self):
         """Returns the model properties as a dict"""

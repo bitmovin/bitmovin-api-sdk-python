@@ -50,10 +50,14 @@ class AkamaiMslOutput(Output):
         self._msl_version = None
         self.discriminator = None
 
-        self.stream_id = stream_id
-        self.event_name = event_name
-        self.stream_format = stream_format
-        self.msl_version = msl_version
+        if stream_id is not None:
+            self.stream_id = stream_id
+        if event_name is not None:
+            self.event_name = event_name
+        if stream_format is not None:
+            self.stream_format = stream_format
+        if msl_version is not None:
+            self.msl_version = msl_version
 
     @property
     def stream_id(self):
@@ -80,7 +84,7 @@ class AkamaiMslOutput(Output):
             if not isinstance(stream_id, int):
                 raise TypeError("Invalid type for `stream_id`, type has to be `int`")
 
-            self._stream_id = stream_id
+        self._stream_id = stream_id
 
 
     @property
@@ -108,7 +112,7 @@ class AkamaiMslOutput(Output):
             if not isinstance(event_name, str):
                 raise TypeError("Invalid type for `event_name`, type has to be `str`")
 
-            self._event_name = event_name
+        self._event_name = event_name
 
 
     @property
@@ -134,7 +138,7 @@ class AkamaiMslOutput(Output):
             if not isinstance(stream_format, AkamaiMslStreamFormat):
                 raise TypeError("Invalid type for `stream_format`, type has to be `AkamaiMslStreamFormat`")
 
-            self._stream_format = stream_format
+        self._stream_format = stream_format
 
 
     @property
@@ -160,7 +164,7 @@ class AkamaiMslOutput(Output):
             if not isinstance(msl_version, AkamaiMslVersion):
                 raise TypeError("Invalid type for `msl_version`, type has to be `AkamaiMslVersion`")
 
-            self._msl_version = msl_version
+        self._msl_version = msl_version
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -40,7 +40,8 @@ class Mp3Muxing(Muxing):
         self._filename = None
         self.discriminator = None
 
-        self.filename = filename
+        if filename is not None:
+            self.filename = filename
 
     @property
     def filename(self):
@@ -67,7 +68,7 @@ class Mp3Muxing(Muxing):
             if not isinstance(filename, str):
                 raise TypeError("Invalid type for `filename`, type has to be `str`")
 
-            self._filename = filename
+        self._filename = filename
 
     def to_dict(self):
         """Returns the model properties as a dict"""

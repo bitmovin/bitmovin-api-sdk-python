@@ -61,8 +61,8 @@ class Task(BitmovinResponse):
         self._status = None
         self._eta = None
         self._progress = None
-        self._subtasks = None
-        self._messages = None
+        self._subtasks = list()
+        self._messages = list()
         self._created_at = None
         self._queued_at = None
         self._running_at = None
@@ -71,7 +71,8 @@ class Task(BitmovinResponse):
         self._error = None
         self.discriminator = None
 
-        self.status = status
+        if status is not None:
+            self.status = status
         if eta is not None:
             self.eta = eta
         if progress is not None:
@@ -118,7 +119,7 @@ class Task(BitmovinResponse):
             if not isinstance(status, Status):
                 raise TypeError("Invalid type for `status`, type has to be `Status`")
 
-            self._status = status
+        self._status = status
 
 
     @property
@@ -143,10 +144,10 @@ class Task(BitmovinResponse):
         """
 
         if eta is not None:
-            if not isinstance(eta, float):
+            if not isinstance(eta, (float, int)):
                 raise TypeError("Invalid type for `eta`, type has to be `float`")
 
-            self._eta = eta
+        self._eta = eta
 
 
     @property
@@ -174,7 +175,7 @@ class Task(BitmovinResponse):
             if not isinstance(progress, int):
                 raise TypeError("Invalid type for `progress`, type has to be `int`")
 
-            self._progress = progress
+        self._progress = progress
 
 
     @property
@@ -202,7 +203,7 @@ class Task(BitmovinResponse):
             if not isinstance(subtasks, list):
                 raise TypeError("Invalid type for `subtasks`, type has to be `list[Subtask]`")
 
-            self._subtasks = subtasks
+        self._subtasks = subtasks
 
 
     @property
@@ -230,7 +231,7 @@ class Task(BitmovinResponse):
             if not isinstance(messages, list):
                 raise TypeError("Invalid type for `messages`, type has to be `list[Message]`")
 
-            self._messages = messages
+        self._messages = messages
 
 
     @property
@@ -258,7 +259,7 @@ class Task(BitmovinResponse):
             if not isinstance(created_at, datetime):
                 raise TypeError("Invalid type for `created_at`, type has to be `datetime`")
 
-            self._created_at = created_at
+        self._created_at = created_at
 
 
     @property
@@ -286,7 +287,7 @@ class Task(BitmovinResponse):
             if not isinstance(queued_at, datetime):
                 raise TypeError("Invalid type for `queued_at`, type has to be `datetime`")
 
-            self._queued_at = queued_at
+        self._queued_at = queued_at
 
 
     @property
@@ -314,7 +315,7 @@ class Task(BitmovinResponse):
             if not isinstance(running_at, datetime):
                 raise TypeError("Invalid type for `running_at`, type has to be `datetime`")
 
-            self._running_at = running_at
+        self._running_at = running_at
 
 
     @property
@@ -342,7 +343,7 @@ class Task(BitmovinResponse):
             if not isinstance(finished_at, datetime):
                 raise TypeError("Invalid type for `finished_at`, type has to be `datetime`")
 
-            self._finished_at = finished_at
+        self._finished_at = finished_at
 
 
     @property
@@ -370,7 +371,7 @@ class Task(BitmovinResponse):
             if not isinstance(error_at, datetime):
                 raise TypeError("Invalid type for `error_at`, type has to be `datetime`")
 
-            self._error_at = error_at
+        self._error_at = error_at
 
 
     @property
@@ -398,7 +399,7 @@ class Task(BitmovinResponse):
             if not isinstance(error, ErrorDetails):
                 raise TypeError("Invalid type for `error`, type has to be `ErrorDetails`")
 
-            self._error = error
+        self._error = error
 
     def to_dict(self):
         """Returns the model properties as a dict"""

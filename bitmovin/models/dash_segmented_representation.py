@@ -59,10 +59,12 @@ class DashSegmentedRepresentation(DashRepresentation):
         self._end_keyframe_id = None
         self.discriminator = None
 
-        self.type = type
+        if type is not None:
+            self.type = type
         if mode is not None:
             self.mode = mode
-        self.segment_path = segment_path
+        if segment_path is not None:
+            self.segment_path = segment_path
         if start_segment_number is not None:
             self.start_segment_number = start_segment_number
         if end_segment_number is not None:
@@ -95,7 +97,7 @@ class DashSegmentedRepresentation(DashRepresentation):
             if not isinstance(type, DashRepresentationType):
                 raise TypeError("Invalid type for `type`, type has to be `DashRepresentationType`")
 
-            self._type = type
+        self._type = type
 
 
     @property
@@ -121,7 +123,7 @@ class DashSegmentedRepresentation(DashRepresentation):
             if not isinstance(mode, DashRepresentationTypeMode):
                 raise TypeError("Invalid type for `mode`, type has to be `DashRepresentationTypeMode`")
 
-            self._mode = mode
+        self._mode = mode
 
 
     @property
@@ -149,7 +151,7 @@ class DashSegmentedRepresentation(DashRepresentation):
             if not isinstance(segment_path, str):
                 raise TypeError("Invalid type for `segment_path`, type has to be `str`")
 
-            self._segment_path = segment_path
+        self._segment_path = segment_path
 
 
     @property
@@ -177,7 +179,7 @@ class DashSegmentedRepresentation(DashRepresentation):
             if not isinstance(start_segment_number, int):
                 raise TypeError("Invalid type for `start_segment_number`, type has to be `int`")
 
-            self._start_segment_number = start_segment_number
+        self._start_segment_number = start_segment_number
 
 
     @property
@@ -205,7 +207,7 @@ class DashSegmentedRepresentation(DashRepresentation):
             if not isinstance(end_segment_number, int):
                 raise TypeError("Invalid type for `end_segment_number`, type has to be `int`")
 
-            self._end_segment_number = end_segment_number
+        self._end_segment_number = end_segment_number
 
 
     @property
@@ -233,7 +235,7 @@ class DashSegmentedRepresentation(DashRepresentation):
             if not isinstance(start_keyframe_id, str):
                 raise TypeError("Invalid type for `start_keyframe_id`, type has to be `str`")
 
-            self._start_keyframe_id = start_keyframe_id
+        self._start_keyframe_id = start_keyframe_id
 
 
     @property
@@ -261,7 +263,7 @@ class DashSegmentedRepresentation(DashRepresentation):
             if not isinstance(end_keyframe_id, str):
                 raise TypeError("Invalid type for `end_keyframe_id`, type has to be `str`")
 
-            self._end_keyframe_id = end_keyframe_id
+        self._end_keyframe_id = end_keyframe_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

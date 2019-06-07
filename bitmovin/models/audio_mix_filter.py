@@ -40,11 +40,13 @@ class AudioMixFilter(Filter):
         super(AudioMixFilter, self).__init__(*args, **kwargs)
 
         self._channel_layout = None
-        self._audio_mix_channels = None
+        self._audio_mix_channels = list()
         self.discriminator = None
 
-        self.channel_layout = channel_layout
-        self.audio_mix_channels = audio_mix_channels
+        if channel_layout is not None:
+            self.channel_layout = channel_layout
+        if audio_mix_channels is not None:
+            self.audio_mix_channels = audio_mix_channels
 
     @property
     def channel_layout(self):
@@ -71,7 +73,7 @@ class AudioMixFilter(Filter):
             if not isinstance(channel_layout, AudioMixChannelLayout):
                 raise TypeError("Invalid type for `channel_layout`, type has to be `AudioMixChannelLayout`")
 
-            self._channel_layout = channel_layout
+        self._channel_layout = channel_layout
 
 
     @property
@@ -99,7 +101,7 @@ class AudioMixFilter(Filter):
             if not isinstance(audio_mix_channels, list):
                 raise TypeError("Invalid type for `audio_mix_channels`, type has to be `list[AudioMixChannel]`")
 
-            self._audio_mix_channels = audio_mix_channels
+        self._audio_mix_channels = audio_mix_channels
 
     def to_dict(self):
         """Returns the model properties as a dict"""

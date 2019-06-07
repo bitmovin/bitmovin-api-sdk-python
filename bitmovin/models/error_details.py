@@ -45,10 +45,14 @@ class ErrorDetails(object):
         self._retry_hint = None
         self.discriminator = None
 
-        self.code = code
-        self.category = category
-        self.text = text
-        self.retry_hint = retry_hint
+        if code is not None:
+            self.code = code
+        if category is not None:
+            self.category = category
+        if text is not None:
+            self.text = text
+        if retry_hint is not None:
+            self.retry_hint = retry_hint
 
     @property
     def code(self):
@@ -75,7 +79,7 @@ class ErrorDetails(object):
             if not isinstance(code, int):
                 raise TypeError("Invalid type for `code`, type has to be `int`")
 
-            self._code = code
+        self._code = code
 
 
     @property
@@ -103,7 +107,7 @@ class ErrorDetails(object):
             if not isinstance(category, str):
                 raise TypeError("Invalid type for `category`, type has to be `str`")
 
-            self._category = category
+        self._category = category
 
 
     @property
@@ -131,7 +135,7 @@ class ErrorDetails(object):
             if not isinstance(text, str):
                 raise TypeError("Invalid type for `text`, type has to be `str`")
 
-            self._text = text
+        self._text = text
 
 
     @property
@@ -159,7 +163,7 @@ class ErrorDetails(object):
             if not isinstance(retry_hint, RetryHint):
                 raise TypeError("Invalid type for `retry_hint`, type has to be `RetryHint`")
 
-            self._retry_hint = retry_hint
+        self._retry_hint = retry_hint
 
     def to_dict(self):
         """Returns the model properties as a dict"""

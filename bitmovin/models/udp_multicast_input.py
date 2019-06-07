@@ -42,8 +42,10 @@ class UdpMulticastInput(Input):
         self._port = None
         self.discriminator = None
 
-        self.host = host
-        self.port = port
+        if host is not None:
+            self.host = host
+        if port is not None:
+            self.port = port
 
     @property
     def host(self):
@@ -70,7 +72,7 @@ class UdpMulticastInput(Input):
             if not isinstance(host, str):
                 raise TypeError("Invalid type for `host`, type has to be `str`")
 
-            self._host = host
+        self._host = host
 
 
     @property
@@ -98,7 +100,7 @@ class UdpMulticastInput(Input):
             if not isinstance(port, int):
                 raise TypeError("Invalid type for `port`, type has to be `int`")
 
-            self._port = port
+        self._port = port
 
     def to_dict(self):
         """Returns the model properties as a dict"""

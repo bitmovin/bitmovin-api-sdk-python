@@ -39,7 +39,8 @@ class Tenant(BitmovinResource):
         self._e_mail = None
         self.discriminator = None
 
-        self.e_mail = e_mail
+        if e_mail is not None:
+            self.e_mail = e_mail
 
     @property
     def e_mail(self):
@@ -66,7 +67,7 @@ class Tenant(BitmovinResource):
             if not isinstance(e_mail, str):
                 raise TypeError("Invalid type for `e_mail`, type has to be `str`")
 
-            self._e_mail = e_mail
+        self._e_mail = e_mail
 
     def to_dict(self):
         """Returns the model properties as a dict"""

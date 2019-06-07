@@ -308,7 +308,8 @@ class AnalyticsImpressionDetails(BitmovinResponse):
             self.error_message = error_message
         if experiment_name is not None:
             self.experiment_name = experiment_name
-        self.impression_id = impression_id
+        if impression_id is not None:
+            self.impression_id = impression_id
         if ip_address is not None:
             self.ip_address = ip_address
         if is_casting is not None:
@@ -421,7 +422,7 @@ class AnalyticsImpressionDetails(BitmovinResponse):
             if not isinstance(ad, int):
                 raise TypeError("Invalid type for `ad`, type has to be `int`")
 
-            self._ad = ad
+        self._ad = ad
 
 
     @property
@@ -449,7 +450,7 @@ class AnalyticsImpressionDetails(BitmovinResponse):
             if not isinstance(analytics_version, str):
                 raise TypeError("Invalid type for `analytics_version`, type has to be `str`")
 
-            self._analytics_version = analytics_version
+        self._analytics_version = analytics_version
 
 
     @property
@@ -477,7 +478,7 @@ class AnalyticsImpressionDetails(BitmovinResponse):
             if not isinstance(asn, int):
                 raise TypeError("Invalid type for `asn`, type has to be `int`")
 
-            self._asn = asn
+        self._asn = asn
 
 
     @property
@@ -505,7 +506,7 @@ class AnalyticsImpressionDetails(BitmovinResponse):
             if not isinstance(audio_bitrate, int):
                 raise TypeError("Invalid type for `audio_bitrate`, type has to be `int`")
 
-            self._audio_bitrate = audio_bitrate
+        self._audio_bitrate = audio_bitrate
 
 
     @property
@@ -533,7 +534,7 @@ class AnalyticsImpressionDetails(BitmovinResponse):
             if not isinstance(autoplay, bool):
                 raise TypeError("Invalid type for `autoplay`, type has to be `bool`")
 
-            self._autoplay = autoplay
+        self._autoplay = autoplay
 
 
     @property
@@ -561,7 +562,7 @@ class AnalyticsImpressionDetails(BitmovinResponse):
             if not isinstance(browser, str):
                 raise TypeError("Invalid type for `browser`, type has to be `str`")
 
-            self._browser = browser
+        self._browser = browser
 
 
     @property
@@ -589,7 +590,7 @@ class AnalyticsImpressionDetails(BitmovinResponse):
             if not isinstance(browser_version_major, str):
                 raise TypeError("Invalid type for `browser_version_major`, type has to be `str`")
 
-            self._browser_version_major = browser_version_major
+        self._browser_version_major = browser_version_major
 
 
     @property
@@ -617,7 +618,7 @@ class AnalyticsImpressionDetails(BitmovinResponse):
             if not isinstance(browser_version_minor, str):
                 raise TypeError("Invalid type for `browser_version_minor`, type has to be `str`")
 
-            self._browser_version_minor = browser_version_minor
+        self._browser_version_minor = browser_version_minor
 
 
     @property
@@ -645,7 +646,7 @@ class AnalyticsImpressionDetails(BitmovinResponse):
             if not isinstance(buffered, int):
                 raise TypeError("Invalid type for `buffered`, type has to be `int`")
 
-            self._buffered = buffered
+        self._buffered = buffered
 
 
     @property
@@ -673,7 +674,7 @@ class AnalyticsImpressionDetails(BitmovinResponse):
             if not isinstance(cdn_provider, str):
                 raise TypeError("Invalid type for `cdn_provider`, type has to be `str`")
 
-            self._cdn_provider = cdn_provider
+        self._cdn_provider = cdn_provider
 
 
     @property
@@ -701,7 +702,7 @@ class AnalyticsImpressionDetails(BitmovinResponse):
             if not isinstance(city, str):
                 raise TypeError("Invalid type for `city`, type has to be `str`")
 
-            self._city = city
+        self._city = city
 
 
     @property
@@ -729,7 +730,7 @@ class AnalyticsImpressionDetails(BitmovinResponse):
             if not isinstance(client_time, int):
                 raise TypeError("Invalid type for `client_time`, type has to be `int`")
 
-            self._client_time = client_time
+        self._client_time = client_time
 
 
     @property
@@ -757,7 +758,7 @@ class AnalyticsImpressionDetails(BitmovinResponse):
             if not isinstance(country, str):
                 raise TypeError("Invalid type for `country`, type has to be `str`")
 
-            self._country = country
+        self._country = country
 
 
     @property
@@ -785,7 +786,7 @@ class AnalyticsImpressionDetails(BitmovinResponse):
             if not isinstance(custom_user_id, str):
                 raise TypeError("Invalid type for `custom_user_id`, type has to be `str`")
 
-            self._custom_user_id = custom_user_id
+        self._custom_user_id = custom_user_id
 
 
     @property
@@ -813,7 +814,7 @@ class AnalyticsImpressionDetails(BitmovinResponse):
             if not isinstance(custom_data1, str):
                 raise TypeError("Invalid type for `custom_data1`, type has to be `str`")
 
-            self._custom_data1 = custom_data1
+        self._custom_data1 = custom_data1
 
 
     @property
@@ -841,7 +842,7 @@ class AnalyticsImpressionDetails(BitmovinResponse):
             if not isinstance(custom_data2, str):
                 raise TypeError("Invalid type for `custom_data2`, type has to be `str`")
 
-            self._custom_data2 = custom_data2
+        self._custom_data2 = custom_data2
 
 
     @property
@@ -869,7 +870,7 @@ class AnalyticsImpressionDetails(BitmovinResponse):
             if not isinstance(custom_data3, str):
                 raise TypeError("Invalid type for `custom_data3`, type has to be `str`")
 
-            self._custom_data3 = custom_data3
+        self._custom_data3 = custom_data3
 
 
     @property
@@ -897,7 +898,7 @@ class AnalyticsImpressionDetails(BitmovinResponse):
             if not isinstance(custom_data4, str):
                 raise TypeError("Invalid type for `custom_data4`, type has to be `str`")
 
-            self._custom_data4 = custom_data4
+        self._custom_data4 = custom_data4
 
 
     @property
@@ -925,7 +926,7 @@ class AnalyticsImpressionDetails(BitmovinResponse):
             if not isinstance(custom_data5, str):
                 raise TypeError("Invalid type for `custom_data5`, type has to be `str`")
 
-            self._custom_data5 = custom_data5
+        self._custom_data5 = custom_data5
 
 
     @property
@@ -953,7 +954,7 @@ class AnalyticsImpressionDetails(BitmovinResponse):
             if not isinstance(device_type, str):
                 raise TypeError("Invalid type for `device_type`, type has to be `str`")
 
-            self._device_type = device_type
+        self._device_type = device_type
 
 
     @property
@@ -981,7 +982,7 @@ class AnalyticsImpressionDetails(BitmovinResponse):
             if not isinstance(domain, str):
                 raise TypeError("Invalid type for `domain`, type has to be `str`")
 
-            self._domain = domain
+        self._domain = domain
 
 
     @property
@@ -1009,7 +1010,7 @@ class AnalyticsImpressionDetails(BitmovinResponse):
             if not isinstance(drm_load_time, int):
                 raise TypeError("Invalid type for `drm_load_time`, type has to be `int`")
 
-            self._drm_load_time = drm_load_time
+        self._drm_load_time = drm_load_time
 
 
     @property
@@ -1037,7 +1038,7 @@ class AnalyticsImpressionDetails(BitmovinResponse):
             if not isinstance(drm_type, str):
                 raise TypeError("Invalid type for `drm_type`, type has to be `str`")
 
-            self._drm_type = drm_type
+        self._drm_type = drm_type
 
 
     @property
@@ -1065,7 +1066,7 @@ class AnalyticsImpressionDetails(BitmovinResponse):
             if not isinstance(dropped_frames, int):
                 raise TypeError("Invalid type for `dropped_frames`, type has to be `int`")
 
-            self._dropped_frames = dropped_frames
+        self._dropped_frames = dropped_frames
 
 
     @property
@@ -1093,7 +1094,7 @@ class AnalyticsImpressionDetails(BitmovinResponse):
             if not isinstance(duration, int):
                 raise TypeError("Invalid type for `duration`, type has to be `int`")
 
-            self._duration = duration
+        self._duration = duration
 
 
     @property
@@ -1121,7 +1122,7 @@ class AnalyticsImpressionDetails(BitmovinResponse):
             if not isinstance(error_code, int):
                 raise TypeError("Invalid type for `error_code`, type has to be `int`")
 
-            self._error_code = error_code
+        self._error_code = error_code
 
 
     @property
@@ -1149,7 +1150,7 @@ class AnalyticsImpressionDetails(BitmovinResponse):
             if not isinstance(error_message, str):
                 raise TypeError("Invalid type for `error_message`, type has to be `str`")
 
-            self._error_message = error_message
+        self._error_message = error_message
 
 
     @property
@@ -1177,7 +1178,7 @@ class AnalyticsImpressionDetails(BitmovinResponse):
             if not isinstance(experiment_name, str):
                 raise TypeError("Invalid type for `experiment_name`, type has to be `str`")
 
-            self._experiment_name = experiment_name
+        self._experiment_name = experiment_name
 
 
     @property
@@ -1205,7 +1206,7 @@ class AnalyticsImpressionDetails(BitmovinResponse):
             if not isinstance(impression_id, str):
                 raise TypeError("Invalid type for `impression_id`, type has to be `str`")
 
-            self._impression_id = impression_id
+        self._impression_id = impression_id
 
 
     @property
@@ -1233,7 +1234,7 @@ class AnalyticsImpressionDetails(BitmovinResponse):
             if not isinstance(ip_address, str):
                 raise TypeError("Invalid type for `ip_address`, type has to be `str`")
 
-            self._ip_address = ip_address
+        self._ip_address = ip_address
 
 
     @property
@@ -1261,7 +1262,7 @@ class AnalyticsImpressionDetails(BitmovinResponse):
             if not isinstance(is_casting, bool):
                 raise TypeError("Invalid type for `is_casting`, type has to be `bool`")
 
-            self._is_casting = is_casting
+        self._is_casting = is_casting
 
 
     @property
@@ -1289,7 +1290,7 @@ class AnalyticsImpressionDetails(BitmovinResponse):
             if not isinstance(is_live, bool):
                 raise TypeError("Invalid type for `is_live`, type has to be `bool`")
 
-            self._is_live = is_live
+        self._is_live = is_live
 
 
     @property
@@ -1317,7 +1318,7 @@ class AnalyticsImpressionDetails(BitmovinResponse):
             if not isinstance(is_muted, bool):
                 raise TypeError("Invalid type for `is_muted`, type has to be `bool`")
 
-            self._is_muted = is_muted
+        self._is_muted = is_muted
 
 
     @property
@@ -1345,7 +1346,7 @@ class AnalyticsImpressionDetails(BitmovinResponse):
             if not isinstance(isp, str):
                 raise TypeError("Invalid type for `isp`, type has to be `str`")
 
-            self._isp = isp
+        self._isp = isp
 
 
     @property
@@ -1373,7 +1374,7 @@ class AnalyticsImpressionDetails(BitmovinResponse):
             if not isinstance(language, str):
                 raise TypeError("Invalid type for `language`, type has to be `str`")
 
-            self._language = language
+        self._language = language
 
 
     @property
@@ -1401,7 +1402,7 @@ class AnalyticsImpressionDetails(BitmovinResponse):
             if not isinstance(license_key, str):
                 raise TypeError("Invalid type for `license_key`, type has to be `str`")
 
-            self._license_key = license_key
+        self._license_key = license_key
 
 
     @property
@@ -1429,7 +1430,7 @@ class AnalyticsImpressionDetails(BitmovinResponse):
             if not isinstance(operating_system, str):
                 raise TypeError("Invalid type for `operating_system`, type has to be `str`")
 
-            self._operating_system = operating_system
+        self._operating_system = operating_system
 
 
     @property
@@ -1457,7 +1458,7 @@ class AnalyticsImpressionDetails(BitmovinResponse):
             if not isinstance(operating_system_version_major, str):
                 raise TypeError("Invalid type for `operating_system_version_major`, type has to be `str`")
 
-            self._operating_system_version_major = operating_system_version_major
+        self._operating_system_version_major = operating_system_version_major
 
 
     @property
@@ -1485,7 +1486,7 @@ class AnalyticsImpressionDetails(BitmovinResponse):
             if not isinstance(operating_system_version_minor, str):
                 raise TypeError("Invalid type for `operating_system_version_minor`, type has to be `str`")
 
-            self._operating_system_version_minor = operating_system_version_minor
+        self._operating_system_version_minor = operating_system_version_minor
 
 
     @property
@@ -1513,7 +1514,7 @@ class AnalyticsImpressionDetails(BitmovinResponse):
             if not isinstance(page_load_time, int):
                 raise TypeError("Invalid type for `page_load_time`, type has to be `int`")
 
-            self._page_load_time = page_load_time
+        self._page_load_time = page_load_time
 
 
     @property
@@ -1541,7 +1542,7 @@ class AnalyticsImpressionDetails(BitmovinResponse):
             if not isinstance(page_load_type, int):
                 raise TypeError("Invalid type for `page_load_type`, type has to be `int`")
 
-            self._page_load_type = page_load_type
+        self._page_load_type = page_load_type
 
 
     @property
@@ -1569,7 +1570,7 @@ class AnalyticsImpressionDetails(BitmovinResponse):
             if not isinstance(path, str):
                 raise TypeError("Invalid type for `path`, type has to be `str`")
 
-            self._path = path
+        self._path = path
 
 
     @property
@@ -1597,7 +1598,7 @@ class AnalyticsImpressionDetails(BitmovinResponse):
             if not isinstance(paused, int):
                 raise TypeError("Invalid type for `paused`, type has to be `int`")
 
-            self._paused = paused
+        self._paused = paused
 
 
     @property
@@ -1625,7 +1626,7 @@ class AnalyticsImpressionDetails(BitmovinResponse):
             if not isinstance(platform, str):
                 raise TypeError("Invalid type for `platform`, type has to be `str`")
 
-            self._platform = platform
+        self._platform = platform
 
 
     @property
@@ -1653,7 +1654,7 @@ class AnalyticsImpressionDetails(BitmovinResponse):
             if not isinstance(played, int):
                 raise TypeError("Invalid type for `played`, type has to be `int`")
 
-            self._played = played
+        self._played = played
 
 
     @property
@@ -1681,7 +1682,7 @@ class AnalyticsImpressionDetails(BitmovinResponse):
             if not isinstance(player, str):
                 raise TypeError("Invalid type for `player`, type has to be `str`")
 
-            self._player = player
+        self._player = player
 
 
     @property
@@ -1709,7 +1710,7 @@ class AnalyticsImpressionDetails(BitmovinResponse):
             if not isinstance(player_key, str):
                 raise TypeError("Invalid type for `player_key`, type has to be `str`")
 
-            self._player_key = player_key
+        self._player_key = player_key
 
 
     @property
@@ -1737,7 +1738,7 @@ class AnalyticsImpressionDetails(BitmovinResponse):
             if not isinstance(player_startuptime, int):
                 raise TypeError("Invalid type for `player_startuptime`, type has to be `int`")
 
-            self._player_startuptime = player_startuptime
+        self._player_startuptime = player_startuptime
 
 
     @property
@@ -1765,7 +1766,7 @@ class AnalyticsImpressionDetails(BitmovinResponse):
             if not isinstance(player_tech, str):
                 raise TypeError("Invalid type for `player_tech`, type has to be `str`")
 
-            self._player_tech = player_tech
+        self._player_tech = player_tech
 
 
     @property
@@ -1793,7 +1794,7 @@ class AnalyticsImpressionDetails(BitmovinResponse):
             if not isinstance(player_version, str):
                 raise TypeError("Invalid type for `player_version`, type has to be `str`")
 
-            self._player_version = player_version
+        self._player_version = player_version
 
 
     @property
@@ -1821,7 +1822,7 @@ class AnalyticsImpressionDetails(BitmovinResponse):
             if not isinstance(region, str):
                 raise TypeError("Invalid type for `region`, type has to be `str`")
 
-            self._region = region
+        self._region = region
 
 
     @property
@@ -1849,7 +1850,7 @@ class AnalyticsImpressionDetails(BitmovinResponse):
             if not isinstance(screen_height, int):
                 raise TypeError("Invalid type for `screen_height`, type has to be `int`")
 
-            self._screen_height = screen_height
+        self._screen_height = screen_height
 
 
     @property
@@ -1877,7 +1878,7 @@ class AnalyticsImpressionDetails(BitmovinResponse):
             if not isinstance(screen_width, int):
                 raise TypeError("Invalid type for `screen_width`, type has to be `int`")
 
-            self._screen_width = screen_width
+        self._screen_width = screen_width
 
 
     @property
@@ -1905,7 +1906,7 @@ class AnalyticsImpressionDetails(BitmovinResponse):
             if not isinstance(seeked, int):
                 raise TypeError("Invalid type for `seeked`, type has to be `int`")
 
-            self._seeked = seeked
+        self._seeked = seeked
 
 
     @property
@@ -1933,7 +1934,7 @@ class AnalyticsImpressionDetails(BitmovinResponse):
             if not isinstance(sequence_number, int):
                 raise TypeError("Invalid type for `sequence_number`, type has to be `int`")
 
-            self._sequence_number = sequence_number
+        self._sequence_number = sequence_number
 
 
     @property
@@ -1961,7 +1962,7 @@ class AnalyticsImpressionDetails(BitmovinResponse):
             if not isinstance(size, str):
                 raise TypeError("Invalid type for `size`, type has to be `str`")
 
-            self._size = size
+        self._size = size
 
 
     @property
@@ -1989,7 +1990,7 @@ class AnalyticsImpressionDetails(BitmovinResponse):
             if not isinstance(startup_time, int):
                 raise TypeError("Invalid type for `startup_time`, type has to be `int`")
 
-            self._startup_time = startup_time
+        self._startup_time = startup_time
 
 
     @property
@@ -2017,7 +2018,7 @@ class AnalyticsImpressionDetails(BitmovinResponse):
             if not isinstance(state, str):
                 raise TypeError("Invalid type for `state`, type has to be `str`")
 
-            self._state = state
+        self._state = state
 
 
     @property
@@ -2045,7 +2046,7 @@ class AnalyticsImpressionDetails(BitmovinResponse):
             if not isinstance(stream_format, str):
                 raise TypeError("Invalid type for `stream_format`, type has to be `str`")
 
-            self._stream_format = stream_format
+        self._stream_format = stream_format
 
 
     @property
@@ -2073,7 +2074,7 @@ class AnalyticsImpressionDetails(BitmovinResponse):
             if not isinstance(time, int):
                 raise TypeError("Invalid type for `time`, type has to be `int`")
 
-            self._time = time
+        self._time = time
 
 
     @property
@@ -2101,7 +2102,7 @@ class AnalyticsImpressionDetails(BitmovinResponse):
             if not isinstance(user_id, str):
                 raise TypeError("Invalid type for `user_id`, type has to be `str`")
 
-            self._user_id = user_id
+        self._user_id = user_id
 
 
     @property
@@ -2129,7 +2130,7 @@ class AnalyticsImpressionDetails(BitmovinResponse):
             if not isinstance(video_bitrate, int):
                 raise TypeError("Invalid type for `video_bitrate`, type has to be `int`")
 
-            self._video_bitrate = video_bitrate
+        self._video_bitrate = video_bitrate
 
 
     @property
@@ -2157,7 +2158,7 @@ class AnalyticsImpressionDetails(BitmovinResponse):
             if not isinstance(video_duration, int):
                 raise TypeError("Invalid type for `video_duration`, type has to be `int`")
 
-            self._video_duration = video_duration
+        self._video_duration = video_duration
 
 
     @property
@@ -2185,7 +2186,7 @@ class AnalyticsImpressionDetails(BitmovinResponse):
             if not isinstance(video_id, str):
                 raise TypeError("Invalid type for `video_id`, type has to be `str`")
 
-            self._video_id = video_id
+        self._video_id = video_id
 
 
     @property
@@ -2213,7 +2214,7 @@ class AnalyticsImpressionDetails(BitmovinResponse):
             if not isinstance(video_title, str):
                 raise TypeError("Invalid type for `video_title`, type has to be `str`")
 
-            self._video_title = video_title
+        self._video_title = video_title
 
 
     @property
@@ -2241,7 +2242,7 @@ class AnalyticsImpressionDetails(BitmovinResponse):
             if not isinstance(video_playback_height, int):
                 raise TypeError("Invalid type for `video_playback_height`, type has to be `int`")
 
-            self._video_playback_height = video_playback_height
+        self._video_playback_height = video_playback_height
 
 
     @property
@@ -2269,7 +2270,7 @@ class AnalyticsImpressionDetails(BitmovinResponse):
             if not isinstance(video_playback_width, int):
                 raise TypeError("Invalid type for `video_playback_width`, type has to be `int`")
 
-            self._video_playback_width = video_playback_width
+        self._video_playback_width = video_playback_width
 
 
     @property
@@ -2297,7 +2298,7 @@ class AnalyticsImpressionDetails(BitmovinResponse):
             if not isinstance(video_startup_time, int):
                 raise TypeError("Invalid type for `video_startup_time`, type has to be `int`")
 
-            self._video_startup_time = video_startup_time
+        self._video_startup_time = video_startup_time
 
 
     @property
@@ -2325,7 +2326,7 @@ class AnalyticsImpressionDetails(BitmovinResponse):
             if not isinstance(videotime_end, int):
                 raise TypeError("Invalid type for `videotime_end`, type has to be `int`")
 
-            self._videotime_end = videotime_end
+        self._videotime_end = videotime_end
 
 
     @property
@@ -2353,7 +2354,7 @@ class AnalyticsImpressionDetails(BitmovinResponse):
             if not isinstance(videotime_start, int):
                 raise TypeError("Invalid type for `videotime_start`, type has to be `int`")
 
-            self._videotime_start = videotime_start
+        self._videotime_start = videotime_start
 
 
     @property
@@ -2381,7 +2382,7 @@ class AnalyticsImpressionDetails(BitmovinResponse):
             if not isinstance(video_window_height, int):
                 raise TypeError("Invalid type for `video_window_height`, type has to be `int`")
 
-            self._video_window_height = video_window_height
+        self._video_window_height = video_window_height
 
 
     @property
@@ -2409,7 +2410,7 @@ class AnalyticsImpressionDetails(BitmovinResponse):
             if not isinstance(video_window_width, int):
                 raise TypeError("Invalid type for `video_window_width`, type has to be `int`")
 
-            self._video_window_width = video_window_width
+        self._video_window_width = video_window_width
 
     def to_dict(self):
         """Returns the model properties as a dict"""

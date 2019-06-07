@@ -72,7 +72,7 @@ class SubtitleStream(MediaStream):
             if not isinstance(language, str):
                 raise TypeError("Invalid type for `language`, type has to be `str`")
 
-            self._language = language
+        self._language = language
 
 
     @property
@@ -100,7 +100,7 @@ class SubtitleStream(MediaStream):
             if not isinstance(hearing_impaired, bool):
                 raise TypeError("Invalid type for `hearing_impaired`, type has to be `bool`")
 
-            self._hearing_impaired = hearing_impaired
+        self._hearing_impaired = hearing_impaired
 
     def to_dict(self):
         """Returns the model properties as a dict"""

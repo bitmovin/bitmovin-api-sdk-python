@@ -68,7 +68,7 @@ class AnalyticsPercentileQueryRequest(AnalyticsQueryRequest):
             if not isinstance(percentile, int):
                 raise TypeError("Invalid type for `percentile`, type has to be `int`")
 
-            self._percentile = percentile
+        self._percentile = percentile
 
     def to_dict(self):
         """Returns the model properties as a dict"""

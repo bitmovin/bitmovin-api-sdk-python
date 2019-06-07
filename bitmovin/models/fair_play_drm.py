@@ -45,8 +45,10 @@ class FairPlayDrm(Drm):
         self._uri = None
         self.discriminator = None
 
-        self.key = key
-        self.iv = iv
+        if key is not None:
+            self.key = key
+        if iv is not None:
+            self.iv = iv
         if uri is not None:
             self.uri = uri
 
@@ -75,7 +77,7 @@ class FairPlayDrm(Drm):
             if not isinstance(key, str):
                 raise TypeError("Invalid type for `key`, type has to be `str`")
 
-            self._key = key
+        self._key = key
 
 
     @property
@@ -103,7 +105,7 @@ class FairPlayDrm(Drm):
             if not isinstance(iv, str):
                 raise TypeError("Invalid type for `iv`, type has to be `str`")
 
-            self._iv = iv
+        self._iv = iv
 
 
     @property
@@ -131,7 +133,7 @@ class FairPlayDrm(Drm):
             if not isinstance(uri, str):
                 raise TypeError("Invalid type for `uri`, type has to be `str`")
 
-            self._uri = uri
+        self._uri = uri
 
     def to_dict(self):
         """Returns the model properties as a dict"""

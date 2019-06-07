@@ -44,7 +44,8 @@ class AudioMixInputStreamChannel(object):
 
         if input_stream_id is not None:
             self.input_stream_id = input_stream_id
-        self.output_channel_type = output_channel_type
+        if output_channel_type is not None:
+            self.output_channel_type = output_channel_type
         if output_channel_number is not None:
             self.output_channel_number = output_channel_number
 
@@ -73,7 +74,7 @@ class AudioMixInputStreamChannel(object):
             if not isinstance(input_stream_id, str):
                 raise TypeError("Invalid type for `input_stream_id`, type has to be `str`")
 
-            self._input_stream_id = input_stream_id
+        self._input_stream_id = input_stream_id
 
 
     @property
@@ -99,7 +100,7 @@ class AudioMixInputStreamChannel(object):
             if not isinstance(output_channel_type, AudioMixChannelType):
                 raise TypeError("Invalid type for `output_channel_type`, type has to be `AudioMixChannelType`")
 
-            self._output_channel_type = output_channel_type
+        self._output_channel_type = output_channel_type
 
 
     @property
@@ -127,7 +128,7 @@ class AudioMixInputStreamChannel(object):
             if not isinstance(output_channel_number, int):
                 raise TypeError("Invalid type for `output_channel_number`, type has to be `int`")
 
-            self._output_channel_number = output_channel_number
+        self._output_channel_number = output_channel_number
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -59,10 +59,10 @@ class AutoRepresentation(object):
         """
 
         if adopt_configuration_threshold is not None:
-            if not isinstance(adopt_configuration_threshold, float):
+            if not isinstance(adopt_configuration_threshold, (float, int)):
                 raise TypeError("Invalid type for `adopt_configuration_threshold`, type has to be `float`")
 
-            self._adopt_configuration_threshold = adopt_configuration_threshold
+        self._adopt_configuration_threshold = adopt_configuration_threshold
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -1,2 +1,3 @@
 from bitmovin.encoding.filters.deinterlace.deinterlace_api import DeinterlaceApi
 from bitmovin.encoding.filters.deinterlace.customdata.customdata_api import CustomdataApi
+from bitmovin.encoding.filters.deinterlace.deinterlace_filter_list_query_params import DeinterlaceFilterListQueryParams

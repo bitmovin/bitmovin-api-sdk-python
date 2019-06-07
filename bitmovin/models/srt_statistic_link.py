@@ -67,10 +67,10 @@ class SrtStatisticLink(object):
         """
 
         if bandwidth is not None:
-            if not isinstance(bandwidth, float):
+            if not isinstance(bandwidth, (float, int)):
                 raise TypeError("Invalid type for `bandwidth`, type has to be `float`")
 
-            self._bandwidth = bandwidth
+        self._bandwidth = bandwidth
 
 
     @property
@@ -93,10 +93,10 @@ class SrtStatisticLink(object):
         """
 
         if max_bandwidth is not None:
-            if not isinstance(max_bandwidth, float):
+            if not isinstance(max_bandwidth, (float, int)):
                 raise TypeError("Invalid type for `max_bandwidth`, type has to be `float`")
 
-            self._max_bandwidth = max_bandwidth
+        self._max_bandwidth = max_bandwidth
 
 
     @property
@@ -119,10 +119,10 @@ class SrtStatisticLink(object):
         """
 
         if rtt is not None:
-            if not isinstance(rtt, float):
+            if not isinstance(rtt, (float, int)):
                 raise TypeError("Invalid type for `rtt`, type has to be `float`")
 
-            self._rtt = rtt
+        self._rtt = rtt
 
     def to_dict(self):
         """Returns the model properties as a dict"""

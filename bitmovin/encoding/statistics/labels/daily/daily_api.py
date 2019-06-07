@@ -8,8 +8,8 @@ from bitmovin.common.poscheck import poscheck_except
 from bitmovin.models.daily_statistics_per_label import DailyStatisticsPerLabel
 from bitmovin.models.response_envelope import ResponseEnvelope
 from bitmovin.models.response_error import ResponseError
-from bitmovin.encoding.statistics.labels.daily.daily_statistics_per_label_list_by_date_range_query_params import DailyStatisticsPerLabelListByDateRangeQueryParams
 from bitmovin.encoding.statistics.labels.daily.daily_statistics_per_label_list_query_params import DailyStatisticsPerLabelListQueryParams
+from bitmovin.encoding.statistics.labels.daily.daily_statistics_per_label_list_by_date_range_query_params import DailyStatisticsPerLabelListByDateRangeQueryParams
 
 
 class DailyApi(BaseApi):

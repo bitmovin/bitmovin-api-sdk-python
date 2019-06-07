@@ -43,8 +43,10 @@ class FrameIdId3Tag(Id3Tag):
         self._frame_id = None
         self.discriminator = None
 
-        self.bytes = bytes
-        self.frame_id = frame_id
+        if bytes is not None:
+            self.bytes = bytes
+        if frame_id is not None:
+            self.frame_id = frame_id
 
     @property
     def bytes(self):
@@ -71,7 +73,7 @@ class FrameIdId3Tag(Id3Tag):
             if not isinstance(bytes, str):
                 raise TypeError("Invalid type for `bytes`, type has to be `str`")
 
-            self._bytes = bytes
+        self._bytes = bytes
 
 
     @property
@@ -99,7 +101,7 @@ class FrameIdId3Tag(Id3Tag):
             if not isinstance(frame_id, str):
                 raise TypeError("Invalid type for `frame_id`, type has to be `str`")
 
-            self._frame_id = frame_id
+        self._frame_id = frame_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

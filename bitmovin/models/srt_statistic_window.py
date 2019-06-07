@@ -70,7 +70,7 @@ class SrtStatisticWindow(object):
             if not isinstance(congestion, int):
                 raise TypeError("Invalid type for `congestion`, type has to be `int`")
 
-            self._congestion = congestion
+        self._congestion = congestion
 
 
     @property
@@ -96,7 +96,7 @@ class SrtStatisticWindow(object):
             if not isinstance(flight, int):
                 raise TypeError("Invalid type for `flight`, type has to be `int`")
 
-            self._flight = flight
+        self._flight = flight
 
 
     @property
@@ -122,7 +122,7 @@ class SrtStatisticWindow(object):
             if not isinstance(flow, int):
                 raise TypeError("Invalid type for `flow`, type has to be `int`")
 
-            self._flow = flow
+        self._flow = flow
 
     def to_dict(self):
         """Returns the model properties as a dict"""

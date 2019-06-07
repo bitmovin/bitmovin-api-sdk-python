@@ -63,8 +63,10 @@ class VideoStream(MediaStream):
             self.bitrate = bitrate
         if rate is not None:
             self.rate = rate
-        self.width = width
-        self.height = height
+        if width is not None:
+            self.width = width
+        if height is not None:
+            self.height = height
         if par is not None:
             self.par = par
         if rotation is not None:
@@ -95,7 +97,7 @@ class VideoStream(MediaStream):
             if not isinstance(fps, str):
                 raise TypeError("Invalid type for `fps`, type has to be `str`")
 
-            self._fps = fps
+        self._fps = fps
 
 
     @property
@@ -123,7 +125,7 @@ class VideoStream(MediaStream):
             if not isinstance(bitrate, str):
                 raise TypeError("Invalid type for `bitrate`, type has to be `str`")
 
-            self._bitrate = bitrate
+        self._bitrate = bitrate
 
 
     @property
@@ -151,7 +153,7 @@ class VideoStream(MediaStream):
             if not isinstance(rate, int):
                 raise TypeError("Invalid type for `rate`, type has to be `int`")
 
-            self._rate = rate
+        self._rate = rate
 
 
     @property
@@ -179,7 +181,7 @@ class VideoStream(MediaStream):
             if not isinstance(width, int):
                 raise TypeError("Invalid type for `width`, type has to be `int`")
 
-            self._width = width
+        self._width = width
 
 
     @property
@@ -207,7 +209,7 @@ class VideoStream(MediaStream):
             if not isinstance(height, int):
                 raise TypeError("Invalid type for `height`, type has to be `int`")
 
-            self._height = height
+        self._height = height
 
 
     @property
@@ -232,10 +234,10 @@ class VideoStream(MediaStream):
         """
 
         if par is not None:
-            if not isinstance(par, float):
+            if not isinstance(par, (float, int)):
                 raise TypeError("Invalid type for `par`, type has to be `float`")
 
-            self._par = par
+        self._par = par
 
 
     @property
@@ -263,7 +265,7 @@ class VideoStream(MediaStream):
             if not isinstance(rotation, int):
                 raise TypeError("Invalid type for `rotation`, type has to be `int`")
 
-            self._rotation = rotation
+        self._rotation = rotation
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -82,10 +82,10 @@ class BroadcastTsMuxing(Muxing):
         """
 
         if segment_length is not None:
-            if not isinstance(segment_length, float):
+            if not isinstance(segment_length, (float, int)):
                 raise TypeError("Invalid type for `segment_length`, type has to be `float`")
 
-            self._segment_length = segment_length
+        self._segment_length = segment_length
 
 
     @property
@@ -113,7 +113,7 @@ class BroadcastTsMuxing(Muxing):
             if not isinstance(filename, str):
                 raise TypeError("Invalid type for `filename`, type has to be `str`")
 
-            self._filename = filename
+        self._filename = filename
 
 
     @property
@@ -139,7 +139,7 @@ class BroadcastTsMuxing(Muxing):
             if not isinstance(configuration, BroadcastTsMuxingConfiguration):
                 raise TypeError("Invalid type for `configuration`, type has to be `BroadcastTsMuxingConfiguration`")
 
-            self._configuration = configuration
+        self._configuration = configuration
 
 
     @property
@@ -167,7 +167,7 @@ class BroadcastTsMuxing(Muxing):
             if not isinstance(internal_chunk_length, InternalChunkLength):
                 raise TypeError("Invalid type for `internal_chunk_length`, type has to be `InternalChunkLength`")
 
-            self._internal_chunk_length = internal_chunk_length
+        self._internal_chunk_length = internal_chunk_length
 
     def to_dict(self):
         """Returns the model properties as a dict"""

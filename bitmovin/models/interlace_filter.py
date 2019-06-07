@@ -72,7 +72,7 @@ class InterlaceFilter(Filter):
             if not isinstance(mode, InterlaceMode):
                 raise TypeError("Invalid type for `mode`, type has to be `InterlaceMode`")
 
-            self._mode = mode
+        self._mode = mode
 
 
     @property
@@ -98,7 +98,7 @@ class InterlaceFilter(Filter):
             if not isinstance(vertical_low_pass_filtering_mode, VerticalLowPassFilteringMode):
                 raise TypeError("Invalid type for `vertical_low_pass_filtering_mode`, type has to be `VerticalLowPassFilteringMode`")
 
-            self._vertical_low_pass_filtering_mode = vertical_low_pass_filtering_mode
+        self._vertical_low_pass_filtering_mode = vertical_low_pass_filtering_mode
 
     def to_dict(self):
         """Returns the model properties as a dict"""

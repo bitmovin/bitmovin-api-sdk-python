@@ -95,7 +95,7 @@ class PerTitleConfiguration(object):
             if not isinstance(min_bitrate, int):
                 raise TypeError("Invalid type for `min_bitrate`, type has to be `int`")
 
-            self._min_bitrate = min_bitrate
+        self._min_bitrate = min_bitrate
 
 
     @property
@@ -123,7 +123,7 @@ class PerTitleConfiguration(object):
             if not isinstance(max_bitrate, int):
                 raise TypeError("Invalid type for `max_bitrate`, type has to be `int`")
 
-            self._max_bitrate = max_bitrate
+        self._max_bitrate = max_bitrate
 
 
     @property
@@ -148,10 +148,10 @@ class PerTitleConfiguration(object):
         """
 
         if min_bitrate_step_size is not None:
-            if not isinstance(min_bitrate_step_size, float):
+            if not isinstance(min_bitrate_step_size, (float, int)):
                 raise TypeError("Invalid type for `min_bitrate_step_size`, type has to be `float`")
 
-            self._min_bitrate_step_size = min_bitrate_step_size
+        self._min_bitrate_step_size = min_bitrate_step_size
 
 
     @property
@@ -176,10 +176,10 @@ class PerTitleConfiguration(object):
         """
 
         if max_bitrate_step_size is not None:
-            if not isinstance(max_bitrate_step_size, float):
+            if not isinstance(max_bitrate_step_size, (float, int)):
                 raise TypeError("Invalid type for `max_bitrate_step_size`, type has to be `float`")
 
-            self._max_bitrate_step_size = max_bitrate_step_size
+        self._max_bitrate_step_size = max_bitrate_step_size
 
 
     @property
@@ -205,7 +205,7 @@ class PerTitleConfiguration(object):
             if not isinstance(auto_representations, AutoRepresentation):
                 raise TypeError("Invalid type for `auto_representations`, type has to be `AutoRepresentation`")
 
-            self._auto_representations = auto_representations
+        self._auto_representations = auto_representations
 
 
     @property
@@ -232,10 +232,10 @@ class PerTitleConfiguration(object):
         if complexity_factor is not None:
             if complexity_factor is not None and complexity_factor <= 0:
                 raise ValueError("Invalid value for `complexity_factor`, must be a value greater than `0`")
-            if not isinstance(complexity_factor, float):
+            if not isinstance(complexity_factor, (float, int)):
                 raise TypeError("Invalid type for `complexity_factor`, type has to be `float`")
 
-            self._complexity_factor = complexity_factor
+        self._complexity_factor = complexity_factor
 
 
     @property
@@ -263,7 +263,7 @@ class PerTitleConfiguration(object):
             if not isinstance(fixed_resolution_and_bitrate_configuration, PerTitleFixedResolutionAndBitrateConfiguration):
                 raise TypeError("Invalid type for `fixed_resolution_and_bitrate_configuration`, type has to be `PerTitleFixedResolutionAndBitrateConfiguration`")
 
-            self._fixed_resolution_and_bitrate_configuration = fixed_resolution_and_bitrate_configuration
+        self._fixed_resolution_and_bitrate_configuration = fixed_resolution_and_bitrate_configuration
 
     def to_dict(self):
         """Returns the model properties as a dict"""

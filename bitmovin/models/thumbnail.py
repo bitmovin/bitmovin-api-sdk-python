@@ -47,15 +47,17 @@ class Thumbnail(BitmovinResource):
 
         self._height = None
         self._pattern = None
-        self._positions = None
-        self._outputs = None
+        self._positions = list()
+        self._outputs = list()
         self._unit = None
         self.discriminator = None
 
-        self.height = height
+        if height is not None:
+            self.height = height
         if pattern is not None:
             self.pattern = pattern
-        self.positions = positions
+        if positions is not None:
+            self.positions = positions
         if outputs is not None:
             self.outputs = outputs
         if unit is not None:
@@ -86,7 +88,7 @@ class Thumbnail(BitmovinResource):
             if not isinstance(height, int):
                 raise TypeError("Invalid type for `height`, type has to be `int`")
 
-            self._height = height
+        self._height = height
 
 
     @property
@@ -114,7 +116,7 @@ class Thumbnail(BitmovinResource):
             if not isinstance(pattern, str):
                 raise TypeError("Invalid type for `pattern`, type has to be `str`")
 
-            self._pattern = pattern
+        self._pattern = pattern
 
 
     @property
@@ -142,7 +144,7 @@ class Thumbnail(BitmovinResource):
             if not isinstance(positions, list):
                 raise TypeError("Invalid type for `positions`, type has to be `list[float]`")
 
-            self._positions = positions
+        self._positions = positions
 
 
     @property
@@ -168,7 +170,7 @@ class Thumbnail(BitmovinResource):
             if not isinstance(outputs, list):
                 raise TypeError("Invalid type for `outputs`, type has to be `list[EncodingOutput]`")
 
-            self._outputs = outputs
+        self._outputs = outputs
 
 
     @property
@@ -194,7 +196,7 @@ class Thumbnail(BitmovinResource):
             if not isinstance(unit, ThumbnailUnit):
                 raise TypeError("Invalid type for `unit`, type has to be `ThumbnailUnit`")
 
-            self._unit = unit
+        self._unit = unit
 
     def to_dict(self):
         """Returns the model properties as a dict"""

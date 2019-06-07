@@ -68,13 +68,18 @@ class AnalyticsExportTask(BitmovinResponse):
         self._finished_at = None
         self.discriminator = None
 
-        self.start_time = start_time
-        self.end_time = end_time
-        self.name = name
+        if start_time is not None:
+            self.start_time = start_time
+        if end_time is not None:
+            self.end_time = end_time
+        if name is not None:
+            self.name = name
         if description is not None:
             self.description = description
-        self.license_key = license_key
-        self.output = output
+        if license_key is not None:
+            self.license_key = license_key
+        if output is not None:
+            self.output = output
         if progress is not None:
             self.progress = progress
         if status is not None:
@@ -109,7 +114,7 @@ class AnalyticsExportTask(BitmovinResponse):
             if not isinstance(start_time, datetime):
                 raise TypeError("Invalid type for `start_time`, type has to be `datetime`")
 
-            self._start_time = start_time
+        self._start_time = start_time
 
 
     @property
@@ -137,7 +142,7 @@ class AnalyticsExportTask(BitmovinResponse):
             if not isinstance(end_time, datetime):
                 raise TypeError("Invalid type for `end_time`, type has to be `datetime`")
 
-            self._end_time = end_time
+        self._end_time = end_time
 
 
     @property
@@ -165,7 +170,7 @@ class AnalyticsExportTask(BitmovinResponse):
             if not isinstance(name, str):
                 raise TypeError("Invalid type for `name`, type has to be `str`")
 
-            self._name = name
+        self._name = name
 
 
     @property
@@ -193,7 +198,7 @@ class AnalyticsExportTask(BitmovinResponse):
             if not isinstance(description, str):
                 raise TypeError("Invalid type for `description`, type has to be `str`")
 
-            self._description = description
+        self._description = description
 
 
     @property
@@ -221,7 +226,7 @@ class AnalyticsExportTask(BitmovinResponse):
             if not isinstance(license_key, str):
                 raise TypeError("Invalid type for `license_key`, type has to be `str`")
 
-            self._license_key = license_key
+        self._license_key = license_key
 
 
     @property
@@ -247,7 +252,7 @@ class AnalyticsExportTask(BitmovinResponse):
             if not isinstance(output, AnalyticsExportTaskOutputTarget):
                 raise TypeError("Invalid type for `output`, type has to be `AnalyticsExportTaskOutputTarget`")
 
-            self._output = output
+        self._output = output
 
 
     @property
@@ -275,7 +280,7 @@ class AnalyticsExportTask(BitmovinResponse):
             if not isinstance(progress, int):
                 raise TypeError("Invalid type for `progress`, type has to be `int`")
 
-            self._progress = progress
+        self._progress = progress
 
 
     @property
@@ -301,7 +306,7 @@ class AnalyticsExportTask(BitmovinResponse):
             if not isinstance(status, AnalyticsExportStatus):
                 raise TypeError("Invalid type for `status`, type has to be `AnalyticsExportStatus`")
 
-            self._status = status
+        self._status = status
 
 
     @property
@@ -329,7 +334,7 @@ class AnalyticsExportTask(BitmovinResponse):
             if not isinstance(started_at, datetime):
                 raise TypeError("Invalid type for `started_at`, type has to be `datetime`")
 
-            self._started_at = started_at
+        self._started_at = started_at
 
 
     @property
@@ -357,7 +362,7 @@ class AnalyticsExportTask(BitmovinResponse):
             if not isinstance(finished_at, datetime):
                 raise TypeError("Invalid type for `finished_at`, type has to be `datetime`")
 
-            self._finished_at = finished_at
+        self._finished_at = finished_at
 
     def to_dict(self):
         """Returns the model properties as a dict"""

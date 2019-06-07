@@ -50,13 +50,15 @@ class Message(BitmovinResponse):
         self._type = None
         self._text = None
         self._field = None
-        self._links = None
+        self._links = list()
         self._more = None
         self._date = None
         self.discriminator = None
 
-        self.type = type
-        self.text = text
+        if type is not None:
+            self.type = type
+        if text is not None:
+            self.text = text
         if field is not None:
             self.field = field
         if links is not None:
@@ -91,7 +93,7 @@ class Message(BitmovinResponse):
             if not isinstance(type, MessageType):
                 raise TypeError("Invalid type for `type`, type has to be `MessageType`")
 
-            self._type = type
+        self._type = type
 
 
     @property
@@ -119,7 +121,7 @@ class Message(BitmovinResponse):
             if not isinstance(text, str):
                 raise TypeError("Invalid type for `text`, type has to be `str`")
 
-            self._text = text
+        self._text = text
 
 
     @property
@@ -147,7 +149,7 @@ class Message(BitmovinResponse):
             if not isinstance(field, str):
                 raise TypeError("Invalid type for `field`, type has to be `str`")
 
-            self._field = field
+        self._field = field
 
 
     @property
@@ -175,7 +177,7 @@ class Message(BitmovinResponse):
             if not isinstance(links, list):
                 raise TypeError("Invalid type for `links`, type has to be `list[Link]`")
 
-            self._links = links
+        self._links = links
 
 
     @property
@@ -203,7 +205,7 @@ class Message(BitmovinResponse):
             if not isinstance(more, object):
                 raise TypeError("Invalid type for `more`, type has to be `object`")
 
-            self._more = more
+        self._more = more
 
 
     @property
@@ -231,7 +233,7 @@ class Message(BitmovinResponse):
             if not isinstance(date, datetime):
                 raise TypeError("Invalid type for `date`, type has to be `datetime`")
 
-            self._date = date
+        self._date = date
 
     def to_dict(self):
         """Returns the model properties as a dict"""

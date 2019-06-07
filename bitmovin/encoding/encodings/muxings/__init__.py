@@ -10,3 +10,4 @@ from bitmovin.encoding.encodings.muxings.progressiveTs.progressive_ts_api import
 from bitmovin.encoding.encodings.muxings.broadcastTs.broadcast_ts_api import BroadcastTsApi
 from bitmovin.encoding.encodings.muxings.progressiveWebm.progressive_webm_api import ProgressiveWebmApi
 from bitmovin.encoding.encodings.muxings.progressiveMov.progressive_mov_api import ProgressiveMovApi
+from bitmovin.encoding.encodings.muxings.muxing_list_query_params import MuxingListQueryParams

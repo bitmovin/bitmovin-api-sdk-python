@@ -93,7 +93,7 @@ class PlayReadyDrm(Drm):
             if not isinstance(key, str):
                 raise TypeError("Invalid type for `key`, type has to be `str`")
 
-            self._key = key
+        self._key = key
 
 
     @property
@@ -121,7 +121,7 @@ class PlayReadyDrm(Drm):
             if not isinstance(key_seed, str):
                 raise TypeError("Invalid type for `key_seed`, type has to be `str`")
 
-            self._key_seed = key_seed
+        self._key_seed = key_seed
 
 
     @property
@@ -149,7 +149,7 @@ class PlayReadyDrm(Drm):
             if not isinstance(la_url, str):
                 raise TypeError("Invalid type for `la_url`, type has to be `str`")
 
-            self._la_url = la_url
+        self._la_url = la_url
 
 
     @property
@@ -177,7 +177,7 @@ class PlayReadyDrm(Drm):
             if not isinstance(pssh, str):
                 raise TypeError("Invalid type for `pssh`, type has to be `str`")
 
-            self._pssh = pssh
+        self._pssh = pssh
 
 
     @property
@@ -203,7 +203,7 @@ class PlayReadyDrm(Drm):
             if not isinstance(method, PlayReadyEncryptionMethod):
                 raise TypeError("Invalid type for `method`, type has to be `PlayReadyEncryptionMethod`")
 
-            self._method = method
+        self._method = method
 
 
     @property
@@ -231,7 +231,7 @@ class PlayReadyDrm(Drm):
             if not isinstance(kid, str):
                 raise TypeError("Invalid type for `kid`, type has to be `str`")
 
-            self._kid = kid
+        self._kid = kid
 
     def to_dict(self):
         """Returns the model properties as a dict"""

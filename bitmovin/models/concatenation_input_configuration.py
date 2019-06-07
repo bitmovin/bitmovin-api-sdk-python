@@ -72,7 +72,7 @@ class ConcatenationInputConfiguration(object):
             if not isinstance(input_stream_id, str):
                 raise TypeError("Invalid type for `input_stream_id`, type has to be `str`")
 
-            self._input_stream_id = input_stream_id
+        self._input_stream_id = input_stream_id
 
 
     @property
@@ -100,7 +100,7 @@ class ConcatenationInputConfiguration(object):
             if not isinstance(is_main, bool):
                 raise TypeError("Invalid type for `is_main`, type has to be `bool`")
 
-            self._is_main = is_main
+        self._is_main = is_main
 
 
     @property
@@ -128,7 +128,7 @@ class ConcatenationInputConfiguration(object):
             if not isinstance(position, int):
                 raise TypeError("Invalid type for `position`, type has to be `int`")
 
-            self._position = position
+        self._position = position
 
     def to_dict(self):
         """Returns the model properties as a dict"""

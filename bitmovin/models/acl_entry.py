@@ -41,7 +41,8 @@ class AclEntry(object):
 
         if scope is not None:
             self.scope = scope
-        self.permission = permission
+        if permission is not None:
+            self.permission = permission
 
     @property
     def scope(self):
@@ -66,7 +67,7 @@ class AclEntry(object):
             if not isinstance(scope, str):
                 raise TypeError("Invalid type for `scope`, type has to be `str`")
 
-            self._scope = scope
+        self._scope = scope
 
 
     @property
@@ -92,7 +93,7 @@ class AclEntry(object):
             if not isinstance(permission, AclPermission):
                 raise TypeError("Invalid type for `permission`, type has to be `AclPermission`")
 
-            self._permission = permission
+        self._permission = permission
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -42,13 +42,16 @@ class ResponseErrorData(object):
         self._code = None
         self._message = None
         self._developer_message = None
-        self._links = None
-        self._details = None
+        self._links = list()
+        self._details = list()
         self.discriminator = None
 
-        self.code = code
-        self.message = message
-        self.developer_message = developer_message
+        if code is not None:
+            self.code = code
+        if message is not None:
+            self.message = message
+        if developer_message is not None:
+            self.developer_message = developer_message
         if links is not None:
             self.links = links
         if details is not None:
@@ -79,7 +82,7 @@ class ResponseErrorData(object):
             if not isinstance(code, int):
                 raise TypeError("Invalid type for `code`, type has to be `int`")
 
-            self._code = code
+        self._code = code
 
 
     @property
@@ -107,7 +110,7 @@ class ResponseErrorData(object):
             if not isinstance(message, str):
                 raise TypeError("Invalid type for `message`, type has to be `str`")
 
-            self._message = message
+        self._message = message
 
 
     @property
@@ -135,7 +138,7 @@ class ResponseErrorData(object):
             if not isinstance(developer_message, str):
                 raise TypeError("Invalid type for `developer_message`, type has to be `str`")
 
-            self._developer_message = developer_message
+        self._developer_message = developer_message
 
 
     @property
@@ -163,7 +166,7 @@ class ResponseErrorData(object):
             if not isinstance(links, list):
                 raise TypeError("Invalid type for `links`, type has to be `list[Link]`")
 
-            self._links = links
+        self._links = links
 
 
     @property
@@ -191,7 +194,7 @@ class ResponseErrorData(object):
             if not isinstance(details, list):
                 raise TypeError("Invalid type for `details`, type has to be `list[Message]`")
 
-            self._details = details
+        self._details = details
 
     def to_dict(self):
         """Returns the model properties as a dict"""

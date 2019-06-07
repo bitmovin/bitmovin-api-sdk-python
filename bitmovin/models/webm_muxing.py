@@ -52,7 +52,8 @@ class WebmMuxing(Muxing):
         self._init_segment_name_template = None
         self.discriminator = None
 
-        self.segment_length = segment_length
+        if segment_length is not None:
+            self.segment_length = segment_length
         if segment_naming is not None:
             self.segment_naming = segment_naming
         if segment_naming_template is not None:
@@ -84,10 +85,10 @@ class WebmMuxing(Muxing):
         """
 
         if segment_length is not None:
-            if not isinstance(segment_length, float):
+            if not isinstance(segment_length, (float, int)):
                 raise TypeError("Invalid type for `segment_length`, type has to be `float`")
 
-            self._segment_length = segment_length
+        self._segment_length = segment_length
 
 
     @property
@@ -115,7 +116,7 @@ class WebmMuxing(Muxing):
             if not isinstance(segment_naming, str):
                 raise TypeError("Invalid type for `segment_naming`, type has to be `str`")
 
-            self._segment_naming = segment_naming
+        self._segment_naming = segment_naming
 
 
     @property
@@ -143,7 +144,7 @@ class WebmMuxing(Muxing):
             if not isinstance(segment_naming_template, str):
                 raise TypeError("Invalid type for `segment_naming_template`, type has to be `str`")
 
-            self._segment_naming_template = segment_naming_template
+        self._segment_naming_template = segment_naming_template
 
 
     @property
@@ -171,7 +172,7 @@ class WebmMuxing(Muxing):
             if not isinstance(init_segment_name, str):
                 raise TypeError("Invalid type for `init_segment_name`, type has to be `str`")
 
-            self._init_segment_name = init_segment_name
+        self._init_segment_name = init_segment_name
 
 
     @property
@@ -199,7 +200,7 @@ class WebmMuxing(Muxing):
             if not isinstance(init_segment_name_template, str):
                 raise TypeError("Invalid type for `init_segment_name_template`, type has to be `str`")
 
-            self._init_segment_name_template = init_segment_name_template
+        self._init_segment_name_template = init_segment_name_template
 
     def to_dict(self):
         """Returns the model properties as a dict"""

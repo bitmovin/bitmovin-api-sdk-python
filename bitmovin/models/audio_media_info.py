@@ -67,7 +67,7 @@ class AudioMediaInfo(StandardMediaInfo):
             if not isinstance(forced, bool):
                 raise TypeError("Invalid type for `forced`, type has to be `bool`")
 
-            self._forced = forced
+        self._forced = forced
 
     def to_dict(self):
         """Returns the model properties as a dict"""

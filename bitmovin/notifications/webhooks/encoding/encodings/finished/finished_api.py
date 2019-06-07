@@ -10,8 +10,8 @@ from bitmovin.models.response_envelope import ResponseEnvelope
 from bitmovin.models.response_error import ResponseError
 from bitmovin.models.webhook import Webhook
 from bitmovin.notifications.webhooks.encoding.encodings.finished.customdata.customdata_api import CustomdataApi
-from bitmovin.notifications.webhooks.encoding.encodings.finished.webhook_list_by_encoding_id_query_params import WebhookListByEncodingIdQueryParams
 from bitmovin.notifications.webhooks.encoding.encodings.finished.webhook_list_query_params import WebhookListQueryParams
+from bitmovin.notifications.webhooks.encoding.encodings.finished.webhook_list_by_encoding_id_query_params import WebhookListByEncodingIdQueryParams
 
 
 class FinishedApi(BaseApi):

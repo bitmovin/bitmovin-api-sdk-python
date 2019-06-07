@@ -68,7 +68,7 @@ class HeAacV2AudioConfiguration(AudioConfiguration):
             if not isinstance(channel_layout, AacChannelLayout):
                 raise TypeError("Invalid type for `channel_layout`, type has to be `AacChannelLayout`")
 
-            self._channel_layout = channel_layout
+        self._channel_layout = channel_layout
 
     def to_dict(self):
         """Returns the model properties as a dict"""

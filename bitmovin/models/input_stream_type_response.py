@@ -64,7 +64,7 @@ class InputStreamTypeResponse(object):
             if not isinstance(type, InputStreamType):
                 raise TypeError("Invalid type for `type`, type has to be `InputStreamType`")
 
-            self._type = type
+        self._type = type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

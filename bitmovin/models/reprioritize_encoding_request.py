@@ -34,7 +34,8 @@ class ReprioritizeEncodingRequest(object):
         self._priority = None
         self.discriminator = None
 
-        self.priority = priority
+        if priority is not None:
+            self.priority = priority
 
     @property
     def priority(self):
@@ -65,7 +66,7 @@ class ReprioritizeEncodingRequest(object):
             if not isinstance(priority, int):
                 raise TypeError("Invalid type for `priority`, type has to be `int`")
 
-            self._priority = priority
+        self._priority = priority
 
     def to_dict(self):
         """Returns the model properties as a dict"""

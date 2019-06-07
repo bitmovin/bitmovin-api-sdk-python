@@ -4,3 +4,4 @@ from bitmovin.encoding.encodings.inputStreams.audioMix.audio_mix_api import Audi
 from bitmovin.encoding.encodings.inputStreams.ingest.ingest_api import IngestApi
 from bitmovin.encoding.encodings.inputStreams.concatenation.concatenation_api import ConcatenationApi
 from bitmovin.encoding.encodings.inputStreams.trimming.trimming_api import TrimmingApi
+from bitmovin.encoding.encodings.inputStreams.input_stream_list_query_params import InputStreamListQueryParams

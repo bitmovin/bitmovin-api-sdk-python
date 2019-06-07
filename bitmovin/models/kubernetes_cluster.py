@@ -45,9 +45,12 @@ class KubernetesCluster(BitmovinResource):
         self._agent_deployment_download_url = None
         self.discriminator = None
 
-        self.online = online
-        self.connected = connected
-        self.agent_deployment_download_url = agent_deployment_download_url
+        if online is not None:
+            self.online = online
+        if connected is not None:
+            self.connected = connected
+        if agent_deployment_download_url is not None:
+            self.agent_deployment_download_url = agent_deployment_download_url
 
     @property
     def online(self):
@@ -74,7 +77,7 @@ class KubernetesCluster(BitmovinResource):
             if not isinstance(online, bool):
                 raise TypeError("Invalid type for `online`, type has to be `bool`")
 
-            self._online = online
+        self._online = online
 
 
     @property
@@ -102,7 +105,7 @@ class KubernetesCluster(BitmovinResource):
             if not isinstance(connected, bool):
                 raise TypeError("Invalid type for `connected`, type has to be `bool`")
 
-            self._connected = connected
+        self._connected = connected
 
 
     @property
@@ -128,7 +131,7 @@ class KubernetesCluster(BitmovinResource):
             if not isinstance(agent_deployment_download_url, str):
                 raise TypeError("Invalid type for `agent_deployment_download_url`, type has to be `str`")
 
-            self._agent_deployment_download_url = agent_deployment_download_url
+        self._agent_deployment_download_url = agent_deployment_download_url
 
     def to_dict(self):
         """Returns the model properties as a dict"""

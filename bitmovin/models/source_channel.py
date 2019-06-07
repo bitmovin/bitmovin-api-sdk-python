@@ -44,7 +44,8 @@ class SourceChannel(object):
 
         if gain is not None:
             self.gain = gain
-        self.type = type
+        if type is not None:
+            self.type = type
         if channel_number is not None:
             self.channel_number = channel_number
 
@@ -70,10 +71,10 @@ class SourceChannel(object):
         """
 
         if gain is not None:
-            if not isinstance(gain, float):
+            if not isinstance(gain, (float, int)):
                 raise TypeError("Invalid type for `gain`, type has to be `float`")
 
-            self._gain = gain
+        self._gain = gain
 
 
     @property
@@ -99,7 +100,7 @@ class SourceChannel(object):
             if not isinstance(type, SourceChannelType):
                 raise TypeError("Invalid type for `type`, type has to be `SourceChannelType`")
 
-            self._type = type
+        self._type = type
 
 
     @property
@@ -127,7 +128,7 @@ class SourceChannel(object):
             if not isinstance(channel_number, int):
                 raise TypeError("Invalid type for `channel_number`, type has to be `int`")
 
-            self._channel_number = channel_number
+        self._channel_number = channel_number
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -78,7 +78,7 @@ class DeinterlaceFilter(Filter):
             if not isinstance(parity, PictureFieldParity):
                 raise TypeError("Invalid type for `parity`, type has to be `PictureFieldParity`")
 
-            self._parity = parity
+        self._parity = parity
 
 
     @property
@@ -104,7 +104,7 @@ class DeinterlaceFilter(Filter):
             if not isinstance(mode, DeinterlaceMode):
                 raise TypeError("Invalid type for `mode`, type has to be `DeinterlaceMode`")
 
-            self._mode = mode
+        self._mode = mode
 
 
     @property
@@ -130,7 +130,7 @@ class DeinterlaceFilter(Filter):
             if not isinstance(frame_selection_mode, DeinterlaceFrameSelectionMode):
                 raise TypeError("Invalid type for `frame_selection_mode`, type has to be `DeinterlaceFrameSelectionMode`")
 
-            self._frame_selection_mode = frame_selection_mode
+        self._frame_selection_mode = frame_selection_mode
 
     def to_dict(self):
         """Returns the model properties as a dict"""

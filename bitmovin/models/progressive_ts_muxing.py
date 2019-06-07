@@ -81,10 +81,10 @@ class ProgressiveTsMuxing(Muxing):
         """
 
         if segment_length is not None:
-            if not isinstance(segment_length, float):
+            if not isinstance(segment_length, (float, int)):
                 raise TypeError("Invalid type for `segment_length`, type has to be `float`")
 
-            self._segment_length = segment_length
+        self._segment_length = segment_length
 
 
     @property
@@ -112,7 +112,7 @@ class ProgressiveTsMuxing(Muxing):
             if not isinstance(filename, str):
                 raise TypeError("Invalid type for `filename`, type has to be `str`")
 
-            self._filename = filename
+        self._filename = filename
 
 
     @property
@@ -137,10 +137,10 @@ class ProgressiveTsMuxing(Muxing):
         """
 
         if start_offset is not None:
-            if not isinstance(start_offset, float):
+            if not isinstance(start_offset, (float, int)):
                 raise TypeError("Invalid type for `start_offset`, type has to be `float`")
 
-            self._start_offset = start_offset
+        self._start_offset = start_offset
 
 
     @property
@@ -168,7 +168,7 @@ class ProgressiveTsMuxing(Muxing):
             if not isinstance(internal_chunk_length, InternalChunkLength):
                 raise TypeError("Invalid type for `internal_chunk_length`, type has to be `InternalChunkLength`")
 
-            self._internal_chunk_length = internal_chunk_length
+        self._internal_chunk_length = internal_chunk_length
 
     def to_dict(self):
         """Returns the model properties as a dict"""

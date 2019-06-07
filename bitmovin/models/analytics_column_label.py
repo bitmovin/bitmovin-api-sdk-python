@@ -65,7 +65,7 @@ class AnalyticsColumnLabel(object):
             if not isinstance(key, str):
                 raise TypeError("Invalid type for `key`, type has to be `str`")
 
-            self._key = key
+        self._key = key
 
 
     @property
@@ -91,7 +91,7 @@ class AnalyticsColumnLabel(object):
             if not isinstance(label, str):
                 raise TypeError("Invalid type for `label`, type has to be `str`")
 
-            self._label = label
+        self._label = label
 
     def to_dict(self):
         """Returns the model properties as a dict"""

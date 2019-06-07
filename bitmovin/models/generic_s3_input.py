@@ -58,16 +58,20 @@ class GenericS3Input(Input):
         self._secret_key = None
         self.discriminator = None
 
-        self.bucket_name = bucket_name
-        self.host = host
+        if bucket_name is not None:
+            self.bucket_name = bucket_name
+        if host is not None:
+            self.host = host
         if port is not None:
             self.port = port
         if ssl is not None:
             self.ssl = ssl
         if signature_version is not None:
             self.signature_version = signature_version
-        self.access_key = access_key
-        self.secret_key = secret_key
+        if access_key is not None:
+            self.access_key = access_key
+        if secret_key is not None:
+            self.secret_key = secret_key
 
     @property
     def bucket_name(self):
@@ -94,7 +98,7 @@ class GenericS3Input(Input):
             if not isinstance(bucket_name, str):
                 raise TypeError("Invalid type for `bucket_name`, type has to be `str`")
 
-            self._bucket_name = bucket_name
+        self._bucket_name = bucket_name
 
 
     @property
@@ -122,7 +126,7 @@ class GenericS3Input(Input):
             if not isinstance(host, str):
                 raise TypeError("Invalid type for `host`, type has to be `str`")
 
-            self._host = host
+        self._host = host
 
 
     @property
@@ -150,7 +154,7 @@ class GenericS3Input(Input):
             if not isinstance(port, int):
                 raise TypeError("Invalid type for `port`, type has to be `int`")
 
-            self._port = port
+        self._port = port
 
 
     @property
@@ -178,7 +182,7 @@ class GenericS3Input(Input):
             if not isinstance(ssl, bool):
                 raise TypeError("Invalid type for `ssl`, type has to be `bool`")
 
-            self._ssl = ssl
+        self._ssl = ssl
 
 
     @property
@@ -206,7 +210,7 @@ class GenericS3Input(Input):
             if not isinstance(signature_version, S3SignatureVersion):
                 raise TypeError("Invalid type for `signature_version`, type has to be `S3SignatureVersion`")
 
-            self._signature_version = signature_version
+        self._signature_version = signature_version
 
 
     @property
@@ -234,7 +238,7 @@ class GenericS3Input(Input):
             if not isinstance(access_key, str):
                 raise TypeError("Invalid type for `access_key`, type has to be `str`")
 
-            self._access_key = access_key
+        self._access_key = access_key
 
 
     @property
@@ -262,7 +266,7 @@ class GenericS3Input(Input):
             if not isinstance(secret_key, str):
                 raise TypeError("Invalid type for `secret_key`, type has to be `str`")
 
-            self._secret_key = secret_key
+        self._secret_key = secret_key
 
     def to_dict(self):
         """Returns the model properties as a dict"""

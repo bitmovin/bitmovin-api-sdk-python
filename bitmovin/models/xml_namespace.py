@@ -37,8 +37,10 @@ class XmlNamespace(object):
         self._uri = None
         self.discriminator = None
 
-        self.prefix = prefix
-        self.uri = uri
+        if prefix is not None:
+            self.prefix = prefix
+        if uri is not None:
+            self.uri = uri
 
     @property
     def prefix(self):
@@ -65,7 +67,7 @@ class XmlNamespace(object):
             if not isinstance(prefix, str):
                 raise TypeError("Invalid type for `prefix`, type has to be `str`")
 
-            self._prefix = prefix
+        self._prefix = prefix
 
 
     @property
@@ -93,7 +95,7 @@ class XmlNamespace(object):
             if not isinstance(uri, str):
                 raise TypeError("Invalid type for `uri`, type has to be `str`")
 
-            self._uri = uri
+        self._uri = uri
 
     def to_dict(self):
         """Returns the model properties as a dict"""

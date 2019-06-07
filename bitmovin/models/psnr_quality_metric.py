@@ -39,8 +39,10 @@ class PsnrQualityMetric(object):
         self._psnr = None
         self.discriminator = None
 
-        self.time_span = time_span
-        self.psnr = psnr
+        if time_span is not None:
+            self.time_span = time_span
+        if psnr is not None:
+            self.psnr = psnr
 
     @property
     def time_span(self):
@@ -65,7 +67,7 @@ class PsnrQualityMetric(object):
             if not isinstance(time_span, TimeSpan):
                 raise TypeError("Invalid type for `time_span`, type has to be `TimeSpan`")
 
-            self._time_span = time_span
+        self._time_span = time_span
 
 
     @property
@@ -90,10 +92,10 @@ class PsnrQualityMetric(object):
         """
 
         if psnr is not None:
-            if not isinstance(psnr, float):
+            if not isinstance(psnr, (float, int)):
                 raise TypeError("Invalid type for `psnr`, type has to be `float`")
 
-            self._psnr = psnr
+        self._psnr = psnr
 
     def to_dict(self):
         """Returns the model properties as a dict"""

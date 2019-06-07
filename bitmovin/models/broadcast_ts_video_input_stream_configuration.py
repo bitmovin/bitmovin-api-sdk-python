@@ -73,7 +73,7 @@ class BroadcastTsVideoInputStreamConfiguration(BroadcastTsInputStreamConfigurati
             if not isinstance(insert_access_unit_delimiter_in_avc, bool):
                 raise TypeError("Invalid type for `insert_access_unit_delimiter_in_avc`, type has to be `bool`")
 
-            self._insert_access_unit_delimiter_in_avc = insert_access_unit_delimiter_in_avc
+        self._insert_access_unit_delimiter_in_avc = insert_access_unit_delimiter_in_avc
 
 
     @property
@@ -105,7 +105,7 @@ class BroadcastTsVideoInputStreamConfiguration(BroadcastTsInputStreamConfigurati
             if not isinstance(max_decode_delay, int):
                 raise TypeError("Invalid type for `max_decode_delay`, type has to be `int`")
 
-            self._max_decode_delay = max_decode_delay
+        self._max_decode_delay = max_decode_delay
 
     def to_dict(self):
         """Returns the model properties as a dict"""

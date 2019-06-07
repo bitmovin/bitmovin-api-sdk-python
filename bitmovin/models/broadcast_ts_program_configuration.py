@@ -76,7 +76,7 @@ class BroadcastTsProgramConfiguration(object):
             if not isinstance(program_number, int):
                 raise TypeError("Invalid type for `program_number`, type has to be `int`")
 
-            self._program_number = program_number
+        self._program_number = program_number
 
 
     @property
@@ -108,7 +108,7 @@ class BroadcastTsProgramConfiguration(object):
             if not isinstance(pid_for_pmt, int):
                 raise TypeError("Invalid type for `pid_for_pmt`, type has to be `int`")
 
-            self._pid_for_pmt = pid_for_pmt
+        self._pid_for_pmt = pid_for_pmt
 
 
     @property
@@ -136,7 +136,7 @@ class BroadcastTsProgramConfiguration(object):
             if not isinstance(insert_program_clock_ref_on_pes, bool):
                 raise TypeError("Invalid type for `insert_program_clock_ref_on_pes`, type has to be `bool`")
 
-            self._insert_program_clock_ref_on_pes = insert_program_clock_ref_on_pes
+        self._insert_program_clock_ref_on_pes = insert_program_clock_ref_on_pes
 
     def to_dict(self):
         """Returns the model properties as a dict"""

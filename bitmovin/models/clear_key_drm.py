@@ -42,8 +42,10 @@ class ClearKeyDrm(Drm):
         self._kid = None
         self.discriminator = None
 
-        self.key = key
-        self.kid = kid
+        if key is not None:
+            self.key = key
+        if kid is not None:
+            self.kid = kid
 
     @property
     def key(self):
@@ -70,7 +72,7 @@ class ClearKeyDrm(Drm):
             if not isinstance(key, str):
                 raise TypeError("Invalid type for `key`, type has to be `str`")
 
-            self._key = key
+        self._key = key
 
 
     @property
@@ -98,7 +100,7 @@ class ClearKeyDrm(Drm):
             if not isinstance(kid, str):
                 raise TypeError("Invalid type for `kid`, type has to be `str`")
 
-            self._kid = kid
+        self._kid = kid
 
     def to_dict(self):
         """Returns the model properties as a dict"""

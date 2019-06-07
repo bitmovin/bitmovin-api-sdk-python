@@ -9,8 +9,8 @@ from bitmovin.models.response_envelope import ResponseEnvelope
 from bitmovin.models.response_error import ResponseError
 from bitmovin.models.statistics_per_label import StatisticsPerLabel
 from bitmovin.encoding.statistics.labels.daily.daily_api import DailyApi
-from bitmovin.encoding.statistics.labels.statistics_per_label_list_by_date_range_query_params import StatisticsPerLabelListByDateRangeQueryParams
 from bitmovin.encoding.statistics.labels.statistics_per_label_list_query_params import StatisticsPerLabelListQueryParams
+from bitmovin.encoding.statistics.labels.statistics_per_label_list_by_date_range_query_params import StatisticsPerLabelListByDateRangeQueryParams
 
 
 class LabelsApi(BaseApi):

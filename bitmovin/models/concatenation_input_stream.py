@@ -36,7 +36,7 @@ class ConcatenationInputStream(InputStream):
     def __init__(self, concatenation=None, *args, **kwargs):
         super(ConcatenationInputStream, self).__init__(*args, **kwargs)
 
-        self._concatenation = None
+        self._concatenation = list()
         self.discriminator = None
 
         if concatenation is not None:
@@ -67,7 +67,7 @@ class ConcatenationInputStream(InputStream):
             if not isinstance(concatenation, list):
                 raise TypeError("Invalid type for `concatenation`, type has to be `list[ConcatenationInputConfiguration]`")
 
-            self._concatenation = concatenation
+        self._concatenation = concatenation
 
     def to_dict(self):
         """Returns the model properties as a dict"""

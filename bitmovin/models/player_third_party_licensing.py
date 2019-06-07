@@ -45,10 +45,14 @@ class PlayerThirdPartyLicensing(object):
         self._timeout_action = None
         self.discriminator = None
 
-        self.license_check_server = license_check_server
-        self.license_check_timeout = license_check_timeout
-        self.error_action = error_action
-        self.timeout_action = timeout_action
+        if license_check_server is not None:
+            self.license_check_server = license_check_server
+        if license_check_timeout is not None:
+            self.license_check_timeout = license_check_timeout
+        if error_action is not None:
+            self.error_action = error_action
+        if timeout_action is not None:
+            self.timeout_action = timeout_action
 
     @property
     def license_check_server(self):
@@ -75,7 +79,7 @@ class PlayerThirdPartyLicensing(object):
             if not isinstance(license_check_server, str):
                 raise TypeError("Invalid type for `license_check_server`, type has to be `str`")
 
-            self._license_check_server = license_check_server
+        self._license_check_server = license_check_server
 
 
     @property
@@ -107,7 +111,7 @@ class PlayerThirdPartyLicensing(object):
             if not isinstance(license_check_timeout, int):
                 raise TypeError("Invalid type for `license_check_timeout`, type has to be `int`")
 
-            self._license_check_timeout = license_check_timeout
+        self._license_check_timeout = license_check_timeout
 
 
     @property
@@ -135,7 +139,7 @@ class PlayerThirdPartyLicensing(object):
             if not isinstance(error_action, PlayerThirdPartyLicensingErrorAction):
                 raise TypeError("Invalid type for `error_action`, type has to be `PlayerThirdPartyLicensingErrorAction`")
 
-            self._error_action = error_action
+        self._error_action = error_action
 
 
     @property
@@ -163,7 +167,7 @@ class PlayerThirdPartyLicensing(object):
             if not isinstance(timeout_action, PlayerThirdPartyLicensingErrorAction):
                 raise TypeError("Invalid type for `timeout_action`, type has to be `PlayerThirdPartyLicensingErrorAction`")
 
-            self._timeout_action = timeout_action
+        self._timeout_action = timeout_action
 
     def to_dict(self):
         """Returns the model properties as a dict"""

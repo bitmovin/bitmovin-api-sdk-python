@@ -64,13 +64,13 @@ class Stream(BitmovinResource):
     def __init__(self, input_streams=None, outputs=None, create_quality_meta_data=None, codec_config_id=None, segments_encoded=None, conditions=None, ignored_by=None, mode=None, per_title_settings=None, metadata=None, decoding_error_mode=None, applied_settings=None, *args, **kwargs):
         super(Stream, self).__init__(*args, **kwargs)
 
-        self._input_streams = None
-        self._outputs = None
+        self._input_streams = list()
+        self._outputs = list()
         self._create_quality_meta_data = None
         self._codec_config_id = None
         self._segments_encoded = None
         self._conditions = None
-        self._ignored_by = None
+        self._ignored_by = list()
         self._mode = None
         self._per_title_settings = None
         self._metadata = None
@@ -78,12 +78,14 @@ class Stream(BitmovinResource):
         self._applied_settings = None
         self.discriminator = None
 
-        self.input_streams = input_streams
+        if input_streams is not None:
+            self.input_streams = input_streams
         if outputs is not None:
             self.outputs = outputs
         if create_quality_meta_data is not None:
             self.create_quality_meta_data = create_quality_meta_data
-        self.codec_config_id = codec_config_id
+        if codec_config_id is not None:
+            self.codec_config_id = codec_config_id
         if segments_encoded is not None:
             self.segments_encoded = segments_encoded
         if conditions is not None:
@@ -124,7 +126,7 @@ class Stream(BitmovinResource):
             if not isinstance(input_streams, list):
                 raise TypeError("Invalid type for `input_streams`, type has to be `list[StreamInput]`")
 
-            self._input_streams = input_streams
+        self._input_streams = input_streams
 
 
     @property
@@ -150,7 +152,7 @@ class Stream(BitmovinResource):
             if not isinstance(outputs, list):
                 raise TypeError("Invalid type for `outputs`, type has to be `list[EncodingOutput]`")
 
-            self._outputs = outputs
+        self._outputs = outputs
 
 
     @property
@@ -178,7 +180,7 @@ class Stream(BitmovinResource):
             if not isinstance(create_quality_meta_data, bool):
                 raise TypeError("Invalid type for `create_quality_meta_data`, type has to be `bool`")
 
-            self._create_quality_meta_data = create_quality_meta_data
+        self._create_quality_meta_data = create_quality_meta_data
 
 
     @property
@@ -206,7 +208,7 @@ class Stream(BitmovinResource):
             if not isinstance(codec_config_id, str):
                 raise TypeError("Invalid type for `codec_config_id`, type has to be `str`")
 
-            self._codec_config_id = codec_config_id
+        self._codec_config_id = codec_config_id
 
 
     @property
@@ -234,7 +236,7 @@ class Stream(BitmovinResource):
             if not isinstance(segments_encoded, int):
                 raise TypeError("Invalid type for `segments_encoded`, type has to be `int`")
 
-            self._segments_encoded = segments_encoded
+        self._segments_encoded = segments_encoded
 
 
     @property
@@ -262,7 +264,7 @@ class Stream(BitmovinResource):
             if not isinstance(conditions, AbstractCondition):
                 raise TypeError("Invalid type for `conditions`, type has to be `AbstractCondition`")
 
-            self._conditions = conditions
+        self._conditions = conditions
 
 
     @property
@@ -290,7 +292,7 @@ class Stream(BitmovinResource):
             if not isinstance(ignored_by, list):
                 raise TypeError("Invalid type for `ignored_by`, type has to be `list[Ignoring]`")
 
-            self._ignored_by = ignored_by
+        self._ignored_by = ignored_by
 
 
     @property
@@ -318,7 +320,7 @@ class Stream(BitmovinResource):
             if not isinstance(mode, StreamMode):
                 raise TypeError("Invalid type for `mode`, type has to be `StreamMode`")
 
-            self._mode = mode
+        self._mode = mode
 
 
     @property
@@ -346,7 +348,7 @@ class Stream(BitmovinResource):
             if not isinstance(per_title_settings, StreamPerTitleSettings):
                 raise TypeError("Invalid type for `per_title_settings`, type has to be `StreamPerTitleSettings`")
 
-            self._per_title_settings = per_title_settings
+        self._per_title_settings = per_title_settings
 
 
     @property
@@ -372,7 +374,7 @@ class Stream(BitmovinResource):
             if not isinstance(metadata, StreamMetadata):
                 raise TypeError("Invalid type for `metadata`, type has to be `StreamMetadata`")
 
-            self._metadata = metadata
+        self._metadata = metadata
 
 
     @property
@@ -400,7 +402,7 @@ class Stream(BitmovinResource):
             if not isinstance(decoding_error_mode, DecodingErrorMode):
                 raise TypeError("Invalid type for `decoding_error_mode`, type has to be `DecodingErrorMode`")
 
-            self._decoding_error_mode = decoding_error_mode
+        self._decoding_error_mode = decoding_error_mode
 
 
     @property
@@ -428,7 +430,7 @@ class Stream(BitmovinResource):
             if not isinstance(applied_settings, AppliedStreamSettings):
                 raise TypeError("Invalid type for `applied_settings`, type has to be `AppliedStreamSettings`")
 
-            self._applied_settings = applied_settings
+        self._applied_settings = applied_settings
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -110,7 +110,7 @@ class VideoConfiguration(CodecConfiguration):
             if not isinstance(width, int):
                 raise TypeError("Invalid type for `width`, type has to be `int`")
 
-            self._width = width
+        self._width = width
 
 
     @property
@@ -138,7 +138,7 @@ class VideoConfiguration(CodecConfiguration):
             if not isinstance(height, int):
                 raise TypeError("Invalid type for `height`, type has to be `int`")
 
-            self._height = height
+        self._height = height
 
 
     @property
@@ -166,7 +166,7 @@ class VideoConfiguration(CodecConfiguration):
             if not isinstance(bitrate, int):
                 raise TypeError("Invalid type for `bitrate`, type has to be `int`")
 
-            self._bitrate = bitrate
+        self._bitrate = bitrate
 
 
     @property
@@ -191,10 +191,10 @@ class VideoConfiguration(CodecConfiguration):
         """
 
         if rate is not None:
-            if not isinstance(rate, float):
+            if not isinstance(rate, (float, int)):
                 raise TypeError("Invalid type for `rate`, type has to be `float`")
 
-            self._rate = rate
+        self._rate = rate
 
 
     @property
@@ -220,7 +220,7 @@ class VideoConfiguration(CodecConfiguration):
             if not isinstance(pixel_format, PixelFormat):
                 raise TypeError("Invalid type for `pixel_format`, type has to be `PixelFormat`")
 
-            self._pixel_format = pixel_format
+        self._pixel_format = pixel_format
 
 
     @property
@@ -246,7 +246,7 @@ class VideoConfiguration(CodecConfiguration):
             if not isinstance(color_config, ColorConfig):
                 raise TypeError("Invalid type for `color_config`, type has to be `ColorConfig`")
 
-            self._color_config = color_config
+        self._color_config = color_config
 
 
     @property
@@ -274,7 +274,7 @@ class VideoConfiguration(CodecConfiguration):
             if not isinstance(sample_aspect_ratio_numerator, int):
                 raise TypeError("Invalid type for `sample_aspect_ratio_numerator`, type has to be `int`")
 
-            self._sample_aspect_ratio_numerator = sample_aspect_ratio_numerator
+        self._sample_aspect_ratio_numerator = sample_aspect_ratio_numerator
 
 
     @property
@@ -302,7 +302,7 @@ class VideoConfiguration(CodecConfiguration):
             if not isinstance(sample_aspect_ratio_denominator, int):
                 raise TypeError("Invalid type for `sample_aspect_ratio_denominator`, type has to be `int`")
 
-            self._sample_aspect_ratio_denominator = sample_aspect_ratio_denominator
+        self._sample_aspect_ratio_denominator = sample_aspect_ratio_denominator
 
 
     @property
@@ -330,7 +330,7 @@ class VideoConfiguration(CodecConfiguration):
             if not isinstance(encoding_mode, EncodingMode):
                 raise TypeError("Invalid type for `encoding_mode`, type has to be `EncodingMode`")
 
-            self._encoding_mode = encoding_mode
+        self._encoding_mode = encoding_mode
 
     def to_dict(self):
         """Returns the model properties as a dict"""

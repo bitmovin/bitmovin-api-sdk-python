@@ -47,7 +47,8 @@ class HlsManifest(Manifest):
         self._hls_master_playlist_version = None
         self.discriminator = None
 
-        self.manifest_name = manifest_name
+        if manifest_name is not None:
+            self.manifest_name = manifest_name
         if hls_media_playlist_version is not None:
             self.hls_media_playlist_version = hls_media_playlist_version
         if hls_master_playlist_version is not None:
@@ -78,7 +79,7 @@ class HlsManifest(Manifest):
             if not isinstance(manifest_name, str):
                 raise TypeError("Invalid type for `manifest_name`, type has to be `str`")
 
-            self._manifest_name = manifest_name
+        self._manifest_name = manifest_name
 
 
     @property
@@ -106,7 +107,7 @@ class HlsManifest(Manifest):
             if not isinstance(hls_media_playlist_version, HlsVersion):
                 raise TypeError("Invalid type for `hls_media_playlist_version`, type has to be `HlsVersion`")
 
-            self._hls_media_playlist_version = hls_media_playlist_version
+        self._hls_media_playlist_version = hls_media_playlist_version
 
 
     @property
@@ -134,7 +135,7 @@ class HlsManifest(Manifest):
             if not isinstance(hls_master_playlist_version, HlsVersion):
                 raise TypeError("Invalid type for `hls_master_playlist_version`, type has to be `HlsVersion`")
 
-            self._hls_master_playlist_version = hls_master_playlist_version
+        self._hls_master_playlist_version = hls_master_playlist_version
 
     def to_dict(self):
         """Returns the model properties as a dict"""

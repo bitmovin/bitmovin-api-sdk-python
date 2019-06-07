@@ -42,8 +42,10 @@ class DashRepresentation(BitmovinResponse):
         self._muxing_id = None
         self.discriminator = None
 
-        self.encoding_id = encoding_id
-        self.muxing_id = muxing_id
+        if encoding_id is not None:
+            self.encoding_id = encoding_id
+        if muxing_id is not None:
+            self.muxing_id = muxing_id
 
     @property
     def encoding_id(self):
@@ -70,7 +72,7 @@ class DashRepresentation(BitmovinResponse):
             if not isinstance(encoding_id, str):
                 raise TypeError("Invalid type for `encoding_id`, type has to be `str`")
 
-            self._encoding_id = encoding_id
+        self._encoding_id = encoding_id
 
 
     @property
@@ -98,7 +100,7 @@ class DashRepresentation(BitmovinResponse):
             if not isinstance(muxing_id, str):
                 raise TypeError("Invalid type for `muxing_id`, type has to be `str`")
 
-            self._muxing_id = muxing_id
+        self._muxing_id = muxing_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

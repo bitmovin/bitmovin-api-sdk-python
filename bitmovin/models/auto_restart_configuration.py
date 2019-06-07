@@ -86,10 +86,10 @@ class AutoRestartConfiguration(object):
         if segments_written_timeout is not None:
             if segments_written_timeout is not None and segments_written_timeout < 30:
                 raise ValueError("Invalid value for `segments_written_timeout`, must be a value greater than or equal to `30`")
-            if not isinstance(segments_written_timeout, float):
+            if not isinstance(segments_written_timeout, (float, int)):
                 raise TypeError("Invalid type for `segments_written_timeout`, type has to be `float`")
 
-            self._segments_written_timeout = segments_written_timeout
+        self._segments_written_timeout = segments_written_timeout
 
 
     @property
@@ -116,10 +116,10 @@ class AutoRestartConfiguration(object):
         if bytes_written_timeout is not None:
             if bytes_written_timeout is not None and bytes_written_timeout < 30:
                 raise ValueError("Invalid value for `bytes_written_timeout`, must be a value greater than or equal to `30`")
-            if not isinstance(bytes_written_timeout, float):
+            if not isinstance(bytes_written_timeout, (float, int)):
                 raise TypeError("Invalid type for `bytes_written_timeout`, type has to be `float`")
 
-            self._bytes_written_timeout = bytes_written_timeout
+        self._bytes_written_timeout = bytes_written_timeout
 
 
     @property
@@ -146,10 +146,10 @@ class AutoRestartConfiguration(object):
         if frames_written_timeout is not None:
             if frames_written_timeout is not None and frames_written_timeout < 30:
                 raise ValueError("Invalid value for `frames_written_timeout`, must be a value greater than or equal to `30`")
-            if not isinstance(frames_written_timeout, float):
+            if not isinstance(frames_written_timeout, (float, int)):
                 raise TypeError("Invalid type for `frames_written_timeout`, type has to be `float`")
 
-            self._frames_written_timeout = frames_written_timeout
+        self._frames_written_timeout = frames_written_timeout
 
 
     @property
@@ -176,10 +176,10 @@ class AutoRestartConfiguration(object):
         if hls_manifests_update_timeout is not None:
             if hls_manifests_update_timeout is not None and hls_manifests_update_timeout < 30:
                 raise ValueError("Invalid value for `hls_manifests_update_timeout`, must be a value greater than or equal to `30`")
-            if not isinstance(hls_manifests_update_timeout, float):
+            if not isinstance(hls_manifests_update_timeout, (float, int)):
                 raise TypeError("Invalid type for `hls_manifests_update_timeout`, type has to be `float`")
 
-            self._hls_manifests_update_timeout = hls_manifests_update_timeout
+        self._hls_manifests_update_timeout = hls_manifests_update_timeout
 
 
     @property
@@ -206,10 +206,10 @@ class AutoRestartConfiguration(object):
         if dash_manifests_update_timeout is not None:
             if dash_manifests_update_timeout is not None and dash_manifests_update_timeout < 30:
                 raise ValueError("Invalid value for `dash_manifests_update_timeout`, must be a value greater than or equal to `30`")
-            if not isinstance(dash_manifests_update_timeout, float):
+            if not isinstance(dash_manifests_update_timeout, (float, int)):
                 raise TypeError("Invalid type for `dash_manifests_update_timeout`, type has to be `float`")
 
-            self._dash_manifests_update_timeout = dash_manifests_update_timeout
+        self._dash_manifests_update_timeout = dash_manifests_update_timeout
 
 
     @property
@@ -237,7 +237,7 @@ class AutoRestartConfiguration(object):
             if not isinstance(schedule_expression, str):
                 raise TypeError("Invalid type for `schedule_expression`, type has to be `str`")
 
-            self._schedule_expression = schedule_expression
+        self._schedule_expression = schedule_expression
 
     def to_dict(self):
         """Returns the model properties as a dict"""

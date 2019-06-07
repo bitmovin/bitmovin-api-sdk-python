@@ -39,7 +39,8 @@ class CustomWebPlayerBuildDomain(BitmovinResource):
         self._domain = None
         self.discriminator = None
 
-        self.domain = domain
+        if domain is not None:
+            self.domain = domain
 
     @property
     def domain(self):
@@ -66,7 +67,7 @@ class CustomWebPlayerBuildDomain(BitmovinResource):
             if not isinstance(domain, str):
                 raise TypeError("Invalid type for `domain`, type has to be `str`")
 
-            self._domain = domain
+        self._domain = domain
 
     def to_dict(self):
         """Returns the model properties as a dict"""

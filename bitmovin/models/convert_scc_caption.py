@@ -48,16 +48,20 @@ class ConvertSccCaption(BitmovinResource):
         super(ConvertSccCaption, self).__init__(*args, **kwargs)
 
         self._input = None
-        self._outputs = None
+        self._outputs = list()
         self._file_name = None
         self._output_format = None
         self._web_vtt_settings = None
         self.discriminator = None
 
-        self.input = input
-        self.outputs = outputs
-        self.file_name = file_name
-        self.output_format = output_format
+        if input is not None:
+            self.input = input
+        if outputs is not None:
+            self.outputs = outputs
+        if file_name is not None:
+            self.file_name = file_name
+        if output_format is not None:
+            self.output_format = output_format
         if web_vtt_settings is not None:
             self.web_vtt_settings = web_vtt_settings
 
@@ -86,7 +90,7 @@ class ConvertSccCaption(BitmovinResource):
             if not isinstance(input, InputPath):
                 raise TypeError("Invalid type for `input`, type has to be `InputPath`")
 
-            self._input = input
+        self._input = input
 
 
     @property
@@ -112,7 +116,7 @@ class ConvertSccCaption(BitmovinResource):
             if not isinstance(outputs, list):
                 raise TypeError("Invalid type for `outputs`, type has to be `list[EncodingOutput]`")
 
-            self._outputs = outputs
+        self._outputs = outputs
 
 
     @property
@@ -140,7 +144,7 @@ class ConvertSccCaption(BitmovinResource):
             if not isinstance(file_name, str):
                 raise TypeError("Invalid type for `file_name`, type has to be `str`")
 
-            self._file_name = file_name
+        self._file_name = file_name
 
 
     @property
@@ -166,7 +170,7 @@ class ConvertSccCaption(BitmovinResource):
             if not isinstance(output_format, StreamCaptionOutputFormat):
                 raise TypeError("Invalid type for `output_format`, type has to be `StreamCaptionOutputFormat`")
 
-            self._output_format = output_format
+        self._output_format = output_format
 
 
     @property
@@ -194,7 +198,7 @@ class ConvertSccCaption(BitmovinResource):
             if not isinstance(web_vtt_settings, ConvertSccCaptionWebVttSettings):
                 raise TypeError("Invalid type for `web_vtt_settings`, type has to be `ConvertSccCaptionWebVttSettings`")
 
-            self._web_vtt_settings = web_vtt_settings
+        self._web_vtt_settings = web_vtt_settings
 
     def to_dict(self):
         """Returns the model properties as a dict"""

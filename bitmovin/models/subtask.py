@@ -60,7 +60,7 @@ class Subtask(BitmovinResponse):
         self._status = None
         self._progress = None
         self._name = None
-        self._messages = None
+        self._messages = list()
         self._created_at = None
         self._updated_at = None
         self._started_at = None
@@ -70,10 +70,12 @@ class Subtask(BitmovinResponse):
         self._error_at = None
         self.discriminator = None
 
-        self.status = status
+        if status is not None:
+            self.status = status
         if progress is not None:
             self.progress = progress
-        self.name = name
+        if name is not None:
+            self.name = name
         if messages is not None:
             self.messages = messages
         if created_at is not None:
@@ -116,7 +118,7 @@ class Subtask(BitmovinResponse):
             if not isinstance(status, Status):
                 raise TypeError("Invalid type for `status`, type has to be `Status`")
 
-            self._status = status
+        self._status = status
 
 
     @property
@@ -144,7 +146,7 @@ class Subtask(BitmovinResponse):
             if not isinstance(progress, int):
                 raise TypeError("Invalid type for `progress`, type has to be `int`")
 
-            self._progress = progress
+        self._progress = progress
 
 
     @property
@@ -172,7 +174,7 @@ class Subtask(BitmovinResponse):
             if not isinstance(name, str):
                 raise TypeError("Invalid type for `name`, type has to be `str`")
 
-            self._name = name
+        self._name = name
 
 
     @property
@@ -200,7 +202,7 @@ class Subtask(BitmovinResponse):
             if not isinstance(messages, list):
                 raise TypeError("Invalid type for `messages`, type has to be `list[Message]`")
 
-            self._messages = messages
+        self._messages = messages
 
 
     @property
@@ -228,7 +230,7 @@ class Subtask(BitmovinResponse):
             if not isinstance(created_at, datetime):
                 raise TypeError("Invalid type for `created_at`, type has to be `datetime`")
 
-            self._created_at = created_at
+        self._created_at = created_at
 
 
     @property
@@ -256,7 +258,7 @@ class Subtask(BitmovinResponse):
             if not isinstance(updated_at, datetime):
                 raise TypeError("Invalid type for `updated_at`, type has to be `datetime`")
 
-            self._updated_at = updated_at
+        self._updated_at = updated_at
 
 
     @property
@@ -284,7 +286,7 @@ class Subtask(BitmovinResponse):
             if not isinstance(started_at, datetime):
                 raise TypeError("Invalid type for `started_at`, type has to be `datetime`")
 
-            self._started_at = started_at
+        self._started_at = started_at
 
 
     @property
@@ -312,7 +314,7 @@ class Subtask(BitmovinResponse):
             if not isinstance(queued_at, datetime):
                 raise TypeError("Invalid type for `queued_at`, type has to be `datetime`")
 
-            self._queued_at = queued_at
+        self._queued_at = queued_at
 
 
     @property
@@ -340,7 +342,7 @@ class Subtask(BitmovinResponse):
             if not isinstance(running_at, datetime):
                 raise TypeError("Invalid type for `running_at`, type has to be `datetime`")
 
-            self._running_at = running_at
+        self._running_at = running_at
 
 
     @property
@@ -368,7 +370,7 @@ class Subtask(BitmovinResponse):
             if not isinstance(finished_at, datetime):
                 raise TypeError("Invalid type for `finished_at`, type has to be `datetime`")
 
-            self._finished_at = finished_at
+        self._finished_at = finished_at
 
 
     @property
@@ -396,7 +398,7 @@ class Subtask(BitmovinResponse):
             if not isinstance(error_at, datetime):
                 raise TypeError("Invalid type for `error_at`, type has to be `datetime`")
 
-            self._error_at = error_at
+        self._error_at = error_at
 
     def to_dict(self):
         """Returns the model properties as a dict"""

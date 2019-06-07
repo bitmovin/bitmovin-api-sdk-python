@@ -35,9 +35,9 @@ class AnalyticsResponse(object):
 
     def __init__(self, rows=None, row_count=None, column_labels=None, *args, **kwargs):
 
-        self._rows = None
+        self._rows = list()
         self._row_count = None
-        self._column_labels = None
+        self._column_labels = list()
         self.discriminator = None
 
         if rows is not None:
@@ -70,7 +70,7 @@ class AnalyticsResponse(object):
             if not isinstance(rows, list):
                 raise TypeError("Invalid type for `rows`, type has to be `list[object]`")
 
-            self._rows = rows
+        self._rows = rows
 
 
     @property
@@ -98,7 +98,7 @@ class AnalyticsResponse(object):
             if not isinstance(row_count, int):
                 raise TypeError("Invalid type for `row_count`, type has to be `int`")
 
-            self._row_count = row_count
+        self._row_count = row_count
 
 
     @property
@@ -124,7 +124,7 @@ class AnalyticsResponse(object):
             if not isinstance(column_labels, list):
                 raise TypeError("Invalid type for `column_labels`, type has to be `list[AnalyticsColumnLabel]`")
 
-            self._column_labels = column_labels
+        self._column_labels = column_labels
 
     def to_dict(self):
         """Returns the model properties as a dict"""

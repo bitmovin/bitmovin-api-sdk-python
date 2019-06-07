@@ -69,10 +69,10 @@ class Period(BitmovinResponse):
         """
 
         if start is not None:
-            if not isinstance(start, float):
+            if not isinstance(start, (float, int)):
                 raise TypeError("Invalid type for `start`, type has to be `float`")
 
-            self._start = start
+        self._start = start
 
 
     @property
@@ -97,10 +97,10 @@ class Period(BitmovinResponse):
         """
 
         if duration is not None:
-            if not isinstance(duration, float):
+            if not isinstance(duration, (float, int)):
                 raise TypeError("Invalid type for `duration`, type has to be `float`")
 
-            self._duration = duration
+        self._duration = duration
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -36,11 +36,13 @@ class AudioGroupConfiguration(object):
     def __init__(self, dropping_mode=None, groups=None, *args, **kwargs):
 
         self._dropping_mode = None
-        self._groups = None
+        self._groups = list()
         self.discriminator = None
 
-        self.dropping_mode = dropping_mode
-        self.groups = groups
+        if dropping_mode is not None:
+            self.dropping_mode = dropping_mode
+        if groups is not None:
+            self.groups = groups
 
     @property
     def dropping_mode(self):
@@ -67,7 +69,7 @@ class AudioGroupConfiguration(object):
             if not isinstance(dropping_mode, VariantStreamDroppingMode):
                 raise TypeError("Invalid type for `dropping_mode`, type has to be `VariantStreamDroppingMode`")
 
-            self._dropping_mode = dropping_mode
+        self._dropping_mode = dropping_mode
 
 
     @property
@@ -95,7 +97,7 @@ class AudioGroupConfiguration(object):
             if not isinstance(groups, list):
                 raise TypeError("Invalid type for `groups`, type has to be `list[AudioGroup]`")
 
-            self._groups = groups
+        self._groups = groups
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -40,7 +40,8 @@ class LiveDashManifest(object):
         self._live_edge_offset = None
         self.discriminator = None
 
-        self.manifest_id = manifest_id
+        if manifest_id is not None:
+            self.manifest_id = manifest_id
         if timeshift is not None:
             self.timeshift = timeshift
         if live_edge_offset is not None:
@@ -71,7 +72,7 @@ class LiveDashManifest(object):
             if not isinstance(manifest_id, str):
                 raise TypeError("Invalid type for `manifest_id`, type has to be `str`")
 
-            self._manifest_id = manifest_id
+        self._manifest_id = manifest_id
 
 
     @property
@@ -96,10 +97,10 @@ class LiveDashManifest(object):
         """
 
         if timeshift is not None:
-            if not isinstance(timeshift, float):
+            if not isinstance(timeshift, (float, int)):
                 raise TypeError("Invalid type for `timeshift`, type has to be `float`")
 
-            self._timeshift = timeshift
+        self._timeshift = timeshift
 
 
     @property
@@ -124,10 +125,10 @@ class LiveDashManifest(object):
         """
 
         if live_edge_offset is not None:
-            if not isinstance(live_edge_offset, float):
+            if not isinstance(live_edge_offset, (float, int)):
                 raise TypeError("Invalid type for `live_edge_offset`, type has to be `float`")
 
-            self._live_edge_offset = live_edge_offset
+        self._live_edge_offset = live_edge_offset
 
     def to_dict(self):
         """Returns the model properties as a dict"""

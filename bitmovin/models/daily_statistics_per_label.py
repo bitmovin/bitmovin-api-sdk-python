@@ -34,11 +34,13 @@ class DailyStatisticsPerLabel(object):
     def __init__(self, date=None, labels=None, *args, **kwargs):
 
         self._date = None
-        self._labels = None
+        self._labels = list()
         self.discriminator = None
 
-        self.date = date
-        self.labels = labels
+        if date is not None:
+            self.date = date
+        if labels is not None:
+            self.labels = labels
 
     @property
     def date(self):
@@ -65,7 +67,7 @@ class DailyStatisticsPerLabel(object):
             if not isinstance(date, validation_date):
                 raise TypeError("Invalid type for `date`, type has to be `date`")
 
-            self._date = date
+        self._date = date
 
 
     @property
@@ -93,7 +95,7 @@ class DailyStatisticsPerLabel(object):
             if not isinstance(labels, list):
                 raise TypeError("Invalid type for `labels`, type has to be `list[DailyStatistics]`")
 
-            self._labels = labels
+        self._labels = labels
 
     def to_dict(self):
         """Returns the model properties as a dict"""

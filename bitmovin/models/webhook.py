@@ -54,7 +54,8 @@ class Webhook(BitmovinResource):
         self._signature = None
         self.discriminator = None
 
-        self.url = url
+        if url is not None:
+            self.url = url
         if method is not None:
             self.method = method
         if insecure_ssl is not None:
@@ -89,7 +90,7 @@ class Webhook(BitmovinResource):
             if not isinstance(url, str):
                 raise TypeError("Invalid type for `url`, type has to be `str`")
 
-            self._url = url
+        self._url = url
 
 
     @property
@@ -117,7 +118,7 @@ class Webhook(BitmovinResource):
             if not isinstance(method, WebhookHttpMethod):
                 raise TypeError("Invalid type for `method`, type has to be `WebhookHttpMethod`")
 
-            self._method = method
+        self._method = method
 
 
     @property
@@ -145,7 +146,7 @@ class Webhook(BitmovinResource):
             if not isinstance(insecure_ssl, bool):
                 raise TypeError("Invalid type for `insecure_ssl`, type has to be `bool`")
 
-            self._insecure_ssl = insecure_ssl
+        self._insecure_ssl = insecure_ssl
 
 
     @property
@@ -173,7 +174,7 @@ class Webhook(BitmovinResource):
             if not isinstance(encryption, WebhookEncryption):
                 raise TypeError("Invalid type for `encryption`, type has to be `WebhookEncryption`")
 
-            self._encryption = encryption
+        self._encryption = encryption
 
 
     @property
@@ -201,7 +202,7 @@ class Webhook(BitmovinResource):
             if not isinstance(signature, WebhookSignature):
                 raise TypeError("Invalid type for `signature`, type has to be `WebhookSignature`")
 
-            self._signature = signature
+        self._signature = signature
 
     def to_dict(self):
         """Returns the model properties as a dict"""

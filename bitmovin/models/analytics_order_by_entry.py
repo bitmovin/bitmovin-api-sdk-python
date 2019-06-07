@@ -41,7 +41,8 @@ class AnalyticsOrderByEntry(object):
 
         if name is not None:
             self.name = name
-        self.order = order
+        if order is not None:
+            self.order = order
 
     @property
     def name(self):
@@ -66,7 +67,7 @@ class AnalyticsOrderByEntry(object):
             if not isinstance(name, str):
                 raise TypeError("Invalid type for `name`, type has to be `str`")
 
-            self._name = name
+        self._name = name
 
 
     @property
@@ -92,7 +93,7 @@ class AnalyticsOrderByEntry(object):
             if not isinstance(order, AnalyticsOrder):
                 raise TypeError("Invalid type for `order`, type has to be `AnalyticsOrder`")
 
-            self._order = order
+        self._order = order
 
     def to_dict(self):
         """Returns the model properties as a dict"""

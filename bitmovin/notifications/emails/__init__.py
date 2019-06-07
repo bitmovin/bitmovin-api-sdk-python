@@ -1,2 +1,3 @@
 from bitmovin.notifications.emails.emails_api import EmailsApi
 from bitmovin.notifications.emails.encoding.encoding_api import EncodingApi
+from bitmovin.notifications.emails.notification_list_query_params import NotificationListQueryParams

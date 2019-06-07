@@ -31,10 +31,11 @@ class StreamFilterList(object):
 
     def __init__(self, filters=None, *args, **kwargs):
 
-        self._filters = None
+        self._filters = list()
         self.discriminator = None
 
-        self.filters = filters
+        if filters is not None:
+            self.filters = filters
 
     @property
     def filters(self):
@@ -61,7 +62,7 @@ class StreamFilterList(object):
             if not isinstance(filters, list):
                 raise TypeError("Invalid type for `filters`, type has to be `list[StreamFilter]`")
 
-            self._filters = filters
+        self._filters = filters
 
     def to_dict(self):
         """Returns the model properties as a dict"""

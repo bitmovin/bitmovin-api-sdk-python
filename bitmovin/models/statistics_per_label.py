@@ -46,12 +46,13 @@ class StatisticsPerLabel(Statistics):
 
         self._label = None
         self._billable_minutes = None
-        self._billable_encoding_minutes = None
+        self._billable_encoding_minutes = list()
         self._billable_transmuxing_minutes = None
-        self._billable_feature_minutes = None
+        self._billable_feature_minutes = list()
         self.discriminator = None
 
-        self.label = label
+        if label is not None:
+            self.label = label
         if billable_minutes is not None:
             self.billable_minutes = billable_minutes
         if billable_encoding_minutes is not None:
@@ -86,7 +87,7 @@ class StatisticsPerLabel(Statistics):
             if not isinstance(label, str):
                 raise TypeError("Invalid type for `label`, type has to be `str`")
 
-            self._label = label
+        self._label = label
 
 
     @property
@@ -111,10 +112,10 @@ class StatisticsPerLabel(Statistics):
         """
 
         if billable_minutes is not None:
-            if not isinstance(billable_minutes, float):
+            if not isinstance(billable_minutes, (float, int)):
                 raise TypeError("Invalid type for `billable_minutes`, type has to be `float`")
 
-            self._billable_minutes = billable_minutes
+        self._billable_minutes = billable_minutes
 
 
     @property
@@ -142,7 +143,7 @@ class StatisticsPerLabel(Statistics):
             if not isinstance(billable_encoding_minutes, list):
                 raise TypeError("Invalid type for `billable_encoding_minutes`, type has to be `list[BillableEncodingMinutes]`")
 
-            self._billable_encoding_minutes = billable_encoding_minutes
+        self._billable_encoding_minutes = billable_encoding_minutes
 
 
     @property
@@ -167,10 +168,10 @@ class StatisticsPerLabel(Statistics):
         """
 
         if billable_transmuxing_minutes is not None:
-            if not isinstance(billable_transmuxing_minutes, float):
+            if not isinstance(billable_transmuxing_minutes, (float, int)):
                 raise TypeError("Invalid type for `billable_transmuxing_minutes`, type has to be `float`")
 
-            self._billable_transmuxing_minutes = billable_transmuxing_minutes
+        self._billable_transmuxing_minutes = billable_transmuxing_minutes
 
 
     @property
@@ -198,7 +199,7 @@ class StatisticsPerLabel(Statistics):
             if not isinstance(billable_feature_minutes, list):
                 raise TypeError("Invalid type for `billable_feature_minutes`, type has to be `list[BillableEncodingFeatureMinutes]`")
 
-            self._billable_feature_minutes = billable_feature_minutes
+        self._billable_feature_minutes = billable_feature_minutes
 
     def to_dict(self):
         """Returns the model properties as a dict"""

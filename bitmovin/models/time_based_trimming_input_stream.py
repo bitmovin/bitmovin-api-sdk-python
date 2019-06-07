@@ -77,7 +77,7 @@ class TimeBasedTrimmingInputStream(InputStream):
             if not isinstance(input_stream_id, str):
                 raise TypeError("Invalid type for `input_stream_id`, type has to be `str`")
 
-            self._input_stream_id = input_stream_id
+        self._input_stream_id = input_stream_id
 
 
     @property
@@ -104,10 +104,10 @@ class TimeBasedTrimmingInputStream(InputStream):
         if offset is not None:
             if offset is not None and offset < 0:
                 raise ValueError("Invalid value for `offset`, must be a value greater than or equal to `0`")
-            if not isinstance(offset, float):
+            if not isinstance(offset, (float, int)):
                 raise TypeError("Invalid type for `offset`, type has to be `float`")
 
-            self._offset = offset
+        self._offset = offset
 
 
     @property
@@ -134,10 +134,10 @@ class TimeBasedTrimmingInputStream(InputStream):
         if duration is not None:
             if duration is not None and duration < 0:
                 raise ValueError("Invalid value for `duration`, must be a value greater than or equal to `0`")
-            if not isinstance(duration, float):
+            if not isinstance(duration, (float, int)):
                 raise TypeError("Invalid type for `duration`, type has to be `float`")
 
-            self._duration = duration
+        self._duration = duration
 
     def to_dict(self):
         """Returns the model properties as a dict"""

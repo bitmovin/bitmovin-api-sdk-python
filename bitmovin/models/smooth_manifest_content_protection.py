@@ -45,9 +45,12 @@ class SmoothManifestContentProtection(BitmovinResource):
         self._drm_id = None
         self.discriminator = None
 
-        self.encoding_id = encoding_id
-        self.muxing_id = muxing_id
-        self.drm_id = drm_id
+        if encoding_id is not None:
+            self.encoding_id = encoding_id
+        if muxing_id is not None:
+            self.muxing_id = muxing_id
+        if drm_id is not None:
+            self.drm_id = drm_id
 
     @property
     def encoding_id(self):
@@ -74,7 +77,7 @@ class SmoothManifestContentProtection(BitmovinResource):
             if not isinstance(encoding_id, str):
                 raise TypeError("Invalid type for `encoding_id`, type has to be `str`")
 
-            self._encoding_id = encoding_id
+        self._encoding_id = encoding_id
 
 
     @property
@@ -102,7 +105,7 @@ class SmoothManifestContentProtection(BitmovinResource):
             if not isinstance(muxing_id, str):
                 raise TypeError("Invalid type for `muxing_id`, type has to be `str`")
 
-            self._muxing_id = muxing_id
+        self._muxing_id = muxing_id
 
 
     @property
@@ -130,7 +133,7 @@ class SmoothManifestContentProtection(BitmovinResource):
             if not isinstance(drm_id, str):
                 raise TypeError("Invalid type for `drm_id`, type has to be `str`")
 
-            self._drm_id = drm_id
+        self._drm_id = drm_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

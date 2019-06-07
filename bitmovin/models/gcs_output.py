@@ -49,9 +49,12 @@ class GcsOutput(Output):
         self._cloud_region = None
         self.discriminator = None
 
-        self.access_key = access_key
-        self.secret_key = secret_key
-        self.bucket_name = bucket_name
+        if access_key is not None:
+            self.access_key = access_key
+        if secret_key is not None:
+            self.secret_key = secret_key
+        if bucket_name is not None:
+            self.bucket_name = bucket_name
         if cloud_region is not None:
             self.cloud_region = cloud_region
 
@@ -80,7 +83,7 @@ class GcsOutput(Output):
             if not isinstance(access_key, str):
                 raise TypeError("Invalid type for `access_key`, type has to be `str`")
 
-            self._access_key = access_key
+        self._access_key = access_key
 
 
     @property
@@ -108,7 +111,7 @@ class GcsOutput(Output):
             if not isinstance(secret_key, str):
                 raise TypeError("Invalid type for `secret_key`, type has to be `str`")
 
-            self._secret_key = secret_key
+        self._secret_key = secret_key
 
 
     @property
@@ -136,7 +139,7 @@ class GcsOutput(Output):
             if not isinstance(bucket_name, str):
                 raise TypeError("Invalid type for `bucket_name`, type has to be `str`")
 
-            self._bucket_name = bucket_name
+        self._bucket_name = bucket_name
 
 
     @property
@@ -162,7 +165,7 @@ class GcsOutput(Output):
             if not isinstance(cloud_region, GoogleCloudRegion):
                 raise TypeError("Invalid type for `cloud_region`, type has to be `GoogleCloudRegion`")
 
-            self._cloud_region = cloud_region
+        self._cloud_region = cloud_region
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -68,7 +68,7 @@ class Mp2AudioConfiguration(AudioConfiguration):
             if not isinstance(channel_layout, ChannelLayout):
                 raise TypeError("Invalid type for `channel_layout`, type has to be `ChannelLayout`")
 
-            self._channel_layout = channel_layout
+        self._channel_layout = channel_layout
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -34,7 +34,8 @@ class BitmovinResponse(object):
         self._id = None
         self.discriminator = None
 
-        self.id = id
+        if id is not None:
+            self.id = id
 
     @property
     def id(self):
@@ -61,7 +62,7 @@ class BitmovinResponse(object):
             if not isinstance(id, str):
                 raise TypeError("Invalid type for `id`, type has to be `str`")
 
-            self._id = id
+        self._id = id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

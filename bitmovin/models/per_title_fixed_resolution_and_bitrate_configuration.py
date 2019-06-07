@@ -76,7 +76,7 @@ class PerTitleFixedResolutionAndBitrateConfiguration(object):
             if not isinstance(forced_rendition_above_highest_fixed_representation, int):
                 raise TypeError("Invalid type for `forced_rendition_above_highest_fixed_representation`, type has to be `int`")
 
-            self._forced_rendition_above_highest_fixed_representation = forced_rendition_above_highest_fixed_representation
+        self._forced_rendition_above_highest_fixed_representation = forced_rendition_above_highest_fixed_representation
 
 
     @property
@@ -101,10 +101,10 @@ class PerTitleFixedResolutionAndBitrateConfiguration(object):
         """
 
         if forced_rendition_above_highest_fixed_representation_factor is not None:
-            if not isinstance(forced_rendition_above_highest_fixed_representation_factor, float):
+            if not isinstance(forced_rendition_above_highest_fixed_representation_factor, (float, int)):
                 raise TypeError("Invalid type for `forced_rendition_above_highest_fixed_representation_factor`, type has to be `float`")
 
-            self._forced_rendition_above_highest_fixed_representation_factor = forced_rendition_above_highest_fixed_representation_factor
+        self._forced_rendition_above_highest_fixed_representation_factor = forced_rendition_above_highest_fixed_representation_factor
 
 
     @property
@@ -132,7 +132,7 @@ class PerTitleFixedResolutionAndBitrateConfiguration(object):
             if not isinstance(forced_rendition_above_highest_fixed_representation_calculation_mode, PerTitleFixedResolutionAndBitrateConfigurationMode):
                 raise TypeError("Invalid type for `forced_rendition_above_highest_fixed_representation_calculation_mode`, type has to be `PerTitleFixedResolutionAndBitrateConfigurationMode`")
 
-            self._forced_rendition_above_highest_fixed_representation_calculation_mode = forced_rendition_above_highest_fixed_representation_calculation_mode
+        self._forced_rendition_above_highest_fixed_representation_calculation_mode = forced_rendition_above_highest_fixed_representation_calculation_mode
 
     def to_dict(self):
         """Returns the model properties as a dict"""

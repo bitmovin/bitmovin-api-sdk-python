@@ -42,8 +42,10 @@ class EncodingStatisticsVod(EncodingStatistics):
         self._real_time_factor = None
         self.discriminator = None
 
-        self.time_enqueued = time_enqueued
-        self.real_time_factor = real_time_factor
+        if time_enqueued is not None:
+            self.time_enqueued = time_enqueued
+        if real_time_factor is not None:
+            self.real_time_factor = real_time_factor
 
     @property
     def time_enqueued(self):
@@ -70,7 +72,7 @@ class EncodingStatisticsVod(EncodingStatistics):
             if not isinstance(time_enqueued, int):
                 raise TypeError("Invalid type for `time_enqueued`, type has to be `int`")
 
-            self._time_enqueued = time_enqueued
+        self._time_enqueued = time_enqueued
 
 
     @property
@@ -95,10 +97,10 @@ class EncodingStatisticsVod(EncodingStatistics):
         """
 
         if real_time_factor is not None:
-            if not isinstance(real_time_factor, float):
+            if not isinstance(real_time_factor, (float, int)):
                 raise TypeError("Invalid type for `real_time_factor`, type has to be `float`")
 
-            self._real_time_factor = real_time_factor
+        self._real_time_factor = real_time_factor
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -39,7 +39,8 @@ class Domain(BitmovinResource):
         self._url = None
         self.discriminator = None
 
-        self.url = url
+        if url is not None:
+            self.url = url
 
     @property
     def url(self):
@@ -66,7 +67,7 @@ class Domain(BitmovinResource):
             if not isinstance(url, str):
                 raise TypeError("Invalid type for `url`, type has to be `str`")
 
-            self._url = url
+        self._url = url
 
     def to_dict(self):
         """Returns the model properties as a dict"""

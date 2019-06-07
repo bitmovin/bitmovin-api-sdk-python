@@ -34,7 +34,8 @@ class ManifestResource(object):
         self._manifest_id = None
         self.discriminator = None
 
-        self.manifest_id = manifest_id
+        if manifest_id is not None:
+            self.manifest_id = manifest_id
 
     @property
     def manifest_id(self):
@@ -61,7 +62,7 @@ class ManifestResource(object):
             if not isinstance(manifest_id, str):
                 raise TypeError("Invalid type for `manifest_id`, type has to be `str`")
 
-            self._manifest_id = manifest_id
+        self._manifest_id = manifest_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -91,19 +91,28 @@ class StatisticsPerStream(object):
         self._psnr_multiplicator = None
         self.discriminator = None
 
-        self.stream_id = stream_id
-        self.codec_config_id = codec_config_id
-        self.multiplicator = multiplicator
-        self.encoded_bytes = encoded_bytes
-        self.encoded_seconds = encoded_seconds
-        self.billable_minutes = billable_minutes
+        if stream_id is not None:
+            self.stream_id = stream_id
+        if codec_config_id is not None:
+            self.codec_config_id = codec_config_id
+        if multiplicator is not None:
+            self.multiplicator = multiplicator
+        if encoded_bytes is not None:
+            self.encoded_bytes = encoded_bytes
+        if encoded_seconds is not None:
+            self.encoded_seconds = encoded_seconds
+        if billable_minutes is not None:
+            self.billable_minutes = billable_minutes
         if width is not None:
             self.width = width
         if height is not None:
             self.height = height
-        self.rate = rate
-        self.bitrate = bitrate
-        self.codec = codec
+        if rate is not None:
+            self.rate = rate
+        if bitrate is not None:
+            self.bitrate = bitrate
+        if codec is not None:
+            self.codec = codec
         if resolution is not None:
             self.resolution = resolution
         if encoding_mode is not None:
@@ -144,7 +153,7 @@ class StatisticsPerStream(object):
             if not isinstance(stream_id, str):
                 raise TypeError("Invalid type for `stream_id`, type has to be `str`")
 
-            self._stream_id = stream_id
+        self._stream_id = stream_id
 
 
     @property
@@ -172,7 +181,7 @@ class StatisticsPerStream(object):
             if not isinstance(codec_config_id, str):
                 raise TypeError("Invalid type for `codec_config_id`, type has to be `str`")
 
-            self._codec_config_id = codec_config_id
+        self._codec_config_id = codec_config_id
 
 
     @property
@@ -197,10 +206,10 @@ class StatisticsPerStream(object):
         """
 
         if multiplicator is not None:
-            if not isinstance(multiplicator, float):
+            if not isinstance(multiplicator, (float, int)):
                 raise TypeError("Invalid type for `multiplicator`, type has to be `float`")
 
-            self._multiplicator = multiplicator
+        self._multiplicator = multiplicator
 
 
     @property
@@ -228,7 +237,7 @@ class StatisticsPerStream(object):
             if not isinstance(encoded_bytes, int):
                 raise TypeError("Invalid type for `encoded_bytes`, type has to be `int`")
 
-            self._encoded_bytes = encoded_bytes
+        self._encoded_bytes = encoded_bytes
 
 
     @property
@@ -253,10 +262,10 @@ class StatisticsPerStream(object):
         """
 
         if encoded_seconds is not None:
-            if not isinstance(encoded_seconds, float):
+            if not isinstance(encoded_seconds, (float, int)):
                 raise TypeError("Invalid type for `encoded_seconds`, type has to be `float`")
 
-            self._encoded_seconds = encoded_seconds
+        self._encoded_seconds = encoded_seconds
 
 
     @property
@@ -281,10 +290,10 @@ class StatisticsPerStream(object):
         """
 
         if billable_minutes is not None:
-            if not isinstance(billable_minutes, float):
+            if not isinstance(billable_minutes, (float, int)):
                 raise TypeError("Invalid type for `billable_minutes`, type has to be `float`")
 
-            self._billable_minutes = billable_minutes
+        self._billable_minutes = billable_minutes
 
 
     @property
@@ -312,7 +321,7 @@ class StatisticsPerStream(object):
             if not isinstance(width, int):
                 raise TypeError("Invalid type for `width`, type has to be `int`")
 
-            self._width = width
+        self._width = width
 
 
     @property
@@ -340,7 +349,7 @@ class StatisticsPerStream(object):
             if not isinstance(height, int):
                 raise TypeError("Invalid type for `height`, type has to be `int`")
 
-            self._height = height
+        self._height = height
 
 
     @property
@@ -368,7 +377,7 @@ class StatisticsPerStream(object):
             if not isinstance(rate, int):
                 raise TypeError("Invalid type for `rate`, type has to be `int`")
 
-            self._rate = rate
+        self._rate = rate
 
 
     @property
@@ -396,7 +405,7 @@ class StatisticsPerStream(object):
             if not isinstance(bitrate, int):
                 raise TypeError("Invalid type for `bitrate`, type has to be `int`")
 
-            self._bitrate = bitrate
+        self._bitrate = bitrate
 
 
     @property
@@ -422,7 +431,7 @@ class StatisticsPerStream(object):
             if not isinstance(codec, CodecConfigType):
                 raise TypeError("Invalid type for `codec`, type has to be `CodecConfigType`")
 
-            self._codec = codec
+        self._codec = codec
 
 
     @property
@@ -448,7 +457,7 @@ class StatisticsPerStream(object):
             if not isinstance(resolution, StatisticsResolution):
                 raise TypeError("Invalid type for `resolution`, type has to be `StatisticsResolution`")
 
-            self._resolution = resolution
+        self._resolution = resolution
 
 
     @property
@@ -474,7 +483,7 @@ class StatisticsPerStream(object):
             if not isinstance(encoding_mode, EncodingMode):
                 raise TypeError("Invalid type for `encoding_mode`, type has to be `EncodingMode`")
 
-            self._encoding_mode = encoding_mode
+        self._encoding_mode = encoding_mode
 
 
     @property
@@ -499,10 +508,10 @@ class StatisticsPerStream(object):
         """
 
         if encoding_mode_multiplicator is not None:
-            if not isinstance(encoding_mode_multiplicator, float):
+            if not isinstance(encoding_mode_multiplicator, (float, int)):
                 raise TypeError("Invalid type for `encoding_mode_multiplicator`, type has to be `float`")
 
-            self._encoding_mode_multiplicator = encoding_mode_multiplicator
+        self._encoding_mode_multiplicator = encoding_mode_multiplicator
 
 
     @property
@@ -528,7 +537,7 @@ class StatisticsPerStream(object):
             if not isinstance(per_title_result_stream, StatisticsPerTitleStream):
                 raise TypeError("Invalid type for `per_title_result_stream`, type has to be `StatisticsPerTitleStream`")
 
-            self._per_title_result_stream = per_title_result_stream
+        self._per_title_result_stream = per_title_result_stream
 
 
     @property
@@ -553,10 +562,10 @@ class StatisticsPerStream(object):
         """
 
         if per_title_multiplicator is not None:
-            if not isinstance(per_title_multiplicator, float):
+            if not isinstance(per_title_multiplicator, (float, int)):
                 raise TypeError("Invalid type for `per_title_multiplicator`, type has to be `float`")
 
-            self._per_title_multiplicator = per_title_multiplicator
+        self._per_title_multiplicator = per_title_multiplicator
 
 
     @property
@@ -582,7 +591,7 @@ class StatisticsPerStream(object):
             if not isinstance(psnr_mode, PsnrPerStreamMode):
                 raise TypeError("Invalid type for `psnr_mode`, type has to be `PsnrPerStreamMode`")
 
-            self._psnr_mode = psnr_mode
+        self._psnr_mode = psnr_mode
 
 
     @property
@@ -607,10 +616,10 @@ class StatisticsPerStream(object):
         """
 
         if psnr_multiplicator is not None:
-            if not isinstance(psnr_multiplicator, float):
+            if not isinstance(psnr_multiplicator, (float, int)):
                 raise TypeError("Invalid type for `psnr_multiplicator`, type has to be `float`")
 
-            self._psnr_multiplicator = psnr_multiplicator
+        self._psnr_multiplicator = psnr_multiplicator
 
     def to_dict(self):
         """Returns the model properties as a dict"""

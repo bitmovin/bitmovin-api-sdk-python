@@ -40,12 +40,13 @@ class Manifest(BitmovinResource):
         super(Manifest, self).__init__(*args, **kwargs)
 
         self._type = None
-        self._outputs = None
+        self._outputs = list()
         self.discriminator = None
 
         if type is not None:
             self.type = type
-        self.outputs = outputs
+        if outputs is not None:
+            self.outputs = outputs
 
     @property
     def type(self):
@@ -70,7 +71,7 @@ class Manifest(BitmovinResource):
             if not isinstance(type, ManifestType):
                 raise TypeError("Invalid type for `type`, type has to be `ManifestType`")
 
-            self._type = type
+        self._type = type
 
 
     @property
@@ -98,7 +99,7 @@ class Manifest(BitmovinResource):
             if not isinstance(outputs, list):
                 raise TypeError("Invalid type for `outputs`, type has to be `list[EncodingOutput]`")
 
-            self._outputs = outputs
+        self._outputs = outputs
 
     def to_dict(self):
         """Returns the model properties as a dict"""

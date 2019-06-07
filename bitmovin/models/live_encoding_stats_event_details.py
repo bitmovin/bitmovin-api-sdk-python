@@ -45,7 +45,8 @@ class LiveEncodingStatsEventDetails(object):
         self._error_message = None
         self.discriminator = None
 
-        self.event_name = event_name
+        if event_name is not None:
+            self.event_name = event_name
         if av_drift_in_seconds is not None:
             self.av_drift_in_seconds = av_drift_in_seconds
         if idle_duration_in_seconds is not None:
@@ -76,7 +77,7 @@ class LiveEncodingStatsEventDetails(object):
             if not isinstance(event_name, LiveEncodingEventName):
                 raise TypeError("Invalid type for `event_name`, type has to be `LiveEncodingEventName`")
 
-            self._event_name = event_name
+        self._event_name = event_name
 
 
     @property
@@ -104,7 +105,7 @@ class LiveEncodingStatsEventDetails(object):
             if not isinstance(av_drift_in_seconds, int):
                 raise TypeError("Invalid type for `av_drift_in_seconds`, type has to be `int`")
 
-            self._av_drift_in_seconds = av_drift_in_seconds
+        self._av_drift_in_seconds = av_drift_in_seconds
 
 
     @property
@@ -132,7 +133,7 @@ class LiveEncodingStatsEventDetails(object):
             if not isinstance(idle_duration_in_seconds, int):
                 raise TypeError("Invalid type for `idle_duration_in_seconds`, type has to be `int`")
 
-            self._idle_duration_in_seconds = idle_duration_in_seconds
+        self._idle_duration_in_seconds = idle_duration_in_seconds
 
 
     @property
@@ -160,7 +161,7 @@ class LiveEncodingStatsEventDetails(object):
             if not isinstance(error_message, str):
                 raise TypeError("Invalid type for `error_message`, type has to be `str`")
 
-            self._error_message = error_message
+        self._error_message = error_message
 
     def to_dict(self):
         """Returns the model properties as a dict"""

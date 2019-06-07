@@ -125,7 +125,7 @@ class ColorConfig(object):
             if not isinstance(copy_chroma_location_flag, bool):
                 raise TypeError("Invalid type for `copy_chroma_location_flag`, type has to be `bool`")
 
-            self._copy_chroma_location_flag = copy_chroma_location_flag
+        self._copy_chroma_location_flag = copy_chroma_location_flag
 
 
     @property
@@ -153,7 +153,7 @@ class ColorConfig(object):
             if not isinstance(copy_color_space_flag, bool):
                 raise TypeError("Invalid type for `copy_color_space_flag`, type has to be `bool`")
 
-            self._copy_color_space_flag = copy_color_space_flag
+        self._copy_color_space_flag = copy_color_space_flag
 
 
     @property
@@ -181,7 +181,7 @@ class ColorConfig(object):
             if not isinstance(copy_color_primaries_flag, bool):
                 raise TypeError("Invalid type for `copy_color_primaries_flag`, type has to be `bool`")
 
-            self._copy_color_primaries_flag = copy_color_primaries_flag
+        self._copy_color_primaries_flag = copy_color_primaries_flag
 
 
     @property
@@ -209,7 +209,7 @@ class ColorConfig(object):
             if not isinstance(copy_color_range_flag, bool):
                 raise TypeError("Invalid type for `copy_color_range_flag`, type has to be `bool`")
 
-            self._copy_color_range_flag = copy_color_range_flag
+        self._copy_color_range_flag = copy_color_range_flag
 
 
     @property
@@ -237,7 +237,7 @@ class ColorConfig(object):
             if not isinstance(copy_color_transfer_flag, bool):
                 raise TypeError("Invalid type for `copy_color_transfer_flag`, type has to be `bool`")
 
-            self._copy_color_transfer_flag = copy_color_transfer_flag
+        self._copy_color_transfer_flag = copy_color_transfer_flag
 
 
     @property
@@ -265,7 +265,7 @@ class ColorConfig(object):
             if not isinstance(chroma_location, ChromaLocation):
                 raise TypeError("Invalid type for `chroma_location`, type has to be `ChromaLocation`")
 
-            self._chroma_location = chroma_location
+        self._chroma_location = chroma_location
 
 
     @property
@@ -293,7 +293,7 @@ class ColorConfig(object):
             if not isinstance(color_space, ColorSpace):
                 raise TypeError("Invalid type for `color_space`, type has to be `ColorSpace`")
 
-            self._color_space = color_space
+        self._color_space = color_space
 
 
     @property
@@ -321,7 +321,7 @@ class ColorConfig(object):
             if not isinstance(color_primaries, ColorPrimaries):
                 raise TypeError("Invalid type for `color_primaries`, type has to be `ColorPrimaries`")
 
-            self._color_primaries = color_primaries
+        self._color_primaries = color_primaries
 
 
     @property
@@ -349,7 +349,7 @@ class ColorConfig(object):
             if not isinstance(color_range, ColorRange):
                 raise TypeError("Invalid type for `color_range`, type has to be `ColorRange`")
 
-            self._color_range = color_range
+        self._color_range = color_range
 
 
     @property
@@ -377,7 +377,7 @@ class ColorConfig(object):
             if not isinstance(color_transfer, ColorTransfer):
                 raise TypeError("Invalid type for `color_transfer`, type has to be `ColorTransfer`")
 
-            self._color_transfer = color_transfer
+        self._color_transfer = color_transfer
 
 
     @property
@@ -405,7 +405,7 @@ class ColorConfig(object):
             if not isinstance(input_color_space, InputColorSpace):
                 raise TypeError("Invalid type for `input_color_space`, type has to be `InputColorSpace`")
 
-            self._input_color_space = input_color_space
+        self._input_color_space = input_color_space
 
 
     @property
@@ -433,7 +433,7 @@ class ColorConfig(object):
             if not isinstance(input_color_range, InputColorRange):
                 raise TypeError("Invalid type for `input_color_range`, type has to be `InputColorRange`")
 
-            self._input_color_range = input_color_range
+        self._input_color_range = input_color_range
 
     def to_dict(self):
         """Returns the model properties as a dict"""

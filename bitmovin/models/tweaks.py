@@ -64,7 +64,7 @@ class Tweaks(object):
             if not isinstance(audio_video_sync_mode, AudioVideoSyncMode):
                 raise TypeError("Invalid type for `audio_video_sync_mode`, type has to be `AudioVideoSyncMode`")
 
-            self._audio_video_sync_mode = audio_video_sync_mode
+        self._audio_video_sync_mode = audio_video_sync_mode
 
     def to_dict(self):
         """Returns the model properties as a dict"""

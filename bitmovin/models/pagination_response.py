@@ -46,7 +46,7 @@ class PaginationResponse(object):
         self._limit = None
         self._previous = None
         self._next = None
-        self._items = None
+        self._items = list()
         self.discriminator = None
 
         if total_count is not None:
@@ -85,7 +85,7 @@ class PaginationResponse(object):
             if not isinstance(total_count, int):
                 raise TypeError("Invalid type for `total_count`, type has to be `int`")
 
-            self._total_count = total_count
+        self._total_count = total_count
 
 
     @property
@@ -111,7 +111,7 @@ class PaginationResponse(object):
             if not isinstance(offset, int):
                 raise TypeError("Invalid type for `offset`, type has to be `int`")
 
-            self._offset = offset
+        self._offset = offset
 
 
     @property
@@ -137,7 +137,7 @@ class PaginationResponse(object):
             if not isinstance(limit, int):
                 raise TypeError("Invalid type for `limit`, type has to be `int`")
 
-            self._limit = limit
+        self._limit = limit
 
 
     @property
@@ -163,7 +163,7 @@ class PaginationResponse(object):
             if not isinstance(previous, str):
                 raise TypeError("Invalid type for `previous`, type has to be `str`")
 
-            self._previous = previous
+        self._previous = previous
 
 
     @property
@@ -189,7 +189,7 @@ class PaginationResponse(object):
             if not isinstance(next, str):
                 raise TypeError("Invalid type for `next`, type has to be `str`")
 
-            self._next = next
+        self._next = next
 
 
     @property
@@ -215,7 +215,7 @@ class PaginationResponse(object):
             if not isinstance(items, list):
                 raise TypeError("Invalid type for `items`, type has to be `list[object]`")
 
-            self._items = items
+        self._items = items
 
     def to_dict(self):
         """Returns the model properties as a dict"""

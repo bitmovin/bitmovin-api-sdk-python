@@ -46,8 +46,10 @@ class SegmentedRawMuxing(Muxing):
         self._segments_muxed = None
         self.discriminator = None
 
-        self.segment_length = segment_length
-        self.segment_naming = segment_naming
+        if segment_length is not None:
+            self.segment_length = segment_length
+        if segment_naming is not None:
+            self.segment_naming = segment_naming
         if segments_muxed is not None:
             self.segments_muxed = segments_muxed
 
@@ -73,10 +75,10 @@ class SegmentedRawMuxing(Muxing):
         """
 
         if segment_length is not None:
-            if not isinstance(segment_length, float):
+            if not isinstance(segment_length, (float, int)):
                 raise TypeError("Invalid type for `segment_length`, type has to be `float`")
 
-            self._segment_length = segment_length
+        self._segment_length = segment_length
 
 
     @property
@@ -104,7 +106,7 @@ class SegmentedRawMuxing(Muxing):
             if not isinstance(segment_naming, str):
                 raise TypeError("Invalid type for `segment_naming`, type has to be `str`")
 
-            self._segment_naming = segment_naming
+        self._segment_naming = segment_naming
 
 
     @property
@@ -132,7 +134,7 @@ class SegmentedRawMuxing(Muxing):
             if not isinstance(segments_muxed, int):
                 raise TypeError("Invalid type for `segments_muxed`, type has to be `int`")
 
-            self._segments_muxed = segments_muxed
+        self._segments_muxed = segments_muxed
 
     def to_dict(self):
         """Returns the model properties as a dict"""

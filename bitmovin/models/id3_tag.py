@@ -82,7 +82,7 @@ class Id3Tag(BitmovinResource):
             if not isinstance(position_mode, Id3TagPositionMode):
                 raise TypeError("Invalid type for `position_mode`, type has to be `Id3TagPositionMode`")
 
-            self._position_mode = position_mode
+        self._position_mode = position_mode
 
 
     @property
@@ -110,7 +110,7 @@ class Id3Tag(BitmovinResource):
             if not isinstance(frame, int):
                 raise TypeError("Invalid type for `frame`, type has to be `int`")
 
-            self._frame = frame
+        self._frame = frame
 
 
     @property
@@ -135,10 +135,10 @@ class Id3Tag(BitmovinResource):
         """
 
         if time is not None:
-            if not isinstance(time, float):
+            if not isinstance(time, (float, int)):
                 raise TypeError("Invalid type for `time`, type has to be `float`")
 
-            self._time = time
+        self._time = time
 
     def get_real_child_model(self, data):
         """Returns the real base class specified by the discriminator"""

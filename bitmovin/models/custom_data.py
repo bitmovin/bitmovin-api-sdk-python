@@ -67,7 +67,7 @@ class CustomData(object):
             if not isinstance(custom_data, dict):
                 raise TypeError("Invalid type for `custom_data`, type has to be `dict(str, object)`")
 
-            self._custom_data = custom_data
+        self._custom_data = custom_data
 
 
     @property
@@ -95,7 +95,7 @@ class CustomData(object):
             if not isinstance(created_at, datetime):
                 raise TypeError("Invalid type for `created_at`, type has to be `datetime`")
 
-            self._created_at = created_at
+        self._created_at = created_at
 
     def to_dict(self):
         """Returns the model properties as a dict"""

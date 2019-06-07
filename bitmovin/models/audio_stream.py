@@ -92,7 +92,7 @@ class AudioStream(MediaStream):
             if not isinstance(sample_rate, int):
                 raise TypeError("Invalid type for `sample_rate`, type has to be `int`")
 
-            self._sample_rate = sample_rate
+        self._sample_rate = sample_rate
 
 
     @property
@@ -120,7 +120,7 @@ class AudioStream(MediaStream):
             if not isinstance(bitrate, int):
                 raise TypeError("Invalid type for `bitrate`, type has to be `int`")
 
-            self._bitrate = bitrate
+        self._bitrate = bitrate
 
 
     @property
@@ -148,7 +148,7 @@ class AudioStream(MediaStream):
             if not isinstance(rate, int):
                 raise TypeError("Invalid type for `rate`, type has to be `int`")
 
-            self._rate = rate
+        self._rate = rate
 
 
     @property
@@ -176,7 +176,7 @@ class AudioStream(MediaStream):
             if not isinstance(channel_format, str):
                 raise TypeError("Invalid type for `channel_format`, type has to be `str`")
 
-            self._channel_format = channel_format
+        self._channel_format = channel_format
 
 
     @property
@@ -204,7 +204,7 @@ class AudioStream(MediaStream):
             if not isinstance(language, str):
                 raise TypeError("Invalid type for `language`, type has to be `str`")
 
-            self._language = language
+        self._language = language
 
 
     @property
@@ -232,7 +232,7 @@ class AudioStream(MediaStream):
             if not isinstance(hearing_impaired, bool):
                 raise TypeError("Invalid type for `hearing_impaired`, type has to be `bool`")
 
-            self._hearing_impaired = hearing_impaired
+        self._hearing_impaired = hearing_impaired
 
     def to_dict(self):
         """Returns the model properties as a dict"""

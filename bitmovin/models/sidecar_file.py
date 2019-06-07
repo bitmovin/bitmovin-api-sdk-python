@@ -45,12 +45,14 @@ class SidecarFile(BitmovinResource):
 
         self._input_id = None
         self._input_path = None
-        self._outputs = None
+        self._outputs = list()
         self._error_mode = None
         self.discriminator = None
 
-        self.input_id = input_id
-        self.input_path = input_path
+        if input_id is not None:
+            self.input_id = input_id
+        if input_path is not None:
+            self.input_path = input_path
         if outputs is not None:
             self.outputs = outputs
         if error_mode is not None:
@@ -81,7 +83,7 @@ class SidecarFile(BitmovinResource):
             if not isinstance(input_id, str):
                 raise TypeError("Invalid type for `input_id`, type has to be `str`")
 
-            self._input_id = input_id
+        self._input_id = input_id
 
 
     @property
@@ -109,7 +111,7 @@ class SidecarFile(BitmovinResource):
             if not isinstance(input_path, str):
                 raise TypeError("Invalid type for `input_path`, type has to be `str`")
 
-            self._input_path = input_path
+        self._input_path = input_path
 
 
     @property
@@ -135,7 +137,7 @@ class SidecarFile(BitmovinResource):
             if not isinstance(outputs, list):
                 raise TypeError("Invalid type for `outputs`, type has to be `list[EncodingOutput]`")
 
-            self._outputs = outputs
+        self._outputs = outputs
 
 
     @property
@@ -161,7 +163,7 @@ class SidecarFile(BitmovinResource):
             if not isinstance(error_mode, SidecarErrorMode):
                 raise TypeError("Invalid type for `error_mode`, type has to be `SidecarErrorMode`")
 
-            self._error_mode = error_mode
+        self._error_mode = error_mode
 
     def to_dict(self):
         """Returns the model properties as a dict"""

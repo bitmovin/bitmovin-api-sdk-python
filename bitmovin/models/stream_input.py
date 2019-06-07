@@ -84,7 +84,7 @@ class StreamInput(object):
             if not isinstance(input_id, str):
                 raise TypeError("Invalid type for `input_id`, type has to be `str`")
 
-            self._input_id = input_id
+        self._input_id = input_id
 
 
     @property
@@ -112,7 +112,7 @@ class StreamInput(object):
             if not isinstance(input_path, str):
                 raise TypeError("Invalid type for `input_path`, type has to be `str`")
 
-            self._input_path = input_path
+        self._input_path = input_path
 
 
     @property
@@ -140,7 +140,7 @@ class StreamInput(object):
             if not isinstance(selection_mode, StreamSelectionMode):
                 raise TypeError("Invalid type for `selection_mode`, type has to be `StreamSelectionMode`")
 
-            self._selection_mode = selection_mode
+        self._selection_mode = selection_mode
 
 
     @property
@@ -168,7 +168,7 @@ class StreamInput(object):
             if not isinstance(position, int):
                 raise TypeError("Invalid type for `position`, type has to be `int`")
 
-            self._position = position
+        self._position = position
 
 
     @property
@@ -196,7 +196,7 @@ class StreamInput(object):
             if not isinstance(input_stream_id, str):
                 raise TypeError("Invalid type for `input_stream_id`, type has to be `str`")
 
-            self._input_stream_id = input_stream_id
+        self._input_stream_id = input_stream_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

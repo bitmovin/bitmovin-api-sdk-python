@@ -35,14 +35,15 @@ class Keyframe(BitmovinResource):
         })
         return attributes
 
-    def __init__(self, time=None, segment_cut=True, *args, **kwargs):
+    def __init__(self, time=None, segment_cut=None, *args, **kwargs):
         super(Keyframe, self).__init__(*args, **kwargs)
 
         self._time = None
         self._segment_cut = None
         self.discriminator = None
 
-        self.time = time
+        if time is not None:
+            self.time = time
         if segment_cut is not None:
             self.segment_cut = segment_cut
 
@@ -68,10 +69,10 @@ class Keyframe(BitmovinResource):
         """
 
         if time is not None:
-            if not isinstance(time, float):
+            if not isinstance(time, (float, int)):
                 raise TypeError("Invalid type for `time`, type has to be `float`")
 
-            self._time = time
+        self._time = time
 
 
     @property
@@ -99,7 +100,7 @@ class Keyframe(BitmovinResource):
             if not isinstance(segment_cut, bool):
                 raise TypeError("Invalid type for `segment_cut`, type has to be `bool`")
 
-            self._segment_cut = segment_cut
+        self._segment_cut = segment_cut
 
     def to_dict(self):
         """Returns the model properties as a dict"""

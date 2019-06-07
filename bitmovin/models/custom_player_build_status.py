@@ -49,10 +49,12 @@ class CustomPlayerBuildStatus(object):
         self._subtasks = None
         self.discriminator = None
 
-        self.status = status
+        if status is not None:
+            self.status = status
         if eta is not None:
             self.eta = eta
-        self.progress = progress
+        if progress is not None:
+            self.progress = progress
         if messages is not None:
             self.messages = messages
         if subtasks is not None:
@@ -83,7 +85,7 @@ class CustomPlayerBuildStatus(object):
             if not isinstance(status, Status):
                 raise TypeError("Invalid type for `status`, type has to be `Status`")
 
-            self._status = status
+        self._status = status
 
 
     @property
@@ -111,7 +113,7 @@ class CustomPlayerBuildStatus(object):
             if not isinstance(eta, int):
                 raise TypeError("Invalid type for `eta`, type has to be `int`")
 
-            self._eta = eta
+        self._eta = eta
 
 
     @property
@@ -139,7 +141,7 @@ class CustomPlayerBuildStatus(object):
             if not isinstance(progress, int):
                 raise TypeError("Invalid type for `progress`, type has to be `int`")
 
-            self._progress = progress
+        self._progress = progress
 
 
     @property
@@ -165,7 +167,7 @@ class CustomPlayerBuildStatus(object):
             if not isinstance(messages, Message):
                 raise TypeError("Invalid type for `messages`, type has to be `Message`")
 
-            self._messages = messages
+        self._messages = messages
 
 
     @property
@@ -191,7 +193,7 @@ class CustomPlayerBuildStatus(object):
             if not isinstance(subtasks, str):
                 raise TypeError("Invalid type for `subtasks`, type has to be `str`")
 
-            self._subtasks = subtasks
+        self._subtasks = subtasks
 
     def to_dict(self):
         """Returns the model properties as a dict"""

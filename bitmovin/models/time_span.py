@@ -37,8 +37,10 @@ class TimeSpan(object):
         self._to = None
         self.discriminator = None
 
-        self._from = _from
-        self.to = to
+        if _from is not None:
+            self._from = _from
+        if to is not None:
+            self.to = to
 
     @property
     def _from(self):
@@ -65,7 +67,7 @@ class TimeSpan(object):
             if not isinstance(_from, int):
                 raise TypeError("Invalid type for `_from`, type has to be `int`")
 
-            self.__from = _from
+        self.__from = _from
 
 
     @property
@@ -93,7 +95,7 @@ class TimeSpan(object):
             if not isinstance(to, int):
                 raise TypeError("Invalid type for `to`, type has to be `int`")
 
-            self._to = to
+        self._to = to
 
     def to_dict(self):
         """Returns the model properties as a dict"""

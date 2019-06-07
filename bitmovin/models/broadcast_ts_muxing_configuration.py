@@ -42,8 +42,8 @@ class BroadcastTsMuxingConfiguration(object):
 
         self._transport = None
         self._program = None
-        self._video_streams = None
-        self._audio_streams = None
+        self._video_streams = list()
+        self._audio_streams = list()
         self.discriminator = None
 
         if transport is not None:
@@ -80,7 +80,7 @@ class BroadcastTsMuxingConfiguration(object):
             if not isinstance(transport, BroadcastTsTransportConfiguration):
                 raise TypeError("Invalid type for `transport`, type has to be `BroadcastTsTransportConfiguration`")
 
-            self._transport = transport
+        self._transport = transport
 
 
     @property
@@ -108,7 +108,7 @@ class BroadcastTsMuxingConfiguration(object):
             if not isinstance(program, BroadcastTsProgramConfiguration):
                 raise TypeError("Invalid type for `program`, type has to be `BroadcastTsProgramConfiguration`")
 
-            self._program = program
+        self._program = program
 
 
     @property
@@ -134,7 +134,7 @@ class BroadcastTsMuxingConfiguration(object):
             if not isinstance(video_streams, list):
                 raise TypeError("Invalid type for `video_streams`, type has to be `list[BroadcastTsVideoInputStreamConfiguration]`")
 
-            self._video_streams = video_streams
+        self._video_streams = video_streams
 
 
     @property
@@ -160,7 +160,7 @@ class BroadcastTsMuxingConfiguration(object):
             if not isinstance(audio_streams, list):
                 raise TypeError("Invalid type for `audio_streams`, type has to be `list[BroadcastTsAudioInputStreamConfiguration]`")
 
-            self._audio_streams = audio_streams
+        self._audio_streams = audio_streams
 
     def to_dict(self):
         """Returns the model properties as a dict"""
