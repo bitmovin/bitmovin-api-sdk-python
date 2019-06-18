@@ -132,7 +132,7 @@ class VideoStream(MediaStream):
     def rate(self):
         """Gets the rate of this VideoStream.
 
-        Bitrate in bps
+        Bitrate in bps (the same as bitrate, but represented as an integer value)
 
         :return: The rate of this VideoStream.
         :rtype: int
@@ -143,7 +143,7 @@ class VideoStream(MediaStream):
     def rate(self, rate):
         """Sets the rate of this VideoStream.
 
-        Bitrate in bps
+        Bitrate in bps (the same as bitrate, but represented as an integer value)
 
         :param rate: The rate of this VideoStream.
         :type: int

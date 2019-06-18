@@ -6,6 +6,7 @@ from bitmovin.common import BaseApi
 from bitmovin.common.poscheck import poscheck_except
 
 from bitmovin.models.email_notification_with_stream_conditions import EmailNotificationWithStreamConditions
+from bitmovin.models.email_notification_with_stream_conditions_request import EmailNotificationWithStreamConditionsRequest
 from bitmovin.models.response_envelope import ResponseEnvelope
 from bitmovin.models.response_error import ResponseError
 
@@ -20,33 +21,33 @@ class LiveInputStreamChangedApi(BaseApi):
             logger=logger
         )
 
-    def create(self, email_notification_with_stream_conditions, **kwargs):
+    def create(self, email_notification_with_stream_conditions_request, **kwargs):
         """Add Live Input Stream Changed Email Notification (All Encodings)"""
 
         return self.api_client.post(
             '/notifications/emails/encoding/encodings/live-input-stream-changed',
-            email_notification_with_stream_conditions,
+            email_notification_with_stream_conditions_request,
             type=EmailNotificationWithStreamConditions,
             **kwargs
         )
 
-    def createByEncodingId(self, encoding_id, email_notification_with_stream_conditions, **kwargs):
+    def createByEncodingId(self, encoding_id, email_notification_with_stream_conditions_request, **kwargs):
         """Add Live Input Stream Changed Email Notification (Specific Encoding)"""
 
         return self.api_client.post(
             '/notifications/emails/encoding/encodings/{encoding_id}/live-input-stream-changed',
-            email_notification_with_stream_conditions,
+            email_notification_with_stream_conditions_request,
             path_params={'encoding_id': encoding_id},
             type=EmailNotificationWithStreamConditions,
             **kwargs
         )
 
-    def update(self, notification_id, email_notification_with_stream_conditions, **kwargs):
+    def update(self, notification_id, email_notification_with_stream_conditions_request, **kwargs):
         """Replace Live Input Stream Changed Email Notification"""
 
         return self.api_client.put(
             '/notifications/emails/encoding/encodings/live-input-stream-changed/{notification_id}',
-            email_notification_with_stream_conditions,
+            email_notification_with_stream_conditions_request,
             path_params={'notification_id': notification_id},
             type=EmailNotificationWithStreamConditions,
             **kwargs

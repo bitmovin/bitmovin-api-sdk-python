@@ -24,6 +24,7 @@ class Thumbnail(BitmovinResource):
         types.update({
             'height': 'int',
             'pattern': 'str',
+            'interval': 'float',
             'positions': 'list[float]',
             'outputs': 'list[EncodingOutput]',
             'unit': 'ThumbnailUnit'
@@ -36,17 +37,19 @@ class Thumbnail(BitmovinResource):
         attributes.update({
             'height': 'height',
             'pattern': 'pattern',
+            'interval': 'interval',
             'positions': 'positions',
             'outputs': 'outputs',
             'unit': 'unit'
         })
         return attributes
 
-    def __init__(self, height=None, pattern=None, positions=None, outputs=None, unit=None, *args, **kwargs):
+    def __init__(self, height=None, pattern=None, interval=None, positions=None, outputs=None, unit=None, *args, **kwargs):
         super(Thumbnail, self).__init__(*args, **kwargs)
 
         self._height = None
         self._pattern = None
+        self._interval = None
         self._positions = list()
         self._outputs = list()
         self._unit = None
@@ -56,6 +59,8 @@ class Thumbnail(BitmovinResource):
             self.height = height
         if pattern is not None:
             self.pattern = pattern
+        if interval is not None:
+            self.interval = interval
         if positions is not None:
             self.positions = positions
         if outputs is not None:
@@ -67,7 +72,7 @@ class Thumbnail(BitmovinResource):
     def height(self):
         """Gets the height of this Thumbnail.
 
-        Height of the thumbnail
+        Height of the thumbnail.
 
         :return: The height of this Thumbnail.
         :rtype: int
@@ -78,7 +83,7 @@ class Thumbnail(BitmovinResource):
     def height(self, height):
         """Sets the height of this Thumbnail.
 
-        Height of the thumbnail
+        Height of the thumbnail.
 
         :param height: The height of this Thumbnail.
         :type: int
@@ -95,7 +100,7 @@ class Thumbnail(BitmovinResource):
     def pattern(self):
         """Gets the pattern of this Thumbnail.
 
-         Pattern which describes the thumbnail filenames. For example with thumbnail-%number%.png as pattern and 3 positions: thumbnail-3_0.png, thumbnail-5_0.png and thumbnail-25_5.png. (The number represents the position in the source video in seconds, in the previous example the first filename represents the thumbnail at 3s, the second one at 5s and the third one at 25.5s)
+         Pattern which describes the thumbnail filenames. For example with thumbnail-%number%.png as pattern and 3 positions: thumbnail-3_0.png, thumbnail-5_0.png and thumbnail-25_5.png. (The number represents the position in the source video in seconds, in the previous example the first filename represents the thumbnail at 3s, the second one at 5s and the third one at 25.5s).
 
         :return: The pattern of this Thumbnail.
         :rtype: str
@@ -106,7 +111,7 @@ class Thumbnail(BitmovinResource):
     def pattern(self, pattern):
         """Sets the pattern of this Thumbnail.
 
-         Pattern which describes the thumbnail filenames. For example with thumbnail-%number%.png as pattern and 3 positions: thumbnail-3_0.png, thumbnail-5_0.png and thumbnail-25_5.png. (The number represents the position in the source video in seconds, in the previous example the first filename represents the thumbnail at 3s, the second one at 5s and the third one at 25.5s)
+         Pattern which describes the thumbnail filenames. For example with thumbnail-%number%.png as pattern and 3 positions: thumbnail-3_0.png, thumbnail-5_0.png and thumbnail-25_5.png. (The number represents the position in the source video in seconds, in the previous example the first filename represents the thumbnail at 3s, the second one at 5s and the third one at 25.5s).
 
         :param pattern: The pattern of this Thumbnail.
         :type: str
@@ -120,10 +125,38 @@ class Thumbnail(BitmovinResource):
 
 
     @property
+    def interval(self):
+        """Gets the interval of this Thumbnail.
+
+        The interval in which to create thumbnails. In seconds (E.g. a value of 4 means create a thumbnail every 4 seconds). Mutually exclusive with positions/unit. Has to be equal to or greater than 1.
+
+        :return: The interval of this Thumbnail.
+        :rtype: float
+        """
+        return self._interval
+
+    @interval.setter
+    def interval(self, interval):
+        """Sets the interval of this Thumbnail.
+
+        The interval in which to create thumbnails. In seconds (E.g. a value of 4 means create a thumbnail every 4 seconds). Mutually exclusive with positions/unit. Has to be equal to or greater than 1.
+
+        :param interval: The interval of this Thumbnail.
+        :type: float
+        """
+
+        if interval is not None:
+            if not isinstance(interval, (float, int)):
+                raise TypeError("Invalid type for `interval`, type has to be `float`")
+
+        self._interval = interval
+
+
+    @property
     def positions(self):
         """Gets the positions of this Thumbnail.
 
-        Position in the unit where the thumbnail should be created from.
+        Position in the unit where the thumbnail should be created from. Mutually exclusive with interval.
 
         :return: The positions of this Thumbnail.
         :rtype: list[float]
@@ -134,7 +167,7 @@ class Thumbnail(BitmovinResource):
     def positions(self, positions):
         """Sets the positions of this Thumbnail.
 
-        Position in the unit where the thumbnail should be created from.
+        Position in the unit where the thumbnail should be created from. Mutually exclusive with interval.
 
         :param positions: The positions of this Thumbnail.
         :type: list[float]
@@ -177,6 +210,7 @@ class Thumbnail(BitmovinResource):
     def unit(self):
         """Gets the unit of this Thumbnail.
 
+        Unit of the values in the positions array.
 
         :return: The unit of this Thumbnail.
         :rtype: ThumbnailUnit
@@ -187,6 +221,7 @@ class Thumbnail(BitmovinResource):
     def unit(self, unit):
         """Sets the unit of this Thumbnail.
 
+        Unit of the values in the positions array.
 
         :param unit: The unit of this Thumbnail.
         :type: ThumbnailUnit

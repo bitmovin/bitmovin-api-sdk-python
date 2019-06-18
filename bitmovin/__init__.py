@@ -2,7 +2,7 @@
 
 from __future__ import absolute_import
 
-__version__ = "1.16.0alpha0"
+__version__ = "1.17.0alpha0"
 
 # import apis into sdk package
 from bitmovin.common import *
@@ -700,6 +700,12 @@ from bitmovin.notifications.emails.encoding.encodings.liveInputStreamChanged.liv
 
 from bitmovin.notifications.emails.encoding.encodings.error.error_api import ErrorApi
 
+from bitmovin.notifications.webhooks.encoding.manifest.manifest_api import ManifestApi
+from bitmovin.notifications.webhooks.encoding.manifest.manifest_api import NotificationListQueryParams
+from bitmovin.notifications.webhooks.encoding.manifest.error.error_api import ErrorApi
+
+from bitmovin.notifications.webhooks.encoding.manifest.finished.finished_api import FinishedApi
+
 from bitmovin.player.player_api import PlayerApi
 
 from bitmovin.player.channels.channels_api import ChannelsApi
@@ -893,6 +899,7 @@ from bitmovin.models.eac3_audio_configuration import Eac3AudioConfiguration
 from bitmovin.models.ebu_r128_single_pass_filter import EbuR128SinglePassFilter
 from bitmovin.models.email_notification import EmailNotification
 from bitmovin.models.email_notification_with_stream_conditions import EmailNotificationWithStreamConditions
+from bitmovin.models.email_notification_with_stream_conditions_request import EmailNotificationWithStreamConditionsRequest
 from bitmovin.models.encoding import Encoding
 from bitmovin.models.encoding_error_definition import EncodingErrorDefinition
 from bitmovin.models.encoding_error_email_notification import EncodingErrorEmailNotification

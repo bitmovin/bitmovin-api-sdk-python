@@ -22,7 +22,7 @@ class AudioStream(MediaStream):
         types = super(AudioStream, self).openapi_types
         types.update({
             'sample_rate': 'int',
-            'bitrate': 'int',
+            'bitrate': 'str',
             'rate': 'int',
             'channel_format': 'str',
             'language': 'str',
@@ -102,7 +102,7 @@ class AudioStream(MediaStream):
         Bitrate in bps
 
         :return: The bitrate of this AudioStream.
-        :rtype: int
+        :rtype: str
         """
         return self._bitrate
 
@@ -113,12 +113,12 @@ class AudioStream(MediaStream):
         Bitrate in bps
 
         :param bitrate: The bitrate of this AudioStream.
-        :type: int
+        :type: str
         """
 
         if bitrate is not None:
-            if not isinstance(bitrate, int):
-                raise TypeError("Invalid type for `bitrate`, type has to be `int`")
+            if not isinstance(bitrate, str):
+                raise TypeError("Invalid type for `bitrate`, type has to be `str`")
 
         self._bitrate = bitrate
 

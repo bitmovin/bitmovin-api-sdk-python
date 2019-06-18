@@ -57,7 +57,7 @@ class Condition(AbstractCondition):
     def attribute(self):
         """Gets the attribute of this Condition.
 
-        The attribute that should be used for the evaluation
+        The attribute that should be used for the evaluation. Valid values include, depending on the context: - HEIGHT - WIDTH - BITRATE - FPS - ASPECTRATIO - INPUTSTREAM - LANGUAGE - CHANNELFORMAT - CHANNELLAYOUT - STREAMCOUNT - AUDIOSTREAMCOUNT - VIDEOSTREAMCOUNT - DURATION - CONNECTION_STATUS - CONNECTION_STATUS_JUST_CHANGED 
 
         :return: The attribute of this Condition.
         :rtype: str
@@ -68,7 +68,7 @@ class Condition(AbstractCondition):
     def attribute(self, attribute):
         """Sets the attribute of this Condition.
 
-        The attribute that should be used for the evaluation
+        The attribute that should be used for the evaluation. Valid values include, depending on the context: - HEIGHT - WIDTH - BITRATE - FPS - ASPECTRATIO - INPUTSTREAM - LANGUAGE - CHANNELFORMAT - CHANNELLAYOUT - STREAMCOUNT - AUDIOSTREAMCOUNT - VIDEOSTREAMCOUNT - DURATION - CONNECTION_STATUS - CONNECTION_STATUS_JUST_CHANGED 
 
         :param attribute: The attribute of this Condition.
         :type: str

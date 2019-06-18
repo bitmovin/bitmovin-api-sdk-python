@@ -23,7 +23,7 @@ class EncodingStreamInputDetails(object):
             'duration': 'float',
             'size': 'int',
             'bitrate': 'int',
-            'tags': 'list[str]',
+            'tags': 'dict(str, object)',
             'video_streams': 'list[VideoStream]',
             'audio_streams': 'list[AudioStream]',
             'meta_streams': 'list[MediaStream]',
@@ -54,7 +54,7 @@ class EncodingStreamInputDetails(object):
         self._duration = None
         self._size = None
         self._bitrate = None
-        self._tags = list()
+        self._tags = None
         self._video_streams = list()
         self._audio_streams = list()
         self._meta_streams = list()
@@ -229,7 +229,7 @@ class EncodingStreamInputDetails(object):
         Additional metadata saved in the input file
 
         :return: The tags of this EncodingStreamInputDetails.
-        :rtype: list[str]
+        :rtype: dict(str, object)
         """
         return self._tags
 
@@ -240,12 +240,12 @@ class EncodingStreamInputDetails(object):
         Additional metadata saved in the input file
 
         :param tags: The tags of this EncodingStreamInputDetails.
-        :type: list[str]
+        :type: dict(str, object)
         """
 
         if tags is not None:
-            if not isinstance(tags, list):
-                raise TypeError("Invalid type for `tags`, type has to be `list[str]`")
+            if not isinstance(tags, dict):
+                raise TypeError("Invalid type for `tags`, type has to be `dict(str, object)`")
 
         self._tags = tags
 
