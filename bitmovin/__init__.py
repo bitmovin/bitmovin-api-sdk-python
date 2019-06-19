@@ -2,7 +2,7 @@
 
 from __future__ import absolute_import
 
-__version__ = "1.17.1alpha0"
+__version__ = "1.17.2alpha0"
 
 # import apis into sdk package
 from bitmovin.common import *
