@@ -127,7 +127,7 @@ class AsperaInput(Input):
     def host(self):
         """Gets the host of this AsperaInput.
 
-        Host to use for Aspera transfers
+        Host to use for Aspera transfers (required)
 
         :return: The host of this AsperaInput.
         :rtype: str
@@ -138,7 +138,7 @@ class AsperaInput(Input):
     def host(self, host):
         """Sets the host of this AsperaInput.
 
-        Host to use for Aspera transfers
+        Host to use for Aspera transfers (required)
 
         :param host: The host of this AsperaInput.
         :type: str

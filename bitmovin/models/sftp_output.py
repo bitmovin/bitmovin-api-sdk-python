@@ -77,7 +77,7 @@ class SftpOutput(Output):
     def host(self):
         """Gets the host of this SftpOutput.
 
-        Host Url or IP of the SFTP server
+        Host Url or IP of the SFTP server (required)
 
         :return: The host of this SftpOutput.
         :rtype: str
@@ -88,7 +88,7 @@ class SftpOutput(Output):
     def host(self, host):
         """Sets the host of this SftpOutput.
 
-        Host Url or IP of the SFTP server
+        Host Url or IP of the SFTP server (required)
 
         :param host: The host of this SftpOutput.
         :type: str

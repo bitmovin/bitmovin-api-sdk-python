@@ -78,7 +78,7 @@ class Manifest(BitmovinResource):
     def outputs(self):
         """Gets the outputs of this Manifest.
 
-        The outputs to store the manifest
+        The outputs to store the manifest (required)
 
         :return: The outputs of this Manifest.
         :rtype: list[EncodingOutput]
@@ -89,7 +89,7 @@ class Manifest(BitmovinResource):
     def outputs(self, outputs):
         """Sets the outputs of this Manifest.
 
-        The outputs to store the manifest
+        The outputs to store the manifest (required)
 
         :param outputs: The outputs of this Manifest.
         :type: list[EncodingOutput]

@@ -46,7 +46,7 @@ class ContentProtection(DashRepresentation):
     def drm_id(self):
         """Gets the drm_id of this ContentProtection.
 
-        DRM Id
+        DRM Id (required)
 
         :return: The drm_id of this ContentProtection.
         :rtype: str
@@ -57,7 +57,7 @@ class ContentProtection(DashRepresentation):
     def drm_id(self, drm_id):
         """Sets the drm_id of this ContentProtection.
 
-        DRM Id
+        DRM Id (required)
 
         :param drm_id: The drm_id of this ContentProtection.
         :type: str

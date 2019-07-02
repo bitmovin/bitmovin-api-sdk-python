@@ -57,7 +57,7 @@ class SegmentedRawMuxing(Muxing):
     def segment_length(self):
         """Gets the segment_length of this SegmentedRawMuxing.
 
-        Length of the fragments in seconds
+        Length of the fragments in seconds (required)
 
         :return: The segment_length of this SegmentedRawMuxing.
         :rtype: float
@@ -68,7 +68,7 @@ class SegmentedRawMuxing(Muxing):
     def segment_length(self, segment_length):
         """Sets the segment_length of this SegmentedRawMuxing.
 
-        Length of the fragments in seconds
+        Length of the fragments in seconds (required)
 
         :param segment_length: The segment_length of this SegmentedRawMuxing.
         :type: float
@@ -85,7 +85,7 @@ class SegmentedRawMuxing(Muxing):
     def segment_naming(self):
         """Gets the segment_naming of this SegmentedRawMuxing.
 
-        Segment naming policy
+        Segment naming policy (required)
 
         :return: The segment_naming of this SegmentedRawMuxing.
         :rtype: str
@@ -96,7 +96,7 @@ class SegmentedRawMuxing(Muxing):
     def segment_naming(self, segment_naming):
         """Sets the segment_naming of this SegmentedRawMuxing.
 
-        Segment naming policy
+        Segment naming policy (required)
 
         :param segment_naming: The segment_naming of this SegmentedRawMuxing.
         :type: str

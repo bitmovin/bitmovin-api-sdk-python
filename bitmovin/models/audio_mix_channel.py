@@ -46,7 +46,7 @@ class AudioMixChannel(object):
     def channel_number(self):
         """Gets the channel_number of this AudioMixChannel.
 
-        Channel number of this mix (starting with 0)
+        Channel number of this mix (starting with 0) (required)
 
         :return: The channel_number of this AudioMixChannel.
         :rtype: int
@@ -57,7 +57,7 @@ class AudioMixChannel(object):
     def channel_number(self, channel_number):
         """Sets the channel_number of this AudioMixChannel.
 
-        Channel number of this mix (starting with 0)
+        Channel number of this mix (starting with 0) (required)
 
         :param channel_number: The channel_number of this AudioMixChannel.
         :type: int
@@ -74,7 +74,7 @@ class AudioMixChannel(object):
     def source_channels(self):
         """Gets the source_channels of this AudioMixChannel.
 
-        List of source channels to be mixed
+        List of source channels to be mixed (required)
 
         :return: The source_channels of this AudioMixChannel.
         :rtype: list[SourceChannel]
@@ -85,7 +85,7 @@ class AudioMixChannel(object):
     def source_channels(self, source_channels):
         """Sets the source_channels of this AudioMixChannel.
 
-        List of source channels to be mixed
+        List of source channels to be mixed (required)
 
         :param source_channels: The source_channels of this AudioMixChannel.
         :type: list[SourceChannel]

@@ -2,6 +2,7 @@
 
 from bitmovin.models.muxing import Muxing
 from bitmovin.models.stream_conditions_mode import StreamConditionsMode
+from bitmovin.models.ts_muxing_configuration import TsMuxingConfiguration
 import pprint
 import six
 from datetime import datetime
@@ -26,7 +27,8 @@ class TsMuxing(Muxing):
             'segment_naming': 'str',
             'segment_naming_template': 'str',
             'start_offset': 'int',
-            'segments_muxed': 'int'
+            'segments_muxed': 'int',
+            'configuration': 'TsMuxingConfiguration'
         })
         return types
 
@@ -38,11 +40,12 @@ class TsMuxing(Muxing):
             'segment_naming': 'segmentNaming',
             'segment_naming_template': 'segmentNamingTemplate',
             'start_offset': 'startOffset',
-            'segments_muxed': 'segmentsMuxed'
+            'segments_muxed': 'segmentsMuxed',
+            'configuration': 'configuration'
         })
         return attributes
 
-    def __init__(self, segment_length=None, segment_naming=None, segment_naming_template=None, start_offset=None, segments_muxed=None, *args, **kwargs):
+    def __init__(self, segment_length=None, segment_naming=None, segment_naming_template=None, start_offset=None, segments_muxed=None, configuration=None, *args, **kwargs):
         super(TsMuxing, self).__init__(*args, **kwargs)
 
         self._segment_length = None
@@ -50,6 +53,7 @@ class TsMuxing(Muxing):
         self._segment_naming_template = None
         self._start_offset = None
         self._segments_muxed = None
+        self._configuration = None
         self.discriminator = None
 
         if segment_length is not None:
@@ -62,12 +66,14 @@ class TsMuxing(Muxing):
             self.start_offset = start_offset
         if segments_muxed is not None:
             self.segments_muxed = segments_muxed
+        if configuration is not None:
+            self.configuration = configuration
 
     @property
     def segment_length(self):
         """Gets the segment_length of this TsMuxing.
 
-        Length of the fragments in seconds
+        Length of the fragments in seconds (required)
 
         :return: The segment_length of this TsMuxing.
         :rtype: float
@@ -78,7 +84,7 @@ class TsMuxing(Muxing):
     def segment_length(self, segment_length):
         """Sets the segment_length of this TsMuxing.
 
-        Length of the fragments in seconds
+        Length of the fragments in seconds (required)
 
         :param segment_length: The segment_length of this TsMuxing.
         :type: float
@@ -201,6 +207,34 @@ class TsMuxing(Muxing):
                 raise TypeError("Invalid type for `segments_muxed`, type has to be `int`")
 
         self._segments_muxed = segments_muxed
+
+
+    @property
+    def configuration(self):
+        """Gets the configuration of this TsMuxing.
+
+        Advanced Configuration of the MPEG Transport Stream Parameters
+
+        :return: The configuration of this TsMuxing.
+        :rtype: TsMuxingConfiguration
+        """
+        return self._configuration
+
+    @configuration.setter
+    def configuration(self, configuration):
+        """Sets the configuration of this TsMuxing.
+
+        Advanced Configuration of the MPEG Transport Stream Parameters
+
+        :param configuration: The configuration of this TsMuxing.
+        :type: TsMuxingConfiguration
+        """
+
+        if configuration is not None:
+            if not isinstance(configuration, TsMuxingConfiguration):
+                raise TypeError("Invalid type for `configuration`, type has to be `TsMuxingConfiguration`")
+
+        self._configuration = configuration
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -41,7 +41,7 @@ class CencWidevine(object):
     def pssh(self):
         """Gets the pssh of this CencWidevine.
 
-        Base64 encoded pssh payload
+        Base64 encoded pssh payload (required)
 
         :return: The pssh of this CencWidevine.
         :rtype: str
@@ -52,7 +52,7 @@ class CencWidevine(object):
     def pssh(self, pssh):
         """Sets the pssh of this CencWidevine.
 
-        Base64 encoded pssh payload
+        Base64 encoded pssh payload (required)
 
         :param pssh: The pssh of this CencWidevine.
         :type: str

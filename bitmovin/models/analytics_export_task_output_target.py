@@ -46,7 +46,7 @@ class AnalyticsExportTaskOutputTarget(object):
     def output_path(self):
         """Gets the output_path of this AnalyticsExportTaskOutputTarget.
 
-        Path where the export should be saved
+        Path where the export should be saved (required)
 
         :return: The output_path of this AnalyticsExportTaskOutputTarget.
         :rtype: str
@@ -57,7 +57,7 @@ class AnalyticsExportTaskOutputTarget(object):
     def output_path(self, output_path):
         """Sets the output_path of this AnalyticsExportTaskOutputTarget.
 
-        Path where the export should be saved
+        Path where the export should be saved (required)
 
         :param output_path: The output_path of this AnalyticsExportTaskOutputTarget.
         :type: str
@@ -74,7 +74,7 @@ class AnalyticsExportTaskOutputTarget(object):
     def output_id(self):
         """Gets the output_id of this AnalyticsExportTaskOutputTarget.
 
-        Id of the output that should be used
+        Id of the output that should be used (required)
 
         :return: The output_id of this AnalyticsExportTaskOutputTarget.
         :rtype: str
@@ -85,7 +85,7 @@ class AnalyticsExportTaskOutputTarget(object):
     def output_id(self, output_id):
         """Sets the output_id of this AnalyticsExportTaskOutputTarget.
 
-        Id of the output that should be used
+        Id of the output that should be used (required)
 
         :param output_id: The output_id of this AnalyticsExportTaskOutputTarget.
         :type: str

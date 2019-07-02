@@ -51,7 +51,7 @@ class DashRepresentation(BitmovinResponse):
     def encoding_id(self):
         """Gets the encoding_id of this DashRepresentation.
 
-        UUID of an encoding
+        UUID of an encoding (required)
 
         :return: The encoding_id of this DashRepresentation.
         :rtype: str
@@ -62,7 +62,7 @@ class DashRepresentation(BitmovinResponse):
     def encoding_id(self, encoding_id):
         """Sets the encoding_id of this DashRepresentation.
 
-        UUID of an encoding
+        UUID of an encoding (required)
 
         :param encoding_id: The encoding_id of this DashRepresentation.
         :type: str
@@ -79,7 +79,7 @@ class DashRepresentation(BitmovinResponse):
     def muxing_id(self):
         """Gets the muxing_id of this DashRepresentation.
 
-        UUID of a muxing
+        UUID of a muxing (required)
 
         :return: The muxing_id of this DashRepresentation.
         :rtype: str
@@ -90,7 +90,7 @@ class DashRepresentation(BitmovinResponse):
     def muxing_id(self, muxing_id):
         """Sets the muxing_id of this DashRepresentation.
 
-        UUID of a muxing
+        UUID of a muxing (required)
 
         :param muxing_id: The muxing_id of this DashRepresentation.
         :type: str

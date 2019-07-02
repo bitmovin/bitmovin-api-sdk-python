@@ -69,7 +69,7 @@ class ConvertSccCaption(BitmovinResource):
     def input(self):
         """Gets the input of this ConvertSccCaption.
 
-        The input location to get the scc file from
+        The input location to get the scc file from (required)
 
         :return: The input of this ConvertSccCaption.
         :rtype: InputPath
@@ -80,7 +80,7 @@ class ConvertSccCaption(BitmovinResource):
     def input(self, input):
         """Sets the input of this ConvertSccCaption.
 
-        The input location to get the scc file from
+        The input location to get the scc file from (required)
 
         :param input: The input of this ConvertSccCaption.
         :type: InputPath
@@ -123,7 +123,7 @@ class ConvertSccCaption(BitmovinResource):
     def file_name(self):
         """Gets the file_name of this ConvertSccCaption.
 
-        Name of the captions file
+        Name of the captions file (required)
 
         :return: The file_name of this ConvertSccCaption.
         :rtype: str
@@ -134,7 +134,7 @@ class ConvertSccCaption(BitmovinResource):
     def file_name(self, file_name):
         """Sets the file_name of this ConvertSccCaption.
 
-        Name of the captions file
+        Name of the captions file (required)
 
         :param file_name: The file_name of this ConvertSccCaption.
         :type: str

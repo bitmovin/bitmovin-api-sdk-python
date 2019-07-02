@@ -46,7 +46,7 @@ class StreamFilter(object):
     def id(self):
         """Gets the id of this StreamFilter.
 
-        The id of the filter that should be used in the stream
+        The id of the filter that should be used in the stream (required)
 
         :return: The id of this StreamFilter.
         :rtype: str
@@ -57,7 +57,7 @@ class StreamFilter(object):
     def id(self, id):
         """Sets the id of this StreamFilter.
 
-        The id of the filter that should be used in the stream
+        The id of the filter that should be used in the stream (required)
 
         :param id: The id of this StreamFilter.
         :type: str
@@ -74,7 +74,7 @@ class StreamFilter(object):
     def position(self):
         """Gets the position of this StreamFilter.
 
-        Defines the order in which filters are applied. Filters are applied in ascending order.
+        Defines the order in which filters are applied. Filters are applied in ascending order. (required)
 
         :return: The position of this StreamFilter.
         :rtype: int
@@ -85,7 +85,7 @@ class StreamFilter(object):
     def position(self, position):
         """Sets the position of this StreamFilter.
 
-        Defines the order in which filters are applied. Filters are applied in ascending order.
+        Defines the order in which filters are applied. Filters are applied in ascending order. (required)
 
         :param position: The position of this StreamFilter.
         :type: int

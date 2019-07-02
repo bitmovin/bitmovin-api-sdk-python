@@ -92,7 +92,7 @@ class CencDrm(Drm):
     def key(self):
         """Gets the key of this CencDrm.
 
-        16 byte encryption key, 32 hexadecimal characters
+        16 byte encryption key, 32 hexadecimal characters (required)
 
         :return: The key of this CencDrm.
         :rtype: str
@@ -103,7 +103,7 @@ class CencDrm(Drm):
     def key(self, key):
         """Sets the key of this CencDrm.
 
-        16 byte encryption key, 32 hexadecimal characters
+        16 byte encryption key, 32 hexadecimal characters (required)
 
         :param key: The key of this CencDrm.
         :type: str
@@ -148,7 +148,7 @@ class CencDrm(Drm):
     def encryption_mode(self):
         """Gets the encryption_mode of this CencDrm.
 
-        The encryption method to use. Default is `CTR`
+        The encryption method to use. Default is `CTR` (required)
 
         :return: The encryption_mode of this CencDrm.
         :rtype: EncryptionMode
@@ -159,7 +159,7 @@ class CencDrm(Drm):
     def encryption_mode(self, encryption_mode):
         """Sets the encryption_mode of this CencDrm.
 
-        The encryption method to use. Default is `CTR`
+        The encryption method to use. Default is `CTR` (required)
 
         :param encryption_mode: The encryption_mode of this CencDrm.
         :type: EncryptionMode

@@ -62,7 +62,7 @@ class AesEncryptionDrm(Drm):
     def key(self):
         """Gets the key of this AesEncryptionDrm.
 
-        16 byte Encryption key, 32 hexadecimal characters
+        16 byte Encryption key, 32 hexadecimal characters (required)
 
         :return: The key of this AesEncryptionDrm.
         :rtype: str
@@ -73,7 +73,7 @@ class AesEncryptionDrm(Drm):
     def key(self, key):
         """Sets the key of this AesEncryptionDrm.
 
-        16 byte Encryption key, 32 hexadecimal characters
+        16 byte Encryption key, 32 hexadecimal characters (required)
 
         :param key: The key of this AesEncryptionDrm.
         :type: str

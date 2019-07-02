@@ -56,7 +56,7 @@ class PrimeTimeDrm(Drm):
     def key(self):
         """Gets the key of this PrimeTimeDrm.
 
-        16 byte Encryption key, 32 hexadecimal characters
+        16 byte Encryption key, 32 hexadecimal characters (required)
 
         :return: The key of this PrimeTimeDrm.
         :rtype: str
@@ -67,7 +67,7 @@ class PrimeTimeDrm(Drm):
     def key(self, key):
         """Sets the key of this PrimeTimeDrm.
 
-        16 byte Encryption key, 32 hexadecimal characters
+        16 byte Encryption key, 32 hexadecimal characters (required)
 
         :param key: The key of this PrimeTimeDrm.
         :type: str
@@ -84,7 +84,7 @@ class PrimeTimeDrm(Drm):
     def kid(self):
         """Gets the kid of this PrimeTimeDrm.
 
-        16 byte Key id, 32 hexadecimal characters
+        16 byte Key id, 32 hexadecimal characters (required)
 
         :return: The kid of this PrimeTimeDrm.
         :rtype: str
@@ -95,7 +95,7 @@ class PrimeTimeDrm(Drm):
     def kid(self, kid):
         """Sets the kid of this PrimeTimeDrm.
 
-        16 byte Key id, 32 hexadecimal characters
+        16 byte Key id, 32 hexadecimal characters (required)
 
         :param kid: The kid of this PrimeTimeDrm.
         :type: str
@@ -112,7 +112,7 @@ class PrimeTimeDrm(Drm):
     def pssh(self):
         """Gets the pssh of this PrimeTimeDrm.
 
-        Base 64 Encoded
+        Base 64 Encoded (required)
 
         :return: The pssh of this PrimeTimeDrm.
         :rtype: str
@@ -123,7 +123,7 @@ class PrimeTimeDrm(Drm):
     def pssh(self, pssh):
         """Sets the pssh of this PrimeTimeDrm.
 
-        Base 64 Encoded
+        Base 64 Encoded (required)
 
         :param pssh: The pssh of this PrimeTimeDrm.
         :type: str

@@ -56,7 +56,7 @@ class AkamaiNetStorageInput(Input):
     def host(self):
         """Gets the host of this AkamaiNetStorageInput.
 
-        Host to use for Akamai NetStorage transfers
+        Host to use for Akamai NetStorage transfers (required)
 
         :return: The host of this AkamaiNetStorageInput.
         :rtype: str
@@ -67,7 +67,7 @@ class AkamaiNetStorageInput(Input):
     def host(self, host):
         """Sets the host of this AkamaiNetStorageInput.
 
-        Host to use for Akamai NetStorage transfers
+        Host to use for Akamai NetStorage transfers (required)
 
         :param host: The host of this AkamaiNetStorageInput.
         :type: str
@@ -84,7 +84,7 @@ class AkamaiNetStorageInput(Input):
     def username(self):
         """Gets the username of this AkamaiNetStorageInput.
 
-        Your Akamai NetStorage Username
+        Your Akamai NetStorage Username (required)
 
         :return: The username of this AkamaiNetStorageInput.
         :rtype: str
@@ -95,7 +95,7 @@ class AkamaiNetStorageInput(Input):
     def username(self, username):
         """Sets the username of this AkamaiNetStorageInput.
 
-        Your Akamai NetStorage Username
+        Your Akamai NetStorage Username (required)
 
         :param username: The username of this AkamaiNetStorageInput.
         :type: str
@@ -112,7 +112,7 @@ class AkamaiNetStorageInput(Input):
     def password(self):
         """Gets the password of this AkamaiNetStorageInput.
 
-        Your Akamai NetStorage password
+        Your Akamai NetStorage password (required)
 
         :return: The password of this AkamaiNetStorageInput.
         :rtype: str
@@ -123,7 +123,7 @@ class AkamaiNetStorageInput(Input):
     def password(self, password):
         """Sets the password of this AkamaiNetStorageInput.
 
-        Your Akamai NetStorage password
+        Your Akamai NetStorage password (required)
 
         :param password: The password of this AkamaiNetStorageInput.
         :type: str

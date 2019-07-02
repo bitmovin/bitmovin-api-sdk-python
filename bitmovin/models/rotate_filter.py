@@ -46,7 +46,7 @@ class RotateFilter(Filter):
     def rotation(self):
         """Gets the rotation of this RotateFilter.
 
-        Rotation of the video in degrees. A positive value will rotate the video clockwise and a negative one counter clockwise.
+        Rotation of the video in degrees. A positive value will rotate the video clockwise and a negative one counter clockwise. (required)
 
         :return: The rotation of this RotateFilter.
         :rtype: int
@@ -57,7 +57,7 @@ class RotateFilter(Filter):
     def rotation(self, rotation):
         """Sets the rotation of this RotateFilter.
 
-        Rotation of the video in degrees. A positive value will rotate the video clockwise and a negative one counter clockwise.
+        Rotation of the video in degrees. A positive value will rotate the video clockwise and a negative one counter clockwise. (required)
 
         :param rotation: The rotation of this RotateFilter.
         :type: int

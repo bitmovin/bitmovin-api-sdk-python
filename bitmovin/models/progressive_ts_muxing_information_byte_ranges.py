@@ -56,7 +56,7 @@ class ProgressiveTsMuxingInformationByteRanges(object):
     def segment_number(self):
         """Gets the segment_number of this ProgressiveTsMuxingInformationByteRanges.
 
-        Number of the segment (starting at 0)
+        Number of the segment (starting at 0) (required)
 
         :return: The segment_number of this ProgressiveTsMuxingInformationByteRanges.
         :rtype: int
@@ -67,7 +67,7 @@ class ProgressiveTsMuxingInformationByteRanges(object):
     def segment_number(self, segment_number):
         """Sets the segment_number of this ProgressiveTsMuxingInformationByteRanges.
 
-        Number of the segment (starting at 0)
+        Number of the segment (starting at 0) (required)
 
         :param segment_number: The segment_number of this ProgressiveTsMuxingInformationByteRanges.
         :type: int

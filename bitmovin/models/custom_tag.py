@@ -67,7 +67,7 @@ class CustomTag(BitmovinResource):
     def position_mode(self):
         """Gets the position_mode of this CustomTag.
 
-        The positioning mode that should be used when inserting the placement opportunity
+        The positioning mode that should be used when inserting the placement opportunity (required)
 
         :return: The position_mode of this CustomTag.
         :rtype: PositionMode
@@ -78,7 +78,7 @@ class CustomTag(BitmovinResource):
     def position_mode(self, position_mode):
         """Sets the position_mode of this CustomTag.
 
-        The positioning mode that should be used when inserting the placement opportunity
+        The positioning mode that should be used when inserting the placement opportunity (required)
 
         :param position_mode: The position_mode of this CustomTag.
         :type: PositionMode
@@ -179,7 +179,7 @@ class CustomTag(BitmovinResource):
     def data(self):
         """Gets the data of this CustomTag.
 
-        The data to be contained in the custom tag.
+        The data to be contained in the custom tag. (required)
 
         :return: The data of this CustomTag.
         :rtype: str
@@ -190,7 +190,7 @@ class CustomTag(BitmovinResource):
     def data(self, data):
         """Sets the data of this CustomTag.
 
-        The data to be contained in the custom tag.
+        The data to be contained in the custom tag. (required)
 
         :param data: The data of this CustomTag.
         :type: str

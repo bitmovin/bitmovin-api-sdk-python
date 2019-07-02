@@ -51,7 +51,7 @@ class EncodingStatisticsVod(EncodingStatistics):
     def time_enqueued(self):
         """Gets the time_enqueued of this EncodingStatisticsVod.
 
-        Time in seconds encoded for this encoding.
+        Time in seconds encoded for this encoding. (required)
 
         :return: The time_enqueued of this EncodingStatisticsVod.
         :rtype: int
@@ -62,7 +62,7 @@ class EncodingStatisticsVod(EncodingStatistics):
     def time_enqueued(self, time_enqueued):
         """Sets the time_enqueued of this EncodingStatisticsVod.
 
-        Time in seconds encoded for this encoding.
+        Time in seconds encoded for this encoding. (required)
 
         :param time_enqueued: The time_enqueued of this EncodingStatisticsVod.
         :type: int
@@ -79,7 +79,7 @@ class EncodingStatisticsVod(EncodingStatistics):
     def real_time_factor(self):
         """Gets the real_time_factor of this EncodingStatisticsVod.
 
-        The realtime factor.
+        The realtime factor. (required)
 
         :return: The real_time_factor of this EncodingStatisticsVod.
         :rtype: float
@@ -90,7 +90,7 @@ class EncodingStatisticsVod(EncodingStatistics):
     def real_time_factor(self, real_time_factor):
         """Sets the real_time_factor of this EncodingStatisticsVod.
 
-        The realtime factor.
+        The realtime factor. (required)
 
         :param real_time_factor: The real_time_factor of this EncodingStatisticsVod.
         :type: float

@@ -93,7 +93,7 @@ class AnalyticsExportTask(BitmovinResponse):
     def start_time(self):
         """Gets the start_time of this AnalyticsExportTask.
 
-        Start of timeframe which is exported in UTC format
+        Start of timeframe which is exported in UTC format (required)
 
         :return: The start_time of this AnalyticsExportTask.
         :rtype: datetime
@@ -104,7 +104,7 @@ class AnalyticsExportTask(BitmovinResponse):
     def start_time(self, start_time):
         """Sets the start_time of this AnalyticsExportTask.
 
-        Start of timeframe which is exported in UTC format
+        Start of timeframe which is exported in UTC format (required)
 
         :param start_time: The start_time of this AnalyticsExportTask.
         :type: datetime
@@ -121,7 +121,7 @@ class AnalyticsExportTask(BitmovinResponse):
     def end_time(self):
         """Gets the end_time of this AnalyticsExportTask.
 
-        End of timeframe which is exported in UTC format
+        End of timeframe which is exported in UTC format (required)
 
         :return: The end_time of this AnalyticsExportTask.
         :rtype: datetime
@@ -132,7 +132,7 @@ class AnalyticsExportTask(BitmovinResponse):
     def end_time(self, end_time):
         """Sets the end_time of this AnalyticsExportTask.
 
-        End of timeframe which is exported in UTC format
+        End of timeframe which is exported in UTC format (required)
 
         :param end_time: The end_time of this AnalyticsExportTask.
         :type: datetime
@@ -149,7 +149,7 @@ class AnalyticsExportTask(BitmovinResponse):
     def name(self):
         """Gets the name of this AnalyticsExportTask.
 
-        Name of the export task
+        Name of the export task (required)
 
         :return: The name of this AnalyticsExportTask.
         :rtype: str
@@ -160,7 +160,7 @@ class AnalyticsExportTask(BitmovinResponse):
     def name(self, name):
         """Sets the name of this AnalyticsExportTask.
 
-        Name of the export task
+        Name of the export task (required)
 
         :param name: The name of this AnalyticsExportTask.
         :type: str
@@ -205,7 +205,7 @@ class AnalyticsExportTask(BitmovinResponse):
     def license_key(self):
         """Gets the license_key of this AnalyticsExportTask.
 
-        License key
+        License key (required)
 
         :return: The license_key of this AnalyticsExportTask.
         :rtype: str
@@ -216,7 +216,7 @@ class AnalyticsExportTask(BitmovinResponse):
     def license_key(self, license_key):
         """Sets the license_key of this AnalyticsExportTask.
 
-        License key
+        License key (required)
 
         :param license_key: The license_key of this AnalyticsExportTask.
         :type: str

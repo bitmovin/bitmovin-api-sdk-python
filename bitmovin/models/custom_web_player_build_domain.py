@@ -46,7 +46,7 @@ class CustomWebPlayerBuildDomain(BitmovinResource):
     def domain(self):
         """Gets the domain of this CustomWebPlayerBuildDomain.
 
-        Domain where the player is allowed to play
+        Domain where the player is allowed to play (required)
 
         :return: The domain of this CustomWebPlayerBuildDomain.
         :rtype: str
@@ -57,7 +57,7 @@ class CustomWebPlayerBuildDomain(BitmovinResource):
     def domain(self, domain):
         """Sets the domain of this CustomWebPlayerBuildDomain.
 
-        Domain where the player is allowed to play
+        Domain where the player is allowed to play (required)
 
         :param domain: The domain of this CustomWebPlayerBuildDomain.
         :type: str

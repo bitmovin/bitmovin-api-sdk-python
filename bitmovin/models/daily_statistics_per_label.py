@@ -46,7 +46,7 @@ class DailyStatisticsPerLabel(object):
     def date(self):
         """Gets the date of this DailyStatisticsPerLabel.
 
-        Date, format. yyyy-MM-dd
+        Date, format. yyyy-MM-dd (required)
 
         :return: The date of this DailyStatisticsPerLabel.
         :rtype: date
@@ -57,7 +57,7 @@ class DailyStatisticsPerLabel(object):
     def date(self, date):
         """Sets the date of this DailyStatisticsPerLabel.
 
-        Date, format. yyyy-MM-dd
+        Date, format. yyyy-MM-dd (required)
 
         :param date: The date of this DailyStatisticsPerLabel.
         :type: date
@@ -74,7 +74,7 @@ class DailyStatisticsPerLabel(object):
     def labels(self):
         """Gets the labels of this DailyStatisticsPerLabel.
 
-        List of labels and their aggregated statistics
+        List of labels and their aggregated statistics (required)
 
         :return: The labels of this DailyStatisticsPerLabel.
         :rtype: list[DailyStatistics]
@@ -85,7 +85,7 @@ class DailyStatisticsPerLabel(object):
     def labels(self, labels):
         """Sets the labels of this DailyStatisticsPerLabel.
 
-        List of labels and their aggregated statistics
+        List of labels and their aggregated statistics (required)
 
         :param labels: The labels of this DailyStatisticsPerLabel.
         :type: list[DailyStatistics]

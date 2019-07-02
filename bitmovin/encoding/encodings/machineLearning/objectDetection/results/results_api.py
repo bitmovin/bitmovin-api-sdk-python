@@ -8,6 +8,7 @@ from bitmovin.common.poscheck import poscheck_except
 from bitmovin.models.object_detection_result import ObjectDetectionResult
 from bitmovin.models.response_envelope import ResponseEnvelope
 from bitmovin.models.response_error import ResponseError
+from bitmovin.encoding.encodings.machineLearning.objectDetection.results.byTimestamp.by_timestamp_api import ByTimestampApi
 from bitmovin.encoding.encodings.machineLearning.objectDetection.results.object_detection_result_list_query_params import ObjectDetectionResultListQueryParams
 
 
@@ -15,6 +16,13 @@ class ResultsApi(BaseApi):
     @poscheck_except(2)
     def __init__(self, api_key: str, tenant_org_id: str = None, base_url: str = None, logger=None):
         super(ResultsApi, self).__init__(
+            api_key=api_key,
+            tenant_org_id=tenant_org_id,
+            base_url=base_url,
+            logger=logger
+        )
+
+        self.byTimestamp = ByTimestampApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,

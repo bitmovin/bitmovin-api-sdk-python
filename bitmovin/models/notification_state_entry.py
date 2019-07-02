@@ -93,7 +93,7 @@ class NotificationStateEntry(BitmovinResponse):
     def muted(self):
         """Gets the muted of this NotificationStateEntry.
 
-        Indicate if notification was sent
+        Indicate if notification was sent (required)
 
         :return: The muted of this NotificationStateEntry.
         :rtype: bool
@@ -104,7 +104,7 @@ class NotificationStateEntry(BitmovinResponse):
     def muted(self, muted):
         """Sets the muted of this NotificationStateEntry.
 
-        Indicate if notification was sent
+        Indicate if notification was sent (required)
 
         :param muted: The muted of this NotificationStateEntry.
         :type: bool
@@ -121,7 +121,7 @@ class NotificationStateEntry(BitmovinResponse):
     def notification_id(self):
         """Gets the notification_id of this NotificationStateEntry.
 
-        The notification this state belongs to
+        The notification this state belongs to (required)
 
         :return: The notification_id of this NotificationStateEntry.
         :rtype: str
@@ -132,7 +132,7 @@ class NotificationStateEntry(BitmovinResponse):
     def notification_id(self, notification_id):
         """Sets the notification_id of this NotificationStateEntry.
 
-        The notification this state belongs to
+        The notification this state belongs to (required)
 
         :param notification_id: The notification_id of this NotificationStateEntry.
         :type: str
@@ -149,7 +149,7 @@ class NotificationStateEntry(BitmovinResponse):
     def resource_id(self):
         """Gets the resource_id of this NotificationStateEntry.
 
-        Indicate if triggered for specific resource
+        Indicate if triggered for specific resource (required)
 
         :return: The resource_id of this NotificationStateEntry.
         :rtype: str
@@ -160,7 +160,7 @@ class NotificationStateEntry(BitmovinResponse):
     def resource_id(self, resource_id):
         """Sets the resource_id of this NotificationStateEntry.
 
-        Indicate if triggered for specific resource
+        Indicate if triggered for specific resource (required)
 
         :param resource_id: The resource_id of this NotificationStateEntry.
         :type: str

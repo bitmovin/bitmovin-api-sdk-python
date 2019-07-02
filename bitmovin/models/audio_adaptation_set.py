@@ -46,7 +46,7 @@ class AudioAdaptationSet(AdaptationSet):
     def lang(self):
         """Gets the lang of this AudioAdaptationSet.
 
-        ISO 639-1 (Alpha-2) code identifying the language of the audio adaptation set
+        ISO 639-1 (Alpha-2) code identifying the language of the audio adaptation set (required)
 
         :return: The lang of this AudioAdaptationSet.
         :rtype: str
@@ -57,7 +57,7 @@ class AudioAdaptationSet(AdaptationSet):
     def lang(self, lang):
         """Sets the lang of this AudioAdaptationSet.
 
-        ISO 639-1 (Alpha-2) code identifying the language of the audio adaptation set
+        ISO 639-1 (Alpha-2) code identifying the language of the audio adaptation set (required)
 
         :param lang: The lang of this AudioAdaptationSet.
         :type: str

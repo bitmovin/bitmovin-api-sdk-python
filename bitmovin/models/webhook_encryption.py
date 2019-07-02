@@ -48,7 +48,7 @@ class WebhookEncryption(object):
     def type(self):
         """Gets the type of this WebhookEncryption.
 
-        The encryption algorithm used for the webhook
+        The encryption algorithm used for the webhook (required)
 
         :return: The type of this WebhookEncryption.
         :rtype: EncryptionType
@@ -59,7 +59,7 @@ class WebhookEncryption(object):
     def type(self, type):
         """Sets the type of this WebhookEncryption.
 
-        The encryption algorithm used for the webhook
+        The encryption algorithm used for the webhook (required)
 
         :param type: The type of this WebhookEncryption.
         :type: EncryptionType
@@ -76,7 +76,7 @@ class WebhookEncryption(object):
     def key(self):
         """Gets the key of this WebhookEncryption.
 
-        The key of the encryption
+        The key of the encryption (required)
 
         :return: The key of this WebhookEncryption.
         :rtype: str
@@ -87,7 +87,7 @@ class WebhookEncryption(object):
     def key(self, key):
         """Sets the key of this WebhookEncryption.
 
-        The key of the encryption
+        The key of the encryption (required)
 
         :param key: The key of this WebhookEncryption.
         :type: str

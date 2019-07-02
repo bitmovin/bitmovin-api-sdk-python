@@ -46,7 +46,7 @@ class PlayerChannel(BitmovinResponse):
     def name(self):
         """Gets the name of this PlayerChannel.
 
-        Name of the resource
+        Name of the resource (required)
 
         :return: The name of this PlayerChannel.
         :rtype: str
@@ -57,7 +57,7 @@ class PlayerChannel(BitmovinResponse):
     def name(self, name):
         """Sets the name of this PlayerChannel.
 
-        Name of the resource
+        Name of the resource (required)
 
         :param name: The name of this PlayerChannel.
         :type: str

@@ -46,7 +46,7 @@ class Login(object):
     def e_mail(self):
         """Gets the e_mail of this Login.
 
-        Email address of the account.
+        Email address of the account. (required)
 
         :return: The e_mail of this Login.
         :rtype: str
@@ -57,7 +57,7 @@ class Login(object):
     def e_mail(self, e_mail):
         """Sets the e_mail of this Login.
 
-        Email address of the account.
+        Email address of the account. (required)
 
         :param e_mail: The e_mail of this Login.
         :type: str
@@ -74,7 +74,7 @@ class Login(object):
     def password(self):
         """Gets the password of this Login.
 
-        Password of the account.
+        Password of the account. (required)
 
         :return: The password of this Login.
         :rtype: str
@@ -85,7 +85,7 @@ class Login(object):
     def password(self, password):
         """Sets the password of this Login.
 
-        Password of the account.
+        Password of the account. (required)
 
         :param password: The password of this Login.
         :type: str

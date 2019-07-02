@@ -22,7 +22,10 @@ class BroadcastTsTransportConfiguration(object):
             'stop_on_error': 'bool',
             'prevent_empty_adaption_fields_in_video': 'bool',
             'pat_repetition_rate_per_sec': 'float',
-            'pmt_repetition_rate_per_sec': 'float'
+            'pmt_repetition_rate_per_sec': 'float',
+            'variable_mux_rate': 'bool',
+            'initial_presentation_time_stamp': 'float',
+            'initial_program_clock_reference': 'float'
         }
         return types
 
@@ -33,17 +36,23 @@ class BroadcastTsTransportConfiguration(object):
             'stop_on_error': 'stopOnError',
             'prevent_empty_adaption_fields_in_video': 'preventEmptyAdaptionFieldsInVideo',
             'pat_repetition_rate_per_sec': 'patRepetitionRatePerSec',
-            'pmt_repetition_rate_per_sec': 'pmtRepetitionRatePerSec'
+            'pmt_repetition_rate_per_sec': 'pmtRepetitionRatePerSec',
+            'variable_mux_rate': 'variableMuxRate',
+            'initial_presentation_time_stamp': 'initialPresentationTimeStamp',
+            'initial_program_clock_reference': 'initialProgramClockReference'
         }
         return attributes
 
-    def __init__(self, muxrate=None, stop_on_error=None, prevent_empty_adaption_fields_in_video=None, pat_repetition_rate_per_sec=None, pmt_repetition_rate_per_sec=None, *args, **kwargs):
+    def __init__(self, muxrate=None, stop_on_error=None, prevent_empty_adaption_fields_in_video=None, pat_repetition_rate_per_sec=None, pmt_repetition_rate_per_sec=None, variable_mux_rate=None, initial_presentation_time_stamp=None, initial_program_clock_reference=None, *args, **kwargs):
 
         self._muxrate = None
         self._stop_on_error = None
         self._prevent_empty_adaption_fields_in_video = None
         self._pat_repetition_rate_per_sec = None
         self._pmt_repetition_rate_per_sec = None
+        self._variable_mux_rate = None
+        self._initial_presentation_time_stamp = None
+        self._initial_program_clock_reference = None
         self.discriminator = None
 
         if muxrate is not None:
@@ -56,6 +65,12 @@ class BroadcastTsTransportConfiguration(object):
             self.pat_repetition_rate_per_sec = pat_repetition_rate_per_sec
         if pmt_repetition_rate_per_sec is not None:
             self.pmt_repetition_rate_per_sec = pmt_repetition_rate_per_sec
+        if variable_mux_rate is not None:
+            self.variable_mux_rate = variable_mux_rate
+        if initial_presentation_time_stamp is not None:
+            self.initial_presentation_time_stamp = initial_presentation_time_stamp
+        if initial_program_clock_reference is not None:
+            self.initial_program_clock_reference = initial_program_clock_reference
 
     @property
     def muxrate(self):
@@ -207,6 +222,98 @@ class BroadcastTsTransportConfiguration(object):
                 raise TypeError("Invalid type for `pmt_repetition_rate_per_sec`, type has to be `float`")
 
         self._pmt_repetition_rate_per_sec = pmt_repetition_rate_per_sec
+
+
+    @property
+    def variable_mux_rate(self):
+        """Gets the variable_mux_rate of this BroadcastTsTransportConfiguration.
+
+        When false, the output stream is created at a constant bit rate. When true, the output rate is allowed to vary from a maximum rate set by the muxrate parameter down to the minimum required to carry the stream. Default: false
+
+        :return: The variable_mux_rate of this BroadcastTsTransportConfiguration.
+        :rtype: bool
+        """
+        return self._variable_mux_rate
+
+    @variable_mux_rate.setter
+    def variable_mux_rate(self, variable_mux_rate):
+        """Sets the variable_mux_rate of this BroadcastTsTransportConfiguration.
+
+        When false, the output stream is created at a constant bit rate. When true, the output rate is allowed to vary from a maximum rate set by the muxrate parameter down to the minimum required to carry the stream. Default: false
+
+        :param variable_mux_rate: The variable_mux_rate of this BroadcastTsTransportConfiguration.
+        :type: bool
+        """
+
+        if variable_mux_rate is not None:
+            if not isinstance(variable_mux_rate, bool):
+                raise TypeError("Invalid type for `variable_mux_rate`, type has to be `bool`")
+
+        self._variable_mux_rate = variable_mux_rate
+
+
+    @property
+    def initial_presentation_time_stamp(self):
+        """Gets the initial_presentation_time_stamp of this BroadcastTsTransportConfiguration.
+
+        Sets the presentation time stamp value for the first video frame. The timestamp is specified in the timescale of 90000. Default: 0
+
+        :return: The initial_presentation_time_stamp of this BroadcastTsTransportConfiguration.
+        :rtype: float
+        """
+        return self._initial_presentation_time_stamp
+
+    @initial_presentation_time_stamp.setter
+    def initial_presentation_time_stamp(self, initial_presentation_time_stamp):
+        """Sets the initial_presentation_time_stamp of this BroadcastTsTransportConfiguration.
+
+        Sets the presentation time stamp value for the first video frame. The timestamp is specified in the timescale of 90000. Default: 0
+
+        :param initial_presentation_time_stamp: The initial_presentation_time_stamp of this BroadcastTsTransportConfiguration.
+        :type: float
+        """
+
+        if initial_presentation_time_stamp is not None:
+            if initial_presentation_time_stamp is not None and initial_presentation_time_stamp > 5400000:
+                raise ValueError("Invalid value for `initial_presentation_time_stamp`, must be a value less than or equal to `5400000`")
+            if initial_presentation_time_stamp is not None and initial_presentation_time_stamp < 0:
+                raise ValueError("Invalid value for `initial_presentation_time_stamp`, must be a value greater than or equal to `0`")
+            if not isinstance(initial_presentation_time_stamp, (float, int)):
+                raise TypeError("Invalid type for `initial_presentation_time_stamp`, type has to be `float`")
+
+        self._initial_presentation_time_stamp = initial_presentation_time_stamp
+
+
+    @property
+    def initial_program_clock_reference(self):
+        """Gets the initial_program_clock_reference of this BroadcastTsTransportConfiguration.
+
+        Sets the Program Clock Reference value at the beginning of the first packet for the transport stream. The PCR is specified in the timescale of 90000. Default: 0
+
+        :return: The initial_program_clock_reference of this BroadcastTsTransportConfiguration.
+        :rtype: float
+        """
+        return self._initial_program_clock_reference
+
+    @initial_program_clock_reference.setter
+    def initial_program_clock_reference(self, initial_program_clock_reference):
+        """Sets the initial_program_clock_reference of this BroadcastTsTransportConfiguration.
+
+        Sets the Program Clock Reference value at the beginning of the first packet for the transport stream. The PCR is specified in the timescale of 90000. Default: 0
+
+        :param initial_program_clock_reference: The initial_program_clock_reference of this BroadcastTsTransportConfiguration.
+        :type: float
+        """
+
+        if initial_program_clock_reference is not None:
+            if initial_program_clock_reference is not None and initial_program_clock_reference > 2576980377600:
+                raise ValueError("Invalid value for `initial_program_clock_reference`, must be a value less than or equal to `2576980377600`")
+            if initial_program_clock_reference is not None and initial_program_clock_reference < 0:
+                raise ValueError("Invalid value for `initial_program_clock_reference`, must be a value greater than or equal to `0`")
+            if not isinstance(initial_program_clock_reference, (float, int)):
+                raise TypeError("Invalid type for `initial_program_clock_reference`, type has to be `float`")
+
+        self._initial_program_clock_reference = initial_program_clock_reference
 
     def to_dict(self):
         """Returns the model properties as a dict"""

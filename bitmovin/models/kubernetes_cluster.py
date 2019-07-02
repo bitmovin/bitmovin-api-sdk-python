@@ -56,7 +56,7 @@ class KubernetesCluster(BitmovinResource):
     def online(self):
         """Gets the online of this KubernetesCluster.
 
-        Shows if the Bitmovin Agent is alive
+        Shows if the Bitmovin Agent is alive (required)
 
         :return: The online of this KubernetesCluster.
         :rtype: bool
@@ -67,7 +67,7 @@ class KubernetesCluster(BitmovinResource):
     def online(self, online):
         """Sets the online of this KubernetesCluster.
 
-        Shows if the Bitmovin Agent is alive
+        Shows if the Bitmovin Agent is alive (required)
 
         :param online: The online of this KubernetesCluster.
         :type: bool
@@ -84,7 +84,7 @@ class KubernetesCluster(BitmovinResource):
     def connected(self):
         """Gets the connected of this KubernetesCluster.
 
-        Shows if the Kubernetes cluster is accessible by the Bitmovin Agent
+        Shows if the Kubernetes cluster is accessible by the Bitmovin Agent (required)
 
         :return: The connected of this KubernetesCluster.
         :rtype: bool
@@ -95,7 +95,7 @@ class KubernetesCluster(BitmovinResource):
     def connected(self, connected):
         """Sets the connected of this KubernetesCluster.
 
-        Shows if the Kubernetes cluster is accessible by the Bitmovin Agent
+        Shows if the Kubernetes cluster is accessible by the Bitmovin Agent (required)
 
         :param connected: The connected of this KubernetesCluster.
         :type: bool

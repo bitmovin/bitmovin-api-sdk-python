@@ -72,7 +72,7 @@ class Thumbnail(BitmovinResource):
     def height(self):
         """Gets the height of this Thumbnail.
 
-        Height of the thumbnail.
+        Height of the thumbnail. (required)
 
         :return: The height of this Thumbnail.
         :rtype: int
@@ -83,7 +83,7 @@ class Thumbnail(BitmovinResource):
     def height(self, height):
         """Sets the height of this Thumbnail.
 
-        Height of the thumbnail.
+        Height of the thumbnail. (required)
 
         :param height: The height of this Thumbnail.
         :type: int

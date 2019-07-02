@@ -32,7 +32,7 @@ class StatisticsPerStream(object):
             'billable_minutes': 'float',
             'width': 'int',
             'height': 'int',
-            'rate': 'int',
+            'rate': 'float',
             'bitrate': 'int',
             'codec': 'CodecConfigType',
             'resolution': 'StatisticsResolution',
@@ -132,7 +132,7 @@ class StatisticsPerStream(object):
     def stream_id(self):
         """Gets the stream_id of this StatisticsPerStream.
 
-        ID of the stream
+        ID of the stream (required)
 
         :return: The stream_id of this StatisticsPerStream.
         :rtype: str
@@ -143,7 +143,7 @@ class StatisticsPerStream(object):
     def stream_id(self, stream_id):
         """Sets the stream_id of this StatisticsPerStream.
 
-        ID of the stream
+        ID of the stream (required)
 
         :param stream_id: The stream_id of this StatisticsPerStream.
         :type: str
@@ -160,7 +160,7 @@ class StatisticsPerStream(object):
     def codec_config_id(self):
         """Gets the codec_config_id of this StatisticsPerStream.
 
-        ID of the condec configuration
+        ID of the condec configuration (required)
 
         :return: The codec_config_id of this StatisticsPerStream.
         :rtype: str
@@ -171,7 +171,7 @@ class StatisticsPerStream(object):
     def codec_config_id(self, codec_config_id):
         """Sets the codec_config_id of this StatisticsPerStream.
 
-        ID of the condec configuration
+        ID of the condec configuration (required)
 
         :param codec_config_id: The codec_config_id of this StatisticsPerStream.
         :type: str
@@ -188,7 +188,7 @@ class StatisticsPerStream(object):
     def multiplicator(self):
         """Gets the multiplicator of this StatisticsPerStream.
 
-        Multiplier for the encoded minutes. Depends on muxing type.
+        Multiplier for the encoded minutes. Depends on muxing type. (required)
 
         :return: The multiplicator of this StatisticsPerStream.
         :rtype: float
@@ -199,7 +199,7 @@ class StatisticsPerStream(object):
     def multiplicator(self, multiplicator):
         """Sets the multiplicator of this StatisticsPerStream.
 
-        Multiplier for the encoded minutes. Depends on muxing type.
+        Multiplier for the encoded minutes. Depends on muxing type. (required)
 
         :param multiplicator: The multiplicator of this StatisticsPerStream.
         :type: float
@@ -216,7 +216,7 @@ class StatisticsPerStream(object):
     def encoded_bytes(self):
         """Gets the encoded_bytes of this StatisticsPerStream.
 
-        Encoded bytes.
+        Encoded bytes. (required)
 
         :return: The encoded_bytes of this StatisticsPerStream.
         :rtype: int
@@ -227,7 +227,7 @@ class StatisticsPerStream(object):
     def encoded_bytes(self, encoded_bytes):
         """Sets the encoded_bytes of this StatisticsPerStream.
 
-        Encoded bytes.
+        Encoded bytes. (required)
 
         :param encoded_bytes: The encoded_bytes of this StatisticsPerStream.
         :type: int
@@ -244,7 +244,7 @@ class StatisticsPerStream(object):
     def encoded_seconds(self):
         """Gets the encoded_seconds of this StatisticsPerStream.
 
-        Length of the stream.
+        Length of the stream. (required)
 
         :return: The encoded_seconds of this StatisticsPerStream.
         :rtype: float
@@ -255,7 +255,7 @@ class StatisticsPerStream(object):
     def encoded_seconds(self, encoded_seconds):
         """Sets the encoded_seconds of this StatisticsPerStream.
 
-        Length of the stream.
+        Length of the stream. (required)
 
         :param encoded_seconds: The encoded_seconds of this StatisticsPerStream.
         :type: float
@@ -272,7 +272,7 @@ class StatisticsPerStream(object):
     def billable_minutes(self):
         """Gets the billable_minutes of this StatisticsPerStream.
 
-        Minutes you will be charged for (billableMinutes = encodedSeconds * multiplicator)
+        Minutes you will be charged for (billableMinutes = encodedSeconds * multiplicator) (required)
 
         :return: The billable_minutes of this StatisticsPerStream.
         :rtype: float
@@ -283,7 +283,7 @@ class StatisticsPerStream(object):
     def billable_minutes(self, billable_minutes):
         """Sets the billable_minutes of this StatisticsPerStream.
 
-        Minutes you will be charged for (billableMinutes = encodedSeconds * multiplicator)
+        Minutes you will be charged for (billableMinutes = encodedSeconds * multiplicator) (required)
 
         :param billable_minutes: The billable_minutes of this StatisticsPerStream.
         :type: float
@@ -356,10 +356,10 @@ class StatisticsPerStream(object):
     def rate(self):
         """Gets the rate of this StatisticsPerStream.
 
-        If it' a video stream this value is the FPS, for audio it's the sample rate.
+        If it' a video stream this value is the FPS, for audio it's the sample rate. (required)
 
         :return: The rate of this StatisticsPerStream.
-        :rtype: int
+        :rtype: float
         """
         return self._rate
 
@@ -367,15 +367,15 @@ class StatisticsPerStream(object):
     def rate(self, rate):
         """Sets the rate of this StatisticsPerStream.
 
-        If it' a video stream this value is the FPS, for audio it's the sample rate.
+        If it' a video stream this value is the FPS, for audio it's the sample rate. (required)
 
         :param rate: The rate of this StatisticsPerStream.
-        :type: int
+        :type: float
         """
 
         if rate is not None:
-            if not isinstance(rate, int):
-                raise TypeError("Invalid type for `rate`, type has to be `int`")
+            if not isinstance(rate, (float, int)):
+                raise TypeError("Invalid type for `rate`, type has to be `float`")
 
         self._rate = rate
 
@@ -384,7 +384,7 @@ class StatisticsPerStream(object):
     def bitrate(self):
         """Gets the bitrate of this StatisticsPerStream.
 
-        Bitrate of the stream
+        Bitrate of the stream (required)
 
         :return: The bitrate of this StatisticsPerStream.
         :rtype: int
@@ -395,7 +395,7 @@ class StatisticsPerStream(object):
     def bitrate(self, bitrate):
         """Sets the bitrate of this StatisticsPerStream.
 
-        Bitrate of the stream
+        Bitrate of the stream (required)
 
         :param bitrate: The bitrate of this StatisticsPerStream.
         :type: int

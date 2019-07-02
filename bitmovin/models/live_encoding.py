@@ -46,7 +46,7 @@ class LiveEncoding(object):
     def stream_key(self):
         """Gets the stream_key of this LiveEncoding.
 
-        Stream key of the live encoder
+        Stream key of the live encoder (required)
 
         :return: The stream_key of this LiveEncoding.
         :rtype: str
@@ -57,7 +57,7 @@ class LiveEncoding(object):
     def stream_key(self, stream_key):
         """Sets the stream_key of this LiveEncoding.
 
-        Stream key of the live encoder
+        Stream key of the live encoder (required)
 
         :param stream_key: The stream_key of this LiveEncoding.
         :type: str
@@ -74,7 +74,7 @@ class LiveEncoding(object):
     def encoder_ip(self):
         """Gets the encoder_ip of this LiveEncoding.
 
-        IP address of the live encoder
+        IP address of the live encoder (required)
 
         :return: The encoder_ip of this LiveEncoding.
         :rtype: str
@@ -85,7 +85,7 @@ class LiveEncoding(object):
     def encoder_ip(self, encoder_ip):
         """Sets the encoder_ip of this LiveEncoding.
 
-        IP address of the live encoder
+        IP address of the live encoder (required)
 
         :param encoder_ip: The encoder_ip of this LiveEncoding.
         :type: str

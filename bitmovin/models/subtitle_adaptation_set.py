@@ -46,7 +46,7 @@ class SubtitleAdaptationSet(AdaptationSet):
     def lang(self):
         """Gets the lang of this SubtitleAdaptationSet.
 
-        ISO 639-1 (Alpha-2) code identifying the language of the subtitle adaptation set
+        ISO 639-1 (Alpha-2) code identifying the language of the subtitle adaptation set (required)
 
         :return: The lang of this SubtitleAdaptationSet.
         :rtype: str
@@ -57,7 +57,7 @@ class SubtitleAdaptationSet(AdaptationSet):
     def lang(self, lang):
         """Sets the lang of this SubtitleAdaptationSet.
 
-        ISO 639-1 (Alpha-2) code identifying the language of the subtitle adaptation set
+        ISO 639-1 (Alpha-2) code identifying the language of the subtitle adaptation set (required)
 
         :param lang: The lang of this SubtitleAdaptationSet.
         :type: str

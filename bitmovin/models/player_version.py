@@ -61,7 +61,7 @@ class PlayerVersion(BitmovinResponse):
     def version(self):
         """Gets the version of this PlayerVersion.
 
-        Version of the Player
+        Version of the Player (required)
 
         :return: The version of this PlayerVersion.
         :rtype: str
@@ -72,7 +72,7 @@ class PlayerVersion(BitmovinResponse):
     def version(self, version):
         """Sets the version of this PlayerVersion.
 
-        Version of the Player
+        Version of the Player (required)
 
         :param version: The version of this PlayerVersion.
         :type: str
@@ -89,7 +89,7 @@ class PlayerVersion(BitmovinResponse):
     def cdn_url(self):
         """Gets the cdn_url of this PlayerVersion.
 
-        URL of the specified player
+        URL of the specified player (required)
 
         :return: The cdn_url of this PlayerVersion.
         :rtype: str
@@ -100,7 +100,7 @@ class PlayerVersion(BitmovinResponse):
     def cdn_url(self, cdn_url):
         """Sets the cdn_url of this PlayerVersion.
 
-        URL of the specified player
+        URL of the specified player (required)
 
         :param cdn_url: The cdn_url of this PlayerVersion.
         :type: str
@@ -117,7 +117,7 @@ class PlayerVersion(BitmovinResponse):
     def download_url(self):
         """Gets the download_url of this PlayerVersion.
 
-        Download URL of the specified player package
+        Download URL of the specified player package (required)
 
         :return: The download_url of this PlayerVersion.
         :rtype: str
@@ -128,7 +128,7 @@ class PlayerVersion(BitmovinResponse):
     def download_url(self, download_url):
         """Sets the download_url of this PlayerVersion.
 
-        Download URL of the specified player package
+        Download URL of the specified player package (required)
 
         :param download_url: The download_url of this PlayerVersion.
         :type: str
@@ -145,7 +145,7 @@ class PlayerVersion(BitmovinResponse):
     def created_at(self):
         """Gets the created_at of this PlayerVersion.
 
-        Creation timestamp formatted in UTC: YYYY-MM-DDThh:mm:ssZ
+        Creation timestamp formatted in UTC: YYYY-MM-DDThh:mm:ssZ (required)
 
         :return: The created_at of this PlayerVersion.
         :rtype: datetime
@@ -156,7 +156,7 @@ class PlayerVersion(BitmovinResponse):
     def created_at(self, created_at):
         """Sets the created_at of this PlayerVersion.
 
-        Creation timestamp formatted in UTC: YYYY-MM-DDThh:mm:ssZ
+        Creation timestamp formatted in UTC: YYYY-MM-DDThh:mm:ssZ (required)
 
         :param created_at: The created_at of this PlayerVersion.
         :type: datetime

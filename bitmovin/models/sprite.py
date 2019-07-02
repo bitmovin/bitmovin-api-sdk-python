@@ -87,7 +87,7 @@ class Sprite(BitmovinResource):
     def height(self):
         """Gets the height of this Sprite.
 
-        Height of one thumbnail
+        Height of one thumbnail (required)
 
         :return: The height of this Sprite.
         :rtype: int
@@ -98,7 +98,7 @@ class Sprite(BitmovinResource):
     def height(self, height):
         """Sets the height of this Sprite.
 
-        Height of one thumbnail
+        Height of one thumbnail (required)
 
         :param height: The height of this Sprite.
         :type: int
@@ -115,7 +115,7 @@ class Sprite(BitmovinResource):
     def width(self):
         """Gets the width of this Sprite.
 
-        Width of one thumbnail
+        Width of one thumbnail (required)
 
         :return: The width of this Sprite.
         :rtype: int
@@ -126,7 +126,7 @@ class Sprite(BitmovinResource):
     def width(self, width):
         """Sets the width of this Sprite.
 
-        Width of one thumbnail
+        Width of one thumbnail (required)
 
         :param width: The width of this Sprite.
         :type: int
@@ -197,7 +197,7 @@ class Sprite(BitmovinResource):
     def sprite_name(self):
         """Gets the sprite_name of this Sprite.
 
-        Name of the sprite image. File extension \".jpg\" or \".png\" is required.
+        Name of the sprite image. File extension \".jpg\" or \".png\" is required. (required)
 
         :return: The sprite_name of this Sprite.
         :rtype: str
@@ -208,7 +208,7 @@ class Sprite(BitmovinResource):
     def sprite_name(self, sprite_name):
         """Sets the sprite_name of this Sprite.
 
-        Name of the sprite image. File extension \".jpg\" or \".png\" is required.
+        Name of the sprite image. File extension \".jpg\" or \".png\" is required. (required)
 
         :param sprite_name: The sprite_name of this Sprite.
         :type: str
@@ -253,7 +253,7 @@ class Sprite(BitmovinResource):
     def vtt_name(self):
         """Gets the vtt_name of this Sprite.
 
-        Filename of the vtt-file. The file-extension \".vtt\" is required.
+        Filename of the vtt-file. The file-extension \".vtt\" is required. (required)
 
         :return: The vtt_name of this Sprite.
         :rtype: str
@@ -264,7 +264,7 @@ class Sprite(BitmovinResource):
     def vtt_name(self, vtt_name):
         """Sets the vtt_name of this Sprite.
 
-        Filename of the vtt-file. The file-extension \".vtt\" is required.
+        Filename of the vtt-file. The file-extension \".vtt\" is required. (required)
 
         :param vtt_name: The vtt_name of this Sprite.
         :type: str

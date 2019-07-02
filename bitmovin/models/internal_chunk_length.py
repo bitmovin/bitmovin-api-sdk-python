@@ -48,7 +48,7 @@ class InternalChunkLength(object):
     def mode(self):
         """Gets the mode of this InternalChunkLength.
 
-        Defines how the internal chunk length for encoding will be determined
+        Defines how the internal chunk length for encoding will be determined (required)
 
         :return: The mode of this InternalChunkLength.
         :rtype: ChunkLengthMode
@@ -59,7 +59,7 @@ class InternalChunkLength(object):
     def mode(self, mode):
         """Sets the mode of this InternalChunkLength.
 
-        Defines how the internal chunk length for encoding will be determined
+        Defines how the internal chunk length for encoding will be determined (required)
 
         :param mode: The mode of this InternalChunkLength.
         :type: ChunkLengthMode

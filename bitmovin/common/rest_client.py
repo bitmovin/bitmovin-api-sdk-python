@@ -15,7 +15,7 @@ class RestClient(object):
     HTTP_HEADERS = {
         'Content-Type': 'application/json',
         'X-Api-Client': 'bitmovin-api-sdk-python',
-        'X-Api-Client-Version': '1.17.2alpha0'
+        'X-Api-Client-Version': '1.18.0alpha0'
     }
 
     DELETE = 'DELETE'

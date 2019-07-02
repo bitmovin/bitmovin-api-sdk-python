@@ -41,7 +41,7 @@ class ReprioritizeEncodingRequest(object):
     def priority(self):
         """Gets the priority of this ReprioritizeEncodingRequest.
 
-        Priority of the Encoding
+        Priority of the Encoding (required)
 
         :return: The priority of this ReprioritizeEncodingRequest.
         :rtype: int
@@ -52,7 +52,7 @@ class ReprioritizeEncodingRequest(object):
     def priority(self, priority):
         """Sets the priority of this ReprioritizeEncodingRequest.
 
-        Priority of the Encoding
+        Priority of the Encoding (required)
 
         :param priority: The priority of this ReprioritizeEncodingRequest.
         :type: int

@@ -54,7 +54,7 @@ class ResponseError(object):
     def request_id(self):
         """Gets the request_id of this ResponseError.
 
-        Unique correlation id
+        Unique correlation id (required)
 
         :return: The request_id of this ResponseError.
         :rtype: str
@@ -65,7 +65,7 @@ class ResponseError(object):
     def request_id(self, request_id):
         """Sets the request_id of this ResponseError.
 
-        Unique correlation id
+        Unique correlation id (required)
 
         :param request_id: The request_id of this ResponseError.
         :type: str
@@ -82,7 +82,7 @@ class ResponseError(object):
     def status(self):
         """Gets the status of this ResponseError.
 
-        Response status information
+        Response status information (required)
 
         :return: The status of this ResponseError.
         :rtype: ResponseStatus
@@ -93,7 +93,7 @@ class ResponseError(object):
     def status(self, status):
         """Sets the status of this ResponseError.
 
-        Response status information
+        Response status information (required)
 
         :param status: The status of this ResponseError.
         :type: ResponseStatus
@@ -110,7 +110,7 @@ class ResponseError(object):
     def data(self):
         """Gets the data of this ResponseError.
 
-        Response information
+        Response information (required)
 
         :return: The data of this ResponseError.
         :rtype: ResponseErrorData
@@ -121,7 +121,7 @@ class ResponseError(object):
     def data(self, data):
         """Sets the data of this ResponseError.
 
-        Response information
+        Response information (required)
 
         :param data: The data of this ResponseError.
         :type: ResponseErrorData

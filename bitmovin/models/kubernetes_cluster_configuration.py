@@ -46,7 +46,7 @@ class KubernetesClusterConfiguration(object):
     def parallel_encodings(self):
         """Gets the parallel_encodings of this KubernetesClusterConfiguration.
 
-        Number of parallel scheduled encodings on the Kubernetes cluster
+        Number of parallel scheduled encodings on the Kubernetes cluster (required)
 
         :return: The parallel_encodings of this KubernetesClusterConfiguration.
         :rtype: int
@@ -57,7 +57,7 @@ class KubernetesClusterConfiguration(object):
     def parallel_encodings(self, parallel_encodings):
         """Sets the parallel_encodings of this KubernetesClusterConfiguration.
 
-        Number of parallel scheduled encodings on the Kubernetes cluster
+        Number of parallel scheduled encodings on the Kubernetes cluster (required)
 
         :param parallel_encodings: The parallel_encodings of this KubernetesClusterConfiguration.
         :type: int
@@ -74,7 +74,7 @@ class KubernetesClusterConfiguration(object):
     def workers_per_encoding(self):
         """Gets the workers_per_encoding of this KubernetesClusterConfiguration.
 
-        Number of worker nodes used for each encoding on the Kubernetes cluster
+        Number of worker nodes used for each encoding on the Kubernetes cluster (required)
 
         :return: The workers_per_encoding of this KubernetesClusterConfiguration.
         :rtype: int
@@ -85,7 +85,7 @@ class KubernetesClusterConfiguration(object):
     def workers_per_encoding(self, workers_per_encoding):
         """Sets the workers_per_encoding of this KubernetesClusterConfiguration.
 
-        Number of worker nodes used for each encoding on the Kubernetes cluster
+        Number of worker nodes used for each encoding on the Kubernetes cluster (required)
 
         :param workers_per_encoding: The workers_per_encoding of this KubernetesClusterConfiguration.
         :type: int

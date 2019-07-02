@@ -12,7 +12,10 @@ from bitmovin.encoding.encodings.inputStreams.type.type_api import TypeApi
 from bitmovin.encoding.encodings.inputStreams.audioMix.audio_mix_api import AudioMixApi
 from bitmovin.encoding.encodings.inputStreams.ingest.ingest_api import IngestApi
 from bitmovin.encoding.encodings.inputStreams.concatenation.concatenation_api import ConcatenationApi
+from bitmovin.encoding.encodings.inputStreams.file.file_api import FileApi
 from bitmovin.encoding.encodings.inputStreams.trimming.trimming_api import TrimmingApi
+from bitmovin.encoding.encodings.inputStreams.subtitles.subtitles_api import SubtitlesApi
+from bitmovin.encoding.encodings.inputStreams.captions.captions_api import CaptionsApi
 from bitmovin.encoding.encodings.inputStreams.input_stream_list_query_params import InputStreamListQueryParams
 
 
@@ -54,7 +57,28 @@ class InputStreamsApi(BaseApi):
             logger=logger
         )
 
+        self.file = FileApi(
+            api_key=api_key,
+            tenant_org_id=tenant_org_id,
+            base_url=base_url,
+            logger=logger
+        )
+
         self.trimming = TrimmingApi(
+            api_key=api_key,
+            tenant_org_id=tenant_org_id,
+            base_url=base_url,
+            logger=logger
+        )
+
+        self.subtitles = SubtitlesApi(
+            api_key=api_key,
+            tenant_org_id=tenant_org_id,
+            base_url=base_url,
+            logger=logger
+        )
+
+        self.captions = CaptionsApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,

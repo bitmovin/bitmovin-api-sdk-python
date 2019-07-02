@@ -41,7 +41,7 @@ class StreamFilterList(object):
     def filters(self):
         """Gets the filters of this StreamFilterList.
 
-        List of stream filters
+        List of stream filters (required)
 
         :return: The filters of this StreamFilterList.
         :rtype: list[StreamFilter]
@@ -52,7 +52,7 @@ class StreamFilterList(object):
     def filters(self, filters):
         """Sets the filters of this StreamFilterList.
 
-        List of stream filters
+        List of stream filters (required)
 
         :param filters: The filters of this StreamFilterList.
         :type: list[StreamFilter]

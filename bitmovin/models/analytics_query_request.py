@@ -82,7 +82,7 @@ class AnalyticsQueryRequest(AnalyticsQueryTimeframe):
     def license_key(self):
         """Gets the license_key of this AnalyticsQueryRequest.
 
-        Analytics license key
+        Analytics license key (required)
 
         :return: The license_key of this AnalyticsQueryRequest.
         :rtype: str
@@ -93,7 +93,7 @@ class AnalyticsQueryRequest(AnalyticsQueryTimeframe):
     def license_key(self, license_key):
         """Sets the license_key of this AnalyticsQueryRequest.
 
-        Analytics license key
+        Analytics license key (required)
 
         :param license_key: The license_key of this AnalyticsQueryRequest.
         :type: str

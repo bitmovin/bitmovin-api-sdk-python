@@ -41,7 +41,7 @@ class ManifestResource(object):
     def manifest_id(self):
         """Gets the manifest_id of this ManifestResource.
 
-        Id of the manifest resource
+        Id of the manifest resource (required)
 
         :return: The manifest_id of this ManifestResource.
         :rtype: str
@@ -52,7 +52,7 @@ class ManifestResource(object):
     def manifest_id(self, manifest_id):
         """Sets the manifest_id of this ManifestResource.
 
-        Id of the manifest resource
+        Id of the manifest resource (required)
 
         :param manifest_id: The manifest_id of this ManifestResource.
         :type: str

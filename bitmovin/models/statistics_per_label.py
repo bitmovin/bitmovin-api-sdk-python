@@ -66,7 +66,7 @@ class StatisticsPerLabel(Statistics):
     def label(self):
         """Gets the label of this StatisticsPerLabel.
 
-        An optional error message, when the event is in error state (occurs at event: ERROR)
+        An optional error message, when the event is in error state (occurs at event: ERROR) (required)
 
         :return: The label of this StatisticsPerLabel.
         :rtype: str
@@ -77,7 +77,7 @@ class StatisticsPerLabel(Statistics):
     def label(self, label):
         """Sets the label of this StatisticsPerLabel.
 
-        An optional error message, when the event is in error state (occurs at event: ERROR)
+        An optional error message, when the event is in error state (occurs at event: ERROR) (required)
 
         :param label: The label of this StatisticsPerLabel.
         :type: str

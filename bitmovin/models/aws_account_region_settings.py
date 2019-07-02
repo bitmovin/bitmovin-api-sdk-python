@@ -160,7 +160,7 @@ class AwsAccountRegionSettings(BitmovinResource):
     def security_group_id(self):
         """Gets the security_group_id of this AwsAccountRegionSettings.
 
-        Id of the security group for encoding instances
+        Id of the security group for encoding instances (required)
 
         :return: The security_group_id of this AwsAccountRegionSettings.
         :rtype: str
@@ -171,7 +171,7 @@ class AwsAccountRegionSettings(BitmovinResource):
     def security_group_id(self, security_group_id):
         """Sets the security_group_id of this AwsAccountRegionSettings.
 
-        Id of the security group for encoding instances
+        Id of the security group for encoding instances (required)
 
         :param security_group_id: The security_group_id of this AwsAccountRegionSettings.
         :type: str
@@ -188,7 +188,7 @@ class AwsAccountRegionSettings(BitmovinResource):
     def subnet_id(self):
         """Gets the subnet_id of this AwsAccountRegionSettings.
 
-        Id of the subnet for encoding instances
+        Id of the subnet for encoding instances (required)
 
         :return: The subnet_id of this AwsAccountRegionSettings.
         :rtype: str
@@ -199,7 +199,7 @@ class AwsAccountRegionSettings(BitmovinResource):
     def subnet_id(self, subnet_id):
         """Sets the subnet_id of this AwsAccountRegionSettings.
 
-        Id of the subnet for encoding instances
+        Id of the subnet for encoding instances (required)
 
         :param subnet_id: The subnet_id of this AwsAccountRegionSettings.
         :type: str

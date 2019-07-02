@@ -51,7 +51,7 @@ class ClosedCaptionsMediaInfo(SegmentsMediaInfo):
     def instream_id(self):
         """Gets the instream_id of this ClosedCaptionsMediaInfo.
 
-        Specifies a Rendition within the segments in the Media Playlist. (See HLS spec 4.3.4.1. EXT-X-MEDIA INSTREAM-ID)
+        Specifies a Rendition within the segments in the Media Playlist. (See HLS spec 4.3.4.1. EXT-X-MEDIA INSTREAM-ID) (required)
 
         :return: The instream_id of this ClosedCaptionsMediaInfo.
         :rtype: str
@@ -62,7 +62,7 @@ class ClosedCaptionsMediaInfo(SegmentsMediaInfo):
     def instream_id(self, instream_id):
         """Sets the instream_id of this ClosedCaptionsMediaInfo.
 
-        Specifies a Rendition within the segments in the Media Playlist. (See HLS spec 4.3.4.1. EXT-X-MEDIA INSTREAM-ID)
+        Specifies a Rendition within the segments in the Media Playlist. (See HLS spec 4.3.4.1. EXT-X-MEDIA INSTREAM-ID) (required)
 
         :param instream_id: The instream_id of this ClosedCaptionsMediaInfo.
         :type: str

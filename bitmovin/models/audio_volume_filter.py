@@ -52,7 +52,7 @@ class AudioVolumeFilter(Filter):
     def volume(self):
         """Gets the volume of this AudioVolumeFilter.
 
-        Audio volume value
+        Audio volume value (required)
 
         :return: The volume of this AudioVolumeFilter.
         :rtype: float
@@ -63,7 +63,7 @@ class AudioVolumeFilter(Filter):
     def volume(self, volume):
         """Sets the volume of this AudioVolumeFilter.
 
-        Audio volume value
+        Audio volume value (required)
 
         :param volume: The volume of this AudioVolumeFilter.
         :type: float

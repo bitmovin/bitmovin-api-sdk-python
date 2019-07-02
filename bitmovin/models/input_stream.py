@@ -15,7 +15,8 @@ class InputStream(BitmovinResource):
         'TRIMMING_TIME_BASED': 'TimeBasedTrimmingInputStream',
         'TRIMMING_TIME_CODE_TRACK': 'TimecodeTrackTrimmingInputStream',
         'TRIMMING_H264_PICTURE_TIMING': 'H264PictureTimingTrimmingInputStream',
-        'AUDIO_MIX': 'AudioMixInputStream'
+        'AUDIO_MIX': 'AudioMixInputStream',
+        'FILE': 'FileInputStream'
     }
 
     def __init__(self, *args, **kwargs):

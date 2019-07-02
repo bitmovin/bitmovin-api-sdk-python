@@ -2,7 +2,7 @@
 
 from __future__ import absolute_import
 
-__version__ = "1.17.2alpha0"
+__version__ = "1.18.0alpha0"
 
 # import apis into sdk package
 from bitmovin.common import *
@@ -246,6 +246,12 @@ from bitmovin.encoding.configurations.audio.mp3.mp3_api import Mp3Api
 from bitmovin.encoding.configurations.audio.mp3.mp3_api import Mp3AudioConfigurationListQueryParams
 from bitmovin.encoding.configurations.audio.mp3.customdata.customdata_api import CustomdataApi
 
+from bitmovin.encoding.configurations.subtitles.subtitles_api import SubtitlesApi
+
+from bitmovin.encoding.configurations.subtitles.webvtt.webvtt_api import WebvttApi
+from bitmovin.encoding.configurations.subtitles.webvtt.webvtt_api import WebVttConfigurationListQueryParams
+from bitmovin.encoding.configurations.subtitles.webvtt.customdata.customdata_api import CustomdataApi
+
 from bitmovin.encoding.filters.filters_api import FiltersApi
 from bitmovin.encoding.filters.filters_api import FilterListQueryParams
 from bitmovin.encoding.filters.watermark.watermark_api import WatermarkApi
@@ -314,6 +320,8 @@ from bitmovin.encoding.encodings.machineLearning.objectDetection.customdata.cust
 
 from bitmovin.encoding.encodings.machineLearning.objectDetection.results.results_api import ResultsApi
 from bitmovin.encoding.encodings.machineLearning.objectDetection.results.results_api import ObjectDetectionResultListQueryParams
+from bitmovin.encoding.encodings.machineLearning.objectDetection.results.byTimestamp.by_timestamp_api import ByTimestampApi
+from bitmovin.encoding.encodings.machineLearning.objectDetection.results.byTimestamp.by_timestamp_api import ObjectDetectionTimestampResultListQueryParams
 from bitmovin.encoding.encodings.customdata.customdata_api import CustomdataApi
 
 from bitmovin.encoding.encodings.streams.streams_api import StreamsApi
@@ -334,6 +342,8 @@ from bitmovin.encoding.encodings.inputStreams.ingest.ingest_api import IngestApi
 from bitmovin.encoding.encodings.inputStreams.ingest.ingest_api import IngestInputStreamListQueryParams
 from bitmovin.encoding.encodings.inputStreams.concatenation.concatenation_api import ConcatenationApi
 from bitmovin.encoding.encodings.inputStreams.concatenation.concatenation_api import ConcatenationInputStreamListQueryParams
+from bitmovin.encoding.encodings.inputStreams.file.file_api import FileApi
+from bitmovin.encoding.encodings.inputStreams.file.file_api import FileInputStreamListQueryParams
 from bitmovin.encoding.encodings.inputStreams.trimming.trimming_api import TrimmingApi
 
 from bitmovin.encoding.encodings.inputStreams.trimming.timeBased.time_based_api import TimeBasedApi
@@ -342,11 +352,25 @@ from bitmovin.encoding.encodings.inputStreams.trimming.timecodeTrack.timecode_tr
 from bitmovin.encoding.encodings.inputStreams.trimming.timecodeTrack.timecode_track_api import TimecodeTrackTrimmingInputStreamListQueryParams
 from bitmovin.encoding.encodings.inputStreams.trimming.h264PictureTiming.h264_picture_timing_api import H264PictureTimingApi
 from bitmovin.encoding.encodings.inputStreams.trimming.h264PictureTiming.h264_picture_timing_api import H264PictureTimingTrimmingInputStreamListQueryParams
+from bitmovin.encoding.encodings.inputStreams.subtitles.subtitles_api import SubtitlesApi
+
+from bitmovin.encoding.encodings.inputStreams.subtitles.dvbTeletext.dvb_teletext_api import DvbTeletextApi
+from bitmovin.encoding.encodings.inputStreams.subtitles.dvbTeletext.dvb_teletext_api import DvbTeletextInputStreamListQueryParams
+from bitmovin.encoding.encodings.inputStreams.captions.captions_api import CaptionsApi
+
+from bitmovin.encoding.encodings.inputStreams.captions.cea608.cea608_api import Cea608Api
+from bitmovin.encoding.encodings.inputStreams.captions.cea608.cea608_api import Cea608CaptionInputStreamListQueryParams
+from bitmovin.encoding.encodings.inputStreams.captions.cea708.cea708_api import Cea708Api
+from bitmovin.encoding.encodings.inputStreams.captions.cea708.cea708_api import Cea708CaptionInputStreamListQueryParams
 from bitmovin.encoding.encodings.muxings.muxings_api import MuxingsApi
 from bitmovin.encoding.encodings.muxings.muxings_api import MuxingListQueryParams
 from bitmovin.encoding.encodings.muxings.fmp4.fmp4_api import Fmp4Api
 from bitmovin.encoding.encodings.muxings.fmp4.fmp4_api import Fmp4MuxingListQueryParams
 from bitmovin.encoding.encodings.muxings.fmp4.customdata.customdata_api import CustomdataApi
+
+from bitmovin.encoding.encodings.muxings.chunkedText.chunked_text_api import ChunkedTextApi
+from bitmovin.encoding.encodings.muxings.chunkedText.chunked_text_api import ChunkedTextMuxingListQueryParams
+from bitmovin.encoding.encodings.muxings.chunkedText.customdata.customdata_api import CustomdataApi
 
 from bitmovin.encoding.encodings.muxings.cmaf.cmaf_api import CmafApi
 from bitmovin.encoding.encodings.muxings.cmaf.cmaf_api import CmafMuxingListQueryParams
@@ -355,6 +379,10 @@ from bitmovin.encoding.encodings.muxings.cmaf.customdata.customdata_api import C
 from bitmovin.encoding.encodings.muxings.segmentedRaw.segmented_raw_api import SegmentedRawApi
 from bitmovin.encoding.encodings.muxings.segmentedRaw.segmented_raw_api import SegmentedRawMuxingListQueryParams
 from bitmovin.encoding.encodings.muxings.segmentedRaw.customdata.customdata_api import CustomdataApi
+
+from bitmovin.encoding.encodings.muxings.text.text_api import TextApi
+from bitmovin.encoding.encodings.muxings.text.text_api import TextMuxingListQueryParams
+from bitmovin.encoding.encodings.muxings.text.customdata.customdata_api import CustomdataApi
 
 from bitmovin.encoding.encodings.muxings.ts.ts_api import TsApi
 from bitmovin.encoding.encodings.muxings.ts.ts_api import TsMuxingListQueryParams
@@ -519,6 +547,10 @@ from bitmovin.encoding.encodings.sidecars.sidecars_api import SidecarFileListQue
 from bitmovin.encoding.encodings.sidecars.customdata.customdata_api import CustomdataApi
 
 from bitmovin.encoding.encodings.sidecars.webvtt.webvtt_api import WebvttApi
+
+from bitmovin.encoding.encodings.streams.bifs.bifs_api import BifsApi
+from bitmovin.encoding.encodings.streams.bifs.bifs_api import BifListQueryParams
+from bitmovin.encoding.encodings.streams.bifs.customdata.customdata_api import CustomdataApi
 
 from bitmovin.encoding.encodings.streams.thumbnails.thumbnails_api import ThumbnailsApi
 from bitmovin.encoding.encodings.streams.thumbnails.thumbnails_api import ThumbnailListQueryParams
@@ -688,6 +720,12 @@ from bitmovin.notifications.webhooks.encoding.encodings.error.error_api import E
 from bitmovin.notifications.webhooks.encoding.encodings.error.error_api import WebhookListQueryParams,WebhookListByEncodingIdQueryParams
 from bitmovin.notifications.webhooks.encoding.encodings.error.customdata.customdata_api import CustomdataApi
 
+from bitmovin.notifications.webhooks.encoding.manifest.manifest_api import ManifestApi
+from bitmovin.notifications.webhooks.encoding.manifest.manifest_api import NotificationListQueryParams
+from bitmovin.notifications.webhooks.encoding.manifest.error.error_api import ErrorApi
+
+from bitmovin.notifications.webhooks.encoding.manifest.finished.finished_api import FinishedApi
+
 from bitmovin.notifications.states.states_api import StatesApi
 from bitmovin.notifications.states.states_api import NotificationStateEntryListQueryParams
 from bitmovin.notifications.emails.emails_api import EmailsApi
@@ -699,12 +737,6 @@ from bitmovin.notifications.emails.encoding.encodings.encodings_api import Email
 from bitmovin.notifications.emails.encoding.encodings.liveInputStreamChanged.live_input_stream_changed_api import LiveInputStreamChangedApi
 
 from bitmovin.notifications.emails.encoding.encodings.error.error_api import ErrorApi
-
-from bitmovin.notifications.webhooks.encoding.manifest.manifest_api import ManifestApi
-from bitmovin.notifications.webhooks.encoding.manifest.manifest_api import NotificationListQueryParams
-from bitmovin.notifications.webhooks.encoding.manifest.error.error_api import ErrorApi
-
-from bitmovin.notifications.webhooks.encoding.manifest.finished.finished_api import FinishedApi
 
 from bitmovin.player.player_api import PlayerApi
 
@@ -812,6 +844,7 @@ from bitmovin.models.azure_output import AzureOutput
 from bitmovin.models.b_adapt import BAdapt
 from bitmovin.models.backup_srt_inputs import BackupSrtInputs
 from bitmovin.models.basic_media_info import BasicMediaInfo
+from bitmovin.models.bif import Bif
 from bitmovin.models.billable_encoding_feature_minutes import BillableEncodingFeatureMinutes
 from bitmovin.models.billable_encoding_minutes import BillableEncodingMinutes
 from bitmovin.models.billable_encoding_minutes_details import BillableEncodingMinutesDetails
@@ -830,6 +863,9 @@ from bitmovin.models.broadcast_ts_video_input_stream_configuration import Broadc
 from bitmovin.models.burn_in_subtitle_srt import BurnInSubtitleSrt
 from bitmovin.models.caption_character_encoding import CaptionCharacterEncoding
 from bitmovin.models.cea608708_subtitle_configuration import Cea608708SubtitleConfiguration
+from bitmovin.models.cea608_caption_input_stream import Cea608CaptionInputStream
+from bitmovin.models.cea608_channel_type import Cea608ChannelType
+from bitmovin.models.cea708_caption_input_stream import Cea708CaptionInputStream
 from bitmovin.models.cenc_drm import CencDrm
 from bitmovin.models.cenc_fair_play import CencFairPlay
 from bitmovin.models.cenc_marlin import CencMarlin
@@ -838,6 +874,7 @@ from bitmovin.models.cenc_widevine import CencWidevine
 from bitmovin.models.channel_layout import ChannelLayout
 from bitmovin.models.chroma_location import ChromaLocation
 from bitmovin.models.chunk_length_mode import ChunkLengthMode
+from bitmovin.models.chunked_text_muxing import ChunkedTextMuxing
 from bitmovin.models.clear_key_drm import ClearKeyDrm
 from bitmovin.models.closed_captions_media_info import ClosedCaptionsMediaInfo
 from bitmovin.models.cloud_region import CloudRegion
@@ -895,6 +932,7 @@ from bitmovin.models.domain import Domain
 from bitmovin.models.domain_list import DomainList
 from bitmovin.models.drm import Drm
 from bitmovin.models.drm_type import DrmType
+from bitmovin.models.dvb_teletext_input_stream import DvbTeletextInputStream
 from bitmovin.models.eac3_audio_configuration import Eac3AudioConfiguration
 from bitmovin.models.ebu_r128_single_pass_filter import EbuR128SinglePassFilter
 from bitmovin.models.email_notification import EmailNotification
@@ -916,6 +954,8 @@ from bitmovin.models.enhanced_watermark_filter import EnhancedWatermarkFilter
 from bitmovin.models.error_details import ErrorDetails
 from bitmovin.models.error_retry_hint import ErrorRetryHint
 from bitmovin.models.fair_play_drm import FairPlayDrm
+from bitmovin.models.file_input_stream import FileInputStream
+from bitmovin.models.file_input_stream_type import FileInputStreamType
 from bitmovin.models.filter import Filter
 from bitmovin.models.filter_type import FilterType
 from bitmovin.models.filter_type_response import FilterTypeResponse
@@ -1027,6 +1067,7 @@ from bitmovin.models.notification_states import NotificationStates
 from bitmovin.models.object_detection_bounding_box import ObjectDetectionBoundingBox
 from bitmovin.models.object_detection_configuration import ObjectDetectionConfiguration
 from bitmovin.models.object_detection_result import ObjectDetectionResult
+from bitmovin.models.object_detection_timestamp_result import ObjectDetectionTimestampResult
 from bitmovin.models.opus_audio_configuration import OpusAudioConfiguration
 from bitmovin.models.opus_channel_layout import OpusChannelLayout
 from bitmovin.models.or_conjunction import OrConjunction
@@ -1155,6 +1196,7 @@ from bitmovin.models.tcp_input import TcpInput
 from bitmovin.models.tenant import Tenant
 from bitmovin.models.text_filter import TextFilter
 from bitmovin.models.text_filter_font import TextFilterFont
+from bitmovin.models.text_muxing import TextMuxing
 from bitmovin.models.thumbnail import Thumbnail
 from bitmovin.models.thumbnail_unit import ThumbnailUnit
 from bitmovin.models.time_based_trimming_input_stream import TimeBasedTrimmingInputStream
@@ -1164,7 +1206,13 @@ from bitmovin.models.timecode_track_trimming_input_stream import TimecodeTrackTr
 from bitmovin.models.transfer_version import TransferVersion
 from bitmovin.models.transform_skip_mode import TransformSkipMode
 from bitmovin.models.trimming import Trimming
+from bitmovin.models.ts_audio_stream_configuration import TsAudioStreamConfiguration
 from bitmovin.models.ts_muxing import TsMuxing
+from bitmovin.models.ts_muxing_configuration import TsMuxingConfiguration
+from bitmovin.models.ts_program_clock_reference_configuration import TsProgramClockReferenceConfiguration
+from bitmovin.models.ts_program_map_table_configuration import TsProgramMapTableConfiguration
+from bitmovin.models.ts_stream_configuration import TsStreamConfiguration
+from bitmovin.models.ts_video_stream_configuration import TsVideoStreamConfiguration
 from bitmovin.models.ttml_embed import TtmlEmbed
 from bitmovin.models.tu_inter_depth import TuInterDepth
 from bitmovin.models.tu_intra_depth import TuIntraDepth
@@ -1193,6 +1241,7 @@ from bitmovin.models.vp9_quality import Vp9Quality
 from bitmovin.models.vp9_video_configuration import Vp9VideoConfiguration
 from bitmovin.models.vtt_media_info import VttMediaInfo
 from bitmovin.models.watermark_filter import WatermarkFilter
+from bitmovin.models.web_vtt_configuration import WebVttConfiguration
 from bitmovin.models.web_vtt_sidecar_file import WebVttSidecarFile
 from bitmovin.models.web_vtt_sidecar_file_segmentation import WebVttSidecarFileSegmentation
 from bitmovin.models.webhook import Webhook

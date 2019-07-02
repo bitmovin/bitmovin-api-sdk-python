@@ -97,7 +97,7 @@ class Subtask(BitmovinResponse):
     def status(self):
         """Gets the status of this Subtask.
 
-        Current status
+        Current status (required)
 
         :return: The status of this Subtask.
         :rtype: Status
@@ -108,7 +108,7 @@ class Subtask(BitmovinResponse):
     def status(self, status):
         """Sets the status of this Subtask.
 
-        Current status
+        Current status (required)
 
         :param status: The status of this Subtask.
         :type: Status
@@ -153,7 +153,7 @@ class Subtask(BitmovinResponse):
     def name(self):
         """Gets the name of this Subtask.
 
-        Name of the subtask
+        Name of the subtask (required)
 
         :return: The name of this Subtask.
         :rtype: str
@@ -164,7 +164,7 @@ class Subtask(BitmovinResponse):
     def name(self, name):
         """Sets the name of this Subtask.
 
-        Name of the subtask
+        Name of the subtask (required)
 
         :param name: The name of this Subtask.
         :type: str

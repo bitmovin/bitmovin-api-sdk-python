@@ -46,7 +46,7 @@ class DashMp4DrmRepresentation(DashMp4Representation):
     def drm_id(self):
         """Gets the drm_id of this DashMp4DrmRepresentation.
 
-        DRM Id
+        DRM Id (required)
 
         :return: The drm_id of this DashMp4DrmRepresentation.
         :rtype: str
@@ -57,7 +57,7 @@ class DashMp4DrmRepresentation(DashMp4Representation):
     def drm_id(self, drm_id):
         """Sets the drm_id of this DashMp4DrmRepresentation.
 
-        DRM Id
+        DRM Id (required)
 
         :param drm_id: The drm_id of this DashMp4DrmRepresentation.
         :type: str

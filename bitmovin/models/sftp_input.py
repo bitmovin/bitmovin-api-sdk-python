@@ -66,7 +66,7 @@ class SftpInput(Input):
     def host(self):
         """Gets the host of this SftpInput.
 
-        Host Url or IP of the SFTP server
+        Host Url or IP of the SFTP server (required)
 
         :return: The host of this SftpInput.
         :rtype: str
@@ -77,7 +77,7 @@ class SftpInput(Input):
     def host(self, host):
         """Sets the host of this SftpInput.
 
-        Host Url or IP of the SFTP server
+        Host Url or IP of the SFTP server (required)
 
         :param host: The host of this SftpInput.
         :type: str

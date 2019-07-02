@@ -51,7 +51,7 @@ class MarlinDrm(Drm):
     def key(self):
         """Gets the key of this MarlinDrm.
 
-        16 byte key in hex (32 characters)
+        16 byte key in hex (32 characters) (required)
 
         :return: The key of this MarlinDrm.
         :rtype: str
@@ -62,7 +62,7 @@ class MarlinDrm(Drm):
     def key(self, key):
         """Sets the key of this MarlinDrm.
 
-        16 byte key in hex (32 characters)
+        16 byte key in hex (32 characters) (required)
 
         :param key: The key of this MarlinDrm.
         :type: str
@@ -79,7 +79,7 @@ class MarlinDrm(Drm):
     def kid(self):
         """Gets the kid of this MarlinDrm.
 
-        16 byte key in hex (32 characters)
+        16 byte key in hex (32 characters) (required)
 
         :return: The kid of this MarlinDrm.
         :rtype: str
@@ -90,7 +90,7 @@ class MarlinDrm(Drm):
     def kid(self, kid):
         """Sets the kid of this MarlinDrm.
 
-        16 byte key in hex (32 characters)
+        16 byte key in hex (32 characters) (required)
 
         :param kid: The kid of this MarlinDrm.
         :type: str

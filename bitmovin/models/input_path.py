@@ -46,7 +46,7 @@ class InputPath(object):
     def input_id(self):
         """Gets the input_id of this InputPath.
 
-        Id of input
+        Id of input (required)
 
         :return: The input_id of this InputPath.
         :rtype: str
@@ -57,7 +57,7 @@ class InputPath(object):
     def input_id(self, input_id):
         """Sets the input_id of this InputPath.
 
-        Id of input
+        Id of input (required)
 
         :param input_id: The input_id of this InputPath.
         :type: str
@@ -74,7 +74,7 @@ class InputPath(object):
     def input_path(self):
         """Gets the input_path of this InputPath.
 
-        Path to media file
+        Path to media file (required)
 
         :return: The input_path of this InputPath.
         :rtype: str
@@ -85,7 +85,7 @@ class InputPath(object):
     def input_path(self, input_path):
         """Sets the input_path of this InputPath.
 
-        Path to media file
+        Path to media file (required)
 
         :param input_path: The input_path of this InputPath.
         :type: str

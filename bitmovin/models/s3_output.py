@@ -73,7 +73,7 @@ class S3Output(Output):
     def bucket_name(self):
         """Gets the bucket_name of this S3Output.
 
-        Amazon S3 bucket name
+        Amazon S3 bucket name (required)
 
         :return: The bucket_name of this S3Output.
         :rtype: str
@@ -84,7 +84,7 @@ class S3Output(Output):
     def bucket_name(self, bucket_name):
         """Sets the bucket_name of this S3Output.
 
-        Amazon S3 bucket name
+        Amazon S3 bucket name (required)
 
         :param bucket_name: The bucket_name of this S3Output.
         :type: str
@@ -101,7 +101,7 @@ class S3Output(Output):
     def access_key(self):
         """Gets the access_key of this S3Output.
 
-        Amazon S3 access key
+        Amazon S3 access key (required)
 
         :return: The access_key of this S3Output.
         :rtype: str
@@ -112,7 +112,7 @@ class S3Output(Output):
     def access_key(self, access_key):
         """Sets the access_key of this S3Output.
 
-        Amazon S3 access key
+        Amazon S3 access key (required)
 
         :param access_key: The access_key of this S3Output.
         :type: str
@@ -129,7 +129,7 @@ class S3Output(Output):
     def secret_key(self):
         """Gets the secret_key of this S3Output.
 
-        Amazon S3 secret key
+        Amazon S3 secret key (required)
 
         :return: The secret_key of this S3Output.
         :rtype: str
@@ -140,7 +140,7 @@ class S3Output(Output):
     def secret_key(self, secret_key):
         """Sets the secret_key of this S3Output.
 
-        Amazon S3 secret key
+        Amazon S3 secret key (required)
 
         :param secret_key: The secret_key of this S3Output.
         :type: str

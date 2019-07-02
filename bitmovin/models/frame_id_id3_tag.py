@@ -52,7 +52,7 @@ class FrameIdId3Tag(Id3Tag):
     def bytes(self):
         """Gets the bytes of this FrameIdId3Tag.
 
-        Base64 Encoded Data
+        Base64 Encoded Data (required)
 
         :return: The bytes of this FrameIdId3Tag.
         :rtype: str
@@ -63,7 +63,7 @@ class FrameIdId3Tag(Id3Tag):
     def bytes(self, bytes):
         """Sets the bytes of this FrameIdId3Tag.
 
-        Base64 Encoded Data
+        Base64 Encoded Data (required)
 
         :param bytes: The bytes of this FrameIdId3Tag.
         :type: str
@@ -80,7 +80,7 @@ class FrameIdId3Tag(Id3Tag):
     def frame_id(self):
         """Gets the frame_id of this FrameIdId3Tag.
 
-        4 character long Frame ID
+        4 character long Frame ID (required)
 
         :return: The frame_id of this FrameIdId3Tag.
         :rtype: str
@@ -91,7 +91,7 @@ class FrameIdId3Tag(Id3Tag):
     def frame_id(self, frame_id):
         """Sets the frame_id of this FrameIdId3Tag.
 
-        4 character long Frame ID
+        4 character long Frame ID (required)
 
         :param frame_id: The frame_id of this FrameIdId3Tag.
         :type: str

@@ -62,7 +62,7 @@ class GcsOutput(Output):
     def access_key(self):
         """Gets the access_key of this GcsOutput.
 
-        GCS access key
+        GCS access key (required)
 
         :return: The access_key of this GcsOutput.
         :rtype: str
@@ -73,7 +73,7 @@ class GcsOutput(Output):
     def access_key(self, access_key):
         """Sets the access_key of this GcsOutput.
 
-        GCS access key
+        GCS access key (required)
 
         :param access_key: The access_key of this GcsOutput.
         :type: str
@@ -90,7 +90,7 @@ class GcsOutput(Output):
     def secret_key(self):
         """Gets the secret_key of this GcsOutput.
 
-        GCS secret key
+        GCS secret key (required)
 
         :return: The secret_key of this GcsOutput.
         :rtype: str
@@ -101,7 +101,7 @@ class GcsOutput(Output):
     def secret_key(self, secret_key):
         """Sets the secret_key of this GcsOutput.
 
-        GCS secret key
+        GCS secret key (required)
 
         :param secret_key: The secret_key of this GcsOutput.
         :type: str
@@ -118,7 +118,7 @@ class GcsOutput(Output):
     def bucket_name(self):
         """Gets the bucket_name of this GcsOutput.
 
-        Name of the bucket
+        Name of the bucket (required)
 
         :return: The bucket_name of this GcsOutput.
         :rtype: str
@@ -129,7 +129,7 @@ class GcsOutput(Output):
     def bucket_name(self, bucket_name):
         """Sets the bucket_name of this GcsOutput.
 
-        Name of the bucket
+        Name of the bucket (required)
 
         :param bucket_name: The bucket_name of this GcsOutput.
         :type: str

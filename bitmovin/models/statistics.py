@@ -46,7 +46,7 @@ class Statistics(object):
     def bytes_encoded_total(self):
         """Gets the bytes_encoded_total of this Statistics.
 
-        Bytes encoded total.
+        Bytes encoded total. (required)
 
         :return: The bytes_encoded_total of this Statistics.
         :rtype: int
@@ -57,7 +57,7 @@ class Statistics(object):
     def bytes_encoded_total(self, bytes_encoded_total):
         """Sets the bytes_encoded_total of this Statistics.
 
-        Bytes encoded total.
+        Bytes encoded total. (required)
 
         :param bytes_encoded_total: The bytes_encoded_total of this Statistics.
         :type: int
@@ -74,7 +74,7 @@ class Statistics(object):
     def time_encoded_total(self):
         """Gets the time_encoded_total of this Statistics.
 
-        Time in seconds encoded for all contained daily statistics.
+        Time in seconds encoded for all contained daily statistics. (required)
 
         :return: The time_encoded_total of this Statistics.
         :rtype: int
@@ -85,7 +85,7 @@ class Statistics(object):
     def time_encoded_total(self, time_encoded_total):
         """Sets the time_encoded_total of this Statistics.
 
-        Time in seconds encoded for all contained daily statistics.
+        Time in seconds encoded for all contained daily statistics. (required)
 
         :param time_encoded_total: The time_encoded_total of this Statistics.
         :type: int

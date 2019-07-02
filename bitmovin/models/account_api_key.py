@@ -46,7 +46,7 @@ class AccountApiKey(BitmovinResource):
     def value(self):
         """Gets the value of this AccountApiKey.
 
-        Key value for authentication with the Bitmovin API
+        Key value for authentication with the Bitmovin API (required)
 
         :return: The value of this AccountApiKey.
         :rtype: str
@@ -57,7 +57,7 @@ class AccountApiKey(BitmovinResource):
     def value(self, value):
         """Sets the value of this AccountApiKey.
 
-        Key value for authentication with the Bitmovin API
+        Key value for authentication with the Bitmovin API (required)
 
         :param value: The value of this AccountApiKey.
         :type: str

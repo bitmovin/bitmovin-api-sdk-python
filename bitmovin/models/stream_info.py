@@ -229,7 +229,7 @@ class StreamInfo(BitmovinResource):
     def closed_captions(self):
         """Gets the closed_captions of this StreamInfo.
 
-        If the value is not 'NONE', it MUST match the value of the GROUP-ID attribute of a Closed Captions EXT-X-MEDIA tag elsewhere in the Playlist
+        If the value is not 'NONE', it MUST match the value of the GROUP-ID attribute of a Closed Captions EXT-X-MEDIA tag elsewhere in the Playlist (required)
 
         :return: The closed_captions of this StreamInfo.
         :rtype: str
@@ -240,7 +240,7 @@ class StreamInfo(BitmovinResource):
     def closed_captions(self, closed_captions):
         """Sets the closed_captions of this StreamInfo.
 
-        If the value is not 'NONE', it MUST match the value of the GROUP-ID attribute of a Closed Captions EXT-X-MEDIA tag elsewhere in the Playlist
+        If the value is not 'NONE', it MUST match the value of the GROUP-ID attribute of a Closed Captions EXT-X-MEDIA tag elsewhere in the Playlist (required)
 
         :param closed_captions: The closed_captions of this StreamInfo.
         :type: str
@@ -257,7 +257,7 @@ class StreamInfo(BitmovinResource):
     def encoding_id(self):
         """Gets the encoding_id of this StreamInfo.
 
-        Id of the encoding.
+        Id of the encoding. (required)
 
         :return: The encoding_id of this StreamInfo.
         :rtype: str
@@ -268,7 +268,7 @@ class StreamInfo(BitmovinResource):
     def encoding_id(self, encoding_id):
         """Sets the encoding_id of this StreamInfo.
 
-        Id of the encoding.
+        Id of the encoding. (required)
 
         :param encoding_id: The encoding_id of this StreamInfo.
         :type: str
@@ -285,7 +285,7 @@ class StreamInfo(BitmovinResource):
     def stream_id(self):
         """Gets the stream_id of this StreamInfo.
 
-        Id of the stream.
+        Id of the stream. (required)
 
         :return: The stream_id of this StreamInfo.
         :rtype: str
@@ -296,7 +296,7 @@ class StreamInfo(BitmovinResource):
     def stream_id(self, stream_id):
         """Sets the stream_id of this StreamInfo.
 
-        Id of the stream.
+        Id of the stream. (required)
 
         :param stream_id: The stream_id of this StreamInfo.
         :type: str
@@ -313,7 +313,7 @@ class StreamInfo(BitmovinResource):
     def muxing_id(self):
         """Gets the muxing_id of this StreamInfo.
 
-        Id of the muxing.
+        Id of the muxing. (required)
 
         :return: The muxing_id of this StreamInfo.
         :rtype: str
@@ -324,7 +324,7 @@ class StreamInfo(BitmovinResource):
     def muxing_id(self, muxing_id):
         """Sets the muxing_id of this StreamInfo.
 
-        Id of the muxing.
+        Id of the muxing. (required)
 
         :param muxing_id: The muxing_id of this StreamInfo.
         :type: str
@@ -369,7 +369,7 @@ class StreamInfo(BitmovinResource):
     def segment_path(self):
         """Gets the segment_path of this StreamInfo.
 
-        Path to segments.
+        Path to segments. (required)
 
         :return: The segment_path of this StreamInfo.
         :rtype: str
@@ -380,7 +380,7 @@ class StreamInfo(BitmovinResource):
     def segment_path(self, segment_path):
         """Sets the segment_path of this StreamInfo.
 
-        Path to segments.
+        Path to segments. (required)
 
         :param segment_path: The segment_path of this StreamInfo.
         :type: str
@@ -397,7 +397,7 @@ class StreamInfo(BitmovinResource):
     def uri(self):
         """Gets the uri of this StreamInfo.
 
-        The URI of the playlist file.
+        The URI of the playlist file. (required)
 
         :return: The uri of this StreamInfo.
         :rtype: str
@@ -408,7 +408,7 @@ class StreamInfo(BitmovinResource):
     def uri(self, uri):
         """Sets the uri of this StreamInfo.
 
-        The URI of the playlist file.
+        The URI of the playlist file. (required)
 
         :param uri: The uri of this StreamInfo.
         :type: str

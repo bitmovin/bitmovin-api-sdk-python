@@ -51,7 +51,7 @@ class ClearKeyDrm(Drm):
     def key(self):
         """Gets the key of this ClearKeyDrm.
 
-        16 byte encryption key, 32 hexadecimal characters
+        16 byte encryption key, 32 hexadecimal characters (required)
 
         :return: The key of this ClearKeyDrm.
         :rtype: str
@@ -62,7 +62,7 @@ class ClearKeyDrm(Drm):
     def key(self, key):
         """Sets the key of this ClearKeyDrm.
 
-        16 byte encryption key, 32 hexadecimal characters
+        16 byte encryption key, 32 hexadecimal characters (required)
 
         :param key: The key of this ClearKeyDrm.
         :type: str
@@ -79,7 +79,7 @@ class ClearKeyDrm(Drm):
     def kid(self):
         """Gets the kid of this ClearKeyDrm.
 
-        16 byte key id
+        16 byte key id (required)
 
         :return: The kid of this ClearKeyDrm.
         :rtype: str
@@ -90,7 +90,7 @@ class ClearKeyDrm(Drm):
     def kid(self, kid):
         """Sets the kid of this ClearKeyDrm.
 
-        16 byte key id
+        16 byte key id (required)
 
         :param kid: The kid of this ClearKeyDrm.
         :type: str

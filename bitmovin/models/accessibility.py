@@ -46,7 +46,7 @@ class Accessibility(object):
     def value(self):
         """Gets the value of this Accessibility.
 
-        Can be either list of languages or a complete map of services (or CC channels, in CEA-608 terminology)
+        Can be either list of languages or a complete map of services (or CC channels, in CEA-608 terminology) (required)
 
         :return: The value of this Accessibility.
         :rtype: str
@@ -57,7 +57,7 @@ class Accessibility(object):
     def value(self, value):
         """Sets the value of this Accessibility.
 
-        Can be either list of languages or a complete map of services (or CC channels, in CEA-608 terminology)
+        Can be either list of languages or a complete map of services (or CC channels, in CEA-608 terminology) (required)
 
         :param value: The value of this Accessibility.
         :type: str
@@ -74,7 +74,7 @@ class Accessibility(object):
     def scheme_id_uri(self):
         """Gets the scheme_id_uri of this Accessibility.
 
-        The scheme id to use. Please refer to the DASH standard.
+        The scheme id to use. Please refer to the DASH standard. (required)
 
         :return: The scheme_id_uri of this Accessibility.
         :rtype: str
@@ -85,7 +85,7 @@ class Accessibility(object):
     def scheme_id_uri(self, scheme_id_uri):
         """Sets the scheme_id_uri of this Accessibility.
 
-        The scheme id to use. Please refer to the DASH standard.
+        The scheme id to use. Please refer to the DASH standard. (required)
 
         :param scheme_id_uri: The scheme_id_uri of this Accessibility.
         :type: str

@@ -83,7 +83,7 @@ class SrtInput(Input):
     def mode(self):
         """Gets the mode of this SrtInput.
 
-        The SRT mode to use
+        The SRT mode to use (required)
 
         :return: The mode of this SrtInput.
         :rtype: SrtMode
@@ -94,7 +94,7 @@ class SrtInput(Input):
     def mode(self, mode):
         """Sets the mode of this SrtInput.
 
-        The SRT mode to use
+        The SRT mode to use (required)
 
         :param mode: The mode of this SrtInput.
         :type: SrtMode
@@ -139,7 +139,7 @@ class SrtInput(Input):
     def port(self):
         """Gets the port of this SrtInput.
 
-        The port to connect to or listen on. Has to be one of [2088, 2089, 2090, 2091] when using LISTENER mode.
+        The port to connect to or listen on. Has to be one of [2088, 2089, 2090, 2091] when using LISTENER mode. (required)
 
         :return: The port of this SrtInput.
         :rtype: int
@@ -150,7 +150,7 @@ class SrtInput(Input):
     def port(self, port):
         """Sets the port of this SrtInput.
 
-        The port to connect to or listen on. Has to be one of [2088, 2089, 2090, 2091] when using LISTENER mode.
+        The port to connect to or listen on. Has to be one of [2088, 2089, 2090, 2091] when using LISTENER mode. (required)
 
         :param port: The port of this SrtInput.
         :type: int

@@ -61,7 +61,7 @@ class HttpInput(Input):
     def host(self):
         """Gets the host of this HttpInput.
 
-        Host Url or IP of the HTTP server
+        Host Url or IP of the HTTP server (required)
 
         :return: The host of this HttpInput.
         :rtype: str
@@ -72,7 +72,7 @@ class HttpInput(Input):
     def host(self, host):
         """Sets the host of this HttpInput.
 
-        Host Url or IP of the HTTP server
+        Host Url or IP of the HTTP server (required)
 
         :param host: The host of this HttpInput.
         :type: str

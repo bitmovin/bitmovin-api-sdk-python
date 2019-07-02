@@ -69,7 +69,7 @@ class Webhook(BitmovinResource):
     def url(self):
         """Gets the url of this Webhook.
 
-        Webhook url
+        Webhook url (required)
 
         :return: The url of this Webhook.
         :rtype: str
@@ -80,7 +80,7 @@ class Webhook(BitmovinResource):
     def url(self, url):
         """Sets the url of this Webhook.
 
-        Webhook url
+        Webhook url (required)
 
         :param url: The url of this Webhook.
         :type: str

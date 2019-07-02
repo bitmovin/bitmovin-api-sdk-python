@@ -46,7 +46,7 @@ class TimeSpan(object):
     def _from(self):
         """Gets the _from of this TimeSpan.
 
-        Start offset of the time frame in milliseconds
+        Start offset of the time frame in milliseconds (required)
 
         :return: The _from of this TimeSpan.
         :rtype: int
@@ -57,7 +57,7 @@ class TimeSpan(object):
     def _from(self, _from):
         """Sets the _from of this TimeSpan.
 
-        Start offset of the time frame in milliseconds
+        Start offset of the time frame in milliseconds (required)
 
         :param _from: The _from of this TimeSpan.
         :type: int
@@ -74,7 +74,7 @@ class TimeSpan(object):
     def to(self):
         """Gets the to of this TimeSpan.
 
-        End offset of the time frame in milliseconds
+        End offset of the time frame in milliseconds (required)
 
         :return: The to of this TimeSpan.
         :rtype: int
@@ -85,7 +85,7 @@ class TimeSpan(object):
     def to(self, to):
         """Sets the to of this TimeSpan.
 
-        End offset of the time frame in milliseconds
+        End offset of the time frame in milliseconds (required)
 
         :param to: The to of this TimeSpan.
         :type: int

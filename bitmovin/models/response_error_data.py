@@ -61,7 +61,7 @@ class ResponseErrorData(object):
     def code(self):
         """Gets the code of this ResponseErrorData.
 
-        Contains an error code as defined in https://bitmovin.com/encoding-documentation/bitmovin-api/#/introduction/api-error-codes 
+        Contains an error code as defined in https://bitmovin.com/encoding-documentation/bitmovin-api/#/introduction/api-error-codes (required)
 
         :return: The code of this ResponseErrorData.
         :rtype: int
@@ -72,7 +72,7 @@ class ResponseErrorData(object):
     def code(self, code):
         """Sets the code of this ResponseErrorData.
 
-        Contains an error code as defined in https://bitmovin.com/encoding-documentation/bitmovin-api/#/introduction/api-error-codes 
+        Contains an error code as defined in https://bitmovin.com/encoding-documentation/bitmovin-api/#/introduction/api-error-codes (required)
 
         :param code: The code of this ResponseErrorData.
         :type: int
@@ -89,7 +89,7 @@ class ResponseErrorData(object):
     def message(self):
         """Gets the message of this ResponseErrorData.
 
-        General error message
+        General error message (required)
 
         :return: The message of this ResponseErrorData.
         :rtype: str
@@ -100,7 +100,7 @@ class ResponseErrorData(object):
     def message(self, message):
         """Sets the message of this ResponseErrorData.
 
-        General error message
+        General error message (required)
 
         :param message: The message of this ResponseErrorData.
         :type: str
@@ -117,7 +117,7 @@ class ResponseErrorData(object):
     def developer_message(self):
         """Gets the developer_message of this ResponseErrorData.
 
-        More detailed message meant for developers
+        More detailed message meant for developers (required)
 
         :return: The developer_message of this ResponseErrorData.
         :rtype: str
@@ -128,7 +128,7 @@ class ResponseErrorData(object):
     def developer_message(self, developer_message):
         """Sets the developer_message of this ResponseErrorData.
 
-        More detailed message meant for developers
+        More detailed message meant for developers (required)
 
         :param developer_message: The developer_message of this ResponseErrorData.
         :type: str

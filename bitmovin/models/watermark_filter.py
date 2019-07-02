@@ -72,7 +72,7 @@ class WatermarkFilter(Filter):
     def image(self):
         """Gets the image of this WatermarkFilter.
 
-        URL of the file to be used as watermark image. Supported image formats: PNG, JPEG, BMP, GIF
+        URL of the file to be used as watermark image. Supported image formats: PNG, JPEG, BMP, GIF (required)
 
         :return: The image of this WatermarkFilter.
         :rtype: str
@@ -83,7 +83,7 @@ class WatermarkFilter(Filter):
     def image(self, image):
         """Sets the image of this WatermarkFilter.
 
-        URL of the file to be used as watermark image. Supported image formats: PNG, JPEG, BMP, GIF
+        URL of the file to be used as watermark image. Supported image formats: PNG, JPEG, BMP, GIF (required)
 
         :param image: The image of this WatermarkFilter.
         :type: str

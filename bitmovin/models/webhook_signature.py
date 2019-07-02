@@ -48,7 +48,7 @@ class WebhookSignature(object):
     def type(self):
         """Gets the type of this WebhookSignature.
 
-        The signature type used for the webhook.  Selects one of the supported signatures. The signature is attached to the list of headers with the key `Bitmovin-Signature`. In case of the `HMAC` type the SHA512 hashing algorithm is used to generate an authentication code from the webhook body. 
+        The signature type used for the webhook.  Selects one of the supported signatures. The signature is attached to the list of headers with the key `Bitmovin-Signature`. In case of the `HMAC` type the SHA512 hashing algorithm is used to generate an authentication code from the webhook body. (required)
 
         :return: The type of this WebhookSignature.
         :rtype: SignatureType
@@ -59,7 +59,7 @@ class WebhookSignature(object):
     def type(self, type):
         """Sets the type of this WebhookSignature.
 
-        The signature type used for the webhook.  Selects one of the supported signatures. The signature is attached to the list of headers with the key `Bitmovin-Signature`. In case of the `HMAC` type the SHA512 hashing algorithm is used to generate an authentication code from the webhook body. 
+        The signature type used for the webhook.  Selects one of the supported signatures. The signature is attached to the list of headers with the key `Bitmovin-Signature`. In case of the `HMAC` type the SHA512 hashing algorithm is used to generate an authentication code from the webhook body. (required)
 
         :param type: The type of this WebhookSignature.
         :type: SignatureType
@@ -76,7 +76,7 @@ class WebhookSignature(object):
     def key(self):
         """Gets the key of this WebhookSignature.
 
-        The key of the signature
+        The key of the signature (required)
 
         :return: The key of this WebhookSignature.
         :rtype: str
@@ -87,7 +87,7 @@ class WebhookSignature(object):
     def key(self, key):
         """Sets the key of this WebhookSignature.
 
-        The key of the signature
+        The key of the signature (required)
 
         :param key: The key of this WebhookSignature.
         :type: str

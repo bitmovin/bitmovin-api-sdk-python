@@ -56,7 +56,7 @@ class AzureInput(Input):
     def account_name(self):
         """Gets the account_name of this AzureInput.
 
-        Azure Account Name
+        Azure Account Name (required)
 
         :return: The account_name of this AzureInput.
         :rtype: str
@@ -67,7 +67,7 @@ class AzureInput(Input):
     def account_name(self, account_name):
         """Sets the account_name of this AzureInput.
 
-        Azure Account Name
+        Azure Account Name (required)
 
         :param account_name: The account_name of this AzureInput.
         :type: str
@@ -84,7 +84,7 @@ class AzureInput(Input):
     def account_key(self):
         """Gets the account_key of this AzureInput.
 
-        Azure Account Key
+        Azure Account Key (required)
 
         :return: The account_key of this AzureInput.
         :rtype: str
@@ -95,7 +95,7 @@ class AzureInput(Input):
     def account_key(self, account_key):
         """Sets the account_key of this AzureInput.
 
-        Azure Account Key
+        Azure Account Key (required)
 
         :param account_key: The account_key of this AzureInput.
         :type: str
@@ -112,7 +112,7 @@ class AzureInput(Input):
     def container(self):
         """Gets the container of this AzureInput.
 
-        Name of the bucket
+        Name of the bucket (required)
 
         :return: The container of this AzureInput.
         :rtype: str
@@ -123,7 +123,7 @@ class AzureInput(Input):
     def container(self, container):
         """Sets the container of this AzureInput.
 
-        Name of the bucket
+        Name of the bucket (required)
 
         :param container: The container of this AzureInput.
         :type: str

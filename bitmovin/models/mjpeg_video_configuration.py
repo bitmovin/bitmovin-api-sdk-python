@@ -123,7 +123,7 @@ class MjpegVideoConfiguration(CodecConfiguration):
     def rate(self):
         """Gets the rate of this MjpegVideoConfiguration.
 
-        Target frame rate of the encoded video!
+        Target frame rate of the encoded video! (required)
 
         :return: The rate of this MjpegVideoConfiguration.
         :rtype: float
@@ -134,7 +134,7 @@ class MjpegVideoConfiguration(CodecConfiguration):
     def rate(self, rate):
         """Sets the rate of this MjpegVideoConfiguration.
 
-        Target frame rate of the encoded video!
+        Target frame rate of the encoded video! (required)
 
         :param rate: The rate of this MjpegVideoConfiguration.
         :type: float
@@ -151,7 +151,7 @@ class MjpegVideoConfiguration(CodecConfiguration):
     def q_scale(self):
         """Gets the q_scale of this MjpegVideoConfiguration.
 
-        The quality scale parameter
+        The quality scale parameter (required)
 
         :return: The q_scale of this MjpegVideoConfiguration.
         :rtype: int
@@ -162,7 +162,7 @@ class MjpegVideoConfiguration(CodecConfiguration):
     def q_scale(self, q_scale):
         """Sets the q_scale of this MjpegVideoConfiguration.
 
-        The quality scale parameter
+        The quality scale parameter (required)
 
         :param q_scale: The q_scale of this MjpegVideoConfiguration.
         :type: int

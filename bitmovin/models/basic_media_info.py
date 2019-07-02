@@ -76,7 +76,7 @@ class BasicMediaInfo(BitmovinResponse):
     def group_id(self):
         """Gets the group_id of this BasicMediaInfo.
 
-        The value is a quoted-string which specifies the group to which the Rendition belongs.
+        The value is a quoted-string which specifies the group to which the Rendition belongs. (required)
 
         :return: The group_id of this BasicMediaInfo.
         :rtype: str
@@ -87,7 +87,7 @@ class BasicMediaInfo(BitmovinResponse):
     def group_id(self, group_id):
         """Sets the group_id of this BasicMediaInfo.
 
-        The value is a quoted-string which specifies the group to which the Rendition belongs.
+        The value is a quoted-string which specifies the group to which the Rendition belongs. (required)
 
         :param group_id: The group_id of this BasicMediaInfo.
         :type: str
@@ -160,7 +160,7 @@ class BasicMediaInfo(BitmovinResponse):
     def name(self):
         """Gets the name of this BasicMediaInfo.
 
-        Human readable description of the rendition.
+        Human readable description of the rendition. (required)
 
         :return: The name of this BasicMediaInfo.
         :rtype: str
@@ -171,7 +171,7 @@ class BasicMediaInfo(BitmovinResponse):
     def name(self, name):
         """Sets the name of this BasicMediaInfo.
 
-        Human readable description of the rendition.
+        Human readable description of the rendition. (required)
 
         :param name: The name of this BasicMediaInfo.
         :type: str

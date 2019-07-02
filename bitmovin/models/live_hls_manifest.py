@@ -56,7 +56,7 @@ class LiveHlsManifest(object):
     def manifest_id(self):
         """Gets the manifest_id of this LiveHlsManifest.
 
-        Hls manifest ids
+        Hls manifest ids (required)
 
         :return: The manifest_id of this LiveHlsManifest.
         :rtype: str
@@ -67,7 +67,7 @@ class LiveHlsManifest(object):
     def manifest_id(self, manifest_id):
         """Sets the manifest_id of this LiveHlsManifest.
 
-        Hls manifest ids
+        Hls manifest ids (required)
 
         :param manifest_id: The manifest_id of this LiveHlsManifest.
         :type: str

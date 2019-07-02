@@ -70,7 +70,7 @@ class StartLiveEncodingRequest(object):
     def stream_key(self):
         """Gets the stream_key of this StartLiveEncodingRequest.
 
-        Key for the stream. (a-zA-Z, 3-20 characters)
+        Key for the stream. (a-zA-Z, 3-20 characters) (required)
 
         :return: The stream_key of this StartLiveEncodingRequest.
         :rtype: str
@@ -81,7 +81,7 @@ class StartLiveEncodingRequest(object):
     def stream_key(self, stream_key):
         """Sets the stream_key of this StartLiveEncodingRequest.
 
-        Key for the stream. (a-zA-Z, 3-20 characters)
+        Key for the stream. (a-zA-Z, 3-20 characters) (required)
 
         :param stream_key: The stream_key of this StartLiveEncodingRequest.
         :type: str

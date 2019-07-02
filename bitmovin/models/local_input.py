@@ -46,7 +46,7 @@ class LocalInput(Input):
     def path(self):
         """Gets the path of this LocalInput.
 
-        Path to your local storage
+        Path to your local storage (required)
 
         :return: The path of this LocalInput.
         :rtype: str
@@ -57,7 +57,7 @@ class LocalInput(Input):
     def path(self, path):
         """Sets the path of this LocalInput.
 
-        Path to your local storage
+        Path to your local storage (required)
 
         :param path: The path of this LocalInput.
         :type: str

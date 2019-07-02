@@ -46,7 +46,7 @@ class CustomPlayerBuildDownload(object):
     def download_link(self):
         """Gets the download_link of this CustomPlayerBuildDownload.
 
-        The link to download the custom built player
+        The link to download the custom built player (required)
 
         :return: The download_link of this CustomPlayerBuildDownload.
         :rtype: str
@@ -57,7 +57,7 @@ class CustomPlayerBuildDownload(object):
     def download_link(self, download_link):
         """Sets the download_link of this CustomPlayerBuildDownload.
 
-        The link to download the custom built player
+        The link to download the custom built player (required)
 
         :param download_link: The download_link of this CustomPlayerBuildDownload.
         :type: str
@@ -74,7 +74,7 @@ class CustomPlayerBuildDownload(object):
     def expires_at(self):
         """Gets the expires_at of this CustomPlayerBuildDownload.
 
-        Until this date the download link is valid and can be downloaded.
+        Until this date the download link is valid and can be downloaded. (required)
 
         :return: The expires_at of this CustomPlayerBuildDownload.
         :rtype: datetime
@@ -85,7 +85,7 @@ class CustomPlayerBuildDownload(object):
     def expires_at(self, expires_at):
         """Sets the expires_at of this CustomPlayerBuildDownload.
 
-        Until this date the download link is valid and can be downloaded.
+        Until this date the download link is valid and can be downloaded. (required)
 
         :param expires_at: The expires_at of this CustomPlayerBuildDownload.
         :type: datetime

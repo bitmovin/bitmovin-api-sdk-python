@@ -47,7 +47,7 @@ class SccCaption(BitmovinResource):
     def input(self):
         """Gets the input of this SccCaption.
 
-        The input location to get the scc file from
+        The input location to get the scc file from (required)
 
         :return: The input of this SccCaption.
         :rtype: InputPath
@@ -58,7 +58,7 @@ class SccCaption(BitmovinResource):
     def input(self, input):
         """Sets the input of this SccCaption.
 
-        The input location to get the scc file from
+        The input location to get the scc file from (required)
 
         :param input: The input of this SccCaption.
         :type: InputPath

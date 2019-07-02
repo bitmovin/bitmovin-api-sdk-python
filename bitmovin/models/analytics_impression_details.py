@@ -1185,7 +1185,7 @@ class AnalyticsImpressionDetails(BitmovinResponse):
     def impression_id(self):
         """Gets the impression_id of this AnalyticsImpressionDetails.
 
-        Random UUID that is used to identify a sessions
+        Random UUID that is used to identify a sessions (required)
 
         :return: The impression_id of this AnalyticsImpressionDetails.
         :rtype: str
@@ -1196,7 +1196,7 @@ class AnalyticsImpressionDetails(BitmovinResponse):
     def impression_id(self, impression_id):
         """Sets the impression_id of this AnalyticsImpressionDetails.
 
-        Random UUID that is used to identify a sessions
+        Random UUID that is used to identify a sessions (required)
 
         :param impression_id: The impression_id of this AnalyticsImpressionDetails.
         :type: str

@@ -81,7 +81,7 @@ class PlayerLicense(BitmovinResponse):
     def name(self):
         """Gets the name of this PlayerLicense.
 
-        Name of the resource
+        Name of the resource (required)
 
         :return: The name of this PlayerLicense.
         :rtype: str
@@ -92,7 +92,7 @@ class PlayerLicense(BitmovinResponse):
     def name(self, name):
         """Sets the name of this PlayerLicense.
 
-        Name of the resource
+        Name of the resource (required)
 
         :param name: The name of this PlayerLicense.
         :type: str
@@ -109,7 +109,7 @@ class PlayerLicense(BitmovinResponse):
     def created_at(self):
         """Gets the created_at of this PlayerLicense.
 
-        Creation timestamp formatted in UTC: YYYY-MM-DDThh:mm:ssZ
+        Creation timestamp formatted in UTC: YYYY-MM-DDThh:mm:ssZ (required)
 
         :return: The created_at of this PlayerLicense.
         :rtype: datetime
@@ -120,7 +120,7 @@ class PlayerLicense(BitmovinResponse):
     def created_at(self, created_at):
         """Sets the created_at of this PlayerLicense.
 
-        Creation timestamp formatted in UTC: YYYY-MM-DDThh:mm:ssZ
+        Creation timestamp formatted in UTC: YYYY-MM-DDThh:mm:ssZ (required)
 
         :param created_at: The created_at of this PlayerLicense.
         :type: datetime
@@ -137,7 +137,7 @@ class PlayerLicense(BitmovinResponse):
     def license_key(self):
         """Gets the license_key of this PlayerLicense.
 
-        License Key
+        License Key (required)
 
         :return: The license_key of this PlayerLicense.
         :rtype: str
@@ -148,7 +148,7 @@ class PlayerLicense(BitmovinResponse):
     def license_key(self, license_key):
         """Sets the license_key of this PlayerLicense.
 
-        License Key
+        License Key (required)
 
         :param license_key: The license_key of this PlayerLicense.
         :type: str
@@ -165,7 +165,7 @@ class PlayerLicense(BitmovinResponse):
     def impressions(self):
         """Gets the impressions of this PlayerLicense.
 
-        Number of impressions recorded
+        Number of impressions recorded (required)
 
         :return: The impressions of this PlayerLicense.
         :rtype: int
@@ -176,7 +176,7 @@ class PlayerLicense(BitmovinResponse):
     def impressions(self, impressions):
         """Sets the impressions of this PlayerLicense.
 
-        Number of impressions recorded
+        Number of impressions recorded (required)
 
         :param impressions: The impressions of this PlayerLicense.
         :type: int
@@ -193,7 +193,7 @@ class PlayerLicense(BitmovinResponse):
     def max_impressions(self):
         """Gets the max_impressions of this PlayerLicense.
 
-        Maximum number of impressions
+        Maximum number of impressions (required)
 
         :return: The max_impressions of this PlayerLicense.
         :rtype: int
@@ -204,7 +204,7 @@ class PlayerLicense(BitmovinResponse):
     def max_impressions(self, max_impressions):
         """Sets the max_impressions of this PlayerLicense.
 
-        Maximum number of impressions
+        Maximum number of impressions (required)
 
         :param max_impressions: The max_impressions of this PlayerLicense.
         :type: int
@@ -221,7 +221,7 @@ class PlayerLicense(BitmovinResponse):
     def third_party_licensing_enabled(self):
         """Gets the third_party_licensing_enabled of this PlayerLicense.
 
-        Flag if third party licensing is enabled
+        Flag if third party licensing is enabled (required)
 
         :return: The third_party_licensing_enabled of this PlayerLicense.
         :rtype: bool
@@ -232,7 +232,7 @@ class PlayerLicense(BitmovinResponse):
     def third_party_licensing_enabled(self, third_party_licensing_enabled):
         """Sets the third_party_licensing_enabled of this PlayerLicense.
 
-        Flag if third party licensing is enabled
+        Flag if third party licensing is enabled (required)
 
         :param third_party_licensing_enabled: The third_party_licensing_enabled of this PlayerLicense.
         :type: bool
@@ -249,7 +249,7 @@ class PlayerLicense(BitmovinResponse):
     def domains(self):
         """Gets the domains of this PlayerLicense.
 
-        Whitelisted domains
+        Whitelisted domains (required)
 
         :return: The domains of this PlayerLicense.
         :rtype: list[Domain]
@@ -260,7 +260,7 @@ class PlayerLicense(BitmovinResponse):
     def domains(self, domains):
         """Sets the domains of this PlayerLicense.
 
-        Whitelisted domains
+        Whitelisted domains (required)
 
         :param domains: The domains of this PlayerLicense.
         :type: list[Domain]

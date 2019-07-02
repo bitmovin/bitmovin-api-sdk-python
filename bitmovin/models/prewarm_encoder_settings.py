@@ -62,7 +62,7 @@ class PrewarmEncoderSettings(BitmovinResource):
     def encoder_version(self):
         """Gets the encoder_version of this PrewarmEncoderSettings.
 
-        Encoder Version to be prewarmed. Only one encoder of this version can be prewarmed per cluster.
+        Encoder Version to be prewarmed. Only one encoder of this version can be prewarmed per cluster. (required)
 
         :return: The encoder_version of this PrewarmEncoderSettings.
         :rtype: str
@@ -73,7 +73,7 @@ class PrewarmEncoderSettings(BitmovinResource):
     def encoder_version(self, encoder_version):
         """Sets the encoder_version of this PrewarmEncoderSettings.
 
-        Encoder Version to be prewarmed. Only one encoder of this version can be prewarmed per cluster.
+        Encoder Version to be prewarmed. Only one encoder of this version can be prewarmed per cluster. (required)
 
         :param encoder_version: The encoder_version of this PrewarmEncoderSettings.
         :type: str
@@ -90,7 +90,7 @@ class PrewarmEncoderSettings(BitmovinResource):
     def min_prewarmed(self):
         """Gets the min_prewarmed of this PrewarmEncoderSettings.
 
-        The minimum number of prewarmed encoders of this Version
+        The minimum number of prewarmed encoders of this Version (required)
 
         :return: The min_prewarmed of this PrewarmEncoderSettings.
         :rtype: int
@@ -101,7 +101,7 @@ class PrewarmEncoderSettings(BitmovinResource):
     def min_prewarmed(self, min_prewarmed):
         """Sets the min_prewarmed of this PrewarmEncoderSettings.
 
-        The minimum number of prewarmed encoders of this Version
+        The minimum number of prewarmed encoders of this Version (required)
 
         :param min_prewarmed: The min_prewarmed of this PrewarmEncoderSettings.
         :type: int

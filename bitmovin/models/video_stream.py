@@ -160,7 +160,7 @@ class VideoStream(MediaStream):
     def width(self):
         """Gets the width of this VideoStream.
 
-        Width of the video
+        Width of the video (required)
 
         :return: The width of this VideoStream.
         :rtype: int
@@ -171,7 +171,7 @@ class VideoStream(MediaStream):
     def width(self, width):
         """Sets the width of this VideoStream.
 
-        Width of the video
+        Width of the video (required)
 
         :param width: The width of this VideoStream.
         :type: int
@@ -188,7 +188,7 @@ class VideoStream(MediaStream):
     def height(self):
         """Gets the height of this VideoStream.
 
-        Height of the video
+        Height of the video (required)
 
         :return: The height of this VideoStream.
         :rtype: int
@@ -199,7 +199,7 @@ class VideoStream(MediaStream):
     def height(self, height):
         """Sets the height of this VideoStream.
 
-        Height of the video
+        Height of the video (required)
 
         :param height: The height of this VideoStream.
         :type: int

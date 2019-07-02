@@ -46,7 +46,7 @@ class Link(object):
     def href(self):
         """Gets the href of this Link.
 
-        webpage target URL
+        webpage target URL (required)
 
         :return: The href of this Link.
         :rtype: str
@@ -57,7 +57,7 @@ class Link(object):
     def href(self, href):
         """Sets the href of this Link.
 
-        webpage target URL
+        webpage target URL (required)
 
         :param href: The href of this Link.
         :type: str

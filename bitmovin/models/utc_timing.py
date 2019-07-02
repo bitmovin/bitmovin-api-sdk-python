@@ -46,7 +46,7 @@ class UtcTiming(object):
     def value(self):
         """Gets the value of this UtcTiming.
 
-        The server to get the time from
+        The server to get the time from (required)
 
         :return: The value of this UtcTiming.
         :rtype: str
@@ -57,7 +57,7 @@ class UtcTiming(object):
     def value(self, value):
         """Sets the value of this UtcTiming.
 
-        The server to get the time from
+        The server to get the time from (required)
 
         :param value: The value of this UtcTiming.
         :type: str
@@ -74,7 +74,7 @@ class UtcTiming(object):
     def scheme_id_uri(self):
         """Gets the scheme_id_uri of this UtcTiming.
 
-        The scheme id to use. Please refer to the DASH standard.
+        The scheme id to use. Please refer to the DASH standard. (required)
 
         :return: The scheme_id_uri of this UtcTiming.
         :rtype: str
@@ -85,7 +85,7 @@ class UtcTiming(object):
     def scheme_id_uri(self, scheme_id_uri):
         """Sets the scheme_id_uri of this UtcTiming.
 
-        The scheme id to use. Please refer to the DASH standard.
+        The scheme id to use. Please refer to the DASH standard. (required)
 
         :param scheme_id_uri: The scheme_id_uri of this UtcTiming.
         :type: str

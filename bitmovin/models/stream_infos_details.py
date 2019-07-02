@@ -129,7 +129,7 @@ class StreamInfosDetails(object):
     def id(self):
         """Gets the id of this StreamInfosDetails.
 
-        The id of the stream
+        The id of the stream (required)
 
         :return: The id of this StreamInfosDetails.
         :rtype: int
@@ -140,7 +140,7 @@ class StreamInfosDetails(object):
     def id(self, id):
         """Sets the id of this StreamInfosDetails.
 
-        The id of the stream
+        The id of the stream (required)
 
         :param id: The id of this StreamInfosDetails.
         :type: int
@@ -157,7 +157,7 @@ class StreamInfosDetails(object):
     def media_type(self):
         """Gets the media_type of this StreamInfosDetails.
 
-        The media type of the stream
+        The media type of the stream (required)
 
         :return: The media_type of this StreamInfosDetails.
         :rtype: MediaType
@@ -168,7 +168,7 @@ class StreamInfosDetails(object):
     def media_type(self, media_type):
         """Sets the media_type of this StreamInfosDetails.
 
-        The media type of the stream
+        The media type of the stream (required)
 
         :param media_type: The media_type of this StreamInfosDetails.
         :type: MediaType
@@ -241,7 +241,7 @@ class StreamInfosDetails(object):
     def rate(self):
         """Gets the rate of this StreamInfosDetails.
 
-        The rate (sample rate / fps) of the stream
+        The rate (sample rate / fps) of the stream (required)
 
         :return: The rate of this StreamInfosDetails.
         :rtype: int
@@ -252,7 +252,7 @@ class StreamInfosDetails(object):
     def rate(self, rate):
         """Sets the rate of this StreamInfosDetails.
 
-        The rate (sample rate / fps) of the stream
+        The rate (sample rate / fps) of the stream (required)
 
         :param rate: The rate of this StreamInfosDetails.
         :type: int
@@ -269,7 +269,7 @@ class StreamInfosDetails(object):
     def codec(self):
         """Gets the codec of this StreamInfosDetails.
 
-        The codec of the input stream
+        The codec of the input stream (required)
 
         :return: The codec of this StreamInfosDetails.
         :rtype: LiveEncodingCodec
@@ -280,7 +280,7 @@ class StreamInfosDetails(object):
     def codec(self, codec):
         """Sets the codec of this StreamInfosDetails.
 
-        The codec of the input stream
+        The codec of the input stream (required)
 
         :param codec: The codec of this StreamInfosDetails.
         :type: LiveEncodingCodec
@@ -297,7 +297,7 @@ class StreamInfosDetails(object):
     def samples_read_per_second_min(self):
         """Gets the samples_read_per_second_min of this StreamInfosDetails.
 
-        The minimum samples read per second within the last minute
+        The minimum samples read per second within the last minute (required)
 
         :return: The samples_read_per_second_min of this StreamInfosDetails.
         :rtype: float
@@ -308,7 +308,7 @@ class StreamInfosDetails(object):
     def samples_read_per_second_min(self, samples_read_per_second_min):
         """Sets the samples_read_per_second_min of this StreamInfosDetails.
 
-        The minimum samples read per second within the last minute
+        The minimum samples read per second within the last minute (required)
 
         :param samples_read_per_second_min: The samples_read_per_second_min of this StreamInfosDetails.
         :type: float
@@ -325,7 +325,7 @@ class StreamInfosDetails(object):
     def samples_read_per_second_max(self):
         """Gets the samples_read_per_second_max of this StreamInfosDetails.
 
-        The maximum samples read per second within the last minute
+        The maximum samples read per second within the last minute (required)
 
         :return: The samples_read_per_second_max of this StreamInfosDetails.
         :rtype: float
@@ -336,7 +336,7 @@ class StreamInfosDetails(object):
     def samples_read_per_second_max(self, samples_read_per_second_max):
         """Sets the samples_read_per_second_max of this StreamInfosDetails.
 
-        The maximum samples read per second within the last minute
+        The maximum samples read per second within the last minute (required)
 
         :param samples_read_per_second_max: The samples_read_per_second_max of this StreamInfosDetails.
         :type: float
@@ -353,7 +353,7 @@ class StreamInfosDetails(object):
     def samples_read_per_second_avg(self):
         """Gets the samples_read_per_second_avg of this StreamInfosDetails.
 
-        The average samples read per second within the last minute
+        The average samples read per second within the last minute (required)
 
         :return: The samples_read_per_second_avg of this StreamInfosDetails.
         :rtype: float
@@ -364,7 +364,7 @@ class StreamInfosDetails(object):
     def samples_read_per_second_avg(self, samples_read_per_second_avg):
         """Sets the samples_read_per_second_avg of this StreamInfosDetails.
 
-        The average samples read per second within the last minute
+        The average samples read per second within the last minute (required)
 
         :param samples_read_per_second_avg: The samples_read_per_second_avg of this StreamInfosDetails.
         :type: float
@@ -381,7 +381,7 @@ class StreamInfosDetails(object):
     def samples_backup_per_second_min(self):
         """Gets the samples_backup_per_second_min of this StreamInfosDetails.
 
-        The minimum amount of backup samples used per second within the last minute. This will be written when no live stream is ingested. The last picture will be repeated with silent audio.
+        The minimum amount of backup samples used per second within the last minute. This will be written when no live stream is ingested. The last picture will be repeated with silent audio. (required)
 
         :return: The samples_backup_per_second_min of this StreamInfosDetails.
         :rtype: float
@@ -392,7 +392,7 @@ class StreamInfosDetails(object):
     def samples_backup_per_second_min(self, samples_backup_per_second_min):
         """Sets the samples_backup_per_second_min of this StreamInfosDetails.
 
-        The minimum amount of backup samples used per second within the last minute. This will be written when no live stream is ingested. The last picture will be repeated with silent audio.
+        The minimum amount of backup samples used per second within the last minute. This will be written when no live stream is ingested. The last picture will be repeated with silent audio. (required)
 
         :param samples_backup_per_second_min: The samples_backup_per_second_min of this StreamInfosDetails.
         :type: float
@@ -409,7 +409,7 @@ class StreamInfosDetails(object):
     def samples_backup_per_second_max(self):
         """Gets the samples_backup_per_second_max of this StreamInfosDetails.
 
-        The maximum amount of backup samples used per second within the last minute. This will be written when no live stream is ingested. The last picture will be repeated with silent audio.
+        The maximum amount of backup samples used per second within the last minute. This will be written when no live stream is ingested. The last picture will be repeated with silent audio. (required)
 
         :return: The samples_backup_per_second_max of this StreamInfosDetails.
         :rtype: float
@@ -420,7 +420,7 @@ class StreamInfosDetails(object):
     def samples_backup_per_second_max(self, samples_backup_per_second_max):
         """Sets the samples_backup_per_second_max of this StreamInfosDetails.
 
-        The maximum amount of backup samples used per second within the last minute. This will be written when no live stream is ingested. The last picture will be repeated with silent audio.
+        The maximum amount of backup samples used per second within the last minute. This will be written when no live stream is ingested. The last picture will be repeated with silent audio. (required)
 
         :param samples_backup_per_second_max: The samples_backup_per_second_max of this StreamInfosDetails.
         :type: float
@@ -437,7 +437,7 @@ class StreamInfosDetails(object):
     def samples_backup_per_second_avg(self):
         """Gets the samples_backup_per_second_avg of this StreamInfosDetails.
 
-        The average amount of backup samples used per second within the last minute. This will be written when no live stream is ingested. The last picture will be repeated with silent audio.
+        The average amount of backup samples used per second within the last minute. This will be written when no live stream is ingested. The last picture will be repeated with silent audio. (required)
 
         :return: The samples_backup_per_second_avg of this StreamInfosDetails.
         :rtype: float
@@ -448,7 +448,7 @@ class StreamInfosDetails(object):
     def samples_backup_per_second_avg(self, samples_backup_per_second_avg):
         """Sets the samples_backup_per_second_avg of this StreamInfosDetails.
 
-        The average amount of backup samples used per second within the last minute. This will be written when no live stream is ingested. The last picture will be repeated with silent audio.
+        The average amount of backup samples used per second within the last minute. This will be written when no live stream is ingested. The last picture will be repeated with silent audio. (required)
 
         :param samples_backup_per_second_avg: The samples_backup_per_second_avg of this StreamInfosDetails.
         :type: float
@@ -465,7 +465,7 @@ class StreamInfosDetails(object):
     def bytes_read_per_second_min(self):
         """Gets the bytes_read_per_second_min of this StreamInfosDetails.
 
-        The minimum bytes read per second within the last minute
+        The minimum bytes read per second within the last minute (required)
 
         :return: The bytes_read_per_second_min of this StreamInfosDetails.
         :rtype: float
@@ -476,7 +476,7 @@ class StreamInfosDetails(object):
     def bytes_read_per_second_min(self, bytes_read_per_second_min):
         """Sets the bytes_read_per_second_min of this StreamInfosDetails.
 
-        The minimum bytes read per second within the last minute
+        The minimum bytes read per second within the last minute (required)
 
         :param bytes_read_per_second_min: The bytes_read_per_second_min of this StreamInfosDetails.
         :type: float
@@ -493,7 +493,7 @@ class StreamInfosDetails(object):
     def bytes_read_per_second_max(self):
         """Gets the bytes_read_per_second_max of this StreamInfosDetails.
 
-        The maximum bytes read per second within the last minute
+        The maximum bytes read per second within the last minute (required)
 
         :return: The bytes_read_per_second_max of this StreamInfosDetails.
         :rtype: float
@@ -504,7 +504,7 @@ class StreamInfosDetails(object):
     def bytes_read_per_second_max(self, bytes_read_per_second_max):
         """Sets the bytes_read_per_second_max of this StreamInfosDetails.
 
-        The maximum bytes read per second within the last minute
+        The maximum bytes read per second within the last minute (required)
 
         :param bytes_read_per_second_max: The bytes_read_per_second_max of this StreamInfosDetails.
         :type: float
@@ -521,7 +521,7 @@ class StreamInfosDetails(object):
     def bytes_read_per_second_avg(self):
         """Gets the bytes_read_per_second_avg of this StreamInfosDetails.
 
-        The average bytes read per second within the last minute
+        The average bytes read per second within the last minute (required)
 
         :return: The bytes_read_per_second_avg of this StreamInfosDetails.
         :rtype: float
@@ -532,7 +532,7 @@ class StreamInfosDetails(object):
     def bytes_read_per_second_avg(self, bytes_read_per_second_avg):
         """Sets the bytes_read_per_second_avg of this StreamInfosDetails.
 
-        The average bytes read per second within the last minute
+        The average bytes read per second within the last minute (required)
 
         :param bytes_read_per_second_avg: The bytes_read_per_second_avg of this StreamInfosDetails.
         :type: float
@@ -549,7 +549,7 @@ class StreamInfosDetails(object):
     def bytes_backup_per_second_min(self):
         """Gets the bytes_backup_per_second_min of this StreamInfosDetails.
 
-        The minimum amount of backup bytes used per second within the last minute. This will be written when no live stream is ingested. The last picture will be repeated with silent audio.
+        The minimum amount of backup bytes used per second within the last minute. This will be written when no live stream is ingested. The last picture will be repeated with silent audio. (required)
 
         :return: The bytes_backup_per_second_min of this StreamInfosDetails.
         :rtype: float
@@ -560,7 +560,7 @@ class StreamInfosDetails(object):
     def bytes_backup_per_second_min(self, bytes_backup_per_second_min):
         """Sets the bytes_backup_per_second_min of this StreamInfosDetails.
 
-        The minimum amount of backup bytes used per second within the last minute. This will be written when no live stream is ingested. The last picture will be repeated with silent audio.
+        The minimum amount of backup bytes used per second within the last minute. This will be written when no live stream is ingested. The last picture will be repeated with silent audio. (required)
 
         :param bytes_backup_per_second_min: The bytes_backup_per_second_min of this StreamInfosDetails.
         :type: float
@@ -577,7 +577,7 @@ class StreamInfosDetails(object):
     def bytes_backup_per_second_max(self):
         """Gets the bytes_backup_per_second_max of this StreamInfosDetails.
 
-        The maximum amount of backup bytes used per second within the last minute. This will be written when no live stream is ingested. The last picture will be repeated with silent audio.
+        The maximum amount of backup bytes used per second within the last minute. This will be written when no live stream is ingested. The last picture will be repeated with silent audio. (required)
 
         :return: The bytes_backup_per_second_max of this StreamInfosDetails.
         :rtype: float
@@ -588,7 +588,7 @@ class StreamInfosDetails(object):
     def bytes_backup_per_second_max(self, bytes_backup_per_second_max):
         """Sets the bytes_backup_per_second_max of this StreamInfosDetails.
 
-        The maximum amount of backup bytes used per second within the last minute. This will be written when no live stream is ingested. The last picture will be repeated with silent audio.
+        The maximum amount of backup bytes used per second within the last minute. This will be written when no live stream is ingested. The last picture will be repeated with silent audio. (required)
 
         :param bytes_backup_per_second_max: The bytes_backup_per_second_max of this StreamInfosDetails.
         :type: float
@@ -605,7 +605,7 @@ class StreamInfosDetails(object):
     def bytes_backup_per_second_avg(self):
         """Gets the bytes_backup_per_second_avg of this StreamInfosDetails.
 
-        The average amount of backup bytes used per second within the last minute. This will be written when no live stream is ingested. The last picture will be repeated with silent audio.
+        The average amount of backup bytes used per second within the last minute. This will be written when no live stream is ingested. The last picture will be repeated with silent audio. (required)
 
         :return: The bytes_backup_per_second_avg of this StreamInfosDetails.
         :rtype: float
@@ -616,7 +616,7 @@ class StreamInfosDetails(object):
     def bytes_backup_per_second_avg(self, bytes_backup_per_second_avg):
         """Sets the bytes_backup_per_second_avg of this StreamInfosDetails.
 
-        The average amount of backup bytes used per second within the last minute. This will be written when no live stream is ingested. The last picture will be repeated with silent audio.
+        The average amount of backup bytes used per second within the last minute. This will be written when no live stream is ingested. The last picture will be repeated with silent audio. (required)
 
         :param bytes_backup_per_second_avg: The bytes_backup_per_second_avg of this StreamInfosDetails.
         :type: float

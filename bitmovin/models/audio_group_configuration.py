@@ -48,7 +48,7 @@ class AudioGroupConfiguration(object):
     def dropping_mode(self):
         """Gets the dropping_mode of this AudioGroupConfiguration.
 
-        Dropping mode
+        Dropping mode (required)
 
         :return: The dropping_mode of this AudioGroupConfiguration.
         :rtype: VariantStreamDroppingMode
@@ -59,7 +59,7 @@ class AudioGroupConfiguration(object):
     def dropping_mode(self, dropping_mode):
         """Sets the dropping_mode of this AudioGroupConfiguration.
 
-        Dropping mode
+        Dropping mode (required)
 
         :param dropping_mode: The dropping_mode of this AudioGroupConfiguration.
         :type: VariantStreamDroppingMode
@@ -76,7 +76,7 @@ class AudioGroupConfiguration(object):
     def groups(self):
         """Gets the groups of this AudioGroupConfiguration.
 
-        Audio groups
+        Audio groups (required)
 
         :return: The groups of this AudioGroupConfiguration.
         :rtype: list[AudioGroup]
@@ -87,7 +87,7 @@ class AudioGroupConfiguration(object):
     def groups(self, groups):
         """Sets the groups of this AudioGroupConfiguration.
 
-        Audio groups
+        Audio groups (required)
 
         :param groups: The groups of this AudioGroupConfiguration.
         :type: list[AudioGroup]

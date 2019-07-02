@@ -58,7 +58,7 @@ class ErrorDetails(object):
     def code(self):
         """Gets the code of this ErrorDetails.
 
-        Specific error code
+        Specific error code (required)
 
         :return: The code of this ErrorDetails.
         :rtype: int
@@ -69,7 +69,7 @@ class ErrorDetails(object):
     def code(self, code):
         """Sets the code of this ErrorDetails.
 
-        Specific error code
+        Specific error code (required)
 
         :param code: The code of this ErrorDetails.
         :type: int
@@ -86,7 +86,7 @@ class ErrorDetails(object):
     def category(self):
         """Gets the category of this ErrorDetails.
 
-        Error group name
+        Error group name (required)
 
         :return: The category of this ErrorDetails.
         :rtype: str
@@ -97,7 +97,7 @@ class ErrorDetails(object):
     def category(self, category):
         """Sets the category of this ErrorDetails.
 
-        Error group name
+        Error group name (required)
 
         :param category: The category of this ErrorDetails.
         :type: str
@@ -114,7 +114,7 @@ class ErrorDetails(object):
     def text(self):
         """Gets the text of this ErrorDetails.
 
-        Detailed error message
+        Detailed error message (required)
 
         :return: The text of this ErrorDetails.
         :rtype: str
@@ -125,7 +125,7 @@ class ErrorDetails(object):
     def text(self, text):
         """Sets the text of this ErrorDetails.
 
-        Detailed error message
+        Detailed error message (required)
 
         :param text: The text of this ErrorDetails.
         :type: str
@@ -142,7 +142,7 @@ class ErrorDetails(object):
     def retry_hint(self):
         """Gets the retry_hint of this ErrorDetails.
 
-        Information if the encoding could potentially succeed when retrying.
+        Information if the encoding could potentially succeed when retrying. (required)
 
         :return: The retry_hint of this ErrorDetails.
         :rtype: RetryHint
@@ -153,7 +153,7 @@ class ErrorDetails(object):
     def retry_hint(self, retry_hint):
         """Sets the retry_hint of this ErrorDetails.
 
-        Information if the encoding could potentially succeed when retrying.
+        Information if the encoding could potentially succeed when retrying. (required)
 
         :param retry_hint: The retry_hint of this ErrorDetails.
         :type: RetryHint

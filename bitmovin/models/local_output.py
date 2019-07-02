@@ -46,7 +46,7 @@ class LocalOutput(Output):
     def path(self):
         """Gets the path of this LocalOutput.
 
-        Path to your local storage
+        Path to your local storage (required)
 
         :return: The path of this LocalOutput.
         :rtype: str
@@ -57,7 +57,7 @@ class LocalOutput(Output):
     def path(self, path):
         """Sets the path of this LocalOutput.
 
-        Path to your local storage
+        Path to your local storage (required)
 
         :param path: The path of this LocalOutput.
         :type: str

@@ -187,7 +187,7 @@ class Stream(BitmovinResource):
     def codec_config_id(self):
         """Gets the codec_config_id of this Stream.
 
-        Id of the codec configuration
+        Id of the codec configuration (required)
 
         :return: The codec_config_id of this Stream.
         :rtype: str
@@ -198,7 +198,7 @@ class Stream(BitmovinResource):
     def codec_config_id(self, codec_config_id):
         """Sets the codec_config_id of this Stream.
 
-        Id of the codec configuration
+        Id of the codec configuration (required)
 
         :param codec_config_id: The codec_config_id of this Stream.
         :type: str

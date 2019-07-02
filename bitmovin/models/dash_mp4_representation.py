@@ -46,7 +46,7 @@ class DashMp4Representation(DashRepresentation):
     def file_path(self):
         """Gets the file_path of this DashMp4Representation.
 
-        Path to the MP4 file
+        Path to the MP4 file (required)
 
         :return: The file_path of this DashMp4Representation.
         :rtype: str
@@ -57,7 +57,7 @@ class DashMp4Representation(DashRepresentation):
     def file_path(self, file_path):
         """Sets the file_path of this DashMp4Representation.
 
-        Path to the MP4 file
+        Path to the MP4 file (required)
 
         :param file_path: The file_path of this DashMp4Representation.
         :type: str

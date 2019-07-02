@@ -77,7 +77,7 @@ class GenericS3Output(Output):
     def access_key(self):
         """Gets the access_key of this GenericS3Output.
 
-        Your generic S3 access key
+        Your generic S3 access key (required)
 
         :return: The access_key of this GenericS3Output.
         :rtype: str
@@ -88,7 +88,7 @@ class GenericS3Output(Output):
     def access_key(self, access_key):
         """Sets the access_key of this GenericS3Output.
 
-        Your generic S3 access key
+        Your generic S3 access key (required)
 
         :param access_key: The access_key of this GenericS3Output.
         :type: str
@@ -105,7 +105,7 @@ class GenericS3Output(Output):
     def secret_key(self):
         """Gets the secret_key of this GenericS3Output.
 
-        Your generic S3 secret key
+        Your generic S3 secret key (required)
 
         :return: The secret_key of this GenericS3Output.
         :rtype: str
@@ -116,7 +116,7 @@ class GenericS3Output(Output):
     def secret_key(self, secret_key):
         """Sets the secret_key of this GenericS3Output.
 
-        Your generic S3 secret key
+        Your generic S3 secret key (required)
 
         :param secret_key: The secret_key of this GenericS3Output.
         :type: str
@@ -133,7 +133,7 @@ class GenericS3Output(Output):
     def bucket_name(self):
         """Gets the bucket_name of this GenericS3Output.
 
-        Name of the bucket
+        Name of the bucket (required)
 
         :return: The bucket_name of this GenericS3Output.
         :rtype: str
@@ -144,7 +144,7 @@ class GenericS3Output(Output):
     def bucket_name(self, bucket_name):
         """Sets the bucket_name of this GenericS3Output.
 
-        Name of the bucket
+        Name of the bucket (required)
 
         :param bucket_name: The bucket_name of this GenericS3Output.
         :type: str
@@ -161,7 +161,7 @@ class GenericS3Output(Output):
     def host(self):
         """Gets the host of this GenericS3Output.
 
-        The Generic S3 server hostname (or IP address)
+        The Generic S3 server hostname (or IP address) (required)
 
         :return: The host of this GenericS3Output.
         :rtype: str
@@ -172,7 +172,7 @@ class GenericS3Output(Output):
     def host(self, host):
         """Sets the host of this GenericS3Output.
 
-        The Generic S3 server hostname (or IP address)
+        The Generic S3 server hostname (or IP address) (required)
 
         :param host: The host of this GenericS3Output.
         :type: str

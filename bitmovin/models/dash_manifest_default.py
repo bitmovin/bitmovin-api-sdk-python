@@ -54,7 +54,7 @@ class DashManifestDefault(DashManifest):
     def encoding_id(self):
         """Gets the encoding_id of this DashManifestDefault.
 
-        The id of the encoding to create a default manifest from
+        The id of the encoding to create a default manifest from (required)
 
         :return: The encoding_id of this DashManifestDefault.
         :rtype: str
@@ -65,7 +65,7 @@ class DashManifestDefault(DashManifest):
     def encoding_id(self, encoding_id):
         """Sets the encoding_id of this DashManifestDefault.
 
-        The id of the encoding to create a default manifest from
+        The id of the encoding to create a default manifest from (required)
 
         :param encoding_id: The encoding_id of this DashManifestDefault.
         :type: str

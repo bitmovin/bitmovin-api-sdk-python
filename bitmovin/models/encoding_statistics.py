@@ -51,7 +51,7 @@ class EncodingStatistics(object):
     def date(self):
         """Gets the date of this EncodingStatistics.
 
-        Date, format. yyyy-MM-dd
+        Date, format. yyyy-MM-dd (required)
 
         :return: The date of this EncodingStatistics.
         :rtype: datetime
@@ -62,7 +62,7 @@ class EncodingStatistics(object):
     def date(self, date):
         """Sets the date of this EncodingStatistics.
 
-        Date, format. yyyy-MM-dd
+        Date, format. yyyy-MM-dd (required)
 
         :param date: The date of this EncodingStatistics.
         :type: datetime
@@ -79,7 +79,7 @@ class EncodingStatistics(object):
     def bytes_encoded(self):
         """Gets the bytes_encoded of this EncodingStatistics.
 
-        Bytes encoded for this encoding.
+        Bytes encoded for this encoding. (required)
 
         :return: The bytes_encoded of this EncodingStatistics.
         :rtype: int
@@ -90,7 +90,7 @@ class EncodingStatistics(object):
     def bytes_encoded(self, bytes_encoded):
         """Sets the bytes_encoded of this EncodingStatistics.
 
-        Bytes encoded for this encoding.
+        Bytes encoded for this encoding. (required)
 
         :param bytes_encoded: The bytes_encoded of this EncodingStatistics.
         :type: int
@@ -107,7 +107,7 @@ class EncodingStatistics(object):
     def time_encoded(self):
         """Gets the time_encoded of this EncodingStatistics.
 
-        Time in seconds encoded for this encoding.
+        Time in seconds encoded for this encoding. (required)
 
         :return: The time_encoded of this EncodingStatistics.
         :rtype: int
@@ -118,7 +118,7 @@ class EncodingStatistics(object):
     def time_encoded(self, time_encoded):
         """Sets the time_encoded of this EncodingStatistics.
 
-        Time in seconds encoded for this encoding.
+        Time in seconds encoded for this encoding. (required)
 
         :param time_encoded: The time_encoded of this EncodingStatistics.
         :type: int

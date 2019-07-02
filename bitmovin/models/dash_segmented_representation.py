@@ -130,7 +130,7 @@ class DashSegmentedRepresentation(DashRepresentation):
     def segment_path(self):
         """Gets the segment_path of this DashSegmentedRepresentation.
 
-        Path to segments. Will be used as the representation id if the type is set to TEMPLATE_ADAPTATION_SET
+        Path to segments. Will be used as the representation id if the type is set to TEMPLATE_ADAPTATION_SET (required)
 
         :return: The segment_path of this DashSegmentedRepresentation.
         :rtype: str
@@ -141,7 +141,7 @@ class DashSegmentedRepresentation(DashRepresentation):
     def segment_path(self, segment_path):
         """Sets the segment_path of this DashSegmentedRepresentation.
 
-        Path to segments. Will be used as the representation id if the type is set to TEMPLATE_ADAPTATION_SET
+        Path to segments. Will be used as the representation id if the type is set to TEMPLATE_ADAPTATION_SET (required)
 
         :param segment_path: The segment_path of this DashSegmentedRepresentation.
         :type: str

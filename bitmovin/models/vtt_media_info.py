@@ -56,7 +56,7 @@ class VttMediaInfo(BasicMediaInfo):
     def vtt_url(self):
         """Gets the vtt_url of this VttMediaInfo.
 
-        The URL of the referenced VTT file
+        The URL of the referenced VTT file (required)
 
         :return: The vtt_url of this VttMediaInfo.
         :rtype: str
@@ -67,7 +67,7 @@ class VttMediaInfo(BasicMediaInfo):
     def vtt_url(self, vtt_url):
         """Sets the vtt_url of this VttMediaInfo.
 
-        The URL of the referenced VTT file
+        The URL of the referenced VTT file (required)
 
         :param vtt_url: The vtt_url of this VttMediaInfo.
         :type: str
@@ -84,7 +84,7 @@ class VttMediaInfo(BasicMediaInfo):
     def uri(self):
         """Gets the uri of this VttMediaInfo.
 
-        The URI of the Rendition
+        The URI of the Rendition (required)
 
         :return: The uri of this VttMediaInfo.
         :rtype: str
@@ -95,7 +95,7 @@ class VttMediaInfo(BasicMediaInfo):
     def uri(self, uri):
         """Sets the uri of this VttMediaInfo.
 
-        The URI of the Rendition
+        The URI of the Rendition (required)
 
         :param uri: The uri of this VttMediaInfo.
         :type: str

@@ -64,7 +64,7 @@ class CustomPlayerBuildStatus(object):
     def status(self):
         """Gets the status of this CustomPlayerBuildStatus.
 
-        Status of the player build
+        Status of the player build (required)
 
         :return: The status of this CustomPlayerBuildStatus.
         :rtype: Status
@@ -75,7 +75,7 @@ class CustomPlayerBuildStatus(object):
     def status(self, status):
         """Sets the status of this CustomPlayerBuildStatus.
 
-        Status of the player build
+        Status of the player build (required)
 
         :param status: The status of this CustomPlayerBuildStatus.
         :type: Status
@@ -120,7 +120,7 @@ class CustomPlayerBuildStatus(object):
     def progress(self):
         """Gets the progress of this CustomPlayerBuildStatus.
 
-        The actual progress of the custom player build.
+        The actual progress of the custom player build. (required)
 
         :return: The progress of this CustomPlayerBuildStatus.
         :rtype: int
@@ -131,7 +131,7 @@ class CustomPlayerBuildStatus(object):
     def progress(self, progress):
         """Sets the progress of this CustomPlayerBuildStatus.
 
-        The actual progress of the custom player build.
+        The actual progress of the custom player build. (required)
 
         :param progress: The progress of this CustomPlayerBuildStatus.
         :type: int

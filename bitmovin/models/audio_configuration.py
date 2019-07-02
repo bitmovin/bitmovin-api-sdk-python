@@ -51,7 +51,7 @@ class AudioConfiguration(CodecConfiguration):
     def bitrate(self):
         """Gets the bitrate of this AudioConfiguration.
 
-        Target bitrate for the encoded audio in bps
+        Target bitrate for the encoded audio in bps (required)
 
         :return: The bitrate of this AudioConfiguration.
         :rtype: int
@@ -62,7 +62,7 @@ class AudioConfiguration(CodecConfiguration):
     def bitrate(self, bitrate):
         """Sets the bitrate of this AudioConfiguration.
 
-        Target bitrate for the encoded audio in bps
+        Target bitrate for the encoded audio in bps (required)
 
         :param bitrate: The bitrate of this AudioConfiguration.
         :type: int

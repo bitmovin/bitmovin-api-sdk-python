@@ -47,7 +47,7 @@ class TtmlEmbed(BitmovinResource):
     def input_stream(self):
         """Gets the input_stream of this TtmlEmbed.
 
-        The input stream to extract the subtitle from
+        The input stream to extract the subtitle from (required)
 
         :return: The input_stream of this TtmlEmbed.
         :rtype: StreamInput
@@ -58,7 +58,7 @@ class TtmlEmbed(BitmovinResource):
     def input_stream(self, input_stream):
         """Sets the input_stream of this TtmlEmbed.
 
-        The input stream to extract the subtitle from
+        The input stream to extract the subtitle from (required)
 
         :param input_stream: The input_stream of this TtmlEmbed.
         :type: StreamInput

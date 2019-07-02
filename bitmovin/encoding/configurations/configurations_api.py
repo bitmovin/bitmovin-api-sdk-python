@@ -11,6 +11,7 @@ from bitmovin.models.response_error import ResponseError
 from bitmovin.encoding.configurations.type.type_api import TypeApi
 from bitmovin.encoding.configurations.video.video_api import VideoApi
 from bitmovin.encoding.configurations.audio.audio_api import AudioApi
+from bitmovin.encoding.configurations.subtitles.subtitles_api import SubtitlesApi
 from bitmovin.encoding.configurations.codec_configuration_list_query_params import CodecConfigurationListQueryParams
 
 
@@ -39,6 +40,13 @@ class ConfigurationsApi(BaseApi):
         )
 
         self.audio = AudioApi(
+            api_key=api_key,
+            tenant_org_id=tenant_org_id,
+            base_url=base_url,
+            logger=logger
+        )
+
+        self.subtitles = SubtitlesApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,

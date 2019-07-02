@@ -57,7 +57,7 @@ class Condition(AbstractCondition):
     def attribute(self):
         """Gets the attribute of this Condition.
 
-        The attribute that should be used for the evaluation. Valid values include, depending on the context: - HEIGHT - WIDTH - BITRATE - FPS - ASPECTRATIO - INPUTSTREAM - LANGUAGE - CHANNELFORMAT - CHANNELLAYOUT - STREAMCOUNT - AUDIOSTREAMCOUNT - VIDEOSTREAMCOUNT - DURATION - CONNECTION_STATUS - CONNECTION_STATUS_JUST_CHANGED 
+        The attribute that should be used for the evaluation. Valid values include, depending on the context: - HEIGHT - WIDTH - BITRATE - FPS - ASPECTRATIO - INPUTSTREAM - LANGUAGE - CHANNELFORMAT - CHANNELLAYOUT - STREAMCOUNT - AUDIOSTREAMCOUNT - VIDEOSTREAMCOUNT - DURATION - CONNECTION_STATUS - CONNECTION_STATUS_JUST_CHANGED (required)
 
         :return: The attribute of this Condition.
         :rtype: str
@@ -68,7 +68,7 @@ class Condition(AbstractCondition):
     def attribute(self, attribute):
         """Sets the attribute of this Condition.
 
-        The attribute that should be used for the evaluation. Valid values include, depending on the context: - HEIGHT - WIDTH - BITRATE - FPS - ASPECTRATIO - INPUTSTREAM - LANGUAGE - CHANNELFORMAT - CHANNELLAYOUT - STREAMCOUNT - AUDIOSTREAMCOUNT - VIDEOSTREAMCOUNT - DURATION - CONNECTION_STATUS - CONNECTION_STATUS_JUST_CHANGED 
+        The attribute that should be used for the evaluation. Valid values include, depending on the context: - HEIGHT - WIDTH - BITRATE - FPS - ASPECTRATIO - INPUTSTREAM - LANGUAGE - CHANNELFORMAT - CHANNELLAYOUT - STREAMCOUNT - AUDIOSTREAMCOUNT - VIDEOSTREAMCOUNT - DURATION - CONNECTION_STATUS - CONNECTION_STATUS_JUST_CHANGED (required)
 
         :param attribute: The attribute of this Condition.
         :type: str
@@ -85,7 +85,7 @@ class Condition(AbstractCondition):
     def operator(self):
         """Gets the operator of this Condition.
 
-        The operator that should be used for the evaluation
+        The operator that should be used for the evaluation (required)
 
         :return: The operator of this Condition.
         :rtype: ConditionOperator
@@ -96,7 +96,7 @@ class Condition(AbstractCondition):
     def operator(self, operator):
         """Sets the operator of this Condition.
 
-        The operator that should be used for the evaluation
+        The operator that should be used for the evaluation (required)
 
         :param operator: The operator of this Condition.
         :type: ConditionOperator
@@ -113,7 +113,7 @@ class Condition(AbstractCondition):
     def value(self):
         """Gets the value of this Condition.
 
-        The value that should be used for comparison
+        The value that should be used for comparison (required)
 
         :return: The value of this Condition.
         :rtype: str
@@ -124,7 +124,7 @@ class Condition(AbstractCondition):
     def value(self, value):
         """Sets the value of this Condition.
 
-        The value that should be used for comparison
+        The value that should be used for comparison (required)
 
         :param value: The value of this Condition.
         :type: str

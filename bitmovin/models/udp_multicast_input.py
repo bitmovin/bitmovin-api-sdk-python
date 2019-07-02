@@ -51,7 +51,7 @@ class UdpMulticastInput(Input):
     def host(self):
         """Gets the host of this UdpMulticastInput.
 
-        Host name or IP address to use
+        Host name or IP address to use (required)
 
         :return: The host of this UdpMulticastInput.
         :rtype: str
@@ -62,7 +62,7 @@ class UdpMulticastInput(Input):
     def host(self, host):
         """Sets the host of this UdpMulticastInput.
 
-        Host name or IP address to use
+        Host name or IP address to use (required)
 
         :param host: The host of this UdpMulticastInput.
         :type: str
@@ -79,7 +79,7 @@ class UdpMulticastInput(Input):
     def port(self):
         """Gets the port of this UdpMulticastInput.
 
-        Port to use
+        Port to use (required)
 
         :return: The port of this UdpMulticastInput.
         :rtype: int
@@ -90,7 +90,7 @@ class UdpMulticastInput(Input):
     def port(self, port):
         """Sets the port of this UdpMulticastInput.
 
-        Port to use
+        Port to use (required)
 
         :param port: The port of this UdpMulticastInput.
         :type: int

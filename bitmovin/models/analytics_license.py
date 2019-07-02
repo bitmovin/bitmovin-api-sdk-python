@@ -79,7 +79,7 @@ class AnalyticsLicense(BitmovinResponse):
     def license_key(self):
         """Gets the license_key of this AnalyticsLicense.
 
-        License Key
+        License Key (required)
 
         :return: The license_key of this AnalyticsLicense.
         :rtype: str
@@ -90,7 +90,7 @@ class AnalyticsLicense(BitmovinResponse):
     def license_key(self, license_key):
         """Sets the license_key of this AnalyticsLicense.
 
-        License Key
+        License Key (required)
 
         :param license_key: The license_key of this AnalyticsLicense.
         :type: str

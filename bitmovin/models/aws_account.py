@@ -56,7 +56,7 @@ class AwsAccount(BitmovinResource):
     def access_key(self):
         """Gets the access_key of this AwsAccount.
 
-        Amazon access key
+        Amazon access key (required)
 
         :return: The access_key of this AwsAccount.
         :rtype: str
@@ -67,7 +67,7 @@ class AwsAccount(BitmovinResource):
     def access_key(self, access_key):
         """Sets the access_key of this AwsAccount.
 
-        Amazon access key
+        Amazon access key (required)
 
         :param access_key: The access_key of this AwsAccount.
         :type: str
@@ -84,7 +84,7 @@ class AwsAccount(BitmovinResource):
     def secret_key(self):
         """Gets the secret_key of this AwsAccount.
 
-        Amazon secret key
+        Amazon secret key (required)
 
         :return: The secret_key of this AwsAccount.
         :rtype: str
@@ -95,7 +95,7 @@ class AwsAccount(BitmovinResource):
     def secret_key(self, secret_key):
         """Sets the secret_key of this AwsAccount.
 
-        Amazon secret key
+        Amazon secret key (required)
 
         :param secret_key: The secret_key of this AwsAccount.
         :type: str
@@ -112,7 +112,7 @@ class AwsAccount(BitmovinResource):
     def account_number(self):
         """Gets the account_number of this AwsAccount.
 
-        Amazon account number (12 digits as per AWS spec)
+        Amazon account number (12 digits as per AWS spec) (required)
 
         :return: The account_number of this AwsAccount.
         :rtype: str
@@ -123,7 +123,7 @@ class AwsAccount(BitmovinResource):
     def account_number(self, account_number):
         """Sets the account_number of this AwsAccount.
 
-        Amazon account number (12 digits as per AWS spec)
+        Amazon account number (12 digits as per AWS spec) (required)
 
         :param account_number: The account_number of this AwsAccount.
         :type: str

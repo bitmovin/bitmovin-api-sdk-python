@@ -56,7 +56,9 @@ class Muxing(BitmovinResource):
         'PROGRESSIVE_WEBM': 'ProgressiveWebmMuxing',
         'PROGRESSIVE_MOV': 'ProgressiveMovMuxing',
         'PROGRESSIVE_TS': 'ProgressiveTsMuxing',
-        'BROADCAST_TS': 'BroadcastTsMuxing'
+        'BROADCAST_TS': 'BroadcastTsMuxing',
+        'CHUNKED_TEXT': 'ChunkedTextMuxing',
+        'TEXT': 'TextMuxing'
     }
 
     def __init__(self, streams=None, outputs=None, avg_bitrate=None, min_bitrate=None, max_bitrate=None, ignored_by=None, stream_conditions_mode=None, *args, **kwargs):

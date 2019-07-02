@@ -46,7 +46,7 @@ class CustomAttribute(object):
     def key(self):
         """Gets the key of this CustomAttribute.
 
-        unique string identifier for the custom attribute
+        unique string identifier for the custom attribute (required)
 
         :return: The key of this CustomAttribute.
         :rtype: str
@@ -57,7 +57,7 @@ class CustomAttribute(object):
     def key(self, key):
         """Sets the key of this CustomAttribute.
 
-        unique string identifier for the custom attribute
+        unique string identifier for the custom attribute (required)
 
         :param key: The key of this CustomAttribute.
         :type: str

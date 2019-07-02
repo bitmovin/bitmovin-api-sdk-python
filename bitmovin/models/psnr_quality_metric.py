@@ -74,7 +74,7 @@ class PsnrQualityMetric(object):
     def psnr(self):
         """Gets the psnr of this PsnrQualityMetric.
 
-        Peak signal-to-noise ratio
+        Peak signal-to-noise ratio (required)
 
         :return: The psnr of this PsnrQualityMetric.
         :rtype: float
@@ -85,7 +85,7 @@ class PsnrQualityMetric(object):
     def psnr(self, psnr):
         """Sets the psnr of this PsnrQualityMetric.
 
-        Peak signal-to-noise ratio
+        Peak signal-to-noise ratio (required)
 
         :param psnr: The psnr of this PsnrQualityMetric.
         :type: float

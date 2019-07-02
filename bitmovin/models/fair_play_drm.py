@@ -56,7 +56,7 @@ class FairPlayDrm(Drm):
     def key(self):
         """Gets the key of this FairPlayDrm.
 
-        16 byte Encryption key, 32 hexadecimal characters
+        16 byte Encryption key, 32 hexadecimal characters (required)
 
         :return: The key of this FairPlayDrm.
         :rtype: str
@@ -67,7 +67,7 @@ class FairPlayDrm(Drm):
     def key(self, key):
         """Sets the key of this FairPlayDrm.
 
-        16 byte Encryption key, 32 hexadecimal characters
+        16 byte Encryption key, 32 hexadecimal characters (required)
 
         :param key: The key of this FairPlayDrm.
         :type: str
@@ -84,7 +84,7 @@ class FairPlayDrm(Drm):
     def iv(self):
         """Gets the iv of this FairPlayDrm.
 
-        16 byte initialization vector
+        16 byte initialization vector (required)
 
         :return: The iv of this FairPlayDrm.
         :rtype: str
@@ -95,7 +95,7 @@ class FairPlayDrm(Drm):
     def iv(self, iv):
         """Sets the iv of this FairPlayDrm.
 
-        16 byte initialization vector
+        16 byte initialization vector (required)
 
         :param iv: The iv of this FairPlayDrm.
         :type: str

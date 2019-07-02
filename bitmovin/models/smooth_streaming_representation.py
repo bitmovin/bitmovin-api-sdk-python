@@ -66,7 +66,7 @@ class SmoothStreamingRepresentation(BitmovinResource):
     def encoding_id(self):
         """Gets the encoding_id of this SmoothStreamingRepresentation.
 
-        Id of the encoding
+        Id of the encoding (required)
 
         :return: The encoding_id of this SmoothStreamingRepresentation.
         :rtype: str
@@ -77,7 +77,7 @@ class SmoothStreamingRepresentation(BitmovinResource):
     def encoding_id(self, encoding_id):
         """Sets the encoding_id of this SmoothStreamingRepresentation.
 
-        Id of the encoding
+        Id of the encoding (required)
 
         :param encoding_id: The encoding_id of this SmoothStreamingRepresentation.
         :type: str
@@ -94,7 +94,7 @@ class SmoothStreamingRepresentation(BitmovinResource):
     def muxing_id(self):
         """Gets the muxing_id of this SmoothStreamingRepresentation.
 
-        Id of the muxing.
+        Id of the muxing. (required)
 
         :return: The muxing_id of this SmoothStreamingRepresentation.
         :rtype: str
@@ -105,7 +105,7 @@ class SmoothStreamingRepresentation(BitmovinResource):
     def muxing_id(self, muxing_id):
         """Sets the muxing_id of this SmoothStreamingRepresentation.
 
-        Id of the muxing.
+        Id of the muxing. (required)
 
         :param muxing_id: The muxing_id of this SmoothStreamingRepresentation.
         :type: str
@@ -122,7 +122,7 @@ class SmoothStreamingRepresentation(BitmovinResource):
     def media_file(self):
         """Gets the media_file of this SmoothStreamingRepresentation.
 
-        The Smooth Streaming ismv or isma file that will be referenced in the manifest.
+        The Smooth Streaming ismv or isma file that will be referenced in the manifest. (required)
 
         :return: The media_file of this SmoothStreamingRepresentation.
         :rtype: str
@@ -133,7 +133,7 @@ class SmoothStreamingRepresentation(BitmovinResource):
     def media_file(self, media_file):
         """Sets the media_file of this SmoothStreamingRepresentation.
 
-        The Smooth Streaming ismv or isma file that will be referenced in the manifest.
+        The Smooth Streaming ismv or isma file that will be referenced in the manifest. (required)
 
         :param media_file: The media_file of this SmoothStreamingRepresentation.
         :type: str

@@ -46,7 +46,7 @@ class XmlNamespace(object):
     def prefix(self):
         """Gets the prefix of this XmlNamespace.
 
-        Name of the XML Namespace reference
+        Name of the XML Namespace reference (required)
 
         :return: The prefix of this XmlNamespace.
         :rtype: str
@@ -57,7 +57,7 @@ class XmlNamespace(object):
     def prefix(self, prefix):
         """Sets the prefix of this XmlNamespace.
 
-        Name of the XML Namespace reference
+        Name of the XML Namespace reference (required)
 
         :param prefix: The prefix of this XmlNamespace.
         :type: str
@@ -74,7 +74,7 @@ class XmlNamespace(object):
     def uri(self):
         """Gets the uri of this XmlNamespace.
 
-        Source of the XML Namespace reference
+        Source of the XML Namespace reference (required)
 
         :return: The uri of this XmlNamespace.
         :rtype: str
@@ -85,7 +85,7 @@ class XmlNamespace(object):
     def uri(self, uri):
         """Sets the uri of this XmlNamespace.
 
-        Source of the XML Namespace reference
+        Source of the XML Namespace reference (required)
 
         :param uri: The uri of this XmlNamespace.
         :type: str

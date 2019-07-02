@@ -58,7 +58,7 @@ class PlayerThirdPartyLicensing(object):
     def license_check_server(self):
         """Gets the license_check_server of this PlayerThirdPartyLicensing.
 
-        URL to your license check server
+        URL to your license check server (required)
 
         :return: The license_check_server of this PlayerThirdPartyLicensing.
         :rtype: str
@@ -69,7 +69,7 @@ class PlayerThirdPartyLicensing(object):
     def license_check_server(self, license_check_server):
         """Sets the license_check_server of this PlayerThirdPartyLicensing.
 
-        URL to your license check server
+        URL to your license check server (required)
 
         :param license_check_server: The license_check_server of this PlayerThirdPartyLicensing.
         :type: str
@@ -86,7 +86,7 @@ class PlayerThirdPartyLicensing(object):
     def license_check_timeout(self):
         """Gets the license_check_timeout of this PlayerThirdPartyLicensing.
 
-        Timeout in ms
+        Timeout in ms (required)
 
         :return: The license_check_timeout of this PlayerThirdPartyLicensing.
         :rtype: int
@@ -97,7 +97,7 @@ class PlayerThirdPartyLicensing(object):
     def license_check_timeout(self, license_check_timeout):
         """Sets the license_check_timeout of this PlayerThirdPartyLicensing.
 
-        Timeout in ms
+        Timeout in ms (required)
 
         :param license_check_timeout: The license_check_timeout of this PlayerThirdPartyLicensing.
         :type: int
@@ -118,7 +118,7 @@ class PlayerThirdPartyLicensing(object):
     def error_action(self):
         """Gets the error_action of this PlayerThirdPartyLicensing.
 
-        Specify if the Licensing Request should fail or not on Third Party Licensing Error
+        Specify if the Licensing Request should fail or not on Third Party Licensing Error (required)
 
         :return: The error_action of this PlayerThirdPartyLicensing.
         :rtype: PlayerThirdPartyLicensingErrorAction
@@ -129,7 +129,7 @@ class PlayerThirdPartyLicensing(object):
     def error_action(self, error_action):
         """Sets the error_action of this PlayerThirdPartyLicensing.
 
-        Specify if the Licensing Request should fail or not on Third Party Licensing Error
+        Specify if the Licensing Request should fail or not on Third Party Licensing Error (required)
 
         :param error_action: The error_action of this PlayerThirdPartyLicensing.
         :type: PlayerThirdPartyLicensingErrorAction
@@ -146,7 +146,7 @@ class PlayerThirdPartyLicensing(object):
     def timeout_action(self):
         """Gets the timeout_action of this PlayerThirdPartyLicensing.
 
-        Specify if the Licensing Request should fail or not on Third Party Licensing timeout
+        Specify if the Licensing Request should fail or not on Third Party Licensing timeout (required)
 
         :return: The timeout_action of this PlayerThirdPartyLicensing.
         :rtype: PlayerThirdPartyLicensingErrorAction
@@ -157,7 +157,7 @@ class PlayerThirdPartyLicensing(object):
     def timeout_action(self, timeout_action):
         """Sets the timeout_action of this PlayerThirdPartyLicensing.
 
-        Specify if the Licensing Request should fail or not on Third Party Licensing timeout
+        Specify if the Licensing Request should fail or not on Third Party Licensing timeout (required)
 
         :param timeout_action: The timeout_action of this PlayerThirdPartyLicensing.
         :type: PlayerThirdPartyLicensingErrorAction

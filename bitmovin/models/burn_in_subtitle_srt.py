@@ -53,7 +53,7 @@ class BurnInSubtitleSrt(BitmovinResource):
     def character_encoding(self):
         """Gets the character_encoding of this BurnInSubtitleSrt.
 
-        Character encoding of the SRT file
+        Character encoding of the SRT file (required)
 
         :return: The character_encoding of this BurnInSubtitleSrt.
         :rtype: CaptionCharacterEncoding
@@ -64,7 +64,7 @@ class BurnInSubtitleSrt(BitmovinResource):
     def character_encoding(self, character_encoding):
         """Sets the character_encoding of this BurnInSubtitleSrt.
 
-        Character encoding of the SRT file
+        Character encoding of the SRT file (required)
 
         :param character_encoding: The character_encoding of this BurnInSubtitleSrt.
         :type: CaptionCharacterEncoding
@@ -81,7 +81,7 @@ class BurnInSubtitleSrt(BitmovinResource):
     def input(self):
         """Gets the input of this BurnInSubtitleSrt.
 
-        The input location to get the SRT file from
+        The input location to get the SRT file from (required)
 
         :return: The input of this BurnInSubtitleSrt.
         :rtype: InputPath
@@ -92,7 +92,7 @@ class BurnInSubtitleSrt(BitmovinResource):
     def input(self, input):
         """Sets the input of this BurnInSubtitleSrt.
 
-        The input location to get the SRT file from
+        The input location to get the SRT file from (required)
 
         :param input: The input of this BurnInSubtitleSrt.
         :type: InputPath

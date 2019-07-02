@@ -578,7 +578,7 @@ class TextFilter(Filter):
     def x(self):
         """Gets the x of this TextFilter.
 
-        X position of the text. Also an expression can be used. The following variables are valid: line_h - height of each text line; main_h - input height; main_w - input width; n - number of input frame; text_h - Text height; text_w - Text width
+        X position of the text. Also an expression can be used. The following variables are valid: line_h - height of each text line; main_h - input height; main_w - input width; n - number of input frame; text_h - Text height; text_w - Text width (required)
 
         :return: The x of this TextFilter.
         :rtype: str
@@ -589,7 +589,7 @@ class TextFilter(Filter):
     def x(self, x):
         """Sets the x of this TextFilter.
 
-        X position of the text. Also an expression can be used. The following variables are valid: line_h - height of each text line; main_h - input height; main_w - input width; n - number of input frame; text_h - Text height; text_w - Text width
+        X position of the text. Also an expression can be used. The following variables are valid: line_h - height of each text line; main_h - input height; main_w - input width; n - number of input frame; text_h - Text height; text_w - Text width (required)
 
         :param x: The x of this TextFilter.
         :type: str
@@ -606,7 +606,7 @@ class TextFilter(Filter):
     def y(self):
         """Gets the y of this TextFilter.
 
-        Y position of the text. Also an expression can be used. The following variables are valid: line_h - height of each text line; main_h - input height; main_w - input width; n - number of input frame; text_h - Text height; text_w - Text width
+        Y position of the text. Also an expression can be used. The following variables are valid: line_h - height of each text line; main_h - input height; main_w - input width; n - number of input frame; text_h - Text height; text_w - Text width (required)
 
         :return: The y of this TextFilter.
         :rtype: str
@@ -617,7 +617,7 @@ class TextFilter(Filter):
     def y(self, y):
         """Sets the y of this TextFilter.
 
-        Y position of the text. Also an expression can be used. The following variables are valid: line_h - height of each text line; main_h - input height; main_w - input width; n - number of input frame; text_h - Text height; text_w - Text width
+        Y position of the text. Also an expression can be used. The following variables are valid: line_h - height of each text line; main_h - input height; main_w - input width; n - number of input frame; text_h - Text height; text_w - Text width (required)
 
         :param y: The y of this TextFilter.
         :type: str

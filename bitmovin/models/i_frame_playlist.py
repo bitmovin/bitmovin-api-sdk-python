@@ -46,7 +46,7 @@ class IFramePlaylist(BitmovinResource):
     def filename(self):
         """Gets the filename of this IFramePlaylist.
 
-        The filename of your I-frame playlist
+        The filename of your I-frame playlist (required)
 
         :return: The filename of this IFramePlaylist.
         :rtype: str
@@ -57,7 +57,7 @@ class IFramePlaylist(BitmovinResource):
     def filename(self, filename):
         """Sets the filename of this IFramePlaylist.
 
-        The filename of your I-frame playlist
+        The filename of your I-frame playlist (required)
 
         :param filename: The filename of this IFramePlaylist.
         :type: str

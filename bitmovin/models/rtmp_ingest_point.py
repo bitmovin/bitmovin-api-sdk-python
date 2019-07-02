@@ -46,7 +46,7 @@ class RtmpIngestPoint(object):
     def application_name(self):
         """Gets the application_name of this RtmpIngestPoint.
 
-        The name of the application where the ingest is streamed to. This has to be unique for each ingest point
+        The name of the application where the ingest is streamed to. This has to be unique for each ingest point (required)
 
         :return: The application_name of this RtmpIngestPoint.
         :rtype: str
@@ -57,7 +57,7 @@ class RtmpIngestPoint(object):
     def application_name(self, application_name):
         """Sets the application_name of this RtmpIngestPoint.
 
-        The name of the application where the ingest is streamed to. This has to be unique for each ingest point
+        The name of the application where the ingest is streamed to. This has to be unique for each ingest point (required)
 
         :param application_name: The application_name of this RtmpIngestPoint.
         :type: str
@@ -74,7 +74,7 @@ class RtmpIngestPoint(object):
     def stream_key(self):
         """Gets the stream_key of this RtmpIngestPoint.
 
-        The stream key for the backup input
+        The stream key for the backup input (required)
 
         :return: The stream_key of this RtmpIngestPoint.
         :rtype: str
@@ -85,7 +85,7 @@ class RtmpIngestPoint(object):
     def stream_key(self, stream_key):
         """Sets the stream_key of this RtmpIngestPoint.
 
-        The stream key for the backup input
+        The stream key for the backup input (required)
 
         :param stream_key: The stream_key of this RtmpIngestPoint.
         :type: str

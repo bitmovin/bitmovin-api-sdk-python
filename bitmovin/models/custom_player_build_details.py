@@ -51,7 +51,7 @@ class CustomPlayerBuildDetails(BitmovinResource):
     def player_version(self):
         """Gets the player_version of this CustomPlayerBuildDetails.
 
-        The player version that should be used for the custom player build. If not set the 'latest' version is used. 
+        The player version that should be used for the custom player build. If not set the 'latest' version is used. (required)
 
         :return: The player_version of this CustomPlayerBuildDetails.
         :rtype: str
@@ -62,7 +62,7 @@ class CustomPlayerBuildDetails(BitmovinResource):
     def player_version(self, player_version):
         """Sets the player_version of this CustomPlayerBuildDetails.
 
-        The player version that should be used for the custom player build. If not set the 'latest' version is used. 
+        The player version that should be used for the custom player build. If not set the 'latest' version is used. (required)
 
         :param player_version: The player_version of this CustomPlayerBuildDetails.
         :type: str
@@ -79,7 +79,7 @@ class CustomPlayerBuildDetails(BitmovinResource):
     def domains(self):
         """Gets the domains of this CustomPlayerBuildDetails.
 
-        The domains that the player is locked to. If not set the player will only work with 'localhost'. Not more than 49 additional domains can be added. 
+        The domains that the player is locked to. If not set the player will only work with 'localhost'. Not more than 49 additional domains can be added. (required)
 
         :return: The domains of this CustomPlayerBuildDetails.
         :rtype: list[str]
@@ -90,7 +90,7 @@ class CustomPlayerBuildDetails(BitmovinResource):
     def domains(self, domains):
         """Sets the domains of this CustomPlayerBuildDetails.
 
-        The domains that the player is locked to. If not set the player will only work with 'localhost'. Not more than 49 additional domains can be added. 
+        The domains that the player is locked to. If not set the player will only work with 'localhost'. Not more than 49 additional domains can be added. (required)
 
         :param domains: The domains of this CustomPlayerBuildDetails.
         :type: list[str]

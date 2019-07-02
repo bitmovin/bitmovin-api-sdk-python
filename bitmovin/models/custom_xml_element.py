@@ -46,7 +46,7 @@ class CustomXmlElement(BitmovinResponse):
     def data(self):
         """Gets the data of this CustomXmlElement.
 
-        String representation of the XML element
+        String representation of the XML element (required)
 
         :return: The data of this CustomXmlElement.
         :rtype: str
@@ -57,7 +57,7 @@ class CustomXmlElement(BitmovinResponse):
     def data(self, data):
         """Sets the data of this CustomXmlElement.
 
-        String representation of the XML element
+        String representation of the XML element (required)
 
         :param data: The data of this CustomXmlElement.
         :type: str

@@ -2,4 +2,5 @@ from bitmovin.encoding.configurations.configurations_api import ConfigurationsAp
 from bitmovin.encoding.configurations.type.type_api import TypeApi
 from bitmovin.encoding.configurations.video.video_api import VideoApi
 from bitmovin.encoding.configurations.audio.audio_api import AudioApi
+from bitmovin.encoding.configurations.subtitles.subtitles_api import SubtitlesApi
 from bitmovin.encoding.configurations.codec_configuration_list_query_params import CodecConfigurationListQueryParams

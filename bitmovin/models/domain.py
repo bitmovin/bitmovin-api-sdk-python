@@ -46,7 +46,7 @@ class Domain(BitmovinResource):
     def url(self):
         """Gets the url of this Domain.
 
-        Host where the player is allowed to play
+        Host where the player is allowed to play (required)
 
         :return: The url of this Domain.
         :rtype: str
@@ -57,7 +57,7 @@ class Domain(BitmovinResource):
     def url(self, url):
         """Sets the url of this Domain.
 
-        Host where the player is allowed to play
+        Host where the player is allowed to play (required)
 
         :param url: The url of this Domain.
         :type: str

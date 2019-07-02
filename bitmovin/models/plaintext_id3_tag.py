@@ -52,7 +52,7 @@ class PlaintextId3Tag(Id3Tag):
     def text(self):
         """Gets the text of this PlaintextId3Tag.
 
-        Plain Text Data
+        Plain Text Data (required)
 
         :return: The text of this PlaintextId3Tag.
         :rtype: str
@@ -63,7 +63,7 @@ class PlaintextId3Tag(Id3Tag):
     def text(self, text):
         """Sets the text of this PlaintextId3Tag.
 
-        Plain Text Data
+        Plain Text Data (required)
 
         :param text: The text of this PlaintextId3Tag.
         :type: str
@@ -80,7 +80,7 @@ class PlaintextId3Tag(Id3Tag):
     def frame_id(self):
         """Gets the frame_id of this PlaintextId3Tag.
 
-        4 character long Frame ID
+        4 character long Frame ID (required)
 
         :return: The frame_id of this PlaintextId3Tag.
         :rtype: str
@@ -91,7 +91,7 @@ class PlaintextId3Tag(Id3Tag):
     def frame_id(self, frame_id):
         """Sets the frame_id of this PlaintextId3Tag.
 
-        4 character long Frame ID
+        4 character long Frame ID (required)
 
         :param frame_id: The frame_id of this PlaintextId3Tag.
         :type: str

@@ -46,7 +46,7 @@ class Tenant(BitmovinResource):
     def e_mail(self):
         """Gets the e_mail of this Tenant.
 
-        Email address of the tenant.
+        Email address of the tenant. (required)
 
         :return: The e_mail of this Tenant.
         :rtype: str
@@ -57,7 +57,7 @@ class Tenant(BitmovinResource):
     def e_mail(self, e_mail):
         """Sets the e_mail of this Tenant.
 
-        Email address of the tenant.
+        Email address of the tenant. (required)
 
         :param e_mail: The e_mail of this Tenant.
         :type: str

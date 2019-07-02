@@ -62,7 +62,7 @@ class SidecarFile(BitmovinResource):
     def input_id(self):
         """Gets the input_id of this SidecarFile.
 
-        Id of input
+        Id of input (required)
 
         :return: The input_id of this SidecarFile.
         :rtype: str
@@ -73,7 +73,7 @@ class SidecarFile(BitmovinResource):
     def input_id(self, input_id):
         """Sets the input_id of this SidecarFile.
 
-        Id of input
+        Id of input (required)
 
         :param input_id: The input_id of this SidecarFile.
         :type: str
@@ -90,7 +90,7 @@ class SidecarFile(BitmovinResource):
     def input_path(self):
         """Gets the input_path of this SidecarFile.
 
-        Path to sidecar file
+        Path to sidecar file (required)
 
         :return: The input_path of this SidecarFile.
         :rtype: str
@@ -101,7 +101,7 @@ class SidecarFile(BitmovinResource):
     def input_path(self, input_path):
         """Sets the input_path of this SidecarFile.
 
-        Path to sidecar file
+        Path to sidecar file (required)
 
         :param input_path: The input_path of this SidecarFile.
         :type: str

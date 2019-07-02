@@ -53,7 +53,7 @@ class SmoothManifestDefault(SmoothStreamingManifest):
     def encoding_id(self):
         """Gets the encoding_id of this SmoothManifestDefault.
 
-        The id of the encoding to create a default manifest from
+        The id of the encoding to create a default manifest from (required)
 
         :return: The encoding_id of this SmoothManifestDefault.
         :rtype: str
@@ -64,7 +64,7 @@ class SmoothManifestDefault(SmoothStreamingManifest):
     def encoding_id(self, encoding_id):
         """Sets the encoding_id of this SmoothManifestDefault.
 
-        The id of the encoding to create a default manifest from
+        The id of the encoding to create a default manifest from (required)
 
         :param encoding_id: The encoding_id of this SmoothManifestDefault.
         :type: str

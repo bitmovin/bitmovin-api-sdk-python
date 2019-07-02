@@ -51,7 +51,7 @@ class Keyframe(BitmovinResource):
     def time(self):
         """Gets the time of this Keyframe.
 
-        Time in seconds where the keyframe should be inserted
+        Time in seconds where the keyframe should be inserted (required)
 
         :return: The time of this Keyframe.
         :rtype: float
@@ -62,7 +62,7 @@ class Keyframe(BitmovinResource):
     def time(self, time):
         """Sets the time of this Keyframe.
 
-        Time in seconds where the keyframe should be inserted
+        Time in seconds where the keyframe should be inserted (required)
 
         :param time: The time of this Keyframe.
         :type: float

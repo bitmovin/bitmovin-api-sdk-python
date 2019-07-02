@@ -46,7 +46,7 @@ class StandardMediaInfo(SegmentsMediaInfo):
     def uri(self):
         """Gets the uri of this StandardMediaInfo.
 
-        The URI of the Rendition
+        The URI of the Rendition (required)
 
         :return: The uri of this StandardMediaInfo.
         :rtype: str
@@ -57,7 +57,7 @@ class StandardMediaInfo(SegmentsMediaInfo):
     def uri(self, uri):
         """Sets the uri of this StandardMediaInfo.
 
-        The URI of the Rendition
+        The URI of the Rendition (required)
 
         :param uri: The uri of this StandardMediaInfo.
         :type: str

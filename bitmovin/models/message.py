@@ -72,7 +72,7 @@ class Message(BitmovinResponse):
     def type(self):
         """Gets the type of this Message.
 
-        Message type giving a hint on the importance of the message (log level)
+        Message type giving a hint on the importance of the message (log level) (required)
 
         :return: The type of this Message.
         :rtype: MessageType
@@ -83,7 +83,7 @@ class Message(BitmovinResponse):
     def type(self, type):
         """Sets the type of this Message.
 
-        Message type giving a hint on the importance of the message (log level)
+        Message type giving a hint on the importance of the message (log level) (required)
 
         :param type: The type of this Message.
         :type: MessageType
@@ -100,7 +100,7 @@ class Message(BitmovinResponse):
     def text(self):
         """Gets the text of this Message.
 
-        Message text
+        Message text (required)
 
         :return: The text of this Message.
         :rtype: str
@@ -111,7 +111,7 @@ class Message(BitmovinResponse):
     def text(self, text):
         """Sets the text of this Message.
 
-        Message text
+        Message text (required)
 
         :param text: The text of this Message.
         :type: str

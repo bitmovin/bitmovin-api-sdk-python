@@ -41,7 +41,7 @@ class PlayerLicenseAnalytics(object):
     def analytics_key(self):
         """Gets the analytics_key of this PlayerLicenseAnalytics.
 
-        Analytics License Key
+        Analytics License Key (required)
 
         :return: The analytics_key of this PlayerLicenseAnalytics.
         :rtype: str
@@ -52,7 +52,7 @@ class PlayerLicenseAnalytics(object):
     def analytics_key(self, analytics_key):
         """Sets the analytics_key of this PlayerLicenseAnalytics.
 
-        Analytics License Key
+        Analytics License Key (required)
 
         :param analytics_key: The analytics_key of this PlayerLicenseAnalytics.
         :type: str

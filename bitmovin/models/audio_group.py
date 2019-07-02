@@ -46,7 +46,7 @@ class AudioGroup(object):
     def name(self):
         """Gets the name of this AudioGroup.
 
-        Name of the audio group
+        Name of the audio group (required)
 
         :return: The name of this AudioGroup.
         :rtype: str
@@ -57,7 +57,7 @@ class AudioGroup(object):
     def name(self, name):
         """Sets the name of this AudioGroup.
 
-        Name of the audio group
+        Name of the audio group (required)
 
         :param name: The name of this AudioGroup.
         :type: str
@@ -74,7 +74,7 @@ class AudioGroup(object):
     def priority(self):
         """Gets the priority of this AudioGroup.
 
-        Priority of the audio group
+        Priority of the audio group (required)
 
         :return: The priority of this AudioGroup.
         :rtype: int
@@ -85,7 +85,7 @@ class AudioGroup(object):
     def priority(self, priority):
         """Sets the priority of this AudioGroup.
 
-        Priority of the audio group
+        Priority of the audio group (required)
 
         :param priority: The priority of this AudioGroup.
         :type: int

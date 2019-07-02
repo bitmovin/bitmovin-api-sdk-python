@@ -77,7 +77,7 @@ class GenericS3Input(Input):
     def bucket_name(self):
         """Gets the bucket_name of this GenericS3Input.
 
-        Your generic S3 bucket name
+        Your generic S3 bucket name (required)
 
         :return: The bucket_name of this GenericS3Input.
         :rtype: str
@@ -88,7 +88,7 @@ class GenericS3Input(Input):
     def bucket_name(self, bucket_name):
         """Sets the bucket_name of this GenericS3Input.
 
-        Your generic S3 bucket name
+        Your generic S3 bucket name (required)
 
         :param bucket_name: The bucket_name of this GenericS3Input.
         :type: str
@@ -105,7 +105,7 @@ class GenericS3Input(Input):
     def host(self):
         """Gets the host of this GenericS3Input.
 
-        The generic S3 server hostname (or IP address)
+        The generic S3 server hostname (or IP address) (required)
 
         :return: The host of this GenericS3Input.
         :rtype: str
@@ -116,7 +116,7 @@ class GenericS3Input(Input):
     def host(self, host):
         """Sets the host of this GenericS3Input.
 
-        The generic S3 server hostname (or IP address)
+        The generic S3 server hostname (or IP address) (required)
 
         :param host: The host of this GenericS3Input.
         :type: str
@@ -217,7 +217,7 @@ class GenericS3Input(Input):
     def access_key(self):
         """Gets the access_key of this GenericS3Input.
 
-        Your generic S3 access key
+        Your generic S3 access key (required)
 
         :return: The access_key of this GenericS3Input.
         :rtype: str
@@ -228,7 +228,7 @@ class GenericS3Input(Input):
     def access_key(self, access_key):
         """Sets the access_key of this GenericS3Input.
 
-        Your generic S3 access key
+        Your generic S3 access key (required)
 
         :param access_key: The access_key of this GenericS3Input.
         :type: str
@@ -245,7 +245,7 @@ class GenericS3Input(Input):
     def secret_key(self):
         """Gets the secret_key of this GenericS3Input.
 
-        Your generic S3 secret key
+        Your generic S3 secret key (required)
 
         :return: The secret_key of this GenericS3Input.
         :rtype: str
@@ -256,7 +256,7 @@ class GenericS3Input(Input):
     def secret_key(self, secret_key):
         """Sets the secret_key of this GenericS3Input.
 
-        Your generic S3 secret key
+        Your generic S3 secret key (required)
 
         :param secret_key: The secret_key of this GenericS3Input.
         :type: str

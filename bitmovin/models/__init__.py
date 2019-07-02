@@ -81,6 +81,7 @@ from bitmovin.models.azure_output import AzureOutput
 from bitmovin.models.b_adapt import BAdapt
 from bitmovin.models.backup_srt_inputs import BackupSrtInputs
 from bitmovin.models.basic_media_info import BasicMediaInfo
+from bitmovin.models.bif import Bif
 from bitmovin.models.billable_encoding_feature_minutes import BillableEncodingFeatureMinutes
 from bitmovin.models.billable_encoding_minutes import BillableEncodingMinutes
 from bitmovin.models.billable_encoding_minutes_details import BillableEncodingMinutesDetails
@@ -99,6 +100,9 @@ from bitmovin.models.broadcast_ts_video_input_stream_configuration import Broadc
 from bitmovin.models.burn_in_subtitle_srt import BurnInSubtitleSrt
 from bitmovin.models.caption_character_encoding import CaptionCharacterEncoding
 from bitmovin.models.cea608708_subtitle_configuration import Cea608708SubtitleConfiguration
+from bitmovin.models.cea608_caption_input_stream import Cea608CaptionInputStream
+from bitmovin.models.cea608_channel_type import Cea608ChannelType
+from bitmovin.models.cea708_caption_input_stream import Cea708CaptionInputStream
 from bitmovin.models.cenc_drm import CencDrm
 from bitmovin.models.cenc_fair_play import CencFairPlay
 from bitmovin.models.cenc_marlin import CencMarlin
@@ -107,6 +111,7 @@ from bitmovin.models.cenc_widevine import CencWidevine
 from bitmovin.models.channel_layout import ChannelLayout
 from bitmovin.models.chroma_location import ChromaLocation
 from bitmovin.models.chunk_length_mode import ChunkLengthMode
+from bitmovin.models.chunked_text_muxing import ChunkedTextMuxing
 from bitmovin.models.clear_key_drm import ClearKeyDrm
 from bitmovin.models.closed_captions_media_info import ClosedCaptionsMediaInfo
 from bitmovin.models.cloud_region import CloudRegion
@@ -164,6 +169,7 @@ from bitmovin.models.domain import Domain
 from bitmovin.models.domain_list import DomainList
 from bitmovin.models.drm import Drm
 from bitmovin.models.drm_type import DrmType
+from bitmovin.models.dvb_teletext_input_stream import DvbTeletextInputStream
 from bitmovin.models.eac3_audio_configuration import Eac3AudioConfiguration
 from bitmovin.models.ebu_r128_single_pass_filter import EbuR128SinglePassFilter
 from bitmovin.models.email_notification import EmailNotification
@@ -185,6 +191,8 @@ from bitmovin.models.enhanced_watermark_filter import EnhancedWatermarkFilter
 from bitmovin.models.error_details import ErrorDetails
 from bitmovin.models.error_retry_hint import ErrorRetryHint
 from bitmovin.models.fair_play_drm import FairPlayDrm
+from bitmovin.models.file_input_stream import FileInputStream
+from bitmovin.models.file_input_stream_type import FileInputStreamType
 from bitmovin.models.filter import Filter
 from bitmovin.models.filter_type import FilterType
 from bitmovin.models.filter_type_response import FilterTypeResponse
@@ -296,6 +304,7 @@ from bitmovin.models.notification_states import NotificationStates
 from bitmovin.models.object_detection_bounding_box import ObjectDetectionBoundingBox
 from bitmovin.models.object_detection_configuration import ObjectDetectionConfiguration
 from bitmovin.models.object_detection_result import ObjectDetectionResult
+from bitmovin.models.object_detection_timestamp_result import ObjectDetectionTimestampResult
 from bitmovin.models.opus_audio_configuration import OpusAudioConfiguration
 from bitmovin.models.opus_channel_layout import OpusChannelLayout
 from bitmovin.models.or_conjunction import OrConjunction
@@ -424,6 +433,7 @@ from bitmovin.models.tcp_input import TcpInput
 from bitmovin.models.tenant import Tenant
 from bitmovin.models.text_filter import TextFilter
 from bitmovin.models.text_filter_font import TextFilterFont
+from bitmovin.models.text_muxing import TextMuxing
 from bitmovin.models.thumbnail import Thumbnail
 from bitmovin.models.thumbnail_unit import ThumbnailUnit
 from bitmovin.models.time_based_trimming_input_stream import TimeBasedTrimmingInputStream
@@ -433,7 +443,13 @@ from bitmovin.models.timecode_track_trimming_input_stream import TimecodeTrackTr
 from bitmovin.models.transfer_version import TransferVersion
 from bitmovin.models.transform_skip_mode import TransformSkipMode
 from bitmovin.models.trimming import Trimming
+from bitmovin.models.ts_audio_stream_configuration import TsAudioStreamConfiguration
 from bitmovin.models.ts_muxing import TsMuxing
+from bitmovin.models.ts_muxing_configuration import TsMuxingConfiguration
+from bitmovin.models.ts_program_clock_reference_configuration import TsProgramClockReferenceConfiguration
+from bitmovin.models.ts_program_map_table_configuration import TsProgramMapTableConfiguration
+from bitmovin.models.ts_stream_configuration import TsStreamConfiguration
+from bitmovin.models.ts_video_stream_configuration import TsVideoStreamConfiguration
 from bitmovin.models.ttml_embed import TtmlEmbed
 from bitmovin.models.tu_inter_depth import TuInterDepth
 from bitmovin.models.tu_intra_depth import TuIntraDepth
@@ -462,6 +478,7 @@ from bitmovin.models.vp9_quality import Vp9Quality
 from bitmovin.models.vp9_video_configuration import Vp9VideoConfiguration
 from bitmovin.models.vtt_media_info import VttMediaInfo
 from bitmovin.models.watermark_filter import WatermarkFilter
+from bitmovin.models.web_vtt_configuration import WebVttConfiguration
 from bitmovin.models.web_vtt_sidecar_file import WebVttSidecarFile
 from bitmovin.models.web_vtt_sidecar_file_segmentation import WebVttSidecarFileSegmentation
 from bitmovin.models.webhook import Webhook

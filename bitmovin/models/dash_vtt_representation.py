@@ -46,7 +46,7 @@ class DashVttRepresentation(BitmovinResource):
     def vtt_url(self):
         """Gets the vtt_url of this DashVttRepresentation.
 
-        URL of the referenced VTT file
+        URL of the referenced VTT file (required)
 
         :return: The vtt_url of this DashVttRepresentation.
         :rtype: str
@@ -57,7 +57,7 @@ class DashVttRepresentation(BitmovinResource):
     def vtt_url(self, vtt_url):
         """Sets the vtt_url of this DashVttRepresentation.
 
-        URL of the referenced VTT file
+        URL of the referenced VTT file (required)
 
         :param vtt_url: The vtt_url of this DashVttRepresentation.
         :type: str

@@ -56,7 +56,7 @@ class SmoothManifestContentProtection(BitmovinResource):
     def encoding_id(self):
         """Gets the encoding_id of this SmoothManifestContentProtection.
 
-        Id of the encoding.
+        Id of the encoding. (required)
 
         :return: The encoding_id of this SmoothManifestContentProtection.
         :rtype: str
@@ -67,7 +67,7 @@ class SmoothManifestContentProtection(BitmovinResource):
     def encoding_id(self, encoding_id):
         """Sets the encoding_id of this SmoothManifestContentProtection.
 
-        Id of the encoding.
+        Id of the encoding. (required)
 
         :param encoding_id: The encoding_id of this SmoothManifestContentProtection.
         :type: str
@@ -84,7 +84,7 @@ class SmoothManifestContentProtection(BitmovinResource):
     def muxing_id(self):
         """Gets the muxing_id of this SmoothManifestContentProtection.
 
-        Id of the muxing.
+        Id of the muxing. (required)
 
         :return: The muxing_id of this SmoothManifestContentProtection.
         :rtype: str
@@ -95,7 +95,7 @@ class SmoothManifestContentProtection(BitmovinResource):
     def muxing_id(self, muxing_id):
         """Sets the muxing_id of this SmoothManifestContentProtection.
 
-        Id of the muxing.
+        Id of the muxing. (required)
 
         :param muxing_id: The muxing_id of this SmoothManifestContentProtection.
         :type: str
@@ -112,7 +112,7 @@ class SmoothManifestContentProtection(BitmovinResource):
     def drm_id(self):
         """Gets the drm_id of this SmoothManifestContentProtection.
 
-        Id of the drm.
+        Id of the drm. (required)
 
         :return: The drm_id of this SmoothManifestContentProtection.
         :rtype: str
@@ -123,7 +123,7 @@ class SmoothManifestContentProtection(BitmovinResource):
     def drm_id(self, drm_id):
         """Sets the drm_id of this SmoothManifestContentProtection.
 
-        Id of the drm.
+        Id of the drm. (required)
 
         :param drm_id: The drm_id of this SmoothManifestContentProtection.
         :type: str

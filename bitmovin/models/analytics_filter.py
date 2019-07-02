@@ -105,7 +105,7 @@ class AnalyticsFilter(object):
     def value(self):
         """Gets the value of this AnalyticsFilter.
 
-        The value to compare to the property specified by the name
+        The value to compare to the property specified by the name (required)
 
         :return: The value of this AnalyticsFilter.
         :rtype: str
@@ -116,7 +116,7 @@ class AnalyticsFilter(object):
     def value(self, value):
         """Sets the value of this AnalyticsFilter.
 
-        The value to compare to the property specified by the name
+        The value to compare to the property specified by the name (required)
 
         :param value: The value of this AnalyticsFilter.
         :type: str

@@ -47,7 +47,7 @@ class RawId3Tag(Id3Tag):
     def bytes(self):
         """Gets the bytes of this RawId3Tag.
 
-        Base64 Encoded Data
+        Base64 Encoded Data (required)
 
         :return: The bytes of this RawId3Tag.
         :rtype: str
@@ -58,7 +58,7 @@ class RawId3Tag(Id3Tag):
     def bytes(self, bytes):
         """Sets the bytes of this RawId3Tag.
 
-        Base64 Encoded Data
+        Base64 Encoded Data (required)
 
         :param bytes: The bytes of this RawId3Tag.
         :type: str

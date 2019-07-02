@@ -77,7 +77,7 @@ class FtpOutput(Output):
     def host(self):
         """Gets the host of this FtpOutput.
 
-        Host URL or IP of the FTP server
+        Host URL or IP of the FTP server (required)
 
         :return: The host of this FtpOutput.
         :rtype: str
@@ -88,7 +88,7 @@ class FtpOutput(Output):
     def host(self, host):
         """Sets the host of this FtpOutput.
 
-        Host URL or IP of the FTP server
+        Host URL or IP of the FTP server (required)
 
         :param host: The host of this FtpOutput.
         :type: str

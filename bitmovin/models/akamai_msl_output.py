@@ -63,7 +63,7 @@ class AkamaiMslOutput(Output):
     def stream_id(self):
         """Gets the stream_id of this AkamaiMslOutput.
 
-        The Akamai stream ID
+        The Akamai stream ID (required)
 
         :return: The stream_id of this AkamaiMslOutput.
         :rtype: int
@@ -74,7 +74,7 @@ class AkamaiMslOutput(Output):
     def stream_id(self, stream_id):
         """Sets the stream_id of this AkamaiMslOutput.
 
-        The Akamai stream ID
+        The Akamai stream ID (required)
 
         :param stream_id: The stream_id of this AkamaiMslOutput.
         :type: int
@@ -91,7 +91,7 @@ class AkamaiMslOutput(Output):
     def event_name(self):
         """Gets the event_name of this AkamaiMslOutput.
 
-        The Akamai event name
+        The Akamai event name (required)
 
         :return: The event_name of this AkamaiMslOutput.
         :rtype: str
@@ -102,7 +102,7 @@ class AkamaiMslOutput(Output):
     def event_name(self, event_name):
         """Sets the event_name of this AkamaiMslOutput.
 
-        The Akamai event name
+        The Akamai event name (required)
 
         :param event_name: The event_name of this AkamaiMslOutput.
         :type: str

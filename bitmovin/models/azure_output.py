@@ -56,7 +56,7 @@ class AzureOutput(Output):
     def account_name(self):
         """Gets the account_name of this AzureOutput.
 
-        Azure Account Name
+        Azure Account Name (required)
 
         :return: The account_name of this AzureOutput.
         :rtype: str
@@ -67,7 +67,7 @@ class AzureOutput(Output):
     def account_name(self, account_name):
         """Sets the account_name of this AzureOutput.
 
-        Azure Account Name
+        Azure Account Name (required)
 
         :param account_name: The account_name of this AzureOutput.
         :type: str
@@ -84,7 +84,7 @@ class AzureOutput(Output):
     def account_key(self):
         """Gets the account_key of this AzureOutput.
 
-        Azure Account Key
+        Azure Account Key (required)
 
         :return: The account_key of this AzureOutput.
         :rtype: str
@@ -95,7 +95,7 @@ class AzureOutput(Output):
     def account_key(self, account_key):
         """Sets the account_key of this AzureOutput.
 
-        Azure Account Key
+        Azure Account Key (required)
 
         :param account_key: The account_key of this AzureOutput.
         :type: str
@@ -112,7 +112,7 @@ class AzureOutput(Output):
     def container(self):
         """Gets the container of this AzureOutput.
 
-        Name of the bucket
+        Name of the bucket (required)
 
         :return: The container of this AzureOutput.
         :rtype: str
@@ -123,7 +123,7 @@ class AzureOutput(Output):
     def container(self, container):
         """Sets the container of this AzureOutput.
 
-        Name of the bucket
+        Name of the bucket (required)
 
         :param container: The container of this AzureOutput.
         :type: str

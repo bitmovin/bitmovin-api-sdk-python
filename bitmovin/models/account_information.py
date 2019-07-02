@@ -71,7 +71,7 @@ class AccountInformation(BitmovinResource):
     def email(self):
         """Gets the email of this AccountInformation.
 
-        Email address of the account.
+        Email address of the account. (required)
 
         :return: The email of this AccountInformation.
         :rtype: str
@@ -82,7 +82,7 @@ class AccountInformation(BitmovinResource):
     def email(self, email):
         """Sets the email of this AccountInformation.
 
-        Email address of the account.
+        Email address of the account. (required)
 
         :param email: The email of this AccountInformation.
         :type: str
@@ -99,7 +99,7 @@ class AccountInformation(BitmovinResource):
     def api_keys(self):
         """Gets the api_keys of this AccountInformation.
 
-        ApiKeys associated with the account
+        ApiKeys associated with the account (required)
 
         :return: The api_keys of this AccountInformation.
         :rtype: list[AccountApiKey]
@@ -110,7 +110,7 @@ class AccountInformation(BitmovinResource):
     def api_keys(self, api_keys):
         """Sets the api_keys of this AccountInformation.
 
-        ApiKeys associated with the account
+        ApiKeys associated with the account (required)
 
         :param api_keys: The api_keys of this AccountInformation.
         :type: list[AccountApiKey]

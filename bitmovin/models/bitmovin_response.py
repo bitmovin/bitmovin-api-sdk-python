@@ -41,7 +41,7 @@ class BitmovinResponse(object):
     def id(self):
         """Gets the id of this BitmovinResponse.
 
-        Id of the resource
+        Id of the resource (required)
 
         :return: The id of this BitmovinResponse.
         :rtype: str
@@ -52,7 +52,7 @@ class BitmovinResponse(object):
     def id(self, id):
         """Sets the id of this BitmovinResponse.
 
-        Id of the resource
+        Id of the resource (required)
 
         :param id: The id of this BitmovinResponse.
         :type: str

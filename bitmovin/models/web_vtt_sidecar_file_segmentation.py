@@ -41,7 +41,7 @@ class WebVttSidecarFileSegmentation(object):
     def segment_length(self):
         """Gets the segment_length of this WebVttSidecarFileSegmentation.
 
-        The length of the WebVTT fragments in seconds
+        The length of the WebVTT fragments in seconds (required)
 
         :return: The segment_length of this WebVttSidecarFileSegmentation.
         :rtype: float
@@ -52,7 +52,7 @@ class WebVttSidecarFileSegmentation(object):
     def segment_length(self, segment_length):
         """Sets the segment_length of this WebVttSidecarFileSegmentation.
 
-        The length of the WebVTT fragments in seconds
+        The length of the WebVTT fragments in seconds (required)
 
         :param segment_length: The segment_length of this WebVttSidecarFileSegmentation.
         :type: float

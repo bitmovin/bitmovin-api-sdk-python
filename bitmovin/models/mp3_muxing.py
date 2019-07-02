@@ -47,7 +47,7 @@ class Mp3Muxing(Muxing):
     def filename(self):
         """Gets the filename of this Mp3Muxing.
 
-        Name of the new file
+        Name of the new file (required)
 
         :return: The filename of this Mp3Muxing.
         :rtype: str
@@ -58,7 +58,7 @@ class Mp3Muxing(Muxing):
     def filename(self, filename):
         """Sets the filename of this Mp3Muxing.
 
-        Name of the new file
+        Name of the new file (required)
 
         :param filename: The filename of this Mp3Muxing.
         :type: str

@@ -76,7 +76,7 @@ class DailyStatistics(object):
     def date(self):
         """Gets the date of this DailyStatistics.
 
-        Date for the shown data. Format: yyyy-MM-dd
+        Date for the shown data. Format: yyyy-MM-dd (required)
 
         :return: The date of this DailyStatistics.
         :rtype: date
@@ -87,7 +87,7 @@ class DailyStatistics(object):
     def date(self, date):
         """Sets the date of this DailyStatistics.
 
-        Date for the shown data. Format: yyyy-MM-dd
+        Date for the shown data. Format: yyyy-MM-dd (required)
 
         :param date: The date of this DailyStatistics.
         :type: date
@@ -104,7 +104,7 @@ class DailyStatistics(object):
     def bytes_encoded(self):
         """Gets the bytes_encoded of this DailyStatistics.
 
-        Bytes encoded.
+        Bytes encoded. (required)
 
         :return: The bytes_encoded of this DailyStatistics.
         :rtype: int
@@ -115,7 +115,7 @@ class DailyStatistics(object):
     def bytes_encoded(self, bytes_encoded):
         """Sets the bytes_encoded of this DailyStatistics.
 
-        Bytes encoded.
+        Bytes encoded. (required)
 
         :param bytes_encoded: The bytes_encoded of this DailyStatistics.
         :type: int
@@ -132,7 +132,7 @@ class DailyStatistics(object):
     def time_encoded(self):
         """Gets the time_encoded of this DailyStatistics.
 
-        Time in seconds encoded for this day.
+        Time in seconds encoded for this day. (required)
 
         :return: The time_encoded of this DailyStatistics.
         :rtype: int
@@ -143,7 +143,7 @@ class DailyStatistics(object):
     def time_encoded(self, time_encoded):
         """Sets the time_encoded of this DailyStatistics.
 
-        Time in seconds encoded for this day.
+        Time in seconds encoded for this day. (required)
 
         :param time_encoded: The time_encoded of this DailyStatistics.
         :type: int

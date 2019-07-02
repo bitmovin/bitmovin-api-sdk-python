@@ -68,7 +68,7 @@ class StatisticsPerMuxing(object):
     def stream_id(self):
         """Gets the stream_id of this StatisticsPerMuxing.
 
-        ID of the stream
+        ID of the stream (required)
 
         :return: The stream_id of this StatisticsPerMuxing.
         :rtype: str
@@ -79,7 +79,7 @@ class StatisticsPerMuxing(object):
     def stream_id(self, stream_id):
         """Sets the stream_id of this StatisticsPerMuxing.
 
-        ID of the stream
+        ID of the stream (required)
 
         :param stream_id: The stream_id of this StatisticsPerMuxing.
         :type: str
@@ -96,7 +96,7 @@ class StatisticsPerMuxing(object):
     def muxing_id(self):
         """Gets the muxing_id of this StatisticsPerMuxing.
 
-        ID of the muxing
+        ID of the muxing (required)
 
         :return: The muxing_id of this StatisticsPerMuxing.
         :rtype: str
@@ -107,7 +107,7 @@ class StatisticsPerMuxing(object):
     def muxing_id(self, muxing_id):
         """Sets the muxing_id of this StatisticsPerMuxing.
 
-        ID of the muxing
+        ID of the muxing (required)
 
         :param muxing_id: The muxing_id of this StatisticsPerMuxing.
         :type: str
@@ -124,7 +124,7 @@ class StatisticsPerMuxing(object):
     def multiplicator(self):
         """Gets the multiplicator of this StatisticsPerMuxing.
 
-        Multiplier for the encoded minutes. Depends on muxing type.
+        Multiplier for the encoded minutes. Depends on muxing type. (required)
 
         :return: The multiplicator of this StatisticsPerMuxing.
         :rtype: float
@@ -135,7 +135,7 @@ class StatisticsPerMuxing(object):
     def multiplicator(self, multiplicator):
         """Sets the multiplicator of this StatisticsPerMuxing.
 
-        Multiplier for the encoded minutes. Depends on muxing type.
+        Multiplier for the encoded minutes. Depends on muxing type. (required)
 
         :param multiplicator: The multiplicator of this StatisticsPerMuxing.
         :type: float
@@ -152,7 +152,7 @@ class StatisticsPerMuxing(object):
     def encoded_bytes(self):
         """Gets the encoded_bytes of this StatisticsPerMuxing.
 
-        Encoded bytes.
+        Encoded bytes. (required)
 
         :return: The encoded_bytes of this StatisticsPerMuxing.
         :rtype: int
@@ -163,7 +163,7 @@ class StatisticsPerMuxing(object):
     def encoded_bytes(self, encoded_bytes):
         """Sets the encoded_bytes of this StatisticsPerMuxing.
 
-        Encoded bytes.
+        Encoded bytes. (required)
 
         :param encoded_bytes: The encoded_bytes of this StatisticsPerMuxing.
         :type: int
@@ -180,7 +180,7 @@ class StatisticsPerMuxing(object):
     def billable_minutes(self):
         """Gets the billable_minutes of this StatisticsPerMuxing.
 
-        Resulting minutes you will be charged for.
+        Resulting minutes you will be charged for. (required)
 
         :return: The billable_minutes of this StatisticsPerMuxing.
         :rtype: float
@@ -191,7 +191,7 @@ class StatisticsPerMuxing(object):
     def billable_minutes(self, billable_minutes):
         """Sets the billable_minutes of this StatisticsPerMuxing.
 
-        Resulting minutes you will be charged for.
+        Resulting minutes you will be charged for. (required)
 
         :param billable_minutes: The billable_minutes of this StatisticsPerMuxing.
         :type: float

@@ -57,7 +57,7 @@ class Acl(BitmovinResource):
     def resource(self):
         """Gets the resource of this Acl.
 
-        Resource to define the permission for.
+        Resource to define the permission for. (required)
 
         :return: The resource of this Acl.
         :rtype: str
@@ -68,7 +68,7 @@ class Acl(BitmovinResource):
     def resource(self, resource):
         """Sets the resource of this Acl.
 
-        Resource to define the permission for.
+        Resource to define the permission for. (required)
 
         :param resource: The resource of this Acl.
         :type: str
@@ -111,7 +111,7 @@ class Acl(BitmovinResource):
     def permissions(self):
         """Gets the permissions of this Acl.
 
-        Permissions to assign.
+        Permissions to assign. (required)
 
         :return: The permissions of this Acl.
         :rtype: list[Permission]
@@ -122,7 +122,7 @@ class Acl(BitmovinResource):
     def permissions(self, permissions):
         """Sets the permissions of this Acl.
 
-        Permissions to assign.
+        Permissions to assign. (required)
 
         :param permissions: The permissions of this Acl.
         :type: list[Permission]

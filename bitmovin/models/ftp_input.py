@@ -71,7 +71,7 @@ class FtpInput(Input):
     def host(self):
         """Gets the host of this FtpInput.
 
-        Host URL or IP of the FTP server
+        Host URL or IP of the FTP server (required)
 
         :return: The host of this FtpInput.
         :rtype: str
@@ -82,7 +82,7 @@ class FtpInput(Input):
     def host(self, host):
         """Sets the host of this FtpInput.
 
-        Host URL or IP of the FTP server
+        Host URL or IP of the FTP server (required)
 
         :param host: The host of this FtpInput.
         :type: str

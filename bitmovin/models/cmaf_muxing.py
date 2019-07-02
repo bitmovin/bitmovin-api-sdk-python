@@ -77,7 +77,7 @@ class CmafMuxing(Muxing):
     def segment_length(self):
         """Gets the segment_length of this CmafMuxing.
 
-        Length of the fragments in seconds
+        Length of the fragments in seconds (required)
 
         :return: The segment_length of this CmafMuxing.
         :rtype: float
@@ -88,7 +88,7 @@ class CmafMuxing(Muxing):
     def segment_length(self, segment_length):
         """Sets the segment_length of this CmafMuxing.
 
-        Length of the fragments in seconds
+        Length of the fragments in seconds (required)
 
         :param segment_length: The segment_length of this CmafMuxing.
         :type: float

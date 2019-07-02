@@ -48,7 +48,7 @@ class DashCmafDrmRepresentation(DashCmafRepresentation):
     def drm_id(self):
         """Gets the drm_id of this DashCmafDrmRepresentation.
 
-        DRM Id
+        DRM Id (required)
 
         :return: The drm_id of this DashCmafDrmRepresentation.
         :rtype: str
@@ -59,7 +59,7 @@ class DashCmafDrmRepresentation(DashCmafRepresentation):
     def drm_id(self, drm_id):
         """Sets the drm_id of this DashCmafDrmRepresentation.
 
-        DRM Id
+        DRM Id (required)
 
         :param drm_id: The drm_id of this DashCmafDrmRepresentation.
         :type: str

@@ -59,7 +59,7 @@ class ResponseEnvelope(object):
     def request_id(self):
         """Gets the request_id of this ResponseEnvelope.
 
-        Unique correlation id
+        Unique correlation id (required)
 
         :return: The request_id of this ResponseEnvelope.
         :rtype: str
@@ -70,7 +70,7 @@ class ResponseEnvelope(object):
     def request_id(self, request_id):
         """Sets the request_id of this ResponseEnvelope.
 
-        Unique correlation id
+        Unique correlation id (required)
 
         :param request_id: The request_id of this ResponseEnvelope.
         :type: str
@@ -87,7 +87,7 @@ class ResponseEnvelope(object):
     def status(self):
         """Gets the status of this ResponseEnvelope.
 
-        Response status information
+        Response status information (required)
 
         :return: The status of this ResponseEnvelope.
         :rtype: ResponseStatus
@@ -98,7 +98,7 @@ class ResponseEnvelope(object):
     def status(self, status):
         """Sets the status of this ResponseEnvelope.
 
-        Response status information
+        Response status information (required)
 
         :param status: The status of this ResponseEnvelope.
         :type: ResponseStatus
@@ -115,7 +115,7 @@ class ResponseEnvelope(object):
     def data(self):
         """Gets the data of this ResponseEnvelope.
 
-        Response information
+        Response information (required)
 
         :return: The data of this ResponseEnvelope.
         :rtype: ResultWrapper
@@ -126,7 +126,7 @@ class ResponseEnvelope(object):
     def data(self, data):
         """Sets the data of this ResponseEnvelope.
 
-        Response information
+        Response information (required)
 
         :param data: The data of this ResponseEnvelope.
         :type: ResultWrapper

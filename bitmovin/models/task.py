@@ -98,7 +98,7 @@ class Task(BitmovinResponse):
     def status(self):
         """Gets the status of this Task.
 
-        Current status
+        Current status (required)
 
         :return: The status of this Task.
         :rtype: Status
@@ -109,7 +109,7 @@ class Task(BitmovinResponse):
     def status(self, status):
         """Sets the status of this Task.
 
-        Current status
+        Current status (required)
 
         :param status: The status of this Task.
         :type: Status

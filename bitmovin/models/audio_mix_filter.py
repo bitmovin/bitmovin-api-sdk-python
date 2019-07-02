@@ -52,7 +52,7 @@ class AudioMixFilter(Filter):
     def channel_layout(self):
         """Gets the channel_layout of this AudioMixFilter.
 
-        Channel layout of the audio codec configuration
+        Channel layout of the audio codec configuration (required)
 
         :return: The channel_layout of this AudioMixFilter.
         :rtype: AudioMixChannelLayout
@@ -63,7 +63,7 @@ class AudioMixFilter(Filter):
     def channel_layout(self, channel_layout):
         """Sets the channel_layout of this AudioMixFilter.
 
-        Channel layout of the audio codec configuration
+        Channel layout of the audio codec configuration (required)
 
         :param channel_layout: The channel_layout of this AudioMixFilter.
         :type: AudioMixChannelLayout
@@ -80,7 +80,7 @@ class AudioMixFilter(Filter):
     def audio_mix_channels(self):
         """Gets the audio_mix_channels of this AudioMixFilter.
 
-        List of mixed channels that matches the channel layout
+        List of mixed channels that matches the channel layout (required)
 
         :return: The audio_mix_channels of this AudioMixFilter.
         :rtype: list[AudioMixChannel]
@@ -91,7 +91,7 @@ class AudioMixFilter(Filter):
     def audio_mix_channels(self, audio_mix_channels):
         """Sets the audio_mix_channels of this AudioMixFilter.
 
-        List of mixed channels that matches the channel layout
+        List of mixed channels that matches the channel layout (required)
 
         :param audio_mix_channels: The audio_mix_channels of this AudioMixFilter.
         :type: list[AudioMixChannel]

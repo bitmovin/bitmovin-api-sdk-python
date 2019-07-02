@@ -58,7 +58,7 @@ class HlsManifest(Manifest):
     def manifest_name(self):
         """Gets the manifest_name of this HlsManifest.
 
-        The filename of your manifest
+        The filename of your manifest (required)
 
         :return: The manifest_name of this HlsManifest.
         :rtype: str
@@ -69,7 +69,7 @@ class HlsManifest(Manifest):
     def manifest_name(self, manifest_name):
         """Sets the manifest_name of this HlsManifest.
 
-        The filename of your manifest
+        The filename of your manifest (required)
 
         :param manifest_name: The manifest_name of this HlsManifest.
         :type: str

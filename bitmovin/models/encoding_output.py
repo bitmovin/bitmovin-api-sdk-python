@@ -51,7 +51,7 @@ class EncodingOutput(object):
     def output_id(self):
         """Gets the output_id of this EncodingOutput.
 
-        Id of the corresponding output
+        Id of the corresponding output (required)
 
         :return: The output_id of this EncodingOutput.
         :rtype: str
@@ -62,7 +62,7 @@ class EncodingOutput(object):
     def output_id(self, output_id):
         """Sets the output_id of this EncodingOutput.
 
-        Id of the corresponding output
+        Id of the corresponding output (required)
 
         :param output_id: The output_id of this EncodingOutput.
         :type: str
@@ -79,7 +79,7 @@ class EncodingOutput(object):
     def output_path(self):
         """Gets the output_path of this EncodingOutput.
 
-        Subdirectory where to save the files to
+        Subdirectory where to save the files to (required)
 
         :return: The output_path of this EncodingOutput.
         :rtype: str
@@ -90,7 +90,7 @@ class EncodingOutput(object):
     def output_path(self, output_path):
         """Sets the output_path of this EncodingOutput.
 
-        Subdirectory where to save the files to
+        Subdirectory where to save the files to (required)
 
         :param output_path: The output_path of this EncodingOutput.
         :type: str

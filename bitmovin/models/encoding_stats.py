@@ -124,7 +124,7 @@ class EncodingStats(object):
     def encoding_id(self):
         """Gets the encoding_id of this EncodingStats.
 
-        The id of the encoding
+        The id of the encoding (required)
 
         :return: The encoding_id of this EncodingStats.
         :rtype: str
@@ -135,7 +135,7 @@ class EncodingStats(object):
     def encoding_id(self, encoding_id):
         """Sets the encoding_id of this EncodingStats.
 
-        The id of the encoding
+        The id of the encoding (required)
 
         :param encoding_id: The encoding_id of this EncodingStats.
         :type: str
@@ -292,7 +292,7 @@ class EncodingStats(object):
     def billable_transmuxing_minutes(self):
         """Gets the billable_transmuxing_minutes of this EncodingStats.
 
-        Billable transmuxing minutes
+        Billable transmuxing minutes (required)
 
         :return: The billable_transmuxing_minutes of this EncodingStats.
         :rtype: float
@@ -303,7 +303,7 @@ class EncodingStats(object):
     def billable_transmuxing_minutes(self, billable_transmuxing_minutes):
         """Sets the billable_transmuxing_minutes of this EncodingStats.
 
-        Billable transmuxing minutes
+        Billable transmuxing minutes (required)
 
         :param billable_transmuxing_minutes: The billable_transmuxing_minutes of this EncodingStats.
         :type: float
@@ -348,7 +348,7 @@ class EncodingStats(object):
     def streams(self):
         """Gets the streams of this EncodingStats.
 
-        Detailed statistics per stream
+        Detailed statistics per stream (required)
 
         :return: The streams of this EncodingStats.
         :rtype: list[StatisticsPerStream]
@@ -359,7 +359,7 @@ class EncodingStats(object):
     def streams(self, streams):
         """Sets the streams of this EncodingStats.
 
-        Detailed statistics per stream
+        Detailed statistics per stream (required)
 
         :param streams: The streams of this EncodingStats.
         :type: list[StatisticsPerStream]
@@ -376,7 +376,7 @@ class EncodingStats(object):
     def muxings(self):
         """Gets the muxings of this EncodingStats.
 
-        Detailed statistics per muxing
+        Detailed statistics per muxing (required)
 
         :return: The muxings of this EncodingStats.
         :rtype: list[StatisticsPerMuxing]
@@ -387,7 +387,7 @@ class EncodingStats(object):
     def muxings(self, muxings):
         """Sets the muxings of this EncodingStats.
 
-        Detailed statistics per muxing
+        Detailed statistics per muxing (required)
 
         :param muxings: The muxings of this EncodingStats.
         :type: list[StatisticsPerMuxing]
