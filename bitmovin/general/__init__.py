@@ -1,2 +1,0 @@
-from bitmovin.general.general_api import GeneralApi
-from bitmovin.general.errorDefinitions.error_definitions_api import ErrorDefinitionsApi

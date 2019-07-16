@@ -1,3 +1,0 @@
-from bitmovin.encoding.configurations.video.av1.av1_api import Av1Api
-from bitmovin.encoding.configurations.video.av1.customdata.customdata_api import CustomdataApi
-from bitmovin.encoding.configurations.video.av1.av1_video_configuration_list_query_params import Av1VideoConfigurationListQueryParams

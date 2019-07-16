@@ -1,2 +1,0 @@
-from bitmovin.encoding.encodings.streams.qc.psnr.psnr_api import PsnrApi
-from bitmovin.encoding.encodings.streams.qc.psnr.psnr_quality_metric_list_query_params import PsnrQualityMetricListQueryParams

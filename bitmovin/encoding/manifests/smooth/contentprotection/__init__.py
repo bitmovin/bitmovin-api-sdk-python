@@ -1,2 +1,0 @@
-from bitmovin.encoding.manifests.smooth.contentprotection.contentprotection_api import ContentprotectionApi
-from bitmovin.encoding.manifests.smooth.contentprotection.smooth_manifest_content_protection_list_query_params import SmoothManifestContentProtectionListQueryParams

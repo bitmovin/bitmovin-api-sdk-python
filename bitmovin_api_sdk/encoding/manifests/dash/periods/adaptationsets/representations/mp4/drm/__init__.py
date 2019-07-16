@@ -1,0 +1,2 @@
+from bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.mp4.drm.drm_api import DrmApi
+from bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.mp4.drm.dash_mp4_drm_representation_list_query_params import DashMp4DrmRepresentationListQueryParams

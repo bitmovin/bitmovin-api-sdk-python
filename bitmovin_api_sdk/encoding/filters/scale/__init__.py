@@ -1,0 +1,3 @@
+from bitmovin_api_sdk.encoding.filters.scale.scale_api import ScaleApi
+from bitmovin_api_sdk.encoding.filters.scale.customdata.customdata_api import CustomdataApi
+from bitmovin_api_sdk.encoding.filters.scale.scale_filter_list_query_params import ScaleFilterListQueryParams

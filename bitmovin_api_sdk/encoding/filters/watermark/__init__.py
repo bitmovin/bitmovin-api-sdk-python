@@ -1,0 +1,3 @@
+from bitmovin_api_sdk.encoding.filters.watermark.watermark_api import WatermarkApi
+from bitmovin_api_sdk.encoding.filters.watermark.customdata.customdata_api import CustomdataApi
+from bitmovin_api_sdk.encoding.filters.watermark.watermark_filter_list_query_params import WatermarkFilterListQueryParams

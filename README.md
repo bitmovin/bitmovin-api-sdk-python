@@ -39,7 +39,7 @@ python3 setup.py install
 ## Initialization
 
 ```python
-import bitmovin.bitmovin_api import BitmovinApi
+import bitmovin_api_sdk.bitmovin_api import BitmovinApi
 
 
 bitmovinApi = BitmovinApi(api_key='<YOUR_API_KEY>')

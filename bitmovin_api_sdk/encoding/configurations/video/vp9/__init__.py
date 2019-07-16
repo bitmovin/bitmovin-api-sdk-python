@@ -1,0 +1,3 @@
+from bitmovin_api_sdk.encoding.configurations.video.vp9.vp9_api import Vp9Api
+from bitmovin_api_sdk.encoding.configurations.video.vp9.customdata.customdata_api import CustomdataApi
+from bitmovin_api_sdk.encoding.configurations.video.vp9.vp9_video_configuration_list_query_params import Vp9VideoConfigurationListQueryParams
