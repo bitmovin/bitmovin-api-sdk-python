@@ -1,7 +1,7 @@
 # coding: utf-8
 
 from enum import Enum
-from six import string_types
+from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
 from bitmovin_api_sdk.models.broadcast_ts_muxing_configuration import BroadcastTsMuxingConfiguration
 from bitmovin_api_sdk.models.internal_chunk_length import InternalChunkLength
@@ -197,9 +197,9 @@ class BroadcastTsMuxing(Muxing):
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}
+
         if hasattr(super(BroadcastTsMuxing, self), "to_dict"):
             result = super(BroadcastTsMuxing, self).to_dict()
-
         for attr, _ in six.iteritems(self.openapi_types):
             value = getattr(self, attr)
             if isinstance(value, list):

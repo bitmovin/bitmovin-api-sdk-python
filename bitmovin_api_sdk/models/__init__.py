@@ -254,6 +254,9 @@ from bitmovin_api_sdk.models.input_stream_type import InputStreamType
 from bitmovin_api_sdk.models.input_stream_type_response import InputStreamTypeResponse
 from bitmovin_api_sdk.models.input_type import InputType
 from bitmovin_api_sdk.models.input_type_response import InputTypeResponse
+from bitmovin_api_sdk.models.insertable_content import InsertableContent
+from bitmovin_api_sdk.models.insertable_content_input import InsertableContentInput
+from bitmovin_api_sdk.models.insertable_content_status import InsertableContentStatus
 from bitmovin_api_sdk.models.interlace_filter import InterlaceFilter
 from bitmovin_api_sdk.models.interlace_mode import InterlaceMode
 from bitmovin_api_sdk.models.internal_chunk_length import InternalChunkLength
@@ -384,6 +387,8 @@ from bitmovin_api_sdk.models.s3_signature_version import S3SignatureVersion
 from bitmovin_api_sdk.models.scale_filter import ScaleFilter
 from bitmovin_api_sdk.models.scaling_algorithm import ScalingAlgorithm
 from bitmovin_api_sdk.models.scc_caption import SccCaption
+from bitmovin_api_sdk.models.scheduled_content_insertion import ScheduledContentInsertion
+from bitmovin_api_sdk.models.scheduled_content_insertion_status import ScheduledContentInsertionStatus
 from bitmovin_api_sdk.models.scheduling import Scheduling
 from bitmovin_api_sdk.models.segmented_raw_muxing import SegmentedRawMuxing
 from bitmovin_api_sdk.models.segments_media_info import SegmentsMediaInfo

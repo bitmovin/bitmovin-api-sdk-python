@@ -7,7 +7,7 @@ from bitmovin_api_sdk.common.poscheck import poscheck_except
 from bitmovin_api_sdk.models.email_notification_with_stream_conditions import EmailNotificationWithStreamConditions
 from bitmovin_api_sdk.models.response_envelope import ResponseEnvelope
 from bitmovin_api_sdk.models.response_error import ResponseError
-from bitmovin_api_sdk.notifications.emails.encoding.encodings.liveInputStreamChanged.live_input_stream_changed_api import LiveInputStreamChangedApi
+from bitmovin_api_sdk.notifications.emails.encoding.encodings.live_input_stream_changed.live_input_stream_changed_api import LiveInputStreamChangedApi
 from bitmovin_api_sdk.notifications.emails.encoding.encodings.error.error_api import ErrorApi
 from bitmovin_api_sdk.notifications.emails.encoding.encodings.email_notification_with_stream_conditions_list_query_params import EmailNotificationWithStreamConditionsListQueryParams
 
@@ -24,7 +24,7 @@ class EncodingsApi(BaseApi):
             logger=logger
         )
 
-        self.liveInputStreamChanged = LiveInputStreamChangedApi(
+        self.live_input_stream_changed = LiveInputStreamChangedApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,

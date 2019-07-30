@@ -8,14 +8,14 @@ from bitmovin_api_sdk.models.filter import Filter
 from bitmovin_api_sdk.models.response_envelope import ResponseEnvelope
 from bitmovin_api_sdk.models.response_error import ResponseError
 from bitmovin_api_sdk.encoding.filters.watermark.watermark_api import WatermarkApi
-from bitmovin_api_sdk.encoding.filters.audioVolume.audio_volume_api import AudioVolumeApi
-from bitmovin_api_sdk.encoding.filters.enhancedWatermark.enhanced_watermark_api import EnhancedWatermarkApi
+from bitmovin_api_sdk.encoding.filters.audio_volume.audio_volume_api import AudioVolumeApi
+from bitmovin_api_sdk.encoding.filters.enhanced_watermark.enhanced_watermark_api import EnhancedWatermarkApi
 from bitmovin_api_sdk.encoding.filters.crop.crop_api import CropApi
 from bitmovin_api_sdk.encoding.filters.rotate.rotate_api import RotateApi
 from bitmovin_api_sdk.encoding.filters.deinterlace.deinterlace_api import DeinterlaceApi
-from bitmovin_api_sdk.encoding.filters.audioMix.audio_mix_api import AudioMixApi
-from bitmovin_api_sdk.encoding.filters.denoiseHqdn3d.denoise_hqdn3d_api import DenoiseHqdn3dApi
-from bitmovin_api_sdk.encoding.filters.ebuR128SinglePass.ebu_r128_single_pass_api import EbuR128SinglePassApi
+from bitmovin_api_sdk.encoding.filters.audio_mix.audio_mix_api import AudioMixApi
+from bitmovin_api_sdk.encoding.filters.denoise_hqdn3d.denoise_hqdn3d_api import DenoiseHqdn3dApi
+from bitmovin_api_sdk.encoding.filters.ebu_r128_single_pass.ebu_r128_single_pass_api import EbuR128SinglePassApi
 from bitmovin_api_sdk.encoding.filters.text.text_api import TextApi
 from bitmovin_api_sdk.encoding.filters.interlace.interlace_api import InterlaceApi
 from bitmovin_api_sdk.encoding.filters.unsharp.unsharp_api import UnsharpApi
@@ -43,14 +43,14 @@ class FiltersApi(BaseApi):
             logger=logger
         )
 
-        self.audioVolume = AudioVolumeApi(
+        self.audio_volume = AudioVolumeApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,
             logger=logger
         )
 
-        self.enhancedWatermark = EnhancedWatermarkApi(
+        self.enhanced_watermark = EnhancedWatermarkApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,
@@ -78,21 +78,21 @@ class FiltersApi(BaseApi):
             logger=logger
         )
 
-        self.audioMix = AudioMixApi(
+        self.audio_mix = AudioMixApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,
             logger=logger
         )
 
-        self.denoiseHqdn3d = DenoiseHqdn3dApi(
+        self.denoise_hqdn3d = DenoiseHqdn3dApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,
             logger=logger
         )
 
-        self.ebuR128SinglePass = EbuR128SinglePassApi(
+        self.ebu_r128_single_pass = EbuR128SinglePassApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,

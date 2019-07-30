@@ -1,7 +1,7 @@
 # coding: utf-8
 
 
-from six import string_types
+from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
 from bitmovin_api_sdk.models.ts_stream_configuration import TsStreamConfiguration
 import pprint
@@ -12,9 +12,9 @@ class TsVideoStreamConfiguration(TsStreamConfiguration):
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}
+
         if hasattr(super(TsVideoStreamConfiguration, self), "to_dict"):
             result = super(TsVideoStreamConfiguration, self).to_dict()
-
         return result
 
     def to_str(self):

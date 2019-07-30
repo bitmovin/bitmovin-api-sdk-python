@@ -9,6 +9,9 @@ from bitmovin_api_sdk.models.live_encoding import LiveEncoding
 from bitmovin_api_sdk.models.response_envelope import ResponseEnvelope
 from bitmovin_api_sdk.models.response_error import ResponseError
 from bitmovin_api_sdk.models.start_live_encoding_request import StartLiveEncodingRequest
+from bitmovin_api_sdk.encoding.encodings.live.insertable_content.insertable_content_api import InsertableContentApi
+from bitmovin_api_sdk.encoding.encodings.live.scheduled_content_insertion.scheduled_content_insertion_api import ScheduledContentInsertionApi
+from bitmovin_api_sdk.encoding.encodings.live.stop_inserted_content.stop_inserted_content_api import StopInsertedContentApi
 
 
 class LiveApi(BaseApi):
@@ -17,6 +20,27 @@ class LiveApi(BaseApi):
         # type: (str, str, str, BitmovinApiLoggerBase) -> None
 
         super(LiveApi, self).__init__(
+            api_key=api_key,
+            tenant_org_id=tenant_org_id,
+            base_url=base_url,
+            logger=logger
+        )
+
+        self.insertable_content = InsertableContentApi(
+            api_key=api_key,
+            tenant_org_id=tenant_org_id,
+            base_url=base_url,
+            logger=logger
+        )
+
+        self.scheduled_content_insertion = ScheduledContentInsertionApi(
+            api_key=api_key,
+            tenant_org_id=tenant_org_id,
+            base_url=base_url,
+            logger=logger
+        )
+
+        self.stop_inserted_content = StopInsertedContentApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,

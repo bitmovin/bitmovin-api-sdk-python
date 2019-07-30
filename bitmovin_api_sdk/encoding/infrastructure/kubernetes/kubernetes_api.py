@@ -11,8 +11,8 @@ from bitmovin_api_sdk.models.response_error import ResponseError
 from bitmovin_api_sdk.encoding.infrastructure.kubernetes.status.status_api import StatusApi
 from bitmovin_api_sdk.encoding.infrastructure.kubernetes.customdata.customdata_api import CustomdataApi
 from bitmovin_api_sdk.encoding.infrastructure.kubernetes.configuration.configuration_api import ConfigurationApi
-from bitmovin_api_sdk.encoding.infrastructure.kubernetes.agentDeployment.agent_deployment_api import AgentDeploymentApi
-from bitmovin_api_sdk.encoding.infrastructure.kubernetes.prewarmedDeployment.prewarmed_deployment_api import PrewarmedDeploymentApi
+from bitmovin_api_sdk.encoding.infrastructure.kubernetes.agent_deployment.agent_deployment_api import AgentDeploymentApi
+from bitmovin_api_sdk.encoding.infrastructure.kubernetes.prewarmed_deployment.prewarmed_deployment_api import PrewarmedDeploymentApi
 from bitmovin_api_sdk.encoding.infrastructure.kubernetes.kubernetes_cluster_list_query_params import KubernetesClusterListQueryParams
 
 
@@ -49,14 +49,14 @@ class KubernetesApi(BaseApi):
             logger=logger
         )
 
-        self.agentDeployment = AgentDeploymentApi(
+        self.agent_deployment = AgentDeploymentApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,
             logger=logger
         )
 
-        self.prewarmedDeployment = PrewarmedDeploymentApi(
+        self.prewarmed_deployment = PrewarmedDeploymentApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,

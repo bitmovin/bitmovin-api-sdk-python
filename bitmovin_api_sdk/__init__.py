@@ -11,7 +11,7 @@ from bitmovin_api_sdk.account.information.information_api import InformationApi
 
 from bitmovin_api_sdk.account.login.login_api import LoginApi
 
-from bitmovin_api_sdk.account.apiKeys.api_keys_api import ApiKeysApi
+from bitmovin_api_sdk.account.api_keys.api_keys_api import ApiKeysApi
 
 from bitmovin_api_sdk.account.organizations.organizations_api import OrganizationsApi
 
@@ -29,11 +29,11 @@ from bitmovin_api_sdk.analytics.impressions.impressions_api import ImpressionsAp
 
 from bitmovin_api_sdk.analytics.metrics.metrics_api import MetricsApi
 
-from bitmovin_api_sdk.analytics.metrics.maxConcurrentviewers.max_concurrentviewers_api import MaxConcurrentviewersApi
+from bitmovin_api_sdk.analytics.metrics.max_concurrentviewers.max_concurrentviewers_api import MaxConcurrentviewersApi
 
-from bitmovin_api_sdk.analytics.metrics.avgConcurrentviewers.avg_concurrentviewers_api import AvgConcurrentviewersApi
+from bitmovin_api_sdk.analytics.metrics.avg_concurrentviewers.avg_concurrentviewers_api import AvgConcurrentviewersApi
 
-from bitmovin_api_sdk.analytics.metrics.avgDroppedFrames.avg_dropped_frames_api import AvgDroppedFramesApi
+from bitmovin_api_sdk.analytics.metrics.avg_dropped_frames.avg_dropped_frames_api import AvgDroppedFramesApi
 
 from bitmovin_api_sdk.analytics.queries.queries_api import QueriesApi
 
@@ -61,9 +61,9 @@ from bitmovin_api_sdk.analytics.licenses.domains.domains_api import DomainsApi
 
 from bitmovin_api_sdk.analytics.outputs.outputs_api import OutputsApi
 
-from bitmovin_api_sdk.analytics.outputs.s3RoleBased.s3_role_based_api import S3RoleBasedApi
-from bitmovin_api_sdk.analytics.outputs.s3RoleBased.s3_role_based_api import S3RoleBasedOutputListQueryParams
-from bitmovin_api_sdk.analytics.outputs.s3RoleBased.customdata.customdata_api import CustomdataApi
+from bitmovin_api_sdk.analytics.outputs.s3_role_based.s3_role_based_api import S3RoleBasedApi
+from bitmovin_api_sdk.analytics.outputs.s3_role_based.s3_role_based_api import S3RoleBasedOutputListQueryParams
+from bitmovin_api_sdk.analytics.outputs.s3_role_based.customdata.customdata_api import CustomdataApi
 
 from bitmovin_api_sdk.encoding.encoding_api import EncodingApi
 
@@ -73,19 +73,19 @@ from bitmovin_api_sdk.encoding.inputs.type.type_api import TypeApi
 
 from bitmovin_api_sdk.encoding.inputs.rtmp.rtmp_api import RtmpApi
 from bitmovin_api_sdk.encoding.inputs.rtmp.rtmp_api import RtmpInputListQueryParams
-from bitmovin_api_sdk.encoding.inputs.redundantRtmp.redundant_rtmp_api import RedundantRtmpApi
-from bitmovin_api_sdk.encoding.inputs.redundantRtmp.redundant_rtmp_api import RedundantRtmpInputListQueryParams
+from bitmovin_api_sdk.encoding.inputs.redundant_rtmp.redundant_rtmp_api import RedundantRtmpApi
+from bitmovin_api_sdk.encoding.inputs.redundant_rtmp.redundant_rtmp_api import RedundantRtmpInputListQueryParams
 from bitmovin_api_sdk.encoding.inputs.s3.s3_api import S3Api
 from bitmovin_api_sdk.encoding.inputs.s3.s3_api import S3InputListQueryParams
 from bitmovin_api_sdk.encoding.inputs.s3.customdata.customdata_api import CustomdataApi
 
-from bitmovin_api_sdk.encoding.inputs.s3RoleBased.s3_role_based_api import S3RoleBasedApi
-from bitmovin_api_sdk.encoding.inputs.s3RoleBased.s3_role_based_api import S3RoleBasedInputListQueryParams
-from bitmovin_api_sdk.encoding.inputs.s3RoleBased.customdata.customdata_api import CustomdataApi
+from bitmovin_api_sdk.encoding.inputs.s3_role_based.s3_role_based_api import S3RoleBasedApi
+from bitmovin_api_sdk.encoding.inputs.s3_role_based.s3_role_based_api import S3RoleBasedInputListQueryParams
+from bitmovin_api_sdk.encoding.inputs.s3_role_based.customdata.customdata_api import CustomdataApi
 
-from bitmovin_api_sdk.encoding.inputs.genericS3.generic_s3_api import GenericS3Api
-from bitmovin_api_sdk.encoding.inputs.genericS3.generic_s3_api import GenericS3InputListQueryParams
-from bitmovin_api_sdk.encoding.inputs.genericS3.customdata.customdata_api import CustomdataApi
+from bitmovin_api_sdk.encoding.inputs.generic_s3.generic_s3_api import GenericS3Api
+from bitmovin_api_sdk.encoding.inputs.generic_s3.generic_s3_api import GenericS3InputListQueryParams
+from bitmovin_api_sdk.encoding.inputs.generic_s3.customdata.customdata_api import CustomdataApi
 
 from bitmovin_api_sdk.encoding.inputs.local.local_api import LocalApi
 from bitmovin_api_sdk.encoding.inputs.local.local_api import LocalInputListQueryParams
@@ -119,9 +119,9 @@ from bitmovin_api_sdk.encoding.inputs.aspera.aspera_api import AsperaApi
 from bitmovin_api_sdk.encoding.inputs.aspera.aspera_api import AsperaInputListQueryParams
 from bitmovin_api_sdk.encoding.inputs.aspera.customdata.customdata_api import CustomdataApi
 
-from bitmovin_api_sdk.encoding.inputs.akamaiNetstorage.akamai_netstorage_api import AkamaiNetstorageApi
-from bitmovin_api_sdk.encoding.inputs.akamaiNetstorage.akamai_netstorage_api import AkamaiNetStorageInputListQueryParams
-from bitmovin_api_sdk.encoding.inputs.akamaiNetstorage.customdata.customdata_api import CustomdataApi
+from bitmovin_api_sdk.encoding.inputs.akamai_netstorage.akamai_netstorage_api import AkamaiNetstorageApi
+from bitmovin_api_sdk.encoding.inputs.akamai_netstorage.akamai_netstorage_api import AkamaiNetStorageInputListQueryParams
+from bitmovin_api_sdk.encoding.inputs.akamai_netstorage.customdata.customdata_api import CustomdataApi
 
 from bitmovin_api_sdk.encoding.inputs.srt.srt_api import SrtApi
 from bitmovin_api_sdk.encoding.inputs.srt.srt_api import SrtInputListQueryParams
@@ -131,9 +131,9 @@ from bitmovin_api_sdk.encoding.inputs.tcp.tcp_api import TcpApi
 from bitmovin_api_sdk.encoding.inputs.tcp.tcp_api import TcpInputListQueryParams
 from bitmovin_api_sdk.encoding.inputs.udp.udp_api import UdpApi
 from bitmovin_api_sdk.encoding.inputs.udp.udp_api import UdpInputListQueryParams
-from bitmovin_api_sdk.encoding.inputs.udpMulticast.udp_multicast_api import UdpMulticastApi
-from bitmovin_api_sdk.encoding.inputs.udpMulticast.udp_multicast_api import UdpMulticastInputListQueryParams
-from bitmovin_api_sdk.encoding.inputs.udpMulticast.customdata.customdata_api import CustomdataApi
+from bitmovin_api_sdk.encoding.inputs.udp_multicast.udp_multicast_api import UdpMulticastApi
+from bitmovin_api_sdk.encoding.inputs.udp_multicast.udp_multicast_api import UdpMulticastInputListQueryParams
+from bitmovin_api_sdk.encoding.inputs.udp_multicast.customdata.customdata_api import CustomdataApi
 
 from bitmovin_api_sdk.encoding.inputs.zixi.zixi_api import ZixiApi
 from bitmovin_api_sdk.encoding.inputs.zixi.zixi_api import ZixiInputListQueryParams
@@ -147,13 +147,13 @@ from bitmovin_api_sdk.encoding.outputs.s3.s3_api import S3Api
 from bitmovin_api_sdk.encoding.outputs.s3.s3_api import S3OutputListQueryParams
 from bitmovin_api_sdk.encoding.outputs.s3.customdata.customdata_api import CustomdataApi
 
-from bitmovin_api_sdk.encoding.outputs.s3RoleBased.s3_role_based_api import S3RoleBasedApi
-from bitmovin_api_sdk.encoding.outputs.s3RoleBased.s3_role_based_api import S3RoleBasedOutputListQueryParams
-from bitmovin_api_sdk.encoding.outputs.s3RoleBased.customdata.customdata_api import CustomdataApi
+from bitmovin_api_sdk.encoding.outputs.s3_role_based.s3_role_based_api import S3RoleBasedApi
+from bitmovin_api_sdk.encoding.outputs.s3_role_based.s3_role_based_api import S3RoleBasedOutputListQueryParams
+from bitmovin_api_sdk.encoding.outputs.s3_role_based.customdata.customdata_api import CustomdataApi
 
-from bitmovin_api_sdk.encoding.outputs.genericS3.generic_s3_api import GenericS3Api
-from bitmovin_api_sdk.encoding.outputs.genericS3.generic_s3_api import GenericS3OutputListQueryParams
-from bitmovin_api_sdk.encoding.outputs.genericS3.customdata.customdata_api import CustomdataApi
+from bitmovin_api_sdk.encoding.outputs.generic_s3.generic_s3_api import GenericS3Api
+from bitmovin_api_sdk.encoding.outputs.generic_s3.generic_s3_api import GenericS3OutputListQueryParams
+from bitmovin_api_sdk.encoding.outputs.generic_s3.customdata.customdata_api import CustomdataApi
 
 from bitmovin_api_sdk.encoding.outputs.local.local_api import LocalApi
 from bitmovin_api_sdk.encoding.outputs.local.local_api import LocalOutputListQueryParams
@@ -175,17 +175,17 @@ from bitmovin_api_sdk.encoding.outputs.sftp.sftp_api import SftpApi
 from bitmovin_api_sdk.encoding.outputs.sftp.sftp_api import SftpOutputListQueryParams
 from bitmovin_api_sdk.encoding.outputs.sftp.customdata.customdata_api import CustomdataApi
 
-from bitmovin_api_sdk.encoding.outputs.akamaiMsl.akamai_msl_api import AkamaiMslApi
-from bitmovin_api_sdk.encoding.outputs.akamaiMsl.akamai_msl_api import AkamaiMslOutputListQueryParams
-from bitmovin_api_sdk.encoding.outputs.akamaiMsl.customdata.customdata_api import CustomdataApi
+from bitmovin_api_sdk.encoding.outputs.akamai_msl.akamai_msl_api import AkamaiMslApi
+from bitmovin_api_sdk.encoding.outputs.akamai_msl.akamai_msl_api import AkamaiMslOutputListQueryParams
+from bitmovin_api_sdk.encoding.outputs.akamai_msl.customdata.customdata_api import CustomdataApi
 
-from bitmovin_api_sdk.encoding.outputs.akamaiNetstorage.akamai_netstorage_api import AkamaiNetstorageApi
-from bitmovin_api_sdk.encoding.outputs.akamaiNetstorage.akamai_netstorage_api import AkamaiNetStorageOutputListQueryParams
-from bitmovin_api_sdk.encoding.outputs.akamaiNetstorage.customdata.customdata_api import CustomdataApi
+from bitmovin_api_sdk.encoding.outputs.akamai_netstorage.akamai_netstorage_api import AkamaiNetstorageApi
+from bitmovin_api_sdk.encoding.outputs.akamai_netstorage.akamai_netstorage_api import AkamaiNetStorageOutputListQueryParams
+from bitmovin_api_sdk.encoding.outputs.akamai_netstorage.customdata.customdata_api import CustomdataApi
 
-from bitmovin_api_sdk.encoding.outputs.liveMediaIngest.live_media_ingest_api import LiveMediaIngestApi
-from bitmovin_api_sdk.encoding.outputs.liveMediaIngest.live_media_ingest_api import LiveMediaIngestOutputListQueryParams
-from bitmovin_api_sdk.encoding.outputs.liveMediaIngest.customdata.customdata_api import CustomdataApi
+from bitmovin_api_sdk.encoding.outputs.live_media_ingest.live_media_ingest_api import LiveMediaIngestApi
+from bitmovin_api_sdk.encoding.outputs.live_media_ingest.live_media_ingest_api import LiveMediaIngestOutputListQueryParams
+from bitmovin_api_sdk.encoding.outputs.live_media_ingest.customdata.customdata_api import CustomdataApi
 
 from bitmovin_api_sdk.encoding.configurations.configurations_api import ConfigurationsApi
 from bitmovin_api_sdk.encoding.configurations.configurations_api import CodecConfigurationListQueryParams
@@ -223,13 +223,13 @@ from bitmovin_api_sdk.encoding.configurations.audio.aac.aac_api import AacApi
 from bitmovin_api_sdk.encoding.configurations.audio.aac.aac_api import AacAudioConfigurationListQueryParams
 from bitmovin_api_sdk.encoding.configurations.audio.aac.customdata.customdata_api import CustomdataApi
 
-from bitmovin_api_sdk.encoding.configurations.audio.heAacV1.he_aac_v1_api import HeAacV1Api
-from bitmovin_api_sdk.encoding.configurations.audio.heAacV1.he_aac_v1_api import HeAacV1AudioConfigurationListQueryParams
-from bitmovin_api_sdk.encoding.configurations.audio.heAacV1.customdata.customdata_api import CustomdataApi
+from bitmovin_api_sdk.encoding.configurations.audio.he_aac_v1.he_aac_v1_api import HeAacV1Api
+from bitmovin_api_sdk.encoding.configurations.audio.he_aac_v1.he_aac_v1_api import HeAacV1AudioConfigurationListQueryParams
+from bitmovin_api_sdk.encoding.configurations.audio.he_aac_v1.customdata.customdata_api import CustomdataApi
 
-from bitmovin_api_sdk.encoding.configurations.audio.heAacV2.he_aac_v2_api import HeAacV2Api
-from bitmovin_api_sdk.encoding.configurations.audio.heAacV2.he_aac_v2_api import HeAacV2AudioConfigurationListQueryParams
-from bitmovin_api_sdk.encoding.configurations.audio.heAacV2.customdata.customdata_api import CustomdataApi
+from bitmovin_api_sdk.encoding.configurations.audio.he_aac_v2.he_aac_v2_api import HeAacV2Api
+from bitmovin_api_sdk.encoding.configurations.audio.he_aac_v2.he_aac_v2_api import HeAacV2AudioConfigurationListQueryParams
+from bitmovin_api_sdk.encoding.configurations.audio.he_aac_v2.customdata.customdata_api import CustomdataApi
 
 from bitmovin_api_sdk.encoding.configurations.audio.vorbis.vorbis_api import VorbisApi
 from bitmovin_api_sdk.encoding.configurations.audio.vorbis.vorbis_api import VorbisAudioConfigurationListQueryParams
@@ -267,13 +267,13 @@ from bitmovin_api_sdk.encoding.filters.watermark.watermark_api import WatermarkA
 from bitmovin_api_sdk.encoding.filters.watermark.watermark_api import WatermarkFilterListQueryParams
 from bitmovin_api_sdk.encoding.filters.watermark.customdata.customdata_api import CustomdataApi
 
-from bitmovin_api_sdk.encoding.filters.audioVolume.audio_volume_api import AudioVolumeApi
-from bitmovin_api_sdk.encoding.filters.audioVolume.audio_volume_api import AudioVolumeFilterListQueryParams
-from bitmovin_api_sdk.encoding.filters.audioVolume.customdata.customdata_api import CustomdataApi
+from bitmovin_api_sdk.encoding.filters.audio_volume.audio_volume_api import AudioVolumeApi
+from bitmovin_api_sdk.encoding.filters.audio_volume.audio_volume_api import AudioVolumeFilterListQueryParams
+from bitmovin_api_sdk.encoding.filters.audio_volume.customdata.customdata_api import CustomdataApi
 
-from bitmovin_api_sdk.encoding.filters.enhancedWatermark.enhanced_watermark_api import EnhancedWatermarkApi
-from bitmovin_api_sdk.encoding.filters.enhancedWatermark.enhanced_watermark_api import EnhancedWatermarkFilterListQueryParams
-from bitmovin_api_sdk.encoding.filters.enhancedWatermark.customdata.customdata_api import CustomdataApi
+from bitmovin_api_sdk.encoding.filters.enhanced_watermark.enhanced_watermark_api import EnhancedWatermarkApi
+from bitmovin_api_sdk.encoding.filters.enhanced_watermark.enhanced_watermark_api import EnhancedWatermarkFilterListQueryParams
+from bitmovin_api_sdk.encoding.filters.enhanced_watermark.customdata.customdata_api import CustomdataApi
 
 from bitmovin_api_sdk.encoding.filters.crop.crop_api import CropApi
 from bitmovin_api_sdk.encoding.filters.crop.crop_api import CropFilterListQueryParams
@@ -289,17 +289,17 @@ from bitmovin_api_sdk.encoding.filters.deinterlace.deinterlace_api import Deinte
 from bitmovin_api_sdk.encoding.filters.deinterlace.deinterlace_api import DeinterlaceFilterListQueryParams
 from bitmovin_api_sdk.encoding.filters.deinterlace.customdata.customdata_api import CustomdataApi
 
-from bitmovin_api_sdk.encoding.filters.audioMix.audio_mix_api import AudioMixApi
-from bitmovin_api_sdk.encoding.filters.audioMix.audio_mix_api import AudioMixFilterListQueryParams
-from bitmovin_api_sdk.encoding.filters.audioMix.customdata.customdata_api import CustomdataApi
+from bitmovin_api_sdk.encoding.filters.audio_mix.audio_mix_api import AudioMixApi
+from bitmovin_api_sdk.encoding.filters.audio_mix.audio_mix_api import AudioMixFilterListQueryParams
+from bitmovin_api_sdk.encoding.filters.audio_mix.customdata.customdata_api import CustomdataApi
 
-from bitmovin_api_sdk.encoding.filters.denoiseHqdn3d.denoise_hqdn3d_api import DenoiseHqdn3dApi
-from bitmovin_api_sdk.encoding.filters.denoiseHqdn3d.denoise_hqdn3d_api import DenoiseHqdn3dFilterListQueryParams
-from bitmovin_api_sdk.encoding.filters.denoiseHqdn3d.customdata.customdata_api import CustomdataApi
+from bitmovin_api_sdk.encoding.filters.denoise_hqdn3d.denoise_hqdn3d_api import DenoiseHqdn3dApi
+from bitmovin_api_sdk.encoding.filters.denoise_hqdn3d.denoise_hqdn3d_api import DenoiseHqdn3dFilterListQueryParams
+from bitmovin_api_sdk.encoding.filters.denoise_hqdn3d.customdata.customdata_api import CustomdataApi
 
-from bitmovin_api_sdk.encoding.filters.ebuR128SinglePass.ebu_r128_single_pass_api import EbuR128SinglePassApi
-from bitmovin_api_sdk.encoding.filters.ebuR128SinglePass.ebu_r128_single_pass_api import EbuR128SinglePassFilterListQueryParams
-from bitmovin_api_sdk.encoding.filters.ebuR128SinglePass.customdata.customdata_api import CustomdataApi
+from bitmovin_api_sdk.encoding.filters.ebu_r128_single_pass.ebu_r128_single_pass_api import EbuR128SinglePassApi
+from bitmovin_api_sdk.encoding.filters.ebu_r128_single_pass.ebu_r128_single_pass_api import EbuR128SinglePassFilterListQueryParams
+from bitmovin_api_sdk.encoding.filters.ebu_r128_single_pass.customdata.customdata_api import CustomdataApi
 
 from bitmovin_api_sdk.encoding.filters.text.text_api import TextApi
 from bitmovin_api_sdk.encoding.filters.text.text_api import TextFilterListQueryParams
@@ -321,16 +321,16 @@ from bitmovin_api_sdk.encoding.filters.type.type_api import TypeApi
 
 from bitmovin_api_sdk.encoding.encodings.live.live_api import LiveApi
 
-from bitmovin_api_sdk.encoding.encodings.machineLearning.machine_learning_api import MachineLearningApi
+from bitmovin_api_sdk.encoding.encodings.machine_learning.machine_learning_api import MachineLearningApi
 
-from bitmovin_api_sdk.encoding.encodings.machineLearning.objectDetection.object_detection_api import ObjectDetectionApi
-from bitmovin_api_sdk.encoding.encodings.machineLearning.objectDetection.object_detection_api import ObjectDetectionConfigurationListQueryParams
-from bitmovin_api_sdk.encoding.encodings.machineLearning.objectDetection.customdata.customdata_api import CustomdataApi
+from bitmovin_api_sdk.encoding.encodings.machine_learning.object_detection.object_detection_api import ObjectDetectionApi
+from bitmovin_api_sdk.encoding.encodings.machine_learning.object_detection.object_detection_api import ObjectDetectionConfigurationListQueryParams
+from bitmovin_api_sdk.encoding.encodings.machine_learning.object_detection.customdata.customdata_api import CustomdataApi
 
-from bitmovin_api_sdk.encoding.encodings.machineLearning.objectDetection.results.results_api import ResultsApi
-from bitmovin_api_sdk.encoding.encodings.machineLearning.objectDetection.results.results_api import ObjectDetectionResultListQueryParams
-from bitmovin_api_sdk.encoding.encodings.machineLearning.objectDetection.results.byTimestamp.by_timestamp_api import ByTimestampApi
-from bitmovin_api_sdk.encoding.encodings.machineLearning.objectDetection.results.byTimestamp.by_timestamp_api import ObjectDetectionTimestampResultListQueryParams
+from bitmovin_api_sdk.encoding.encodings.machine_learning.object_detection.results.results_api import ResultsApi
+from bitmovin_api_sdk.encoding.encodings.machine_learning.object_detection.results.results_api import ObjectDetectionResultListQueryParams
+from bitmovin_api_sdk.encoding.encodings.machine_learning.object_detection.results.by_timestamp.by_timestamp_api import ByTimestampApi
+from bitmovin_api_sdk.encoding.encodings.machine_learning.object_detection.results.by_timestamp.by_timestamp_api import ObjectDetectionTimestampResultListQueryParams
 from bitmovin_api_sdk.encoding.encodings.customdata.customdata_api import CustomdataApi
 
 from bitmovin_api_sdk.encoding.encodings.streams.streams_api import StreamsApi
@@ -341,53 +341,53 @@ from bitmovin_api_sdk.encoding.encodings.streams.input.input_api import InputApi
 
 from bitmovin_api_sdk.encoding.encodings.streams.inputs.inputs_api import InputsApi
 
-from bitmovin_api_sdk.encoding.encodings.inputStreams.input_streams_api import InputStreamsApi
-from bitmovin_api_sdk.encoding.encodings.inputStreams.input_streams_api import InputStreamListQueryParams
-from bitmovin_api_sdk.encoding.encodings.inputStreams.type.type_api import TypeApi
+from bitmovin_api_sdk.encoding.encodings.input_streams.input_streams_api import InputStreamsApi
+from bitmovin_api_sdk.encoding.encodings.input_streams.input_streams_api import InputStreamListQueryParams
+from bitmovin_api_sdk.encoding.encodings.input_streams.type.type_api import TypeApi
 
-from bitmovin_api_sdk.encoding.encodings.inputStreams.audioMix.audio_mix_api import AudioMixApi
-from bitmovin_api_sdk.encoding.encodings.inputStreams.audioMix.audio_mix_api import AudioMixInputStreamListQueryParams
-from bitmovin_api_sdk.encoding.encodings.inputStreams.ingest.ingest_api import IngestApi
-from bitmovin_api_sdk.encoding.encodings.inputStreams.ingest.ingest_api import IngestInputStreamListQueryParams
-from bitmovin_api_sdk.encoding.encodings.inputStreams.concatenation.concatenation_api import ConcatenationApi
-from bitmovin_api_sdk.encoding.encodings.inputStreams.concatenation.concatenation_api import ConcatenationInputStreamListQueryParams
-from bitmovin_api_sdk.encoding.encodings.inputStreams.file.file_api import FileApi
-from bitmovin_api_sdk.encoding.encodings.inputStreams.file.file_api import FileInputStreamListQueryParams
-from bitmovin_api_sdk.encoding.encodings.inputStreams.trimming.trimming_api import TrimmingApi
+from bitmovin_api_sdk.encoding.encodings.input_streams.audio_mix.audio_mix_api import AudioMixApi
+from bitmovin_api_sdk.encoding.encodings.input_streams.audio_mix.audio_mix_api import AudioMixInputStreamListQueryParams
+from bitmovin_api_sdk.encoding.encodings.input_streams.ingest.ingest_api import IngestApi
+from bitmovin_api_sdk.encoding.encodings.input_streams.ingest.ingest_api import IngestInputStreamListQueryParams
+from bitmovin_api_sdk.encoding.encodings.input_streams.concatenation.concatenation_api import ConcatenationApi
+from bitmovin_api_sdk.encoding.encodings.input_streams.concatenation.concatenation_api import ConcatenationInputStreamListQueryParams
+from bitmovin_api_sdk.encoding.encodings.input_streams.file.file_api import FileApi
+from bitmovin_api_sdk.encoding.encodings.input_streams.file.file_api import FileInputStreamListQueryParams
+from bitmovin_api_sdk.encoding.encodings.input_streams.trimming.trimming_api import TrimmingApi
 
-from bitmovin_api_sdk.encoding.encodings.inputStreams.trimming.timeBased.time_based_api import TimeBasedApi
-from bitmovin_api_sdk.encoding.encodings.inputStreams.trimming.timeBased.time_based_api import TimeBasedTrimmingInputStreamListQueryParams
-from bitmovin_api_sdk.encoding.encodings.inputStreams.trimming.timecodeTrack.timecode_track_api import TimecodeTrackApi
-from bitmovin_api_sdk.encoding.encodings.inputStreams.trimming.timecodeTrack.timecode_track_api import TimecodeTrackTrimmingInputStreamListQueryParams
-from bitmovin_api_sdk.encoding.encodings.inputStreams.trimming.h264PictureTiming.h264_picture_timing_api import H264PictureTimingApi
-from bitmovin_api_sdk.encoding.encodings.inputStreams.trimming.h264PictureTiming.h264_picture_timing_api import H264PictureTimingTrimmingInputStreamListQueryParams
-from bitmovin_api_sdk.encoding.encodings.inputStreams.subtitles.subtitles_api import SubtitlesApi
+from bitmovin_api_sdk.encoding.encodings.input_streams.trimming.time_based.time_based_api import TimeBasedApi
+from bitmovin_api_sdk.encoding.encodings.input_streams.trimming.time_based.time_based_api import TimeBasedTrimmingInputStreamListQueryParams
+from bitmovin_api_sdk.encoding.encodings.input_streams.trimming.timecode_track.timecode_track_api import TimecodeTrackApi
+from bitmovin_api_sdk.encoding.encodings.input_streams.trimming.timecode_track.timecode_track_api import TimecodeTrackTrimmingInputStreamListQueryParams
+from bitmovin_api_sdk.encoding.encodings.input_streams.trimming.h264_picture_timing.h264_picture_timing_api import H264PictureTimingApi
+from bitmovin_api_sdk.encoding.encodings.input_streams.trimming.h264_picture_timing.h264_picture_timing_api import H264PictureTimingTrimmingInputStreamListQueryParams
+from bitmovin_api_sdk.encoding.encodings.input_streams.subtitles.subtitles_api import SubtitlesApi
 
-from bitmovin_api_sdk.encoding.encodings.inputStreams.subtitles.dvbTeletext.dvb_teletext_api import DvbTeletextApi
-from bitmovin_api_sdk.encoding.encodings.inputStreams.subtitles.dvbTeletext.dvb_teletext_api import DvbTeletextInputStreamListQueryParams
-from bitmovin_api_sdk.encoding.encodings.inputStreams.captions.captions_api import CaptionsApi
+from bitmovin_api_sdk.encoding.encodings.input_streams.subtitles.dvb_teletext.dvb_teletext_api import DvbTeletextApi
+from bitmovin_api_sdk.encoding.encodings.input_streams.subtitles.dvb_teletext.dvb_teletext_api import DvbTeletextInputStreamListQueryParams
+from bitmovin_api_sdk.encoding.encodings.input_streams.captions.captions_api import CaptionsApi
 
-from bitmovin_api_sdk.encoding.encodings.inputStreams.captions.cea608.cea608_api import Cea608Api
-from bitmovin_api_sdk.encoding.encodings.inputStreams.captions.cea608.cea608_api import Cea608CaptionInputStreamListQueryParams
-from bitmovin_api_sdk.encoding.encodings.inputStreams.captions.cea708.cea708_api import Cea708Api
-from bitmovin_api_sdk.encoding.encodings.inputStreams.captions.cea708.cea708_api import Cea708CaptionInputStreamListQueryParams
+from bitmovin_api_sdk.encoding.encodings.input_streams.captions.cea608.cea608_api import Cea608Api
+from bitmovin_api_sdk.encoding.encodings.input_streams.captions.cea608.cea608_api import Cea608CaptionInputStreamListQueryParams
+from bitmovin_api_sdk.encoding.encodings.input_streams.captions.cea708.cea708_api import Cea708Api
+from bitmovin_api_sdk.encoding.encodings.input_streams.captions.cea708.cea708_api import Cea708CaptionInputStreamListQueryParams
 from bitmovin_api_sdk.encoding.encodings.muxings.muxings_api import MuxingsApi
 from bitmovin_api_sdk.encoding.encodings.muxings.muxings_api import MuxingListQueryParams
 from bitmovin_api_sdk.encoding.encodings.muxings.fmp4.fmp4_api import Fmp4Api
 from bitmovin_api_sdk.encoding.encodings.muxings.fmp4.fmp4_api import Fmp4MuxingListQueryParams
 from bitmovin_api_sdk.encoding.encodings.muxings.fmp4.customdata.customdata_api import CustomdataApi
 
-from bitmovin_api_sdk.encoding.encodings.muxings.chunkedText.chunked_text_api import ChunkedTextApi
-from bitmovin_api_sdk.encoding.encodings.muxings.chunkedText.chunked_text_api import ChunkedTextMuxingListQueryParams
-from bitmovin_api_sdk.encoding.encodings.muxings.chunkedText.customdata.customdata_api import CustomdataApi
+from bitmovin_api_sdk.encoding.encodings.muxings.chunked_text.chunked_text_api import ChunkedTextApi
+from bitmovin_api_sdk.encoding.encodings.muxings.chunked_text.chunked_text_api import ChunkedTextMuxingListQueryParams
+from bitmovin_api_sdk.encoding.encodings.muxings.chunked_text.customdata.customdata_api import CustomdataApi
 
 from bitmovin_api_sdk.encoding.encodings.muxings.cmaf.cmaf_api import CmafApi
 from bitmovin_api_sdk.encoding.encodings.muxings.cmaf.cmaf_api import CmafMuxingListQueryParams
 from bitmovin_api_sdk.encoding.encodings.muxings.cmaf.customdata.customdata_api import CustomdataApi
 
-from bitmovin_api_sdk.encoding.encodings.muxings.segmentedRaw.segmented_raw_api import SegmentedRawApi
-from bitmovin_api_sdk.encoding.encodings.muxings.segmentedRaw.segmented_raw_api import SegmentedRawMuxingListQueryParams
-from bitmovin_api_sdk.encoding.encodings.muxings.segmentedRaw.customdata.customdata_api import CustomdataApi
+from bitmovin_api_sdk.encoding.encodings.muxings.segmented_raw.segmented_raw_api import SegmentedRawApi
+from bitmovin_api_sdk.encoding.encodings.muxings.segmented_raw.segmented_raw_api import SegmentedRawMuxingListQueryParams
+from bitmovin_api_sdk.encoding.encodings.muxings.segmented_raw.customdata.customdata_api import CustomdataApi
 
 from bitmovin_api_sdk.encoding.encodings.muxings.text.text_api import TextApi
 from bitmovin_api_sdk.encoding.encodings.muxings.text.text_api import TextMuxingListQueryParams
@@ -419,43 +419,43 @@ from bitmovin_api_sdk.encoding.encodings.muxings.mp4.customdata.customdata_api i
 
 from bitmovin_api_sdk.encoding.encodings.muxings.mp4.information.information_api import InformationApi
 
-from bitmovin_api_sdk.encoding.encodings.muxings.progressiveTs.progressive_ts_api import ProgressiveTsApi
-from bitmovin_api_sdk.encoding.encodings.muxings.progressiveTs.progressive_ts_api import ProgressiveTsMuxingListQueryParams
-from bitmovin_api_sdk.encoding.encodings.muxings.progressiveTs.customdata.customdata_api import CustomdataApi
+from bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.progressive_ts_api import ProgressiveTsApi
+from bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.progressive_ts_api import ProgressiveTsMuxingListQueryParams
+from bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.customdata.customdata_api import CustomdataApi
 
-from bitmovin_api_sdk.encoding.encodings.muxings.progressiveTs.information.information_api import InformationApi
+from bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.information.information_api import InformationApi
 
-from bitmovin_api_sdk.encoding.encodings.muxings.broadcastTs.broadcast_ts_api import BroadcastTsApi
-from bitmovin_api_sdk.encoding.encodings.muxings.broadcastTs.broadcast_ts_api import BroadcastTsMuxingListQueryParams
-from bitmovin_api_sdk.encoding.encodings.muxings.broadcastTs.customdata.customdata_api import CustomdataApi
+from bitmovin_api_sdk.encoding.encodings.muxings.broadcast_ts.broadcast_ts_api import BroadcastTsApi
+from bitmovin_api_sdk.encoding.encodings.muxings.broadcast_ts.broadcast_ts_api import BroadcastTsMuxingListQueryParams
+from bitmovin_api_sdk.encoding.encodings.muxings.broadcast_ts.customdata.customdata_api import CustomdataApi
 
-from bitmovin_api_sdk.encoding.encodings.muxings.broadcastTs.information.information_api import InformationApi
+from bitmovin_api_sdk.encoding.encodings.muxings.broadcast_ts.information.information_api import InformationApi
 
-from bitmovin_api_sdk.encoding.encodings.muxings.progressiveWebm.progressive_webm_api import ProgressiveWebmApi
-from bitmovin_api_sdk.encoding.encodings.muxings.progressiveWebm.progressive_webm_api import ProgressiveWebmMuxingListQueryParams
-from bitmovin_api_sdk.encoding.encodings.muxings.progressiveWebm.customdata.customdata_api import CustomdataApi
+from bitmovin_api_sdk.encoding.encodings.muxings.progressive_webm.progressive_webm_api import ProgressiveWebmApi
+from bitmovin_api_sdk.encoding.encodings.muxings.progressive_webm.progressive_webm_api import ProgressiveWebmMuxingListQueryParams
+from bitmovin_api_sdk.encoding.encodings.muxings.progressive_webm.customdata.customdata_api import CustomdataApi
 
-from bitmovin_api_sdk.encoding.encodings.muxings.progressiveWebm.information.information_api import InformationApi
+from bitmovin_api_sdk.encoding.encodings.muxings.progressive_webm.information.information_api import InformationApi
 
-from bitmovin_api_sdk.encoding.encodings.muxings.progressiveMov.progressive_mov_api import ProgressiveMovApi
-from bitmovin_api_sdk.encoding.encodings.muxings.progressiveMov.progressive_mov_api import ProgressiveMovMuxingListQueryParams
-from bitmovin_api_sdk.encoding.encodings.muxings.progressiveMov.customdata.customdata_api import CustomdataApi
+from bitmovin_api_sdk.encoding.encodings.muxings.progressive_mov.progressive_mov_api import ProgressiveMovApi
+from bitmovin_api_sdk.encoding.encodings.muxings.progressive_mov.progressive_mov_api import ProgressiveMovMuxingListQueryParams
+from bitmovin_api_sdk.encoding.encodings.muxings.progressive_mov.customdata.customdata_api import CustomdataApi
 
-from bitmovin_api_sdk.encoding.encodings.muxings.progressiveMov.information.information_api import InformationApi
+from bitmovin_api_sdk.encoding.encodings.muxings.progressive_mov.information.information_api import InformationApi
 
-from bitmovin_api_sdk.encoding.encodings.muxings.progressiveTs.id3.id3_api import Id3Api
-from bitmovin_api_sdk.encoding.encodings.muxings.progressiveTs.id3.id3_api import Id3TagListQueryParams
-from bitmovin_api_sdk.encoding.encodings.muxings.progressiveTs.id3.raw.raw_api import RawApi
-from bitmovin_api_sdk.encoding.encodings.muxings.progressiveTs.id3.raw.raw_api import RawId3TagListQueryParams
-from bitmovin_api_sdk.encoding.encodings.muxings.progressiveTs.id3.raw.customdata.customdata_api import CustomdataApi
+from bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.id3.id3_api import Id3Api
+from bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.id3.id3_api import Id3TagListQueryParams
+from bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.id3.raw.raw_api import RawApi
+from bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.id3.raw.raw_api import RawId3TagListQueryParams
+from bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.id3.raw.customdata.customdata_api import CustomdataApi
 
-from bitmovin_api_sdk.encoding.encodings.muxings.progressiveTs.id3.frameId.frame_id_api import FrameIdApi
-from bitmovin_api_sdk.encoding.encodings.muxings.progressiveTs.id3.frameId.frame_id_api import FrameIdId3TagListQueryParams
-from bitmovin_api_sdk.encoding.encodings.muxings.progressiveTs.id3.frameId.customdata.customdata_api import CustomdataApi
+from bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.id3.frame_id.frame_id_api import FrameIdApi
+from bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.id3.frame_id.frame_id_api import FrameIdId3TagListQueryParams
+from bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.id3.frame_id.customdata.customdata_api import CustomdataApi
 
-from bitmovin_api_sdk.encoding.encodings.muxings.progressiveTs.id3.plainText.plain_text_api import PlainTextApi
-from bitmovin_api_sdk.encoding.encodings.muxings.progressiveTs.id3.plainText.plain_text_api import PlaintextId3TagListQueryParams
-from bitmovin_api_sdk.encoding.encodings.muxings.progressiveTs.id3.plainText.customdata.customdata_api import CustomdataApi
+from bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.id3.plain_text.plain_text_api import PlainTextApi
+from bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.id3.plain_text.plain_text_api import PlaintextId3TagListQueryParams
+from bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.id3.plain_text.customdata.customdata_api import CustomdataApi
 
 from bitmovin_api_sdk.encoding.encodings.muxings.fmp4.drm.drm_api import DrmApi
 
@@ -497,11 +497,11 @@ from bitmovin_api_sdk.encoding.encodings.muxings.ts.drm.aes.aes_api import AesAp
 from bitmovin_api_sdk.encoding.encodings.muxings.ts.drm.aes.aes_api import AesEncryptionDrmListQueryParams
 from bitmovin_api_sdk.encoding.encodings.muxings.ts.drm.aes.customdata.customdata_api import CustomdataApi
 
-from bitmovin_api_sdk.encoding.encodings.muxings.progressiveTs.drm.drm_api import DrmApi
+from bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.drm.drm_api import DrmApi
 
-from bitmovin_api_sdk.encoding.encodings.muxings.progressiveTs.drm.fairplay.fairplay_api import FairplayApi
-from bitmovin_api_sdk.encoding.encodings.muxings.progressiveTs.drm.fairplay.fairplay_api import FairPlayDrmListQueryParams
-from bitmovin_api_sdk.encoding.encodings.muxings.progressiveTs.drm.fairplay.customdata.customdata_api import CustomdataApi
+from bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.drm.fairplay.fairplay_api import FairplayApi
+from bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.drm.fairplay.fairplay_api import FairPlayDrmListQueryParams
+from bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.drm.fairplay.customdata.customdata_api import CustomdataApi
 
 from bitmovin_api_sdk.encoding.encodings.muxings.mp4.drm.drm_api import DrmApi
 
@@ -527,12 +527,12 @@ from bitmovin_api_sdk.encoding.encodings.muxings.mp4.drm.cenc.customdata.customd
 
 from bitmovin_api_sdk.encoding.encodings.streams.filters.filters_api import FiltersApi
 from bitmovin_api_sdk.encoding.encodings.streams.filters.filters_api import StreamFilterListListQueryParams
-from bitmovin_api_sdk.encoding.encodings.streams.burnInSubtitles.burn_in_subtitles_api import BurnInSubtitlesApi
+from bitmovin_api_sdk.encoding.encodings.streams.burn_in_subtitles.burn_in_subtitles_api import BurnInSubtitlesApi
 
-from bitmovin_api_sdk.encoding.encodings.streams.burnInSubtitles.dvbsub.dvbsub_api import DvbsubApi
+from bitmovin_api_sdk.encoding.encodings.streams.burn_in_subtitles.dvbsub.dvbsub_api import DvbsubApi
 
-from bitmovin_api_sdk.encoding.encodings.streams.burnInSubtitles.srt.srt_api import SrtApi
-from bitmovin_api_sdk.encoding.encodings.streams.burnInSubtitles.srt.srt_api import BurnInSubtitleSrtListQueryParams
+from bitmovin_api_sdk.encoding.encodings.streams.burn_in_subtitles.srt.srt_api import SrtApi
+from bitmovin_api_sdk.encoding.encodings.streams.burn_in_subtitles.srt.srt_api import BurnInSubtitleSrtListQueryParams
 from bitmovin_api_sdk.encoding.encodings.muxings.cmaf.captions.captions_api import CaptionsApi
 
 from bitmovin_api_sdk.encoding.encodings.muxings.cmaf.captions.ttml.ttml_api import TtmlApi
@@ -587,8 +587,8 @@ from bitmovin_api_sdk.encoding.manifests.dash.customdata.customdata_api import C
 
 from bitmovin_api_sdk.encoding.manifests.dash.periods.periods_api import PeriodsApi
 from bitmovin_api_sdk.encoding.manifests.dash.periods.periods_api import PeriodListQueryParams
-from bitmovin_api_sdk.encoding.manifests.dash.periods.customXmlElements.custom_xml_elements_api import CustomXmlElementsApi
-from bitmovin_api_sdk.encoding.manifests.dash.periods.customXmlElements.custom_xml_elements_api import CustomXmlElementListQueryParams
+from bitmovin_api_sdk.encoding.manifests.dash.periods.custom_xml_elements.custom_xml_elements_api import CustomXmlElementsApi
+from bitmovin_api_sdk.encoding.manifests.dash.periods.custom_xml_elements.custom_xml_elements_api import CustomXmlElementListQueryParams
 from bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.adaptationsets_api import AdaptationsetsApi
 
 from bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.audio.audio_api import AudioApi
@@ -635,14 +635,14 @@ from bitmovin_api_sdk.encoding.manifests.hls.customdata.customdata_api import Cu
 
 from bitmovin_api_sdk.encoding.manifests.hls.streams.streams_api import StreamsApi
 from bitmovin_api_sdk.encoding.manifests.hls.streams.streams_api import StreamInfoListQueryParams
-from bitmovin_api_sdk.encoding.manifests.hls.streams.customTags.custom_tags_api import CustomTagsApi
-from bitmovin_api_sdk.encoding.manifests.hls.streams.customTags.custom_tags_api import CustomTagListQueryParams
+from bitmovin_api_sdk.encoding.manifests.hls.streams.custom_tags.custom_tags_api import CustomTagsApi
+from bitmovin_api_sdk.encoding.manifests.hls.streams.custom_tags.custom_tags_api import CustomTagListQueryParams
 from bitmovin_api_sdk.encoding.manifests.hls.streams.iframe.iframe_api import IframeApi
 from bitmovin_api_sdk.encoding.manifests.hls.streams.iframe.iframe_api import IFramePlaylistListQueryParams
 from bitmovin_api_sdk.encoding.manifests.hls.media.media_api import MediaApi
 
-from bitmovin_api_sdk.encoding.manifests.hls.media.customTags.custom_tags_api import CustomTagsApi
-from bitmovin_api_sdk.encoding.manifests.hls.media.customTags.custom_tags_api import CustomTagListQueryParams
+from bitmovin_api_sdk.encoding.manifests.hls.media.custom_tags.custom_tags_api import CustomTagsApi
+from bitmovin_api_sdk.encoding.manifests.hls.media.custom_tags.custom_tags_api import CustomTagListQueryParams
 from bitmovin_api_sdk.encoding.manifests.hls.media.type.type_api import TypeApi
 
 from bitmovin_api_sdk.encoding.manifests.hls.media.video.video_api import VideoApi
@@ -653,8 +653,8 @@ from bitmovin_api_sdk.encoding.manifests.hls.media.subtitles.subtitles_api impor
 from bitmovin_api_sdk.encoding.manifests.hls.media.subtitles.subtitles_api import SubtitlesMediaInfoListQueryParams
 from bitmovin_api_sdk.encoding.manifests.hls.media.vtt.vtt_api import VttApi
 from bitmovin_api_sdk.encoding.manifests.hls.media.vtt.vtt_api import VttMediaInfoListQueryParams
-from bitmovin_api_sdk.encoding.manifests.hls.media.closedCaptions.closed_captions_api import ClosedCaptionsApi
-from bitmovin_api_sdk.encoding.manifests.hls.media.closedCaptions.closed_captions_api import ClosedCaptionsMediaInfoListQueryParams
+from bitmovin_api_sdk.encoding.manifests.hls.media.closed_captions.closed_captions_api import ClosedCaptionsApi
+from bitmovin_api_sdk.encoding.manifests.hls.media.closed_captions.closed_captions_api import ClosedCaptionsMediaInfoListQueryParams
 from bitmovin_api_sdk.encoding.manifests.smooth.smooth_api import SmoothApi
 from bitmovin_api_sdk.encoding.manifests.smooth.smooth_api import SmoothStreamingManifestListQueryParams
 from bitmovin_api_sdk.encoding.manifests.smooth.default.default_api import DefaultApi
@@ -677,10 +677,10 @@ from bitmovin_api_sdk.encoding.infrastructure.kubernetes.customdata.customdata_a
 
 from bitmovin_api_sdk.encoding.infrastructure.kubernetes.configuration.configuration_api import ConfigurationApi
 
-from bitmovin_api_sdk.encoding.infrastructure.kubernetes.agentDeployment.agent_deployment_api import AgentDeploymentApi
+from bitmovin_api_sdk.encoding.infrastructure.kubernetes.agent_deployment.agent_deployment_api import AgentDeploymentApi
 
-from bitmovin_api_sdk.encoding.infrastructure.kubernetes.prewarmedDeployment.prewarmed_deployment_api import PrewarmedDeploymentApi
-from bitmovin_api_sdk.encoding.infrastructure.kubernetes.prewarmedDeployment.prewarmed_deployment_api import PrewarmEncoderSettingsListQueryParams
+from bitmovin_api_sdk.encoding.infrastructure.kubernetes.prewarmed_deployment.prewarmed_deployment_api import PrewarmedDeploymentApi
+from bitmovin_api_sdk.encoding.infrastructure.kubernetes.prewarmed_deployment.prewarmed_deployment_api import PrewarmEncoderSettingsListQueryParams
 from bitmovin_api_sdk.encoding.infrastructure.aws.aws_api import AwsApi
 from bitmovin_api_sdk.encoding.infrastructure.aws.aws_api import AwsAccountListQueryParams
 from bitmovin_api_sdk.encoding.infrastructure.aws.regions.regions_api import RegionsApi
@@ -695,24 +695,30 @@ from bitmovin_api_sdk.encoding.statistics.encodings.live.live_api import LiveApi
 from bitmovin_api_sdk.encoding.statistics.encodings.live.live_api import EncodingStatisticsLiveListQueryParams, EncodingStatisticsLiveListByDateRangeQueryParams
 from bitmovin_api_sdk.encoding.statistics.encodings.vod.vod_api import VodApi
 from bitmovin_api_sdk.encoding.statistics.encodings.vod.vod_api import EncodingStatisticsVodListQueryParams, EncodingStatisticsVodListByDateRangeQueryParams
-from bitmovin_api_sdk.encoding.statistics.encodings.liveStatistics.live_statistics_api import LiveStatisticsApi
+from bitmovin_api_sdk.encoding.statistics.encodings.live_statistics.live_statistics_api import LiveStatisticsApi
 
-from bitmovin_api_sdk.encoding.statistics.encodings.liveStatistics.events.events_api import EventsApi
-from bitmovin_api_sdk.encoding.statistics.encodings.liveStatistics.events.events_api import LiveEncodingStatsEventListQueryParams
-from bitmovin_api_sdk.encoding.statistics.encodings.liveStatistics.streams.streams_api import StreamsApi
-from bitmovin_api_sdk.encoding.statistics.encodings.liveStatistics.streams.streams_api import StreamInfosListQueryParams
-from bitmovin_api_sdk.encoding.statistics.encodings.liveStatistics.srt.srt_api import SrtApi
-from bitmovin_api_sdk.encoding.statistics.encodings.liveStatistics.srt.srt_api import SrtStatisticsListQueryParams, SrtStatisticsListBySrtInputIdQueryParams
+from bitmovin_api_sdk.encoding.statistics.encodings.live_statistics.events.events_api import EventsApi
+from bitmovin_api_sdk.encoding.statistics.encodings.live_statistics.events.events_api import LiveEncodingStatsEventListQueryParams
+from bitmovin_api_sdk.encoding.statistics.encodings.live_statistics.streams.streams_api import StreamsApi
+from bitmovin_api_sdk.encoding.statistics.encodings.live_statistics.streams.streams_api import StreamInfosListQueryParams
+from bitmovin_api_sdk.encoding.statistics.encodings.live_statistics.srt.srt_api import SrtApi
+from bitmovin_api_sdk.encoding.statistics.encodings.live_statistics.srt.srt_api import SrtStatisticsListQueryParams, SrtStatisticsListBySrtInputIdQueryParams
 from bitmovin_api_sdk.encoding.statistics.labels.labels_api import LabelsApi
 from bitmovin_api_sdk.encoding.statistics.labels.labels_api import StatisticsPerLabelListQueryParams, StatisticsPerLabelListByDateRangeQueryParams
 from bitmovin_api_sdk.encoding.statistics.labels.daily.daily_api import DailyApi
 from bitmovin_api_sdk.encoding.statistics.labels.daily.daily_api import DailyStatisticsPerLabelListQueryParams, DailyStatisticsPerLabelListByDateRangeQueryParams
 from bitmovin_api_sdk.general.general_api import GeneralApi
 
-from bitmovin_api_sdk.general.errorDefinitions.error_definitions_api import ErrorDefinitionsApi
-from bitmovin_api_sdk.general.errorDefinitions.error_definitions_api import ApiErrorDefinitionListQueryParams
-from bitmovin_api_sdk.encoding.errorDefinitions.error_definitions_api import ErrorDefinitionsApi
-from bitmovin_api_sdk.encoding.errorDefinitions.error_definitions_api import EncodingErrorDefinitionListQueryParams
+from bitmovin_api_sdk.general.error_definitions.error_definitions_api import ErrorDefinitionsApi
+from bitmovin_api_sdk.general.error_definitions.error_definitions_api import ApiErrorDefinitionListQueryParams
+from bitmovin_api_sdk.encoding.error_definitions.error_definitions_api import ErrorDefinitionsApi
+from bitmovin_api_sdk.encoding.error_definitions.error_definitions_api import EncodingErrorDefinitionListQueryParams
+from bitmovin_api_sdk.encoding.encodings.live.insertable_content.insertable_content_api import InsertableContentApi
+from bitmovin_api_sdk.encoding.encodings.live.insertable_content.insertable_content_api import InsertableContentListQueryParams
+from bitmovin_api_sdk.encoding.encodings.live.scheduled_content_insertion.scheduled_content_insertion_api import ScheduledContentInsertionApi
+from bitmovin_api_sdk.encoding.encodings.live.scheduled_content_insertion.scheduled_content_insertion_api import ScheduledContentInsertionListQueryParams
+from bitmovin_api_sdk.encoding.encodings.live.stop_inserted_content.stop_inserted_content_api import StopInsertedContentApi
+
 from bitmovin_api_sdk.notifications.notifications_api import NotificationsApi
 from bitmovin_api_sdk.notifications.notifications_api import NotificationListQueryParams, NotificationStateEntryListByNotificationIdQueryParams
 from bitmovin_api_sdk.notifications.webhooks.webhooks_api import WebhooksApi
@@ -743,7 +749,7 @@ from bitmovin_api_sdk.notifications.emails.encoding.encoding_api import Encoding
 from bitmovin_api_sdk.notifications.emails.encoding.encoding_api import EmailNotificationListQueryParams
 from bitmovin_api_sdk.notifications.emails.encoding.encodings.encodings_api import EncodingsApi
 from bitmovin_api_sdk.notifications.emails.encoding.encodings.encodings_api import EmailNotificationWithStreamConditionsListQueryParams
-from bitmovin_api_sdk.notifications.emails.encoding.encodings.liveInputStreamChanged.live_input_stream_changed_api import LiveInputStreamChangedApi
+from bitmovin_api_sdk.notifications.emails.encoding.encodings.live_input_stream_changed.live_input_stream_changed_api import LiveInputStreamChangedApi
 
 from bitmovin_api_sdk.notifications.emails.encoding.encodings.error.error_api import ErrorApi
 
@@ -761,17 +767,17 @@ from bitmovin_api_sdk.player.licenses.analytics.analytics_api import AnalyticsAp
 
 from bitmovin_api_sdk.player.licenses.domains.domains_api import DomainsApi
 
-from bitmovin_api_sdk.player.licenses.thirdPartyLicensing.third_party_licensing_api import ThirdPartyLicensingApi
+from bitmovin_api_sdk.player.licenses.third_party_licensing.third_party_licensing_api import ThirdPartyLicensingApi
 
-from bitmovin_api_sdk.player.customBuilds.custom_builds_api import CustomBuildsApi
+from bitmovin_api_sdk.player.custom_builds.custom_builds_api import CustomBuildsApi
 
-from bitmovin_api_sdk.player.customBuilds.web.web_api import WebApi
+from bitmovin_api_sdk.player.custom_builds.web.web_api import WebApi
 
-from bitmovin_api_sdk.player.customBuilds.web.domains.domains_api import DomainsApi
+from bitmovin_api_sdk.player.custom_builds.web.domains.domains_api import DomainsApi
 
-from bitmovin_api_sdk.player.customBuilds.web.status.status_api import StatusApi
+from bitmovin_api_sdk.player.custom_builds.web.status.status_api import StatusApi
 
-from bitmovin_api_sdk.player.customBuilds.web.download.download_api import DownloadApi
+from bitmovin_api_sdk.player.custom_builds.web.download.download_api import DownloadApi
 
 
 from bitmovin_api_sdk.models.aac_audio_configuration import AacAudioConfiguration
@@ -1025,6 +1031,9 @@ from bitmovin_api_sdk.models.input_stream_type import InputStreamType
 from bitmovin_api_sdk.models.input_stream_type_response import InputStreamTypeResponse
 from bitmovin_api_sdk.models.input_type import InputType
 from bitmovin_api_sdk.models.input_type_response import InputTypeResponse
+from bitmovin_api_sdk.models.insertable_content import InsertableContent
+from bitmovin_api_sdk.models.insertable_content_input import InsertableContentInput
+from bitmovin_api_sdk.models.insertable_content_status import InsertableContentStatus
 from bitmovin_api_sdk.models.interlace_filter import InterlaceFilter
 from bitmovin_api_sdk.models.interlace_mode import InterlaceMode
 from bitmovin_api_sdk.models.internal_chunk_length import InternalChunkLength
@@ -1155,6 +1164,8 @@ from bitmovin_api_sdk.models.s3_signature_version import S3SignatureVersion
 from bitmovin_api_sdk.models.scale_filter import ScaleFilter
 from bitmovin_api_sdk.models.scaling_algorithm import ScalingAlgorithm
 from bitmovin_api_sdk.models.scc_caption import SccCaption
+from bitmovin_api_sdk.models.scheduled_content_insertion import ScheduledContentInsertion
+from bitmovin_api_sdk.models.scheduled_content_insertion_status import ScheduledContentInsertionStatus
 from bitmovin_api_sdk.models.scheduling import Scheduling
 from bitmovin_api_sdk.models.segmented_raw_muxing import SegmentedRawMuxing
 from bitmovin_api_sdk.models.segments_media_info import SegmentsMediaInfo
@@ -1273,4 +1284,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.19.0alpha0"
+__version__ = "1.20.0alpha0"

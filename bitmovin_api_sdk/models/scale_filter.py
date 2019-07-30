@@ -1,7 +1,7 @@
 # coding: utf-8
 
 from enum import Enum
-from six import string_types
+from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
 from bitmovin_api_sdk.models.filter import Filter
 from bitmovin_api_sdk.models.scaling_algorithm import ScalingAlgorithm
@@ -223,9 +223,9 @@ class ScaleFilter(Filter):
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}
+
         if hasattr(super(ScaleFilter, self), "to_dict"):
             result = super(ScaleFilter, self).to_dict()
-
         for attr, _ in six.iteritems(self.openapi_types):
             value = getattr(self, attr)
             if isinstance(value, list):

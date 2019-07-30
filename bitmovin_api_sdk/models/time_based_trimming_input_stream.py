@@ -1,7 +1,7 @@
 # coding: utf-8
 
 from enum import Enum
-from six import string_types
+from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
 from bitmovin_api_sdk.models.input_stream import InputStream
 import pprint
@@ -158,9 +158,9 @@ class TimeBasedTrimmingInputStream(InputStream):
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}
+
         if hasattr(super(TimeBasedTrimmingInputStream, self), "to_dict"):
             result = super(TimeBasedTrimmingInputStream, self).to_dict()
-
         for attr, _ in six.iteritems(self.openapi_types):
             value = getattr(self, attr)
             if isinstance(value, list):

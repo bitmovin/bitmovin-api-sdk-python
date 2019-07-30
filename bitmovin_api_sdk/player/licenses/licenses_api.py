@@ -9,7 +9,7 @@ from bitmovin_api_sdk.models.response_envelope import ResponseEnvelope
 from bitmovin_api_sdk.models.response_error import ResponseError
 from bitmovin_api_sdk.player.licenses.analytics.analytics_api import AnalyticsApi
 from bitmovin_api_sdk.player.licenses.domains.domains_api import DomainsApi
-from bitmovin_api_sdk.player.licenses.thirdPartyLicensing.third_party_licensing_api import ThirdPartyLicensingApi
+from bitmovin_api_sdk.player.licenses.third_party_licensing.third_party_licensing_api import ThirdPartyLicensingApi
 from bitmovin_api_sdk.player.licenses.player_license_list_query_params import PlayerLicenseListQueryParams
 
 
@@ -39,7 +39,7 @@ class LicensesApi(BaseApi):
             logger=logger
         )
 
-        self.thirdPartyLicensing = ThirdPartyLicensingApi(
+        self.third_party_licensing = ThirdPartyLicensingApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,

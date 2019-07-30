@@ -1,7 +1,7 @@
 # coding: utf-8
 
 
-from six import string_types
+from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
 from bitmovin_api_sdk.models.analytics_attribute import AnalyticsAttribute
 from bitmovin_api_sdk.models.analytics_interval import AnalyticsInterval
@@ -14,9 +14,9 @@ class AnalyticsAvgQueryRequest(AnalyticsQueryRequest):
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}
+
         if hasattr(super(AnalyticsAvgQueryRequest, self), "to_dict"):
             result = super(AnalyticsAvgQueryRequest, self).to_dict()
-
         return result
 
     def to_str(self):

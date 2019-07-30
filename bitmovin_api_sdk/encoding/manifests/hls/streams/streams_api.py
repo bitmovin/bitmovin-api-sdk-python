@@ -8,7 +8,7 @@ from bitmovin_api_sdk.models.bitmovin_response import BitmovinResponse
 from bitmovin_api_sdk.models.response_envelope import ResponseEnvelope
 from bitmovin_api_sdk.models.response_error import ResponseError
 from bitmovin_api_sdk.models.stream_info import StreamInfo
-from bitmovin_api_sdk.encoding.manifests.hls.streams.customTags.custom_tags_api import CustomTagsApi
+from bitmovin_api_sdk.encoding.manifests.hls.streams.custom_tags.custom_tags_api import CustomTagsApi
 from bitmovin_api_sdk.encoding.manifests.hls.streams.iframe.iframe_api import IframeApi
 from bitmovin_api_sdk.encoding.manifests.hls.streams.stream_info_list_query_params import StreamInfoListQueryParams
 
@@ -25,7 +25,7 @@ class StreamsApi(BaseApi):
             logger=logger
         )
 
-        self.customTags = CustomTagsApi(
+        self.custom_tags = CustomTagsApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,

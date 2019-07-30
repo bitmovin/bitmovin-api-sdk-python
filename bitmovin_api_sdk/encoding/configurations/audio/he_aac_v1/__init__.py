@@ -1,0 +1,3 @@
+from bitmovin_api_sdk.encoding.configurations.audio.he_aac_v1.he_aac_v1_api import HeAacV1Api
+from bitmovin_api_sdk.encoding.configurations.audio.he_aac_v1.customdata.customdata_api import CustomdataApi
+from bitmovin_api_sdk.encoding.configurations.audio.he_aac_v1.he_aac_v1_audio_configuration_list_query_params import HeAacV1AudioConfigurationListQueryParams

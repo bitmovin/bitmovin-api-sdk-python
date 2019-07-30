@@ -44,16 +44,25 @@ class BitmovinJsonDecoder(object):
 
     @staticmethod
     def map_dict_to_model(result, model):
-        # type: (object, type) -> object
+        # type: (dict, type) -> object
 
         if isinstance(model, EnumMeta):
             return get_enum_value(result, model)
 
         if issubclass(model, list):
-            # ToDo: Implement list deserialization
             return result
 
         model_instance = model()
+
+        if 'discriminator_value_class_map' in model.__dict__:
+            model_name = model_instance.discriminator_value_class_map[result['type']]
+            model = getattr(BitmovinJsonDecoder.model_module, model_name)
+
+        model_instance = model()
+
+        if not hasattr(model_instance, 'attribute_map'):
+            model_instance.attribute_map = {}
+
         all_attributes = model_instance.attribute_map
 
         for key in all_attributes:

@@ -4,9 +4,9 @@ from __future__ import absolute_import
 
 from bitmovin_api_sdk.common import BaseApi, BitmovinApiLoggerBase
 from bitmovin_api_sdk.common.poscheck import poscheck_except
-from bitmovin_api_sdk.analytics.metrics.maxConcurrentviewers.max_concurrentviewers_api import MaxConcurrentviewersApi
-from bitmovin_api_sdk.analytics.metrics.avgConcurrentviewers.avg_concurrentviewers_api import AvgConcurrentviewersApi
-from bitmovin_api_sdk.analytics.metrics.avgDroppedFrames.avg_dropped_frames_api import AvgDroppedFramesApi
+from bitmovin_api_sdk.analytics.metrics.max_concurrentviewers.max_concurrentviewers_api import MaxConcurrentviewersApi
+from bitmovin_api_sdk.analytics.metrics.avg_concurrentviewers.avg_concurrentviewers_api import AvgConcurrentviewersApi
+from bitmovin_api_sdk.analytics.metrics.avg_dropped_frames.avg_dropped_frames_api import AvgDroppedFramesApi
 
 
 class MetricsApi(BaseApi):
@@ -21,21 +21,21 @@ class MetricsApi(BaseApi):
             logger=logger
         )
 
-        self.maxConcurrentviewers = MaxConcurrentviewersApi(
+        self.max_concurrentviewers = MaxConcurrentviewersApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,
             logger=logger
         )
 
-        self.avgConcurrentviewers = AvgConcurrentviewersApi(
+        self.avg_concurrentviewers = AvgConcurrentviewersApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,
             logger=logger
         )
 
-        self.avgDroppedFrames = AvgDroppedFramesApi(
+        self.avg_dropped_frames = AvgDroppedFramesApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,

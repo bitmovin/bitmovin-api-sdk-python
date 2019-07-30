@@ -14,10 +14,10 @@ from bitmovin_api_sdk.models.response_error import ResponseError
 from bitmovin_api_sdk.models.start_encoding_request import StartEncodingRequest
 from bitmovin_api_sdk.models.task import Task
 from bitmovin_api_sdk.encoding.encodings.live.live_api import LiveApi
-from bitmovin_api_sdk.encoding.encodings.machineLearning.machine_learning_api import MachineLearningApi
+from bitmovin_api_sdk.encoding.encodings.machine_learning.machine_learning_api import MachineLearningApi
 from bitmovin_api_sdk.encoding.encodings.customdata.customdata_api import CustomdataApi
 from bitmovin_api_sdk.encoding.encodings.streams.streams_api import StreamsApi
-from bitmovin_api_sdk.encoding.encodings.inputStreams.input_streams_api import InputStreamsApi
+from bitmovin_api_sdk.encoding.encodings.input_streams.input_streams_api import InputStreamsApi
 from bitmovin_api_sdk.encoding.encodings.muxings.muxings_api import MuxingsApi
 from bitmovin_api_sdk.encoding.encodings.captions.captions_api import CaptionsApi
 from bitmovin_api_sdk.encoding.encodings.sidecars.sidecars_api import SidecarsApi
@@ -44,7 +44,7 @@ class EncodingsApi(BaseApi):
             logger=logger
         )
 
-        self.machineLearning = MachineLearningApi(
+        self.machine_learning = MachineLearningApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,
@@ -65,7 +65,7 @@ class EncodingsApi(BaseApi):
             logger=logger
         )
 
-        self.inputStreams = InputStreamsApi(
+        self.input_streams = InputStreamsApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,

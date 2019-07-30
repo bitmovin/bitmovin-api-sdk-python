@@ -3,7 +3,7 @@ from bitmovin_api_sdk.encoding.encodings.streams.customdata.customdata_api impor
 from bitmovin_api_sdk.encoding.encodings.streams.input.input_api import InputApi
 from bitmovin_api_sdk.encoding.encodings.streams.inputs.inputs_api import InputsApi
 from bitmovin_api_sdk.encoding.encodings.streams.filters.filters_api import FiltersApi
-from bitmovin_api_sdk.encoding.encodings.streams.burnInSubtitles.burn_in_subtitles_api import BurnInSubtitlesApi
+from bitmovin_api_sdk.encoding.encodings.streams.burn_in_subtitles.burn_in_subtitles_api import BurnInSubtitlesApi
 from bitmovin_api_sdk.encoding.encodings.streams.captions.captions_api import CaptionsApi
 from bitmovin_api_sdk.encoding.encodings.streams.bifs.bifs_api import BifsApi
 from bitmovin_api_sdk.encoding.encodings.streams.thumbnails.thumbnails_api import ThumbnailsApi

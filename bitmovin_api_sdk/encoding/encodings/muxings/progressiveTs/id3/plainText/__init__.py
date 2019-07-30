@@ -1,3 +1,0 @@
-from bitmovin_api_sdk.encoding.encodings.muxings.progressiveTs.id3.plainText.plain_text_api import PlainTextApi
-from bitmovin_api_sdk.encoding.encodings.muxings.progressiveTs.id3.plainText.customdata.customdata_api import CustomdataApi
-from bitmovin_api_sdk.encoding.encodings.muxings.progressiveTs.id3.plainText.plaintext_id3_tag_list_query_params import PlaintextId3TagListQueryParams

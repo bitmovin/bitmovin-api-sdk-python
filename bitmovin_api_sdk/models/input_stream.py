@@ -1,7 +1,7 @@
 # coding: utf-8
 
 
-from six import string_types
+from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
 from bitmovin_api_sdk.models.bitmovin_resource import BitmovinResource
 import pprint
@@ -22,9 +22,13 @@ class InputStream(BitmovinResource):
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}
+        for k, v in iteritems(self.discriminator_value_class_map):
+            if v == type(self).__name__:
+                result['type'] = k
+                break
+
         if hasattr(super(InputStream, self), "to_dict"):
             result = super(InputStream, self).to_dict()
-
         return result
 
     def to_str(self):

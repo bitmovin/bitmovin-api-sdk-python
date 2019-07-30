@@ -4,7 +4,7 @@ from __future__ import absolute_import
 
 from bitmovin_api_sdk.common import BaseApi, BitmovinApiLoggerBase
 from bitmovin_api_sdk.common.poscheck import poscheck_except
-from bitmovin_api_sdk.analytics.outputs.s3RoleBased.s3_role_based_api import S3RoleBasedApi
+from bitmovin_api_sdk.analytics.outputs.s3_role_based.s3_role_based_api import S3RoleBasedApi
 
 
 class OutputsApi(BaseApi):
@@ -19,7 +19,7 @@ class OutputsApi(BaseApi):
             logger=logger
         )
 
-        self.s3RoleBased = S3RoleBasedApi(
+        self.s3_role_based = S3RoleBasedApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,

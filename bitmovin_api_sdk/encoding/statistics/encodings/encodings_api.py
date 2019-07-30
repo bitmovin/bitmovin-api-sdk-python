@@ -9,7 +9,7 @@ from bitmovin_api_sdk.models.response_envelope import ResponseEnvelope
 from bitmovin_api_sdk.models.response_error import ResponseError
 from bitmovin_api_sdk.encoding.statistics.encodings.live.live_api import LiveApi
 from bitmovin_api_sdk.encoding.statistics.encodings.vod.vod_api import VodApi
-from bitmovin_api_sdk.encoding.statistics.encodings.liveStatistics.live_statistics_api import LiveStatisticsApi
+from bitmovin_api_sdk.encoding.statistics.encodings.live_statistics.live_statistics_api import LiveStatisticsApi
 
 
 class EncodingsApi(BaseApi):
@@ -38,7 +38,7 @@ class EncodingsApi(BaseApi):
             logger=logger
         )
 
-        self.liveStatistics = LiveStatisticsApi(
+        self.live_statistics = LiveStatisticsApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,

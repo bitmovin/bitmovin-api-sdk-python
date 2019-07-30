@@ -1,11 +1,13 @@
 # coding: utf-8
 
 from enum import Enum
-from six import string_types
+from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
 from bitmovin_api_sdk.models.bitmovin_resource import BitmovinResource
 from bitmovin_api_sdk.models.cloud_region import CloudRegion
+from bitmovin_api_sdk.models.encoding_mode import EncodingMode
 from bitmovin_api_sdk.models.infrastructure_settings import InfrastructureSettings
+from bitmovin_api_sdk.models.status import Status
 import pprint
 import six
 
@@ -23,14 +25,22 @@ class Encoding(BitmovinResource):
                  encoder_version=None,
                  infrastructure_id=None,
                  infrastructure=None,
+                 selected_encoder_version=None,
+                 selected_encoding_mode=None,
+                 selected_cloud_region=None,
+                 status=None,
                  labels=None):
-        # type: (string_types, string_types, string_types, datetime, datetime, dict, CloudRegion, string_types, string_types, InfrastructureSettings, list[string_types]) -> None
+        # type: (string_types, string_types, string_types, datetime, datetime, dict, CloudRegion, string_types, string_types, InfrastructureSettings, string_types, EncodingMode, CloudRegion, Status, list[string_types]) -> None
         super(Encoding, self).__init__(id_=id_, name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data)
 
         self._cloud_region = None
         self._encoder_version = None
         self._infrastructure_id = None
         self._infrastructure = None
+        self._selected_encoder_version = None
+        self._selected_encoding_mode = None
+        self._selected_cloud_region = None
+        self._status = None
         self._labels = list()
         self.discriminator = None
 
@@ -42,6 +52,14 @@ class Encoding(BitmovinResource):
             self.infrastructure_id = infrastructure_id
         if infrastructure is not None:
             self.infrastructure = infrastructure
+        if selected_encoder_version is not None:
+            self.selected_encoder_version = selected_encoder_version
+        if selected_encoding_mode is not None:
+            self.selected_encoding_mode = selected_encoding_mode
+        if selected_cloud_region is not None:
+            self.selected_cloud_region = selected_cloud_region
+        if status is not None:
+            self.status = status
         if labels is not None:
             self.labels = labels
 
@@ -57,6 +75,10 @@ class Encoding(BitmovinResource):
             'encoder_version': 'string_types',
             'infrastructure_id': 'string_types',
             'infrastructure': 'InfrastructureSettings',
+            'selected_encoder_version': 'string_types',
+            'selected_encoding_mode': 'EncodingMode',
+            'selected_cloud_region': 'CloudRegion',
+            'status': 'Status',
             'labels': 'list[string_types]'
         })
 
@@ -74,6 +96,10 @@ class Encoding(BitmovinResource):
             'encoder_version': 'encoderVersion',
             'infrastructure_id': 'infrastructureId',
             'infrastructure': 'infrastructure',
+            'selected_encoder_version': 'selectedEncoderVersion',
+            'selected_encoding_mode': 'selectedEncodingMode',
+            'selected_cloud_region': 'selectedCloudRegion',
+            'status': 'status',
             'labels': 'labels'
         })
         return attributes
@@ -191,6 +217,122 @@ class Encoding(BitmovinResource):
         self._infrastructure = infrastructure
 
     @property
+    def selected_encoder_version(self):
+        # type: () -> string_types
+        """Gets the selected_encoder_version of this Encoding.
+
+        Will be set to the encoder version that was actually used for the encoding. This is especially useful when starting an encoding with a version tag like STABLE or BETA.
+
+        :return: The selected_encoder_version of this Encoding.
+        :rtype: string_types
+        """
+        return self._selected_encoder_version
+
+    @selected_encoder_version.setter
+    def selected_encoder_version(self, selected_encoder_version):
+        # type: (string_types) -> None
+        """Sets the selected_encoder_version of this Encoding.
+
+        Will be set to the encoder version that was actually used for the encoding. This is especially useful when starting an encoding with a version tag like STABLE or BETA.
+
+        :param selected_encoder_version: The selected_encoder_version of this Encoding.
+        :type: string_types
+        """
+
+        if selected_encoder_version is not None:
+            if not isinstance(selected_encoder_version, string_types):
+                raise TypeError("Invalid type for `selected_encoder_version`, type has to be `string_types`")
+
+        self._selected_encoder_version = selected_encoder_version
+
+    @property
+    def selected_encoding_mode(self):
+        # type: () -> EncodingMode
+        """Gets the selected_encoding_mode of this Encoding.
+
+        Will be set to the encoding mode that was actually used for the encoding. This is especially useful when starting an encoding with encoding mode STANDARD.
+
+        :return: The selected_encoding_mode of this Encoding.
+        :rtype: EncodingMode
+        """
+        return self._selected_encoding_mode
+
+    @selected_encoding_mode.setter
+    def selected_encoding_mode(self, selected_encoding_mode):
+        # type: (EncodingMode) -> None
+        """Sets the selected_encoding_mode of this Encoding.
+
+        Will be set to the encoding mode that was actually used for the encoding. This is especially useful when starting an encoding with encoding mode STANDARD.
+
+        :param selected_encoding_mode: The selected_encoding_mode of this Encoding.
+        :type: EncodingMode
+        """
+
+        if selected_encoding_mode is not None:
+            if not isinstance(selected_encoding_mode, EncodingMode):
+                raise TypeError("Invalid type for `selected_encoding_mode`, type has to be `EncodingMode`")
+
+        self._selected_encoding_mode = selected_encoding_mode
+
+    @property
+    def selected_cloud_region(self):
+        # type: () -> CloudRegion
+        """Gets the selected_cloud_region of this Encoding.
+
+        Contains the region which was selected when cloudregion:AUTO was specified
+
+        :return: The selected_cloud_region of this Encoding.
+        :rtype: CloudRegion
+        """
+        return self._selected_cloud_region
+
+    @selected_cloud_region.setter
+    def selected_cloud_region(self, selected_cloud_region):
+        # type: (CloudRegion) -> None
+        """Sets the selected_cloud_region of this Encoding.
+
+        Contains the region which was selected when cloudregion:AUTO was specified
+
+        :param selected_cloud_region: The selected_cloud_region of this Encoding.
+        :type: CloudRegion
+        """
+
+        if selected_cloud_region is not None:
+            if not isinstance(selected_cloud_region, CloudRegion):
+                raise TypeError("Invalid type for `selected_cloud_region`, type has to be `CloudRegion`")
+
+        self._selected_cloud_region = selected_cloud_region
+
+    @property
+    def status(self):
+        # type: () -> Status
+        """Gets the status of this Encoding.
+
+        The current status of the encoding.
+
+        :return: The status of this Encoding.
+        :rtype: Status
+        """
+        return self._status
+
+    @status.setter
+    def status(self, status):
+        # type: (Status) -> None
+        """Sets the status of this Encoding.
+
+        The current status of the encoding.
+
+        :param status: The status of this Encoding.
+        :type: Status
+        """
+
+        if status is not None:
+            if not isinstance(status, Status):
+                raise TypeError("Invalid type for `status`, type has to be `Status`")
+
+        self._status = status
+
+    @property
     def labels(self):
         # type: () -> list[string_types]
         """Gets the labels of this Encoding.
@@ -222,9 +364,9 @@ class Encoding(BitmovinResource):
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}
+
         if hasattr(super(Encoding, self), "to_dict"):
             result = super(Encoding, self).to_dict()
-
         for attr, _ in six.iteritems(self.openapi_types):
             value = getattr(self, attr)
             if isinstance(value, list):

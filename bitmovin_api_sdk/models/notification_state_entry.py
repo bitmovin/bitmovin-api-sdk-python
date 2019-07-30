@@ -2,7 +2,7 @@
 
 from enum import Enum
 from datetime import datetime
-from six import string_types
+from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
 from bitmovin_api_sdk.models.bitmovin_response import BitmovinResponse
 from bitmovin_api_sdk.models.notification_states import NotificationStates
@@ -217,9 +217,9 @@ class NotificationStateEntry(BitmovinResponse):
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}
+
         if hasattr(super(NotificationStateEntry, self), "to_dict"):
             result = super(NotificationStateEntry, self).to_dict()
-
         for attr, _ in six.iteritems(self.openapi_types):
             value = getattr(self, attr)
             if isinstance(value, list):

@@ -6,7 +6,7 @@ from bitmovin_api_sdk.common import BaseApi, BitmovinApiLoggerBase
 from bitmovin_api_sdk.common.poscheck import poscheck_except
 from bitmovin_api_sdk.account.information.information_api import InformationApi
 from bitmovin_api_sdk.account.login.login_api import LoginApi
-from bitmovin_api_sdk.account.apiKeys.api_keys_api import ApiKeysApi
+from bitmovin_api_sdk.account.api_keys.api_keys_api import ApiKeysApi
 from bitmovin_api_sdk.account.organizations.organizations_api import OrganizationsApi
 
 
@@ -36,7 +36,7 @@ class AccountApi(BaseApi):
             logger=logger
         )
 
-        self.apiKeys = ApiKeysApi(
+        self.api_keys = ApiKeysApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,

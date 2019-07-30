@@ -1,7 +1,7 @@
 # coding: utf-8
 
 
-from six import string_types
+from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
 import pprint
 
@@ -17,6 +17,10 @@ class AbstractCondition(object):
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}
+        for k, v in iteritems(self.discriminator_value_class_map):
+            if v == type(self).__name__:
+                result['type'] = k
+                break
 
         return result
 

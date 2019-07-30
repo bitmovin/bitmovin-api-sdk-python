@@ -1,7 +1,7 @@
 # coding: utf-8
 
 from enum import Enum
-from six import string_types
+from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
 from bitmovin_api_sdk.models.muxing import Muxing
 from bitmovin_api_sdk.models.stream_conditions_mode import StreamConditionsMode
@@ -32,7 +32,7 @@ class CmafMuxing(Muxing):
                  init_segment_name_template=None,
                  segments_muxed=None,
                  frames_per_cmaf_chunk=None):
-        # type: (string_types, string_types, datetime, datetime, dict, string_types, list[MuxingStream], list[EncodingOutput], int, int, int, list[Ignoring], StreamConditionsMode, float, string_types, string_types, string_types, string_types, int, object) -> None
+        # type: (string_types, string_types, datetime, datetime, dict, string_types, list[MuxingStream], list[EncodingOutput], int, int, int, list[Ignoring], StreamConditionsMode, float, string_types, string_types, string_types, string_types, int, int) -> None
         super(CmafMuxing, self).__init__(name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, id_=id_, streams=streams, outputs=outputs, avg_bitrate=avg_bitrate, min_bitrate=min_bitrate, max_bitrate=max_bitrate, ignored_by=ignored_by, stream_conditions_mode=stream_conditions_mode)
 
         self._segment_length = None
@@ -73,7 +73,7 @@ class CmafMuxing(Muxing):
             'init_segment_name': 'string_types',
             'init_segment_name_template': 'string_types',
             'segments_muxed': 'int',
-            'frames_per_cmaf_chunk': 'object'
+            'frames_per_cmaf_chunk': 'int'
         })
 
         return types
@@ -272,39 +272,39 @@ class CmafMuxing(Muxing):
 
     @property
     def frames_per_cmaf_chunk(self):
-        # type: () -> object
+        # type: () -> int
         """Gets the frames_per_cmaf_chunk of this CmafMuxing.
 
         Number of media frames per CMAF chunk. Defaults to: Length of a segment in frames. Minimum: 1. Maximum: Length of a segment in frames.
 
         :return: The frames_per_cmaf_chunk of this CmafMuxing.
-        :rtype: object
+        :rtype: int
         """
         return self._frames_per_cmaf_chunk
 
     @frames_per_cmaf_chunk.setter
     def frames_per_cmaf_chunk(self, frames_per_cmaf_chunk):
-        # type: (object) -> None
+        # type: (int) -> None
         """Sets the frames_per_cmaf_chunk of this CmafMuxing.
 
         Number of media frames per CMAF chunk. Defaults to: Length of a segment in frames. Minimum: 1. Maximum: Length of a segment in frames.
 
         :param frames_per_cmaf_chunk: The frames_per_cmaf_chunk of this CmafMuxing.
-        :type: object
+        :type: int
         """
 
         if frames_per_cmaf_chunk is not None:
-            if not isinstance(frames_per_cmaf_chunk, object):
-                raise TypeError("Invalid type for `frames_per_cmaf_chunk`, type has to be `object`")
+            if not isinstance(frames_per_cmaf_chunk, int):
+                raise TypeError("Invalid type for `frames_per_cmaf_chunk`, type has to be `int`")
 
         self._frames_per_cmaf_chunk = frames_per_cmaf_chunk
 
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}
+
         if hasattr(super(CmafMuxing, self), "to_dict"):
             result = super(CmafMuxing, self).to_dict()
-
         for attr, _ in six.iteritems(self.openapi_types):
             value = getattr(self, attr)
             if isinstance(value, list):

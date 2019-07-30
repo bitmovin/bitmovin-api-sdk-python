@@ -1,3 +1,0 @@
-from bitmovin_api_sdk.encoding.outputs.s3RoleBased.s3_role_based_api import S3RoleBasedApi
-from bitmovin_api_sdk.encoding.outputs.s3RoleBased.customdata.customdata_api import CustomdataApi
-from bitmovin_api_sdk.encoding.outputs.s3RoleBased.s3_role_based_output_list_query_params import S3RoleBasedOutputListQueryParams

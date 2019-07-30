@@ -2,7 +2,7 @@
 
 from enum import Enum
 from datetime import date
-from six import string_types
+from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
 import pprint
 import six

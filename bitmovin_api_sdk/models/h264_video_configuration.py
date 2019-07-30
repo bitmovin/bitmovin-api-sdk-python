@@ -1,7 +1,7 @@
 # coding: utf-8
 
 from enum import Enum
-from six import string_types
+from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
 from bitmovin_api_sdk.models.adaptive_quant_mode import AdaptiveQuantMode
 from bitmovin_api_sdk.models.b_adapt import BAdapt
@@ -403,6 +403,7 @@ class H264VideoConfiguration(VideoConfiguration):
         # type: () -> ProfileH264
         """Gets the profile of this H264VideoConfiguration.
 
+        When setting a profile, all other settings must not exceed the limits which are defined in the profile. Otherwise, a higher profile may be automatically chosen. (required)
 
         :return: The profile of this H264VideoConfiguration.
         :rtype: ProfileH264
@@ -414,6 +415,7 @@ class H264VideoConfiguration(VideoConfiguration):
         # type: (ProfileH264) -> None
         """Sets the profile of this H264VideoConfiguration.
 
+        When setting a profile, all other settings must not exceed the limits which are defined in the profile. Otherwise, a higher profile may be automatically chosen. (required)
 
         :param profile: The profile of this H264VideoConfiguration.
         :type: ProfileH264
@@ -883,6 +885,7 @@ class H264VideoConfiguration(VideoConfiguration):
         # type: () -> LevelH264
         """Gets the level of this H264VideoConfiguration.
 
+        If three-pass encoding is used and a level is set for the encoder, the bitrate for some segments may exceed the bitrate limit which is defined by the level.
 
         :return: The level of this H264VideoConfiguration.
         :rtype: LevelH264
@@ -894,6 +897,7 @@ class H264VideoConfiguration(VideoConfiguration):
         # type: (LevelH264) -> None
         """Sets the level of this H264VideoConfiguration.
 
+        If three-pass encoding is used and a level is set for the encoder, the bitrate for some segments may exceed the bitrate limit which is defined by the level.
 
         :param level: The level of this H264VideoConfiguration.
         :type: LevelH264
@@ -1641,9 +1645,9 @@ class H264VideoConfiguration(VideoConfiguration):
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}
+
         if hasattr(super(H264VideoConfiguration, self), "to_dict"):
             result = super(H264VideoConfiguration, self).to_dict()
-
         for attr, _ in six.iteritems(self.openapi_types):
             value = getattr(self, attr)
             if isinstance(value, list):

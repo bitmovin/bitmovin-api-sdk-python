@@ -1,7 +1,7 @@
 # coding: utf-8
 
 
-from six import string_types
+from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
 from bitmovin_api_sdk.models.dash_representation_type import DashRepresentationType
 from bitmovin_api_sdk.models.dash_representation_type_mode import DashRepresentationTypeMode
@@ -14,9 +14,9 @@ class DashWebmRepresentation(DashSegmentedRepresentation):
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}
+
         if hasattr(super(DashWebmRepresentation, self), "to_dict"):
             result = super(DashWebmRepresentation, self).to_dict()
-
         return result
 
     def to_str(self):

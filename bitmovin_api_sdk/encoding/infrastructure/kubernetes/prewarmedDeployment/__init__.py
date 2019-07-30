@@ -1,2 +1,0 @@
-from bitmovin_api_sdk.encoding.infrastructure.kubernetes.prewarmedDeployment.prewarmed_deployment_api import PrewarmedDeploymentApi
-from bitmovin_api_sdk.encoding.infrastructure.kubernetes.prewarmedDeployment.prewarm_encoder_settings_list_query_params import PrewarmEncoderSettingsListQueryParams

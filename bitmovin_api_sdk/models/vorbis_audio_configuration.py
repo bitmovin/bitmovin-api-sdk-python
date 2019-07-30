@@ -1,7 +1,7 @@
 # coding: utf-8
 
 from enum import Enum
-from six import string_types
+from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
 from bitmovin_api_sdk.models.audio_configuration import AudioConfiguration
 from bitmovin_api_sdk.models.vorbis_channel_layout import VorbisChannelLayout
@@ -87,9 +87,9 @@ class VorbisAudioConfiguration(AudioConfiguration):
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}
+
         if hasattr(super(VorbisAudioConfiguration, self), "to_dict"):
             result = super(VorbisAudioConfiguration, self).to_dict()
-
         for attr, _ in six.iteritems(self.openapi_types):
             value = getattr(self, attr)
             if isinstance(value, list):

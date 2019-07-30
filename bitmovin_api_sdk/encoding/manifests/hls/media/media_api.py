@@ -4,13 +4,13 @@ from __future__ import absolute_import
 
 from bitmovin_api_sdk.common import BaseApi, BitmovinApiLoggerBase
 from bitmovin_api_sdk.common.poscheck import poscheck_except
-from bitmovin_api_sdk.encoding.manifests.hls.media.customTags.custom_tags_api import CustomTagsApi
+from bitmovin_api_sdk.encoding.manifests.hls.media.custom_tags.custom_tags_api import CustomTagsApi
 from bitmovin_api_sdk.encoding.manifests.hls.media.type.type_api import TypeApi
 from bitmovin_api_sdk.encoding.manifests.hls.media.video.video_api import VideoApi
 from bitmovin_api_sdk.encoding.manifests.hls.media.audio.audio_api import AudioApi
 from bitmovin_api_sdk.encoding.manifests.hls.media.subtitles.subtitles_api import SubtitlesApi
 from bitmovin_api_sdk.encoding.manifests.hls.media.vtt.vtt_api import VttApi
-from bitmovin_api_sdk.encoding.manifests.hls.media.closedCaptions.closed_captions_api import ClosedCaptionsApi
+from bitmovin_api_sdk.encoding.manifests.hls.media.closed_captions.closed_captions_api import ClosedCaptionsApi
 
 
 class MediaApi(BaseApi):
@@ -25,7 +25,7 @@ class MediaApi(BaseApi):
             logger=logger
         )
 
-        self.customTags = CustomTagsApi(
+        self.custom_tags = CustomTagsApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,
@@ -67,7 +67,7 @@ class MediaApi(BaseApi):
             logger=logger
         )
 
-        self.closedCaptions = ClosedCaptionsApi(
+        self.closed_captions = ClosedCaptionsApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,

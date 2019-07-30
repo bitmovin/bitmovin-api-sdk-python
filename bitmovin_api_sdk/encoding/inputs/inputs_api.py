@@ -9,10 +9,10 @@ from bitmovin_api_sdk.models.response_envelope import ResponseEnvelope
 from bitmovin_api_sdk.models.response_error import ResponseError
 from bitmovin_api_sdk.encoding.inputs.type.type_api import TypeApi
 from bitmovin_api_sdk.encoding.inputs.rtmp.rtmp_api import RtmpApi
-from bitmovin_api_sdk.encoding.inputs.redundantRtmp.redundant_rtmp_api import RedundantRtmpApi
+from bitmovin_api_sdk.encoding.inputs.redundant_rtmp.redundant_rtmp_api import RedundantRtmpApi
 from bitmovin_api_sdk.encoding.inputs.s3.s3_api import S3Api
-from bitmovin_api_sdk.encoding.inputs.s3RoleBased.s3_role_based_api import S3RoleBasedApi
-from bitmovin_api_sdk.encoding.inputs.genericS3.generic_s3_api import GenericS3Api
+from bitmovin_api_sdk.encoding.inputs.s3_role_based.s3_role_based_api import S3RoleBasedApi
+from bitmovin_api_sdk.encoding.inputs.generic_s3.generic_s3_api import GenericS3Api
 from bitmovin_api_sdk.encoding.inputs.local.local_api import LocalApi
 from bitmovin_api_sdk.encoding.inputs.gcs.gcs_api import GcsApi
 from bitmovin_api_sdk.encoding.inputs.azure.azure_api import AzureApi
@@ -21,11 +21,11 @@ from bitmovin_api_sdk.encoding.inputs.sftp.sftp_api import SftpApi
 from bitmovin_api_sdk.encoding.inputs.http.http_api import HttpApi
 from bitmovin_api_sdk.encoding.inputs.https.https_api import HttpsApi
 from bitmovin_api_sdk.encoding.inputs.aspera.aspera_api import AsperaApi
-from bitmovin_api_sdk.encoding.inputs.akamaiNetstorage.akamai_netstorage_api import AkamaiNetstorageApi
+from bitmovin_api_sdk.encoding.inputs.akamai_netstorage.akamai_netstorage_api import AkamaiNetstorageApi
 from bitmovin_api_sdk.encoding.inputs.srt.srt_api import SrtApi
 from bitmovin_api_sdk.encoding.inputs.tcp.tcp_api import TcpApi
 from bitmovin_api_sdk.encoding.inputs.udp.udp_api import UdpApi
-from bitmovin_api_sdk.encoding.inputs.udpMulticast.udp_multicast_api import UdpMulticastApi
+from bitmovin_api_sdk.encoding.inputs.udp_multicast.udp_multicast_api import UdpMulticastApi
 from bitmovin_api_sdk.encoding.inputs.zixi.zixi_api import ZixiApi
 from bitmovin_api_sdk.encoding.inputs.input_list_query_params import InputListQueryParams
 
@@ -56,7 +56,7 @@ class InputsApi(BaseApi):
             logger=logger
         )
 
-        self.redundantRtmp = RedundantRtmpApi(
+        self.redundant_rtmp = RedundantRtmpApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,
@@ -70,14 +70,14 @@ class InputsApi(BaseApi):
             logger=logger
         )
 
-        self.s3RoleBased = S3RoleBasedApi(
+        self.s3_role_based = S3RoleBasedApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,
             logger=logger
         )
 
-        self.genericS3 = GenericS3Api(
+        self.generic_s3 = GenericS3Api(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,
@@ -140,7 +140,7 @@ class InputsApi(BaseApi):
             logger=logger
         )
 
-        self.akamaiNetstorage = AkamaiNetstorageApi(
+        self.akamai_netstorage = AkamaiNetstorageApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,
@@ -168,7 +168,7 @@ class InputsApi(BaseApi):
             logger=logger
         )
 
-        self.udpMulticast = UdpMulticastApi(
+        self.udp_multicast = UdpMulticastApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,

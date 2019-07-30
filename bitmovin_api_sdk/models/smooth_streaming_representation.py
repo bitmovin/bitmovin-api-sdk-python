@@ -1,7 +1,7 @@
 # coding: utf-8
 
 from enum import Enum
-from six import string_types
+from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
 from bitmovin_api_sdk.models.bitmovin_resource import BitmovinResource
 import pprint
@@ -21,8 +21,9 @@ class SmoothStreamingRepresentation(BitmovinResource):
                  muxing_id=None,
                  media_file=None,
                  language=None,
-                 track_name=None):
-        # type: (string_types, string_types, string_types, datetime, datetime, dict, string_types, string_types, string_types, string_types, string_types) -> None
+                 track_name=None,
+                 priority=None):
+        # type: (string_types, string_types, string_types, datetime, datetime, dict, string_types, string_types, string_types, string_types, string_types, int) -> None
         super(SmoothStreamingRepresentation, self).__init__(id_=id_, name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data)
 
         self._encoding_id = None
@@ -30,6 +31,7 @@ class SmoothStreamingRepresentation(BitmovinResource):
         self._media_file = None
         self._language = None
         self._track_name = None
+        self._priority = None
         self.discriminator = None
 
         if encoding_id is not None:
@@ -42,6 +44,8 @@ class SmoothStreamingRepresentation(BitmovinResource):
             self.language = language
         if track_name is not None:
             self.track_name = track_name
+        if priority is not None:
+            self.priority = priority
 
     @property
     def openapi_types(self):
@@ -55,7 +59,8 @@ class SmoothStreamingRepresentation(BitmovinResource):
             'muxing_id': 'string_types',
             'media_file': 'string_types',
             'language': 'string_types',
-            'track_name': 'string_types'
+            'track_name': 'string_types',
+            'priority': 'int'
         })
 
         return types
@@ -72,7 +77,8 @@ class SmoothStreamingRepresentation(BitmovinResource):
             'muxing_id': 'muxingId',
             'media_file': 'mediaFile',
             'language': 'language',
-            'track_name': 'trackName'
+            'track_name': 'trackName',
+            'priority': 'priority'
         })
         return attributes
 
@@ -221,12 +227,41 @@ class SmoothStreamingRepresentation(BitmovinResource):
 
         self._track_name = track_name
 
+    @property
+    def priority(self):
+        # type: () -> int
+        """Gets the priority of this SmoothStreamingRepresentation.
+
+        Specify the priority of this representation. Representations with higher priority will be listed first in the manifest.
+
+        :return: The priority of this SmoothStreamingRepresentation.
+        :rtype: int
+        """
+        return self._priority
+
+    @priority.setter
+    def priority(self, priority):
+        # type: (int) -> None
+        """Sets the priority of this SmoothStreamingRepresentation.
+
+        Specify the priority of this representation. Representations with higher priority will be listed first in the manifest.
+
+        :param priority: The priority of this SmoothStreamingRepresentation.
+        :type: int
+        """
+
+        if priority is not None:
+            if not isinstance(priority, int):
+                raise TypeError("Invalid type for `priority`, type has to be `int`")
+
+        self._priority = priority
+
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}
+
         if hasattr(super(SmoothStreamingRepresentation, self), "to_dict"):
             result = super(SmoothStreamingRepresentation, self).to_dict()
-
         for attr, _ in six.iteritems(self.openapi_types):
             value = getattr(self, attr)
             if isinstance(value, list):

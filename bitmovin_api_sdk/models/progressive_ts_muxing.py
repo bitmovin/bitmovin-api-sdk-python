@@ -1,7 +1,7 @@
 # coding: utf-8
 
 from enum import Enum
-from six import string_types
+from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
 from bitmovin_api_sdk.models.internal_chunk_length import InternalChunkLength
 from bitmovin_api_sdk.models.muxing import Muxing
@@ -30,7 +30,7 @@ class ProgressiveTsMuxing(Muxing):
                  filename=None,
                  start_offset=None,
                  internal_chunk_length=None):
-        # type: (string_types, string_types, datetime, datetime, dict, string_types, list[MuxingStream], list[EncodingOutput], int, int, int, list[Ignoring], StreamConditionsMode, float, string_types, float, InternalChunkLength) -> None
+        # type: (string_types, string_types, datetime, datetime, dict, string_types, list[MuxingStream], list[EncodingOutput], int, int, int, list[Ignoring], StreamConditionsMode, float, string_types, int, InternalChunkLength) -> None
         super(ProgressiveTsMuxing, self).__init__(name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, id_=id_, streams=streams, outputs=outputs, avg_bitrate=avg_bitrate, min_bitrate=min_bitrate, max_bitrate=max_bitrate, ignored_by=ignored_by, stream_conditions_mode=stream_conditions_mode)
 
         self._segment_length = None
@@ -58,7 +58,7 @@ class ProgressiveTsMuxing(Muxing):
         types.update({
             'segment_length': 'float',
             'filename': 'string_types',
-            'start_offset': 'float',
+            'start_offset': 'int',
             'internal_chunk_length': 'InternalChunkLength'
         })
 
@@ -139,30 +139,30 @@ class ProgressiveTsMuxing(Muxing):
 
     @property
     def start_offset(self):
-        # type: () -> float
+        # type: () -> int
         """Gets the start_offset of this ProgressiveTsMuxing.
 
-        Offset of MPEG-TS timestamps in seconds. E.g., first packet will start with PTS 900,000 for a 10 seconds offset (90,000 MPEG-TS timescale).
+        Offset of MPEG-TS timestamps in seconds. e.g. first packet will start with PTS 900,000 for a 10 seconds offset (90,000 MPEG-TS timescale).
 
         :return: The start_offset of this ProgressiveTsMuxing.
-        :rtype: float
+        :rtype: int
         """
         return self._start_offset
 
     @start_offset.setter
     def start_offset(self, start_offset):
-        # type: (float) -> None
+        # type: (int) -> None
         """Sets the start_offset of this ProgressiveTsMuxing.
 
-        Offset of MPEG-TS timestamps in seconds. E.g., first packet will start with PTS 900,000 for a 10 seconds offset (90,000 MPEG-TS timescale).
+        Offset of MPEG-TS timestamps in seconds. e.g. first packet will start with PTS 900,000 for a 10 seconds offset (90,000 MPEG-TS timescale).
 
         :param start_offset: The start_offset of this ProgressiveTsMuxing.
-        :type: float
+        :type: int
         """
 
         if start_offset is not None:
-            if not isinstance(start_offset, (float, int)):
-                raise TypeError("Invalid type for `start_offset`, type has to be `float`")
+            if not isinstance(start_offset, int):
+                raise TypeError("Invalid type for `start_offset`, type has to be `int`")
 
         self._start_offset = start_offset
 
@@ -198,9 +198,9 @@ class ProgressiveTsMuxing(Muxing):
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}
+
         if hasattr(super(ProgressiveTsMuxing, self), "to_dict"):
             result = super(ProgressiveTsMuxing, self).to_dict()
-
         for attr, _ in six.iteritems(self.openapi_types):
             value = getattr(self, attr)
             if isinstance(value, list):

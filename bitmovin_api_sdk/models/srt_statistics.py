@@ -2,7 +2,7 @@
 
 from enum import Enum
 from datetime import datetime
-from six import string_types
+from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
 from bitmovin_api_sdk.models.srt_statistic_link import SrtStatisticLink
 from bitmovin_api_sdk.models.srt_statistic_recv import SrtStatisticRecv

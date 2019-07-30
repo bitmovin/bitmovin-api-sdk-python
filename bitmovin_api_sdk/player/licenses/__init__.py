@@ -1,5 +1,5 @@
 from bitmovin_api_sdk.player.licenses.licenses_api import LicensesApi
 from bitmovin_api_sdk.player.licenses.analytics.analytics_api import AnalyticsApi
 from bitmovin_api_sdk.player.licenses.domains.domains_api import DomainsApi
-from bitmovin_api_sdk.player.licenses.thirdPartyLicensing.third_party_licensing_api import ThirdPartyLicensingApi
+from bitmovin_api_sdk.player.licenses.third_party_licensing.third_party_licensing_api import ThirdPartyLicensingApi
 from bitmovin_api_sdk.player.licenses.player_license_list_query_params import PlayerLicenseListQueryParams

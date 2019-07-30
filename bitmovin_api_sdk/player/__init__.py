@@ -1,4 +1,4 @@
 from bitmovin_api_sdk.player.player_api import PlayerApi
 from bitmovin_api_sdk.player.channels.channels_api import ChannelsApi
 from bitmovin_api_sdk.player.licenses.licenses_api import LicensesApi
-from bitmovin_api_sdk.player.customBuilds.custom_builds_api import CustomBuildsApi
+from bitmovin_api_sdk.player.custom_builds.custom_builds_api import CustomBuildsApi

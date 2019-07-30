@@ -9,18 +9,18 @@ from bitmovin_api_sdk.models.response_envelope import ResponseEnvelope
 from bitmovin_api_sdk.models.response_error import ResponseError
 from bitmovin_api_sdk.models.stream_mode import StreamMode
 from bitmovin_api_sdk.encoding.encodings.muxings.fmp4.fmp4_api import Fmp4Api
-from bitmovin_api_sdk.encoding.encodings.muxings.chunkedText.chunked_text_api import ChunkedTextApi
+from bitmovin_api_sdk.encoding.encodings.muxings.chunked_text.chunked_text_api import ChunkedTextApi
 from bitmovin_api_sdk.encoding.encodings.muxings.cmaf.cmaf_api import CmafApi
-from bitmovin_api_sdk.encoding.encodings.muxings.segmentedRaw.segmented_raw_api import SegmentedRawApi
+from bitmovin_api_sdk.encoding.encodings.muxings.segmented_raw.segmented_raw_api import SegmentedRawApi
 from bitmovin_api_sdk.encoding.encodings.muxings.text.text_api import TextApi
 from bitmovin_api_sdk.encoding.encodings.muxings.ts.ts_api import TsApi
 from bitmovin_api_sdk.encoding.encodings.muxings.webm.webm_api import WebmApi
 from bitmovin_api_sdk.encoding.encodings.muxings.mp3.mp3_api import Mp3Api
 from bitmovin_api_sdk.encoding.encodings.muxings.mp4.mp4_api import Mp4Api
-from bitmovin_api_sdk.encoding.encodings.muxings.progressiveTs.progressive_ts_api import ProgressiveTsApi
-from bitmovin_api_sdk.encoding.encodings.muxings.broadcastTs.broadcast_ts_api import BroadcastTsApi
-from bitmovin_api_sdk.encoding.encodings.muxings.progressiveWebm.progressive_webm_api import ProgressiveWebmApi
-from bitmovin_api_sdk.encoding.encodings.muxings.progressiveMov.progressive_mov_api import ProgressiveMovApi
+from bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.progressive_ts_api import ProgressiveTsApi
+from bitmovin_api_sdk.encoding.encodings.muxings.broadcast_ts.broadcast_ts_api import BroadcastTsApi
+from bitmovin_api_sdk.encoding.encodings.muxings.progressive_webm.progressive_webm_api import ProgressiveWebmApi
+from bitmovin_api_sdk.encoding.encodings.muxings.progressive_mov.progressive_mov_api import ProgressiveMovApi
 from bitmovin_api_sdk.encoding.encodings.muxings.muxing_list_query_params import MuxingListQueryParams
 
 
@@ -43,7 +43,7 @@ class MuxingsApi(BaseApi):
             logger=logger
         )
 
-        self.chunkedText = ChunkedTextApi(
+        self.chunked_text = ChunkedTextApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,
@@ -57,7 +57,7 @@ class MuxingsApi(BaseApi):
             logger=logger
         )
 
-        self.segmentedRaw = SegmentedRawApi(
+        self.segmented_raw = SegmentedRawApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,
@@ -99,28 +99,28 @@ class MuxingsApi(BaseApi):
             logger=logger
         )
 
-        self.progressiveTs = ProgressiveTsApi(
+        self.progressive_ts = ProgressiveTsApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,
             logger=logger
         )
 
-        self.broadcastTs = BroadcastTsApi(
+        self.broadcast_ts = BroadcastTsApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,
             logger=logger
         )
 
-        self.progressiveWebm = ProgressiveWebmApi(
+        self.progressive_webm = ProgressiveWebmApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,
             logger=logger
         )
 
-        self.progressiveMov = ProgressiveMovApi(
+        self.progressive_mov = ProgressiveMovApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,

@@ -1,7 +1,7 @@
 # coding: utf-8
 
 from enum import Enum
-from six import string_types
+from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
 from bitmovin_api_sdk.models.billable_encoding_minutes_details import BillableEncodingMinutesDetails
 from bitmovin_api_sdk.models.codec_config_type import CodecConfigType

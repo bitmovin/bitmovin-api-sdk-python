@@ -1,2 +1,0 @@
-from bitmovin_api_sdk.general.errorDefinitions.error_definitions_api import ErrorDefinitionsApi
-from bitmovin_api_sdk.general.errorDefinitions.api_error_definition_list_query_params import ApiErrorDefinitionListQueryParams

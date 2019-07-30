@@ -1,7 +1,7 @@
 # coding: utf-8
 
 from enum import Enum
-from six import string_types
+from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
 from bitmovin_api_sdk.models.bitrate_selection_mode import BitrateSelectionMode
 import pprint
@@ -16,7 +16,7 @@ class StreamPerTitleFixedResolutionAndBitrateSettings(object):
                  bitrate_selection_mode=None,
                  low_complexity_boundary_for_max_bitrate=None,
                  high_complexity_boundary_for_max_bitrate=None):
-        # type: (int, int, BitrateSelectionMode, float, float) -> None
+        # type: (int, int, BitrateSelectionMode, int, int) -> None
 
         self._min_bitrate = None
         self._max_bitrate = None
@@ -42,8 +42,8 @@ class StreamPerTitleFixedResolutionAndBitrateSettings(object):
             'min_bitrate': 'int',
             'max_bitrate': 'int',
             'bitrate_selection_mode': 'BitrateSelectionMode',
-            'low_complexity_boundary_for_max_bitrate': 'float',
-            'high_complexity_boundary_for_max_bitrate': 'float'
+            'low_complexity_boundary_for_max_bitrate': 'int',
+            'high_complexity_boundary_for_max_bitrate': 'int'
         }
 
         return types
@@ -148,59 +148,59 @@ class StreamPerTitleFixedResolutionAndBitrateSettings(object):
 
     @property
     def low_complexity_boundary_for_max_bitrate(self):
-        # type: () -> float
+        # type: () -> int
         """Gets the low_complexity_boundary_for_max_bitrate of this StreamPerTitleFixedResolutionAndBitrateSettings.
 
         Low complexity boundary for max bitrate
 
         :return: The low_complexity_boundary_for_max_bitrate of this StreamPerTitleFixedResolutionAndBitrateSettings.
-        :rtype: float
+        :rtype: int
         """
         return self._low_complexity_boundary_for_max_bitrate
 
     @low_complexity_boundary_for_max_bitrate.setter
     def low_complexity_boundary_for_max_bitrate(self, low_complexity_boundary_for_max_bitrate):
-        # type: (float) -> None
+        # type: (int) -> None
         """Sets the low_complexity_boundary_for_max_bitrate of this StreamPerTitleFixedResolutionAndBitrateSettings.
 
         Low complexity boundary for max bitrate
 
         :param low_complexity_boundary_for_max_bitrate: The low_complexity_boundary_for_max_bitrate of this StreamPerTitleFixedResolutionAndBitrateSettings.
-        :type: float
+        :type: int
         """
 
         if low_complexity_boundary_for_max_bitrate is not None:
-            if not isinstance(low_complexity_boundary_for_max_bitrate, (float, int)):
-                raise TypeError("Invalid type for `low_complexity_boundary_for_max_bitrate`, type has to be `float`")
+            if not isinstance(low_complexity_boundary_for_max_bitrate, int):
+                raise TypeError("Invalid type for `low_complexity_boundary_for_max_bitrate`, type has to be `int`")
 
         self._low_complexity_boundary_for_max_bitrate = low_complexity_boundary_for_max_bitrate
 
     @property
     def high_complexity_boundary_for_max_bitrate(self):
-        # type: () -> float
+        # type: () -> int
         """Gets the high_complexity_boundary_for_max_bitrate of this StreamPerTitleFixedResolutionAndBitrateSettings.
 
         High complexity boundary for max bitrate
 
         :return: The high_complexity_boundary_for_max_bitrate of this StreamPerTitleFixedResolutionAndBitrateSettings.
-        :rtype: float
+        :rtype: int
         """
         return self._high_complexity_boundary_for_max_bitrate
 
     @high_complexity_boundary_for_max_bitrate.setter
     def high_complexity_boundary_for_max_bitrate(self, high_complexity_boundary_for_max_bitrate):
-        # type: (float) -> None
+        # type: (int) -> None
         """Sets the high_complexity_boundary_for_max_bitrate of this StreamPerTitleFixedResolutionAndBitrateSettings.
 
         High complexity boundary for max bitrate
 
         :param high_complexity_boundary_for_max_bitrate: The high_complexity_boundary_for_max_bitrate of this StreamPerTitleFixedResolutionAndBitrateSettings.
-        :type: float
+        :type: int
         """
 
         if high_complexity_boundary_for_max_bitrate is not None:
-            if not isinstance(high_complexity_boundary_for_max_bitrate, (float, int)):
-                raise TypeError("Invalid type for `high_complexity_boundary_for_max_bitrate`, type has to be `float`")
+            if not isinstance(high_complexity_boundary_for_max_bitrate, int):
+                raise TypeError("Invalid type for `high_complexity_boundary_for_max_bitrate`, type has to be `int`")
 
         self._high_complexity_boundary_for_max_bitrate = high_complexity_boundary_for_max_bitrate
 

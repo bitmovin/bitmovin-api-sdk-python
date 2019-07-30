@@ -36,11 +36,11 @@ class ApiClient(object):
         found = re.search(r'({.*})', url)
         return found is not None
 
-    def prepare_url(self, relative_url, **kwargs):
+    def prepare_url(self, relative_url, query_params=None, **kwargs):
         # type: (str, dict) -> str
 
-        if 'query_params' in kwargs and kwargs['query_params'] is not None:
-            query_params = self._remove_none_values_from_dict(kwargs['query_params'].__dict__)
+        if query_params is not None:
+            query_params = self._remove_none_values_from_dict(query_params.__dict__)
             relative_url += '?' + urllib.parse.urlencode(query_params)
 
         if not self._check_url_contains_placeholders(relative_url):
@@ -67,10 +67,10 @@ class ApiClient(object):
 
         return relative_url
 
-    def request(self, method, relative_url, payload=None, raw_response=False, **kwargs):
+    def request(self, method, relative_url, payload=None, raw_response=False, query_params=None, **kwargs):
         # type: (str, str, object, bool, dict) -> object
 
-        url = self.prepare_url(relative_url, **kwargs)
+        url = self.prepare_url(relative_url, query_params=query_params, **kwargs)
 
         try:
             response = self.rest_client.request(method=method, payload=payload, relative_url=url)
@@ -86,14 +86,14 @@ class ApiClient(object):
 
         return self.request('DELETE', relative_url=relative_url, **kwargs)
 
-    def get(self, relative_url, **kwargs):
+    def get(self, relative_url, query_params=None, **kwargs):
         # type: (str, dict) -> object
 
         raw_response = False
         if 'type' not in kwargs or kwargs['type'] is None:
             raw_response = True
 
-        return self.request('GET', relative_url=relative_url, raw_response=raw_response, **kwargs)
+        return self.request('GET', relative_url=relative_url, raw_response=raw_response, query_params=query_params, **kwargs)
 
     def post(self, relative_url, payload=None, **kwargs):
         # type: (str, object, dict) -> object
@@ -103,7 +103,8 @@ class ApiClient(object):
 
         if payload is not None:
             if type(payload) != list:
-                return self.request('POST', relative_url=relative_url, payload=payload.to_dict(), **kwargs)
+                payload_dict = payload.to_dict()
+                return self.request('POST', relative_url=relative_url, payload=payload_dict, **kwargs)
             else:
                 return self.request('POST', relative_url=relative_url, payload=payload, **kwargs)
         elif payload is None:
@@ -115,11 +116,13 @@ class ApiClient(object):
         if 'type' not in kwargs or kwargs['type'] is None:
             raise MissingArgumentException('type must be given')
 
-        return self.request('PUT', relative_url=relative_url, payload=payload.to_dict() if payload else None, **kwargs)
+        payload_dict = payload.to_dict()
+
+        return self.request('PUT', relative_url=relative_url, payload=payload_dict if payload else None, **kwargs)
 
     @staticmethod
     def _map_response_to_model(response, **kwargs):
-        # type: (object, dict) -> object
+        # type: (dict, dict) -> object
 
         if 'status' in response and response['status'] == 'SUCCESS':
             if 'data' in response and 'result' in response['data']:

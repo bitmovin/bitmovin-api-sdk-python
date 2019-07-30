@@ -8,7 +8,7 @@ from bitmovin_api_sdk.models.bitmovin_response import BitmovinResponse
 from bitmovin_api_sdk.models.period import Period
 from bitmovin_api_sdk.models.response_envelope import ResponseEnvelope
 from bitmovin_api_sdk.models.response_error import ResponseError
-from bitmovin_api_sdk.encoding.manifests.dash.periods.customXmlElements.custom_xml_elements_api import CustomXmlElementsApi
+from bitmovin_api_sdk.encoding.manifests.dash.periods.custom_xml_elements.custom_xml_elements_api import CustomXmlElementsApi
 from bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.adaptationsets_api import AdaptationsetsApi
 from bitmovin_api_sdk.encoding.manifests.dash.periods.period_list_query_params import PeriodListQueryParams
 
@@ -25,7 +25,7 @@ class PeriodsApi(BaseApi):
             logger=logger
         )
 
-        self.customXmlElements = CustomXmlElementsApi(
+        self.custom_xml_elements = CustomXmlElementsApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,

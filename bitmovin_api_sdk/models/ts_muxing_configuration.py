@@ -1,7 +1,7 @@
 # coding: utf-8
 
 from enum import Enum
-from six import string_types
+from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
 from bitmovin_api_sdk.models.ts_program_clock_reference_configuration import TsProgramClockReferenceConfiguration
 from bitmovin_api_sdk.models.ts_program_map_table_configuration import TsProgramMapTableConfiguration

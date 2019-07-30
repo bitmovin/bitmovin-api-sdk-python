@@ -1,7 +1,7 @@
 # coding: utf-8
 
 from enum import Enum
-from six import string_types
+from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
 from bitmovin_api_sdk.models.id3_tag import Id3Tag
 from bitmovin_api_sdk.models.id3_tag_position_mode import Id3TagPositionMode
@@ -123,9 +123,9 @@ class PlaintextId3Tag(Id3Tag):
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}
+
         if hasattr(super(PlaintextId3Tag, self), "to_dict"):
             result = super(PlaintextId3Tag, self).to_dict()
-
         for attr, _ in six.iteritems(self.openapi_types):
             value = getattr(self, attr)
             if isinstance(value, list):
