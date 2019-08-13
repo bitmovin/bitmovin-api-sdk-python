@@ -1,4 +1,2 @@
 from bitmovin_api_sdk.encoding.encodings.live.live_api import LiveApi
 from bitmovin_api_sdk.encoding.encodings.live.insertable_content.insertable_content_api import InsertableContentApi
-from bitmovin_api_sdk.encoding.encodings.live.scheduled_content_insertion.scheduled_content_insertion_api import ScheduledContentInsertionApi
-from bitmovin_api_sdk.encoding.encodings.live.stop_inserted_content.stop_inserted_content_api import StopInsertedContentApi

@@ -7,6 +7,7 @@ from bitmovin_api_sdk.common.poscheck import poscheck_except
 from bitmovin_api_sdk.analytics.exports.exports_api import ExportsApi
 from bitmovin_api_sdk.analytics.impressions.impressions_api import ImpressionsApi
 from bitmovin_api_sdk.analytics.metrics.metrics_api import MetricsApi
+from bitmovin_api_sdk.analytics.ads.ads_api import AdsApi
 from bitmovin_api_sdk.analytics.queries.queries_api import QueriesApi
 from bitmovin_api_sdk.analytics.licenses.licenses_api import LicensesApi
 from bitmovin_api_sdk.analytics.outputs.outputs_api import OutputsApi
@@ -39,6 +40,13 @@ class AnalyticsApi(BaseApi):
         )
 
         self.metrics = MetricsApi(
+            api_key=api_key,
+            tenant_org_id=tenant_org_id,
+            base_url=base_url,
+            logger=logger
+        )
+
+        self.ads = AdsApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,

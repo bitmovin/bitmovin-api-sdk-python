@@ -7,6 +7,7 @@ from bitmovin_api_sdk.models.abstract_condition import AbstractCondition
 from bitmovin_api_sdk.models.applied_stream_settings import AppliedStreamSettings
 from bitmovin_api_sdk.models.bitmovin_resource import BitmovinResource
 from bitmovin_api_sdk.models.decoding_error_mode import DecodingErrorMode
+from bitmovin_api_sdk.models.encoding_mode import EncodingMode
 from bitmovin_api_sdk.models.stream_metadata import StreamMetadata
 from bitmovin_api_sdk.models.stream_mode import StreamMode
 from bitmovin_api_sdk.models.stream_per_title_settings import StreamPerTitleSettings
@@ -31,11 +32,12 @@ class Stream(BitmovinResource):
                  conditions=None,
                  ignored_by=None,
                  mode=None,
+                 selected_encoding_mode=None,
                  per_title_settings=None,
                  metadata=None,
                  decoding_error_mode=None,
                  applied_settings=None):
-        # type: (string_types, string_types, string_types, datetime, datetime, dict, list[StreamInput], list[EncodingOutput], bool, string_types, int, AbstractCondition, list[Ignoring], StreamMode, StreamPerTitleSettings, StreamMetadata, DecodingErrorMode, AppliedStreamSettings) -> None
+        # type: (string_types, string_types, string_types, datetime, datetime, dict, list[StreamInput], list[EncodingOutput], bool, string_types, int, AbstractCondition, list[Ignoring], StreamMode, EncodingMode, StreamPerTitleSettings, StreamMetadata, DecodingErrorMode, AppliedStreamSettings) -> None
         super(Stream, self).__init__(id_=id_, name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data)
 
         self._input_streams = list()
@@ -46,6 +48,7 @@ class Stream(BitmovinResource):
         self._conditions = None
         self._ignored_by = list()
         self._mode = None
+        self._selected_encoding_mode = None
         self._per_title_settings = None
         self._metadata = None
         self._decoding_error_mode = None
@@ -68,6 +71,8 @@ class Stream(BitmovinResource):
             self.ignored_by = ignored_by
         if mode is not None:
             self.mode = mode
+        if selected_encoding_mode is not None:
+            self.selected_encoding_mode = selected_encoding_mode
         if per_title_settings is not None:
             self.per_title_settings = per_title_settings
         if metadata is not None:
@@ -93,6 +98,7 @@ class Stream(BitmovinResource):
             'conditions': 'AbstractCondition',
             'ignored_by': 'list[Ignoring]',
             'mode': 'StreamMode',
+            'selected_encoding_mode': 'EncodingMode',
             'per_title_settings': 'StreamPerTitleSettings',
             'metadata': 'StreamMetadata',
             'decoding_error_mode': 'DecodingErrorMode',
@@ -117,6 +123,7 @@ class Stream(BitmovinResource):
             'conditions': 'conditions',
             'ignored_by': 'ignoredBy',
             'mode': 'mode',
+            'selected_encoding_mode': 'selectedEncodingMode',
             'per_title_settings': 'perTitleSettings',
             'metadata': 'metadata',
             'decoding_error_mode': 'decodingErrorMode',
@@ -351,6 +358,35 @@ class Stream(BitmovinResource):
                 raise TypeError("Invalid type for `mode`, type has to be `StreamMode`")
 
         self._mode = mode
+
+    @property
+    def selected_encoding_mode(self):
+        # type: () -> EncodingMode
+        """Gets the selected_encoding_mode of this Stream.
+
+        The encoding mode of the stream which was applied by the assigned codec configuration
+
+        :return: The selected_encoding_mode of this Stream.
+        :rtype: EncodingMode
+        """
+        return self._selected_encoding_mode
+
+    @selected_encoding_mode.setter
+    def selected_encoding_mode(self, selected_encoding_mode):
+        # type: (EncodingMode) -> None
+        """Sets the selected_encoding_mode of this Stream.
+
+        The encoding mode of the stream which was applied by the assigned codec configuration
+
+        :param selected_encoding_mode: The selected_encoding_mode of this Stream.
+        :type: EncodingMode
+        """
+
+        if selected_encoding_mode is not None:
+            if not isinstance(selected_encoding_mode, EncodingMode):
+                raise TypeError("Invalid type for `selected_encoding_mode`, type has to be `EncodingMode`")
+
+        self._selected_encoding_mode = selected_encoding_mode
 
     @property
     def per_title_settings(self):

@@ -1,2 +1,5 @@
 from bitmovin_api_sdk.encoding.encodings.live.insertable_content.insertable_content_api import InsertableContentApi
+from bitmovin_api_sdk.encoding.encodings.live.insertable_content.schedule.schedule_api import ScheduleApi
+from bitmovin_api_sdk.encoding.encodings.live.insertable_content.scheduled.scheduled_api import ScheduledApi
+from bitmovin_api_sdk.encoding.encodings.live.insertable_content.stop.stop_api import StopApi
 from bitmovin_api_sdk.encoding.encodings.live.insertable_content.insertable_content_list_query_params import InsertableContentListQueryParams

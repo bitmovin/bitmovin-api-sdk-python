@@ -5,7 +5,7 @@ from __future__ import absolute_import
 from bitmovin_api_sdk.common import BaseApi, BitmovinApiLoggerBase
 from bitmovin_api_sdk.common.poscheck import poscheck_except
 from bitmovin_api_sdk.models.analytics_impression_details import AnalyticsImpressionDetails
-from bitmovin_api_sdk.models.analytics_license import AnalyticsLicense
+from bitmovin_api_sdk.models.analytics_license_key import AnalyticsLicenseKey
 from bitmovin_api_sdk.models.response_envelope import ResponseEnvelope
 from bitmovin_api_sdk.models.response_error import ResponseError
 
@@ -22,21 +22,21 @@ class ImpressionsApi(BaseApi):
             logger=logger
         )
 
-    def create(self, impression_id, analytics_license, **kwargs):
-        # type: (string_types, AnalyticsLicense, dict) -> AnalyticsImpressionDetails
+    def create(self, impression_id, analytics_license_key, **kwargs):
+        # type: (string_types, AnalyticsLicenseKey, dict) -> AnalyticsImpressionDetails
         """Impression Details
 
         :param impression_id: Impression id
         :type impression_id: string_types, required
-        :param analytics_license: Analytics license
-        :type analytics_license: AnalyticsLicense, required
+        :param analytics_license_key: Analytics license
+        :type analytics_license_key: AnalyticsLicenseKey, required
         :return: Service specific result
         :rtype: AnalyticsImpressionDetails
         """
 
         return self.api_client.post(
             '/analytics/impressions/{impression_id}',
-            analytics_license,
+            analytics_license_key,
             path_params={'impression_id': impression_id},
             type=AnalyticsImpressionDetails,
             **kwargs

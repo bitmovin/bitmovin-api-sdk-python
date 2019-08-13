@@ -1,6 +1,7 @@
 # coding: utf-8
 
 from enum import Enum
+from datetime import datetime
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
 import pprint
@@ -12,7 +13,7 @@ class AnalyticsQueryTimeframe(object):
     def __init__(self,
                  start=None,
                  end=None):
-        # type: (string_types, string_types) -> None
+        # type: (datetime, datetime) -> None
 
         self._start = None
         self._end = None
@@ -26,8 +27,8 @@ class AnalyticsQueryTimeframe(object):
     @property
     def openapi_types(self):
         types = {
-            'start': 'string_types',
-            'end': 'string_types'
+            'start': 'datetime',
+            'end': 'datetime'
         }
 
         return types
@@ -42,59 +43,59 @@ class AnalyticsQueryTimeframe(object):
 
     @property
     def start(self):
-        # type: () -> string_types
+        # type: () -> datetime
         """Gets the start of this AnalyticsQueryTimeframe.
 
-        Start of timeframe which is queried
+        Start of timeframe which is queried in UTC format.
 
         :return: The start of this AnalyticsQueryTimeframe.
-        :rtype: string_types
+        :rtype: datetime
         """
         return self._start
 
     @start.setter
     def start(self, start):
-        # type: (string_types) -> None
+        # type: (datetime) -> None
         """Sets the start of this AnalyticsQueryTimeframe.
 
-        Start of timeframe which is queried
+        Start of timeframe which is queried in UTC format.
 
         :param start: The start of this AnalyticsQueryTimeframe.
-        :type: string_types
+        :type: datetime
         """
 
         if start is not None:
-            if not isinstance(start, string_types):
-                raise TypeError("Invalid type for `start`, type has to be `string_types`")
+            if not isinstance(start, datetime):
+                raise TypeError("Invalid type for `start`, type has to be `datetime`")
 
         self._start = start
 
     @property
     def end(self):
-        # type: () -> string_types
+        # type: () -> datetime
         """Gets the end of this AnalyticsQueryTimeframe.
 
-        End of timeframe which is queried
+        End of timeframe which is queried in UTC format.
 
         :return: The end of this AnalyticsQueryTimeframe.
-        :rtype: string_types
+        :rtype: datetime
         """
         return self._end
 
     @end.setter
     def end(self, end):
-        # type: (string_types) -> None
+        # type: (datetime) -> None
         """Sets the end of this AnalyticsQueryTimeframe.
 
-        End of timeframe which is queried
+        End of timeframe which is queried in UTC format.
 
         :param end: The end of this AnalyticsQueryTimeframe.
-        :type: string_types
+        :type: datetime
         """
 
         if end is not None:
-            if not isinstance(end, string_types):
-                raise TypeError("Invalid type for `end`, type has to be `string_types`")
+            if not isinstance(end, datetime):
+                raise TypeError("Invalid type for `end`, type has to be `datetime`")
 
         self._end = end
 

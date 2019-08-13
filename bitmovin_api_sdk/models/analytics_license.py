@@ -1,6 +1,7 @@
 # coding: utf-8
 
 from enum import Enum
+from datetime import datetime
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
 from bitmovin_api_sdk.models.analytics_license_custom_data_field_labels import AnalyticsLicenseCustomDataFieldLabels
@@ -22,7 +23,7 @@ class AnalyticsLicense(BitmovinResponse):
                  ignore_dnt=None,
                  time_zone=None,
                  custom_data_field_labels=None):
-        # type: (string_types, string_types, string_types, string_types, int, int, list[AnalyticsLicenseDomain], bool, string_types, AnalyticsLicenseCustomDataFieldLabels) -> None
+        # type: (string_types, string_types, string_types, datetime, int, int, list[AnalyticsLicenseDomain], bool, string_types, AnalyticsLicenseCustomDataFieldLabels) -> None
         super(AnalyticsLicense, self).__init__(id_=id_)
 
         self._name = None
@@ -65,7 +66,7 @@ class AnalyticsLicense(BitmovinResponse):
         types.update({
             'name': 'string_types',
             'license_key': 'string_types',
-            'created_at': 'string_types',
+            'created_at': 'datetime',
             'max_impressions': 'int',
             'impressions': 'int',
             'domains': 'list[AnalyticsLicenseDomain]',
@@ -156,30 +157,30 @@ class AnalyticsLicense(BitmovinResponse):
 
     @property
     def created_at(self):
-        # type: () -> string_types
+        # type: () -> datetime
         """Gets the created_at of this AnalyticsLicense.
 
-        Creation date of the Analytics License
+        Creation date of the Analytics License in UTC format
 
         :return: The created_at of this AnalyticsLicense.
-        :rtype: string_types
+        :rtype: datetime
         """
         return self._created_at
 
     @created_at.setter
     def created_at(self, created_at):
-        # type: (string_types) -> None
+        # type: (datetime) -> None
         """Sets the created_at of this AnalyticsLicense.
 
-        Creation date of the Analytics License
+        Creation date of the Analytics License in UTC format
 
         :param created_at: The created_at of this AnalyticsLicense.
-        :type: string_types
+        :type: datetime
         """
 
         if created_at is not None:
-            if not isinstance(created_at, string_types):
-                raise TypeError("Invalid type for `created_at`, type has to be `string_types`")
+            if not isinstance(created_at, datetime):
+                raise TypeError("Invalid type for `created_at`, type has to be `datetime`")
 
         self._created_at = created_at
 

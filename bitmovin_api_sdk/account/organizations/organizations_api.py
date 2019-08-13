@@ -4,11 +4,10 @@ from __future__ import absolute_import
 
 from bitmovin_api_sdk.common import BaseApi, BitmovinApiLoggerBase
 from bitmovin_api_sdk.common.poscheck import poscheck_except
-from bitmovin_api_sdk.models.bitmovin_resource import BitmovinResource
-from bitmovin_api_sdk.models.bitmovin_response import BitmovinResponse
 from bitmovin_api_sdk.models.organization import Organization
 from bitmovin_api_sdk.models.response_envelope import ResponseEnvelope
 from bitmovin_api_sdk.models.response_error import ResponseError
+from bitmovin_api_sdk.account.organizations.sub_organizations.sub_organizations_api import SubOrganizationsApi
 from bitmovin_api_sdk.account.organizations.groups.groups_api import GroupsApi
 
 
@@ -18,6 +17,13 @@ class OrganizationsApi(BaseApi):
         # type: (str, str, str, BitmovinApiLoggerBase) -> None
 
         super(OrganizationsApi, self).__init__(
+            api_key=api_key,
+            tenant_org_id=tenant_org_id,
+            base_url=base_url,
+            logger=logger
+        )
+
+        self.sub_organizations = SubOrganizationsApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,
@@ -48,28 +54,11 @@ class OrganizationsApi(BaseApi):
             **kwargs
         )
 
-    def delete(self, organization_id, **kwargs):
-        # type: (string_types, dict) -> BitmovinResponse
-        """Delete Organization
-
-        :param organization_id: Id of the organization
-        :type organization_id: string_types, required
-        :return: Id of the Organization
-        :rtype: BitmovinResponse
-        """
-
-        return self.api_client.delete(
-            '/account/organizations/{organization_id}',
-            path_params={'organization_id': organization_id},
-            type=BitmovinResponse,
-            **kwargs
-        )
-
     def get(self, organization_id, **kwargs):
         # type: (string_types, dict) -> Organization
         """Organization Details
 
-        :param organization_id: Id of the organization
+        :param organization_id: ID of the organization
         :type organization_id: string_types, required
         :return: Organization details
         :rtype: Organization

@@ -21,7 +21,7 @@ class AnalyticsMetricsQueryRequest(AnalyticsQueryTimeframe):
                  group_by=None,
                  limit=None,
                  offset=None):
-        # type: (string_types, string_types, string_types, list[AnalyticsFilter], list[AnalyticsOrderByEntry], AnalyticsInterval, list[AnalyticsAttribute], int, int) -> None
+        # type: (datetime, datetime, string_types, list[AnalyticsAbstractFilter], list[AnalyticsOrderByEntry], AnalyticsInterval, list[AnalyticsAttribute], int, int) -> None
         super(AnalyticsMetricsQueryRequest, self).__init__(start=start, end=end)
 
         self._license_key = None
@@ -57,7 +57,7 @@ class AnalyticsMetricsQueryRequest(AnalyticsQueryTimeframe):
 
         types.update({
             'license_key': 'string_types',
-            'filters': 'list[AnalyticsFilter]',
+            'filters': 'list[AnalyticsAbstractFilter]',
             'order_by': 'list[AnalyticsOrderByEntry]',
             'interval': 'AnalyticsInterval',
             'group_by': 'list[AnalyticsAttribute]',
@@ -116,12 +116,12 @@ class AnalyticsMetricsQueryRequest(AnalyticsQueryTimeframe):
 
     @property
     def filters(self):
-        # type: () -> list[AnalyticsFilter]
+        # type: () -> list[AnalyticsAbstractFilter]
         """Gets the filters of this AnalyticsMetricsQueryRequest.
 
 
         :return: The filters of this AnalyticsMetricsQueryRequest.
-        :rtype: list[AnalyticsFilter]
+        :rtype: list[AnalyticsAbstractFilter]
         """
         return self._filters
 
@@ -132,12 +132,12 @@ class AnalyticsMetricsQueryRequest(AnalyticsQueryTimeframe):
 
 
         :param filters: The filters of this AnalyticsMetricsQueryRequest.
-        :type: list[AnalyticsFilter]
+        :type: list[AnalyticsAbstractFilter]
         """
 
         if filters is not None:
             if not isinstance(filters, list):
-                raise TypeError("Invalid type for `filters`, type has to be `list[AnalyticsFilter]`")
+                raise TypeError("Invalid type for `filters`, type has to be `list[AnalyticsAbstractFilter]`")
 
         self._filters = filters
 

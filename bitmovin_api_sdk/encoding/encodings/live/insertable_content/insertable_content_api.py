@@ -7,6 +7,9 @@ from bitmovin_api_sdk.common.poscheck import poscheck_except
 from bitmovin_api_sdk.models.insertable_content import InsertableContent
 from bitmovin_api_sdk.models.response_envelope import ResponseEnvelope
 from bitmovin_api_sdk.models.response_error import ResponseError
+from bitmovin_api_sdk.encoding.encodings.live.insertable_content.schedule.schedule_api import ScheduleApi
+from bitmovin_api_sdk.encoding.encodings.live.insertable_content.scheduled.scheduled_api import ScheduledApi
+from bitmovin_api_sdk.encoding.encodings.live.insertable_content.stop.stop_api import StopApi
 from bitmovin_api_sdk.encoding.encodings.live.insertable_content.insertable_content_list_query_params import InsertableContentListQueryParams
 
 
@@ -16,6 +19,27 @@ class InsertableContentApi(BaseApi):
         # type: (str, str, str, BitmovinApiLoggerBase) -> None
 
         super(InsertableContentApi, self).__init__(
+            api_key=api_key,
+            tenant_org_id=tenant_org_id,
+            base_url=base_url,
+            logger=logger
+        )
+
+        self.schedule = ScheduleApi(
+            api_key=api_key,
+            tenant_org_id=tenant_org_id,
+            base_url=base_url,
+            logger=logger
+        )
+
+        self.scheduled = ScheduledApi(
+            api_key=api_key,
+            tenant_org_id=tenant_org_id,
+            base_url=base_url,
+            logger=logger
+        )
+
+        self.stop = StopApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,

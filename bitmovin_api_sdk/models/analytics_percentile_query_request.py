@@ -24,7 +24,7 @@ class AnalyticsPercentileQueryRequest(AnalyticsQueryRequest):
                  limit=None,
                  offset=None,
                  percentile=None):
-        # type: (string_types, string_types, string_types, list[AnalyticsBaseFilter], list[AnalyticsOrderByEntry], AnalyticsAttribute, AnalyticsInterval, list[AnalyticsAttribute], int, int, int) -> None
+        # type: (datetime, datetime, string_types, list[AnalyticsAbstractFilter], list[AnalyticsOrderByEntry], AnalyticsAttribute, AnalyticsInterval, list[AnalyticsAttribute], int, int, int) -> None
         super(AnalyticsPercentileQueryRequest, self).__init__(start=start, end=end, license_key=license_key, filters=filters, order_by=order_by, dimension=dimension, interval=interval, group_by=group_by, limit=limit, offset=offset)
 
         self._percentile = None
