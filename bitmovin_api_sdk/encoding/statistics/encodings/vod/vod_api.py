@@ -41,12 +41,12 @@ class VodApi(BaseApi):
             **kwargs
         )
 
-    def list_by_date_range(self, _from, to, query_params=None, **kwargs):
+    def list_by_date_range(self, from_, to, query_params=None, **kwargs):
         # type: (date, date, EncodingStatisticsVodListByDateRangeQueryParams, dict) -> EncodingStatisticsVod
         """List VOD Encoding Statistics Within Specific Dates
 
-        :param _from: Start date, format: yyyy-MM-dd
-        :type _from: date, required
+        :param from_: Start date, format: yyyy-MM-dd
+        :type from_: date, required
         :param to: End date, format: yyyy-MM-dd
         :type to: date, required
         :param query_params: Query parameters
@@ -57,7 +57,7 @@ class VodApi(BaseApi):
 
         return self.api_client.get(
             '/encoding/statistics/encodings/vod/{from}/{to}',
-            path_params={'from': _from, 'to': to},
+            path_params={'from': from_, 'to': to},
             query_params=query_params,
             pagination_response=True,
             type=EncodingStatisticsVod,

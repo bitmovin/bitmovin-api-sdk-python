@@ -147,7 +147,11 @@ class BroadcastTsProgramConfiguration(object):
 
         for attr, _ in six.iteritems(self.openapi_types):
             value = getattr(self, attr)
+            if value is None:
+                continue
             if isinstance(value, list):
+                if len(value) == 0:
+                    continue
                 result[self.attribute_map.get(attr)] = [x.to_dict() if hasattr(x, "to_dict") else x for x in value]
             elif hasattr(value, "to_dict"):
                 result[self.attribute_map.get(attr)] = value.to_dict()

@@ -41,12 +41,12 @@ class DailyApi(BaseApi):
             **kwargs
         )
 
-    def list_by_date_range(self, _from, to, query_params=None, **kwargs):
+    def list_by_date_range(self, from_, to, query_params=None, **kwargs):
         # type: (date, date, DailyStatisticsPerLabelListByDateRangeQueryParams, dict) -> DailyStatisticsPerLabel
         """Get daily statistics per label within specific dates
 
-        :param _from: Start date. Format: yyyy-MM-dd
-        :type _from: date, required
+        :param from_: Start date. Format: yyyy-MM-dd
+        :type from_: date, required
         :param to: End date. Format: yyyy-MM-dd
         :type to: date, required
         :param query_params: Query parameters
@@ -57,7 +57,7 @@ class DailyApi(BaseApi):
 
         return self.api_client.get(
             '/encoding/statistics/labels/daily/{from}/{to}',
-            path_params={'from': _from, 'to': to},
+            path_params={'from': from_, 'to': to},
             query_params=query_params,
             pagination_response=True,
             type=DailyStatisticsPerLabel,

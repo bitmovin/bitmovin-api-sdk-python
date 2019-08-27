@@ -10,23 +10,23 @@ import six
 class TimeSpan(object):
     @poscheck_model
     def __init__(self,
-                 _from=None,
+                 from_=None,
                  to=None):
         # type: (int, int) -> None
 
-        self.__from = None
+        self._from_ = None
         self._to = None
         self.discriminator = None
 
-        if _from is not None:
-            self._from = _from
+        if from_ is not None:
+            self.from_ = from_
         if to is not None:
             self.to = to
 
     @property
     def openapi_types(self):
         types = {
-            '_from': 'int',
+            'from_': 'int',
             'to': 'int'
         }
 
@@ -35,39 +35,39 @@ class TimeSpan(object):
     @property
     def attribute_map(self):
         attributes = {
-            '_from': 'from',
+            'from_': 'from',
             'to': 'to'
         }
         return attributes
 
     @property
-    def _from(self):
+    def from_(self):
         # type: () -> int
-        """Gets the _from of this TimeSpan.
+        """Gets the from_ of this TimeSpan.
 
         Start offset of the time frame in milliseconds (required)
 
-        :return: The _from of this TimeSpan.
+        :return: The from_ of this TimeSpan.
         :rtype: int
         """
-        return self.__from
+        return self._from_
 
-    @_from.setter
-    def _from(self, _from):
+    @from_.setter
+    def from_(self, from_):
         # type: (int) -> None
-        """Sets the _from of this TimeSpan.
+        """Sets the from_ of this TimeSpan.
 
         Start offset of the time frame in milliseconds (required)
 
-        :param _from: The _from of this TimeSpan.
+        :param from_: The from_ of this TimeSpan.
         :type: int
         """
 
-        if _from is not None:
-            if not isinstance(_from, int):
-                raise TypeError("Invalid type for `_from`, type has to be `int`")
+        if from_ is not None:
+            if not isinstance(from_, int):
+                raise TypeError("Invalid type for `from_`, type has to be `int`")
 
-        self.__from = _from
+        self._from_ = from_
 
     @property
     def to(self):
@@ -104,7 +104,11 @@ class TimeSpan(object):
 
         for attr, _ in six.iteritems(self.openapi_types):
             value = getattr(self, attr)
+            if value is None:
+                continue
             if isinstance(value, list):
+                if len(value) == 0:
+                    continue
                 result[self.attribute_map.get(attr)] = [x.to_dict() if hasattr(x, "to_dict") else x for x in value]
             elif hasattr(value, "to_dict"):
                 result[self.attribute_map.get(attr)] = value.to_dict()

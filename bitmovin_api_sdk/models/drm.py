@@ -93,16 +93,20 @@ class Drm(BitmovinResource):
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}
+
+        if hasattr(super(Drm, self), "to_dict"):
+            result = super(Drm, self).to_dict()
         for k, v in iteritems(self.discriminator_value_class_map):
             if v == type(self).__name__:
                 result['type'] = k
                 break
-
-        if hasattr(super(Drm, self), "to_dict"):
-            result = super(Drm, self).to_dict()
         for attr, _ in six.iteritems(self.openapi_types):
             value = getattr(self, attr)
+            if value is None:
+                continue
             if isinstance(value, list):
+                if len(value) == 0:
+                    continue
                 result[self.attribute_map.get(attr)] = [x.to_dict() if hasattr(x, "to_dict") else x for x in value]
             elif hasattr(value, "to_dict"):
                 result[self.attribute_map.get(attr)] = value.to_dict()

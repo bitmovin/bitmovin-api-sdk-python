@@ -1,4 +1,4 @@
-class EbuR128SinglePassFilterListQueryParams(dict):
+class EbuR128SinglePassFilterListQueryParams(object):
     def __init__(self, offset=None, limit=None, name=None):
         # type: (int, int, string_types) -> None
         super(EbuR128SinglePassFilterListQueryParams, self).__init__()
@@ -6,3 +6,23 @@ class EbuR128SinglePassFilterListQueryParams(dict):
         self.offset = offset
         self.limit = limit
         self.name = name
+
+    @property
+    def openapi_types(self):
+        types = {
+            'offset': 'int',
+            'limit': 'int',
+            'name': 'string_types'
+        }
+
+        return types
+
+    @property
+    def attribute_map(self):
+        attributes = {
+            'offset': 'offset',
+            'limit': 'limit',
+            'name': 'name'
+        }
+
+        return attributes

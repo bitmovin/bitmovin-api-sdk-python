@@ -49,7 +49,7 @@ class ErrorApi(BaseApi):
             **kwargs
         )
 
-    def createby_encoding_id(self, encoding_id, webhook, **kwargs):
+    def create_by_encoding_id(self, encoding_id, webhook, **kwargs):
         # type: (string_types, Webhook, dict) -> Webhook
         """Add Encoding Error Webhook for specific Encoding Resource
 

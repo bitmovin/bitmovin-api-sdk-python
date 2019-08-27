@@ -17,11 +17,11 @@ class AbstractCondition(object):
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}
+
         for k, v in iteritems(self.discriminator_value_class_map):
             if v == type(self).__name__:
                 result['type'] = k
                 break
-
         return result
 
     def to_str(self):

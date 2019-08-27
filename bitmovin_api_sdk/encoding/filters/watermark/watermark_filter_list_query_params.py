@@ -1,4 +1,4 @@
-class WatermarkFilterListQueryParams(dict):
+class WatermarkFilterListQueryParams(object):
     def __init__(self, offset=None, limit=None, name=None):
         # type: (int, int, string_types) -> None
         super(WatermarkFilterListQueryParams, self).__init__()
@@ -6,3 +6,23 @@ class WatermarkFilterListQueryParams(dict):
         self.offset = offset
         self.limit = limit
         self.name = name
+
+    @property
+    def openapi_types(self):
+        types = {
+            'offset': 'int',
+            'limit': 'int',
+            'name': 'string_types'
+        }
+
+        return types
+
+    @property
+    def attribute_map(self):
+        attributes = {
+            'offset': 'offset',
+            'limit': 'limit',
+            'name': 'name'
+        }
+
+        return attributes

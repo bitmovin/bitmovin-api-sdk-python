@@ -3,14 +3,14 @@
 from enum import Enum
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
-from bitmovin_api_sdk.models.analytics_attribute import AnalyticsAttribute
+from bitmovin_api_sdk.models.ad_analytics_attribute import AdAnalyticsAttribute
+from bitmovin_api_sdk.models.ad_analytics_query_request import AdAnalyticsQueryRequest
 from bitmovin_api_sdk.models.analytics_interval import AnalyticsInterval
-from bitmovin_api_sdk.models.analytics_query_request import AnalyticsQueryRequest
 import pprint
 import six
 
 
-class AdAnalyticsPercentileQueryRequest(AnalyticsQueryRequest):
+class AdAnalyticsPercentileQueryRequest(AdAnalyticsQueryRequest):
     @poscheck_model
     def __init__(self,
                  start=None,
@@ -24,7 +24,7 @@ class AdAnalyticsPercentileQueryRequest(AnalyticsQueryRequest):
                  limit=None,
                  offset=None,
                  percentile=None):
-        # type: (datetime, datetime, string_types, list[AnalyticsAbstractFilter], list[AnalyticsOrderByEntry], AnalyticsAttribute, AnalyticsInterval, list[AnalyticsAttribute], int, int, int) -> None
+        # type: (datetime, datetime, string_types, list[AdAnalyticsAbstractFilter], list[AdAnalyticsOrderByEntry], AdAnalyticsAttribute, AnalyticsInterval, list[AdAnalyticsAttribute], int, int, int) -> None
         super(AdAnalyticsPercentileQueryRequest, self).__init__(start=start, end=end, license_key=license_key, filters=filters, order_by=order_by, dimension=dimension, interval=interval, group_by=group_by, limit=limit, offset=offset)
 
         self._percentile = None
@@ -95,7 +95,11 @@ class AdAnalyticsPercentileQueryRequest(AnalyticsQueryRequest):
             result = super(AdAnalyticsPercentileQueryRequest, self).to_dict()
         for attr, _ in six.iteritems(self.openapi_types):
             value = getattr(self, attr)
+            if value is None:
+                continue
             if isinstance(value, list):
+                if len(value) == 0:
+                    continue
                 result[self.attribute_map.get(attr)] = [x.to_dict() if hasattr(x, "to_dict") else x for x in value]
             elif hasattr(value, "to_dict"):
                 result[self.attribute_map.get(attr)] = value.to_dict()

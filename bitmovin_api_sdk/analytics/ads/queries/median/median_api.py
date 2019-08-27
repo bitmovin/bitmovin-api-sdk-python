@@ -5,7 +5,7 @@ from __future__ import absolute_import
 from bitmovin_api_sdk.common import BaseApi, BitmovinApiLoggerBase
 from bitmovin_api_sdk.common.poscheck import poscheck_except
 from bitmovin_api_sdk.models.ad_analytics_median_query_request import AdAnalyticsMedianQueryRequest
-from bitmovin_api_sdk.models.analytics_query_request import AnalyticsQueryRequest
+from bitmovin_api_sdk.models.ad_analytics_query_request import AdAnalyticsQueryRequest
 from bitmovin_api_sdk.models.analytics_response import AnalyticsResponse
 from bitmovin_api_sdk.models.response_envelope import ResponseEnvelope
 from bitmovin_api_sdk.models.response_error import ResponseError

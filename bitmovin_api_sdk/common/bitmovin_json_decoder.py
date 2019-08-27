@@ -21,11 +21,11 @@ class BitmovinJsonDecoder(object):
         model_instance = model()
         if 'discriminator_value_class_map' in model.__dict__:
             for i in model_to_return.items:
-                discriminator_value = model_instance.discriminator_value_class_map[i['type']]
-                pagination_items.append(
-                    BitmovinJsonDecoder.map_dict_to_model(i,
-                                                          getattr(BitmovinJsonDecoder.model_module,
-                                                                  discriminator_value)))
+                model_class = type(model_instance)
+                discriminator_value = model_instance.discriminator_value_class_map.get(i['type'])
+                if discriminator_value is not None:
+                    model_class = getattr(BitmovinJsonDecoder.model_module, discriminator_value)
+                pagination_items.append(BitmovinJsonDecoder.map_dict_to_model(i, model_class))
         else:
             pagination_items = BitmovinJsonDecoder.map_dict_to_list(model_to_return.items, model)
 
@@ -55,8 +55,9 @@ class BitmovinJsonDecoder(object):
         model_instance = model()
 
         if 'discriminator_value_class_map' in model.__dict__:
-            model_name = model_instance.discriminator_value_class_map[result['type']]
-            model = getattr(BitmovinJsonDecoder.model_module, model_name)
+            model_name = model_instance.discriminator_value_class_map.get(result['type'])
+            if model_name is not None:
+                model = getattr(BitmovinJsonDecoder.model_module, model_name)
 
         model_instance = model()
 

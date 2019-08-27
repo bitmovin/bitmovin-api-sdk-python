@@ -3,13 +3,13 @@
 
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
-from bitmovin_api_sdk.models.analytics_attribute import AnalyticsAttribute
+from bitmovin_api_sdk.models.ad_analytics_attribute import AdAnalyticsAttribute
+from bitmovin_api_sdk.models.ad_analytics_query_request import AdAnalyticsQueryRequest
 from bitmovin_api_sdk.models.analytics_interval import AnalyticsInterval
-from bitmovin_api_sdk.models.analytics_query_request import AnalyticsQueryRequest
 import pprint
 
 
-class AdAnalyticsMedianQueryRequest(AnalyticsQueryRequest):
+class AdAnalyticsMedianQueryRequest(AdAnalyticsQueryRequest):
 
     def to_dict(self):
         """Returns the model properties as a dict"""

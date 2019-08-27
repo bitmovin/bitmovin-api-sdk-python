@@ -34,13 +34,13 @@ class Input(BitmovinResource):
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}
+
+        if hasattr(super(Input, self), "to_dict"):
+            result = super(Input, self).to_dict()
         for k, v in iteritems(self.discriminator_value_class_map):
             if v == type(self).__name__:
                 result['type'] = k
                 break
-
-        if hasattr(super(Input, self), "to_dict"):
-            result = super(Input, self).to_dict()
         return result
 
     def to_str(self):
