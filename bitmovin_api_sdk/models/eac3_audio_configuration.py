@@ -20,15 +20,19 @@ class Eac3AudioConfiguration(AudioConfiguration):
                  id_=None,
                  bitrate=None,
                  rate=None,
-                 channel_layout=None):
-        # type: (string_types, string_types, datetime, datetime, dict, string_types, int, float, Ac3ChannelLayout) -> None
+                 channel_layout=None,
+                 cutoff_frequency=None):
+        # type: (string_types, string_types, datetime, datetime, dict, string_types, int, float, Ac3ChannelLayout, int) -> None
         super(Eac3AudioConfiguration, self).__init__(name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, id_=id_, bitrate=bitrate, rate=rate)
 
         self._channel_layout = None
+        self._cutoff_frequency = None
         self.discriminator = None
 
         if channel_layout is not None:
             self.channel_layout = channel_layout
+        if cutoff_frequency is not None:
+            self.cutoff_frequency = cutoff_frequency
 
     @property
     def openapi_types(self):
@@ -38,7 +42,8 @@ class Eac3AudioConfiguration(AudioConfiguration):
             types = getattr(super(Eac3AudioConfiguration, self), 'openapi_types')
 
         types.update({
-            'channel_layout': 'Ac3ChannelLayout'
+            'channel_layout': 'Ac3ChannelLayout',
+            'cutoff_frequency': 'int'
         })
 
         return types
@@ -51,7 +56,8 @@ class Eac3AudioConfiguration(AudioConfiguration):
             attributes = getattr(super(Eac3AudioConfiguration, self), 'attribute_map')
 
         attributes.update({
-            'channel_layout': 'channelLayout'
+            'channel_layout': 'channelLayout',
+            'cutoff_frequency': 'cutoffFrequency'
         })
         return attributes
 
@@ -83,6 +89,35 @@ class Eac3AudioConfiguration(AudioConfiguration):
                 raise TypeError("Invalid type for `channel_layout`, type has to be `Ac3ChannelLayout`")
 
         self._channel_layout = channel_layout
+
+    @property
+    def cutoff_frequency(self):
+        # type: () -> int
+        """Gets the cutoff_frequency of this Eac3AudioConfiguration.
+
+        The highest frequency that will pass the audio encoder. This value is optional.
+
+        :return: The cutoff_frequency of this Eac3AudioConfiguration.
+        :rtype: int
+        """
+        return self._cutoff_frequency
+
+    @cutoff_frequency.setter
+    def cutoff_frequency(self, cutoff_frequency):
+        # type: (int) -> None
+        """Sets the cutoff_frequency of this Eac3AudioConfiguration.
+
+        The highest frequency that will pass the audio encoder. This value is optional.
+
+        :param cutoff_frequency: The cutoff_frequency of this Eac3AudioConfiguration.
+        :type: int
+        """
+
+        if cutoff_frequency is not None:
+            if not isinstance(cutoff_frequency, int):
+                raise TypeError("Invalid type for `cutoff_frequency`, type has to be `int`")
+
+        self._cutoff_frequency = cutoff_frequency
 
     def to_dict(self):
         """Returns the model properties as a dict"""

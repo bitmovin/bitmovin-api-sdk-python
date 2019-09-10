@@ -24,8 +24,10 @@ class EnhancedWatermarkFilter(Filter):
                  top=None,
                  bottom=None,
                  unit=None,
-                 opacity=None):
-        # type: (string_types, string_types, datetime, datetime, dict, string_types, string_types, float, float, float, float, PositionUnit, float) -> None
+                 opacity=None,
+                 width=None,
+                 height=None):
+        # type: (string_types, string_types, datetime, datetime, dict, string_types, string_types, float, float, float, float, PositionUnit, float, float, float) -> None
         super(EnhancedWatermarkFilter, self).__init__(name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, id_=id_)
 
         self._image = None
@@ -35,6 +37,8 @@ class EnhancedWatermarkFilter(Filter):
         self._bottom = None
         self._unit = None
         self._opacity = None
+        self._width = None
+        self._height = None
         self.discriminator = None
 
         if image is not None:
@@ -51,6 +55,10 @@ class EnhancedWatermarkFilter(Filter):
             self.unit = unit
         if opacity is not None:
             self.opacity = opacity
+        if width is not None:
+            self.width = width
+        if height is not None:
+            self.height = height
 
     @property
     def openapi_types(self):
@@ -66,7 +74,9 @@ class EnhancedWatermarkFilter(Filter):
             'top': 'float',
             'bottom': 'float',
             'unit': 'PositionUnit',
-            'opacity': 'float'
+            'opacity': 'float',
+            'width': 'float',
+            'height': 'float'
         })
 
         return types
@@ -85,7 +95,9 @@ class EnhancedWatermarkFilter(Filter):
             'top': 'top',
             'bottom': 'bottom',
             'unit': 'unit',
-            'opacity': 'opacity'
+            'opacity': 'opacity',
+            'width': 'width',
+            'height': 'height'
         })
         return attributes
 
@@ -289,6 +301,64 @@ class EnhancedWatermarkFilter(Filter):
                 raise TypeError("Invalid type for `opacity`, type has to be `float`")
 
         self._opacity = opacity
+
+    @property
+    def width(self):
+        # type: () -> float
+        """Gets the width of this EnhancedWatermarkFilter.
+
+        Desired width of the watermark image, the unit of the parameter is specified separately by the parameter 'unit'. If both width and height are set the watermark size is fixed. If only one is set the aspect ratio of the image will be used to rescale it
+
+        :return: The width of this EnhancedWatermarkFilter.
+        :rtype: float
+        """
+        return self._width
+
+    @width.setter
+    def width(self, width):
+        # type: (float) -> None
+        """Sets the width of this EnhancedWatermarkFilter.
+
+        Desired width of the watermark image, the unit of the parameter is specified separately by the parameter 'unit'. If both width and height are set the watermark size is fixed. If only one is set the aspect ratio of the image will be used to rescale it
+
+        :param width: The width of this EnhancedWatermarkFilter.
+        :type: float
+        """
+
+        if width is not None:
+            if not isinstance(width, (float, int)):
+                raise TypeError("Invalid type for `width`, type has to be `float`")
+
+        self._width = width
+
+    @property
+    def height(self):
+        # type: () -> float
+        """Gets the height of this EnhancedWatermarkFilter.
+
+        Desired height of the watermark image, the unit of the parameter is specified separately by the parameter 'unit'. If both width and height are set the watermark size is fixed. If only one is set the aspect ratio of the image will be used to rescale it
+
+        :return: The height of this EnhancedWatermarkFilter.
+        :rtype: float
+        """
+        return self._height
+
+    @height.setter
+    def height(self, height):
+        # type: (float) -> None
+        """Sets the height of this EnhancedWatermarkFilter.
+
+        Desired height of the watermark image, the unit of the parameter is specified separately by the parameter 'unit'. If both width and height are set the watermark size is fixed. If only one is set the aspect ratio of the image will be used to rescale it
+
+        :param height: The height of this EnhancedWatermarkFilter.
+        :type: float
+        """
+
+        if height is not None:
+            if not isinstance(height, (float, int)):
+                raise TypeError("Invalid type for `height`, type has to be `float`")
+
+        self._height = height
 
     def to_dict(self):
         """Returns the model properties as a dict"""

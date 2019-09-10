@@ -5,6 +5,7 @@ from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
 from bitmovin_api_sdk.models.aac_channel_layout import AacChannelLayout
 from bitmovin_api_sdk.models.audio_configuration import AudioConfiguration
+from bitmovin_api_sdk.models.he_aac_v2_signaling import HeAacV2Signaling
 import pprint
 import six
 
@@ -20,15 +21,19 @@ class HeAacV2AudioConfiguration(AudioConfiguration):
                  id_=None,
                  bitrate=None,
                  rate=None,
-                 channel_layout=None):
-        # type: (string_types, string_types, datetime, datetime, dict, string_types, int, float, AacChannelLayout) -> None
+                 channel_layout=None,
+                 signaling=None):
+        # type: (string_types, string_types, datetime, datetime, dict, string_types, int, float, AacChannelLayout, HeAacV2Signaling) -> None
         super(HeAacV2AudioConfiguration, self).__init__(name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, id_=id_, bitrate=bitrate, rate=rate)
 
         self._channel_layout = None
+        self._signaling = None
         self.discriminator = None
 
         if channel_layout is not None:
             self.channel_layout = channel_layout
+        if signaling is not None:
+            self.signaling = signaling
 
     @property
     def openapi_types(self):
@@ -38,7 +43,8 @@ class HeAacV2AudioConfiguration(AudioConfiguration):
             types = getattr(super(HeAacV2AudioConfiguration, self), 'openapi_types')
 
         types.update({
-            'channel_layout': 'AacChannelLayout'
+            'channel_layout': 'AacChannelLayout',
+            'signaling': 'HeAacV2Signaling'
         })
 
         return types
@@ -51,7 +57,8 @@ class HeAacV2AudioConfiguration(AudioConfiguration):
             attributes = getattr(super(HeAacV2AudioConfiguration, self), 'attribute_map')
 
         attributes.update({
-            'channel_layout': 'channelLayout'
+            'channel_layout': 'channelLayout',
+            'signaling': 'signaling'
         })
         return attributes
 
@@ -83,6 +90,35 @@ class HeAacV2AudioConfiguration(AudioConfiguration):
                 raise TypeError("Invalid type for `channel_layout`, type has to be `AacChannelLayout`")
 
         self._channel_layout = channel_layout
+
+    @property
+    def signaling(self):
+        # type: () -> HeAacV2Signaling
+        """Gets the signaling of this HeAacV2AudioConfiguration.
+
+        Sets the Spectral Band Replication (SBR) and Parameteric Stereo (PS) signaling style.
+
+        :return: The signaling of this HeAacV2AudioConfiguration.
+        :rtype: HeAacV2Signaling
+        """
+        return self._signaling
+
+    @signaling.setter
+    def signaling(self, signaling):
+        # type: (HeAacV2Signaling) -> None
+        """Sets the signaling of this HeAacV2AudioConfiguration.
+
+        Sets the Spectral Band Replication (SBR) and Parameteric Stereo (PS) signaling style.
+
+        :param signaling: The signaling of this HeAacV2AudioConfiguration.
+        :type: HeAacV2Signaling
+        """
+
+        if signaling is not None:
+            if not isinstance(signaling, HeAacV2Signaling):
+                raise TypeError("Invalid type for `signaling`, type has to be `HeAacV2Signaling`")
+
+        self._signaling = signaling
 
     def to_dict(self):
         """Returns the model properties as a dict"""

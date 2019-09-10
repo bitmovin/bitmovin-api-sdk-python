@@ -3,6 +3,7 @@
 from enum import Enum
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
+from bitmovin_api_sdk.models.deinterlace_auto_enable import DeinterlaceAutoEnable
 from bitmovin_api_sdk.models.deinterlace_frame_selection_mode import DeinterlaceFrameSelectionMode
 from bitmovin_api_sdk.models.deinterlace_mode import DeinterlaceMode
 from bitmovin_api_sdk.models.filter import Filter
@@ -22,13 +23,15 @@ class DeinterlaceFilter(Filter):
                  id_=None,
                  parity=None,
                  mode=None,
-                 frame_selection_mode=None):
-        # type: (string_types, string_types, datetime, datetime, dict, string_types, PictureFieldParity, DeinterlaceMode, DeinterlaceFrameSelectionMode) -> None
+                 frame_selection_mode=None,
+                 auto_enable=None):
+        # type: (string_types, string_types, datetime, datetime, dict, string_types, PictureFieldParity, DeinterlaceMode, DeinterlaceFrameSelectionMode, DeinterlaceAutoEnable) -> None
         super(DeinterlaceFilter, self).__init__(name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, id_=id_)
 
         self._parity = None
         self._mode = None
         self._frame_selection_mode = None
+        self._auto_enable = None
         self.discriminator = None
 
         if parity is not None:
@@ -37,6 +40,8 @@ class DeinterlaceFilter(Filter):
             self.mode = mode
         if frame_selection_mode is not None:
             self.frame_selection_mode = frame_selection_mode
+        if auto_enable is not None:
+            self.auto_enable = auto_enable
 
     @property
     def openapi_types(self):
@@ -48,7 +53,8 @@ class DeinterlaceFilter(Filter):
         types.update({
             'parity': 'PictureFieldParity',
             'mode': 'DeinterlaceMode',
-            'frame_selection_mode': 'DeinterlaceFrameSelectionMode'
+            'frame_selection_mode': 'DeinterlaceFrameSelectionMode',
+            'auto_enable': 'DeinterlaceAutoEnable'
         })
 
         return types
@@ -63,7 +69,8 @@ class DeinterlaceFilter(Filter):
         attributes.update({
             'parity': 'parity',
             'mode': 'mode',
-            'frame_selection_mode': 'frameSelectionMode'
+            'frame_selection_mode': 'frameSelectionMode',
+            'auto_enable': 'autoEnable'
         })
         return attributes
 
@@ -147,6 +154,33 @@ class DeinterlaceFilter(Filter):
                 raise TypeError("Invalid type for `frame_selection_mode`, type has to be `DeinterlaceFrameSelectionMode`")
 
         self._frame_selection_mode = frame_selection_mode
+
+    @property
+    def auto_enable(self):
+        # type: () -> DeinterlaceAutoEnable
+        """Gets the auto_enable of this DeinterlaceFilter.
+
+
+        :return: The auto_enable of this DeinterlaceFilter.
+        :rtype: DeinterlaceAutoEnable
+        """
+        return self._auto_enable
+
+    @auto_enable.setter
+    def auto_enable(self, auto_enable):
+        # type: (DeinterlaceAutoEnable) -> None
+        """Sets the auto_enable of this DeinterlaceFilter.
+
+
+        :param auto_enable: The auto_enable of this DeinterlaceFilter.
+        :type: DeinterlaceAutoEnable
+        """
+
+        if auto_enable is not None:
+            if not isinstance(auto_enable, DeinterlaceAutoEnable):
+                raise TypeError("Invalid type for `auto_enable`, type has to be `DeinterlaceAutoEnable`")
+
+        self._auto_enable = auto_enable
 
     def to_dict(self):
         """Returns the model properties as a dict"""

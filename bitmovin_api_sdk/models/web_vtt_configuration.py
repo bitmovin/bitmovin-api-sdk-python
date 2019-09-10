@@ -17,15 +17,19 @@ class WebVttConfiguration(BitmovinResource):
                  created_at=None,
                  modified_at=None,
                  custom_data=None,
-                 append_optional_zero_hour=None):
-        # type: (string_types, string_types, string_types, datetime, datetime, dict, bool) -> None
+                 append_optional_zero_hour=None,
+                 ignore_region=None):
+        # type: (string_types, string_types, string_types, datetime, datetime, dict, bool, bool) -> None
         super(WebVttConfiguration, self).__init__(id_=id_, name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data)
 
         self._append_optional_zero_hour = None
+        self._ignore_region = None
         self.discriminator = None
 
         if append_optional_zero_hour is not None:
             self.append_optional_zero_hour = append_optional_zero_hour
+        if ignore_region is not None:
+            self.ignore_region = ignore_region
 
     @property
     def openapi_types(self):
@@ -35,7 +39,8 @@ class WebVttConfiguration(BitmovinResource):
             types = getattr(super(WebVttConfiguration, self), 'openapi_types')
 
         types.update({
-            'append_optional_zero_hour': 'bool'
+            'append_optional_zero_hour': 'bool',
+            'ignore_region': 'bool'
         })
 
         return types
@@ -48,7 +53,8 @@ class WebVttConfiguration(BitmovinResource):
             attributes = getattr(super(WebVttConfiguration, self), 'attribute_map')
 
         attributes.update({
-            'append_optional_zero_hour': 'appendOptionalZeroHour'
+            'append_optional_zero_hour': 'appendOptionalZeroHour',
+            'ignore_region': 'ignoreRegion'
         })
         return attributes
 
@@ -80,6 +86,35 @@ class WebVttConfiguration(BitmovinResource):
                 raise TypeError("Invalid type for `append_optional_zero_hour`, type has to be `bool`")
 
         self._append_optional_zero_hour = append_optional_zero_hour
+
+    @property
+    def ignore_region(self):
+        # type: () -> bool
+        """Gets the ignore_region of this WebVttConfiguration.
+
+        If set to true, the region information of the resulting webvtt file will be omitted. Defaults to false.
+
+        :return: The ignore_region of this WebVttConfiguration.
+        :rtype: bool
+        """
+        return self._ignore_region
+
+    @ignore_region.setter
+    def ignore_region(self, ignore_region):
+        # type: (bool) -> None
+        """Sets the ignore_region of this WebVttConfiguration.
+
+        If set to true, the region information of the resulting webvtt file will be omitted. Defaults to false.
+
+        :param ignore_region: The ignore_region of this WebVttConfiguration.
+        :type: bool
+        """
+
+        if ignore_region is not None:
+            if not isinstance(ignore_region, bool):
+                raise TypeError("Invalid type for `ignore_region`, type has to be `bool`")
+
+        self._ignore_region = ignore_region
 
     def to_dict(self):
         """Returns the model properties as a dict"""

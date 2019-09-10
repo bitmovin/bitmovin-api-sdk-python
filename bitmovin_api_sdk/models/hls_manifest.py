@@ -73,7 +73,7 @@ class HlsManifest(Manifest):
         # type: () -> string_types
         """Gets the manifest_name of this HlsManifest.
 
-        The filename of your manifest (required)
+        The filename of your manifest. If this is not set, the `name` is used as output file name. Either one of `name` or `manifestName` is required. Be aware that spaces will be replaced with underlines (`_`) on the output.
 
         :return: The manifest_name of this HlsManifest.
         :rtype: string_types
@@ -85,7 +85,7 @@ class HlsManifest(Manifest):
         # type: (string_types) -> None
         """Sets the manifest_name of this HlsManifest.
 
-        The filename of your manifest (required)
+        The filename of your manifest. If this is not set, the `name` is used as output file name. Either one of `name` or `manifestName` is required. Be aware that spaces will be replaced with underlines (`_`) on the output.
 
         :param manifest_name: The manifest_name of this HlsManifest.
         :type: string_types
