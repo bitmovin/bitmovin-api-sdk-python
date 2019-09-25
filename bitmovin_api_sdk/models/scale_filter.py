@@ -82,7 +82,7 @@ class ScaleFilter(Filter):
         # type: () -> int
         """Gets the width of this ScaleFilter.
 
-        The width of the output frame in pixel. If not set: codec configuration width will be used.
+        The width of the output frame in pixels. If not set it will be based on the configured height by maintaining the original aspect ratio. If height is also not set, the original source dimensions will be applied.
 
         :return: The width of this ScaleFilter.
         :rtype: int
@@ -94,7 +94,7 @@ class ScaleFilter(Filter):
         # type: (int) -> None
         """Sets the width of this ScaleFilter.
 
-        The width of the output frame in pixel. If not set: codec configuration width will be used.
+        The width of the output frame in pixels. If not set it will be based on the configured height by maintaining the original aspect ratio. If height is also not set, the original source dimensions will be applied.
 
         :param width: The width of this ScaleFilter.
         :type: int
@@ -111,7 +111,7 @@ class ScaleFilter(Filter):
         # type: () -> int
         """Gets the height of this ScaleFilter.
 
-        The height of the output frame in pixel. If not set: codec configuration height will be used.
+        The height of the output frame in pixels. If not set it will be based on the configured width by maintaining the original aspect ratio. If width is also not set, the original source dimensions will be applied.
 
         :return: The height of this ScaleFilter.
         :rtype: int
@@ -123,7 +123,7 @@ class ScaleFilter(Filter):
         # type: (int) -> None
         """Sets the height of this ScaleFilter.
 
-        The height of the output frame in pixel. If not set: codec configuration height will be used.
+        The height of the output frame in pixels. If not set it will be based on the configured width by maintaining the original aspect ratio. If width is also not set, the original source dimensions will be applied.
 
         :param height: The height of this ScaleFilter.
         :type: int
@@ -233,7 +233,7 @@ class ScaleFilter(Filter):
             if isinstance(value, list):
                 if len(value) == 0:
                     continue
-                result[self.attribute_map.get(attr)] = [x.to_dict() if hasattr(x, "to_dict") else x for x in value]
+                result[self.attribute_map.get(attr)] = [y.value if isinstance(y, Enum) else y for y in [x.to_dict() if hasattr(x, "to_dict") else x for x in value]]
             elif hasattr(value, "to_dict"):
                 result[self.attribute_map.get(attr)] = value.to_dict()
             elif isinstance(value, Enum):

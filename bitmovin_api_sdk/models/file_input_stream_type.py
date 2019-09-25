@@ -7,3 +7,4 @@ from bitmovin_api_sdk.common.poscheck import poscheck_model
 
 class FileInputStreamType(Enum):
     TTML = "TTML"
+    WEBVTT = "WEBVTT"

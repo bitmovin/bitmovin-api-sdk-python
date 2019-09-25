@@ -11,6 +11,7 @@ class Filter(BitmovinResource):
 
     discriminator_value_class_map = {
         'CROP': 'CropFilter',
+        'CONFORM': 'ConformFilter',
         'WATERMARK': 'WatermarkFilter',
         'ENHANCED_WATERMARK': 'EnhancedWatermarkFilter',
         'ROTATE': 'RotateFilter',

@@ -1,4 +1,5 @@
 from bitmovin_api_sdk.encoding.filters.filters_api import FiltersApi
+from bitmovin_api_sdk.encoding.filters.conform.conform_api import ConformApi
 from bitmovin_api_sdk.encoding.filters.watermark.watermark_api import WatermarkApi
 from bitmovin_api_sdk.encoding.filters.audio_volume.audio_volume_api import AudioVolumeApi
 from bitmovin_api_sdk.encoding.filters.enhanced_watermark.enhanced_watermark_api import EnhancedWatermarkApi

@@ -1,15 +1,24 @@
-# Bitmovin Python Client
+<p align="center">
+  <a href="https://www.bitmovin.com">
+    <img alt="Bitmovin Python API SDK Header" src="https://cdn.bitmovin.com/frontend/encoding/openapi-clients/readme-headers/ReadmeHeader_Python.png" >
+  </a>
+
+  <h4 align="center">
+    Python API SDK which enables you to seamlessly integrate the Bitmovin API into your projects.
+  </h4>
+
+  <p align="center">
+    <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License"></img></a>
+  </p>
+</p>
 
 ***Important: This is an alpha version. There may be breaking changes***
 
-[![bitmovin](http://bitmovin-a.akamaihd.net/webpages/bitmovin-logo-github.png)](http://www.bitmovin.com)
+Using this API client requires an active account.
 
-Python-Client which enables you to seamlessly integrate the Bitmovin API into your projects. Using this API client requires an active account.
-TypeScript/JavaScript-Client which enables you to seamlessly integrate the Bitmovin API into your projects. Using this API client requires an active account.
+> Don't have an account yet? [Sign up for a free Bitmovin trial plan](https://dashboard.bitmovin.com/signup)!
 
-[Sign up for a Bitmovin Account!](https://dashboard.bitmovin.com/signup)
-
-The full API reference can be found [here](https://bitmovin.com/docs).
+For full documentation of all available API endpoints, see the [Bitmovin API reference](https://bitmovin.com/docs).
 
 ## Installation
 ### pip install
@@ -39,7 +48,7 @@ python3 setup.py install
 ## Initialization
 
 ```python
-import bitmovin_api_sdk.bitmovin_api import BitmovinApi
+from bitmovin_api_sdk import BitmovinApi
 
 
 bitmovinApi = BitmovinApi(api_key='<YOUR_API_KEY>')

@@ -16,6 +16,7 @@ class AnalyticsImpressionDetails(BitmovinResponse):
                  analytics_version=None,
                  asn=None,
                  audio_bitrate=None,
+                 audio_language=None,
                  autoplay=None,
                  browser=None,
                  browser_version_major=None,
@@ -71,6 +72,8 @@ class AnalyticsImpressionDetails(BitmovinResponse):
                  startup_time=None,
                  state=None,
                  stream_format=None,
+                 subtitle_enabled=None,
+                 subtitle_language=None,
                  time=None,
                  user_id=None,
                  video_bitrate=None,
@@ -84,13 +87,14 @@ class AnalyticsImpressionDetails(BitmovinResponse):
                  videotime_start=None,
                  video_window_height=None,
                  video_window_width=None):
-        # type: (string_types, int, string_types, int, int, bool, string_types, string_types, string_types, int, string_types, string_types, int, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, int, string_types, int, int, int, string_types, string_types, string_types, string_types, bool, bool, bool, string_types, string_types, string_types, string_types, string_types, string_types, int, int, string_types, int, string_types, int, string_types, string_types, int, string_types, string_types, string_types, int, int, int, int, string_types, int, string_types, string_types, int, string_types, int, int, string_types, string_types, int, int, int, int, int, int, int) -> None
+        # type: (string_types, int, string_types, int, int, string_types, bool, string_types, string_types, string_types, int, string_types, string_types, int, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, int, string_types, int, int, int, string_types, string_types, string_types, string_types, bool, bool, bool, string_types, string_types, string_types, string_types, string_types, string_types, int, int, string_types, int, string_types, int, string_types, string_types, int, string_types, string_types, string_types, int, int, int, int, string_types, int, string_types, string_types, bool, string_types, int, string_types, int, int, string_types, string_types, int, int, int, int, int, int, int) -> None
         super(AnalyticsImpressionDetails, self).__init__(id_=id_)
 
         self._ad = None
         self._analytics_version = None
         self._asn = None
         self._audio_bitrate = None
+        self._audio_language = None
         self._autoplay = None
         self._browser = None
         self._browser_version_major = None
@@ -146,6 +150,8 @@ class AnalyticsImpressionDetails(BitmovinResponse):
         self._startup_time = None
         self._state = None
         self._stream_format = None
+        self._subtitle_enabled = None
+        self._subtitle_language = None
         self._time = None
         self._user_id = None
         self._video_bitrate = None
@@ -169,6 +175,8 @@ class AnalyticsImpressionDetails(BitmovinResponse):
             self.asn = asn
         if audio_bitrate is not None:
             self.audio_bitrate = audio_bitrate
+        if audio_language is not None:
+            self.audio_language = audio_language
         if autoplay is not None:
             self.autoplay = autoplay
         if browser is not None:
@@ -279,6 +287,10 @@ class AnalyticsImpressionDetails(BitmovinResponse):
             self.state = state
         if stream_format is not None:
             self.stream_format = stream_format
+        if subtitle_enabled is not None:
+            self.subtitle_enabled = subtitle_enabled
+        if subtitle_language is not None:
+            self.subtitle_language = subtitle_language
         if time is not None:
             self.time = time
         if user_id is not None:
@@ -318,6 +330,7 @@ class AnalyticsImpressionDetails(BitmovinResponse):
             'analytics_version': 'string_types',
             'asn': 'int',
             'audio_bitrate': 'int',
+            'audio_language': 'string_types',
             'autoplay': 'bool',
             'browser': 'string_types',
             'browser_version_major': 'string_types',
@@ -373,6 +386,8 @@ class AnalyticsImpressionDetails(BitmovinResponse):
             'startup_time': 'int',
             'state': 'string_types',
             'stream_format': 'string_types',
+            'subtitle_enabled': 'bool',
+            'subtitle_language': 'string_types',
             'time': 'int',
             'user_id': 'string_types',
             'video_bitrate': 'int',
@@ -402,6 +417,7 @@ class AnalyticsImpressionDetails(BitmovinResponse):
             'analytics_version': 'analyticsVersion',
             'asn': 'asn',
             'audio_bitrate': 'audioBitrate',
+            'audio_language': 'audioLanguage',
             'autoplay': 'autoplay',
             'browser': 'browser',
             'browser_version_major': 'browserVersionMajor',
@@ -457,6 +473,8 @@ class AnalyticsImpressionDetails(BitmovinResponse):
             'startup_time': 'startupTime',
             'state': 'state',
             'stream_format': 'streamFormat',
+            'subtitle_enabled': 'subtitleEnabled',
+            'subtitle_language': 'subtitleLanguage',
             'time': 'time',
             'user_id': 'userId',
             'video_bitrate': 'videoBitrate',
@@ -590,6 +608,35 @@ class AnalyticsImpressionDetails(BitmovinResponse):
         self._audio_bitrate = audio_bitrate
 
     @property
+    def audio_language(self):
+        # type: () -> string_types
+        """Gets the audio_language of this AnalyticsImpressionDetails.
+
+        Selected audio language
+
+        :return: The audio_language of this AnalyticsImpressionDetails.
+        :rtype: string_types
+        """
+        return self._audio_language
+
+    @audio_language.setter
+    def audio_language(self, audio_language):
+        # type: (string_types) -> None
+        """Sets the audio_language of this AnalyticsImpressionDetails.
+
+        Selected audio language
+
+        :param audio_language: The audio_language of this AnalyticsImpressionDetails.
+        :type: string_types
+        """
+
+        if audio_language is not None:
+            if not isinstance(audio_language, string_types):
+                raise TypeError("Invalid type for `audio_language`, type has to be `string_types`")
+
+        self._audio_language = audio_language
+
+    @property
     def autoplay(self):
         # type: () -> bool
         """Gets the autoplay of this AnalyticsImpressionDetails.
@@ -710,7 +757,7 @@ class AnalyticsImpressionDetails(BitmovinResponse):
         # type: () -> int
         """Gets the buffered of this AnalyticsImpressionDetails.
 
-        Millisecond the player buffered
+        Milliseconds the player buffered
 
         :return: The buffered of this AnalyticsImpressionDetails.
         :rtype: int
@@ -722,7 +769,7 @@ class AnalyticsImpressionDetails(BitmovinResponse):
         # type: (int) -> None
         """Sets the buffered of this AnalyticsImpressionDetails.
 
-        Millisecond the player buffered
+        Milliseconds the player buffered
 
         :param buffered: The buffered of this AnalyticsImpressionDetails.
         :type: int
@@ -2185,6 +2232,64 @@ class AnalyticsImpressionDetails(BitmovinResponse):
         self._stream_format = stream_format
 
     @property
+    def subtitle_enabled(self):
+        # type: () -> bool
+        """Gets the subtitle_enabled of this AnalyticsImpressionDetails.
+
+        Subtitle enabled
+
+        :return: The subtitle_enabled of this AnalyticsImpressionDetails.
+        :rtype: bool
+        """
+        return self._subtitle_enabled
+
+    @subtitle_enabled.setter
+    def subtitle_enabled(self, subtitle_enabled):
+        # type: (bool) -> None
+        """Sets the subtitle_enabled of this AnalyticsImpressionDetails.
+
+        Subtitle enabled
+
+        :param subtitle_enabled: The subtitle_enabled of this AnalyticsImpressionDetails.
+        :type: bool
+        """
+
+        if subtitle_enabled is not None:
+            if not isinstance(subtitle_enabled, bool):
+                raise TypeError("Invalid type for `subtitle_enabled`, type has to be `bool`")
+
+        self._subtitle_enabled = subtitle_enabled
+
+    @property
+    def subtitle_language(self):
+        # type: () -> string_types
+        """Gets the subtitle_language of this AnalyticsImpressionDetails.
+
+        Selected subtitle language
+
+        :return: The subtitle_language of this AnalyticsImpressionDetails.
+        :rtype: string_types
+        """
+        return self._subtitle_language
+
+    @subtitle_language.setter
+    def subtitle_language(self, subtitle_language):
+        # type: (string_types) -> None
+        """Sets the subtitle_language of this AnalyticsImpressionDetails.
+
+        Selected subtitle language
+
+        :param subtitle_language: The subtitle_language of this AnalyticsImpressionDetails.
+        :type: string_types
+        """
+
+        if subtitle_language is not None:
+            if not isinstance(subtitle_language, string_types):
+                raise TypeError("Invalid type for `subtitle_language`, type has to be `string_types`")
+
+        self._subtitle_language = subtitle_language
+
+    @property
     def time(self):
         # type: () -> int
         """Gets the time of this AnalyticsImpressionDetails.
@@ -2574,7 +2679,7 @@ class AnalyticsImpressionDetails(BitmovinResponse):
             if isinstance(value, list):
                 if len(value) == 0:
                     continue
-                result[self.attribute_map.get(attr)] = [x.to_dict() if hasattr(x, "to_dict") else x for x in value]
+                result[self.attribute_map.get(attr)] = [y.value if isinstance(y, Enum) else y for y in [x.to_dict() if hasattr(x, "to_dict") else x for x in value]]
             elif hasattr(value, "to_dict"):
                 result[self.attribute_map.get(attr)] = value.to_dict()
             elif isinstance(value, Enum):

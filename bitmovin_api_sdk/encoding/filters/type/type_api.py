@@ -4,7 +4,7 @@ from __future__ import absolute_import
 
 from bitmovin_api_sdk.common import BaseApi, BitmovinApiLoggerBase
 from bitmovin_api_sdk.common.poscheck import poscheck_except
-from bitmovin_api_sdk.models.filter_type_response import FilterTypeResponse
+from bitmovin_api_sdk.models.filter_type import FilterType
 from bitmovin_api_sdk.models.response_envelope import ResponseEnvelope
 from bitmovin_api_sdk.models.response_error import ResponseError
 
@@ -22,18 +22,18 @@ class TypeApi(BaseApi):
         )
 
     def get(self, filter_id, **kwargs):
-        # type: (string_types, dict) -> FilterTypeResponse
+        # type: (string_types, dict) -> FilterType
         """Get Filter Type
 
         :param filter_id: Id of the filter
         :type filter_id: string_types, required
         :return: Filter Type
-        :rtype: FilterTypeResponse
+        :rtype: FilterType
         """
 
         return self.api_client.get(
             '/encoding/filters/{filter_id}/type',
             path_params={'filter_id': filter_id},
-            type=FilterTypeResponse,
+            type=FilterType,
             **kwargs
         )

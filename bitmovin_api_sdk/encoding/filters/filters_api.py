@@ -7,6 +7,7 @@ from bitmovin_api_sdk.common.poscheck import poscheck_except
 from bitmovin_api_sdk.models.filter import Filter
 from bitmovin_api_sdk.models.response_envelope import ResponseEnvelope
 from bitmovin_api_sdk.models.response_error import ResponseError
+from bitmovin_api_sdk.encoding.filters.conform.conform_api import ConformApi
 from bitmovin_api_sdk.encoding.filters.watermark.watermark_api import WatermarkApi
 from bitmovin_api_sdk.encoding.filters.audio_volume.audio_volume_api import AudioVolumeApi
 from bitmovin_api_sdk.encoding.filters.enhanced_watermark.enhanced_watermark_api import EnhancedWatermarkApi
@@ -30,6 +31,13 @@ class FiltersApi(BaseApi):
         # type: (str, str, str, BitmovinApiLoggerBase) -> None
 
         super(FiltersApi, self).__init__(
+            api_key=api_key,
+            tenant_org_id=tenant_org_id,
+            base_url=base_url,
+            logger=logger
+        )
+
+        self.conform = ConformApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,

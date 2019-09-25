@@ -1,5 +1,6 @@
 from datetime import datetime
 from requests import RequestException, Request, Response
+from json import dumps
 from bitmovin_api_sdk.common.bitmovin_json_decoder import BitmovinJsonDecoder
 from bitmovin_api_sdk.models import ResponseErrorData, Message, Link
 

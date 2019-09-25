@@ -3,11 +3,11 @@
 from setuptools import setup, find_packages
 
 NAME = 'bitmovin-api-sdk'
-VERSION = '1.23.0alpha0'
+VERSION = '1.24.0alpha0'
 DESCRIPTION = 'Python-Client which enables you to seamlessly integrate the Bitmovin API into your projects. Using this API client requires an active account.'
 AUTHOR = 'Bitmovin Inc'
 EMAIL = 'support@bitmovin.com'
-URL = 'https://github.com/bitmovin/bitmovin-api-sdk'
+URL = 'https://github.com/bitmovin/bitmovin-api-sdk-python'
 LICENSE = 'MIT'
 
 # To install the library, run the following

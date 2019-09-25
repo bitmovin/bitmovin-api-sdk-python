@@ -7,6 +7,7 @@ from bitmovin_api_sdk.common.poscheck import poscheck_model
 
 class FilterType(Enum):
     CROP = "CROP"
+    CONFORM = "CONFORM"
     WATERMARK = "WATERMARK"
     ENHANCED_WATERMARK = "ENHANCED_WATERMARK"
     ROTATE = "ROTATE"

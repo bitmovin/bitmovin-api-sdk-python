@@ -110,7 +110,7 @@ class AnalyticsQueryTimeframe(object):
             if isinstance(value, list):
                 if len(value) == 0:
                     continue
-                result[self.attribute_map.get(attr)] = [x.to_dict() if hasattr(x, "to_dict") else x for x in value]
+                result[self.attribute_map.get(attr)] = [y.value if isinstance(y, Enum) else y for y in [x.to_dict() if hasattr(x, "to_dict") else x for x in value]]
             elif hasattr(value, "to_dict"):
                 result[self.attribute_map.get(attr)] = value.to_dict()
             elif isinstance(value, Enum):

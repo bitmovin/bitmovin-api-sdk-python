@@ -1,6 +1,7 @@
 from bitmovin_api_sdk.analytics.analytics_api import AnalyticsApi
 from bitmovin_api_sdk.analytics.exports.exports_api import ExportsApi
 from bitmovin_api_sdk.analytics.impressions.impressions_api import ImpressionsApi
+from bitmovin_api_sdk.analytics.insights.insights_api import InsightsApi
 from bitmovin_api_sdk.analytics.metrics.metrics_api import MetricsApi
 from bitmovin_api_sdk.analytics.ads.ads_api import AdsApi
 from bitmovin_api_sdk.analytics.queries.queries_api import QueriesApi

@@ -3,27 +3,26 @@
 from enum import Enum
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
-from bitmovin_api_sdk.models.filter_type import FilterType
 import pprint
 import six
 
 
-class FilterTypeResponse(object):
+class AnalyticsInsightsOrganizationSettingsRequest(object):
     @poscheck_model
     def __init__(self,
-                 type_=None):
-        # type: (FilterType) -> None
+                 include_in_insights=None):
+        # type: (bool) -> None
 
-        self._type = None
+        self._include_in_insights = None
         self.discriminator = None
 
-        if type_ is not None:
-            self.type = type_
+        if include_in_insights is not None:
+            self.include_in_insights = include_in_insights
 
     @property
     def openapi_types(self):
         types = {
-            'type': 'FilterType'
+            'include_in_insights': 'bool'
         }
 
         return types
@@ -31,38 +30,38 @@ class FilterTypeResponse(object):
     @property
     def attribute_map(self):
         attributes = {
-            'type': 'type'
+            'include_in_insights': 'includeInInsights'
         }
         return attributes
 
     @property
-    def type(self):
-        # type: () -> FilterType
-        """Gets the type of this FilterTypeResponse.
+    def include_in_insights(self):
+        # type: () -> bool
+        """Gets the include_in_insights of this AnalyticsInsightsOrganizationSettingsRequest.
 
-        The type of the filter
+        Whether the organization's data is being contributed to industry insights
 
-        :return: The type of this FilterTypeResponse.
-        :rtype: FilterType
+        :return: The include_in_insights of this AnalyticsInsightsOrganizationSettingsRequest.
+        :rtype: bool
         """
-        return self._type
+        return self._include_in_insights
 
-    @type.setter
-    def type(self, type_):
-        # type: (FilterType) -> None
-        """Sets the type of this FilterTypeResponse.
+    @include_in_insights.setter
+    def include_in_insights(self, include_in_insights):
+        # type: (bool) -> None
+        """Sets the include_in_insights of this AnalyticsInsightsOrganizationSettingsRequest.
 
-        The type of the filter
+        Whether the organization's data is being contributed to industry insights
 
-        :param type_: The type of this FilterTypeResponse.
-        :type: FilterType
+        :param include_in_insights: The include_in_insights of this AnalyticsInsightsOrganizationSettingsRequest.
+        :type: bool
         """
 
-        if type_ is not None:
-            if not isinstance(type_, FilterType):
-                raise TypeError("Invalid type for `type`, type has to be `FilterType`")
+        if include_in_insights is not None:
+            if not isinstance(include_in_insights, bool):
+                raise TypeError("Invalid type for `include_in_insights`, type has to be `bool`")
 
-        self._type = type_
+        self._include_in_insights = include_in_insights
 
     def to_dict(self):
         """Returns the model properties as a dict"""
@@ -75,7 +74,7 @@ class FilterTypeResponse(object):
             if isinstance(value, list):
                 if len(value) == 0:
                     continue
-                result[self.attribute_map.get(attr)] = [x.to_dict() if hasattr(x, "to_dict") else x for x in value]
+                result[self.attribute_map.get(attr)] = [y.value if isinstance(y, Enum) else y for y in [x.to_dict() if hasattr(x, "to_dict") else x for x in value]]
             elif hasattr(value, "to_dict"):
                 result[self.attribute_map.get(attr)] = value.to_dict()
             elif isinstance(value, Enum):
@@ -97,7 +96,7 @@ class FilterTypeResponse(object):
 
     def __eq__(self, other):
         """Returns true if both objects are equal"""
-        if not isinstance(other, FilterTypeResponse):
+        if not isinstance(other, AnalyticsInsightsOrganizationSettingsRequest):
             return False
 
         return self.__dict__ == other.__dict__
