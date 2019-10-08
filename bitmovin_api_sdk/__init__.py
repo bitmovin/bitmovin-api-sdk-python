@@ -443,6 +443,10 @@ from bitmovin_api_sdk.encoding.encodings.muxings.webm.drm.cenc.cenc_api import C
 from bitmovin_api_sdk.encoding.encodings.muxings.webm.drm.cenc.cenc_api import CencDrmListQueryParams
 from bitmovin_api_sdk.encoding.encodings.muxings.webm.drm.cenc.customdata.customdata_api import CustomdataApi
 
+from bitmovin_api_sdk.encoding.encodings.muxings.webm.drm.speke.speke_api import SpekeApi
+from bitmovin_api_sdk.encoding.encodings.muxings.webm.drm.speke.speke_api import SpekeDrmListQueryParams
+from bitmovin_api_sdk.encoding.encodings.muxings.webm.drm.speke.customdata.customdata_api import CustomdataApi
+
 from bitmovin_api_sdk.encoding.encodings.muxings.mp3.mp3_api import Mp3Api
 from bitmovin_api_sdk.encoding.encodings.muxings.mp3.mp3_api import Mp3MuxingListQueryParams
 from bitmovin_api_sdk.encoding.encodings.muxings.mp3.customdata.customdata_api import CustomdataApi
@@ -523,6 +527,16 @@ from bitmovin_api_sdk.encoding.encodings.muxings.fmp4.drm.cenc.cenc_api import C
 from bitmovin_api_sdk.encoding.encodings.muxings.fmp4.drm.cenc.cenc_api import CencDrmListQueryParams
 from bitmovin_api_sdk.encoding.encodings.muxings.fmp4.drm.cenc.customdata.customdata_api import CustomdataApi
 
+from bitmovin_api_sdk.encoding.encodings.muxings.fmp4.drm.speke.speke_api import SpekeApi
+from bitmovin_api_sdk.encoding.encodings.muxings.fmp4.drm.speke.speke_api import SpekeDrmListQueryParams
+from bitmovin_api_sdk.encoding.encodings.muxings.fmp4.drm.speke.customdata.customdata_api import CustomdataApi
+
+from bitmovin_api_sdk.encoding.encodings.muxings.cmaf.drm.drm_api import DrmApi
+
+from bitmovin_api_sdk.encoding.encodings.muxings.cmaf.drm.speke.speke_api import SpekeApi
+from bitmovin_api_sdk.encoding.encodings.muxings.cmaf.drm.speke.speke_api import SpekeDrmListQueryParams
+from bitmovin_api_sdk.encoding.encodings.muxings.cmaf.drm.speke.customdata.customdata_api import CustomdataApi
+
 from bitmovin_api_sdk.encoding.encodings.muxings.ts.drm.drm_api import DrmApi
 
 from bitmovin_api_sdk.encoding.encodings.muxings.ts.drm.fairplay.fairplay_api import FairplayApi
@@ -533,11 +547,19 @@ from bitmovin_api_sdk.encoding.encodings.muxings.ts.drm.aes.aes_api import AesAp
 from bitmovin_api_sdk.encoding.encodings.muxings.ts.drm.aes.aes_api import AesEncryptionDrmListQueryParams
 from bitmovin_api_sdk.encoding.encodings.muxings.ts.drm.aes.customdata.customdata_api import CustomdataApi
 
+from bitmovin_api_sdk.encoding.encodings.muxings.ts.drm.speke.speke_api import SpekeApi
+from bitmovin_api_sdk.encoding.encodings.muxings.ts.drm.speke.speke_api import SpekeDrmListQueryParams
+from bitmovin_api_sdk.encoding.encodings.muxings.ts.drm.speke.customdata.customdata_api import CustomdataApi
+
 from bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.drm.drm_api import DrmApi
 
 from bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.drm.fairplay.fairplay_api import FairplayApi
 from bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.drm.fairplay.fairplay_api import FairPlayDrmListQueryParams
 from bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.drm.fairplay.customdata.customdata_api import CustomdataApi
+
+from bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.drm.speke.speke_api import SpekeApi
+from bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.drm.speke.speke_api import SpekeDrmListQueryParams
+from bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.drm.speke.customdata.customdata_api import CustomdataApi
 
 from bitmovin_api_sdk.encoding.encodings.muxings.mp4.drm.drm_api import DrmApi
 
@@ -560,6 +582,10 @@ from bitmovin_api_sdk.encoding.encodings.muxings.mp4.drm.marlin.customdata.custo
 from bitmovin_api_sdk.encoding.encodings.muxings.mp4.drm.cenc.cenc_api import CencApi
 from bitmovin_api_sdk.encoding.encodings.muxings.mp4.drm.cenc.cenc_api import CencDrmListQueryParams
 from bitmovin_api_sdk.encoding.encodings.muxings.mp4.drm.cenc.customdata.customdata_api import CustomdataApi
+
+from bitmovin_api_sdk.encoding.encodings.muxings.mp4.drm.speke.speke_api import SpekeApi
+from bitmovin_api_sdk.encoding.encodings.muxings.mp4.drm.speke.speke_api import SpekeDrmListQueryParams
+from bitmovin_api_sdk.encoding.encodings.muxings.mp4.drm.speke.customdata.customdata_api import CustomdataApi
 
 from bitmovin_api_sdk.encoding.encodings.streams.filters.filters_api import FiltersApi
 from bitmovin_api_sdk.encoding.encodings.streams.filters.filters_api import StreamFilterListListQueryParams
@@ -1262,6 +1288,8 @@ from bitmovin_api_sdk.models.smooth_streaming_manifest import SmoothStreamingMan
 from bitmovin_api_sdk.models.smooth_streaming_representation import SmoothStreamingRepresentation
 from bitmovin_api_sdk.models.source_channel import SourceChannel
 from bitmovin_api_sdk.models.source_channel_type import SourceChannelType
+from bitmovin_api_sdk.models.speke_drm import SpekeDrm
+from bitmovin_api_sdk.models.speke_drm_provider import SpekeDrmProvider
 from bitmovin_api_sdk.models.sprite import Sprite
 from bitmovin_api_sdk.models.sprite_unit import SpriteUnit
 from bitmovin_api_sdk.models.srt_input import SrtInput
@@ -1365,4 +1393,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.24.0alpha0"
+__version__ = "1.25.0alpha0"

@@ -9,6 +9,7 @@ from bitmovin_api_sdk.models.cmaf_muxing import CmafMuxing
 from bitmovin_api_sdk.models.response_envelope import ResponseEnvelope
 from bitmovin_api_sdk.models.response_error import ResponseError
 from bitmovin_api_sdk.encoding.encodings.muxings.cmaf.customdata.customdata_api import CustomdataApi
+from bitmovin_api_sdk.encoding.encodings.muxings.cmaf.drm.drm_api import DrmApi
 from bitmovin_api_sdk.encoding.encodings.muxings.cmaf.captions.captions_api import CaptionsApi
 from bitmovin_api_sdk.encoding.encodings.muxings.cmaf.cmaf_muxing_list_query_params import CmafMuxingListQueryParams
 
@@ -26,6 +27,13 @@ class CmafApi(BaseApi):
         )
 
         self.customdata = CustomdataApi(
+            api_key=api_key,
+            tenant_org_id=tenant_org_id,
+            base_url=base_url,
+            logger=logger
+        )
+
+        self.drm = DrmApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,

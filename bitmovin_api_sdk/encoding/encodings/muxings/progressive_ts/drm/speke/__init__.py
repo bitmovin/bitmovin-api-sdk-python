@@ -1,0 +1,3 @@
+from bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.drm.speke.speke_api import SpekeApi
+from bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.drm.speke.customdata.customdata_api import CustomdataApi
+from bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.drm.speke.speke_drm_list_query_params import SpekeDrmListQueryParams

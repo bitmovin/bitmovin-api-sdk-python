@@ -60,7 +60,8 @@ class Drm(BitmovinResource):
         'MARLIN': 'MarlinDrm',
         'CLEARKEY': 'ClearKeyDrm',
         'AES': 'AesEncryptionDrm',
-        'CENC': 'CencDrm'
+        'CENC': 'CencDrm',
+        'SPEKE': 'SpekeDrm'
     }
 
     @property

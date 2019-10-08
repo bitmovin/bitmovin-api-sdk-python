@@ -445,6 +445,8 @@ from bitmovin_api_sdk.models.smooth_streaming_manifest import SmoothStreamingMan
 from bitmovin_api_sdk.models.smooth_streaming_representation import SmoothStreamingRepresentation
 from bitmovin_api_sdk.models.source_channel import SourceChannel
 from bitmovin_api_sdk.models.source_channel_type import SourceChannelType
+from bitmovin_api_sdk.models.speke_drm import SpekeDrm
+from bitmovin_api_sdk.models.speke_drm_provider import SpekeDrmProvider
 from bitmovin_api_sdk.models.sprite import Sprite
 from bitmovin_api_sdk.models.sprite_unit import SpriteUnit
 from bitmovin_api_sdk.models.srt_input import SrtInput

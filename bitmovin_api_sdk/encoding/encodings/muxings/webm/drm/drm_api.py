@@ -8,6 +8,7 @@ from bitmovin_api_sdk.models.drm import Drm
 from bitmovin_api_sdk.models.response_envelope import ResponseEnvelope
 from bitmovin_api_sdk.models.response_error import ResponseError
 from bitmovin_api_sdk.encoding.encodings.muxings.webm.drm.cenc.cenc_api import CencApi
+from bitmovin_api_sdk.encoding.encodings.muxings.webm.drm.speke.speke_api import SpekeApi
 
 
 class DrmApi(BaseApi):
@@ -23,6 +24,13 @@ class DrmApi(BaseApi):
         )
 
         self.cenc = CencApi(
+            api_key=api_key,
+            tenant_org_id=tenant_org_id,
+            base_url=base_url,
+            logger=logger
+        )
+
+        self.speke = SpekeApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,

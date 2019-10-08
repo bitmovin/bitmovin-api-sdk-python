@@ -101,7 +101,8 @@ class Muxing(BitmovinResource):
         'PROGRESSIVE_TS': 'ProgressiveTsMuxing',
         'BROADCAST_TS': 'BroadcastTsMuxing',
         'CHUNKED_TEXT': 'ChunkedTextMuxing',
-        'TEXT': 'TextMuxing'
+        'TEXT': 'TextMuxing',
+        'SEGMENTED_RAW': 'SegmentedRawMuxing'
     }
 
     @property

@@ -14,3 +14,4 @@ class DrmType(Enum):
     CLEARKEY = "CLEARKEY"
     AES = "AES"
     CENC = "CENC"
+    SPEKE = "SPEKE"
