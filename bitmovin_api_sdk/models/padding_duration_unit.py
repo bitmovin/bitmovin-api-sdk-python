@@ -5,8 +5,6 @@ from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
 
 
-class StatisticsResolution(Enum):
-    SD = "SD"
-    HD = "HD"
-    UHD = "UHD"
-    UHD_8K = "UHD_8K"
+class PaddingDurationUnit(Enum):
+    SECONDS = "SECONDS"
+    FRAMES = "FRAMES"

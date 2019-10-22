@@ -1206,6 +1206,8 @@ from bitmovin_api_sdk.models.organization_type import OrganizationType
 from bitmovin_api_sdk.models.output import Output
 from bitmovin_api_sdk.models.output_type import OutputType
 from bitmovin_api_sdk.models.output_type_response import OutputTypeResponse
+from bitmovin_api_sdk.models.padding_duration_unit import PaddingDurationUnit
+from bitmovin_api_sdk.models.padding_sequence import PaddingSequence
 from bitmovin_api_sdk.models.pagination_response import PaginationResponse
 from bitmovin_api_sdk.models.per_title import PerTitle
 from bitmovin_api_sdk.models.per_title_configuration import PerTitleConfiguration
@@ -1393,4 +1395,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.25.0alpha0"
+__version__ = "1.26.0alpha0"

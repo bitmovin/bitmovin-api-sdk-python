@@ -3,6 +3,7 @@
 from enum import Enum
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
+from bitmovin_api_sdk.models.padding_sequence import PaddingSequence
 import pprint
 import six
 
@@ -12,12 +13,16 @@ class ConcatenationInputConfiguration(object):
     def __init__(self,
                  input_stream_id=None,
                  is_main=None,
-                 position=None):
-        # type: (string_types, bool, int) -> None
+                 position=None,
+                 padding_before=None,
+                 padding_after=None):
+        # type: (string_types, bool, int, PaddingSequence, PaddingSequence) -> None
 
         self._input_stream_id = None
         self._is_main = None
         self._position = None
+        self._padding_before = None
+        self._padding_after = None
         self.discriminator = None
 
         if input_stream_id is not None:
@@ -26,13 +31,19 @@ class ConcatenationInputConfiguration(object):
             self.is_main = is_main
         if position is not None:
             self.position = position
+        if padding_before is not None:
+            self.padding_before = padding_before
+        if padding_after is not None:
+            self.padding_after = padding_after
 
     @property
     def openapi_types(self):
         types = {
             'input_stream_id': 'string_types',
             'is_main': 'bool',
-            'position': 'int'
+            'position': 'int',
+            'padding_before': 'PaddingSequence',
+            'padding_after': 'PaddingSequence'
         }
 
         return types
@@ -42,7 +53,9 @@ class ConcatenationInputConfiguration(object):
         attributes = {
             'input_stream_id': 'inputStreamId',
             'is_main': 'isMain',
-            'position': 'position'
+            'position': 'position',
+            'padding_before': 'paddingBefore',
+            'padding_after': 'paddingAfter'
         }
         return attributes
 
@@ -132,6 +145,64 @@ class ConcatenationInputConfiguration(object):
                 raise TypeError("Invalid type for `position`, type has to be `int`")
 
         self._position = position
+
+    @property
+    def padding_before(self):
+        # type: () -> PaddingSequence
+        """Gets the padding_before of this ConcatenationInputConfiguration.
+
+        Inserts a padding sequence (black frames and/or silent audio) before the input stream. If this is set, all video output streams of the encoding need to use the same ConcatenationInputStream.
+
+        :return: The padding_before of this ConcatenationInputConfiguration.
+        :rtype: PaddingSequence
+        """
+        return self._padding_before
+
+    @padding_before.setter
+    def padding_before(self, padding_before):
+        # type: (PaddingSequence) -> None
+        """Sets the padding_before of this ConcatenationInputConfiguration.
+
+        Inserts a padding sequence (black frames and/or silent audio) before the input stream. If this is set, all video output streams of the encoding need to use the same ConcatenationInputStream.
+
+        :param padding_before: The padding_before of this ConcatenationInputConfiguration.
+        :type: PaddingSequence
+        """
+
+        if padding_before is not None:
+            if not isinstance(padding_before, PaddingSequence):
+                raise TypeError("Invalid type for `padding_before`, type has to be `PaddingSequence`")
+
+        self._padding_before = padding_before
+
+    @property
+    def padding_after(self):
+        # type: () -> PaddingSequence
+        """Gets the padding_after of this ConcatenationInputConfiguration.
+
+        Inserts a padding sequence (black frames and/or silent audio) after the input stream. If this is set, all video output streams of the encoding need to use the same ConcatenationInputStream.
+
+        :return: The padding_after of this ConcatenationInputConfiguration.
+        :rtype: PaddingSequence
+        """
+        return self._padding_after
+
+    @padding_after.setter
+    def padding_after(self, padding_after):
+        # type: (PaddingSequence) -> None
+        """Sets the padding_after of this ConcatenationInputConfiguration.
+
+        Inserts a padding sequence (black frames and/or silent audio) after the input stream. If this is set, all video output streams of the encoding need to use the same ConcatenationInputStream.
+
+        :param padding_after: The padding_after of this ConcatenationInputConfiguration.
+        :type: PaddingSequence
+        """
+
+        if padding_after is not None:
+            if not isinstance(padding_after, PaddingSequence):
+                raise TypeError("Invalid type for `padding_after`, type has to be `PaddingSequence`")
+
+        self._padding_after = padding_after
 
     def to_dict(self):
         """Returns the model properties as a dict"""
