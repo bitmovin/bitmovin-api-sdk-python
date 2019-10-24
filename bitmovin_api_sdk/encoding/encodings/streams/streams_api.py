@@ -15,6 +15,7 @@ from bitmovin_api_sdk.encoding.encodings.streams.filters.filters_api import Filt
 from bitmovin_api_sdk.encoding.encodings.streams.burn_in_subtitles.burn_in_subtitles_api import BurnInSubtitlesApi
 from bitmovin_api_sdk.encoding.encodings.streams.captions.captions_api import CaptionsApi
 from bitmovin_api_sdk.encoding.encodings.streams.bifs.bifs_api import BifsApi
+from bitmovin_api_sdk.encoding.encodings.streams.hdr.hdr_api import HdrApi
 from bitmovin_api_sdk.encoding.encodings.streams.thumbnails.thumbnails_api import ThumbnailsApi
 from bitmovin_api_sdk.encoding.encodings.streams.sprites.sprites_api import SpritesApi
 from bitmovin_api_sdk.encoding.encodings.streams.qc.qc_api import QcApi
@@ -76,6 +77,13 @@ class StreamsApi(BaseApi):
         )
 
         self.bifs = BifsApi(
+            api_key=api_key,
+            tenant_org_id=tenant_org_id,
+            base_url=base_url,
+            logger=logger
+        )
+
+        self.hdr = HdrApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,

@@ -385,6 +385,10 @@ from bitmovin_api_sdk.encoding.encodings.input_streams.audio_mix.audio_mix_api i
 from bitmovin_api_sdk.encoding.encodings.input_streams.audio_mix.audio_mix_api import AudioMixInputStreamListQueryParams
 from bitmovin_api_sdk.encoding.encodings.input_streams.ingest.ingest_api import IngestApi
 from bitmovin_api_sdk.encoding.encodings.input_streams.ingest.ingest_api import IngestInputStreamListQueryParams
+from bitmovin_api_sdk.encoding.encodings.input_streams.sidecar.sidecar_api import SidecarApi
+
+from bitmovin_api_sdk.encoding.encodings.input_streams.sidecar.dolby_vision_metadata_ingest.dolby_vision_metadata_ingest_api import DolbyVisionMetadataIngestApi
+from bitmovin_api_sdk.encoding.encodings.input_streams.sidecar.dolby_vision_metadata_ingest.dolby_vision_metadata_ingest_api import DolbyVisionMetadataIngestInputStreamListQueryParams
 from bitmovin_api_sdk.encoding.encodings.input_streams.concatenation.concatenation_api import ConcatenationApi
 from bitmovin_api_sdk.encoding.encodings.input_streams.concatenation.concatenation_api import ConcatenationInputStreamListQueryParams
 from bitmovin_api_sdk.encoding.encodings.input_streams.file.file_api import FileApi
@@ -623,6 +627,10 @@ from bitmovin_api_sdk.encoding.encodings.streams.bifs.bifs_api import BifsApi
 from bitmovin_api_sdk.encoding.encodings.streams.bifs.bifs_api import BifListQueryParams
 from bitmovin_api_sdk.encoding.encodings.streams.bifs.customdata.customdata_api import CustomdataApi
 
+from bitmovin_api_sdk.encoding.encodings.streams.hdr.hdr_api import HdrApi
+
+from bitmovin_api_sdk.encoding.encodings.streams.hdr.dolby_vision.dolby_vision_api import DolbyVisionApi
+from bitmovin_api_sdk.encoding.encodings.streams.hdr.dolby_vision.dolby_vision_api import DolbyVisionMetadataListQueryParams
 from bitmovin_api_sdk.encoding.encodings.streams.thumbnails.thumbnails_api import ThumbnailsApi
 from bitmovin_api_sdk.encoding.encodings.streams.thumbnails.thumbnails_api import ThumbnailListQueryParams
 from bitmovin_api_sdk.encoding.encodings.streams.thumbnails.customdata.customdata_api import CustomdataApi
@@ -1052,6 +1060,12 @@ from bitmovin_api_sdk.models.deinterlace_filter import DeinterlaceFilter
 from bitmovin_api_sdk.models.deinterlace_frame_selection_mode import DeinterlaceFrameSelectionMode
 from bitmovin_api_sdk.models.deinterlace_mode import DeinterlaceMode
 from bitmovin_api_sdk.models.denoise_hqdn3d_filter import DenoiseHqdn3dFilter
+from bitmovin_api_sdk.models.dolby_vision_metadata import DolbyVisionMetadata
+from bitmovin_api_sdk.models.dolby_vision_metadata_ingest_input_stream import DolbyVisionMetadataIngestInputStream
+from bitmovin_api_sdk.models.dolby_vision_metadata_source import DolbyVisionMetadataSource
+from bitmovin_api_sdk.models.dolby_vision_muxing_configuration import DolbyVisionMuxingConfiguration
+from bitmovin_api_sdk.models.dolby_vision_profile import DolbyVisionProfile
+from bitmovin_api_sdk.models.dolby_vision_track_sample_entry_name import DolbyVisionTrackSampleEntryName
 from bitmovin_api_sdk.models.domain import Domain
 from bitmovin_api_sdk.models.domain_list import DomainList
 from bitmovin_api_sdk.models.drm import Drm
@@ -1395,4 +1409,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.26.0alpha0"
+__version__ = "1.27.0alpha0"

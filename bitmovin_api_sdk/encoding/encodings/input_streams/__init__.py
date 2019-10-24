@@ -2,6 +2,7 @@ from bitmovin_api_sdk.encoding.encodings.input_streams.input_streams_api import 
 from bitmovin_api_sdk.encoding.encodings.input_streams.type.type_api import TypeApi
 from bitmovin_api_sdk.encoding.encodings.input_streams.audio_mix.audio_mix_api import AudioMixApi
 from bitmovin_api_sdk.encoding.encodings.input_streams.ingest.ingest_api import IngestApi
+from bitmovin_api_sdk.encoding.encodings.input_streams.sidecar.sidecar_api import SidecarApi
 from bitmovin_api_sdk.encoding.encodings.input_streams.concatenation.concatenation_api import ConcatenationApi
 from bitmovin_api_sdk.encoding.encodings.input_streams.file.file_api import FileApi
 from bitmovin_api_sdk.encoding.encodings.input_streams.trimming.trimming_api import TrimmingApi

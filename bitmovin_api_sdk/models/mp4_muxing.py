@@ -3,6 +3,7 @@
 from enum import Enum
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
+from bitmovin_api_sdk.models.dolby_vision_muxing_configuration import DolbyVisionMuxingConfiguration
 from bitmovin_api_sdk.models.fragmented_mp4_muxing_manifest_type import FragmentedMp4MuxingManifestType
 from bitmovin_api_sdk.models.internal_chunk_length import InternalChunkLength
 from bitmovin_api_sdk.models.muxing import Muxing
@@ -32,8 +33,9 @@ class Mp4Muxing(Muxing):
                  fragment_duration=None,
                  time_code=None,
                  fragmented_mp4_muxing_manifest_type=None,
-                 internal_chunk_length=None):
-        # type: (string_types, string_types, datetime, datetime, dict, string_types, list[MuxingStream], list[EncodingOutput], int, int, int, list[Ignoring], StreamConditionsMode, string_types, int, TimeCode, FragmentedMp4MuxingManifestType, InternalChunkLength) -> None
+                 internal_chunk_length=None,
+                 dolby_vision_configuration=None):
+        # type: (string_types, string_types, datetime, datetime, dict, string_types, list[MuxingStream], list[EncodingOutput], int, int, int, list[Ignoring], StreamConditionsMode, string_types, int, TimeCode, FragmentedMp4MuxingManifestType, InternalChunkLength, DolbyVisionMuxingConfiguration) -> None
         super(Mp4Muxing, self).__init__(name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, id_=id_, streams=streams, outputs=outputs, avg_bitrate=avg_bitrate, min_bitrate=min_bitrate, max_bitrate=max_bitrate, ignored_by=ignored_by, stream_conditions_mode=stream_conditions_mode)
 
         self._filename = None
@@ -41,6 +43,7 @@ class Mp4Muxing(Muxing):
         self._time_code = None
         self._fragmented_mp4_muxing_manifest_type = None
         self._internal_chunk_length = None
+        self._dolby_vision_configuration = None
         self.discriminator = None
 
         if filename is not None:
@@ -53,6 +56,8 @@ class Mp4Muxing(Muxing):
             self.fragmented_mp4_muxing_manifest_type = fragmented_mp4_muxing_manifest_type
         if internal_chunk_length is not None:
             self.internal_chunk_length = internal_chunk_length
+        if dolby_vision_configuration is not None:
+            self.dolby_vision_configuration = dolby_vision_configuration
 
     @property
     def openapi_types(self):
@@ -66,7 +71,8 @@ class Mp4Muxing(Muxing):
             'fragment_duration': 'int',
             'time_code': 'TimeCode',
             'fragmented_mp4_muxing_manifest_type': 'FragmentedMp4MuxingManifestType',
-            'internal_chunk_length': 'InternalChunkLength'
+            'internal_chunk_length': 'InternalChunkLength',
+            'dolby_vision_configuration': 'DolbyVisionMuxingConfiguration'
         })
 
         return types
@@ -83,7 +89,8 @@ class Mp4Muxing(Muxing):
             'fragment_duration': 'fragmentDuration',
             'time_code': 'timeCode',
             'fragmented_mp4_muxing_manifest_type': 'fragmentedMP4MuxingManifestType',
-            'internal_chunk_length': 'internalChunkLength'
+            'internal_chunk_length': 'internalChunkLength',
+            'dolby_vision_configuration': 'dolbyVisionConfiguration'
         })
         return attributes
 
@@ -227,6 +234,35 @@ class Mp4Muxing(Muxing):
                 raise TypeError("Invalid type for `internal_chunk_length`, type has to be `InternalChunkLength`")
 
         self._internal_chunk_length = internal_chunk_length
+
+    @property
+    def dolby_vision_configuration(self):
+        # type: () -> DolbyVisionMuxingConfiguration
+        """Gets the dolby_vision_configuration of this Mp4Muxing.
+
+        Dolby Vision specific configuration
+
+        :return: The dolby_vision_configuration of this Mp4Muxing.
+        :rtype: DolbyVisionMuxingConfiguration
+        """
+        return self._dolby_vision_configuration
+
+    @dolby_vision_configuration.setter
+    def dolby_vision_configuration(self, dolby_vision_configuration):
+        # type: (DolbyVisionMuxingConfiguration) -> None
+        """Sets the dolby_vision_configuration of this Mp4Muxing.
+
+        Dolby Vision specific configuration
+
+        :param dolby_vision_configuration: The dolby_vision_configuration of this Mp4Muxing.
+        :type: DolbyVisionMuxingConfiguration
+        """
+
+        if dolby_vision_configuration is not None:
+            if not isinstance(dolby_vision_configuration, DolbyVisionMuxingConfiguration):
+                raise TypeError("Invalid type for `dolby_vision_configuration`, type has to be `DolbyVisionMuxingConfiguration`")
+
+        self._dolby_vision_configuration = dolby_vision_configuration
 
     def to_dict(self):
         """Returns the model properties as a dict"""

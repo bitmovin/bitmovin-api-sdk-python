@@ -10,6 +10,7 @@ from bitmovin_api_sdk.models.response_error import ResponseError
 from bitmovin_api_sdk.encoding.encodings.input_streams.type.type_api import TypeApi
 from bitmovin_api_sdk.encoding.encodings.input_streams.audio_mix.audio_mix_api import AudioMixApi
 from bitmovin_api_sdk.encoding.encodings.input_streams.ingest.ingest_api import IngestApi
+from bitmovin_api_sdk.encoding.encodings.input_streams.sidecar.sidecar_api import SidecarApi
 from bitmovin_api_sdk.encoding.encodings.input_streams.concatenation.concatenation_api import ConcatenationApi
 from bitmovin_api_sdk.encoding.encodings.input_streams.file.file_api import FileApi
 from bitmovin_api_sdk.encoding.encodings.input_streams.trimming.trimming_api import TrimmingApi
@@ -45,6 +46,13 @@ class InputStreamsApi(BaseApi):
         )
 
         self.ingest = IngestApi(
+            api_key=api_key,
+            tenant_org_id=tenant_org_id,
+            base_url=base_url,
+            logger=logger
+        )
+
+        self.sidecar = SidecarApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,

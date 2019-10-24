@@ -16,6 +16,7 @@ class InputStream(BitmovinResource):
         'TRIMMING_TIME_CODE_TRACK': 'TimecodeTrackTrimmingInputStream',
         'TRIMMING_H264_PICTURE_TIMING': 'H264PictureTimingTrimmingInputStream',
         'AUDIO_MIX': 'AudioMixInputStream',
+        'SIDECAR_DOLBY_VISION_METADATA': 'DolbyVisionMetadataIngestInputStream',
         'CAPTION_CEA608': 'Cea608CaptionInputStream',
         'CAPTION_CEA708': 'Cea708CaptionInputStream',
         'FILE': 'FileInputStream',

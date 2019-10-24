@@ -11,3 +11,4 @@ class Status(Enum):
     RUNNING = "RUNNING"
     FINISHED = "FINISHED"
     ERROR = "ERROR"
+    CANCELED = "CANCELED"
