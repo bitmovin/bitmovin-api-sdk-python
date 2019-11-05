@@ -3,7 +3,6 @@
 from enum import Enum
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
-from bitmovin_api_sdk.models.internal_chunk_length import InternalChunkLength
 from bitmovin_api_sdk.models.muxing import Muxing
 from bitmovin_api_sdk.models.stream_conditions_mode import StreamConditionsMode
 import pprint
@@ -28,15 +27,13 @@ class ProgressiveTsMuxing(Muxing):
                  stream_conditions_mode=None,
                  segment_length=None,
                  filename=None,
-                 start_offset=None,
-                 internal_chunk_length=None):
-        # type: (string_types, string_types, datetime, datetime, dict, string_types, list[MuxingStream], list[EncodingOutput], int, int, int, list[Ignoring], StreamConditionsMode, float, string_types, int, InternalChunkLength) -> None
+                 start_offset=None):
+        # type: (string_types, string_types, datetime, datetime, dict, string_types, list[MuxingStream], list[EncodingOutput], int, int, int, list[Ignoring], StreamConditionsMode, float, string_types, int) -> None
         super(ProgressiveTsMuxing, self).__init__(name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, id_=id_, streams=streams, outputs=outputs, avg_bitrate=avg_bitrate, min_bitrate=min_bitrate, max_bitrate=max_bitrate, ignored_by=ignored_by, stream_conditions_mode=stream_conditions_mode)
 
         self._segment_length = None
         self._filename = None
         self._start_offset = None
-        self._internal_chunk_length = None
         self.discriminator = None
 
         if segment_length is not None:
@@ -45,8 +42,6 @@ class ProgressiveTsMuxing(Muxing):
             self.filename = filename
         if start_offset is not None:
             self.start_offset = start_offset
-        if internal_chunk_length is not None:
-            self.internal_chunk_length = internal_chunk_length
 
     @property
     def openapi_types(self):
@@ -58,8 +53,7 @@ class ProgressiveTsMuxing(Muxing):
         types.update({
             'segment_length': 'float',
             'filename': 'string_types',
-            'start_offset': 'int',
-            'internal_chunk_length': 'InternalChunkLength'
+            'start_offset': 'int'
         })
 
         return types
@@ -74,8 +68,7 @@ class ProgressiveTsMuxing(Muxing):
         attributes.update({
             'segment_length': 'segmentLength',
             'filename': 'filename',
-            'start_offset': 'startOffset',
-            'internal_chunk_length': 'internalChunkLength'
+            'start_offset': 'startOffset'
         })
         return attributes
 
@@ -165,35 +158,6 @@ class ProgressiveTsMuxing(Muxing):
                 raise TypeError("Invalid type for `start_offset`, type has to be `int`")
 
         self._start_offset = start_offset
-
-    @property
-    def internal_chunk_length(self):
-        # type: () -> InternalChunkLength
-        """Gets the internal_chunk_length of this ProgressiveTsMuxing.
-
-        Modifies the internal chunk length used for chunked encoding
-
-        :return: The internal_chunk_length of this ProgressiveTsMuxing.
-        :rtype: InternalChunkLength
-        """
-        return self._internal_chunk_length
-
-    @internal_chunk_length.setter
-    def internal_chunk_length(self, internal_chunk_length):
-        # type: (InternalChunkLength) -> None
-        """Sets the internal_chunk_length of this ProgressiveTsMuxing.
-
-        Modifies the internal chunk length used for chunked encoding
-
-        :param internal_chunk_length: The internal_chunk_length of this ProgressiveTsMuxing.
-        :type: InternalChunkLength
-        """
-
-        if internal_chunk_length is not None:
-            if not isinstance(internal_chunk_length, InternalChunkLength):
-                raise TypeError("Invalid type for `internal_chunk_length`, type has to be `InternalChunkLength`")
-
-        self._internal_chunk_length = internal_chunk_length
 
     def to_dict(self):
         """Returns the model properties as a dict"""

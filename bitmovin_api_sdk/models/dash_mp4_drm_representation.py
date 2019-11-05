@@ -14,10 +14,11 @@ class DashMp4DrmRepresentation(DashMp4Representation):
                  id_=None,
                  encoding_id=None,
                  muxing_id=None,
+                 dependency_id=None,
                  file_path=None,
                  drm_id=None):
-        # type: (string_types, string_types, string_types, string_types, string_types) -> None
-        super(DashMp4DrmRepresentation, self).__init__(id_=id_, encoding_id=encoding_id, muxing_id=muxing_id, file_path=file_path)
+        # type: (string_types, string_types, string_types, string_types, string_types, string_types) -> None
+        super(DashMp4DrmRepresentation, self).__init__(id_=id_, encoding_id=encoding_id, muxing_id=muxing_id, dependency_id=dependency_id, file_path=file_path)
 
         self._drm_id = None
         self.discriminator = None

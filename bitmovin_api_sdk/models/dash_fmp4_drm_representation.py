@@ -16,6 +16,7 @@ class DashFmp4DrmRepresentation(DashFmp4Representation):
                  id_=None,
                  encoding_id=None,
                  muxing_id=None,
+                 dependency_id=None,
                  type_=None,
                  mode=None,
                  segment_path=None,
@@ -24,8 +25,8 @@ class DashFmp4DrmRepresentation(DashFmp4Representation):
                  start_keyframe_id=None,
                  end_keyframe_id=None,
                  drm_id=None):
-        # type: (string_types, string_types, string_types, DashRepresentationType, DashRepresentationTypeMode, string_types, int, int, string_types, string_types, string_types) -> None
-        super(DashFmp4DrmRepresentation, self).__init__(id_=id_, encoding_id=encoding_id, muxing_id=muxing_id, type_=type_, mode=mode, segment_path=segment_path, start_segment_number=start_segment_number, end_segment_number=end_segment_number, start_keyframe_id=start_keyframe_id, end_keyframe_id=end_keyframe_id)
+        # type: (string_types, string_types, string_types, string_types, DashRepresentationType, DashRepresentationTypeMode, string_types, int, int, string_types, string_types, string_types) -> None
+        super(DashFmp4DrmRepresentation, self).__init__(id_=id_, encoding_id=encoding_id, muxing_id=muxing_id, dependency_id=dependency_id, type_=type_, mode=mode, segment_path=segment_path, start_segment_number=start_segment_number, end_segment_number=end_segment_number, start_keyframe_id=start_keyframe_id, end_keyframe_id=end_keyframe_id)
 
         self._drm_id = None
         self.discriminator = None

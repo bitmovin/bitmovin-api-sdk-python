@@ -3,7 +3,6 @@
 from enum import Enum
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
-from bitmovin_api_sdk.models.internal_chunk_length import InternalChunkLength
 from bitmovin_api_sdk.models.muxing import Muxing
 from bitmovin_api_sdk.models.stream_conditions_mode import StreamConditionsMode
 import pprint
@@ -26,19 +25,15 @@ class ProgressiveWebmMuxing(Muxing):
                  max_bitrate=None,
                  ignored_by=None,
                  stream_conditions_mode=None,
-                 filename=None,
-                 internal_chunk_length=None):
-        # type: (string_types, string_types, datetime, datetime, dict, string_types, list[MuxingStream], list[EncodingOutput], int, int, int, list[Ignoring], StreamConditionsMode, string_types, InternalChunkLength) -> None
+                 filename=None):
+        # type: (string_types, string_types, datetime, datetime, dict, string_types, list[MuxingStream], list[EncodingOutput], int, int, int, list[Ignoring], StreamConditionsMode, string_types) -> None
         super(ProgressiveWebmMuxing, self).__init__(name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, id_=id_, streams=streams, outputs=outputs, avg_bitrate=avg_bitrate, min_bitrate=min_bitrate, max_bitrate=max_bitrate, ignored_by=ignored_by, stream_conditions_mode=stream_conditions_mode)
 
         self._filename = None
-        self._internal_chunk_length = None
         self.discriminator = None
 
         if filename is not None:
             self.filename = filename
-        if internal_chunk_length is not None:
-            self.internal_chunk_length = internal_chunk_length
 
     @property
     def openapi_types(self):
@@ -48,8 +43,7 @@ class ProgressiveWebmMuxing(Muxing):
             types = getattr(super(ProgressiveWebmMuxing, self), 'openapi_types')
 
         types.update({
-            'filename': 'string_types',
-            'internal_chunk_length': 'InternalChunkLength'
+            'filename': 'string_types'
         })
 
         return types
@@ -62,8 +56,7 @@ class ProgressiveWebmMuxing(Muxing):
             attributes = getattr(super(ProgressiveWebmMuxing, self), 'attribute_map')
 
         attributes.update({
-            'filename': 'filename',
-            'internal_chunk_length': 'internalChunkLength'
+            'filename': 'filename'
         })
         return attributes
 
@@ -95,35 +88,6 @@ class ProgressiveWebmMuxing(Muxing):
                 raise TypeError("Invalid type for `filename`, type has to be `string_types`")
 
         self._filename = filename
-
-    @property
-    def internal_chunk_length(self):
-        # type: () -> InternalChunkLength
-        """Gets the internal_chunk_length of this ProgressiveWebmMuxing.
-
-        Modifies the internal chunk length used for chunked encoding
-
-        :return: The internal_chunk_length of this ProgressiveWebmMuxing.
-        :rtype: InternalChunkLength
-        """
-        return self._internal_chunk_length
-
-    @internal_chunk_length.setter
-    def internal_chunk_length(self, internal_chunk_length):
-        # type: (InternalChunkLength) -> None
-        """Sets the internal_chunk_length of this ProgressiveWebmMuxing.
-
-        Modifies the internal chunk length used for chunked encoding
-
-        :param internal_chunk_length: The internal_chunk_length of this ProgressiveWebmMuxing.
-        :type: InternalChunkLength
-        """
-
-        if internal_chunk_length is not None:
-            if not isinstance(internal_chunk_length, InternalChunkLength):
-                raise TypeError("Invalid type for `internal_chunk_length`, type has to be `InternalChunkLength`")
-
-        self._internal_chunk_length = internal_chunk_length
 
     def to_dict(self):
         """Returns the model properties as a dict"""

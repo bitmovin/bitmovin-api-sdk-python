@@ -152,7 +152,6 @@ from bitmovin_api_sdk.models.cenc_play_ready import CencPlayReady
 from bitmovin_api_sdk.models.cenc_widevine import CencWidevine
 from bitmovin_api_sdk.models.channel_layout import ChannelLayout
 from bitmovin_api_sdk.models.chroma_location import ChromaLocation
-from bitmovin_api_sdk.models.chunk_length_mode import ChunkLengthMode
 from bitmovin_api_sdk.models.chunked_text_muxing import ChunkedTextMuxing
 from bitmovin_api_sdk.models.clear_key_drm import ClearKeyDrm
 from bitmovin_api_sdk.models.closed_captions_media_info import ClosedCaptionsMediaInfo
@@ -302,7 +301,6 @@ from bitmovin_api_sdk.models.insertable_content_input import InsertableContentIn
 from bitmovin_api_sdk.models.insertable_content_status import InsertableContentStatus
 from bitmovin_api_sdk.models.interlace_filter import InterlaceFilter
 from bitmovin_api_sdk.models.interlace_mode import InterlaceMode
-from bitmovin_api_sdk.models.internal_chunk_length import InternalChunkLength
 from bitmovin_api_sdk.models.iv_size import IvSize
 from bitmovin_api_sdk.models.keyframe import Keyframe
 from bitmovin_api_sdk.models.kubernetes_cluster import KubernetesCluster

@@ -16,6 +16,7 @@ class DashSegmentedRepresentation(DashRepresentation):
                  id_=None,
                  encoding_id=None,
                  muxing_id=None,
+                 dependency_id=None,
                  type_=None,
                  mode=None,
                  segment_path=None,
@@ -23,8 +24,8 @@ class DashSegmentedRepresentation(DashRepresentation):
                  end_segment_number=None,
                  start_keyframe_id=None,
                  end_keyframe_id=None):
-        # type: (string_types, string_types, string_types, DashRepresentationType, DashRepresentationTypeMode, string_types, int, int, string_types, string_types) -> None
-        super(DashSegmentedRepresentation, self).__init__(id_=id_, encoding_id=encoding_id, muxing_id=muxing_id)
+        # type: (string_types, string_types, string_types, string_types, DashRepresentationType, DashRepresentationTypeMode, string_types, int, int, string_types, string_types) -> None
+        super(DashSegmentedRepresentation, self).__init__(id_=id_, encoding_id=encoding_id, muxing_id=muxing_id, dependency_id=dependency_id)
 
         self._type = None
         self._mode = None

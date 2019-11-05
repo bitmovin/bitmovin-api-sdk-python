@@ -4,7 +4,6 @@ from enum import Enum
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
 from bitmovin_api_sdk.models.broadcast_ts_muxing_configuration import BroadcastTsMuxingConfiguration
-from bitmovin_api_sdk.models.internal_chunk_length import InternalChunkLength
 from bitmovin_api_sdk.models.muxing import Muxing
 from bitmovin_api_sdk.models.stream_conditions_mode import StreamConditionsMode
 import pprint
@@ -29,15 +28,13 @@ class BroadcastTsMuxing(Muxing):
                  stream_conditions_mode=None,
                  segment_length=None,
                  filename=None,
-                 configuration=None,
-                 internal_chunk_length=None):
-        # type: (string_types, string_types, datetime, datetime, dict, string_types, list[MuxingStream], list[EncodingOutput], int, int, int, list[Ignoring], StreamConditionsMode, float, string_types, BroadcastTsMuxingConfiguration, InternalChunkLength) -> None
+                 configuration=None):
+        # type: (string_types, string_types, datetime, datetime, dict, string_types, list[MuxingStream], list[EncodingOutput], int, int, int, list[Ignoring], StreamConditionsMode, float, string_types, BroadcastTsMuxingConfiguration) -> None
         super(BroadcastTsMuxing, self).__init__(name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, id_=id_, streams=streams, outputs=outputs, avg_bitrate=avg_bitrate, min_bitrate=min_bitrate, max_bitrate=max_bitrate, ignored_by=ignored_by, stream_conditions_mode=stream_conditions_mode)
 
         self._segment_length = None
         self._filename = None
         self._configuration = None
-        self._internal_chunk_length = None
         self.discriminator = None
 
         if segment_length is not None:
@@ -46,8 +43,6 @@ class BroadcastTsMuxing(Muxing):
             self.filename = filename
         if configuration is not None:
             self.configuration = configuration
-        if internal_chunk_length is not None:
-            self.internal_chunk_length = internal_chunk_length
 
     @property
     def openapi_types(self):
@@ -59,8 +54,7 @@ class BroadcastTsMuxing(Muxing):
         types.update({
             'segment_length': 'float',
             'filename': 'string_types',
-            'configuration': 'BroadcastTsMuxingConfiguration',
-            'internal_chunk_length': 'InternalChunkLength'
+            'configuration': 'BroadcastTsMuxingConfiguration'
         })
 
         return types
@@ -75,8 +69,7 @@ class BroadcastTsMuxing(Muxing):
         attributes.update({
             'segment_length': 'segmentLength',
             'filename': 'filename',
-            'configuration': 'configuration',
-            'internal_chunk_length': 'internalChunkLength'
+            'configuration': 'configuration'
         })
         return attributes
 
@@ -164,35 +157,6 @@ class BroadcastTsMuxing(Muxing):
                 raise TypeError("Invalid type for `configuration`, type has to be `BroadcastTsMuxingConfiguration`")
 
         self._configuration = configuration
-
-    @property
-    def internal_chunk_length(self):
-        # type: () -> InternalChunkLength
-        """Gets the internal_chunk_length of this BroadcastTsMuxing.
-
-        Modifies the internal chunk length used for chunked encoding
-
-        :return: The internal_chunk_length of this BroadcastTsMuxing.
-        :rtype: InternalChunkLength
-        """
-        return self._internal_chunk_length
-
-    @internal_chunk_length.setter
-    def internal_chunk_length(self, internal_chunk_length):
-        # type: (InternalChunkLength) -> None
-        """Sets the internal_chunk_length of this BroadcastTsMuxing.
-
-        Modifies the internal chunk length used for chunked encoding
-
-        :param internal_chunk_length: The internal_chunk_length of this BroadcastTsMuxing.
-        :type: InternalChunkLength
-        """
-
-        if internal_chunk_length is not None:
-            if not isinstance(internal_chunk_length, InternalChunkLength):
-                raise TypeError("Invalid type for `internal_chunk_length`, type has to be `InternalChunkLength`")
-
-        self._internal_chunk_length = internal_chunk_length
 
     def to_dict(self):
         """Returns the model properties as a dict"""

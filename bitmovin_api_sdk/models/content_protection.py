@@ -14,9 +14,10 @@ class ContentProtection(DashRepresentation):
                  id_=None,
                  encoding_id=None,
                  muxing_id=None,
+                 dependency_id=None,
                  drm_id=None):
-        # type: (string_types, string_types, string_types, string_types) -> None
-        super(ContentProtection, self).__init__(id_=id_, encoding_id=encoding_id, muxing_id=muxing_id)
+        # type: (string_types, string_types, string_types, string_types, string_types) -> None
+        super(ContentProtection, self).__init__(id_=id_, encoding_id=encoding_id, muxing_id=muxing_id, dependency_id=dependency_id)
 
         self._drm_id = None
         self.discriminator = None
