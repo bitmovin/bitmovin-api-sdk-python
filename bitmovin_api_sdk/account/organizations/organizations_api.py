@@ -7,6 +7,7 @@ from bitmovin_api_sdk.common.poscheck import poscheck_except
 from bitmovin_api_sdk.models.organization import Organization
 from bitmovin_api_sdk.models.response_envelope import ResponseEnvelope
 from bitmovin_api_sdk.models.response_error import ResponseError
+from bitmovin_api_sdk.models.update_organization_request import UpdateOrganizationRequest
 from bitmovin_api_sdk.account.organizations.sub_organizations.sub_organizations_api import SubOrganizationsApi
 from bitmovin_api_sdk.account.organizations.groups.groups_api import GroupsApi
 
@@ -75,13 +76,33 @@ class OrganizationsApi(BaseApi):
         # type: (dict) -> Organization
         """List Organizations
 
-        :return: Service specific result
+        :return: List of organizations
         :rtype: Organization
         """
 
         return self.api_client.get(
             '/account/organizations',
             pagination_response=True,
+            type=Organization,
+            **kwargs
+        )
+
+    def update(self, organization_id, update_organization_request, **kwargs):
+        # type: (string_types, UpdateOrganizationRequest, dict) -> Organization
+        """Update Organization
+
+        :param organization_id: ID of the organization
+        :type organization_id: string_types, required
+        :param update_organization_request: Organization Details fields to be updated
+        :type update_organization_request: UpdateOrganizationRequest, required
+        :return: Orgnaization Details
+        :rtype: Organization
+        """
+
+        return self.api_client.put(
+            '/account/organizations/{organization_id}',
+            update_organization_request,
+            path_params={'organization_id': organization_id},
             type=Organization,
             **kwargs
         )

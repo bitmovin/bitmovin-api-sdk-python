@@ -301,6 +301,8 @@ from bitmovin_api_sdk.models.insertable_content_input import InsertableContentIn
 from bitmovin_api_sdk.models.insertable_content_status import InsertableContentStatus
 from bitmovin_api_sdk.models.interlace_filter import InterlaceFilter
 from bitmovin_api_sdk.models.interlace_mode import InterlaceMode
+from bitmovin_api_sdk.models.invitation import Invitation
+from bitmovin_api_sdk.models.invitation_status import InvitationStatus
 from bitmovin_api_sdk.models.iv_size import IvSize
 from bitmovin_api_sdk.models.keyframe import Keyframe
 from bitmovin_api_sdk.models.kubernetes_cluster import KubernetesCluster
@@ -323,7 +325,6 @@ from bitmovin_api_sdk.models.live_media_ingest_output import LiveMediaIngestOutp
 from bitmovin_api_sdk.models.local_input import LocalInput
 from bitmovin_api_sdk.models.local_output import LocalOutput
 from bitmovin_api_sdk.models.log_level import LogLevel
-from bitmovin_api_sdk.models.login import Login
 from bitmovin_api_sdk.models.manifest import Manifest
 from bitmovin_api_sdk.models.manifest_resource import ManifestResource
 from bitmovin_api_sdk.models.manifest_type import ManifestType
@@ -521,6 +522,7 @@ from bitmovin_api_sdk.models.tweaks import Tweaks
 from bitmovin_api_sdk.models.udp_input import UdpInput
 from bitmovin_api_sdk.models.udp_multicast_input import UdpMulticastInput
 from bitmovin_api_sdk.models.unsharp_filter import UnsharpFilter
+from bitmovin_api_sdk.models.update_organization_request import UpdateOrganizationRequest
 from bitmovin_api_sdk.models.utc_timing import UtcTiming
 from bitmovin_api_sdk.models.variant_stream_dropping_mode import VariantStreamDroppingMode
 from bitmovin_api_sdk.models.vertical_low_pass_filtering_mode import VerticalLowPassFilteringMode

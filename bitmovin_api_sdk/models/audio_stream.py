@@ -21,7 +21,7 @@ class AudioStream(MediaStream):
                  channel_format=None,
                  language=None,
                  hearing_impaired=None):
-        # type: (string_types, int, int, string_types, int, string_types, int, string_types, string_types, bool) -> None
+        # type: (string_types, int, float, string_types, int, string_types, int, string_types, string_types, bool) -> None
         super(AudioStream, self).__init__(id_=id_, position=position, duration=duration, codec=codec)
 
         self._sample_rate = None

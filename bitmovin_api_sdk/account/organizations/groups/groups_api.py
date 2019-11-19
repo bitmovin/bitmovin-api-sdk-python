@@ -10,6 +10,7 @@ from bitmovin_api_sdk.models.group import Group
 from bitmovin_api_sdk.models.response_envelope import ResponseEnvelope
 from bitmovin_api_sdk.models.response_error import ResponseError
 from bitmovin_api_sdk.account.organizations.groups.tenants.tenants_api import TenantsApi
+from bitmovin_api_sdk.account.organizations.groups.invitations.invitations_api import InvitationsApi
 from bitmovin_api_sdk.account.organizations.groups.permissions.permissions_api import PermissionsApi
 
 
@@ -26,6 +27,13 @@ class GroupsApi(BaseApi):
         )
 
         self.tenants = TenantsApi(
+            api_key=api_key,
+            tenant_org_id=tenant_org_id,
+            base_url=base_url,
+            logger=logger
+        )
+
+        self.invitations = InvitationsApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,

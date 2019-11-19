@@ -15,7 +15,7 @@ class MediaStream(BitmovinResponse):
                  position=None,
                  duration=None,
                  codec=None):
-        # type: (string_types, int, int, string_types) -> None
+        # type: (string_types, int, float, string_types) -> None
         super(MediaStream, self).__init__(id_=id_)
 
         self._position = None
@@ -39,7 +39,7 @@ class MediaStream(BitmovinResponse):
 
         types.update({
             'position': 'int',
-            'duration': 'int',
+            'duration': 'float',
             'codec': 'string_types'
         })
 
@@ -90,30 +90,30 @@ class MediaStream(BitmovinResponse):
 
     @property
     def duration(self):
-        # type: () -> int
+        # type: () -> float
         """Gets the duration of this MediaStream.
 
         Duration of the stream in seconds
 
         :return: The duration of this MediaStream.
-        :rtype: int
+        :rtype: float
         """
         return self._duration
 
     @duration.setter
     def duration(self, duration):
-        # type: (int) -> None
+        # type: (float) -> None
         """Sets the duration of this MediaStream.
 
         Duration of the stream in seconds
 
         :param duration: The duration of this MediaStream.
-        :type: int
+        :type: float
         """
 
         if duration is not None:
-            if not isinstance(duration, int):
-                raise TypeError("Invalid type for `duration`, type has to be `int`")
+            if not isinstance(duration, (float, int)):
+                raise TypeError("Invalid type for `duration`, type has to be `float`")
 
         self._duration = duration
 

@@ -7,6 +7,7 @@ from bitmovin_api_sdk.common.poscheck import poscheck_except
 from bitmovin_api_sdk.models.notification import Notification
 from bitmovin_api_sdk.models.response_envelope import ResponseEnvelope
 from bitmovin_api_sdk.models.response_error import ResponseError
+from bitmovin_api_sdk.notifications.emails.usage_reports.usage_reports_api import UsageReportsApi
 from bitmovin_api_sdk.notifications.emails.encoding.encoding_api import EncodingApi
 from bitmovin_api_sdk.notifications.emails.notification_list_query_params import NotificationListQueryParams
 
@@ -17,6 +18,13 @@ class EmailsApi(BaseApi):
         # type: (str, str, str, BitmovinApiLoggerBase) -> None
 
         super(EmailsApi, self).__init__(
+            api_key=api_key,
+            tenant_org_id=tenant_org_id,
+            base_url=base_url,
+            logger=logger
+        )
+
+        self.usage_reports = UsageReportsApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,

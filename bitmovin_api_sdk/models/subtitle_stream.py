@@ -17,7 +17,7 @@ class SubtitleStream(MediaStream):
                  codec=None,
                  language=None,
                  hearing_impaired=None):
-        # type: (string_types, int, int, string_types, string_types, bool) -> None
+        # type: (string_types, int, float, string_types, string_types, bool) -> None
         super(SubtitleStream, self).__init__(id_=id_, position=position, duration=duration, codec=codec)
 
         self._language = None

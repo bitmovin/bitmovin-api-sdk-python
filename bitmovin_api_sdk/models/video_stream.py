@@ -22,7 +22,7 @@ class VideoStream(MediaStream):
                  height=None,
                  par=None,
                  rotation=None):
-        # type: (string_types, int, int, string_types, string_types, string_types, int, int, int, float, int) -> None
+        # type: (string_types, int, float, string_types, string_types, string_types, int, int, int, float, int) -> None
         super(VideoStream, self).__init__(id_=id_, position=position, duration=duration, codec=codec)
 
         self._fps = None

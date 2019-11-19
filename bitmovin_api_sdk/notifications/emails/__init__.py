@@ -1,3 +1,4 @@
 from bitmovin_api_sdk.notifications.emails.emails_api import EmailsApi
+from bitmovin_api_sdk.notifications.emails.usage_reports.usage_reports_api import UsageReportsApi
 from bitmovin_api_sdk.notifications.emails.encoding.encoding_api import EncodingApi
 from bitmovin_api_sdk.notifications.emails.notification_list_query_params import NotificationListQueryParams
