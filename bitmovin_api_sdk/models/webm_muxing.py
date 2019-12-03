@@ -29,8 +29,9 @@ class WebmMuxing(Muxing):
                  segment_naming=None,
                  segment_naming_template=None,
                  init_segment_name=None,
-                 init_segment_name_template=None):
-        # type: (string_types, string_types, datetime, datetime, dict, string_types, list[MuxingStream], list[EncodingOutput], int, int, int, list[Ignoring], StreamConditionsMode, float, string_types, string_types, string_types, string_types) -> None
+                 init_segment_name_template=None,
+                 segments_muxed=None):
+        # type: (string_types, string_types, datetime, datetime, dict, string_types, list[MuxingStream], list[EncodingOutput], int, int, int, list[Ignoring], StreamConditionsMode, float, string_types, string_types, string_types, string_types, int) -> None
         super(WebmMuxing, self).__init__(name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, id_=id_, streams=streams, outputs=outputs, avg_bitrate=avg_bitrate, min_bitrate=min_bitrate, max_bitrate=max_bitrate, ignored_by=ignored_by, stream_conditions_mode=stream_conditions_mode)
 
         self._segment_length = None
@@ -38,6 +39,7 @@ class WebmMuxing(Muxing):
         self._segment_naming_template = None
         self._init_segment_name = None
         self._init_segment_name_template = None
+        self._segments_muxed = None
         self.discriminator = None
 
         if segment_length is not None:
@@ -50,6 +52,8 @@ class WebmMuxing(Muxing):
             self.init_segment_name = init_segment_name
         if init_segment_name_template is not None:
             self.init_segment_name_template = init_segment_name_template
+        if segments_muxed is not None:
+            self.segments_muxed = segments_muxed
 
     @property
     def openapi_types(self):
@@ -63,7 +67,8 @@ class WebmMuxing(Muxing):
             'segment_naming': 'string_types',
             'segment_naming_template': 'string_types',
             'init_segment_name': 'string_types',
-            'init_segment_name_template': 'string_types'
+            'init_segment_name_template': 'string_types',
+            'segments_muxed': 'int'
         })
 
         return types
@@ -80,7 +85,8 @@ class WebmMuxing(Muxing):
             'segment_naming': 'segmentNaming',
             'segment_naming_template': 'segmentNamingTemplate',
             'init_segment_name': 'initSegmentName',
-            'init_segment_name_template': 'initSegmentNameTemplate'
+            'init_segment_name_template': 'initSegmentNameTemplate',
+            'segments_muxed': 'segmentsMuxed'
         })
         return attributes
 
@@ -228,6 +234,35 @@ class WebmMuxing(Muxing):
                 raise TypeError("Invalid type for `init_segment_name_template`, type has to be `string_types`")
 
         self._init_segment_name_template = init_segment_name_template
+
+    @property
+    def segments_muxed(self):
+        # type: () -> int
+        """Gets the segments_muxed of this WebmMuxing.
+
+        Number of segments which have been encoded
+
+        :return: The segments_muxed of this WebmMuxing.
+        :rtype: int
+        """
+        return self._segments_muxed
+
+    @segments_muxed.setter
+    def segments_muxed(self, segments_muxed):
+        # type: (int) -> None
+        """Sets the segments_muxed of this WebmMuxing.
+
+        Number of segments which have been encoded
+
+        :param segments_muxed: The segments_muxed of this WebmMuxing.
+        :type: int
+        """
+
+        if segments_muxed is not None:
+            if not isinstance(segments_muxed, int):
+                raise TypeError("Invalid type for `segments_muxed`, type has to be `int`")
+
+        self._segments_muxed = segments_muxed
 
     def to_dict(self):
         """Returns the model properties as a dict"""

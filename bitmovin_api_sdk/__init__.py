@@ -913,6 +913,9 @@ from bitmovin_api_sdk.models.analytics_export_task_output_target import Analytic
 from bitmovin_api_sdk.models.analytics_greater_than_filter import AnalyticsGreaterThanFilter
 from bitmovin_api_sdk.models.analytics_greater_than_or_equal_filter import AnalyticsGreaterThanOrEqualFilter
 from bitmovin_api_sdk.models.analytics_impression_details import AnalyticsImpressionDetails
+from bitmovin_api_sdk.models.analytics_impression_list_item import AnalyticsImpressionListItem
+from bitmovin_api_sdk.models.analytics_impressions_query import AnalyticsImpressionsQuery
+from bitmovin_api_sdk.models.analytics_impressions_response import AnalyticsImpressionsResponse
 from bitmovin_api_sdk.models.analytics_in_filter import AnalyticsInFilter
 from bitmovin_api_sdk.models.analytics_insights_organization_settings import AnalyticsInsightsOrganizationSettings
 from bitmovin_api_sdk.models.analytics_insights_organization_settings_request import AnalyticsInsightsOrganizationSettingsRequest
@@ -1409,4 +1412,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.29.0alpha0"
+__version__ = "1.30.0alpha0"
