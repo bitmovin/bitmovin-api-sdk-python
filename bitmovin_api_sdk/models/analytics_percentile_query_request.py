@@ -21,11 +21,12 @@ class AnalyticsPercentileQueryRequest(AnalyticsQueryRequest):
                  dimension=None,
                  interval=None,
                  group_by=None,
+                 include_context=None,
                  limit=None,
                  offset=None,
                  percentile=None):
-        # type: (datetime, datetime, string_types, list[AnalyticsAbstractFilter], list[AnalyticsOrderByEntry], AnalyticsAttribute, AnalyticsInterval, list[AnalyticsAttribute], int, int, int) -> None
-        super(AnalyticsPercentileQueryRequest, self).__init__(start=start, end=end, license_key=license_key, filters=filters, order_by=order_by, dimension=dimension, interval=interval, group_by=group_by, limit=limit, offset=offset)
+        # type: (datetime, datetime, string_types, list[AnalyticsAbstractFilter], list[AnalyticsOrderByEntry], AnalyticsAttribute, AnalyticsInterval, list[AnalyticsAttribute], bool, int, int, int) -> None
+        super(AnalyticsPercentileQueryRequest, self).__init__(start=start, end=end, license_key=license_key, filters=filters, order_by=order_by, dimension=dimension, interval=interval, group_by=group_by, include_context=include_context, limit=limit, offset=offset)
 
         self._percentile = None
         self.discriminator = None

@@ -3,6 +3,7 @@
 from enum import Enum
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
+from bitmovin_api_sdk.models.aspect_mode import AspectMode
 from bitmovin_api_sdk.models.padding_sequence import PaddingSequence
 import pprint
 import six
@@ -15,14 +16,16 @@ class ConcatenationInputConfiguration(object):
                  is_main=None,
                  position=None,
                  padding_before=None,
-                 padding_after=None):
-        # type: (string_types, bool, int, PaddingSequence, PaddingSequence) -> None
+                 padding_after=None,
+                 aspect_mode=None):
+        # type: (string_types, bool, int, PaddingSequence, PaddingSequence, AspectMode) -> None
 
         self._input_stream_id = None
         self._is_main = None
         self._position = None
         self._padding_before = None
         self._padding_after = None
+        self._aspect_mode = None
         self.discriminator = None
 
         if input_stream_id is not None:
@@ -35,6 +38,8 @@ class ConcatenationInputConfiguration(object):
             self.padding_before = padding_before
         if padding_after is not None:
             self.padding_after = padding_after
+        if aspect_mode is not None:
+            self.aspect_mode = aspect_mode
 
     @property
     def openapi_types(self):
@@ -43,7 +48,8 @@ class ConcatenationInputConfiguration(object):
             'is_main': 'bool',
             'position': 'int',
             'padding_before': 'PaddingSequence',
-            'padding_after': 'PaddingSequence'
+            'padding_after': 'PaddingSequence',
+            'aspect_mode': 'AspectMode'
         }
 
         return types
@@ -55,7 +61,8 @@ class ConcatenationInputConfiguration(object):
             'is_main': 'isMain',
             'position': 'position',
             'padding_before': 'paddingBefore',
-            'padding_after': 'paddingAfter'
+            'padding_after': 'paddingAfter',
+            'aspect_mode': 'aspectMode'
         }
         return attributes
 
@@ -203,6 +210,35 @@ class ConcatenationInputConfiguration(object):
                 raise TypeError("Invalid type for `padding_after`, type has to be `PaddingSequence`")
 
         self._padding_after = padding_after
+
+    @property
+    def aspect_mode(self):
+        # type: () -> AspectMode
+        """Gets the aspect_mode of this ConcatenationInputConfiguration.
+
+        Specifies the aspect mode that is used when adapting to the main input stream's aspect ratio
+
+        :return: The aspect_mode of this ConcatenationInputConfiguration.
+        :rtype: AspectMode
+        """
+        return self._aspect_mode
+
+    @aspect_mode.setter
+    def aspect_mode(self, aspect_mode):
+        # type: (AspectMode) -> None
+        """Sets the aspect_mode of this ConcatenationInputConfiguration.
+
+        Specifies the aspect mode that is used when adapting to the main input stream's aspect ratio
+
+        :param aspect_mode: The aspect_mode of this ConcatenationInputConfiguration.
+        :type: AspectMode
+        """
+
+        if aspect_mode is not None:
+            if not isinstance(aspect_mode, AspectMode):
+                raise TypeError("Invalid type for `aspect_mode`, type has to be `AspectMode`")
+
+        self._aspect_mode = aspect_mode
 
     def to_dict(self):
         """Returns the model properties as a dict"""

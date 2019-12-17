@@ -3,6 +3,7 @@
 from enum import Enum
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
+from bitmovin_api_sdk.models.play_ready_additional_information import PlayReadyAdditionalInformation
 import pprint
 import six
 
@@ -11,23 +12,28 @@ class CencPlayReady(object):
     @poscheck_model
     def __init__(self,
                  la_url=None,
-                 pssh=None):
-        # type: (string_types, string_types) -> None
+                 pssh=None,
+                 additional_information=None):
+        # type: (string_types, string_types, PlayReadyAdditionalInformation) -> None
 
         self._la_url = None
         self._pssh = None
+        self._additional_information = None
         self.discriminator = None
 
         if la_url is not None:
             self.la_url = la_url
         if pssh is not None:
             self.pssh = pssh
+        if additional_information is not None:
+            self.additional_information = additional_information
 
     @property
     def openapi_types(self):
         types = {
             'la_url': 'string_types',
-            'pssh': 'string_types'
+            'pssh': 'string_types',
+            'additional_information': 'PlayReadyAdditionalInformation'
         }
 
         return types
@@ -36,7 +42,8 @@ class CencPlayReady(object):
     def attribute_map(self):
         attributes = {
             'la_url': 'laUrl',
-            'pssh': 'pssh'
+            'pssh': 'pssh',
+            'additional_information': 'additionalInformation'
         }
         return attributes
 
@@ -97,6 +104,33 @@ class CencPlayReady(object):
                 raise TypeError("Invalid type for `pssh`, type has to be `string_types`")
 
         self._pssh = pssh
+
+    @property
+    def additional_information(self):
+        # type: () -> PlayReadyAdditionalInformation
+        """Gets the additional_information of this CencPlayReady.
+
+
+        :return: The additional_information of this CencPlayReady.
+        :rtype: PlayReadyAdditionalInformation
+        """
+        return self._additional_information
+
+    @additional_information.setter
+    def additional_information(self, additional_information):
+        # type: (PlayReadyAdditionalInformation) -> None
+        """Sets the additional_information of this CencPlayReady.
+
+
+        :param additional_information: The additional_information of this CencPlayReady.
+        :type: PlayReadyAdditionalInformation
+        """
+
+        if additional_information is not None:
+            if not isinstance(additional_information, PlayReadyAdditionalInformation):
+                raise TypeError("Invalid type for `additional_information`, type has to be `PlayReadyAdditionalInformation`")
+
+        self._additional_information = additional_information
 
     def to_dict(self):
         """Returns the model properties as a dict"""

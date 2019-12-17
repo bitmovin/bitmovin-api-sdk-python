@@ -1,1 +1,2 @@
 from bitmovin_api_sdk.encoding.encodings.streams.burn_in_subtitles.dvbsub.dvbsub_api import DvbsubApi
+from bitmovin_api_sdk.encoding.encodings.streams.burn_in_subtitles.dvbsub.burn_in_subtitle_dvb_sub_list_query_params import BurnInSubtitleDvbSubListQueryParams

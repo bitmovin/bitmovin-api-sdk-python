@@ -12,12 +12,14 @@ class AnalyticsResponse(object):
     def __init__(self,
                  rows=None,
                  row_count=None,
-                 column_labels=None):
-        # type: (list[object], int, list[AnalyticsColumnLabel]) -> None
+                 column_labels=None,
+                 context_description=None):
+        # type: (list[object], int, list[AnalyticsColumnLabel], list[AnalyticsContextDescription]) -> None
 
         self._rows = list()
         self._row_count = None
         self._column_labels = list()
+        self._context_description = list()
         self.discriminator = None
 
         if rows is not None:
@@ -26,13 +28,16 @@ class AnalyticsResponse(object):
             self.row_count = row_count
         if column_labels is not None:
             self.column_labels = column_labels
+        if context_description is not None:
+            self.context_description = context_description
 
     @property
     def openapi_types(self):
         types = {
             'rows': 'list[object]',
             'row_count': 'int',
-            'column_labels': 'list[AnalyticsColumnLabel]'
+            'column_labels': 'list[AnalyticsColumnLabel]',
+            'context_description': 'list[AnalyticsContextDescription]'
         }
 
         return types
@@ -42,7 +47,8 @@ class AnalyticsResponse(object):
         attributes = {
             'rows': 'rows',
             'row_count': 'rowCount',
-            'column_labels': 'columnLabels'
+            'column_labels': 'columnLabels',
+            'context_description': 'contextDescription'
         }
         return attributes
 
@@ -128,6 +134,33 @@ class AnalyticsResponse(object):
                 raise TypeError("Invalid type for `column_labels`, type has to be `list[AnalyticsColumnLabel]`")
 
         self._column_labels = column_labels
+
+    @property
+    def context_description(self):
+        # type: () -> list[AnalyticsContextDescription]
+        """Gets the context_description of this AnalyticsResponse.
+
+
+        :return: The context_description of this AnalyticsResponse.
+        :rtype: list[AnalyticsContextDescription]
+        """
+        return self._context_description
+
+    @context_description.setter
+    def context_description(self, context_description):
+        # type: (list) -> None
+        """Sets the context_description of this AnalyticsResponse.
+
+
+        :param context_description: The context_description of this AnalyticsResponse.
+        :type: list[AnalyticsContextDescription]
+        """
+
+        if context_description is not None:
+            if not isinstance(context_description, list):
+                raise TypeError("Invalid type for `context_description`, type has to be `list[AnalyticsContextDescription]`")
+
+        self._context_description = context_description
 
     def to_dict(self):
         """Returns the model properties as a dict"""

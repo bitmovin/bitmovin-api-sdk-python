@@ -4,6 +4,7 @@ from enum import Enum
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
 from bitmovin_api_sdk.models.drm import Drm
+from bitmovin_api_sdk.models.play_ready_additional_information import PlayReadyAdditionalInformation
 from bitmovin_api_sdk.models.play_ready_encryption_method import PlayReadyEncryptionMethod
 import pprint
 import six
@@ -24,8 +25,9 @@ class PlayReadyDrm(Drm):
                  la_url=None,
                  pssh=None,
                  method=None,
-                 kid=None):
-        # type: (string_types, string_types, datetime, datetime, dict, string_types, list[EncodingOutput], string_types, string_types, string_types, string_types, PlayReadyEncryptionMethod, string_types) -> None
+                 kid=None,
+                 additional_information=None):
+        # type: (string_types, string_types, datetime, datetime, dict, string_types, list[EncodingOutput], string_types, string_types, string_types, string_types, PlayReadyEncryptionMethod, string_types, PlayReadyAdditionalInformation) -> None
         super(PlayReadyDrm, self).__init__(name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, id_=id_, outputs=outputs)
 
         self._key = None
@@ -34,6 +36,7 @@ class PlayReadyDrm(Drm):
         self._pssh = None
         self._method = None
         self._kid = None
+        self._additional_information = None
         self.discriminator = None
 
         if key is not None:
@@ -48,6 +51,8 @@ class PlayReadyDrm(Drm):
             self.method = method
         if kid is not None:
             self.kid = kid
+        if additional_information is not None:
+            self.additional_information = additional_information
 
     @property
     def openapi_types(self):
@@ -62,7 +67,8 @@ class PlayReadyDrm(Drm):
             'la_url': 'string_types',
             'pssh': 'string_types',
             'method': 'PlayReadyEncryptionMethod',
-            'kid': 'string_types'
+            'kid': 'string_types',
+            'additional_information': 'PlayReadyAdditionalInformation'
         })
 
         return types
@@ -80,7 +86,8 @@ class PlayReadyDrm(Drm):
             'la_url': 'laUrl',
             'pssh': 'pssh',
             'method': 'method',
-            'kid': 'kid'
+            'kid': 'kid',
+            'additional_information': 'additionalInformation'
         })
         return attributes
 
@@ -255,6 +262,33 @@ class PlayReadyDrm(Drm):
                 raise TypeError("Invalid type for `kid`, type has to be `string_types`")
 
         self._kid = kid
+
+    @property
+    def additional_information(self):
+        # type: () -> PlayReadyAdditionalInformation
+        """Gets the additional_information of this PlayReadyDrm.
+
+
+        :return: The additional_information of this PlayReadyDrm.
+        :rtype: PlayReadyAdditionalInformation
+        """
+        return self._additional_information
+
+    @additional_information.setter
+    def additional_information(self, additional_information):
+        # type: (PlayReadyAdditionalInformation) -> None
+        """Sets the additional_information of this PlayReadyDrm.
+
+
+        :param additional_information: The additional_information of this PlayReadyDrm.
+        :type: PlayReadyAdditionalInformation
+        """
+
+        if additional_information is not None:
+            if not isinstance(additional_information, PlayReadyAdditionalInformation):
+                raise TypeError("Invalid type for `additional_information`, type has to be `PlayReadyAdditionalInformation`")
+
+        self._additional_information = additional_information
 
     def to_dict(self):
         """Returns the model properties as a dict"""

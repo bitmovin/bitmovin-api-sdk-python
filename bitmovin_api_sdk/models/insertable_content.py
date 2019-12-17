@@ -64,7 +64,7 @@ class InsertableContent(BitmovinResource):
         # type: () -> list[InsertableContentInput]
         """Gets the inputs of this InsertableContent.
 
-        List of video files to be inserted in the live stream. These have to match the codec, aspect ration and frame rate of the live stream.
+        Either a list of video files to be inserted in the live stream which have to match the codec, aspect ratio and frame rate of the live stream or a single image file. Supported image formats are: `.Y.U.V`, `Alias PIX`, `animated GIF`, `APNG`, `BMP`, `DPX`, `FITS`, `JPEG`, `JPEG 2000`, `JPEG-LS`, `PAM`, `PBM`, `PCX`, `PGM`, `PGMYUV`, `PNG`, `PPM`, `SGI`, `Sun Rasterfile`, `TIFF`, `Truevision Targa`, `WebP`, `XBM`, `XFace`, `XPM`, `XWD`
 
         :return: The inputs of this InsertableContent.
         :rtype: list[InsertableContentInput]
@@ -76,7 +76,7 @@ class InsertableContent(BitmovinResource):
         # type: (list) -> None
         """Sets the inputs of this InsertableContent.
 
-        List of video files to be inserted in the live stream. These have to match the codec, aspect ration and frame rate of the live stream.
+        Either a list of video files to be inserted in the live stream which have to match the codec, aspect ratio and frame rate of the live stream or a single image file. Supported image formats are: `.Y.U.V`, `Alias PIX`, `animated GIF`, `APNG`, `BMP`, `DPX`, `FITS`, `JPEG`, `JPEG 2000`, `JPEG-LS`, `PAM`, `PBM`, `PCX`, `PGM`, `PGMYUV`, `PNG`, `PPM`, `SGI`, `Sun Rasterfile`, `TIFF`, `Truevision Targa`, `WebP`, `XBM`, `XFace`, `XPM`, `XWD`
 
         :param inputs: The inputs of this InsertableContent.
         :type: list[InsertableContentInput]

@@ -106,7 +106,7 @@ class ScheduledInsertableContent(BitmovinResource):
         # type: () -> datetime
         """Gets the run_at of this ScheduledInsertableContent.
 
-        Time to to play the content in UTC: YYYY-MM-DDThh:mm:ssZ
+        Time to to play the content in UTC: YYYY-MM-DDThh:mm:ssZ, if this property is not set the content will be played as soon as possible.
 
         :return: The run_at of this ScheduledInsertableContent.
         :rtype: datetime
@@ -118,7 +118,7 @@ class ScheduledInsertableContent(BitmovinResource):
         # type: (datetime) -> None
         """Sets the run_at of this ScheduledInsertableContent.
 
-        Time to to play the content in UTC: YYYY-MM-DDThh:mm:ssZ
+        Time to to play the content in UTC: YYYY-MM-DDThh:mm:ssZ, if this property is not set the content will be played as soon as possible.
 
         :param run_at: The run_at of this ScheduledInsertableContent.
         :type: datetime
@@ -135,7 +135,7 @@ class ScheduledInsertableContent(BitmovinResource):
         # type: () -> float
         """Gets the duration_in_seconds of this ScheduledInsertableContent.
 
-        Duration for how long to play the content. Cut off if shorter, loop if longer than actual duration.
+        Duration for how long to play the content. Cut off if shorter, loop if longer than actual duration. This property is required if the insertable content is an image.
 
         :return: The duration_in_seconds of this ScheduledInsertableContent.
         :rtype: float
@@ -147,7 +147,7 @@ class ScheduledInsertableContent(BitmovinResource):
         # type: (float) -> None
         """Sets the duration_in_seconds of this ScheduledInsertableContent.
 
-        Duration for how long to play the content. Cut off if shorter, loop if longer than actual duration.
+        Duration for how long to play the content. Cut off if shorter, loop if longer than actual duration. This property is required if the insertable content is an image.
 
         :param duration_in_seconds: The duration_in_seconds of this ScheduledInsertableContent.
         :type: float

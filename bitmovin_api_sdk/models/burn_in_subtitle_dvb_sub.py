@@ -4,12 +4,11 @@ from enum import Enum
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
 from bitmovin_api_sdk.models.bitmovin_resource import BitmovinResource
-from bitmovin_api_sdk.models.stream_input import StreamInput
 import pprint
 import six
 
 
-class StreamDvbSubSubtitle(BitmovinResource):
+class BurnInSubtitleDvbSub(BitmovinResource):
     @poscheck_model
     def __init__(self,
                  id_=None,
@@ -18,25 +17,25 @@ class StreamDvbSubSubtitle(BitmovinResource):
                  created_at=None,
                  modified_at=None,
                  custom_data=None,
-                 input_stream=None):
-        # type: (string_types, string_types, string_types, datetime, datetime, dict, StreamInput) -> None
-        super(StreamDvbSubSubtitle, self).__init__(id_=id_, name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data)
+                 input_stream_id=None):
+        # type: (string_types, string_types, string_types, datetime, datetime, dict, string_types) -> None
+        super(BurnInSubtitleDvbSub, self).__init__(id_=id_, name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data)
 
-        self._input_stream = None
+        self._input_stream_id = None
         self.discriminator = None
 
-        if input_stream is not None:
-            self.input_stream = input_stream
+        if input_stream_id is not None:
+            self.input_stream_id = input_stream_id
 
     @property
     def openapi_types(self):
         types = {}
 
-        if hasattr(super(StreamDvbSubSubtitle, self), 'openapi_types'):
-            types = getattr(super(StreamDvbSubSubtitle, self), 'openapi_types')
+        if hasattr(super(BurnInSubtitleDvbSub, self), 'openapi_types'):
+            types = getattr(super(BurnInSubtitleDvbSub, self), 'openapi_types')
 
         types.update({
-            'input_stream': 'StreamInput'
+            'input_stream_id': 'string_types'
         })
 
         return types
@@ -45,49 +44,49 @@ class StreamDvbSubSubtitle(BitmovinResource):
     def attribute_map(self):
         attributes = {}
 
-        if hasattr(super(StreamDvbSubSubtitle, self), 'attribute_map'):
-            attributes = getattr(super(StreamDvbSubSubtitle, self), 'attribute_map')
+        if hasattr(super(BurnInSubtitleDvbSub, self), 'attribute_map'):
+            attributes = getattr(super(BurnInSubtitleDvbSub, self), 'attribute_map')
 
         attributes.update({
-            'input_stream': 'inputStream'
+            'input_stream_id': 'inputStreamId'
         })
         return attributes
 
     @property
-    def input_stream(self):
-        # type: () -> StreamInput
-        """Gets the input_stream of this StreamDvbSubSubtitle.
+    def input_stream_id(self):
+        # type: () -> string_types
+        """Gets the input_stream_id of this BurnInSubtitleDvbSub.
 
-        The input stream to extract the subtitle from (required)
+        Id of an IngestInputStream which specifies the stream of the DVB-SUB subtitles (required)
 
-        :return: The input_stream of this StreamDvbSubSubtitle.
-        :rtype: StreamInput
+        :return: The input_stream_id of this BurnInSubtitleDvbSub.
+        :rtype: string_types
         """
-        return self._input_stream
+        return self._input_stream_id
 
-    @input_stream.setter
-    def input_stream(self, input_stream):
-        # type: (StreamInput) -> None
-        """Sets the input_stream of this StreamDvbSubSubtitle.
+    @input_stream_id.setter
+    def input_stream_id(self, input_stream_id):
+        # type: (string_types) -> None
+        """Sets the input_stream_id of this BurnInSubtitleDvbSub.
 
-        The input stream to extract the subtitle from (required)
+        Id of an IngestInputStream which specifies the stream of the DVB-SUB subtitles (required)
 
-        :param input_stream: The input_stream of this StreamDvbSubSubtitle.
-        :type: StreamInput
+        :param input_stream_id: The input_stream_id of this BurnInSubtitleDvbSub.
+        :type: string_types
         """
 
-        if input_stream is not None:
-            if not isinstance(input_stream, StreamInput):
-                raise TypeError("Invalid type for `input_stream`, type has to be `StreamInput`")
+        if input_stream_id is not None:
+            if not isinstance(input_stream_id, string_types):
+                raise TypeError("Invalid type for `input_stream_id`, type has to be `string_types`")
 
-        self._input_stream = input_stream
+        self._input_stream_id = input_stream_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}
 
-        if hasattr(super(StreamDvbSubSubtitle, self), "to_dict"):
-            result = super(StreamDvbSubSubtitle, self).to_dict()
+        if hasattr(super(BurnInSubtitleDvbSub, self), "to_dict"):
+            result = super(BurnInSubtitleDvbSub, self).to_dict()
         for attr, _ in six.iteritems(self.openapi_types):
             value = getattr(self, attr)
             if value is None:
@@ -117,7 +116,7 @@ class StreamDvbSubSubtitle(BitmovinResource):
 
     def __eq__(self, other):
         """Returns true if both objects are equal"""
-        if not isinstance(other, StreamDvbSubSubtitle):
+        if not isinstance(other, BurnInSubtitleDvbSub):
             return False
 
         return self.__dict__ == other.__dict__

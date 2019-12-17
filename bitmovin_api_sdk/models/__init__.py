@@ -54,6 +54,7 @@ from bitmovin_api_sdk.models.analytics_avg_dropped_frames_response import Analyt
 from bitmovin_api_sdk.models.analytics_avg_query_request import AnalyticsAvgQueryRequest
 from bitmovin_api_sdk.models.analytics_column_label import AnalyticsColumnLabel
 from bitmovin_api_sdk.models.analytics_contains_filter import AnalyticsContainsFilter
+from bitmovin_api_sdk.models.analytics_context_description import AnalyticsContextDescription
 from bitmovin_api_sdk.models.analytics_count_query_request import AnalyticsCountQueryRequest
 from bitmovin_api_sdk.models.analytics_equal_filter import AnalyticsEqualFilter
 from bitmovin_api_sdk.models.analytics_export_status import AnalyticsExportStatus
@@ -96,6 +97,7 @@ from bitmovin_api_sdk.models.analytics_variance_query_request import AnalyticsVa
 from bitmovin_api_sdk.models.and_conjunction import AndConjunction
 from bitmovin_api_sdk.models.api_error_definition import ApiErrorDefinition
 from bitmovin_api_sdk.models.applied_stream_settings import AppliedStreamSettings
+from bitmovin_api_sdk.models.aspect_mode import AspectMode
 from bitmovin_api_sdk.models.aspera_input import AsperaInput
 from bitmovin_api_sdk.models.audio_adaptation_set import AudioAdaptationSet
 from bitmovin_api_sdk.models.audio_configuration import AudioConfiguration
@@ -142,6 +144,7 @@ from bitmovin_api_sdk.models.broadcast_ts_muxing_information import BroadcastTsM
 from bitmovin_api_sdk.models.broadcast_ts_program_configuration import BroadcastTsProgramConfiguration
 from bitmovin_api_sdk.models.broadcast_ts_transport_configuration import BroadcastTsTransportConfiguration
 from bitmovin_api_sdk.models.broadcast_ts_video_input_stream_configuration import BroadcastTsVideoInputStreamConfiguration
+from bitmovin_api_sdk.models.burn_in_subtitle_dvb_sub import BurnInSubtitleDvbSub
 from bitmovin_api_sdk.models.burn_in_subtitle_srt import BurnInSubtitleSrt
 from bitmovin_api_sdk.models.caption_character_encoding import CaptionCharacterEncoding
 from bitmovin_api_sdk.models.cea608708_subtitle_configuration import Cea608708SubtitleConfiguration
@@ -383,6 +386,7 @@ from bitmovin_api_sdk.models.permission import Permission
 from bitmovin_api_sdk.models.picture_field_parity import PictureFieldParity
 from bitmovin_api_sdk.models.pixel_format import PixelFormat
 from bitmovin_api_sdk.models.plaintext_id3_tag import PlaintextId3Tag
+from bitmovin_api_sdk.models.play_ready_additional_information import PlayReadyAdditionalInformation
 from bitmovin_api_sdk.models.play_ready_drm import PlayReadyDrm
 from bitmovin_api_sdk.models.play_ready_encryption_method import PlayReadyEncryptionMethod
 from bitmovin_api_sdk.models.player_channel import PlayerChannel
@@ -480,7 +484,6 @@ from bitmovin_api_sdk.models.stream import Stream
 from bitmovin_api_sdk.models.stream_caption_output_format import StreamCaptionOutputFormat
 from bitmovin_api_sdk.models.stream_conditions_mode import StreamConditionsMode
 from bitmovin_api_sdk.models.stream_details import StreamDetails
-from bitmovin_api_sdk.models.stream_dvb_sub_subtitle import StreamDvbSubSubtitle
 from bitmovin_api_sdk.models.stream_filter import StreamFilter
 from bitmovin_api_sdk.models.stream_filter_list import StreamFilterList
 from bitmovin_api_sdk.models.stream_info import StreamInfo
