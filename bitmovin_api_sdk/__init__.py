@@ -1415,4 +1415,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.31.0alpha0"
+__version__ = "1.32.0alpha0"
