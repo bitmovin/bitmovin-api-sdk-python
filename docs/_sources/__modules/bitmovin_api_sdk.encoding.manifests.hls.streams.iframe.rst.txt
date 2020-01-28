@@ -1,0 +1,30 @@
+bitmovin\_api\_sdk.encoding.manifests.hls.streams.iframe package
+================================================================
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.encoding.manifests.hls.streams.iframe.i\_frame\_playlist\_list\_query\_params module
+-------------------------------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.manifests.hls.streams.iframe.i_frame_playlist_list_query_params
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.encoding.manifests.hls.streams.iframe.iframe\_api module
+---------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.manifests.hls.streams.iframe.iframe_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.encoding.manifests.hls.streams.iframe
+   :members:
+   :undoc-members:
+   :show-inheritance:

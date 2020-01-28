@@ -1,0 +1,22 @@
+bitmovin\_api\_sdk.player.custom\_builds.web.status package
+===========================================================
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.player.custom\_builds.web.status.status\_api module
+----------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.player.custom_builds.web.status.status_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.player.custom_builds.web.status
+   :members:
+   :undoc-members:
+   :show-inheritance:

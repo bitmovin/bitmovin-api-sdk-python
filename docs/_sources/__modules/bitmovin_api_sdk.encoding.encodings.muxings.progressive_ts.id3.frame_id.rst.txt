@@ -1,0 +1,37 @@
+bitmovin\_api\_sdk.encoding.encodings.muxings.progressive\_ts.id3.frame\_id package
+===================================================================================
+
+Subpackages
+-----------
+
+.. toctree::
+
+   bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.id3.frame_id.customdata
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.encoding.encodings.muxings.progressive\_ts.id3.frame\_id.frame\_id\_api module
+-------------------------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.id3.frame_id.frame_id_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.encoding.encodings.muxings.progressive\_ts.id3.frame\_id.frame\_id\_id3\_tag\_list\_query\_params module
+---------------------------------------------------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.id3.frame_id.frame_id_id3_tag_list_query_params
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.id3.frame_id
+   :members:
+   :undoc-members:
+   :show-inheritance:

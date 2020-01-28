@@ -1,0 +1,37 @@
+bitmovin\_api\_sdk.encoding.inputs.udp\_multicast package
+=========================================================
+
+Subpackages
+-----------
+
+.. toctree::
+
+   bitmovin_api_sdk.encoding.inputs.udp_multicast.customdata
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.encoding.inputs.udp\_multicast.udp\_multicast\_api module
+----------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.inputs.udp_multicast.udp_multicast_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.encoding.inputs.udp\_multicast.udp\_multicast\_input\_list\_query\_params module
+---------------------------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.inputs.udp_multicast.udp_multicast_input_list_query_params
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.encoding.inputs.udp_multicast
+   :members:
+   :undoc-members:
+   :show-inheritance:

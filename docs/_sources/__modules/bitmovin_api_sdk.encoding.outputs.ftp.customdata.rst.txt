@@ -1,0 +1,22 @@
+bitmovin\_api\_sdk.encoding.outputs.ftp.customdata package
+==========================================================
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.encoding.outputs.ftp.customdata.customdata\_api module
+-------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.outputs.ftp.customdata.customdata_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.encoding.outputs.ftp.customdata
+   :members:
+   :undoc-members:
+   :show-inheritance:

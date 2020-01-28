@@ -1,0 +1,22 @@
+bitmovin\_api\_sdk.encoding.filters.conform.customdata package
+==============================================================
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.encoding.filters.conform.customdata.customdata\_api module
+-----------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.filters.conform.customdata.customdata_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.encoding.filters.conform.customdata
+   :members:
+   :undoc-members:
+   :show-inheritance:

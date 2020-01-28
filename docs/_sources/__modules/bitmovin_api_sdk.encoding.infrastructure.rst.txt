@@ -1,0 +1,31 @@
+bitmovin\_api\_sdk.encoding.infrastructure package
+==================================================
+
+Subpackages
+-----------
+
+.. toctree::
+
+   bitmovin_api_sdk.encoding.infrastructure.aws
+   bitmovin_api_sdk.encoding.infrastructure.gce
+   bitmovin_api_sdk.encoding.infrastructure.kubernetes
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.encoding.infrastructure.infrastructure\_api module
+---------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.infrastructure.infrastructure_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.encoding.infrastructure
+   :members:
+   :undoc-members:
+   :show-inheritance:

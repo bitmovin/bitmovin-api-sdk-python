@@ -1,0 +1,37 @@
+bitmovin\_api\_sdk.encoding.inputs.ftp package
+==============================================
+
+Subpackages
+-----------
+
+.. toctree::
+
+   bitmovin_api_sdk.encoding.inputs.ftp.customdata
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.encoding.inputs.ftp.ftp\_api module
+------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.inputs.ftp.ftp_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.encoding.inputs.ftp.ftp\_input\_list\_query\_params module
+-----------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.inputs.ftp.ftp_input_list_query_params
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.encoding.inputs.ftp
+   :members:
+   :undoc-members:
+   :show-inheritance:

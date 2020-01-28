@@ -1,0 +1,37 @@
+bitmovin\_api\_sdk.encoding.configurations.audio package
+========================================================
+
+Subpackages
+-----------
+
+.. toctree::
+
+   bitmovin_api_sdk.encoding.configurations.audio.aac
+   bitmovin_api_sdk.encoding.configurations.audio.ac3
+   bitmovin_api_sdk.encoding.configurations.audio.eac3
+   bitmovin_api_sdk.encoding.configurations.audio.he_aac_v1
+   bitmovin_api_sdk.encoding.configurations.audio.he_aac_v2
+   bitmovin_api_sdk.encoding.configurations.audio.mp2
+   bitmovin_api_sdk.encoding.configurations.audio.mp3
+   bitmovin_api_sdk.encoding.configurations.audio.opus
+   bitmovin_api_sdk.encoding.configurations.audio.vorbis
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.encoding.configurations.audio.audio\_api module
+------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.configurations.audio.audio_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.encoding.configurations.audio
+   :members:
+   :undoc-members:
+   :show-inheritance:

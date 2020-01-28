@@ -1,0 +1,37 @@
+bitmovin\_api\_sdk.encoding.configurations.audio.eac3 package
+=============================================================
+
+Subpackages
+-----------
+
+.. toctree::
+
+   bitmovin_api_sdk.encoding.configurations.audio.eac3.customdata
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.encoding.configurations.audio.eac3.eac3\_api module
+----------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.configurations.audio.eac3.eac3_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.encoding.configurations.audio.eac3.eac3\_audio\_configuration\_list\_query\_params module
+------------------------------------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.configurations.audio.eac3.eac3_audio_configuration_list_query_params
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.encoding.configurations.audio.eac3
+   :members:
+   :undoc-members:
+   :show-inheritance:

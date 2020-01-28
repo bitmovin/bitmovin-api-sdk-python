@@ -1,0 +1,47 @@
+bitmovin\_api\_sdk.notifications package
+========================================
+
+Subpackages
+-----------
+
+.. toctree::
+
+   bitmovin_api_sdk.notifications.emails
+   bitmovin_api_sdk.notifications.states
+   bitmovin_api_sdk.notifications.webhooks
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.notifications.notification\_list\_query\_params module
+-------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.notifications.notification_list_query_params
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.notifications.notification\_state\_entry\_list\_by\_notification\_id\_query\_params module
+-------------------------------------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.notifications.notification_state_entry_list_by_notification_id_query_params
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.notifications.notifications\_api module
+----------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.notifications.notifications_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.notifications
+   :members:
+   :undoc-members:
+   :show-inheritance:

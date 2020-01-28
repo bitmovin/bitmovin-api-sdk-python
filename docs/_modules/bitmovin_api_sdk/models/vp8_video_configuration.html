@@ -1,0 +1,996 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>bitmovin_api_sdk.models.vp8_video_configuration &mdash; Bitmovin Python API SDK {{packageVersion}} documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: blue" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Bitmovin Python API SDK
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../__modules/modules.html">python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../__modules/bitmovin_api_sdk.encoding.html">bitmovin_api_sdk.encoding package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../__modules/bitmovin_api_sdk.analytics.html">bitmovin_api_sdk.analytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../__modules/bitmovin_api_sdk.player.html">bitmovin_api_sdk.player package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../__modules/bitmovin_api_sdk.account.html">bitmovin_api_sdk.account package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../__modules/bitmovin_api_sdk.notifications.html">bitmovin_api_sdk.notifications package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../__modules/bitmovin_api_sdk.general.html">bitmovin_api_sdk.general package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../__modules/bitmovin_api_sdk.common.html">bitmovin_api_sdk.common package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../__modules/bitmovin_api_sdk.models.html">bitmovin_api_sdk.models package</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Bitmovin Python API SDK</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+      <li>bitmovin_api_sdk.models.vp8_video_configuration</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for bitmovin_api_sdk.models.vp8_video_configuration</h1><div class="highlight"><pre>
+<span></span><span class="c1"># coding: utf-8</span>
+
+<span class="kn">from</span> <span class="nn">enum</span> <span class="kn">import</span> <span class="n">Enum</span>
+<span class="kn">from</span> <span class="nn">six</span> <span class="kn">import</span> <span class="n">string_types</span><span class="p">,</span> <span class="n">iteritems</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.common.poscheck</span> <span class="kn">import</span> <span class="n">poscheck_model</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.color_config</span> <span class="kn">import</span> <span class="n">ColorConfig</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.encoding_mode</span> <span class="kn">import</span> <span class="n">EncodingMode</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.pixel_format</span> <span class="kn">import</span> <span class="n">PixelFormat</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.video_configuration</span> <span class="kn">import</span> <span class="n">VideoConfiguration</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.vp8_arnr_type</span> <span class="kn">import</span> <span class="n">Vp8ArnrType</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.vp8_noise_sensitivity</span> <span class="kn">import</span> <span class="n">Vp8NoiseSensitivity</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.vp8_quality</span> <span class="kn">import</span> <span class="n">Vp8Quality</span>
+<span class="kn">import</span> <span class="nn">pprint</span>
+<span class="kn">import</span> <span class="nn">six</span>
+
+
+<div class="viewcode-block" id="Vp8VideoConfiguration"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.vp8_video_configuration.Vp8VideoConfiguration">[docs]</a><span class="k">class</span> <span class="nc">Vp8VideoConfiguration</span><span class="p">(</span><span class="n">VideoConfiguration</span><span class="p">):</span>
+    <span class="nd">@poscheck_model</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                 <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">description</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">created_at</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">modified_at</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">custom_data</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">id_</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">width</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">height</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">bitrate</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">rate</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">pixel_format</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">color_config</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">sample_aspect_ratio_numerator</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">sample_aspect_ratio_denominator</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">encoding_mode</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">crf</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">lag_in_frames</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">max_intra_rate</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">qp_min</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">qp_max</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">rate_undershoot_pct</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">rate_overshoot_pct</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">cpu_used</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">noise_sensitivity</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">sharpness</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">min_gop</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">max_gop</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">min_keyframe_interval</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">max_keyframe_interval</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">quality</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">static_thresh</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">arnr_max_frames</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">arnr_strength</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">arnr_type</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="c1"># type: (string_types, string_types, datetime, datetime, dict, string_types, int, int, int, float, PixelFormat, ColorConfig, int, int, EncodingMode, int, int, int, int, int, int, int, int, Vp8NoiseSensitivity, int, int, int, float, float, Vp8Quality, int, int, int, Vp8ArnrType) -&gt; None</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">Vp8VideoConfiguration</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="n">description</span><span class="p">,</span> <span class="n">created_at</span><span class="o">=</span><span class="n">created_at</span><span class="p">,</span> <span class="n">modified_at</span><span class="o">=</span><span class="n">modified_at</span><span class="p">,</span> <span class="n">custom_data</span><span class="o">=</span><span class="n">custom_data</span><span class="p">,</span> <span class="n">id_</span><span class="o">=</span><span class="n">id_</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="n">height</span><span class="p">,</span> <span class="n">bitrate</span><span class="o">=</span><span class="n">bitrate</span><span class="p">,</span> <span class="n">rate</span><span class="o">=</span><span class="n">rate</span><span class="p">,</span> <span class="n">pixel_format</span><span class="o">=</span><span class="n">pixel_format</span><span class="p">,</span> <span class="n">color_config</span><span class="o">=</span><span class="n">color_config</span><span class="p">,</span> <span class="n">sample_aspect_ratio_numerator</span><span class="o">=</span><span class="n">sample_aspect_ratio_numerator</span><span class="p">,</span> <span class="n">sample_aspect_ratio_denominator</span><span class="o">=</span><span class="n">sample_aspect_ratio_denominator</span><span class="p">,</span> <span class="n">encoding_mode</span><span class="o">=</span><span class="n">encoding_mode</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_crf</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_lag_in_frames</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_max_intra_rate</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_qp_min</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_qp_max</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_rate_undershoot_pct</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_rate_overshoot_pct</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_cpu_used</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_noise_sensitivity</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_sharpness</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_min_gop</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_max_gop</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_min_keyframe_interval</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_max_keyframe_interval</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_quality</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_static_thresh</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_arnr_max_frames</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_arnr_strength</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_arnr_type</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="k">if</span> <span class="n">crf</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">crf</span> <span class="o">=</span> <span class="n">crf</span>
+        <span class="k">if</span> <span class="n">lag_in_frames</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">lag_in_frames</span> <span class="o">=</span> <span class="n">lag_in_frames</span>
+        <span class="k">if</span> <span class="n">max_intra_rate</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">max_intra_rate</span> <span class="o">=</span> <span class="n">max_intra_rate</span>
+        <span class="k">if</span> <span class="n">qp_min</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">qp_min</span> <span class="o">=</span> <span class="n">qp_min</span>
+        <span class="k">if</span> <span class="n">qp_max</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">qp_max</span> <span class="o">=</span> <span class="n">qp_max</span>
+        <span class="k">if</span> <span class="n">rate_undershoot_pct</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">rate_undershoot_pct</span> <span class="o">=</span> <span class="n">rate_undershoot_pct</span>
+        <span class="k">if</span> <span class="n">rate_overshoot_pct</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">rate_overshoot_pct</span> <span class="o">=</span> <span class="n">rate_overshoot_pct</span>
+        <span class="k">if</span> <span class="n">cpu_used</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">cpu_used</span> <span class="o">=</span> <span class="n">cpu_used</span>
+        <span class="k">if</span> <span class="n">noise_sensitivity</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">noise_sensitivity</span> <span class="o">=</span> <span class="n">noise_sensitivity</span>
+        <span class="k">if</span> <span class="n">sharpness</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">sharpness</span> <span class="o">=</span> <span class="n">sharpness</span>
+        <span class="k">if</span> <span class="n">min_gop</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">min_gop</span> <span class="o">=</span> <span class="n">min_gop</span>
+        <span class="k">if</span> <span class="n">max_gop</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">max_gop</span> <span class="o">=</span> <span class="n">max_gop</span>
+        <span class="k">if</span> <span class="n">min_keyframe_interval</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">min_keyframe_interval</span> <span class="o">=</span> <span class="n">min_keyframe_interval</span>
+        <span class="k">if</span> <span class="n">max_keyframe_interval</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">max_keyframe_interval</span> <span class="o">=</span> <span class="n">max_keyframe_interval</span>
+        <span class="k">if</span> <span class="n">quality</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">quality</span> <span class="o">=</span> <span class="n">quality</span>
+        <span class="k">if</span> <span class="n">static_thresh</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">static_thresh</span> <span class="o">=</span> <span class="n">static_thresh</span>
+        <span class="k">if</span> <span class="n">arnr_max_frames</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">arnr_max_frames</span> <span class="o">=</span> <span class="n">arnr_max_frames</span>
+        <span class="k">if</span> <span class="n">arnr_strength</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">arnr_strength</span> <span class="o">=</span> <span class="n">arnr_strength</span>
+        <span class="k">if</span> <span class="n">arnr_type</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">arnr_type</span> <span class="o">=</span> <span class="n">arnr_type</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">types</span> <span class="o">=</span> <span class="p">{}</span>
+
+        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="nb">super</span><span class="p">(</span><span class="n">Vp8VideoConfiguration</span><span class="p">,</span> <span class="bp">self</span><span class="p">),</span> <span class="s1">&#39;openapi_types&#39;</span><span class="p">):</span>
+            <span class="n">types</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="nb">super</span><span class="p">(</span><span class="n">Vp8VideoConfiguration</span><span class="p">,</span> <span class="bp">self</span><span class="p">),</span> <span class="s1">&#39;openapi_types&#39;</span><span class="p">)</span>
+
+        <span class="n">types</span><span class="o">.</span><span class="n">update</span><span class="p">({</span>
+            <span class="s1">&#39;crf&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;lag_in_frames&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;max_intra_rate&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;qp_min&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;qp_max&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;rate_undershoot_pct&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;rate_overshoot_pct&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;cpu_used&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;noise_sensitivity&#39;</span><span class="p">:</span> <span class="s1">&#39;Vp8NoiseSensitivity&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;sharpness&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;min_gop&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;max_gop&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;min_keyframe_interval&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;max_keyframe_interval&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;quality&#39;</span><span class="p">:</span> <span class="s1">&#39;Vp8Quality&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;static_thresh&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;arnr_max_frames&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;arnr_strength&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;arnr_type&#39;</span><span class="p">:</span> <span class="s1">&#39;Vp8ArnrType&#39;</span>
+        <span class="p">})</span>
+
+        <span class="k">return</span> <span class="n">types</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">attribute_map</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">attributes</span> <span class="o">=</span> <span class="p">{}</span>
+
+        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="nb">super</span><span class="p">(</span><span class="n">Vp8VideoConfiguration</span><span class="p">,</span> <span class="bp">self</span><span class="p">),</span> <span class="s1">&#39;attribute_map&#39;</span><span class="p">):</span>
+            <span class="n">attributes</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="nb">super</span><span class="p">(</span><span class="n">Vp8VideoConfiguration</span><span class="p">,</span> <span class="bp">self</span><span class="p">),</span> <span class="s1">&#39;attribute_map&#39;</span><span class="p">)</span>
+
+        <span class="n">attributes</span><span class="o">.</span><span class="n">update</span><span class="p">({</span>
+            <span class="s1">&#39;crf&#39;</span><span class="p">:</span> <span class="s1">&#39;crf&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;lag_in_frames&#39;</span><span class="p">:</span> <span class="s1">&#39;lagInFrames&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;max_intra_rate&#39;</span><span class="p">:</span> <span class="s1">&#39;maxIntraRate&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;qp_min&#39;</span><span class="p">:</span> <span class="s1">&#39;qpMin&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;qp_max&#39;</span><span class="p">:</span> <span class="s1">&#39;qpMax&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;rate_undershoot_pct&#39;</span><span class="p">:</span> <span class="s1">&#39;rateUndershootPct&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;rate_overshoot_pct&#39;</span><span class="p">:</span> <span class="s1">&#39;rateOvershootPct&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;cpu_used&#39;</span><span class="p">:</span> <span class="s1">&#39;cpuUsed&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;noise_sensitivity&#39;</span><span class="p">:</span> <span class="s1">&#39;noiseSensitivity&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;sharpness&#39;</span><span class="p">:</span> <span class="s1">&#39;sharpness&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;min_gop&#39;</span><span class="p">:</span> <span class="s1">&#39;minGop&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;max_gop&#39;</span><span class="p">:</span> <span class="s1">&#39;maxGop&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;min_keyframe_interval&#39;</span><span class="p">:</span> <span class="s1">&#39;minKeyframeInterval&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;max_keyframe_interval&#39;</span><span class="p">:</span> <span class="s1">&#39;maxKeyframeInterval&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;quality&#39;</span><span class="p">:</span> <span class="s1">&#39;quality&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;static_thresh&#39;</span><span class="p">:</span> <span class="s1">&#39;staticThresh&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;arnr_max_frames&#39;</span><span class="p">:</span> <span class="s1">&#39;arnrMaxFrames&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;arnr_strength&#39;</span><span class="p">:</span> <span class="s1">&#39;arnrStrength&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;arnr_type&#39;</span><span class="p">:</span> <span class="s1">&#39;arnrType&#39;</span>
+        <span class="p">})</span>
+        <span class="k">return</span> <span class="n">attributes</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">crf</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; int</span>
+        <span class="sd">&quot;&quot;&quot;Gets the crf of this Vp8VideoConfiguration.</span>
+
+<span class="sd">        Sets the constant rate factor for quality-based variable bitrate. Either bitrate or crf is required.</span>
+
+<span class="sd">        :return: The crf of this Vp8VideoConfiguration.</span>
+<span class="sd">        :rtype: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_crf</span>
+
+    <span class="nd">@crf</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">crf</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">crf</span><span class="p">):</span>
+        <span class="c1"># type: (int) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the crf of this Vp8VideoConfiguration.</span>
+
+<span class="sd">        Sets the constant rate factor for quality-based variable bitrate. Either bitrate or crf is required.</span>
+
+<span class="sd">        :param crf: The crf of this Vp8VideoConfiguration.</span>
+<span class="sd">        :type: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">crf</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">crf</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">crf</span> <span class="o">&gt;</span> <span class="mi">63</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid value for `crf`, must be a value less than or equal to `63`&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">crf</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">crf</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid value for `crf`, must be a value greater than or equal to `0`&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">crf</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `crf`, type has to be `int`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_crf</span> <span class="o">=</span> <span class="n">crf</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">lag_in_frames</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; int</span>
+        <span class="sd">&quot;&quot;&quot;Gets the lag_in_frames of this Vp8VideoConfiguration.</span>
+
+<span class="sd">        Number of frames to look ahead for alternate reference frame selection.</span>
+
+<span class="sd">        :return: The lag_in_frames of this Vp8VideoConfiguration.</span>
+<span class="sd">        :rtype: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_lag_in_frames</span>
+
+    <span class="nd">@lag_in_frames</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">lag_in_frames</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">lag_in_frames</span><span class="p">):</span>
+        <span class="c1"># type: (int) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the lag_in_frames of this Vp8VideoConfiguration.</span>
+
+<span class="sd">        Number of frames to look ahead for alternate reference frame selection.</span>
+
+<span class="sd">        :param lag_in_frames: The lag_in_frames of this Vp8VideoConfiguration.</span>
+<span class="sd">        :type: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">lag_in_frames</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">lag_in_frames</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">lag_in_frames</span> <span class="o">&gt;</span> <span class="mi">25</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid value for `lag_in_frames`, must be a value less than or equal to `25`&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">lag_in_frames</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">lag_in_frames</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid value for `lag_in_frames`, must be a value greater than or equal to `0`&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">lag_in_frames</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `lag_in_frames`, type has to be `int`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_lag_in_frames</span> <span class="o">=</span> <span class="n">lag_in_frames</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">max_intra_rate</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; int</span>
+        <span class="sd">&quot;&quot;&quot;Gets the max_intra_rate of this Vp8VideoConfiguration.</span>
+
+<span class="sd">        Maximum I-frame bitrate (percentage) 0=unlimited</span>
+
+<span class="sd">        :return: The max_intra_rate of this Vp8VideoConfiguration.</span>
+<span class="sd">        :rtype: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_max_intra_rate</span>
+
+    <span class="nd">@max_intra_rate</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">max_intra_rate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">max_intra_rate</span><span class="p">):</span>
+        <span class="c1"># type: (int) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the max_intra_rate of this Vp8VideoConfiguration.</span>
+
+<span class="sd">        Maximum I-frame bitrate (percentage) 0=unlimited</span>
+
+<span class="sd">        :param max_intra_rate: The max_intra_rate of this Vp8VideoConfiguration.</span>
+<span class="sd">        :type: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">max_intra_rate</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">max_intra_rate</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `max_intra_rate`, type has to be `int`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_max_intra_rate</span> <span class="o">=</span> <span class="n">max_intra_rate</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">qp_min</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; int</span>
+        <span class="sd">&quot;&quot;&quot;Gets the qp_min of this Vp8VideoConfiguration.</span>
+
+<span class="sd">        Sets the minimum of quantization factor.</span>
+
+<span class="sd">        :return: The qp_min of this Vp8VideoConfiguration.</span>
+<span class="sd">        :rtype: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_qp_min</span>
+
+    <span class="nd">@qp_min</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">qp_min</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">qp_min</span><span class="p">):</span>
+        <span class="c1"># type: (int) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the qp_min of this Vp8VideoConfiguration.</span>
+
+<span class="sd">        Sets the minimum of quantization factor.</span>
+
+<span class="sd">        :param qp_min: The qp_min of this Vp8VideoConfiguration.</span>
+<span class="sd">        :type: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">qp_min</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">qp_min</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">qp_min</span> <span class="o">&gt;</span> <span class="mi">63</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid value for `qp_min`, must be a value less than or equal to `63`&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">qp_min</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">qp_min</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid value for `qp_min`, must be a value greater than or equal to `0`&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">qp_min</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `qp_min`, type has to be `int`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_qp_min</span> <span class="o">=</span> <span class="n">qp_min</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">qp_max</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; int</span>
+        <span class="sd">&quot;&quot;&quot;Gets the qp_max of this Vp8VideoConfiguration.</span>
+
+<span class="sd">        Sets the maximum of quantization factor.</span>
+
+<span class="sd">        :return: The qp_max of this Vp8VideoConfiguration.</span>
+<span class="sd">        :rtype: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_qp_max</span>
+
+    <span class="nd">@qp_max</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">qp_max</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">qp_max</span><span class="p">):</span>
+        <span class="c1"># type: (int) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the qp_max of this Vp8VideoConfiguration.</span>
+
+<span class="sd">        Sets the maximum of quantization factor.</span>
+
+<span class="sd">        :param qp_max: The qp_max of this Vp8VideoConfiguration.</span>
+<span class="sd">        :type: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">qp_max</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">qp_max</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">qp_max</span> <span class="o">&gt;</span> <span class="mi">63</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid value for `qp_max`, must be a value less than or equal to `63`&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">qp_max</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">qp_max</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid value for `qp_max`, must be a value greater than or equal to `0`&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">qp_max</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `qp_max`, type has to be `int`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_qp_max</span> <span class="o">=</span> <span class="n">qp_max</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">rate_undershoot_pct</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; int</span>
+        <span class="sd">&quot;&quot;&quot;Gets the rate_undershoot_pct of this Vp8VideoConfiguration.</span>
+
+<span class="sd">        Datarate undershoot (min) target (percentage).</span>
+
+<span class="sd">        :return: The rate_undershoot_pct of this Vp8VideoConfiguration.</span>
+<span class="sd">        :rtype: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_rate_undershoot_pct</span>
+
+    <span class="nd">@rate_undershoot_pct</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">rate_undershoot_pct</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rate_undershoot_pct</span><span class="p">):</span>
+        <span class="c1"># type: (int) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the rate_undershoot_pct of this Vp8VideoConfiguration.</span>
+
+<span class="sd">        Datarate undershoot (min) target (percentage).</span>
+
+<span class="sd">        :param rate_undershoot_pct: The rate_undershoot_pct of this Vp8VideoConfiguration.</span>
+<span class="sd">        :type: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">rate_undershoot_pct</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">rate_undershoot_pct</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">rate_undershoot_pct</span> <span class="o">&gt;</span> <span class="mi">100</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid value for `rate_undershoot_pct`, must be a value less than or equal to `100`&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">rate_undershoot_pct</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">rate_undershoot_pct</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid value for `rate_undershoot_pct`, must be a value greater than or equal to `0`&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">rate_undershoot_pct</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `rate_undershoot_pct`, type has to be `int`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_rate_undershoot_pct</span> <span class="o">=</span> <span class="n">rate_undershoot_pct</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">rate_overshoot_pct</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; int</span>
+        <span class="sd">&quot;&quot;&quot;Gets the rate_overshoot_pct of this Vp8VideoConfiguration.</span>
+
+<span class="sd">        Datarate overshoot (max) target (percentage).</span>
+
+<span class="sd">        :return: The rate_overshoot_pct of this Vp8VideoConfiguration.</span>
+<span class="sd">        :rtype: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_rate_overshoot_pct</span>
+
+    <span class="nd">@rate_overshoot_pct</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">rate_overshoot_pct</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rate_overshoot_pct</span><span class="p">):</span>
+        <span class="c1"># type: (int) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the rate_overshoot_pct of this Vp8VideoConfiguration.</span>
+
+<span class="sd">        Datarate overshoot (max) target (percentage).</span>
+
+<span class="sd">        :param rate_overshoot_pct: The rate_overshoot_pct of this Vp8VideoConfiguration.</span>
+<span class="sd">        :type: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">rate_overshoot_pct</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">rate_overshoot_pct</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">rate_overshoot_pct</span> <span class="o">&gt;</span> <span class="mi">100</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid value for `rate_overshoot_pct`, must be a value less than or equal to `100`&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">rate_overshoot_pct</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">rate_overshoot_pct</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid value for `rate_overshoot_pct`, must be a value greater than or equal to `0`&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">rate_overshoot_pct</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `rate_overshoot_pct`, type has to be `int`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_rate_overshoot_pct</span> <span class="o">=</span> <span class="n">rate_overshoot_pct</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">cpu_used</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; int</span>
+        <span class="sd">&quot;&quot;&quot;Gets the cpu_used of this Vp8VideoConfiguration.</span>
+
+
+<span class="sd">        :return: The cpu_used of this Vp8VideoConfiguration.</span>
+<span class="sd">        :rtype: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cpu_used</span>
+
+    <span class="nd">@cpu_used</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">cpu_used</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cpu_used</span><span class="p">):</span>
+        <span class="c1"># type: (int) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the cpu_used of this Vp8VideoConfiguration.</span>
+
+
+<span class="sd">        :param cpu_used: The cpu_used of this Vp8VideoConfiguration.</span>
+<span class="sd">        :type: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">cpu_used</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">cpu_used</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `cpu_used`, type has to be `int`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_cpu_used</span> <span class="o">=</span> <span class="n">cpu_used</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">noise_sensitivity</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; Vp8NoiseSensitivity</span>
+        <span class="sd">&quot;&quot;&quot;Gets the noise_sensitivity of this Vp8VideoConfiguration.</span>
+
+
+<span class="sd">        :return: The noise_sensitivity of this Vp8VideoConfiguration.</span>
+<span class="sd">        :rtype: Vp8NoiseSensitivity</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_noise_sensitivity</span>
+
+    <span class="nd">@noise_sensitivity</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">noise_sensitivity</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">noise_sensitivity</span><span class="p">):</span>
+        <span class="c1"># type: (Vp8NoiseSensitivity) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the noise_sensitivity of this Vp8VideoConfiguration.</span>
+
+
+<span class="sd">        :param noise_sensitivity: The noise_sensitivity of this Vp8VideoConfiguration.</span>
+<span class="sd">        :type: Vp8NoiseSensitivity</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">noise_sensitivity</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">noise_sensitivity</span><span class="p">,</span> <span class="n">Vp8NoiseSensitivity</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `noise_sensitivity`, type has to be `Vp8NoiseSensitivity`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_noise_sensitivity</span> <span class="o">=</span> <span class="n">noise_sensitivity</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">sharpness</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; int</span>
+        <span class="sd">&quot;&quot;&quot;Gets the sharpness of this Vp8VideoConfiguration.</span>
+
+<span class="sd">        Loop filter sharpness.</span>
+
+<span class="sd">        :return: The sharpness of this Vp8VideoConfiguration.</span>
+<span class="sd">        :rtype: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sharpness</span>
+
+    <span class="nd">@sharpness</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">sharpness</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sharpness</span><span class="p">):</span>
+        <span class="c1"># type: (int) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the sharpness of this Vp8VideoConfiguration.</span>
+
+<span class="sd">        Loop filter sharpness.</span>
+
+<span class="sd">        :param sharpness: The sharpness of this Vp8VideoConfiguration.</span>
+<span class="sd">        :type: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">sharpness</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">sharpness</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">sharpness</span> <span class="o">&gt;</span> <span class="mi">7</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid value for `sharpness`, must be a value less than or equal to `7`&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">sharpness</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">sharpness</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid value for `sharpness`, must be a value greater than or equal to `0`&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">sharpness</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `sharpness`, type has to be `int`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_sharpness</span> <span class="o">=</span> <span class="n">sharpness</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">min_gop</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; int</span>
+        <span class="sd">&quot;&quot;&quot;Gets the min_gop of this Vp8VideoConfiguration.</span>
+
+<span class="sd">        Minimum GOP length, the minimum distance between I-frames.</span>
+
+<span class="sd">        :return: The min_gop of this Vp8VideoConfiguration.</span>
+<span class="sd">        :rtype: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_min_gop</span>
+
+    <span class="nd">@min_gop</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">min_gop</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">min_gop</span><span class="p">):</span>
+        <span class="c1"># type: (int) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the min_gop of this Vp8VideoConfiguration.</span>
+
+<span class="sd">        Minimum GOP length, the minimum distance between I-frames.</span>
+
+<span class="sd">        :param min_gop: The min_gop of this Vp8VideoConfiguration.</span>
+<span class="sd">        :type: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">min_gop</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">min_gop</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `min_gop`, type has to be `int`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_min_gop</span> <span class="o">=</span> <span class="n">min_gop</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">max_gop</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; int</span>
+        <span class="sd">&quot;&quot;&quot;Gets the max_gop of this Vp8VideoConfiguration.</span>
+
+<span class="sd">        Maximum GOP length, the maximum distance between I-frames</span>
+
+<span class="sd">        :return: The max_gop of this Vp8VideoConfiguration.</span>
+<span class="sd">        :rtype: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_max_gop</span>
+
+    <span class="nd">@max_gop</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">max_gop</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">max_gop</span><span class="p">):</span>
+        <span class="c1"># type: (int) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the max_gop of this Vp8VideoConfiguration.</span>
+
+<span class="sd">        Maximum GOP length, the maximum distance between I-frames</span>
+
+<span class="sd">        :param max_gop: The max_gop of this Vp8VideoConfiguration.</span>
+<span class="sd">        :type: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">max_gop</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">max_gop</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `max_gop`, type has to be `int`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_max_gop</span> <span class="o">=</span> <span class="n">max_gop</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">min_keyframe_interval</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; float</span>
+        <span class="sd">&quot;&quot;&quot;Gets the min_keyframe_interval of this Vp8VideoConfiguration.</span>
+
+<span class="sd">        Minimum interval in seconds between key frames</span>
+
+<span class="sd">        :return: The min_keyframe_interval of this Vp8VideoConfiguration.</span>
+<span class="sd">        :rtype: float</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_min_keyframe_interval</span>
+
+    <span class="nd">@min_keyframe_interval</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">min_keyframe_interval</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">min_keyframe_interval</span><span class="p">):</span>
+        <span class="c1"># type: (float) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the min_keyframe_interval of this Vp8VideoConfiguration.</span>
+
+<span class="sd">        Minimum interval in seconds between key frames</span>
+
+<span class="sd">        :param min_keyframe_interval: The min_keyframe_interval of this Vp8VideoConfiguration.</span>
+<span class="sd">        :type: float</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">min_keyframe_interval</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">min_keyframe_interval</span><span class="p">,</span> <span class="p">(</span><span class="nb">float</span><span class="p">,</span> <span class="nb">int</span><span class="p">)):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `min_keyframe_interval`, type has to be `float`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_min_keyframe_interval</span> <span class="o">=</span> <span class="n">min_keyframe_interval</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">max_keyframe_interval</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; float</span>
+        <span class="sd">&quot;&quot;&quot;Gets the max_keyframe_interval of this Vp8VideoConfiguration.</span>
+
+<span class="sd">        Maximum interval in seconds between key frames</span>
+
+<span class="sd">        :return: The max_keyframe_interval of this Vp8VideoConfiguration.</span>
+<span class="sd">        :rtype: float</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_max_keyframe_interval</span>
+
+    <span class="nd">@max_keyframe_interval</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">max_keyframe_interval</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">max_keyframe_interval</span><span class="p">):</span>
+        <span class="c1"># type: (float) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the max_keyframe_interval of this Vp8VideoConfiguration.</span>
+
+<span class="sd">        Maximum interval in seconds between key frames</span>
+
+<span class="sd">        :param max_keyframe_interval: The max_keyframe_interval of this Vp8VideoConfiguration.</span>
+<span class="sd">        :type: float</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">max_keyframe_interval</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">max_keyframe_interval</span><span class="p">,</span> <span class="p">(</span><span class="nb">float</span><span class="p">,</span> <span class="nb">int</span><span class="p">)):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `max_keyframe_interval`, type has to be `float`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_max_keyframe_interval</span> <span class="o">=</span> <span class="n">max_keyframe_interval</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">quality</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; Vp8Quality</span>
+        <span class="sd">&quot;&quot;&quot;Gets the quality of this Vp8VideoConfiguration.</span>
+
+
+<span class="sd">        :return: The quality of this Vp8VideoConfiguration.</span>
+<span class="sd">        :rtype: Vp8Quality</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_quality</span>
+
+    <span class="nd">@quality</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">quality</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">quality</span><span class="p">):</span>
+        <span class="c1"># type: (Vp8Quality) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the quality of this Vp8VideoConfiguration.</span>
+
+
+<span class="sd">        :param quality: The quality of this Vp8VideoConfiguration.</span>
+<span class="sd">        :type: Vp8Quality</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">quality</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">quality</span><span class="p">,</span> <span class="n">Vp8Quality</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `quality`, type has to be `Vp8Quality`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_quality</span> <span class="o">=</span> <span class="n">quality</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">static_thresh</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; int</span>
+        <span class="sd">&quot;&quot;&quot;Gets the static_thresh of this Vp8VideoConfiguration.</span>
+
+<span class="sd">        A change threshold on blocks below which they will be skipped by the encoder.</span>
+
+<span class="sd">        :return: The static_thresh of this Vp8VideoConfiguration.</span>
+<span class="sd">        :rtype: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_static_thresh</span>
+
+    <span class="nd">@static_thresh</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">static_thresh</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">static_thresh</span><span class="p">):</span>
+        <span class="c1"># type: (int) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the static_thresh of this Vp8VideoConfiguration.</span>
+
+<span class="sd">        A change threshold on blocks below which they will be skipped by the encoder.</span>
+
+<span class="sd">        :param static_thresh: The static_thresh of this Vp8VideoConfiguration.</span>
+<span class="sd">        :type: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">static_thresh</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">static_thresh</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">static_thresh</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid value for `static_thresh`, must be a value greater than or equal to `0`&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">static_thresh</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `static_thresh`, type has to be `int`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_static_thresh</span> <span class="o">=</span> <span class="n">static_thresh</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">arnr_max_frames</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; int</span>
+        <span class="sd">&quot;&quot;&quot;Gets the arnr_max_frames of this Vp8VideoConfiguration.</span>
+
+<span class="sd">        altref noise reduction max frame count.</span>
+
+<span class="sd">        :return: The arnr_max_frames of this Vp8VideoConfiguration.</span>
+<span class="sd">        :rtype: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_arnr_max_frames</span>
+
+    <span class="nd">@arnr_max_frames</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">arnr_max_frames</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">arnr_max_frames</span><span class="p">):</span>
+        <span class="c1"># type: (int) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the arnr_max_frames of this Vp8VideoConfiguration.</span>
+
+<span class="sd">        altref noise reduction max frame count.</span>
+
+<span class="sd">        :param arnr_max_frames: The arnr_max_frames of this Vp8VideoConfiguration.</span>
+<span class="sd">        :type: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">arnr_max_frames</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">arnr_max_frames</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">arnr_max_frames</span> <span class="o">&gt;</span> <span class="mi">15</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid value for `arnr_max_frames`, must be a value less than or equal to `15`&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">arnr_max_frames</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">arnr_max_frames</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid value for `arnr_max_frames`, must be a value greater than or equal to `0`&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">arnr_max_frames</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `arnr_max_frames`, type has to be `int`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_arnr_max_frames</span> <span class="o">=</span> <span class="n">arnr_max_frames</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">arnr_strength</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; int</span>
+        <span class="sd">&quot;&quot;&quot;Gets the arnr_strength of this Vp8VideoConfiguration.</span>
+
+<span class="sd">        altref noise reduction filter strength.</span>
+
+<span class="sd">        :return: The arnr_strength of this Vp8VideoConfiguration.</span>
+<span class="sd">        :rtype: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_arnr_strength</span>
+
+    <span class="nd">@arnr_strength</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">arnr_strength</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">arnr_strength</span><span class="p">):</span>
+        <span class="c1"># type: (int) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the arnr_strength of this Vp8VideoConfiguration.</span>
+
+<span class="sd">        altref noise reduction filter strength.</span>
+
+<span class="sd">        :param arnr_strength: The arnr_strength of this Vp8VideoConfiguration.</span>
+<span class="sd">        :type: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">arnr_strength</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">arnr_strength</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">arnr_strength</span> <span class="o">&gt;</span> <span class="mi">6</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid value for `arnr_strength`, must be a value less than or equal to `6`&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">arnr_strength</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">arnr_strength</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid value for `arnr_strength`, must be a value greater than or equal to `0`&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">arnr_strength</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `arnr_strength`, type has to be `int`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_arnr_strength</span> <span class="o">=</span> <span class="n">arnr_strength</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">arnr_type</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; Vp8ArnrType</span>
+        <span class="sd">&quot;&quot;&quot;Gets the arnr_type of this Vp8VideoConfiguration.</span>
+
+
+<span class="sd">        :return: The arnr_type of this Vp8VideoConfiguration.</span>
+<span class="sd">        :rtype: Vp8ArnrType</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_arnr_type</span>
+
+    <span class="nd">@arnr_type</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">arnr_type</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">arnr_type</span><span class="p">):</span>
+        <span class="c1"># type: (Vp8ArnrType) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the arnr_type of this Vp8VideoConfiguration.</span>
+
+
+<span class="sd">        :param arnr_type: The arnr_type of this Vp8VideoConfiguration.</span>
+<span class="sd">        :type: Vp8ArnrType</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">arnr_type</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">arnr_type</span><span class="p">,</span> <span class="n">Vp8ArnrType</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `arnr_type`, type has to be `Vp8ArnrType`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_arnr_type</span> <span class="o">=</span> <span class="n">arnr_type</span>
+
+<div class="viewcode-block" id="Vp8VideoConfiguration.to_dict"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.vp8_video_configuration.Vp8VideoConfiguration.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="p">{}</span>
+
+        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="nb">super</span><span class="p">(</span><span class="n">Vp8VideoConfiguration</span><span class="p">,</span> <span class="bp">self</span><span class="p">),</span> <span class="s2">&quot;to_dict&quot;</span><span class="p">):</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="nb">super</span><span class="p">(</span><span class="n">Vp8VideoConfiguration</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">attr</span><span class="p">,</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">six</span><span class="o">.</span><span class="n">iteritems</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">openapi_types</span><span class="p">):</span>
+            <span class="n">value</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">attr</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="k">continue</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+                <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="k">continue</span>
+                <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="p">[</span><span class="n">y</span><span class="o">.</span><span class="n">value</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">Enum</span><span class="p">)</span> <span class="k">else</span> <span class="n">y</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span> <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="s2">&quot;to_dict&quot;</span><span class="p">)</span> <span class="k">else</span> <span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">value</span><span class="p">]]</span>
+            <span class="k">elif</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="s2">&quot;to_dict&quot;</span><span class="p">):</span>
+                <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="n">value</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span>
+            <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">Enum</span><span class="p">):</span>
+                <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="n">value</span><span class="o">.</span><span class="n">value</span>
+            <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+                <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="p">(</span><span class="n">v</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span> <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="s2">&quot;to_dict&quot;</span><span class="p">)</span> <span class="k">else</span> <span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span> <span class="ow">in</span> <span class="n">value</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="n">value</span>
+
+        <span class="k">return</span> <span class="n">result</span></div>
+
+<div class="viewcode-block" id="Vp8VideoConfiguration.to_str"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.vp8_video_configuration.Vp8VideoConfiguration.to_str">[docs]</a>    <span class="k">def</span> <span class="nf">to_str</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns the string representation of the model&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">pprint</span><span class="o">.</span><span class="n">pformat</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">to_dict</span><span class="p">())</span></div>
+
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;For `print` and `pprint`&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">to_str</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns true if both objects are equal&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">Vp8VideoConfiguration</span><span class="p">):</span>
+            <span class="k">return</span> <span class="kc">False</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="vm">__dict__</span>
+
+    <span class="k">def</span> <span class="fm">__ne__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns true if both objects are not equal&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="ow">not</span> <span class="bp">self</span> <span class="o">==</span> <span class="n">other</span></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Bitmovin Inc
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

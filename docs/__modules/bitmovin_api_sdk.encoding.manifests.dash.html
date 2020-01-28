@@ -1,0 +1,595 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>bitmovin_api_sdk.encoding.manifests.dash package &mdash; Bitmovin Python API SDK {{packageVersion}} documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="bitmovin_api_sdk.encoding.manifests.dash.customdata package" href="bitmovin_api_sdk.encoding.manifests.dash.customdata.html" />
+    <link rel="prev" title="bitmovin_api_sdk.encoding.manifests package" href="bitmovin_api_sdk.encoding.manifests.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: blue" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Bitmovin Python API SDK
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="modules.html">python</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="bitmovin_api_sdk.encoding.html">bitmovin_api_sdk.encoding package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="bitmovin_api_sdk.encoding.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="bitmovin_api_sdk.encoding.configurations.html">bitmovin_api_sdk.encoding.configurations package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bitmovin_api_sdk.encoding.encodings.html">bitmovin_api_sdk.encoding.encodings package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bitmovin_api_sdk.encoding.error_definitions.html">bitmovin_api_sdk.encoding.error_definitions package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bitmovin_api_sdk.encoding.filters.html">bitmovin_api_sdk.encoding.filters package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bitmovin_api_sdk.encoding.infrastructure.html">bitmovin_api_sdk.encoding.infrastructure package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bitmovin_api_sdk.encoding.inputs.html">bitmovin_api_sdk.encoding.inputs package</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.html">bitmovin_api_sdk.encoding.manifests package</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.html#subpackages">Subpackages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.html#module-bitmovin_api_sdk.encoding.manifests.manifest_list_query_params">bitmovin_api_sdk.encoding.manifests.manifest_list_query_params module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.html#module-bitmovin_api_sdk.encoding.manifests.manifests_api">bitmovin_api_sdk.encoding.manifests.manifests_api module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.html#module-bitmovin_api_sdk.encoding.manifests">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="bitmovin_api_sdk.encoding.outputs.html">bitmovin_api_sdk.encoding.outputs package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bitmovin_api_sdk.encoding.statistics.html">bitmovin_api_sdk.encoding.statistics package</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="bitmovin_api_sdk.encoding.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bitmovin_api_sdk.encoding.html#module-bitmovin_api_sdk.encoding.encoding_api">bitmovin_api_sdk.encoding.encoding_api module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bitmovin_api_sdk.encoding.html#module-bitmovin_api_sdk.encoding">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="bitmovin_api_sdk.analytics.html">bitmovin_api_sdk.analytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bitmovin_api_sdk.player.html">bitmovin_api_sdk.player package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bitmovin_api_sdk.account.html">bitmovin_api_sdk.account package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bitmovin_api_sdk.notifications.html">bitmovin_api_sdk.notifications package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bitmovin_api_sdk.general.html">bitmovin_api_sdk.general package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bitmovin_api_sdk.common.html">bitmovin_api_sdk.common package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bitmovin_api_sdk.models.html">bitmovin_api_sdk.models package</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Bitmovin Python API SDK</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="modules.html">python</a> &raquo;</li>
+        
+          <li><a href="bitmovin_api_sdk.html">bitmovin_api_sdk package</a> &raquo;</li>
+        
+          <li><a href="bitmovin_api_sdk.encoding.html">bitmovin_api_sdk.encoding package</a> &raquo;</li>
+        
+          <li><a href="bitmovin_api_sdk.encoding.manifests.html">bitmovin_api_sdk.encoding.manifests package</a> &raquo;</li>
+        
+      <li>bitmovin_api_sdk.encoding.manifests.dash package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/__modules/bitmovin_api_sdk.encoding.manifests.dash.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
+      
+        <a href="bitmovin_api_sdk.encoding.manifests.dash.customdata.html" class="btn btn-neutral float-right" title="bitmovin_api_sdk.encoding.manifests.dash.customdata package" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="bitmovin_api_sdk.encoding.manifests.html" class="btn btn-neutral float-left" title="bitmovin_api_sdk.encoding.manifests package" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+  </div>
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="bitmovin-api-sdk-encoding-manifests-dash-package">
+<h1>bitmovin_api_sdk.encoding.manifests.dash package<a class="headerlink" href="#bitmovin-api-sdk-encoding-manifests-dash-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.customdata.html">bitmovin_api_sdk.encoding.manifests.dash.customdata package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.customdata.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.customdata.html#module-bitmovin_api_sdk.encoding.manifests.dash.customdata.customdata_api">bitmovin_api_sdk.encoding.manifests.dash.customdata.customdata_api module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.customdata.html#module-bitmovin_api_sdk.encoding.manifests.dash.customdata">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.default.html">bitmovin_api_sdk.encoding.manifests.dash.default package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.default.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.default.html#module-bitmovin_api_sdk.encoding.manifests.dash.default.default_api">bitmovin_api_sdk.encoding.manifests.dash.default.default_api module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.default.html#module-bitmovin_api_sdk.encoding.manifests.dash.default">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.html">bitmovin_api_sdk.encoding.manifests.dash.periods package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.html">bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.audio.html">bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.audio package</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.audio.html#submodules">Submodules</a></li>
+<li class="toctree-l6"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.audio.html#module-bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.audio.audio_adaptation_set_list_query_params">bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.audio.audio_adaptation_set_list_query_params module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.audio.html#module-bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.audio.audio_api">bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.audio.audio_api module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.audio.html#module-bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.audio">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.contentprotection.html">bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.contentprotection package</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.contentprotection.html#submodules">Submodules</a></li>
+<li class="toctree-l6"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.contentprotection.html#module-bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.contentprotection.content_protection_list_query_params">bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.contentprotection.content_protection_list_query_params module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.contentprotection.html#module-bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.contentprotection.contentprotection_api">bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.contentprotection.contentprotection_api module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.contentprotection.html#module-bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.contentprotection">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.html">bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations package</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.cmaf.html">bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.cmaf package</a><ul>
+<li class="toctree-l8"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.cmaf.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l9"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.cmaf.contentprotection.html">bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.cmaf.contentprotection package</a><ul>
+<li class="toctree-l10"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.cmaf.contentprotection.html#submodules">Submodules</a></li>
+<li class="toctree-l10"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.cmaf.contentprotection.html#module-bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.cmaf.contentprotection.content_protection_list_query_params">bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.cmaf.contentprotection.content_protection_list_query_params module</a></li>
+<li class="toctree-l10"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.cmaf.contentprotection.html#module-bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.cmaf.contentprotection.contentprotection_api">bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.cmaf.contentprotection.contentprotection_api module</a></li>
+<li class="toctree-l10"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.cmaf.contentprotection.html#module-bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.cmaf.contentprotection">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l9"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.cmaf.drm.html">bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.cmaf.drm package</a><ul>
+<li class="toctree-l10"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.cmaf.drm.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l11"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.cmaf.drm.contentprotection.html">bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.cmaf.drm.contentprotection package</a><ul>
+<li class="toctree-l12"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.cmaf.drm.contentprotection.html#submodules">Submodules</a></li>
+<li class="toctree-l12"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.cmaf.drm.contentprotection.html#module-bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.cmaf.drm.contentprotection.content_protection_list_query_params">bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.cmaf.drm.contentprotection.content_protection_list_query_params module</a></li>
+<li class="toctree-l12"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.cmaf.drm.contentprotection.html#module-bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.cmaf.drm.contentprotection.contentprotection_api">bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.cmaf.drm.contentprotection.contentprotection_api module</a></li>
+<li class="toctree-l12"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.cmaf.drm.contentprotection.html#module-bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.cmaf.drm.contentprotection">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l10"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.cmaf.drm.html#submodules">Submodules</a></li>
+<li class="toctree-l10"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.cmaf.drm.html#module-bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.cmaf.drm.dash_cmaf_drm_representation_list_query_params">bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.cmaf.drm.dash_cmaf_drm_representation_list_query_params module</a></li>
+<li class="toctree-l10"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.cmaf.drm.html#module-bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.cmaf.drm.drm_api">bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.cmaf.drm.drm_api module</a></li>
+<li class="toctree-l10"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.cmaf.drm.html#module-bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.cmaf.drm">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l8"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.cmaf.html#submodules">Submodules</a></li>
+<li class="toctree-l8"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.cmaf.html#module-bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.cmaf.cmaf_api">bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.cmaf.cmaf_api module</a></li>
+<li class="toctree-l8"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.cmaf.html#module-bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.cmaf.dash_cmaf_representation_list_query_params">bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.cmaf.dash_cmaf_representation_list_query_params module</a></li>
+<li class="toctree-l8"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.cmaf.html#module-bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.cmaf">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l7"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.fmp4.html">bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.fmp4 package</a><ul>
+<li class="toctree-l8"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.fmp4.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l9"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.fmp4.contentprotection.html">bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.fmp4.contentprotection package</a><ul>
+<li class="toctree-l10"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.fmp4.contentprotection.html#submodules">Submodules</a></li>
+<li class="toctree-l10"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.fmp4.contentprotection.html#module-bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.fmp4.contentprotection.content_protection_list_query_params">bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.fmp4.contentprotection.content_protection_list_query_params module</a></li>
+<li class="toctree-l10"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.fmp4.contentprotection.html#module-bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.fmp4.contentprotection.contentprotection_api">bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.fmp4.contentprotection.contentprotection_api module</a></li>
+<li class="toctree-l10"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.fmp4.contentprotection.html#module-bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.fmp4.contentprotection">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l9"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.fmp4.drm.html">bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.fmp4.drm package</a><ul>
+<li class="toctree-l10"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.fmp4.drm.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l11"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.fmp4.drm.contentprotection.html">bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.fmp4.drm.contentprotection package</a><ul>
+<li class="toctree-l12"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.fmp4.drm.contentprotection.html#submodules">Submodules</a></li>
+<li class="toctree-l12"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.fmp4.drm.contentprotection.html#module-bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.fmp4.drm.contentprotection.content_protection_list_query_params">bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.fmp4.drm.contentprotection.content_protection_list_query_params module</a></li>
+<li class="toctree-l12"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.fmp4.drm.contentprotection.html#module-bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.fmp4.drm.contentprotection.contentprotection_api">bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.fmp4.drm.contentprotection.contentprotection_api module</a></li>
+<li class="toctree-l12"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.fmp4.drm.contentprotection.html#module-bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.fmp4.drm.contentprotection">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l10"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.fmp4.drm.html#submodules">Submodules</a></li>
+<li class="toctree-l10"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.fmp4.drm.html#module-bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.fmp4.drm.dash_fmp4_drm_representation_list_query_params">bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.fmp4.drm.dash_fmp4_drm_representation_list_query_params module</a></li>
+<li class="toctree-l10"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.fmp4.drm.html#module-bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.fmp4.drm.drm_api">bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.fmp4.drm.drm_api module</a></li>
+<li class="toctree-l10"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.fmp4.drm.html#module-bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.fmp4.drm">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l8"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.fmp4.html#submodules">Submodules</a></li>
+<li class="toctree-l8"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.fmp4.html#module-bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.fmp4.dash_fmp4_representation_list_query_params">bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.fmp4.dash_fmp4_representation_list_query_params module</a></li>
+<li class="toctree-l8"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.fmp4.html#module-bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.fmp4.fmp4_api">bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.fmp4.fmp4_api module</a></li>
+<li class="toctree-l8"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.fmp4.html#module-bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.fmp4">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l7"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.mp4.html">bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.mp4 package</a><ul>
+<li class="toctree-l8"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.mp4.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l9"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.mp4.drm.html">bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.mp4.drm package</a><ul>
+<li class="toctree-l10"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.mp4.drm.html#submodules">Submodules</a></li>
+<li class="toctree-l10"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.mp4.drm.html#module-bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.mp4.drm.dash_mp4_drm_representation_list_query_params">bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.mp4.drm.dash_mp4_drm_representation_list_query_params module</a></li>
+<li class="toctree-l10"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.mp4.drm.html#module-bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.mp4.drm.drm_api">bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.mp4.drm.drm_api module</a></li>
+<li class="toctree-l10"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.mp4.drm.html#module-bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.mp4.drm">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l8"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.mp4.html#submodules">Submodules</a></li>
+<li class="toctree-l8"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.mp4.html#module-bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.mp4.dash_mp4_representation_list_query_params">bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.mp4.dash_mp4_representation_list_query_params module</a></li>
+<li class="toctree-l8"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.mp4.html#module-bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.mp4.mp4_api">bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.mp4.mp4_api module</a></li>
+<li class="toctree-l8"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.mp4.html#module-bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.mp4">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l7"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.vtt.html">bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.vtt package</a><ul>
+<li class="toctree-l8"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.vtt.html#submodules">Submodules</a></li>
+<li class="toctree-l8"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.vtt.html#module-bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.vtt.dash_vtt_representation_list_query_params">bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.vtt.dash_vtt_representation_list_query_params module</a></li>
+<li class="toctree-l8"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.vtt.html#module-bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.vtt.vtt_api">bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.vtt.vtt_api module</a></li>
+<li class="toctree-l8"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.vtt.html#module-bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.vtt">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l7"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.webm.html">bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.webm package</a><ul>
+<li class="toctree-l8"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.webm.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l9"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.webm.contentprotection.html">bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.webm.contentprotection package</a><ul>
+<li class="toctree-l10"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.webm.contentprotection.html#submodules">Submodules</a></li>
+<li class="toctree-l10"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.webm.contentprotection.html#module-bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.webm.contentprotection.content_protection_list_query_params">bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.webm.contentprotection.content_protection_list_query_params module</a></li>
+<li class="toctree-l10"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.webm.contentprotection.html#module-bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.webm.contentprotection.contentprotection_api">bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.webm.contentprotection.contentprotection_api module</a></li>
+<li class="toctree-l10"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.webm.contentprotection.html#module-bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.webm.contentprotection">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l8"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.webm.html#submodules">Submodules</a></li>
+<li class="toctree-l8"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.webm.html#module-bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.webm.dash_webm_representation_list_query_params">bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.webm.dash_webm_representation_list_query_params module</a></li>
+<li class="toctree-l8"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.webm.html#module-bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.webm.webm_api">bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.webm.webm_api module</a></li>
+<li class="toctree-l8"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.webm.html#module-bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.webm">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.html#submodules">Submodules</a></li>
+<li class="toctree-l6"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.html#module-bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.representations_api">bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.representations_api module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.html#module-bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.subtitle.html">bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.subtitle package</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.subtitle.html#submodules">Submodules</a></li>
+<li class="toctree-l6"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.subtitle.html#module-bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.subtitle.subtitle_adaptation_set_list_query_params">bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.subtitle.subtitle_adaptation_set_list_query_params module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.subtitle.html#module-bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.subtitle.subtitle_api">bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.subtitle.subtitle_api module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.subtitle.html#module-bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.subtitle">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.video.html">bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.video package</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.video.html#submodules">Submodules</a></li>
+<li class="toctree-l6"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.video.html#module-bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.video.video_adaptation_set_list_query_params">bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.video.video_adaptation_set_list_query_params module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.video.html#module-bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.video.video_api">bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.video.video_api module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.video.html#module-bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.video">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.html#module-bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.adaptationsets_api">bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.adaptationsets_api module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.html#module-bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.custom_xml_elements.html">bitmovin_api_sdk.encoding.manifests.dash.periods.custom_xml_elements package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.custom_xml_elements.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.custom_xml_elements.html#module-bitmovin_api_sdk.encoding.manifests.dash.periods.custom_xml_elements.custom_xml_element_list_query_params">bitmovin_api_sdk.encoding.manifests.dash.periods.custom_xml_elements.custom_xml_element_list_query_params module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.custom_xml_elements.html#module-bitmovin_api_sdk.encoding.manifests.dash.periods.custom_xml_elements.custom_xml_elements_api">bitmovin_api_sdk.encoding.manifests.dash.periods.custom_xml_elements.custom_xml_elements_api module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.custom_xml_elements.html#module-bitmovin_api_sdk.encoding.manifests.dash.periods.custom_xml_elements">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.html#module-bitmovin_api_sdk.encoding.manifests.dash.periods.period_list_query_params">bitmovin_api_sdk.encoding.manifests.dash.periods.period_list_query_params module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.html#module-bitmovin_api_sdk.encoding.manifests.dash.periods.periods_api">bitmovin_api_sdk.encoding.manifests.dash.periods.periods_api module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.dash.periods.html#module-bitmovin_api_sdk.encoding.manifests.dash.periods">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-bitmovin_api_sdk.encoding.manifests.dash.dash_api">
+<span id="bitmovin-api-sdk-encoding-manifests-dash-dash-api-module"></span><h2>bitmovin_api_sdk.encoding.manifests.dash.dash_api module<a class="headerlink" href="#module-bitmovin_api_sdk.encoding.manifests.dash.dash_api" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="bitmovin_api_sdk.encoding.manifests.dash.dash_api.DashApi">
+<em class="property">class </em><code class="sig-prename descclassname">bitmovin_api_sdk.encoding.manifests.dash.dash_api.</code><code class="sig-name descname">DashApi</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/manifests/dash/dash_api.html#DashApi"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.manifests.dash.dash_api.DashApi" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="bitmovin_api_sdk.common.html#bitmovin_api_sdk.common.base_api.BaseApi" title="bitmovin_api_sdk.common.base_api.BaseApi"><code class="xref py py-class docutils literal notranslate"><span class="pre">bitmovin_api_sdk.common.base_api.BaseApi</span></code></a></p>
+<dl class="method">
+<dt id="bitmovin_api_sdk.encoding.manifests.dash.dash_api.DashApi.create">
+<code class="sig-name descname">create</code><span class="sig-paren">(</span><em class="sig-param">dash_manifest</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/manifests/dash/dash_api.html#DashApi.create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.manifests.dash.dash_api.DashApi.create" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create DASH Manifest</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>dash_manifest</strong> (<a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.dash_manifest.DashManifest" title="bitmovin_api_sdk.models.dash_manifest.DashManifest"><em>DashManifest</em></a><em>, </em><em>required</em>) – The DASH manifest to be created</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Id of the dash manifest</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.dash_manifest.DashManifest" title="bitmovin_api_sdk.models.dash_manifest.DashManifest">DashManifest</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="bitmovin_api_sdk.encoding.manifests.dash.dash_api.DashApi.delete">
+<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">manifest_id</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/manifests/dash/dash_api.html#DashApi.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.manifests.dash.dash_api.DashApi.delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete DASH Manifest</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>manifest_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – UUID of the DASH manifest to be deleted</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Id of the dash manifest</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.bitmovin_response.BitmovinResponse" title="bitmovin_api_sdk.models.bitmovin_response.BitmovinResponse">BitmovinResponse</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="bitmovin_api_sdk.encoding.manifests.dash.dash_api.DashApi.get">
+<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">manifest_id</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/manifests/dash/dash_api.html#DashApi.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.manifests.dash.dash_api.DashApi.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>DASH Manifest Details</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>manifest_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – UUID of the dash manifest</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Dash Manifest details</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.dash_manifest.DashManifest" title="bitmovin_api_sdk.models.dash_manifest.DashManifest">DashManifest</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="bitmovin_api_sdk.encoding.manifests.dash.dash_api.DashApi.list">
+<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">query_params=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/manifests/dash/dash_api.html#DashApi.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.manifests.dash.dash_api.DashApi.list" title="Permalink to this definition">¶</a></dt>
+<dd><p>List DASH Manifests</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>query_params</strong> (<a class="reference internal" href="#bitmovin_api_sdk.encoding.manifests.dash.dash_manifest_list_query_params.DashManifestListQueryParams" title="bitmovin_api_sdk.encoding.manifests.dash.dash_manifest_list_query_params.DashManifestListQueryParams"><em>DashManifestListQueryParams</em></a>) – Query parameters</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>List of dash manifests</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.dash_manifest.DashManifest" title="bitmovin_api_sdk.models.dash_manifest.DashManifest">DashManifest</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="bitmovin_api_sdk.encoding.manifests.dash.dash_api.DashApi.start">
+<code class="sig-name descname">start</code><span class="sig-paren">(</span><em class="sig-param">manifest_id</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/manifests/dash/dash_api.html#DashApi.start"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.manifests.dash.dash_api.DashApi.start" title="Permalink to this definition">¶</a></dt>
+<dd><p>Start DASH Manifest Creation</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>manifest_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the DASH manifest.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Id of the manifest</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.bitmovin_response.BitmovinResponse" title="bitmovin_api_sdk.models.bitmovin_response.BitmovinResponse">BitmovinResponse</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="bitmovin_api_sdk.encoding.manifests.dash.dash_api.DashApi.status">
+<code class="sig-name descname">status</code><span class="sig-paren">(</span><em class="sig-param">manifest_id</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/manifests/dash/dash_api.html#DashApi.status"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.manifests.dash.dash_api.DashApi.status" title="Permalink to this definition">¶</a></dt>
+<dd><p>DASH Manifest Creation Status</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>manifest_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the DASH manifest.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Status of manifest creation</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.task.Task" title="bitmovin_api_sdk.models.task.Task">Task</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="bitmovin_api_sdk.encoding.manifests.dash.dash_api.DashApi.stop">
+<code class="sig-name descname">stop</code><span class="sig-paren">(</span><em class="sig-param">manifest_id</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/manifests/dash/dash_api.html#DashApi.stop"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.manifests.dash.dash_api.DashApi.stop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stop DASH Manifest Creation</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>manifest_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the DASH manifest.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Id of the DASH manifest</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.bitmovin_response.BitmovinResponse" title="bitmovin_api_sdk.models.bitmovin_response.BitmovinResponse">BitmovinResponse</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-bitmovin_api_sdk.encoding.manifests.dash.dash_manifest_list_query_params">
+<span id="bitmovin-api-sdk-encoding-manifests-dash-dash-manifest-list-query-params-module"></span><h2>bitmovin_api_sdk.encoding.manifests.dash.dash_manifest_list_query_params module<a class="headerlink" href="#module-bitmovin_api_sdk.encoding.manifests.dash.dash_manifest_list_query_params" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="bitmovin_api_sdk.encoding.manifests.dash.dash_manifest_list_query_params.DashManifestListQueryParams">
+<em class="property">class </em><code class="sig-prename descclassname">bitmovin_api_sdk.encoding.manifests.dash.dash_manifest_list_query_params.</code><code class="sig-name descname">DashManifestListQueryParams</code><span class="sig-paren">(</span><em class="sig-param">offset=None</em>, <em class="sig-param">limit=None</em>, <em class="sig-param">encoding_id=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/manifests/dash/dash_manifest_list_query_params.html#DashManifestListQueryParams"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.manifests.dash.dash_manifest_list_query_params.DashManifestListQueryParams" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="bitmovin_api_sdk.encoding.manifests.dash.dash_manifest_list_query_params.DashManifestListQueryParams.attribute_map">
+<em class="property">property </em><code class="sig-name descname">attribute_map</code><a class="headerlink" href="#bitmovin_api_sdk.encoding.manifests.dash.dash_manifest_list_query_params.DashManifestListQueryParams.attribute_map" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bitmovin_api_sdk.encoding.manifests.dash.dash_manifest_list_query_params.DashManifestListQueryParams.openapi_types">
+<em class="property">property </em><code class="sig-name descname">openapi_types</code><a class="headerlink" href="#bitmovin_api_sdk.encoding.manifests.dash.dash_manifest_list_query_params.DashManifestListQueryParams.openapi_types" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-bitmovin_api_sdk.encoding.manifests.dash">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-bitmovin_api_sdk.encoding.manifests.dash" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="bitmovin_api_sdk.encoding.manifests.dash.customdata.html" class="btn btn-neutral float-right" title="bitmovin_api_sdk.encoding.manifests.dash.customdata package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="bitmovin_api_sdk.encoding.manifests.html" class="btn btn-neutral float-left" title="bitmovin_api_sdk.encoding.manifests package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Bitmovin Inc
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

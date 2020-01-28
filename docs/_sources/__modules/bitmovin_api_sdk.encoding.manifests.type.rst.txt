@@ -1,0 +1,22 @@
+bitmovin\_api\_sdk.encoding.manifests.type package
+==================================================
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.encoding.manifests.type.type\_api module
+-----------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.manifests.type.type_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.encoding.manifests.type
+   :members:
+   :undoc-members:
+   :show-inheritance:

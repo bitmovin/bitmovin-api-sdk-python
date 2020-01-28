@@ -1,0 +1,22 @@
+bitmovin\_api\_sdk.analytics.ads.queries.variance package
+=========================================================
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.analytics.ads.queries.variance.variance\_api module
+----------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.analytics.ads.queries.variance.variance_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.analytics.ads.queries.variance
+   :members:
+   :undoc-members:
+   :show-inheritance:

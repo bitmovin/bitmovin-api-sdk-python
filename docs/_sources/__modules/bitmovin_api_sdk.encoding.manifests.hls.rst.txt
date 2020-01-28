@@ -1,0 +1,40 @@
+bitmovin\_api\_sdk.encoding.manifests.hls package
+=================================================
+
+Subpackages
+-----------
+
+.. toctree::
+
+   bitmovin_api_sdk.encoding.manifests.hls.customdata
+   bitmovin_api_sdk.encoding.manifests.hls.default
+   bitmovin_api_sdk.encoding.manifests.hls.media
+   bitmovin_api_sdk.encoding.manifests.hls.streams
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.encoding.manifests.hls.hls\_api module
+---------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.manifests.hls.hls_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.encoding.manifests.hls.hls\_manifest\_list\_query\_params module
+-----------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.manifests.hls.hls_manifest_list_query_params
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.encoding.manifests.hls
+   :members:
+   :undoc-members:
+   :show-inheritance:

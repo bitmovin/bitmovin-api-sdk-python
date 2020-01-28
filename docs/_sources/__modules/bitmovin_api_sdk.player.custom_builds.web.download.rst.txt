@@ -1,0 +1,22 @@
+bitmovin\_api\_sdk.player.custom\_builds.web.download package
+=============================================================
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.player.custom\_builds.web.download.download\_api module
+--------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.player.custom_builds.web.download.download_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.player.custom_builds.web.download
+   :members:
+   :undoc-members:
+   :show-inheritance:

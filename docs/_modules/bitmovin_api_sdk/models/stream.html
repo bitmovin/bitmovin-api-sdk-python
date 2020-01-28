@@ -1,0 +1,742 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>bitmovin_api_sdk.models.stream &mdash; Bitmovin Python API SDK {{packageVersion}} documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: blue" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Bitmovin Python API SDK
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../__modules/modules.html">python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../__modules/bitmovin_api_sdk.encoding.html">bitmovin_api_sdk.encoding package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../__modules/bitmovin_api_sdk.analytics.html">bitmovin_api_sdk.analytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../__modules/bitmovin_api_sdk.player.html">bitmovin_api_sdk.player package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../__modules/bitmovin_api_sdk.account.html">bitmovin_api_sdk.account package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../__modules/bitmovin_api_sdk.notifications.html">bitmovin_api_sdk.notifications package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../__modules/bitmovin_api_sdk.general.html">bitmovin_api_sdk.general package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../__modules/bitmovin_api_sdk.common.html">bitmovin_api_sdk.common package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../__modules/bitmovin_api_sdk.models.html">bitmovin_api_sdk.models package</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Bitmovin Python API SDK</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+      <li>bitmovin_api_sdk.models.stream</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for bitmovin_api_sdk.models.stream</h1><div class="highlight"><pre>
+<span></span><span class="c1"># coding: utf-8</span>
+
+<span class="kn">from</span> <span class="nn">enum</span> <span class="kn">import</span> <span class="n">Enum</span>
+<span class="kn">from</span> <span class="nn">six</span> <span class="kn">import</span> <span class="n">string_types</span><span class="p">,</span> <span class="n">iteritems</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.common.poscheck</span> <span class="kn">import</span> <span class="n">poscheck_model</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.abstract_condition</span> <span class="kn">import</span> <span class="n">AbstractCondition</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.applied_stream_settings</span> <span class="kn">import</span> <span class="n">AppliedStreamSettings</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.bitmovin_resource</span> <span class="kn">import</span> <span class="n">BitmovinResource</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.decoding_error_mode</span> <span class="kn">import</span> <span class="n">DecodingErrorMode</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.encoding_mode</span> <span class="kn">import</span> <span class="n">EncodingMode</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.stream_metadata</span> <span class="kn">import</span> <span class="n">StreamMetadata</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.stream_mode</span> <span class="kn">import</span> <span class="n">StreamMode</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.stream_per_title_settings</span> <span class="kn">import</span> <span class="n">StreamPerTitleSettings</span>
+<span class="kn">import</span> <span class="nn">pprint</span>
+<span class="kn">import</span> <span class="nn">six</span>
+
+
+<div class="viewcode-block" id="Stream"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.stream.Stream">[docs]</a><span class="k">class</span> <span class="nc">Stream</span><span class="p">(</span><span class="n">BitmovinResource</span><span class="p">):</span>
+    <span class="nd">@poscheck_model</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                 <span class="n">id_</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">description</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">created_at</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">modified_at</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">custom_data</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">input_streams</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">outputs</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">create_quality_meta_data</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">codec_config_id</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">segments_encoded</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">conditions</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">ignored_by</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">mode</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">selected_encoding_mode</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">per_title_settings</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">metadata</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">decoding_error_mode</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">applied_settings</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="c1"># type: (string_types, string_types, string_types, datetime, datetime, dict, list[StreamInput], list[EncodingOutput], bool, string_types, int, AbstractCondition, list[Ignoring], StreamMode, EncodingMode, StreamPerTitleSettings, StreamMetadata, DecodingErrorMode, AppliedStreamSettings) -&gt; None</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">Stream</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">id_</span><span class="o">=</span><span class="n">id_</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="n">description</span><span class="p">,</span> <span class="n">created_at</span><span class="o">=</span><span class="n">created_at</span><span class="p">,</span> <span class="n">modified_at</span><span class="o">=</span><span class="n">modified_at</span><span class="p">,</span> <span class="n">custom_data</span><span class="o">=</span><span class="n">custom_data</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_input_streams</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_outputs</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_create_quality_meta_data</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_codec_config_id</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_segments_encoded</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_conditions</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_ignored_by</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_mode</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_selected_encoding_mode</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_per_title_settings</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_metadata</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_decoding_error_mode</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_applied_settings</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="k">if</span> <span class="n">input_streams</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">input_streams</span> <span class="o">=</span> <span class="n">input_streams</span>
+        <span class="k">if</span> <span class="n">outputs</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">outputs</span> <span class="o">=</span> <span class="n">outputs</span>
+        <span class="k">if</span> <span class="n">create_quality_meta_data</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">create_quality_meta_data</span> <span class="o">=</span> <span class="n">create_quality_meta_data</span>
+        <span class="k">if</span> <span class="n">codec_config_id</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">codec_config_id</span> <span class="o">=</span> <span class="n">codec_config_id</span>
+        <span class="k">if</span> <span class="n">segments_encoded</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">segments_encoded</span> <span class="o">=</span> <span class="n">segments_encoded</span>
+        <span class="k">if</span> <span class="n">conditions</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">conditions</span> <span class="o">=</span> <span class="n">conditions</span>
+        <span class="k">if</span> <span class="n">ignored_by</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">ignored_by</span> <span class="o">=</span> <span class="n">ignored_by</span>
+        <span class="k">if</span> <span class="n">mode</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">mode</span> <span class="o">=</span> <span class="n">mode</span>
+        <span class="k">if</span> <span class="n">selected_encoding_mode</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">selected_encoding_mode</span> <span class="o">=</span> <span class="n">selected_encoding_mode</span>
+        <span class="k">if</span> <span class="n">per_title_settings</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">per_title_settings</span> <span class="o">=</span> <span class="n">per_title_settings</span>
+        <span class="k">if</span> <span class="n">metadata</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">metadata</span> <span class="o">=</span> <span class="n">metadata</span>
+        <span class="k">if</span> <span class="n">decoding_error_mode</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">decoding_error_mode</span> <span class="o">=</span> <span class="n">decoding_error_mode</span>
+        <span class="k">if</span> <span class="n">applied_settings</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">applied_settings</span> <span class="o">=</span> <span class="n">applied_settings</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">types</span> <span class="o">=</span> <span class="p">{}</span>
+
+        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="nb">super</span><span class="p">(</span><span class="n">Stream</span><span class="p">,</span> <span class="bp">self</span><span class="p">),</span> <span class="s1">&#39;openapi_types&#39;</span><span class="p">):</span>
+            <span class="n">types</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="nb">super</span><span class="p">(</span><span class="n">Stream</span><span class="p">,</span> <span class="bp">self</span><span class="p">),</span> <span class="s1">&#39;openapi_types&#39;</span><span class="p">)</span>
+
+        <span class="n">types</span><span class="o">.</span><span class="n">update</span><span class="p">({</span>
+            <span class="s1">&#39;input_streams&#39;</span><span class="p">:</span> <span class="s1">&#39;list[StreamInput]&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;outputs&#39;</span><span class="p">:</span> <span class="s1">&#39;list[EncodingOutput]&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;create_quality_meta_data&#39;</span><span class="p">:</span> <span class="s1">&#39;bool&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;codec_config_id&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;segments_encoded&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;conditions&#39;</span><span class="p">:</span> <span class="s1">&#39;AbstractCondition&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;ignored_by&#39;</span><span class="p">:</span> <span class="s1">&#39;list[Ignoring]&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;mode&#39;</span><span class="p">:</span> <span class="s1">&#39;StreamMode&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;selected_encoding_mode&#39;</span><span class="p">:</span> <span class="s1">&#39;EncodingMode&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;per_title_settings&#39;</span><span class="p">:</span> <span class="s1">&#39;StreamPerTitleSettings&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;metadata&#39;</span><span class="p">:</span> <span class="s1">&#39;StreamMetadata&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;decoding_error_mode&#39;</span><span class="p">:</span> <span class="s1">&#39;DecodingErrorMode&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;applied_settings&#39;</span><span class="p">:</span> <span class="s1">&#39;AppliedStreamSettings&#39;</span>
+        <span class="p">})</span>
+
+        <span class="k">return</span> <span class="n">types</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">attribute_map</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">attributes</span> <span class="o">=</span> <span class="p">{}</span>
+
+        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="nb">super</span><span class="p">(</span><span class="n">Stream</span><span class="p">,</span> <span class="bp">self</span><span class="p">),</span> <span class="s1">&#39;attribute_map&#39;</span><span class="p">):</span>
+            <span class="n">attributes</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="nb">super</span><span class="p">(</span><span class="n">Stream</span><span class="p">,</span> <span class="bp">self</span><span class="p">),</span> <span class="s1">&#39;attribute_map&#39;</span><span class="p">)</span>
+
+        <span class="n">attributes</span><span class="o">.</span><span class="n">update</span><span class="p">({</span>
+            <span class="s1">&#39;input_streams&#39;</span><span class="p">:</span> <span class="s1">&#39;inputStreams&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;outputs&#39;</span><span class="p">:</span> <span class="s1">&#39;outputs&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;create_quality_meta_data&#39;</span><span class="p">:</span> <span class="s1">&#39;createQualityMetaData&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;codec_config_id&#39;</span><span class="p">:</span> <span class="s1">&#39;codecConfigId&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;segments_encoded&#39;</span><span class="p">:</span> <span class="s1">&#39;segmentsEncoded&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;conditions&#39;</span><span class="p">:</span> <span class="s1">&#39;conditions&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;ignored_by&#39;</span><span class="p">:</span> <span class="s1">&#39;ignoredBy&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;mode&#39;</span><span class="p">:</span> <span class="s1">&#39;mode&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;selected_encoding_mode&#39;</span><span class="p">:</span> <span class="s1">&#39;selectedEncodingMode&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;per_title_settings&#39;</span><span class="p">:</span> <span class="s1">&#39;perTitleSettings&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;metadata&#39;</span><span class="p">:</span> <span class="s1">&#39;metadata&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;decoding_error_mode&#39;</span><span class="p">:</span> <span class="s1">&#39;decodingErrorMode&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;applied_settings&#39;</span><span class="p">:</span> <span class="s1">&#39;appliedSettings&#39;</span>
+        <span class="p">})</span>
+        <span class="k">return</span> <span class="n">attributes</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">input_streams</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; list[StreamInput]</span>
+        <span class="sd">&quot;&quot;&quot;Gets the input_streams of this Stream.</span>
+
+
+<span class="sd">        :return: The input_streams of this Stream.</span>
+<span class="sd">        :rtype: list[StreamInput]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_input_streams</span>
+
+    <span class="nd">@input_streams</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">input_streams</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_streams</span><span class="p">):</span>
+        <span class="c1"># type: (list) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the input_streams of this Stream.</span>
+
+
+<span class="sd">        :param input_streams: The input_streams of this Stream.</span>
+<span class="sd">        :type: list[StreamInput]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">input_streams</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">input_streams</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `input_streams`, type has to be `list[StreamInput]`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_input_streams</span> <span class="o">=</span> <span class="n">input_streams</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">outputs</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; list[EncodingOutput]</span>
+        <span class="sd">&quot;&quot;&quot;Gets the outputs of this Stream.</span>
+
+
+<span class="sd">        :return: The outputs of this Stream.</span>
+<span class="sd">        :rtype: list[EncodingOutput]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_outputs</span>
+
+    <span class="nd">@outputs</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">outputs</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">outputs</span><span class="p">):</span>
+        <span class="c1"># type: (list) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the outputs of this Stream.</span>
+
+
+<span class="sd">        :param outputs: The outputs of this Stream.</span>
+<span class="sd">        :type: list[EncodingOutput]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">outputs</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">outputs</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `outputs`, type has to be `list[EncodingOutput]`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_outputs</span> <span class="o">=</span> <span class="n">outputs</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">create_quality_meta_data</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; bool</span>
+        <span class="sd">&quot;&quot;&quot;Gets the create_quality_meta_data of this Stream.</span>
+
+<span class="sd">        Set true to create quality metadata for this stream</span>
+
+<span class="sd">        :return: The create_quality_meta_data of this Stream.</span>
+<span class="sd">        :rtype: bool</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_create_quality_meta_data</span>
+
+    <span class="nd">@create_quality_meta_data</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">create_quality_meta_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">create_quality_meta_data</span><span class="p">):</span>
+        <span class="c1"># type: (bool) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the create_quality_meta_data of this Stream.</span>
+
+<span class="sd">        Set true to create quality metadata for this stream</span>
+
+<span class="sd">        :param create_quality_meta_data: The create_quality_meta_data of this Stream.</span>
+<span class="sd">        :type: bool</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">create_quality_meta_data</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">create_quality_meta_data</span><span class="p">,</span> <span class="nb">bool</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `create_quality_meta_data`, type has to be `bool`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_create_quality_meta_data</span> <span class="o">=</span> <span class="n">create_quality_meta_data</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">codec_config_id</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; string_types</span>
+        <span class="sd">&quot;&quot;&quot;Gets the codec_config_id of this Stream.</span>
+
+<span class="sd">        Id of the codec configuration (required)</span>
+
+<span class="sd">        :return: The codec_config_id of this Stream.</span>
+<span class="sd">        :rtype: string_types</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_codec_config_id</span>
+
+    <span class="nd">@codec_config_id</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">codec_config_id</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">codec_config_id</span><span class="p">):</span>
+        <span class="c1"># type: (string_types) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the codec_config_id of this Stream.</span>
+
+<span class="sd">        Id of the codec configuration (required)</span>
+
+<span class="sd">        :param codec_config_id: The codec_config_id of this Stream.</span>
+<span class="sd">        :type: string_types</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">codec_config_id</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">codec_config_id</span><span class="p">,</span> <span class="n">string_types</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `codec_config_id`, type has to be `string_types`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_codec_config_id</span> <span class="o">=</span> <span class="n">codec_config_id</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">segments_encoded</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; int</span>
+        <span class="sd">&quot;&quot;&quot;Gets the segments_encoded of this Stream.</span>
+
+<span class="sd">        Number of encoded segments. Available after encoding finishes.</span>
+
+<span class="sd">        :return: The segments_encoded of this Stream.</span>
+<span class="sd">        :rtype: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_segments_encoded</span>
+
+    <span class="nd">@segments_encoded</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">segments_encoded</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">segments_encoded</span><span class="p">):</span>
+        <span class="c1"># type: (int) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the segments_encoded of this Stream.</span>
+
+<span class="sd">        Number of encoded segments. Available after encoding finishes.</span>
+
+<span class="sd">        :param segments_encoded: The segments_encoded of this Stream.</span>
+<span class="sd">        :type: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">segments_encoded</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">segments_encoded</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `segments_encoded`, type has to be `int`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_segments_encoded</span> <span class="o">=</span> <span class="n">segments_encoded</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">conditions</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; AbstractCondition</span>
+        <span class="sd">&quot;&quot;&quot;Gets the conditions of this Stream.</span>
+
+<span class="sd">        Conditions to evaluate before creating the stream. If this evaluation fails, the stream won&#39;t be created. All muxings that depend on the stream will also not be created.</span>
+
+<span class="sd">        :return: The conditions of this Stream.</span>
+<span class="sd">        :rtype: AbstractCondition</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_conditions</span>
+
+    <span class="nd">@conditions</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">conditions</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">conditions</span><span class="p">):</span>
+        <span class="c1"># type: (AbstractCondition) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the conditions of this Stream.</span>
+
+<span class="sd">        Conditions to evaluate before creating the stream. If this evaluation fails, the stream won&#39;t be created. All muxings that depend on the stream will also not be created.</span>
+
+<span class="sd">        :param conditions: The conditions of this Stream.</span>
+<span class="sd">        :type: AbstractCondition</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">conditions</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">conditions</span><span class="p">,</span> <span class="n">AbstractCondition</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `conditions`, type has to be `AbstractCondition`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_conditions</span> <span class="o">=</span> <span class="n">conditions</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">ignored_by</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; list[Ignoring]</span>
+        <span class="sd">&quot;&quot;&quot;Gets the ignored_by of this Stream.</span>
+
+<span class="sd">        If this is set and contains objects, then this stream has been ignored during the encoding process</span>
+
+<span class="sd">        :return: The ignored_by of this Stream.</span>
+<span class="sd">        :rtype: list[Ignoring]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_ignored_by</span>
+
+    <span class="nd">@ignored_by</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">ignored_by</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ignored_by</span><span class="p">):</span>
+        <span class="c1"># type: (list) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the ignored_by of this Stream.</span>
+
+<span class="sd">        If this is set and contains objects, then this stream has been ignored during the encoding process</span>
+
+<span class="sd">        :param ignored_by: The ignored_by of this Stream.</span>
+<span class="sd">        :type: list[Ignoring]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">ignored_by</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">ignored_by</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `ignored_by`, type has to be `list[Ignoring]`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_ignored_by</span> <span class="o">=</span> <span class="n">ignored_by</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">mode</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; StreamMode</span>
+        <span class="sd">&quot;&quot;&quot;Gets the mode of this Stream.</span>
+
+<span class="sd">        Mode of the stream</span>
+
+<span class="sd">        :return: The mode of this Stream.</span>
+<span class="sd">        :rtype: StreamMode</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mode</span>
+
+    <span class="nd">@mode</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">mode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mode</span><span class="p">):</span>
+        <span class="c1"># type: (StreamMode) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the mode of this Stream.</span>
+
+<span class="sd">        Mode of the stream</span>
+
+<span class="sd">        :param mode: The mode of this Stream.</span>
+<span class="sd">        :type: StreamMode</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">mode</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">mode</span><span class="p">,</span> <span class="n">StreamMode</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `mode`, type has to be `StreamMode`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_mode</span> <span class="o">=</span> <span class="n">mode</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">selected_encoding_mode</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; EncodingMode</span>
+        <span class="sd">&quot;&quot;&quot;Gets the selected_encoding_mode of this Stream.</span>
+
+<span class="sd">        The encoding mode of the stream which was applied by the assigned codec configuration</span>
+
+<span class="sd">        :return: The selected_encoding_mode of this Stream.</span>
+<span class="sd">        :rtype: EncodingMode</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_selected_encoding_mode</span>
+
+    <span class="nd">@selected_encoding_mode</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">selected_encoding_mode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">selected_encoding_mode</span><span class="p">):</span>
+        <span class="c1"># type: (EncodingMode) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the selected_encoding_mode of this Stream.</span>
+
+<span class="sd">        The encoding mode of the stream which was applied by the assigned codec configuration</span>
+
+<span class="sd">        :param selected_encoding_mode: The selected_encoding_mode of this Stream.</span>
+<span class="sd">        :type: EncodingMode</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">selected_encoding_mode</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">selected_encoding_mode</span><span class="p">,</span> <span class="n">EncodingMode</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `selected_encoding_mode`, type has to be `EncodingMode`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_selected_encoding_mode</span> <span class="o">=</span> <span class="n">selected_encoding_mode</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">per_title_settings</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; StreamPerTitleSettings</span>
+        <span class="sd">&quot;&quot;&quot;Gets the per_title_settings of this Stream.</span>
+
+<span class="sd">        Settings to configure Per-Title on stream level</span>
+
+<span class="sd">        :return: The per_title_settings of this Stream.</span>
+<span class="sd">        :rtype: StreamPerTitleSettings</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_per_title_settings</span>
+
+    <span class="nd">@per_title_settings</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">per_title_settings</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">per_title_settings</span><span class="p">):</span>
+        <span class="c1"># type: (StreamPerTitleSettings) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the per_title_settings of this Stream.</span>
+
+<span class="sd">        Settings to configure Per-Title on stream level</span>
+
+<span class="sd">        :param per_title_settings: The per_title_settings of this Stream.</span>
+<span class="sd">        :type: StreamPerTitleSettings</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">per_title_settings</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">per_title_settings</span><span class="p">,</span> <span class="n">StreamPerTitleSettings</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `per_title_settings`, type has to be `StreamPerTitleSettings`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_per_title_settings</span> <span class="o">=</span> <span class="n">per_title_settings</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">metadata</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; StreamMetadata</span>
+        <span class="sd">&quot;&quot;&quot;Gets the metadata of this Stream.</span>
+
+
+<span class="sd">        :return: The metadata of this Stream.</span>
+<span class="sd">        :rtype: StreamMetadata</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_metadata</span>
+
+    <span class="nd">@metadata</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">metadata</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">metadata</span><span class="p">):</span>
+        <span class="c1"># type: (StreamMetadata) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the metadata of this Stream.</span>
+
+
+<span class="sd">        :param metadata: The metadata of this Stream.</span>
+<span class="sd">        :type: StreamMetadata</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">metadata</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">metadata</span><span class="p">,</span> <span class="n">StreamMetadata</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `metadata`, type has to be `StreamMetadata`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_metadata</span> <span class="o">=</span> <span class="n">metadata</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">decoding_error_mode</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; DecodingErrorMode</span>
+        <span class="sd">&quot;&quot;&quot;Gets the decoding_error_mode of this Stream.</span>
+
+<span class="sd">        Determines how to react to errors during decoding</span>
+
+<span class="sd">        :return: The decoding_error_mode of this Stream.</span>
+<span class="sd">        :rtype: DecodingErrorMode</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_decoding_error_mode</span>
+
+    <span class="nd">@decoding_error_mode</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">decoding_error_mode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">decoding_error_mode</span><span class="p">):</span>
+        <span class="c1"># type: (DecodingErrorMode) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the decoding_error_mode of this Stream.</span>
+
+<span class="sd">        Determines how to react to errors during decoding</span>
+
+<span class="sd">        :param decoding_error_mode: The decoding_error_mode of this Stream.</span>
+<span class="sd">        :type: DecodingErrorMode</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">decoding_error_mode</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">decoding_error_mode</span><span class="p">,</span> <span class="n">DecodingErrorMode</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `decoding_error_mode`, type has to be `DecodingErrorMode`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_decoding_error_mode</span> <span class="o">=</span> <span class="n">decoding_error_mode</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">applied_settings</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; AppliedStreamSettings</span>
+        <span class="sd">&quot;&quot;&quot;Gets the applied_settings of this Stream.</span>
+
+<span class="sd">        Contains stream properties which may not have been defined in the configuration</span>
+
+<span class="sd">        :return: The applied_settings of this Stream.</span>
+<span class="sd">        :rtype: AppliedStreamSettings</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_applied_settings</span>
+
+    <span class="nd">@applied_settings</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">applied_settings</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">applied_settings</span><span class="p">):</span>
+        <span class="c1"># type: (AppliedStreamSettings) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the applied_settings of this Stream.</span>
+
+<span class="sd">        Contains stream properties which may not have been defined in the configuration</span>
+
+<span class="sd">        :param applied_settings: The applied_settings of this Stream.</span>
+<span class="sd">        :type: AppliedStreamSettings</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">applied_settings</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">applied_settings</span><span class="p">,</span> <span class="n">AppliedStreamSettings</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `applied_settings`, type has to be `AppliedStreamSettings`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_applied_settings</span> <span class="o">=</span> <span class="n">applied_settings</span>
+
+<div class="viewcode-block" id="Stream.to_dict"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.stream.Stream.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="p">{}</span>
+
+        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="nb">super</span><span class="p">(</span><span class="n">Stream</span><span class="p">,</span> <span class="bp">self</span><span class="p">),</span> <span class="s2">&quot;to_dict&quot;</span><span class="p">):</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="nb">super</span><span class="p">(</span><span class="n">Stream</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">attr</span><span class="p">,</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">six</span><span class="o">.</span><span class="n">iteritems</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">openapi_types</span><span class="p">):</span>
+            <span class="n">value</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">attr</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="k">continue</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+                <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="k">continue</span>
+                <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="p">[</span><span class="n">y</span><span class="o">.</span><span class="n">value</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">Enum</span><span class="p">)</span> <span class="k">else</span> <span class="n">y</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span> <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="s2">&quot;to_dict&quot;</span><span class="p">)</span> <span class="k">else</span> <span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">value</span><span class="p">]]</span>
+            <span class="k">elif</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="s2">&quot;to_dict&quot;</span><span class="p">):</span>
+                <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="n">value</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span>
+            <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">Enum</span><span class="p">):</span>
+                <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="n">value</span><span class="o">.</span><span class="n">value</span>
+            <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+                <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="p">(</span><span class="n">v</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span> <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="s2">&quot;to_dict&quot;</span><span class="p">)</span> <span class="k">else</span> <span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span> <span class="ow">in</span> <span class="n">value</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="n">value</span>
+
+        <span class="k">return</span> <span class="n">result</span></div>
+
+<div class="viewcode-block" id="Stream.to_str"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.stream.Stream.to_str">[docs]</a>    <span class="k">def</span> <span class="nf">to_str</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns the string representation of the model&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">pprint</span><span class="o">.</span><span class="n">pformat</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">to_dict</span><span class="p">())</span></div>
+
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;For `print` and `pprint`&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">to_str</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns true if both objects are equal&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">Stream</span><span class="p">):</span>
+            <span class="k">return</span> <span class="kc">False</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="vm">__dict__</span>
+
+    <span class="k">def</span> <span class="fm">__ne__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns true if both objects are not equal&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="ow">not</span> <span class="bp">self</span> <span class="o">==</span> <span class="n">other</span></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Bitmovin Inc
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

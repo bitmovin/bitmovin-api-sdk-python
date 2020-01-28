@@ -1,0 +1,29 @@
+bitmovin\_api\_sdk.encoding.encodings.input\_streams.sidecar package
+====================================================================
+
+Subpackages
+-----------
+
+.. toctree::
+
+   bitmovin_api_sdk.encoding.encodings.input_streams.sidecar.dolby_vision_metadata_ingest
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.encoding.encodings.input\_streams.sidecar.sidecar\_api module
+--------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.encodings.input_streams.sidecar.sidecar_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.encoding.encodings.input_streams.sidecar
+   :members:
+   :undoc-members:
+   :show-inheritance:

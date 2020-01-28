@@ -1,0 +1,22 @@
+bitmovin\_api\_sdk.player.channels.versions.latest package
+==========================================================
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.player.channels.versions.latest.latest\_api module
+---------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.player.channels.versions.latest.latest_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.player.channels.versions.latest
+   :members:
+   :undoc-members:
+   :show-inheritance:

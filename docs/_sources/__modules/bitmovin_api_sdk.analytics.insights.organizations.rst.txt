@@ -1,0 +1,29 @@
+bitmovin\_api\_sdk.analytics.insights.organizations package
+===========================================================
+
+Subpackages
+-----------
+
+.. toctree::
+
+   bitmovin_api_sdk.analytics.insights.organizations.settings
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.analytics.insights.organizations.organizations\_api module
+-----------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.analytics.insights.organizations.organizations_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.analytics.insights.organizations
+   :members:
+   :undoc-members:
+   :show-inheritance:

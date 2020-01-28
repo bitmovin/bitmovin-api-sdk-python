@@ -1,0 +1,30 @@
+bitmovin\_api\_sdk.account.organizations package
+================================================
+
+Subpackages
+-----------
+
+.. toctree::
+
+   bitmovin_api_sdk.account.organizations.groups
+   bitmovin_api_sdk.account.organizations.sub_organizations
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.account.organizations.organizations\_api module
+------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.account.organizations.organizations_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.account.organizations
+   :members:
+   :undoc-members:
+   :show-inheritance:

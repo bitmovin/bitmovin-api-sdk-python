@@ -1,0 +1,39 @@
+bitmovin\_api\_sdk.player.licenses package
+==========================================
+
+Subpackages
+-----------
+
+.. toctree::
+
+   bitmovin_api_sdk.player.licenses.analytics
+   bitmovin_api_sdk.player.licenses.domains
+   bitmovin_api_sdk.player.licenses.third_party_licensing
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.player.licenses.licenses\_api module
+-------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.player.licenses.licenses_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.player.licenses.player\_license\_list\_query\_params module
+------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.player.licenses.player_license_list_query_params
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.player.licenses
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,22 @@
+bitmovin\_api\_sdk.analytics.ads.queries.count package
+======================================================
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.analytics.ads.queries.count.count\_api module
+----------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.analytics.ads.queries.count.count_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.analytics.ads.queries.count
+   :members:
+   :undoc-members:
+   :show-inheritance:

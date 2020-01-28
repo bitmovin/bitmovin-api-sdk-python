@@ -1,0 +1,22 @@
+bitmovin\_api\_sdk.encoding.infrastructure.kubernetes.configuration package
+===========================================================================
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.encoding.infrastructure.kubernetes.configuration.configuration\_api module
+---------------------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.infrastructure.kubernetes.configuration.configuration_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.encoding.infrastructure.kubernetes.configuration
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,22 @@
+bitmovin\_api\_sdk.analytics.ads.queries.median package
+=======================================================
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.analytics.ads.queries.median.median\_api module
+------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.analytics.ads.queries.median.median_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.analytics.ads.queries.median
+   :members:
+   :undoc-members:
+   :show-inheritance:

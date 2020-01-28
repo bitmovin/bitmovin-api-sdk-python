@@ -1,0 +1,29 @@
+bitmovin\_api\_sdk.encoding.configurations.subtitles package
+============================================================
+
+Subpackages
+-----------
+
+.. toctree::
+
+   bitmovin_api_sdk.encoding.configurations.subtitles.webvtt
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.encoding.configurations.subtitles.subtitles\_api module
+--------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.configurations.subtitles.subtitles_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.encoding.configurations.subtitles
+   :members:
+   :undoc-members:
+   :show-inheritance:

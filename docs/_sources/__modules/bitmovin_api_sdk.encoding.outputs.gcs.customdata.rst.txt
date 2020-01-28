@@ -1,0 +1,22 @@
+bitmovin\_api\_sdk.encoding.outputs.gcs.customdata package
+==========================================================
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.encoding.outputs.gcs.customdata.customdata\_api module
+-------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.outputs.gcs.customdata.customdata_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.encoding.outputs.gcs.customdata
+   :members:
+   :undoc-members:
+   :show-inheritance:

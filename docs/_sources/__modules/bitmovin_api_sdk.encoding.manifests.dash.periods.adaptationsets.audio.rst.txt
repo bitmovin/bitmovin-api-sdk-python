@@ -1,0 +1,30 @@
+bitmovin\_api\_sdk.encoding.manifests.dash.periods.adaptationsets.audio package
+===============================================================================
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.encoding.manifests.dash.periods.adaptationsets.audio.audio\_adaptation\_set\_list\_query\_params module
+--------------------------------------------------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.audio.audio_adaptation_set_list_query_params
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.encoding.manifests.dash.periods.adaptationsets.audio.audio\_api module
+-----------------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.audio.audio_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.audio
+   :members:
+   :undoc-members:
+   :show-inheritance:

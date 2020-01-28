@@ -1,0 +1,22 @@
+bitmovin\_api\_sdk.analytics.ads.queries.avg package
+====================================================
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.analytics.ads.queries.avg.avg\_api module
+------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.analytics.ads.queries.avg.avg_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.analytics.ads.queries.avg
+   :members:
+   :undoc-members:
+   :show-inheritance:

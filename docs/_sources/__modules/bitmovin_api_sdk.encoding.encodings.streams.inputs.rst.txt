@@ -1,0 +1,22 @@
+bitmovin\_api\_sdk.encoding.encodings.streams.inputs package
+============================================================
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.encoding.encodings.streams.inputs.inputs\_api module
+-----------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.encodings.streams.inputs.inputs_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.encoding.encodings.streams.inputs
+   :members:
+   :undoc-members:
+   :show-inheritance:

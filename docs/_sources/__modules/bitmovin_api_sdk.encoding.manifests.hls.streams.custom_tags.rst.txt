@@ -1,0 +1,30 @@
+bitmovin\_api\_sdk.encoding.manifests.hls.streams.custom\_tags package
+======================================================================
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.encoding.manifests.hls.streams.custom\_tags.custom\_tag\_list\_query\_params module
+------------------------------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.manifests.hls.streams.custom_tags.custom_tag_list_query_params
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.encoding.manifests.hls.streams.custom\_tags.custom\_tags\_api module
+---------------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.manifests.hls.streams.custom_tags.custom_tags_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.encoding.manifests.hls.streams.custom_tags
+   :members:
+   :undoc-members:
+   :show-inheritance:

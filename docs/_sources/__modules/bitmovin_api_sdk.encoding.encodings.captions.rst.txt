@@ -1,0 +1,29 @@
+bitmovin\_api\_sdk.encoding.encodings.captions package
+======================================================
+
+Subpackages
+-----------
+
+.. toctree::
+
+   bitmovin_api_sdk.encoding.encodings.captions.scc
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.encoding.encodings.captions.captions\_api module
+-------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.encodings.captions.captions_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.encoding.encodings.captions
+   :members:
+   :undoc-members:
+   :show-inheritance:

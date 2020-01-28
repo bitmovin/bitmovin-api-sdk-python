@@ -1069,6 +1069,7 @@ from bitmovin_api_sdk.models.dolby_vision_metadata import DolbyVisionMetadata
 from bitmovin_api_sdk.models.dolby_vision_metadata_ingest_input_stream import DolbyVisionMetadataIngestInputStream
 from bitmovin_api_sdk.models.dolby_vision_metadata_source import DolbyVisionMetadataSource
 from bitmovin_api_sdk.models.dolby_vision_muxing_configuration import DolbyVisionMuxingConfiguration
+from bitmovin_api_sdk.models.dolby_vision_per_stream_mode import DolbyVisionPerStreamMode
 from bitmovin_api_sdk.models.dolby_vision_profile import DolbyVisionProfile
 from bitmovin_api_sdk.models.dolby_vision_track_sample_entry_name import DolbyVisionTrackSampleEntryName
 from bitmovin_api_sdk.models.domain import Domain
@@ -1415,4 +1416,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.32.0alpha0"
+__version__ = "1.33.0"

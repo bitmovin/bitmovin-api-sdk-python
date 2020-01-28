@@ -1,0 +1,37 @@
+bitmovin\_api\_sdk.encoding.encodings.muxings.text package
+==========================================================
+
+Subpackages
+-----------
+
+.. toctree::
+
+   bitmovin_api_sdk.encoding.encodings.muxings.text.customdata
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.encoding.encodings.muxings.text.text\_api module
+-------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.encodings.muxings.text.text_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.encoding.encodings.muxings.text.text\_muxing\_list\_query\_params module
+-------------------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.encodings.muxings.text.text_muxing_list_query_params
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.encoding.encodings.muxings.text
+   :members:
+   :undoc-members:
+   :show-inheritance:

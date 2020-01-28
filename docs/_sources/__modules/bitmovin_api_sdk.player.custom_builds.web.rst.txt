@@ -1,0 +1,31 @@
+bitmovin\_api\_sdk.player.custom\_builds.web package
+====================================================
+
+Subpackages
+-----------
+
+.. toctree::
+
+   bitmovin_api_sdk.player.custom_builds.web.domains
+   bitmovin_api_sdk.player.custom_builds.web.download
+   bitmovin_api_sdk.player.custom_builds.web.status
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.player.custom\_builds.web.web\_api module
+------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.player.custom_builds.web.web_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.player.custom_builds.web
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,1882 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>bitmovin_api_sdk.models.h264_video_configuration &mdash; Bitmovin Python API SDK {{packageVersion}} documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: blue" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Bitmovin Python API SDK
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../__modules/modules.html">python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../__modules/bitmovin_api_sdk.encoding.html">bitmovin_api_sdk.encoding package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../__modules/bitmovin_api_sdk.analytics.html">bitmovin_api_sdk.analytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../__modules/bitmovin_api_sdk.player.html">bitmovin_api_sdk.player package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../__modules/bitmovin_api_sdk.account.html">bitmovin_api_sdk.account package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../__modules/bitmovin_api_sdk.notifications.html">bitmovin_api_sdk.notifications package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../__modules/bitmovin_api_sdk.general.html">bitmovin_api_sdk.general package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../__modules/bitmovin_api_sdk.common.html">bitmovin_api_sdk.common package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../__modules/bitmovin_api_sdk.models.html">bitmovin_api_sdk.models package</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Bitmovin Python API SDK</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+      <li>bitmovin_api_sdk.models.h264_video_configuration</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for bitmovin_api_sdk.models.h264_video_configuration</h1><div class="highlight"><pre>
+<span></span><span class="c1"># coding: utf-8</span>
+
+<span class="kn">from</span> <span class="nn">enum</span> <span class="kn">import</span> <span class="n">Enum</span>
+<span class="kn">from</span> <span class="nn">six</span> <span class="kn">import</span> <span class="n">string_types</span><span class="p">,</span> <span class="n">iteritems</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.common.poscheck</span> <span class="kn">import</span> <span class="n">poscheck_model</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.adaptive_quant_mode</span> <span class="kn">import</span> <span class="n">AdaptiveQuantMode</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.b_adapt</span> <span class="kn">import</span> <span class="n">BAdapt</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.cea608708_subtitle_configuration</span> <span class="kn">import</span> <span class="n">Cea608708SubtitleConfiguration</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.color_config</span> <span class="kn">import</span> <span class="n">ColorConfig</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.encoding_mode</span> <span class="kn">import</span> <span class="n">EncodingMode</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.h264_b_pyramid</span> <span class="kn">import</span> <span class="n">H264BPyramid</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.h264_interlace_mode</span> <span class="kn">import</span> <span class="n">H264InterlaceMode</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.h264_motion_estimation_method</span> <span class="kn">import</span> <span class="n">H264MotionEstimationMethod</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.h264_nal_hrd</span> <span class="kn">import</span> <span class="n">H264NalHrd</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.h264_sub_me</span> <span class="kn">import</span> <span class="n">H264SubMe</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.h264_trellis</span> <span class="kn">import</span> <span class="n">H264Trellis</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.level_h264</span> <span class="kn">import</span> <span class="n">LevelH264</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.mv_prediction_mode</span> <span class="kn">import</span> <span class="n">MvPredictionMode</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.pixel_format</span> <span class="kn">import</span> <span class="n">PixelFormat</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.preset_configuration</span> <span class="kn">import</span> <span class="n">PresetConfiguration</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.profile_h264</span> <span class="kn">import</span> <span class="n">ProfileH264</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.video_configuration</span> <span class="kn">import</span> <span class="n">VideoConfiguration</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.weighted_prediction_p_frames</span> <span class="kn">import</span> <span class="n">WeightedPredictionPFrames</span>
+<span class="kn">import</span> <span class="nn">pprint</span>
+<span class="kn">import</span> <span class="nn">six</span>
+
+
+<div class="viewcode-block" id="H264VideoConfiguration"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.h264_video_configuration.H264VideoConfiguration">[docs]</a><span class="k">class</span> <span class="nc">H264VideoConfiguration</span><span class="p">(</span><span class="n">VideoConfiguration</span><span class="p">):</span>
+    <span class="nd">@poscheck_model</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                 <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">description</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">created_at</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">modified_at</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">custom_data</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">id_</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">width</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">height</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">bitrate</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">rate</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">pixel_format</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">color_config</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">sample_aspect_ratio_numerator</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">sample_aspect_ratio_denominator</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">encoding_mode</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">preset_configuration</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">crf</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">profile</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">bframes</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">ref_frames</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">qp_min</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">qp_max</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">mv_prediction_mode</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">mv_search_range_max</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">cabac</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">max_bitrate</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">min_bitrate</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">bufsize</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">min_gop</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">max_gop</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">open_gop</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">min_keyframe_interval</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">max_keyframe_interval</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">level</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">b_adaptive_strategy</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">motion_estimation_method</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">rc_lookahead</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">sub_me</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">trellis</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">partitions</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">slices</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">interlace_mode</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">scene_cut_threshold</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">nal_hrd</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">b_pyramid</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">cea608708_subtitle_config</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">deblock_alpha</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">deblock_beta</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">adaptive_quantization_mode</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">adaptive_quantization_strength</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">mixed_references</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">adaptive_spatial_transform</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">fast_skip_detection_p_frames</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">weighted_prediction_b_frames</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">weighted_prediction_p_frames</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">macroblock_tree_ratecontrol</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">quantizer_curve_compression</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">psy_rate_distortion_optimization</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">psy_trellis</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="c1"># type: (string_types, string_types, datetime, datetime, dict, string_types, int, int, int, float, PixelFormat, ColorConfig, int, int, EncodingMode, PresetConfiguration, float, ProfileH264, int, int, int, int, MvPredictionMode, int, bool, int, int, int, int, int, bool, float, float, LevelH264, BAdapt, H264MotionEstimationMethod, int, H264SubMe, H264Trellis, list[H264Partition], int, H264InterlaceMode, int, H264NalHrd, H264BPyramid, Cea608708SubtitleConfiguration, int, int, AdaptiveQuantMode, float, bool, bool, bool, bool, WeightedPredictionPFrames, bool, float, float, float) -&gt; None</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">H264VideoConfiguration</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="n">description</span><span class="p">,</span> <span class="n">created_at</span><span class="o">=</span><span class="n">created_at</span><span class="p">,</span> <span class="n">modified_at</span><span class="o">=</span><span class="n">modified_at</span><span class="p">,</span> <span class="n">custom_data</span><span class="o">=</span><span class="n">custom_data</span><span class="p">,</span> <span class="n">id_</span><span class="o">=</span><span class="n">id_</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="n">height</span><span class="p">,</span> <span class="n">bitrate</span><span class="o">=</span><span class="n">bitrate</span><span class="p">,</span> <span class="n">rate</span><span class="o">=</span><span class="n">rate</span><span class="p">,</span> <span class="n">pixel_format</span><span class="o">=</span><span class="n">pixel_format</span><span class="p">,</span> <span class="n">color_config</span><span class="o">=</span><span class="n">color_config</span><span class="p">,</span> <span class="n">sample_aspect_ratio_numerator</span><span class="o">=</span><span class="n">sample_aspect_ratio_numerator</span><span class="p">,</span> <span class="n">sample_aspect_ratio_denominator</span><span class="o">=</span><span class="n">sample_aspect_ratio_denominator</span><span class="p">,</span> <span class="n">encoding_mode</span><span class="o">=</span><span class="n">encoding_mode</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_preset_configuration</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_crf</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_profile</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_bframes</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_ref_frames</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_qp_min</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_qp_max</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_mv_prediction_mode</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_mv_search_range_max</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_cabac</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_max_bitrate</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_min_bitrate</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_bufsize</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_min_gop</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_max_gop</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_open_gop</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_min_keyframe_interval</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_max_keyframe_interval</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_level</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_b_adaptive_strategy</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_motion_estimation_method</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_rc_lookahead</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_sub_me</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_trellis</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_partitions</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_slices</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_interlace_mode</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_scene_cut_threshold</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_nal_hrd</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_b_pyramid</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_cea608708_subtitle_config</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_deblock_alpha</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_deblock_beta</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_adaptive_quantization_mode</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_adaptive_quantization_strength</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_mixed_references</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_adaptive_spatial_transform</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_fast_skip_detection_p_frames</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_weighted_prediction_b_frames</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_weighted_prediction_p_frames</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_macroblock_tree_ratecontrol</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_quantizer_curve_compression</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_psy_rate_distortion_optimization</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_psy_trellis</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="k">if</span> <span class="n">preset_configuration</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">preset_configuration</span> <span class="o">=</span> <span class="n">preset_configuration</span>
+        <span class="k">if</span> <span class="n">crf</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">crf</span> <span class="o">=</span> <span class="n">crf</span>
+        <span class="k">if</span> <span class="n">profile</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">profile</span> <span class="o">=</span> <span class="n">profile</span>
+        <span class="k">if</span> <span class="n">bframes</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">bframes</span> <span class="o">=</span> <span class="n">bframes</span>
+        <span class="k">if</span> <span class="n">ref_frames</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">ref_frames</span> <span class="o">=</span> <span class="n">ref_frames</span>
+        <span class="k">if</span> <span class="n">qp_min</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">qp_min</span> <span class="o">=</span> <span class="n">qp_min</span>
+        <span class="k">if</span> <span class="n">qp_max</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">qp_max</span> <span class="o">=</span> <span class="n">qp_max</span>
+        <span class="k">if</span> <span class="n">mv_prediction_mode</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">mv_prediction_mode</span> <span class="o">=</span> <span class="n">mv_prediction_mode</span>
+        <span class="k">if</span> <span class="n">mv_search_range_max</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">mv_search_range_max</span> <span class="o">=</span> <span class="n">mv_search_range_max</span>
+        <span class="k">if</span> <span class="n">cabac</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">cabac</span> <span class="o">=</span> <span class="n">cabac</span>
+        <span class="k">if</span> <span class="n">max_bitrate</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">max_bitrate</span> <span class="o">=</span> <span class="n">max_bitrate</span>
+        <span class="k">if</span> <span class="n">min_bitrate</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">min_bitrate</span> <span class="o">=</span> <span class="n">min_bitrate</span>
+        <span class="k">if</span> <span class="n">bufsize</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">bufsize</span> <span class="o">=</span> <span class="n">bufsize</span>
+        <span class="k">if</span> <span class="n">min_gop</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">min_gop</span> <span class="o">=</span> <span class="n">min_gop</span>
+        <span class="k">if</span> <span class="n">max_gop</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">max_gop</span> <span class="o">=</span> <span class="n">max_gop</span>
+        <span class="k">if</span> <span class="n">open_gop</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">open_gop</span> <span class="o">=</span> <span class="n">open_gop</span>
+        <span class="k">if</span> <span class="n">min_keyframe_interval</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">min_keyframe_interval</span> <span class="o">=</span> <span class="n">min_keyframe_interval</span>
+        <span class="k">if</span> <span class="n">max_keyframe_interval</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">max_keyframe_interval</span> <span class="o">=</span> <span class="n">max_keyframe_interval</span>
+        <span class="k">if</span> <span class="n">level</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">level</span> <span class="o">=</span> <span class="n">level</span>
+        <span class="k">if</span> <span class="n">b_adaptive_strategy</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">b_adaptive_strategy</span> <span class="o">=</span> <span class="n">b_adaptive_strategy</span>
+        <span class="k">if</span> <span class="n">motion_estimation_method</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">motion_estimation_method</span> <span class="o">=</span> <span class="n">motion_estimation_method</span>
+        <span class="k">if</span> <span class="n">rc_lookahead</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">rc_lookahead</span> <span class="o">=</span> <span class="n">rc_lookahead</span>
+        <span class="k">if</span> <span class="n">sub_me</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">sub_me</span> <span class="o">=</span> <span class="n">sub_me</span>
+        <span class="k">if</span> <span class="n">trellis</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">trellis</span> <span class="o">=</span> <span class="n">trellis</span>
+        <span class="k">if</span> <span class="n">partitions</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">partitions</span> <span class="o">=</span> <span class="n">partitions</span>
+        <span class="k">if</span> <span class="n">slices</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">slices</span> <span class="o">=</span> <span class="n">slices</span>
+        <span class="k">if</span> <span class="n">interlace_mode</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">interlace_mode</span> <span class="o">=</span> <span class="n">interlace_mode</span>
+        <span class="k">if</span> <span class="n">scene_cut_threshold</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">scene_cut_threshold</span> <span class="o">=</span> <span class="n">scene_cut_threshold</span>
+        <span class="k">if</span> <span class="n">nal_hrd</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">nal_hrd</span> <span class="o">=</span> <span class="n">nal_hrd</span>
+        <span class="k">if</span> <span class="n">b_pyramid</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">b_pyramid</span> <span class="o">=</span> <span class="n">b_pyramid</span>
+        <span class="k">if</span> <span class="n">cea608708_subtitle_config</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">cea608708_subtitle_config</span> <span class="o">=</span> <span class="n">cea608708_subtitle_config</span>
+        <span class="k">if</span> <span class="n">deblock_alpha</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">deblock_alpha</span> <span class="o">=</span> <span class="n">deblock_alpha</span>
+        <span class="k">if</span> <span class="n">deblock_beta</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">deblock_beta</span> <span class="o">=</span> <span class="n">deblock_beta</span>
+        <span class="k">if</span> <span class="n">adaptive_quantization_mode</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">adaptive_quantization_mode</span> <span class="o">=</span> <span class="n">adaptive_quantization_mode</span>
+        <span class="k">if</span> <span class="n">adaptive_quantization_strength</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">adaptive_quantization_strength</span> <span class="o">=</span> <span class="n">adaptive_quantization_strength</span>
+        <span class="k">if</span> <span class="n">mixed_references</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">mixed_references</span> <span class="o">=</span> <span class="n">mixed_references</span>
+        <span class="k">if</span> <span class="n">adaptive_spatial_transform</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">adaptive_spatial_transform</span> <span class="o">=</span> <span class="n">adaptive_spatial_transform</span>
+        <span class="k">if</span> <span class="n">fast_skip_detection_p_frames</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">fast_skip_detection_p_frames</span> <span class="o">=</span> <span class="n">fast_skip_detection_p_frames</span>
+        <span class="k">if</span> <span class="n">weighted_prediction_b_frames</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">weighted_prediction_b_frames</span> <span class="o">=</span> <span class="n">weighted_prediction_b_frames</span>
+        <span class="k">if</span> <span class="n">weighted_prediction_p_frames</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">weighted_prediction_p_frames</span> <span class="o">=</span> <span class="n">weighted_prediction_p_frames</span>
+        <span class="k">if</span> <span class="n">macroblock_tree_ratecontrol</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">macroblock_tree_ratecontrol</span> <span class="o">=</span> <span class="n">macroblock_tree_ratecontrol</span>
+        <span class="k">if</span> <span class="n">quantizer_curve_compression</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">quantizer_curve_compression</span> <span class="o">=</span> <span class="n">quantizer_curve_compression</span>
+        <span class="k">if</span> <span class="n">psy_rate_distortion_optimization</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">psy_rate_distortion_optimization</span> <span class="o">=</span> <span class="n">psy_rate_distortion_optimization</span>
+        <span class="k">if</span> <span class="n">psy_trellis</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">psy_trellis</span> <span class="o">=</span> <span class="n">psy_trellis</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">types</span> <span class="o">=</span> <span class="p">{}</span>
+
+        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="nb">super</span><span class="p">(</span><span class="n">H264VideoConfiguration</span><span class="p">,</span> <span class="bp">self</span><span class="p">),</span> <span class="s1">&#39;openapi_types&#39;</span><span class="p">):</span>
+            <span class="n">types</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="nb">super</span><span class="p">(</span><span class="n">H264VideoConfiguration</span><span class="p">,</span> <span class="bp">self</span><span class="p">),</span> <span class="s1">&#39;openapi_types&#39;</span><span class="p">)</span>
+
+        <span class="n">types</span><span class="o">.</span><span class="n">update</span><span class="p">({</span>
+            <span class="s1">&#39;preset_configuration&#39;</span><span class="p">:</span> <span class="s1">&#39;PresetConfiguration&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;crf&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;profile&#39;</span><span class="p">:</span> <span class="s1">&#39;ProfileH264&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;bframes&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;ref_frames&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;qp_min&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;qp_max&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;mv_prediction_mode&#39;</span><span class="p">:</span> <span class="s1">&#39;MvPredictionMode&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;mv_search_range_max&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;cabac&#39;</span><span class="p">:</span> <span class="s1">&#39;bool&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;max_bitrate&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;min_bitrate&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;bufsize&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;min_gop&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;max_gop&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;open_gop&#39;</span><span class="p">:</span> <span class="s1">&#39;bool&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;min_keyframe_interval&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;max_keyframe_interval&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;level&#39;</span><span class="p">:</span> <span class="s1">&#39;LevelH264&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;b_adaptive_strategy&#39;</span><span class="p">:</span> <span class="s1">&#39;BAdapt&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;motion_estimation_method&#39;</span><span class="p">:</span> <span class="s1">&#39;H264MotionEstimationMethod&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;rc_lookahead&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;sub_me&#39;</span><span class="p">:</span> <span class="s1">&#39;H264SubMe&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;trellis&#39;</span><span class="p">:</span> <span class="s1">&#39;H264Trellis&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;partitions&#39;</span><span class="p">:</span> <span class="s1">&#39;list[H264Partition]&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;slices&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;interlace_mode&#39;</span><span class="p">:</span> <span class="s1">&#39;H264InterlaceMode&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;scene_cut_threshold&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;nal_hrd&#39;</span><span class="p">:</span> <span class="s1">&#39;H264NalHrd&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;b_pyramid&#39;</span><span class="p">:</span> <span class="s1">&#39;H264BPyramid&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;cea608708_subtitle_config&#39;</span><span class="p">:</span> <span class="s1">&#39;Cea608708SubtitleConfiguration&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;deblock_alpha&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;deblock_beta&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;adaptive_quantization_mode&#39;</span><span class="p">:</span> <span class="s1">&#39;AdaptiveQuantMode&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;adaptive_quantization_strength&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;mixed_references&#39;</span><span class="p">:</span> <span class="s1">&#39;bool&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;adaptive_spatial_transform&#39;</span><span class="p">:</span> <span class="s1">&#39;bool&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;fast_skip_detection_p_frames&#39;</span><span class="p">:</span> <span class="s1">&#39;bool&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;weighted_prediction_b_frames&#39;</span><span class="p">:</span> <span class="s1">&#39;bool&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;weighted_prediction_p_frames&#39;</span><span class="p">:</span> <span class="s1">&#39;WeightedPredictionPFrames&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;macroblock_tree_ratecontrol&#39;</span><span class="p">:</span> <span class="s1">&#39;bool&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;quantizer_curve_compression&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;psy_rate_distortion_optimization&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;psy_trellis&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span>
+        <span class="p">})</span>
+
+        <span class="k">return</span> <span class="n">types</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">attribute_map</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">attributes</span> <span class="o">=</span> <span class="p">{}</span>
+
+        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="nb">super</span><span class="p">(</span><span class="n">H264VideoConfiguration</span><span class="p">,</span> <span class="bp">self</span><span class="p">),</span> <span class="s1">&#39;attribute_map&#39;</span><span class="p">):</span>
+            <span class="n">attributes</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="nb">super</span><span class="p">(</span><span class="n">H264VideoConfiguration</span><span class="p">,</span> <span class="bp">self</span><span class="p">),</span> <span class="s1">&#39;attribute_map&#39;</span><span class="p">)</span>
+
+        <span class="n">attributes</span><span class="o">.</span><span class="n">update</span><span class="p">({</span>
+            <span class="s1">&#39;preset_configuration&#39;</span><span class="p">:</span> <span class="s1">&#39;presetConfiguration&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;crf&#39;</span><span class="p">:</span> <span class="s1">&#39;crf&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;profile&#39;</span><span class="p">:</span> <span class="s1">&#39;profile&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;bframes&#39;</span><span class="p">:</span> <span class="s1">&#39;bframes&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;ref_frames&#39;</span><span class="p">:</span> <span class="s1">&#39;refFrames&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;qp_min&#39;</span><span class="p">:</span> <span class="s1">&#39;qpMin&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;qp_max&#39;</span><span class="p">:</span> <span class="s1">&#39;qpMax&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;mv_prediction_mode&#39;</span><span class="p">:</span> <span class="s1">&#39;mvPredictionMode&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;mv_search_range_max&#39;</span><span class="p">:</span> <span class="s1">&#39;mvSearchRangeMax&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;cabac&#39;</span><span class="p">:</span> <span class="s1">&#39;cabac&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;max_bitrate&#39;</span><span class="p">:</span> <span class="s1">&#39;maxBitrate&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;min_bitrate&#39;</span><span class="p">:</span> <span class="s1">&#39;minBitrate&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;bufsize&#39;</span><span class="p">:</span> <span class="s1">&#39;bufsize&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;min_gop&#39;</span><span class="p">:</span> <span class="s1">&#39;minGop&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;max_gop&#39;</span><span class="p">:</span> <span class="s1">&#39;maxGop&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;open_gop&#39;</span><span class="p">:</span> <span class="s1">&#39;openGop&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;min_keyframe_interval&#39;</span><span class="p">:</span> <span class="s1">&#39;minKeyframeInterval&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;max_keyframe_interval&#39;</span><span class="p">:</span> <span class="s1">&#39;maxKeyframeInterval&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;level&#39;</span><span class="p">:</span> <span class="s1">&#39;level&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;b_adaptive_strategy&#39;</span><span class="p">:</span> <span class="s1">&#39;bAdaptiveStrategy&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;motion_estimation_method&#39;</span><span class="p">:</span> <span class="s1">&#39;motionEstimationMethod&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;rc_lookahead&#39;</span><span class="p">:</span> <span class="s1">&#39;rcLookahead&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;sub_me&#39;</span><span class="p">:</span> <span class="s1">&#39;subMe&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;trellis&#39;</span><span class="p">:</span> <span class="s1">&#39;trellis&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;partitions&#39;</span><span class="p">:</span> <span class="s1">&#39;partitions&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;slices&#39;</span><span class="p">:</span> <span class="s1">&#39;slices&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;interlace_mode&#39;</span><span class="p">:</span> <span class="s1">&#39;interlaceMode&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;scene_cut_threshold&#39;</span><span class="p">:</span> <span class="s1">&#39;sceneCutThreshold&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;nal_hrd&#39;</span><span class="p">:</span> <span class="s1">&#39;nalHrd&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;b_pyramid&#39;</span><span class="p">:</span> <span class="s1">&#39;bPyramid&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;cea608708_subtitle_config&#39;</span><span class="p">:</span> <span class="s1">&#39;cea608708SubtitleConfig&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;deblock_alpha&#39;</span><span class="p">:</span> <span class="s1">&#39;deblockAlpha&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;deblock_beta&#39;</span><span class="p">:</span> <span class="s1">&#39;deblockBeta&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;adaptive_quantization_mode&#39;</span><span class="p">:</span> <span class="s1">&#39;adaptiveQuantizationMode&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;adaptive_quantization_strength&#39;</span><span class="p">:</span> <span class="s1">&#39;adaptiveQuantizationStrength&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;mixed_references&#39;</span><span class="p">:</span> <span class="s1">&#39;mixedReferences&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;adaptive_spatial_transform&#39;</span><span class="p">:</span> <span class="s1">&#39;adaptiveSpatialTransform&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;fast_skip_detection_p_frames&#39;</span><span class="p">:</span> <span class="s1">&#39;fastSkipDetectionPFrames&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;weighted_prediction_b_frames&#39;</span><span class="p">:</span> <span class="s1">&#39;weightedPredictionBFrames&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;weighted_prediction_p_frames&#39;</span><span class="p">:</span> <span class="s1">&#39;weightedPredictionPFrames&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;macroblock_tree_ratecontrol&#39;</span><span class="p">:</span> <span class="s1">&#39;macroblockTreeRatecontrol&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;quantizer_curve_compression&#39;</span><span class="p">:</span> <span class="s1">&#39;quantizerCurveCompression&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;psy_rate_distortion_optimization&#39;</span><span class="p">:</span> <span class="s1">&#39;psyRateDistortionOptimization&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;psy_trellis&#39;</span><span class="p">:</span> <span class="s1">&#39;psyTrellis&#39;</span>
+        <span class="p">})</span>
+        <span class="k">return</span> <span class="n">attributes</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">preset_configuration</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; PresetConfiguration</span>
+        <span class="sd">&quot;&quot;&quot;Gets the preset_configuration of this H264VideoConfiguration.</span>
+
+<span class="sd">        Use a set of well defined configurations preset to support certain use cases. Can be overwritten with more specific values.</span>
+
+<span class="sd">        :return: The preset_configuration of this H264VideoConfiguration.</span>
+<span class="sd">        :rtype: PresetConfiguration</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_preset_configuration</span>
+
+    <span class="nd">@preset_configuration</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">preset_configuration</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">preset_configuration</span><span class="p">):</span>
+        <span class="c1"># type: (PresetConfiguration) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the preset_configuration of this H264VideoConfiguration.</span>
+
+<span class="sd">        Use a set of well defined configurations preset to support certain use cases. Can be overwritten with more specific values.</span>
+
+<span class="sd">        :param preset_configuration: The preset_configuration of this H264VideoConfiguration.</span>
+<span class="sd">        :type: PresetConfiguration</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">preset_configuration</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">preset_configuration</span><span class="p">,</span> <span class="n">PresetConfiguration</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `preset_configuration`, type has to be `PresetConfiguration`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_preset_configuration</span> <span class="o">=</span> <span class="n">preset_configuration</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">crf</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; float</span>
+        <span class="sd">&quot;&quot;&quot;Gets the crf of this H264VideoConfiguration.</span>
+
+<span class="sd">        Sets the constant rate factor for quality-based variable bitrate. Either bitrate or crf is required.</span>
+
+<span class="sd">        :return: The crf of this H264VideoConfiguration.</span>
+<span class="sd">        :rtype: float</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_crf</span>
+
+    <span class="nd">@crf</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">crf</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">crf</span><span class="p">):</span>
+        <span class="c1"># type: (float) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the crf of this H264VideoConfiguration.</span>
+
+<span class="sd">        Sets the constant rate factor for quality-based variable bitrate. Either bitrate or crf is required.</span>
+
+<span class="sd">        :param crf: The crf of this H264VideoConfiguration.</span>
+<span class="sd">        :type: float</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">crf</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">crf</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">crf</span> <span class="o">&gt;</span> <span class="mi">51</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid value for `crf`, must be a value less than or equal to `51`&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">crf</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">crf</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid value for `crf`, must be a value greater than or equal to `0`&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">crf</span><span class="p">,</span> <span class="p">(</span><span class="nb">float</span><span class="p">,</span> <span class="nb">int</span><span class="p">)):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `crf`, type has to be `float`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_crf</span> <span class="o">=</span> <span class="n">crf</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">profile</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; ProfileH264</span>
+        <span class="sd">&quot;&quot;&quot;Gets the profile of this H264VideoConfiguration.</span>
+
+<span class="sd">        When setting a profile, all other settings must not exceed the limits which are defined in the profile. Otherwise, a higher profile may be automatically chosen. (required)</span>
+
+<span class="sd">        :return: The profile of this H264VideoConfiguration.</span>
+<span class="sd">        :rtype: ProfileH264</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_profile</span>
+
+    <span class="nd">@profile</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">profile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">profile</span><span class="p">):</span>
+        <span class="c1"># type: (ProfileH264) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the profile of this H264VideoConfiguration.</span>
+
+<span class="sd">        When setting a profile, all other settings must not exceed the limits which are defined in the profile. Otherwise, a higher profile may be automatically chosen. (required)</span>
+
+<span class="sd">        :param profile: The profile of this H264VideoConfiguration.</span>
+<span class="sd">        :type: ProfileH264</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">profile</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">profile</span><span class="p">,</span> <span class="n">ProfileH264</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `profile`, type has to be `ProfileH264`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_profile</span> <span class="o">=</span> <span class="n">profile</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">bframes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; int</span>
+        <span class="sd">&quot;&quot;&quot;Gets the bframes of this H264VideoConfiguration.</span>
+
+<span class="sd">        Sets the amount of b frames.</span>
+
+<span class="sd">        :return: The bframes of this H264VideoConfiguration.</span>
+<span class="sd">        :rtype: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_bframes</span>
+
+    <span class="nd">@bframes</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">bframes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bframes</span><span class="p">):</span>
+        <span class="c1"># type: (int) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the bframes of this H264VideoConfiguration.</span>
+
+<span class="sd">        Sets the amount of b frames.</span>
+
+<span class="sd">        :param bframes: The bframes of this H264VideoConfiguration.</span>
+<span class="sd">        :type: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">bframes</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">bframes</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">bframes</span> <span class="o">&gt;</span> <span class="mi">16</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid value for `bframes`, must be a value less than or equal to `16`&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">bframes</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">bframes</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid value for `bframes`, must be a value greater than or equal to `0`&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">bframes</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `bframes`, type has to be `int`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_bframes</span> <span class="o">=</span> <span class="n">bframes</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">ref_frames</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; int</span>
+        <span class="sd">&quot;&quot;&quot;Gets the ref_frames of this H264VideoConfiguration.</span>
+
+<span class="sd">        Sets the amount of reference frames.</span>
+
+<span class="sd">        :return: The ref_frames of this H264VideoConfiguration.</span>
+<span class="sd">        :rtype: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_ref_frames</span>
+
+    <span class="nd">@ref_frames</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">ref_frames</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ref_frames</span><span class="p">):</span>
+        <span class="c1"># type: (int) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the ref_frames of this H264VideoConfiguration.</span>
+
+<span class="sd">        Sets the amount of reference frames.</span>
+
+<span class="sd">        :param ref_frames: The ref_frames of this H264VideoConfiguration.</span>
+<span class="sd">        :type: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">ref_frames</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">ref_frames</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">ref_frames</span> <span class="o">&gt;</span> <span class="mi">16</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid value for `ref_frames`, must be a value less than or equal to `16`&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">ref_frames</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">ref_frames</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid value for `ref_frames`, must be a value greater than or equal to `1`&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">ref_frames</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `ref_frames`, type has to be `int`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_ref_frames</span> <span class="o">=</span> <span class="n">ref_frames</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">qp_min</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; int</span>
+        <span class="sd">&quot;&quot;&quot;Gets the qp_min of this H264VideoConfiguration.</span>
+
+<span class="sd">        Sets the minimum of quantization factor.</span>
+
+<span class="sd">        :return: The qp_min of this H264VideoConfiguration.</span>
+<span class="sd">        :rtype: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_qp_min</span>
+
+    <span class="nd">@qp_min</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">qp_min</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">qp_min</span><span class="p">):</span>
+        <span class="c1"># type: (int) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the qp_min of this H264VideoConfiguration.</span>
+
+<span class="sd">        Sets the minimum of quantization factor.</span>
+
+<span class="sd">        :param qp_min: The qp_min of this H264VideoConfiguration.</span>
+<span class="sd">        :type: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">qp_min</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">qp_min</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">qp_min</span> <span class="o">&gt;</span> <span class="mi">69</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid value for `qp_min`, must be a value less than or equal to `69`&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">qp_min</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">qp_min</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid value for `qp_min`, must be a value greater than or equal to `0`&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">qp_min</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `qp_min`, type has to be `int`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_qp_min</span> <span class="o">=</span> <span class="n">qp_min</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">qp_max</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; int</span>
+        <span class="sd">&quot;&quot;&quot;Gets the qp_max of this H264VideoConfiguration.</span>
+
+<span class="sd">        Sets the maximum of quantization factor.</span>
+
+<span class="sd">        :return: The qp_max of this H264VideoConfiguration.</span>
+<span class="sd">        :rtype: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_qp_max</span>
+
+    <span class="nd">@qp_max</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">qp_max</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">qp_max</span><span class="p">):</span>
+        <span class="c1"># type: (int) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the qp_max of this H264VideoConfiguration.</span>
+
+<span class="sd">        Sets the maximum of quantization factor.</span>
+
+<span class="sd">        :param qp_max: The qp_max of this H264VideoConfiguration.</span>
+<span class="sd">        :type: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">qp_max</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">qp_max</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">qp_max</span> <span class="o">&gt;</span> <span class="mi">69</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid value for `qp_max`, must be a value less than or equal to `69`&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">qp_max</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">qp_max</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid value for `qp_max`, must be a value greater than or equal to `0`&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">qp_max</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `qp_max`, type has to be `int`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_qp_max</span> <span class="o">=</span> <span class="n">qp_max</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">mv_prediction_mode</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; MvPredictionMode</span>
+        <span class="sd">&quot;&quot;&quot;Gets the mv_prediction_mode of this H264VideoConfiguration.</span>
+
+
+<span class="sd">        :return: The mv_prediction_mode of this H264VideoConfiguration.</span>
+<span class="sd">        :rtype: MvPredictionMode</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mv_prediction_mode</span>
+
+    <span class="nd">@mv_prediction_mode</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">mv_prediction_mode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mv_prediction_mode</span><span class="p">):</span>
+        <span class="c1"># type: (MvPredictionMode) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the mv_prediction_mode of this H264VideoConfiguration.</span>
+
+
+<span class="sd">        :param mv_prediction_mode: The mv_prediction_mode of this H264VideoConfiguration.</span>
+<span class="sd">        :type: MvPredictionMode</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">mv_prediction_mode</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">mv_prediction_mode</span><span class="p">,</span> <span class="n">MvPredictionMode</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `mv_prediction_mode`, type has to be `MvPredictionMode`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_mv_prediction_mode</span> <span class="o">=</span> <span class="n">mv_prediction_mode</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">mv_search_range_max</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; int</span>
+        <span class="sd">&quot;&quot;&quot;Gets the mv_search_range_max of this H264VideoConfiguration.</span>
+
+<span class="sd">        Sets the maximum Motion-Vector-Search-Range</span>
+
+<span class="sd">        :return: The mv_search_range_max of this H264VideoConfiguration.</span>
+<span class="sd">        :rtype: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mv_search_range_max</span>
+
+    <span class="nd">@mv_search_range_max</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">mv_search_range_max</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mv_search_range_max</span><span class="p">):</span>
+        <span class="c1"># type: (int) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the mv_search_range_max of this H264VideoConfiguration.</span>
+
+<span class="sd">        Sets the maximum Motion-Vector-Search-Range</span>
+
+<span class="sd">        :param mv_search_range_max: The mv_search_range_max of this H264VideoConfiguration.</span>
+<span class="sd">        :type: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">mv_search_range_max</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">mv_search_range_max</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">mv_search_range_max</span> <span class="o">&gt;</span> <span class="mi">24</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid value for `mv_search_range_max`, must be a value less than or equal to `24`&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">mv_search_range_max</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">mv_search_range_max</span> <span class="o">&lt;</span> <span class="mi">16</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid value for `mv_search_range_max`, must be a value greater than or equal to `16`&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">mv_search_range_max</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `mv_search_range_max`, type has to be `int`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_mv_search_range_max</span> <span class="o">=</span> <span class="n">mv_search_range_max</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">cabac</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; bool</span>
+        <span class="sd">&quot;&quot;&quot;Gets the cabac of this H264VideoConfiguration.</span>
+
+<span class="sd">        Enable or disable CABAC</span>
+
+<span class="sd">        :return: The cabac of this H264VideoConfiguration.</span>
+<span class="sd">        :rtype: bool</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cabac</span>
+
+    <span class="nd">@cabac</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">cabac</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cabac</span><span class="p">):</span>
+        <span class="c1"># type: (bool) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the cabac of this H264VideoConfiguration.</span>
+
+<span class="sd">        Enable or disable CABAC</span>
+
+<span class="sd">        :param cabac: The cabac of this H264VideoConfiguration.</span>
+<span class="sd">        :type: bool</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">cabac</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">cabac</span><span class="p">,</span> <span class="nb">bool</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `cabac`, type has to be `bool`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_cabac</span> <span class="o">=</span> <span class="n">cabac</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">max_bitrate</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; int</span>
+        <span class="sd">&quot;&quot;&quot;Gets the max_bitrate of this H264VideoConfiguration.</span>
+
+<span class="sd">        Maximum Bitrate</span>
+
+<span class="sd">        :return: The max_bitrate of this H264VideoConfiguration.</span>
+<span class="sd">        :rtype: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_max_bitrate</span>
+
+    <span class="nd">@max_bitrate</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">max_bitrate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">max_bitrate</span><span class="p">):</span>
+        <span class="c1"># type: (int) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the max_bitrate of this H264VideoConfiguration.</span>
+
+<span class="sd">        Maximum Bitrate</span>
+
+<span class="sd">        :param max_bitrate: The max_bitrate of this H264VideoConfiguration.</span>
+<span class="sd">        :type: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">max_bitrate</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">max_bitrate</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `max_bitrate`, type has to be `int`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_max_bitrate</span> <span class="o">=</span> <span class="n">max_bitrate</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">min_bitrate</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; int</span>
+        <span class="sd">&quot;&quot;&quot;Gets the min_bitrate of this H264VideoConfiguration.</span>
+
+<span class="sd">        Minimum Bitrate</span>
+
+<span class="sd">        :return: The min_bitrate of this H264VideoConfiguration.</span>
+<span class="sd">        :rtype: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_min_bitrate</span>
+
+    <span class="nd">@min_bitrate</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">min_bitrate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">min_bitrate</span><span class="p">):</span>
+        <span class="c1"># type: (int) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the min_bitrate of this H264VideoConfiguration.</span>
+
+<span class="sd">        Minimum Bitrate</span>
+
+<span class="sd">        :param min_bitrate: The min_bitrate of this H264VideoConfiguration.</span>
+<span class="sd">        :type: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">min_bitrate</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">min_bitrate</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `min_bitrate`, type has to be `int`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_min_bitrate</span> <span class="o">=</span> <span class="n">min_bitrate</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">bufsize</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; int</span>
+        <span class="sd">&quot;&quot;&quot;Gets the bufsize of this H264VideoConfiguration.</span>
+
+<span class="sd">        Playback device buffer size</span>
+
+<span class="sd">        :return: The bufsize of this H264VideoConfiguration.</span>
+<span class="sd">        :rtype: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_bufsize</span>
+
+    <span class="nd">@bufsize</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">bufsize</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bufsize</span><span class="p">):</span>
+        <span class="c1"># type: (int) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the bufsize of this H264VideoConfiguration.</span>
+
+<span class="sd">        Playback device buffer size</span>
+
+<span class="sd">        :param bufsize: The bufsize of this H264VideoConfiguration.</span>
+<span class="sd">        :type: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">bufsize</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">bufsize</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `bufsize`, type has to be `int`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_bufsize</span> <span class="o">=</span> <span class="n">bufsize</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">min_gop</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; int</span>
+        <span class="sd">&quot;&quot;&quot;Gets the min_gop of this H264VideoConfiguration.</span>
+
+<span class="sd">        Minimum GOP length, the minimum distance between I-frames</span>
+
+<span class="sd">        :return: The min_gop of this H264VideoConfiguration.</span>
+<span class="sd">        :rtype: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_min_gop</span>
+
+    <span class="nd">@min_gop</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">min_gop</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">min_gop</span><span class="p">):</span>
+        <span class="c1"># type: (int) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the min_gop of this H264VideoConfiguration.</span>
+
+<span class="sd">        Minimum GOP length, the minimum distance between I-frames</span>
+
+<span class="sd">        :param min_gop: The min_gop of this H264VideoConfiguration.</span>
+<span class="sd">        :type: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">min_gop</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">min_gop</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `min_gop`, type has to be `int`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_min_gop</span> <span class="o">=</span> <span class="n">min_gop</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">max_gop</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; int</span>
+        <span class="sd">&quot;&quot;&quot;Gets the max_gop of this H264VideoConfiguration.</span>
+
+<span class="sd">        Maximum GOP length, the maximum distance between I-frames</span>
+
+<span class="sd">        :return: The max_gop of this H264VideoConfiguration.</span>
+<span class="sd">        :rtype: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_max_gop</span>
+
+    <span class="nd">@max_gop</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">max_gop</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">max_gop</span><span class="p">):</span>
+        <span class="c1"># type: (int) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the max_gop of this H264VideoConfiguration.</span>
+
+<span class="sd">        Maximum GOP length, the maximum distance between I-frames</span>
+
+<span class="sd">        :param max_gop: The max_gop of this H264VideoConfiguration.</span>
+<span class="sd">        :type: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">max_gop</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">max_gop</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `max_gop`, type has to be `int`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_max_gop</span> <span class="o">=</span> <span class="n">max_gop</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">open_gop</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; bool</span>
+        <span class="sd">&quot;&quot;&quot;Gets the open_gop of this H264VideoConfiguration.</span>
+
+<span class="sd">        Enable open-gop, allows referencing frames from a previous gop</span>
+
+<span class="sd">        :return: The open_gop of this H264VideoConfiguration.</span>
+<span class="sd">        :rtype: bool</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_open_gop</span>
+
+    <span class="nd">@open_gop</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">open_gop</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">open_gop</span><span class="p">):</span>
+        <span class="c1"># type: (bool) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the open_gop of this H264VideoConfiguration.</span>
+
+<span class="sd">        Enable open-gop, allows referencing frames from a previous gop</span>
+
+<span class="sd">        :param open_gop: The open_gop of this H264VideoConfiguration.</span>
+<span class="sd">        :type: bool</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">open_gop</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">open_gop</span><span class="p">,</span> <span class="nb">bool</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `open_gop`, type has to be `bool`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_open_gop</span> <span class="o">=</span> <span class="n">open_gop</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">min_keyframe_interval</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; float</span>
+        <span class="sd">&quot;&quot;&quot;Gets the min_keyframe_interval of this H264VideoConfiguration.</span>
+
+<span class="sd">        Minimum interval in seconds between key frames</span>
+
+<span class="sd">        :return: The min_keyframe_interval of this H264VideoConfiguration.</span>
+<span class="sd">        :rtype: float</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_min_keyframe_interval</span>
+
+    <span class="nd">@min_keyframe_interval</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">min_keyframe_interval</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">min_keyframe_interval</span><span class="p">):</span>
+        <span class="c1"># type: (float) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the min_keyframe_interval of this H264VideoConfiguration.</span>
+
+<span class="sd">        Minimum interval in seconds between key frames</span>
+
+<span class="sd">        :param min_keyframe_interval: The min_keyframe_interval of this H264VideoConfiguration.</span>
+<span class="sd">        :type: float</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">min_keyframe_interval</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">min_keyframe_interval</span><span class="p">,</span> <span class="p">(</span><span class="nb">float</span><span class="p">,</span> <span class="nb">int</span><span class="p">)):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `min_keyframe_interval`, type has to be `float`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_min_keyframe_interval</span> <span class="o">=</span> <span class="n">min_keyframe_interval</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">max_keyframe_interval</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; float</span>
+        <span class="sd">&quot;&quot;&quot;Gets the max_keyframe_interval of this H264VideoConfiguration.</span>
+
+<span class="sd">        Maximum interval in seconds between key frames</span>
+
+<span class="sd">        :return: The max_keyframe_interval of this H264VideoConfiguration.</span>
+<span class="sd">        :rtype: float</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_max_keyframe_interval</span>
+
+    <span class="nd">@max_keyframe_interval</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">max_keyframe_interval</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">max_keyframe_interval</span><span class="p">):</span>
+        <span class="c1"># type: (float) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the max_keyframe_interval of this H264VideoConfiguration.</span>
+
+<span class="sd">        Maximum interval in seconds between key frames</span>
+
+<span class="sd">        :param max_keyframe_interval: The max_keyframe_interval of this H264VideoConfiguration.</span>
+<span class="sd">        :type: float</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">max_keyframe_interval</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">max_keyframe_interval</span><span class="p">,</span> <span class="p">(</span><span class="nb">float</span><span class="p">,</span> <span class="nb">int</span><span class="p">)):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `max_keyframe_interval`, type has to be `float`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_max_keyframe_interval</span> <span class="o">=</span> <span class="n">max_keyframe_interval</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">level</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; LevelH264</span>
+        <span class="sd">&quot;&quot;&quot;Gets the level of this H264VideoConfiguration.</span>
+
+<span class="sd">        If three-pass encoding is used and a level is set for the encoder, the bitrate for some segments may exceed the bitrate limit which is defined by the level.</span>
+
+<span class="sd">        :return: The level of this H264VideoConfiguration.</span>
+<span class="sd">        :rtype: LevelH264</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_level</span>
+
+    <span class="nd">@level</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">level</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">level</span><span class="p">):</span>
+        <span class="c1"># type: (LevelH264) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the level of this H264VideoConfiguration.</span>
+
+<span class="sd">        If three-pass encoding is used and a level is set for the encoder, the bitrate for some segments may exceed the bitrate limit which is defined by the level.</span>
+
+<span class="sd">        :param level: The level of this H264VideoConfiguration.</span>
+<span class="sd">        :type: LevelH264</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">level</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">level</span><span class="p">,</span> <span class="n">LevelH264</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `level`, type has to be `LevelH264`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_level</span> <span class="o">=</span> <span class="n">level</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">b_adaptive_strategy</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; BAdapt</span>
+        <span class="sd">&quot;&quot;&quot;Gets the b_adaptive_strategy of this H264VideoConfiguration.</span>
+
+
+<span class="sd">        :return: The b_adaptive_strategy of this H264VideoConfiguration.</span>
+<span class="sd">        :rtype: BAdapt</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_b_adaptive_strategy</span>
+
+    <span class="nd">@b_adaptive_strategy</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">b_adaptive_strategy</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">b_adaptive_strategy</span><span class="p">):</span>
+        <span class="c1"># type: (BAdapt) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the b_adaptive_strategy of this H264VideoConfiguration.</span>
+
+
+<span class="sd">        :param b_adaptive_strategy: The b_adaptive_strategy of this H264VideoConfiguration.</span>
+<span class="sd">        :type: BAdapt</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">b_adaptive_strategy</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">b_adaptive_strategy</span><span class="p">,</span> <span class="n">BAdapt</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `b_adaptive_strategy`, type has to be `BAdapt`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_b_adaptive_strategy</span> <span class="o">=</span> <span class="n">b_adaptive_strategy</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">motion_estimation_method</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; H264MotionEstimationMethod</span>
+        <span class="sd">&quot;&quot;&quot;Gets the motion_estimation_method of this H264VideoConfiguration.</span>
+
+
+<span class="sd">        :return: The motion_estimation_method of this H264VideoConfiguration.</span>
+<span class="sd">        :rtype: H264MotionEstimationMethod</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_motion_estimation_method</span>
+
+    <span class="nd">@motion_estimation_method</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">motion_estimation_method</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">motion_estimation_method</span><span class="p">):</span>
+        <span class="c1"># type: (H264MotionEstimationMethod) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the motion_estimation_method of this H264VideoConfiguration.</span>
+
+
+<span class="sd">        :param motion_estimation_method: The motion_estimation_method of this H264VideoConfiguration.</span>
+<span class="sd">        :type: H264MotionEstimationMethod</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">motion_estimation_method</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">motion_estimation_method</span><span class="p">,</span> <span class="n">H264MotionEstimationMethod</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `motion_estimation_method`, type has to be `H264MotionEstimationMethod`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_motion_estimation_method</span> <span class="o">=</span> <span class="n">motion_estimation_method</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">rc_lookahead</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; int</span>
+        <span class="sd">&quot;&quot;&quot;Gets the rc_lookahead of this H264VideoConfiguration.</span>
+
+<span class="sd">        Number of frames for frame-type decision lookahead</span>
+
+<span class="sd">        :return: The rc_lookahead of this H264VideoConfiguration.</span>
+<span class="sd">        :rtype: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_rc_lookahead</span>
+
+    <span class="nd">@rc_lookahead</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">rc_lookahead</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rc_lookahead</span><span class="p">):</span>
+        <span class="c1"># type: (int) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the rc_lookahead of this H264VideoConfiguration.</span>
+
+<span class="sd">        Number of frames for frame-type decision lookahead</span>
+
+<span class="sd">        :param rc_lookahead: The rc_lookahead of this H264VideoConfiguration.</span>
+<span class="sd">        :type: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">rc_lookahead</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">rc_lookahead</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">rc_lookahead</span> <span class="o">&gt;</span> <span class="mi">250</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid value for `rc_lookahead`, must be a value less than or equal to `250`&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">rc_lookahead</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">rc_lookahead</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid value for `rc_lookahead`, must be a value greater than or equal to `0`&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">rc_lookahead</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `rc_lookahead`, type has to be `int`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_rc_lookahead</span> <span class="o">=</span> <span class="n">rc_lookahead</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">sub_me</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; H264SubMe</span>
+        <span class="sd">&quot;&quot;&quot;Gets the sub_me of this H264VideoConfiguration.</span>
+
+<span class="sd">        Subpixel motion estimation and mode decision</span>
+
+<span class="sd">        :return: The sub_me of this H264VideoConfiguration.</span>
+<span class="sd">        :rtype: H264SubMe</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sub_me</span>
+
+    <span class="nd">@sub_me</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">sub_me</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sub_me</span><span class="p">):</span>
+        <span class="c1"># type: (H264SubMe) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the sub_me of this H264VideoConfiguration.</span>
+
+<span class="sd">        Subpixel motion estimation and mode decision</span>
+
+<span class="sd">        :param sub_me: The sub_me of this H264VideoConfiguration.</span>
+<span class="sd">        :type: H264SubMe</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">sub_me</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">sub_me</span><span class="p">,</span> <span class="n">H264SubMe</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `sub_me`, type has to be `H264SubMe`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_sub_me</span> <span class="o">=</span> <span class="n">sub_me</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">trellis</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; H264Trellis</span>
+        <span class="sd">&quot;&quot;&quot;Gets the trellis of this H264VideoConfiguration.</span>
+
+<span class="sd">        Enables or disables Trellis quantization. NOTE: This requires cabac</span>
+
+<span class="sd">        :return: The trellis of this H264VideoConfiguration.</span>
+<span class="sd">        :rtype: H264Trellis</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_trellis</span>
+
+    <span class="nd">@trellis</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">trellis</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">trellis</span><span class="p">):</span>
+        <span class="c1"># type: (H264Trellis) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the trellis of this H264VideoConfiguration.</span>
+
+<span class="sd">        Enables or disables Trellis quantization. NOTE: This requires cabac</span>
+
+<span class="sd">        :param trellis: The trellis of this H264VideoConfiguration.</span>
+<span class="sd">        :type: H264Trellis</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">trellis</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">trellis</span><span class="p">,</span> <span class="n">H264Trellis</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `trellis`, type has to be `H264Trellis`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_trellis</span> <span class="o">=</span> <span class="n">trellis</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">partitions</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; list[H264Partition]</span>
+        <span class="sd">&quot;&quot;&quot;Gets the partitions of this H264VideoConfiguration.</span>
+
+<span class="sd">        Partitions to consider. Analyzing more partition options improves quality at the cost of speed.</span>
+
+<span class="sd">        :return: The partitions of this H264VideoConfiguration.</span>
+<span class="sd">        :rtype: list[H264Partition]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_partitions</span>
+
+    <span class="nd">@partitions</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">partitions</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">partitions</span><span class="p">):</span>
+        <span class="c1"># type: (list) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the partitions of this H264VideoConfiguration.</span>
+
+<span class="sd">        Partitions to consider. Analyzing more partition options improves quality at the cost of speed.</span>
+
+<span class="sd">        :param partitions: The partitions of this H264VideoConfiguration.</span>
+<span class="sd">        :type: list[H264Partition]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">partitions</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">partitions</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `partitions`, type has to be `list[H264Partition]`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_partitions</span> <span class="o">=</span> <span class="n">partitions</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">slices</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; int</span>
+        <span class="sd">&quot;&quot;&quot;Gets the slices of this H264VideoConfiguration.</span>
+
+<span class="sd">        Number of slices per frame.</span>
+
+<span class="sd">        :return: The slices of this H264VideoConfiguration.</span>
+<span class="sd">        :rtype: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_slices</span>
+
+    <span class="nd">@slices</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">slices</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">slices</span><span class="p">):</span>
+        <span class="c1"># type: (int) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the slices of this H264VideoConfiguration.</span>
+
+<span class="sd">        Number of slices per frame.</span>
+
+<span class="sd">        :param slices: The slices of this H264VideoConfiguration.</span>
+<span class="sd">        :type: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">slices</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">slices</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">slices</span> <span class="o">&gt;</span> <span class="mi">45</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid value for `slices`, must be a value less than or equal to `45`&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">slices</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">slices</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid value for `slices`, must be a value greater than or equal to `1`&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">slices</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `slices`, type has to be `int`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_slices</span> <span class="o">=</span> <span class="n">slices</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">interlace_mode</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; H264InterlaceMode</span>
+        <span class="sd">&quot;&quot;&quot;Gets the interlace_mode of this H264VideoConfiguration.</span>
+
+<span class="sd">        Using TOP_FIELD_FIRST or BOTTOM_FIELD_FIRST will output interlaced video</span>
+
+<span class="sd">        :return: The interlace_mode of this H264VideoConfiguration.</span>
+<span class="sd">        :rtype: H264InterlaceMode</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_interlace_mode</span>
+
+    <span class="nd">@interlace_mode</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">interlace_mode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">interlace_mode</span><span class="p">):</span>
+        <span class="c1"># type: (H264InterlaceMode) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the interlace_mode of this H264VideoConfiguration.</span>
+
+<span class="sd">        Using TOP_FIELD_FIRST or BOTTOM_FIELD_FIRST will output interlaced video</span>
+
+<span class="sd">        :param interlace_mode: The interlace_mode of this H264VideoConfiguration.</span>
+<span class="sd">        :type: H264InterlaceMode</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">interlace_mode</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">interlace_mode</span><span class="p">,</span> <span class="n">H264InterlaceMode</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `interlace_mode`, type has to be `H264InterlaceMode`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_interlace_mode</span> <span class="o">=</span> <span class="n">interlace_mode</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">scene_cut_threshold</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; int</span>
+        <span class="sd">&quot;&quot;&quot;Gets the scene_cut_threshold of this H264VideoConfiguration.</span>
+
+<span class="sd">        Scene change sensitivity. The higher the value, the more likely an I-frame will be inserted. Set to 0 to disable it which is advised for scenarios where fixed GOP is required, e.g., adaptive streaming outputs like DASH, HLS and Smooth. Having this setting enabled can improve quality for progressive output with an increased internal chunk length (see `internalChunkLength` of muxings).</span>
+
+<span class="sd">        :return: The scene_cut_threshold of this H264VideoConfiguration.</span>
+<span class="sd">        :rtype: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_scene_cut_threshold</span>
+
+    <span class="nd">@scene_cut_threshold</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">scene_cut_threshold</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">scene_cut_threshold</span><span class="p">):</span>
+        <span class="c1"># type: (int) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the scene_cut_threshold of this H264VideoConfiguration.</span>
+
+<span class="sd">        Scene change sensitivity. The higher the value, the more likely an I-frame will be inserted. Set to 0 to disable it which is advised for scenarios where fixed GOP is required, e.g., adaptive streaming outputs like DASH, HLS and Smooth. Having this setting enabled can improve quality for progressive output with an increased internal chunk length (see `internalChunkLength` of muxings).</span>
+
+<span class="sd">        :param scene_cut_threshold: The scene_cut_threshold of this H264VideoConfiguration.</span>
+<span class="sd">        :type: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">scene_cut_threshold</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">scene_cut_threshold</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">scene_cut_threshold</span> <span class="o">&gt;</span> <span class="mi">100</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid value for `scene_cut_threshold`, must be a value less than or equal to `100`&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">scene_cut_threshold</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">scene_cut_threshold</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid value for `scene_cut_threshold`, must be a value greater than or equal to `0`&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">scene_cut_threshold</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `scene_cut_threshold`, type has to be `int`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_scene_cut_threshold</span> <span class="o">=</span> <span class="n">scene_cut_threshold</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">nal_hrd</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; H264NalHrd</span>
+        <span class="sd">&quot;&quot;&quot;Gets the nal_hrd of this H264VideoConfiguration.</span>
+
+<span class="sd">        Signal hypothetical reference decoder (HRD) information (requires bufsize to be set)</span>
+
+<span class="sd">        :return: The nal_hrd of this H264VideoConfiguration.</span>
+<span class="sd">        :rtype: H264NalHrd</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_nal_hrd</span>
+
+    <span class="nd">@nal_hrd</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">nal_hrd</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nal_hrd</span><span class="p">):</span>
+        <span class="c1"># type: (H264NalHrd) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the nal_hrd of this H264VideoConfiguration.</span>
+
+<span class="sd">        Signal hypothetical reference decoder (HRD) information (requires bufsize to be set)</span>
+
+<span class="sd">        :param nal_hrd: The nal_hrd of this H264VideoConfiguration.</span>
+<span class="sd">        :type: H264NalHrd</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">nal_hrd</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">nal_hrd</span><span class="p">,</span> <span class="n">H264NalHrd</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `nal_hrd`, type has to be `H264NalHrd`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_nal_hrd</span> <span class="o">=</span> <span class="n">nal_hrd</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">b_pyramid</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; H264BPyramid</span>
+        <span class="sd">&quot;&quot;&quot;Gets the b_pyramid of this H264VideoConfiguration.</span>
+
+<span class="sd">        Keep some B-frames as references</span>
+
+<span class="sd">        :return: The b_pyramid of this H264VideoConfiguration.</span>
+<span class="sd">        :rtype: H264BPyramid</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_b_pyramid</span>
+
+    <span class="nd">@b_pyramid</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">b_pyramid</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">b_pyramid</span><span class="p">):</span>
+        <span class="c1"># type: (H264BPyramid) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the b_pyramid of this H264VideoConfiguration.</span>
+
+<span class="sd">        Keep some B-frames as references</span>
+
+<span class="sd">        :param b_pyramid: The b_pyramid of this H264VideoConfiguration.</span>
+<span class="sd">        :type: H264BPyramid</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">b_pyramid</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">b_pyramid</span><span class="p">,</span> <span class="n">H264BPyramid</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `b_pyramid`, type has to be `H264BPyramid`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_b_pyramid</span> <span class="o">=</span> <span class="n">b_pyramid</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">cea608708_subtitle_config</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; Cea608708SubtitleConfiguration</span>
+        <span class="sd">&quot;&quot;&quot;Gets the cea608708_subtitle_config of this H264VideoConfiguration.</span>
+
+<span class="sd">        Defines whether CEA 608/708 subtitles are copied from the input video stream</span>
+
+<span class="sd">        :return: The cea608708_subtitle_config of this H264VideoConfiguration.</span>
+<span class="sd">        :rtype: Cea608708SubtitleConfiguration</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cea608708_subtitle_config</span>
+
+    <span class="nd">@cea608708_subtitle_config</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">cea608708_subtitle_config</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cea608708_subtitle_config</span><span class="p">):</span>
+        <span class="c1"># type: (Cea608708SubtitleConfiguration) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the cea608708_subtitle_config of this H264VideoConfiguration.</span>
+
+<span class="sd">        Defines whether CEA 608/708 subtitles are copied from the input video stream</span>
+
+<span class="sd">        :param cea608708_subtitle_config: The cea608708_subtitle_config of this H264VideoConfiguration.</span>
+<span class="sd">        :type: Cea608708SubtitleConfiguration</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">cea608708_subtitle_config</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">cea608708_subtitle_config</span><span class="p">,</span> <span class="n">Cea608708SubtitleConfiguration</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `cea608708_subtitle_config`, type has to be `Cea608708SubtitleConfiguration`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_cea608708_subtitle_config</span> <span class="o">=</span> <span class="n">cea608708_subtitle_config</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">deblock_alpha</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; int</span>
+        <span class="sd">&quot;&quot;&quot;Gets the deblock_alpha of this H264VideoConfiguration.</span>
+
+<span class="sd">        Strength of the in-loop deblocking filter. Higher values deblock more effectively but also soften the image</span>
+
+<span class="sd">        :return: The deblock_alpha of this H264VideoConfiguration.</span>
+<span class="sd">        :rtype: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deblock_alpha</span>
+
+    <span class="nd">@deblock_alpha</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">deblock_alpha</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">deblock_alpha</span><span class="p">):</span>
+        <span class="c1"># type: (int) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the deblock_alpha of this H264VideoConfiguration.</span>
+
+<span class="sd">        Strength of the in-loop deblocking filter. Higher values deblock more effectively but also soften the image</span>
+
+<span class="sd">        :param deblock_alpha: The deblock_alpha of this H264VideoConfiguration.</span>
+<span class="sd">        :type: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">deblock_alpha</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">deblock_alpha</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `deblock_alpha`, type has to be `int`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_deblock_alpha</span> <span class="o">=</span> <span class="n">deblock_alpha</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">deblock_beta</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; int</span>
+        <span class="sd">&quot;&quot;&quot;Gets the deblock_beta of this H264VideoConfiguration.</span>
+
+<span class="sd">        Threshold of the in-loop deblocking filter. Higher values apply deblocking stronger on non flat blocks, lower values on flat blocks</span>
+
+<span class="sd">        :return: The deblock_beta of this H264VideoConfiguration.</span>
+<span class="sd">        :rtype: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deblock_beta</span>
+
+    <span class="nd">@deblock_beta</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">deblock_beta</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">deblock_beta</span><span class="p">):</span>
+        <span class="c1"># type: (int) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the deblock_beta of this H264VideoConfiguration.</span>
+
+<span class="sd">        Threshold of the in-loop deblocking filter. Higher values apply deblocking stronger on non flat blocks, lower values on flat blocks</span>
+
+<span class="sd">        :param deblock_beta: The deblock_beta of this H264VideoConfiguration.</span>
+<span class="sd">        :type: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">deblock_beta</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">deblock_beta</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `deblock_beta`, type has to be `int`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_deblock_beta</span> <span class="o">=</span> <span class="n">deblock_beta</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">adaptive_quantization_mode</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; AdaptiveQuantMode</span>
+        <span class="sd">&quot;&quot;&quot;Gets the adaptive_quantization_mode of this H264VideoConfiguration.</span>
+
+<span class="sd">        Controls the adaptive quantization algorithm</span>
+
+<span class="sd">        :return: The adaptive_quantization_mode of this H264VideoConfiguration.</span>
+<span class="sd">        :rtype: AdaptiveQuantMode</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_adaptive_quantization_mode</span>
+
+    <span class="nd">@adaptive_quantization_mode</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">adaptive_quantization_mode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">adaptive_quantization_mode</span><span class="p">):</span>
+        <span class="c1"># type: (AdaptiveQuantMode) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the adaptive_quantization_mode of this H264VideoConfiguration.</span>
+
+<span class="sd">        Controls the adaptive quantization algorithm</span>
+
+<span class="sd">        :param adaptive_quantization_mode: The adaptive_quantization_mode of this H264VideoConfiguration.</span>
+<span class="sd">        :type: AdaptiveQuantMode</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">adaptive_quantization_mode</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">adaptive_quantization_mode</span><span class="p">,</span> <span class="n">AdaptiveQuantMode</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `adaptive_quantization_mode`, type has to be `AdaptiveQuantMode`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_adaptive_quantization_mode</span> <span class="o">=</span> <span class="n">adaptive_quantization_mode</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">adaptive_quantization_strength</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; float</span>
+        <span class="sd">&quot;&quot;&quot;Gets the adaptive_quantization_strength of this H264VideoConfiguration.</span>
+
+<span class="sd">        Values greater than 1 reduce blocking and blurring in flat and textured areas. Values less than 1 reduces ringing artifacts at the cost of more banding artifacts. Negative values are not allowed</span>
+
+<span class="sd">        :return: The adaptive_quantization_strength of this H264VideoConfiguration.</span>
+<span class="sd">        :rtype: float</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_adaptive_quantization_strength</span>
+
+    <span class="nd">@adaptive_quantization_strength</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">adaptive_quantization_strength</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">adaptive_quantization_strength</span><span class="p">):</span>
+        <span class="c1"># type: (float) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the adaptive_quantization_strength of this H264VideoConfiguration.</span>
+
+<span class="sd">        Values greater than 1 reduce blocking and blurring in flat and textured areas. Values less than 1 reduces ringing artifacts at the cost of more banding artifacts. Negative values are not allowed</span>
+
+<span class="sd">        :param adaptive_quantization_strength: The adaptive_quantization_strength of this H264VideoConfiguration.</span>
+<span class="sd">        :type: float</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">adaptive_quantization_strength</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">adaptive_quantization_strength</span><span class="p">,</span> <span class="p">(</span><span class="nb">float</span><span class="p">,</span> <span class="nb">int</span><span class="p">)):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `adaptive_quantization_strength`, type has to be `float`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_adaptive_quantization_strength</span> <span class="o">=</span> <span class="n">adaptive_quantization_strength</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">mixed_references</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; bool</span>
+        <span class="sd">&quot;&quot;&quot;Gets the mixed_references of this H264VideoConfiguration.</span>
+
+<span class="sd">        Allow references on a per partition basis, rather than per-macroblock basis</span>
+
+<span class="sd">        :return: The mixed_references of this H264VideoConfiguration.</span>
+<span class="sd">        :rtype: bool</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mixed_references</span>
+
+    <span class="nd">@mixed_references</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">mixed_references</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mixed_references</span><span class="p">):</span>
+        <span class="c1"># type: (bool) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the mixed_references of this H264VideoConfiguration.</span>
+
+<span class="sd">        Allow references on a per partition basis, rather than per-macroblock basis</span>
+
+<span class="sd">        :param mixed_references: The mixed_references of this H264VideoConfiguration.</span>
+<span class="sd">        :type: bool</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">mixed_references</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">mixed_references</span><span class="p">,</span> <span class="nb">bool</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `mixed_references`, type has to be `bool`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_mixed_references</span> <span class="o">=</span> <span class="n">mixed_references</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">adaptive_spatial_transform</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; bool</span>
+        <span class="sd">&quot;&quot;&quot;Gets the adaptive_spatial_transform of this H264VideoConfiguration.</span>
+
+<span class="sd">        Enables adaptive spatial transform (high profile 8x8 transform)</span>
+
+<span class="sd">        :return: The adaptive_spatial_transform of this H264VideoConfiguration.</span>
+<span class="sd">        :rtype: bool</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_adaptive_spatial_transform</span>
+
+    <span class="nd">@adaptive_spatial_transform</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">adaptive_spatial_transform</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">adaptive_spatial_transform</span><span class="p">):</span>
+        <span class="c1"># type: (bool) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the adaptive_spatial_transform of this H264VideoConfiguration.</span>
+
+<span class="sd">        Enables adaptive spatial transform (high profile 8x8 transform)</span>
+
+<span class="sd">        :param adaptive_spatial_transform: The adaptive_spatial_transform of this H264VideoConfiguration.</span>
+<span class="sd">        :type: bool</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">adaptive_spatial_transform</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">adaptive_spatial_transform</span><span class="p">,</span> <span class="nb">bool</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `adaptive_spatial_transform`, type has to be `bool`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_adaptive_spatial_transform</span> <span class="o">=</span> <span class="n">adaptive_spatial_transform</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">fast_skip_detection_p_frames</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; bool</span>
+        <span class="sd">&quot;&quot;&quot;Gets the fast_skip_detection_p_frames of this H264VideoConfiguration.</span>
+
+<span class="sd">        Enables fast skip detection on P-frames. Disabling this very slightly increases quality but at a large speed loss</span>
+
+<span class="sd">        :return: The fast_skip_detection_p_frames of this H264VideoConfiguration.</span>
+<span class="sd">        :rtype: bool</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_fast_skip_detection_p_frames</span>
+
+    <span class="nd">@fast_skip_detection_p_frames</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">fast_skip_detection_p_frames</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fast_skip_detection_p_frames</span><span class="p">):</span>
+        <span class="c1"># type: (bool) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the fast_skip_detection_p_frames of this H264VideoConfiguration.</span>
+
+<span class="sd">        Enables fast skip detection on P-frames. Disabling this very slightly increases quality but at a large speed loss</span>
+
+<span class="sd">        :param fast_skip_detection_p_frames: The fast_skip_detection_p_frames of this H264VideoConfiguration.</span>
+<span class="sd">        :type: bool</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">fast_skip_detection_p_frames</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">fast_skip_detection_p_frames</span><span class="p">,</span> <span class="nb">bool</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `fast_skip_detection_p_frames`, type has to be `bool`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_fast_skip_detection_p_frames</span> <span class="o">=</span> <span class="n">fast_skip_detection_p_frames</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">weighted_prediction_b_frames</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; bool</span>
+        <span class="sd">&quot;&quot;&quot;Gets the weighted_prediction_b_frames of this H264VideoConfiguration.</span>
+
+<span class="sd">        Enable open-gop, allows referencing frames from a previous gop</span>
+
+<span class="sd">        :return: The weighted_prediction_b_frames of this H264VideoConfiguration.</span>
+<span class="sd">        :rtype: bool</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_weighted_prediction_b_frames</span>
+
+    <span class="nd">@weighted_prediction_b_frames</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">weighted_prediction_b_frames</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">weighted_prediction_b_frames</span><span class="p">):</span>
+        <span class="c1"># type: (bool) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the weighted_prediction_b_frames of this H264VideoConfiguration.</span>
+
+<span class="sd">        Enable open-gop, allows referencing frames from a previous gop</span>
+
+<span class="sd">        :param weighted_prediction_b_frames: The weighted_prediction_b_frames of this H264VideoConfiguration.</span>
+<span class="sd">        :type: bool</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">weighted_prediction_b_frames</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">weighted_prediction_b_frames</span><span class="p">,</span> <span class="nb">bool</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `weighted_prediction_b_frames`, type has to be `bool`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_weighted_prediction_b_frames</span> <span class="o">=</span> <span class="n">weighted_prediction_b_frames</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">weighted_prediction_p_frames</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; WeightedPredictionPFrames</span>
+        <span class="sd">&quot;&quot;&quot;Gets the weighted_prediction_p_frames of this H264VideoConfiguration.</span>
+
+<span class="sd">        Defines the mode for weighted prediction for P-frames</span>
+
+<span class="sd">        :return: The weighted_prediction_p_frames of this H264VideoConfiguration.</span>
+<span class="sd">        :rtype: WeightedPredictionPFrames</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_weighted_prediction_p_frames</span>
+
+    <span class="nd">@weighted_prediction_p_frames</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">weighted_prediction_p_frames</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">weighted_prediction_p_frames</span><span class="p">):</span>
+        <span class="c1"># type: (WeightedPredictionPFrames) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the weighted_prediction_p_frames of this H264VideoConfiguration.</span>
+
+<span class="sd">        Defines the mode for weighted prediction for P-frames</span>
+
+<span class="sd">        :param weighted_prediction_p_frames: The weighted_prediction_p_frames of this H264VideoConfiguration.</span>
+<span class="sd">        :type: WeightedPredictionPFrames</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">weighted_prediction_p_frames</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">weighted_prediction_p_frames</span><span class="p">,</span> <span class="n">WeightedPredictionPFrames</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `weighted_prediction_p_frames`, type has to be `WeightedPredictionPFrames`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_weighted_prediction_p_frames</span> <span class="o">=</span> <span class="n">weighted_prediction_p_frames</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">macroblock_tree_ratecontrol</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; bool</span>
+        <span class="sd">&quot;&quot;&quot;Gets the macroblock_tree_ratecontrol of this H264VideoConfiguration.</span>
+
+<span class="sd">        Enable macroblock tree ratecontrol. Macroblock tree rate control tracks how often blocks of the frame are used for prediciting future frames</span>
+
+<span class="sd">        :return: The macroblock_tree_ratecontrol of this H264VideoConfiguration.</span>
+<span class="sd">        :rtype: bool</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_macroblock_tree_ratecontrol</span>
+
+    <span class="nd">@macroblock_tree_ratecontrol</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">macroblock_tree_ratecontrol</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">macroblock_tree_ratecontrol</span><span class="p">):</span>
+        <span class="c1"># type: (bool) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the macroblock_tree_ratecontrol of this H264VideoConfiguration.</span>
+
+<span class="sd">        Enable macroblock tree ratecontrol. Macroblock tree rate control tracks how often blocks of the frame are used for prediciting future frames</span>
+
+<span class="sd">        :param macroblock_tree_ratecontrol: The macroblock_tree_ratecontrol of this H264VideoConfiguration.</span>
+<span class="sd">        :type: bool</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">macroblock_tree_ratecontrol</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">macroblock_tree_ratecontrol</span><span class="p">,</span> <span class="nb">bool</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `macroblock_tree_ratecontrol`, type has to be `bool`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_macroblock_tree_ratecontrol</span> <span class="o">=</span> <span class="n">macroblock_tree_ratecontrol</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">quantizer_curve_compression</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; float</span>
+        <span class="sd">&quot;&quot;&quot;Gets the quantizer_curve_compression of this H264VideoConfiguration.</span>
+
+<span class="sd">        Ratio between constant bitrate (0.0) and constant quantizer (1.0). Valid range 0.0 - 1.0</span>
+
+<span class="sd">        :return: The quantizer_curve_compression of this H264VideoConfiguration.</span>
+<span class="sd">        :rtype: float</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_quantizer_curve_compression</span>
+
+    <span class="nd">@quantizer_curve_compression</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">quantizer_curve_compression</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">quantizer_curve_compression</span><span class="p">):</span>
+        <span class="c1"># type: (float) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the quantizer_curve_compression of this H264VideoConfiguration.</span>
+
+<span class="sd">        Ratio between constant bitrate (0.0) and constant quantizer (1.0). Valid range 0.0 - 1.0</span>
+
+<span class="sd">        :param quantizer_curve_compression: The quantizer_curve_compression of this H264VideoConfiguration.</span>
+<span class="sd">        :type: float</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">quantizer_curve_compression</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">quantizer_curve_compression</span><span class="p">,</span> <span class="p">(</span><span class="nb">float</span><span class="p">,</span> <span class="nb">int</span><span class="p">)):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `quantizer_curve_compression`, type has to be `float`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_quantizer_curve_compression</span> <span class="o">=</span> <span class="n">quantizer_curve_compression</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">psy_rate_distortion_optimization</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; float</span>
+        <span class="sd">&quot;&quot;&quot;Gets the psy_rate_distortion_optimization of this H264VideoConfiguration.</span>
+
+<span class="sd">        Psychovisual Rate Distortion retains fine details like film grain at the expense of more blocking artifacts. Higher values make the video appear sharper and more detailed but with a higher risk of blocking artifacts. Needs to have subMe with RD_IP, RD_ALL, RD_REF_IP or RD_REF_ALL</span>
+
+<span class="sd">        :return: The psy_rate_distortion_optimization of this H264VideoConfiguration.</span>
+<span class="sd">        :rtype: float</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_psy_rate_distortion_optimization</span>
+
+    <span class="nd">@psy_rate_distortion_optimization</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">psy_rate_distortion_optimization</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">psy_rate_distortion_optimization</span><span class="p">):</span>
+        <span class="c1"># type: (float) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the psy_rate_distortion_optimization of this H264VideoConfiguration.</span>
+
+<span class="sd">        Psychovisual Rate Distortion retains fine details like film grain at the expense of more blocking artifacts. Higher values make the video appear sharper and more detailed but with a higher risk of blocking artifacts. Needs to have subMe with RD_IP, RD_ALL, RD_REF_IP or RD_REF_ALL</span>
+
+<span class="sd">        :param psy_rate_distortion_optimization: The psy_rate_distortion_optimization of this H264VideoConfiguration.</span>
+<span class="sd">        :type: float</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">psy_rate_distortion_optimization</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">psy_rate_distortion_optimization</span><span class="p">,</span> <span class="p">(</span><span class="nb">float</span><span class="p">,</span> <span class="nb">int</span><span class="p">)):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `psy_rate_distortion_optimization`, type has to be `float`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_psy_rate_distortion_optimization</span> <span class="o">=</span> <span class="n">psy_rate_distortion_optimization</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">psy_trellis</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; float</span>
+        <span class="sd">&quot;&quot;&quot;Gets the psy_trellis of this H264VideoConfiguration.</span>
+
+<span class="sd">        Higher values will improve sharpness and detail retention but might come at costs of artifacts. Needs to have trellis enabled</span>
+
+<span class="sd">        :return: The psy_trellis of this H264VideoConfiguration.</span>
+<span class="sd">        :rtype: float</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_psy_trellis</span>
+
+    <span class="nd">@psy_trellis</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">psy_trellis</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">psy_trellis</span><span class="p">):</span>
+        <span class="c1"># type: (float) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the psy_trellis of this H264VideoConfiguration.</span>
+
+<span class="sd">        Higher values will improve sharpness and detail retention but might come at costs of artifacts. Needs to have trellis enabled</span>
+
+<span class="sd">        :param psy_trellis: The psy_trellis of this H264VideoConfiguration.</span>
+<span class="sd">        :type: float</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">psy_trellis</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">psy_trellis</span><span class="p">,</span> <span class="p">(</span><span class="nb">float</span><span class="p">,</span> <span class="nb">int</span><span class="p">)):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `psy_trellis`, type has to be `float`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_psy_trellis</span> <span class="o">=</span> <span class="n">psy_trellis</span>
+
+<div class="viewcode-block" id="H264VideoConfiguration.to_dict"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.h264_video_configuration.H264VideoConfiguration.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="p">{}</span>
+
+        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="nb">super</span><span class="p">(</span><span class="n">H264VideoConfiguration</span><span class="p">,</span> <span class="bp">self</span><span class="p">),</span> <span class="s2">&quot;to_dict&quot;</span><span class="p">):</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="nb">super</span><span class="p">(</span><span class="n">H264VideoConfiguration</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">attr</span><span class="p">,</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">six</span><span class="o">.</span><span class="n">iteritems</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">openapi_types</span><span class="p">):</span>
+            <span class="n">value</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">attr</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="k">continue</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+                <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="k">continue</span>
+                <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="p">[</span><span class="n">y</span><span class="o">.</span><span class="n">value</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">Enum</span><span class="p">)</span> <span class="k">else</span> <span class="n">y</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span> <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="s2">&quot;to_dict&quot;</span><span class="p">)</span> <span class="k">else</span> <span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">value</span><span class="p">]]</span>
+            <span class="k">elif</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="s2">&quot;to_dict&quot;</span><span class="p">):</span>
+                <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="n">value</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span>
+            <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">Enum</span><span class="p">):</span>
+                <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="n">value</span><span class="o">.</span><span class="n">value</span>
+            <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+                <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="p">(</span><span class="n">v</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span> <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="s2">&quot;to_dict&quot;</span><span class="p">)</span> <span class="k">else</span> <span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span> <span class="ow">in</span> <span class="n">value</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="n">value</span>
+
+        <span class="k">return</span> <span class="n">result</span></div>
+
+<div class="viewcode-block" id="H264VideoConfiguration.to_str"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.h264_video_configuration.H264VideoConfiguration.to_str">[docs]</a>    <span class="k">def</span> <span class="nf">to_str</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns the string representation of the model&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">pprint</span><span class="o">.</span><span class="n">pformat</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">to_dict</span><span class="p">())</span></div>
+
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;For `print` and `pprint`&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">to_str</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns true if both objects are equal&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">H264VideoConfiguration</span><span class="p">):</span>
+            <span class="k">return</span> <span class="kc">False</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="vm">__dict__</span>
+
+    <span class="k">def</span> <span class="fm">__ne__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns true if both objects are not equal&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="ow">not</span> <span class="bp">self</span> <span class="o">==</span> <span class="n">other</span></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Bitmovin Inc
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

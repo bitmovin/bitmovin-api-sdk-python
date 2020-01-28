@@ -1,0 +1,39 @@
+bitmovin\_api\_sdk.encoding.manifests.dash package
+==================================================
+
+Subpackages
+-----------
+
+.. toctree::
+
+   bitmovin_api_sdk.encoding.manifests.dash.customdata
+   bitmovin_api_sdk.encoding.manifests.dash.default
+   bitmovin_api_sdk.encoding.manifests.dash.periods
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.encoding.manifests.dash.dash\_api module
+-----------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.manifests.dash.dash_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.encoding.manifests.dash.dash\_manifest\_list\_query\_params module
+-------------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.manifests.dash.dash_manifest_list_query_params
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.encoding.manifests.dash
+   :members:
+   :undoc-members:
+   :show-inheritance:

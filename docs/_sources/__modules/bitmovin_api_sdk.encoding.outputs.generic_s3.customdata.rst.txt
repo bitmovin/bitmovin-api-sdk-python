@@ -1,0 +1,22 @@
+bitmovin\_api\_sdk.encoding.outputs.generic\_s3.customdata package
+==================================================================
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.encoding.outputs.generic\_s3.customdata.customdata\_api module
+---------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.outputs.generic_s3.customdata.customdata_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.encoding.outputs.generic_s3.customdata
+   :members:
+   :undoc-members:
+   :show-inheritance:

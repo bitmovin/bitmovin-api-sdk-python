@@ -1,0 +1,29 @@
+bitmovin\_api\_sdk.analytics.licenses package
+=============================================
+
+Subpackages
+-----------
+
+.. toctree::
+
+   bitmovin_api_sdk.analytics.licenses.domains
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.analytics.licenses.licenses\_api module
+----------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.analytics.licenses.licenses_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.analytics.licenses
+   :members:
+   :undoc-members:
+   :show-inheritance:

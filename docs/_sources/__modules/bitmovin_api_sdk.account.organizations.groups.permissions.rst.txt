@@ -1,0 +1,22 @@
+bitmovin\_api\_sdk.account.organizations.groups.permissions package
+===================================================================
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.account.organizations.groups.permissions.permissions\_api module
+-----------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.account.organizations.groups.permissions.permissions_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.account.organizations.groups.permissions
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,33 @@
+bitmovin\_api\_sdk.encoding.manifests.dash.periods.adaptationsets.representations package
+=========================================================================================
+
+Subpackages
+-----------
+
+.. toctree::
+
+   bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.cmaf
+   bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.fmp4
+   bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.mp4
+   bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.vtt
+   bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.webm
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.encoding.manifests.dash.periods.adaptationsets.representations.representations\_api module
+-------------------------------------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.representations_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,37 @@
+bitmovin\_api\_sdk.encoding.configurations.video.h264 package
+=============================================================
+
+Subpackages
+-----------
+
+.. toctree::
+
+   bitmovin_api_sdk.encoding.configurations.video.h264.customdata
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.encoding.configurations.video.h264.h264\_api module
+----------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.configurations.video.h264.h264_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.encoding.configurations.video.h264.h264\_video\_configuration\_list\_query\_params module
+------------------------------------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.configurations.video.h264.h264_video_configuration_list_query_params
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.encoding.configurations.video.h264
+   :members:
+   :undoc-members:
+   :show-inheritance:

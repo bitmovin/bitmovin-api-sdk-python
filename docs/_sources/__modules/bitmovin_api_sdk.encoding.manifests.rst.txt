@@ -1,0 +1,40 @@
+bitmovin\_api\_sdk.encoding.manifests package
+=============================================
+
+Subpackages
+-----------
+
+.. toctree::
+
+   bitmovin_api_sdk.encoding.manifests.dash
+   bitmovin_api_sdk.encoding.manifests.hls
+   bitmovin_api_sdk.encoding.manifests.smooth
+   bitmovin_api_sdk.encoding.manifests.type
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.encoding.manifests.manifest\_list\_query\_params module
+--------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.manifests.manifest_list_query_params
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.encoding.manifests.manifests\_api module
+-----------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.manifests.manifests_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.encoding.manifests
+   :members:
+   :undoc-members:
+   :show-inheritance:

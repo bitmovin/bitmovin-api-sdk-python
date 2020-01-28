@@ -1,0 +1,37 @@
+bitmovin\_api\_sdk.encoding.configurations.audio.vorbis package
+===============================================================
+
+Subpackages
+-----------
+
+.. toctree::
+
+   bitmovin_api_sdk.encoding.configurations.audio.vorbis.customdata
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.encoding.configurations.audio.vorbis.vorbis\_api module
+--------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.configurations.audio.vorbis.vorbis_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.encoding.configurations.audio.vorbis.vorbis\_audio\_configuration\_list\_query\_params module
+----------------------------------------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.configurations.audio.vorbis.vorbis_audio_configuration_list_query_params
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.encoding.configurations.audio.vorbis
+   :members:
+   :undoc-members:
+   :show-inheritance:

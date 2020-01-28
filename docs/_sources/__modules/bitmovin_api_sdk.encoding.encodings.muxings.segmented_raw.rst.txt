@@ -1,0 +1,37 @@
+bitmovin\_api\_sdk.encoding.encodings.muxings.segmented\_raw package
+====================================================================
+
+Subpackages
+-----------
+
+.. toctree::
+
+   bitmovin_api_sdk.encoding.encodings.muxings.segmented_raw.customdata
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.encoding.encodings.muxings.segmented\_raw.segmented\_raw\_api module
+---------------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.encodings.muxings.segmented_raw.segmented_raw_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.encoding.encodings.muxings.segmented\_raw.segmented\_raw\_muxing\_list\_query\_params module
+---------------------------------------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.encodings.muxings.segmented_raw.segmented_raw_muxing_list_query_params
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.encoding.encodings.muxings.segmented_raw
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,31 @@
+bitmovin\_api\_sdk.analytics.metrics package
+============================================
+
+Subpackages
+-----------
+
+.. toctree::
+
+   bitmovin_api_sdk.analytics.metrics.avg_concurrentviewers
+   bitmovin_api_sdk.analytics.metrics.avg_dropped_frames
+   bitmovin_api_sdk.analytics.metrics.max_concurrentviewers
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.analytics.metrics.metrics\_api module
+--------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.analytics.metrics.metrics_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.analytics.metrics
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,22 @@
+bitmovin\_api\_sdk.encoding.configurations.audio.he\_aac\_v2.customdata package
+===============================================================================
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.encoding.configurations.audio.he\_aac\_v2.customdata.customdata\_api module
+----------------------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.configurations.audio.he_aac_v2.customdata.customdata_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.encoding.configurations.audio.he_aac_v2.customdata
+   :members:
+   :undoc-members:
+   :show-inheritance:

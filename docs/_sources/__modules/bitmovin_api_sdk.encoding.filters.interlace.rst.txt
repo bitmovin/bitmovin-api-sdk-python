@@ -1,0 +1,37 @@
+bitmovin\_api\_sdk.encoding.filters.interlace package
+=====================================================
+
+Subpackages
+-----------
+
+.. toctree::
+
+   bitmovin_api_sdk.encoding.filters.interlace.customdata
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.encoding.filters.interlace.interlace\_api module
+-------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.filters.interlace.interlace_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.encoding.filters.interlace.interlace\_filter\_list\_query\_params module
+-------------------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.filters.interlace.interlace_filter_list_query_params
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.encoding.filters.interlace
+   :members:
+   :undoc-members:
+   :show-inheritance:

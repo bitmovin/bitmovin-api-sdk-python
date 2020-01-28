@@ -1,0 +1,36 @@
+bitmovin\_api\_sdk.analytics package
+====================================
+
+Subpackages
+-----------
+
+.. toctree::
+
+   bitmovin_api_sdk.analytics.ads
+   bitmovin_api_sdk.analytics.exports
+   bitmovin_api_sdk.analytics.impressions
+   bitmovin_api_sdk.analytics.insights
+   bitmovin_api_sdk.analytics.licenses
+   bitmovin_api_sdk.analytics.metrics
+   bitmovin_api_sdk.analytics.outputs
+   bitmovin_api_sdk.analytics.queries
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.analytics.analytics\_api module
+--------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.analytics.analytics_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.analytics
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,30 @@
+bitmovin\_api\_sdk.encoding.infrastructure.aws.regions package
+==============================================================
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.encoding.infrastructure.aws.regions.aws\_account\_region\_settings\_list\_query\_params module
+-----------------------------------------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.infrastructure.aws.regions.aws_account_region_settings_list_query_params
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.encoding.infrastructure.aws.regions.regions\_api module
+--------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.infrastructure.aws.regions.regions_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.encoding.infrastructure.aws.regions
+   :members:
+   :undoc-members:
+   :show-inheritance:

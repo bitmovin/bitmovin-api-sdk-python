@@ -1,0 +1,29 @@
+bitmovin\_api\_sdk.encoding.configurations.audio.mp2 package
+============================================================
+
+Subpackages
+-----------
+
+.. toctree::
+
+   bitmovin_api_sdk.encoding.configurations.audio.mp2.customdata
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.encoding.configurations.audio.mp2.mp2\_api module
+--------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.configurations.audio.mp2.mp2_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.encoding.configurations.audio.mp2
+   :members:
+   :undoc-members:
+   :show-inheritance:

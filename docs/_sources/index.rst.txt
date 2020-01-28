@@ -1,0 +1,35 @@
+Bitmovin Python API SDK Documentation
+=====================================
+
+Python API SDK which enables you to seamlessly integrate the Bitmovin API into your projects.
+
+Packages
+--------
+
+.. toctree::
+  :maxdepth: 1
+
+  __modules/modules
+  __modules/bitmovin_api_sdk.encoding
+  __modules/bitmovin_api_sdk.analytics
+  __modules/bitmovin_api_sdk.player
+  __modules/bitmovin_api_sdk.account
+  __modules/bitmovin_api_sdk.notifications
+  __modules/bitmovin_api_sdk.general
+  __modules/bitmovin_api_sdk.common
+  __modules/bitmovin_api_sdk.models
+
+
+Examples
+--------
+
+Examples can be found  `here
+<https://github.com/bitmovin/bitmovin-api-sdk-examples/>`_.
+
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`

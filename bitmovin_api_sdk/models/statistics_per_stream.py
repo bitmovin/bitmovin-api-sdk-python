@@ -4,6 +4,7 @@ from enum import Enum
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
 from bitmovin_api_sdk.models.codec_config_type import CodecConfigType
+from bitmovin_api_sdk.models.dolby_vision_per_stream_mode import DolbyVisionPerStreamMode
 from bitmovin_api_sdk.models.encoding_mode import EncodingMode
 from bitmovin_api_sdk.models.psnr_per_stream_mode import PsnrPerStreamMode
 from bitmovin_api_sdk.models.statistics_per_title_stream import StatisticsPerTitleStream
@@ -32,8 +33,10 @@ class StatisticsPerStream(object):
                  per_title_result_stream=None,
                  per_title_multiplicator=None,
                  psnr_mode=None,
-                 psnr_multiplicator=None):
-        # type: (string_types, string_types, float, int, float, float, int, int, float, int, CodecConfigType, StatisticsResolution, EncodingMode, float, StatisticsPerTitleStream, float, PsnrPerStreamMode, float) -> None
+                 psnr_multiplicator=None,
+                 dolby_vision_mode=None,
+                 dolby_vision_multiplicator=None):
+        # type: (string_types, string_types, float, int, float, float, int, int, float, int, CodecConfigType, StatisticsResolution, EncodingMode, float, StatisticsPerTitleStream, float, PsnrPerStreamMode, float, DolbyVisionPerStreamMode, float) -> None
 
         self._stream_id = None
         self._codec_config_id = None
@@ -53,6 +56,8 @@ class StatisticsPerStream(object):
         self._per_title_multiplicator = None
         self._psnr_mode = None
         self._psnr_multiplicator = None
+        self._dolby_vision_mode = None
+        self._dolby_vision_multiplicator = None
         self.discriminator = None
 
         if stream_id is not None:
@@ -91,6 +96,10 @@ class StatisticsPerStream(object):
             self.psnr_mode = psnr_mode
         if psnr_multiplicator is not None:
             self.psnr_multiplicator = psnr_multiplicator
+        if dolby_vision_mode is not None:
+            self.dolby_vision_mode = dolby_vision_mode
+        if dolby_vision_multiplicator is not None:
+            self.dolby_vision_multiplicator = dolby_vision_multiplicator
 
     @property
     def openapi_types(self):
@@ -112,7 +121,9 @@ class StatisticsPerStream(object):
             'per_title_result_stream': 'StatisticsPerTitleStream',
             'per_title_multiplicator': 'float',
             'psnr_mode': 'PsnrPerStreamMode',
-            'psnr_multiplicator': 'float'
+            'psnr_multiplicator': 'float',
+            'dolby_vision_mode': 'DolbyVisionPerStreamMode',
+            'dolby_vision_multiplicator': 'float'
         }
 
         return types
@@ -137,7 +148,9 @@ class StatisticsPerStream(object):
             'per_title_result_stream': 'perTitleResultStream',
             'per_title_multiplicator': 'perTitleMultiplicator',
             'psnr_mode': 'psnrMode',
-            'psnr_multiplicator': 'psnrMultiplicator'
+            'psnr_multiplicator': 'psnrMultiplicator',
+            'dolby_vision_mode': 'dolbyVisionMode',
+            'dolby_vision_multiplicator': 'dolbyVisionMultiplicator'
         }
         return attributes
 
@@ -652,6 +665,62 @@ class StatisticsPerStream(object):
                 raise TypeError("Invalid type for `psnr_multiplicator`, type has to be `float`")
 
         self._psnr_multiplicator = psnr_multiplicator
+
+    @property
+    def dolby_vision_mode(self):
+        # type: () -> DolbyVisionPerStreamMode
+        """Gets the dolby_vision_mode of this StatisticsPerStream.
+
+
+        :return: The dolby_vision_mode of this StatisticsPerStream.
+        :rtype: DolbyVisionPerStreamMode
+        """
+        return self._dolby_vision_mode
+
+    @dolby_vision_mode.setter
+    def dolby_vision_mode(self, dolby_vision_mode):
+        # type: (DolbyVisionPerStreamMode) -> None
+        """Sets the dolby_vision_mode of this StatisticsPerStream.
+
+
+        :param dolby_vision_mode: The dolby_vision_mode of this StatisticsPerStream.
+        :type: DolbyVisionPerStreamMode
+        """
+
+        if dolby_vision_mode is not None:
+            if not isinstance(dolby_vision_mode, DolbyVisionPerStreamMode):
+                raise TypeError("Invalid type for `dolby_vision_mode`, type has to be `DolbyVisionPerStreamMode`")
+
+        self._dolby_vision_mode = dolby_vision_mode
+
+    @property
+    def dolby_vision_multiplicator(self):
+        # type: () -> float
+        """Gets the dolby_vision_multiplicator of this StatisticsPerStream.
+
+        The output minutes multiplicator for Dolby Vision streams
+
+        :return: The dolby_vision_multiplicator of this StatisticsPerStream.
+        :rtype: float
+        """
+        return self._dolby_vision_multiplicator
+
+    @dolby_vision_multiplicator.setter
+    def dolby_vision_multiplicator(self, dolby_vision_multiplicator):
+        # type: (float) -> None
+        """Sets the dolby_vision_multiplicator of this StatisticsPerStream.
+
+        The output minutes multiplicator for Dolby Vision streams
+
+        :param dolby_vision_multiplicator: The dolby_vision_multiplicator of this StatisticsPerStream.
+        :type: float
+        """
+
+        if dolby_vision_multiplicator is not None:
+            if not isinstance(dolby_vision_multiplicator, (float, int)):
+                raise TypeError("Invalid type for `dolby_vision_multiplicator`, type has to be `float`")
+
+        self._dolby_vision_multiplicator = dolby_vision_multiplicator
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -1,0 +1,31 @@
+bitmovin\_api\_sdk.encoding.encodings.input\_streams.trimming package
+=====================================================================
+
+Subpackages
+-----------
+
+.. toctree::
+
+   bitmovin_api_sdk.encoding.encodings.input_streams.trimming.h264_picture_timing
+   bitmovin_api_sdk.encoding.encodings.input_streams.trimming.time_based
+   bitmovin_api_sdk.encoding.encodings.input_streams.trimming.timecode_track
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.encoding.encodings.input\_streams.trimming.trimming\_api module
+----------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.encodings.input_streams.trimming.trimming_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.encoding.encodings.input_streams.trimming
+   :members:
+   :undoc-members:
+   :show-inheritance:

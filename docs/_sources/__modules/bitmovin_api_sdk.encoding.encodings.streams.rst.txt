@@ -1,0 +1,47 @@
+bitmovin\_api\_sdk.encoding.encodings.streams package
+=====================================================
+
+Subpackages
+-----------
+
+.. toctree::
+
+   bitmovin_api_sdk.encoding.encodings.streams.bifs
+   bitmovin_api_sdk.encoding.encodings.streams.burn_in_subtitles
+   bitmovin_api_sdk.encoding.encodings.streams.captions
+   bitmovin_api_sdk.encoding.encodings.streams.customdata
+   bitmovin_api_sdk.encoding.encodings.streams.filters
+   bitmovin_api_sdk.encoding.encodings.streams.hdr
+   bitmovin_api_sdk.encoding.encodings.streams.input
+   bitmovin_api_sdk.encoding.encodings.streams.inputs
+   bitmovin_api_sdk.encoding.encodings.streams.qc
+   bitmovin_api_sdk.encoding.encodings.streams.sprites
+   bitmovin_api_sdk.encoding.encodings.streams.thumbnails
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.encoding.encodings.streams.stream\_list\_query\_params module
+--------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.encodings.streams.stream_list_query_params
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.encoding.encodings.streams.streams\_api module
+-----------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.encodings.streams.streams_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.encoding.encodings.streams
+   :members:
+   :undoc-members:
+   :show-inheritance:

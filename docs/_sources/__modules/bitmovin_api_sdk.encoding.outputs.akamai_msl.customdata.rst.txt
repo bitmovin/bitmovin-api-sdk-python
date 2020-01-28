@@ -1,0 +1,22 @@
+bitmovin\_api\_sdk.encoding.outputs.akamai\_msl.customdata package
+==================================================================
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.encoding.outputs.akamai\_msl.customdata.customdata\_api module
+---------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.outputs.akamai_msl.customdata.customdata_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.encoding.outputs.akamai_msl.customdata
+   :members:
+   :undoc-members:
+   :show-inheritance:

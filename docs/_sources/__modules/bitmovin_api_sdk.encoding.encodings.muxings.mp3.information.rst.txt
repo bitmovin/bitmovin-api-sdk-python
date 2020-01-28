@@ -1,0 +1,22 @@
+bitmovin\_api\_sdk.encoding.encodings.muxings.mp3.information package
+=====================================================================
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.encoding.encodings.muxings.mp3.information.information\_api module
+-------------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.encodings.muxings.mp3.information.information_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.encoding.encodings.muxings.mp3.information
+   :members:
+   :undoc-members:
+   :show-inheritance:

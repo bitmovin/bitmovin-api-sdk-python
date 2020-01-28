@@ -1,0 +1,531 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>bitmovin_api_sdk.models.caption_character_encoding &mdash; Bitmovin Python API SDK {{packageVersion}} documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: blue" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Bitmovin Python API SDK
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../__modules/modules.html">python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../__modules/bitmovin_api_sdk.encoding.html">bitmovin_api_sdk.encoding package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../__modules/bitmovin_api_sdk.analytics.html">bitmovin_api_sdk.analytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../__modules/bitmovin_api_sdk.player.html">bitmovin_api_sdk.player package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../__modules/bitmovin_api_sdk.account.html">bitmovin_api_sdk.account package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../__modules/bitmovin_api_sdk.notifications.html">bitmovin_api_sdk.notifications package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../__modules/bitmovin_api_sdk.general.html">bitmovin_api_sdk.general package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../__modules/bitmovin_api_sdk.common.html">bitmovin_api_sdk.common package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../__modules/bitmovin_api_sdk.models.html">bitmovin_api_sdk.models package</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Bitmovin Python API SDK</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+      <li>bitmovin_api_sdk.models.caption_character_encoding</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for bitmovin_api_sdk.models.caption_character_encoding</h1><div class="highlight"><pre>
+<span></span><span class="c1"># coding: utf-8</span>
+
+<span class="kn">from</span> <span class="nn">enum</span> <span class="kn">import</span> <span class="n">Enum</span>
+<span class="kn">from</span> <span class="nn">six</span> <span class="kn">import</span> <span class="n">string_types</span><span class="p">,</span> <span class="n">iteritems</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.common.poscheck</span> <span class="kn">import</span> <span class="n">poscheck_model</span>
+
+
+<div class="viewcode-block" id="CaptionCharacterEncoding"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.caption_character_encoding.CaptionCharacterEncoding">[docs]</a><span class="k">class</span> <span class="nc">CaptionCharacterEncoding</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+    <span class="n">ANSI_X3_4_1968</span> <span class="o">=</span> <span class="s2">&quot;ANSI_X3.4-1968&quot;</span>
+    <span class="n">ANSI_X3_4_1986</span> <span class="o">=</span> <span class="s2">&quot;ANSI_X3.4-1986&quot;</span>
+    <span class="n">ARABIC</span> <span class="o">=</span> <span class="s2">&quot;ARABIC&quot;</span>
+    <span class="n">ARMSCII_8</span> <span class="o">=</span> <span class="s2">&quot;ARMSCII-8&quot;</span>
+    <span class="n">ASCII</span> <span class="o">=</span> <span class="s2">&quot;ASCII&quot;</span>
+    <span class="n">ASMO_708</span> <span class="o">=</span> <span class="s2">&quot;ASMO-708&quot;</span>
+    <span class="n">BIG_5</span> <span class="o">=</span> <span class="s2">&quot;BIG-5&quot;</span>
+    <span class="n">BIG_FIVE</span> <span class="o">=</span> <span class="s2">&quot;BIG-FIVE&quot;</span>
+    <span class="n">BIG5</span> <span class="o">=</span> <span class="s2">&quot;BIG5&quot;</span>
+    <span class="n">BIG5_HKSCS</span> <span class="o">=</span> <span class="s2">&quot;BIG5-HKSCS&quot;</span>
+    <span class="n">BIG5_HKSCS_1999</span> <span class="o">=</span> <span class="s2">&quot;BIG5-HKSCS:1999&quot;</span>
+    <span class="n">BIG5_HKSCS_2001</span> <span class="o">=</span> <span class="s2">&quot;BIG5-HKSCS:2001&quot;</span>
+    <span class="n">BIG5_HKSCS_2004</span> <span class="o">=</span> <span class="s2">&quot;BIG5-HKSCS:2004&quot;</span>
+    <span class="n">BIG5_HKSCS_2008</span> <span class="o">=</span> <span class="s2">&quot;BIG5-HKSCS:2008&quot;</span>
+    <span class="n">BIG5HKSCS</span> <span class="o">=</span> <span class="s2">&quot;BIG5HKSCS&quot;</span>
+    <span class="n">BIGFIVE</span> <span class="o">=</span> <span class="s2">&quot;BIGFIVE&quot;</span>
+    <span class="n">C99</span> <span class="o">=</span> <span class="s2">&quot;C99&quot;</span>
+    <span class="n">CHAR</span> <span class="o">=</span> <span class="s2">&quot;CHAR&quot;</span>
+    <span class="n">CHINESE</span> <span class="o">=</span> <span class="s2">&quot;CHINESE&quot;</span>
+    <span class="n">CN</span> <span class="o">=</span> <span class="s2">&quot;CN&quot;</span>
+    <span class="n">CN_BIG5</span> <span class="o">=</span> <span class="s2">&quot;CN-BIG5&quot;</span>
+    <span class="n">CN_GB</span> <span class="o">=</span> <span class="s2">&quot;CN-GB&quot;</span>
+    <span class="n">CN_GB_ISOIR165</span> <span class="o">=</span> <span class="s2">&quot;CN-GB-ISOIR165&quot;</span>
+    <span class="n">CP1131</span> <span class="o">=</span> <span class="s2">&quot;CP1131&quot;</span>
+    <span class="n">CP1133</span> <span class="o">=</span> <span class="s2">&quot;CP1133&quot;</span>
+    <span class="n">CP1250</span> <span class="o">=</span> <span class="s2">&quot;CP1250&quot;</span>
+    <span class="n">CP1251</span> <span class="o">=</span> <span class="s2">&quot;CP1251&quot;</span>
+    <span class="n">CP1252</span> <span class="o">=</span> <span class="s2">&quot;CP1252&quot;</span>
+    <span class="n">CP1253</span> <span class="o">=</span> <span class="s2">&quot;CP1253&quot;</span>
+    <span class="n">CP1254</span> <span class="o">=</span> <span class="s2">&quot;CP1254&quot;</span>
+    <span class="n">CP1255</span> <span class="o">=</span> <span class="s2">&quot;CP1255&quot;</span>
+    <span class="n">CP1256</span> <span class="o">=</span> <span class="s2">&quot;CP1256&quot;</span>
+    <span class="n">CP1257</span> <span class="o">=</span> <span class="s2">&quot;CP1257&quot;</span>
+    <span class="n">CP1258</span> <span class="o">=</span> <span class="s2">&quot;CP1258&quot;</span>
+    <span class="n">CP1361</span> <span class="o">=</span> <span class="s2">&quot;CP1361&quot;</span>
+    <span class="n">CP154</span> <span class="o">=</span> <span class="s2">&quot;CP154&quot;</span>
+    <span class="n">CP367</span> <span class="o">=</span> <span class="s2">&quot;CP367&quot;</span>
+    <span class="n">CP819</span> <span class="o">=</span> <span class="s2">&quot;CP819&quot;</span>
+    <span class="n">CP850</span> <span class="o">=</span> <span class="s2">&quot;CP850&quot;</span>
+    <span class="n">CP862</span> <span class="o">=</span> <span class="s2">&quot;CP862&quot;</span>
+    <span class="n">CP866</span> <span class="o">=</span> <span class="s2">&quot;CP866&quot;</span>
+    <span class="n">CP874</span> <span class="o">=</span> <span class="s2">&quot;CP874&quot;</span>
+    <span class="n">CP932</span> <span class="o">=</span> <span class="s2">&quot;CP932&quot;</span>
+    <span class="n">CP936</span> <span class="o">=</span> <span class="s2">&quot;CP936&quot;</span>
+    <span class="n">CP949</span> <span class="o">=</span> <span class="s2">&quot;CP949&quot;</span>
+    <span class="n">CP950</span> <span class="o">=</span> <span class="s2">&quot;CP950&quot;</span>
+    <span class="n">CSASCII</span> <span class="o">=</span> <span class="s2">&quot;CSASCII&quot;</span>
+    <span class="n">CSBIG5</span> <span class="o">=</span> <span class="s2">&quot;CSBIG5&quot;</span>
+    <span class="n">CSEUCKR</span> <span class="o">=</span> <span class="s2">&quot;CSEUCKR&quot;</span>
+    <span class="n">CSEUCPKDFMTJAPANESE</span> <span class="o">=</span> <span class="s2">&quot;CSEUCPKDFMTJAPANESE&quot;</span>
+    <span class="n">CSEUCTW</span> <span class="o">=</span> <span class="s2">&quot;CSEUCTW&quot;</span>
+    <span class="n">CSGB2312</span> <span class="o">=</span> <span class="s2">&quot;CSGB2312&quot;</span>
+    <span class="n">CSHALFWIDTHKATAKANA</span> <span class="o">=</span> <span class="s2">&quot;CSHALFWIDTHKATAKANA&quot;</span>
+    <span class="n">CSHPROMAN8</span> <span class="o">=</span> <span class="s2">&quot;CSHPROMAN8&quot;</span>
+    <span class="n">CSIBM866</span> <span class="o">=</span> <span class="s2">&quot;CSIBM866&quot;</span>
+    <span class="n">CSISO14JISC6220RO</span> <span class="o">=</span> <span class="s2">&quot;CSISO14JISC6220RO&quot;</span>
+    <span class="n">CSISO159JISX02121990</span> <span class="o">=</span> <span class="s2">&quot;CSISO159JISX02121990&quot;</span>
+    <span class="n">CSISO2022CN</span> <span class="o">=</span> <span class="s2">&quot;CSISO2022CN&quot;</span>
+    <span class="n">CSISO2022JP</span> <span class="o">=</span> <span class="s2">&quot;CSISO2022JP&quot;</span>
+    <span class="n">CSISO2022JP2</span> <span class="o">=</span> <span class="s2">&quot;CSISO2022JP2&quot;</span>
+    <span class="n">CSISO2022KR</span> <span class="o">=</span> <span class="s2">&quot;CSISO2022KR&quot;</span>
+    <span class="n">CSISO57GB1988</span> <span class="o">=</span> <span class="s2">&quot;CSISO57GB1988&quot;</span>
+    <span class="n">CSISO58GB231280</span> <span class="o">=</span> <span class="s2">&quot;CSISO58GB231280&quot;</span>
+    <span class="n">CSISO87JISX0208</span> <span class="o">=</span> <span class="s2">&quot;CSISO87JISX0208&quot;</span>
+    <span class="n">CSISOLATIN1</span> <span class="o">=</span> <span class="s2">&quot;CSISOLATIN1&quot;</span>
+    <span class="n">CSISOLATIN2</span> <span class="o">=</span> <span class="s2">&quot;CSISOLATIN2&quot;</span>
+    <span class="n">CSISOLATIN3</span> <span class="o">=</span> <span class="s2">&quot;CSISOLATIN3&quot;</span>
+    <span class="n">CSISOLATIN4</span> <span class="o">=</span> <span class="s2">&quot;CSISOLATIN4&quot;</span>
+    <span class="n">CSISOLATIN5</span> <span class="o">=</span> <span class="s2">&quot;CSISOLATIN5&quot;</span>
+    <span class="n">CSISOLATIN6</span> <span class="o">=</span> <span class="s2">&quot;CSISOLATIN6&quot;</span>
+    <span class="n">CSISOLATINARABIC</span> <span class="o">=</span> <span class="s2">&quot;CSISOLATINARABIC&quot;</span>
+    <span class="n">CSISOLATINCYRILLIC</span> <span class="o">=</span> <span class="s2">&quot;CSISOLATINCYRILLIC&quot;</span>
+    <span class="n">CSISOLATINGREEK</span> <span class="o">=</span> <span class="s2">&quot;CSISOLATINGREEK&quot;</span>
+    <span class="n">CSISOLATINHEBREW</span> <span class="o">=</span> <span class="s2">&quot;CSISOLATINHEBREW&quot;</span>
+    <span class="n">CSKOI8R</span> <span class="o">=</span> <span class="s2">&quot;CSKOI8R&quot;</span>
+    <span class="n">CSKSC56011987</span> <span class="o">=</span> <span class="s2">&quot;CSKSC56011987&quot;</span>
+    <span class="n">CSKZ1048</span> <span class="o">=</span> <span class="s2">&quot;CSKZ1048&quot;</span>
+    <span class="n">CSMACINTOSH</span> <span class="o">=</span> <span class="s2">&quot;CSMACINTOSH&quot;</span>
+    <span class="n">CSPC850MULTILINGUAL</span> <span class="o">=</span> <span class="s2">&quot;CSPC850MULTILINGUAL&quot;</span>
+    <span class="n">CSPC862LATINHEBREW</span> <span class="o">=</span> <span class="s2">&quot;CSPC862LATINHEBREW&quot;</span>
+    <span class="n">CSPTCP154</span> <span class="o">=</span> <span class="s2">&quot;CSPTCP154&quot;</span>
+    <span class="n">CSSHIFTJIS</span> <span class="o">=</span> <span class="s2">&quot;CSSHIFTJIS&quot;</span>
+    <span class="n">CSUCS4</span> <span class="o">=</span> <span class="s2">&quot;CSUCS4&quot;</span>
+    <span class="n">CSUNICODE</span> <span class="o">=</span> <span class="s2">&quot;CSUNICODE&quot;</span>
+    <span class="n">CSUNICODE11</span> <span class="o">=</span> <span class="s2">&quot;CSUNICODE11&quot;</span>
+    <span class="n">CSUNICODE11UTF7</span> <span class="o">=</span> <span class="s2">&quot;CSUNICODE11UTF7&quot;</span>
+    <span class="n">CSVISCII</span> <span class="o">=</span> <span class="s2">&quot;CSVISCII&quot;</span>
+    <span class="n">CYRILLIC</span> <span class="o">=</span> <span class="s2">&quot;CYRILLIC&quot;</span>
+    <span class="n">CYRILLIC_ASIAN</span> <span class="o">=</span> <span class="s2">&quot;CYRILLIC-ASIAN&quot;</span>
+    <span class="n">ECMA_114</span> <span class="o">=</span> <span class="s2">&quot;ECMA-114&quot;</span>
+    <span class="n">ECMA_118</span> <span class="o">=</span> <span class="s2">&quot;ECMA-118&quot;</span>
+    <span class="n">ELOT_928</span> <span class="o">=</span> <span class="s2">&quot;ELOT_928&quot;</span>
+    <span class="n">EUC_CN</span> <span class="o">=</span> <span class="s2">&quot;EUC-CN&quot;</span>
+    <span class="n">EUC_JP</span> <span class="o">=</span> <span class="s2">&quot;EUC-JP&quot;</span>
+    <span class="n">EUC_KR</span> <span class="o">=</span> <span class="s2">&quot;EUC-KR&quot;</span>
+    <span class="n">EUC_TW</span> <span class="o">=</span> <span class="s2">&quot;EUC-TW&quot;</span>
+    <span class="n">EUCCN</span> <span class="o">=</span> <span class="s2">&quot;EUCCN&quot;</span>
+    <span class="n">EUCJP</span> <span class="o">=</span> <span class="s2">&quot;EUCJP&quot;</span>
+    <span class="n">EUCKR</span> <span class="o">=</span> <span class="s2">&quot;EUCKR&quot;</span>
+    <span class="n">EUCTW</span> <span class="o">=</span> <span class="s2">&quot;EUCTW&quot;</span>
+    <span class="n">EXTENDED_UNIX_CODE_PACKED_FORMAT_FOR_JAPANESE</span> <span class="o">=</span> <span class="s2">&quot;EXTENDED_UNIX_CODE_PACKED_FORMAT_FOR_JAPANESE&quot;</span>
+    <span class="n">GB_1988_80</span> <span class="o">=</span> <span class="s2">&quot;GB_1988-80&quot;</span>
+    <span class="n">GB_2312_80</span> <span class="o">=</span> <span class="s2">&quot;GB_2312-80&quot;</span>
+    <span class="n">GB18030</span> <span class="o">=</span> <span class="s2">&quot;GB18030&quot;</span>
+    <span class="n">GB2312</span> <span class="o">=</span> <span class="s2">&quot;GB2312&quot;</span>
+    <span class="n">GBK</span> <span class="o">=</span> <span class="s2">&quot;GBK&quot;</span>
+    <span class="n">GEORGIAN_ACADEMY</span> <span class="o">=</span> <span class="s2">&quot;GEORGIAN-ACADEMY&quot;</span>
+    <span class="n">GEORGIAN_PS</span> <span class="o">=</span> <span class="s2">&quot;GEORGIAN-PS&quot;</span>
+    <span class="n">GREEK</span> <span class="o">=</span> <span class="s2">&quot;GREEK&quot;</span>
+    <span class="n">GREEK8</span> <span class="o">=</span> <span class="s2">&quot;GREEK8&quot;</span>
+    <span class="n">HEBREW</span> <span class="o">=</span> <span class="s2">&quot;HEBREW&quot;</span>
+    <span class="n">HP_ROMAN8</span> <span class="o">=</span> <span class="s2">&quot;HP-ROMAN8&quot;</span>
+    <span class="n">HZ</span> <span class="o">=</span> <span class="s2">&quot;HZ&quot;</span>
+    <span class="n">HZ_GB_2312</span> <span class="o">=</span> <span class="s2">&quot;HZ-GB-2312&quot;</span>
+    <span class="n">IBM_CP1133</span> <span class="o">=</span> <span class="s2">&quot;IBM-CP1133&quot;</span>
+    <span class="n">IBM367</span> <span class="o">=</span> <span class="s2">&quot;IBM367&quot;</span>
+    <span class="n">IBM819</span> <span class="o">=</span> <span class="s2">&quot;IBM819&quot;</span>
+    <span class="n">IBM850</span> <span class="o">=</span> <span class="s2">&quot;IBM850&quot;</span>
+    <span class="n">IBM862</span> <span class="o">=</span> <span class="s2">&quot;IBM862&quot;</span>
+    <span class="n">IBM866</span> <span class="o">=</span> <span class="s2">&quot;IBM866&quot;</span>
+    <span class="n">ISO_10646_UCS_2</span> <span class="o">=</span> <span class="s2">&quot;ISO-10646-UCS-2&quot;</span>
+    <span class="n">ISO_10646_UCS_4</span> <span class="o">=</span> <span class="s2">&quot;ISO-10646-UCS-4&quot;</span>
+    <span class="n">ISO_2022_CN</span> <span class="o">=</span> <span class="s2">&quot;ISO-2022-CN&quot;</span>
+    <span class="n">ISO_2022_CN_EXT</span> <span class="o">=</span> <span class="s2">&quot;ISO-2022-CN-EXT&quot;</span>
+    <span class="n">ISO_2022_JP</span> <span class="o">=</span> <span class="s2">&quot;ISO-2022-JP&quot;</span>
+    <span class="n">ISO_2022_JP_1</span> <span class="o">=</span> <span class="s2">&quot;ISO-2022-JP-1&quot;</span>
+    <span class="n">ISO_2022_JP_2</span> <span class="o">=</span> <span class="s2">&quot;ISO-2022-JP-2&quot;</span>
+    <span class="n">ISO_2022_KR</span> <span class="o">=</span> <span class="s2">&quot;ISO-2022-KR&quot;</span>
+    <span class="n">ISO_8859_1</span> <span class="o">=</span> <span class="s2">&quot;ISO-8859-1&quot;</span>
+    <span class="n">ISO_8859_10</span> <span class="o">=</span> <span class="s2">&quot;ISO-8859-10&quot;</span>
+    <span class="n">ISO_8859_11</span> <span class="o">=</span> <span class="s2">&quot;ISO-8859-11&quot;</span>
+    <span class="n">ISO_8859_13</span> <span class="o">=</span> <span class="s2">&quot;ISO-8859-13&quot;</span>
+    <span class="n">ISO_8859_14</span> <span class="o">=</span> <span class="s2">&quot;ISO-8859-14&quot;</span>
+    <span class="n">ISO_8859_15</span> <span class="o">=</span> <span class="s2">&quot;ISO-8859-15&quot;</span>
+    <span class="n">ISO_8859_16</span> <span class="o">=</span> <span class="s2">&quot;ISO-8859-16&quot;</span>
+    <span class="n">ISO_8859_2</span> <span class="o">=</span> <span class="s2">&quot;ISO-8859-2&quot;</span>
+    <span class="n">ISO_8859_3</span> <span class="o">=</span> <span class="s2">&quot;ISO-8859-3&quot;</span>
+    <span class="n">ISO_8859_4</span> <span class="o">=</span> <span class="s2">&quot;ISO-8859-4&quot;</span>
+    <span class="n">ISO_8859_5</span> <span class="o">=</span> <span class="s2">&quot;ISO-8859-5&quot;</span>
+    <span class="n">ISO_8859_6</span> <span class="o">=</span> <span class="s2">&quot;ISO-8859-6&quot;</span>
+    <span class="n">ISO_8859_7</span> <span class="o">=</span> <span class="s2">&quot;ISO-8859-7&quot;</span>
+    <span class="n">ISO_8859_8</span> <span class="o">=</span> <span class="s2">&quot;ISO-8859-8&quot;</span>
+    <span class="n">ISO_8859_9</span> <span class="o">=</span> <span class="s2">&quot;ISO-8859-9&quot;</span>
+    <span class="n">ISO_CELTIC</span> <span class="o">=</span> <span class="s2">&quot;ISO-CELTIC&quot;</span>
+    <span class="n">ISO_IR_100</span> <span class="o">=</span> <span class="s2">&quot;ISO-IR-100&quot;</span>
+    <span class="n">ISO_IR_101</span> <span class="o">=</span> <span class="s2">&quot;ISO-IR-101&quot;</span>
+    <span class="n">ISO_IR_109</span> <span class="o">=</span> <span class="s2">&quot;ISO-IR-109&quot;</span>
+    <span class="n">ISO_IR_110</span> <span class="o">=</span> <span class="s2">&quot;ISO-IR-110&quot;</span>
+    <span class="n">ISO_IR_126</span> <span class="o">=</span> <span class="s2">&quot;ISO-IR-126&quot;</span>
+    <span class="n">ISO_IR_127</span> <span class="o">=</span> <span class="s2">&quot;ISO-IR-127&quot;</span>
+    <span class="n">ISO_IR_138</span> <span class="o">=</span> <span class="s2">&quot;ISO-IR-138&quot;</span>
+    <span class="n">ISO_IR_14</span> <span class="o">=</span> <span class="s2">&quot;ISO-IR-14&quot;</span>
+    <span class="n">ISO_IR_144</span> <span class="o">=</span> <span class="s2">&quot;ISO-IR-144&quot;</span>
+    <span class="n">ISO_IR_148</span> <span class="o">=</span> <span class="s2">&quot;ISO-IR-148&quot;</span>
+    <span class="n">ISO_IR_149</span> <span class="o">=</span> <span class="s2">&quot;ISO-IR-149&quot;</span>
+    <span class="n">ISO_IR_157</span> <span class="o">=</span> <span class="s2">&quot;ISO-IR-157&quot;</span>
+    <span class="n">ISO_IR_159</span> <span class="o">=</span> <span class="s2">&quot;ISO-IR-159&quot;</span>
+    <span class="n">ISO_IR_165</span> <span class="o">=</span> <span class="s2">&quot;ISO-IR-165&quot;</span>
+    <span class="n">ISO_IR_166</span> <span class="o">=</span> <span class="s2">&quot;ISO-IR-166&quot;</span>
+    <span class="n">ISO_IR_179</span> <span class="o">=</span> <span class="s2">&quot;ISO-IR-179&quot;</span>
+    <span class="n">ISO_IR_199</span> <span class="o">=</span> <span class="s2">&quot;ISO-IR-199&quot;</span>
+    <span class="n">ISO_IR_203</span> <span class="o">=</span> <span class="s2">&quot;ISO-IR-203&quot;</span>
+    <span class="n">ISO_IR_226</span> <span class="o">=</span> <span class="s2">&quot;ISO-IR-226&quot;</span>
+    <span class="n">ISO_IR_57</span> <span class="o">=</span> <span class="s2">&quot;ISO-IR-57&quot;</span>
+    <span class="n">ISO_IR_58</span> <span class="o">=</span> <span class="s2">&quot;ISO-IR-58&quot;</span>
+    <span class="n">ISO_IR_6</span> <span class="o">=</span> <span class="s2">&quot;ISO-IR-6&quot;</span>
+    <span class="n">ISO_IR_87</span> <span class="o">=</span> <span class="s2">&quot;ISO-IR-87&quot;</span>
+    <span class="n">ISO_646_IRV_1991</span> <span class="o">=</span> <span class="s2">&quot;ISO_646.IRV:1991&quot;</span>
+    <span class="n">ISO_8859_1_1987</span> <span class="o">=</span> <span class="s2">&quot;ISO_8859-1:1987&quot;</span>
+    <span class="n">ISO_8859_10_1992</span> <span class="o">=</span> <span class="s2">&quot;ISO_8859-10:1992&quot;</span>
+    <span class="n">ISO_8859_14_1998</span> <span class="o">=</span> <span class="s2">&quot;ISO_8859-14:1998&quot;</span>
+    <span class="n">ISO_8859_15_1998</span> <span class="o">=</span> <span class="s2">&quot;ISO_8859-15:1998&quot;</span>
+    <span class="n">ISO_8859_16_2001</span> <span class="o">=</span> <span class="s2">&quot;ISO_8859-16:2001&quot;</span>
+    <span class="n">ISO_8859_2_1987</span> <span class="o">=</span> <span class="s2">&quot;ISO_8859-2:1987&quot;</span>
+    <span class="n">ISO_8859_3_1988</span> <span class="o">=</span> <span class="s2">&quot;ISO_8859-3:1988&quot;</span>
+    <span class="n">ISO_8859_4_1988</span> <span class="o">=</span> <span class="s2">&quot;ISO_8859-4:1988&quot;</span>
+    <span class="n">ISO_8859_5_1988</span> <span class="o">=</span> <span class="s2">&quot;ISO_8859-5:1988&quot;</span>
+    <span class="n">ISO_8859_6_1987</span> <span class="o">=</span> <span class="s2">&quot;ISO_8859-6:1987&quot;</span>
+    <span class="n">ISO_8859_7_1987</span> <span class="o">=</span> <span class="s2">&quot;ISO_8859-7:1987&quot;</span>
+    <span class="n">ISO_8859_7_2003</span> <span class="o">=</span> <span class="s2">&quot;ISO_8859-7:2003&quot;</span>
+    <span class="n">ISO_8859_8_1988</span> <span class="o">=</span> <span class="s2">&quot;ISO_8859-8:1988&quot;</span>
+    <span class="n">ISO_8859_9_1989</span> <span class="o">=</span> <span class="s2">&quot;ISO_8859-9:1989&quot;</span>
+    <span class="n">ISO646_CN</span> <span class="o">=</span> <span class="s2">&quot;ISO646-CN&quot;</span>
+    <span class="n">ISO646_JP</span> <span class="o">=</span> <span class="s2">&quot;ISO646-JP&quot;</span>
+    <span class="n">ISO646_US</span> <span class="o">=</span> <span class="s2">&quot;ISO646-US&quot;</span>
+    <span class="n">ISO8859_1</span> <span class="o">=</span> <span class="s2">&quot;ISO8859-1&quot;</span>
+    <span class="n">ISO8859_10</span> <span class="o">=</span> <span class="s2">&quot;ISO8859-10&quot;</span>
+    <span class="n">ISO8859_11</span> <span class="o">=</span> <span class="s2">&quot;ISO8859-11&quot;</span>
+    <span class="n">ISO8859_13</span> <span class="o">=</span> <span class="s2">&quot;ISO8859-13&quot;</span>
+    <span class="n">ISO8859_14</span> <span class="o">=</span> <span class="s2">&quot;ISO8859-14&quot;</span>
+    <span class="n">ISO8859_15</span> <span class="o">=</span> <span class="s2">&quot;ISO8859-15&quot;</span>
+    <span class="n">ISO8859_16</span> <span class="o">=</span> <span class="s2">&quot;ISO8859-16&quot;</span>
+    <span class="n">ISO8859_2</span> <span class="o">=</span> <span class="s2">&quot;ISO8859-2&quot;</span>
+    <span class="n">ISO8859_3</span> <span class="o">=</span> <span class="s2">&quot;ISO8859-3&quot;</span>
+    <span class="n">ISO8859_4</span> <span class="o">=</span> <span class="s2">&quot;ISO8859-4&quot;</span>
+    <span class="n">ISO8859_5</span> <span class="o">=</span> <span class="s2">&quot;ISO8859-5&quot;</span>
+    <span class="n">ISO8859_6</span> <span class="o">=</span> <span class="s2">&quot;ISO8859-6&quot;</span>
+    <span class="n">ISO8859_7</span> <span class="o">=</span> <span class="s2">&quot;ISO8859-7&quot;</span>
+    <span class="n">ISO8859_8</span> <span class="o">=</span> <span class="s2">&quot;ISO8859-8&quot;</span>
+    <span class="n">ISO8859_9</span> <span class="o">=</span> <span class="s2">&quot;ISO8859-9&quot;</span>
+    <span class="n">JAVA</span> <span class="o">=</span> <span class="s2">&quot;JAVA&quot;</span>
+    <span class="n">JIS_C6220_1969_RO</span> <span class="o">=</span> <span class="s2">&quot;JIS_C6220-1969-RO&quot;</span>
+    <span class="n">JIS_C6226_1983</span> <span class="o">=</span> <span class="s2">&quot;JIS_C6226-1983&quot;</span>
+    <span class="n">JIS_X0201</span> <span class="o">=</span> <span class="s2">&quot;JIS_X0201&quot;</span>
+    <span class="n">JIS_X0208</span> <span class="o">=</span> <span class="s2">&quot;JIS_X0208&quot;</span>
+    <span class="n">JIS_X0208_1983</span> <span class="o">=</span> <span class="s2">&quot;JIS_X0208-1983&quot;</span>
+    <span class="n">JIS_X0208_1990</span> <span class="o">=</span> <span class="s2">&quot;JIS_X0208-1990&quot;</span>
+    <span class="n">JIS_X0212</span> <span class="o">=</span> <span class="s2">&quot;JIS_X0212&quot;</span>
+    <span class="n">JIS_X0212_1990</span> <span class="o">=</span> <span class="s2">&quot;JIS_X0212-1990&quot;</span>
+    <span class="n">JIS_X0212_1990_0</span> <span class="o">=</span> <span class="s2">&quot;JIS_X0212.1990-0&quot;</span>
+    <span class="n">JIS0208</span> <span class="o">=</span> <span class="s2">&quot;JIS0208&quot;</span>
+    <span class="n">JISX0201_1976</span> <span class="o">=</span> <span class="s2">&quot;JISX0201-1976&quot;</span>
+    <span class="n">JOHAB</span> <span class="o">=</span> <span class="s2">&quot;JOHAB&quot;</span>
+    <span class="n">JP</span> <span class="o">=</span> <span class="s2">&quot;JP&quot;</span>
+    <span class="n">KOI8_R</span> <span class="o">=</span> <span class="s2">&quot;KOI8-R&quot;</span>
+    <span class="n">KOI8_RU</span> <span class="o">=</span> <span class="s2">&quot;KOI8-RU&quot;</span>
+    <span class="n">KOI8_T</span> <span class="o">=</span> <span class="s2">&quot;KOI8-T&quot;</span>
+    <span class="n">KOI8_U</span> <span class="o">=</span> <span class="s2">&quot;KOI8-U&quot;</span>
+    <span class="n">KOREAN</span> <span class="o">=</span> <span class="s2">&quot;KOREAN&quot;</span>
+    <span class="n">KS_C_5601_1987</span> <span class="o">=</span> <span class="s2">&quot;KS_C_5601-1987&quot;</span>
+    <span class="n">KS_C_5601_1989</span> <span class="o">=</span> <span class="s2">&quot;KS_C_5601-1989&quot;</span>
+    <span class="n">KSC_5601</span> <span class="o">=</span> <span class="s2">&quot;KSC_5601&quot;</span>
+    <span class="n">KZ_1048</span> <span class="o">=</span> <span class="s2">&quot;KZ-1048&quot;</span>
+    <span class="n">L1</span> <span class="o">=</span> <span class="s2">&quot;L1&quot;</span>
+    <span class="n">L10</span> <span class="o">=</span> <span class="s2">&quot;L10&quot;</span>
+    <span class="n">L2</span> <span class="o">=</span> <span class="s2">&quot;L2&quot;</span>
+    <span class="n">L3</span> <span class="o">=</span> <span class="s2">&quot;L3&quot;</span>
+    <span class="n">L4</span> <span class="o">=</span> <span class="s2">&quot;L4&quot;</span>
+    <span class="n">L5</span> <span class="o">=</span> <span class="s2">&quot;L5&quot;</span>
+    <span class="n">L6</span> <span class="o">=</span> <span class="s2">&quot;L6&quot;</span>
+    <span class="n">L7</span> <span class="o">=</span> <span class="s2">&quot;L7&quot;</span>
+    <span class="n">L8</span> <span class="o">=</span> <span class="s2">&quot;L8&quot;</span>
+    <span class="n">LATIN_9</span> <span class="o">=</span> <span class="s2">&quot;LATIN-9&quot;</span>
+    <span class="n">LATIN1</span> <span class="o">=</span> <span class="s2">&quot;LATIN1&quot;</span>
+    <span class="n">LATIN10</span> <span class="o">=</span> <span class="s2">&quot;LATIN10&quot;</span>
+    <span class="n">LATIN2</span> <span class="o">=</span> <span class="s2">&quot;LATIN2&quot;</span>
+    <span class="n">LATIN3</span> <span class="o">=</span> <span class="s2">&quot;LATIN3&quot;</span>
+    <span class="n">LATIN4</span> <span class="o">=</span> <span class="s2">&quot;LATIN4&quot;</span>
+    <span class="n">LATIN5</span> <span class="o">=</span> <span class="s2">&quot;LATIN5&quot;</span>
+    <span class="n">LATIN6</span> <span class="o">=</span> <span class="s2">&quot;LATIN6&quot;</span>
+    <span class="n">LATIN7</span> <span class="o">=</span> <span class="s2">&quot;LATIN7&quot;</span>
+    <span class="n">LATIN8</span> <span class="o">=</span> <span class="s2">&quot;LATIN8&quot;</span>
+    <span class="n">MAC</span> <span class="o">=</span> <span class="s2">&quot;MAC&quot;</span>
+    <span class="n">MACARABIC</span> <span class="o">=</span> <span class="s2">&quot;MACARABIC&quot;</span>
+    <span class="n">MACCENTRALEUROPE</span> <span class="o">=</span> <span class="s2">&quot;MACCENTRALEUROPE&quot;</span>
+    <span class="n">MACCROATIAN</span> <span class="o">=</span> <span class="s2">&quot;MACCROATIAN&quot;</span>
+    <span class="n">MACCYRILLIC</span> <span class="o">=</span> <span class="s2">&quot;MACCYRILLIC&quot;</span>
+    <span class="n">MACGREEK</span> <span class="o">=</span> <span class="s2">&quot;MACGREEK&quot;</span>
+    <span class="n">MACHEBREW</span> <span class="o">=</span> <span class="s2">&quot;MACHEBREW&quot;</span>
+    <span class="n">MACICELAND</span> <span class="o">=</span> <span class="s2">&quot;MACICELAND&quot;</span>
+    <span class="n">MACINTOSH</span> <span class="o">=</span> <span class="s2">&quot;MACINTOSH&quot;</span>
+    <span class="n">MACROMAN</span> <span class="o">=</span> <span class="s2">&quot;MACROMAN&quot;</span>
+    <span class="n">MACROMANIA</span> <span class="o">=</span> <span class="s2">&quot;MACROMANIA&quot;</span>
+    <span class="n">MACTHAI</span> <span class="o">=</span> <span class="s2">&quot;MACTHAI&quot;</span>
+    <span class="n">MACTURKISH</span> <span class="o">=</span> <span class="s2">&quot;MACTURKISH&quot;</span>
+    <span class="n">MACUKRAINE</span> <span class="o">=</span> <span class="s2">&quot;MACUKRAINE&quot;</span>
+    <span class="n">MS_ANSI</span> <span class="o">=</span> <span class="s2">&quot;MS-ANSI&quot;</span>
+    <span class="n">MS_ARAB</span> <span class="o">=</span> <span class="s2">&quot;MS-ARAB&quot;</span>
+    <span class="n">MS_CYRL</span> <span class="o">=</span> <span class="s2">&quot;MS-CYRL&quot;</span>
+    <span class="n">MS_EE</span> <span class="o">=</span> <span class="s2">&quot;MS-EE&quot;</span>
+    <span class="n">MS_GREEK</span> <span class="o">=</span> <span class="s2">&quot;MS-GREEK&quot;</span>
+    <span class="n">MS_HEBR</span> <span class="o">=</span> <span class="s2">&quot;MS-HEBR&quot;</span>
+    <span class="n">MS_TURK</span> <span class="o">=</span> <span class="s2">&quot;MS-TURK&quot;</span>
+    <span class="n">MS_KANJI</span> <span class="o">=</span> <span class="s2">&quot;MS_KANJI&quot;</span>
+    <span class="n">MS936</span> <span class="o">=</span> <span class="s2">&quot;MS936&quot;</span>
+    <span class="n">MULELAO_1</span> <span class="o">=</span> <span class="s2">&quot;MULELAO-1&quot;</span>
+    <span class="n">NEXTSTEP</span> <span class="o">=</span> <span class="s2">&quot;NEXTSTEP&quot;</span>
+    <span class="n">PT154</span> <span class="o">=</span> <span class="s2">&quot;PT154&quot;</span>
+    <span class="n">PTCP154</span> <span class="o">=</span> <span class="s2">&quot;PTCP154&quot;</span>
+    <span class="n">R8</span> <span class="o">=</span> <span class="s2">&quot;R8&quot;</span>
+    <span class="n">RK1048</span> <span class="o">=</span> <span class="s2">&quot;RK1048&quot;</span>
+    <span class="n">ROMAN8</span> <span class="o">=</span> <span class="s2">&quot;ROMAN8&quot;</span>
+    <span class="n">SHIFT_JIS</span> <span class="o">=</span> <span class="s2">&quot;SHIFT-JIS&quot;</span>
+    <span class="n">SJIS</span> <span class="o">=</span> <span class="s2">&quot;SJIS&quot;</span>
+    <span class="n">STRK1048_2002</span> <span class="o">=</span> <span class="s2">&quot;STRK1048-2002&quot;</span>
+    <span class="n">TCVN</span> <span class="o">=</span> <span class="s2">&quot;TCVN&quot;</span>
+    <span class="n">TCVN_5712</span> <span class="o">=</span> <span class="s2">&quot;TCVN-5712&quot;</span>
+    <span class="n">TCVN5712_1</span> <span class="o">=</span> <span class="s2">&quot;TCVN5712-1&quot;</span>
+    <span class="n">TCVN5712_1_1993</span> <span class="o">=</span> <span class="s2">&quot;TCVN5712-1:1993&quot;</span>
+    <span class="n">TIS_620</span> <span class="o">=</span> <span class="s2">&quot;TIS-620&quot;</span>
+    <span class="n">TIS620</span> <span class="o">=</span> <span class="s2">&quot;TIS620&quot;</span>
+    <span class="n">TIS620_0</span> <span class="o">=</span> <span class="s2">&quot;TIS620-0&quot;</span>
+    <span class="n">TIS620_2529_1</span> <span class="o">=</span> <span class="s2">&quot;TIS620.2529-1&quot;</span>
+    <span class="n">TIS620_2533_0</span> <span class="o">=</span> <span class="s2">&quot;TIS620.2533-0&quot;</span>
+    <span class="n">TIS620_2533_1</span> <span class="o">=</span> <span class="s2">&quot;TIS620.2533-1&quot;</span>
+    <span class="n">UCS_2</span> <span class="o">=</span> <span class="s2">&quot;UCS-2&quot;</span>
+    <span class="n">UCS_2_INTERNAL</span> <span class="o">=</span> <span class="s2">&quot;UCS-2-INTERNAL&quot;</span>
+    <span class="n">UCS_2_SWAPPED</span> <span class="o">=</span> <span class="s2">&quot;UCS-2-SWAPPED&quot;</span>
+    <span class="n">UCS_2BE</span> <span class="o">=</span> <span class="s2">&quot;UCS-2BE&quot;</span>
+    <span class="n">UCS_2LE</span> <span class="o">=</span> <span class="s2">&quot;UCS-2LE&quot;</span>
+    <span class="n">UCS_4</span> <span class="o">=</span> <span class="s2">&quot;UCS-4&quot;</span>
+    <span class="n">UCS_4_INTERNAL</span> <span class="o">=</span> <span class="s2">&quot;UCS-4-INTERNAL&quot;</span>
+    <span class="n">UCS_4_SWAPPED</span> <span class="o">=</span> <span class="s2">&quot;UCS-4-SWAPPED&quot;</span>
+    <span class="n">UCS_4BE</span> <span class="o">=</span> <span class="s2">&quot;UCS-4BE&quot;</span>
+    <span class="n">UCS_4LE</span> <span class="o">=</span> <span class="s2">&quot;UCS-4LE&quot;</span>
+    <span class="n">UHC</span> <span class="o">=</span> <span class="s2">&quot;UHC&quot;</span>
+    <span class="n">UNICODE_1_1</span> <span class="o">=</span> <span class="s2">&quot;UNICODE-1-1&quot;</span>
+    <span class="n">UNICODE_1_1_UTF_7</span> <span class="o">=</span> <span class="s2">&quot;UNICODE-1-1-UTF-7&quot;</span>
+    <span class="n">UNICODEBIG</span> <span class="o">=</span> <span class="s2">&quot;UNICODEBIG&quot;</span>
+    <span class="n">UNICODELITTLE</span> <span class="o">=</span> <span class="s2">&quot;UNICODELITTLE&quot;</span>
+    <span class="n">US</span> <span class="o">=</span> <span class="s2">&quot;US&quot;</span>
+    <span class="n">US_ASCII</span> <span class="o">=</span> <span class="s2">&quot;US-ASCII&quot;</span>
+    <span class="n">UTF_16</span> <span class="o">=</span> <span class="s2">&quot;UTF-16&quot;</span>
+    <span class="n">UTF_16BE</span> <span class="o">=</span> <span class="s2">&quot;UTF-16BE&quot;</span>
+    <span class="n">UTF_16LE</span> <span class="o">=</span> <span class="s2">&quot;UTF-16LE&quot;</span>
+    <span class="n">UTF_32</span> <span class="o">=</span> <span class="s2">&quot;UTF-32&quot;</span>
+    <span class="n">UTF_32BE</span> <span class="o">=</span> <span class="s2">&quot;UTF-32BE&quot;</span>
+    <span class="n">UTF_32LE</span> <span class="o">=</span> <span class="s2">&quot;UTF-32LE&quot;</span>
+    <span class="n">UTF_7</span> <span class="o">=</span> <span class="s2">&quot;UTF-7&quot;</span>
+    <span class="n">UTF_8</span> <span class="o">=</span> <span class="s2">&quot;UTF-8&quot;</span>
+    <span class="n">VISCII</span> <span class="o">=</span> <span class="s2">&quot;VISCII&quot;</span>
+    <span class="n">VISCII1_1_1</span> <span class="o">=</span> <span class="s2">&quot;VISCII1.1-1&quot;</span>
+    <span class="n">WCHAR_T</span> <span class="o">=</span> <span class="s2">&quot;WCHAR_T&quot;</span>
+    <span class="n">WINBALTRIM</span> <span class="o">=</span> <span class="s2">&quot;WINBALTRIM&quot;</span>
+    <span class="n">WINDOWS_1250</span> <span class="o">=</span> <span class="s2">&quot;WINDOWS-1250&quot;</span>
+    <span class="n">WINDOWS_1251</span> <span class="o">=</span> <span class="s2">&quot;WINDOWS-1251&quot;</span>
+    <span class="n">WINDOWS_1252</span> <span class="o">=</span> <span class="s2">&quot;WINDOWS-1252&quot;</span>
+    <span class="n">WINDOWS_1253</span> <span class="o">=</span> <span class="s2">&quot;WINDOWS-1253&quot;</span>
+    <span class="n">WINDOWS_1254</span> <span class="o">=</span> <span class="s2">&quot;WINDOWS-1254&quot;</span>
+    <span class="n">WINDOWS_1255</span> <span class="o">=</span> <span class="s2">&quot;WINDOWS-1255&quot;</span>
+    <span class="n">WINDOWS_1256</span> <span class="o">=</span> <span class="s2">&quot;WINDOWS-1256&quot;</span>
+    <span class="n">WINDOWS_1257</span> <span class="o">=</span> <span class="s2">&quot;WINDOWS-1257&quot;</span>
+    <span class="n">WINDOWS_1258</span> <span class="o">=</span> <span class="s2">&quot;WINDOWS-1258&quot;</span>
+    <span class="n">WINDOWS_874</span> <span class="o">=</span> <span class="s2">&quot;WINDOWS-874&quot;</span>
+    <span class="n">WINDOWS_936</span> <span class="o">=</span> <span class="s2">&quot;WINDOWS-936&quot;</span>
+    <span class="n">X0201</span> <span class="o">=</span> <span class="s2">&quot;X0201&quot;</span>
+    <span class="n">X0208</span> <span class="o">=</span> <span class="s2">&quot;X0208&quot;</span>
+    <span class="n">X0212</span> <span class="o">=</span> <span class="s2">&quot;X0212&quot;</span></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Bitmovin Inc
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+bitmovin\_api\_sdk.encoding.encodings.input\_streams.file package
+=================================================================
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.encoding.encodings.input\_streams.file.file\_api module
+--------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.encodings.input_streams.file.file_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.encoding.encodings.input\_streams.file.file\_input\_stream\_list\_query\_params module
+---------------------------------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.encodings.input_streams.file.file_input_stream_list_query_params
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.encoding.encodings.input_streams.file
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -12,8 +12,6 @@
   </p>
 </p>
 
-***Important: This is an alpha version. There may be breaking changes***
-
 Using this API client requires an active account.
 
 > Don't have an account yet? [Sign up for a free Bitmovin trial plan](https://dashboard.bitmovin.com/signup)!
@@ -53,3 +51,12 @@ from bitmovin_api_sdk import BitmovinApi
 
 bitmovinApi = BitmovinApi(api_key='<YOUR_API_KEY>')
 ```
+
+## Examples
+You can find sample workflow scripts in the [Bitmovin API SDK examples](https://github.com/bitmovin/bitmovin-api-sdk-examples) repository.
+
+# Previous API Client (Legacy)
+
+`bitmovin-api-sdk-python` is the latest Bitmovin API client for Python 2 and 3. It guarantees 100% specification conformity at any given time and access to all features of the API as soon as they are released. 
+
+However, if you need to use the previous version for legacy reasons, you can still find it at [bitmovin-java](https://github.com/bitmovin/bitmovin-python). 

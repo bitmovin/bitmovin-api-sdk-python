@@ -1,0 +1,22 @@
+bitmovin\_api\_sdk.encoding.encodings.machine\_learning.object\_detection.customdata package
+============================================================================================
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.encoding.encodings.machine\_learning.object\_detection.customdata.customdata\_api module
+-----------------------------------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.encodings.machine_learning.object_detection.customdata.customdata_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.encoding.encodings.machine_learning.object_detection.customdata
+   :members:
+   :undoc-members:
+   :show-inheritance:

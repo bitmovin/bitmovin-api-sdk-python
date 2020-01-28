@@ -1,0 +1,388 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.id3.raw package &mdash; Bitmovin Python API SDK {{packageVersion}} documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.id3.raw.customdata package" href="bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.id3.raw.customdata.html" />
+    <link rel="prev" title="bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.id3.plain_text.customdata package" href="bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.id3.plain_text.customdata.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: blue" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Bitmovin Python API SDK
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="modules.html">python</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="bitmovin_api_sdk.encoding.html">bitmovin_api_sdk.encoding package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="bitmovin_api_sdk.encoding.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="bitmovin_api_sdk.encoding.configurations.html">bitmovin_api_sdk.encoding.configurations package</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="bitmovin_api_sdk.encoding.encodings.html">bitmovin_api_sdk.encoding.encodings package</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="bitmovin_api_sdk.encoding.encodings.html#subpackages">Subpackages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bitmovin_api_sdk.encoding.encodings.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bitmovin_api_sdk.encoding.encodings.html#module-bitmovin_api_sdk.encoding.encodings.encoding_list_query_params">bitmovin_api_sdk.encoding.encodings.encoding_list_query_params module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bitmovin_api_sdk.encoding.encodings.html#module-bitmovin_api_sdk.encoding.encodings.encodings_api">bitmovin_api_sdk.encoding.encodings.encodings_api module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bitmovin_api_sdk.encoding.encodings.html#module-bitmovin_api_sdk.encoding.encodings">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="bitmovin_api_sdk.encoding.error_definitions.html">bitmovin_api_sdk.encoding.error_definitions package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bitmovin_api_sdk.encoding.filters.html">bitmovin_api_sdk.encoding.filters package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bitmovin_api_sdk.encoding.infrastructure.html">bitmovin_api_sdk.encoding.infrastructure package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bitmovin_api_sdk.encoding.inputs.html">bitmovin_api_sdk.encoding.inputs package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bitmovin_api_sdk.encoding.manifests.html">bitmovin_api_sdk.encoding.manifests package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bitmovin_api_sdk.encoding.outputs.html">bitmovin_api_sdk.encoding.outputs package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bitmovin_api_sdk.encoding.statistics.html">bitmovin_api_sdk.encoding.statistics package</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="bitmovin_api_sdk.encoding.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bitmovin_api_sdk.encoding.html#module-bitmovin_api_sdk.encoding.encoding_api">bitmovin_api_sdk.encoding.encoding_api module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bitmovin_api_sdk.encoding.html#module-bitmovin_api_sdk.encoding">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="bitmovin_api_sdk.analytics.html">bitmovin_api_sdk.analytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bitmovin_api_sdk.player.html">bitmovin_api_sdk.player package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bitmovin_api_sdk.account.html">bitmovin_api_sdk.account package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bitmovin_api_sdk.notifications.html">bitmovin_api_sdk.notifications package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bitmovin_api_sdk.general.html">bitmovin_api_sdk.general package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bitmovin_api_sdk.common.html">bitmovin_api_sdk.common package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bitmovin_api_sdk.models.html">bitmovin_api_sdk.models package</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Bitmovin Python API SDK</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="modules.html">python</a> &raquo;</li>
+        
+          <li><a href="bitmovin_api_sdk.html">bitmovin_api_sdk package</a> &raquo;</li>
+        
+          <li><a href="bitmovin_api_sdk.encoding.html">bitmovin_api_sdk.encoding package</a> &raquo;</li>
+        
+          <li><a href="bitmovin_api_sdk.encoding.encodings.html">bitmovin_api_sdk.encoding.encodings package</a> &raquo;</li>
+        
+          <li><a href="bitmovin_api_sdk.encoding.encodings.muxings.html">bitmovin_api_sdk.encoding.encodings.muxings package</a> &raquo;</li>
+        
+          <li><a href="bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.html">bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts package</a> &raquo;</li>
+        
+          <li><a href="bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.id3.html">bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.id3 package</a> &raquo;</li>
+        
+      <li>bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.id3.raw package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/__modules/bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.id3.raw.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
+      
+        <a href="bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.id3.raw.customdata.html" class="btn btn-neutral float-right" title="bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.id3.raw.customdata package" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.id3.plain_text.customdata.html" class="btn btn-neutral float-left" title="bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.id3.plain_text.customdata package" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+  </div>
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="bitmovin-api-sdk-encoding-encodings-muxings-progressive-ts-id3-raw-package">
+<h1>bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.id3.raw package<a class="headerlink" href="#bitmovin-api-sdk-encoding-encodings-muxings-progressive-ts-id3-raw-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.id3.raw.customdata.html">bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.id3.raw.customdata package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.id3.raw.customdata.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.id3.raw.customdata.html#module-bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.id3.raw.customdata.customdata_api">bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.id3.raw.customdata.customdata_api module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.id3.raw.customdata.html#module-bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.id3.raw.customdata">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.id3.raw.raw_api">
+<span id="bitmovin-api-sdk-encoding-encodings-muxings-progressive-ts-id3-raw-raw-api-module"></span><h2>bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.id3.raw.raw_api module<a class="headerlink" href="#module-bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.id3.raw.raw_api" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.id3.raw.raw_api.RawApi">
+<em class="property">class </em><code class="sig-prename descclassname">bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.id3.raw.raw_api.</code><code class="sig-name descname">RawApi</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/encodings/muxings/progressive_ts/id3/raw/raw_api.html#RawApi"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.id3.raw.raw_api.RawApi" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="bitmovin_api_sdk.common.html#bitmovin_api_sdk.common.base_api.BaseApi" title="bitmovin_api_sdk.common.base_api.BaseApi"><code class="xref py py-class docutils literal notranslate"><span class="pre">bitmovin_api_sdk.common.base_api.BaseApi</span></code></a></p>
+<dl class="method">
+<dt id="bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.id3.raw.raw_api.RawApi.create">
+<code class="sig-name descname">create</code><span class="sig-paren">(</span><em class="sig-param">encoding_id</em>, <em class="sig-param">muxing_id</em>, <em class="sig-param">raw_id3_tag</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/encodings/muxings/progressive_ts/id3/raw/raw_api.html#RawApi.create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.id3.raw.raw_api.RawApi.create" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add Raw ID3 Tag to Progressive TS Muxing</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>encoding_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – ID of the Encoding.</p></li>
+<li><p><strong>muxing_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – ID of the Progressive TS Muxing</p></li>
+<li><p><strong>raw_id3_tag</strong> (<a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.raw_id3_tag.RawId3Tag" title="bitmovin_api_sdk.models.raw_id3_tag.RawId3Tag"><em>RawId3Tag</em></a><em>, </em><em>required</em>) – The Raw ID3 Tag to be created</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Raw ID3 Tag</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.raw_id3_tag.RawId3Tag" title="bitmovin_api_sdk.models.raw_id3_tag.RawId3Tag">RawId3Tag</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.id3.raw.raw_api.RawApi.delete">
+<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">encoding_id</em>, <em class="sig-param">muxing_id</em>, <em class="sig-param">id3_tag_id</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/encodings/muxings/progressive_ts/id3/raw/raw_api.html#RawApi.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.id3.raw.raw_api.RawApi.delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete Raw ID3 Tag of Progressive TS Muxing</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>encoding_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – ID of the Encoding.</p></li>
+<li><p><strong>muxing_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – ID of the Progressive TS Muxing</p></li>
+<li><p><strong>id3_tag_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – ID of the RAW ID3 Tag</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>ID of the Raw ID3 Tag</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.bitmovin_response.BitmovinResponse" title="bitmovin_api_sdk.models.bitmovin_response.BitmovinResponse">BitmovinResponse</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.id3.raw.raw_api.RawApi.get">
+<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">encoding_id</em>, <em class="sig-param">muxing_id</em>, <em class="sig-param">id3_tag_id</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/encodings/muxings/progressive_ts/id3/raw/raw_api.html#RawApi.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.id3.raw.raw_api.RawApi.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Raw ID3 Tag Details of Progressive TS Muxing</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>encoding_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – ID of the Encoding.</p></li>
+<li><p><strong>muxing_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – ID of the Progressive TS Muxing</p></li>
+<li><p><strong>id3_tag_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – ID of the Raw ID3 Tag</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Raw ID3 Tag</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.raw_id3_tag.RawId3Tag" title="bitmovin_api_sdk.models.raw_id3_tag.RawId3Tag">RawId3Tag</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.id3.raw.raw_api.RawApi.list">
+<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">encoding_id</em>, <em class="sig-param">muxing_id</em>, <em class="sig-param">query_params=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/encodings/muxings/progressive_ts/id3/raw/raw_api.html#RawApi.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.id3.raw.raw_api.RawApi.list" title="Permalink to this definition">¶</a></dt>
+<dd><p>List Raw ID3 Tags of Progressive TS Muxing</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>encoding_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – ID of the Encoding.</p></li>
+<li><p><strong>muxing_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – ID of the Progressive TS Muxing</p></li>
+<li><p><strong>query_params</strong> (<a class="reference internal" href="#bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.id3.raw.raw_id3_tag_list_query_params.RawId3TagListQueryParams" title="bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.id3.raw.raw_id3_tag_list_query_params.RawId3TagListQueryParams"><em>RawId3TagListQueryParams</em></a>) – Query parameters</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>List of Raw ID3 Tags</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.raw_id3_tag.RawId3Tag" title="bitmovin_api_sdk.models.raw_id3_tag.RawId3Tag">RawId3Tag</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.id3.raw.raw_id3_tag_list_query_params">
+<span id="bitmovin-api-sdk-encoding-encodings-muxings-progressive-ts-id3-raw-raw-id3-tag-list-query-params-module"></span><h2>bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.id3.raw.raw_id3_tag_list_query_params module<a class="headerlink" href="#module-bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.id3.raw.raw_id3_tag_list_query_params" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.id3.raw.raw_id3_tag_list_query_params.RawId3TagListQueryParams">
+<em class="property">class </em><code class="sig-prename descclassname">bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.id3.raw.raw_id3_tag_list_query_params.</code><code class="sig-name descname">RawId3TagListQueryParams</code><span class="sig-paren">(</span><em class="sig-param">offset=None</em>, <em class="sig-param">limit=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/encodings/muxings/progressive_ts/id3/raw/raw_id3_tag_list_query_params.html#RawId3TagListQueryParams"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.id3.raw.raw_id3_tag_list_query_params.RawId3TagListQueryParams" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.id3.raw.raw_id3_tag_list_query_params.RawId3TagListQueryParams.attribute_map">
+<em class="property">property </em><code class="sig-name descname">attribute_map</code><a class="headerlink" href="#bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.id3.raw.raw_id3_tag_list_query_params.RawId3TagListQueryParams.attribute_map" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.id3.raw.raw_id3_tag_list_query_params.RawId3TagListQueryParams.openapi_types">
+<em class="property">property </em><code class="sig-name descname">openapi_types</code><a class="headerlink" href="#bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.id3.raw.raw_id3_tag_list_query_params.RawId3TagListQueryParams.openapi_types" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.id3.raw">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.id3.raw" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.id3.raw.customdata.html" class="btn btn-neutral float-right" title="bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.id3.raw.customdata package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.id3.plain_text.customdata.html" class="btn btn-neutral float-left" title="bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.id3.plain_text.customdata package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Bitmovin Inc
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+bitmovin\_api\_sdk.encoding.configurations.video.vp9 package
+============================================================
+
+Subpackages
+-----------
+
+.. toctree::
+
+   bitmovin_api_sdk.encoding.configurations.video.vp9.customdata
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.encoding.configurations.video.vp9.vp9\_api module
+--------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.configurations.video.vp9.vp9_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.encoding.configurations.video.vp9.vp9\_video\_configuration\_list\_query\_params module
+----------------------------------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.configurations.video.vp9.vp9_video_configuration_list_query_params
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.encoding.configurations.video.vp9
+   :members:
+   :undoc-members:
+   :show-inheritance:

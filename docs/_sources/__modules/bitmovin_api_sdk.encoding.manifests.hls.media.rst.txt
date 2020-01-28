@@ -1,0 +1,35 @@
+bitmovin\_api\_sdk.encoding.manifests.hls.media package
+=======================================================
+
+Subpackages
+-----------
+
+.. toctree::
+
+   bitmovin_api_sdk.encoding.manifests.hls.media.audio
+   bitmovin_api_sdk.encoding.manifests.hls.media.closed_captions
+   bitmovin_api_sdk.encoding.manifests.hls.media.custom_tags
+   bitmovin_api_sdk.encoding.manifests.hls.media.subtitles
+   bitmovin_api_sdk.encoding.manifests.hls.media.type
+   bitmovin_api_sdk.encoding.manifests.hls.media.video
+   bitmovin_api_sdk.encoding.manifests.hls.media.vtt
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.encoding.manifests.hls.media.media\_api module
+-----------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.manifests.hls.media.media_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.encoding.manifests.hls.media
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,322 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.cmaf.drm.drm_api &mdash; Bitmovin Python API SDK {{packageVersion}} documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../../../../../../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../../../../../../../" src="../../../../../../../../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../../../../../../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../../../../../../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../../../../../../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../../../../../../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../../../../../../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../../../../../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../../../../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../../../../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../../../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: blue" >
+          
+
+          
+            <a href="../../../../../../../../../../index.html" class="icon icon-home"> Bitmovin Python API SDK
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../../../../__modules/modules.html">python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../../../../__modules/bitmovin_api_sdk.encoding.html">bitmovin_api_sdk.encoding package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../../../../__modules/bitmovin_api_sdk.analytics.html">bitmovin_api_sdk.analytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../../../../__modules/bitmovin_api_sdk.player.html">bitmovin_api_sdk.player package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../../../../__modules/bitmovin_api_sdk.account.html">bitmovin_api_sdk.account package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../../../../__modules/bitmovin_api_sdk.notifications.html">bitmovin_api_sdk.notifications package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../../../../__modules/bitmovin_api_sdk.general.html">bitmovin_api_sdk.general package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../../../../__modules/bitmovin_api_sdk.common.html">bitmovin_api_sdk.common package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../../../../__modules/bitmovin_api_sdk.models.html">bitmovin_api_sdk.models package</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../../../../../../index.html">Bitmovin Python API SDK</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../../../../../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../../../../../../../../index.html">Module code</a> &raquo;</li>
+        
+      <li>bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.cmaf.drm.drm_api</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.cmaf.drm.drm_api</h1><div class="highlight"><pre>
+<span></span><span class="c1"># coding: utf-8</span>
+
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">absolute_import</span>
+
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.common</span> <span class="kn">import</span> <span class="n">BaseApi</span><span class="p">,</span> <span class="n">BitmovinApiLoggerBase</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.common.poscheck</span> <span class="kn">import</span> <span class="n">poscheck_except</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.bitmovin_response</span> <span class="kn">import</span> <span class="n">BitmovinResponse</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.dash_cmaf_drm_representation</span> <span class="kn">import</span> <span class="n">DashCmafDrmRepresentation</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.response_envelope</span> <span class="kn">import</span> <span class="n">ResponseEnvelope</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.response_error</span> <span class="kn">import</span> <span class="n">ResponseError</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.cmaf.drm.contentprotection.contentprotection_api</span> <span class="kn">import</span> <span class="n">ContentprotectionApi</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.cmaf.drm.dash_cmaf_drm_representation_list_query_params</span> <span class="kn">import</span> <span class="n">DashCmafDrmRepresentationListQueryParams</span>
+
+
+<div class="viewcode-block" id="DrmApi"><a class="viewcode-back" href="../../../../../../../../../../__modules/bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.cmaf.drm.html#bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.cmaf.drm.drm_api.DrmApi">[docs]</a><span class="k">class</span> <span class="nc">DrmApi</span><span class="p">(</span><span class="n">BaseApi</span><span class="p">):</span>
+    <span class="nd">@poscheck_except</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">api_key</span><span class="p">,</span> <span class="n">tenant_org_id</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">base_url</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">logger</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="c1"># type: (str, str, str, BitmovinApiLoggerBase) -&gt; None</span>
+
+        <span class="nb">super</span><span class="p">(</span><span class="n">DrmApi</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span>
+            <span class="n">api_key</span><span class="o">=</span><span class="n">api_key</span><span class="p">,</span>
+            <span class="n">tenant_org_id</span><span class="o">=</span><span class="n">tenant_org_id</span><span class="p">,</span>
+            <span class="n">base_url</span><span class="o">=</span><span class="n">base_url</span><span class="p">,</span>
+            <span class="n">logger</span><span class="o">=</span><span class="n">logger</span>
+        <span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">contentprotection</span> <span class="o">=</span> <span class="n">ContentprotectionApi</span><span class="p">(</span>
+            <span class="n">api_key</span><span class="o">=</span><span class="n">api_key</span><span class="p">,</span>
+            <span class="n">tenant_org_id</span><span class="o">=</span><span class="n">tenant_org_id</span><span class="p">,</span>
+            <span class="n">base_url</span><span class="o">=</span><span class="n">base_url</span><span class="p">,</span>
+            <span class="n">logger</span><span class="o">=</span><span class="n">logger</span>
+        <span class="p">)</span>
+
+<div class="viewcode-block" id="DrmApi.create"><a class="viewcode-back" href="../../../../../../../../../../__modules/bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.cmaf.drm.html#bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.cmaf.drm.drm_api.DrmApi.create">[docs]</a>    <span class="k">def</span> <span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">manifest_id</span><span class="p">,</span> <span class="n">period_id</span><span class="p">,</span> <span class="n">adaptationset_id</span><span class="p">,</span> <span class="n">dash_cmaf_drm_representation</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="c1"># type: (string_types, string_types, string_types, DashCmafDrmRepresentation, dict) -&gt; DashCmafDrmRepresentation</span>
+        <span class="sd">&quot;&quot;&quot;Add DRM CMAF Representation</span>
+
+<span class="sd">        :param manifest_id: Id of the manifest</span>
+<span class="sd">        :type manifest_id: string_types, required</span>
+<span class="sd">        :param period_id: Id of the period</span>
+<span class="sd">        :type period_id: string_types, required</span>
+<span class="sd">        :param adaptationset_id: Id of the adaptation set</span>
+<span class="sd">        :type adaptationset_id: string_types, required</span>
+<span class="sd">        :param dash_cmaf_drm_representation: The DRM CMAF representation to be added to the adaptation set</span>
+<span class="sd">        :type dash_cmaf_drm_representation: DashCmafDrmRepresentation, required</span>
+<span class="sd">        :return: Id of the DRM CMAF representation</span>
+<span class="sd">        :rtype: DashCmafDrmRepresentation</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">post</span><span class="p">(</span>
+            <span class="s1">&#39;/encoding/manifests/dash/</span><span class="si">{manifest_id}</span><span class="s1">/periods/</span><span class="si">{period_id}</span><span class="s1">/adaptationsets/</span><span class="si">{adaptationset_id}</span><span class="s1">/representations/cmaf/drm&#39;</span><span class="p">,</span>
+            <span class="n">dash_cmaf_drm_representation</span><span class="p">,</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;manifest_id&#39;</span><span class="p">:</span> <span class="n">manifest_id</span><span class="p">,</span> <span class="s1">&#39;period_id&#39;</span><span class="p">:</span> <span class="n">period_id</span><span class="p">,</span> <span class="s1">&#39;adaptationset_id&#39;</span><span class="p">:</span> <span class="n">adaptationset_id</span><span class="p">},</span>
+            <span class="nb">type</span><span class="o">=</span><span class="n">DashCmafDrmRepresentation</span><span class="p">,</span>
+            <span class="o">**</span><span class="n">kwargs</span>
+        <span class="p">)</span></div>
+
+<div class="viewcode-block" id="DrmApi.delete"><a class="viewcode-back" href="../../../../../../../../../../__modules/bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.cmaf.drm.html#bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.cmaf.drm.drm_api.DrmApi.delete">[docs]</a>    <span class="k">def</span> <span class="nf">delete</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">manifest_id</span><span class="p">,</span> <span class="n">period_id</span><span class="p">,</span> <span class="n">adaptationset_id</span><span class="p">,</span> <span class="n">representation_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="c1"># type: (string_types, string_types, string_types, string_types, dict) -&gt; BitmovinResponse</span>
+        <span class="sd">&quot;&quot;&quot;Delete DRM CMAF Representation</span>
+
+<span class="sd">        :param manifest_id: Id of the manifest</span>
+<span class="sd">        :type manifest_id: string_types, required</span>
+<span class="sd">        :param period_id: Id of the period</span>
+<span class="sd">        :type period_id: string_types, required</span>
+<span class="sd">        :param adaptationset_id: Id of the adaptation set</span>
+<span class="sd">        :type adaptationset_id: string_types, required</span>
+<span class="sd">        :param representation_id: Id of the DRM CMAF representation to be deleted</span>
+<span class="sd">        :type representation_id: string_types, required</span>
+<span class="sd">        :return: Id of the DRM CMAF Representation</span>
+<span class="sd">        :rtype: BitmovinResponse</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span>
+            <span class="s1">&#39;/encoding/manifests/dash/</span><span class="si">{manifest_id}</span><span class="s1">/periods/</span><span class="si">{period_id}</span><span class="s1">/adaptationsets/</span><span class="si">{adaptationset_id}</span><span class="s1">/representations/cmaf/drm/</span><span class="si">{representation_id}</span><span class="s1">&#39;</span><span class="p">,</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;manifest_id&#39;</span><span class="p">:</span> <span class="n">manifest_id</span><span class="p">,</span> <span class="s1">&#39;period_id&#39;</span><span class="p">:</span> <span class="n">period_id</span><span class="p">,</span> <span class="s1">&#39;adaptationset_id&#39;</span><span class="p">:</span> <span class="n">adaptationset_id</span><span class="p">,</span> <span class="s1">&#39;representation_id&#39;</span><span class="p">:</span> <span class="n">representation_id</span><span class="p">},</span>
+            <span class="nb">type</span><span class="o">=</span><span class="n">BitmovinResponse</span><span class="p">,</span>
+            <span class="o">**</span><span class="n">kwargs</span>
+        <span class="p">)</span></div>
+
+<div class="viewcode-block" id="DrmApi.get"><a class="viewcode-back" href="../../../../../../../../../../__modules/bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.cmaf.drm.html#bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.cmaf.drm.drm_api.DrmApi.get">[docs]</a>    <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">manifest_id</span><span class="p">,</span> <span class="n">period_id</span><span class="p">,</span> <span class="n">adaptationset_id</span><span class="p">,</span> <span class="n">representation_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="c1"># type: (string_types, string_types, string_types, string_types, dict) -&gt; DashCmafDrmRepresentation</span>
+        <span class="sd">&quot;&quot;&quot;DRM CMAF Representation Details</span>
+
+<span class="sd">        :param manifest_id: Id of the manifest</span>
+<span class="sd">        :type manifest_id: string_types, required</span>
+<span class="sd">        :param period_id: Id of the period</span>
+<span class="sd">        :type period_id: string_types, required</span>
+<span class="sd">        :param adaptationset_id: Id of the adaptation set</span>
+<span class="sd">        :type adaptationset_id: string_types, required</span>
+<span class="sd">        :param representation_id: Id of the representation</span>
+<span class="sd">        :type representation_id: string_types, required</span>
+<span class="sd">        :return: DRM CMAF Representation details</span>
+<span class="sd">        :rtype: DashCmafDrmRepresentation</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+            <span class="s1">&#39;/encoding/manifests/dash/</span><span class="si">{manifest_id}</span><span class="s1">/periods/</span><span class="si">{period_id}</span><span class="s1">/adaptationsets/</span><span class="si">{adaptationset_id}</span><span class="s1">/representations/cmaf/drm/</span><span class="si">{representation_id}</span><span class="s1">&#39;</span><span class="p">,</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;manifest_id&#39;</span><span class="p">:</span> <span class="n">manifest_id</span><span class="p">,</span> <span class="s1">&#39;period_id&#39;</span><span class="p">:</span> <span class="n">period_id</span><span class="p">,</span> <span class="s1">&#39;adaptationset_id&#39;</span><span class="p">:</span> <span class="n">adaptationset_id</span><span class="p">,</span> <span class="s1">&#39;representation_id&#39;</span><span class="p">:</span> <span class="n">representation_id</span><span class="p">},</span>
+            <span class="nb">type</span><span class="o">=</span><span class="n">DashCmafDrmRepresentation</span><span class="p">,</span>
+            <span class="o">**</span><span class="n">kwargs</span>
+        <span class="p">)</span></div>
+
+<div class="viewcode-block" id="DrmApi.list"><a class="viewcode-back" href="../../../../../../../../../../__modules/bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.cmaf.drm.html#bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.cmaf.drm.drm_api.DrmApi.list">[docs]</a>    <span class="k">def</span> <span class="nf">list</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">manifest_id</span><span class="p">,</span> <span class="n">period_id</span><span class="p">,</span> <span class="n">adaptationset_id</span><span class="p">,</span> <span class="n">query_params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="c1"># type: (string_types, string_types, string_types, DashCmafDrmRepresentationListQueryParams, dict) -&gt; DashCmafDrmRepresentation</span>
+        <span class="sd">&quot;&quot;&quot;List all DRM CMAF Representations</span>
+
+<span class="sd">        :param manifest_id: Id of the manifest</span>
+<span class="sd">        :type manifest_id: string_types, required</span>
+<span class="sd">        :param period_id: Id of the period</span>
+<span class="sd">        :type period_id: string_types, required</span>
+<span class="sd">        :param adaptationset_id: Id of the adaptation set</span>
+<span class="sd">        :type adaptationset_id: string_types, required</span>
+<span class="sd">        :param query_params: Query parameters</span>
+<span class="sd">        :type query_params: DashCmafDrmRepresentationListQueryParams</span>
+<span class="sd">        :return: List of DRM CMAF Representations</span>
+<span class="sd">        :rtype: DashCmafDrmRepresentation</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+            <span class="s1">&#39;/encoding/manifests/dash/</span><span class="si">{manifest_id}</span><span class="s1">/periods/</span><span class="si">{period_id}</span><span class="s1">/adaptationsets/</span><span class="si">{adaptationset_id}</span><span class="s1">/representations/cmaf/drm&#39;</span><span class="p">,</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;manifest_id&#39;</span><span class="p">:</span> <span class="n">manifest_id</span><span class="p">,</span> <span class="s1">&#39;period_id&#39;</span><span class="p">:</span> <span class="n">period_id</span><span class="p">,</span> <span class="s1">&#39;adaptationset_id&#39;</span><span class="p">:</span> <span class="n">adaptationset_id</span><span class="p">},</span>
+            <span class="n">query_params</span><span class="o">=</span><span class="n">query_params</span><span class="p">,</span>
+            <span class="n">pagination_response</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+            <span class="nb">type</span><span class="o">=</span><span class="n">DashCmafDrmRepresentation</span><span class="p">,</span>
+            <span class="o">**</span><span class="n">kwargs</span>
+        <span class="p">)</span></div></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Bitmovin Inc
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

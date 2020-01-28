@@ -1,0 +1,38 @@
+bitmovin\_api\_sdk.encoding.encodings.machine\_learning.object\_detection package
+=================================================================================
+
+Subpackages
+-----------
+
+.. toctree::
+
+   bitmovin_api_sdk.encoding.encodings.machine_learning.object_detection.customdata
+   bitmovin_api_sdk.encoding.encodings.machine_learning.object_detection.results
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.encoding.encodings.machine\_learning.object\_detection.object\_detection\_api module
+-------------------------------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.encodings.machine_learning.object_detection.object_detection_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.encoding.encodings.machine\_learning.object\_detection.object\_detection\_configuration\_list\_query\_params module
+--------------------------------------------------------------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.encodings.machine_learning.object_detection.object_detection_configuration_list_query_params
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.encoding.encodings.machine_learning.object_detection
+   :members:
+   :undoc-members:
+   :show-inheritance:

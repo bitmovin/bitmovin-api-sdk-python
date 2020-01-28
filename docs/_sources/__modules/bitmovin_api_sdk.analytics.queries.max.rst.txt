@@ -1,0 +1,22 @@
+bitmovin\_api\_sdk.analytics.queries.max package
+================================================
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.analytics.queries.max.max\_api module
+--------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.analytics.queries.max.max_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.analytics.queries.max
+   :members:
+   :undoc-members:
+   :show-inheritance:

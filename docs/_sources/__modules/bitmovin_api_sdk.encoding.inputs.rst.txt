@@ -1,0 +1,56 @@
+bitmovin\_api\_sdk.encoding.inputs package
+==========================================
+
+Subpackages
+-----------
+
+.. toctree::
+
+   bitmovin_api_sdk.encoding.inputs.akamai_netstorage
+   bitmovin_api_sdk.encoding.inputs.aspera
+   bitmovin_api_sdk.encoding.inputs.azure
+   bitmovin_api_sdk.encoding.inputs.ftp
+   bitmovin_api_sdk.encoding.inputs.gcs
+   bitmovin_api_sdk.encoding.inputs.generic_s3
+   bitmovin_api_sdk.encoding.inputs.http
+   bitmovin_api_sdk.encoding.inputs.https
+   bitmovin_api_sdk.encoding.inputs.local
+   bitmovin_api_sdk.encoding.inputs.redundant_rtmp
+   bitmovin_api_sdk.encoding.inputs.rtmp
+   bitmovin_api_sdk.encoding.inputs.s3
+   bitmovin_api_sdk.encoding.inputs.s3_role_based
+   bitmovin_api_sdk.encoding.inputs.sftp
+   bitmovin_api_sdk.encoding.inputs.srt
+   bitmovin_api_sdk.encoding.inputs.tcp
+   bitmovin_api_sdk.encoding.inputs.type
+   bitmovin_api_sdk.encoding.inputs.udp
+   bitmovin_api_sdk.encoding.inputs.udp_multicast
+   bitmovin_api_sdk.encoding.inputs.zixi
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.encoding.inputs.input\_list\_query\_params module
+--------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.inputs.input_list_query_params
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.encoding.inputs.inputs\_api module
+-----------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.inputs.inputs_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.encoding.inputs
+   :members:
+   :undoc-members:
+   :show-inheritance:

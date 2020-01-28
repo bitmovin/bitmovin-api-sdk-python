@@ -1,0 +1,22 @@
+bitmovin\_api\_sdk.analytics.insights.organizations.settings package
+====================================================================
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.analytics.insights.organizations.settings.settings\_api module
+---------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.analytics.insights.organizations.settings.settings_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.analytics.insights.organizations.settings
+   :members:
+   :undoc-members:
+   :show-inheritance:

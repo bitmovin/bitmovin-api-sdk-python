@@ -1,0 +1,37 @@
+bitmovin\_api\_sdk.analytics.queries package
+============================================
+
+Subpackages
+-----------
+
+.. toctree::
+
+   bitmovin_api_sdk.analytics.queries.avg
+   bitmovin_api_sdk.analytics.queries.count
+   bitmovin_api_sdk.analytics.queries.max
+   bitmovin_api_sdk.analytics.queries.median
+   bitmovin_api_sdk.analytics.queries.min
+   bitmovin_api_sdk.analytics.queries.percentile
+   bitmovin_api_sdk.analytics.queries.stddev
+   bitmovin_api_sdk.analytics.queries.sum
+   bitmovin_api_sdk.analytics.queries.variance
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.analytics.queries.queries\_api module
+--------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.analytics.queries.queries_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.analytics.queries
+   :members:
+   :undoc-members:
+   :show-inheritance:

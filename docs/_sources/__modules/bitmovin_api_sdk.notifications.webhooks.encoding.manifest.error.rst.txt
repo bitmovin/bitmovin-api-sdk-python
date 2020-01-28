@@ -1,0 +1,22 @@
+bitmovin\_api\_sdk.notifications.webhooks.encoding.manifest.error package
+=========================================================================
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.notifications.webhooks.encoding.manifest.error.error\_api module
+-----------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.notifications.webhooks.encoding.manifest.error.error_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.notifications.webhooks.encoding.manifest.error
+   :members:
+   :undoc-members:
+   :show-inheritance:

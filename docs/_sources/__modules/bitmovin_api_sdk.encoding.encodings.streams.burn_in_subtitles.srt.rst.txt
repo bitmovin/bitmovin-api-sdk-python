@@ -1,0 +1,30 @@
+bitmovin\_api\_sdk.encoding.encodings.streams.burn\_in\_subtitles.srt package
+=============================================================================
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.encoding.encodings.streams.burn\_in\_subtitles.srt.burn\_in\_subtitle\_srt\_list\_query\_params module
+-------------------------------------------------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.encodings.streams.burn_in_subtitles.srt.burn_in_subtitle_srt_list_query_params
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.encoding.encodings.streams.burn\_in\_subtitles.srt.srt\_api module
+-------------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.encodings.streams.burn_in_subtitles.srt.srt_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.encoding.encodings.streams.burn_in_subtitles.srt
+   :members:
+   :undoc-members:
+   :show-inheritance:

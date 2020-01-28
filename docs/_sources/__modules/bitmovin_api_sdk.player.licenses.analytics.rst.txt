@@ -1,0 +1,22 @@
+bitmovin\_api\_sdk.player.licenses.analytics package
+====================================================
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.player.licenses.analytics.analytics\_api module
+------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.player.licenses.analytics.analytics_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.player.licenses.analytics
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,37 @@
+bitmovin\_api\_sdk.encoding.encodings.captions.scc package
+==========================================================
+
+Subpackages
+-----------
+
+.. toctree::
+
+   bitmovin_api_sdk.encoding.encodings.captions.scc.customdata
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.encoding.encodings.captions.scc.convert\_scc\_caption\_list\_query\_params module
+----------------------------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.encodings.captions.scc.convert_scc_caption_list_query_params
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.encoding.encodings.captions.scc.scc\_api module
+------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.encodings.captions.scc.scc_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.encoding.encodings.captions.scc
+   :members:
+   :undoc-members:
+   :show-inheritance:

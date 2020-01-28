@@ -1,0 +1,22 @@
+bitmovin\_api\_sdk.analytics.queries.sum package
+================================================
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.analytics.queries.sum.sum\_api module
+--------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.analytics.queries.sum.sum_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.analytics.queries.sum
+   :members:
+   :undoc-members:
+   :show-inheritance:

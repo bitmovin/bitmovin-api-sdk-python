@@ -1,0 +1,22 @@
+bitmovin\_api\_sdk.account.organizations.groups.tenants package
+===============================================================
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.account.organizations.groups.tenants.tenants\_api module
+---------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.account.organizations.groups.tenants.tenants_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.account.organizations.groups.tenants
+   :members:
+   :undoc-members:
+   :show-inheritance:

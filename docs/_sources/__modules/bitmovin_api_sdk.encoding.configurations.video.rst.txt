@@ -1,0 +1,34 @@
+bitmovin\_api\_sdk.encoding.configurations.video package
+========================================================
+
+Subpackages
+-----------
+
+.. toctree::
+
+   bitmovin_api_sdk.encoding.configurations.video.av1
+   bitmovin_api_sdk.encoding.configurations.video.h264
+   bitmovin_api_sdk.encoding.configurations.video.h265
+   bitmovin_api_sdk.encoding.configurations.video.mjpeg
+   bitmovin_api_sdk.encoding.configurations.video.vp8
+   bitmovin_api_sdk.encoding.configurations.video.vp9
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.encoding.configurations.video.video\_api module
+------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.configurations.video.video_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.encoding.configurations.video
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,29 @@
+bitmovin\_api\_sdk.analytics.ads package
+========================================
+
+Subpackages
+-----------
+
+.. toctree::
+
+   bitmovin_api_sdk.analytics.ads.queries
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.analytics.ads.ads\_api module
+------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.analytics.ads.ads_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.analytics.ads
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,22 @@
+bitmovin\_api\_sdk.encoding.inputs.https.customdata package
+===========================================================
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.encoding.inputs.https.customdata.customdata\_api module
+--------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.inputs.https.customdata.customdata_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.encoding.inputs.https.customdata
+   :members:
+   :undoc-members:
+   :show-inheritance:

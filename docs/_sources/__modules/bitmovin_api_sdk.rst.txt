@@ -1,0 +1,36 @@
+bitmovin\_api\_sdk package
+==========================
+
+Subpackages
+-----------
+
+.. toctree::
+
+   bitmovin_api_sdk.account
+   bitmovin_api_sdk.analytics
+   bitmovin_api_sdk.common
+   bitmovin_api_sdk.encoding
+   bitmovin_api_sdk.general
+   bitmovin_api_sdk.models
+   bitmovin_api_sdk.notifications
+   bitmovin_api_sdk.player
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.bitmovin\_api module
+---------------------------------------
+
+.. automodule:: bitmovin_api_sdk.bitmovin_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk
+   :members:
+   :undoc-members:
+   :show-inheritance:

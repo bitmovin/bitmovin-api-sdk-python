@@ -1,0 +1,37 @@
+bitmovin\_api\_sdk.encoding.outputs.s3 package
+==============================================
+
+Subpackages
+-----------
+
+.. toctree::
+
+   bitmovin_api_sdk.encoding.outputs.s3.customdata
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.encoding.outputs.s3.s3\_api module
+-----------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.outputs.s3.s3_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.encoding.outputs.s3.s3\_output\_list\_query\_params module
+-----------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.outputs.s3.s3_output_list_query_params
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.encoding.outputs.s3
+   :members:
+   :undoc-members:
+   :show-inheritance:
