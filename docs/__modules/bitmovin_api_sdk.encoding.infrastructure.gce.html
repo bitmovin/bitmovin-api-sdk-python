@@ -21,10 +21,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -203,7 +203,7 @@
 <span id="bitmovin-api-sdk-encoding-infrastructure-gce-gce-account-list-query-params-module"></span><h2>bitmovin_api_sdk.encoding.infrastructure.gce.gce_account_list_query_params module<a class="headerlink" href="#module-bitmovin_api_sdk.encoding.infrastructure.gce.gce_account_list_query_params" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="bitmovin_api_sdk.encoding.infrastructure.gce.gce_account_list_query_params.GceAccountListQueryParams">
-<em class="property">class </em><code class="sig-prename descclassname">bitmovin_api_sdk.encoding.infrastructure.gce.gce_account_list_query_params.</code><code class="sig-name descname">GceAccountListQueryParams</code><span class="sig-paren">(</span><em class="sig-param">offset=None</em>, <em class="sig-param">limit=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/infrastructure/gce/gce_account_list_query_params.html#GceAccountListQueryParams"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.infrastructure.gce.gce_account_list_query_params.GceAccountListQueryParams" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">bitmovin_api_sdk.encoding.infrastructure.gce.gce_account_list_query_params.</code><code class="sig-name descname">GceAccountListQueryParams</code><span class="sig-paren">(</span><em class="sig-param">offset: Optional[int] = None</em>, <em class="sig-param">limit: Optional[int] = None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/infrastructure/gce/gce_account_list_query_params.html#GceAccountListQueryParams"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.infrastructure.gce.gce_account_list_query_params.GceAccountListQueryParams" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="method">
 <dt id="bitmovin_api_sdk.encoding.infrastructure.gce.gce_account_list_query_params.GceAccountListQueryParams.attribute_map">
@@ -226,7 +226,7 @@
 <dd><p>Bases: <a class="reference internal" href="bitmovin_api_sdk.common.html#bitmovin_api_sdk.common.base_api.BaseApi" title="bitmovin_api_sdk.common.base_api.BaseApi"><code class="xref py py-class docutils literal notranslate"><span class="pre">bitmovin_api_sdk.common.base_api.BaseApi</span></code></a></p>
 <dl class="method">
 <dt id="bitmovin_api_sdk.encoding.infrastructure.gce.gce_api.GceApi.create">
-<code class="sig-name descname">create</code><span class="sig-paren">(</span><em class="sig-param">gce_account</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/infrastructure/gce/gce_api.html#GceApi.create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.infrastructure.gce.gce_api.GceApi.create" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">create</code><span class="sig-paren">(</span><em class="sig-param">gce_account: bitmovin_api_sdk.models.gce_account.GceAccount</em>, <em class="sig-param">**kwargs: dict</em><span class="sig-paren">)</span> &#x2192; bitmovin_api_sdk.models.gce_account.GceAccount<a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/infrastructure/gce/gce_api.html#GceApi.create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.infrastructure.gce.gce_api.GceApi.create" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add GCE Account</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -243,7 +243,7 @@
 
 <dl class="method">
 <dt id="bitmovin_api_sdk.encoding.infrastructure.gce.gce_api.GceApi.delete">
-<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">infrastructure_id</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/infrastructure/gce/gce_api.html#GceApi.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.infrastructure.gce.gce_api.GceApi.delete" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">infrastructure_id: string_types</em>, <em class="sig-param">**kwargs: dict</em><span class="sig-paren">)</span> &#x2192; GceAccount<a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/infrastructure/gce/gce_api.html#GceApi.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.infrastructure.gce.gce_api.GceApi.delete" title="Permalink to this definition">¶</a></dt>
 <dd><p>Delete GCE Account</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -260,7 +260,7 @@
 
 <dl class="method">
 <dt id="bitmovin_api_sdk.encoding.infrastructure.gce.gce_api.GceApi.get">
-<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">infrastructure_id</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/infrastructure/gce/gce_api.html#GceApi.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.infrastructure.gce.gce_api.GceApi.get" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">infrastructure_id: string_types</em>, <em class="sig-param">**kwargs: dict</em><span class="sig-paren">)</span> &#x2192; GceAccount<a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/infrastructure/gce/gce_api.html#GceApi.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.infrastructure.gce.gce_api.GceApi.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>GCE Account Details</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -277,7 +277,7 @@
 
 <dl class="method">
 <dt id="bitmovin_api_sdk.encoding.infrastructure.gce.gce_api.GceApi.list">
-<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">query_params=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/infrastructure/gce/gce_api.html#GceApi.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.infrastructure.gce.gce_api.GceApi.list" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">query_params: Optional[bitmovin_api_sdk.encoding.infrastructure.gce.gce_account_list_query_params.GceAccountListQueryParams] = None</em>, <em class="sig-param">**kwargs: dict</em><span class="sig-paren">)</span> &#x2192; bitmovin_api_sdk.models.gce_account.GceAccount<a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/infrastructure/gce/gce_api.html#GceApi.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.infrastructure.gce.gce_api.GceApi.list" title="Permalink to this definition">¶</a></dt>
 <dd><p>List GCE Accounts</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>

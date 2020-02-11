@@ -59,4 +59,4 @@ You can find sample workflow scripts in the [Bitmovin API SDK examples](https://
 
 `bitmovin-api-sdk-python` is the latest Bitmovin API client for Python 2 and 3. It guarantees 100% specification conformity at any given time and access to all features of the API as soon as they are released. 
 
-However, if you need to use the previous version for legacy reasons, you can still find it at [bitmovin-python](https://github.com/bitmovin/bitmovin-python). 
+However, if you need to use the previous version for legacy reasons, you can still find it at [bitmovin-java](https://github.com/bitmovin/bitmovin-python). 

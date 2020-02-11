@@ -7,3 +7,4 @@ from bitmovin_api_sdk.common.poscheck import poscheck_model
 
 class DashManifestDefaultVersion(Enum):
     V1 = "V1"
+    V2 = "V2"

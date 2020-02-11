@@ -21,10 +21,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -207,7 +207,7 @@
 <dd><p>Bases: <a class="reference internal" href="bitmovin_api_sdk.common.html#bitmovin_api_sdk.common.base_api.BaseApi" title="bitmovin_api_sdk.common.base_api.BaseApi"><code class="xref py py-class docutils literal notranslate"><span class="pre">bitmovin_api_sdk.common.base_api.BaseApi</span></code></a></p>
 <dl class="method">
 <dt id="bitmovin_api_sdk.notifications.webhooks.encoding.manifest.error.error_api.ErrorApi.create">
-<code class="sig-name descname">create</code><span class="sig-paren">(</span><em class="sig-param">webhook</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/notifications/webhooks/encoding/manifest/error/error_api.html#ErrorApi.create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.notifications.webhooks.encoding.manifest.error.error_api.ErrorApi.create" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">create</code><span class="sig-paren">(</span><em class="sig-param">webhook: bitmovin_api_sdk.models.webhook.Webhook</em>, <em class="sig-param">**kwargs: dict</em><span class="sig-paren">)</span> &#x2192; bitmovin_api_sdk.models.webhook.Webhook<a class="reference internal" href="../_modules/bitmovin_api_sdk/notifications/webhooks/encoding/manifest/error/error_api.html#ErrorApi.create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.notifications.webhooks.encoding.manifest.error.error_api.ErrorApi.create" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add Manifest Error Webhook (All Manifests)</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -224,7 +224,7 @@
 
 <dl class="method">
 <dt id="bitmovin_api_sdk.notifications.webhooks.encoding.manifest.error.error_api.ErrorApi.create_by_manifest_id">
-<code class="sig-name descname">create_by_manifest_id</code><span class="sig-paren">(</span><em class="sig-param">manifest_id</em>, <em class="sig-param">webhook</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/notifications/webhooks/encoding/manifest/error/error_api.html#ErrorApi.create_by_manifest_id"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.notifications.webhooks.encoding.manifest.error.error_api.ErrorApi.create_by_manifest_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">create_by_manifest_id</code><span class="sig-paren">(</span><em class="sig-param">manifest_id: string_types</em>, <em class="sig-param">webhook: Webhook</em>, <em class="sig-param">**kwargs: dict</em><span class="sig-paren">)</span> &#x2192; Webhook<a class="reference internal" href="../_modules/bitmovin_api_sdk/notifications/webhooks/encoding/manifest/error/error_api.html#ErrorApi.create_by_manifest_id"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.notifications.webhooks.encoding.manifest.error.error_api.ErrorApi.create_by_manifest_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add Manifest Error Webhook Notification (Specific Manifest)</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -244,7 +244,7 @@
 
 <dl class="method">
 <dt id="bitmovin_api_sdk.notifications.webhooks.encoding.manifest.error.error_api.ErrorApi.update">
-<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param">notification_id</em>, <em class="sig-param">webhook</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/notifications/webhooks/encoding/manifest/error/error_api.html#ErrorApi.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.notifications.webhooks.encoding.manifest.error.error_api.ErrorApi.update" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param">notification_id: string_types</em>, <em class="sig-param">webhook: Webhook</em>, <em class="sig-param">**kwargs: dict</em><span class="sig-paren">)</span> &#x2192; Webhook<a class="reference internal" href="../_modules/bitmovin_api_sdk/notifications/webhooks/encoding/manifest/error/error_api.html#ErrorApi.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.notifications.webhooks.encoding.manifest.error.error_api.ErrorApi.update" title="Permalink to this definition">¶</a></dt>
 <dd><p>Replace Manifest Error Webhook Notification</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>

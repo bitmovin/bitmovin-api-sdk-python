@@ -21,10 +21,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../../../_static/js/theme.js"></script>
 
@@ -158,6 +158,7 @@
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.common.poscheck</span> <span class="kn">import</span> <span class="n">poscheck_model</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.adaptive_quant_mode</span> <span class="kn">import</span> <span class="n">AdaptiveQuantMode</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.b_adapt</span> <span class="kn">import</span> <span class="n">BAdapt</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.cea608708_subtitle_configuration</span> <span class="kn">import</span> <span class="n">Cea608708SubtitleConfiguration</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.color_config</span> <span class="kn">import</span> <span class="n">ColorConfig</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.encoding_mode</span> <span class="kn">import</span> <span class="n">EncodingMode</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.force_flush_mode</span> <span class="kn">import</span> <span class="n">ForceFlushMode</span>
@@ -294,8 +295,9 @@
                  <span class="n">blur_complexity</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">sao_non_deblock</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">limit_sao</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                 <span class="n">lowpass_dct</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (string_types, string_types, datetime, datetime, dict, string_types, int, int, int, float, PixelFormat, ColorConfig, int, int, EncodingMode, PresetConfiguration, float, ProfileH265, int, int, int, int, int, int, int, int, bool, float, float, LevelH265, int, BAdapt, MaxCtuSize, TuIntraDepth, TuInterDepth, MotionSearch, int, int, bool, bool, bool, string_types, int, int, bool, int, AdaptiveQuantMode, bool, VideoFormat, float, float, bool, bool, MinCodingUnitSize, int, LimitReferences, bool, bool, bool, int, bool, bool, bool, bool, bool, int, RateDistortionLevelForQuantization, int, int, bool, int, bool, bool, bool, bool, TransformSkipMode, bool, LimitTransformUnitDepthRecursionMode, int, int, RateDistortionPenaltyMode, MaxTransformUnitSize, int, bool, bool, bool, bool, bool, float, int, int, int, ForceFlushMode, float, bool, QuantizationGroupSize, bool, int, int, float, float, float, int, bool, float, float, bool, bool, bool) -&gt; None</span>
+                 <span class="n">lowpass_dct</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">cea608708_subtitle_config</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="c1"># type: (string_types, string_types, datetime, datetime, dict, string_types, int, int, int, float, PixelFormat, ColorConfig, int, int, EncodingMode, PresetConfiguration, float, ProfileH265, int, int, int, int, int, int, int, int, bool, float, float, LevelH265, int, BAdapt, MaxCtuSize, TuIntraDepth, TuInterDepth, MotionSearch, int, int, bool, bool, bool, string_types, int, int, bool, int, AdaptiveQuantMode, bool, VideoFormat, float, float, bool, bool, MinCodingUnitSize, int, LimitReferences, bool, bool, bool, int, bool, bool, bool, bool, bool, int, RateDistortionLevelForQuantization, int, int, bool, int, bool, bool, bool, bool, TransformSkipMode, bool, LimitTransformUnitDepthRecursionMode, int, int, RateDistortionPenaltyMode, MaxTransformUnitSize, int, bool, bool, bool, bool, bool, float, int, int, int, ForceFlushMode, float, bool, QuantizationGroupSize, bool, int, int, float, float, float, int, bool, float, float, bool, bool, bool, Cea608708SubtitleConfiguration) -&gt; None</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">H265VideoConfiguration</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="n">description</span><span class="p">,</span> <span class="n">created_at</span><span class="o">=</span><span class="n">created_at</span><span class="p">,</span> <span class="n">modified_at</span><span class="o">=</span><span class="n">modified_at</span><span class="p">,</span> <span class="n">custom_data</span><span class="o">=</span><span class="n">custom_data</span><span class="p">,</span> <span class="n">id_</span><span class="o">=</span><span class="n">id_</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="n">height</span><span class="p">,</span> <span class="n">bitrate</span><span class="o">=</span><span class="n">bitrate</span><span class="p">,</span> <span class="n">rate</span><span class="o">=</span><span class="n">rate</span><span class="p">,</span> <span class="n">pixel_format</span><span class="o">=</span><span class="n">pixel_format</span><span class="p">,</span> <span class="n">color_config</span><span class="o">=</span><span class="n">color_config</span><span class="p">,</span> <span class="n">sample_aspect_ratio_numerator</span><span class="o">=</span><span class="n">sample_aspect_ratio_numerator</span><span class="p">,</span> <span class="n">sample_aspect_ratio_denominator</span><span class="o">=</span><span class="n">sample_aspect_ratio_denominator</span><span class="p">,</span> <span class="n">encoding_mode</span><span class="o">=</span><span class="n">encoding_mode</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_preset_configuration</span> <span class="o">=</span> <span class="kc">None</span>
@@ -392,6 +394,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_sao_non_deblock</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_limit_sao</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_lowpass_dct</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_cea608708_subtitle_config</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>
 
         <span class="k">if</span> <span class="n">preset_configuration</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -582,6 +585,8 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">limit_sao</span> <span class="o">=</span> <span class="n">limit_sao</span>
         <span class="k">if</span> <span class="n">lowpass_dct</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">lowpass_dct</span> <span class="o">=</span> <span class="n">lowpass_dct</span>
+        <span class="k">if</span> <span class="n">cea608708_subtitle_config</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">cea608708_subtitle_config</span> <span class="o">=</span> <span class="n">cea608708_subtitle_config</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -684,7 +689,8 @@
             <span class="s1">&#39;blur_complexity&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span><span class="p">,</span>
             <span class="s1">&#39;sao_non_deblock&#39;</span><span class="p">:</span> <span class="s1">&#39;bool&#39;</span><span class="p">,</span>
             <span class="s1">&#39;limit_sao&#39;</span><span class="p">:</span> <span class="s1">&#39;bool&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;lowpass_dct&#39;</span><span class="p">:</span> <span class="s1">&#39;bool&#39;</span>
+            <span class="s1">&#39;lowpass_dct&#39;</span><span class="p">:</span> <span class="s1">&#39;bool&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;cea608708_subtitle_config&#39;</span><span class="p">:</span> <span class="s1">&#39;Cea608708SubtitleConfiguration&#39;</span>
         <span class="p">})</span>
 
         <span class="k">return</span> <span class="n">types</span>
@@ -790,7 +796,8 @@
             <span class="s1">&#39;blur_complexity&#39;</span><span class="p">:</span> <span class="s1">&#39;blurComplexity&#39;</span><span class="p">,</span>
             <span class="s1">&#39;sao_non_deblock&#39;</span><span class="p">:</span> <span class="s1">&#39;saoNonDeblock&#39;</span><span class="p">,</span>
             <span class="s1">&#39;limit_sao&#39;</span><span class="p">:</span> <span class="s1">&#39;limitSao&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;lowpass_dct&#39;</span><span class="p">:</span> <span class="s1">&#39;lowpassDct&#39;</span>
+            <span class="s1">&#39;lowpass_dct&#39;</span><span class="p">:</span> <span class="s1">&#39;lowpassDct&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;cea608708_subtitle_config&#39;</span><span class="p">:</span> <span class="s1">&#39;cea608708SubtitleConfig&#39;</span>
         <span class="p">})</span>
         <span class="k">return</span> <span class="n">attributes</span>
 
@@ -3581,6 +3588,35 @@
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `lowpass_dct`, type has to be `bool`&quot;</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_lowpass_dct</span> <span class="o">=</span> <span class="n">lowpass_dct</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">cea608708_subtitle_config</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; Cea608708SubtitleConfiguration</span>
+        <span class="sd">&quot;&quot;&quot;Gets the cea608708_subtitle_config of this H265VideoConfiguration.</span>
+
+<span class="sd">        Defines whether CEA 608/708 subtitles are extracted from the input video stream</span>
+
+<span class="sd">        :return: The cea608708_subtitle_config of this H265VideoConfiguration.</span>
+<span class="sd">        :rtype: Cea608708SubtitleConfiguration</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cea608708_subtitle_config</span>
+
+    <span class="nd">@cea608708_subtitle_config</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">cea608708_subtitle_config</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cea608708_subtitle_config</span><span class="p">):</span>
+        <span class="c1"># type: (Cea608708SubtitleConfiguration) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the cea608708_subtitle_config of this H265VideoConfiguration.</span>
+
+<span class="sd">        Defines whether CEA 608/708 subtitles are extracted from the input video stream</span>
+
+<span class="sd">        :param cea608708_subtitle_config: The cea608708_subtitle_config of this H265VideoConfiguration.</span>
+<span class="sd">        :type: Cea608708SubtitleConfiguration</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">cea608708_subtitle_config</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">cea608708_subtitle_config</span><span class="p">,</span> <span class="n">Cea608708SubtitleConfiguration</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `cea608708_subtitle_config`, type has to be `Cea608708SubtitleConfiguration`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_cea608708_subtitle_config</span> <span class="o">=</span> <span class="n">cea608708_subtitle_config</span>
 
 <div class="viewcode-block" id="H265VideoConfiguration.to_dict"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.h265_video_configuration.H265VideoConfiguration.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>

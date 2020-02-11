@@ -21,10 +21,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -210,7 +210,7 @@
 <dd><p>Bases: <a class="reference internal" href="bitmovin_api_sdk.common.html#bitmovin_api_sdk.common.base_api.BaseApi" title="bitmovin_api_sdk.common.base_api.BaseApi"><code class="xref py py-class docutils literal notranslate"><span class="pre">bitmovin_api_sdk.common.base_api.BaseApi</span></code></a></p>
 <dl class="method">
 <dt id="bitmovin_api_sdk.encoding.statistics.labels.daily.daily_api.DailyApi.list">
-<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">query_params=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/statistics/labels/daily/daily_api.html#DailyApi.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.statistics.labels.daily.daily_api.DailyApi.list" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">query_params: Optional[bitmovin_api_sdk.encoding.statistics.labels.daily.daily_statistics_per_label_list_query_params.DailyStatisticsPerLabelListQueryParams] = None</em>, <em class="sig-param">**kwargs: dict</em><span class="sig-paren">)</span> &#x2192; bitmovin_api_sdk.models.daily_statistics_per_label.DailyStatisticsPerLabel<a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/statistics/labels/daily/daily_api.html#DailyApi.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.statistics.labels.daily.daily_api.DailyApi.list" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get Daily Statistics per Label</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -227,7 +227,7 @@
 
 <dl class="method">
 <dt id="bitmovin_api_sdk.encoding.statistics.labels.daily.daily_api.DailyApi.list_by_date_range">
-<code class="sig-name descname">list_by_date_range</code><span class="sig-paren">(</span><em class="sig-param">from_</em>, <em class="sig-param">to</em>, <em class="sig-param">query_params=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/statistics/labels/daily/daily_api.html#DailyApi.list_by_date_range"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.statistics.labels.daily.daily_api.DailyApi.list_by_date_range" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list_by_date_range</code><span class="sig-paren">(</span><em class="sig-param">from_: date</em>, <em class="sig-param">to: date</em>, <em class="sig-param">query_params: DailyStatisticsPerLabelListByDateRangeQueryParams = None</em>, <em class="sig-param">**kwargs: dict</em><span class="sig-paren">)</span> &#x2192; DailyStatisticsPerLabel<a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/statistics/labels/daily/daily_api.html#DailyApi.list_by_date_range"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.statistics.labels.daily.daily_api.DailyApi.list_by_date_range" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get daily statistics per label within specific dates</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -253,7 +253,7 @@
 <span id="bitmovin-api-sdk-encoding-statistics-labels-daily-daily-statistics-per-label-list-by-date-range-query-params-module"></span><h2>bitmovin_api_sdk.encoding.statistics.labels.daily.daily_statistics_per_label_list_by_date_range_query_params module<a class="headerlink" href="#module-bitmovin_api_sdk.encoding.statistics.labels.daily.daily_statistics_per_label_list_by_date_range_query_params" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="bitmovin_api_sdk.encoding.statistics.labels.daily.daily_statistics_per_label_list_by_date_range_query_params.DailyStatisticsPerLabelListByDateRangeQueryParams">
-<em class="property">class </em><code class="sig-prename descclassname">bitmovin_api_sdk.encoding.statistics.labels.daily.daily_statistics_per_label_list_by_date_range_query_params.</code><code class="sig-name descname">DailyStatisticsPerLabelListByDateRangeQueryParams</code><span class="sig-paren">(</span><em class="sig-param">offset=None</em>, <em class="sig-param">limit=None</em>, <em class="sig-param">labels=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/statistics/labels/daily/daily_statistics_per_label_list_by_date_range_query_params.html#DailyStatisticsPerLabelListByDateRangeQueryParams"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.statistics.labels.daily.daily_statistics_per_label_list_by_date_range_query_params.DailyStatisticsPerLabelListByDateRangeQueryParams" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">bitmovin_api_sdk.encoding.statistics.labels.daily.daily_statistics_per_label_list_by_date_range_query_params.</code><code class="sig-name descname">DailyStatisticsPerLabelListByDateRangeQueryParams</code><span class="sig-paren">(</span><em class="sig-param">offset: int = None</em>, <em class="sig-param">limit: int = None</em>, <em class="sig-param">labels: string_types = None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/statistics/labels/daily/daily_statistics_per_label_list_by_date_range_query_params.html#DailyStatisticsPerLabelListByDateRangeQueryParams"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.statistics.labels.daily.daily_statistics_per_label_list_by_date_range_query_params.DailyStatisticsPerLabelListByDateRangeQueryParams" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="method">
 <dt id="bitmovin_api_sdk.encoding.statistics.labels.daily.daily_statistics_per_label_list_by_date_range_query_params.DailyStatisticsPerLabelListByDateRangeQueryParams.attribute_map">
@@ -272,7 +272,7 @@
 <span id="bitmovin-api-sdk-encoding-statistics-labels-daily-daily-statistics-per-label-list-query-params-module"></span><h2>bitmovin_api_sdk.encoding.statistics.labels.daily.daily_statistics_per_label_list_query_params module<a class="headerlink" href="#module-bitmovin_api_sdk.encoding.statistics.labels.daily.daily_statistics_per_label_list_query_params" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="bitmovin_api_sdk.encoding.statistics.labels.daily.daily_statistics_per_label_list_query_params.DailyStatisticsPerLabelListQueryParams">
-<em class="property">class </em><code class="sig-prename descclassname">bitmovin_api_sdk.encoding.statistics.labels.daily.daily_statistics_per_label_list_query_params.</code><code class="sig-name descname">DailyStatisticsPerLabelListQueryParams</code><span class="sig-paren">(</span><em class="sig-param">offset=None</em>, <em class="sig-param">limit=None</em>, <em class="sig-param">labels=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/statistics/labels/daily/daily_statistics_per_label_list_query_params.html#DailyStatisticsPerLabelListQueryParams"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.statistics.labels.daily.daily_statistics_per_label_list_query_params.DailyStatisticsPerLabelListQueryParams" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">bitmovin_api_sdk.encoding.statistics.labels.daily.daily_statistics_per_label_list_query_params.</code><code class="sig-name descname">DailyStatisticsPerLabelListQueryParams</code><span class="sig-paren">(</span><em class="sig-param">offset: int = None</em>, <em class="sig-param">limit: int = None</em>, <em class="sig-param">labels: string_types = None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/statistics/labels/daily/daily_statistics_per_label_list_query_params.html#DailyStatisticsPerLabelListQueryParams"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.statistics.labels.daily.daily_statistics_per_label_list_query_params.DailyStatisticsPerLabelListQueryParams" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="method">
 <dt id="bitmovin_api_sdk.encoding.statistics.labels.daily.daily_statistics_per_label_list_query_params.DailyStatisticsPerLabelListQueryParams.attribute_map">

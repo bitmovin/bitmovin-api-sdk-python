@@ -21,10 +21,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -223,7 +223,7 @@
 <span id="bitmovin-api-sdk-encoding-encodings-muxings-fmp4-drm-clearkey-clear-key-drm-list-query-params-module"></span><h2>bitmovin_api_sdk.encoding.encodings.muxings.fmp4.drm.clearkey.clear_key_drm_list_query_params module<a class="headerlink" href="#module-bitmovin_api_sdk.encoding.encodings.muxings.fmp4.drm.clearkey.clear_key_drm_list_query_params" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="bitmovin_api_sdk.encoding.encodings.muxings.fmp4.drm.clearkey.clear_key_drm_list_query_params.ClearKeyDrmListQueryParams">
-<em class="property">class </em><code class="sig-prename descclassname">bitmovin_api_sdk.encoding.encodings.muxings.fmp4.drm.clearkey.clear_key_drm_list_query_params.</code><code class="sig-name descname">ClearKeyDrmListQueryParams</code><span class="sig-paren">(</span><em class="sig-param">offset=None</em>, <em class="sig-param">limit=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/encodings/muxings/fmp4/drm/clearkey/clear_key_drm_list_query_params.html#ClearKeyDrmListQueryParams"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.encodings.muxings.fmp4.drm.clearkey.clear_key_drm_list_query_params.ClearKeyDrmListQueryParams" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">bitmovin_api_sdk.encoding.encodings.muxings.fmp4.drm.clearkey.clear_key_drm_list_query_params.</code><code class="sig-name descname">ClearKeyDrmListQueryParams</code><span class="sig-paren">(</span><em class="sig-param">offset: Optional[int] = None</em>, <em class="sig-param">limit: Optional[int] = None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/encodings/muxings/fmp4/drm/clearkey/clear_key_drm_list_query_params.html#ClearKeyDrmListQueryParams"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.encodings.muxings.fmp4.drm.clearkey.clear_key_drm_list_query_params.ClearKeyDrmListQueryParams" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="method">
 <dt id="bitmovin_api_sdk.encoding.encodings.muxings.fmp4.drm.clearkey.clear_key_drm_list_query_params.ClearKeyDrmListQueryParams.attribute_map">
@@ -246,7 +246,7 @@
 <dd><p>Bases: <a class="reference internal" href="bitmovin_api_sdk.common.html#bitmovin_api_sdk.common.base_api.BaseApi" title="bitmovin_api_sdk.common.base_api.BaseApi"><code class="xref py py-class docutils literal notranslate"><span class="pre">bitmovin_api_sdk.common.base_api.BaseApi</span></code></a></p>
 <dl class="method">
 <dt id="bitmovin_api_sdk.encoding.encodings.muxings.fmp4.drm.clearkey.clearkey_api.ClearkeyApi.create">
-<code class="sig-name descname">create</code><span class="sig-paren">(</span><em class="sig-param">encoding_id</em>, <em class="sig-param">muxing_id</em>, <em class="sig-param">clear_key_drm</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/encodings/muxings/fmp4/drm/clearkey/clearkey_api.html#ClearkeyApi.create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.encodings.muxings.fmp4.drm.clearkey.clearkey_api.ClearkeyApi.create" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">create</code><span class="sig-paren">(</span><em class="sig-param">encoding_id: string_types</em>, <em class="sig-param">muxing_id: string_types</em>, <em class="sig-param">clear_key_drm: ClearKeyDrm</em>, <em class="sig-param">**kwargs: dict</em><span class="sig-paren">)</span> &#x2192; ClearKeyDrm<a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/encodings/muxings/fmp4/drm/clearkey/clearkey_api.html#ClearkeyApi.create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.encodings.muxings.fmp4.drm.clearkey.clearkey_api.ClearkeyApi.create" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add ClearKey DRM to fMP4</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -267,7 +267,7 @@
 
 <dl class="method">
 <dt id="bitmovin_api_sdk.encoding.encodings.muxings.fmp4.drm.clearkey.clearkey_api.ClearkeyApi.delete">
-<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">encoding_id</em>, <em class="sig-param">muxing_id</em>, <em class="sig-param">drm_id</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/encodings/muxings/fmp4/drm/clearkey/clearkey_api.html#ClearkeyApi.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.encodings.muxings.fmp4.drm.clearkey.clearkey_api.ClearkeyApi.delete" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">encoding_id: string_types</em>, <em class="sig-param">muxing_id: string_types</em>, <em class="sig-param">drm_id: string_types</em>, <em class="sig-param">**kwargs: dict</em><span class="sig-paren">)</span> &#x2192; BitmovinResponse<a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/encodings/muxings/fmp4/drm/clearkey/clearkey_api.html#ClearkeyApi.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.encodings.muxings.fmp4.drm.clearkey.clearkey_api.ClearkeyApi.delete" title="Permalink to this definition">¶</a></dt>
 <dd><p>Delete ClearKey DRM from fMP4</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -288,7 +288,7 @@
 
 <dl class="method">
 <dt id="bitmovin_api_sdk.encoding.encodings.muxings.fmp4.drm.clearkey.clearkey_api.ClearkeyApi.get">
-<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">encoding_id</em>, <em class="sig-param">muxing_id</em>, <em class="sig-param">drm_id</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/encodings/muxings/fmp4/drm/clearkey/clearkey_api.html#ClearkeyApi.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.encodings.muxings.fmp4.drm.clearkey.clearkey_api.ClearkeyApi.get" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">encoding_id: string_types</em>, <em class="sig-param">muxing_id: string_types</em>, <em class="sig-param">drm_id: string_types</em>, <em class="sig-param">**kwargs: dict</em><span class="sig-paren">)</span> &#x2192; ClearKeyDrm<a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/encodings/muxings/fmp4/drm/clearkey/clearkey_api.html#ClearkeyApi.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.encodings.muxings.fmp4.drm.clearkey.clearkey_api.ClearkeyApi.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>ClearKey DRM Details of fMP4</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -309,7 +309,7 @@
 
 <dl class="method">
 <dt id="bitmovin_api_sdk.encoding.encodings.muxings.fmp4.drm.clearkey.clearkey_api.ClearkeyApi.list">
-<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">encoding_id</em>, <em class="sig-param">muxing_id</em>, <em class="sig-param">query_params=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/encodings/muxings/fmp4/drm/clearkey/clearkey_api.html#ClearkeyApi.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.encodings.muxings.fmp4.drm.clearkey.clearkey_api.ClearkeyApi.list" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">encoding_id: string_types</em>, <em class="sig-param">muxing_id: string_types</em>, <em class="sig-param">query_params: ClearKeyDrmListQueryParams = None</em>, <em class="sig-param">**kwargs: dict</em><span class="sig-paren">)</span> &#x2192; ClearKeyDrm<a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/encodings/muxings/fmp4/drm/clearkey/clearkey_api.html#ClearkeyApi.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.encodings.muxings.fmp4.drm.clearkey.clearkey_api.ClearkeyApi.list" title="Permalink to this definition">¶</a></dt>
 <dd><p>List ClearKey DRMs of fMP4</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>

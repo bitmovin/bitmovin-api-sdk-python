@@ -22,8 +22,10 @@ class AsperaInput(Input):
                  host=None,
                  username=None,
                  password=None,
-                 token=None):
-        # type: (string_types, string_types, datetime, datetime, dict, string_types, string_types, string_types, string_types, string_types, string_types, string_types) -> None
+                 token=None,
+                 ssh_port=None,
+                 fasp_port=None):
+        # type: (string_types, string_types, datetime, datetime, dict, string_types, string_types, string_types, string_types, string_types, string_types, string_types, int, int) -> None
         super(AsperaInput, self).__init__(name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, id_=id_)
 
         self._min_bandwidth = None
@@ -32,6 +34,8 @@ class AsperaInput(Input):
         self._username = None
         self._password = None
         self._token = None
+        self._ssh_port = None
+        self._fasp_port = None
         self.discriminator = None
 
         if min_bandwidth is not None:
@@ -46,6 +50,10 @@ class AsperaInput(Input):
             self.password = password
         if token is not None:
             self.token = token
+        if ssh_port is not None:
+            self.ssh_port = ssh_port
+        if fasp_port is not None:
+            self.fasp_port = fasp_port
 
     @property
     def openapi_types(self):
@@ -60,7 +68,9 @@ class AsperaInput(Input):
             'host': 'string_types',
             'username': 'string_types',
             'password': 'string_types',
-            'token': 'string_types'
+            'token': 'string_types',
+            'ssh_port': 'int',
+            'fasp_port': 'int'
         })
 
         return types
@@ -78,7 +88,9 @@ class AsperaInput(Input):
             'host': 'host',
             'username': 'username',
             'password': 'password',
-            'token': 'token'
+            'token': 'token',
+            'ssh_port': 'sshPort',
+            'fasp_port': 'faspPort'
         })
         return attributes
 
@@ -255,6 +267,64 @@ class AsperaInput(Input):
                 raise TypeError("Invalid type for `token`, type has to be `string_types`")
 
         self._token = token
+
+    @property
+    def ssh_port(self):
+        # type: () -> int
+        """Gets the ssh_port of this AsperaInput.
+
+        Set the TCP port to be used for fasp session initiation
+
+        :return: The ssh_port of this AsperaInput.
+        :rtype: int
+        """
+        return self._ssh_port
+
+    @ssh_port.setter
+    def ssh_port(self, ssh_port):
+        # type: (int) -> None
+        """Sets the ssh_port of this AsperaInput.
+
+        Set the TCP port to be used for fasp session initiation
+
+        :param ssh_port: The ssh_port of this AsperaInput.
+        :type: int
+        """
+
+        if ssh_port is not None:
+            if not isinstance(ssh_port, int):
+                raise TypeError("Invalid type for `ssh_port`, type has to be `int`")
+
+        self._ssh_port = ssh_port
+
+    @property
+    def fasp_port(self):
+        # type: () -> int
+        """Gets the fasp_port of this AsperaInput.
+
+        Set the UDP port to be used by fasp for data transfer
+
+        :return: The fasp_port of this AsperaInput.
+        :rtype: int
+        """
+        return self._fasp_port
+
+    @fasp_port.setter
+    def fasp_port(self, fasp_port):
+        # type: (int) -> None
+        """Sets the fasp_port of this AsperaInput.
+
+        Set the UDP port to be used by fasp for data transfer
+
+        :param fasp_port: The fasp_port of this AsperaInput.
+        :type: int
+        """
+
+        if fasp_port is not None:
+            if not isinstance(fasp_port, int):
+                raise TypeError("Invalid type for `fasp_port`, type has to be `int`")
+
+        self._fasp_port = fasp_port
 
     def to_dict(self):
         """Returns the model properties as a dict"""

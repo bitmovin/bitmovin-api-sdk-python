@@ -21,10 +21,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -239,7 +239,7 @@
 <dd><p>Bases: <a class="reference internal" href="bitmovin_api_sdk.common.html#bitmovin_api_sdk.common.base_api.BaseApi" title="bitmovin_api_sdk.common.base_api.BaseApi"><code class="xref py py-class docutils literal notranslate"><span class="pre">bitmovin_api_sdk.common.base_api.BaseApi</span></code></a></p>
 <dl class="method">
 <dt id="bitmovin_api_sdk.account.organizations.organizations_api.OrganizationsApi.create">
-<code class="sig-name descname">create</code><span class="sig-paren">(</span><em class="sig-param">organization</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/account/organizations/organizations_api.html#OrganizationsApi.create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.account.organizations.organizations_api.OrganizationsApi.create" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">create</code><span class="sig-paren">(</span><em class="sig-param">organization: bitmovin_api_sdk.models.organization.Organization</em>, <em class="sig-param">**kwargs: dict</em><span class="sig-paren">)</span> &#x2192; bitmovin_api_sdk.models.organization.Organization<a class="reference internal" href="../_modules/bitmovin_api_sdk/account/organizations/organizations_api.html#OrganizationsApi.create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.account.organizations.organizations_api.OrganizationsApi.create" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add Organization</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -256,7 +256,7 @@
 
 <dl class="method">
 <dt id="bitmovin_api_sdk.account.organizations.organizations_api.OrganizationsApi.get">
-<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">organization_id</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/account/organizations/organizations_api.html#OrganizationsApi.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.account.organizations.organizations_api.OrganizationsApi.get" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">organization_id: string_types</em>, <em class="sig-param">**kwargs: dict</em><span class="sig-paren">)</span> &#x2192; Organization<a class="reference internal" href="../_modules/bitmovin_api_sdk/account/organizations/organizations_api.html#OrganizationsApi.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.account.organizations.organizations_api.OrganizationsApi.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Organization Details</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -273,7 +273,7 @@
 
 <dl class="method">
 <dt id="bitmovin_api_sdk.account.organizations.organizations_api.OrganizationsApi.list">
-<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/account/organizations/organizations_api.html#OrganizationsApi.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.account.organizations.organizations_api.OrganizationsApi.list" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">**kwargs: dict</em><span class="sig-paren">)</span> &#x2192; bitmovin_api_sdk.models.organization.Organization<a class="reference internal" href="../_modules/bitmovin_api_sdk/account/organizations/organizations_api.html#OrganizationsApi.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.account.organizations.organizations_api.OrganizationsApi.list" title="Permalink to this definition">¶</a></dt>
 <dd><p>List Organizations</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -287,7 +287,7 @@
 
 <dl class="method">
 <dt id="bitmovin_api_sdk.account.organizations.organizations_api.OrganizationsApi.update">
-<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param">organization_id</em>, <em class="sig-param">update_organization_request</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/account/organizations/organizations_api.html#OrganizationsApi.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.account.organizations.organizations_api.OrganizationsApi.update" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param">organization_id: string_types</em>, <em class="sig-param">update_organization_request: UpdateOrganizationRequest</em>, <em class="sig-param">**kwargs: dict</em><span class="sig-paren">)</span> &#x2192; Organization<a class="reference internal" href="../_modules/bitmovin_api_sdk/account/organizations/organizations_api.html#OrganizationsApi.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.account.organizations.organizations_api.OrganizationsApi.update" title="Permalink to this definition">¶</a></dt>
 <dd><p>Update Organization</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>

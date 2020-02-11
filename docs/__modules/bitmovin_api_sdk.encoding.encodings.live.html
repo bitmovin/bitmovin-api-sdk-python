@@ -21,10 +21,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -244,7 +244,7 @@
 <dd><p>Bases: <a class="reference internal" href="bitmovin_api_sdk.common.html#bitmovin_api_sdk.common.base_api.BaseApi" title="bitmovin_api_sdk.common.base_api.BaseApi"><code class="xref py py-class docutils literal notranslate"><span class="pre">bitmovin_api_sdk.common.base_api.BaseApi</span></code></a></p>
 <dl class="method">
 <dt id="bitmovin_api_sdk.encoding.encodings.live.live_api.LiveApi.get">
-<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">encoding_id</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/encodings/live/live_api.html#LiveApi.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.encodings.live.live_api.LiveApi.get" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">encoding_id: string_types</em>, <em class="sig-param">**kwargs: dict</em><span class="sig-paren">)</span> &#x2192; LiveEncoding<a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/encodings/live/live_api.html#LiveApi.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.encodings.live.live_api.LiveApi.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Live Encoding Details</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -261,7 +261,7 @@
 
 <dl class="method">
 <dt id="bitmovin_api_sdk.encoding.encodings.live.live_api.LiveApi.get_start_request">
-<code class="sig-name descname">get_start_request</code><span class="sig-paren">(</span><em class="sig-param">encoding_id</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/encodings/live/live_api.html#LiveApi.get_start_request"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.encodings.live.live_api.LiveApi.get_start_request" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_start_request</code><span class="sig-paren">(</span><em class="sig-param">encoding_id: string_types</em>, <em class="sig-param">**kwargs: dict</em><span class="sig-paren">)</span> &#x2192; StartLiveEncodingRequest<a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/encodings/live/live_api.html#LiveApi.get_start_request"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.encodings.live.live_api.LiveApi.get_start_request" title="Permalink to this definition">¶</a></dt>
 <dd><p>Live Encoding Start Details</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -278,7 +278,7 @@
 
 <dl class="method">
 <dt id="bitmovin_api_sdk.encoding.encodings.live.live_api.LiveApi.restart">
-<code class="sig-name descname">restart</code><span class="sig-paren">(</span><em class="sig-param">encoding_id</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/encodings/live/live_api.html#LiveApi.restart"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.encodings.live.live_api.LiveApi.restart" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">restart</code><span class="sig-paren">(</span><em class="sig-param">encoding_id: string_types</em>, <em class="sig-param">**kwargs: dict</em><span class="sig-paren">)</span> &#x2192; BitmovinResponse<a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/encodings/live/live_api.html#LiveApi.restart"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.encodings.live.live_api.LiveApi.restart" title="Permalink to this definition">¶</a></dt>
 <dd><p>Re-Start Live Encoding</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -295,7 +295,7 @@
 
 <dl class="method">
 <dt id="bitmovin_api_sdk.encoding.encodings.live.live_api.LiveApi.start">
-<code class="sig-name descname">start</code><span class="sig-paren">(</span><em class="sig-param">encoding_id</em>, <em class="sig-param">start_live_encoding_request</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/encodings/live/live_api.html#LiveApi.start"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.encodings.live.live_api.LiveApi.start" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">start</code><span class="sig-paren">(</span><em class="sig-param">encoding_id: string_types</em>, <em class="sig-param">start_live_encoding_request: StartLiveEncodingRequest</em>, <em class="sig-param">**kwargs: dict</em><span class="sig-paren">)</span> &#x2192; BitmovinResponse<a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/encodings/live/live_api.html#LiveApi.start"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.encodings.live.live_api.LiveApi.start" title="Permalink to this definition">¶</a></dt>
 <dd><p>Start Live Encoding</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -315,7 +315,7 @@
 
 <dl class="method">
 <dt id="bitmovin_api_sdk.encoding.encodings.live.live_api.LiveApi.stop">
-<code class="sig-name descname">stop</code><span class="sig-paren">(</span><em class="sig-param">encoding_id</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/encodings/live/live_api.html#LiveApi.stop"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.encodings.live.live_api.LiveApi.stop" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">stop</code><span class="sig-paren">(</span><em class="sig-param">encoding_id: string_types</em>, <em class="sig-param">**kwargs: dict</em><span class="sig-paren">)</span> &#x2192; BitmovinResponse<a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/encodings/live/live_api.html#LiveApi.stop"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.encodings.live.live_api.LiveApi.stop" title="Permalink to this definition">¶</a></dt>
 <dd><p>Stop Live Encoding</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>

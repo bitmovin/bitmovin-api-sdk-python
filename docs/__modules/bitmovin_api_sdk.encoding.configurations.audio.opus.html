@@ -21,10 +21,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -223,7 +223,7 @@
 <dd><p>Bases: <a class="reference internal" href="bitmovin_api_sdk.common.html#bitmovin_api_sdk.common.base_api.BaseApi" title="bitmovin_api_sdk.common.base_api.BaseApi"><code class="xref py py-class docutils literal notranslate"><span class="pre">bitmovin_api_sdk.common.base_api.BaseApi</span></code></a></p>
 <dl class="method">
 <dt id="bitmovin_api_sdk.encoding.configurations.audio.opus.opus_api.OpusApi.create">
-<code class="sig-name descname">create</code><span class="sig-paren">(</span><em class="sig-param">opus_audio_configuration</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/configurations/audio/opus/opus_api.html#OpusApi.create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.configurations.audio.opus.opus_api.OpusApi.create" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">create</code><span class="sig-paren">(</span><em class="sig-param">opus_audio_configuration: bitmovin_api_sdk.models.opus_audio_configuration.OpusAudioConfiguration</em>, <em class="sig-param">**kwargs: dict</em><span class="sig-paren">)</span> &#x2192; bitmovin_api_sdk.models.opus_audio_configuration.OpusAudioConfiguration<a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/configurations/audio/opus/opus_api.html#OpusApi.create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.configurations.audio.opus.opus_api.OpusApi.create" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create Opus Codec Configuration</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -240,7 +240,7 @@
 
 <dl class="method">
 <dt id="bitmovin_api_sdk.encoding.configurations.audio.opus.opus_api.OpusApi.delete">
-<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">configuration_id</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/configurations/audio/opus/opus_api.html#OpusApi.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.configurations.audio.opus.opus_api.OpusApi.delete" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">configuration_id: string_types</em>, <em class="sig-param">**kwargs: dict</em><span class="sig-paren">)</span> &#x2192; BitmovinResponse<a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/configurations/audio/opus/opus_api.html#OpusApi.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.configurations.audio.opus.opus_api.OpusApi.delete" title="Permalink to this definition">¶</a></dt>
 <dd><p>Delete Opus Codec Configuration</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -257,7 +257,7 @@
 
 <dl class="method">
 <dt id="bitmovin_api_sdk.encoding.configurations.audio.opus.opus_api.OpusApi.get">
-<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">configuration_id</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/configurations/audio/opus/opus_api.html#OpusApi.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.configurations.audio.opus.opus_api.OpusApi.get" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">configuration_id: string_types</em>, <em class="sig-param">**kwargs: dict</em><span class="sig-paren">)</span> &#x2192; OpusAudioConfiguration<a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/configurations/audio/opus/opus_api.html#OpusApi.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.configurations.audio.opus.opus_api.OpusApi.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Opus Codec Configuration Details</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -274,7 +274,7 @@
 
 <dl class="method">
 <dt id="bitmovin_api_sdk.encoding.configurations.audio.opus.opus_api.OpusApi.list">
-<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">query_params=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/configurations/audio/opus/opus_api.html#OpusApi.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.configurations.audio.opus.opus_api.OpusApi.list" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">query_params: Optional[bitmovin_api_sdk.encoding.configurations.audio.opus.opus_audio_configuration_list_query_params.OpusAudioConfigurationListQueryParams] = None</em>, <em class="sig-param">**kwargs: dict</em><span class="sig-paren">)</span> &#x2192; bitmovin_api_sdk.models.opus_audio_configuration.OpusAudioConfiguration<a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/configurations/audio/opus/opus_api.html#OpusApi.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.configurations.audio.opus.opus_api.OpusApi.list" title="Permalink to this definition">¶</a></dt>
 <dd><p>List Opus Configurations</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -296,7 +296,7 @@
 <span id="bitmovin-api-sdk-encoding-configurations-audio-opus-opus-audio-configuration-list-query-params-module"></span><h2>bitmovin_api_sdk.encoding.configurations.audio.opus.opus_audio_configuration_list_query_params module<a class="headerlink" href="#module-bitmovin_api_sdk.encoding.configurations.audio.opus.opus_audio_configuration_list_query_params" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="bitmovin_api_sdk.encoding.configurations.audio.opus.opus_audio_configuration_list_query_params.OpusAudioConfigurationListQueryParams">
-<em class="property">class </em><code class="sig-prename descclassname">bitmovin_api_sdk.encoding.configurations.audio.opus.opus_audio_configuration_list_query_params.</code><code class="sig-name descname">OpusAudioConfigurationListQueryParams</code><span class="sig-paren">(</span><em class="sig-param">offset=None</em>, <em class="sig-param">limit=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/configurations/audio/opus/opus_audio_configuration_list_query_params.html#OpusAudioConfigurationListQueryParams"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.configurations.audio.opus.opus_audio_configuration_list_query_params.OpusAudioConfigurationListQueryParams" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">bitmovin_api_sdk.encoding.configurations.audio.opus.opus_audio_configuration_list_query_params.</code><code class="sig-name descname">OpusAudioConfigurationListQueryParams</code><span class="sig-paren">(</span><em class="sig-param">offset: int = None</em>, <em class="sig-param">limit: int = None</em>, <em class="sig-param">name: string_types = None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/configurations/audio/opus/opus_audio_configuration_list_query_params.html#OpusAudioConfigurationListQueryParams"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.configurations.audio.opus.opus_audio_configuration_list_query_params.OpusAudioConfigurationListQueryParams" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="method">
 <dt id="bitmovin_api_sdk.encoding.configurations.audio.opus.opus_audio_configuration_list_query_params.OpusAudioConfigurationListQueryParams.attribute_map">

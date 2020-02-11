@@ -5,6 +5,7 @@ from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
 from bitmovin_api_sdk.models.adaptive_quant_mode import AdaptiveQuantMode
 from bitmovin_api_sdk.models.b_adapt import BAdapt
+from bitmovin_api_sdk.models.cea608708_subtitle_configuration import Cea608708SubtitleConfiguration
 from bitmovin_api_sdk.models.color_config import ColorConfig
 from bitmovin_api_sdk.models.encoding_mode import EncodingMode
 from bitmovin_api_sdk.models.force_flush_mode import ForceFlushMode
@@ -141,8 +142,9 @@ class H265VideoConfiguration(VideoConfiguration):
                  blur_complexity=None,
                  sao_non_deblock=None,
                  limit_sao=None,
-                 lowpass_dct=None):
-        # type: (string_types, string_types, datetime, datetime, dict, string_types, int, int, int, float, PixelFormat, ColorConfig, int, int, EncodingMode, PresetConfiguration, float, ProfileH265, int, int, int, int, int, int, int, int, bool, float, float, LevelH265, int, BAdapt, MaxCtuSize, TuIntraDepth, TuInterDepth, MotionSearch, int, int, bool, bool, bool, string_types, int, int, bool, int, AdaptiveQuantMode, bool, VideoFormat, float, float, bool, bool, MinCodingUnitSize, int, LimitReferences, bool, bool, bool, int, bool, bool, bool, bool, bool, int, RateDistortionLevelForQuantization, int, int, bool, int, bool, bool, bool, bool, TransformSkipMode, bool, LimitTransformUnitDepthRecursionMode, int, int, RateDistortionPenaltyMode, MaxTransformUnitSize, int, bool, bool, bool, bool, bool, float, int, int, int, ForceFlushMode, float, bool, QuantizationGroupSize, bool, int, int, float, float, float, int, bool, float, float, bool, bool, bool) -> None
+                 lowpass_dct=None,
+                 cea608708_subtitle_config=None):
+        # type: (string_types, string_types, datetime, datetime, dict, string_types, int, int, int, float, PixelFormat, ColorConfig, int, int, EncodingMode, PresetConfiguration, float, ProfileH265, int, int, int, int, int, int, int, int, bool, float, float, LevelH265, int, BAdapt, MaxCtuSize, TuIntraDepth, TuInterDepth, MotionSearch, int, int, bool, bool, bool, string_types, int, int, bool, int, AdaptiveQuantMode, bool, VideoFormat, float, float, bool, bool, MinCodingUnitSize, int, LimitReferences, bool, bool, bool, int, bool, bool, bool, bool, bool, int, RateDistortionLevelForQuantization, int, int, bool, int, bool, bool, bool, bool, TransformSkipMode, bool, LimitTransformUnitDepthRecursionMode, int, int, RateDistortionPenaltyMode, MaxTransformUnitSize, int, bool, bool, bool, bool, bool, float, int, int, int, ForceFlushMode, float, bool, QuantizationGroupSize, bool, int, int, float, float, float, int, bool, float, float, bool, bool, bool, Cea608708SubtitleConfiguration) -> None
         super(H265VideoConfiguration, self).__init__(name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, id_=id_, width=width, height=height, bitrate=bitrate, rate=rate, pixel_format=pixel_format, color_config=color_config, sample_aspect_ratio_numerator=sample_aspect_ratio_numerator, sample_aspect_ratio_denominator=sample_aspect_ratio_denominator, encoding_mode=encoding_mode)
 
         self._preset_configuration = None
@@ -239,6 +241,7 @@ class H265VideoConfiguration(VideoConfiguration):
         self._sao_non_deblock = None
         self._limit_sao = None
         self._lowpass_dct = None
+        self._cea608708_subtitle_config = None
         self.discriminator = None
 
         if preset_configuration is not None:
@@ -429,6 +432,8 @@ class H265VideoConfiguration(VideoConfiguration):
             self.limit_sao = limit_sao
         if lowpass_dct is not None:
             self.lowpass_dct = lowpass_dct
+        if cea608708_subtitle_config is not None:
+            self.cea608708_subtitle_config = cea608708_subtitle_config
 
     @property
     def openapi_types(self):
@@ -531,7 +536,8 @@ class H265VideoConfiguration(VideoConfiguration):
             'blur_complexity': 'float',
             'sao_non_deblock': 'bool',
             'limit_sao': 'bool',
-            'lowpass_dct': 'bool'
+            'lowpass_dct': 'bool',
+            'cea608708_subtitle_config': 'Cea608708SubtitleConfiguration'
         })
 
         return types
@@ -637,7 +643,8 @@ class H265VideoConfiguration(VideoConfiguration):
             'blur_complexity': 'blurComplexity',
             'sao_non_deblock': 'saoNonDeblock',
             'limit_sao': 'limitSao',
-            'lowpass_dct': 'lowpassDct'
+            'lowpass_dct': 'lowpassDct',
+            'cea608708_subtitle_config': 'cea608708SubtitleConfig'
         })
         return attributes
 
@@ -3428,6 +3435,35 @@ class H265VideoConfiguration(VideoConfiguration):
                 raise TypeError("Invalid type for `lowpass_dct`, type has to be `bool`")
 
         self._lowpass_dct = lowpass_dct
+
+    @property
+    def cea608708_subtitle_config(self):
+        # type: () -> Cea608708SubtitleConfiguration
+        """Gets the cea608708_subtitle_config of this H265VideoConfiguration.
+
+        Defines whether CEA 608/708 subtitles are extracted from the input video stream
+
+        :return: The cea608708_subtitle_config of this H265VideoConfiguration.
+        :rtype: Cea608708SubtitleConfiguration
+        """
+        return self._cea608708_subtitle_config
+
+    @cea608708_subtitle_config.setter
+    def cea608708_subtitle_config(self, cea608708_subtitle_config):
+        # type: (Cea608708SubtitleConfiguration) -> None
+        """Sets the cea608708_subtitle_config of this H265VideoConfiguration.
+
+        Defines whether CEA 608/708 subtitles are extracted from the input video stream
+
+        :param cea608708_subtitle_config: The cea608708_subtitle_config of this H265VideoConfiguration.
+        :type: Cea608708SubtitleConfiguration
+        """
+
+        if cea608708_subtitle_config is not None:
+            if not isinstance(cea608708_subtitle_config, Cea608708SubtitleConfiguration):
+                raise TypeError("Invalid type for `cea608708_subtitle_config`, type has to be `Cea608708SubtitleConfiguration`")
+
+        self._cea608708_subtitle_config = cea608708_subtitle_config
 
     def to_dict(self):
         """Returns the model properties as a dict"""

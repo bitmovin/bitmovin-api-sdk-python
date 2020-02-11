@@ -21,10 +21,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -203,7 +203,7 @@
 <dd><p>Bases: <a class="reference internal" href="bitmovin_api_sdk.common.html#bitmovin_api_sdk.common.base_api.BaseApi" title="bitmovin_api_sdk.common.base_api.BaseApi"><code class="xref py py-class docutils literal notranslate"><span class="pre">bitmovin_api_sdk.common.base_api.BaseApi</span></code></a></p>
 <dl class="method">
 <dt id="bitmovin_api_sdk.player.custom_builds.web.domains.domains_api.DomainsApi.create">
-<code class="sig-name descname">create</code><span class="sig-paren">(</span><em class="sig-param">custom_web_player_build_domain</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/player/custom_builds/web/domains/domains_api.html#DomainsApi.create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.player.custom_builds.web.domains.domains_api.DomainsApi.create" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">create</code><span class="sig-paren">(</span><em class="sig-param">custom_web_player_build_domain: bitmovin_api_sdk.models.custom_web_player_build_domain.CustomWebPlayerBuildDomain</em>, <em class="sig-param">**kwargs: dict</em><span class="sig-paren">)</span> &#x2192; bitmovin_api_sdk.models.custom_web_player_build_domain.CustomWebPlayerBuildDomain<a class="reference internal" href="../_modules/bitmovin_api_sdk/player/custom_builds/web/domains/domains_api.html#DomainsApi.create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.player.custom_builds.web.domains.domains_api.DomainsApi.create" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add Domain</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -220,7 +220,7 @@
 
 <dl class="method">
 <dt id="bitmovin_api_sdk.player.custom_builds.web.domains.domains_api.DomainsApi.delete">
-<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">domain_id</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/player/custom_builds/web/domains/domains_api.html#DomainsApi.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.player.custom_builds.web.domains.domains_api.DomainsApi.delete" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">domain_id: string_types</em>, <em class="sig-param">**kwargs: dict</em><span class="sig-paren">)</span> &#x2192; BitmovinResponse<a class="reference internal" href="../_modules/bitmovin_api_sdk/player/custom_builds/web/domains/domains_api.html#DomainsApi.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.player.custom_builds.web.domains.domains_api.DomainsApi.delete" title="Permalink to this definition">¶</a></dt>
 <dd><p>Delete Domain</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -237,7 +237,7 @@
 
 <dl class="method">
 <dt id="bitmovin_api_sdk.player.custom_builds.web.domains.domains_api.DomainsApi.get">
-<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">domain_id</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/player/custom_builds/web/domains/domains_api.html#DomainsApi.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.player.custom_builds.web.domains.domains_api.DomainsApi.get" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">domain_id: string_types</em>, <em class="sig-param">**kwargs: dict</em><span class="sig-paren">)</span> &#x2192; CustomWebPlayerBuildDomain<a class="reference internal" href="../_modules/bitmovin_api_sdk/player/custom_builds/web/domains/domains_api.html#DomainsApi.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.player.custom_builds.web.domains.domains_api.DomainsApi.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get Domain Details</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -254,7 +254,7 @@
 
 <dl class="method">
 <dt id="bitmovin_api_sdk.player.custom_builds.web.domains.domains_api.DomainsApi.list">
-<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/player/custom_builds/web/domains/domains_api.html#DomainsApi.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.player.custom_builds.web.domains.domains_api.DomainsApi.list" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">**kwargs: dict</em><span class="sig-paren">)</span> &#x2192; bitmovin_api_sdk.models.custom_web_player_build_domain.CustomWebPlayerBuildDomain<a class="reference internal" href="../_modules/bitmovin_api_sdk/player/custom_builds/web/domains/domains_api.html#DomainsApi.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.player.custom_builds.web.domains.domains_api.DomainsApi.list" title="Permalink to this definition">¶</a></dt>
 <dd><p>List Domain Details</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>

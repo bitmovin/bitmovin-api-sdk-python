@@ -21,10 +21,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -223,7 +223,7 @@
 <span id="bitmovin-api-sdk-encoding-encodings-muxings-mp4-drm-playready-play-ready-drm-list-query-params-module"></span><h2>bitmovin_api_sdk.encoding.encodings.muxings.mp4.drm.playready.play_ready_drm_list_query_params module<a class="headerlink" href="#module-bitmovin_api_sdk.encoding.encodings.muxings.mp4.drm.playready.play_ready_drm_list_query_params" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="bitmovin_api_sdk.encoding.encodings.muxings.mp4.drm.playready.play_ready_drm_list_query_params.PlayReadyDrmListQueryParams">
-<em class="property">class </em><code class="sig-prename descclassname">bitmovin_api_sdk.encoding.encodings.muxings.mp4.drm.playready.play_ready_drm_list_query_params.</code><code class="sig-name descname">PlayReadyDrmListQueryParams</code><span class="sig-paren">(</span><em class="sig-param">offset=None</em>, <em class="sig-param">limit=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/encodings/muxings/mp4/drm/playready/play_ready_drm_list_query_params.html#PlayReadyDrmListQueryParams"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.encodings.muxings.mp4.drm.playready.play_ready_drm_list_query_params.PlayReadyDrmListQueryParams" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">bitmovin_api_sdk.encoding.encodings.muxings.mp4.drm.playready.play_ready_drm_list_query_params.</code><code class="sig-name descname">PlayReadyDrmListQueryParams</code><span class="sig-paren">(</span><em class="sig-param">offset: Optional[int] = None</em>, <em class="sig-param">limit: Optional[int] = None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/encodings/muxings/mp4/drm/playready/play_ready_drm_list_query_params.html#PlayReadyDrmListQueryParams"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.encodings.muxings.mp4.drm.playready.play_ready_drm_list_query_params.PlayReadyDrmListQueryParams" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="method">
 <dt id="bitmovin_api_sdk.encoding.encodings.muxings.mp4.drm.playready.play_ready_drm_list_query_params.PlayReadyDrmListQueryParams.attribute_map">
@@ -246,7 +246,7 @@
 <dd><p>Bases: <a class="reference internal" href="bitmovin_api_sdk.common.html#bitmovin_api_sdk.common.base_api.BaseApi" title="bitmovin_api_sdk.common.base_api.BaseApi"><code class="xref py py-class docutils literal notranslate"><span class="pre">bitmovin_api_sdk.common.base_api.BaseApi</span></code></a></p>
 <dl class="method">
 <dt id="bitmovin_api_sdk.encoding.encodings.muxings.mp4.drm.playready.playready_api.PlayreadyApi.create">
-<code class="sig-name descname">create</code><span class="sig-paren">(</span><em class="sig-param">encoding_id</em>, <em class="sig-param">muxing_id</em>, <em class="sig-param">play_ready_drm</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/encodings/muxings/mp4/drm/playready/playready_api.html#PlayreadyApi.create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.encodings.muxings.mp4.drm.playready.playready_api.PlayreadyApi.create" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">create</code><span class="sig-paren">(</span><em class="sig-param">encoding_id: string_types</em>, <em class="sig-param">muxing_id: string_types</em>, <em class="sig-param">play_ready_drm: PlayReadyDrm</em>, <em class="sig-param">**kwargs: dict</em><span class="sig-paren">)</span> &#x2192; PlayReadyDrm<a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/encodings/muxings/mp4/drm/playready/playready_api.html#PlayreadyApi.create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.encodings.muxings.mp4.drm.playready.playready_api.PlayreadyApi.create" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add PlayReady DRM to MP4</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -267,7 +267,7 @@
 
 <dl class="method">
 <dt id="bitmovin_api_sdk.encoding.encodings.muxings.mp4.drm.playready.playready_api.PlayreadyApi.delete">
-<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">encoding_id</em>, <em class="sig-param">muxing_id</em>, <em class="sig-param">drm_id</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/encodings/muxings/mp4/drm/playready/playready_api.html#PlayreadyApi.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.encodings.muxings.mp4.drm.playready.playready_api.PlayreadyApi.delete" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">encoding_id: string_types</em>, <em class="sig-param">muxing_id: string_types</em>, <em class="sig-param">drm_id: string_types</em>, <em class="sig-param">**kwargs: dict</em><span class="sig-paren">)</span> &#x2192; BitmovinResponse<a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/encodings/muxings/mp4/drm/playready/playready_api.html#PlayreadyApi.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.encodings.muxings.mp4.drm.playready.playready_api.PlayreadyApi.delete" title="Permalink to this definition">¶</a></dt>
 <dd><p>Delete PlayReady DRM from MP4</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -288,7 +288,7 @@
 
 <dl class="method">
 <dt id="bitmovin_api_sdk.encoding.encodings.muxings.mp4.drm.playready.playready_api.PlayreadyApi.get">
-<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">encoding_id</em>, <em class="sig-param">muxing_id</em>, <em class="sig-param">drm_id</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/encodings/muxings/mp4/drm/playready/playready_api.html#PlayreadyApi.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.encodings.muxings.mp4.drm.playready.playready_api.PlayreadyApi.get" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">encoding_id: string_types</em>, <em class="sig-param">muxing_id: string_types</em>, <em class="sig-param">drm_id: string_types</em>, <em class="sig-param">**kwargs: dict</em><span class="sig-paren">)</span> &#x2192; PlayReadyDrm<a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/encodings/muxings/mp4/drm/playready/playready_api.html#PlayreadyApi.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.encodings.muxings.mp4.drm.playready.playready_api.PlayreadyApi.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>PlayReady DRM Details of MP4</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -309,7 +309,7 @@
 
 <dl class="method">
 <dt id="bitmovin_api_sdk.encoding.encodings.muxings.mp4.drm.playready.playready_api.PlayreadyApi.list">
-<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">encoding_id</em>, <em class="sig-param">muxing_id</em>, <em class="sig-param">query_params=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/encodings/muxings/mp4/drm/playready/playready_api.html#PlayreadyApi.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.encodings.muxings.mp4.drm.playready.playready_api.PlayreadyApi.list" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">encoding_id: string_types</em>, <em class="sig-param">muxing_id: string_types</em>, <em class="sig-param">query_params: PlayReadyDrmListQueryParams = None</em>, <em class="sig-param">**kwargs: dict</em><span class="sig-paren">)</span> &#x2192; PlayReadyDrm<a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/encodings/muxings/mp4/drm/playready/playready_api.html#PlayreadyApi.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.encodings.muxings.mp4.drm.playready.playready_api.PlayreadyApi.list" title="Permalink to this definition">¶</a></dt>
 <dd><p>List PlayReady DRMs of MP4</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
