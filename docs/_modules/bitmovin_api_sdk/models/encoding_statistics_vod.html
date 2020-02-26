@@ -167,10 +167,11 @@
                  <span class="n">date_</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">bytes_encoded</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">time_encoded</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">bytes_egress</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">time_enqueued</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">real_time_factor</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (datetime, int, int, int, float) -&gt; None</span>
-        <span class="nb">super</span><span class="p">(</span><span class="n">EncodingStatisticsVod</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">date_</span><span class="o">=</span><span class="n">date_</span><span class="p">,</span> <span class="n">bytes_encoded</span><span class="o">=</span><span class="n">bytes_encoded</span><span class="p">,</span> <span class="n">time_encoded</span><span class="o">=</span><span class="n">time_encoded</span><span class="p">)</span>
+        <span class="c1"># type: (datetime, int, int, int, int, float) -&gt; None</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">EncodingStatisticsVod</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">date_</span><span class="o">=</span><span class="n">date_</span><span class="p">,</span> <span class="n">bytes_encoded</span><span class="o">=</span><span class="n">bytes_encoded</span><span class="p">,</span> <span class="n">time_encoded</span><span class="o">=</span><span class="n">time_encoded</span><span class="p">,</span> <span class="n">bytes_egress</span><span class="o">=</span><span class="n">bytes_egress</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_time_enqueued</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_real_time_factor</span> <span class="o">=</span> <span class="kc">None</span>

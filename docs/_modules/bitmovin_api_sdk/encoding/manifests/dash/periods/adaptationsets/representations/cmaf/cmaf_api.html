@@ -162,7 +162,6 @@
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.dash_segmented_representation</span> <span class="kn">import</span> <span class="n">DashSegmentedRepresentation</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.response_envelope</span> <span class="kn">import</span> <span class="n">ResponseEnvelope</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.response_error</span> <span class="kn">import</span> <span class="n">ResponseError</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.cmaf.drm.drm_api</span> <span class="kn">import</span> <span class="n">DrmApi</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.cmaf.contentprotection.contentprotection_api</span> <span class="kn">import</span> <span class="n">ContentprotectionApi</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.cmaf.dash_cmaf_representation_list_query_params</span> <span class="kn">import</span> <span class="n">DashCmafRepresentationListQueryParams</span>
 
@@ -173,13 +172,6 @@
         <span class="c1"># type: (str, str, str, BitmovinApiLoggerBase) -&gt; None</span>
 
         <span class="nb">super</span><span class="p">(</span><span class="n">CmafApi</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span>
-            <span class="n">api_key</span><span class="o">=</span><span class="n">api_key</span><span class="p">,</span>
-            <span class="n">tenant_org_id</span><span class="o">=</span><span class="n">tenant_org_id</span><span class="p">,</span>
-            <span class="n">base_url</span><span class="o">=</span><span class="n">base_url</span><span class="p">,</span>
-            <span class="n">logger</span><span class="o">=</span><span class="n">logger</span>
-        <span class="p">)</span>
-
-        <span class="bp">self</span><span class="o">.</span><span class="n">drm</span> <span class="o">=</span> <span class="n">DrmApi</span><span class="p">(</span>
             <span class="n">api_key</span><span class="o">=</span><span class="n">api_key</span><span class="p">,</span>
             <span class="n">tenant_org_id</span><span class="o">=</span><span class="n">tenant_org_id</span><span class="p">,</span>
             <span class="n">base_url</span><span class="o">=</span><span class="n">base_url</span><span class="p">,</span>

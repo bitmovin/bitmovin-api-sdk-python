@@ -1,0 +1,30 @@
+bitmovin\_api\_sdk.encoding.encodings.transfer\_retries package
+===============================================================
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.encoding.encodings.transfer\_retries.transfer\_retries\_api module
+-------------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.encodings.transfer_retries.transfer_retries_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.encoding.encodings.transfer\_retries.transfer\_retry\_list\_query\_params module
+---------------------------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.encodings.transfer_retries.transfer_retry_list_query_params
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.encoding.encodings.transfer_retries
+   :members:
+   :undoc-members:
+   :show-inheritance:

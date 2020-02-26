@@ -4,3 +4,4 @@ from bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representat
 from bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.cmaf.cmaf_api import CmafApi
 from bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.mp4.mp4_api import Mp4Api
 from bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.webm.webm_api import WebmApi
+from bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.progressive_webm.progressive_webm_api import ProgressiveWebmApi

@@ -156,6 +156,7 @@
 <span class="kn">from</span> <span class="nn">enum</span> <span class="kn">import</span> <span class="n">Enum</span>
 <span class="kn">from</span> <span class="nn">six</span> <span class="kn">import</span> <span class="n">string_types</span><span class="p">,</span> <span class="n">iteritems</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.common.poscheck</span> <span class="kn">import</span> <span class="n">poscheck_model</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.passthrough_mode</span> <span class="kn">import</span> <span class="n">PassthroughMode</span>
 <span class="kn">import</span> <span class="nn">pprint</span>
 <span class="kn">import</span> <span class="nn">six</span>
 
@@ -163,19 +164,24 @@
 <div class="viewcode-block" id="Cea608708SubtitleConfiguration"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.cea608708_subtitle_configuration.Cea608708SubtitleConfiguration">[docs]</a><span class="k">class</span> <span class="nc">Cea608708SubtitleConfiguration</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="nd">@poscheck_model</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
-                 <span class="n">passthrough_activated</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (bool) -&gt; None</span>
+                 <span class="n">passthrough_activated</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">passthrough_mode</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="c1"># type: (bool, PassthroughMode) -&gt; None</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_passthrough_activated</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_passthrough_mode</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>
 
         <span class="k">if</span> <span class="n">passthrough_activated</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">passthrough_activated</span> <span class="o">=</span> <span class="n">passthrough_activated</span>
+        <span class="k">if</span> <span class="n">passthrough_mode</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">passthrough_mode</span> <span class="o">=</span> <span class="n">passthrough_mode</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">types</span> <span class="o">=</span> <span class="p">{</span>
-            <span class="s1">&#39;passthrough_activated&#39;</span><span class="p">:</span> <span class="s1">&#39;bool&#39;</span>
+            <span class="s1">&#39;passthrough_activated&#39;</span><span class="p">:</span> <span class="s1">&#39;bool&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;passthrough_mode&#39;</span><span class="p">:</span> <span class="s1">&#39;PassthroughMode&#39;</span>
         <span class="p">}</span>
 
         <span class="k">return</span> <span class="n">types</span>
@@ -183,7 +189,8 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">attribute_map</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">attributes</span> <span class="o">=</span> <span class="p">{</span>
-            <span class="s1">&#39;passthrough_activated&#39;</span><span class="p">:</span> <span class="s1">&#39;passthroughActivated&#39;</span>
+            <span class="s1">&#39;passthrough_activated&#39;</span><span class="p">:</span> <span class="s1">&#39;passthroughActivated&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;passthrough_mode&#39;</span><span class="p">:</span> <span class="s1">&#39;passthroughMode&#39;</span>
         <span class="p">}</span>
         <span class="k">return</span> <span class="n">attributes</span>
 
@@ -215,6 +222,33 @@
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `passthrough_activated`, type has to be `bool`&quot;</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_passthrough_activated</span> <span class="o">=</span> <span class="n">passthrough_activated</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">passthrough_mode</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; PassthroughMode</span>
+        <span class="sd">&quot;&quot;&quot;Gets the passthrough_mode of this Cea608708SubtitleConfiguration.</span>
+
+
+<span class="sd">        :return: The passthrough_mode of this Cea608708SubtitleConfiguration.</span>
+<span class="sd">        :rtype: PassthroughMode</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_passthrough_mode</span>
+
+    <span class="nd">@passthrough_mode</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">passthrough_mode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">passthrough_mode</span><span class="p">):</span>
+        <span class="c1"># type: (PassthroughMode) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the passthrough_mode of this Cea608708SubtitleConfiguration.</span>
+
+
+<span class="sd">        :param passthrough_mode: The passthrough_mode of this Cea608708SubtitleConfiguration.</span>
+<span class="sd">        :type: PassthroughMode</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">passthrough_mode</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">passthrough_mode</span><span class="p">,</span> <span class="n">PassthroughMode</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `passthrough_mode`, type has to be `PassthroughMode`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_passthrough_mode</span> <span class="o">=</span> <span class="n">passthrough_mode</span>
 
 <div class="viewcode-block" id="Cea608708SubtitleConfiguration.to_dict"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.cea608708_subtitle_configuration.Cea608708SubtitleConfiguration.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>

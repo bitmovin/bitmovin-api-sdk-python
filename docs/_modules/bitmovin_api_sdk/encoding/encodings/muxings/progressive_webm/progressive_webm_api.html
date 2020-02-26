@@ -163,6 +163,7 @@
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.response_error</span> <span class="kn">import</span> <span class="n">ResponseError</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.encoding.encodings.muxings.progressive_webm.customdata.customdata_api</span> <span class="kn">import</span> <span class="n">CustomdataApi</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.encoding.encodings.muxings.progressive_webm.information.information_api</span> <span class="kn">import</span> <span class="n">InformationApi</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.encoding.encodings.muxings.progressive_webm.drm.drm_api</span> <span class="kn">import</span> <span class="n">DrmApi</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.encoding.encodings.muxings.progressive_webm.progressive_webm_muxing_list_query_params</span> <span class="kn">import</span> <span class="n">ProgressiveWebmMuxingListQueryParams</span>
 
 
@@ -192,15 +193,22 @@
             <span class="n">logger</span><span class="o">=</span><span class="n">logger</span>
         <span class="p">)</span>
 
+        <span class="bp">self</span><span class="o">.</span><span class="n">drm</span> <span class="o">=</span> <span class="n">DrmApi</span><span class="p">(</span>
+            <span class="n">api_key</span><span class="o">=</span><span class="n">api_key</span><span class="p">,</span>
+            <span class="n">tenant_org_id</span><span class="o">=</span><span class="n">tenant_org_id</span><span class="p">,</span>
+            <span class="n">base_url</span><span class="o">=</span><span class="n">base_url</span><span class="p">,</span>
+            <span class="n">logger</span><span class="o">=</span><span class="n">logger</span>
+        <span class="p">)</span>
+
 <div class="viewcode-block" id="ProgressiveWebmApi.create"><a class="viewcode-back" href="../../../../../../__modules/bitmovin_api_sdk.encoding.encodings.muxings.progressive_webm.html#bitmovin_api_sdk.encoding.encodings.muxings.progressive_webm.progressive_webm_api.ProgressiveWebmApi.create">[docs]</a>    <span class="k">def</span> <span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">encoding_id</span><span class="p">,</span> <span class="n">progressive_webm_muxing</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, ProgressiveWebmMuxing, dict) -&gt; ProgressiveWebmMuxing</span>
-        <span class="sd">&quot;&quot;&quot;Add Progressive WebM Muxing</span>
+        <span class="sd">&quot;&quot;&quot;Add Progressive WebM muxing</span>
 
 <span class="sd">        :param encoding_id: Id of the encoding.</span>
 <span class="sd">        :type encoding_id: string_types, required</span>
-<span class="sd">        :param progressive_webm_muxing: The Progressive WebM Muxing to be created</span>
+<span class="sd">        :param progressive_webm_muxing: The Progressive WebM muxing to be created</span>
 <span class="sd">        :type progressive_webm_muxing: ProgressiveWebmMuxing, required</span>
-<span class="sd">        :return: Progressive WebM Muxing</span>
+<span class="sd">        :return: Progressive WebM muxing</span>
 <span class="sd">        :rtype: ProgressiveWebmMuxing</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
@@ -214,7 +222,7 @@
 
 <div class="viewcode-block" id="ProgressiveWebmApi.delete"><a class="viewcode-back" href="../../../../../../__modules/bitmovin_api_sdk.encoding.encodings.muxings.progressive_webm.html#bitmovin_api_sdk.encoding.encodings.muxings.progressive_webm.progressive_webm_api.ProgressiveWebmApi.delete">[docs]</a>    <span class="k">def</span> <span class="nf">delete</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">encoding_id</span><span class="p">,</span> <span class="n">muxing_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, string_types, dict) -&gt; BitmovinResponse</span>
-        <span class="sd">&quot;&quot;&quot;Delete Progressive WebM Muxing</span>
+        <span class="sd">&quot;&quot;&quot;Delete Progressive WebM muxing</span>
 
 <span class="sd">        :param encoding_id: Id of the encoding.</span>
 <span class="sd">        :type encoding_id: string_types, required</span>
@@ -233,13 +241,13 @@
 
 <div class="viewcode-block" id="ProgressiveWebmApi.get"><a class="viewcode-back" href="../../../../../../__modules/bitmovin_api_sdk.encoding.encodings.muxings.progressive_webm.html#bitmovin_api_sdk.encoding.encodings.muxings.progressive_webm.progressive_webm_api.ProgressiveWebmApi.get">[docs]</a>    <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">encoding_id</span><span class="p">,</span> <span class="n">muxing_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, string_types, dict) -&gt; ProgressiveWebmMuxing</span>
-        <span class="sd">&quot;&quot;&quot;Progressive WebM Muxing Details</span>
+        <span class="sd">&quot;&quot;&quot;Progressive WebM muxing details</span>
 
 <span class="sd">        :param encoding_id: Id of the encoding.</span>
 <span class="sd">        :type encoding_id: string_types, required</span>
 <span class="sd">        :param muxing_id: Id of the Progressive WebM muxing</span>
 <span class="sd">        :type muxing_id: string_types, required</span>
-<span class="sd">        :return: Progressive WebM Muxing</span>
+<span class="sd">        :return: Progressive WebM muxing</span>
 <span class="sd">        :rtype: ProgressiveWebmMuxing</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
@@ -252,7 +260,7 @@
 
 <div class="viewcode-block" id="ProgressiveWebmApi.list"><a class="viewcode-back" href="../../../../../../__modules/bitmovin_api_sdk.encoding.encodings.muxings.progressive_webm.html#bitmovin_api_sdk.encoding.encodings.muxings.progressive_webm.progressive_webm_api.ProgressiveWebmApi.list">[docs]</a>    <span class="k">def</span> <span class="nf">list</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">encoding_id</span><span class="p">,</span> <span class="n">query_params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, ProgressiveWebmMuxingListQueryParams, dict) -&gt; ProgressiveWebmMuxing</span>
-        <span class="sd">&quot;&quot;&quot;List Progressive WebM Muxings</span>
+        <span class="sd">&quot;&quot;&quot;List Progressive WebM muxings</span>
 
 <span class="sd">        :param encoding_id: Id of the encoding.</span>
 <span class="sd">        :type encoding_id: string_types, required</span>

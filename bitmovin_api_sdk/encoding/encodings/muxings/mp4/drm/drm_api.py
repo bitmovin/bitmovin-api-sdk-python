@@ -71,7 +71,7 @@ class DrmApi(BaseApi):
 
     def list(self, encoding_id, muxing_id, **kwargs):
         # type: (string_types, string_types, dict) -> Drm
-        """List all DRM configurations of MP4 Muxing
+        """List all DRM configurations of MP4 muxing
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required

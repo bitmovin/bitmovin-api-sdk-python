@@ -33,11 +33,11 @@ class RawApi(BaseApi):
 
     def create(self, encoding_id, muxing_id, raw_id3_tag, **kwargs):
         # type: (string_types, string_types, RawId3Tag, dict) -> RawId3Tag
-        """Add Raw ID3 Tag to Progressive TS Muxing
+        """Add Raw ID3 Tag to Progressive TS muxing
 
         :param encoding_id: ID of the Encoding.
         :type encoding_id: string_types, required
-        :param muxing_id: ID of the Progressive TS Muxing
+        :param muxing_id: ID of the Progressive TS muxing
         :type muxing_id: string_types, required
         :param raw_id3_tag: The Raw ID3 Tag to be created
         :type raw_id3_tag: RawId3Tag, required
@@ -55,11 +55,11 @@ class RawApi(BaseApi):
 
     def delete(self, encoding_id, muxing_id, id3_tag_id, **kwargs):
         # type: (string_types, string_types, string_types, dict) -> BitmovinResponse
-        """Delete Raw ID3 Tag of Progressive TS Muxing
+        """Delete Raw ID3 Tag of Progressive TS muxing
 
         :param encoding_id: ID of the Encoding.
         :type encoding_id: string_types, required
-        :param muxing_id: ID of the Progressive TS Muxing
+        :param muxing_id: ID of the Progressive TS muxing
         :type muxing_id: string_types, required
         :param id3_tag_id: ID of the RAW ID3 Tag
         :type id3_tag_id: string_types, required
@@ -76,11 +76,11 @@ class RawApi(BaseApi):
 
     def get(self, encoding_id, muxing_id, id3_tag_id, **kwargs):
         # type: (string_types, string_types, string_types, dict) -> RawId3Tag
-        """Raw ID3 Tag Details of Progressive TS Muxing
+        """Raw ID3 Tag Details of Progressive TS muxing
 
         :param encoding_id: ID of the Encoding.
         :type encoding_id: string_types, required
-        :param muxing_id: ID of the Progressive TS Muxing
+        :param muxing_id: ID of the Progressive TS muxing
         :type muxing_id: string_types, required
         :param id3_tag_id: ID of the Raw ID3 Tag
         :type id3_tag_id: string_types, required
@@ -97,11 +97,11 @@ class RawApi(BaseApi):
 
     def list(self, encoding_id, muxing_id, query_params=None, **kwargs):
         # type: (string_types, string_types, RawId3TagListQueryParams, dict) -> RawId3Tag
-        """List Raw ID3 Tags of Progressive TS Muxing
+        """List Raw ID3 Tags of Progressive TS muxing
 
         :param encoding_id: ID of the Encoding.
         :type encoding_id: string_types, required
-        :param muxing_id: ID of the Progressive TS Muxing
+        :param muxing_id: ID of the Progressive TS muxing
         :type muxing_id: string_types, required
         :param query_params: Query parameters
         :type query_params: RawId3TagListQueryParams

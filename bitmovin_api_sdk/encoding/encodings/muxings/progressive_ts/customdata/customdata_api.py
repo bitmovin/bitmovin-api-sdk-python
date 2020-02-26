@@ -23,13 +23,13 @@ class CustomdataApi(BaseApi):
 
     def get(self, encoding_id, muxing_id, **kwargs):
         # type: (string_types, string_types, dict) -> CustomData
-        """Progressive TS Muxing Custom Data
+        """Progressive TS muxing Custom Data
 
         :param encoding_id: ID of the Encoding.
         :type encoding_id: string_types, required
         :param muxing_id: ID of the Progressive TS muxing
         :type muxing_id: string_types, required
-        :return: Progressive TS Muxing Custom Data
+        :return: Progressive TS muxing Custom Data
         :rtype: CustomData
         """
 

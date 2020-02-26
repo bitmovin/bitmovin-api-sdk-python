@@ -57,13 +57,13 @@ class ProgressiveTsApi(BaseApi):
 
     def create(self, encoding_id, progressive_ts_muxing, **kwargs):
         # type: (string_types, ProgressiveTsMuxing, dict) -> ProgressiveTsMuxing
-        """Add Progressive TS Muxing
+        """Add Progressive TS muxing
 
         :param encoding_id: ID of the encoding.
         :type encoding_id: string_types, required
-        :param progressive_ts_muxing: The Progressive TS Muxing to be created
+        :param progressive_ts_muxing: The Progressive TS muxing to be created
         :type progressive_ts_muxing: ProgressiveTsMuxing, required
-        :return: Progressive TS Muxing
+        :return: Progressive TS muxing
         :rtype: ProgressiveTsMuxing
         """
 
@@ -77,13 +77,13 @@ class ProgressiveTsApi(BaseApi):
 
     def delete(self, encoding_id, muxing_id, **kwargs):
         # type: (string_types, string_types, dict) -> BitmovinResponse
-        """Delete Progressive TS Muxing
+        """Delete Progressive TS muxing
 
         :param encoding_id: ID of the Encoding.
         :type encoding_id: string_types, required
         :param muxing_id: ID of the Progressive TS muxing
         :type muxing_id: string_types, required
-        :return: ID of the Progressive TS Muxing
+        :return: ID of the Progressive TS muxing
         :rtype: BitmovinResponse
         """
 
@@ -96,13 +96,13 @@ class ProgressiveTsApi(BaseApi):
 
     def get(self, encoding_id, muxing_id, **kwargs):
         # type: (string_types, string_types, dict) -> ProgressiveTsMuxing
-        """Progressive TS Muxing Details
+        """Progressive TS muxing details
 
         :param encoding_id: ID of the Encoding.
         :type encoding_id: string_types, required
-        :param muxing_id: ID of the Progressive TS Muxing
+        :param muxing_id: ID of the Progressive TS muxing
         :type muxing_id: string_types, required
-        :return: Progressive TS Muxing
+        :return: Progressive TS muxing
         :rtype: ProgressiveTsMuxing
         """
 
@@ -115,7 +115,7 @@ class ProgressiveTsApi(BaseApi):
 
     def list(self, encoding_id, query_params=None, **kwargs):
         # type: (string_types, ProgressiveTsMuxingListQueryParams, dict) -> ProgressiveTsMuxing
-        """List Progressive TS Muxings
+        """List Progressive TS muxings
 
         :param encoding_id: ID of the Encoding.
         :type encoding_id: string_types, required

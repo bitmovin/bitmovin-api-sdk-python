@@ -71,7 +71,7 @@ class HlsManifestDefault(HlsManifest):
         # type: () -> string_types
         """Gets the encoding_id of this HlsManifestDefault.
 
-        The id of the encoding to create a default manifest from (required)
+        The id of the encoding to create a default manifest from. (required)
 
         :return: The encoding_id of this HlsManifestDefault.
         :rtype: string_types
@@ -83,7 +83,7 @@ class HlsManifestDefault(HlsManifest):
         # type: (string_types) -> None
         """Sets the encoding_id of this HlsManifestDefault.
 
-        The id of the encoding to create a default manifest from (required)
+        The id of the encoding to create a default manifest from. (required)
 
         :param encoding_id: The encoding_id of this HlsManifestDefault.
         :type: string_types

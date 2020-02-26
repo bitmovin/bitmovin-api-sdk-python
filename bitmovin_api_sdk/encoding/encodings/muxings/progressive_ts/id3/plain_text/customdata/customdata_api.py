@@ -23,11 +23,11 @@ class CustomdataApi(BaseApi):
 
     def get(self, encoding_id, muxing_id, id3_tag_id, **kwargs):
         # type: (string_types, string_types, string_types, dict) -> CustomData
-        """Plain Text ID3 Tag Custom Data of Progressive TS Muxing
+        """Plain Text ID3 Tag Custom Data of Progressive TS muxing
 
         :param encoding_id: ID of the Encoding.
         :type encoding_id: string_types, required
-        :param muxing_id: ID of the Progressive TS Muxing
+        :param muxing_id: ID of the Progressive TS muxing
         :type muxing_id: string_types, required
         :param id3_tag_id: ID of the Plain Text ID3 Tag
         :type id3_tag_id: string_types, required

@@ -33,7 +33,7 @@ class AesApi(BaseApi):
 
     def create(self, encoding_id, muxing_id, aes_encryption_drm, **kwargs):
         # type: (string_types, string_types, AesEncryptionDrm, dict) -> AesEncryptionDrm
-        """Add AES Encryption to TS Segment
+        """Add AES Encryption to TS muxing
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -55,11 +55,11 @@ class AesApi(BaseApi):
 
     def delete(self, encoding_id, muxing_id, drm_id, **kwargs):
         # type: (string_types, string_types, string_types, dict) -> BitmovinResponse
-        """Delete AES Encryption from TS Segment
+        """Delete AES Encryption from TS muxing
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
-        :param muxing_id: Id of the transport stream segment.
+        :param muxing_id: Id of the TS muxing.
         :type muxing_id: string_types, required
         :param drm_id: Id of the PlayReady DRM configuration.
         :type drm_id: string_types, required
@@ -76,11 +76,11 @@ class AesApi(BaseApi):
 
     def get(self, encoding_id, muxing_id, drm_id, **kwargs):
         # type: (string_types, string_types, string_types, dict) -> AesEncryptionDrm
-        """AES Encryption Details of TS Segment
+        """AES Encryption Details of TS muxing
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
-        :param muxing_id: Id of the transport stream segment.
+        :param muxing_id: Id of the TS muxing.
         :type muxing_id: string_types, required
         :param drm_id: Id of the AESEncryption configuration.
         :type drm_id: string_types, required
@@ -97,11 +97,11 @@ class AesApi(BaseApi):
 
     def list(self, encoding_id, muxing_id, query_params=None, **kwargs):
         # type: (string_types, string_types, AesEncryptionDrmListQueryParams, dict) -> AesEncryptionDrm
-        """List AES Encryption of TS Segment
+        """List AES Encryption of TS muxing
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
-        :param muxing_id: Id of the transport stream segment.
+        :param muxing_id: Id of the TS muxing.
         :type muxing_id: string_types, required
         :param query_params: Query parameters
         :type query_params: AesEncryptionDrmListQueryParams

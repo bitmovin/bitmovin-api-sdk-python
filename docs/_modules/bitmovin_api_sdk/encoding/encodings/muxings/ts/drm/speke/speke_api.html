@@ -186,11 +186,11 @@
 
 <div class="viewcode-block" id="SpekeApi.create"><a class="viewcode-back" href="../../../../../../../../__modules/bitmovin_api_sdk.encoding.encodings.muxings.ts.drm.speke.html#bitmovin_api_sdk.encoding.encodings.muxings.ts.drm.speke.speke_api.SpekeApi.create">[docs]</a>    <span class="k">def</span> <span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">encoding_id</span><span class="p">,</span> <span class="n">muxing_id</span><span class="p">,</span> <span class="n">speke_drm</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, string_types, SpekeDrm, dict) -&gt; SpekeDrm</span>
-        <span class="sd">&quot;&quot;&quot;Add SPEKE DRM key provider to TS Segment</span>
+        <span class="sd">&quot;&quot;&quot;Add SPEKE DRM key provider to TS muxing</span>
 
 <span class="sd">        :param encoding_id: Id of the encoding.</span>
 <span class="sd">        :type encoding_id: string_types, required</span>
-<span class="sd">        :param muxing_id: Id of the TS Segment muxing</span>
+<span class="sd">        :param muxing_id: Id of the TS muxing</span>
 <span class="sd">        :type muxing_id: string_types, required</span>
 <span class="sd">        :param speke_drm: The SPEKE DRM key provider to be created</span>
 <span class="sd">        :type speke_drm: SpekeDrm, required</span>
@@ -208,11 +208,11 @@
 
 <div class="viewcode-block" id="SpekeApi.delete"><a class="viewcode-back" href="../../../../../../../../__modules/bitmovin_api_sdk.encoding.encodings.muxings.ts.drm.speke.html#bitmovin_api_sdk.encoding.encodings.muxings.ts.drm.speke.speke_api.SpekeApi.delete">[docs]</a>    <span class="k">def</span> <span class="nf">delete</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">encoding_id</span><span class="p">,</span> <span class="n">muxing_id</span><span class="p">,</span> <span class="n">drm_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, string_types, string_types, dict) -&gt; BitmovinResponse</span>
-        <span class="sd">&quot;&quot;&quot;Delete SPEKE DRM from TS Segment</span>
+        <span class="sd">&quot;&quot;&quot;Delete SPEKE DRM from TS muxing</span>
 
 <span class="sd">        :param encoding_id: Id of the encoding.</span>
 <span class="sd">        :type encoding_id: string_types, required</span>
-<span class="sd">        :param muxing_id: Id of the TS Segment muxing</span>
+<span class="sd">        :param muxing_id: Id of the TS muxing</span>
 <span class="sd">        :type muxing_id: string_types, required</span>
 <span class="sd">        :param drm_id: Id of the SPEKE DRM.</span>
 <span class="sd">        :type drm_id: string_types, required</span>
@@ -229,11 +229,11 @@
 
 <div class="viewcode-block" id="SpekeApi.get"><a class="viewcode-back" href="../../../../../../../../__modules/bitmovin_api_sdk.encoding.encodings.muxings.ts.drm.speke.html#bitmovin_api_sdk.encoding.encodings.muxings.ts.drm.speke.speke_api.SpekeApi.get">[docs]</a>    <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">encoding_id</span><span class="p">,</span> <span class="n">muxing_id</span><span class="p">,</span> <span class="n">drm_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, string_types, string_types, dict) -&gt; SpekeDrm</span>
-        <span class="sd">&quot;&quot;&quot;SPEKE DRM Details of TS Segment</span>
+        <span class="sd">&quot;&quot;&quot;SPEKE DRM Details of TS muxing</span>
 
 <span class="sd">        :param encoding_id: Id of the encoding.</span>
 <span class="sd">        :type encoding_id: string_types, required</span>
-<span class="sd">        :param muxing_id: Id of the TS Segment muxing</span>
+<span class="sd">        :param muxing_id: Id of the TS muxing</span>
 <span class="sd">        :type muxing_id: string_types, required</span>
 <span class="sd">        :param drm_id: Id of the SPEKE DRM.</span>
 <span class="sd">        :type drm_id: string_types, required</span>
@@ -250,11 +250,11 @@
 
 <div class="viewcode-block" id="SpekeApi.list"><a class="viewcode-back" href="../../../../../../../../__modules/bitmovin_api_sdk.encoding.encodings.muxings.ts.drm.speke.html#bitmovin_api_sdk.encoding.encodings.muxings.ts.drm.speke.speke_api.SpekeApi.list">[docs]</a>    <span class="k">def</span> <span class="nf">list</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">encoding_id</span><span class="p">,</span> <span class="n">muxing_id</span><span class="p">,</span> <span class="n">query_params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, string_types, SpekeDrmListQueryParams, dict) -&gt; SpekeDrm</span>
-        <span class="sd">&quot;&quot;&quot;List SPEKE DRM of TS Segment</span>
+        <span class="sd">&quot;&quot;&quot;List SPEKE DRM of TS muxing</span>
 
 <span class="sd">        :param encoding_id: Id of the encoding.</span>
 <span class="sd">        :type encoding_id: string_types, required</span>
-<span class="sd">        :param muxing_id: Id of the TS Segment muxing</span>
+<span class="sd">        :param muxing_id: Id of the TS muxing</span>
 <span class="sd">        :type muxing_id: string_types, required</span>
 <span class="sd">        :param query_params: Query parameters</span>
 <span class="sd">        :type query_params: SpekeDrmListQueryParams</span>

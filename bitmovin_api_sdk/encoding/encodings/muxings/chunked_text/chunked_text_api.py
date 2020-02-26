@@ -33,13 +33,13 @@ class ChunkedTextApi(BaseApi):
 
     def create(self, encoding_id, chunked_text_muxing, **kwargs):
         # type: (string_types, ChunkedTextMuxing, dict) -> ChunkedTextMuxing
-        """Add Chunked Text Muxing
+        """Add Chunked Text muxing
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
-        :param chunked_text_muxing: The Chunked Text Muxing to be created
+        :param chunked_text_muxing: The Chunked Text muxing to be created
         :type chunked_text_muxing: ChunkedTextMuxing, required
-        :return: Chunked Text Muxing
+        :return: Chunked Text muxing
         :rtype: ChunkedTextMuxing
         """
 
@@ -53,13 +53,13 @@ class ChunkedTextApi(BaseApi):
 
     def delete(self, encoding_id, muxing_id, **kwargs):
         # type: (string_types, string_types, dict) -> BitmovinResponse
-        """Delete Chunked Text Muxing
+        """Delete Chunked Text muxing
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
-        :param muxing_id: Id of the Chunked Text Muxing
+        :param muxing_id: Id of the Chunked Text muxing
         :type muxing_id: string_types, required
-        :return: Id of the Chunked Text Muxing
+        :return: Id of the Chunked Text muxing
         :rtype: BitmovinResponse
         """
 
@@ -72,13 +72,13 @@ class ChunkedTextApi(BaseApi):
 
     def get(self, encoding_id, muxing_id, **kwargs):
         # type: (string_types, string_types, dict) -> ChunkedTextMuxing
-        """Chunked Text Muxing Details
+        """Chunked Text muxing details
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
-        :param muxing_id: Id of the Chunked Text Muxing
+        :param muxing_id: Id of the Chunked Text muxing
         :type muxing_id: string_types, required
-        :return: Chunked Text Muxing
+        :return: Chunked Text muxing
         :rtype: ChunkedTextMuxing
         """
 
@@ -91,13 +91,13 @@ class ChunkedTextApi(BaseApi):
 
     def list(self, encoding_id, query_params=None, **kwargs):
         # type: (string_types, ChunkedTextMuxingListQueryParams, dict) -> ChunkedTextMuxing
-        """List Chunked Text Muxings
+        """List Chunked Text muxings
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
         :param query_params: Query parameters
         :type query_params: ChunkedTextMuxingListQueryParams
-        :return: List of Chunked Text Muxings
+        :return: List of Chunked Text muxings
         :rtype: ChunkedTextMuxing
         """
 

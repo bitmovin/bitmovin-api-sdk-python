@@ -224,6 +224,7 @@ class VideoConfiguration(CodecConfiguration):
         # type: () -> PixelFormat
         """Gets the pixel_format of this VideoConfiguration.
 
+        Describes the color encoding, bit depth, and chroma subsampling of each pixel in the output image.
 
         :return: The pixel_format of this VideoConfiguration.
         :rtype: PixelFormat
@@ -235,6 +236,7 @@ class VideoConfiguration(CodecConfiguration):
         # type: (PixelFormat) -> None
         """Sets the pixel_format of this VideoConfiguration.
 
+        Describes the color encoding, bit depth, and chroma subsampling of each pixel in the output image.
 
         :param pixel_format: The pixel_format of this VideoConfiguration.
         :type: PixelFormat

@@ -9,7 +9,6 @@ from bitmovin_api_sdk.models.dash_cmaf_representation import DashCmafRepresentat
 from bitmovin_api_sdk.models.dash_segmented_representation import DashSegmentedRepresentation
 from bitmovin_api_sdk.models.response_envelope import ResponseEnvelope
 from bitmovin_api_sdk.models.response_error import ResponseError
-from bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.cmaf.drm.drm_api import DrmApi
 from bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.cmaf.contentprotection.contentprotection_api import ContentprotectionApi
 from bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.cmaf.dash_cmaf_representation_list_query_params import DashCmafRepresentationListQueryParams
 
@@ -20,13 +19,6 @@ class CmafApi(BaseApi):
         # type: (str, str, str, BitmovinApiLoggerBase) -> None
 
         super(CmafApi, self).__init__(
-            api_key=api_key,
-            tenant_org_id=tenant_org_id,
-            base_url=base_url,
-            logger=logger
-        )
-
-        self.drm = DrmApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,

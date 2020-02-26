@@ -247,7 +247,7 @@
 <dl class="method">
 <dt id="bitmovin_api_sdk.encoding.encodings.muxings.ts.drm.fairplay.fairplay_api.FairplayApi.create">
 <code class="sig-name descname">create</code><span class="sig-paren">(</span><em class="sig-param">encoding_id: string_types</em>, <em class="sig-param">muxing_id: string_types</em>, <em class="sig-param">fair_play_drm: FairPlayDrm</em>, <em class="sig-param">**kwargs: dict</em><span class="sig-paren">)</span> &#x2192; FairPlayDrm<a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/encodings/muxings/ts/drm/fairplay/fairplay_api.html#FairplayApi.create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.encodings.muxings.ts.drm.fairplay.fairplay_api.FairplayApi.create" title="Permalink to this definition">¶</a></dt>
-<dd><p>Add FairPlay DRM to TS Segment</p>
+<dd><p>Add FairPlay DRM to TS muxing</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -268,12 +268,12 @@
 <dl class="method">
 <dt id="bitmovin_api_sdk.encoding.encodings.muxings.ts.drm.fairplay.fairplay_api.FairplayApi.delete">
 <code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">encoding_id: string_types</em>, <em class="sig-param">muxing_id: string_types</em>, <em class="sig-param">drm_id: string_types</em>, <em class="sig-param">**kwargs: dict</em><span class="sig-paren">)</span> &#x2192; BitmovinResponse<a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/encodings/muxings/ts/drm/fairplay/fairplay_api.html#FairplayApi.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.encodings.muxings.ts.drm.fairplay.fairplay_api.FairplayApi.delete" title="Permalink to this definition">¶</a></dt>
-<dd><p>Delete FairPlay DRM from TS Segment</p>
+<dd><p>Delete FairPlay DRM from TS muxing</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>encoding_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the encoding.</p></li>
-<li><p><strong>muxing_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the transport streams segment.</p></li>
+<li><p><strong>muxing_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the TS muxing.</p></li>
 <li><p><strong>drm_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the FairPlay DRM configuration.</p></li>
 </ul>
 </dd>
@@ -289,12 +289,12 @@
 <dl class="method">
 <dt id="bitmovin_api_sdk.encoding.encodings.muxings.ts.drm.fairplay.fairplay_api.FairplayApi.get">
 <code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">encoding_id: string_types</em>, <em class="sig-param">muxing_id: string_types</em>, <em class="sig-param">drm_id: string_types</em>, <em class="sig-param">**kwargs: dict</em><span class="sig-paren">)</span> &#x2192; FairPlayDrm<a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/encodings/muxings/ts/drm/fairplay/fairplay_api.html#FairplayApi.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.encodings.muxings.ts.drm.fairplay.fairplay_api.FairplayApi.get" title="Permalink to this definition">¶</a></dt>
-<dd><p>FairPlay DRM Details of TS Segment</p>
+<dd><p>FairPlay DRM Details of TS muxing</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>encoding_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the encoding.</p></li>
-<li><p><strong>muxing_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the transport streams segment.</p></li>
+<li><p><strong>muxing_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the TS muxing.</p></li>
 <li><p><strong>drm_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the FairPlay DRM configuration.</p></li>
 </ul>
 </dd>
@@ -310,12 +310,12 @@
 <dl class="method">
 <dt id="bitmovin_api_sdk.encoding.encodings.muxings.ts.drm.fairplay.fairplay_api.FairplayApi.list">
 <code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">encoding_id: string_types</em>, <em class="sig-param">muxing_id: string_types</em>, <em class="sig-param">query_params: FairPlayDrmListQueryParams = None</em>, <em class="sig-param">**kwargs: dict</em><span class="sig-paren">)</span> &#x2192; FairPlayDrm<a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/encodings/muxings/ts/drm/fairplay/fairplay_api.html#FairplayApi.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.encodings.muxings.ts.drm.fairplay.fairplay_api.FairplayApi.list" title="Permalink to this definition">¶</a></dt>
-<dd><p>List FairPlay DRMs of TS Segment</p>
+<dd><p>List FairPlay DRMs of TS muxing</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>encoding_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the encoding.</p></li>
-<li><p><strong>muxing_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the transport streams segment.</p></li>
+<li><p><strong>muxing_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the TS muxing.</p></li>
 <li><p><strong>query_params</strong> (<a class="reference internal" href="bitmovin_api_sdk.encoding.encodings.muxings.fmp4.drm.fairplay.html#bitmovin_api_sdk.encoding.encodings.muxings.fmp4.drm.fairplay.fair_play_drm_list_query_params.FairPlayDrmListQueryParams" title="bitmovin_api_sdk.encoding.encodings.muxings.fmp4.drm.fairplay.fair_play_drm_list_query_params.FairPlayDrmListQueryParams"><em>FairPlayDrmListQueryParams</em></a>) – Query parameters</p></li>
 </ul>
 </dd>

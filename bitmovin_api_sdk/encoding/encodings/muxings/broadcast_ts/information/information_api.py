@@ -23,13 +23,13 @@ class InformationApi(BaseApi):
 
     def get(self, encoding_id, muxing_id, **kwargs):
         # type: (string_types, string_types, dict) -> BroadcastTsMuxingInformation
-        """Broadcast TS Muxing Information
+        """Broadcast TS muxing Information
 
         :param encoding_id: ID of the Encoding.
         :type encoding_id: string_types, required
-        :param muxing_id: ID of the Broadcast TS Muxing
+        :param muxing_id: ID of the Broadcast TS muxing
         :type muxing_id: string_types, required
-        :return: Broadcast TS Muxing Information
+        :return: Broadcast TS muxing Information
         :rtype: BroadcastTsMuxingInformation
         """
 

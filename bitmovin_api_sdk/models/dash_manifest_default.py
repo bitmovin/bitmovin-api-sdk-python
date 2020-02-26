@@ -27,18 +27,22 @@ class DashManifestDefault(DashManifest):
                  namespaces=None,
                  utc_timings=None,
                  encoding_id=None,
-                 version=None):
-        # type: (string_types, string_types, datetime, datetime, dict, string_types, ManifestType, list[EncodingOutput], DashProfile, string_types, list[XmlNamespace], list[UtcTiming], string_types, DashManifestDefaultVersion) -> None
+                 version=None,
+                 periods=None):
+        # type: (string_types, string_types, datetime, datetime, dict, string_types, ManifestType, list[EncodingOutput], DashProfile, string_types, list[XmlNamespace], list[UtcTiming], string_types, DashManifestDefaultVersion, list[DefaultDashManifestPeriod]) -> None
         super(DashManifestDefault, self).__init__(name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, id_=id_, type_=type_, outputs=outputs, profile=profile, manifest_name=manifest_name, namespaces=namespaces, utc_timings=utc_timings)
 
         self._encoding_id = None
         self._version = None
+        self._periods = list()
         self.discriminator = None
 
         if encoding_id is not None:
             self.encoding_id = encoding_id
         if version is not None:
             self.version = version
+        if periods is not None:
+            self.periods = periods
 
     @property
     def openapi_types(self):
@@ -49,7 +53,8 @@ class DashManifestDefault(DashManifest):
 
         types.update({
             'encoding_id': 'string_types',
-            'version': 'DashManifestDefaultVersion'
+            'version': 'DashManifestDefaultVersion',
+            'periods': 'list[DefaultDashManifestPeriod]'
         })
 
         return types
@@ -63,7 +68,8 @@ class DashManifestDefault(DashManifest):
 
         attributes.update({
             'encoding_id': 'encodingId',
-            'version': 'version'
+            'version': 'version',
+            'periods': 'periods'
         })
         return attributes
 
@@ -72,7 +78,7 @@ class DashManifestDefault(DashManifest):
         # type: () -> string_types
         """Gets the encoding_id of this DashManifestDefault.
 
-        The id of the encoding to create a default manifest from (required)
+        The id of the encoding to create a default manifest from. Required: encodingId or periods
 
         :return: The encoding_id of this DashManifestDefault.
         :rtype: string_types
@@ -84,7 +90,7 @@ class DashManifestDefault(DashManifest):
         # type: (string_types) -> None
         """Sets the encoding_id of this DashManifestDefault.
 
-        The id of the encoding to create a default manifest from (required)
+        The id of the encoding to create a default manifest from. Required: encodingId or periods
 
         :param encoding_id: The encoding_id of this DashManifestDefault.
         :type: string_types
@@ -124,6 +130,35 @@ class DashManifestDefault(DashManifest):
                 raise TypeError("Invalid type for `version`, type has to be `DashManifestDefaultVersion`")
 
         self._version = version
+
+    @property
+    def periods(self):
+        # type: () -> list[DefaultDashManifestPeriod]
+        """Gets the periods of this DashManifestDefault.
+
+        Adds a period for every item. Required: encodingId or periods
+
+        :return: The periods of this DashManifestDefault.
+        :rtype: list[DefaultDashManifestPeriod]
+        """
+        return self._periods
+
+    @periods.setter
+    def periods(self, periods):
+        # type: (list) -> None
+        """Sets the periods of this DashManifestDefault.
+
+        Adds a period for every item. Required: encodingId or periods
+
+        :param periods: The periods of this DashManifestDefault.
+        :type: list[DefaultDashManifestPeriod]
+        """
+
+        if periods is not None:
+            if not isinstance(periods, list):
+                raise TypeError("Invalid type for `periods`, type has to be `list[DefaultDashManifestPeriod]`")
+
+        self._periods = periods
 
     def to_dict(self):
         """Returns the model properties as a dict"""

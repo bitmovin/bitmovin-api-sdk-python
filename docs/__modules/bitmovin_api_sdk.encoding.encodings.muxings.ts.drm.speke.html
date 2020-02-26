@@ -228,12 +228,12 @@
 <dl class="method">
 <dt id="bitmovin_api_sdk.encoding.encodings.muxings.ts.drm.speke.speke_api.SpekeApi.create">
 <code class="sig-name descname">create</code><span class="sig-paren">(</span><em class="sig-param">encoding_id: string_types</em>, <em class="sig-param">muxing_id: string_types</em>, <em class="sig-param">speke_drm: SpekeDrm</em>, <em class="sig-param">**kwargs: dict</em><span class="sig-paren">)</span> &#x2192; SpekeDrm<a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/encodings/muxings/ts/drm/speke/speke_api.html#SpekeApi.create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.encodings.muxings.ts.drm.speke.speke_api.SpekeApi.create" title="Permalink to this definition">¶</a></dt>
-<dd><p>Add SPEKE DRM key provider to TS Segment</p>
+<dd><p>Add SPEKE DRM key provider to TS muxing</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>encoding_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the encoding.</p></li>
-<li><p><strong>muxing_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the TS Segment muxing</p></li>
+<li><p><strong>muxing_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the TS muxing</p></li>
 <li><p><strong>speke_drm</strong> (<a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.speke_drm.SpekeDrm" title="bitmovin_api_sdk.models.speke_drm.SpekeDrm"><em>SpekeDrm</em></a><em>, </em><em>required</em>) – The SPEKE DRM key provider to be created</p></li>
 </ul>
 </dd>
@@ -249,12 +249,12 @@
 <dl class="method">
 <dt id="bitmovin_api_sdk.encoding.encodings.muxings.ts.drm.speke.speke_api.SpekeApi.delete">
 <code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">encoding_id: string_types</em>, <em class="sig-param">muxing_id: string_types</em>, <em class="sig-param">drm_id: string_types</em>, <em class="sig-param">**kwargs: dict</em><span class="sig-paren">)</span> &#x2192; BitmovinResponse<a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/encodings/muxings/ts/drm/speke/speke_api.html#SpekeApi.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.encodings.muxings.ts.drm.speke.speke_api.SpekeApi.delete" title="Permalink to this definition">¶</a></dt>
-<dd><p>Delete SPEKE DRM from TS Segment</p>
+<dd><p>Delete SPEKE DRM from TS muxing</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>encoding_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the encoding.</p></li>
-<li><p><strong>muxing_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the TS Segment muxing</p></li>
+<li><p><strong>muxing_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the TS muxing</p></li>
 <li><p><strong>drm_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the SPEKE DRM.</p></li>
 </ul>
 </dd>
@@ -270,12 +270,12 @@
 <dl class="method">
 <dt id="bitmovin_api_sdk.encoding.encodings.muxings.ts.drm.speke.speke_api.SpekeApi.get">
 <code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">encoding_id: string_types</em>, <em class="sig-param">muxing_id: string_types</em>, <em class="sig-param">drm_id: string_types</em>, <em class="sig-param">**kwargs: dict</em><span class="sig-paren">)</span> &#x2192; SpekeDrm<a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/encodings/muxings/ts/drm/speke/speke_api.html#SpekeApi.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.encodings.muxings.ts.drm.speke.speke_api.SpekeApi.get" title="Permalink to this definition">¶</a></dt>
-<dd><p>SPEKE DRM Details of TS Segment</p>
+<dd><p>SPEKE DRM Details of TS muxing</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>encoding_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the encoding.</p></li>
-<li><p><strong>muxing_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the TS Segment muxing</p></li>
+<li><p><strong>muxing_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the TS muxing</p></li>
 <li><p><strong>drm_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the SPEKE DRM.</p></li>
 </ul>
 </dd>
@@ -291,13 +291,13 @@
 <dl class="method">
 <dt id="bitmovin_api_sdk.encoding.encodings.muxings.ts.drm.speke.speke_api.SpekeApi.list">
 <code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">encoding_id: string_types</em>, <em class="sig-param">muxing_id: string_types</em>, <em class="sig-param">query_params: SpekeDrmListQueryParams = None</em>, <em class="sig-param">**kwargs: dict</em><span class="sig-paren">)</span> &#x2192; SpekeDrm<a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/encodings/muxings/ts/drm/speke/speke_api.html#SpekeApi.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.encodings.muxings.ts.drm.speke.speke_api.SpekeApi.list" title="Permalink to this definition">¶</a></dt>
-<dd><p>List SPEKE DRM of TS Segment</p>
+<dd><p>List SPEKE DRM of TS muxing</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>encoding_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the encoding.</p></li>
-<li><p><strong>muxing_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the TS Segment muxing</p></li>
-<li><p><strong>query_params</strong> (<a class="reference internal" href="bitmovin_api_sdk.encoding.encodings.muxings.cmaf.drm.speke.html#bitmovin_api_sdk.encoding.encodings.muxings.cmaf.drm.speke.speke_drm_list_query_params.SpekeDrmListQueryParams" title="bitmovin_api_sdk.encoding.encodings.muxings.cmaf.drm.speke.speke_drm_list_query_params.SpekeDrmListQueryParams"><em>SpekeDrmListQueryParams</em></a>) – Query parameters</p></li>
+<li><p><strong>muxing_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the TS muxing</p></li>
+<li><p><strong>query_params</strong> (<a class="reference internal" href="bitmovin_api_sdk.encoding.encodings.muxings.fmp4.drm.speke.html#bitmovin_api_sdk.encoding.encodings.muxings.fmp4.drm.speke.speke_drm_list_query_params.SpekeDrmListQueryParams" title="bitmovin_api_sdk.encoding.encodings.muxings.fmp4.drm.speke.speke_drm_list_query_params.SpekeDrmListQueryParams"><em>SpekeDrmListQueryParams</em></a>) – Query parameters</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>

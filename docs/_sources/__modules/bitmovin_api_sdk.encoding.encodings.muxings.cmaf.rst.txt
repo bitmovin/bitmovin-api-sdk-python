@@ -8,7 +8,6 @@ Subpackages
 
    bitmovin_api_sdk.encoding.encodings.muxings.cmaf.captions
    bitmovin_api_sdk.encoding.encodings.muxings.cmaf.customdata
-   bitmovin_api_sdk.encoding.encodings.muxings.cmaf.drm
 
 Submodules
 ----------

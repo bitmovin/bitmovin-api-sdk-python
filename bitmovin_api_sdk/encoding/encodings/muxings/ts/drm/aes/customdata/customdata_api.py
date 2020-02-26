@@ -23,11 +23,11 @@ class CustomdataApi(BaseApi):
 
     def get(self, encoding_id, muxing_id, drm_id, **kwargs):
         # type: (string_types, string_types, string_types, dict) -> CustomData
-        """AES Encryption Custom Data of TS Segment
+        """AES Encryption Custom Data of TS muxing
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
-        :param muxing_id: Id of the transport stream segment.
+        :param muxing_id: Id of the TS muxing.
         :type muxing_id: string_types, required
         :param drm_id: Id of the PlayReady DRM configuration.
         :type drm_id: string_types, required

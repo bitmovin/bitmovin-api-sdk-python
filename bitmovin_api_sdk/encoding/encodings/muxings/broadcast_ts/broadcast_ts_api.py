@@ -41,13 +41,13 @@ class BroadcastTsApi(BaseApi):
 
     def create(self, encoding_id, broadcast_ts_muxing, **kwargs):
         # type: (string_types, BroadcastTsMuxing, dict) -> BroadcastTsMuxing
-        """Add Broadcast TS Muxing
+        """Add Broadcast TS muxing
 
         :param encoding_id: ID of the encoding.
         :type encoding_id: string_types, required
-        :param broadcast_ts_muxing: The Broadcast TS Muxing to be created
+        :param broadcast_ts_muxing: The Broadcast TS muxing to be created
         :type broadcast_ts_muxing: BroadcastTsMuxing, required
-        :return: Broadcast TS Muxing
+        :return: Broadcast TS muxing
         :rtype: BroadcastTsMuxing
         """
 
@@ -61,13 +61,13 @@ class BroadcastTsApi(BaseApi):
 
     def delete(self, encoding_id, muxing_id, **kwargs):
         # type: (string_types, string_types, dict) -> BitmovinResponse
-        """Delete Broadcast TS Muxing
+        """Delete Broadcast TS muxing
 
         :param encoding_id: ID of the Encoding.
         :type encoding_id: string_types, required
         :param muxing_id: ID of the Broadcast TS muxing
         :type muxing_id: string_types, required
-        :return: ID of the Broadcast TS Muxing
+        :return: ID of the Broadcast TS muxing
         :rtype: BitmovinResponse
         """
 
@@ -80,13 +80,13 @@ class BroadcastTsApi(BaseApi):
 
     def get(self, encoding_id, muxing_id, **kwargs):
         # type: (string_types, string_types, dict) -> BroadcastTsMuxing
-        """Broadcast TS Muxing Details
+        """Broadcast TS muxing details
 
         :param encoding_id: ID of the Encoding.
         :type encoding_id: string_types, required
-        :param muxing_id: ID of the Broadcast TS Muxing
+        :param muxing_id: ID of the Broadcast TS muxing
         :type muxing_id: string_types, required
-        :return: Broadcast TS Muxing
+        :return: Broadcast TS muxing
         :rtype: BroadcastTsMuxing
         """
 
@@ -99,7 +99,7 @@ class BroadcastTsApi(BaseApi):
 
     def list(self, encoding_id, query_params=None, **kwargs):
         # type: (string_types, BroadcastTsMuxingListQueryParams, dict) -> BroadcastTsMuxing
-        """List Broadcast TS Muxings
+        """List Broadcast TS muxings
 
         :param encoding_id: ID of the Encoding.
         :type encoding_id: string_types, required

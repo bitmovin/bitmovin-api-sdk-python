@@ -7,6 +7,7 @@ Subpackages
 .. toctree::
 
    bitmovin_api_sdk.encoding.encodings.muxings.progressive_webm.customdata
+   bitmovin_api_sdk.encoding.encodings.muxings.progressive_webm.drm
    bitmovin_api_sdk.encoding.encodings.muxings.progressive_webm.information
 
 Submodules

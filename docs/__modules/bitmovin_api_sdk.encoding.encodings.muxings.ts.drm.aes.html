@@ -228,7 +228,7 @@
 <dl class="method">
 <dt id="bitmovin_api_sdk.encoding.encodings.muxings.ts.drm.aes.aes_api.AesApi.create">
 <code class="sig-name descname">create</code><span class="sig-paren">(</span><em class="sig-param">encoding_id: string_types</em>, <em class="sig-param">muxing_id: string_types</em>, <em class="sig-param">aes_encryption_drm: AesEncryptionDrm</em>, <em class="sig-param">**kwargs: dict</em><span class="sig-paren">)</span> &#x2192; AesEncryptionDrm<a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/encodings/muxings/ts/drm/aes/aes_api.html#AesApi.create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.encodings.muxings.ts.drm.aes.aes_api.AesApi.create" title="Permalink to this definition">¶</a></dt>
-<dd><p>Add AES Encryption to TS Segment</p>
+<dd><p>Add AES Encryption to TS muxing</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -249,12 +249,12 @@
 <dl class="method">
 <dt id="bitmovin_api_sdk.encoding.encodings.muxings.ts.drm.aes.aes_api.AesApi.delete">
 <code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param">encoding_id: string_types</em>, <em class="sig-param">muxing_id: string_types</em>, <em class="sig-param">drm_id: string_types</em>, <em class="sig-param">**kwargs: dict</em><span class="sig-paren">)</span> &#x2192; BitmovinResponse<a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/encodings/muxings/ts/drm/aes/aes_api.html#AesApi.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.encodings.muxings.ts.drm.aes.aes_api.AesApi.delete" title="Permalink to this definition">¶</a></dt>
-<dd><p>Delete AES Encryption from TS Segment</p>
+<dd><p>Delete AES Encryption from TS muxing</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>encoding_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the encoding.</p></li>
-<li><p><strong>muxing_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the transport stream segment.</p></li>
+<li><p><strong>muxing_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the TS muxing.</p></li>
 <li><p><strong>drm_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the PlayReady DRM configuration.</p></li>
 </ul>
 </dd>
@@ -270,12 +270,12 @@
 <dl class="method">
 <dt id="bitmovin_api_sdk.encoding.encodings.muxings.ts.drm.aes.aes_api.AesApi.get">
 <code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">encoding_id: string_types</em>, <em class="sig-param">muxing_id: string_types</em>, <em class="sig-param">drm_id: string_types</em>, <em class="sig-param">**kwargs: dict</em><span class="sig-paren">)</span> &#x2192; AesEncryptionDrm<a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/encodings/muxings/ts/drm/aes/aes_api.html#AesApi.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.encodings.muxings.ts.drm.aes.aes_api.AesApi.get" title="Permalink to this definition">¶</a></dt>
-<dd><p>AES Encryption Details of TS Segment</p>
+<dd><p>AES Encryption Details of TS muxing</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>encoding_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the encoding.</p></li>
-<li><p><strong>muxing_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the transport stream segment.</p></li>
+<li><p><strong>muxing_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the TS muxing.</p></li>
 <li><p><strong>drm_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the AESEncryption configuration.</p></li>
 </ul>
 </dd>
@@ -291,12 +291,12 @@
 <dl class="method">
 <dt id="bitmovin_api_sdk.encoding.encodings.muxings.ts.drm.aes.aes_api.AesApi.list">
 <code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param">encoding_id: string_types</em>, <em class="sig-param">muxing_id: string_types</em>, <em class="sig-param">query_params: AesEncryptionDrmListQueryParams = None</em>, <em class="sig-param">**kwargs: dict</em><span class="sig-paren">)</span> &#x2192; AesEncryptionDrm<a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/encodings/muxings/ts/drm/aes/aes_api.html#AesApi.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.encodings.muxings.ts.drm.aes.aes_api.AesApi.list" title="Permalink to this definition">¶</a></dt>
-<dd><p>List AES Encryption of TS Segment</p>
+<dd><p>List AES Encryption of TS muxing</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>encoding_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the encoding.</p></li>
-<li><p><strong>muxing_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the transport stream segment.</p></li>
+<li><p><strong>muxing_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the TS muxing.</p></li>
 <li><p><strong>query_params</strong> (<a class="reference internal" href="#bitmovin_api_sdk.encoding.encodings.muxings.ts.drm.aes.aes_encryption_drm_list_query_params.AesEncryptionDrmListQueryParams" title="bitmovin_api_sdk.encoding.encodings.muxings.ts.drm.aes.aes_encryption_drm_list_query_params.AesEncryptionDrmListQueryParams"><em>AesEncryptionDrmListQueryParams</em></a>) – Query parameters</p></li>
 </ul>
 </dd>

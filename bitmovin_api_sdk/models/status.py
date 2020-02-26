@@ -12,3 +12,4 @@ class Status(Enum):
     FINISHED = "FINISHED"
     ERROR = "ERROR"
     CANCELED = "CANCELED"
+    TRANSFER_ERROR = "TRANSFER_ERROR"

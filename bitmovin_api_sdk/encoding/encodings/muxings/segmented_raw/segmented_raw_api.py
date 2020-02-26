@@ -33,11 +33,11 @@ class SegmentedRawApi(BaseApi):
 
     def create(self, encoding_id, segmented_raw_muxing, **kwargs):
         # type: (string_types, SegmentedRawMuxing, dict) -> SegmentedRawMuxing
-        """Add Segmented RAW Muxing
+        """Add Segmented RAW muxing
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
-        :param segmented_raw_muxing: The Segmented RAW Muxing to be created
+        :param segmented_raw_muxing: The Segmented RAW muxing to be created
         :type segmented_raw_muxing: SegmentedRawMuxing, required
         :return: Segmented RAW muxing
         :rtype: SegmentedRawMuxing
@@ -53,7 +53,7 @@ class SegmentedRawApi(BaseApi):
 
     def delete(self, encoding_id, muxing_id, **kwargs):
         # type: (string_types, string_types, dict) -> BitmovinResponse
-        """Delete Segmented RAW Muxing
+        """Delete Segmented RAW muxing
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -72,13 +72,13 @@ class SegmentedRawApi(BaseApi):
 
     def get(self, encoding_id, muxing_id, **kwargs):
         # type: (string_types, string_types, dict) -> SegmentedRawMuxing
-        """Segmented RAW Muxing Details
+        """Segmented RAW muxing details
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
         :param muxing_id: Id of the Segmented RAW muxing
         :type muxing_id: string_types, required
-        :return: Segmented RAW Muxing
+        :return: Segmented RAW muxing
         :rtype: SegmentedRawMuxing
         """
 
@@ -91,7 +91,7 @@ class SegmentedRawApi(BaseApi):
 
     def list(self, encoding_id, query_params=None, **kwargs):
         # type: (string_types, SegmentedRawMuxingListQueryParams, dict) -> SegmentedRawMuxing
-        """List Segmented RAW Muxings
+        """List Segmented RAW muxings
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required

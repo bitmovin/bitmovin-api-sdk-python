@@ -23,13 +23,13 @@ class InformationApi(BaseApi):
 
     def get(self, encoding_id, muxing_id, **kwargs):
         # type: (string_types, string_types, dict) -> Mp4MuxingInformation
-        """MP4 Muxing Information
+        """MP4 muxing Information
 
         :param encoding_id: ID of the Encoding.
         :type encoding_id: string_types, required
-        :param muxing_id: ID of the MP4 Muxing
+        :param muxing_id: ID of the MP4 muxing
         :type muxing_id: string_types, required
-        :return: MP4 Muxing Information
+        :return: MP4 muxing Information
         :rtype: Mp4MuxingInformation
         """
 

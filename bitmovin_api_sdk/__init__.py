@@ -479,6 +479,16 @@ from bitmovin_api_sdk.encoding.encodings.muxings.progressive_webm.customdata.cus
 
 from bitmovin_api_sdk.encoding.encodings.muxings.progressive_webm.information.information_api import InformationApi
 
+from bitmovin_api_sdk.encoding.encodings.muxings.progressive_webm.drm.drm_api import DrmApi
+
+from bitmovin_api_sdk.encoding.encodings.muxings.progressive_webm.drm.cenc.cenc_api import CencApi
+from bitmovin_api_sdk.encoding.encodings.muxings.progressive_webm.drm.cenc.cenc_api import CencDrmListQueryParams
+from bitmovin_api_sdk.encoding.encodings.muxings.progressive_webm.drm.cenc.customdata.customdata_api import CustomdataApi
+
+from bitmovin_api_sdk.encoding.encodings.muxings.progressive_webm.drm.speke.speke_api import SpekeApi
+from bitmovin_api_sdk.encoding.encodings.muxings.progressive_webm.drm.speke.speke_api import SpekeDrmListQueryParams
+from bitmovin_api_sdk.encoding.encodings.muxings.progressive_webm.drm.speke.customdata.customdata_api import CustomdataApi
+
 from bitmovin_api_sdk.encoding.encodings.muxings.progressive_mov.progressive_mov_api import ProgressiveMovApi
 from bitmovin_api_sdk.encoding.encodings.muxings.progressive_mov.progressive_mov_api import ProgressiveMovMuxingListQueryParams
 from bitmovin_api_sdk.encoding.encodings.muxings.progressive_mov.customdata.customdata_api import CustomdataApi
@@ -533,12 +543,6 @@ from bitmovin_api_sdk.encoding.encodings.muxings.fmp4.drm.speke.speke_api import
 from bitmovin_api_sdk.encoding.encodings.muxings.fmp4.drm.speke.speke_api import SpekeDrmListQueryParams
 from bitmovin_api_sdk.encoding.encodings.muxings.fmp4.drm.speke.customdata.customdata_api import CustomdataApi
 
-from bitmovin_api_sdk.encoding.encodings.muxings.cmaf.drm.drm_api import DrmApi
-
-from bitmovin_api_sdk.encoding.encodings.muxings.cmaf.drm.speke.speke_api import SpekeApi
-from bitmovin_api_sdk.encoding.encodings.muxings.cmaf.drm.speke.speke_api import SpekeDrmListQueryParams
-from bitmovin_api_sdk.encoding.encodings.muxings.cmaf.drm.speke.customdata.customdata_api import CustomdataApi
-
 from bitmovin_api_sdk.encoding.encodings.muxings.ts.drm.drm_api import DrmApi
 
 from bitmovin_api_sdk.encoding.encodings.muxings.ts.drm.fairplay.fairplay_api import FairplayApi
@@ -589,6 +593,8 @@ from bitmovin_api_sdk.encoding.encodings.muxings.mp4.drm.speke.speke_api import 
 from bitmovin_api_sdk.encoding.encodings.muxings.mp4.drm.speke.speke_api import SpekeDrmListQueryParams
 from bitmovin_api_sdk.encoding.encodings.muxings.mp4.drm.speke.customdata.customdata_api import CustomdataApi
 
+from bitmovin_api_sdk.encoding.encodings.transfer_retries.transfer_retries_api import TransferRetriesApi
+from bitmovin_api_sdk.encoding.encodings.transfer_retries.transfer_retries_api import TransferRetryListQueryParams
 from bitmovin_api_sdk.encoding.encodings.streams.filters.filters_api import FiltersApi
 from bitmovin_api_sdk.encoding.encodings.streams.filters.filters_api import StreamFilterListListQueryParams
 from bitmovin_api_sdk.encoding.encodings.streams.burn_in_subtitles.burn_in_subtitles_api import BurnInSubtitlesApi
@@ -677,14 +683,14 @@ from bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representat
 from bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.mp4.mp4_api import DashMp4RepresentationListQueryParams
 from bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.fmp4.drm.drm_api import DrmApi
 from bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.fmp4.drm.drm_api import DashFmp4DrmRepresentationListQueryParams
-from bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.cmaf.drm.drm_api import DrmApi
-from bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.cmaf.drm.drm_api import DashCmafDrmRepresentationListQueryParams
 from bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.mp4.drm.drm_api import DrmApi
 from bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.mp4.drm.drm_api import DashMp4DrmRepresentationListQueryParams
 from bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.webm.webm_api import WebmApi
 from bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.webm.webm_api import DashWebmRepresentationListQueryParams
 from bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.webm.contentprotection.contentprotection_api import ContentprotectionApi
 from bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.webm.contentprotection.contentprotection_api import ContentProtectionListQueryParams
+from bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.progressive_webm.progressive_webm_api import ProgressiveWebmApi
+from bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.progressive_webm.progressive_webm_api import DashProgressiveWebmRepresentationListQueryParams
 from bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.contentprotection.contentprotection_api import ContentprotectionApi
 from bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.contentprotection.contentprotection_api import ContentProtectionListQueryParams
 from bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.fmp4.contentprotection.contentprotection_api import ContentprotectionApi
@@ -693,8 +699,6 @@ from bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representat
 from bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.fmp4.drm.contentprotection.contentprotection_api import ContentProtectionListQueryParams
 from bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.cmaf.contentprotection.contentprotection_api import ContentprotectionApi
 from bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.cmaf.contentprotection.contentprotection_api import ContentProtectionListQueryParams
-from bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.cmaf.drm.contentprotection.contentprotection_api import ContentprotectionApi
-from bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.cmaf.drm.contentprotection.contentprotection_api import ContentProtectionListQueryParams
 from bitmovin_api_sdk.encoding.manifests.hls.hls_api import HlsApi
 from bitmovin_api_sdk.encoding.manifests.hls.hls_api import HlsManifestListQueryParams
 from bitmovin_api_sdk.encoding.manifests.hls.default.default_api import DefaultApi
@@ -1043,7 +1047,6 @@ from bitmovin_api_sdk.models.custom_web_player_build_domain import CustomWebPlay
 from bitmovin_api_sdk.models.custom_xml_element import CustomXmlElement
 from bitmovin_api_sdk.models.daily_statistics import DailyStatistics
 from bitmovin_api_sdk.models.daily_statistics_per_label import DailyStatisticsPerLabel
-from bitmovin_api_sdk.models.dash_cmaf_drm_representation import DashCmafDrmRepresentation
 from bitmovin_api_sdk.models.dash_cmaf_representation import DashCmafRepresentation
 from bitmovin_api_sdk.models.dash_fmp4_drm_representation import DashFmp4DrmRepresentation
 from bitmovin_api_sdk.models.dash_fmp4_representation import DashFmp4Representation
@@ -1053,6 +1056,7 @@ from bitmovin_api_sdk.models.dash_manifest_default_version import DashManifestDe
 from bitmovin_api_sdk.models.dash_mp4_drm_representation import DashMp4DrmRepresentation
 from bitmovin_api_sdk.models.dash_mp4_representation import DashMp4Representation
 from bitmovin_api_sdk.models.dash_profile import DashProfile
+from bitmovin_api_sdk.models.dash_progressive_webm_representation import DashProgressiveWebmRepresentation
 from bitmovin_api_sdk.models.dash_representation import DashRepresentation
 from bitmovin_api_sdk.models.dash_representation_type import DashRepresentationType
 from bitmovin_api_sdk.models.dash_representation_type_mode import DashRepresentationTypeMode
@@ -1060,6 +1064,11 @@ from bitmovin_api_sdk.models.dash_segmented_representation import DashSegmentedR
 from bitmovin_api_sdk.models.dash_vtt_representation import DashVttRepresentation
 from bitmovin_api_sdk.models.dash_webm_representation import DashWebmRepresentation
 from bitmovin_api_sdk.models.decoding_error_mode import DecodingErrorMode
+from bitmovin_api_sdk.models.default_dash_manifest_period import DefaultDashManifestPeriod
+from bitmovin_api_sdk.models.default_manifest_and_condition import DefaultManifestAndCondition
+from bitmovin_api_sdk.models.default_manifest_attribute_condition import DefaultManifestAttributeCondition
+from bitmovin_api_sdk.models.default_manifest_condition import DefaultManifestCondition
+from bitmovin_api_sdk.models.default_manifest_or_condition import DefaultManifestOrCondition
 from bitmovin_api_sdk.models.deinterlace_auto_enable import DeinterlaceAutoEnable
 from bitmovin_api_sdk.models.deinterlace_filter import DeinterlaceFilter
 from bitmovin_api_sdk.models.deinterlace_frame_selection_mode import DeinterlaceFrameSelectionMode
@@ -1079,6 +1088,8 @@ from bitmovin_api_sdk.models.drm_type import DrmType
 from bitmovin_api_sdk.models.dvb_teletext_input_stream import DvbTeletextInputStream
 from bitmovin_api_sdk.models.eac3_audio_configuration import Eac3AudioConfiguration
 from bitmovin_api_sdk.models.ebu_r128_single_pass_filter import EbuR128SinglePassFilter
+from bitmovin_api_sdk.models.egress_category import EgressCategory
+from bitmovin_api_sdk.models.egress_information import EgressInformation
 from bitmovin_api_sdk.models.email_notification import EmailNotification
 from bitmovin_api_sdk.models.email_notification_with_stream_conditions import EmailNotificationWithStreamConditions
 from bitmovin_api_sdk.models.email_notification_with_stream_conditions_request import EmailNotificationWithStreamConditionsRequest
@@ -1229,6 +1240,7 @@ from bitmovin_api_sdk.models.output_type_response import OutputTypeResponse
 from bitmovin_api_sdk.models.padding_duration_unit import PaddingDurationUnit
 from bitmovin_api_sdk.models.padding_sequence import PaddingSequence
 from bitmovin_api_sdk.models.pagination_response import PaginationResponse
+from bitmovin_api_sdk.models.passthrough_mode import PassthroughMode
 from bitmovin_api_sdk.models.per_title import PerTitle
 from bitmovin_api_sdk.models.per_title_configuration import PerTitleConfiguration
 from bitmovin_api_sdk.models.per_title_fixed_resolution_and_bitrate_configuration import PerTitleFixedResolutionAndBitrateConfiguration
@@ -1263,6 +1275,7 @@ from bitmovin_api_sdk.models.progressive_ts_muxing_information import Progressiv
 from bitmovin_api_sdk.models.progressive_ts_muxing_information_byte_ranges import ProgressiveTsMuxingInformationByteRanges
 from bitmovin_api_sdk.models.progressive_webm_muxing import ProgressiveWebmMuxing
 from bitmovin_api_sdk.models.progressive_webm_muxing_information import ProgressiveWebmMuxingInformation
+from bitmovin_api_sdk.models.progressive_webm_muxing_manifest_type import ProgressiveWebmMuxingManifestType
 from bitmovin_api_sdk.models.psnr_per_stream_mode import PsnrPerStreamMode
 from bitmovin_api_sdk.models.psnr_quality_metric import PsnrQualityMetric
 from bitmovin_api_sdk.models.quantization_group_size import QuantizationGroupSize
@@ -1363,6 +1376,7 @@ from bitmovin_api_sdk.models.time_based_trimming_input_stream import TimeBasedTr
 from bitmovin_api_sdk.models.time_code import TimeCode
 from bitmovin_api_sdk.models.time_span import TimeSpan
 from bitmovin_api_sdk.models.timecode_track_trimming_input_stream import TimecodeTrackTrimmingInputStream
+from bitmovin_api_sdk.models.transfer_retry import TransferRetry
 from bitmovin_api_sdk.models.transfer_version import TransferVersion
 from bitmovin_api_sdk.models.transform_skip_mode import TransformSkipMode
 from bitmovin_api_sdk.models.trimming import Trimming
@@ -1416,4 +1430,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.34.0"
+__version__ = "1.35.0"

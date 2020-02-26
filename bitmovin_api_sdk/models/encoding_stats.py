@@ -17,13 +17,14 @@ class EncodingStats(object):
                  time_encoded=None,
                  downloaded_size=None,
                  billable_minutes=None,
+                 billable_egress_bytes=None,
                  billable_encoding_minutes=None,
                  billable_transmuxing_minutes=None,
                  billable_feature_minutes=None,
                  streams=None,
                  muxings=None,
                  features=None):
-        # type: (date, string_types, int, int, int, float, list[BillableEncodingMinutes], float, float, list[StatisticsPerStream], list[StatisticsPerMuxing], list[BillableEncodingFeatureMinutes]) -> None
+        # type: (date, string_types, int, int, int, float, list[EgressInformation], list[BillableEncodingMinutes], float, float, list[StatisticsPerStream], list[StatisticsPerMuxing], list[BillableEncodingFeatureMinutes]) -> None
 
         self._date = None
         self._encoding_id = None
@@ -31,6 +32,7 @@ class EncodingStats(object):
         self._time_encoded = None
         self._downloaded_size = None
         self._billable_minutes = None
+        self._billable_egress_bytes = list()
         self._billable_encoding_minutes = list()
         self._billable_transmuxing_minutes = None
         self._billable_feature_minutes = None
@@ -51,6 +53,8 @@ class EncodingStats(object):
             self.downloaded_size = downloaded_size
         if billable_minutes is not None:
             self.billable_minutes = billable_minutes
+        if billable_egress_bytes is not None:
+            self.billable_egress_bytes = billable_egress_bytes
         if billable_encoding_minutes is not None:
             self.billable_encoding_minutes = billable_encoding_minutes
         if billable_transmuxing_minutes is not None:
@@ -73,6 +77,7 @@ class EncodingStats(object):
             'time_encoded': 'int',
             'downloaded_size': 'int',
             'billable_minutes': 'float',
+            'billable_egress_bytes': 'list[EgressInformation]',
             'billable_encoding_minutes': 'list[BillableEncodingMinutes]',
             'billable_transmuxing_minutes': 'float',
             'billable_feature_minutes': 'float',
@@ -92,6 +97,7 @@ class EncodingStats(object):
             'time_encoded': 'timeEncoded',
             'downloaded_size': 'downloadedSize',
             'billable_minutes': 'billableMinutes',
+            'billable_egress_bytes': 'billableEgressBytes',
             'billable_encoding_minutes': 'billableEncodingMinutes',
             'billable_transmuxing_minutes': 'billableTransmuxingMinutes',
             'billable_feature_minutes': 'billableFeatureMinutes',
@@ -274,6 +280,35 @@ class EncodingStats(object):
                 raise TypeError("Invalid type for `billable_minutes`, type has to be `float`")
 
         self._billable_minutes = billable_minutes
+
+    @property
+    def billable_egress_bytes(self):
+        # type: () -> list[EgressInformation]
+        """Gets the billable_egress_bytes of this EncodingStats.
+
+        Billable egress output
+
+        :return: The billable_egress_bytes of this EncodingStats.
+        :rtype: list[EgressInformation]
+        """
+        return self._billable_egress_bytes
+
+    @billable_egress_bytes.setter
+    def billable_egress_bytes(self, billable_egress_bytes):
+        # type: (list) -> None
+        """Sets the billable_egress_bytes of this EncodingStats.
+
+        Billable egress output
+
+        :param billable_egress_bytes: The billable_egress_bytes of this EncodingStats.
+        :type: list[EgressInformation]
+        """
+
+        if billable_egress_bytes is not None:
+            if not isinstance(billable_egress_bytes, list):
+                raise TypeError("Invalid type for `billable_egress_bytes`, type has to be `list[EgressInformation]`")
+
+        self._billable_egress_bytes = billable_egress_bytes
 
     @property
     def billable_encoding_minutes(self):

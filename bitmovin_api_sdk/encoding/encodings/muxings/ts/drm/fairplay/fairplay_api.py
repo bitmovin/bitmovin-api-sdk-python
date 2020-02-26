@@ -33,7 +33,7 @@ class FairplayApi(BaseApi):
 
     def create(self, encoding_id, muxing_id, fair_play_drm, **kwargs):
         # type: (string_types, string_types, FairPlayDrm, dict) -> FairPlayDrm
-        """Add FairPlay DRM to TS Segment
+        """Add FairPlay DRM to TS muxing
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -55,11 +55,11 @@ class FairplayApi(BaseApi):
 
     def delete(self, encoding_id, muxing_id, drm_id, **kwargs):
         # type: (string_types, string_types, string_types, dict) -> BitmovinResponse
-        """Delete FairPlay DRM from TS Segment
+        """Delete FairPlay DRM from TS muxing
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
-        :param muxing_id: Id of the transport streams segment.
+        :param muxing_id: Id of the TS muxing.
         :type muxing_id: string_types, required
         :param drm_id: Id of the FairPlay DRM configuration.
         :type drm_id: string_types, required
@@ -76,11 +76,11 @@ class FairplayApi(BaseApi):
 
     def get(self, encoding_id, muxing_id, drm_id, **kwargs):
         # type: (string_types, string_types, string_types, dict) -> FairPlayDrm
-        """FairPlay DRM Details of TS Segment
+        """FairPlay DRM Details of TS muxing
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
-        :param muxing_id: Id of the transport streams segment.
+        :param muxing_id: Id of the TS muxing.
         :type muxing_id: string_types, required
         :param drm_id: Id of the FairPlay DRM configuration.
         :type drm_id: string_types, required
@@ -97,11 +97,11 @@ class FairplayApi(BaseApi):
 
     def list(self, encoding_id, muxing_id, query_params=None, **kwargs):
         # type: (string_types, string_types, FairPlayDrmListQueryParams, dict) -> FairPlayDrm
-        """List FairPlay DRMs of TS Segment
+        """List FairPlay DRMs of TS muxing
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
-        :param muxing_id: Id of the transport streams segment.
+        :param muxing_id: Id of the TS muxing.
         :type muxing_id: string_types, required
         :param query_params: Query parameters
         :type query_params: FairPlayDrmListQueryParams

@@ -23,13 +23,13 @@ class CustomdataApi(BaseApi):
 
     def get(self, encoding_id, muxing_id, **kwargs):
         # type: (string_types, string_types, dict) -> CustomData
-        """MP3 Muxing Custom Data
+        """MP3 muxing Custom Data
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
         :param muxing_id: Id of the MP3 muxing
         :type muxing_id: string_types, required
-        :return: MP3 Muxing custom data
+        :return: MP3 muxing custom data
         :rtype: CustomData
         """
 

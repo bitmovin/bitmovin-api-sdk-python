@@ -1516,14 +1516,6 @@ bitmovin\_api\_sdk.models.daily\_statistics\_per\_label module
    :undoc-members:
    :show-inheritance:
 
-bitmovin\_api\_sdk.models.dash\_cmaf\_drm\_representation module
-----------------------------------------------------------------
-
-.. automodule:: bitmovin_api_sdk.models.dash_cmaf_drm_representation
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
 bitmovin\_api\_sdk.models.dash\_cmaf\_representation module
 -----------------------------------------------------------
 
@@ -1596,6 +1588,14 @@ bitmovin\_api\_sdk.models.dash\_profile module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.dash\_progressive\_webm\_representation module
+------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.dash_progressive_webm_representation
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.dash\_representation module
 -----------------------------------------------------
 
@@ -1648,6 +1648,46 @@ bitmovin\_api\_sdk.models.decoding\_error\_mode module
 ------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.models.decoding_error_mode
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.default\_dash\_manifest\_period module
+----------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.default_dash_manifest_period
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.default\_manifest\_and\_condition module
+------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.default_manifest_and_condition
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.default\_manifest\_attribute\_condition module
+------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.default_manifest_attribute_condition
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.default\_manifest\_condition module
+-------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.default_manifest_condition
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.default\_manifest\_or\_condition module
+-----------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.default_manifest_or_condition
    :members:
    :undoc-members:
    :show-inheritance:
@@ -1800,6 +1840,22 @@ bitmovin\_api\_sdk.models.ebu\_r128\_single\_pass\_filter module
 ----------------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.models.ebu_r128_single_pass_filter
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.egress\_category module
+-------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.egress_category
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.egress\_information module
+----------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.egress_information
    :members:
    :undoc-members:
    :show-inheritance:
@@ -3004,6 +3060,14 @@ bitmovin\_api\_sdk.models.pagination\_response module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.passthrough\_mode module
+--------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.passthrough_mode
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.per\_title module
 -------------------------------------------
 
@@ -3272,6 +3336,14 @@ bitmovin\_api\_sdk.models.progressive\_webm\_muxing\_information module
 -----------------------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.models.progressive_webm_muxing_information
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.progressive\_webm\_muxing\_manifest\_type module
+--------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.progressive_webm_muxing_manifest_type
    :members:
    :undoc-members:
    :show-inheritance:
@@ -4072,6 +4144,14 @@ bitmovin\_api\_sdk.models.timecode\_track\_trimming\_input\_stream module
 -------------------------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.models.timecode_track_trimming_input_stream
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.transfer\_retry module
+------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.transfer_retry
    :members:
    :undoc-members:
    :show-inheritance:

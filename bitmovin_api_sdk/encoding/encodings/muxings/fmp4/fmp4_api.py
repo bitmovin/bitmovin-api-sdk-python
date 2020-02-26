@@ -41,13 +41,13 @@ class Fmp4Api(BaseApi):
 
     def create(self, encoding_id, fmp4_muxing, **kwargs):
         # type: (string_types, Fmp4Muxing, dict) -> Fmp4Muxing
-        """Add fMP4 Segment Muxing
+        """Add fMP4 muxing
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
-        :param fmp4_muxing: The fMP4 Segment Muxing to be created
+        :param fmp4_muxing: The fMP4 muxing to be created
         :type fmp4_muxing: Fmp4Muxing, required
-        :return: fMP4 Muxing
+        :return: fMP4 muxing
         :rtype: Fmp4Muxing
         """
 
@@ -61,7 +61,7 @@ class Fmp4Api(BaseApi):
 
     def delete(self, encoding_id, muxing_id, **kwargs):
         # type: (string_types, string_types, dict) -> BitmovinResponse
-        """Delete fMP4 Muxing
+        """Delete fMP4 muxing
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -80,13 +80,13 @@ class Fmp4Api(BaseApi):
 
     def get(self, encoding_id, muxing_id, **kwargs):
         # type: (string_types, string_types, dict) -> Fmp4Muxing
-        """fMP4 Segment Muxing Details
+        """fMP4 muxing details
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
         :param muxing_id: Id of the fMP4 muxing
         :type muxing_id: string_types, required
-        :return: fMP4 Muxing
+        :return: fMP4 muxing
         :rtype: Fmp4Muxing
         """
 
@@ -99,7 +99,7 @@ class Fmp4Api(BaseApi):
 
     def list(self, encoding_id, query_params=None, **kwargs):
         # type: (string_types, Fmp4MuxingListQueryParams, dict) -> Fmp4Muxing
-        """List fMP4 Segment Muxings
+        """List fMP4 muxings
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required

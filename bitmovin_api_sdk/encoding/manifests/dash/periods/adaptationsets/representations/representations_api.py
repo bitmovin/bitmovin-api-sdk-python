@@ -9,6 +9,7 @@ from bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representat
 from bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.cmaf.cmaf_api import CmafApi
 from bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.mp4.mp4_api import Mp4Api
 from bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.webm.webm_api import WebmApi
+from bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.progressive_webm.progressive_webm_api import ProgressiveWebmApi
 
 
 class RepresentationsApi(BaseApi):
@@ -52,6 +53,13 @@ class RepresentationsApi(BaseApi):
         )
 
         self.webm = WebmApi(
+            api_key=api_key,
+            tenant_org_id=tenant_org_id,
+            base_url=base_url,
+            logger=logger
+        )
+
+        self.progressive_webm = ProgressiveWebmApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,

@@ -41,13 +41,13 @@ class Mp3Api(BaseApi):
 
     def create(self, encoding_id, mp3_muxing, **kwargs):
         # type: (string_types, Mp3Muxing, dict) -> Mp3Muxing
-        """Add MP3 Muxing
+        """Add MP3 muxing
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
-        :param mp3_muxing: The MP3 Muxing to be created
+        :param mp3_muxing: The MP3 muxing to be created
         :type mp3_muxing: Mp3Muxing, required
-        :return: MP3 Muxing
+        :return: MP3 muxing
         :rtype: Mp3Muxing
         """
 
@@ -61,7 +61,7 @@ class Mp3Api(BaseApi):
 
     def delete(self, encoding_id, muxing_id, **kwargs):
         # type: (string_types, string_types, dict) -> BitmovinResponse
-        """Delete MP3 Muxing
+        """Delete MP3 muxing
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -80,13 +80,13 @@ class Mp3Api(BaseApi):
 
     def get(self, encoding_id, muxing_id, **kwargs):
         # type: (string_types, string_types, dict) -> Mp3Muxing
-        """MP3 Muxing Details
+        """MP3 muxing details
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
         :param muxing_id: Id of the MP3 muxing
         :type muxing_id: string_types, required
-        :return: MP3 Muxing
+        :return: MP3 muxing
         :rtype: Mp3Muxing
         """
 
@@ -99,7 +99,7 @@ class Mp3Api(BaseApi):
 
     def list(self, encoding_id, query_params=None, **kwargs):
         # type: (string_types, Mp3MuxingListQueryParams, dict) -> Mp3Muxing
-        """List MP3 Muxings
+        """List MP3 muxings
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required

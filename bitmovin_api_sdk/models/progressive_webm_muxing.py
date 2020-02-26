@@ -4,6 +4,7 @@ from enum import Enum
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
 from bitmovin_api_sdk.models.muxing import Muxing
+from bitmovin_api_sdk.models.progressive_webm_muxing_manifest_type import ProgressiveWebmMuxingManifestType
 from bitmovin_api_sdk.models.stream_conditions_mode import StreamConditionsMode
 import pprint
 import six
@@ -25,15 +26,23 @@ class ProgressiveWebmMuxing(Muxing):
                  max_bitrate=None,
                  ignored_by=None,
                  stream_conditions_mode=None,
-                 filename=None):
-        # type: (string_types, string_types, datetime, datetime, dict, string_types, list[MuxingStream], list[EncodingOutput], int, int, int, list[Ignoring], StreamConditionsMode, string_types) -> None
+                 filename=None,
+                 manifest_type=None,
+                 segment_length=None):
+        # type: (string_types, string_types, datetime, datetime, dict, string_types, list[MuxingStream], list[EncodingOutput], int, int, int, list[Ignoring], StreamConditionsMode, string_types, ProgressiveWebmMuxingManifestType, float) -> None
         super(ProgressiveWebmMuxing, self).__init__(name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, id_=id_, streams=streams, outputs=outputs, avg_bitrate=avg_bitrate, min_bitrate=min_bitrate, max_bitrate=max_bitrate, ignored_by=ignored_by, stream_conditions_mode=stream_conditions_mode)
 
         self._filename = None
+        self._manifest_type = None
+        self._segment_length = None
         self.discriminator = None
 
         if filename is not None:
             self.filename = filename
+        if manifest_type is not None:
+            self.manifest_type = manifest_type
+        if segment_length is not None:
+            self.segment_length = segment_length
 
     @property
     def openapi_types(self):
@@ -43,7 +52,9 @@ class ProgressiveWebmMuxing(Muxing):
             types = getattr(super(ProgressiveWebmMuxing, self), 'openapi_types')
 
         types.update({
-            'filename': 'string_types'
+            'filename': 'string_types',
+            'manifest_type': 'ProgressiveWebmMuxingManifestType',
+            'segment_length': 'float'
         })
 
         return types
@@ -56,7 +67,9 @@ class ProgressiveWebmMuxing(Muxing):
             attributes = getattr(super(ProgressiveWebmMuxing, self), 'attribute_map')
 
         attributes.update({
-            'filename': 'filename'
+            'filename': 'filename',
+            'manifest_type': 'manifestType',
+            'segment_length': 'segmentLength'
         })
         return attributes
 
@@ -88,6 +101,62 @@ class ProgressiveWebmMuxing(Muxing):
                 raise TypeError("Invalid type for `filename`, type has to be `string_types`")
 
         self._filename = filename
+
+    @property
+    def manifest_type(self):
+        # type: () -> ProgressiveWebmMuxingManifestType
+        """Gets the manifest_type of this ProgressiveWebmMuxing.
+
+
+        :return: The manifest_type of this ProgressiveWebmMuxing.
+        :rtype: ProgressiveWebmMuxingManifestType
+        """
+        return self._manifest_type
+
+    @manifest_type.setter
+    def manifest_type(self, manifest_type):
+        # type: (ProgressiveWebmMuxingManifestType) -> None
+        """Sets the manifest_type of this ProgressiveWebmMuxing.
+
+
+        :param manifest_type: The manifest_type of this ProgressiveWebmMuxing.
+        :type: ProgressiveWebmMuxingManifestType
+        """
+
+        if manifest_type is not None:
+            if not isinstance(manifest_type, ProgressiveWebmMuxingManifestType):
+                raise TypeError("Invalid type for `manifest_type`, type has to be `ProgressiveWebmMuxingManifestType`")
+
+        self._manifest_type = manifest_type
+
+    @property
+    def segment_length(self):
+        # type: () -> float
+        """Gets the segment_length of this ProgressiveWebmMuxing.
+
+        Determines the length of segments in seconds if manifestType is set to DASH_ON_DEMAND. Defaults to 4 seconds
+
+        :return: The segment_length of this ProgressiveWebmMuxing.
+        :rtype: float
+        """
+        return self._segment_length
+
+    @segment_length.setter
+    def segment_length(self, segment_length):
+        # type: (float) -> None
+        """Sets the segment_length of this ProgressiveWebmMuxing.
+
+        Determines the length of segments in seconds if manifestType is set to DASH_ON_DEMAND. Defaults to 4 seconds
+
+        :param segment_length: The segment_length of this ProgressiveWebmMuxing.
+        :type: float
+        """
+
+        if segment_length is not None:
+            if not isinstance(segment_length, (float, int)):
+                raise TypeError("Invalid type for `segment_length`, type has to be `float`")
+
+        self._segment_length = segment_length
 
     def to_dict(self):
         """Returns the model properties as a dict"""

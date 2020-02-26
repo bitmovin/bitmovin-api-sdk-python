@@ -157,6 +157,7 @@
 <span class="kn">from</span> <span class="nn">six</span> <span class="kn">import</span> <span class="n">string_types</span><span class="p">,</span> <span class="n">iteritems</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.common.poscheck</span> <span class="kn">import</span> <span class="n">poscheck_model</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.muxing</span> <span class="kn">import</span> <span class="n">Muxing</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.progressive_webm_muxing_manifest_type</span> <span class="kn">import</span> <span class="n">ProgressiveWebmMuxingManifestType</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.stream_conditions_mode</span> <span class="kn">import</span> <span class="n">StreamConditionsMode</span>
 <span class="kn">import</span> <span class="nn">pprint</span>
 <span class="kn">import</span> <span class="nn">six</span>
@@ -178,15 +179,23 @@
                  <span class="n">max_bitrate</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">ignored_by</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">stream_conditions_mode</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                 <span class="n">filename</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (string_types, string_types, datetime, datetime, dict, string_types, list[MuxingStream], list[EncodingOutput], int, int, int, list[Ignoring], StreamConditionsMode, string_types) -&gt; None</span>
+                 <span class="n">filename</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">manifest_type</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">segment_length</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="c1"># type: (string_types, string_types, datetime, datetime, dict, string_types, list[MuxingStream], list[EncodingOutput], int, int, int, list[Ignoring], StreamConditionsMode, string_types, ProgressiveWebmMuxingManifestType, float) -&gt; None</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">ProgressiveWebmMuxing</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="n">description</span><span class="p">,</span> <span class="n">created_at</span><span class="o">=</span><span class="n">created_at</span><span class="p">,</span> <span class="n">modified_at</span><span class="o">=</span><span class="n">modified_at</span><span class="p">,</span> <span class="n">custom_data</span><span class="o">=</span><span class="n">custom_data</span><span class="p">,</span> <span class="n">id_</span><span class="o">=</span><span class="n">id_</span><span class="p">,</span> <span class="n">streams</span><span class="o">=</span><span class="n">streams</span><span class="p">,</span> <span class="n">outputs</span><span class="o">=</span><span class="n">outputs</span><span class="p">,</span> <span class="n">avg_bitrate</span><span class="o">=</span><span class="n">avg_bitrate</span><span class="p">,</span> <span class="n">min_bitrate</span><span class="o">=</span><span class="n">min_bitrate</span><span class="p">,</span> <span class="n">max_bitrate</span><span class="o">=</span><span class="n">max_bitrate</span><span class="p">,</span> <span class="n">ignored_by</span><span class="o">=</span><span class="n">ignored_by</span><span class="p">,</span> <span class="n">stream_conditions_mode</span><span class="o">=</span><span class="n">stream_conditions_mode</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_filename</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_manifest_type</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_segment_length</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>
 
         <span class="k">if</span> <span class="n">filename</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">filename</span> <span class="o">=</span> <span class="n">filename</span>
+        <span class="k">if</span> <span class="n">manifest_type</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">manifest_type</span> <span class="o">=</span> <span class="n">manifest_type</span>
+        <span class="k">if</span> <span class="n">segment_length</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">segment_length</span> <span class="o">=</span> <span class="n">segment_length</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -196,7 +205,9 @@
             <span class="n">types</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="nb">super</span><span class="p">(</span><span class="n">ProgressiveWebmMuxing</span><span class="p">,</span> <span class="bp">self</span><span class="p">),</span> <span class="s1">&#39;openapi_types&#39;</span><span class="p">)</span>
 
         <span class="n">types</span><span class="o">.</span><span class="n">update</span><span class="p">({</span>
-            <span class="s1">&#39;filename&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span>
+            <span class="s1">&#39;filename&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;manifest_type&#39;</span><span class="p">:</span> <span class="s1">&#39;ProgressiveWebmMuxingManifestType&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;segment_length&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span>
         <span class="p">})</span>
 
         <span class="k">return</span> <span class="n">types</span>
@@ -209,7 +220,9 @@
             <span class="n">attributes</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="nb">super</span><span class="p">(</span><span class="n">ProgressiveWebmMuxing</span><span class="p">,</span> <span class="bp">self</span><span class="p">),</span> <span class="s1">&#39;attribute_map&#39;</span><span class="p">)</span>
 
         <span class="n">attributes</span><span class="o">.</span><span class="n">update</span><span class="p">({</span>
-            <span class="s1">&#39;filename&#39;</span><span class="p">:</span> <span class="s1">&#39;filename&#39;</span>
+            <span class="s1">&#39;filename&#39;</span><span class="p">:</span> <span class="s1">&#39;filename&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;manifest_type&#39;</span><span class="p">:</span> <span class="s1">&#39;manifestType&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;segment_length&#39;</span><span class="p">:</span> <span class="s1">&#39;segmentLength&#39;</span>
         <span class="p">})</span>
         <span class="k">return</span> <span class="n">attributes</span>
 
@@ -241,6 +254,62 @@
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `filename`, type has to be `string_types`&quot;</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_filename</span> <span class="o">=</span> <span class="n">filename</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">manifest_type</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; ProgressiveWebmMuxingManifestType</span>
+        <span class="sd">&quot;&quot;&quot;Gets the manifest_type of this ProgressiveWebmMuxing.</span>
+
+
+<span class="sd">        :return: The manifest_type of this ProgressiveWebmMuxing.</span>
+<span class="sd">        :rtype: ProgressiveWebmMuxingManifestType</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_manifest_type</span>
+
+    <span class="nd">@manifest_type</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">manifest_type</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">manifest_type</span><span class="p">):</span>
+        <span class="c1"># type: (ProgressiveWebmMuxingManifestType) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the manifest_type of this ProgressiveWebmMuxing.</span>
+
+
+<span class="sd">        :param manifest_type: The manifest_type of this ProgressiveWebmMuxing.</span>
+<span class="sd">        :type: ProgressiveWebmMuxingManifestType</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">manifest_type</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">manifest_type</span><span class="p">,</span> <span class="n">ProgressiveWebmMuxingManifestType</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `manifest_type`, type has to be `ProgressiveWebmMuxingManifestType`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_manifest_type</span> <span class="o">=</span> <span class="n">manifest_type</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">segment_length</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; float</span>
+        <span class="sd">&quot;&quot;&quot;Gets the segment_length of this ProgressiveWebmMuxing.</span>
+
+<span class="sd">        Determines the length of segments in seconds if manifestType is set to DASH_ON_DEMAND. Defaults to 4 seconds</span>
+
+<span class="sd">        :return: The segment_length of this ProgressiveWebmMuxing.</span>
+<span class="sd">        :rtype: float</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_segment_length</span>
+
+    <span class="nd">@segment_length</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">segment_length</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">segment_length</span><span class="p">):</span>
+        <span class="c1"># type: (float) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the segment_length of this ProgressiveWebmMuxing.</span>
+
+<span class="sd">        Determines the length of segments in seconds if manifestType is set to DASH_ON_DEMAND. Defaults to 4 seconds</span>
+
+<span class="sd">        :param segment_length: The segment_length of this ProgressiveWebmMuxing.</span>
+<span class="sd">        :type: float</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">segment_length</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">segment_length</span><span class="p">,</span> <span class="p">(</span><span class="nb">float</span><span class="p">,</span> <span class="nb">int</span><span class="p">)):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `segment_length`, type has to be `float`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_segment_length</span> <span class="o">=</span> <span class="n">segment_length</span>
 
 <div class="viewcode-block" id="ProgressiveWebmMuxing.to_dict"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.progressive_webm_muxing.ProgressiveWebmMuxing.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>

@@ -180,18 +180,22 @@
                  <span class="n">namespaces</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">utc_timings</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">encoding_id</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                 <span class="n">version</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (string_types, string_types, datetime, datetime, dict, string_types, ManifestType, list[EncodingOutput], DashProfile, string_types, list[XmlNamespace], list[UtcTiming], string_types, DashManifestDefaultVersion) -&gt; None</span>
+                 <span class="n">version</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">periods</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="c1"># type: (string_types, string_types, datetime, datetime, dict, string_types, ManifestType, list[EncodingOutput], DashProfile, string_types, list[XmlNamespace], list[UtcTiming], string_types, DashManifestDefaultVersion, list[DefaultDashManifestPeriod]) -&gt; None</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">DashManifestDefault</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="n">description</span><span class="p">,</span> <span class="n">created_at</span><span class="o">=</span><span class="n">created_at</span><span class="p">,</span> <span class="n">modified_at</span><span class="o">=</span><span class="n">modified_at</span><span class="p">,</span> <span class="n">custom_data</span><span class="o">=</span><span class="n">custom_data</span><span class="p">,</span> <span class="n">id_</span><span class="o">=</span><span class="n">id_</span><span class="p">,</span> <span class="n">type_</span><span class="o">=</span><span class="n">type_</span><span class="p">,</span> <span class="n">outputs</span><span class="o">=</span><span class="n">outputs</span><span class="p">,</span> <span class="n">profile</span><span class="o">=</span><span class="n">profile</span><span class="p">,</span> <span class="n">manifest_name</span><span class="o">=</span><span class="n">manifest_name</span><span class="p">,</span> <span class="n">namespaces</span><span class="o">=</span><span class="n">namespaces</span><span class="p">,</span> <span class="n">utc_timings</span><span class="o">=</span><span class="n">utc_timings</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_encoding_id</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_version</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_periods</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>
 
         <span class="k">if</span> <span class="n">encoding_id</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">encoding_id</span> <span class="o">=</span> <span class="n">encoding_id</span>
         <span class="k">if</span> <span class="n">version</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">version</span> <span class="o">=</span> <span class="n">version</span>
+        <span class="k">if</span> <span class="n">periods</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">periods</span> <span class="o">=</span> <span class="n">periods</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -202,7 +206,8 @@
 
         <span class="n">types</span><span class="o">.</span><span class="n">update</span><span class="p">({</span>
             <span class="s1">&#39;encoding_id&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;version&#39;</span><span class="p">:</span> <span class="s1">&#39;DashManifestDefaultVersion&#39;</span>
+            <span class="s1">&#39;version&#39;</span><span class="p">:</span> <span class="s1">&#39;DashManifestDefaultVersion&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;periods&#39;</span><span class="p">:</span> <span class="s1">&#39;list[DefaultDashManifestPeriod]&#39;</span>
         <span class="p">})</span>
 
         <span class="k">return</span> <span class="n">types</span>
@@ -216,7 +221,8 @@
 
         <span class="n">attributes</span><span class="o">.</span><span class="n">update</span><span class="p">({</span>
             <span class="s1">&#39;encoding_id&#39;</span><span class="p">:</span> <span class="s1">&#39;encodingId&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;version&#39;</span><span class="p">:</span> <span class="s1">&#39;version&#39;</span>
+            <span class="s1">&#39;version&#39;</span><span class="p">:</span> <span class="s1">&#39;version&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;periods&#39;</span><span class="p">:</span> <span class="s1">&#39;periods&#39;</span>
         <span class="p">})</span>
         <span class="k">return</span> <span class="n">attributes</span>
 
@@ -225,7 +231,7 @@
         <span class="c1"># type: () -&gt; string_types</span>
         <span class="sd">&quot;&quot;&quot;Gets the encoding_id of this DashManifestDefault.</span>
 
-<span class="sd">        The id of the encoding to create a default manifest from (required)</span>
+<span class="sd">        The id of the encoding to create a default manifest from. Required: encodingId or periods</span>
 
 <span class="sd">        :return: The encoding_id of this DashManifestDefault.</span>
 <span class="sd">        :rtype: string_types</span>
@@ -237,7 +243,7 @@
         <span class="c1"># type: (string_types) -&gt; None</span>
         <span class="sd">&quot;&quot;&quot;Sets the encoding_id of this DashManifestDefault.</span>
 
-<span class="sd">        The id of the encoding to create a default manifest from (required)</span>
+<span class="sd">        The id of the encoding to create a default manifest from. Required: encodingId or periods</span>
 
 <span class="sd">        :param encoding_id: The encoding_id of this DashManifestDefault.</span>
 <span class="sd">        :type: string_types</span>
@@ -277,6 +283,35 @@
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `version`, type has to be `DashManifestDefaultVersion`&quot;</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_version</span> <span class="o">=</span> <span class="n">version</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">periods</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; list[DefaultDashManifestPeriod]</span>
+        <span class="sd">&quot;&quot;&quot;Gets the periods of this DashManifestDefault.</span>
+
+<span class="sd">        Adds a period for every item. Required: encodingId or periods</span>
+
+<span class="sd">        :return: The periods of this DashManifestDefault.</span>
+<span class="sd">        :rtype: list[DefaultDashManifestPeriod]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_periods</span>
+
+    <span class="nd">@periods</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">periods</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">periods</span><span class="p">):</span>
+        <span class="c1"># type: (list) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the periods of this DashManifestDefault.</span>
+
+<span class="sd">        Adds a period for every item. Required: encodingId or periods</span>
+
+<span class="sd">        :param periods: The periods of this DashManifestDefault.</span>
+<span class="sd">        :type: list[DefaultDashManifestPeriod]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">periods</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">periods</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `periods`, type has to be `list[DefaultDashManifestPeriod]`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_periods</span> <span class="o">=</span> <span class="n">periods</span>
 
 <div class="viewcode-block" id="DashManifestDefault.to_dict"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.dash_manifest_default.DashManifestDefault.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>

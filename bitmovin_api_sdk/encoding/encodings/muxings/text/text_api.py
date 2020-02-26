@@ -33,13 +33,13 @@ class TextApi(BaseApi):
 
     def create(self, encoding_id, text_muxing, **kwargs):
         # type: (string_types, TextMuxing, dict) -> TextMuxing
-        """Add Text Muxing
+        """Add Text muxing
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
-        :param text_muxing: The Text Muxing to be created
+        :param text_muxing: The Text muxing to be created
         :type text_muxing: TextMuxing, required
-        :return: Text Muxing
+        :return: Text muxing
         :rtype: TextMuxing
         """
 
@@ -53,7 +53,7 @@ class TextApi(BaseApi):
 
     def delete(self, encoding_id, muxing_id, **kwargs):
         # type: (string_types, string_types, dict) -> BitmovinResponse
-        """Delete Text Muxing
+        """Delete Text muxing
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -72,13 +72,13 @@ class TextApi(BaseApi):
 
     def get(self, encoding_id, muxing_id, **kwargs):
         # type: (string_types, string_types, dict) -> TextMuxing
-        """Text Muxing Details
+        """Text muxing details
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
         :param muxing_id: Id of the Text muxing
         :type muxing_id: string_types, required
-        :return: Text Muxing
+        :return: Text muxing
         :rtype: TextMuxing
         """
 
@@ -91,13 +91,13 @@ class TextApi(BaseApi):
 
     def list(self, encoding_id, query_params=None, **kwargs):
         # type: (string_types, TextMuxingListQueryParams, dict) -> TextMuxing
-        """List Text Muxings
+        """List Text muxings
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
         :param query_params: Query parameters
         :type query_params: TextMuxingListQueryParams
-        :return: List of Text Muxings
+        :return: List of Text muxings
         :rtype: TextMuxing
         """
 

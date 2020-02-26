@@ -166,19 +166,22 @@
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
                  <span class="n">bytes_encoded_total</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">time_encoded_total</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">bytes_egress_total</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">label</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">billable_minutes</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">billable_encoding_minutes</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">billable_transmuxing_minutes</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                 <span class="n">billable_feature_minutes</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (int, int, string_types, float, list[BillableEncodingMinutes], float, list[BillableEncodingFeatureMinutes]) -&gt; None</span>
-        <span class="nb">super</span><span class="p">(</span><span class="n">StatisticsPerLabel</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">bytes_encoded_total</span><span class="o">=</span><span class="n">bytes_encoded_total</span><span class="p">,</span> <span class="n">time_encoded_total</span><span class="o">=</span><span class="n">time_encoded_total</span><span class="p">)</span>
+                 <span class="n">billable_feature_minutes</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">billable_egress_bytes</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="c1"># type: (int, int, int, string_types, float, list[BillableEncodingMinutes], float, list[BillableEncodingFeatureMinutes], list[EgressInformation]) -&gt; None</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">StatisticsPerLabel</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">bytes_encoded_total</span><span class="o">=</span><span class="n">bytes_encoded_total</span><span class="p">,</span> <span class="n">time_encoded_total</span><span class="o">=</span><span class="n">time_encoded_total</span><span class="p">,</span> <span class="n">bytes_egress_total</span><span class="o">=</span><span class="n">bytes_egress_total</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_label</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_billable_minutes</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_billable_encoding_minutes</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_billable_transmuxing_minutes</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_billable_feature_minutes</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_billable_egress_bytes</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>
 
         <span class="k">if</span> <span class="n">label</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -191,6 +194,8 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">billable_transmuxing_minutes</span> <span class="o">=</span> <span class="n">billable_transmuxing_minutes</span>
         <span class="k">if</span> <span class="n">billable_feature_minutes</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">billable_feature_minutes</span> <span class="o">=</span> <span class="n">billable_feature_minutes</span>
+        <span class="k">if</span> <span class="n">billable_egress_bytes</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">billable_egress_bytes</span> <span class="o">=</span> <span class="n">billable_egress_bytes</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -204,7 +209,8 @@
             <span class="s1">&#39;billable_minutes&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span><span class="p">,</span>
             <span class="s1">&#39;billable_encoding_minutes&#39;</span><span class="p">:</span> <span class="s1">&#39;list[BillableEncodingMinutes]&#39;</span><span class="p">,</span>
             <span class="s1">&#39;billable_transmuxing_minutes&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;billable_feature_minutes&#39;</span><span class="p">:</span> <span class="s1">&#39;list[BillableEncodingFeatureMinutes]&#39;</span>
+            <span class="s1">&#39;billable_feature_minutes&#39;</span><span class="p">:</span> <span class="s1">&#39;list[BillableEncodingFeatureMinutes]&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;billable_egress_bytes&#39;</span><span class="p">:</span> <span class="s1">&#39;list[EgressInformation]&#39;</span>
         <span class="p">})</span>
 
         <span class="k">return</span> <span class="n">types</span>
@@ -221,7 +227,8 @@
             <span class="s1">&#39;billable_minutes&#39;</span><span class="p">:</span> <span class="s1">&#39;billableMinutes&#39;</span><span class="p">,</span>
             <span class="s1">&#39;billable_encoding_minutes&#39;</span><span class="p">:</span> <span class="s1">&#39;billableEncodingMinutes&#39;</span><span class="p">,</span>
             <span class="s1">&#39;billable_transmuxing_minutes&#39;</span><span class="p">:</span> <span class="s1">&#39;billableTransmuxingMinutes&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;billable_feature_minutes&#39;</span><span class="p">:</span> <span class="s1">&#39;billableFeatureMinutes&#39;</span>
+            <span class="s1">&#39;billable_feature_minutes&#39;</span><span class="p">:</span> <span class="s1">&#39;billableFeatureMinutes&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;billable_egress_bytes&#39;</span><span class="p">:</span> <span class="s1">&#39;billableEgressBytes&#39;</span>
         <span class="p">})</span>
         <span class="k">return</span> <span class="n">attributes</span>
 
@@ -369,6 +376,35 @@
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `billable_feature_minutes`, type has to be `list[BillableEncodingFeatureMinutes]`&quot;</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_billable_feature_minutes</span> <span class="o">=</span> <span class="n">billable_feature_minutes</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">billable_egress_bytes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; list[EgressInformation]</span>
+        <span class="sd">&quot;&quot;&quot;Gets the billable_egress_bytes of this StatisticsPerLabel.</span>
+
+<span class="sd">        Billable egress output</span>
+
+<span class="sd">        :return: The billable_egress_bytes of this StatisticsPerLabel.</span>
+<span class="sd">        :rtype: list[EgressInformation]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_billable_egress_bytes</span>
+
+    <span class="nd">@billable_egress_bytes</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">billable_egress_bytes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">billable_egress_bytes</span><span class="p">):</span>
+        <span class="c1"># type: (list) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the billable_egress_bytes of this StatisticsPerLabel.</span>
+
+<span class="sd">        Billable egress output</span>
+
+<span class="sd">        :param billable_egress_bytes: The billable_egress_bytes of this StatisticsPerLabel.</span>
+<span class="sd">        :type: list[EgressInformation]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">billable_egress_bytes</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">billable_egress_bytes</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `billable_egress_bytes`, type has to be `list[EgressInformation]`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_billable_egress_bytes</span> <span class="o">=</span> <span class="n">billable_egress_bytes</span>
 
 <div class="viewcode-block" id="StatisticsPerLabel.to_dict"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.statistics_per_label.StatisticsPerLabel.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>

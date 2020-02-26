@@ -13,19 +13,22 @@ class StatisticsPerLabel(Statistics):
     def __init__(self,
                  bytes_encoded_total=None,
                  time_encoded_total=None,
+                 bytes_egress_total=None,
                  label=None,
                  billable_minutes=None,
                  billable_encoding_minutes=None,
                  billable_transmuxing_minutes=None,
-                 billable_feature_minutes=None):
-        # type: (int, int, string_types, float, list[BillableEncodingMinutes], float, list[BillableEncodingFeatureMinutes]) -> None
-        super(StatisticsPerLabel, self).__init__(bytes_encoded_total=bytes_encoded_total, time_encoded_total=time_encoded_total)
+                 billable_feature_minutes=None,
+                 billable_egress_bytes=None):
+        # type: (int, int, int, string_types, float, list[BillableEncodingMinutes], float, list[BillableEncodingFeatureMinutes], list[EgressInformation]) -> None
+        super(StatisticsPerLabel, self).__init__(bytes_encoded_total=bytes_encoded_total, time_encoded_total=time_encoded_total, bytes_egress_total=bytes_egress_total)
 
         self._label = None
         self._billable_minutes = None
         self._billable_encoding_minutes = list()
         self._billable_transmuxing_minutes = None
         self._billable_feature_minutes = list()
+        self._billable_egress_bytes = list()
         self.discriminator = None
 
         if label is not None:
@@ -38,6 +41,8 @@ class StatisticsPerLabel(Statistics):
             self.billable_transmuxing_minutes = billable_transmuxing_minutes
         if billable_feature_minutes is not None:
             self.billable_feature_minutes = billable_feature_minutes
+        if billable_egress_bytes is not None:
+            self.billable_egress_bytes = billable_egress_bytes
 
     @property
     def openapi_types(self):
@@ -51,7 +56,8 @@ class StatisticsPerLabel(Statistics):
             'billable_minutes': 'float',
             'billable_encoding_minutes': 'list[BillableEncodingMinutes]',
             'billable_transmuxing_minutes': 'float',
-            'billable_feature_minutes': 'list[BillableEncodingFeatureMinutes]'
+            'billable_feature_minutes': 'list[BillableEncodingFeatureMinutes]',
+            'billable_egress_bytes': 'list[EgressInformation]'
         })
 
         return types
@@ -68,7 +74,8 @@ class StatisticsPerLabel(Statistics):
             'billable_minutes': 'billableMinutes',
             'billable_encoding_minutes': 'billableEncodingMinutes',
             'billable_transmuxing_minutes': 'billableTransmuxingMinutes',
-            'billable_feature_minutes': 'billableFeatureMinutes'
+            'billable_feature_minutes': 'billableFeatureMinutes',
+            'billable_egress_bytes': 'billableEgressBytes'
         })
         return attributes
 
@@ -216,6 +223,35 @@ class StatisticsPerLabel(Statistics):
                 raise TypeError("Invalid type for `billable_feature_minutes`, type has to be `list[BillableEncodingFeatureMinutes]`")
 
         self._billable_feature_minutes = billable_feature_minutes
+
+    @property
+    def billable_egress_bytes(self):
+        # type: () -> list[EgressInformation]
+        """Gets the billable_egress_bytes of this StatisticsPerLabel.
+
+        Billable egress output
+
+        :return: The billable_egress_bytes of this StatisticsPerLabel.
+        :rtype: list[EgressInformation]
+        """
+        return self._billable_egress_bytes
+
+    @billable_egress_bytes.setter
+    def billable_egress_bytes(self, billable_egress_bytes):
+        # type: (list) -> None
+        """Sets the billable_egress_bytes of this StatisticsPerLabel.
+
+        Billable egress output
+
+        :param billable_egress_bytes: The billable_egress_bytes of this StatisticsPerLabel.
+        :type: list[EgressInformation]
+        """
+
+        if billable_egress_bytes is not None:
+            if not isinstance(billable_egress_bytes, list):
+                raise TypeError("Invalid type for `billable_egress_bytes`, type has to be `list[EgressInformation]`")
+
+        self._billable_egress_bytes = billable_egress_bytes
 
     def to_dict(self):
         """Returns the model properties as a dict"""

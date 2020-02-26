@@ -41,13 +41,13 @@ class ProgressiveMovApi(BaseApi):
 
     def create(self, encoding_id, progressive_mov_muxing, **kwargs):
         # type: (string_types, ProgressiveMovMuxing, dict) -> ProgressiveMovMuxing
-        """Add Progressive MOV Muxing
+        """Add Progressive MOV muxing
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
-        :param progressive_mov_muxing: The Progressive MOV Muxing to be created
+        :param progressive_mov_muxing: The Progressive MOV muxing to be created
         :type progressive_mov_muxing: ProgressiveMovMuxing, required
-        :return: Progressive MOV Muxing
+        :return: Progressive MOV muxing
         :rtype: ProgressiveMovMuxing
         """
 
@@ -61,7 +61,7 @@ class ProgressiveMovApi(BaseApi):
 
     def delete(self, encoding_id, muxing_id, **kwargs):
         # type: (string_types, string_types, dict) -> BitmovinResponse
-        """Delete Progressive MOV Muxing
+        """Delete Progressive MOV muxing
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -80,13 +80,13 @@ class ProgressiveMovApi(BaseApi):
 
     def get(self, encoding_id, muxing_id, **kwargs):
         # type: (string_types, string_types, dict) -> ProgressiveMovMuxing
-        """Progressive MOV Muxing Details
+        """Progressive MOV muxing details
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
         :param muxing_id: Id of the Progressive MOV muxing
         :type muxing_id: string_types, required
-        :return: Progressive MOV Muxing details
+        :return: Progressive MOV muxing details
         :rtype: ProgressiveMovMuxing
         """
 
@@ -99,7 +99,7 @@ class ProgressiveMovApi(BaseApi):
 
     def list(self, encoding_id, query_params=None, **kwargs):
         # type: (string_types, ProgressiveMovMuxingListQueryParams, dict) -> ProgressiveMovMuxing
-        """List Progressive MOV Muxings
+        """List Progressive MOV muxings
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required

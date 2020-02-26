@@ -9,7 +9,6 @@ from bitmovin_api_sdk.models.cmaf_muxing import CmafMuxing
 from bitmovin_api_sdk.models.response_envelope import ResponseEnvelope
 from bitmovin_api_sdk.models.response_error import ResponseError
 from bitmovin_api_sdk.encoding.encodings.muxings.cmaf.customdata.customdata_api import CustomdataApi
-from bitmovin_api_sdk.encoding.encodings.muxings.cmaf.drm.drm_api import DrmApi
 from bitmovin_api_sdk.encoding.encodings.muxings.cmaf.captions.captions_api import CaptionsApi
 from bitmovin_api_sdk.encoding.encodings.muxings.cmaf.cmaf_muxing_list_query_params import CmafMuxingListQueryParams
 
@@ -33,13 +32,6 @@ class CmafApi(BaseApi):
             logger=logger
         )
 
-        self.drm = DrmApi(
-            api_key=api_key,
-            tenant_org_id=tenant_org_id,
-            base_url=base_url,
-            logger=logger
-        )
-
         self.captions = CaptionsApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
@@ -55,7 +47,7 @@ class CmafApi(BaseApi):
         :type encoding_id: string_types, required
         :param cmaf_muxing: The CMAF muxing to be created
         :type cmaf_muxing: CmafMuxing, required
-        :return: CMAF Muxing
+        :return: CMAF muxing
         :rtype: CmafMuxing
         """
 
@@ -69,7 +61,7 @@ class CmafApi(BaseApi):
 
     def delete(self, encoding_id, muxing_id, **kwargs):
         # type: (string_types, string_types, dict) -> BitmovinResponse
-        """Delete CMAF Muxing
+        """Delete CMAF muxing
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -88,13 +80,13 @@ class CmafApi(BaseApi):
 
     def get(self, encoding_id, muxing_id, **kwargs):
         # type: (string_types, string_types, dict) -> CmafMuxing
-        """CMAF Muxing Details
+        """CMAF muxing details
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
         :param muxing_id: Id of the CMAF muxing
         :type muxing_id: string_types, required
-        :return: CMAF Muxing
+        :return: CMAF muxing
         :rtype: CmafMuxing
         """
 

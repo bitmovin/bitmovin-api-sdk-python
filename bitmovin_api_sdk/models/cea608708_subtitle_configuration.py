@@ -3,6 +3,7 @@
 from enum import Enum
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
+from bitmovin_api_sdk.models.passthrough_mode import PassthroughMode
 import pprint
 import six
 
@@ -10,19 +11,24 @@ import six
 class Cea608708SubtitleConfiguration(object):
     @poscheck_model
     def __init__(self,
-                 passthrough_activated=None):
-        # type: (bool) -> None
+                 passthrough_activated=None,
+                 passthrough_mode=None):
+        # type: (bool, PassthroughMode) -> None
 
         self._passthrough_activated = None
+        self._passthrough_mode = None
         self.discriminator = None
 
         if passthrough_activated is not None:
             self.passthrough_activated = passthrough_activated
+        if passthrough_mode is not None:
+            self.passthrough_mode = passthrough_mode
 
     @property
     def openapi_types(self):
         types = {
-            'passthrough_activated': 'bool'
+            'passthrough_activated': 'bool',
+            'passthrough_mode': 'PassthroughMode'
         }
 
         return types
@@ -30,7 +36,8 @@ class Cea608708SubtitleConfiguration(object):
     @property
     def attribute_map(self):
         attributes = {
-            'passthrough_activated': 'passthroughActivated'
+            'passthrough_activated': 'passthroughActivated',
+            'passthrough_mode': 'passthroughMode'
         }
         return attributes
 
@@ -62,6 +69,33 @@ class Cea608708SubtitleConfiguration(object):
                 raise TypeError("Invalid type for `passthrough_activated`, type has to be `bool`")
 
         self._passthrough_activated = passthrough_activated
+
+    @property
+    def passthrough_mode(self):
+        # type: () -> PassthroughMode
+        """Gets the passthrough_mode of this Cea608708SubtitleConfiguration.
+
+
+        :return: The passthrough_mode of this Cea608708SubtitleConfiguration.
+        :rtype: PassthroughMode
+        """
+        return self._passthrough_mode
+
+    @passthrough_mode.setter
+    def passthrough_mode(self, passthrough_mode):
+        # type: (PassthroughMode) -> None
+        """Sets the passthrough_mode of this Cea608708SubtitleConfiguration.
+
+
+        :param passthrough_mode: The passthrough_mode of this Cea608708SubtitleConfiguration.
+        :type: PassthroughMode
+        """
+
+        if passthrough_mode is not None:
+            if not isinstance(passthrough_mode, PassthroughMode):
+                raise TypeError("Invalid type for `passthrough_mode`, type has to be `PassthroughMode`")
+
+        self._passthrough_mode = passthrough_mode
 
     def to_dict(self):
         """Returns the model properties as a dict"""

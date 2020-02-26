@@ -41,13 +41,13 @@ class TsApi(BaseApi):
 
     def create(self, encoding_id, ts_muxing, **kwargs):
         # type: (string_types, TsMuxing, dict) -> TsMuxing
-        """Add TS Segment Muxing
+        """Add TS muxing
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
-        :param ts_muxing: The TS Segment Muxing to be created
+        :param ts_muxing: The TS muxing to be created
         :type ts_muxing: TsMuxing, required
-        :return: TS Segment Muxing
+        :return: TS muxing
         :rtype: TsMuxing
         """
 
@@ -61,13 +61,13 @@ class TsApi(BaseApi):
 
     def delete(self, encoding_id, muxing_id, **kwargs):
         # type: (string_types, string_types, dict) -> BitmovinResponse
-        """Delete TS Segment Muxing
+        """Delete TS muxing
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
-        :param muxing_id: Id of the ts segment muxing
+        :param muxing_id: Id of the TS muxing
         :type muxing_id: string_types, required
-        :return: Id of the ts segment muxing
+        :return: Id of the TS muxing
         :rtype: BitmovinResponse
         """
 
@@ -80,13 +80,13 @@ class TsApi(BaseApi):
 
     def get(self, encoding_id, muxing_id, **kwargs):
         # type: (string_types, string_types, dict) -> TsMuxing
-        """TS Segment Muxing Details
+        """TS muxing details
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
-        :param muxing_id: Id of the ts segment muxing
+        :param muxing_id: Id of the TS muxing
         :type muxing_id: string_types, required
-        :return: TS Segment Muxing
+        :return: TS muxing
         :rtype: TsMuxing
         """
 
@@ -99,13 +99,13 @@ class TsApi(BaseApi):
 
     def list(self, encoding_id, query_params=None, **kwargs):
         # type: (string_types, TsMuxingListQueryParams, dict) -> TsMuxing
-        """List TS Segment Muxings
+        """List TS muxings
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
         :param query_params: Query parameters
         :type query_params: TsMuxingListQueryParams
-        :return: List of ts segment muxings
+        :return: List of TS muxings
         :rtype: TsMuxing
         """
 

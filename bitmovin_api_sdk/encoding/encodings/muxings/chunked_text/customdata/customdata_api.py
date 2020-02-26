@@ -27,9 +27,9 @@ class CustomdataApi(BaseApi):
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
-        :param muxing_id: Id of the Chunked Text Muxing
+        :param muxing_id: Id of the Chunked Text muxing
         :type muxing_id: string_types, required
-        :return: Chunked Text Muxing custom data
+        :return: Chunked Text muxing custom data
         :rtype: CustomData
         """
 

@@ -18,8 +18,9 @@ class DailyStatistics(object):
                  label=None,
                  billable_encoding_minutes=None,
                  billable_transmuxing_minutes=None,
-                 billable_feature_minutes=None):
-        # type: (date, int, int, float, string_types, list[BillableEncodingMinutes], float, list[BillableEncodingFeatureMinutes]) -> None
+                 billable_feature_minutes=None,
+                 billable_egress_bytes=None):
+        # type: (date, int, int, float, string_types, list[BillableEncodingMinutes], float, list[BillableEncodingFeatureMinutes], list[EgressInformation]) -> None
 
         self._date = None
         self._bytes_encoded = None
@@ -29,6 +30,7 @@ class DailyStatistics(object):
         self._billable_encoding_minutes = list()
         self._billable_transmuxing_minutes = None
         self._billable_feature_minutes = list()
+        self._billable_egress_bytes = list()
         self.discriminator = None
 
         if date_ is not None:
@@ -47,6 +49,8 @@ class DailyStatistics(object):
             self.billable_transmuxing_minutes = billable_transmuxing_minutes
         if billable_feature_minutes is not None:
             self.billable_feature_minutes = billable_feature_minutes
+        if billable_egress_bytes is not None:
+            self.billable_egress_bytes = billable_egress_bytes
 
     @property
     def openapi_types(self):
@@ -58,7 +62,8 @@ class DailyStatistics(object):
             'label': 'string_types',
             'billable_encoding_minutes': 'list[BillableEncodingMinutes]',
             'billable_transmuxing_minutes': 'float',
-            'billable_feature_minutes': 'list[BillableEncodingFeatureMinutes]'
+            'billable_feature_minutes': 'list[BillableEncodingFeatureMinutes]',
+            'billable_egress_bytes': 'list[EgressInformation]'
         }
 
         return types
@@ -73,7 +78,8 @@ class DailyStatistics(object):
             'label': 'label',
             'billable_encoding_minutes': 'billableEncodingMinutes',
             'billable_transmuxing_minutes': 'billableTransmuxingMinutes',
-            'billable_feature_minutes': 'billableFeatureMinutes'
+            'billable_feature_minutes': 'billableFeatureMinutes',
+            'billable_egress_bytes': 'billableEgressBytes'
         }
         return attributes
 
@@ -308,6 +314,33 @@ class DailyStatistics(object):
                 raise TypeError("Invalid type for `billable_feature_minutes`, type has to be `list[BillableEncodingFeatureMinutes]`")
 
         self._billable_feature_minutes = billable_feature_minutes
+
+    @property
+    def billable_egress_bytes(self):
+        # type: () -> list[EgressInformation]
+        """Gets the billable_egress_bytes of this DailyStatistics.
+
+
+        :return: The billable_egress_bytes of this DailyStatistics.
+        :rtype: list[EgressInformation]
+        """
+        return self._billable_egress_bytes
+
+    @billable_egress_bytes.setter
+    def billable_egress_bytes(self, billable_egress_bytes):
+        # type: (list) -> None
+        """Sets the billable_egress_bytes of this DailyStatistics.
+
+
+        :param billable_egress_bytes: The billable_egress_bytes of this DailyStatistics.
+        :type: list[EgressInformation]
+        """
+
+        if billable_egress_bytes is not None:
+            if not isinstance(billable_egress_bytes, list):
+                raise TypeError("Invalid type for `billable_egress_bytes`, type has to be `list[EgressInformation]`")
+
+        self._billable_egress_bytes = billable_egress_bytes
 
     def to_dict(self):
         """Returns the model properties as a dict"""

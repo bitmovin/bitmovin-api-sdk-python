@@ -33,11 +33,11 @@ class SpekeApi(BaseApi):
 
     def create(self, encoding_id, muxing_id, speke_drm, **kwargs):
         # type: (string_types, string_types, SpekeDrm, dict) -> SpekeDrm
-        """Add SPEKE DRM key provider to TS Segment
+        """Add SPEKE DRM key provider to TS muxing
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
-        :param muxing_id: Id of the TS Segment muxing
+        :param muxing_id: Id of the TS muxing
         :type muxing_id: string_types, required
         :param speke_drm: The SPEKE DRM key provider to be created
         :type speke_drm: SpekeDrm, required
@@ -55,11 +55,11 @@ class SpekeApi(BaseApi):
 
     def delete(self, encoding_id, muxing_id, drm_id, **kwargs):
         # type: (string_types, string_types, string_types, dict) -> BitmovinResponse
-        """Delete SPEKE DRM from TS Segment
+        """Delete SPEKE DRM from TS muxing
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
-        :param muxing_id: Id of the TS Segment muxing
+        :param muxing_id: Id of the TS muxing
         :type muxing_id: string_types, required
         :param drm_id: Id of the SPEKE DRM.
         :type drm_id: string_types, required
@@ -76,11 +76,11 @@ class SpekeApi(BaseApi):
 
     def get(self, encoding_id, muxing_id, drm_id, **kwargs):
         # type: (string_types, string_types, string_types, dict) -> SpekeDrm
-        """SPEKE DRM Details of TS Segment
+        """SPEKE DRM Details of TS muxing
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
-        :param muxing_id: Id of the TS Segment muxing
+        :param muxing_id: Id of the TS muxing
         :type muxing_id: string_types, required
         :param drm_id: Id of the SPEKE DRM.
         :type drm_id: string_types, required
@@ -97,11 +97,11 @@ class SpekeApi(BaseApi):
 
     def list(self, encoding_id, muxing_id, query_params=None, **kwargs):
         # type: (string_types, string_types, SpekeDrmListQueryParams, dict) -> SpekeDrm
-        """List SPEKE DRM of TS Segment
+        """List SPEKE DRM of TS muxing
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
-        :param muxing_id: Id of the TS Segment muxing
+        :param muxing_id: Id of the TS muxing
         :type muxing_id: string_types, required
         :param query_params: Query parameters
         :type query_params: SpekeDrmListQueryParams

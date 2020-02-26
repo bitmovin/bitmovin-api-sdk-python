@@ -23,13 +23,13 @@ class CustomdataApi(BaseApi):
 
     def get(self, encoding_id, muxing_id, **kwargs):
         # type: (string_types, string_types, dict) -> CustomData
-        """MP4 Segment Muxing Custom Data
+        """MP4 muxing Custom Data
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
         :param muxing_id: Id of the MP4 muxing
         :type muxing_id: string_types, required
-        :return: MP4 Segmetn Muxing custom data
+        :return: MP4 Segmetn muxing custom data
         :rtype: CustomData
         """
 

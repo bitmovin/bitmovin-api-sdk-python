@@ -41,13 +41,13 @@ class WebmApi(BaseApi):
 
     def create(self, encoding_id, webm_muxing, **kwargs):
         # type: (string_types, WebmMuxing, dict) -> WebmMuxing
-        """Add WebM Segment Muxing
+        """Add WebM muxing
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
-        :param webm_muxing: The WebM Segment Muxing to be created
+        :param webm_muxing: The WebM muxing to be created
         :type webm_muxing: WebmMuxing, required
-        :return: WebM Muxing
+        :return: WebM muxing
         :rtype: WebmMuxing
         """
 
@@ -61,7 +61,7 @@ class WebmApi(BaseApi):
 
     def delete(self, encoding_id, muxing_id, **kwargs):
         # type: (string_types, string_types, dict) -> BitmovinResponse
-        """Delete WebM Muxing
+        """Delete WebM muxing
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -80,13 +80,13 @@ class WebmApi(BaseApi):
 
     def get(self, encoding_id, muxing_id, **kwargs):
         # type: (string_types, string_types, dict) -> WebmMuxing
-        """WebM Segment Muxing Details
+        """WebM muxing details
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
         :param muxing_id: Id of the WebM muxing
         :type muxing_id: string_types, required
-        :return: WebM Muxing
+        :return: WebM muxing
         :rtype: WebmMuxing
         """
 
@@ -99,7 +99,7 @@ class WebmApi(BaseApi):
 
     def list(self, encoding_id, query_params=None, **kwargs):
         # type: (string_types, WebmMuxingListQueryParams, dict) -> WebmMuxing
-        """List WebM Segment Muxings
+        """List WebM muxings
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required

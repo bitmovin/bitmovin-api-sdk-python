@@ -166,12 +166,14 @@
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
                  <span class="n">date_</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">bytes_encoded</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                 <span class="n">time_encoded</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (datetime, int, int) -&gt; None</span>
+                 <span class="n">time_encoded</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">bytes_egress</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="c1"># type: (datetime, int, int, int) -&gt; None</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_date</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_bytes_encoded</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_time_encoded</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_bytes_egress</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>
 
         <span class="k">if</span> <span class="n">date_</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -180,13 +182,16 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">bytes_encoded</span> <span class="o">=</span> <span class="n">bytes_encoded</span>
         <span class="k">if</span> <span class="n">time_encoded</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">time_encoded</span> <span class="o">=</span> <span class="n">time_encoded</span>
+        <span class="k">if</span> <span class="n">bytes_egress</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">bytes_egress</span> <span class="o">=</span> <span class="n">bytes_egress</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">types</span> <span class="o">=</span> <span class="p">{</span>
             <span class="s1">&#39;date&#39;</span><span class="p">:</span> <span class="s1">&#39;datetime&#39;</span><span class="p">,</span>
             <span class="s1">&#39;bytes_encoded&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;time_encoded&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span>
+            <span class="s1">&#39;time_encoded&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;bytes_egress&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span>
         <span class="p">}</span>
 
         <span class="k">return</span> <span class="n">types</span>
@@ -196,7 +201,8 @@
         <span class="n">attributes</span> <span class="o">=</span> <span class="p">{</span>
             <span class="s1">&#39;date&#39;</span><span class="p">:</span> <span class="s1">&#39;date&#39;</span><span class="p">,</span>
             <span class="s1">&#39;bytes_encoded&#39;</span><span class="p">:</span> <span class="s1">&#39;bytesEncoded&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;time_encoded&#39;</span><span class="p">:</span> <span class="s1">&#39;timeEncoded&#39;</span>
+            <span class="s1">&#39;time_encoded&#39;</span><span class="p">:</span> <span class="s1">&#39;timeEncoded&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;bytes_egress&#39;</span><span class="p">:</span> <span class="s1">&#39;bytesEgress&#39;</span>
         <span class="p">}</span>
         <span class="k">return</span> <span class="n">attributes</span>
 
@@ -286,6 +292,35 @@
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `time_encoded`, type has to be `int`&quot;</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_time_encoded</span> <span class="o">=</span> <span class="n">time_encoded</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">bytes_egress</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; int</span>
+        <span class="sd">&quot;&quot;&quot;Gets the bytes_egress of this EncodingStatistics.</span>
+
+<span class="sd">        Egress output generated by file transfers in bytes (required)</span>
+
+<span class="sd">        :return: The bytes_egress of this EncodingStatistics.</span>
+<span class="sd">        :rtype: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_bytes_egress</span>
+
+    <span class="nd">@bytes_egress</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">bytes_egress</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bytes_egress</span><span class="p">):</span>
+        <span class="c1"># type: (int) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the bytes_egress of this EncodingStatistics.</span>
+
+<span class="sd">        Egress output generated by file transfers in bytes (required)</span>
+
+<span class="sd">        :param bytes_egress: The bytes_egress of this EncodingStatistics.</span>
+<span class="sd">        :type: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">bytes_egress</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">bytes_egress</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `bytes_egress`, type has to be `int`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_bytes_egress</span> <span class="o">=</span> <span class="n">bytes_egress</span>
 
 <div class="viewcode-block" id="EncodingStatistics.to_dict"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.encoding_statistics.EncodingStatistics.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>

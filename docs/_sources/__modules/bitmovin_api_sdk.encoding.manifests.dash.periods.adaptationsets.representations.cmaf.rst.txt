@@ -7,7 +7,6 @@ Subpackages
 .. toctree::
 
    bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.cmaf.contentprotection
-   bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.cmaf.drm
 
 Submodules
 ----------
