@@ -1580,6 +1580,14 @@ bitmovin\_api\_sdk.models.dash\_mp4\_representation module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.dash\_on\_demand\_representation\_type module
+-----------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.dash_on_demand_representation_type
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.dash\_profile module
 ----------------------------------------------
 

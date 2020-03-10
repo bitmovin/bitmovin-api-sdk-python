@@ -4,6 +4,7 @@ from enum import Enum
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
 from bitmovin_api_sdk.models.dash_mp4_representation import DashMp4Representation
+from bitmovin_api_sdk.models.dash_on_demand_representation_type import DashOnDemandRepresentationType
 import pprint
 import six
 
@@ -16,9 +17,10 @@ class DashMp4DrmRepresentation(DashMp4Representation):
                  muxing_id=None,
                  dependency_id=None,
                  file_path=None,
+                 type_=None,
                  drm_id=None):
-        # type: (string_types, string_types, string_types, string_types, string_types, string_types) -> None
-        super(DashMp4DrmRepresentation, self).__init__(id_=id_, encoding_id=encoding_id, muxing_id=muxing_id, dependency_id=dependency_id, file_path=file_path)
+        # type: (string_types, string_types, string_types, string_types, string_types, DashOnDemandRepresentationType, string_types) -> None
+        super(DashMp4DrmRepresentation, self).__init__(id_=id_, encoding_id=encoding_id, muxing_id=muxing_id, dependency_id=dependency_id, file_path=file_path, type_=type_)
 
         self._drm_id = None
         self.discriminator = None

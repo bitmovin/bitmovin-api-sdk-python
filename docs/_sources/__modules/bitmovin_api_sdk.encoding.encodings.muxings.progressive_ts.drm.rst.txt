@@ -6,6 +6,7 @@ Subpackages
 
 .. toctree::
 
+   bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.drm.aes
    bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.drm.fairplay
    bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.drm.speke
 

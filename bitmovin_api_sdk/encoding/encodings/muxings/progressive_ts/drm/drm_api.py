@@ -8,6 +8,7 @@ from bitmovin_api_sdk.models.drm import Drm
 from bitmovin_api_sdk.models.response_envelope import ResponseEnvelope
 from bitmovin_api_sdk.models.response_error import ResponseError
 from bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.drm.fairplay.fairplay_api import FairplayApi
+from bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.drm.aes.aes_api import AesApi
 from bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.drm.speke.speke_api import SpekeApi
 
 
@@ -24,6 +25,13 @@ class DrmApi(BaseApi):
         )
 
         self.fairplay = FairplayApi(
+            api_key=api_key,
+            tenant_org_id=tenant_org_id,
+            base_url=base_url,
+            logger=logger
+        )
+
+        self.aes = AesApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,

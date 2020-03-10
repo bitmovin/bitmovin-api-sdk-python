@@ -3,6 +3,7 @@
 from enum import Enum
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
+from bitmovin_api_sdk.models.dash_on_demand_representation_type import DashOnDemandRepresentationType
 from bitmovin_api_sdk.models.dash_representation import DashRepresentation
 import pprint
 import six
@@ -15,15 +16,19 @@ class DashMp4Representation(DashRepresentation):
                  encoding_id=None,
                  muxing_id=None,
                  dependency_id=None,
-                 file_path=None):
-        # type: (string_types, string_types, string_types, string_types, string_types) -> None
+                 file_path=None,
+                 type_=None):
+        # type: (string_types, string_types, string_types, string_types, string_types, DashOnDemandRepresentationType) -> None
         super(DashMp4Representation, self).__init__(id_=id_, encoding_id=encoding_id, muxing_id=muxing_id, dependency_id=dependency_id)
 
         self._file_path = None
+        self._type = None
         self.discriminator = None
 
         if file_path is not None:
             self.file_path = file_path
+        if type_ is not None:
+            self.type = type_
 
     @property
     def openapi_types(self):
@@ -33,7 +38,8 @@ class DashMp4Representation(DashRepresentation):
             types = getattr(super(DashMp4Representation, self), 'openapi_types')
 
         types.update({
-            'file_path': 'string_types'
+            'file_path': 'string_types',
+            'type': 'DashOnDemandRepresentationType'
         })
 
         return types
@@ -46,7 +52,8 @@ class DashMp4Representation(DashRepresentation):
             attributes = getattr(super(DashMp4Representation, self), 'attribute_map')
 
         attributes.update({
-            'file_path': 'filePath'
+            'file_path': 'filePath',
+            'type': 'type'
         })
         return attributes
 
@@ -78,6 +85,35 @@ class DashMp4Representation(DashRepresentation):
                 raise TypeError("Invalid type for `file_path`, type has to be `string_types`")
 
         self._file_path = file_path
+
+    @property
+    def type(self):
+        # type: () -> DashOnDemandRepresentationType
+        """Gets the type of this DashMp4Representation.
+
+        The type of the dash representation
+
+        :return: The type of this DashMp4Representation.
+        :rtype: DashOnDemandRepresentationType
+        """
+        return self._type
+
+    @type.setter
+    def type(self, type_):
+        # type: (DashOnDemandRepresentationType) -> None
+        """Sets the type of this DashMp4Representation.
+
+        The type of the dash representation
+
+        :param type_: The type of this DashMp4Representation.
+        :type: DashOnDemandRepresentationType
+        """
+
+        if type_ is not None:
+            if not isinstance(type_, DashOnDemandRepresentationType):
+                raise TypeError("Invalid type for `type`, type has to be `DashOnDemandRepresentationType`")
+
+        self._type = type_
 
     def to_dict(self):
         """Returns the model properties as a dict"""

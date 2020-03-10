@@ -161,6 +161,7 @@
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.response_envelope</span> <span class="kn">import</span> <span class="n">ResponseEnvelope</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.response_error</span> <span class="kn">import</span> <span class="n">ResponseError</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.drm.fairplay.fairplay_api</span> <span class="kn">import</span> <span class="n">FairplayApi</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.drm.aes.aes_api</span> <span class="kn">import</span> <span class="n">AesApi</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.drm.speke.speke_api</span> <span class="kn">import</span> <span class="n">SpekeApi</span>
 
 
@@ -177,6 +178,13 @@
         <span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">fairplay</span> <span class="o">=</span> <span class="n">FairplayApi</span><span class="p">(</span>
+            <span class="n">api_key</span><span class="o">=</span><span class="n">api_key</span><span class="p">,</span>
+            <span class="n">tenant_org_id</span><span class="o">=</span><span class="n">tenant_org_id</span><span class="p">,</span>
+            <span class="n">base_url</span><span class="o">=</span><span class="n">base_url</span><span class="p">,</span>
+            <span class="n">logger</span><span class="o">=</span><span class="n">logger</span>
+        <span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">aes</span> <span class="o">=</span> <span class="n">AesApi</span><span class="p">(</span>
             <span class="n">api_key</span><span class="o">=</span><span class="n">api_key</span><span class="p">,</span>
             <span class="n">tenant_org_id</span><span class="o">=</span><span class="n">tenant_org_id</span><span class="p">,</span>
             <span class="n">base_url</span><span class="o">=</span><span class="n">base_url</span><span class="p">,</span>

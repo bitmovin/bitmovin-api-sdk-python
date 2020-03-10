@@ -563,6 +563,10 @@ from bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.drm.fairplay.fai
 from bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.drm.fairplay.fairplay_api import FairPlayDrmListQueryParams
 from bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.drm.fairplay.customdata.customdata_api import CustomdataApi
 
+from bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.drm.aes.aes_api import AesApi
+from bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.drm.aes.aes_api import AesEncryptionDrmListQueryParams
+from bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.drm.aes.customdata.customdata_api import CustomdataApi
+
 from bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.drm.speke.speke_api import SpekeApi
 from bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.drm.speke.speke_api import SpekeDrmListQueryParams
 from bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.drm.speke.customdata.customdata_api import CustomdataApi
@@ -1055,6 +1059,7 @@ from bitmovin_api_sdk.models.dash_manifest_default import DashManifestDefault
 from bitmovin_api_sdk.models.dash_manifest_default_version import DashManifestDefaultVersion
 from bitmovin_api_sdk.models.dash_mp4_drm_representation import DashMp4DrmRepresentation
 from bitmovin_api_sdk.models.dash_mp4_representation import DashMp4Representation
+from bitmovin_api_sdk.models.dash_on_demand_representation_type import DashOnDemandRepresentationType
 from bitmovin_api_sdk.models.dash_profile import DashProfile
 from bitmovin_api_sdk.models.dash_progressive_webm_representation import DashProgressiveWebmRepresentation
 from bitmovin_api_sdk.models.dash_representation import DashRepresentation
@@ -1430,4 +1435,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.35.0"
+__version__ = "1.36.0"
