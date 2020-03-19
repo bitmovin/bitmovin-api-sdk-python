@@ -127,10 +127,6 @@ class StreamDetails(object):
         :type: int
         """
 
-        if duration is not None:
-            if not isinstance(duration, int):
-                raise TypeError("Invalid type for `duration`, type has to be `int`")
-
         self._duration = duration
 
     @property
