@@ -39,7 +39,7 @@ class AesApi(BaseApi):
         :type encoding_id: string_types, required
         :param muxing_id: Id of the Progressive TS muxing
         :type muxing_id: string_types, required
-        :param aes_encryption_drm: The AES encryption configuration to be created
+        :param aes_encryption_drm: The AES encryption configuration to be created. Note that for AES encryption in conjunction with Progressive TS muxing the &#39;iv&#39; must remain unset or be empty.
         :type aes_encryption_drm: AesEncryptionDrm, required
         :return: AES encryption details
         :rtype: AesEncryptionDrm

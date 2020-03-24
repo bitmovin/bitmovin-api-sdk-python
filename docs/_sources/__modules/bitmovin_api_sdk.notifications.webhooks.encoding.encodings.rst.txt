@@ -8,6 +8,7 @@ Subpackages
 
    bitmovin_api_sdk.notifications.webhooks.encoding.encodings.error
    bitmovin_api_sdk.notifications.webhooks.encoding.encodings.finished
+   bitmovin_api_sdk.notifications.webhooks.encoding.encodings.transfer_error
 
 Submodules
 ----------

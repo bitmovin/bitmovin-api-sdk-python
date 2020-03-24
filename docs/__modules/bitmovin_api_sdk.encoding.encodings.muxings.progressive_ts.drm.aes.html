@@ -234,7 +234,7 @@
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>encoding_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the encoding</p></li>
 <li><p><strong>muxing_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the Progressive TS muxing</p></li>
-<li><p><strong>aes_encryption_drm</strong> (<a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.aes_encryption_drm.AesEncryptionDrm" title="bitmovin_api_sdk.models.aes_encryption_drm.AesEncryptionDrm"><em>AesEncryptionDrm</em></a><em>, </em><em>required</em>) – The AES encryption configuration to be created</p></li>
+<li><p><strong>aes_encryption_drm</strong> (<a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.aes_encryption_drm.AesEncryptionDrm" title="bitmovin_api_sdk.models.aes_encryption_drm.AesEncryptionDrm"><em>AesEncryptionDrm</em></a><em>, </em><em>required</em>) – The AES encryption configuration to be created. Note that for AES encryption in conjunction with Progressive TS muxing the 'iv' must remain unset or be empty.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -297,7 +297,7 @@
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>encoding_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the encoding</p></li>
 <li><p><strong>muxing_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the Progressive TS muxing</p></li>
-<li><p><strong>query_params</strong> (<a class="reference internal" href="#bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.drm.aes.aes_encryption_drm_list_query_params.AesEncryptionDrmListQueryParams" title="bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.drm.aes.aes_encryption_drm_list_query_params.AesEncryptionDrmListQueryParams"><em>AesEncryptionDrmListQueryParams</em></a>) – Query parameters</p></li>
+<li><p><strong>query_params</strong> (<a class="reference internal" href="bitmovin_api_sdk.encoding.encodings.muxings.fmp4.drm.aes.html#bitmovin_api_sdk.encoding.encodings.muxings.fmp4.drm.aes.aes_encryption_drm_list_query_params.AesEncryptionDrmListQueryParams" title="bitmovin_api_sdk.encoding.encodings.muxings.fmp4.drm.aes.aes_encryption_drm_list_query_params.AesEncryptionDrmListQueryParams"><em>AesEncryptionDrmListQueryParams</em></a>) – Query parameters</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>

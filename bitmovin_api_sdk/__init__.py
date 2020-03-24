@@ -539,6 +539,10 @@ from bitmovin_api_sdk.encoding.encodings.muxings.fmp4.drm.cenc.cenc_api import C
 from bitmovin_api_sdk.encoding.encodings.muxings.fmp4.drm.cenc.cenc_api import CencDrmListQueryParams
 from bitmovin_api_sdk.encoding.encodings.muxings.fmp4.drm.cenc.customdata.customdata_api import CustomdataApi
 
+from bitmovin_api_sdk.encoding.encodings.muxings.fmp4.drm.aes.aes_api import AesApi
+from bitmovin_api_sdk.encoding.encodings.muxings.fmp4.drm.aes.aes_api import AesEncryptionDrmListQueryParams
+from bitmovin_api_sdk.encoding.encodings.muxings.fmp4.drm.aes.customdata.customdata_api import CustomdataApi
+
 from bitmovin_api_sdk.encoding.encodings.muxings.fmp4.drm.speke.speke_api import SpekeApi
 from bitmovin_api_sdk.encoding.encodings.muxings.fmp4.drm.speke.speke_api import SpekeDrmListQueryParams
 from bitmovin_api_sdk.encoding.encodings.muxings.fmp4.drm.speke.customdata.customdata_api import CustomdataApi
@@ -814,6 +818,10 @@ from bitmovin_api_sdk.notifications.webhooks.encoding.encodings.finished.customd
 from bitmovin_api_sdk.notifications.webhooks.encoding.encodings.error.error_api import ErrorApi
 from bitmovin_api_sdk.notifications.webhooks.encoding.encodings.error.error_api import WebhookListQueryParams, WebhookListByEncodingIdQueryParams
 from bitmovin_api_sdk.notifications.webhooks.encoding.encodings.error.customdata.customdata_api import CustomdataApi
+
+from bitmovin_api_sdk.notifications.webhooks.encoding.encodings.transfer_error.transfer_error_api import TransferErrorApi
+from bitmovin_api_sdk.notifications.webhooks.encoding.encodings.transfer_error.transfer_error_api import WebhookListQueryParams, WebhookListByEncodingIdQueryParams
+from bitmovin_api_sdk.notifications.webhooks.encoding.encodings.transfer_error.customdata.customdata_api import CustomdataApi
 
 from bitmovin_api_sdk.notifications.webhooks.encoding.manifest.manifest_api import ManifestApi
 from bitmovin_api_sdk.notifications.webhooks.encoding.manifest.manifest_api import NotificationListQueryParams
@@ -1435,4 +1443,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.36.0"
+__version__ = "1.37.0"

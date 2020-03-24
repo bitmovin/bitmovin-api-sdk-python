@@ -192,7 +192,7 @@
 <span class="sd">        :type encoding_id: string_types, required</span>
 <span class="sd">        :param muxing_id: Id of the Progressive TS muxing</span>
 <span class="sd">        :type muxing_id: string_types, required</span>
-<span class="sd">        :param aes_encryption_drm: The AES encryption configuration to be created</span>
+<span class="sd">        :param aes_encryption_drm: The AES encryption configuration to be created. Note that for AES encryption in conjunction with Progressive TS muxing the &amp;#39;iv&amp;#39; must remain unset or be empty.</span>
 <span class="sd">        :type aes_encryption_drm: AesEncryptionDrm, required</span>
 <span class="sd">        :return: AES encryption details</span>
 <span class="sd">        :rtype: AesEncryptionDrm</span>

@@ -6,6 +6,7 @@ from bitmovin_api_sdk.common import BaseApi, BitmovinApiLoggerBase
 from bitmovin_api_sdk.common.poscheck import poscheck_except
 from bitmovin_api_sdk.notifications.webhooks.encoding.encodings.finished.finished_api import FinishedApi
 from bitmovin_api_sdk.notifications.webhooks.encoding.encodings.error.error_api import ErrorApi
+from bitmovin_api_sdk.notifications.webhooks.encoding.encodings.transfer_error.transfer_error_api import TransferErrorApi
 
 
 class EncodingsApi(BaseApi):
@@ -28,6 +29,13 @@ class EncodingsApi(BaseApi):
         )
 
         self.error = ErrorApi(
+            api_key=api_key,
+            tenant_org_id=tenant_org_id,
+            base_url=base_url,
+            logger=logger
+        )
+
+        self.transfer_error = TransferErrorApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,

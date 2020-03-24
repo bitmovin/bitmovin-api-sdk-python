@@ -6,6 +6,7 @@ Subpackages
 
 .. toctree::
 
+   bitmovin_api_sdk.encoding.encodings.muxings.fmp4.drm.aes
    bitmovin_api_sdk.encoding.encodings.muxings.fmp4.drm.cenc
    bitmovin_api_sdk.encoding.encodings.muxings.fmp4.drm.clearkey
    bitmovin_api_sdk.encoding.encodings.muxings.fmp4.drm.fairplay

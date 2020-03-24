@@ -1,0 +1,45 @@
+bitmovin\_api\_sdk.notifications.webhooks.encoding.encodings.transfer\_error package
+====================================================================================
+
+Subpackages
+-----------
+
+.. toctree::
+
+   bitmovin_api_sdk.notifications.webhooks.encoding.encodings.transfer_error.customdata
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.notifications.webhooks.encoding.encodings.transfer\_error.transfer\_error\_api module
+--------------------------------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.notifications.webhooks.encoding.encodings.transfer_error.transfer_error_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.notifications.webhooks.encoding.encodings.transfer\_error.webhook\_list\_by\_encoding\_id\_query\_params module
+----------------------------------------------------------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.notifications.webhooks.encoding.encodings.transfer_error.webhook_list_by_encoding_id_query_params
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.notifications.webhooks.encoding.encodings.transfer\_error.webhook\_list\_query\_params module
+----------------------------------------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.notifications.webhooks.encoding.encodings.transfer_error.webhook_list_query_params
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.notifications.webhooks.encoding.encodings.transfer_error
+   :members:
+   :undoc-members:
+   :show-inheritance:
