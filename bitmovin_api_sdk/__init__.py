@@ -125,6 +125,10 @@ from bitmovin_api_sdk.encoding.inputs.gcs.gcs_api import GcsApi
 from bitmovin_api_sdk.encoding.inputs.gcs.gcs_api import GcsInputListQueryParams
 from bitmovin_api_sdk.encoding.inputs.gcs.customdata.customdata_api import CustomdataApi
 
+from bitmovin_api_sdk.encoding.inputs.gcs_service_account.gcs_service_account_api import GcsServiceAccountApi
+from bitmovin_api_sdk.encoding.inputs.gcs_service_account.gcs_service_account_api import GcsServiceAccountInputListQueryParams
+from bitmovin_api_sdk.encoding.inputs.gcs_service_account.customdata.customdata_api import CustomdataApi
+
 from bitmovin_api_sdk.encoding.inputs.azure.azure_api import AzureApi
 from bitmovin_api_sdk.encoding.inputs.azure.azure_api import AzureInputListQueryParams
 from bitmovin_api_sdk.encoding.inputs.azure.customdata.customdata_api import CustomdataApi
@@ -192,6 +196,10 @@ from bitmovin_api_sdk.encoding.outputs.local.customdata.customdata_api import Cu
 from bitmovin_api_sdk.encoding.outputs.gcs.gcs_api import GcsApi
 from bitmovin_api_sdk.encoding.outputs.gcs.gcs_api import GcsOutputListQueryParams
 from bitmovin_api_sdk.encoding.outputs.gcs.customdata.customdata_api import CustomdataApi
+
+from bitmovin_api_sdk.encoding.outputs.gcs_service_account.gcs_service_account_api import GcsServiceAccountApi
+from bitmovin_api_sdk.encoding.outputs.gcs_service_account.gcs_service_account_api import GcsServiceAccountOutputListQueryParams
+from bitmovin_api_sdk.encoding.outputs.gcs_service_account.customdata.customdata_api import CustomdataApi
 
 from bitmovin_api_sdk.encoding.outputs.azure.azure_api import AzureApi
 from bitmovin_api_sdk.encoding.outputs.azure.azure_api import AzureOutputListQueryParams
@@ -777,6 +785,8 @@ from bitmovin_api_sdk.encoding.statistics.encodings.live.live_api import LiveApi
 from bitmovin_api_sdk.encoding.statistics.encodings.live.live_api import EncodingStatisticsLiveListQueryParams, EncodingStatisticsLiveListByDateRangeQueryParams
 from bitmovin_api_sdk.encoding.statistics.encodings.vod.vod_api import VodApi
 from bitmovin_api_sdk.encoding.statistics.encodings.vod.vod_api import EncodingStatisticsVodListQueryParams, EncodingStatisticsVodListByDateRangeQueryParams
+from bitmovin_api_sdk.encoding.statistics.encodings.live.daily.daily_api import DailyApi
+from bitmovin_api_sdk.encoding.statistics.encodings.live.daily.daily_api import EncodingStatisticsLiveListByDateRangeQueryParams
 from bitmovin_api_sdk.encoding.statistics.encodings.live_statistics.live_statistics_api import LiveStatisticsApi
 
 from bitmovin_api_sdk.encoding.statistics.encodings.live_statistics.events.events_api import EventsApi
@@ -978,6 +988,8 @@ from bitmovin_api_sdk.models.audio_mix_filter import AudioMixFilter
 from bitmovin_api_sdk.models.audio_mix_input_channel_layout import AudioMixInputChannelLayout
 from bitmovin_api_sdk.models.audio_mix_input_stream import AudioMixInputStream
 from bitmovin_api_sdk.models.audio_mix_input_stream_channel import AudioMixInputStreamChannel
+from bitmovin_api_sdk.models.audio_mix_input_stream_source_channel import AudioMixInputStreamSourceChannel
+from bitmovin_api_sdk.models.audio_mix_source_channel_type import AudioMixSourceChannelType
 from bitmovin_api_sdk.models.audio_stream import AudioStream
 from bitmovin_api_sdk.models.audio_video_sync_mode import AudioVideoSyncMode
 from bitmovin_api_sdk.models.audio_volume_filter import AudioVolumeFilter
@@ -1135,6 +1147,8 @@ from bitmovin_api_sdk.models.ftp_output import FtpOutput
 from bitmovin_api_sdk.models.gce_account import GceAccount
 from bitmovin_api_sdk.models.gcs_input import GcsInput
 from bitmovin_api_sdk.models.gcs_output import GcsOutput
+from bitmovin_api_sdk.models.gcs_service_account_input import GcsServiceAccountInput
+from bitmovin_api_sdk.models.gcs_service_account_output import GcsServiceAccountOutput
 from bitmovin_api_sdk.models.generic_s3_input import GenericS3Input
 from bitmovin_api_sdk.models.generic_s3_output import GenericS3Output
 from bitmovin_api_sdk.models.google_cloud_region import GoogleCloudRegion
@@ -1443,4 +1457,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.37.0"
+__version__ = "1.38.0"

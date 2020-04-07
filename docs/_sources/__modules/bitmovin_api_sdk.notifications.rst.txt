@@ -5,6 +5,7 @@ Subpackages
 -----------
 
 .. toctree::
+   :maxdepth: 4
 
    bitmovin_api_sdk.notifications.emails
    bitmovin_api_sdk.notifications.states

@@ -19,13 +19,15 @@ class BillableEncodingMinutes(object):
                  codec=None,
                  per_title_result_stream=None,
                  psnr_mode=None,
+                 preset=None,
                  billable_minutes=None):
-        # type: (EncodingMode, CodecConfigType, StatisticsPerTitleStream, PsnrPerStreamMode, BillableEncodingMinutesDetails) -> None
+        # type: (EncodingMode, CodecConfigType, StatisticsPerTitleStream, PsnrPerStreamMode, string_types, BillableEncodingMinutesDetails) -> None
 
         self._encoding_mode = None
         self._codec = None
         self._per_title_result_stream = None
         self._psnr_mode = None
+        self._preset = None
         self._billable_minutes = None
         self.discriminator = None
 
@@ -37,6 +39,8 @@ class BillableEncodingMinutes(object):
             self.per_title_result_stream = per_title_result_stream
         if psnr_mode is not None:
             self.psnr_mode = psnr_mode
+        if preset is not None:
+            self.preset = preset
         if billable_minutes is not None:
             self.billable_minutes = billable_minutes
 
@@ -47,6 +51,7 @@ class BillableEncodingMinutes(object):
             'codec': 'CodecConfigType',
             'per_title_result_stream': 'StatisticsPerTitleStream',
             'psnr_mode': 'PsnrPerStreamMode',
+            'preset': 'string_types',
             'billable_minutes': 'BillableEncodingMinutesDetails'
         }
 
@@ -59,6 +64,7 @@ class BillableEncodingMinutes(object):
             'codec': 'codec',
             'per_title_result_stream': 'perTitleResultStream',
             'psnr_mode': 'psnrMode',
+            'preset': 'preset',
             'billable_minutes': 'billableMinutes'
         }
         return attributes
@@ -170,6 +176,35 @@ class BillableEncodingMinutes(object):
                 raise TypeError("Invalid type for `psnr_mode`, type has to be `PsnrPerStreamMode`")
 
         self._psnr_mode = psnr_mode
+
+    @property
+    def preset(self):
+        # type: () -> string_types
+        """Gets the preset of this BillableEncodingMinutes.
+
+        Name of the preset configuration used for the codec configuration or \"CUSTOM\" if any preset values were overridden
+
+        :return: The preset of this BillableEncodingMinutes.
+        :rtype: string_types
+        """
+        return self._preset
+
+    @preset.setter
+    def preset(self, preset):
+        # type: (string_types) -> None
+        """Sets the preset of this BillableEncodingMinutes.
+
+        Name of the preset configuration used for the codec configuration or \"CUSTOM\" if any preset values were overridden
+
+        :param preset: The preset of this BillableEncodingMinutes.
+        :type: string_types
+        """
+
+        if preset is not None:
+            if not isinstance(preset, string_types):
+                raise TypeError("Invalid type for `preset`, type has to be `string_types`")
+
+        self._preset = preset
 
     @property
     def billable_minutes(self):

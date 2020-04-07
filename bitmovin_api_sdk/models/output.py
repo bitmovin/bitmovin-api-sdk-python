@@ -63,7 +63,8 @@ class Output(BitmovinResource):
         'S3_ROLE_BASED': 'S3RoleBasedOutput',
         'SFTP': 'SftpOutput',
         'AKAMAI_MSL': 'AkamaiMslOutput',
-        'LIVE_MEDIA_INGEST': 'LiveMediaIngestOutput'
+        'LIVE_MEDIA_INGEST': 'LiveMediaIngestOutput',
+        'GCS_SERVICE_ACCOUNT': 'GcsServiceAccountOutput'
     }
 
     @property

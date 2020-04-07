@@ -15,6 +15,7 @@ from bitmovin_api_sdk.encoding.inputs.s3_role_based.s3_role_based_api import S3R
 from bitmovin_api_sdk.encoding.inputs.generic_s3.generic_s3_api import GenericS3Api
 from bitmovin_api_sdk.encoding.inputs.local.local_api import LocalApi
 from bitmovin_api_sdk.encoding.inputs.gcs.gcs_api import GcsApi
+from bitmovin_api_sdk.encoding.inputs.gcs_service_account.gcs_service_account_api import GcsServiceAccountApi
 from bitmovin_api_sdk.encoding.inputs.azure.azure_api import AzureApi
 from bitmovin_api_sdk.encoding.inputs.ftp.ftp_api import FtpApi
 from bitmovin_api_sdk.encoding.inputs.sftp.sftp_api import SftpApi
@@ -92,6 +93,13 @@ class InputsApi(BaseApi):
         )
 
         self.gcs = GcsApi(
+            api_key=api_key,
+            tenant_org_id=tenant_org_id,
+            base_url=base_url,
+            logger=logger
+        )
+
+        self.gcs_service_account = GcsServiceAccountApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,

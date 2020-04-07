@@ -5,6 +5,7 @@ Subpackages
 -----------
 
 .. toctree::
+   :maxdepth: 4
 
    bitmovin_api_sdk.encoding.encodings.streams.burn_in_subtitles.dvbsub
    bitmovin_api_sdk.encoding.encodings.streams.burn_in_subtitles.srt

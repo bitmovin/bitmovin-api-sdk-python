@@ -5,6 +5,7 @@ Subpackages
 -----------
 
 .. toctree::
+   :maxdepth: 4
 
    bitmovin_api_sdk.encoding.encodings.muxings.broadcast_ts.customdata
    bitmovin_api_sdk.encoding.encodings.muxings.broadcast_ts.information

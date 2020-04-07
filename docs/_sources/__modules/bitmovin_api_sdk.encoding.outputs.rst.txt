@@ -5,12 +5,14 @@ Subpackages
 -----------
 
 .. toctree::
+   :maxdepth: 4
 
    bitmovin_api_sdk.encoding.outputs.akamai_msl
    bitmovin_api_sdk.encoding.outputs.akamai_netstorage
    bitmovin_api_sdk.encoding.outputs.azure
    bitmovin_api_sdk.encoding.outputs.ftp
    bitmovin_api_sdk.encoding.outputs.gcs
+   bitmovin_api_sdk.encoding.outputs.gcs_service_account
    bitmovin_api_sdk.encoding.outputs.generic_s3
    bitmovin_api_sdk.encoding.outputs.live_media_ingest
    bitmovin_api_sdk.encoding.outputs.local

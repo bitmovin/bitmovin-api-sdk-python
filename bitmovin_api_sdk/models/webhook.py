@@ -24,8 +24,9 @@ class Webhook(BitmovinResource):
                  method=None,
                  insecure_ssl=None,
                  encryption=None,
-                 signature=None):
-        # type: (string_types, string_types, string_types, datetime, datetime, dict, string_types, WebhookHttpMethod, bool, WebhookEncryption, WebhookSignature) -> None
+                 signature=None,
+                 schema=None):
+        # type: (string_types, string_types, string_types, datetime, datetime, dict, string_types, WebhookHttpMethod, bool, WebhookEncryption, WebhookSignature, object) -> None
         super(Webhook, self).__init__(id_=id_, name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data)
 
         self._url = None
@@ -33,6 +34,7 @@ class Webhook(BitmovinResource):
         self._insecure_ssl = None
         self._encryption = None
         self._signature = None
+        self._schema = None
         self.discriminator = None
 
         if url is not None:
@@ -45,6 +47,8 @@ class Webhook(BitmovinResource):
             self.encryption = encryption
         if signature is not None:
             self.signature = signature
+        if schema is not None:
+            self.schema = schema
 
     @property
     def openapi_types(self):
@@ -58,7 +62,8 @@ class Webhook(BitmovinResource):
             'method': 'WebhookHttpMethod',
             'insecure_ssl': 'bool',
             'encryption': 'WebhookEncryption',
-            'signature': 'WebhookSignature'
+            'signature': 'WebhookSignature',
+            'schema': 'object'
         })
 
         return types
@@ -75,7 +80,8 @@ class Webhook(BitmovinResource):
             'method': 'method',
             'insecure_ssl': 'insecureSsl',
             'encryption': 'encryption',
-            'signature': 'signature'
+            'signature': 'signature',
+            'schema': 'schema'
         })
         return attributes
 
@@ -223,6 +229,35 @@ class Webhook(BitmovinResource):
                 raise TypeError("Invalid type for `signature`, type has to be `WebhookSignature`")
 
         self._signature = signature
+
+    @property
+    def schema(self):
+        # type: () -> object
+        """Gets the schema of this Webhook.
+
+        The json schema of the data that is send as webhook payload
+
+        :return: The schema of this Webhook.
+        :rtype: object
+        """
+        return self._schema
+
+    @schema.setter
+    def schema(self, schema):
+        # type: (object) -> None
+        """Sets the schema of this Webhook.
+
+        The json schema of the data that is send as webhook payload
+
+        :param schema: The schema of this Webhook.
+        :type: object
+        """
+
+        if schema is not None:
+            if not isinstance(schema, object):
+                raise TypeError("Invalid type for `schema`, type has to be `object`")
+
+        self._schema = schema
 
     def to_dict(self):
         """Returns the model properties as a dict"""

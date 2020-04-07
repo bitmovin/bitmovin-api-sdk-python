@@ -5,6 +5,7 @@ Subpackages
 -----------
 
 .. toctree::
+   :maxdepth: 4
 
    bitmovin_api_sdk.notifications.webhooks.encoding.encodings.error
    bitmovin_api_sdk.notifications.webhooks.encoding.encodings.finished

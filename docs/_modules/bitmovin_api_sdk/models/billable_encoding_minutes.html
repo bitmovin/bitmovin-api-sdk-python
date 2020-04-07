@@ -172,13 +172,15 @@
                  <span class="n">codec</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">per_title_result_stream</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">psnr_mode</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">preset</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">billable_minutes</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (EncodingMode, CodecConfigType, StatisticsPerTitleStream, PsnrPerStreamMode, BillableEncodingMinutesDetails) -&gt; None</span>
+        <span class="c1"># type: (EncodingMode, CodecConfigType, StatisticsPerTitleStream, PsnrPerStreamMode, string_types, BillableEncodingMinutesDetails) -&gt; None</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_encoding_mode</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_codec</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_per_title_result_stream</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_psnr_mode</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_preset</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_billable_minutes</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>
 
@@ -190,6 +192,8 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">per_title_result_stream</span> <span class="o">=</span> <span class="n">per_title_result_stream</span>
         <span class="k">if</span> <span class="n">psnr_mode</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">psnr_mode</span> <span class="o">=</span> <span class="n">psnr_mode</span>
+        <span class="k">if</span> <span class="n">preset</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">preset</span> <span class="o">=</span> <span class="n">preset</span>
         <span class="k">if</span> <span class="n">billable_minutes</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">billable_minutes</span> <span class="o">=</span> <span class="n">billable_minutes</span>
 
@@ -200,6 +204,7 @@
             <span class="s1">&#39;codec&#39;</span><span class="p">:</span> <span class="s1">&#39;CodecConfigType&#39;</span><span class="p">,</span>
             <span class="s1">&#39;per_title_result_stream&#39;</span><span class="p">:</span> <span class="s1">&#39;StatisticsPerTitleStream&#39;</span><span class="p">,</span>
             <span class="s1">&#39;psnr_mode&#39;</span><span class="p">:</span> <span class="s1">&#39;PsnrPerStreamMode&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;preset&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
             <span class="s1">&#39;billable_minutes&#39;</span><span class="p">:</span> <span class="s1">&#39;BillableEncodingMinutesDetails&#39;</span>
         <span class="p">}</span>
 
@@ -212,6 +217,7 @@
             <span class="s1">&#39;codec&#39;</span><span class="p">:</span> <span class="s1">&#39;codec&#39;</span><span class="p">,</span>
             <span class="s1">&#39;per_title_result_stream&#39;</span><span class="p">:</span> <span class="s1">&#39;perTitleResultStream&#39;</span><span class="p">,</span>
             <span class="s1">&#39;psnr_mode&#39;</span><span class="p">:</span> <span class="s1">&#39;psnrMode&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;preset&#39;</span><span class="p">:</span> <span class="s1">&#39;preset&#39;</span><span class="p">,</span>
             <span class="s1">&#39;billable_minutes&#39;</span><span class="p">:</span> <span class="s1">&#39;billableMinutes&#39;</span>
         <span class="p">}</span>
         <span class="k">return</span> <span class="n">attributes</span>
@@ -323,6 +329,35 @@
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `psnr_mode`, type has to be `PsnrPerStreamMode`&quot;</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_psnr_mode</span> <span class="o">=</span> <span class="n">psnr_mode</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">preset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; string_types</span>
+        <span class="sd">&quot;&quot;&quot;Gets the preset of this BillableEncodingMinutes.</span>
+
+<span class="sd">        Name of the preset configuration used for the codec configuration or \&quot;CUSTOM\&quot; if any preset values were overridden</span>
+
+<span class="sd">        :return: The preset of this BillableEncodingMinutes.</span>
+<span class="sd">        :rtype: string_types</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_preset</span>
+
+    <span class="nd">@preset</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">preset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">preset</span><span class="p">):</span>
+        <span class="c1"># type: (string_types) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the preset of this BillableEncodingMinutes.</span>
+
+<span class="sd">        Name of the preset configuration used for the codec configuration or \&quot;CUSTOM\&quot; if any preset values were overridden</span>
+
+<span class="sd">        :param preset: The preset of this BillableEncodingMinutes.</span>
+<span class="sd">        :type: string_types</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">preset</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">preset</span><span class="p">,</span> <span class="n">string_types</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `preset`, type has to be `string_types`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_preset</span> <span class="o">=</span> <span class="n">preset</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">billable_minutes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>

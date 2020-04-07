@@ -5,6 +5,7 @@ from bitmovin_api_sdk.encoding.outputs.s3_role_based.s3_role_based_api import S3
 from bitmovin_api_sdk.encoding.outputs.generic_s3.generic_s3_api import GenericS3Api
 from bitmovin_api_sdk.encoding.outputs.local.local_api import LocalApi
 from bitmovin_api_sdk.encoding.outputs.gcs.gcs_api import GcsApi
+from bitmovin_api_sdk.encoding.outputs.gcs_service_account.gcs_service_account_api import GcsServiceAccountApi
 from bitmovin_api_sdk.encoding.outputs.azure.azure_api import AzureApi
 from bitmovin_api_sdk.encoding.outputs.ftp.ftp_api import FtpApi
 from bitmovin_api_sdk.encoding.outputs.sftp.sftp_api import SftpApi

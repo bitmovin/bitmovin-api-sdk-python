@@ -5,6 +5,7 @@ Subpackages
 -----------
 
 .. toctree::
+   :maxdepth: 4
 
    bitmovin_api_sdk.analytics.metrics.avg_concurrentviewers
    bitmovin_api_sdk.analytics.metrics.avg_dropped_frames

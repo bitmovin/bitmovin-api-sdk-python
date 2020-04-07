@@ -13,12 +13,14 @@ class AudioMixInputStreamChannel(object):
     def __init__(self,
                  input_stream_id=None,
                  output_channel_type=None,
-                 output_channel_number=None):
-        # type: (string_types, AudioMixChannelType, int) -> None
+                 output_channel_number=None,
+                 source_channels=None):
+        # type: (string_types, AudioMixChannelType, int, list[AudioMixInputStreamSourceChannel]) -> None
 
         self._input_stream_id = None
         self._output_channel_type = None
         self._output_channel_number = None
+        self._source_channels = list()
         self.discriminator = None
 
         if input_stream_id is not None:
@@ -27,13 +29,16 @@ class AudioMixInputStreamChannel(object):
             self.output_channel_type = output_channel_type
         if output_channel_number is not None:
             self.output_channel_number = output_channel_number
+        if source_channels is not None:
+            self.source_channels = source_channels
 
     @property
     def openapi_types(self):
         types = {
             'input_stream_id': 'string_types',
             'output_channel_type': 'AudioMixChannelType',
-            'output_channel_number': 'int'
+            'output_channel_number': 'int',
+            'source_channels': 'list[AudioMixInputStreamSourceChannel]'
         }
 
         return types
@@ -43,7 +48,8 @@ class AudioMixInputStreamChannel(object):
         attributes = {
             'input_stream_id': 'inputStreamId',
             'output_channel_type': 'outputChannelType',
-            'output_channel_number': 'outputChannelNumber'
+            'output_channel_number': 'outputChannelNumber',
+            'source_channels': 'sourceChannels'
         }
         return attributes
 
@@ -131,6 +137,35 @@ class AudioMixInputStreamChannel(object):
                 raise TypeError("Invalid type for `output_channel_number`, type has to be `int`")
 
         self._output_channel_number = output_channel_number
+
+    @property
+    def source_channels(self):
+        # type: () -> list[AudioMixInputStreamSourceChannel]
+        """Gets the source_channels of this AudioMixInputStreamChannel.
+
+        List of source channels to be mixed
+
+        :return: The source_channels of this AudioMixInputStreamChannel.
+        :rtype: list[AudioMixInputStreamSourceChannel]
+        """
+        return self._source_channels
+
+    @source_channels.setter
+    def source_channels(self, source_channels):
+        # type: (list) -> None
+        """Sets the source_channels of this AudioMixInputStreamChannel.
+
+        List of source channels to be mixed
+
+        :param source_channels: The source_channels of this AudioMixInputStreamChannel.
+        :type: list[AudioMixInputStreamSourceChannel]
+        """
+
+        if source_channels is not None:
+            if not isinstance(source_channels, list):
+                raise TypeError("Invalid type for `source_channels`, type has to be `list[AudioMixInputStreamSourceChannel]`")
+
+        self._source_channels = source_channels
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -7,6 +7,7 @@ from bitmovin_api_sdk.common.poscheck import poscheck_except
 from bitmovin_api_sdk.models.encoding_statistics_live import EncodingStatisticsLive
 from bitmovin_api_sdk.models.response_envelope import ResponseEnvelope
 from bitmovin_api_sdk.models.response_error import ResponseError
+from bitmovin_api_sdk.encoding.statistics.encodings.live.daily.daily_api import DailyApi
 from bitmovin_api_sdk.encoding.statistics.encodings.live.encoding_statistics_live_list_query_params import EncodingStatisticsLiveListQueryParams
 from bitmovin_api_sdk.encoding.statistics.encodings.live.encoding_statistics_live_list_by_date_range_query_params import EncodingStatisticsLiveListByDateRangeQueryParams
 
@@ -17,6 +18,13 @@ class LiveApi(BaseApi):
         # type: (str, str, str, BitmovinApiLoggerBase) -> None
 
         super(LiveApi, self).__init__(
+            api_key=api_key,
+            tenant_org_id=tenant_org_id,
+            base_url=base_url,
+            logger=logger
+        )
+
+        self.daily = DailyApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,

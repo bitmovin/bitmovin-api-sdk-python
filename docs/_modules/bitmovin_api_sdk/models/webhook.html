@@ -177,8 +177,9 @@
                  <span class="n">method</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">insecure_ssl</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">encryption</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                 <span class="n">signature</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (string_types, string_types, string_types, datetime, datetime, dict, string_types, WebhookHttpMethod, bool, WebhookEncryption, WebhookSignature) -&gt; None</span>
+                 <span class="n">signature</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">schema</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="c1"># type: (string_types, string_types, string_types, datetime, datetime, dict, string_types, WebhookHttpMethod, bool, WebhookEncryption, WebhookSignature, object) -&gt; None</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">Webhook</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">id_</span><span class="o">=</span><span class="n">id_</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="n">description</span><span class="p">,</span> <span class="n">created_at</span><span class="o">=</span><span class="n">created_at</span><span class="p">,</span> <span class="n">modified_at</span><span class="o">=</span><span class="n">modified_at</span><span class="p">,</span> <span class="n">custom_data</span><span class="o">=</span><span class="n">custom_data</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_url</span> <span class="o">=</span> <span class="kc">None</span>
@@ -186,6 +187,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_insecure_ssl</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_encryption</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_signature</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_schema</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>
 
         <span class="k">if</span> <span class="n">url</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -198,6 +200,8 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">encryption</span> <span class="o">=</span> <span class="n">encryption</span>
         <span class="k">if</span> <span class="n">signature</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">signature</span> <span class="o">=</span> <span class="n">signature</span>
+        <span class="k">if</span> <span class="n">schema</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">schema</span> <span class="o">=</span> <span class="n">schema</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -211,7 +215,8 @@
             <span class="s1">&#39;method&#39;</span><span class="p">:</span> <span class="s1">&#39;WebhookHttpMethod&#39;</span><span class="p">,</span>
             <span class="s1">&#39;insecure_ssl&#39;</span><span class="p">:</span> <span class="s1">&#39;bool&#39;</span><span class="p">,</span>
             <span class="s1">&#39;encryption&#39;</span><span class="p">:</span> <span class="s1">&#39;WebhookEncryption&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;signature&#39;</span><span class="p">:</span> <span class="s1">&#39;WebhookSignature&#39;</span>
+            <span class="s1">&#39;signature&#39;</span><span class="p">:</span> <span class="s1">&#39;WebhookSignature&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;schema&#39;</span><span class="p">:</span> <span class="s1">&#39;object&#39;</span>
         <span class="p">})</span>
 
         <span class="k">return</span> <span class="n">types</span>
@@ -228,7 +233,8 @@
             <span class="s1">&#39;method&#39;</span><span class="p">:</span> <span class="s1">&#39;method&#39;</span><span class="p">,</span>
             <span class="s1">&#39;insecure_ssl&#39;</span><span class="p">:</span> <span class="s1">&#39;insecureSsl&#39;</span><span class="p">,</span>
             <span class="s1">&#39;encryption&#39;</span><span class="p">:</span> <span class="s1">&#39;encryption&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;signature&#39;</span><span class="p">:</span> <span class="s1">&#39;signature&#39;</span>
+            <span class="s1">&#39;signature&#39;</span><span class="p">:</span> <span class="s1">&#39;signature&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;schema&#39;</span><span class="p">:</span> <span class="s1">&#39;schema&#39;</span>
         <span class="p">})</span>
         <span class="k">return</span> <span class="n">attributes</span>
 
@@ -376,6 +382,35 @@
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `signature`, type has to be `WebhookSignature`&quot;</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_signature</span> <span class="o">=</span> <span class="n">signature</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">schema</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; object</span>
+        <span class="sd">&quot;&quot;&quot;Gets the schema of this Webhook.</span>
+
+<span class="sd">        The json schema of the data that is send as webhook payload</span>
+
+<span class="sd">        :return: The schema of this Webhook.</span>
+<span class="sd">        :rtype: object</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_schema</span>
+
+    <span class="nd">@schema</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">schema</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">schema</span><span class="p">):</span>
+        <span class="c1"># type: (object) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the schema of this Webhook.</span>
+
+<span class="sd">        The json schema of the data that is send as webhook payload</span>
+
+<span class="sd">        :param schema: The schema of this Webhook.</span>
+<span class="sd">        :type: object</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">schema</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">schema</span><span class="p">,</span> <span class="nb">object</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `schema`, type has to be `object`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_schema</span> <span class="o">=</span> <span class="n">schema</span>
 
 <div class="viewcode-block" id="Webhook.to_dict"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.webhook.Webhook.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>

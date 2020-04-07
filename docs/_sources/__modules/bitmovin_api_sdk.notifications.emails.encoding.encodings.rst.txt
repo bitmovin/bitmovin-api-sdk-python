@@ -5,6 +5,7 @@ Subpackages
 -----------
 
 .. toctree::
+   :maxdepth: 4
 
    bitmovin_api_sdk.notifications.emails.encoding.encodings.error
    bitmovin_api_sdk.notifications.emails.encoding.encodings.live_input_stream_changed

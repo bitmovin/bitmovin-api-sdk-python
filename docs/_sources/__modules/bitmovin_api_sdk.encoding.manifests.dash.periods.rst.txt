@@ -5,6 +5,7 @@ Subpackages
 -----------
 
 .. toctree::
+   :maxdepth: 4
 
    bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets
    bitmovin_api_sdk.encoding.manifests.dash.periods.custom_xml_elements

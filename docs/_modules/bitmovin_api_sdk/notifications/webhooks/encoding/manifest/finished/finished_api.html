@@ -157,6 +157,7 @@
 
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.common</span> <span class="kn">import</span> <span class="n">BaseApi</span><span class="p">,</span> <span class="n">BitmovinApiLoggerBase</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.common.poscheck</span> <span class="kn">import</span> <span class="n">poscheck_except</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.bitmovin_response</span> <span class="kn">import</span> <span class="n">BitmovinResponse</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.response_envelope</span> <span class="kn">import</span> <span class="n">ResponseEnvelope</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.response_error</span> <span class="kn">import</span> <span class="n">ResponseError</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.webhook</span> <span class="kn">import</span> <span class="n">Webhook</span>
@@ -178,16 +179,15 @@
         <span class="c1"># type: (Webhook, dict) -&gt; Webhook</span>
         <span class="sd">&quot;&quot;&quot;Add Manifest Finished Successfully Webhook (All Manifests)</span>
 
-<span class="sd">        :param webhook: Add a new webhook notification if a manifest creation finished successfully</span>
+<span class="sd">        :param webhook: Add a new webhook notification if a manifest creation finished successfully. **Note:** A maximum number of 5 webhooks is allowed</span>
 <span class="sd">        :type webhook: Webhook, required</span>
-<span class="sd">        :return: Notification Details</span>
+<span class="sd">        :return: Webhook Details</span>
 <span class="sd">        :rtype: Webhook</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">post</span><span class="p">(</span>
             <span class="s1">&#39;/notifications/webhooks/encoding/manifest/finished&#39;</span><span class="p">,</span>
             <span class="n">webhook</span><span class="p">,</span>
-            <span class="n">pagination_response</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">Webhook</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>
         <span class="p">)</span></div>
@@ -198,7 +198,7 @@
 
 <span class="sd">        :param manifest_id: Id of the manifest resource</span>
 <span class="sd">        :type manifest_id: string_types, required</span>
-<span class="sd">        :param webhook: The webhook notifications object</span>
+<span class="sd">        :param webhook: The webhook notifications object. **Note:** A maximum number of 5 webhooks is allowed</span>
 <span class="sd">        :type webhook: Webhook, required</span>
 <span class="sd">        :return: Notification Details</span>
 <span class="sd">        :rtype: Webhook</span>
@@ -209,6 +209,23 @@
             <span class="n">webhook</span><span class="p">,</span>
             <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;manifest_id&#39;</span><span class="p">:</span> <span class="n">manifest_id</span><span class="p">},</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">Webhook</span><span class="p">,</span>
+            <span class="o">**</span><span class="n">kwargs</span>
+        <span class="p">)</span></div>
+
+<div class="viewcode-block" id="FinishedApi.delete"><a class="viewcode-back" href="../../../../../../../__modules/bitmovin_api_sdk.notifications.webhooks.encoding.manifest.finished.html#bitmovin_api_sdk.notifications.webhooks.encoding.manifest.finished.finished_api.FinishedApi.delete">[docs]</a>    <span class="k">def</span> <span class="nf">delete</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">notification_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="c1"># type: (string_types, dict) -&gt; BitmovinResponse</span>
+        <span class="sd">&quot;&quot;&quot;Delete Manifest Finished Webhook</span>
+
+<span class="sd">        :param notification_id: Id of the webhook notification</span>
+<span class="sd">        :type notification_id: string_types, required</span>
+<span class="sd">        :return: Id of the webhook</span>
+<span class="sd">        :rtype: BitmovinResponse</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span>
+            <span class="s1">&#39;/notifications/webhooks/encoding/manifest/finished/</span><span class="si">{notification_id}</span><span class="s1">&#39;</span><span class="p">,</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;notification_id&#39;</span><span class="p">:</span> <span class="n">notification_id</span><span class="p">},</span>
+            <span class="nb">type</span><span class="o">=</span><span class="n">BitmovinResponse</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>
         <span class="p">)</span></div>
 

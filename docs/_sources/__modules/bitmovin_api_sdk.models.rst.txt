@@ -868,6 +868,22 @@ bitmovin\_api\_sdk.models.audio\_mix\_input\_stream\_channel module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.audio\_mix\_input\_stream\_source\_channel module
+---------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.audio_mix_input_stream_source_channel
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.audio\_mix\_source\_channel\_type module
+------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.audio_mix_source_channel_type
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.audio\_stream module
 ----------------------------------------------
 
@@ -2120,6 +2136,22 @@ bitmovin\_api\_sdk.models.gcs\_output module
 --------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.models.gcs_output
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.gcs\_service\_account\_input module
+-------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.gcs_service_account_input
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.gcs\_service\_account\_output module
+--------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.gcs_service_account_output
    :members:
    :undoc-members:
    :show-inheritance:

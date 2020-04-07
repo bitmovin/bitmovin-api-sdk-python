@@ -25,3 +25,4 @@ class InputType(Enum):
     UDP_MULTICAST = "UDP_MULTICAST"
     ZIXI = "ZIXI"
     SRT = "SRT"
+    GCS_SERVICE_ACCOUNT = "GCS_SERVICE_ACCOUNT"

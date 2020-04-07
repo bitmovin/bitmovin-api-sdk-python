@@ -5,6 +5,7 @@ Subpackages
 -----------
 
 .. toctree::
+   :maxdepth: 4
 
    bitmovin_api_sdk.player.custom_builds.web.domains
    bitmovin_api_sdk.player.custom_builds.web.download

@@ -28,7 +28,8 @@ class Input(BitmovinResource):
         'UDP': 'UdpInput',
         'UDP_MULTICAST': 'UdpMulticastInput',
         'ZIXI': 'ZixiInput',
-        'SRT': 'SrtInput'
+        'SRT': 'SrtInput',
+        'GCS_SERVICE_ACCOUNT': 'GcsServiceAccountInput'
     }
 
     def to_dict(self):

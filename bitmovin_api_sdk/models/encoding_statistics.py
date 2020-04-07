@@ -1,7 +1,7 @@
 # coding: utf-8
 
 from enum import Enum
-from datetime import datetime
+from datetime import date
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
 import pprint
@@ -15,7 +15,7 @@ class EncodingStatistics(object):
                  bytes_encoded=None,
                  time_encoded=None,
                  bytes_egress=None):
-        # type: (datetime, int, int, int) -> None
+        # type: (date, int, int, int) -> None
 
         self._date = None
         self._bytes_encoded = None
@@ -35,7 +35,7 @@ class EncodingStatistics(object):
     @property
     def openapi_types(self):
         types = {
-            'date': 'datetime',
+            'date': 'date',
             'bytes_encoded': 'int',
             'time_encoded': 'int',
             'bytes_egress': 'int'
@@ -55,30 +55,30 @@ class EncodingStatistics(object):
 
     @property
     def date(self):
-        # type: () -> datetime
+        # type: () -> date
         """Gets the date of this EncodingStatistics.
 
         Date, format. yyyy-MM-dd (required)
 
         :return: The date of this EncodingStatistics.
-        :rtype: datetime
+        :rtype: date
         """
         return self._date
 
     @date.setter
     def date(self, date_):
-        # type: (datetime) -> None
+        # type: (date) -> None
         """Sets the date of this EncodingStatistics.
 
         Date, format. yyyy-MM-dd (required)
 
         :param date_: The date of this EncodingStatistics.
-        :type: datetime
+        :type: date
         """
 
         if date_ is not None:
-            if not isinstance(date_, datetime):
-                raise TypeError("Invalid type for `date`, type has to be `datetime`")
+            if not isinstance(date_, date):
+                raise TypeError("Invalid type for `date`, type has to be `date`")
 
         self._date = date_
 

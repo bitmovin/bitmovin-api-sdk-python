@@ -5,6 +5,7 @@ Subpackages
 -----------
 
 .. toctree::
+   :maxdepth: 4
 
    bitmovin_api_sdk.encoding.encodings.input_streams.audio_mix
    bitmovin_api_sdk.encoding.encodings.input_streams.captions

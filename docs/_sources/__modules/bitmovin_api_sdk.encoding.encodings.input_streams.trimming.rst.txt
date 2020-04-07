@@ -5,6 +5,7 @@ Subpackages
 -----------
 
 .. toctree::
+   :maxdepth: 4
 
    bitmovin_api_sdk.encoding.encodings.input_streams.trimming.h264_picture_timing
    bitmovin_api_sdk.encoding.encodings.input_streams.trimming.time_based

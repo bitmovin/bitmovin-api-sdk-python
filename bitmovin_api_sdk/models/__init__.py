@@ -111,6 +111,8 @@ from bitmovin_api_sdk.models.audio_mix_filter import AudioMixFilter
 from bitmovin_api_sdk.models.audio_mix_input_channel_layout import AudioMixInputChannelLayout
 from bitmovin_api_sdk.models.audio_mix_input_stream import AudioMixInputStream
 from bitmovin_api_sdk.models.audio_mix_input_stream_channel import AudioMixInputStreamChannel
+from bitmovin_api_sdk.models.audio_mix_input_stream_source_channel import AudioMixInputStreamSourceChannel
+from bitmovin_api_sdk.models.audio_mix_source_channel_type import AudioMixSourceChannelType
 from bitmovin_api_sdk.models.audio_stream import AudioStream
 from bitmovin_api_sdk.models.audio_video_sync_mode import AudioVideoSyncMode
 from bitmovin_api_sdk.models.audio_volume_filter import AudioVolumeFilter
@@ -268,6 +270,8 @@ from bitmovin_api_sdk.models.ftp_output import FtpOutput
 from bitmovin_api_sdk.models.gce_account import GceAccount
 from bitmovin_api_sdk.models.gcs_input import GcsInput
 from bitmovin_api_sdk.models.gcs_output import GcsOutput
+from bitmovin_api_sdk.models.gcs_service_account_input import GcsServiceAccountInput
+from bitmovin_api_sdk.models.gcs_service_account_output import GcsServiceAccountOutput
 from bitmovin_api_sdk.models.generic_s3_input import GenericS3Input
 from bitmovin_api_sdk.models.generic_s3_output import GenericS3Output
 from bitmovin_api_sdk.models.google_cloud_region import GoogleCloudRegion

@@ -17,7 +17,7 @@ class EncodingStatisticsVod(EncodingStatistics):
                  bytes_egress=None,
                  time_enqueued=None,
                  real_time_factor=None):
-        # type: (datetime, int, int, int, int, float) -> None
+        # type: (date, int, int, int, int, float) -> None
         super(EncodingStatisticsVod, self).__init__(date_=date_, bytes_encoded=bytes_encoded, time_encoded=time_encoded, bytes_egress=bytes_egress)
 
         self._time_enqueued = None

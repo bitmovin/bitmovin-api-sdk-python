@@ -36,7 +36,7 @@ class FinishedApi(BaseApi):
         # type: (Webhook, dict) -> Webhook
         """Add Encoding Finished Webhook
 
-        :param webhook: The Encoding Finished Webhook to be added
+        :param webhook: The Encoding Finished Webhook to be added. **Note:** A maximum number of 5 webhooks is allowed
         :type webhook: Webhook, required
         :return: Webhook Details
         :rtype: Webhook
@@ -51,11 +51,11 @@ class FinishedApi(BaseApi):
 
     def create_by_encoding_id(self, encoding_id, webhook, **kwargs):
         # type: (string_types, Webhook, dict) -> Webhook
-        """Add Encoding Finished Webhook for specific Encoding Resource
+        """Add Encoding Finished Webhook for specific Encoding Resource.
 
         :param encoding_id: Id of the encoding
         :type encoding_id: string_types, required
-        :param webhook: The Encoding Finished Webhook to be added
+        :param webhook: The Encoding Finished Webhook to be added. **Note:** A maximum number of 5 webhooks is allowed
         :type webhook: Webhook, required
         :return: Webhook Details
         :rtype: Webhook

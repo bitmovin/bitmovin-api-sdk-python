@@ -4,6 +4,7 @@ from __future__ import absolute_import
 
 from bitmovin_api_sdk.common import BaseApi, BitmovinApiLoggerBase
 from bitmovin_api_sdk.common.poscheck import poscheck_except
+from bitmovin_api_sdk.models.bitmovin_response import BitmovinResponse
 from bitmovin_api_sdk.models.response_envelope import ResponseEnvelope
 from bitmovin_api_sdk.models.response_error import ResponseError
 from bitmovin_api_sdk.models.webhook import Webhook
@@ -25,16 +26,15 @@ class ErrorApi(BaseApi):
         # type: (Webhook, dict) -> Webhook
         """Add Manifest Error Webhook (All Manifests)
 
-        :param webhook: Add a new webhook notification if a manifest creation failed with an error
+        :param webhook: Add a new webhook notification if a manifest creation failed with an error. **Note:** A maximum number of 5 webhooks is allowed
         :type webhook: Webhook, required
-        :return: Notification Details
+        :return: Webhook Details
         :rtype: Webhook
         """
 
         return self.api_client.post(
             '/notifications/webhooks/encoding/manifest/error',
             webhook,
-            pagination_response=True,
             type=Webhook,
             **kwargs
         )
@@ -45,7 +45,7 @@ class ErrorApi(BaseApi):
 
         :param manifest_id: Id of the manifest resource
         :type manifest_id: string_types, required
-        :param webhook: The webhook notifications object
+        :param webhook: The webhook notifications object. **Note:** A maximum number of 5 webhooks is allowed
         :type webhook: Webhook, required
         :return: Notification Details
         :rtype: Webhook
@@ -56,6 +56,23 @@ class ErrorApi(BaseApi):
             webhook,
             path_params={'manifest_id': manifest_id},
             type=Webhook,
+            **kwargs
+        )
+
+    def delete(self, notification_id, **kwargs):
+        # type: (string_types, dict) -> BitmovinResponse
+        """Delete Manifest Error Webhook
+
+        :param notification_id: Id of the webhook notification
+        :type notification_id: string_types, required
+        :return: Id of the webhook
+        :rtype: BitmovinResponse
+        """
+
+        return self.api_client.delete(
+            '/notifications/webhooks/encoding/manifest/error/{notification_id}',
+            path_params={'notification_id': notification_id},
+            type=BitmovinResponse,
             **kwargs
         )
 

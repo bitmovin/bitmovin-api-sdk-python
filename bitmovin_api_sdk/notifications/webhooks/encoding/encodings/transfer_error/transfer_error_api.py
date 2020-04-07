@@ -36,7 +36,7 @@ class TransferErrorApi(BaseApi):
         # type: (Webhook, dict) -> Webhook
         """Add Encoding Transfer Error Webhook
 
-        :param webhook: The Encoding Transfer Error Webhook to be added
+        :param webhook: The Encoding Transfer Error Webhook to be added. **Note:** A maximum number of 5 webhooks is allowed
         :type webhook: Webhook, required
         :return: Webhook Details
         :rtype: Webhook
@@ -55,7 +55,7 @@ class TransferErrorApi(BaseApi):
 
         :param encoding_id: Id of the encoding
         :type encoding_id: string_types, required
-        :param webhook: The Encoding Transfer Error Webhook to be added
+        :param webhook: The Encoding Transfer Error Webhook to be added. **Note:** A maximum number of 5 webhooks is allowed
         :type webhook: Webhook, required
         :return: Webhook Details
         :rtype: Webhook
