@@ -9,6 +9,7 @@ Subpackages
 
    bitmovin_api_sdk.encoding.encodings.muxings.fmp4.customdata
    bitmovin_api_sdk.encoding.encodings.muxings.fmp4.drm
+   bitmovin_api_sdk.encoding.encodings.muxings.fmp4.information
 
 Submodules
 ----------

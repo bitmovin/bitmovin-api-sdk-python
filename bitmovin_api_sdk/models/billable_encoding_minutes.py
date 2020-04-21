@@ -20,14 +20,16 @@ class BillableEncodingMinutes(object):
                  per_title_result_stream=None,
                  psnr_mode=None,
                  preset=None,
+                 live=None,
                  billable_minutes=None):
-        # type: (EncodingMode, CodecConfigType, StatisticsPerTitleStream, PsnrPerStreamMode, string_types, BillableEncodingMinutesDetails) -> None
+        # type: (EncodingMode, CodecConfigType, StatisticsPerTitleStream, PsnrPerStreamMode, string_types, bool, BillableEncodingMinutesDetails) -> None
 
         self._encoding_mode = None
         self._codec = None
         self._per_title_result_stream = None
         self._psnr_mode = None
         self._preset = None
+        self._live = None
         self._billable_minutes = None
         self.discriminator = None
 
@@ -41,6 +43,8 @@ class BillableEncodingMinutes(object):
             self.psnr_mode = psnr_mode
         if preset is not None:
             self.preset = preset
+        if live is not None:
+            self.live = live
         if billable_minutes is not None:
             self.billable_minutes = billable_minutes
 
@@ -52,6 +56,7 @@ class BillableEncodingMinutes(object):
             'per_title_result_stream': 'StatisticsPerTitleStream',
             'psnr_mode': 'PsnrPerStreamMode',
             'preset': 'string_types',
+            'live': 'bool',
             'billable_minutes': 'BillableEncodingMinutesDetails'
         }
 
@@ -65,6 +70,7 @@ class BillableEncodingMinutes(object):
             'per_title_result_stream': 'perTitleResultStream',
             'psnr_mode': 'psnrMode',
             'preset': 'preset',
+            'live': 'live',
             'billable_minutes': 'billableMinutes'
         }
         return attributes
@@ -205,6 +211,35 @@ class BillableEncodingMinutes(object):
                 raise TypeError("Invalid type for `preset`, type has to be `string_types`")
 
         self._preset = preset
+
+    @property
+    def live(self):
+        # type: () -> bool
+        """Gets the live of this BillableEncodingMinutes.
+
+        Indicates if the stream was part of a live encoding.
+
+        :return: The live of this BillableEncodingMinutes.
+        :rtype: bool
+        """
+        return self._live
+
+    @live.setter
+    def live(self, live):
+        # type: (bool) -> None
+        """Sets the live of this BillableEncodingMinutes.
+
+        Indicates if the stream was part of a live encoding.
+
+        :param live: The live of this BillableEncodingMinutes.
+        :type: bool
+        """
+
+        if live is not None:
+            if not isinstance(live, bool):
+                raise TypeError("Invalid type for `live`, type has to be `bool`")
+
+        self._live = live
 
     @property
     def billable_minutes(self):

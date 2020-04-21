@@ -188,8 +188,12 @@
                  <span class="n">psnr_mode</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">psnr_multiplicator</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">dolby_vision_mode</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                 <span class="n">dolby_vision_multiplicator</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (string_types, string_types, float, int, float, float, int, int, float, int, CodecConfigType, StatisticsResolution, EncodingMode, float, StatisticsPerTitleStream, float, PsnrPerStreamMode, float, DolbyVisionPerStreamMode, float) -&gt; None</span>
+                 <span class="n">dolby_vision_multiplicator</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">preset</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">preset_multiplicator</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">live</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">live_multiplicator</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="c1"># type: (string_types, string_types, float, int, float, float, int, int, float, int, CodecConfigType, StatisticsResolution, EncodingMode, float, StatisticsPerTitleStream, float, PsnrPerStreamMode, float, DolbyVisionPerStreamMode, float, string_types, float, bool, float) -&gt; None</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_stream_id</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_codec_config_id</span> <span class="o">=</span> <span class="kc">None</span>
@@ -211,6 +215,10 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_psnr_multiplicator</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_dolby_vision_mode</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_dolby_vision_multiplicator</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_preset</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_preset_multiplicator</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_live</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_live_multiplicator</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>
 
         <span class="k">if</span> <span class="n">stream_id</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -253,6 +261,14 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">dolby_vision_mode</span> <span class="o">=</span> <span class="n">dolby_vision_mode</span>
         <span class="k">if</span> <span class="n">dolby_vision_multiplicator</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">dolby_vision_multiplicator</span> <span class="o">=</span> <span class="n">dolby_vision_multiplicator</span>
+        <span class="k">if</span> <span class="n">preset</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">preset</span> <span class="o">=</span> <span class="n">preset</span>
+        <span class="k">if</span> <span class="n">preset_multiplicator</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">preset_multiplicator</span> <span class="o">=</span> <span class="n">preset_multiplicator</span>
+        <span class="k">if</span> <span class="n">live</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">live</span> <span class="o">=</span> <span class="n">live</span>
+        <span class="k">if</span> <span class="n">live_multiplicator</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">live_multiplicator</span> <span class="o">=</span> <span class="n">live_multiplicator</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -276,7 +292,11 @@
             <span class="s1">&#39;psnr_mode&#39;</span><span class="p">:</span> <span class="s1">&#39;PsnrPerStreamMode&#39;</span><span class="p">,</span>
             <span class="s1">&#39;psnr_multiplicator&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span><span class="p">,</span>
             <span class="s1">&#39;dolby_vision_mode&#39;</span><span class="p">:</span> <span class="s1">&#39;DolbyVisionPerStreamMode&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;dolby_vision_multiplicator&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span>
+            <span class="s1">&#39;dolby_vision_multiplicator&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;preset&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;preset_multiplicator&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;live&#39;</span><span class="p">:</span> <span class="s1">&#39;bool&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;live_multiplicator&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span>
         <span class="p">}</span>
 
         <span class="k">return</span> <span class="n">types</span>
@@ -303,7 +323,11 @@
             <span class="s1">&#39;psnr_mode&#39;</span><span class="p">:</span> <span class="s1">&#39;psnrMode&#39;</span><span class="p">,</span>
             <span class="s1">&#39;psnr_multiplicator&#39;</span><span class="p">:</span> <span class="s1">&#39;psnrMultiplicator&#39;</span><span class="p">,</span>
             <span class="s1">&#39;dolby_vision_mode&#39;</span><span class="p">:</span> <span class="s1">&#39;dolbyVisionMode&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;dolby_vision_multiplicator&#39;</span><span class="p">:</span> <span class="s1">&#39;dolbyVisionMultiplicator&#39;</span>
+            <span class="s1">&#39;dolby_vision_multiplicator&#39;</span><span class="p">:</span> <span class="s1">&#39;dolbyVisionMultiplicator&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;preset&#39;</span><span class="p">:</span> <span class="s1">&#39;preset&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;preset_multiplicator&#39;</span><span class="p">:</span> <span class="s1">&#39;presetMultiplicator&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;live&#39;</span><span class="p">:</span> <span class="s1">&#39;live&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;live_multiplicator&#39;</span><span class="p">:</span> <span class="s1">&#39;liveMultiplicator&#39;</span>
         <span class="p">}</span>
         <span class="k">return</span> <span class="n">attributes</span>
 
@@ -874,6 +898,122 @@
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `dolby_vision_multiplicator`, type has to be `float`&quot;</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_dolby_vision_multiplicator</span> <span class="o">=</span> <span class="n">dolby_vision_multiplicator</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">preset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; string_types</span>
+        <span class="sd">&quot;&quot;&quot;Gets the preset of this StatisticsPerStream.</span>
+
+<span class="sd">        Name of the preset configuration used for the codec configuration or \&quot;CUSTOM\&quot; if any preset values were overridden</span>
+
+<span class="sd">        :return: The preset of this StatisticsPerStream.</span>
+<span class="sd">        :rtype: string_types</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_preset</span>
+
+    <span class="nd">@preset</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">preset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">preset</span><span class="p">):</span>
+        <span class="c1"># type: (string_types) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the preset of this StatisticsPerStream.</span>
+
+<span class="sd">        Name of the preset configuration used for the codec configuration or \&quot;CUSTOM\&quot; if any preset values were overridden</span>
+
+<span class="sd">        :param preset: The preset of this StatisticsPerStream.</span>
+<span class="sd">        :type: string_types</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">preset</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">preset</span><span class="p">,</span> <span class="n">string_types</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `preset`, type has to be `string_types`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_preset</span> <span class="o">=</span> <span class="n">preset</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">preset_multiplicator</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; float</span>
+        <span class="sd">&quot;&quot;&quot;Gets the preset_multiplicator of this StatisticsPerStream.</span>
+
+<span class="sd">        The output minutes multiplicator for the used codec configuration preset.</span>
+
+<span class="sd">        :return: The preset_multiplicator of this StatisticsPerStream.</span>
+<span class="sd">        :rtype: float</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_preset_multiplicator</span>
+
+    <span class="nd">@preset_multiplicator</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">preset_multiplicator</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">preset_multiplicator</span><span class="p">):</span>
+        <span class="c1"># type: (float) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the preset_multiplicator of this StatisticsPerStream.</span>
+
+<span class="sd">        The output minutes multiplicator for the used codec configuration preset.</span>
+
+<span class="sd">        :param preset_multiplicator: The preset_multiplicator of this StatisticsPerStream.</span>
+<span class="sd">        :type: float</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">preset_multiplicator</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">preset_multiplicator</span><span class="p">,</span> <span class="p">(</span><span class="nb">float</span><span class="p">,</span> <span class="nb">int</span><span class="p">)):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `preset_multiplicator`, type has to be `float`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_preset_multiplicator</span> <span class="o">=</span> <span class="n">preset_multiplicator</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">live</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; bool</span>
+        <span class="sd">&quot;&quot;&quot;Gets the live of this StatisticsPerStream.</span>
+
+<span class="sd">        Indicates if the stream was part of a live encoding.</span>
+
+<span class="sd">        :return: The live of this StatisticsPerStream.</span>
+<span class="sd">        :rtype: bool</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_live</span>
+
+    <span class="nd">@live</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">live</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">live</span><span class="p">):</span>
+        <span class="c1"># type: (bool) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the live of this StatisticsPerStream.</span>
+
+<span class="sd">        Indicates if the stream was part of a live encoding.</span>
+
+<span class="sd">        :param live: The live of this StatisticsPerStream.</span>
+<span class="sd">        :type: bool</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">live</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">live</span><span class="p">,</span> <span class="nb">bool</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `live`, type has to be `bool`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_live</span> <span class="o">=</span> <span class="n">live</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">live_multiplicator</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; float</span>
+        <span class="sd">&quot;&quot;&quot;Gets the live_multiplicator of this StatisticsPerStream.</span>
+
+<span class="sd">        The output minutes multiplicator for live streams.</span>
+
+<span class="sd">        :return: The live_multiplicator of this StatisticsPerStream.</span>
+<span class="sd">        :rtype: float</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_live_multiplicator</span>
+
+    <span class="nd">@live_multiplicator</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">live_multiplicator</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">live_multiplicator</span><span class="p">):</span>
+        <span class="c1"># type: (float) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the live_multiplicator of this StatisticsPerStream.</span>
+
+<span class="sd">        The output minutes multiplicator for live streams.</span>
+
+<span class="sd">        :param live_multiplicator: The live_multiplicator of this StatisticsPerStream.</span>
+<span class="sd">        :type: float</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">live_multiplicator</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">live_multiplicator</span><span class="p">,</span> <span class="p">(</span><span class="nb">float</span><span class="p">,</span> <span class="nb">int</span><span class="p">)):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `live_multiplicator`, type has to be `float`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_live_multiplicator</span> <span class="o">=</span> <span class="n">live_multiplicator</span>
 
 <div class="viewcode-block" id="StatisticsPerStream.to_dict"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.statistics_per_stream.StatisticsPerStream.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>bitmovin_api_sdk.models.passthrough_mode &mdash; Bitmovin Python API SDK {{packageVersion}} documentation</title>
+  <title>bitmovin_api_sdk.models.fmp4_muxing_information &mdash; Bitmovin Python API SDK {{packageVersion}} documentation</title>
   
 
   
@@ -135,7 +135,7 @@
         
           <li><a href="../../index.html">Module code</a> &raquo;</li>
         
-      <li>bitmovin_api_sdk.models.passthrough_mode</li>
+      <li>bitmovin_api_sdk.models.fmp4_muxing_information</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -150,18 +150,44 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <h1>Source code for bitmovin_api_sdk.models.passthrough_mode</h1><div class="highlight"><pre>
+  <h1>Source code for bitmovin_api_sdk.models.fmp4_muxing_information</h1><div class="highlight"><pre>
 <span></span><span class="c1"># coding: utf-8</span>
 
-<span class="kn">from</span> <span class="nn">enum</span> <span class="kn">import</span> <span class="n">Enum</span>
+
 <span class="kn">from</span> <span class="nn">six</span> <span class="kn">import</span> <span class="n">string_types</span><span class="p">,</span> <span class="n">iteritems</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.common.poscheck</span> <span class="kn">import</span> <span class="n">poscheck_model</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.fragmented_muxing_information</span> <span class="kn">import</span> <span class="n">FragmentedMuxingInformation</span>
+<span class="kn">import</span> <span class="nn">pprint</span>
 
 
-<div class="viewcode-block" id="PassthroughMode"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.passthrough_mode.PassthroughMode">[docs]</a><span class="k">class</span> <span class="nc">PassthroughMode</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
-    <span class="n">VIDEO_STREAM</span> <span class="o">=</span> <span class="s2">&quot;VIDEO_STREAM&quot;</span>
-    <span class="n">CAPTION_STREAM</span> <span class="o">=</span> <span class="s2">&quot;CAPTION_STREAM&quot;</span>
-    <span class="n">VIDEO_CAPTION_STREAM</span> <span class="o">=</span> <span class="s2">&quot;VIDEO_CAPTION_STREAM&quot;</span></div>
+<div class="viewcode-block" id="Fmp4MuxingInformation"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.fmp4_muxing_information.Fmp4MuxingInformation">[docs]</a><span class="k">class</span> <span class="nc">Fmp4MuxingInformation</span><span class="p">(</span><span class="n">FragmentedMuxingInformation</span><span class="p">):</span>
+
+<div class="viewcode-block" id="Fmp4MuxingInformation.to_dict"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.fmp4_muxing_information.Fmp4MuxingInformation.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="p">{}</span>
+
+        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="nb">super</span><span class="p">(</span><span class="n">Fmp4MuxingInformation</span><span class="p">,</span> <span class="bp">self</span><span class="p">),</span> <span class="s2">&quot;to_dict&quot;</span><span class="p">):</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="nb">super</span><span class="p">(</span><span class="n">Fmp4MuxingInformation</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">result</span></div>
+
+<div class="viewcode-block" id="Fmp4MuxingInformation.to_str"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.fmp4_muxing_information.Fmp4MuxingInformation.to_str">[docs]</a>    <span class="k">def</span> <span class="nf">to_str</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns the string representation of the model&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">pprint</span><span class="o">.</span><span class="n">pformat</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">to_dict</span><span class="p">())</span></div>
+
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;For `print` and `pprint`&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">to_str</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns true if both objects are equal&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">Fmp4MuxingInformation</span><span class="p">):</span>
+            <span class="k">return</span> <span class="kc">False</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="vm">__dict__</span>
+
+    <span class="k">def</span> <span class="fm">__ne__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns true if both objects are not equal&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="ow">not</span> <span class="bp">self</span> <span class="o">==</span> <span class="n">other</span></div>
 </pre></div>
 
            </div>

@@ -423,6 +423,8 @@ from bitmovin_api_sdk.encoding.encodings.muxings.fmp4.fmp4_api import Fmp4Api
 from bitmovin_api_sdk.encoding.encodings.muxings.fmp4.fmp4_api import Fmp4MuxingListQueryParams
 from bitmovin_api_sdk.encoding.encodings.muxings.fmp4.customdata.customdata_api import CustomdataApi
 
+from bitmovin_api_sdk.encoding.encodings.muxings.fmp4.information.information_api import InformationApi
+
 from bitmovin_api_sdk.encoding.encodings.muxings.chunked_text.chunked_text_api import ChunkedTextApi
 from bitmovin_api_sdk.encoding.encodings.muxings.chunked_text.chunked_text_api import ChunkedTextMuxingListQueryParams
 from bitmovin_api_sdk.encoding.encodings.muxings.chunked_text.customdata.customdata_api import CustomdataApi
@@ -1139,8 +1141,10 @@ from bitmovin_api_sdk.models.file_input_stream_type import FileInputStreamType
 from bitmovin_api_sdk.models.filter import Filter
 from bitmovin_api_sdk.models.filter_type import FilterType
 from bitmovin_api_sdk.models.fmp4_muxing import Fmp4Muxing
+from bitmovin_api_sdk.models.fmp4_muxing_information import Fmp4MuxingInformation
 from bitmovin_api_sdk.models.force_flush_mode import ForceFlushMode
 from bitmovin_api_sdk.models.fragmented_mp4_muxing_manifest_type import FragmentedMp4MuxingManifestType
+from bitmovin_api_sdk.models.fragmented_muxing_information import FragmentedMuxingInformation
 from bitmovin_api_sdk.models.frame_id_id3_tag import FrameIdId3Tag
 from bitmovin_api_sdk.models.ftp_input import FtpInput
 from bitmovin_api_sdk.models.ftp_output import FtpOutput
@@ -1457,4 +1461,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.38.0"
+__version__ = "1.39.0"

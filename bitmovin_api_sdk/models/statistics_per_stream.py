@@ -35,8 +35,12 @@ class StatisticsPerStream(object):
                  psnr_mode=None,
                  psnr_multiplicator=None,
                  dolby_vision_mode=None,
-                 dolby_vision_multiplicator=None):
-        # type: (string_types, string_types, float, int, float, float, int, int, float, int, CodecConfigType, StatisticsResolution, EncodingMode, float, StatisticsPerTitleStream, float, PsnrPerStreamMode, float, DolbyVisionPerStreamMode, float) -> None
+                 dolby_vision_multiplicator=None,
+                 preset=None,
+                 preset_multiplicator=None,
+                 live=None,
+                 live_multiplicator=None):
+        # type: (string_types, string_types, float, int, float, float, int, int, float, int, CodecConfigType, StatisticsResolution, EncodingMode, float, StatisticsPerTitleStream, float, PsnrPerStreamMode, float, DolbyVisionPerStreamMode, float, string_types, float, bool, float) -> None
 
         self._stream_id = None
         self._codec_config_id = None
@@ -58,6 +62,10 @@ class StatisticsPerStream(object):
         self._psnr_multiplicator = None
         self._dolby_vision_mode = None
         self._dolby_vision_multiplicator = None
+        self._preset = None
+        self._preset_multiplicator = None
+        self._live = None
+        self._live_multiplicator = None
         self.discriminator = None
 
         if stream_id is not None:
@@ -100,6 +108,14 @@ class StatisticsPerStream(object):
             self.dolby_vision_mode = dolby_vision_mode
         if dolby_vision_multiplicator is not None:
             self.dolby_vision_multiplicator = dolby_vision_multiplicator
+        if preset is not None:
+            self.preset = preset
+        if preset_multiplicator is not None:
+            self.preset_multiplicator = preset_multiplicator
+        if live is not None:
+            self.live = live
+        if live_multiplicator is not None:
+            self.live_multiplicator = live_multiplicator
 
     @property
     def openapi_types(self):
@@ -123,7 +139,11 @@ class StatisticsPerStream(object):
             'psnr_mode': 'PsnrPerStreamMode',
             'psnr_multiplicator': 'float',
             'dolby_vision_mode': 'DolbyVisionPerStreamMode',
-            'dolby_vision_multiplicator': 'float'
+            'dolby_vision_multiplicator': 'float',
+            'preset': 'string_types',
+            'preset_multiplicator': 'float',
+            'live': 'bool',
+            'live_multiplicator': 'float'
         }
 
         return types
@@ -150,7 +170,11 @@ class StatisticsPerStream(object):
             'psnr_mode': 'psnrMode',
             'psnr_multiplicator': 'psnrMultiplicator',
             'dolby_vision_mode': 'dolbyVisionMode',
-            'dolby_vision_multiplicator': 'dolbyVisionMultiplicator'
+            'dolby_vision_multiplicator': 'dolbyVisionMultiplicator',
+            'preset': 'preset',
+            'preset_multiplicator': 'presetMultiplicator',
+            'live': 'live',
+            'live_multiplicator': 'liveMultiplicator'
         }
         return attributes
 
@@ -721,6 +745,122 @@ class StatisticsPerStream(object):
                 raise TypeError("Invalid type for `dolby_vision_multiplicator`, type has to be `float`")
 
         self._dolby_vision_multiplicator = dolby_vision_multiplicator
+
+    @property
+    def preset(self):
+        # type: () -> string_types
+        """Gets the preset of this StatisticsPerStream.
+
+        Name of the preset configuration used for the codec configuration or \"CUSTOM\" if any preset values were overridden
+
+        :return: The preset of this StatisticsPerStream.
+        :rtype: string_types
+        """
+        return self._preset
+
+    @preset.setter
+    def preset(self, preset):
+        # type: (string_types) -> None
+        """Sets the preset of this StatisticsPerStream.
+
+        Name of the preset configuration used for the codec configuration or \"CUSTOM\" if any preset values were overridden
+
+        :param preset: The preset of this StatisticsPerStream.
+        :type: string_types
+        """
+
+        if preset is not None:
+            if not isinstance(preset, string_types):
+                raise TypeError("Invalid type for `preset`, type has to be `string_types`")
+
+        self._preset = preset
+
+    @property
+    def preset_multiplicator(self):
+        # type: () -> float
+        """Gets the preset_multiplicator of this StatisticsPerStream.
+
+        The output minutes multiplicator for the used codec configuration preset.
+
+        :return: The preset_multiplicator of this StatisticsPerStream.
+        :rtype: float
+        """
+        return self._preset_multiplicator
+
+    @preset_multiplicator.setter
+    def preset_multiplicator(self, preset_multiplicator):
+        # type: (float) -> None
+        """Sets the preset_multiplicator of this StatisticsPerStream.
+
+        The output minutes multiplicator for the used codec configuration preset.
+
+        :param preset_multiplicator: The preset_multiplicator of this StatisticsPerStream.
+        :type: float
+        """
+
+        if preset_multiplicator is not None:
+            if not isinstance(preset_multiplicator, (float, int)):
+                raise TypeError("Invalid type for `preset_multiplicator`, type has to be `float`")
+
+        self._preset_multiplicator = preset_multiplicator
+
+    @property
+    def live(self):
+        # type: () -> bool
+        """Gets the live of this StatisticsPerStream.
+
+        Indicates if the stream was part of a live encoding.
+
+        :return: The live of this StatisticsPerStream.
+        :rtype: bool
+        """
+        return self._live
+
+    @live.setter
+    def live(self, live):
+        # type: (bool) -> None
+        """Sets the live of this StatisticsPerStream.
+
+        Indicates if the stream was part of a live encoding.
+
+        :param live: The live of this StatisticsPerStream.
+        :type: bool
+        """
+
+        if live is not None:
+            if not isinstance(live, bool):
+                raise TypeError("Invalid type for `live`, type has to be `bool`")
+
+        self._live = live
+
+    @property
+    def live_multiplicator(self):
+        # type: () -> float
+        """Gets the live_multiplicator of this StatisticsPerStream.
+
+        The output minutes multiplicator for live streams.
+
+        :return: The live_multiplicator of this StatisticsPerStream.
+        :rtype: float
+        """
+        return self._live_multiplicator
+
+    @live_multiplicator.setter
+    def live_multiplicator(self, live_multiplicator):
+        # type: (float) -> None
+        """Sets the live_multiplicator of this StatisticsPerStream.
+
+        The output minutes multiplicator for live streams.
+
+        :param live_multiplicator: The live_multiplicator of this StatisticsPerStream.
+        :type: float
+        """
+
+        if live_multiplicator is not None:
+            if not isinstance(live_multiplicator, (float, int)):
+                raise TypeError("Invalid type for `live_multiplicator`, type has to be `float`")
+
+        self._live_multiplicator = live_multiplicator
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -262,8 +262,10 @@ from bitmovin_api_sdk.models.file_input_stream_type import FileInputStreamType
 from bitmovin_api_sdk.models.filter import Filter
 from bitmovin_api_sdk.models.filter_type import FilterType
 from bitmovin_api_sdk.models.fmp4_muxing import Fmp4Muxing
+from bitmovin_api_sdk.models.fmp4_muxing_information import Fmp4MuxingInformation
 from bitmovin_api_sdk.models.force_flush_mode import ForceFlushMode
 from bitmovin_api_sdk.models.fragmented_mp4_muxing_manifest_type import FragmentedMp4MuxingManifestType
+from bitmovin_api_sdk.models.fragmented_muxing_information import FragmentedMuxingInformation
 from bitmovin_api_sdk.models.frame_id_id3_tag import FrameIdId3Tag
 from bitmovin_api_sdk.models.ftp_input import FtpInput
 from bitmovin_api_sdk.models.ftp_output import FtpOutput

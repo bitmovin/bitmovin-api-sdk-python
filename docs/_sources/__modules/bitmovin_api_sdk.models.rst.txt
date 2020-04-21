@@ -2076,6 +2076,14 @@ bitmovin\_api\_sdk.models.fmp4\_muxing module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.fmp4\_muxing\_information module
+----------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.fmp4_muxing_information
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.force\_flush\_mode module
 ---------------------------------------------------
 
@@ -2088,6 +2096,14 @@ bitmovin\_api\_sdk.models.fragmented\_mp4\_muxing\_manifest\_type module
 ------------------------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.models.fragmented_mp4_muxing_manifest_type
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.fragmented\_muxing\_information module
+----------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.fragmented_muxing_information
    :members:
    :undoc-members:
    :show-inheritance:
