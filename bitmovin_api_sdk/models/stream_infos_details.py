@@ -30,7 +30,7 @@ class StreamInfosDetails(object):
                  bytes_backup_per_second_min=None,
                  bytes_backup_per_second_max=None,
                  bytes_backup_per_second_avg=None):
-        # type: (int, MediaType, int, int, int, LiveEncodingCodec, float, float, float, float, float, float, float, float, float, float, float, float) -> None
+        # type: (string_types, MediaType, int, int, int, LiveEncodingCodec, float, float, float, float, float, float, float, float, float, float, float, float) -> None
 
         self._id = None
         self._media_type = None
@@ -92,7 +92,7 @@ class StreamInfosDetails(object):
     @property
     def openapi_types(self):
         types = {
-            'id': 'int',
+            'id': 'string_types',
             'media_type': 'MediaType',
             'width': 'int',
             'height': 'int',
@@ -140,30 +140,30 @@ class StreamInfosDetails(object):
 
     @property
     def id(self):
-        # type: () -> int
+        # type: () -> string_types
         """Gets the id of this StreamInfosDetails.
 
         The id of the stream (required)
 
         :return: The id of this StreamInfosDetails.
-        :rtype: int
+        :rtype: string_types
         """
         return self._id
 
     @id.setter
     def id(self, id_):
-        # type: (int) -> None
+        # type: (string_types) -> None
         """Sets the id of this StreamInfosDetails.
 
         The id of the stream (required)
 
         :param id_: The id of this StreamInfosDetails.
-        :type: int
+        :type: string_types
         """
 
         if id_ is not None:
-            if not isinstance(id_, int):
-                raise TypeError("Invalid type for `id`, type has to be `int`")
+            if not isinstance(id_, string_types):
+                raise TypeError("Invalid type for `id`, type has to be `string_types`")
 
         self._id = id_
 
