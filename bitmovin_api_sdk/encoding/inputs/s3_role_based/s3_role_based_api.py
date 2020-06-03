@@ -34,7 +34,7 @@ class S3RoleBasedApi(BaseApi):
         # type: (S3RoleBasedInput, dict) -> S3RoleBasedInput
         """Create S3 Role-based Input
 
-        :param s3_role_based_input: The S3 Role-based input to be created
+        :param s3_role_based_input: The S3 Role-based input to be created  The following permissions are required for S3 Role-based input:   * s3:GetObject   * s3:GetBucketLocation, 
         :type s3_role_based_input: S3RoleBasedInput, required
         :return: S3 Role-based Input
         :rtype: S3RoleBasedInput

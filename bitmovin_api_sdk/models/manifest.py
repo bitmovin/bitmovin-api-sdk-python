@@ -5,6 +5,7 @@ from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
 from bitmovin_api_sdk.models.bitmovin_resource import BitmovinResource
 from bitmovin_api_sdk.models.manifest_type import ManifestType
+from bitmovin_api_sdk.models.status import Status
 import pprint
 import six
 
@@ -19,18 +20,22 @@ class Manifest(BitmovinResource):
                  modified_at=None,
                  custom_data=None,
                  type_=None,
-                 outputs=None):
-        # type: (string_types, string_types, string_types, datetime, datetime, dict, ManifestType, list[EncodingOutput]) -> None
+                 outputs=None,
+                 status=None):
+        # type: (string_types, string_types, string_types, datetime, datetime, dict, ManifestType, list[EncodingOutput], Status) -> None
         super(Manifest, self).__init__(id_=id_, name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data)
 
         self._type = None
         self._outputs = list()
+        self._status = None
         self.discriminator = None
 
         if type_ is not None:
             self.type = type_
         if outputs is not None:
             self.outputs = outputs
+        if status is not None:
+            self.status = status
 
     @property
     def openapi_types(self):
@@ -41,7 +46,8 @@ class Manifest(BitmovinResource):
 
         types.update({
             'type': 'ManifestType',
-            'outputs': 'list[EncodingOutput]'
+            'outputs': 'list[EncodingOutput]',
+            'status': 'Status'
         })
 
         return types
@@ -55,7 +61,8 @@ class Manifest(BitmovinResource):
 
         attributes.update({
             'type': 'type',
-            'outputs': 'outputs'
+            'outputs': 'outputs',
+            'status': 'status'
         })
         return attributes
 
@@ -114,6 +121,35 @@ class Manifest(BitmovinResource):
                 raise TypeError("Invalid type for `outputs`, type has to be `list[EncodingOutput]`")
 
         self._outputs = outputs
+
+    @property
+    def status(self):
+        # type: () -> Status
+        """Gets the status of this Manifest.
+
+        Current status
+
+        :return: The status of this Manifest.
+        :rtype: Status
+        """
+        return self._status
+
+    @status.setter
+    def status(self, status):
+        # type: (Status) -> None
+        """Sets the status of this Manifest.
+
+        Current status
+
+        :param status: The status of this Manifest.
+        :type: Status
+        """
+
+        if status is not None:
+            if not isinstance(status, Status):
+                raise TypeError("Invalid type for `status`, type has to be `Status`")
+
+        self._status = status
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -34,7 +34,7 @@ class S3RoleBasedApi(BaseApi):
         # type: (S3RoleBasedOutput, dict) -> S3RoleBasedOutput
         """Create S3 Role-based Output
 
-        :param s3_role_based_output: The S3 Role-based output to be created
+        :param s3_role_based_output: The S3 Role-based output to be created  The following permissions are required for S3 Role-based output:  * s3:PutObject  * s3:PutObjectAcl  * s3:ListBucket  * s3:GetBucketLocation 
         :type s3_role_based_output: S3RoleBasedOutput, required
         :return: S3 Role-based Output
         :rtype: S3RoleBasedOutput

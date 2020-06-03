@@ -6,6 +6,7 @@ from bitmovin_api_sdk.common.poscheck import poscheck_model
 from bitmovin_api_sdk.models.hls_version import HlsVersion
 from bitmovin_api_sdk.models.manifest import Manifest
 from bitmovin_api_sdk.models.manifest_type import ManifestType
+from bitmovin_api_sdk.models.status import Status
 import pprint
 import six
 
@@ -21,11 +22,12 @@ class HlsManifest(Manifest):
                  id_=None,
                  type_=None,
                  outputs=None,
+                 status=None,
                  manifest_name=None,
                  hls_media_playlist_version=None,
                  hls_master_playlist_version=None):
-        # type: (string_types, string_types, datetime, datetime, dict, string_types, ManifestType, list[EncodingOutput], string_types, HlsVersion, HlsVersion) -> None
-        super(HlsManifest, self).__init__(name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, id_=id_, type_=type_, outputs=outputs)
+        # type: (string_types, string_types, datetime, datetime, dict, string_types, ManifestType, list[EncodingOutput], Status, string_types, HlsVersion, HlsVersion) -> None
+        super(HlsManifest, self).__init__(name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, id_=id_, type_=type_, outputs=outputs, status=status)
 
         self._manifest_name = None
         self._hls_media_playlist_version = None

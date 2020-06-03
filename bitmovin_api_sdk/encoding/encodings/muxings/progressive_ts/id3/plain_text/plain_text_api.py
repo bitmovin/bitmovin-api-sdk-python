@@ -33,7 +33,7 @@ class PlainTextApi(BaseApi):
 
     def create(self, encoding_id, muxing_id, plaintext_id3_tag, **kwargs):
         # type: (string_types, string_types, PlaintextId3Tag, dict) -> PlaintextId3Tag
-        """Add Plain Text ID3 Tag to Progressive TS muxing
+        """Add Plain Text ID3 Tag to a Progressive TS muxing
 
         :param encoding_id: ID of the Encoding.
         :type encoding_id: string_types, required
@@ -55,7 +55,7 @@ class PlainTextApi(BaseApi):
 
     def delete(self, encoding_id, muxing_id, id3_tag_id, **kwargs):
         # type: (string_types, string_types, string_types, dict) -> BitmovinResponse
-        """Delete Plain Text ID3 Tag of Progressive TS muxing
+        """Delete Plain Text ID3 Tag of a Progressive TS muxing
 
         :param encoding_id: ID of the Encoding.
         :type encoding_id: string_types, required
@@ -76,7 +76,7 @@ class PlainTextApi(BaseApi):
 
     def get(self, encoding_id, muxing_id, id3_tag_id, **kwargs):
         # type: (string_types, string_types, string_types, dict) -> PlaintextId3Tag
-        """Plain Text ID3 Tag Details of Progressive TS muxing
+        """Plain Text ID3 Tag Details of a Progressive TS muxing
 
         :param encoding_id: ID of the Encoding.
         :type encoding_id: string_types, required
@@ -97,7 +97,7 @@ class PlainTextApi(BaseApi):
 
     def list(self, encoding_id, muxing_id, query_params=None, **kwargs):
         # type: (string_types, string_types, PlaintextId3TagListQueryParams, dict) -> PlaintextId3Tag
-        """List Plain Text ID3 Tags of Progressive TS muxing
+        """List Plain Text ID3 Tags of a Progressive TS muxing
 
         :param encoding_id: ID of the Encoding.
         :type encoding_id: string_types, required

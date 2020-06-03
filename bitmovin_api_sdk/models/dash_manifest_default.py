@@ -7,6 +7,7 @@ from bitmovin_api_sdk.models.dash_manifest import DashManifest
 from bitmovin_api_sdk.models.dash_manifest_default_version import DashManifestDefaultVersion
 from bitmovin_api_sdk.models.dash_profile import DashProfile
 from bitmovin_api_sdk.models.manifest_type import ManifestType
+from bitmovin_api_sdk.models.status import Status
 import pprint
 import six
 
@@ -22,6 +23,7 @@ class DashManifestDefault(DashManifest):
                  id_=None,
                  type_=None,
                  outputs=None,
+                 status=None,
                  profile=None,
                  manifest_name=None,
                  namespaces=None,
@@ -29,8 +31,8 @@ class DashManifestDefault(DashManifest):
                  encoding_id=None,
                  version=None,
                  periods=None):
-        # type: (string_types, string_types, datetime, datetime, dict, string_types, ManifestType, list[EncodingOutput], DashProfile, string_types, list[XmlNamespace], list[UtcTiming], string_types, DashManifestDefaultVersion, list[DefaultDashManifestPeriod]) -> None
-        super(DashManifestDefault, self).__init__(name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, id_=id_, type_=type_, outputs=outputs, profile=profile, manifest_name=manifest_name, namespaces=namespaces, utc_timings=utc_timings)
+        # type: (string_types, string_types, datetime, datetime, dict, string_types, ManifestType, list[EncodingOutput], Status, DashProfile, string_types, list[XmlNamespace], list[UtcTiming], string_types, DashManifestDefaultVersion, list[DefaultDashManifestPeriod]) -> None
+        super(DashManifestDefault, self).__init__(name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, id_=id_, type_=type_, outputs=outputs, status=status, profile=profile, manifest_name=manifest_name, namespaces=namespaces, utc_timings=utc_timings)
 
         self._encoding_id = None
         self._version = None

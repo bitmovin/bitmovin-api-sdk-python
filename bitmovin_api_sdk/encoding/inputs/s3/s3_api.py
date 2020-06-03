@@ -35,7 +35,7 @@ class S3Api(BaseApi):
         # type: (S3Input, dict) -> S3Input
         """Create S3 Input
 
-        :param s3_input: The S3 input to be created
+        :param s3_input: The S3 input to be created  The following permissions are required for S3 input:   * s3:GetObject   * s3:GetBucketLocation, 
         :type s3_input: S3Input, required
         :return: S3 input
         :rtype: S3Input

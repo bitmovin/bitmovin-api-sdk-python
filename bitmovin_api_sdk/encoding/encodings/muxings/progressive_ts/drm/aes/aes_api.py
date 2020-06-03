@@ -33,7 +33,7 @@ class AesApi(BaseApi):
 
     def create(self, encoding_id, muxing_id, aes_encryption_drm, **kwargs):
         # type: (string_types, string_types, AesEncryptionDrm, dict) -> AesEncryptionDrm
-        """Add AES encryption configuration to Progressive TS muxing
+        """Add AES encryption configuration to a Progressive TS muxing
 
         :param encoding_id: Id of the encoding
         :type encoding_id: string_types, required
@@ -55,7 +55,7 @@ class AesApi(BaseApi):
 
     def delete(self, encoding_id, muxing_id, drm_id, **kwargs):
         # type: (string_types, string_types, string_types, dict) -> BitmovinResponse
-        """Delete AES encryption configuration from Progressive TS muxing
+        """Delete AES encryption configuration from a Progressive TS muxing
 
         :param encoding_id: Id of the encoding
         :type encoding_id: string_types, required
@@ -76,7 +76,7 @@ class AesApi(BaseApi):
 
     def get(self, encoding_id, muxing_id, drm_id, **kwargs):
         # type: (string_types, string_types, string_types, dict) -> AesEncryptionDrm
-        """AES encryption Details of Progressive TS muxing
+        """AES encryption Details of a Progressive TS muxing
 
         :param encoding_id: Id of the encoding
         :type encoding_id: string_types, required
@@ -97,7 +97,7 @@ class AesApi(BaseApi):
 
     def list(self, encoding_id, muxing_id, query_params=None, **kwargs):
         # type: (string_types, string_types, AesEncryptionDrmListQueryParams, dict) -> AesEncryptionDrm
-        """List AES encryption configurations of Progressive TS muxing
+        """List AES encryption configurations of a Progressive TS muxing
 
         :param encoding_id: Id of the encoding
         :type encoding_id: string_types, required

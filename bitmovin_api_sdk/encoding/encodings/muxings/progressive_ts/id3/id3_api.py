@@ -48,7 +48,7 @@ class Id3Api(BaseApi):
 
     def list(self, encoding_id, muxing_id, query_params=None, **kwargs):
         # type: (string_types, string_types, Id3TagListQueryParams, dict) -> Id3Tag
-        """List all ID3 Tags of Progressive TS muxing
+        """List all ID3 Tags of a Progressive TS muxing
 
         :param encoding_id: ID of the Encoding.
         :type encoding_id: string_types, required

@@ -5,6 +5,7 @@ from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
 from bitmovin_api_sdk.models.manifest import Manifest
 from bitmovin_api_sdk.models.manifest_type import ManifestType
+from bitmovin_api_sdk.models.status import Status
 import pprint
 import six
 
@@ -20,10 +21,11 @@ class SmoothStreamingManifest(Manifest):
                  id_=None,
                  type_=None,
                  outputs=None,
+                 status=None,
                  server_manifest_name=None,
                  client_manifest_name=None):
-        # type: (string_types, string_types, datetime, datetime, dict, string_types, ManifestType, list[EncodingOutput], string_types, string_types) -> None
-        super(SmoothStreamingManifest, self).__init__(name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, id_=id_, type_=type_, outputs=outputs)
+        # type: (string_types, string_types, datetime, datetime, dict, string_types, ManifestType, list[EncodingOutput], Status, string_types, string_types) -> None
+        super(SmoothStreamingManifest, self).__init__(name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, id_=id_, type_=type_, outputs=outputs, status=status)
 
         self._server_manifest_name = None
         self._client_manifest_name = None

@@ -23,7 +23,7 @@ class CustomdataApi(BaseApi):
 
     def get(self, encoding_id, muxing_id, drm_id, **kwargs):
         # type: (string_types, string_types, string_types, dict) -> CustomData
-        """FairPlay DRM Custom Data of TS muxing
+        """FairPlay DRM Custom Data of a TS muxing
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required

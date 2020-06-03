@@ -23,7 +23,7 @@ class CustomdataApi(BaseApi):
 
     def get(self, encoding_id, muxing_id, drm_id, **kwargs):
         # type: (string_types, string_types, string_types, dict) -> CustomData
-        """Marlin DRM Custom Data of MP4
+        """Marlin DRM Custom Data of an MP4 muxing
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required

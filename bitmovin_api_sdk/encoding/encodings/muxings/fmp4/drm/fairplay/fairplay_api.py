@@ -33,7 +33,7 @@ class FairplayApi(BaseApi):
 
     def create(self, encoding_id, muxing_id, fair_play_drm, **kwargs):
         # type: (string_types, string_types, FairPlayDrm, dict) -> FairPlayDrm
-        """Add FairPlay DRM to fMP4
+        """Add FairPlay DRM to an fMP4 muxing
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -55,7 +55,7 @@ class FairplayApi(BaseApi):
 
     def delete(self, encoding_id, muxing_id, drm_id, **kwargs):
         # type: (string_types, string_types, string_types, dict) -> BitmovinResponse
-        """Delete FairPlay DRM from fMP4
+        """Delete FairPlay DRM from an fMP4 muxing
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -76,7 +76,7 @@ class FairplayApi(BaseApi):
 
     def get(self, encoding_id, muxing_id, drm_id, **kwargs):
         # type: (string_types, string_types, string_types, dict) -> FairPlayDrm
-        """FairPlay DRM Details of fMP4
+        """FairPlay DRM Details of an fMP4 muxing
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -97,7 +97,7 @@ class FairplayApi(BaseApi):
 
     def list(self, encoding_id, muxing_id, query_params=None, **kwargs):
         # type: (string_types, string_types, FairPlayDrmListQueryParams, dict) -> FairPlayDrm
-        """List FairPlay DRMs of fMP4
+        """List FairPlay DRMs of an fMP4 muxing
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required

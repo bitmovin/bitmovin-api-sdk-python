@@ -187,7 +187,7 @@
         <span class="c1"># type: (S3Output, dict) -&gt; S3Output</span>
         <span class="sd">&quot;&quot;&quot;Create S3 Output</span>
 
-<span class="sd">        :param s3_output: The S3 output to be created</span>
+<span class="sd">        :param s3_output: The S3 output to be created  The following permissions are required for S3 output:  * s3:PutObject  * s3:PutObjectAcl  * s3:ListBucket  * s3:GetBucketLocation </span>
 <span class="sd">        :type s3_output: S3Output, required</span>
 <span class="sd">        :return: S3 output</span>
 <span class="sd">        :rtype: S3Output</span>

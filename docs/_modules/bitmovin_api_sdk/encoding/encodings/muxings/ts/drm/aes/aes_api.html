@@ -186,13 +186,13 @@
 
 <div class="viewcode-block" id="AesApi.create"><a class="viewcode-back" href="../../../../../../../../__modules/bitmovin_api_sdk.encoding.encodings.muxings.ts.drm.aes.html#bitmovin_api_sdk.encoding.encodings.muxings.ts.drm.aes.aes_api.AesApi.create">[docs]</a>    <span class="k">def</span> <span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">encoding_id</span><span class="p">,</span> <span class="n">muxing_id</span><span class="p">,</span> <span class="n">aes_encryption_drm</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, string_types, AesEncryptionDrm, dict) -&gt; AesEncryptionDrm</span>
-        <span class="sd">&quot;&quot;&quot;Add AES Encryption to TS muxing</span>
+        <span class="sd">&quot;&quot;&quot;Add AES encryption configuration to a TS muxing</span>
 
 <span class="sd">        :param encoding_id: Id of the encoding.</span>
 <span class="sd">        :type encoding_id: string_types, required</span>
 <span class="sd">        :param muxing_id: Id of the TS muxing.</span>
 <span class="sd">        :type muxing_id: string_types, required</span>
-<span class="sd">        :param aes_encryption_drm: The AES Encryption to be created</span>
+<span class="sd">        :param aes_encryption_drm: The AES encryption configuration to be created</span>
 <span class="sd">        :type aes_encryption_drm: AesEncryptionDrm, required</span>
 <span class="sd">        :return: AESEncryption details</span>
 <span class="sd">        :rtype: AesEncryptionDrm</span>
@@ -208,7 +208,7 @@
 
 <div class="viewcode-block" id="AesApi.delete"><a class="viewcode-back" href="../../../../../../../../__modules/bitmovin_api_sdk.encoding.encodings.muxings.ts.drm.aes.html#bitmovin_api_sdk.encoding.encodings.muxings.ts.drm.aes.aes_api.AesApi.delete">[docs]</a>    <span class="k">def</span> <span class="nf">delete</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">encoding_id</span><span class="p">,</span> <span class="n">muxing_id</span><span class="p">,</span> <span class="n">drm_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, string_types, string_types, dict) -&gt; BitmovinResponse</span>
-        <span class="sd">&quot;&quot;&quot;Delete AES Encryption from TS muxing</span>
+        <span class="sd">&quot;&quot;&quot;Delete AES encryption configuration from a TS muxing</span>
 
 <span class="sd">        :param encoding_id: Id of the encoding.</span>
 <span class="sd">        :type encoding_id: string_types, required</span>
@@ -216,7 +216,7 @@
 <span class="sd">        :type muxing_id: string_types, required</span>
 <span class="sd">        :param drm_id: Id of the PlayReady DRM configuration.</span>
 <span class="sd">        :type drm_id: string_types, required</span>
-<span class="sd">        :return: Id of the AESEncryption configuration.</span>
+<span class="sd">        :return: Id of the AES encryption configuration.</span>
 <span class="sd">        :rtype: BitmovinResponse</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
@@ -229,13 +229,13 @@
 
 <div class="viewcode-block" id="AesApi.get"><a class="viewcode-back" href="../../../../../../../../__modules/bitmovin_api_sdk.encoding.encodings.muxings.ts.drm.aes.html#bitmovin_api_sdk.encoding.encodings.muxings.ts.drm.aes.aes_api.AesApi.get">[docs]</a>    <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">encoding_id</span><span class="p">,</span> <span class="n">muxing_id</span><span class="p">,</span> <span class="n">drm_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, string_types, string_types, dict) -&gt; AesEncryptionDrm</span>
-        <span class="sd">&quot;&quot;&quot;AES Encryption Details of TS muxing</span>
+        <span class="sd">&quot;&quot;&quot;AES encryption Details of a TS muxing</span>
 
 <span class="sd">        :param encoding_id: Id of the encoding.</span>
 <span class="sd">        :type encoding_id: string_types, required</span>
 <span class="sd">        :param muxing_id: Id of the TS muxing.</span>
 <span class="sd">        :type muxing_id: string_types, required</span>
-<span class="sd">        :param drm_id: Id of the AESEncryption configuration.</span>
+<span class="sd">        :param drm_id: Id of the AES encryption configuration.</span>
 <span class="sd">        :type drm_id: string_types, required</span>
 <span class="sd">        :return: AESEncryption details</span>
 <span class="sd">        :rtype: AesEncryptionDrm</span>
@@ -250,7 +250,7 @@
 
 <div class="viewcode-block" id="AesApi.list"><a class="viewcode-back" href="../../../../../../../../__modules/bitmovin_api_sdk.encoding.encodings.muxings.ts.drm.aes.html#bitmovin_api_sdk.encoding.encodings.muxings.ts.drm.aes.aes_api.AesApi.list">[docs]</a>    <span class="k">def</span> <span class="nf">list</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">encoding_id</span><span class="p">,</span> <span class="n">muxing_id</span><span class="p">,</span> <span class="n">query_params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, string_types, AesEncryptionDrmListQueryParams, dict) -&gt; AesEncryptionDrm</span>
-        <span class="sd">&quot;&quot;&quot;List AES Encryption of TS muxing</span>
+        <span class="sd">&quot;&quot;&quot;List AES encryption configurations of a TS muxing</span>
 
 <span class="sd">        :param encoding_id: Id of the encoding.</span>
 <span class="sd">        :type encoding_id: string_types, required</span>
@@ -258,7 +258,7 @@
 <span class="sd">        :type muxing_id: string_types, required</span>
 <span class="sd">        :param query_params: Query parameters</span>
 <span class="sd">        :type query_params: AesEncryptionDrmListQueryParams</span>
-<span class="sd">        :return: List of AESEncryption configurations</span>
+<span class="sd">        :return: List of AES encryption configurations</span>
 <span class="sd">        :rtype: AesEncryptionDrm</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 

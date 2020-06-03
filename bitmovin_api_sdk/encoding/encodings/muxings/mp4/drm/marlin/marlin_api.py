@@ -32,7 +32,7 @@ class MarlinApi(BaseApi):
 
     def create(self, encoding_id, muxing_id, marlin_drm, **kwargs):
         # type: (string_types, string_types, MarlinDrm, dict) -> MarlinDrm
-        """Add Marlin DRM to MP4
+        """Add Marlin DRM to an MP4 muxing
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -54,7 +54,7 @@ class MarlinApi(BaseApi):
 
     def delete(self, encoding_id, muxing_id, drm_id, **kwargs):
         # type: (string_types, string_types, string_types, dict) -> MarlinDrm
-        """Delete Marlin DRM from MP4
+        """Delete Marlin DRM from an MP4 muxing
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -75,7 +75,7 @@ class MarlinApi(BaseApi):
 
     def get(self, encoding_id, muxing_id, drm_id, **kwargs):
         # type: (string_types, string_types, string_types, dict) -> MarlinDrm
-        """Marlin DRM Details of MP4
+        """Marlin DRM Details of an MP4 muxing
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -96,7 +96,7 @@ class MarlinApi(BaseApi):
 
     def list(self, encoding_id, muxing_id, query_params=None, **kwargs):
         # type: (string_types, string_types, MarlinDrmListQueryParams, dict) -> MarlinDrm
-        """List Marlin DRMs of MP4
+        """List Marlin DRMs of an MP4 muxing
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required

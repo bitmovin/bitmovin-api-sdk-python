@@ -33,7 +33,7 @@ class PrimetimeApi(BaseApi):
 
     def create(self, encoding_id, muxing_id, prime_time_drm, **kwargs):
         # type: (string_types, string_types, PrimeTimeDrm, dict) -> PrimeTimeDrm
-        """Add PrimeTime DRM to fMP4
+        """Add PrimeTime DRM to an fMP4 muxing
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -55,7 +55,7 @@ class PrimetimeApi(BaseApi):
 
     def delete(self, encoding_id, muxing_id, drm_id, **kwargs):
         # type: (string_types, string_types, string_types, dict) -> BitmovinResponse
-        """Delete PrimeTime DRM from fMP4
+        """Delete PrimeTime DRM from an fMP4 muxing
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -76,7 +76,7 @@ class PrimetimeApi(BaseApi):
 
     def get(self, encoding_id, muxing_id, drm_id, **kwargs):
         # type: (string_types, string_types, string_types, dict) -> PrimeTimeDrm
-        """PrimeTime DRM Details of fMP4
+        """PrimeTime DRM Details of an fMP4 muxing
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -97,7 +97,7 @@ class PrimetimeApi(BaseApi):
 
     def list(self, encoding_id, muxing_id, query_params=None, **kwargs):
         # type: (string_types, string_types, PrimeTimeDrmListQueryParams, dict) -> PrimeTimeDrm
-        """List PrimeTime DRMs of fMP4
+        """List PrimeTime DRMs of an fMP4 muxing
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required

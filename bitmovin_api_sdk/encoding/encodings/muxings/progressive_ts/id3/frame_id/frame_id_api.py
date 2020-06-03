@@ -33,7 +33,7 @@ class FrameIdApi(BaseApi):
 
     def create(self, encoding_id, muxing_id, frame_id_id3_tag, **kwargs):
         # type: (string_types, string_types, FrameIdId3Tag, dict) -> FrameIdId3Tag
-        """Add Frame ID ID3 Tag to Progressive TS muxing
+        """Add Frame ID ID3 Tag to a Progressive TS muxing
 
         :param encoding_id: ID of the Encoding.
         :type encoding_id: string_types, required
@@ -55,7 +55,7 @@ class FrameIdApi(BaseApi):
 
     def delete(self, encoding_id, muxing_id, id3_tag_id, **kwargs):
         # type: (string_types, string_types, string_types, dict) -> BitmovinResponse
-        """Delete Frame ID ID3 Tag of Progressive TS muxing
+        """Delete Frame ID ID3 Tag of a Progressive TS muxing
 
         :param encoding_id: ID of the Encoding.
         :type encoding_id: string_types, required
@@ -76,7 +76,7 @@ class FrameIdApi(BaseApi):
 
     def get(self, encoding_id, muxing_id, id3_tag_id, **kwargs):
         # type: (string_types, string_types, string_types, dict) -> FrameIdId3Tag
-        """Frame ID ID3 Tag Details of Progressive TS muxing
+        """Frame ID ID3 Tag Details of a Progressive TS muxing
 
         :param encoding_id: ID of the Encoding.
         :type encoding_id: string_types, required
@@ -97,7 +97,7 @@ class FrameIdApi(BaseApi):
 
     def list(self, encoding_id, muxing_id, query_params=None, **kwargs):
         # type: (string_types, string_types, FrameIdId3TagListQueryParams, dict) -> FrameIdId3Tag
-        """List Frame ID ID3 Tags of Progressive TS muxing
+        """List Frame ID ID3 Tags of a Progressive TS muxing
 
         :param encoding_id: ID of the Encoding.
         :type encoding_id: string_types, required

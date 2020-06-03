@@ -33,7 +33,7 @@ class CencApi(BaseApi):
 
     def create(self, encoding_id, muxing_id, cenc_drm, **kwargs):
         # type: (string_types, string_types, CencDrm, dict) -> CencDrm
-        """Add CENC DRM to fMP4
+        """Add CENC DRM to an fMP4 muxing
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -55,7 +55,7 @@ class CencApi(BaseApi):
 
     def delete(self, encoding_id, muxing_id, drm_id, **kwargs):
         # type: (string_types, string_types, string_types, dict) -> BitmovinResponse
-        """Delete CENC DRM from fMP4
+        """Delete CENC DRM from an fMP4 muxing
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -76,7 +76,7 @@ class CencApi(BaseApi):
 
     def get(self, encoding_id, muxing_id, drm_id, **kwargs):
         # type: (string_types, string_types, string_types, dict) -> CencDrm
-        """CENC DRM Details of fMP4
+        """CENC DRM Details of an fMP4 muxing
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -97,7 +97,7 @@ class CencApi(BaseApi):
 
     def list(self, encoding_id, muxing_id, query_params=None, **kwargs):
         # type: (string_types, string_types, CencDrmListQueryParams, dict) -> CencDrm
-        """List CENC DRMs of fMP4
+        """List CENC DRMs of an fMP4 muxing
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
