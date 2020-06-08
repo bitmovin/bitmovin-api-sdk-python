@@ -187,7 +187,7 @@
         <span class="c1"># type: (S3RoleBasedOutput, dict) -&gt; S3RoleBasedOutput</span>
         <span class="sd">&quot;&quot;&quot;Create S3 Role-based Output</span>
 
-<span class="sd">        :param s3_role_based_output: The S3 Role-based output to be created</span>
+<span class="sd">        :param s3_role_based_output: The S3 Role-based output to be created  The following permissions are required for S3 Role-based output:  * s3:PutObject  * s3:PutObjectAcl  * s3:ListBucket  * s3:GetBucketLocation </span>
 <span class="sd">        :type s3_role_based_output: S3RoleBasedOutput, required</span>
 <span class="sd">        :return: S3 Role-based Output</span>
 <span class="sd">        :rtype: S3RoleBasedOutput</span>

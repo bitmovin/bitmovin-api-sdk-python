@@ -33,7 +33,7 @@ class PlayreadyApi(BaseApi):
 
     def create(self, encoding_id, muxing_id, play_ready_drm, **kwargs):
         # type: (string_types, string_types, PlayReadyDrm, dict) -> PlayReadyDrm
-        """Add PlayReady DRM to MP4
+        """Add PlayReady DRM to an MP4 muxing
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -55,7 +55,7 @@ class PlayreadyApi(BaseApi):
 
     def delete(self, encoding_id, muxing_id, drm_id, **kwargs):
         # type: (string_types, string_types, string_types, dict) -> BitmovinResponse
-        """Delete PlayReady DRM from MP4
+        """Delete PlayReady DRM from an MP4 muxing
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -76,7 +76,7 @@ class PlayreadyApi(BaseApi):
 
     def get(self, encoding_id, muxing_id, drm_id, **kwargs):
         # type: (string_types, string_types, string_types, dict) -> PlayReadyDrm
-        """PlayReady DRM Details of MP4
+        """PlayReady DRM Details of an MP4 muxing
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -97,7 +97,7 @@ class PlayreadyApi(BaseApi):
 
     def list(self, encoding_id, muxing_id, query_params=None, **kwargs):
         # type: (string_types, string_types, PlayReadyDrmListQueryParams, dict) -> PlayReadyDrm
-        """List PlayReady DRMs of MP4
+        """List PlayReady DRMs of an MP4 muxing
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required

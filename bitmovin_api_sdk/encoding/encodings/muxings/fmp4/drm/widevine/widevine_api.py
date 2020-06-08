@@ -33,7 +33,7 @@ class WidevineApi(BaseApi):
 
     def create(self, encoding_id, muxing_id, widevine_drm, **kwargs):
         # type: (string_types, string_types, WidevineDrm, dict) -> WidevineDrm
-        """Add Widevine DRM to fMP4
+        """Add Widevine DRM to an fMP4 muxing
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -55,7 +55,7 @@ class WidevineApi(BaseApi):
 
     def delete(self, encoding_id, muxing_id, drm_id, **kwargs):
         # type: (string_types, string_types, string_types, dict) -> BitmovinResponse
-        """Delete Widevine DRM from fMP4
+        """Delete Widevine DRM from an fMP4 muxing
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -76,7 +76,7 @@ class WidevineApi(BaseApi):
 
     def get(self, encoding_id, muxing_id, drm_id, **kwargs):
         # type: (string_types, string_types, string_types, dict) -> WidevineDrm
-        """Widevine DRM Details of fMP4
+        """Widevine DRM Details of an fMP4 muxing
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -97,7 +97,7 @@ class WidevineApi(BaseApi):
 
     def list(self, encoding_id, muxing_id, query_params=None, **kwargs):
         # type: (string_types, string_types, WidevineDrmListQueryParams, dict) -> WidevineDrm
-        """List Widevine DRMs of fMP4
+        """List Widevine DRMs of an fMP4 muxing
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required

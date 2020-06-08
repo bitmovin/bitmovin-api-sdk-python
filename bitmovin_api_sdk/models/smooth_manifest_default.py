@@ -6,6 +6,7 @@ from bitmovin_api_sdk.common.poscheck import poscheck_model
 from bitmovin_api_sdk.models.manifest_type import ManifestType
 from bitmovin_api_sdk.models.smooth_manifest_default_version import SmoothManifestDefaultVersion
 from bitmovin_api_sdk.models.smooth_streaming_manifest import SmoothStreamingManifest
+from bitmovin_api_sdk.models.status import Status
 import pprint
 import six
 
@@ -21,12 +22,13 @@ class SmoothManifestDefault(SmoothStreamingManifest):
                  id_=None,
                  type_=None,
                  outputs=None,
+                 status=None,
                  server_manifest_name=None,
                  client_manifest_name=None,
                  encoding_id=None,
                  version=None):
-        # type: (string_types, string_types, datetime, datetime, dict, string_types, ManifestType, list[EncodingOutput], string_types, string_types, string_types, SmoothManifestDefaultVersion) -> None
-        super(SmoothManifestDefault, self).__init__(name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, id_=id_, type_=type_, outputs=outputs, server_manifest_name=server_manifest_name, client_manifest_name=client_manifest_name)
+        # type: (string_types, string_types, datetime, datetime, dict, string_types, ManifestType, list[EncodingOutput], Status, string_types, string_types, string_types, SmoothManifestDefaultVersion) -> None
+        super(SmoothManifestDefault, self).__init__(name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, id_=id_, type_=type_, outputs=outputs, status=status, server_manifest_name=server_manifest_name, client_manifest_name=client_manifest_name)
 
         self._encoding_id = None
         self._version = None

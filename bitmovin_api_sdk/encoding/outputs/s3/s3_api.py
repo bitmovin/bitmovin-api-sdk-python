@@ -34,7 +34,7 @@ class S3Api(BaseApi):
         # type: (S3Output, dict) -> S3Output
         """Create S3 Output
 
-        :param s3_output: The S3 output to be created
+        :param s3_output: The S3 output to be created  The following permissions are required for S3 output:  * s3:PutObject  * s3:PutObjectAcl  * s3:ListBucket  * s3:GetBucketLocation 
         :type s3_output: S3Output, required
         :return: S3 output
         :rtype: S3Output

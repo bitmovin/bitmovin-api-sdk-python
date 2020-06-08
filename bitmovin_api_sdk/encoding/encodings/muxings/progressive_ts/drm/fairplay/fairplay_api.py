@@ -33,11 +33,11 @@ class FairplayApi(BaseApi):
 
     def create(self, encoding_id, muxing_id, fair_play_drm, **kwargs):
         # type: (string_types, string_types, FairPlayDrm, dict) -> FairPlayDrm
-        """Add FairPlay DRM to Progressive TS
+        """Add FairPlay DRM to a Progressive TS muxing
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
-        :param muxing_id: Id of the progressive TS fragment.
+        :param muxing_id: Id of the Progressive TS muxing.
         :type muxing_id: string_types, required
         :param fair_play_drm: The FairPlay DRM to be created
         :type fair_play_drm: FairPlayDrm, required
@@ -55,11 +55,11 @@ class FairplayApi(BaseApi):
 
     def delete(self, encoding_id, muxing_id, drm_id, **kwargs):
         # type: (string_types, string_types, string_types, dict) -> BitmovinResponse
-        """Delete FairPlay DRM from Progressive TS
+        """Delete FairPlay DRM from a Progressive TS muxing
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
-        :param muxing_id: Id of the progressive TS fragment.
+        :param muxing_id: Id of the Progressive TS muxing.
         :type muxing_id: string_types, required
         :param drm_id: Id of the FairPlay DRM configuration.
         :type drm_id: string_types, required
@@ -76,11 +76,11 @@ class FairplayApi(BaseApi):
 
     def get(self, encoding_id, muxing_id, drm_id, **kwargs):
         # type: (string_types, string_types, string_types, dict) -> FairPlayDrm
-        """FairPlay DRM Details of Progressive TS
+        """FairPlay DRM Details of a Progressive TS
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
-        :param muxing_id: Id of the progressive TS fragment.
+        :param muxing_id: Id of the Progressive TS muxing.
         :type muxing_id: string_types, required
         :param drm_id: Id of the FairPlay DRM configuration.
         :type drm_id: string_types, required
@@ -97,11 +97,11 @@ class FairplayApi(BaseApi):
 
     def list(self, encoding_id, muxing_id, query_params=None, **kwargs):
         # type: (string_types, string_types, FairPlayDrmListQueryParams, dict) -> FairPlayDrm
-        """List FairPlay DRMs of Progressive TS
+        """List FairPlay DRMs of a Progressive TS muxing
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
-        :param muxing_id: Id of the progressive TS fragment.
+        :param muxing_id: Id of the Progressive TS muxing.
         :type muxing_id: string_types, required
         :param query_params: Query parameters
         :type query_params: FairPlayDrmListQueryParams

@@ -33,7 +33,7 @@ class SpekeApi(BaseApi):
 
     def create(self, encoding_id, muxing_id, speke_drm, **kwargs):
         # type: (string_types, string_types, SpekeDrm, dict) -> SpekeDrm
-        """Add SPEKE DRM key provider to TS muxing
+        """Add SPEKE DRM key provider to a TS muxing
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -55,7 +55,7 @@ class SpekeApi(BaseApi):
 
     def delete(self, encoding_id, muxing_id, drm_id, **kwargs):
         # type: (string_types, string_types, string_types, dict) -> BitmovinResponse
-        """Delete SPEKE DRM from TS muxing
+        """Delete SPEKE DRM from a TS muxing
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -76,7 +76,7 @@ class SpekeApi(BaseApi):
 
     def get(self, encoding_id, muxing_id, drm_id, **kwargs):
         # type: (string_types, string_types, string_types, dict) -> SpekeDrm
-        """SPEKE DRM Details of TS muxing
+        """SPEKE DRM Details of a TS muxing
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -97,7 +97,7 @@ class SpekeApi(BaseApi):
 
     def list(self, encoding_id, muxing_id, query_params=None, **kwargs):
         # type: (string_types, string_types, SpekeDrmListQueryParams, dict) -> SpekeDrm
-        """List SPEKE DRM of TS muxing
+        """List SPEKE DRM of a TS muxing
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required

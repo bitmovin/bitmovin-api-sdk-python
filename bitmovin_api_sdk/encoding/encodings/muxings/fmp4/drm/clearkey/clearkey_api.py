@@ -33,7 +33,7 @@ class ClearkeyApi(BaseApi):
 
     def create(self, encoding_id, muxing_id, clear_key_drm, **kwargs):
         # type: (string_types, string_types, ClearKeyDrm, dict) -> ClearKeyDrm
-        """Add ClearKey DRM to fMP4
+        """Add ClearKey DRM to an fMP4 muxing
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -55,7 +55,7 @@ class ClearkeyApi(BaseApi):
 
     def delete(self, encoding_id, muxing_id, drm_id, **kwargs):
         # type: (string_types, string_types, string_types, dict) -> BitmovinResponse
-        """Delete ClearKey DRM from fMP4
+        """Delete ClearKey DRM from an fMP4 muxing
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -76,7 +76,7 @@ class ClearkeyApi(BaseApi):
 
     def get(self, encoding_id, muxing_id, drm_id, **kwargs):
         # type: (string_types, string_types, string_types, dict) -> ClearKeyDrm
-        """ClearKey DRM Details of fMP4
+        """ClearKey DRM Details of an fMP4 muxing
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -97,7 +97,7 @@ class ClearkeyApi(BaseApi):
 
     def list(self, encoding_id, muxing_id, query_params=None, **kwargs):
         # type: (string_types, string_types, ClearKeyDrmListQueryParams, dict) -> ClearKeyDrm
-        """List ClearKey DRMs of fMP4
+        """List ClearKey DRMs of an fMP4 muxing
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required

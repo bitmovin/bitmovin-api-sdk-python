@@ -92,7 +92,7 @@ class AudioConfiguration(CodecConfiguration):
         # type: () -> float
         """Gets the rate of this AudioConfiguration.
 
-        Audio sampling rate Hz
+        Audio sampling rate in Hz
 
         :return: The rate of this AudioConfiguration.
         :rtype: float
@@ -104,7 +104,7 @@ class AudioConfiguration(CodecConfiguration):
         # type: (float) -> None
         """Sets the rate of this AudioConfiguration.
 
-        Audio sampling rate Hz
+        Audio sampling rate in Hz
 
         :param rate: The rate of this AudioConfiguration.
         :type: float

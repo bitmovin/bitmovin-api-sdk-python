@@ -55,7 +55,7 @@ class SpekeApi(BaseApi):
 
     def delete(self, encoding_id, muxing_id, drm_id, **kwargs):
         # type: (string_types, string_types, string_types, dict) -> BitmovinResponse
-        """Delete SPEKE DRM from fMP4
+        """Delete SPEKE DRM from an fMP4 muxing
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -76,7 +76,7 @@ class SpekeApi(BaseApi):
 
     def get(self, encoding_id, muxing_id, drm_id, **kwargs):
         # type: (string_types, string_types, string_types, dict) -> SpekeDrm
-        """SPEKE DRM Details of fMP4
+        """SPEKE DRM Details of an fMP4 muxing
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -97,7 +97,7 @@ class SpekeApi(BaseApi):
 
     def list(self, encoding_id, muxing_id, query_params=None, **kwargs):
         # type: (string_types, string_types, SpekeDrmListQueryParams, dict) -> SpekeDrm
-        """List SPEKE DRM of fMP4
+        """List SPEKE DRM of an fMP4 muxing
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required

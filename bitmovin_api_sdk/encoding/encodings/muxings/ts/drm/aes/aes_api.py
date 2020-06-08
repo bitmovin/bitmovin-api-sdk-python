@@ -33,13 +33,13 @@ class AesApi(BaseApi):
 
     def create(self, encoding_id, muxing_id, aes_encryption_drm, **kwargs):
         # type: (string_types, string_types, AesEncryptionDrm, dict) -> AesEncryptionDrm
-        """Add AES Encryption to TS muxing
+        """Add AES encryption configuration to a TS muxing
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
         :param muxing_id: Id of the TS muxing.
         :type muxing_id: string_types, required
-        :param aes_encryption_drm: The AES Encryption to be created
+        :param aes_encryption_drm: The AES encryption configuration to be created
         :type aes_encryption_drm: AesEncryptionDrm, required
         :return: AESEncryption details
         :rtype: AesEncryptionDrm
@@ -55,7 +55,7 @@ class AesApi(BaseApi):
 
     def delete(self, encoding_id, muxing_id, drm_id, **kwargs):
         # type: (string_types, string_types, string_types, dict) -> BitmovinResponse
-        """Delete AES Encryption from TS muxing
+        """Delete AES encryption configuration from a TS muxing
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -63,7 +63,7 @@ class AesApi(BaseApi):
         :type muxing_id: string_types, required
         :param drm_id: Id of the PlayReady DRM configuration.
         :type drm_id: string_types, required
-        :return: Id of the AESEncryption configuration.
+        :return: Id of the AES encryption configuration.
         :rtype: BitmovinResponse
         """
 
@@ -76,13 +76,13 @@ class AesApi(BaseApi):
 
     def get(self, encoding_id, muxing_id, drm_id, **kwargs):
         # type: (string_types, string_types, string_types, dict) -> AesEncryptionDrm
-        """AES Encryption Details of TS muxing
+        """AES encryption Details of a TS muxing
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
         :param muxing_id: Id of the TS muxing.
         :type muxing_id: string_types, required
-        :param drm_id: Id of the AESEncryption configuration.
+        :param drm_id: Id of the AES encryption configuration.
         :type drm_id: string_types, required
         :return: AESEncryption details
         :rtype: AesEncryptionDrm
@@ -97,7 +97,7 @@ class AesApi(BaseApi):
 
     def list(self, encoding_id, muxing_id, query_params=None, **kwargs):
         # type: (string_types, string_types, AesEncryptionDrmListQueryParams, dict) -> AesEncryptionDrm
-        """List AES Encryption of TS muxing
+        """List AES encryption configurations of a TS muxing
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -105,7 +105,7 @@ class AesApi(BaseApi):
         :type muxing_id: string_types, required
         :param query_params: Query parameters
         :type query_params: AesEncryptionDrmListQueryParams
-        :return: List of AESEncryption configurations
+        :return: List of AES encryption configurations
         :rtype: AesEncryptionDrm
         """
 
