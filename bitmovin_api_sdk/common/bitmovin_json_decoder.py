@@ -75,7 +75,7 @@ class BitmovinJsonDecoder(object):
                     if re.match('list', type_, re.I):
                         matches = re.search(r'\[(.*)\]', type_)
 
-                        if matches is not None and len(matches.groups()) is 1:
+                        if matches is not None and len(matches.groups()) == 1:
                             if getattr(BitmovinJsonDecoder.model_module, matches.group(1)):
                                 model_class = getattr(BitmovinJsonDecoder.model_module,
                                                       matches.group(1))
