@@ -995,12 +995,14 @@ from bitmovin_api_sdk.models.audio_mix_source_channel_type import AudioMixSource
 from bitmovin_api_sdk.models.audio_stream import AudioStream
 from bitmovin_api_sdk.models.audio_video_sync_mode import AudioVideoSyncMode
 from bitmovin_api_sdk.models.audio_volume_filter import AudioVolumeFilter
+from bitmovin_api_sdk.models.audio_volume_format import AudioVolumeFormat
 from bitmovin_api_sdk.models.audio_volume_unit import AudioVolumeUnit
 from bitmovin_api_sdk.models.auto_representation import AutoRepresentation
 from bitmovin_api_sdk.models.auto_restart_configuration import AutoRestartConfiguration
 from bitmovin_api_sdk.models.av1_adaptive_quant_mode import Av1AdaptiveQuantMode
 from bitmovin_api_sdk.models.av1_key_placement_mode import Av1KeyPlacementMode
 from bitmovin_api_sdk.models.av1_video_configuration import Av1VideoConfiguration
+from bitmovin_api_sdk.models.availability_start_time_mode import AvailabilityStartTimeMode
 from bitmovin_api_sdk.models.aws_account import AwsAccount
 from bitmovin_api_sdk.models.aws_account_region_settings import AwsAccountRegionSettings
 from bitmovin_api_sdk.models.aws_cloud_region import AwsCloudRegion
@@ -1461,4 +1463,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.42.0"
+__version__ = "1.43.0"

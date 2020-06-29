@@ -35,8 +35,9 @@ class TextFilter(Filter):
                  timecode=None,
                  text=None,
                  x=None,
-                 y=None):
-        # type: (string_types, string_types, datetime, datetime, dict, string_types, TextFilterFont, bool, int, string_types, int, int, bool, string_types, int, string_types, int, string_types, int, int, string_types, string_types, string_types, string_types) -> None
+                 y=None,
+                 rate=None):
+        # type: (string_types, string_types, datetime, datetime, dict, string_types, TextFilterFont, bool, int, string_types, int, int, bool, string_types, int, string_types, float, string_types, int, int, string_types, string_types, string_types, string_types, string_types) -> None
         super(TextFilter, self).__init__(name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, id_=id_)
 
         self._font = None
@@ -57,6 +58,7 @@ class TextFilter(Filter):
         self._text = None
         self._x = None
         self._y = None
+        self._rate = None
         self.discriminator = None
 
         if font is not None:
@@ -95,6 +97,8 @@ class TextFilter(Filter):
             self.x = x
         if y is not None:
             self.y = y
+        if rate is not None:
+            self.rate = rate
 
     @property
     def openapi_types(self):
@@ -114,14 +118,15 @@ class TextFilter(Filter):
             'font_color': 'string_types',
             'font_size': 'int',
             'font_size_expression': 'string_types',
-            'alpha': 'int',
+            'alpha': 'float',
             'shadow_color': 'string_types',
             'shadow_x': 'int',
             'shadow_y': 'int',
             'timecode': 'string_types',
             'text': 'string_types',
             'x': 'string_types',
-            'y': 'string_types'
+            'y': 'string_types',
+            'rate': 'string_types'
         })
 
         return types
@@ -151,7 +156,8 @@ class TextFilter(Filter):
             'timecode': 'timecode',
             'text': 'text',
             'x': 'x',
-            'y': 'y'
+            'y': 'y',
+            'rate': 'rate'
         })
         return attributes
 
@@ -445,30 +451,30 @@ class TextFilter(Filter):
 
     @property
     def alpha(self):
-        # type: () -> int
+        # type: () -> float
         """Gets the alpha of this TextFilter.
 
         If set, alpha blending for the text is applied. Values are valid between 0.0 and 1.0.
 
         :return: The alpha of this TextFilter.
-        :rtype: int
+        :rtype: float
         """
         return self._alpha
 
     @alpha.setter
     def alpha(self, alpha):
-        # type: (int) -> None
+        # type: (float) -> None
         """Sets the alpha of this TextFilter.
 
         If set, alpha blending for the text is applied. Values are valid between 0.0 and 1.0.
 
         :param alpha: The alpha of this TextFilter.
-        :type: int
+        :type: float
         """
 
         if alpha is not None:
-            if not isinstance(alpha, int):
-                raise TypeError("Invalid type for `alpha`, type has to be `int`")
+            if not isinstance(alpha, (float, int)):
+                raise TypeError("Invalid type for `alpha`, type has to be `float`")
 
         self._alpha = alpha
 
@@ -674,6 +680,33 @@ class TextFilter(Filter):
                 raise TypeError("Invalid type for `y`, type has to be `string_types`")
 
         self._y = y
+
+    @property
+    def rate(self):
+        # type: () -> string_types
+        """Gets the rate of this TextFilter.
+
+
+        :return: The rate of this TextFilter.
+        :rtype: string_types
+        """
+        return self._rate
+
+    @rate.setter
+    def rate(self, rate):
+        # type: (string_types) -> None
+        """Sets the rate of this TextFilter.
+
+
+        :param rate: The rate of this TextFilter.
+        :type: string_types
+        """
+
+        if rate is not None:
+            if not isinstance(rate, string_types):
+                raise TypeError("Invalid type for `rate`, type has to be `string_types`")
+
+        self._rate = rate
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -3,6 +3,7 @@
 from enum import Enum
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
+from bitmovin_api_sdk.models.audio_volume_format import AudioVolumeFormat
 from bitmovin_api_sdk.models.audio_volume_unit import AudioVolumeUnit
 from bitmovin_api_sdk.models.filter import Filter
 import pprint
@@ -19,18 +20,22 @@ class AudioVolumeFilter(Filter):
                  custom_data=None,
                  id_=None,
                  volume=None,
-                 unit=None):
-        # type: (string_types, string_types, datetime, datetime, dict, string_types, float, AudioVolumeUnit) -> None
+                 unit=None,
+                 format_=None):
+        # type: (string_types, string_types, datetime, datetime, dict, string_types, float, AudioVolumeUnit, AudioVolumeFormat) -> None
         super(AudioVolumeFilter, self).__init__(name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, id_=id_)
 
         self._volume = None
         self._unit = None
+        self._format = None
         self.discriminator = None
 
         if volume is not None:
             self.volume = volume
         if unit is not None:
             self.unit = unit
+        if format_ is not None:
+            self.format = format_
 
     @property
     def openapi_types(self):
@@ -41,7 +46,8 @@ class AudioVolumeFilter(Filter):
 
         types.update({
             'volume': 'float',
-            'unit': 'AudioVolumeUnit'
+            'unit': 'AudioVolumeUnit',
+            'format': 'AudioVolumeFormat'
         })
 
         return types
@@ -55,7 +61,8 @@ class AudioVolumeFilter(Filter):
 
         attributes.update({
             'volume': 'volume',
-            'unit': 'unit'
+            'unit': 'unit',
+            'format': 'format'
         })
         return attributes
 
@@ -114,6 +121,33 @@ class AudioVolumeFilter(Filter):
                 raise TypeError("Invalid type for `unit`, type has to be `AudioVolumeUnit`")
 
         self._unit = unit
+
+    @property
+    def format(self):
+        # type: () -> AudioVolumeFormat
+        """Gets the format of this AudioVolumeFilter.
+
+
+        :return: The format of this AudioVolumeFilter.
+        :rtype: AudioVolumeFormat
+        """
+        return self._format
+
+    @format.setter
+    def format(self, format_):
+        # type: (AudioVolumeFormat) -> None
+        """Sets the format of this AudioVolumeFilter.
+
+
+        :param format_: The format of this AudioVolumeFilter.
+        :type: AudioVolumeFormat
+        """
+
+        if format_ is not None:
+            if not isinstance(format_, AudioVolumeFormat):
+                raise TypeError("Invalid type for `format`, type has to be `AudioVolumeFormat`")
+
+        self._format = format_
 
     def to_dict(self):
         """Returns the model properties as a dict"""

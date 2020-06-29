@@ -3,6 +3,7 @@
 from enum import Enum
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
+from bitmovin_api_sdk.models.availability_start_time_mode import AvailabilityStartTimeMode
 import pprint
 import six
 
@@ -12,12 +13,18 @@ class LiveDashManifest(object):
     def __init__(self,
                  manifest_id=None,
                  timeshift=None,
-                 live_edge_offset=None):
-        # type: (string_types, float, float) -> None
+                 live_edge_offset=None,
+                 suggested_presentation_delay=None,
+                 minimum_update_period=None,
+                 availability_start_time_mode=None):
+        # type: (string_types, float, float, float, float, AvailabilityStartTimeMode) -> None
 
         self._manifest_id = None
         self._timeshift = None
         self._live_edge_offset = None
+        self._suggested_presentation_delay = None
+        self._minimum_update_period = None
+        self._availability_start_time_mode = None
         self.discriminator = None
 
         if manifest_id is not None:
@@ -26,13 +33,22 @@ class LiveDashManifest(object):
             self.timeshift = timeshift
         if live_edge_offset is not None:
             self.live_edge_offset = live_edge_offset
+        if suggested_presentation_delay is not None:
+            self.suggested_presentation_delay = suggested_presentation_delay
+        if minimum_update_period is not None:
+            self.minimum_update_period = minimum_update_period
+        if availability_start_time_mode is not None:
+            self.availability_start_time_mode = availability_start_time_mode
 
     @property
     def openapi_types(self):
         types = {
             'manifest_id': 'string_types',
             'timeshift': 'float',
-            'live_edge_offset': 'float'
+            'live_edge_offset': 'float',
+            'suggested_presentation_delay': 'float',
+            'minimum_update_period': 'float',
+            'availability_start_time_mode': 'AvailabilityStartTimeMode'
         }
 
         return types
@@ -42,7 +58,10 @@ class LiveDashManifest(object):
         attributes = {
             'manifest_id': 'manifestId',
             'timeshift': 'timeshift',
-            'live_edge_offset': 'liveEdgeOffset'
+            'live_edge_offset': 'liveEdgeOffset',
+            'suggested_presentation_delay': 'suggestedPresentationDelay',
+            'minimum_update_period': 'minimumUpdatePeriod',
+            'availability_start_time_mode': 'availabilityStartTimeMode'
         }
         return attributes
 
@@ -132,6 +151,93 @@ class LiveDashManifest(object):
                 raise TypeError("Invalid type for `live_edge_offset`, type has to be `float`")
 
         self._live_edge_offset = live_edge_offset
+
+    @property
+    def suggested_presentation_delay(self):
+        # type: () -> float
+        """Gets the suggested_presentation_delay of this LiveDashManifest.
+
+        The suggestedPresentationDelay to be set in the DASH manifest. If nothing is set, no value will be set.
+
+        :return: The suggested_presentation_delay of this LiveDashManifest.
+        :rtype: float
+        """
+        return self._suggested_presentation_delay
+
+    @suggested_presentation_delay.setter
+    def suggested_presentation_delay(self, suggested_presentation_delay):
+        # type: (float) -> None
+        """Sets the suggested_presentation_delay of this LiveDashManifest.
+
+        The suggestedPresentationDelay to be set in the DASH manifest. If nothing is set, no value will be set.
+
+        :param suggested_presentation_delay: The suggested_presentation_delay of this LiveDashManifest.
+        :type: float
+        """
+
+        if suggested_presentation_delay is not None:
+            if not isinstance(suggested_presentation_delay, (float, int)):
+                raise TypeError("Invalid type for `suggested_presentation_delay`, type has to be `float`")
+
+        self._suggested_presentation_delay = suggested_presentation_delay
+
+    @property
+    def minimum_update_period(self):
+        # type: () -> float
+        """Gets the minimum_update_period of this LiveDashManifest.
+
+        The minimumUpdatePeriod to be set in the DASH manifest. If nothing is set, the segment duration will be set.
+
+        :return: The minimum_update_period of this LiveDashManifest.
+        :rtype: float
+        """
+        return self._minimum_update_period
+
+    @minimum_update_period.setter
+    def minimum_update_period(self, minimum_update_period):
+        # type: (float) -> None
+        """Sets the minimum_update_period of this LiveDashManifest.
+
+        The minimumUpdatePeriod to be set in the DASH manifest. If nothing is set, the segment duration will be set.
+
+        :param minimum_update_period: The minimum_update_period of this LiveDashManifest.
+        :type: float
+        """
+
+        if minimum_update_period is not None:
+            if not isinstance(minimum_update_period, (float, int)):
+                raise TypeError("Invalid type for `minimum_update_period`, type has to be `float`")
+
+        self._minimum_update_period = minimum_update_period
+
+    @property
+    def availability_start_time_mode(self):
+        # type: () -> AvailabilityStartTimeMode
+        """Gets the availability_start_time_mode of this LiveDashManifest.
+
+        The mode to trigger the availabilityStartTime initialization.
+
+        :return: The availability_start_time_mode of this LiveDashManifest.
+        :rtype: AvailabilityStartTimeMode
+        """
+        return self._availability_start_time_mode
+
+    @availability_start_time_mode.setter
+    def availability_start_time_mode(self, availability_start_time_mode):
+        # type: (AvailabilityStartTimeMode) -> None
+        """Sets the availability_start_time_mode of this LiveDashManifest.
+
+        The mode to trigger the availabilityStartTime initialization.
+
+        :param availability_start_time_mode: The availability_start_time_mode of this LiveDashManifest.
+        :type: AvailabilityStartTimeMode
+        """
+
+        if availability_start_time_mode is not None:
+            if not isinstance(availability_start_time_mode, AvailabilityStartTimeMode):
+                raise TypeError("Invalid type for `availability_start_time_mode`, type has to be `AvailabilityStartTimeMode`")
+
+        self._availability_start_time_mode = availability_start_time_mode
 
     def to_dict(self):
         """Returns the model properties as a dict"""

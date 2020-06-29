@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
   
@@ -12,12 +11,18 @@
   
 
   
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+
+  
   
   
   
 
   
-  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
@@ -29,10 +34,6 @@
     <script type="text/javascript" src="../../../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" /> 
 </head>
@@ -48,7 +49,7 @@
           
 
           
-            <a href="../../../index.html" class="icon icon-home"> Bitmovin Python API SDK
+            <a href="../../../index.html" class="icon icon-home" alt="Documentation Home"> Bitmovin Python API SDK
           
 
           
@@ -71,6 +72,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -93,6 +95,7 @@
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -131,7 +134,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
         
           <li><a href="../../index.html">Module code</a> &raquo;</li>
         
@@ -167,13 +170,27 @@
                  <span class="n">date_</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">bytes_encoded</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">time_encoded</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                 <span class="n">bytes_egress</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (date, int, int, int) -&gt; None</span>
+                 <span class="n">bytes_egress</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">billable_encoding_minutes</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">billable_egress_bytes</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">streams</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">muxings</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">features</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">billable_transmuxing_minutes</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">billable_feature_minutes</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="c1"># type: (date, int, int, int, list[BillableEncodingMinutes], list[EgressInformation], list[StatisticsPerStream], list[StatisticsPerMuxing], list[BillableEncodingFeatureMinutes], float, float) -&gt; None</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_date</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_bytes_encoded</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_time_encoded</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_bytes_egress</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_billable_encoding_minutes</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_billable_egress_bytes</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_streams</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_muxings</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_features</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_billable_transmuxing_minutes</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_billable_feature_minutes</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>
 
         <span class="k">if</span> <span class="n">date_</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -184,6 +201,20 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">time_encoded</span> <span class="o">=</span> <span class="n">time_encoded</span>
         <span class="k">if</span> <span class="n">bytes_egress</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">bytes_egress</span> <span class="o">=</span> <span class="n">bytes_egress</span>
+        <span class="k">if</span> <span class="n">billable_encoding_minutes</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">billable_encoding_minutes</span> <span class="o">=</span> <span class="n">billable_encoding_minutes</span>
+        <span class="k">if</span> <span class="n">billable_egress_bytes</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">billable_egress_bytes</span> <span class="o">=</span> <span class="n">billable_egress_bytes</span>
+        <span class="k">if</span> <span class="n">streams</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">streams</span> <span class="o">=</span> <span class="n">streams</span>
+        <span class="k">if</span> <span class="n">muxings</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">muxings</span> <span class="o">=</span> <span class="n">muxings</span>
+        <span class="k">if</span> <span class="n">features</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">features</span> <span class="o">=</span> <span class="n">features</span>
+        <span class="k">if</span> <span class="n">billable_transmuxing_minutes</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">billable_transmuxing_minutes</span> <span class="o">=</span> <span class="n">billable_transmuxing_minutes</span>
+        <span class="k">if</span> <span class="n">billable_feature_minutes</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">billable_feature_minutes</span> <span class="o">=</span> <span class="n">billable_feature_minutes</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -191,7 +222,14 @@
             <span class="s1">&#39;date&#39;</span><span class="p">:</span> <span class="s1">&#39;date&#39;</span><span class="p">,</span>
             <span class="s1">&#39;bytes_encoded&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
             <span class="s1">&#39;time_encoded&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;bytes_egress&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span>
+            <span class="s1">&#39;bytes_egress&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;billable_encoding_minutes&#39;</span><span class="p">:</span> <span class="s1">&#39;list[BillableEncodingMinutes]&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;billable_egress_bytes&#39;</span><span class="p">:</span> <span class="s1">&#39;list[EgressInformation]&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;streams&#39;</span><span class="p">:</span> <span class="s1">&#39;list[StatisticsPerStream]&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;muxings&#39;</span><span class="p">:</span> <span class="s1">&#39;list[StatisticsPerMuxing]&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;features&#39;</span><span class="p">:</span> <span class="s1">&#39;list[BillableEncodingFeatureMinutes]&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;billable_transmuxing_minutes&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;billable_feature_minutes&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span>
         <span class="p">}</span>
 
         <span class="k">return</span> <span class="n">types</span>
@@ -202,7 +240,14 @@
             <span class="s1">&#39;date&#39;</span><span class="p">:</span> <span class="s1">&#39;date&#39;</span><span class="p">,</span>
             <span class="s1">&#39;bytes_encoded&#39;</span><span class="p">:</span> <span class="s1">&#39;bytesEncoded&#39;</span><span class="p">,</span>
             <span class="s1">&#39;time_encoded&#39;</span><span class="p">:</span> <span class="s1">&#39;timeEncoded&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;bytes_egress&#39;</span><span class="p">:</span> <span class="s1">&#39;bytesEgress&#39;</span>
+            <span class="s1">&#39;bytes_egress&#39;</span><span class="p">:</span> <span class="s1">&#39;bytesEgress&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;billable_encoding_minutes&#39;</span><span class="p">:</span> <span class="s1">&#39;billableEncodingMinutes&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;billable_egress_bytes&#39;</span><span class="p">:</span> <span class="s1">&#39;billableEgressBytes&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;streams&#39;</span><span class="p">:</span> <span class="s1">&#39;streams&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;muxings&#39;</span><span class="p">:</span> <span class="s1">&#39;muxings&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;features&#39;</span><span class="p">:</span> <span class="s1">&#39;features&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;billable_transmuxing_minutes&#39;</span><span class="p">:</span> <span class="s1">&#39;billableTransmuxingMinutes&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;billable_feature_minutes&#39;</span><span class="p">:</span> <span class="s1">&#39;billableFeatureMinutes&#39;</span>
         <span class="p">}</span>
         <span class="k">return</span> <span class="n">attributes</span>
 
@@ -322,6 +367,199 @@
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_bytes_egress</span> <span class="o">=</span> <span class="n">bytes_egress</span>
 
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">billable_encoding_minutes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; list[BillableEncodingMinutes]</span>
+        <span class="sd">&quot;&quot;&quot;Gets the billable_encoding_minutes of this EncodingStatistics.</span>
+
+
+<span class="sd">        :return: The billable_encoding_minutes of this EncodingStatistics.</span>
+<span class="sd">        :rtype: list[BillableEncodingMinutes]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_billable_encoding_minutes</span>
+
+    <span class="nd">@billable_encoding_minutes</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">billable_encoding_minutes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">billable_encoding_minutes</span><span class="p">):</span>
+        <span class="c1"># type: (list) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the billable_encoding_minutes of this EncodingStatistics.</span>
+
+
+<span class="sd">        :param billable_encoding_minutes: The billable_encoding_minutes of this EncodingStatistics.</span>
+<span class="sd">        :type: list[BillableEncodingMinutes]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">billable_encoding_minutes</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">billable_encoding_minutes</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `billable_encoding_minutes`, type has to be `list[BillableEncodingMinutes]`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_billable_encoding_minutes</span> <span class="o">=</span> <span class="n">billable_encoding_minutes</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">billable_egress_bytes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; list[EgressInformation]</span>
+        <span class="sd">&quot;&quot;&quot;Gets the billable_egress_bytes of this EncodingStatistics.</span>
+
+
+<span class="sd">        :return: The billable_egress_bytes of this EncodingStatistics.</span>
+<span class="sd">        :rtype: list[EgressInformation]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_billable_egress_bytes</span>
+
+    <span class="nd">@billable_egress_bytes</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">billable_egress_bytes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">billable_egress_bytes</span><span class="p">):</span>
+        <span class="c1"># type: (list) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the billable_egress_bytes of this EncodingStatistics.</span>
+
+
+<span class="sd">        :param billable_egress_bytes: The billable_egress_bytes of this EncodingStatistics.</span>
+<span class="sd">        :type: list[EgressInformation]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">billable_egress_bytes</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">billable_egress_bytes</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `billable_egress_bytes`, type has to be `list[EgressInformation]`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_billable_egress_bytes</span> <span class="o">=</span> <span class="n">billable_egress_bytes</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">streams</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; list[StatisticsPerStream]</span>
+        <span class="sd">&quot;&quot;&quot;Gets the streams of this EncodingStatistics.</span>
+
+
+<span class="sd">        :return: The streams of this EncodingStatistics.</span>
+<span class="sd">        :rtype: list[StatisticsPerStream]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_streams</span>
+
+    <span class="nd">@streams</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">streams</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">streams</span><span class="p">):</span>
+        <span class="c1"># type: (list) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the streams of this EncodingStatistics.</span>
+
+
+<span class="sd">        :param streams: The streams of this EncodingStatistics.</span>
+<span class="sd">        :type: list[StatisticsPerStream]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">streams</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">streams</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `streams`, type has to be `list[StatisticsPerStream]`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_streams</span> <span class="o">=</span> <span class="n">streams</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">muxings</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; list[StatisticsPerMuxing]</span>
+        <span class="sd">&quot;&quot;&quot;Gets the muxings of this EncodingStatistics.</span>
+
+
+<span class="sd">        :return: The muxings of this EncodingStatistics.</span>
+<span class="sd">        :rtype: list[StatisticsPerMuxing]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_muxings</span>
+
+    <span class="nd">@muxings</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">muxings</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">muxings</span><span class="p">):</span>
+        <span class="c1"># type: (list) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the muxings of this EncodingStatistics.</span>
+
+
+<span class="sd">        :param muxings: The muxings of this EncodingStatistics.</span>
+<span class="sd">        :type: list[StatisticsPerMuxing]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">muxings</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">muxings</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `muxings`, type has to be `list[StatisticsPerMuxing]`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_muxings</span> <span class="o">=</span> <span class="n">muxings</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">features</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; list[BillableEncodingFeatureMinutes]</span>
+        <span class="sd">&quot;&quot;&quot;Gets the features of this EncodingStatistics.</span>
+
+
+<span class="sd">        :return: The features of this EncodingStatistics.</span>
+<span class="sd">        :rtype: list[BillableEncodingFeatureMinutes]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_features</span>
+
+    <span class="nd">@features</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">features</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">features</span><span class="p">):</span>
+        <span class="c1"># type: (list) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the features of this EncodingStatistics.</span>
+
+
+<span class="sd">        :param features: The features of this EncodingStatistics.</span>
+<span class="sd">        :type: list[BillableEncodingFeatureMinutes]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">features</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">features</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `features`, type has to be `list[BillableEncodingFeatureMinutes]`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_features</span> <span class="o">=</span> <span class="n">features</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">billable_transmuxing_minutes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; float</span>
+        <span class="sd">&quot;&quot;&quot;Gets the billable_transmuxing_minutes of this EncodingStatistics.</span>
+
+<span class="sd">        Billable minutes for the muxings.</span>
+
+<span class="sd">        :return: The billable_transmuxing_minutes of this EncodingStatistics.</span>
+<span class="sd">        :rtype: float</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_billable_transmuxing_minutes</span>
+
+    <span class="nd">@billable_transmuxing_minutes</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">billable_transmuxing_minutes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">billable_transmuxing_minutes</span><span class="p">):</span>
+        <span class="c1"># type: (float) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the billable_transmuxing_minutes of this EncodingStatistics.</span>
+
+<span class="sd">        Billable minutes for the muxings.</span>
+
+<span class="sd">        :param billable_transmuxing_minutes: The billable_transmuxing_minutes of this EncodingStatistics.</span>
+<span class="sd">        :type: float</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">billable_transmuxing_minutes</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">billable_transmuxing_minutes</span><span class="p">,</span> <span class="p">(</span><span class="nb">float</span><span class="p">,</span> <span class="nb">int</span><span class="p">)):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `billable_transmuxing_minutes`, type has to be `float`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_billable_transmuxing_minutes</span> <span class="o">=</span> <span class="n">billable_transmuxing_minutes</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">billable_feature_minutes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; float</span>
+        <span class="sd">&quot;&quot;&quot;Gets the billable_feature_minutes of this EncodingStatistics.</span>
+
+<span class="sd">        Billable minutes for the features.</span>
+
+<span class="sd">        :return: The billable_feature_minutes of this EncodingStatistics.</span>
+<span class="sd">        :rtype: float</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_billable_feature_minutes</span>
+
+    <span class="nd">@billable_feature_minutes</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">billable_feature_minutes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">billable_feature_minutes</span><span class="p">):</span>
+        <span class="c1"># type: (float) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the billable_feature_minutes of this EncodingStatistics.</span>
+
+<span class="sd">        Billable minutes for the features.</span>
+
+<span class="sd">        :param billable_feature_minutes: The billable_feature_minutes of this EncodingStatistics.</span>
+<span class="sd">        :type: float</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">billable_feature_minutes</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">billable_feature_minutes</span><span class="p">,</span> <span class="p">(</span><span class="nb">float</span><span class="p">,</span> <span class="nb">int</span><span class="p">)):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `billable_feature_minutes`, type has to be `float`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_billable_feature_minutes</span> <span class="o">=</span> <span class="n">billable_feature_minutes</span>
+
 <div class="viewcode-block" id="EncodingStatistics.to_dict"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.encoding_statistics.EncodingStatistics.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>
         <span class="n">result</span> <span class="o">=</span> <span class="p">{}</span>
@@ -375,11 +613,19 @@
 
   <div role="contentinfo">
     <p>
+        
         &copy; Copyright 2020, Bitmovin Inc
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -390,7 +636,6 @@
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

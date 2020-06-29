@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
   
@@ -12,12 +11,18 @@
   
 
   
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+
+  
   
   
   
 
   
-  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
@@ -29,10 +34,6 @@
     <script type="text/javascript" src="../../../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" /> 
 </head>
@@ -48,7 +49,7 @@
           
 
           
-            <a href="../../../index.html" class="icon icon-home"> Bitmovin Python API SDK
+            <a href="../../../index.html" class="icon icon-home" alt="Documentation Home"> Bitmovin Python API SDK
           
 
           
@@ -71,6 +72,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -93,6 +95,7 @@
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -131,7 +134,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
         
           <li><a href="../../index.html">Module code</a> &raquo;</li>
         
@@ -156,6 +159,7 @@
 <span class="kn">from</span> <span class="nn">enum</span> <span class="kn">import</span> <span class="n">Enum</span>
 <span class="kn">from</span> <span class="nn">six</span> <span class="kn">import</span> <span class="n">string_types</span><span class="p">,</span> <span class="n">iteritems</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.common.poscheck</span> <span class="kn">import</span> <span class="n">poscheck_model</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.availability_start_time_mode</span> <span class="kn">import</span> <span class="n">AvailabilityStartTimeMode</span>
 <span class="kn">import</span> <span class="nn">pprint</span>
 <span class="kn">import</span> <span class="nn">six</span>
 
@@ -165,12 +169,18 @@
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
                  <span class="n">manifest_id</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">timeshift</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                 <span class="n">live_edge_offset</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (string_types, float, float) -&gt; None</span>
+                 <span class="n">live_edge_offset</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">suggested_presentation_delay</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">minimum_update_period</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">availability_start_time_mode</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="c1"># type: (string_types, float, float, float, float, AvailabilityStartTimeMode) -&gt; None</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_manifest_id</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_timeshift</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_live_edge_offset</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_suggested_presentation_delay</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_minimum_update_period</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_availability_start_time_mode</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>
 
         <span class="k">if</span> <span class="n">manifest_id</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -179,13 +189,22 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">timeshift</span> <span class="o">=</span> <span class="n">timeshift</span>
         <span class="k">if</span> <span class="n">live_edge_offset</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">live_edge_offset</span> <span class="o">=</span> <span class="n">live_edge_offset</span>
+        <span class="k">if</span> <span class="n">suggested_presentation_delay</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">suggested_presentation_delay</span> <span class="o">=</span> <span class="n">suggested_presentation_delay</span>
+        <span class="k">if</span> <span class="n">minimum_update_period</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">minimum_update_period</span> <span class="o">=</span> <span class="n">minimum_update_period</span>
+        <span class="k">if</span> <span class="n">availability_start_time_mode</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">availability_start_time_mode</span> <span class="o">=</span> <span class="n">availability_start_time_mode</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">types</span> <span class="o">=</span> <span class="p">{</span>
             <span class="s1">&#39;manifest_id&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
             <span class="s1">&#39;timeshift&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;live_edge_offset&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span>
+            <span class="s1">&#39;live_edge_offset&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;suggested_presentation_delay&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;minimum_update_period&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;availability_start_time_mode&#39;</span><span class="p">:</span> <span class="s1">&#39;AvailabilityStartTimeMode&#39;</span>
         <span class="p">}</span>
 
         <span class="k">return</span> <span class="n">types</span>
@@ -195,7 +214,10 @@
         <span class="n">attributes</span> <span class="o">=</span> <span class="p">{</span>
             <span class="s1">&#39;manifest_id&#39;</span><span class="p">:</span> <span class="s1">&#39;manifestId&#39;</span><span class="p">,</span>
             <span class="s1">&#39;timeshift&#39;</span><span class="p">:</span> <span class="s1">&#39;timeshift&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;live_edge_offset&#39;</span><span class="p">:</span> <span class="s1">&#39;liveEdgeOffset&#39;</span>
+            <span class="s1">&#39;live_edge_offset&#39;</span><span class="p">:</span> <span class="s1">&#39;liveEdgeOffset&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;suggested_presentation_delay&#39;</span><span class="p">:</span> <span class="s1">&#39;suggestedPresentationDelay&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;minimum_update_period&#39;</span><span class="p">:</span> <span class="s1">&#39;minimumUpdatePeriod&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;availability_start_time_mode&#39;</span><span class="p">:</span> <span class="s1">&#39;availabilityStartTimeMode&#39;</span>
         <span class="p">}</span>
         <span class="k">return</span> <span class="n">attributes</span>
 
@@ -286,6 +308,93 @@
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_live_edge_offset</span> <span class="o">=</span> <span class="n">live_edge_offset</span>
 
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">suggested_presentation_delay</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; float</span>
+        <span class="sd">&quot;&quot;&quot;Gets the suggested_presentation_delay of this LiveDashManifest.</span>
+
+<span class="sd">        The suggestedPresentationDelay to be set in the DASH manifest. If nothing is set, no value will be set.</span>
+
+<span class="sd">        :return: The suggested_presentation_delay of this LiveDashManifest.</span>
+<span class="sd">        :rtype: float</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_suggested_presentation_delay</span>
+
+    <span class="nd">@suggested_presentation_delay</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">suggested_presentation_delay</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">suggested_presentation_delay</span><span class="p">):</span>
+        <span class="c1"># type: (float) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the suggested_presentation_delay of this LiveDashManifest.</span>
+
+<span class="sd">        The suggestedPresentationDelay to be set in the DASH manifest. If nothing is set, no value will be set.</span>
+
+<span class="sd">        :param suggested_presentation_delay: The suggested_presentation_delay of this LiveDashManifest.</span>
+<span class="sd">        :type: float</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">suggested_presentation_delay</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">suggested_presentation_delay</span><span class="p">,</span> <span class="p">(</span><span class="nb">float</span><span class="p">,</span> <span class="nb">int</span><span class="p">)):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `suggested_presentation_delay`, type has to be `float`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_suggested_presentation_delay</span> <span class="o">=</span> <span class="n">suggested_presentation_delay</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">minimum_update_period</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; float</span>
+        <span class="sd">&quot;&quot;&quot;Gets the minimum_update_period of this LiveDashManifest.</span>
+
+<span class="sd">        The minimumUpdatePeriod to be set in the DASH manifest. If nothing is set, the segment duration will be set.</span>
+
+<span class="sd">        :return: The minimum_update_period of this LiveDashManifest.</span>
+<span class="sd">        :rtype: float</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_minimum_update_period</span>
+
+    <span class="nd">@minimum_update_period</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">minimum_update_period</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">minimum_update_period</span><span class="p">):</span>
+        <span class="c1"># type: (float) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the minimum_update_period of this LiveDashManifest.</span>
+
+<span class="sd">        The minimumUpdatePeriod to be set in the DASH manifest. If nothing is set, the segment duration will be set.</span>
+
+<span class="sd">        :param minimum_update_period: The minimum_update_period of this LiveDashManifest.</span>
+<span class="sd">        :type: float</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">minimum_update_period</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">minimum_update_period</span><span class="p">,</span> <span class="p">(</span><span class="nb">float</span><span class="p">,</span> <span class="nb">int</span><span class="p">)):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `minimum_update_period`, type has to be `float`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_minimum_update_period</span> <span class="o">=</span> <span class="n">minimum_update_period</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">availability_start_time_mode</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; AvailabilityStartTimeMode</span>
+        <span class="sd">&quot;&quot;&quot;Gets the availability_start_time_mode of this LiveDashManifest.</span>
+
+<span class="sd">        The mode to trigger the availabilityStartTime initialization.</span>
+
+<span class="sd">        :return: The availability_start_time_mode of this LiveDashManifest.</span>
+<span class="sd">        :rtype: AvailabilityStartTimeMode</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_availability_start_time_mode</span>
+
+    <span class="nd">@availability_start_time_mode</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">availability_start_time_mode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">availability_start_time_mode</span><span class="p">):</span>
+        <span class="c1"># type: (AvailabilityStartTimeMode) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the availability_start_time_mode of this LiveDashManifest.</span>
+
+<span class="sd">        The mode to trigger the availabilityStartTime initialization.</span>
+
+<span class="sd">        :param availability_start_time_mode: The availability_start_time_mode of this LiveDashManifest.</span>
+<span class="sd">        :type: AvailabilityStartTimeMode</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">availability_start_time_mode</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">availability_start_time_mode</span><span class="p">,</span> <span class="n">AvailabilityStartTimeMode</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `availability_start_time_mode`, type has to be `AvailabilityStartTimeMode`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_availability_start_time_mode</span> <span class="o">=</span> <span class="n">availability_start_time_mode</span>
+
 <div class="viewcode-block" id="LiveDashManifest.to_dict"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.live_dash_manifest.LiveDashManifest.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>
         <span class="n">result</span> <span class="o">=</span> <span class="p">{}</span>
@@ -339,11 +448,19 @@
 
   <div role="contentinfo">
     <p>
+        
         &copy; Copyright 2020, Bitmovin Inc
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -354,7 +471,6 @@
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

@@ -1,9 +1,7 @@
 
 
-
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
   
@@ -13,12 +11,18 @@
   
 
   
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
   
   
   
 
   
-  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -30,10 +34,6 @@
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="#" />
     <link rel="search" title="Search" href="search.html" /> 
 </head>
@@ -49,7 +49,7 @@
           
 
           
-            <a href="index.html" class="icon icon-home"> Bitmovin Python API SDK
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> Bitmovin Python API SDK
           
 
           
@@ -72,6 +72,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -94,6 +95,7 @@
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -132,7 +134,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="index.html">Docs</a> &raquo;</li>
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
       <li>Index</li>
     
@@ -2042,6 +2044,8 @@
 </li>
       <li><a href="__modules/bitmovin_api_sdk.encoding.filters.audio_volume.html#bitmovin_api_sdk.encoding.filters.audio_volume.audio_volume_filter_list_query_params.AudioVolumeFilterListQueryParams">AudioVolumeFilterListQueryParams (class in bitmovin_api_sdk.encoding.filters.audio_volume.audio_volume_filter_list_query_params)</a>
 </li>
+      <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.audio_volume_format.AudioVolumeFormat">AudioVolumeFormat (class in bitmovin_api_sdk.models.audio_volume_format)</a>
+</li>
       <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.audio_volume_unit.AudioVolumeUnit">AudioVolumeUnit (class in bitmovin_api_sdk.models.audio_volume_unit)</a>
 </li>
       <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.cloud_region.CloudRegion.AUSTRALIA">AUSTRALIA (bitmovin_api_sdk.models.cloud_region.CloudRegion attribute)</a>
@@ -2099,6 +2103,10 @@
       <li><a href="__modules/bitmovin_api_sdk.encoding.configurations.video.av1.html#bitmovin_api_sdk.encoding.configurations.video.av1.av1_video_configuration_list_query_params.Av1VideoConfigurationListQueryParams">Av1VideoConfigurationListQueryParams (class in bitmovin_api_sdk.encoding.configurations.video.av1.av1_video_configuration_list_query_params)</a>
 </li>
       <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.live_encoding_stats_event_details.LiveEncodingStatsEventDetails.av_drift_in_seconds">av_drift_in_seconds() (bitmovin_api_sdk.models.live_encoding_stats_event_details.LiveEncodingStatsEventDetails property)</a>
+</li>
+      <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.live_dash_manifest.LiveDashManifest.availability_start_time_mode">availability_start_time_mode() (bitmovin_api_sdk.models.live_dash_manifest.LiveDashManifest property)</a>
+</li>
+      <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.availability_start_time_mode.AvailabilityStartTimeMode">AvailabilityStartTimeMode (class in bitmovin_api_sdk.models.availability_start_time_mode)</a>
 </li>
       <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.dolby_vision_profile.DolbyVisionProfile.AVC3_09">AVC3_09 (bitmovin_api_sdk.models.dolby_vision_profile.DolbyVisionProfile attribute)</a>
 </li>
@@ -2293,6 +2301,8 @@
       <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.daily_statistics.DailyStatistics.billable_egress_bytes">billable_egress_bytes() (bitmovin_api_sdk.models.daily_statistics.DailyStatistics property)</a>
 
       <ul>
+        <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.encoding_statistics.EncodingStatistics.billable_egress_bytes">(bitmovin_api_sdk.models.encoding_statistics.EncodingStatistics property)</a>
+</li>
         <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.encoding_stats.EncodingStats.billable_egress_bytes">(bitmovin_api_sdk.models.encoding_stats.EncodingStats property)</a>
 </li>
         <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.statistics_per_label.StatisticsPerLabel.billable_egress_bytes">(bitmovin_api_sdk.models.statistics_per_label.StatisticsPerLabel property)</a>
@@ -2301,6 +2311,8 @@
       <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.daily_statistics.DailyStatistics.billable_encoding_minutes">billable_encoding_minutes() (bitmovin_api_sdk.models.daily_statistics.DailyStatistics property)</a>
 
       <ul>
+        <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.encoding_statistics.EncodingStatistics.billable_encoding_minutes">(bitmovin_api_sdk.models.encoding_statistics.EncodingStatistics property)</a>
+</li>
         <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.encoding_stats.EncodingStats.billable_encoding_minutes">(bitmovin_api_sdk.models.encoding_stats.EncodingStats property)</a>
 </li>
         <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.statistics_per_label.StatisticsPerLabel.billable_encoding_minutes">(bitmovin_api_sdk.models.statistics_per_label.StatisticsPerLabel property)</a>
@@ -2309,6 +2321,8 @@
       <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.daily_statistics.DailyStatistics.billable_feature_minutes">billable_feature_minutes() (bitmovin_api_sdk.models.daily_statistics.DailyStatistics property)</a>
 
       <ul>
+        <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.encoding_statistics.EncodingStatistics.billable_feature_minutes">(bitmovin_api_sdk.models.encoding_statistics.EncodingStatistics property)</a>
+</li>
         <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.encoding_stats.EncodingStats.billable_feature_minutes">(bitmovin_api_sdk.models.encoding_stats.EncodingStats property)</a>
 </li>
         <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.statistics_per_label.StatisticsPerLabel.billable_feature_minutes">(bitmovin_api_sdk.models.statistics_per_label.StatisticsPerLabel property)</a>
@@ -2333,6 +2347,8 @@
       <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.daily_statistics.DailyStatistics.billable_transmuxing_minutes">billable_transmuxing_minutes() (bitmovin_api_sdk.models.daily_statistics.DailyStatistics property)</a>
 
       <ul>
+        <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.encoding_statistics.EncodingStatistics.billable_transmuxing_minutes">(bitmovin_api_sdk.models.encoding_statistics.EncodingStatistics property)</a>
+</li>
         <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.encoding_stats.EncodingStats.billable_transmuxing_minutes">(bitmovin_api_sdk.models.encoding_stats.EncodingStats property)</a>
 </li>
         <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.statistics_per_label.StatisticsPerLabel.billable_transmuxing_minutes">(bitmovin_api_sdk.models.statistics_per_label.StatisticsPerLabel property)</a>
@@ -10284,6 +10300,13 @@
 </li>
       </ul></li>
       <li>
+    bitmovin_api_sdk.models.audio_volume_format
+
+      <ul>
+        <li><a href="__modules/bitmovin_api_sdk.models.html#module-bitmovin_api_sdk.models.audio_volume_format">module</a>
+</li>
+      </ul></li>
+      <li>
     bitmovin_api_sdk.models.audio_volume_unit
 
       <ul>
@@ -10323,6 +10346,13 @@
 
       <ul>
         <li><a href="__modules/bitmovin_api_sdk.models.html#module-bitmovin_api_sdk.models.av1_video_configuration">module</a>
+</li>
+      </ul></li>
+      <li>
+    bitmovin_api_sdk.models.availability_start_time_mode
+
+      <ul>
+        <li><a href="__modules/bitmovin_api_sdk.models.html#module-bitmovin_api_sdk.models.availability_start_time_mode">module</a>
 </li>
       </ul></li>
       <li>
@@ -16304,6 +16334,10 @@
       </ul></li>
       <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.audio_volume_unit.AudioVolumeUnit.DB">DB (bitmovin_api_sdk.models.audio_volume_unit.AudioVolumeUnit attribute)</a>
 </li>
+      <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.audio_volume_format.AudioVolumeFormat.DBL">DBL (bitmovin_api_sdk.models.audio_volume_format.AudioVolumeFormat attribute)</a>
+</li>
+      <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.audio_volume_format.AudioVolumeFormat.DBLP">DBLP (bitmovin_api_sdk.models.audio_volume_format.AudioVolumeFormat attribute)</a>
+</li>
       <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.ad_analytics_attribute.AdAnalyticsAttribute.DEAL_ID">DEAL_ID (bitmovin_api_sdk.models.ad_analytics_attribute.AdAnalyticsAttribute attribute)</a>
 </li>
       <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.h264_video_configuration.H264VideoConfiguration.deblock_alpha">deblock_alpha() (bitmovin_api_sdk.models.h264_video_configuration.H264VideoConfiguration property)</a>
@@ -17572,8 +17606,12 @@
 </li>
       <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.billable_encoding_feature_minutes.BillableEncodingFeatureMinutes.feature_type">feature_type() (bitmovin_api_sdk.models.billable_encoding_feature_minutes.BillableEncodingFeatureMinutes property)</a>
 </li>
-      <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.encoding_stats.EncodingStats.features">features() (bitmovin_api_sdk.models.encoding_stats.EncodingStats property)</a>
+      <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.encoding_statistics.EncodingStatistics.features">features() (bitmovin_api_sdk.models.encoding_statistics.EncodingStatistics property)</a>
+
+      <ul>
+        <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.encoding_stats.EncodingStats.features">(bitmovin_api_sdk.models.encoding_stats.EncodingStats property)</a>
 </li>
+      </ul></li>
       <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.deinterlace_mode.DeinterlaceMode.FIELD">FIELD (bitmovin_api_sdk.models.deinterlace_mode.DeinterlaceMode attribute)</a>
 </li>
       <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.message.Message.field">field() (bitmovin_api_sdk.models.message.Message property)</a>
@@ -17690,10 +17728,10 @@
       </ul></li>
       <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.text_filter.TextFilter.fix_bounds">fix_bounds() (bitmovin_api_sdk.models.text_filter.TextFilter property)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.av1_key_placement_mode.Av1KeyPlacementMode.FIXED">FIXED (bitmovin_api_sdk.models.av1_key_placement_mode.Av1KeyPlacementMode attribute)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.per_title_configuration.PerTitleConfiguration.fixed_resolution_and_bitrate_configuration">fixed_resolution_and_bitrate_configuration() (bitmovin_api_sdk.models.per_title_configuration.PerTitleConfiguration property)</a>
 </li>
       <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.stream_per_title_settings.StreamPerTitleSettings.fixed_resolution_and_bitrate_settings">fixed_resolution_and_bitrate_settings() (bitmovin_api_sdk.models.stream_per_title_settings.StreamPerTitleSettings property)</a>
@@ -17701,6 +17739,10 @@
       <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.srt_statistic_window.SrtStatisticWindow.flight">flight() (bitmovin_api_sdk.models.srt_statistic_window.SrtStatisticWindow property)</a>
 </li>
       <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.srt_statistic_window.SrtStatisticWindow.flow">flow() (bitmovin_api_sdk.models.srt_statistic_window.SrtStatisticWindow property)</a>
+</li>
+      <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.audio_volume_format.AudioVolumeFormat.FLT">FLT (bitmovin_api_sdk.models.audio_volume_format.AudioVolumeFormat attribute)</a>
+</li>
+      <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.audio_volume_format.AudioVolumeFormat.FLTP">FLTP (bitmovin_api_sdk.models.audio_volume_format.AudioVolumeFormat attribute)</a>
 </li>
       <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.muxing_type.MuxingType.FMP4">FMP4 (bitmovin_api_sdk.models.muxing_type.MuxingType attribute)</a>
 </li>
@@ -17747,6 +17789,8 @@
       <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.per_title_fixed_resolution_and_bitrate_configuration.PerTitleFixedResolutionAndBitrateConfiguration.forced_rendition_above_highest_fixed_representation_factor">forced_rendition_above_highest_fixed_representation_factor() (bitmovin_api_sdk.models.per_title_fixed_resolution_and_bitrate_configuration.PerTitleFixedResolutionAndBitrateConfiguration property)</a>
 </li>
       <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.force_flush_mode.ForceFlushMode">ForceFlushMode (class in bitmovin_api_sdk.models.force_flush_mode)</a>
+</li>
+      <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.audio_volume_filter.AudioVolumeFilter.format">format() (bitmovin_api_sdk.models.audio_volume_filter.AudioVolumeFilter property)</a>
 </li>
       <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.encoding_stream_input_details.EncodingStreamInputDetails.format_name">format_name() (bitmovin_api_sdk.models.encoding_stream_input_details.EncodingStreamInputDetails property)</a>
 </li>
@@ -21036,6 +21080,8 @@
 </li>
       <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.per_title_fixed_resolution_and_bitrate_configuration_mode.PerTitleFixedResolutionAndBitrateConfigurationMode.MINIMUM">MINIMUM (bitmovin_api_sdk.models.per_title_fixed_resolution_and_bitrate_configuration_mode.PerTitleFixedResolutionAndBitrateConfigurationMode attribute)</a>
 </li>
+      <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.live_dash_manifest.LiveDashManifest.minimum_update_period">minimum_update_period() (bitmovin_api_sdk.models.live_dash_manifest.LiveDashManifest property)</a>
+</li>
       <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.ad_analytics_attribute.AdAnalyticsAttribute.MINUTE">MINUTE (bitmovin_api_sdk.models.ad_analytics_attribute.AdAnalyticsAttribute attribute)</a>
 
       <ul>
@@ -23340,6 +23386,8 @@
 </li>
         <li><a href="__modules/bitmovin_api_sdk.models.html#module-bitmovin_api_sdk.models.audio_volume_filter">bitmovin_api_sdk.models.audio_volume_filter</a>
 </li>
+        <li><a href="__modules/bitmovin_api_sdk.models.html#module-bitmovin_api_sdk.models.audio_volume_format">bitmovin_api_sdk.models.audio_volume_format</a>
+</li>
         <li><a href="__modules/bitmovin_api_sdk.models.html#module-bitmovin_api_sdk.models.audio_volume_unit">bitmovin_api_sdk.models.audio_volume_unit</a>
 </li>
         <li><a href="__modules/bitmovin_api_sdk.models.html#module-bitmovin_api_sdk.models.auto_representation">bitmovin_api_sdk.models.auto_representation</a>
@@ -23351,6 +23399,8 @@
         <li><a href="__modules/bitmovin_api_sdk.models.html#module-bitmovin_api_sdk.models.av1_key_placement_mode">bitmovin_api_sdk.models.av1_key_placement_mode</a>
 </li>
         <li><a href="__modules/bitmovin_api_sdk.models.html#module-bitmovin_api_sdk.models.av1_video_configuration">bitmovin_api_sdk.models.av1_video_configuration</a>
+</li>
+        <li><a href="__modules/bitmovin_api_sdk.models.html#module-bitmovin_api_sdk.models.availability_start_time_mode">bitmovin_api_sdk.models.availability_start_time_mode</a>
 </li>
         <li><a href="__modules/bitmovin_api_sdk.models.html#module-bitmovin_api_sdk.models.aws_account">bitmovin_api_sdk.models.aws_account</a>
 </li>
@@ -24599,8 +24649,12 @@
 </li>
       <li><a href="__modules/bitmovin_api_sdk.encoding.encodings.muxings.html#bitmovin_api_sdk.encoding.encodings.muxings.muxing_list_query_params.MuxingListQueryParams">MuxingListQueryParams (class in bitmovin_api_sdk.encoding.encodings.muxings.muxing_list_query_params)</a>
 </li>
-      <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.encoding_stats.EncodingStats.muxings">muxings() (bitmovin_api_sdk.models.encoding_stats.EncodingStats property)</a>
+      <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.encoding_statistics.EncodingStatistics.muxings">muxings() (bitmovin_api_sdk.models.encoding_statistics.EncodingStatistics property)</a>
+
+      <ul>
+        <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.encoding_stats.EncodingStats.muxings">(bitmovin_api_sdk.models.encoding_stats.EncodingStats property)</a>
 </li>
+      </ul></li>
       <li><a href="__modules/bitmovin_api_sdk.encoding.encodings.muxings.html#bitmovin_api_sdk.encoding.encodings.muxings.muxings_api.MuxingsApi">MuxingsApi (class in bitmovin_api_sdk.encoding.encodings.muxings.muxings_api)</a>
 </li>
       <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.muxing_stream.MuxingStream">MuxingStream (class in bitmovin_api_sdk.models.muxing_stream)</a>
@@ -24691,6 +24745,8 @@
         <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.audio_mix_channel_layout.AudioMixChannelLayout.NONE">(bitmovin_api_sdk.models.audio_mix_channel_layout.AudioMixChannelLayout attribute)</a>
 </li>
         <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.audio_mix_input_channel_layout.AudioMixInputChannelLayout.NONE">(bitmovin_api_sdk.models.audio_mix_input_channel_layout.AudioMixInputChannelLayout attribute)</a>
+</li>
+        <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.audio_volume_format.AudioVolumeFormat.NONE">(bitmovin_api_sdk.models.audio_volume_format.AudioVolumeFormat attribute)</a>
 </li>
         <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.b_adapt.BAdapt.NONE">(bitmovin_api_sdk.models.b_adapt.BAdapt attribute)</a>
 </li>
@@ -24818,6 +24874,10 @@
 </li>
       </ul></li>
       <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.dash_profile.DashProfile.ON_DEMAND">ON_DEMAND (bitmovin_api_sdk.models.dash_profile.DashProfile attribute)</a>
+</li>
+      <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.availability_start_time_mode.AvailabilityStartTimeMode.ON_FIRST_SEGMENT">ON_FIRST_SEGMENT (bitmovin_api_sdk.models.availability_start_time_mode.AvailabilityStartTimeMode attribute)</a>
+</li>
+      <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.availability_start_time_mode.AvailabilityStartTimeMode.ON_STREAM_INGEST">ON_STREAM_INGEST (bitmovin_api_sdk.models.availability_start_time_mode.AvailabilityStartTimeMode attribute)</a>
 </li>
       <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.vp8_noise_sensitivity.Vp8NoiseSensitivity.ON_Y_ONLY">ON_Y_ONLY (bitmovin_api_sdk.models.vp8_noise_sensitivity.Vp8NoiseSensitivity attribute)</a>
 </li>
@@ -26894,6 +26954,8 @@
 </li>
         <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.stream_infos_details.StreamInfosDetails.rate">(bitmovin_api_sdk.models.stream_infos_details.StreamInfosDetails property)</a>
 </li>
+        <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.text_filter.TextFilter.rate">(bitmovin_api_sdk.models.text_filter.TextFilter property)</a>
+</li>
         <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.video_configuration.VideoConfiguration.rate">(bitmovin_api_sdk.models.video_configuration.VideoConfiguration property)</a>
 </li>
         <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.video_stream.VideoStream.rate">(bitmovin_api_sdk.models.video_stream.VideoStream property)</a>
@@ -27201,7 +27263,13 @@
 <h2 id="S">S</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.max_ctu_size.MaxCtuSize.S16">S16 (bitmovin_api_sdk.models.max_ctu_size.MaxCtuSize attribute)</a>
+      <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.audio_volume_format.AudioVolumeFormat.S16">S16 (bitmovin_api_sdk.models.audio_volume_format.AudioVolumeFormat attribute)</a>
+
+      <ul>
+        <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.max_ctu_size.MaxCtuSize.S16">(bitmovin_api_sdk.models.max_ctu_size.MaxCtuSize attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.audio_volume_format.AudioVolumeFormat.S16P">S16P (bitmovin_api_sdk.models.audio_volume_format.AudioVolumeFormat attribute)</a>
 </li>
       <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.input_type.InputType.S3">S3 (bitmovin_api_sdk.models.input_type.InputType attribute)</a>
 
@@ -27209,7 +27277,13 @@
         <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.output_type.OutputType.S3">(bitmovin_api_sdk.models.output_type.OutputType attribute)</a>
 </li>
       </ul></li>
-      <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.max_ctu_size.MaxCtuSize.S32">S32 (bitmovin_api_sdk.models.max_ctu_size.MaxCtuSize attribute)</a>
+      <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.audio_volume_format.AudioVolumeFormat.S32">S32 (bitmovin_api_sdk.models.audio_volume_format.AudioVolumeFormat attribute)</a>
+
+      <ul>
+        <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.max_ctu_size.MaxCtuSize.S32">(bitmovin_api_sdk.models.max_ctu_size.MaxCtuSize attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.audio_volume_format.AudioVolumeFormat.S32P">S32P (bitmovin_api_sdk.models.audio_volume_format.AudioVolumeFormat attribute)</a>
 </li>
       <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.input_type.InputType.S3_ROLE_BASED">S3_ROLE_BASED (bitmovin_api_sdk.models.input_type.InputType attribute)</a>
 
@@ -27253,7 +27327,13 @@
       </ul></li>
       <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.s3_signature_version.S3SignatureVersion">S3SignatureVersion (class in bitmovin_api_sdk.models.s3_signature_version)</a>
 </li>
-      <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.max_ctu_size.MaxCtuSize.S64">S64 (bitmovin_api_sdk.models.max_ctu_size.MaxCtuSize attribute)</a>
+      <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.audio_volume_format.AudioVolumeFormat.S64">S64 (bitmovin_api_sdk.models.audio_volume_format.AudioVolumeFormat attribute)</a>
+
+      <ul>
+        <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.max_ctu_size.MaxCtuSize.S64">(bitmovin_api_sdk.models.max_ctu_size.MaxCtuSize attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.audio_volume_format.AudioVolumeFormat.S64P">S64P (bitmovin_api_sdk.models.audio_volume_format.AudioVolumeFormat attribute)</a>
 </li>
       <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.aws_cloud_region.AwsCloudRegion.SA_EAST_1">SA_EAST_1 (bitmovin_api_sdk.models.aws_cloud_region.AwsCloudRegion attribute)</a>
 </li>
@@ -27713,14 +27793,14 @@
         <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.input_color_space.InputColorSpace.SMPTE240M">(bitmovin_api_sdk.models.input_color_space.InputColorSpace attribute)</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.color_primaries.ColorPrimaries.SMPTE428">SMPTE428 (bitmovin_api_sdk.models.color_primaries.ColorPrimaries attribute)</a>
 
       <ul>
         <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.color_transfer.ColorTransfer.SMPTE428">(bitmovin_api_sdk.models.color_transfer.ColorTransfer attribute)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.color_primaries.ColorPrimaries.SMPTE431">SMPTE431 (bitmovin_api_sdk.models.color_primaries.ColorPrimaries attribute)</a>
 </li>
       <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.color_primaries.ColorPrimaries.SMPTE432">SMPTE432 (bitmovin_api_sdk.models.color_primaries.ColorPrimaries attribute)</a>
@@ -28111,9 +28191,11 @@
 </li>
       <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.stream_per_title_settings.StreamPerTitleSettings">StreamPerTitleSettings (class in bitmovin_api_sdk.models.stream_per_title_settings)</a>
 </li>
-      <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.encoding_stats.EncodingStats.streams">streams() (bitmovin_api_sdk.models.encoding_stats.EncodingStats property)</a>
+      <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.encoding_statistics.EncodingStatistics.streams">streams() (bitmovin_api_sdk.models.encoding_statistics.EncodingStatistics property)</a>
 
       <ul>
+        <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.encoding_stats.EncodingStats.streams">(bitmovin_api_sdk.models.encoding_stats.EncodingStats property)</a>
+</li>
         <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.muxing.Muxing.streams">(bitmovin_api_sdk.models.muxing.Muxing property)</a>
 </li>
       </ul></li>
@@ -28194,6 +28276,8 @@
       <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.subtitle_stream.SubtitleStream">SubtitleStream (class in bitmovin_api_sdk.models.subtitle_stream)</a>
 </li>
       <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.response_status.ResponseStatus.SUCCESS">SUCCESS (bitmovin_api_sdk.models.response_status.ResponseStatus attribute)</a>
+</li>
+      <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.live_dash_manifest.LiveDashManifest.suggested_presentation_delay">suggested_presentation_delay() (bitmovin_api_sdk.models.live_dash_manifest.LiveDashManifest property)</a>
 </li>
       <li><a href="__modules/bitmovin_api_sdk.analytics.ads.queries.sum.html#bitmovin_api_sdk.analytics.ads.queries.sum.sum_api.SumApi">SumApi (class in bitmovin_api_sdk.analytics.ads.queries.sum.sum_api)</a>
 
@@ -30293,6 +30377,10 @@
 <h2 id="U">U</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.audio_volume_format.AudioVolumeFormat.U8">U8 (bitmovin_api_sdk.models.audio_volume_format.AudioVolumeFormat attribute)</a>
+</li>
+      <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.audio_volume_format.AudioVolumeFormat.U8P">U8P (bitmovin_api_sdk.models.audio_volume_format.AudioVolumeFormat attribute)</a>
+</li>
       <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.caption_character_encoding.CaptionCharacterEncoding.UCS_2">UCS_2 (bitmovin_api_sdk.models.caption_character_encoding.CaptionCharacterEncoding attribute)</a>
 </li>
       <li><a href="__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.caption_character_encoding.CaptionCharacterEncoding.UCS_2_INTERNAL">UCS_2_INTERNAL (bitmovin_api_sdk.models.caption_character_encoding.CaptionCharacterEncoding attribute)</a>
@@ -31164,11 +31252,19 @@
 
   <div role="contentinfo">
     <p>
+        
         &copy; Copyright 2020, Bitmovin Inc
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -31179,7 +31275,6 @@
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {
