@@ -15,10 +15,17 @@ class EncodingStatisticsVod(EncodingStatistics):
                  bytes_encoded=None,
                  time_encoded=None,
                  bytes_egress=None,
+                 billable_encoding_minutes=None,
+                 billable_egress_bytes=None,
+                 streams=None,
+                 muxings=None,
+                 features=None,
+                 billable_transmuxing_minutes=None,
+                 billable_feature_minutes=None,
                  time_enqueued=None,
                  real_time_factor=None):
-        # type: (date, int, int, int, int, float) -> None
-        super(EncodingStatisticsVod, self).__init__(date_=date_, bytes_encoded=bytes_encoded, time_encoded=time_encoded, bytes_egress=bytes_egress)
+        # type: (date, int, int, int, list[BillableEncodingMinutes], list[EgressInformation], list[StatisticsPerStream], list[StatisticsPerMuxing], list[BillableEncodingFeatureMinutes], float, float, int, float) -> None
+        super(EncodingStatisticsVod, self).__init__(date_=date_, bytes_encoded=bytes_encoded, time_encoded=time_encoded, bytes_egress=bytes_egress, billable_encoding_minutes=billable_encoding_minutes, billable_egress_bytes=billable_egress_bytes, streams=streams, muxings=muxings, features=features, billable_transmuxing_minutes=billable_transmuxing_minutes, billable_feature_minutes=billable_feature_minutes)
 
         self._time_enqueued = None
         self._real_time_factor = None

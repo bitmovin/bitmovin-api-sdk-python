@@ -908,6 +908,14 @@ bitmovin\_api\_sdk.models.audio\_volume\_filter module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.audio\_volume\_format module
+------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.audio_volume_format
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.audio\_volume\_unit module
 ----------------------------------------------------
 
@@ -952,6 +960,14 @@ bitmovin\_api\_sdk.models.av1\_video\_configuration module
 ----------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.models.av1_video_configuration
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.availability\_start\_time\_mode module
+----------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.availability_start_time_mode
    :members:
    :undoc-members:
    :show-inheritance:
