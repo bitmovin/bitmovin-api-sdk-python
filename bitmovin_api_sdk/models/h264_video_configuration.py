@@ -7,6 +7,7 @@ from bitmovin_api_sdk.models.adaptive_quant_mode import AdaptiveQuantMode
 from bitmovin_api_sdk.models.b_adapt import BAdapt
 from bitmovin_api_sdk.models.cea608708_subtitle_configuration import Cea608708SubtitleConfiguration
 from bitmovin_api_sdk.models.color_config import ColorConfig
+from bitmovin_api_sdk.models.display_aspect_ratio import DisplayAspectRatio
 from bitmovin_api_sdk.models.encoding_mode import EncodingMode
 from bitmovin_api_sdk.models.h264_b_pyramid import H264BPyramid
 from bitmovin_api_sdk.models.h264_interlace_mode import H264InterlaceMode
@@ -42,6 +43,7 @@ class H264VideoConfiguration(VideoConfiguration):
                  color_config=None,
                  sample_aspect_ratio_numerator=None,
                  sample_aspect_ratio_denominator=None,
+                 display_aspect_ratio=None,
                  encoding_mode=None,
                  preset_configuration=None,
                  crf=None,
@@ -87,8 +89,8 @@ class H264VideoConfiguration(VideoConfiguration):
                  quantizer_curve_compression=None,
                  psy_rate_distortion_optimization=None,
                  psy_trellis=None):
-        # type: (string_types, string_types, datetime, datetime, dict, string_types, int, int, int, float, PixelFormat, ColorConfig, int, int, EncodingMode, PresetConfiguration, float, ProfileH264, int, int, int, int, MvPredictionMode, int, bool, int, int, int, int, int, bool, float, float, LevelH264, BAdapt, H264MotionEstimationMethod, int, H264SubMe, H264Trellis, list[H264Partition], int, H264InterlaceMode, int, H264NalHrd, H264BPyramid, Cea608708SubtitleConfiguration, int, int, AdaptiveQuantMode, float, bool, bool, bool, bool, WeightedPredictionPFrames, bool, float, float, float) -> None
-        super(H264VideoConfiguration, self).__init__(name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, id_=id_, width=width, height=height, bitrate=bitrate, rate=rate, pixel_format=pixel_format, color_config=color_config, sample_aspect_ratio_numerator=sample_aspect_ratio_numerator, sample_aspect_ratio_denominator=sample_aspect_ratio_denominator, encoding_mode=encoding_mode)
+        # type: (string_types, string_types, datetime, datetime, dict, string_types, int, int, int, float, PixelFormat, ColorConfig, int, int, DisplayAspectRatio, EncodingMode, PresetConfiguration, float, ProfileH264, int, int, int, int, MvPredictionMode, int, bool, int, int, int, int, int, bool, float, float, LevelH264, BAdapt, H264MotionEstimationMethod, int, H264SubMe, H264Trellis, list[H264Partition], int, H264InterlaceMode, int, H264NalHrd, H264BPyramid, Cea608708SubtitleConfiguration, int, int, AdaptiveQuantMode, float, bool, bool, bool, bool, WeightedPredictionPFrames, bool, float, float, float) -> None
+        super(H264VideoConfiguration, self).__init__(name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, id_=id_, width=width, height=height, bitrate=bitrate, rate=rate, pixel_format=pixel_format, color_config=color_config, sample_aspect_ratio_numerator=sample_aspect_ratio_numerator, sample_aspect_ratio_denominator=sample_aspect_ratio_denominator, display_aspect_ratio=display_aspect_ratio, encoding_mode=encoding_mode)
 
         self._preset_configuration = None
         self._crf = None

@@ -22,6 +22,7 @@ class Encoding(BitmovinResource):
                  modified_at=None,
                  custom_data=None,
                  cloud_region=None,
+                 fallback_cloud_regions=None,
                  encoder_version=None,
                  infrastructure_id=None,
                  infrastructure=None,
@@ -30,10 +31,11 @@ class Encoding(BitmovinResource):
                  selected_cloud_region=None,
                  status=None,
                  labels=None):
-        # type: (string_types, string_types, string_types, datetime, datetime, dict, CloudRegion, string_types, string_types, InfrastructureSettings, string_types, EncodingMode, CloudRegion, Status, list[string_types]) -> None
+        # type: (string_types, string_types, string_types, datetime, datetime, dict, CloudRegion, list[CloudRegion], string_types, string_types, InfrastructureSettings, string_types, EncodingMode, CloudRegion, Status, list[string_types]) -> None
         super(Encoding, self).__init__(id_=id_, name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data)
 
         self._cloud_region = None
+        self._fallback_cloud_regions = list()
         self._encoder_version = None
         self._infrastructure_id = None
         self._infrastructure = None
@@ -46,6 +48,8 @@ class Encoding(BitmovinResource):
 
         if cloud_region is not None:
             self.cloud_region = cloud_region
+        if fallback_cloud_regions is not None:
+            self.fallback_cloud_regions = fallback_cloud_regions
         if encoder_version is not None:
             self.encoder_version = encoder_version
         if infrastructure_id is not None:
@@ -72,6 +76,7 @@ class Encoding(BitmovinResource):
 
         types.update({
             'cloud_region': 'CloudRegion',
+            'fallback_cloud_regions': 'list[CloudRegion]',
             'encoder_version': 'string_types',
             'infrastructure_id': 'string_types',
             'infrastructure': 'InfrastructureSettings',
@@ -93,6 +98,7 @@ class Encoding(BitmovinResource):
 
         attributes.update({
             'cloud_region': 'cloudRegion',
+            'fallback_cloud_regions': 'fallbackCloudRegions',
             'encoder_version': 'encoderVersion',
             'infrastructure_id': 'infrastructureId',
             'infrastructure': 'infrastructure',
@@ -130,6 +136,35 @@ class Encoding(BitmovinResource):
                 raise TypeError("Invalid type for `cloud_region`, type has to be `CloudRegion`")
 
         self._cloud_region = cloud_region
+
+    @property
+    def fallback_cloud_regions(self):
+        # type: () -> list[CloudRegion]
+        """Gets the fallback_cloud_regions of this Encoding.
+
+        Specify a list of regions which are used in case the preferred region is down. Currently there are several restrictions. - The region has to be specific or AUTO - The region has to be for the same cloud provider as the default one - You can only configure at most 3 fallback regions 
+
+        :return: The fallback_cloud_regions of this Encoding.
+        :rtype: list[CloudRegion]
+        """
+        return self._fallback_cloud_regions
+
+    @fallback_cloud_regions.setter
+    def fallback_cloud_regions(self, fallback_cloud_regions):
+        # type: (list) -> None
+        """Sets the fallback_cloud_regions of this Encoding.
+
+        Specify a list of regions which are used in case the preferred region is down. Currently there are several restrictions. - The region has to be specific or AUTO - The region has to be for the same cloud provider as the default one - You can only configure at most 3 fallback regions 
+
+        :param fallback_cloud_regions: The fallback_cloud_regions of this Encoding.
+        :type: list[CloudRegion]
+        """
+
+        if fallback_cloud_regions is not None:
+            if not isinstance(fallback_cloud_regions, list):
+                raise TypeError("Invalid type for `fallback_cloud_regions`, type has to be `list[CloudRegion]`")
+
+        self._fallback_cloud_regions = fallback_cloud_regions
 
     @property
     def encoder_version(self):

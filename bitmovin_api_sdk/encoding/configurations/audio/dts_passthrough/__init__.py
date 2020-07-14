@@ -1,0 +1,3 @@
+from bitmovin_api_sdk.encoding.configurations.audio.dts_passthrough.dts_passthrough_api import DtsPassthroughApi
+from bitmovin_api_sdk.encoding.configurations.audio.dts_passthrough.customdata.customdata_api import CustomdataApi
+from bitmovin_api_sdk.encoding.configurations.audio.dts_passthrough.dts_passthrough_audio_configuration_list_query_params import DtsPassthroughAudioConfigurationListQueryParams

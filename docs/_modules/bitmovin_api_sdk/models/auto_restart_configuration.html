@@ -171,8 +171,9 @@
                  <span class="n">frames_written_timeout</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">hls_manifests_update_timeout</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">dash_manifests_update_timeout</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                 <span class="n">schedule_expression</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (float, float, float, float, float, string_types) -&gt; None</span>
+                 <span class="n">schedule_expression</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">restart_on_encoder_error</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="c1"># type: (float, float, float, float, float, string_types, bool) -&gt; None</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_segments_written_timeout</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_bytes_written_timeout</span> <span class="o">=</span> <span class="kc">None</span>
@@ -180,6 +181,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_hls_manifests_update_timeout</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_dash_manifests_update_timeout</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_schedule_expression</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_restart_on_encoder_error</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>
 
         <span class="k">if</span> <span class="n">segments_written_timeout</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -194,6 +196,8 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">dash_manifests_update_timeout</span> <span class="o">=</span> <span class="n">dash_manifests_update_timeout</span>
         <span class="k">if</span> <span class="n">schedule_expression</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">schedule_expression</span> <span class="o">=</span> <span class="n">schedule_expression</span>
+        <span class="k">if</span> <span class="n">restart_on_encoder_error</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">restart_on_encoder_error</span> <span class="o">=</span> <span class="n">restart_on_encoder_error</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -203,7 +207,8 @@
             <span class="s1">&#39;frames_written_timeout&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span><span class="p">,</span>
             <span class="s1">&#39;hls_manifests_update_timeout&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span><span class="p">,</span>
             <span class="s1">&#39;dash_manifests_update_timeout&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;schedule_expression&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span>
+            <span class="s1">&#39;schedule_expression&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;restart_on_encoder_error&#39;</span><span class="p">:</span> <span class="s1">&#39;bool&#39;</span>
         <span class="p">}</span>
 
         <span class="k">return</span> <span class="n">types</span>
@@ -216,7 +221,8 @@
             <span class="s1">&#39;frames_written_timeout&#39;</span><span class="p">:</span> <span class="s1">&#39;framesWrittenTimeout&#39;</span><span class="p">,</span>
             <span class="s1">&#39;hls_manifests_update_timeout&#39;</span><span class="p">:</span> <span class="s1">&#39;hlsManifestsUpdateTimeout&#39;</span><span class="p">,</span>
             <span class="s1">&#39;dash_manifests_update_timeout&#39;</span><span class="p">:</span> <span class="s1">&#39;dashManifestsUpdateTimeout&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;schedule_expression&#39;</span><span class="p">:</span> <span class="s1">&#39;scheduleExpression&#39;</span>
+            <span class="s1">&#39;schedule_expression&#39;</span><span class="p">:</span> <span class="s1">&#39;scheduleExpression&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;restart_on_encoder_error&#39;</span><span class="p">:</span> <span class="s1">&#39;restartOnEncoderError&#39;</span>
         <span class="p">}</span>
         <span class="k">return</span> <span class="n">attributes</span>
 
@@ -403,6 +409,35 @@
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `schedule_expression`, type has to be `string_types`&quot;</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_schedule_expression</span> <span class="o">=</span> <span class="n">schedule_expression</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">restart_on_encoder_error</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; bool</span>
+        <span class="sd">&quot;&quot;&quot;Gets the restart_on_encoder_error of this AutoRestartConfiguration.</span>
+
+<span class="sd">        Defines if the encoding should be restarted in case of an error during encoding.</span>
+
+<span class="sd">        :return: The restart_on_encoder_error of this AutoRestartConfiguration.</span>
+<span class="sd">        :rtype: bool</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_restart_on_encoder_error</span>
+
+    <span class="nd">@restart_on_encoder_error</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">restart_on_encoder_error</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">restart_on_encoder_error</span><span class="p">):</span>
+        <span class="c1"># type: (bool) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the restart_on_encoder_error of this AutoRestartConfiguration.</span>
+
+<span class="sd">        Defines if the encoding should be restarted in case of an error during encoding.</span>
+
+<span class="sd">        :param restart_on_encoder_error: The restart_on_encoder_error of this AutoRestartConfiguration.</span>
+<span class="sd">        :type: bool</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">restart_on_encoder_error</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">restart_on_encoder_error</span><span class="p">,</span> <span class="nb">bool</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `restart_on_encoder_error`, type has to be `bool`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_restart_on_encoder_error</span> <span class="o">=</span> <span class="n">restart_on_encoder_error</span>
 
 <div class="viewcode-block" id="AutoRestartConfiguration.to_dict"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.auto_restart_configuration.AutoRestartConfiguration.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>

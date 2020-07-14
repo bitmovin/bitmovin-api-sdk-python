@@ -261,6 +261,10 @@ from bitmovin_api_sdk.encoding.configurations.audio.aac.aac_api import AacApi
 from bitmovin_api_sdk.encoding.configurations.audio.aac.aac_api import AacAudioConfigurationListQueryParams
 from bitmovin_api_sdk.encoding.configurations.audio.aac.customdata.customdata_api import CustomdataApi
 
+from bitmovin_api_sdk.encoding.configurations.audio.dts_passthrough.dts_passthrough_api import DtsPassthroughApi
+from bitmovin_api_sdk.encoding.configurations.audio.dts_passthrough.dts_passthrough_api import DtsPassthroughAudioConfigurationListQueryParams
+from bitmovin_api_sdk.encoding.configurations.audio.dts_passthrough.customdata.customdata_api import CustomdataApi
+
 from bitmovin_api_sdk.encoding.configurations.audio.he_aac_v1.he_aac_v1_api import HeAacV1Api
 from bitmovin_api_sdk.encoding.configurations.audio.he_aac_v1.he_aac_v1_api import HeAacV1AudioConfigurationListQueryParams
 from bitmovin_api_sdk.encoding.configurations.audio.he_aac_v1.customdata.customdata_api import CustomdataApi
@@ -1103,6 +1107,7 @@ from bitmovin_api_sdk.models.deinterlace_filter import DeinterlaceFilter
 from bitmovin_api_sdk.models.deinterlace_frame_selection_mode import DeinterlaceFrameSelectionMode
 from bitmovin_api_sdk.models.deinterlace_mode import DeinterlaceMode
 from bitmovin_api_sdk.models.denoise_hqdn3d_filter import DenoiseHqdn3dFilter
+from bitmovin_api_sdk.models.display_aspect_ratio import DisplayAspectRatio
 from bitmovin_api_sdk.models.dolby_vision_metadata import DolbyVisionMetadata
 from bitmovin_api_sdk.models.dolby_vision_metadata_ingest_input_stream import DolbyVisionMetadataIngestInputStream
 from bitmovin_api_sdk.models.dolby_vision_metadata_source import DolbyVisionMetadataSource
@@ -1114,6 +1119,7 @@ from bitmovin_api_sdk.models.domain import Domain
 from bitmovin_api_sdk.models.domain_list import DomainList
 from bitmovin_api_sdk.models.drm import Drm
 from bitmovin_api_sdk.models.drm_type import DrmType
+from bitmovin_api_sdk.models.dts_passthrough_audio_configuration import DtsPassthroughAudioConfiguration
 from bitmovin_api_sdk.models.dvb_teletext_input_stream import DvbTeletextInputStream
 from bitmovin_api_sdk.models.eac3_audio_configuration import Eac3AudioConfiguration
 from bitmovin_api_sdk.models.ebu_r128_single_pass_filter import EbuR128SinglePassFilter
@@ -1192,6 +1198,9 @@ from bitmovin_api_sdk.models.ingest_input_stream import IngestInputStream
 from bitmovin_api_sdk.models.input import Input
 from bitmovin_api_sdk.models.input_color_range import InputColorRange
 from bitmovin_api_sdk.models.input_color_space import InputColorSpace
+from bitmovin_api_sdk.models.input_factor import InputFactor
+from bitmovin_api_sdk.models.input_factor_bitrate import InputFactorBitrate
+from bitmovin_api_sdk.models.input_factor_codec import InputFactorCodec
 from bitmovin_api_sdk.models.input_path import InputPath
 from bitmovin_api_sdk.models.input_stream import InputStream
 from bitmovin_api_sdk.models.input_stream_type import InputStreamType
@@ -1463,4 +1472,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.43.0"
+__version__ = "1.44.0"

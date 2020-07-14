@@ -314,6 +314,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.deinterlace_frame_selection_mode">bitmovin_api_sdk.models.deinterlace_frame_selection_mode module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.deinterlace_mode">bitmovin_api_sdk.models.deinterlace_mode module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.denoise_hqdn3d_filter">bitmovin_api_sdk.models.denoise_hqdn3d_filter module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.display_aspect_ratio">bitmovin_api_sdk.models.display_aspect_ratio module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.dolby_vision_metadata">bitmovin_api_sdk.models.dolby_vision_metadata module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.dolby_vision_metadata_ingest_input_stream">bitmovin_api_sdk.models.dolby_vision_metadata_ingest_input_stream module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.dolby_vision_metadata_source">bitmovin_api_sdk.models.dolby_vision_metadata_source module</a></li>
@@ -325,6 +326,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.domain_list">bitmovin_api_sdk.models.domain_list module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.drm">bitmovin_api_sdk.models.drm module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.drm_type">bitmovin_api_sdk.models.drm_type module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.dts_passthrough_audio_configuration">bitmovin_api_sdk.models.dts_passthrough_audio_configuration module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.dvb_teletext_input_stream">bitmovin_api_sdk.models.dvb_teletext_input_stream module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.eac3_audio_configuration">bitmovin_api_sdk.models.eac3_audio_configuration module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.ebu_r128_single_pass_filter">bitmovin_api_sdk.models.ebu_r128_single_pass_filter module</a></li>
@@ -403,6 +405,9 @@
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.input">bitmovin_api_sdk.models.input module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.input_color_range">bitmovin_api_sdk.models.input_color_range module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.input_color_space">bitmovin_api_sdk.models.input_color_space module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.input_factor">bitmovin_api_sdk.models.input_factor module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.input_factor_bitrate">bitmovin_api_sdk.models.input_factor_bitrate module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.input_factor_codec">bitmovin_api_sdk.models.input_factor_codec module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.input_path">bitmovin_api_sdk.models.input_path module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.input_stream">bitmovin_api_sdk.models.input_stream module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.input_stream_type">bitmovin_api_sdk.models.input_stream_type module</a></li>
@@ -9463,6 +9468,21 @@
 <dd></dd></dl>
 
 <dl class="py method">
+<dt id="bitmovin_api_sdk.models.auto_restart_configuration.AutoRestartConfiguration.restart_on_encoder_error">
+<em class="property">property </em><code class="sig-name descname">restart_on_encoder_error</code><a class="headerlink" href="#bitmovin_api_sdk.models.auto_restart_configuration.AutoRestartConfiguration.restart_on_encoder_error" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the restart_on_encoder_error of this AutoRestartConfiguration.</p>
+<p>Defines if the encoding should be restarted in case of an error during encoding.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The restart_on_encoder_error of this AutoRestartConfiguration.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt id="bitmovin_api_sdk.models.auto_restart_configuration.AutoRestartConfiguration.schedule_expression">
 <em class="property">property </em><code class="sig-name descname">schedule_expression</code><a class="headerlink" href="#bitmovin_api_sdk.models.auto_restart_configuration.AutoRestartConfiguration.schedule_expression" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the schedule_expression of this AutoRestartConfiguration.</p>
@@ -14976,6 +14996,11 @@
 <dd></dd></dl>
 
 <dl class="py attribute">
+<dt id="bitmovin_api_sdk.models.codec_config_type.CodecConfigType.DTS_PASSTHROUGH">
+<code class="sig-name descname">DTS_PASSTHROUGH</code><em class="property"> = 'DTS_PASSTHROUGH'</em><a class="headerlink" href="#bitmovin_api_sdk.models.codec_config_type.CodecConfigType.DTS_PASSTHROUGH" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
 <dt id="bitmovin_api_sdk.models.codec_config_type.CodecConfigType.EAC3">
 <code class="sig-name descname">EAC3</code><em class="property"> = 'EAC3'</em><a class="headerlink" href="#bitmovin_api_sdk.models.codec_config_type.CodecConfigType.EAC3" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -15092,7 +15117,7 @@
 <dd><p>Bases: <a class="reference internal" href="#bitmovin_api_sdk.models.bitmovin_resource.BitmovinResource" title="bitmovin_api_sdk.models.bitmovin_resource.BitmovinResource"><code class="xref py py-class docutils literal notranslate"><span class="pre">bitmovin_api_sdk.models.bitmovin_resource.BitmovinResource</span></code></a></p>
 <dl class="py attribute">
 <dt id="bitmovin_api_sdk.models.codec_configuration.CodecConfiguration.discriminator_value_class_map">
-<code class="sig-name descname">discriminator_value_class_map</code><em class="property"> = {'AAC': 'AacAudioConfiguration', 'AC3': 'Ac3AudioConfiguration', 'AV1': 'Av1VideoConfiguration', 'EAC3': 'Eac3AudioConfiguration', 'H264': 'H264VideoConfiguration', 'H265': 'H265VideoConfiguration', 'HE_AAC_V1': 'HeAacV1AudioConfiguration', 'HE_AAC_V2': 'HeAacV2AudioConfiguration', 'MJPEG': 'MjpegVideoConfiguration', 'MP2': 'Mp2AudioConfiguration', 'MP3': 'Mp3AudioConfiguration', 'OPUS': 'OpusAudioConfiguration', 'VORBIS': 'VorbisAudioConfiguration', 'VP8': 'Vp8VideoConfiguration', 'VP9': 'Vp9VideoConfiguration'}</em><a class="headerlink" href="#bitmovin_api_sdk.models.codec_configuration.CodecConfiguration.discriminator_value_class_map" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">discriminator_value_class_map</code><em class="property"> = {'AAC': 'AacAudioConfiguration', 'AC3': 'Ac3AudioConfiguration', 'AV1': 'Av1VideoConfiguration', 'DTS_PASSTHROUGH': 'DtsPassthroughAudioConfiguration', 'EAC3': 'Eac3AudioConfiguration', 'H264': 'H264VideoConfiguration', 'H265': 'H265VideoConfiguration', 'HE_AAC_V1': 'HeAacV1AudioConfiguration', 'HE_AAC_V2': 'HeAacV2AudioConfiguration', 'MJPEG': 'MjpegVideoConfiguration', 'MP2': 'Mp2AudioConfiguration', 'MP3': 'Mp3AudioConfiguration', 'OPUS': 'OpusAudioConfiguration', 'VORBIS': 'VorbisAudioConfiguration', 'VP8': 'Vp8VideoConfiguration', 'VP9': 'Vp9VideoConfiguration'}</em><a class="headerlink" href="#bitmovin_api_sdk.models.codec_configuration.CodecConfiguration.discriminator_value_class_map" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -18384,6 +18409,67 @@
 </dd></dl>
 
 </div>
+<div class="section" id="module-bitmovin_api_sdk.models.display_aspect_ratio">
+<span id="bitmovin-api-sdk-models-display-aspect-ratio-module"></span><h2>bitmovin_api_sdk.models.display_aspect_ratio module<a class="headerlink" href="#module-bitmovin_api_sdk.models.display_aspect_ratio" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="bitmovin_api_sdk.models.display_aspect_ratio.DisplayAspectRatio">
+<em class="property">class </em><code class="sig-prename descclassname">bitmovin_api_sdk.models.display_aspect_ratio.</code><code class="sig-name descname">DisplayAspectRatio</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/models/display_aspect_ratio.html#DisplayAspectRatio"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.models.display_aspect_ratio.DisplayAspectRatio" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.display_aspect_ratio.DisplayAspectRatio.attribute_map">
+<em class="property">property </em><code class="sig-name descname">attribute_map</code><a class="headerlink" href="#bitmovin_api_sdk.models.display_aspect_ratio.DisplayAspectRatio.attribute_map" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.display_aspect_ratio.DisplayAspectRatio.denominator">
+<em class="property">property </em><code class="sig-name descname">denominator</code><a class="headerlink" href="#bitmovin_api_sdk.models.display_aspect_ratio.DisplayAspectRatio.denominator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the denominator of this DisplayAspectRatio.</p>
+<p>The denominator of the display aspect ratio (DAR). For example for a DAR of 16:9, the value 9 must be used. (required)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The denominator of this DisplayAspectRatio.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.display_aspect_ratio.DisplayAspectRatio.numerator">
+<em class="property">property </em><code class="sig-name descname">numerator</code><a class="headerlink" href="#bitmovin_api_sdk.models.display_aspect_ratio.DisplayAspectRatio.numerator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the numerator of this DisplayAspectRatio.</p>
+<p>The numerator of the display aspect ratio (DAR). For example for a DAR of 16:9, the value 16 must be used. (required)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The numerator of this DisplayAspectRatio.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.display_aspect_ratio.DisplayAspectRatio.openapi_types">
+<em class="property">property </em><code class="sig-name descname">openapi_types</code><a class="headerlink" href="#bitmovin_api_sdk.models.display_aspect_ratio.DisplayAspectRatio.openapi_types" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.display_aspect_ratio.DisplayAspectRatio.to_dict">
+<code class="sig-name descname">to_dict</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/models/display_aspect_ratio.html#DisplayAspectRatio.to_dict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.models.display_aspect_ratio.DisplayAspectRatio.to_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the model properties as a dict</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.display_aspect_ratio.DisplayAspectRatio.to_str">
+<code class="sig-name descname">to_str</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/models/display_aspect_ratio.html#DisplayAspectRatio.to_str"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.models.display_aspect_ratio.DisplayAspectRatio.to_str" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the string representation of the model</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
 <div class="section" id="module-bitmovin_api_sdk.models.dolby_vision_metadata">
 <span id="bitmovin-api-sdk-models-dolby-vision-metadata-module"></span><h2>bitmovin_api_sdk.models.dolby_vision_metadata module<a class="headerlink" href="#module-bitmovin_api_sdk.models.dolby_vision_metadata" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
@@ -18853,6 +18939,27 @@
 <dt id="bitmovin_api_sdk.models.drm_type.DrmType.WIDEVINE">
 <code class="sig-name descname">WIDEVINE</code><em class="property"> = 'WIDEVINE'</em><a class="headerlink" href="#bitmovin_api_sdk.models.drm_type.DrmType.WIDEVINE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-bitmovin_api_sdk.models.dts_passthrough_audio_configuration">
+<span id="bitmovin-api-sdk-models-dts-passthrough-audio-configuration-module"></span><h2>bitmovin_api_sdk.models.dts_passthrough_audio_configuration module<a class="headerlink" href="#module-bitmovin_api_sdk.models.dts_passthrough_audio_configuration" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="bitmovin_api_sdk.models.dts_passthrough_audio_configuration.DtsPassthroughAudioConfiguration">
+<em class="property">class </em><code class="sig-prename descclassname">bitmovin_api_sdk.models.dts_passthrough_audio_configuration.</code><code class="sig-name descname">DtsPassthroughAudioConfiguration</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/models/dts_passthrough_audio_configuration.html#DtsPassthroughAudioConfiguration"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.models.dts_passthrough_audio_configuration.DtsPassthroughAudioConfiguration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bitmovin_api_sdk.models.codec_configuration.CodecConfiguration" title="bitmovin_api_sdk.models.codec_configuration.CodecConfiguration"><code class="xref py py-class docutils literal notranslate"><span class="pre">bitmovin_api_sdk.models.codec_configuration.CodecConfiguration</span></code></a></p>
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.dts_passthrough_audio_configuration.DtsPassthroughAudioConfiguration.to_dict">
+<code class="sig-name descname">to_dict</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/models/dts_passthrough_audio_configuration.html#DtsPassthroughAudioConfiguration.to_dict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.models.dts_passthrough_audio_configuration.DtsPassthroughAudioConfiguration.to_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the model properties as a dict</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.dts_passthrough_audio_configuration.DtsPassthroughAudioConfiguration.to_str">
+<code class="sig-name descname">to_str</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/models/dts_passthrough_audio_configuration.html#DtsPassthroughAudioConfiguration.to_str"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.models.dts_passthrough_audio_configuration.DtsPassthroughAudioConfiguration.to_str" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the string representation of the model</p>
+</dd></dl>
 
 </dd></dl>
 
@@ -19422,6 +19529,21 @@
 </dd>
 <dt class="field-even">Return type</dt>
 <dd class="field-even"><p>string_types</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.encoding.Encoding.fallback_cloud_regions">
+<em class="property">property </em><code class="sig-name descname">fallback_cloud_regions</code><a class="headerlink" href="#bitmovin_api_sdk.models.encoding.Encoding.fallback_cloud_regions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the fallback_cloud_regions of this Encoding.</p>
+<p>Specify a list of regions which are used in case the preferred region is down. Currently there are several restrictions. - The region has to be specific or AUTO - The region has to be for the same cloud provider as the default one - You can only configure at most 3 fallback regions</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The fallback_cloud_regions of this Encoding.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>list[<a class="reference internal" href="#bitmovin_api_sdk.models.cloud_region.CloudRegion" title="bitmovin_api_sdk.models.cloud_region.CloudRegion">CloudRegion</a>]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -26232,6 +26354,183 @@
 <dt id="bitmovin_api_sdk.models.input_color_space.InputColorSpace.YCOCG">
 <code class="sig-name descname">YCOCG</code><em class="property"> = 'YCOCG'</em><a class="headerlink" href="#bitmovin_api_sdk.models.input_color_space.InputColorSpace.YCOCG" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-bitmovin_api_sdk.models.input_factor">
+<span id="bitmovin-api-sdk-models-input-factor-module"></span><h2>bitmovin_api_sdk.models.input_factor module<a class="headerlink" href="#module-bitmovin_api_sdk.models.input_factor" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="bitmovin_api_sdk.models.input_factor.InputFactor">
+<em class="property">class </em><code class="sig-prename descclassname">bitmovin_api_sdk.models.input_factor.</code><code class="sig-name descname">InputFactor</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/models/input_factor.html#InputFactor"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.models.input_factor.InputFactor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.input_factor.InputFactor.attribute_map">
+<em class="property">property </em><code class="sig-name descname">attribute_map</code><a class="headerlink" href="#bitmovin_api_sdk.models.input_factor.InputFactor.attribute_map" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.input_factor.InputFactor.bitrate">
+<em class="property">property </em><code class="sig-name descname">bitrate</code><a class="headerlink" href="#bitmovin_api_sdk.models.input_factor.InputFactor.bitrate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the bitrate of this InputFactor.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The bitrate of this InputFactor.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#bitmovin_api_sdk.models.input_factor_bitrate.InputFactorBitrate" title="bitmovin_api_sdk.models.input_factor_bitrate.InputFactorBitrate">InputFactorBitrate</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.input_factor.InputFactor.codec">
+<em class="property">property </em><code class="sig-name descname">codec</code><a class="headerlink" href="#bitmovin_api_sdk.models.input_factor.InputFactor.codec" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the codec of this InputFactor.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The codec of this InputFactor.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#bitmovin_api_sdk.models.input_factor_codec.InputFactorCodec" title="bitmovin_api_sdk.models.input_factor_codec.InputFactorCodec">InputFactorCodec</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.input_factor.InputFactor.openapi_types">
+<em class="property">property </em><code class="sig-name descname">openapi_types</code><a class="headerlink" href="#bitmovin_api_sdk.models.input_factor.InputFactor.openapi_types" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.input_factor.InputFactor.to_dict">
+<code class="sig-name descname">to_dict</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/models/input_factor.html#InputFactor.to_dict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.models.input_factor.InputFactor.to_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the model properties as a dict</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.input_factor.InputFactor.to_str">
+<code class="sig-name descname">to_str</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/models/input_factor.html#InputFactor.to_str"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.models.input_factor.InputFactor.to_str" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the string representation of the model</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-bitmovin_api_sdk.models.input_factor_bitrate">
+<span id="bitmovin-api-sdk-models-input-factor-bitrate-module"></span><h2>bitmovin_api_sdk.models.input_factor_bitrate module<a class="headerlink" href="#module-bitmovin_api_sdk.models.input_factor_bitrate" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="bitmovin_api_sdk.models.input_factor_bitrate.InputFactorBitrate">
+<em class="property">class </em><code class="sig-prename descclassname">bitmovin_api_sdk.models.input_factor_bitrate.</code><code class="sig-name descname">InputFactorBitrate</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/models/input_factor_bitrate.html#InputFactorBitrate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.models.input_factor_bitrate.InputFactorBitrate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.input_factor_bitrate.InputFactorBitrate.attribute_map">
+<em class="property">property </em><code class="sig-name descname">attribute_map</code><a class="headerlink" href="#bitmovin_api_sdk.models.input_factor_bitrate.InputFactorBitrate.attribute_map" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.input_factor_bitrate.InputFactorBitrate.factor">
+<em class="property">property </em><code class="sig-name descname">factor</code><a class="headerlink" href="#bitmovin_api_sdk.models.input_factor_bitrate.InputFactorBitrate.factor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the factor of this InputFactorBitrate.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The factor of this InputFactorBitrate.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.input_factor_bitrate.InputFactorBitrate.openapi_types">
+<em class="property">property </em><code class="sig-name descname">openapi_types</code><a class="headerlink" href="#bitmovin_api_sdk.models.input_factor_bitrate.InputFactorBitrate.openapi_types" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.input_factor_bitrate.InputFactorBitrate.to_dict">
+<code class="sig-name descname">to_dict</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/models/input_factor_bitrate.html#InputFactorBitrate.to_dict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.models.input_factor_bitrate.InputFactorBitrate.to_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the model properties as a dict</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.input_factor_bitrate.InputFactorBitrate.to_str">
+<code class="sig-name descname">to_str</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/models/input_factor_bitrate.html#InputFactorBitrate.to_str"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.models.input_factor_bitrate.InputFactorBitrate.to_str" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the string representation of the model</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.input_factor_bitrate.InputFactorBitrate.value">
+<em class="property">property </em><code class="sig-name descname">value</code><a class="headerlink" href="#bitmovin_api_sdk.models.input_factor_bitrate.InputFactorBitrate.value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the value of this InputFactorBitrate.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The value of this InputFactorBitrate.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-bitmovin_api_sdk.models.input_factor_codec">
+<span id="bitmovin-api-sdk-models-input-factor-codec-module"></span><h2>bitmovin_api_sdk.models.input_factor_codec module<a class="headerlink" href="#module-bitmovin_api_sdk.models.input_factor_codec" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="bitmovin_api_sdk.models.input_factor_codec.InputFactorCodec">
+<em class="property">class </em><code class="sig-prename descclassname">bitmovin_api_sdk.models.input_factor_codec.</code><code class="sig-name descname">InputFactorCodec</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/models/input_factor_codec.html#InputFactorCodec"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.models.input_factor_codec.InputFactorCodec" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.input_factor_codec.InputFactorCodec.attribute_map">
+<em class="property">property </em><code class="sig-name descname">attribute_map</code><a class="headerlink" href="#bitmovin_api_sdk.models.input_factor_codec.InputFactorCodec.attribute_map" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.input_factor_codec.InputFactorCodec.factor">
+<em class="property">property </em><code class="sig-name descname">factor</code><a class="headerlink" href="#bitmovin_api_sdk.models.input_factor_codec.InputFactorCodec.factor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the factor of this InputFactorCodec.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The factor of this InputFactorCodec.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.input_factor_codec.InputFactorCodec.openapi_types">
+<em class="property">property </em><code class="sig-name descname">openapi_types</code><a class="headerlink" href="#bitmovin_api_sdk.models.input_factor_codec.InputFactorCodec.openapi_types" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.input_factor_codec.InputFactorCodec.to_dict">
+<code class="sig-name descname">to_dict</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/models/input_factor_codec.html#InputFactorCodec.to_dict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.models.input_factor_codec.InputFactorCodec.to_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the model properties as a dict</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.input_factor_codec.InputFactorCodec.to_str">
+<code class="sig-name descname">to_str</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/models/input_factor_codec.html#InputFactorCodec.to_str"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.models.input_factor_codec.InputFactorCodec.to_str" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the string representation of the model</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.input_factor_codec.InputFactorCodec.value">
+<em class="property">property </em><code class="sig-name descname">value</code><a class="headerlink" href="#bitmovin_api_sdk.models.input_factor_codec.InputFactorCodec.value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the value of this InputFactorCodec.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The value of this InputFactorCodec.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>string_types</p>
+</dd>
+</dl>
+</dd></dl>
 
 </dd></dl>
 
@@ -38522,6 +38821,20 @@
 </dd></dl>
 
 <dl class="py method">
+<dt id="bitmovin_api_sdk.models.statistics_per_stream.StatisticsPerStream.input_factor">
+<em class="property">property </em><code class="sig-name descname">input_factor</code><a class="headerlink" href="#bitmovin_api_sdk.models.statistics_per_stream.StatisticsPerStream.input_factor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the input_factor of this StatisticsPerStream.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The input_factor of this StatisticsPerStream.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#bitmovin_api_sdk.models.input_factor.InputFactor" title="bitmovin_api_sdk.models.input_factor.InputFactor">InputFactor</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt id="bitmovin_api_sdk.models.statistics_per_stream.StatisticsPerStream.live">
 <em class="property">property </em><code class="sig-name descname">live</code><a class="headerlink" href="#bitmovin_api_sdk.models.statistics_per_stream.StatisticsPerStream.live" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the live of this StatisticsPerStream.</p>
@@ -42962,6 +43275,21 @@
 </dd></dl>
 
 <dl class="py method">
+<dt id="bitmovin_api_sdk.models.video_configuration.VideoConfiguration.display_aspect_ratio">
+<em class="property">property </em><code class="sig-name descname">display_aspect_ratio</code><a class="headerlink" href="#bitmovin_api_sdk.models.video_configuration.VideoConfiguration.display_aspect_ratio" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the display_aspect_ratio of this VideoConfiguration.</p>
+<p>Specifies a display aspect ratio (DAR) to be enforced. The sample aspect ratio (SAR) will be adjusted accordingly. If set then sampleAspectRatioNumerator and sampleAspectRatioDenominator are not allowed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The display_aspect_ratio of this VideoConfiguration.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#bitmovin_api_sdk.models.display_aspect_ratio.DisplayAspectRatio" title="bitmovin_api_sdk.models.display_aspect_ratio.DisplayAspectRatio">DisplayAspectRatio</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt id="bitmovin_api_sdk.models.video_configuration.VideoConfiguration.encoding_mode">
 <em class="property">property </em><code class="sig-name descname">encoding_mode</code><a class="headerlink" href="#bitmovin_api_sdk.models.video_configuration.VideoConfiguration.encoding_mode" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the encoding_mode of this VideoConfiguration.</p>
@@ -43030,7 +43358,7 @@
 <dt id="bitmovin_api_sdk.models.video_configuration.VideoConfiguration.sample_aspect_ratio_denominator">
 <em class="property">property </em><code class="sig-name descname">sample_aspect_ratio_denominator</code><a class="headerlink" href="#bitmovin_api_sdk.models.video_configuration.VideoConfiguration.sample_aspect_ratio_denominator" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the sample_aspect_ratio_denominator of this VideoConfiguration.</p>
-<p>The denominator of the sample aspect ratio (also known as pixel aspect ratio). Must be set if sampleAspectRatioNumerator is set.</p>
+<p>The denominator of the sample aspect ratio (also known as pixel aspect ratio). Must be set if sampleAspectRatioNumerator is set. If set then displayAspectRatio is not allowed.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>The sample_aspect_ratio_denominator of this VideoConfiguration.</p>
@@ -43045,7 +43373,7 @@
 <dt id="bitmovin_api_sdk.models.video_configuration.VideoConfiguration.sample_aspect_ratio_numerator">
 <em class="property">property </em><code class="sig-name descname">sample_aspect_ratio_numerator</code><a class="headerlink" href="#bitmovin_api_sdk.models.video_configuration.VideoConfiguration.sample_aspect_ratio_numerator" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the sample_aspect_ratio_numerator of this VideoConfiguration.</p>
-<p>The numerator of the sample aspect ratio (also known as pixel aspect ratio). Must be set if sampleAspectRatioDenominator is set.</p>
+<p>The numerator of the sample aspect ratio (also known as pixel aspect ratio). Must be set if sampleAspectRatioDenominator is set. If set then displayAspectRatio is not allowed.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>The sample_aspect_ratio_numerator of this VideoConfiguration.</p>

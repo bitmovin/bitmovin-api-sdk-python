@@ -15,8 +15,9 @@ class AutoRestartConfiguration(object):
                  frames_written_timeout=None,
                  hls_manifests_update_timeout=None,
                  dash_manifests_update_timeout=None,
-                 schedule_expression=None):
-        # type: (float, float, float, float, float, string_types) -> None
+                 schedule_expression=None,
+                 restart_on_encoder_error=None):
+        # type: (float, float, float, float, float, string_types, bool) -> None
 
         self._segments_written_timeout = None
         self._bytes_written_timeout = None
@@ -24,6 +25,7 @@ class AutoRestartConfiguration(object):
         self._hls_manifests_update_timeout = None
         self._dash_manifests_update_timeout = None
         self._schedule_expression = None
+        self._restart_on_encoder_error = None
         self.discriminator = None
 
         if segments_written_timeout is not None:
@@ -38,6 +40,8 @@ class AutoRestartConfiguration(object):
             self.dash_manifests_update_timeout = dash_manifests_update_timeout
         if schedule_expression is not None:
             self.schedule_expression = schedule_expression
+        if restart_on_encoder_error is not None:
+            self.restart_on_encoder_error = restart_on_encoder_error
 
     @property
     def openapi_types(self):
@@ -47,7 +51,8 @@ class AutoRestartConfiguration(object):
             'frames_written_timeout': 'float',
             'hls_manifests_update_timeout': 'float',
             'dash_manifests_update_timeout': 'float',
-            'schedule_expression': 'string_types'
+            'schedule_expression': 'string_types',
+            'restart_on_encoder_error': 'bool'
         }
 
         return types
@@ -60,7 +65,8 @@ class AutoRestartConfiguration(object):
             'frames_written_timeout': 'framesWrittenTimeout',
             'hls_manifests_update_timeout': 'hlsManifestsUpdateTimeout',
             'dash_manifests_update_timeout': 'dashManifestsUpdateTimeout',
-            'schedule_expression': 'scheduleExpression'
+            'schedule_expression': 'scheduleExpression',
+            'restart_on_encoder_error': 'restartOnEncoderError'
         }
         return attributes
 
@@ -247,6 +253,35 @@ class AutoRestartConfiguration(object):
                 raise TypeError("Invalid type for `schedule_expression`, type has to be `string_types`")
 
         self._schedule_expression = schedule_expression
+
+    @property
+    def restart_on_encoder_error(self):
+        # type: () -> bool
+        """Gets the restart_on_encoder_error of this AutoRestartConfiguration.
+
+        Defines if the encoding should be restarted in case of an error during encoding.
+
+        :return: The restart_on_encoder_error of this AutoRestartConfiguration.
+        :rtype: bool
+        """
+        return self._restart_on_encoder_error
+
+    @restart_on_encoder_error.setter
+    def restart_on_encoder_error(self, restart_on_encoder_error):
+        # type: (bool) -> None
+        """Sets the restart_on_encoder_error of this AutoRestartConfiguration.
+
+        Defines if the encoding should be restarted in case of an error during encoding.
+
+        :param restart_on_encoder_error: The restart_on_encoder_error of this AutoRestartConfiguration.
+        :type: bool
+        """
+
+        if restart_on_encoder_error is not None:
+            if not isinstance(restart_on_encoder_error, bool):
+                raise TypeError("Invalid type for `restart_on_encoder_error`, type has to be `bool`")
+
+        self._restart_on_encoder_error = restart_on_encoder_error
 
     def to_dict(self):
         """Returns the model properties as a dict"""

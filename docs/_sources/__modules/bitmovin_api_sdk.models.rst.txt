@@ -1772,6 +1772,14 @@ bitmovin\_api\_sdk.models.denoise\_hqdn3d\_filter module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.display\_aspect\_ratio module
+-------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.display_aspect_ratio
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.dolby\_vision\_metadata module
 --------------------------------------------------------
 
@@ -1856,6 +1864,14 @@ bitmovin\_api\_sdk.models.drm\_type module
 ------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.models.drm_type
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.dts\_passthrough\_audio\_configuration module
+-----------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.dts_passthrough_audio_configuration
    :members:
    :undoc-members:
    :show-inheritance:
@@ -2480,6 +2496,30 @@ bitmovin\_api\_sdk.models.input\_color\_space module
 ----------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.models.input_color_space
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.input\_factor module
+----------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.input_factor
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.input\_factor\_bitrate module
+-------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.input_factor_bitrate
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.input\_factor\_codec module
+-----------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.input_factor_codec
    :members:
    :undoc-members:
    :show-inheritance:

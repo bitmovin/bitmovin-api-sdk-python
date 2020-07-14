@@ -5,6 +5,7 @@ from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
 from bitmovin_api_sdk.models.codec_configuration import CodecConfiguration
 from bitmovin_api_sdk.models.color_config import ColorConfig
+from bitmovin_api_sdk.models.display_aspect_ratio import DisplayAspectRatio
 from bitmovin_api_sdk.models.encoding_mode import EncodingMode
 from bitmovin_api_sdk.models.pixel_format import PixelFormat
 import pprint
@@ -28,8 +29,9 @@ class VideoConfiguration(CodecConfiguration):
                  color_config=None,
                  sample_aspect_ratio_numerator=None,
                  sample_aspect_ratio_denominator=None,
+                 display_aspect_ratio=None,
                  encoding_mode=None):
-        # type: (string_types, string_types, datetime, datetime, dict, string_types, int, int, int, float, PixelFormat, ColorConfig, int, int, EncodingMode) -> None
+        # type: (string_types, string_types, datetime, datetime, dict, string_types, int, int, int, float, PixelFormat, ColorConfig, int, int, DisplayAspectRatio, EncodingMode) -> None
         super(VideoConfiguration, self).__init__(name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, id_=id_)
 
         self._width = None
@@ -40,6 +42,7 @@ class VideoConfiguration(CodecConfiguration):
         self._color_config = None
         self._sample_aspect_ratio_numerator = None
         self._sample_aspect_ratio_denominator = None
+        self._display_aspect_ratio = None
         self._encoding_mode = None
         self.discriminator = None
 
@@ -59,6 +62,8 @@ class VideoConfiguration(CodecConfiguration):
             self.sample_aspect_ratio_numerator = sample_aspect_ratio_numerator
         if sample_aspect_ratio_denominator is not None:
             self.sample_aspect_ratio_denominator = sample_aspect_ratio_denominator
+        if display_aspect_ratio is not None:
+            self.display_aspect_ratio = display_aspect_ratio
         if encoding_mode is not None:
             self.encoding_mode = encoding_mode
 
@@ -78,6 +83,7 @@ class VideoConfiguration(CodecConfiguration):
             'color_config': 'ColorConfig',
             'sample_aspect_ratio_numerator': 'int',
             'sample_aspect_ratio_denominator': 'int',
+            'display_aspect_ratio': 'DisplayAspectRatio',
             'encoding_mode': 'EncodingMode'
         })
 
@@ -99,6 +105,7 @@ class VideoConfiguration(CodecConfiguration):
             'color_config': 'colorConfig',
             'sample_aspect_ratio_numerator': 'sampleAspectRatioNumerator',
             'sample_aspect_ratio_denominator': 'sampleAspectRatioDenominator',
+            'display_aspect_ratio': 'displayAspectRatio',
             'encoding_mode': 'encodingMode'
         })
         return attributes
@@ -280,7 +287,7 @@ class VideoConfiguration(CodecConfiguration):
         # type: () -> int
         """Gets the sample_aspect_ratio_numerator of this VideoConfiguration.
 
-        The numerator of the sample aspect ratio (also known as pixel aspect ratio). Must be set if sampleAspectRatioDenominator is set.
+        The numerator of the sample aspect ratio (also known as pixel aspect ratio). Must be set if sampleAspectRatioDenominator is set. If set then displayAspectRatio is not allowed.
 
         :return: The sample_aspect_ratio_numerator of this VideoConfiguration.
         :rtype: int
@@ -292,7 +299,7 @@ class VideoConfiguration(CodecConfiguration):
         # type: (int) -> None
         """Sets the sample_aspect_ratio_numerator of this VideoConfiguration.
 
-        The numerator of the sample aspect ratio (also known as pixel aspect ratio). Must be set if sampleAspectRatioDenominator is set.
+        The numerator of the sample aspect ratio (also known as pixel aspect ratio). Must be set if sampleAspectRatioDenominator is set. If set then displayAspectRatio is not allowed.
 
         :param sample_aspect_ratio_numerator: The sample_aspect_ratio_numerator of this VideoConfiguration.
         :type: int
@@ -309,7 +316,7 @@ class VideoConfiguration(CodecConfiguration):
         # type: () -> int
         """Gets the sample_aspect_ratio_denominator of this VideoConfiguration.
 
-        The denominator of the sample aspect ratio (also known as pixel aspect ratio). Must be set if sampleAspectRatioNumerator is set.
+        The denominator of the sample aspect ratio (also known as pixel aspect ratio). Must be set if sampleAspectRatioNumerator is set. If set then displayAspectRatio is not allowed.
 
         :return: The sample_aspect_ratio_denominator of this VideoConfiguration.
         :rtype: int
@@ -321,7 +328,7 @@ class VideoConfiguration(CodecConfiguration):
         # type: (int) -> None
         """Sets the sample_aspect_ratio_denominator of this VideoConfiguration.
 
-        The denominator of the sample aspect ratio (also known as pixel aspect ratio). Must be set if sampleAspectRatioNumerator is set.
+        The denominator of the sample aspect ratio (also known as pixel aspect ratio). Must be set if sampleAspectRatioNumerator is set. If set then displayAspectRatio is not allowed.
 
         :param sample_aspect_ratio_denominator: The sample_aspect_ratio_denominator of this VideoConfiguration.
         :type: int
@@ -332,6 +339,35 @@ class VideoConfiguration(CodecConfiguration):
                 raise TypeError("Invalid type for `sample_aspect_ratio_denominator`, type has to be `int`")
 
         self._sample_aspect_ratio_denominator = sample_aspect_ratio_denominator
+
+    @property
+    def display_aspect_ratio(self):
+        # type: () -> DisplayAspectRatio
+        """Gets the display_aspect_ratio of this VideoConfiguration.
+
+        Specifies a display aspect ratio (DAR) to be enforced. The sample aspect ratio (SAR) will be adjusted accordingly. If set then sampleAspectRatioNumerator and sampleAspectRatioDenominator are not allowed.
+
+        :return: The display_aspect_ratio of this VideoConfiguration.
+        :rtype: DisplayAspectRatio
+        """
+        return self._display_aspect_ratio
+
+    @display_aspect_ratio.setter
+    def display_aspect_ratio(self, display_aspect_ratio):
+        # type: (DisplayAspectRatio) -> None
+        """Sets the display_aspect_ratio of this VideoConfiguration.
+
+        Specifies a display aspect ratio (DAR) to be enforced. The sample aspect ratio (SAR) will be adjusted accordingly. If set then sampleAspectRatioNumerator and sampleAspectRatioDenominator are not allowed.
+
+        :param display_aspect_ratio: The display_aspect_ratio of this VideoConfiguration.
+        :type: DisplayAspectRatio
+        """
+
+        if display_aspect_ratio is not None:
+            if not isinstance(display_aspect_ratio, DisplayAspectRatio):
+                raise TypeError("Invalid type for `display_aspect_ratio`, type has to be `DisplayAspectRatio`")
+
+        self._display_aspect_ratio = display_aspect_ratio
 
     @property
     def encoding_mode(self):

@@ -6,6 +6,7 @@ from bitmovin_api_sdk.common.poscheck import poscheck_model
 from bitmovin_api_sdk.models.codec_config_type import CodecConfigType
 from bitmovin_api_sdk.models.dolby_vision_per_stream_mode import DolbyVisionPerStreamMode
 from bitmovin_api_sdk.models.encoding_mode import EncodingMode
+from bitmovin_api_sdk.models.input_factor import InputFactor
 from bitmovin_api_sdk.models.psnr_per_stream_mode import PsnrPerStreamMode
 from bitmovin_api_sdk.models.statistics_per_title_stream import StatisticsPerTitleStream
 from bitmovin_api_sdk.models.statistics_resolution import StatisticsResolution
@@ -39,8 +40,9 @@ class StatisticsPerStream(object):
                  preset=None,
                  preset_multiplicator=None,
                  live=None,
-                 live_multiplicator=None):
-        # type: (string_types, string_types, float, int, float, float, int, int, float, int, CodecConfigType, StatisticsResolution, EncodingMode, float, StatisticsPerTitleStream, float, PsnrPerStreamMode, float, DolbyVisionPerStreamMode, float, string_types, float, bool, float) -> None
+                 live_multiplicator=None,
+                 input_factor=None):
+        # type: (string_types, string_types, float, int, float, float, int, int, float, int, CodecConfigType, StatisticsResolution, EncodingMode, float, StatisticsPerTitleStream, float, PsnrPerStreamMode, float, DolbyVisionPerStreamMode, float, string_types, float, bool, float, InputFactor) -> None
 
         self._stream_id = None
         self._codec_config_id = None
@@ -66,6 +68,7 @@ class StatisticsPerStream(object):
         self._preset_multiplicator = None
         self._live = None
         self._live_multiplicator = None
+        self._input_factor = None
         self.discriminator = None
 
         if stream_id is not None:
@@ -116,6 +119,8 @@ class StatisticsPerStream(object):
             self.live = live
         if live_multiplicator is not None:
             self.live_multiplicator = live_multiplicator
+        if input_factor is not None:
+            self.input_factor = input_factor
 
     @property
     def openapi_types(self):
@@ -143,7 +148,8 @@ class StatisticsPerStream(object):
             'preset': 'string_types',
             'preset_multiplicator': 'float',
             'live': 'bool',
-            'live_multiplicator': 'float'
+            'live_multiplicator': 'float',
+            'input_factor': 'InputFactor'
         }
 
         return types
@@ -174,7 +180,8 @@ class StatisticsPerStream(object):
             'preset': 'preset',
             'preset_multiplicator': 'presetMultiplicator',
             'live': 'live',
-            'live_multiplicator': 'liveMultiplicator'
+            'live_multiplicator': 'liveMultiplicator',
+            'input_factor': 'inputFactor'
         }
         return attributes
 
@@ -861,6 +868,33 @@ class StatisticsPerStream(object):
                 raise TypeError("Invalid type for `live_multiplicator`, type has to be `float`")
 
         self._live_multiplicator = live_multiplicator
+
+    @property
+    def input_factor(self):
+        # type: () -> InputFactor
+        """Gets the input_factor of this StatisticsPerStream.
+
+
+        :return: The input_factor of this StatisticsPerStream.
+        :rtype: InputFactor
+        """
+        return self._input_factor
+
+    @input_factor.setter
+    def input_factor(self, input_factor):
+        # type: (InputFactor) -> None
+        """Sets the input_factor of this StatisticsPerStream.
+
+
+        :param input_factor: The input_factor of this StatisticsPerStream.
+        :type: InputFactor
+        """
+
+        if input_factor is not None:
+            if not isinstance(input_factor, InputFactor):
+                raise TypeError("Invalid type for `input_factor`, type has to be `InputFactor`")
+
+        self._input_factor = input_factor
 
     def to_dict(self):
         """Returns the model properties as a dict"""

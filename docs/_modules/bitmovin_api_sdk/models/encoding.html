@@ -178,6 +178,7 @@
                  <span class="n">modified_at</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">custom_data</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">cloud_region</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">fallback_cloud_regions</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">encoder_version</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">infrastructure_id</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">infrastructure</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
@@ -186,10 +187,11 @@
                  <span class="n">selected_cloud_region</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">status</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">labels</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (string_types, string_types, string_types, datetime, datetime, dict, CloudRegion, string_types, string_types, InfrastructureSettings, string_types, EncodingMode, CloudRegion, Status, list[string_types]) -&gt; None</span>
+        <span class="c1"># type: (string_types, string_types, string_types, datetime, datetime, dict, CloudRegion, list[CloudRegion], string_types, string_types, InfrastructureSettings, string_types, EncodingMode, CloudRegion, Status, list[string_types]) -&gt; None</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">Encoding</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">id_</span><span class="o">=</span><span class="n">id_</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="n">description</span><span class="p">,</span> <span class="n">created_at</span><span class="o">=</span><span class="n">created_at</span><span class="p">,</span> <span class="n">modified_at</span><span class="o">=</span><span class="n">modified_at</span><span class="p">,</span> <span class="n">custom_data</span><span class="o">=</span><span class="n">custom_data</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_cloud_region</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_fallback_cloud_regions</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_encoder_version</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_infrastructure_id</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_infrastructure</span> <span class="o">=</span> <span class="kc">None</span>
@@ -202,6 +204,8 @@
 
         <span class="k">if</span> <span class="n">cloud_region</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">cloud_region</span> <span class="o">=</span> <span class="n">cloud_region</span>
+        <span class="k">if</span> <span class="n">fallback_cloud_regions</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">fallback_cloud_regions</span> <span class="o">=</span> <span class="n">fallback_cloud_regions</span>
         <span class="k">if</span> <span class="n">encoder_version</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">encoder_version</span> <span class="o">=</span> <span class="n">encoder_version</span>
         <span class="k">if</span> <span class="n">infrastructure_id</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -228,6 +232,7 @@
 
         <span class="n">types</span><span class="o">.</span><span class="n">update</span><span class="p">({</span>
             <span class="s1">&#39;cloud_region&#39;</span><span class="p">:</span> <span class="s1">&#39;CloudRegion&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;fallback_cloud_regions&#39;</span><span class="p">:</span> <span class="s1">&#39;list[CloudRegion]&#39;</span><span class="p">,</span>
             <span class="s1">&#39;encoder_version&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
             <span class="s1">&#39;infrastructure_id&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
             <span class="s1">&#39;infrastructure&#39;</span><span class="p">:</span> <span class="s1">&#39;InfrastructureSettings&#39;</span><span class="p">,</span>
@@ -249,6 +254,7 @@
 
         <span class="n">attributes</span><span class="o">.</span><span class="n">update</span><span class="p">({</span>
             <span class="s1">&#39;cloud_region&#39;</span><span class="p">:</span> <span class="s1">&#39;cloudRegion&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;fallback_cloud_regions&#39;</span><span class="p">:</span> <span class="s1">&#39;fallbackCloudRegions&#39;</span><span class="p">,</span>
             <span class="s1">&#39;encoder_version&#39;</span><span class="p">:</span> <span class="s1">&#39;encoderVersion&#39;</span><span class="p">,</span>
             <span class="s1">&#39;infrastructure_id&#39;</span><span class="p">:</span> <span class="s1">&#39;infrastructureId&#39;</span><span class="p">,</span>
             <span class="s1">&#39;infrastructure&#39;</span><span class="p">:</span> <span class="s1">&#39;infrastructure&#39;</span><span class="p">,</span>
@@ -286,6 +292,35 @@
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `cloud_region`, type has to be `CloudRegion`&quot;</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_cloud_region</span> <span class="o">=</span> <span class="n">cloud_region</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">fallback_cloud_regions</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; list[CloudRegion]</span>
+        <span class="sd">&quot;&quot;&quot;Gets the fallback_cloud_regions of this Encoding.</span>
+
+<span class="sd">        Specify a list of regions which are used in case the preferred region is down. Currently there are several restrictions. - The region has to be specific or AUTO - The region has to be for the same cloud provider as the default one - You can only configure at most 3 fallback regions </span>
+
+<span class="sd">        :return: The fallback_cloud_regions of this Encoding.</span>
+<span class="sd">        :rtype: list[CloudRegion]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_fallback_cloud_regions</span>
+
+    <span class="nd">@fallback_cloud_regions</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">fallback_cloud_regions</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fallback_cloud_regions</span><span class="p">):</span>
+        <span class="c1"># type: (list) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the fallback_cloud_regions of this Encoding.</span>
+
+<span class="sd">        Specify a list of regions which are used in case the preferred region is down. Currently there are several restrictions. - The region has to be specific or AUTO - The region has to be for the same cloud provider as the default one - You can only configure at most 3 fallback regions </span>
+
+<span class="sd">        :param fallback_cloud_regions: The fallback_cloud_regions of this Encoding.</span>
+<span class="sd">        :type: list[CloudRegion]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">fallback_cloud_regions</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">fallback_cloud_regions</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `fallback_cloud_regions`, type has to be `list[CloudRegion]`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_fallback_cloud_regions</span> <span class="o">=</span> <span class="n">fallback_cloud_regions</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">encoder_version</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>

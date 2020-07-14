@@ -161,6 +161,7 @@
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.common.poscheck</span> <span class="kn">import</span> <span class="n">poscheck_model</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.codec_configuration</span> <span class="kn">import</span> <span class="n">CodecConfiguration</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.color_config</span> <span class="kn">import</span> <span class="n">ColorConfig</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.display_aspect_ratio</span> <span class="kn">import</span> <span class="n">DisplayAspectRatio</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.encoding_mode</span> <span class="kn">import</span> <span class="n">EncodingMode</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.pixel_format</span> <span class="kn">import</span> <span class="n">PixelFormat</span>
 <span class="kn">import</span> <span class="nn">pprint</span>
@@ -184,8 +185,9 @@
                  <span class="n">color_config</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">sample_aspect_ratio_numerator</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">sample_aspect_ratio_denominator</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">display_aspect_ratio</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">encoding_mode</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (string_types, string_types, datetime, datetime, dict, string_types, int, int, int, float, PixelFormat, ColorConfig, int, int, EncodingMode) -&gt; None</span>
+        <span class="c1"># type: (string_types, string_types, datetime, datetime, dict, string_types, int, int, int, float, PixelFormat, ColorConfig, int, int, DisplayAspectRatio, EncodingMode) -&gt; None</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">VideoConfiguration</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="n">description</span><span class="p">,</span> <span class="n">created_at</span><span class="o">=</span><span class="n">created_at</span><span class="p">,</span> <span class="n">modified_at</span><span class="o">=</span><span class="n">modified_at</span><span class="p">,</span> <span class="n">custom_data</span><span class="o">=</span><span class="n">custom_data</span><span class="p">,</span> <span class="n">id_</span><span class="o">=</span><span class="n">id_</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_width</span> <span class="o">=</span> <span class="kc">None</span>
@@ -196,6 +198,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_color_config</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_sample_aspect_ratio_numerator</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_sample_aspect_ratio_denominator</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_display_aspect_ratio</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_encoding_mode</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>
 
@@ -215,6 +218,8 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">sample_aspect_ratio_numerator</span> <span class="o">=</span> <span class="n">sample_aspect_ratio_numerator</span>
         <span class="k">if</span> <span class="n">sample_aspect_ratio_denominator</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">sample_aspect_ratio_denominator</span> <span class="o">=</span> <span class="n">sample_aspect_ratio_denominator</span>
+        <span class="k">if</span> <span class="n">display_aspect_ratio</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">display_aspect_ratio</span> <span class="o">=</span> <span class="n">display_aspect_ratio</span>
         <span class="k">if</span> <span class="n">encoding_mode</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">encoding_mode</span> <span class="o">=</span> <span class="n">encoding_mode</span>
 
@@ -234,6 +239,7 @@
             <span class="s1">&#39;color_config&#39;</span><span class="p">:</span> <span class="s1">&#39;ColorConfig&#39;</span><span class="p">,</span>
             <span class="s1">&#39;sample_aspect_ratio_numerator&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
             <span class="s1">&#39;sample_aspect_ratio_denominator&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;display_aspect_ratio&#39;</span><span class="p">:</span> <span class="s1">&#39;DisplayAspectRatio&#39;</span><span class="p">,</span>
             <span class="s1">&#39;encoding_mode&#39;</span><span class="p">:</span> <span class="s1">&#39;EncodingMode&#39;</span>
         <span class="p">})</span>
 
@@ -255,6 +261,7 @@
             <span class="s1">&#39;color_config&#39;</span><span class="p">:</span> <span class="s1">&#39;colorConfig&#39;</span><span class="p">,</span>
             <span class="s1">&#39;sample_aspect_ratio_numerator&#39;</span><span class="p">:</span> <span class="s1">&#39;sampleAspectRatioNumerator&#39;</span><span class="p">,</span>
             <span class="s1">&#39;sample_aspect_ratio_denominator&#39;</span><span class="p">:</span> <span class="s1">&#39;sampleAspectRatioDenominator&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;display_aspect_ratio&#39;</span><span class="p">:</span> <span class="s1">&#39;displayAspectRatio&#39;</span><span class="p">,</span>
             <span class="s1">&#39;encoding_mode&#39;</span><span class="p">:</span> <span class="s1">&#39;encodingMode&#39;</span>
         <span class="p">})</span>
         <span class="k">return</span> <span class="n">attributes</span>
@@ -436,7 +443,7 @@
         <span class="c1"># type: () -&gt; int</span>
         <span class="sd">&quot;&quot;&quot;Gets the sample_aspect_ratio_numerator of this VideoConfiguration.</span>
 
-<span class="sd">        The numerator of the sample aspect ratio (also known as pixel aspect ratio). Must be set if sampleAspectRatioDenominator is set.</span>
+<span class="sd">        The numerator of the sample aspect ratio (also known as pixel aspect ratio). Must be set if sampleAspectRatioDenominator is set. If set then displayAspectRatio is not allowed.</span>
 
 <span class="sd">        :return: The sample_aspect_ratio_numerator of this VideoConfiguration.</span>
 <span class="sd">        :rtype: int</span>
@@ -448,7 +455,7 @@
         <span class="c1"># type: (int) -&gt; None</span>
         <span class="sd">&quot;&quot;&quot;Sets the sample_aspect_ratio_numerator of this VideoConfiguration.</span>
 
-<span class="sd">        The numerator of the sample aspect ratio (also known as pixel aspect ratio). Must be set if sampleAspectRatioDenominator is set.</span>
+<span class="sd">        The numerator of the sample aspect ratio (also known as pixel aspect ratio). Must be set if sampleAspectRatioDenominator is set. If set then displayAspectRatio is not allowed.</span>
 
 <span class="sd">        :param sample_aspect_ratio_numerator: The sample_aspect_ratio_numerator of this VideoConfiguration.</span>
 <span class="sd">        :type: int</span>
@@ -465,7 +472,7 @@
         <span class="c1"># type: () -&gt; int</span>
         <span class="sd">&quot;&quot;&quot;Gets the sample_aspect_ratio_denominator of this VideoConfiguration.</span>
 
-<span class="sd">        The denominator of the sample aspect ratio (also known as pixel aspect ratio). Must be set if sampleAspectRatioNumerator is set.</span>
+<span class="sd">        The denominator of the sample aspect ratio (also known as pixel aspect ratio). Must be set if sampleAspectRatioNumerator is set. If set then displayAspectRatio is not allowed.</span>
 
 <span class="sd">        :return: The sample_aspect_ratio_denominator of this VideoConfiguration.</span>
 <span class="sd">        :rtype: int</span>
@@ -477,7 +484,7 @@
         <span class="c1"># type: (int) -&gt; None</span>
         <span class="sd">&quot;&quot;&quot;Sets the sample_aspect_ratio_denominator of this VideoConfiguration.</span>
 
-<span class="sd">        The denominator of the sample aspect ratio (also known as pixel aspect ratio). Must be set if sampleAspectRatioNumerator is set.</span>
+<span class="sd">        The denominator of the sample aspect ratio (also known as pixel aspect ratio). Must be set if sampleAspectRatioNumerator is set. If set then displayAspectRatio is not allowed.</span>
 
 <span class="sd">        :param sample_aspect_ratio_denominator: The sample_aspect_ratio_denominator of this VideoConfiguration.</span>
 <span class="sd">        :type: int</span>
@@ -488,6 +495,35 @@
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `sample_aspect_ratio_denominator`, type has to be `int`&quot;</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_sample_aspect_ratio_denominator</span> <span class="o">=</span> <span class="n">sample_aspect_ratio_denominator</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">display_aspect_ratio</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; DisplayAspectRatio</span>
+        <span class="sd">&quot;&quot;&quot;Gets the display_aspect_ratio of this VideoConfiguration.</span>
+
+<span class="sd">        Specifies a display aspect ratio (DAR) to be enforced. The sample aspect ratio (SAR) will be adjusted accordingly. If set then sampleAspectRatioNumerator and sampleAspectRatioDenominator are not allowed.</span>
+
+<span class="sd">        :return: The display_aspect_ratio of this VideoConfiguration.</span>
+<span class="sd">        :rtype: DisplayAspectRatio</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_display_aspect_ratio</span>
+
+    <span class="nd">@display_aspect_ratio</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">display_aspect_ratio</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">display_aspect_ratio</span><span class="p">):</span>
+        <span class="c1"># type: (DisplayAspectRatio) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the display_aspect_ratio of this VideoConfiguration.</span>
+
+<span class="sd">        Specifies a display aspect ratio (DAR) to be enforced. The sample aspect ratio (SAR) will be adjusted accordingly. If set then sampleAspectRatioNumerator and sampleAspectRatioDenominator are not allowed.</span>
+
+<span class="sd">        :param display_aspect_ratio: The display_aspect_ratio of this VideoConfiguration.</span>
+<span class="sd">        :type: DisplayAspectRatio</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">display_aspect_ratio</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">display_aspect_ratio</span><span class="p">,</span> <span class="n">DisplayAspectRatio</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `display_aspect_ratio`, type has to be `DisplayAspectRatio`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_display_aspect_ratio</span> <span class="o">=</span> <span class="n">display_aspect_ratio</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">encoding_mode</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>

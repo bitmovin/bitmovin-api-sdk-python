@@ -9,6 +9,7 @@ Subpackages
 
    bitmovin_api_sdk.encoding.configurations.audio.aac
    bitmovin_api_sdk.encoding.configurations.audio.ac3
+   bitmovin_api_sdk.encoding.configurations.audio.dts_passthrough
    bitmovin_api_sdk.encoding.configurations.audio.eac3
    bitmovin_api_sdk.encoding.configurations.audio.he_aac_v1
    bitmovin_api_sdk.encoding.configurations.audio.he_aac_v2

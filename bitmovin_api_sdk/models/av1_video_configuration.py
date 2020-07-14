@@ -6,6 +6,7 @@ from bitmovin_api_sdk.common.poscheck import poscheck_model
 from bitmovin_api_sdk.models.av1_adaptive_quant_mode import Av1AdaptiveQuantMode
 from bitmovin_api_sdk.models.av1_key_placement_mode import Av1KeyPlacementMode
 from bitmovin_api_sdk.models.color_config import ColorConfig
+from bitmovin_api_sdk.models.display_aspect_ratio import DisplayAspectRatio
 from bitmovin_api_sdk.models.encoding_mode import EncodingMode
 from bitmovin_api_sdk.models.pixel_format import PixelFormat
 from bitmovin_api_sdk.models.video_configuration import VideoConfiguration
@@ -30,6 +31,7 @@ class Av1VideoConfiguration(VideoConfiguration):
                  color_config=None,
                  sample_aspect_ratio_numerator=None,
                  sample_aspect_ratio_denominator=None,
+                 display_aspect_ratio=None,
                  encoding_mode=None,
                  key_placement_mode=None,
                  adaptive_quant_mode=None,
@@ -56,8 +58,8 @@ class Av1VideoConfiguration(VideoConfiguration):
                  max_gf_interval=None,
                  num_tile_groups=None,
                  mtu_size=None):
-        # type: (string_types, string_types, datetime, datetime, dict, string_types, int, int, int, float, PixelFormat, ColorConfig, int, int, EncodingMode, Av1KeyPlacementMode, Av1AdaptiveQuantMode, int, int, int, int, int, int, int, int, int, int, bool, int, int, int, bool, bool, int, bool, bool, int, int, int, int) -> None
-        super(Av1VideoConfiguration, self).__init__(name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, id_=id_, width=width, height=height, bitrate=bitrate, rate=rate, pixel_format=pixel_format, color_config=color_config, sample_aspect_ratio_numerator=sample_aspect_ratio_numerator, sample_aspect_ratio_denominator=sample_aspect_ratio_denominator, encoding_mode=encoding_mode)
+        # type: (string_types, string_types, datetime, datetime, dict, string_types, int, int, int, float, PixelFormat, ColorConfig, int, int, DisplayAspectRatio, EncodingMode, Av1KeyPlacementMode, Av1AdaptiveQuantMode, int, int, int, int, int, int, int, int, int, int, bool, int, int, int, bool, bool, int, bool, bool, int, int, int, int) -> None
+        super(Av1VideoConfiguration, self).__init__(name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, id_=id_, width=width, height=height, bitrate=bitrate, rate=rate, pixel_format=pixel_format, color_config=color_config, sample_aspect_ratio_numerator=sample_aspect_ratio_numerator, sample_aspect_ratio_denominator=sample_aspect_ratio_denominator, display_aspect_ratio=display_aspect_ratio, encoding_mode=encoding_mode)
 
         self._key_placement_mode = None
         self._adaptive_quant_mode = None
