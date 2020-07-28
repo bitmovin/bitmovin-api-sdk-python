@@ -16,6 +16,7 @@ from bitmovin_api_sdk.encoding.encodings.input_streams.file.file_api import File
 from bitmovin_api_sdk.encoding.encodings.input_streams.trimming.trimming_api import TrimmingApi
 from bitmovin_api_sdk.encoding.encodings.input_streams.subtitles.subtitles_api import SubtitlesApi
 from bitmovin_api_sdk.encoding.encodings.input_streams.captions.captions_api import CaptionsApi
+from bitmovin_api_sdk.encoding.encodings.input_streams.dolby_atmos.dolby_atmos_api import DolbyAtmosApi
 from bitmovin_api_sdk.encoding.encodings.input_streams.input_stream_list_query_params import InputStreamListQueryParams
 
 
@@ -88,6 +89,13 @@ class InputStreamsApi(BaseApi):
         )
 
         self.captions = CaptionsApi(
+            api_key=api_key,
+            tenant_org_id=tenant_org_id,
+            base_url=base_url,
+            logger=logger
+        )
+
+        self.dolby_atmos = DolbyAtmosApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,

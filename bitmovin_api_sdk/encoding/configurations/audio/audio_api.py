@@ -6,6 +6,7 @@ from bitmovin_api_sdk.common import BaseApi, BitmovinApiLoggerBase
 from bitmovin_api_sdk.common.poscheck import poscheck_except
 from bitmovin_api_sdk.encoding.configurations.audio.aac.aac_api import AacApi
 from bitmovin_api_sdk.encoding.configurations.audio.dts_passthrough.dts_passthrough_api import DtsPassthroughApi
+from bitmovin_api_sdk.encoding.configurations.audio.dolby_atmos.dolby_atmos_api import DolbyAtmosApi
 from bitmovin_api_sdk.encoding.configurations.audio.he_aac_v1.he_aac_v1_api import HeAacV1Api
 from bitmovin_api_sdk.encoding.configurations.audio.he_aac_v2.he_aac_v2_api import HeAacV2Api
 from bitmovin_api_sdk.encoding.configurations.audio.vorbis.vorbis_api import VorbisApi
@@ -36,6 +37,13 @@ class AudioApi(BaseApi):
         )
 
         self.dts_passthrough = DtsPassthroughApi(
+            api_key=api_key,
+            tenant_org_id=tenant_org_id,
+            base_url=base_url,
+            logger=logger
+        )
+
+        self.dolby_atmos = DolbyAtmosApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,

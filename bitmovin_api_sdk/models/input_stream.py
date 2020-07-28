@@ -20,7 +20,8 @@ class InputStream(BitmovinResource):
         'CAPTION_CEA608': 'Cea608CaptionInputStream',
         'CAPTION_CEA708': 'Cea708CaptionInputStream',
         'FILE': 'FileInputStream',
-        'DVB_TELETEXT': 'DvbTeletextInputStream'
+        'DVB_TELETEXT': 'DvbTeletextInputStream',
+        'DOLBY_ATMOS': 'DolbyAtmosIngestInputStream'
     }
 
     def to_dict(self):

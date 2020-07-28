@@ -25,7 +25,8 @@ class CodecConfiguration(BitmovinResource):
         'OPUS': 'OpusAudioConfiguration',
         'VORBIS': 'VorbisAudioConfiguration',
         'MJPEG': 'MjpegVideoConfiguration',
-        'AV1': 'Av1VideoConfiguration'
+        'AV1': 'Av1VideoConfiguration',
+        'DOLBY_ATMOS': 'DolbyAtmosAudioConfiguration'
     }
 
     def to_dict(self):

@@ -1425,7 +1425,7 @@ class H265VideoConfiguration(VideoConfiguration):
         # type: () -> string_types
         """Gets the master_display of this H265VideoConfiguration.
 
-        Set the mastering display color volume SEI info (SMPTE ST 2086). For example `G(13250,34500)B(7500,3000)R(34000,16000)WP(15635,16450)L(10000000,1)` describes a P3D65 1000-nits monitor, where G(x=0.265, y=0.690), B(x=0.150, y=0.060), R(x=0.680, y=0.320), WP(x=0.3127, y=0.3290), L(max=1000, min=0.0001). Part of HDR-10 metadata.
+        Set the mastering display color volume SEI info (SMPTE ST 2086). For example `G(13250,34500)B(7500,3000)R(34000,16000)WP(15635,16450)L(10000000,1)` describes a P3D65 1000-nits monitor, where G(x=0.265, y=0.690), B(x=0.150, y=0.060), R(x=0.680, y=0.320), WP(x=0.3127, y=0.3290), L(max=1000, min=0.0001). Part of HDR-10 metadata. If used on a Dolby Vision stream, this value must be set to `G(13250,34500)B(7500,3000)R(34000,16000)WP(15635,16450)L(10000000,1)`.
 
         :return: The master_display of this H265VideoConfiguration.
         :rtype: string_types
@@ -1437,7 +1437,7 @@ class H265VideoConfiguration(VideoConfiguration):
         # type: (string_types) -> None
         """Sets the master_display of this H265VideoConfiguration.
 
-        Set the mastering display color volume SEI info (SMPTE ST 2086). For example `G(13250,34500)B(7500,3000)R(34000,16000)WP(15635,16450)L(10000000,1)` describes a P3D65 1000-nits monitor, where G(x=0.265, y=0.690), B(x=0.150, y=0.060), R(x=0.680, y=0.320), WP(x=0.3127, y=0.3290), L(max=1000, min=0.0001). Part of HDR-10 metadata.
+        Set the mastering display color volume SEI info (SMPTE ST 2086). For example `G(13250,34500)B(7500,3000)R(34000,16000)WP(15635,16450)L(10000000,1)` describes a P3D65 1000-nits monitor, where G(x=0.265, y=0.690), B(x=0.150, y=0.060), R(x=0.680, y=0.320), WP(x=0.3127, y=0.3290), L(max=1000, min=0.0001). Part of HDR-10 metadata. If used on a Dolby Vision stream, this value must be set to `G(13250,34500)B(7500,3000)R(34000,16000)WP(15635,16450)L(10000000,1)`.
 
         :param master_display: The master_display of this H265VideoConfiguration.
         :type: string_types

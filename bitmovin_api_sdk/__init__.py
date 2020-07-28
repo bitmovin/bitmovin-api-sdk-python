@@ -265,6 +265,10 @@ from bitmovin_api_sdk.encoding.configurations.audio.dts_passthrough.dts_passthro
 from bitmovin_api_sdk.encoding.configurations.audio.dts_passthrough.dts_passthrough_api import DtsPassthroughAudioConfigurationListQueryParams
 from bitmovin_api_sdk.encoding.configurations.audio.dts_passthrough.customdata.customdata_api import CustomdataApi
 
+from bitmovin_api_sdk.encoding.configurations.audio.dolby_atmos.dolby_atmos_api import DolbyAtmosApi
+from bitmovin_api_sdk.encoding.configurations.audio.dolby_atmos.dolby_atmos_api import DolbyAtmosAudioConfigurationListQueryParams
+from bitmovin_api_sdk.encoding.configurations.audio.dolby_atmos.customdata.customdata_api import CustomdataApi
+
 from bitmovin_api_sdk.encoding.configurations.audio.he_aac_v1.he_aac_v1_api import HeAacV1Api
 from bitmovin_api_sdk.encoding.configurations.audio.he_aac_v1.he_aac_v1_api import HeAacV1AudioConfigurationListQueryParams
 from bitmovin_api_sdk.encoding.configurations.audio.he_aac_v1.customdata.customdata_api import CustomdataApi
@@ -421,6 +425,8 @@ from bitmovin_api_sdk.encoding.encodings.input_streams.captions.cea608.cea608_ap
 from bitmovin_api_sdk.encoding.encodings.input_streams.captions.cea608.cea608_api import Cea608CaptionInputStreamListQueryParams
 from bitmovin_api_sdk.encoding.encodings.input_streams.captions.cea708.cea708_api import Cea708Api
 from bitmovin_api_sdk.encoding.encodings.input_streams.captions.cea708.cea708_api import Cea708CaptionInputStreamListQueryParams
+from bitmovin_api_sdk.encoding.encodings.input_streams.dolby_atmos.dolby_atmos_api import DolbyAtmosApi
+from bitmovin_api_sdk.encoding.encodings.input_streams.dolby_atmos.dolby_atmos_api import DolbyAtmosIngestInputStreamListQueryParams
 from bitmovin_api_sdk.encoding.encodings.muxings.muxings_api import MuxingsApi
 from bitmovin_api_sdk.encoding.encodings.muxings.muxings_api import MuxingListQueryParams
 from bitmovin_api_sdk.encoding.encodings.muxings.fmp4.fmp4_api import Fmp4Api
@@ -1108,6 +1114,12 @@ from bitmovin_api_sdk.models.deinterlace_frame_selection_mode import Deinterlace
 from bitmovin_api_sdk.models.deinterlace_mode import DeinterlaceMode
 from bitmovin_api_sdk.models.denoise_hqdn3d_filter import DenoiseHqdn3dFilter
 from bitmovin_api_sdk.models.display_aspect_ratio import DisplayAspectRatio
+from bitmovin_api_sdk.models.dolby_atmos_audio_configuration import DolbyAtmosAudioConfiguration
+from bitmovin_api_sdk.models.dolby_atmos_dialogue_intelligence import DolbyAtmosDialogueIntelligence
+from bitmovin_api_sdk.models.dolby_atmos_ingest_input_stream import DolbyAtmosIngestInputStream
+from bitmovin_api_sdk.models.dolby_atmos_input_format import DolbyAtmosInputFormat
+from bitmovin_api_sdk.models.dolby_atmos_loudness_control import DolbyAtmosLoudnessControl
+from bitmovin_api_sdk.models.dolby_atmos_metering_mode import DolbyAtmosMeteringMode
 from bitmovin_api_sdk.models.dolby_vision_metadata import DolbyVisionMetadata
 from bitmovin_api_sdk.models.dolby_vision_metadata_ingest_input_stream import DolbyVisionMetadataIngestInputStream
 from bitmovin_api_sdk.models.dolby_vision_metadata_source import DolbyVisionMetadataSource
@@ -1472,4 +1484,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.44.0"
+__version__ = "1.45.0"

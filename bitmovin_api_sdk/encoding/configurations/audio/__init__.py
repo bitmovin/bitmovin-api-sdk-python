@@ -1,6 +1,7 @@
 from bitmovin_api_sdk.encoding.configurations.audio.audio_api import AudioApi
 from bitmovin_api_sdk.encoding.configurations.audio.aac.aac_api import AacApi
 from bitmovin_api_sdk.encoding.configurations.audio.dts_passthrough.dts_passthrough_api import DtsPassthroughApi
+from bitmovin_api_sdk.encoding.configurations.audio.dolby_atmos.dolby_atmos_api import DolbyAtmosApi
 from bitmovin_api_sdk.encoding.configurations.audio.he_aac_v1.he_aac_v1_api import HeAacV1Api
 from bitmovin_api_sdk.encoding.configurations.audio.he_aac_v2.he_aac_v2_api import HeAacV2Api
 from bitmovin_api_sdk.encoding.configurations.audio.vorbis.vorbis_api import VorbisApi

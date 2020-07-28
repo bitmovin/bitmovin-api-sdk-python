@@ -1780,6 +1780,54 @@ bitmovin\_api\_sdk.models.display\_aspect\_ratio module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.dolby\_atmos\_audio\_configuration module
+-------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.dolby_atmos_audio_configuration
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.dolby\_atmos\_dialogue\_intelligence module
+---------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.dolby_atmos_dialogue_intelligence
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.dolby\_atmos\_ingest\_input\_stream module
+--------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.dolby_atmos_ingest_input_stream
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.dolby\_atmos\_input\_format module
+------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.dolby_atmos_input_format
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.dolby\_atmos\_loudness\_control module
+----------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.dolby_atmos_loudness_control
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.dolby\_atmos\_metering\_mode module
+-------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.dolby_atmos_metering_mode
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.dolby\_vision\_metadata module
 --------------------------------------------------------
 
