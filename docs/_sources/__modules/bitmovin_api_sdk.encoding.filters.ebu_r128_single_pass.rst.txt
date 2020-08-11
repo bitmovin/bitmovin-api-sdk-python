@@ -28,7 +28,6 @@ bitmovin\_api\_sdk.encoding.filters.ebu\_r128\_single\_pass.ebu\_r128\_single\_p
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

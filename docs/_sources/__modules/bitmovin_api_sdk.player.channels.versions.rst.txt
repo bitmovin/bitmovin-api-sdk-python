@@ -20,7 +20,6 @@ bitmovin\_api\_sdk.player.channels.versions.versions\_api module
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

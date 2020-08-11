@@ -28,7 +28,6 @@ bitmovin\_api\_sdk.encoding.filters.crop.crop\_filter\_list\_query\_params modul
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

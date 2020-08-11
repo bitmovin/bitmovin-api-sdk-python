@@ -20,7 +20,6 @@ bitmovin\_api\_sdk.encoding.encodings.transfer\_retries.transfer\_retry\_list\_q
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

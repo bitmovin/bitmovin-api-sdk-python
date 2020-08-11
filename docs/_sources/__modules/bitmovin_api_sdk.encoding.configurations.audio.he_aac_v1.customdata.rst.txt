@@ -12,7 +12,6 @@ bitmovin\_api\_sdk.encoding.configurations.audio.he\_aac\_v1.customdata.customda
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

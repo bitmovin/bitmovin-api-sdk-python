@@ -28,7 +28,6 @@ bitmovin\_api\_sdk.encoding.statistics.labels.daily.daily\_statistics\_per\_labe
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

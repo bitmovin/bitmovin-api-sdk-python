@@ -286,6 +286,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.custom_xml_element">bitmovin_api_sdk.models.custom_xml_element module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.daily_statistics">bitmovin_api_sdk.models.daily_statistics module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.daily_statistics_per_label">bitmovin_api_sdk.models.daily_statistics_per_label module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.dash_chunked_text_representation">bitmovin_api_sdk.models.dash_chunked_text_representation module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.dash_cmaf_representation">bitmovin_api_sdk.models.dash_cmaf_representation module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.dash_fmp4_drm_representation">bitmovin_api_sdk.models.dash_fmp4_drm_representation module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.dash_fmp4_representation">bitmovin_api_sdk.models.dash_fmp4_representation module</a></li>
@@ -333,6 +334,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.drm">bitmovin_api_sdk.models.drm module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.drm_type">bitmovin_api_sdk.models.drm_type module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.dts_passthrough_audio_configuration">bitmovin_api_sdk.models.dts_passthrough_audio_configuration module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.dvb_subtitle_input_stream">bitmovin_api_sdk.models.dvb_subtitle_input_stream module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.dvb_teletext_input_stream">bitmovin_api_sdk.models.dvb_teletext_input_stream module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.eac3_audio_configuration">bitmovin_api_sdk.models.eac3_audio_configuration module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.ebu_r128_single_pass_filter">bitmovin_api_sdk.models.ebu_r128_single_pass_filter module</a></li>
@@ -370,6 +372,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.ftp_input">bitmovin_api_sdk.models.ftp_input module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.ftp_output">bitmovin_api_sdk.models.ftp_output module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.gce_account">bitmovin_api_sdk.models.gce_account module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.gce_account_region_settings">bitmovin_api_sdk.models.gce_account_region_settings module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.gcs_input">bitmovin_api_sdk.models.gcs_input module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.gcs_output">bitmovin_api_sdk.models.gcs_output module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.gcs_service_account_input">bitmovin_api_sdk.models.gcs_service_account_input module</a></li>
@@ -642,7 +645,6 @@
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.ts_program_map_table_configuration">bitmovin_api_sdk.models.ts_program_map_table_configuration module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.ts_stream_configuration">bitmovin_api_sdk.models.ts_stream_configuration module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.ts_video_stream_configuration">bitmovin_api_sdk.models.ts_video_stream_configuration module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.ttml_embed">bitmovin_api_sdk.models.ttml_embed module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.tu_inter_depth">bitmovin_api_sdk.models.tu_inter_depth module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.tu_intra_depth">bitmovin_api_sdk.models.tu_intra_depth module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.tweaks">bitmovin_api_sdk.models.tweaks module</a></li>
@@ -15652,7 +15654,7 @@
 <dt id="bitmovin_api_sdk.models.concatenation_input_configuration.ConcatenationInputConfiguration.input_stream_id">
 <em class="property">property </em><code class="sig-name descname">input_stream_id</code><a class="headerlink" href="#bitmovin_api_sdk.models.concatenation_input_configuration.ConcatenationInputConfiguration.input_stream_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the input_stream_id of this ConcatenationInputConfiguration.</p>
-<p>The id of the input stream that should be used for concatenation. Can be either an ingest input stream, or the result of a trimming input stream</p>
+<p>The ID of the input stream to be concatenated. This can be an ingest input stream or a trimming input stream</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>The input_stream_id of this ConcatenationInputConfiguration.</p>
@@ -17097,6 +17099,27 @@
 <dl class="py method">
 <dt id="bitmovin_api_sdk.models.daily_statistics_per_label.DailyStatisticsPerLabel.to_str">
 <code class="sig-name descname">to_str</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/models/daily_statistics_per_label.html#DailyStatisticsPerLabel.to_str"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.models.daily_statistics_per_label.DailyStatisticsPerLabel.to_str" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the string representation of the model</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-bitmovin_api_sdk.models.dash_chunked_text_representation">
+<span id="bitmovin-api-sdk-models-dash-chunked-text-representation-module"></span><h2>bitmovin_api_sdk.models.dash_chunked_text_representation module<a class="headerlink" href="#module-bitmovin_api_sdk.models.dash_chunked_text_representation" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="bitmovin_api_sdk.models.dash_chunked_text_representation.DashChunkedTextRepresentation">
+<em class="property">class </em><code class="sig-prename descclassname">bitmovin_api_sdk.models.dash_chunked_text_representation.</code><code class="sig-name descname">DashChunkedTextRepresentation</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/models/dash_chunked_text_representation.html#DashChunkedTextRepresentation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.models.dash_chunked_text_representation.DashChunkedTextRepresentation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bitmovin_api_sdk.models.dash_segmented_representation.DashSegmentedRepresentation" title="bitmovin_api_sdk.models.dash_segmented_representation.DashSegmentedRepresentation"><code class="xref py py-class docutils literal notranslate"><span class="pre">bitmovin_api_sdk.models.dash_segmented_representation.DashSegmentedRepresentation</span></code></a></p>
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.dash_chunked_text_representation.DashChunkedTextRepresentation.to_dict">
+<code class="sig-name descname">to_dict</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/models/dash_chunked_text_representation.html#DashChunkedTextRepresentation.to_dict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.models.dash_chunked_text_representation.DashChunkedTextRepresentation.to_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the model properties as a dict</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.dash_chunked_text_representation.DashChunkedTextRepresentation.to_str">
+<code class="sig-name descname">to_str</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/models/dash_chunked_text_representation.html#DashChunkedTextRepresentation.to_str"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.models.dash_chunked_text_representation.DashChunkedTextRepresentation.to_str" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the string representation of the model</p>
 </dd></dl>
 
@@ -19242,6 +19265,97 @@
 <dl class="py method">
 <dt id="bitmovin_api_sdk.models.dts_passthrough_audio_configuration.DtsPassthroughAudioConfiguration.to_str">
 <code class="sig-name descname">to_str</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/models/dts_passthrough_audio_configuration.html#DtsPassthroughAudioConfiguration.to_str"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.models.dts_passthrough_audio_configuration.DtsPassthroughAudioConfiguration.to_str" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the string representation of the model</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-bitmovin_api_sdk.models.dvb_subtitle_input_stream">
+<span id="bitmovin-api-sdk-models-dvb-subtitle-input-stream-module"></span><h2>bitmovin_api_sdk.models.dvb_subtitle_input_stream module<a class="headerlink" href="#module-bitmovin_api_sdk.models.dvb_subtitle_input_stream" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="bitmovin_api_sdk.models.dvb_subtitle_input_stream.DvbSubtitleInputStream">
+<em class="property">class </em><code class="sig-prename descclassname">bitmovin_api_sdk.models.dvb_subtitle_input_stream.</code><code class="sig-name descname">DvbSubtitleInputStream</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/models/dvb_subtitle_input_stream.html#DvbSubtitleInputStream"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.models.dvb_subtitle_input_stream.DvbSubtitleInputStream" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bitmovin_api_sdk.models.input_stream.InputStream" title="bitmovin_api_sdk.models.input_stream.InputStream"><code class="xref py py-class docutils literal notranslate"><span class="pre">bitmovin_api_sdk.models.input_stream.InputStream</span></code></a></p>
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.dvb_subtitle_input_stream.DvbSubtitleInputStream.attribute_map">
+<em class="property">property </em><code class="sig-name descname">attribute_map</code><a class="headerlink" href="#bitmovin_api_sdk.models.dvb_subtitle_input_stream.DvbSubtitleInputStream.attribute_map" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.dvb_subtitle_input_stream.DvbSubtitleInputStream.input_id">
+<em class="property">property </em><code class="sig-name descname">input_id</code><a class="headerlink" href="#bitmovin_api_sdk.models.dvb_subtitle_input_stream.DvbSubtitleInputStream.input_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the input_id of this DvbSubtitleInputStream.</p>
+<p>Id of input</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The input_id of this DvbSubtitleInputStream.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>string_types</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.dvb_subtitle_input_stream.DvbSubtitleInputStream.input_path">
+<em class="property">property </em><code class="sig-name descname">input_path</code><a class="headerlink" href="#bitmovin_api_sdk.models.dvb_subtitle_input_stream.DvbSubtitleInputStream.input_path" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the input_path of this DvbSubtitleInputStream.</p>
+<p>Path to media file</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The input_path of this DvbSubtitleInputStream.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>string_types</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.dvb_subtitle_input_stream.DvbSubtitleInputStream.openapi_types">
+<em class="property">property </em><code class="sig-name descname">openapi_types</code><a class="headerlink" href="#bitmovin_api_sdk.models.dvb_subtitle_input_stream.DvbSubtitleInputStream.openapi_types" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.dvb_subtitle_input_stream.DvbSubtitleInputStream.position">
+<em class="property">property </em><code class="sig-name descname">position</code><a class="headerlink" href="#bitmovin_api_sdk.models.dvb_subtitle_input_stream.DvbSubtitleInputStream.position" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the position of this DvbSubtitleInputStream.</p>
+<p>Position of the stream</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The position of this DvbSubtitleInputStream.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.dvb_subtitle_input_stream.DvbSubtitleInputStream.selection_mode">
+<em class="property">property </em><code class="sig-name descname">selection_mode</code><a class="headerlink" href="#bitmovin_api_sdk.models.dvb_subtitle_input_stream.DvbSubtitleInputStream.selection_mode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the selection_mode of this DvbSubtitleInputStream.</p>
+<p>Specifies the algorithm how the stream in the input file will be selected. Only POSITION_ABSOLUTE is supported.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The selection_mode of this DvbSubtitleInputStream.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#bitmovin_api_sdk.models.stream_selection_mode.StreamSelectionMode" title="bitmovin_api_sdk.models.stream_selection_mode.StreamSelectionMode">StreamSelectionMode</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.dvb_subtitle_input_stream.DvbSubtitleInputStream.to_dict">
+<code class="sig-name descname">to_dict</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/models/dvb_subtitle_input_stream.html#DvbSubtitleInputStream.to_dict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.models.dvb_subtitle_input_stream.DvbSubtitleInputStream.to_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the model properties as a dict</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.dvb_subtitle_input_stream.DvbSubtitleInputStream.to_str">
+<code class="sig-name descname">to_str</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/models/dvb_subtitle_input_stream.html#DvbSubtitleInputStream.to_str"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.models.dvb_subtitle_input_stream.DvbSubtitleInputStream.to_str" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the string representation of the model</p>
 </dd></dl>
 
@@ -22223,6 +22337,67 @@
 </dd></dl>
 
 </div>
+<div class="section" id="module-bitmovin_api_sdk.models.gce_account_region_settings">
+<span id="bitmovin-api-sdk-models-gce-account-region-settings-module"></span><h2>bitmovin_api_sdk.models.gce_account_region_settings module<a class="headerlink" href="#module-bitmovin_api_sdk.models.gce_account_region_settings" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="bitmovin_api_sdk.models.gce_account_region_settings.GceAccountRegionSettings">
+<em class="property">class </em><code class="sig-prename descclassname">bitmovin_api_sdk.models.gce_account_region_settings.</code><code class="sig-name descname">GceAccountRegionSettings</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/models/gce_account_region_settings.html#GceAccountRegionSettings"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.models.gce_account_region_settings.GceAccountRegionSettings" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bitmovin_api_sdk.models.bitmovin_resource.BitmovinResource" title="bitmovin_api_sdk.models.bitmovin_resource.BitmovinResource"><code class="xref py py-class docutils literal notranslate"><span class="pre">bitmovin_api_sdk.models.bitmovin_resource.BitmovinResource</span></code></a></p>
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.gce_account_region_settings.GceAccountRegionSettings.attribute_map">
+<em class="property">property </em><code class="sig-name descname">attribute_map</code><a class="headerlink" href="#bitmovin_api_sdk.models.gce_account_region_settings.GceAccountRegionSettings.attribute_map" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.gce_account_region_settings.GceAccountRegionSettings.network">
+<em class="property">property </em><code class="sig-name descname">network</code><a class="headerlink" href="#bitmovin_api_sdk.models.gce_account_region_settings.GceAccountRegionSettings.network" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the network of this GceAccountRegionSettings.</p>
+<p>Id of the network for encoding instances (required)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The network of this GceAccountRegionSettings.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>string_types</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.gce_account_region_settings.GceAccountRegionSettings.openapi_types">
+<em class="property">property </em><code class="sig-name descname">openapi_types</code><a class="headerlink" href="#bitmovin_api_sdk.models.gce_account_region_settings.GceAccountRegionSettings.openapi_types" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.gce_account_region_settings.GceAccountRegionSettings.subnet_id">
+<em class="property">property </em><code class="sig-name descname">subnet_id</code><a class="headerlink" href="#bitmovin_api_sdk.models.gce_account_region_settings.GceAccountRegionSettings.subnet_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the subnet_id of this GceAccountRegionSettings.</p>
+<p>Id of the subnet for encoding instances (required)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The subnet_id of this GceAccountRegionSettings.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>string_types</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.gce_account_region_settings.GceAccountRegionSettings.to_dict">
+<code class="sig-name descname">to_dict</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/models/gce_account_region_settings.html#GceAccountRegionSettings.to_dict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.models.gce_account_region_settings.GceAccountRegionSettings.to_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the model properties as a dict</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.gce_account_region_settings.GceAccountRegionSettings.to_str">
+<code class="sig-name descname">to_str</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/models/gce_account_region_settings.html#GceAccountRegionSettings.to_str"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.models.gce_account_region_settings.GceAccountRegionSettings.to_str" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the string representation of the model</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
 <div class="section" id="module-bitmovin_api_sdk.models.gcs_input">
 <span id="bitmovin-api-sdk-models-gcs-input-module"></span><h2>bitmovin_api_sdk.models.gcs_input module<a class="headerlink" href="#module-bitmovin_api_sdk.models.gcs_input" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
@@ -24975,7 +25150,7 @@
 <dt id="bitmovin_api_sdk.models.h265_video_configuration.H265VideoConfiguration.preset_configuration">
 <em class="property">property </em><code class="sig-name descname">preset_configuration</code><a class="headerlink" href="#bitmovin_api_sdk.models.h265_video_configuration.H265VideoConfiguration.preset_configuration" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the preset_configuration of this H265VideoConfiguration.</p>
-<p>Use a set of well defined configurations preset to support certain use cases. Can be overwritten with more specific values.</p>
+<p>Use a set of well defined configurations preset to support certain use cases. Can be overwritten with more specific values. Valid values [VOD_HIGH_QUALITY, VOD_STANDARD, VOD_SPEED, VOD_HIGH_SPEED, VOD_VERYHIGH_SPEED, VOD_EXTRAHIGH_SPEED, VOD_SUPERHIGH_SPEED, VOD_ULTRAHIGH_SPEED, LIVE_LOW_LATENCY, LIVE_HIGH_QUALITY]</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>The preset_configuration of this H265VideoConfiguration.</p>
@@ -26888,7 +27063,7 @@
 <dd><p>Bases: <a class="reference internal" href="#bitmovin_api_sdk.models.bitmovin_resource.BitmovinResource" title="bitmovin_api_sdk.models.bitmovin_resource.BitmovinResource"><code class="xref py py-class docutils literal notranslate"><span class="pre">bitmovin_api_sdk.models.bitmovin_resource.BitmovinResource</span></code></a></p>
 <dl class="py attribute">
 <dt id="bitmovin_api_sdk.models.input_stream.InputStream.discriminator_value_class_map">
-<code class="sig-name descname">discriminator_value_class_map</code><em class="property"> = {'AUDIO_MIX': 'AudioMixInputStream', 'CAPTION_CEA608': 'Cea608CaptionInputStream', 'CAPTION_CEA708': 'Cea708CaptionInputStream', 'CONCATENATION': 'ConcatenationInputStream', 'DOLBY_ATMOS': 'DolbyAtmosIngestInputStream', 'DVB_TELETEXT': 'DvbTeletextInputStream', 'FILE': 'FileInputStream', 'INGEST': 'IngestInputStream', 'SIDECAR_DOLBY_VISION_METADATA': 'DolbyVisionMetadataIngestInputStream', 'TRIMMING_H264_PICTURE_TIMING': 'H264PictureTimingTrimmingInputStream', 'TRIMMING_TIME_BASED': 'TimeBasedTrimmingInputStream', 'TRIMMING_TIME_CODE_TRACK': 'TimecodeTrackTrimmingInputStream'}</em><a class="headerlink" href="#bitmovin_api_sdk.models.input_stream.InputStream.discriminator_value_class_map" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">discriminator_value_class_map</code><em class="property"> = {'AUDIO_MIX': 'AudioMixInputStream', 'CAPTION_CEA608': 'Cea608CaptionInputStream', 'CAPTION_CEA708': 'Cea708CaptionInputStream', 'CONCATENATION': 'ConcatenationInputStream', 'DOLBY_ATMOS': 'DolbyAtmosIngestInputStream', 'DVB_SUBTITLE': 'DvbSubtitleInputStream', 'DVB_TELETEXT': 'DvbTeletextInputStream', 'FILE': 'FileInputStream', 'INGEST': 'IngestInputStream', 'SIDECAR_DOLBY_VISION_METADATA': 'DolbyVisionMetadataIngestInputStream', 'TRIMMING_H264_PICTURE_TIMING': 'H264PictureTimingTrimmingInputStream', 'TRIMMING_TIME_BASED': 'TimeBasedTrimmingInputStream', 'TRIMMING_TIME_CODE_TRACK': 'TimecodeTrackTrimmingInputStream'}</em><a class="headerlink" href="#bitmovin_api_sdk.models.input_stream.InputStream.discriminator_value_class_map" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -26936,6 +27111,11 @@
 <dl class="py attribute">
 <dt id="bitmovin_api_sdk.models.input_stream_type.InputStreamType.DOLBY_ATMOS">
 <code class="sig-name descname">DOLBY_ATMOS</code><em class="property"> = 'DOLBY_ATMOS'</em><a class="headerlink" href="#bitmovin_api_sdk.models.input_stream_type.InputStreamType.DOLBY_ATMOS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="bitmovin_api_sdk.models.input_stream_type.InputStreamType.DVB_SUBTITLE">
+<code class="sig-name descname">DVB_SUBTITLE</code><em class="property"> = 'DVB_SUBTITLE'</em><a class="headerlink" href="#bitmovin_api_sdk.models.input_stream_type.InputStreamType.DVB_SUBTITLE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
@@ -42967,52 +43147,6 @@
 </dd></dl>
 
 </div>
-<div class="section" id="module-bitmovin_api_sdk.models.ttml_embed">
-<span id="bitmovin-api-sdk-models-ttml-embed-module"></span><h2>bitmovin_api_sdk.models.ttml_embed module<a class="headerlink" href="#module-bitmovin_api_sdk.models.ttml_embed" title="Permalink to this headline">¶</a></h2>
-<dl class="py class">
-<dt id="bitmovin_api_sdk.models.ttml_embed.TtmlEmbed">
-<em class="property">class </em><code class="sig-prename descclassname">bitmovin_api_sdk.models.ttml_embed.</code><code class="sig-name descname">TtmlEmbed</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/models/ttml_embed.html#TtmlEmbed"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.models.ttml_embed.TtmlEmbed" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#bitmovin_api_sdk.models.bitmovin_resource.BitmovinResource" title="bitmovin_api_sdk.models.bitmovin_resource.BitmovinResource"><code class="xref py py-class docutils literal notranslate"><span class="pre">bitmovin_api_sdk.models.bitmovin_resource.BitmovinResource</span></code></a></p>
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.ttml_embed.TtmlEmbed.attribute_map">
-<em class="property">property </em><code class="sig-name descname">attribute_map</code><a class="headerlink" href="#bitmovin_api_sdk.models.ttml_embed.TtmlEmbed.attribute_map" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.ttml_embed.TtmlEmbed.input_stream">
-<em class="property">property </em><code class="sig-name descname">input_stream</code><a class="headerlink" href="#bitmovin_api_sdk.models.ttml_embed.TtmlEmbed.input_stream" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the input_stream of this TtmlEmbed.</p>
-<p>The input stream to extract the subtitle from (required)</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The input_stream of this TtmlEmbed.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p><a class="reference internal" href="#bitmovin_api_sdk.models.stream_input.StreamInput" title="bitmovin_api_sdk.models.stream_input.StreamInput">StreamInput</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.ttml_embed.TtmlEmbed.openapi_types">
-<em class="property">property </em><code class="sig-name descname">openapi_types</code><a class="headerlink" href="#bitmovin_api_sdk.models.ttml_embed.TtmlEmbed.openapi_types" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.ttml_embed.TtmlEmbed.to_dict">
-<code class="sig-name descname">to_dict</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/models/ttml_embed.html#TtmlEmbed.to_dict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.models.ttml_embed.TtmlEmbed.to_dict" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the model properties as a dict</p>
-</dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.ttml_embed.TtmlEmbed.to_str">
-<code class="sig-name descname">to_str</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/models/ttml_embed.html#TtmlEmbed.to_str"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.models.ttml_embed.TtmlEmbed.to_str" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the string representation of the model</p>
-</dd></dl>
-
-</dd></dl>
-
-</div>
 <div class="section" id="module-bitmovin_api_sdk.models.tu_inter_depth">
 <span id="bitmovin-api-sdk-models-tu-inter-depth-module"></span><h2>bitmovin_api_sdk.models.tu_inter_depth module<a class="headerlink" href="#module-bitmovin_api_sdk.models.tu_inter_depth" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
@@ -44852,7 +44986,7 @@
 <dt id="bitmovin_api_sdk.models.vp9_video_configuration.Vp9VideoConfiguration.preset_configuration">
 <em class="property">property </em><code class="sig-name descname">preset_configuration</code><a class="headerlink" href="#bitmovin_api_sdk.models.vp9_video_configuration.Vp9VideoConfiguration.preset_configuration" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the preset_configuration of this Vp9VideoConfiguration.</p>
-<p>Use a set of well defined configurations preset to support certain use cases. Can be overwritten with more specific values.</p>
+<p>Use a set of well defined configurations preset to support certain use cases. Can be overwritten with more specific values. Valid values [VOD_HIGH_QUALITY, VOD_STANDARD, VOD_SPEED]</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>The preset_configuration of this Vp9VideoConfiguration.</p>

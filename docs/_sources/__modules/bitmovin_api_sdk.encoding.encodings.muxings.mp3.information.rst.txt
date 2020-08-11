@@ -12,7 +12,6 @@ bitmovin\_api\_sdk.encoding.encodings.muxings.mp3.information.information\_api m
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

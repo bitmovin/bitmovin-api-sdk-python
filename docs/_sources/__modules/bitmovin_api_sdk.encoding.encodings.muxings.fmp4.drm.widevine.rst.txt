@@ -28,7 +28,6 @@ bitmovin\_api\_sdk.encoding.encodings.muxings.fmp4.drm.widevine.widevine\_drm\_l
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

@@ -7,6 +7,7 @@ from bitmovin_api_sdk.common.poscheck import poscheck_except
 from bitmovin_api_sdk.models.gce_account import GceAccount
 from bitmovin_api_sdk.models.response_envelope import ResponseEnvelope
 from bitmovin_api_sdk.models.response_error import ResponseError
+from bitmovin_api_sdk.encoding.infrastructure.gce.regions.regions_api import RegionsApi
 from bitmovin_api_sdk.encoding.infrastructure.gce.gce_account_list_query_params import GceAccountListQueryParams
 
 
@@ -16,6 +17,13 @@ class GceApi(BaseApi):
         # type: (str, str, str, BitmovinApiLoggerBase) -> None
 
         super(GceApi, self).__init__(
+            api_key=api_key,
+            tenant_org_id=tenant_org_id,
+            base_url=base_url,
+            logger=logger
+        )
+
+        self.regions = RegionsApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,

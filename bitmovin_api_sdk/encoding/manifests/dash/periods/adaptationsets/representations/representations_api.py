@@ -6,6 +6,7 @@ from bitmovin_api_sdk.common import BaseApi, BitmovinApiLoggerBase
 from bitmovin_api_sdk.common.poscheck import poscheck_except
 from bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.vtt.vtt_api import VttApi
 from bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.fmp4.fmp4_api import Fmp4Api
+from bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.chunked_text.chunked_text_api import ChunkedTextApi
 from bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.cmaf.cmaf_api import CmafApi
 from bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.mp4.mp4_api import Mp4Api
 from bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.webm.webm_api import WebmApi
@@ -32,6 +33,13 @@ class RepresentationsApi(BaseApi):
         )
 
         self.fmp4 = Fmp4Api(
+            api_key=api_key,
+            tenant_org_id=tenant_org_id,
+            base_url=base_url,
+            logger=logger
+        )
+
+        self.chunked_text = ChunkedTextApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,

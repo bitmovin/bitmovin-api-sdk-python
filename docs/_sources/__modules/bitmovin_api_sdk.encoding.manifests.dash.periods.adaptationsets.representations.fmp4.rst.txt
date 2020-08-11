@@ -29,7 +29,6 @@ bitmovin\_api\_sdk.encoding.manifests.dash.periods.adaptationsets.representation
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

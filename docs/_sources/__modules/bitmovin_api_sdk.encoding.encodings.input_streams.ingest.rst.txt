@@ -20,7 +20,6 @@ bitmovin\_api\_sdk.encoding.encodings.input\_streams.ingest.ingest\_input\_strea
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

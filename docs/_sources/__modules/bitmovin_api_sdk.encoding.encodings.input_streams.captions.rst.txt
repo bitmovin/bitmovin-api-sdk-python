@@ -21,7 +21,6 @@ bitmovin\_api\_sdk.encoding.encodings.input\_streams.captions.captions\_api modu
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

@@ -12,7 +12,6 @@ bitmovin\_api\_sdk.analytics.impressions.impressions\_api module
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

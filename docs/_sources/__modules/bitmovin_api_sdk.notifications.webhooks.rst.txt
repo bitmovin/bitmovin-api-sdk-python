@@ -20,7 +20,6 @@ bitmovin\_api\_sdk.notifications.webhooks.webhooks\_api module
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

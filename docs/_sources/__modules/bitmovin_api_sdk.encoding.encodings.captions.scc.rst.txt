@@ -28,7 +28,6 @@ bitmovin\_api\_sdk.encoding.encodings.captions.scc.scc\_api module
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

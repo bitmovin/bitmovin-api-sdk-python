@@ -20,7 +20,6 @@ bitmovin\_api\_sdk.encoding.encodings.input\_streams.trimming.h264\_picture\_tim
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

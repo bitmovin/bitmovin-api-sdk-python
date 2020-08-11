@@ -28,7 +28,6 @@ bitmovin\_api\_sdk.encoding.configurations.audio.aac.aac\_audio\_configuration\_
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

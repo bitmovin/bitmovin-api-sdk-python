@@ -12,7 +12,6 @@ bitmovin\_api\_sdk.encoding.configurations.audio.vorbis.customdata.customdata\_a
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

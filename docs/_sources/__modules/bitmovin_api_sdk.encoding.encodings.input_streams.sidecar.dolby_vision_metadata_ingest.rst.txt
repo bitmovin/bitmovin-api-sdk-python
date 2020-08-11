@@ -20,7 +20,6 @@ bitmovin\_api\_sdk.encoding.encodings.input\_streams.sidecar.dolby\_vision\_meta
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

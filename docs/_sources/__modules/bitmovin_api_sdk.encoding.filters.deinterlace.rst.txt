@@ -28,7 +28,6 @@ bitmovin\_api\_sdk.encoding.filters.deinterlace.deinterlace\_filter\_list\_query
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

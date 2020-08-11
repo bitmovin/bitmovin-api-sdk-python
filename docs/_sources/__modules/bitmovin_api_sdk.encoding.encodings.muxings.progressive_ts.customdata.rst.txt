@@ -12,7 +12,6 @@ bitmovin\_api\_sdk.encoding.encodings.muxings.progressive\_ts.customdata.customd
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

@@ -22,7 +22,6 @@ bitmovin\_api\_sdk.encoding.statistics.encodings.encodings\_api module
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

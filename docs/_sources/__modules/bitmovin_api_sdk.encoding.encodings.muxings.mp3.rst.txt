@@ -29,7 +29,6 @@ bitmovin\_api\_sdk.encoding.encodings.muxings.mp3.mp3\_muxing\_list\_query\_para
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

@@ -36,7 +36,6 @@ bitmovin\_api\_sdk.notifications.webhooks.encoding.encodings.transfer\_error.web
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

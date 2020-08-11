@@ -28,7 +28,7 @@ class DomainsApi(BaseApi):
 
         :param license_id: Id of the Player License
         :type license_id: string_types, required
-        :param domain: The Domain to be added to Player License Whitelist
+        :param domain: The Domain to be added to Player License Allowlist
         :type domain: Domain, required
         :return: Domain details
         :rtype: Domain

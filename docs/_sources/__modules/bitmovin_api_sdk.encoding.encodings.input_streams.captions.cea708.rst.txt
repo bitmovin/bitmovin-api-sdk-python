@@ -20,7 +20,6 @@ bitmovin\_api\_sdk.encoding.encodings.input\_streams.captions.cea708.cea708\_cap
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

@@ -22,7 +22,6 @@ bitmovin\_api\_sdk.player.custom\_builds.web.web\_api module
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

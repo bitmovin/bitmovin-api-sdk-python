@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>bitmovin_api_sdk.encoding.encodings.muxings.cmaf.captions.captions_api &mdash; Bitmovin Python API SDK {{packageVersion}} documentation</title>
+  <title>bitmovin_api_sdk.encoding.encodings.input_streams.subtitles.dvb_subtitle.dvb_subtitle_input_stream_list_query_params &mdash; Bitmovin Python API SDK {{packageVersion}} documentation</title>
   
 
   
@@ -138,7 +138,7 @@
         
           <li><a href="../../../../../../index.html">Module code</a> &raquo;</li>
         
-      <li>bitmovin_api_sdk.encoding.encodings.muxings.cmaf.captions.captions_api</li>
+      <li>bitmovin_api_sdk.encoding.encodings.input_streams.subtitles.dvb_subtitle.dvb_subtitle_input_stream_list_query_params</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -153,34 +153,32 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <h1>Source code for bitmovin_api_sdk.encoding.encodings.muxings.cmaf.captions.captions_api</h1><div class="highlight"><pre>
-<span></span><span class="c1"># coding: utf-8</span>
+  <h1>Source code for bitmovin_api_sdk.encoding.encodings.input_streams.subtitles.dvb_subtitle.dvb_subtitle_input_stream_list_query_params</h1><div class="highlight"><pre>
+<div class="viewcode-block" id="DvbSubtitleInputStreamListQueryParams"><a class="viewcode-back" href="../../../../../../../__modules/bitmovin_api_sdk.encoding.encodings.input_streams.subtitles.dvb_subtitle.html#bitmovin_api_sdk.encoding.encodings.input_streams.subtitles.dvb_subtitle.dvb_subtitle_input_stream_list_query_params.DvbSubtitleInputStreamListQueryParams">[docs]</a><span></span><span class="k">class</span> <span class="nc">DvbSubtitleInputStreamListQueryParams</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">offset</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="c1"># type: (int, int) -&gt; None</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">DvbSubtitleInputStreamListQueryParams</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
 
-<span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">absolute_import</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">offset</span> <span class="o">=</span> <span class="n">offset</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">limit</span> <span class="o">=</span> <span class="n">limit</span>
 
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.common</span> <span class="kn">import</span> <span class="n">BaseApi</span><span class="p">,</span> <span class="n">BitmovinApiLoggerBase</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.common.poscheck</span> <span class="kn">import</span> <span class="n">poscheck_except</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.encoding.encodings.muxings.cmaf.captions.ttml.ttml_api</span> <span class="kn">import</span> <span class="n">TtmlApi</span>
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">types</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;offset&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;limit&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span>
+        <span class="p">}</span>
 
+        <span class="k">return</span> <span class="n">types</span>
 
-<div class="viewcode-block" id="CaptionsApi"><a class="viewcode-back" href="../../../../../../../__modules/bitmovin_api_sdk.encoding.encodings.muxings.cmaf.captions.html#bitmovin_api_sdk.encoding.encodings.muxings.cmaf.captions.captions_api.CaptionsApi">[docs]</a><span class="k">class</span> <span class="nc">CaptionsApi</span><span class="p">(</span><span class="n">BaseApi</span><span class="p">):</span>
-    <span class="nd">@poscheck_except</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">api_key</span><span class="p">,</span> <span class="n">tenant_org_id</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">base_url</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">logger</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (str, str, str, BitmovinApiLoggerBase) -&gt; None</span>
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">attribute_map</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">attributes</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;offset&#39;</span><span class="p">:</span> <span class="s1">&#39;offset&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;limit&#39;</span><span class="p">:</span> <span class="s1">&#39;limit&#39;</span>
+        <span class="p">}</span>
 
-        <span class="nb">super</span><span class="p">(</span><span class="n">CaptionsApi</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span>
-            <span class="n">api_key</span><span class="o">=</span><span class="n">api_key</span><span class="p">,</span>
-            <span class="n">tenant_org_id</span><span class="o">=</span><span class="n">tenant_org_id</span><span class="p">,</span>
-            <span class="n">base_url</span><span class="o">=</span><span class="n">base_url</span><span class="p">,</span>
-            <span class="n">logger</span><span class="o">=</span><span class="n">logger</span>
-        <span class="p">)</span>
-
-        <span class="bp">self</span><span class="o">.</span><span class="n">ttml</span> <span class="o">=</span> <span class="n">TtmlApi</span><span class="p">(</span>
-            <span class="n">api_key</span><span class="o">=</span><span class="n">api_key</span><span class="p">,</span>
-            <span class="n">tenant_org_id</span><span class="o">=</span><span class="n">tenant_org_id</span><span class="p">,</span>
-            <span class="n">base_url</span><span class="o">=</span><span class="n">base_url</span><span class="p">,</span>
-            <span class="n">logger</span><span class="o">=</span><span class="n">logger</span>
-        <span class="p">)</span></div>
+        <span class="k">return</span> <span class="n">attributes</span></div>
 </pre></div>
 
            </div>

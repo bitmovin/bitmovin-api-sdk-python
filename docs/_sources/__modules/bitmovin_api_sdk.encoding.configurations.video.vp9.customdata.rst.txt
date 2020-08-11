@@ -12,7 +12,6 @@ bitmovin\_api\_sdk.encoding.configurations.video.vp9.customdata.customdata\_api 
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

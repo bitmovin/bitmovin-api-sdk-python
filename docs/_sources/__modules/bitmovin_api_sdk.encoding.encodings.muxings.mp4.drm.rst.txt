@@ -25,7 +25,6 @@ bitmovin\_api\_sdk.encoding.encodings.muxings.mp4.drm.drm\_api module
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

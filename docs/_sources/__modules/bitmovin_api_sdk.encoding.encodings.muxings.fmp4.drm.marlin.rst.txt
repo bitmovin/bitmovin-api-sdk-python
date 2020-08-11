@@ -28,7 +28,6 @@ bitmovin\_api\_sdk.encoding.encodings.muxings.fmp4.drm.marlin.marlin\_drm\_list\
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

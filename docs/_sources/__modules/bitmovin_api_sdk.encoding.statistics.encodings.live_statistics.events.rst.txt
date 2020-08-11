@@ -20,7 +20,6 @@ bitmovin\_api\_sdk.encoding.statistics.encodings.live\_statistics.events.live\_e
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

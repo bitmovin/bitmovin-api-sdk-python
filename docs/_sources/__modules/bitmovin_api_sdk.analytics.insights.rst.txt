@@ -20,7 +20,6 @@ bitmovin\_api\_sdk.analytics.insights.insights\_api module
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

@@ -22,7 +22,6 @@ bitmovin\_api\_sdk.encoding.encodings.input\_streams.trimming.trimming\_api modu
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

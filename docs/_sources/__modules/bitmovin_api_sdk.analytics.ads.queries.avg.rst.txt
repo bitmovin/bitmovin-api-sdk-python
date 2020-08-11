@@ -12,7 +12,6 @@ bitmovin\_api\_sdk.analytics.ads.queries.avg.avg\_api module
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

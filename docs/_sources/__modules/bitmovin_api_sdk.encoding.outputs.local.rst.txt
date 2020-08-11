@@ -28,7 +28,6 @@ bitmovin\_api\_sdk.encoding.outputs.local.local\_output\_list\_query\_params mod
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

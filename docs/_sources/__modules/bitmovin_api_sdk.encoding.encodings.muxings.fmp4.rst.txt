@@ -30,7 +30,6 @@ bitmovin\_api\_sdk.encoding.encodings.muxings.fmp4.fmp4\_muxing\_list\_query\_pa
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

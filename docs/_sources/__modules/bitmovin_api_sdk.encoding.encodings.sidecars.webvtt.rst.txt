@@ -12,7 +12,6 @@ bitmovin\_api\_sdk.encoding.encodings.sidecars.webvtt.webvtt\_api module
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

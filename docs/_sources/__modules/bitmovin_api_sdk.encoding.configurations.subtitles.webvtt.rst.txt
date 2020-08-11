@@ -28,7 +28,6 @@ bitmovin\_api\_sdk.encoding.configurations.subtitles.webvtt.webvtt\_api module
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

@@ -1548,6 +1548,14 @@ bitmovin\_api\_sdk.models.daily\_statistics\_per\_label module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.dash\_chunked\_text\_representation module
+--------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.dash_chunked_text_representation
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.dash\_cmaf\_representation module
 -----------------------------------------------------------
 
@@ -1924,6 +1932,14 @@ bitmovin\_api\_sdk.models.dts\_passthrough\_audio\_configuration module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.dvb\_subtitle\_input\_stream module
+-------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.dvb_subtitle_input_stream
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.dvb\_teletext\_input\_stream module
 -------------------------------------------------------------
 
@@ -2216,6 +2232,14 @@ bitmovin\_api\_sdk.models.gce\_account module
 ---------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.models.gce_account
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.gce\_account\_region\_settings module
+---------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.gce_account_region_settings
    :members:
    :undoc-members:
    :show-inheritance:
@@ -4396,14 +4420,6 @@ bitmovin\_api\_sdk.models.ts\_video\_stream\_configuration module
    :undoc-members:
    :show-inheritance:
 
-bitmovin\_api\_sdk.models.ttml\_embed module
---------------------------------------------
-
-.. automodule:: bitmovin_api_sdk.models.ttml_embed
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
 bitmovin\_api\_sdk.models.tu\_inter\_depth module
 -------------------------------------------------
 
@@ -4723,7 +4739,6 @@ bitmovin\_api\_sdk.models.zixi\_input module
    :members:
    :undoc-members:
    :show-inheritance:
-
 
 Module contents
 ---------------

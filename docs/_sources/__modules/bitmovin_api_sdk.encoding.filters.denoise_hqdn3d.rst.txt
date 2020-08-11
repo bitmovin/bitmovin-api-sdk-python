@@ -28,7 +28,6 @@ bitmovin\_api\_sdk.encoding.filters.denoise\_hqdn3d.denoise\_hqdn3d\_filter\_lis
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

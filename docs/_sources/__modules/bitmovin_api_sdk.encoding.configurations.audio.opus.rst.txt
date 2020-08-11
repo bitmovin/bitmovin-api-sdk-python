@@ -28,7 +28,6 @@ bitmovin\_api\_sdk.encoding.configurations.audio.opus.opus\_audio\_configuration
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

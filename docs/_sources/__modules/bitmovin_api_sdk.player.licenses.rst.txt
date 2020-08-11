@@ -30,7 +30,6 @@ bitmovin\_api\_sdk.player.licenses.player\_license\_list\_query\_params module
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

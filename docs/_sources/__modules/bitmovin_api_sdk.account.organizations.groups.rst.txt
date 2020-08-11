@@ -22,7 +22,6 @@ bitmovin\_api\_sdk.account.organizations.groups.groups\_api module
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

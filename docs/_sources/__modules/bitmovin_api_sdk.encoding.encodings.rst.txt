@@ -37,7 +37,6 @@ bitmovin\_api\_sdk.encoding.encodings.encodings\_api module
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

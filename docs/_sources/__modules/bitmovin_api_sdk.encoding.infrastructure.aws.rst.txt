@@ -28,7 +28,6 @@ bitmovin\_api\_sdk.encoding.infrastructure.aws.aws\_api module
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

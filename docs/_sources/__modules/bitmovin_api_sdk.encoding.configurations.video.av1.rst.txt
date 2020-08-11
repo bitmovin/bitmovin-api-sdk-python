@@ -28,7 +28,6 @@ bitmovin\_api\_sdk.encoding.configurations.video.av1.av1\_video\_configuration\_
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

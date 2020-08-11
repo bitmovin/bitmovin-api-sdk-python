@@ -20,7 +20,6 @@ bitmovin\_api\_sdk.encoding.manifests.hls.media.closed\_captions.closed\_caption
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

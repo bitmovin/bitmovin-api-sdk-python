@@ -12,7 +12,6 @@ bitmovin\_api\_sdk.analytics.licenses.domains.domains\_api module
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

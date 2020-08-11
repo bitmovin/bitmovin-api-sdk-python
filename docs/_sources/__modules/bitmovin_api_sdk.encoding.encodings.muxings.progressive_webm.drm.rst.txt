@@ -21,7 +21,6 @@ bitmovin\_api\_sdk.encoding.encodings.muxings.progressive\_webm.drm.drm\_api mod
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

@@ -12,7 +12,6 @@ bitmovin\_api\_sdk.analytics.metrics.avg\_concurrentviewers.avg\_concurrentviewe
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

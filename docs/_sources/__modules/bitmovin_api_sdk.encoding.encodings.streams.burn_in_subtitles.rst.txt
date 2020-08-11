@@ -21,7 +21,6 @@ bitmovin\_api\_sdk.encoding.encodings.streams.burn\_in\_subtitles.burn\_in\_subt
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

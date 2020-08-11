@@ -29,7 +29,6 @@ bitmovin\_api\_sdk.encoding.encodings.machine\_learning.object\_detection.object
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

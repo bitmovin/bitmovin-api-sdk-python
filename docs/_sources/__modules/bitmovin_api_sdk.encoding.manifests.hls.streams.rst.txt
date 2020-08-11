@@ -29,7 +29,6 @@ bitmovin\_api\_sdk.encoding.manifests.hls.streams.streams\_api module
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

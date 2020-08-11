@@ -29,7 +29,6 @@ bitmovin\_api\_sdk.notifications.emails.encoding.encodings.encodings\_api module
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

@@ -32,7 +32,6 @@ bitmovin\_api\_sdk.encoding.infrastructure.kubernetes.kubernetes\_cluster\_list\
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

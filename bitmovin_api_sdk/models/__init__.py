@@ -196,6 +196,7 @@ from bitmovin_api_sdk.models.custom_web_player_build_domain import CustomWebPlay
 from bitmovin_api_sdk.models.custom_xml_element import CustomXmlElement
 from bitmovin_api_sdk.models.daily_statistics import DailyStatistics
 from bitmovin_api_sdk.models.daily_statistics_per_label import DailyStatisticsPerLabel
+from bitmovin_api_sdk.models.dash_chunked_text_representation import DashChunkedTextRepresentation
 from bitmovin_api_sdk.models.dash_cmaf_representation import DashCmafRepresentation
 from bitmovin_api_sdk.models.dash_fmp4_drm_representation import DashFmp4DrmRepresentation
 from bitmovin_api_sdk.models.dash_fmp4_representation import DashFmp4Representation
@@ -243,6 +244,7 @@ from bitmovin_api_sdk.models.domain_list import DomainList
 from bitmovin_api_sdk.models.drm import Drm
 from bitmovin_api_sdk.models.drm_type import DrmType
 from bitmovin_api_sdk.models.dts_passthrough_audio_configuration import DtsPassthroughAudioConfiguration
+from bitmovin_api_sdk.models.dvb_subtitle_input_stream import DvbSubtitleInputStream
 from bitmovin_api_sdk.models.dvb_teletext_input_stream import DvbTeletextInputStream
 from bitmovin_api_sdk.models.eac3_audio_configuration import Eac3AudioConfiguration
 from bitmovin_api_sdk.models.ebu_r128_single_pass_filter import EbuR128SinglePassFilter
@@ -280,6 +282,7 @@ from bitmovin_api_sdk.models.frame_id_id3_tag import FrameIdId3Tag
 from bitmovin_api_sdk.models.ftp_input import FtpInput
 from bitmovin_api_sdk.models.ftp_output import FtpOutput
 from bitmovin_api_sdk.models.gce_account import GceAccount
+from bitmovin_api_sdk.models.gce_account_region_settings import GceAccountRegionSettings
 from bitmovin_api_sdk.models.gcs_input import GcsInput
 from bitmovin_api_sdk.models.gcs_output import GcsOutput
 from bitmovin_api_sdk.models.gcs_service_account_input import GcsServiceAccountInput
@@ -552,7 +555,6 @@ from bitmovin_api_sdk.models.ts_program_clock_reference_configuration import TsP
 from bitmovin_api_sdk.models.ts_program_map_table_configuration import TsProgramMapTableConfiguration
 from bitmovin_api_sdk.models.ts_stream_configuration import TsStreamConfiguration
 from bitmovin_api_sdk.models.ts_video_stream_configuration import TsVideoStreamConfiguration
-from bitmovin_api_sdk.models.ttml_embed import TtmlEmbed
 from bitmovin_api_sdk.models.tu_inter_depth import TuInterDepth
 from bitmovin_api_sdk.models.tu_intra_depth import TuIntraDepth
 from bitmovin_api_sdk.models.tweaks import Tweaks

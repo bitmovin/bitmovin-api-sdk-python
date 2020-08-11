@@ -71,7 +71,7 @@ class ConcatenationInputConfiguration(object):
         # type: () -> string_types
         """Gets the input_stream_id of this ConcatenationInputConfiguration.
 
-        The id of the input stream that should be used for concatenation. Can be either an ingest input stream, or the result of a trimming input stream
+        The ID of the input stream to be concatenated. This can be an ingest input stream or a trimming input stream
 
         :return: The input_stream_id of this ConcatenationInputConfiguration.
         :rtype: string_types
@@ -83,7 +83,7 @@ class ConcatenationInputConfiguration(object):
         # type: (string_types) -> None
         """Sets the input_stream_id of this ConcatenationInputConfiguration.
 
-        The id of the input stream that should be used for concatenation. Can be either an ingest input stream, or the result of a trimming input stream
+        The ID of the input stream to be concatenated. This can be an ingest input stream or a trimming input stream
 
         :param input_stream_id: The input_stream_id of this ConcatenationInputConfiguration.
         :type: string_types

@@ -12,7 +12,6 @@ bitmovin\_api\_sdk.analytics.metrics.avg\_dropped\_frames.avg\_dropped\_frames\_
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

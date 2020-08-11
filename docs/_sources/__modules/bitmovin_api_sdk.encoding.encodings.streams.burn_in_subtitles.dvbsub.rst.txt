@@ -20,7 +20,6 @@ bitmovin\_api\_sdk.encoding.encodings.streams.burn\_in\_subtitles.dvbsub.dvbsub\
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

@@ -12,7 +12,6 @@ bitmovin\_api\_sdk.encoding.outputs.s3\_role\_based.customdata.customdata\_api m
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

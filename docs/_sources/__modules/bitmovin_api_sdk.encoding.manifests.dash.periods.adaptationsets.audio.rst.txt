@@ -20,7 +20,6 @@ bitmovin\_api\_sdk.encoding.manifests.dash.periods.adaptationsets.audio.audio\_a
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

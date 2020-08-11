@@ -42,7 +42,6 @@ bitmovin\_api\_sdk.encoding.filters.filters\_api module
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

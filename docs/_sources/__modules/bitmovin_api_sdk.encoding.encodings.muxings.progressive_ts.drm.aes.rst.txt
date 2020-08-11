@@ -28,7 +28,6 @@ bitmovin\_api\_sdk.encoding.encodings.muxings.progressive\_ts.drm.aes.aes\_encry
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

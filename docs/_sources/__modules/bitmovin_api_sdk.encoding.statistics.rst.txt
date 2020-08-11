@@ -30,7 +30,6 @@ bitmovin\_api\_sdk.encoding.statistics.statistics\_list\_query\_params module
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

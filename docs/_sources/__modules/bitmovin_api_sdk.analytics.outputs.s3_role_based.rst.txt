@@ -28,7 +28,6 @@ bitmovin\_api\_sdk.analytics.outputs.s3\_role\_based.s3\_role\_based\_output\_li
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

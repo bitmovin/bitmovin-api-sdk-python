@@ -29,7 +29,6 @@ bitmovin\_api\_sdk.encoding.encodings.muxings.broadcast\_ts.broadcast\_ts\_muxin
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

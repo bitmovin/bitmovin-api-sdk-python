@@ -12,7 +12,6 @@ bitmovin\_api\_sdk.encoding.filters.audio\_mix.customdata.customdata\_api module
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

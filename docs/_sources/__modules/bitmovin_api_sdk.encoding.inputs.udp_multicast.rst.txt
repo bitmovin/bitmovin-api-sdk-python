@@ -28,7 +28,6 @@ bitmovin\_api\_sdk.encoding.inputs.udp\_multicast.udp\_multicast\_input\_list\_q
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

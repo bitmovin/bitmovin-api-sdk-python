@@ -1,6 +1,14 @@
 bitmovin\_api\_sdk.encoding.infrastructure.gce package
 ======================================================
 
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   bitmovin_api_sdk.encoding.infrastructure.gce.regions
+
 Submodules
 ----------
 
@@ -19,7 +27,6 @@ bitmovin\_api\_sdk.encoding.infrastructure.gce.gce\_api module
    :members:
    :undoc-members:
    :show-inheritance:
-
 
 Module contents
 ---------------

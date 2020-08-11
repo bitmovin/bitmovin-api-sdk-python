@@ -28,7 +28,6 @@ bitmovin\_api\_sdk.encoding.filters.scale.scale\_filter\_list\_query\_params mod
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

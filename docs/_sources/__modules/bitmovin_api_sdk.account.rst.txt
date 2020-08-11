@@ -22,7 +22,6 @@ bitmovin\_api\_sdk.account.account\_api module
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

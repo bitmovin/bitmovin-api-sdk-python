@@ -30,7 +30,6 @@ bitmovin\_api\_sdk.encoding.encodings.live.insertable\_content.insertable\_conte
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

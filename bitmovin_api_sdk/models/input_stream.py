@@ -20,6 +20,7 @@ class InputStream(BitmovinResource):
         'CAPTION_CEA608': 'Cea608CaptionInputStream',
         'CAPTION_CEA708': 'Cea708CaptionInputStream',
         'FILE': 'FileInputStream',
+        'DVB_SUBTITLE': 'DvbSubtitleInputStream',
         'DVB_TELETEXT': 'DvbTeletextInputStream',
         'DOLBY_ATMOS': 'DolbyAtmosIngestInputStream'
     }

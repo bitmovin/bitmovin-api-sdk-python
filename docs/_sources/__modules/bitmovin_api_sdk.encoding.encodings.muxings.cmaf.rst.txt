@@ -7,7 +7,6 @@ Subpackages
 .. toctree::
    :maxdepth: 4
 
-   bitmovin_api_sdk.encoding.encodings.muxings.cmaf.captions
    bitmovin_api_sdk.encoding.encodings.muxings.cmaf.customdata
 
 Submodules
@@ -28,7 +27,6 @@ bitmovin\_api\_sdk.encoding.encodings.muxings.cmaf.cmaf\_muxing\_list\_query\_pa
    :members:
    :undoc-members:
    :show-inheritance:
-
 
 Module contents
 ---------------

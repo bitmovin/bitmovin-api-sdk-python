@@ -12,7 +12,6 @@ bitmovin\_api\_sdk.encoding.infrastructure.kubernetes.customdata.customdata\_api
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

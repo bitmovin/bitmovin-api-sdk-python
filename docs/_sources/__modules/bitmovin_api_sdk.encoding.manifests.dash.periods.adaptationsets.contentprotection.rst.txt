@@ -20,7 +20,6 @@ bitmovin\_api\_sdk.encoding.manifests.dash.periods.adaptationsets.contentprotect
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

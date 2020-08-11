@@ -28,7 +28,6 @@ bitmovin\_api\_sdk.encoding.inputs.s3\_role\_based.s3\_role\_based\_input\_list\
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

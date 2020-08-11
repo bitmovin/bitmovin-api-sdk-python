@@ -68,7 +68,6 @@ bitmovin\_api\_sdk.common.rest\_client module
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

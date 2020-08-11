@@ -28,7 +28,6 @@ bitmovin\_api\_sdk.encoding.encodings.muxings.chunked\_text.chunked\_text\_muxin
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

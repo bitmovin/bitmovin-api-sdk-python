@@ -12,7 +12,6 @@ bitmovin\_api\_sdk.encoding.encodings.live.insertable\_content.schedule.schedule
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

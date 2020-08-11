@@ -28,7 +28,6 @@ bitmovin\_api\_sdk.encoding.statistics.daily.daily\_statistics\_list\_query\_par
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

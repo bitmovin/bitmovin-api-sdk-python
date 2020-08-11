@@ -28,7 +28,6 @@ bitmovin\_api\_sdk.encoding.outputs.akamai\_msl.akamai\_msl\_output\_list\_query
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

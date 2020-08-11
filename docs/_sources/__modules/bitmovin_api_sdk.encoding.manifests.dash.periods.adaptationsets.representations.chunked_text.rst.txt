@@ -1,0 +1,29 @@
+bitmovin\_api\_sdk.encoding.manifests.dash.periods.adaptationsets.representations.chunked\_text package
+=======================================================================================================
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.encoding.manifests.dash.periods.adaptationsets.representations.chunked\_text.chunked\_text\_api module
+-------------------------------------------------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.chunked_text.chunked_text_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.encoding.manifests.dash.periods.adaptationsets.representations.chunked\_text.dash\_chunked\_text\_representation\_list\_query\_params module
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.chunked_text.dash_chunked_text_representation_list_query_params
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.chunked_text
+   :members:
+   :undoc-members:
+   :show-inheritance:

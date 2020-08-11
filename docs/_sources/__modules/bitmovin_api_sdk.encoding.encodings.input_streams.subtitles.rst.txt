@@ -7,6 +7,7 @@ Subpackages
 .. toctree::
    :maxdepth: 4
 
+   bitmovin_api_sdk.encoding.encodings.input_streams.subtitles.dvb_subtitle
    bitmovin_api_sdk.encoding.encodings.input_streams.subtitles.dvb_teletext
 
 Submodules
@@ -19,7 +20,6 @@ bitmovin\_api\_sdk.encoding.encodings.input\_streams.subtitles.subtitles\_api mo
    :members:
    :undoc-members:
    :show-inheritance:
-
 
 Module contents
 ---------------

@@ -28,7 +28,6 @@ bitmovin\_api\_sdk.encoding.inputs.generic\_s3.generic\_s3\_input\_list\_query\_
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

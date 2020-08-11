@@ -12,7 +12,6 @@ bitmovin\_api\_sdk.encoding.filters.ebu\_r128\_single\_pass.customdata.customdat
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

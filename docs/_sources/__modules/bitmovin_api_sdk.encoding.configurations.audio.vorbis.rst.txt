@@ -28,7 +28,6 @@ bitmovin\_api\_sdk.encoding.configurations.audio.vorbis.vorbis\_audio\_configura
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

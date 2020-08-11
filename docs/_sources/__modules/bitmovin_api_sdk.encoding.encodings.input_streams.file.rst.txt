@@ -20,7 +20,6 @@ bitmovin\_api\_sdk.encoding.encodings.input\_streams.file.file\_input\_stream\_l
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

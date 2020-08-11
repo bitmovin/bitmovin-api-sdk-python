@@ -1,0 +1,2 @@
+from bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.chunked_text.chunked_text_api import ChunkedTextApi
+from bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.chunked_text.dash_chunked_text_representation_list_query_params import DashChunkedTextRepresentationListQueryParams

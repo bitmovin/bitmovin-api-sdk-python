@@ -28,7 +28,6 @@ bitmovin\_api\_sdk.encoding.encodings.muxings.progressive\_ts.id3.frame\_id.fram
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

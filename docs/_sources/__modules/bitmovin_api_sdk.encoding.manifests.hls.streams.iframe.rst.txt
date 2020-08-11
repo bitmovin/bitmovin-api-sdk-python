@@ -20,7 +20,6 @@ bitmovin\_api\_sdk.encoding.manifests.hls.streams.iframe.iframe\_api module
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

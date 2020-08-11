@@ -30,7 +30,6 @@ bitmovin\_api\_sdk.encoding.encodings.muxings.progressive\_webm.progressive\_web
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

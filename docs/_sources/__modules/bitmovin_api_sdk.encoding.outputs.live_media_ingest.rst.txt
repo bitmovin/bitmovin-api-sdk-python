@@ -28,7 +28,6 @@ bitmovin\_api\_sdk.encoding.outputs.live\_media\_ingest.live\_media\_ingest\_out
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

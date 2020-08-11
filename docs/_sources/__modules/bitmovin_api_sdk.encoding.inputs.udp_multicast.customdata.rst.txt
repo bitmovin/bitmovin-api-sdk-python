@@ -12,7 +12,6 @@ bitmovin\_api\_sdk.encoding.inputs.udp\_multicast.customdata.customdata\_api mod
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

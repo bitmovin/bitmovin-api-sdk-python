@@ -12,7 +12,6 @@ bitmovin\_api\_sdk.encoding.encodings.muxings.broadcast\_ts.information.informat
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 
