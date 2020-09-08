@@ -4,9 +4,9 @@ from __future__ import absolute_import
 
 from bitmovin_api_sdk.common import BaseApi, BitmovinApiLoggerBase
 from bitmovin_api_sdk.common.poscheck import poscheck_except
+from bitmovin_api_sdk.models.encoding_stream_input import EncodingStreamInput
 from bitmovin_api_sdk.models.response_envelope import ResponseEnvelope
 from bitmovin_api_sdk.models.response_error import ResponseError
-from bitmovin_api_sdk.models.stream_details import StreamDetails
 
 
 class InputsApi(BaseApi):
@@ -22,7 +22,7 @@ class InputsApi(BaseApi):
         )
 
     def list(self, encoding_id, stream_id, **kwargs):
-        # type: (string_types, string_types, dict) -> StreamDetails
+        # type: (string_types, string_types, dict) -> EncodingStreamInput
         """Stream Input Analysis Details
 
         :param encoding_id: Id of the encoding.
@@ -30,13 +30,13 @@ class InputsApi(BaseApi):
         :param stream_id: Id of the stream.
         :type stream_id: string_types, required
         :return: List of input analysis details
-        :rtype: StreamDetails
+        :rtype: EncodingStreamInput
         """
 
         return self.api_client.get(
             '/encoding/encodings/{encoding_id}/streams/{stream_id}/inputs',
             path_params={'encoding_id': encoding_id, 'stream_id': stream_id},
             pagination_response=True,
-            type=StreamDetails,
+            type=EncodingStreamInput,
             **kwargs
         )

@@ -260,7 +260,7 @@ class Task(BitmovinResponse):
         # type: () -> datetime
         """Gets the created_at of this Task.
 
-        Timestamp when the task was created, formatted in UTC: YYYY-MM-DDThh:mm:ssZ
+        Timestamp when the task was created, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ
 
         :return: The created_at of this Task.
         :rtype: datetime
@@ -272,7 +272,7 @@ class Task(BitmovinResponse):
         # type: (datetime) -> None
         """Sets the created_at of this Task.
 
-        Timestamp when the task was created, formatted in UTC: YYYY-MM-DDThh:mm:ssZ
+        Timestamp when the task was created, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ
 
         :param created_at: The created_at of this Task.
         :type: datetime
@@ -289,7 +289,7 @@ class Task(BitmovinResponse):
         # type: () -> datetime
         """Gets the queued_at of this Task.
 
-        Timestamp when the task status changed to \"QUEUED\", formatted in UTC: YYYY-MM-DDThh:mm:ssZ
+        Timestamp when the task status changed to \"QUEUED\", returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ
 
         :return: The queued_at of this Task.
         :rtype: datetime
@@ -301,7 +301,7 @@ class Task(BitmovinResponse):
         # type: (datetime) -> None
         """Sets the queued_at of this Task.
 
-        Timestamp when the task status changed to \"QUEUED\", formatted in UTC: YYYY-MM-DDThh:mm:ssZ
+        Timestamp when the task status changed to \"QUEUED\", returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ
 
         :param queued_at: The queued_at of this Task.
         :type: datetime
@@ -318,7 +318,7 @@ class Task(BitmovinResponse):
         # type: () -> datetime
         """Gets the running_at of this Task.
 
-        Timestamp when the task status changed to to \"RUNNING\", formatted in UTC: YYYY-MM-DDThh:mm:ssZ
+        Timestamp when the task status changed to to \"RUNNING\", returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ
 
         :return: The running_at of this Task.
         :rtype: datetime
@@ -330,7 +330,7 @@ class Task(BitmovinResponse):
         # type: (datetime) -> None
         """Sets the running_at of this Task.
 
-        Timestamp when the task status changed to to \"RUNNING\", formatted in UTC: YYYY-MM-DDThh:mm:ssZ
+        Timestamp when the task status changed to to \"RUNNING\", returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ
 
         :param running_at: The running_at of this Task.
         :type: datetime
@@ -347,7 +347,7 @@ class Task(BitmovinResponse):
         # type: () -> datetime
         """Gets the finished_at of this Task.
 
-        Timestamp when the task status changed to \"FINISHED\", formatted in UTC: YYYY-MM-DDThh:mm:ssZ
+        Timestamp when the task status changed to \"FINISHED\", returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ
 
         :return: The finished_at of this Task.
         :rtype: datetime
@@ -359,7 +359,7 @@ class Task(BitmovinResponse):
         # type: (datetime) -> None
         """Sets the finished_at of this Task.
 
-        Timestamp when the task status changed to \"FINISHED\", formatted in UTC: YYYY-MM-DDThh:mm:ssZ
+        Timestamp when the task status changed to \"FINISHED\", returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ
 
         :param finished_at: The finished_at of this Task.
         :type: datetime
@@ -376,7 +376,7 @@ class Task(BitmovinResponse):
         # type: () -> datetime
         """Gets the error_at of this Task.
 
-        Timestamp when the task status changed to \"ERROR\", formatted in UTC: YYYY-MM-DDThh:mm:ssZ
+        Timestamp when the task status changed to \"ERROR\", returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ
 
         :return: The error_at of this Task.
         :rtype: datetime
@@ -388,7 +388,7 @@ class Task(BitmovinResponse):
         # type: (datetime) -> None
         """Sets the error_at of this Task.
 
-        Timestamp when the task status changed to \"ERROR\", formatted in UTC: YYYY-MM-DDThh:mm:ssZ
+        Timestamp when the task status changed to \"ERROR\", returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ
 
         :param error_at: The error_at of this Task.
         :type: datetime

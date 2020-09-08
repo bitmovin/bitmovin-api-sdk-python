@@ -3,6 +3,7 @@
 from enum import Enum
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
+from bitmovin_api_sdk.models.analytics_video_start_failed_reason import AnalyticsVideoStartFailedReason
 from bitmovin_api_sdk.models.bitmovin_response import BitmovinResponse
 import pprint
 import six
@@ -86,8 +87,10 @@ class AnalyticsImpressionDetails(BitmovinResponse):
                  videotime_end=None,
                  videotime_start=None,
                  video_window_height=None,
-                 video_window_width=None):
-        # type: (string_types, int, string_types, int, int, string_types, bool, string_types, string_types, string_types, int, string_types, string_types, int, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, int, string_types, int, int, int, string_types, string_types, string_types, string_types, bool, bool, bool, string_types, string_types, string_types, string_types, string_types, string_types, int, int, string_types, int, string_types, int, string_types, string_types, int, string_types, string_types, string_types, int, int, int, int, string_types, int, string_types, string_types, bool, string_types, int, string_types, int, int, string_types, string_types, int, int, int, int, int, int, int) -> None
+                 video_window_width=None,
+                 videostart_failed=None,
+                 videostart_failed_reason=None):
+        # type: (string_types, int, string_types, int, int, string_types, bool, string_types, string_types, string_types, int, string_types, string_types, int, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, int, string_types, int, int, int, string_types, string_types, string_types, string_types, bool, bool, bool, string_types, string_types, string_types, string_types, string_types, string_types, int, int, string_types, int, string_types, int, string_types, string_types, int, string_types, string_types, string_types, int, int, int, int, string_types, int, string_types, string_types, bool, string_types, int, string_types, int, int, string_types, string_types, int, int, int, int, int, int, int, bool, AnalyticsVideoStartFailedReason) -> None
         super(AnalyticsImpressionDetails, self).__init__(id_=id_)
 
         self._ad = None
@@ -165,6 +168,8 @@ class AnalyticsImpressionDetails(BitmovinResponse):
         self._videotime_start = None
         self._video_window_height = None
         self._video_window_width = None
+        self._videostart_failed = None
+        self._videostart_failed_reason = None
         self.discriminator = None
 
         if ad is not None:
@@ -317,6 +322,10 @@ class AnalyticsImpressionDetails(BitmovinResponse):
             self.video_window_height = video_window_height
         if video_window_width is not None:
             self.video_window_width = video_window_width
+        if videostart_failed is not None:
+            self.videostart_failed = videostart_failed
+        if videostart_failed_reason is not None:
+            self.videostart_failed_reason = videostart_failed_reason
 
     @property
     def openapi_types(self):
@@ -400,7 +409,9 @@ class AnalyticsImpressionDetails(BitmovinResponse):
             'videotime_end': 'int',
             'videotime_start': 'int',
             'video_window_height': 'int',
-            'video_window_width': 'int'
+            'video_window_width': 'int',
+            'videostart_failed': 'bool',
+            'videostart_failed_reason': 'AnalyticsVideoStartFailedReason'
         })
 
         return types
@@ -487,7 +498,9 @@ class AnalyticsImpressionDetails(BitmovinResponse):
             'videotime_end': 'videotimeEnd',
             'videotime_start': 'videotimeStart',
             'video_window_height': 'videoWindowHeight',
-            'video_window_width': 'videoWindowWidth'
+            'video_window_width': 'videoWindowWidth',
+            'videostart_failed': 'videostartFailed',
+            'videostart_failed_reason': 'videostartFailedReason'
         })
         return attributes
 
@@ -2665,6 +2678,62 @@ class AnalyticsImpressionDetails(BitmovinResponse):
                 raise TypeError("Invalid type for `video_window_width`, type has to be `int`")
 
         self._video_window_width = video_window_width
+
+    @property
+    def videostart_failed(self):
+        # type: () -> bool
+        """Gets the videostart_failed of this AnalyticsImpressionDetails.
+
+        True if starting the video failed
+
+        :return: The videostart_failed of this AnalyticsImpressionDetails.
+        :rtype: bool
+        """
+        return self._videostart_failed
+
+    @videostart_failed.setter
+    def videostart_failed(self, videostart_failed):
+        # type: (bool) -> None
+        """Sets the videostart_failed of this AnalyticsImpressionDetails.
+
+        True if starting the video failed
+
+        :param videostart_failed: The videostart_failed of this AnalyticsImpressionDetails.
+        :type: bool
+        """
+
+        if videostart_failed is not None:
+            if not isinstance(videostart_failed, bool):
+                raise TypeError("Invalid type for `videostart_failed`, type has to be `bool`")
+
+        self._videostart_failed = videostart_failed
+
+    @property
+    def videostart_failed_reason(self):
+        # type: () -> AnalyticsVideoStartFailedReason
+        """Gets the videostart_failed_reason of this AnalyticsImpressionDetails.
+
+
+        :return: The videostart_failed_reason of this AnalyticsImpressionDetails.
+        :rtype: AnalyticsVideoStartFailedReason
+        """
+        return self._videostart_failed_reason
+
+    @videostart_failed_reason.setter
+    def videostart_failed_reason(self, videostart_failed_reason):
+        # type: (AnalyticsVideoStartFailedReason) -> None
+        """Sets the videostart_failed_reason of this AnalyticsImpressionDetails.
+
+
+        :param videostart_failed_reason: The videostart_failed_reason of this AnalyticsImpressionDetails.
+        :type: AnalyticsVideoStartFailedReason
+        """
+
+        if videostart_failed_reason is not None:
+            if not isinstance(videostart_failed_reason, AnalyticsVideoStartFailedReason):
+                raise TypeError("Invalid type for `videostart_failed_reason`, type has to be `AnalyticsVideoStartFailedReason`")
+
+        self._videostart_failed_reason = videostart_failed_reason
 
     def to_dict(self):
         """Returns the model properties as a dict"""

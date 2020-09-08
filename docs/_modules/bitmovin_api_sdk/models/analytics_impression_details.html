@@ -159,6 +159,7 @@
 <span class="kn">from</span> <span class="nn">enum</span> <span class="kn">import</span> <span class="n">Enum</span>
 <span class="kn">from</span> <span class="nn">six</span> <span class="kn">import</span> <span class="n">string_types</span><span class="p">,</span> <span class="n">iteritems</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.common.poscheck</span> <span class="kn">import</span> <span class="n">poscheck_model</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.analytics_video_start_failed_reason</span> <span class="kn">import</span> <span class="n">AnalyticsVideoStartFailedReason</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.bitmovin_response</span> <span class="kn">import</span> <span class="n">BitmovinResponse</span>
 <span class="kn">import</span> <span class="nn">pprint</span>
 <span class="kn">import</span> <span class="nn">six</span>
@@ -242,8 +243,10 @@
                  <span class="n">videotime_end</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">videotime_start</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">video_window_height</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                 <span class="n">video_window_width</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (string_types, int, string_types, int, int, string_types, bool, string_types, string_types, string_types, int, string_types, string_types, int, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, int, string_types, int, int, int, string_types, string_types, string_types, string_types, bool, bool, bool, string_types, string_types, string_types, string_types, string_types, string_types, int, int, string_types, int, string_types, int, string_types, string_types, int, string_types, string_types, string_types, int, int, int, int, string_types, int, string_types, string_types, bool, string_types, int, string_types, int, int, string_types, string_types, int, int, int, int, int, int, int) -&gt; None</span>
+                 <span class="n">video_window_width</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">videostart_failed</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">videostart_failed_reason</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="c1"># type: (string_types, int, string_types, int, int, string_types, bool, string_types, string_types, string_types, int, string_types, string_types, int, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, int, string_types, int, int, int, string_types, string_types, string_types, string_types, bool, bool, bool, string_types, string_types, string_types, string_types, string_types, string_types, int, int, string_types, int, string_types, int, string_types, string_types, int, string_types, string_types, string_types, int, int, int, int, string_types, int, string_types, string_types, bool, string_types, int, string_types, int, int, string_types, string_types, int, int, int, int, int, int, int, bool, AnalyticsVideoStartFailedReason) -&gt; None</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">AnalyticsImpressionDetails</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">id_</span><span class="o">=</span><span class="n">id_</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_ad</span> <span class="o">=</span> <span class="kc">None</span>
@@ -321,6 +324,8 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_videotime_start</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_video_window_height</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_video_window_width</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_videostart_failed</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_videostart_failed_reason</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>
 
         <span class="k">if</span> <span class="n">ad</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -473,6 +478,10 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">video_window_height</span> <span class="o">=</span> <span class="n">video_window_height</span>
         <span class="k">if</span> <span class="n">video_window_width</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">video_window_width</span> <span class="o">=</span> <span class="n">video_window_width</span>
+        <span class="k">if</span> <span class="n">videostart_failed</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">videostart_failed</span> <span class="o">=</span> <span class="n">videostart_failed</span>
+        <span class="k">if</span> <span class="n">videostart_failed_reason</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">videostart_failed_reason</span> <span class="o">=</span> <span class="n">videostart_failed_reason</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -556,7 +565,9 @@
             <span class="s1">&#39;videotime_end&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
             <span class="s1">&#39;videotime_start&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
             <span class="s1">&#39;video_window_height&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;video_window_width&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span>
+            <span class="s1">&#39;video_window_width&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;videostart_failed&#39;</span><span class="p">:</span> <span class="s1">&#39;bool&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;videostart_failed_reason&#39;</span><span class="p">:</span> <span class="s1">&#39;AnalyticsVideoStartFailedReason&#39;</span>
         <span class="p">})</span>
 
         <span class="k">return</span> <span class="n">types</span>
@@ -643,7 +654,9 @@
             <span class="s1">&#39;videotime_end&#39;</span><span class="p">:</span> <span class="s1">&#39;videotimeEnd&#39;</span><span class="p">,</span>
             <span class="s1">&#39;videotime_start&#39;</span><span class="p">:</span> <span class="s1">&#39;videotimeStart&#39;</span><span class="p">,</span>
             <span class="s1">&#39;video_window_height&#39;</span><span class="p">:</span> <span class="s1">&#39;videoWindowHeight&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;video_window_width&#39;</span><span class="p">:</span> <span class="s1">&#39;videoWindowWidth&#39;</span>
+            <span class="s1">&#39;video_window_width&#39;</span><span class="p">:</span> <span class="s1">&#39;videoWindowWidth&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;videostart_failed&#39;</span><span class="p">:</span> <span class="s1">&#39;videostartFailed&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;videostart_failed_reason&#39;</span><span class="p">:</span> <span class="s1">&#39;videostartFailedReason&#39;</span>
         <span class="p">})</span>
         <span class="k">return</span> <span class="n">attributes</span>
 
@@ -2821,6 +2834,62 @@
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `video_window_width`, type has to be `int`&quot;</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_video_window_width</span> <span class="o">=</span> <span class="n">video_window_width</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">videostart_failed</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; bool</span>
+        <span class="sd">&quot;&quot;&quot;Gets the videostart_failed of this AnalyticsImpressionDetails.</span>
+
+<span class="sd">        True if starting the video failed</span>
+
+<span class="sd">        :return: The videostart_failed of this AnalyticsImpressionDetails.</span>
+<span class="sd">        :rtype: bool</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_videostart_failed</span>
+
+    <span class="nd">@videostart_failed</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">videostart_failed</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">videostart_failed</span><span class="p">):</span>
+        <span class="c1"># type: (bool) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the videostart_failed of this AnalyticsImpressionDetails.</span>
+
+<span class="sd">        True if starting the video failed</span>
+
+<span class="sd">        :param videostart_failed: The videostart_failed of this AnalyticsImpressionDetails.</span>
+<span class="sd">        :type: bool</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">videostart_failed</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">videostart_failed</span><span class="p">,</span> <span class="nb">bool</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `videostart_failed`, type has to be `bool`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_videostart_failed</span> <span class="o">=</span> <span class="n">videostart_failed</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">videostart_failed_reason</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; AnalyticsVideoStartFailedReason</span>
+        <span class="sd">&quot;&quot;&quot;Gets the videostart_failed_reason of this AnalyticsImpressionDetails.</span>
+
+
+<span class="sd">        :return: The videostart_failed_reason of this AnalyticsImpressionDetails.</span>
+<span class="sd">        :rtype: AnalyticsVideoStartFailedReason</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_videostart_failed_reason</span>
+
+    <span class="nd">@videostart_failed_reason</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">videostart_failed_reason</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">videostart_failed_reason</span><span class="p">):</span>
+        <span class="c1"># type: (AnalyticsVideoStartFailedReason) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the videostart_failed_reason of this AnalyticsImpressionDetails.</span>
+
+
+<span class="sd">        :param videostart_failed_reason: The videostart_failed_reason of this AnalyticsImpressionDetails.</span>
+<span class="sd">        :type: AnalyticsVideoStartFailedReason</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">videostart_failed_reason</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">videostart_failed_reason</span><span class="p">,</span> <span class="n">AnalyticsVideoStartFailedReason</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `videostart_failed_reason`, type has to be `AnalyticsVideoStartFailedReason`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_videostart_failed_reason</span> <span class="o">=</span> <span class="n">videostart_failed_reason</span>
 
 <div class="viewcode-block" id="AnalyticsImpressionDetails.to_dict"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>

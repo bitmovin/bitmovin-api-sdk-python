@@ -106,7 +106,7 @@ class TransferRetry(BitmovinResource):
         # type: () -> datetime
         """Gets the started_at of this TransferRetry.
 
-        Timestamp when the transfer-retry was started, formatted in UTC: YYYY-MM-DDThh:mm:ssZ 
+        Timestamp when the transfer-retry was started, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ 
 
         :return: The started_at of this TransferRetry.
         :rtype: datetime
@@ -118,7 +118,7 @@ class TransferRetry(BitmovinResource):
         # type: (datetime) -> None
         """Sets the started_at of this TransferRetry.
 
-        Timestamp when the transfer-retry was started, formatted in UTC: YYYY-MM-DDThh:mm:ssZ 
+        Timestamp when the transfer-retry was started, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ 
 
         :param started_at: The started_at of this TransferRetry.
         :type: datetime
@@ -135,7 +135,7 @@ class TransferRetry(BitmovinResource):
         # type: () -> datetime
         """Gets the finished_at of this TransferRetry.
 
-        Timestamp when the transfer-retry status changed to 'FINISHED', formatted in UTC: YYYY-MM-DDThh:mm:ssZ 
+        Timestamp when the transfer-retry status changed to 'FINISHED', returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ 
 
         :return: The finished_at of this TransferRetry.
         :rtype: datetime
@@ -147,7 +147,7 @@ class TransferRetry(BitmovinResource):
         # type: (datetime) -> None
         """Sets the finished_at of this TransferRetry.
 
-        Timestamp when the transfer-retry status changed to 'FINISHED', formatted in UTC: YYYY-MM-DDThh:mm:ssZ 
+        Timestamp when the transfer-retry status changed to 'FINISHED', returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ 
 
         :param finished_at: The finished_at of this TransferRetry.
         :type: datetime
@@ -164,7 +164,7 @@ class TransferRetry(BitmovinResource):
         # type: () -> datetime
         """Gets the error_at of this TransferRetry.
 
-        Timestamp when the transfer-retry status changed to 'ERROR', formatted in UTC: YYYY-MM-DDThh:mm:ssZ 
+        Timestamp when the transfer-retry status changed to 'ERROR', returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ 
 
         :return: The error_at of this TransferRetry.
         :rtype: datetime
@@ -176,7 +176,7 @@ class TransferRetry(BitmovinResource):
         # type: (datetime) -> None
         """Sets the error_at of this TransferRetry.
 
-        Timestamp when the transfer-retry status changed to 'ERROR', formatted in UTC: YYYY-MM-DDThh:mm:ssZ 
+        Timestamp when the transfer-retry status changed to 'ERROR', returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ 
 
         :param error_at: The error_at of this TransferRetry.
         :type: datetime

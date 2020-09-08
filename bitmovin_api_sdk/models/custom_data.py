@@ -75,7 +75,7 @@ class CustomData(object):
         # type: () -> datetime
         """Gets the created_at of this CustomData.
 
-        Creation timestamp formatted in UTC: YYYY-MM-DDThh:mm:ssZ
+        Creation timestamp, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ
 
         :return: The created_at of this CustomData.
         :rtype: datetime
@@ -87,7 +87,7 @@ class CustomData(object):
         # type: (datetime) -> None
         """Sets the created_at of this CustomData.
 
-        Creation timestamp formatted in UTC: YYYY-MM-DDThh:mm:ssZ
+        Creation timestamp, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ
 
         :param created_at: The created_at of this CustomData.
         :type: datetime

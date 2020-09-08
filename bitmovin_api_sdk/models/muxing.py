@@ -96,6 +96,7 @@ class Muxing(BitmovinResource):
         'TS': 'TsMuxing',
         'WEBM': 'WebmMuxing',
         'MP3': 'Mp3Muxing',
+        'MXF': 'MxfMuxing',
         'PROGRESSIVE_WEBM': 'ProgressiveWebmMuxing',
         'PROGRESSIVE_MOV': 'ProgressiveMovMuxing',
         'PROGRESSIVE_TS': 'ProgressiveTsMuxing',

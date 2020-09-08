@@ -94,6 +94,7 @@ from bitmovin_api_sdk.models.analytics_response import AnalyticsResponse
 from bitmovin_api_sdk.models.analytics_stddev_query_request import AnalyticsStddevQueryRequest
 from bitmovin_api_sdk.models.analytics_sum_query_request import AnalyticsSumQueryRequest
 from bitmovin_api_sdk.models.analytics_variance_query_request import AnalyticsVarianceQueryRequest
+from bitmovin_api_sdk.models.analytics_video_start_failed_reason import AnalyticsVideoStartFailedReason
 from bitmovin_api_sdk.models.and_conjunction import AndConjunction
 from bitmovin_api_sdk.models.api_error_definition import ApiErrorDefinition
 from bitmovin_api_sdk.models.applied_stream_settings import AppliedStreamSettings
@@ -262,7 +263,9 @@ from bitmovin_api_sdk.models.encoding_statistics import EncodingStatistics
 from bitmovin_api_sdk.models.encoding_statistics_live import EncodingStatisticsLive
 from bitmovin_api_sdk.models.encoding_statistics_vod import EncodingStatisticsVod
 from bitmovin_api_sdk.models.encoding_stats import EncodingStats
+from bitmovin_api_sdk.models.encoding_stream_input import EncodingStreamInput
 from bitmovin_api_sdk.models.encoding_stream_input_details import EncodingStreamInputDetails
+from bitmovin_api_sdk.models.encoding_type import EncodingType
 from bitmovin_api_sdk.models.encryption_mode import EncryptionMode
 from bitmovin_api_sdk.models.encryption_type import EncryptionType
 from bitmovin_api_sdk.models.enhanced_watermark_filter import EnhancedWatermarkFilter
@@ -291,6 +294,9 @@ from bitmovin_api_sdk.models.generic_s3_input import GenericS3Input
 from bitmovin_api_sdk.models.generic_s3_output import GenericS3Output
 from bitmovin_api_sdk.models.google_cloud_region import GoogleCloudRegion
 from bitmovin_api_sdk.models.group import Group
+from bitmovin_api_sdk.models.h262_interlace_mode import H262InterlaceMode
+from bitmovin_api_sdk.models.h262_preset_configuration import H262PresetConfiguration
+from bitmovin_api_sdk.models.h262_video_configuration import H262VideoConfiguration
 from bitmovin_api_sdk.models.h264_b_pyramid import H264BPyramid
 from bitmovin_api_sdk.models.h264_interlace_mode import H264InterlaceMode
 from bitmovin_api_sdk.models.h264_motion_estimation_method import H264MotionEstimationMethod
@@ -344,6 +350,7 @@ from bitmovin_api_sdk.models.iv_size import IvSize
 from bitmovin_api_sdk.models.keyframe import Keyframe
 from bitmovin_api_sdk.models.kubernetes_cluster import KubernetesCluster
 from bitmovin_api_sdk.models.kubernetes_cluster_configuration import KubernetesClusterConfiguration
+from bitmovin_api_sdk.models.level_h262 import LevelH262
 from bitmovin_api_sdk.models.level_h264 import LevelH264
 from bitmovin_api_sdk.models.level_h265 import LevelH265
 from bitmovin_api_sdk.models.limit_references import LimitReferences
@@ -390,6 +397,7 @@ from bitmovin_api_sdk.models.muxing_information_video_track import MuxingInforma
 from bitmovin_api_sdk.models.muxing_stream import MuxingStream
 from bitmovin_api_sdk.models.muxing_type import MuxingType
 from bitmovin_api_sdk.models.mv_prediction_mode import MvPredictionMode
+from bitmovin_api_sdk.models.mxf_muxing import MxfMuxing
 from bitmovin_api_sdk.models.notification import Notification
 from bitmovin_api_sdk.models.notification_state_entry import NotificationStateEntry
 from bitmovin_api_sdk.models.notification_states import NotificationStates
@@ -409,6 +417,10 @@ from bitmovin_api_sdk.models.padding_duration_unit import PaddingDurationUnit
 from bitmovin_api_sdk.models.padding_sequence import PaddingSequence
 from bitmovin_api_sdk.models.pagination_response import PaginationResponse
 from bitmovin_api_sdk.models.passthrough_mode import PassthroughMode
+from bitmovin_api_sdk.models.pcm_audio_configuration import PcmAudioConfiguration
+from bitmovin_api_sdk.models.pcm_channel_layout import PcmChannelLayout
+from bitmovin_api_sdk.models.pcm_preset_configuration import PcmPresetConfiguration
+from bitmovin_api_sdk.models.pcm_sample_format import PcmSampleFormat
 from bitmovin_api_sdk.models.per_title import PerTitle
 from bitmovin_api_sdk.models.per_title_configuration import PerTitleConfiguration
 from bitmovin_api_sdk.models.per_title_fixed_resolution_and_bitrate_configuration import PerTitleFixedResolutionAndBitrateConfiguration
@@ -433,6 +445,7 @@ from bitmovin_api_sdk.models.position_unit import PositionUnit
 from bitmovin_api_sdk.models.preset_configuration import PresetConfiguration
 from bitmovin_api_sdk.models.prewarm_encoder_settings import PrewarmEncoderSettings
 from bitmovin_api_sdk.models.prime_time_drm import PrimeTimeDrm
+from bitmovin_api_sdk.models.profile_h262 import ProfileH262
 from bitmovin_api_sdk.models.profile_h264 import ProfileH264
 from bitmovin_api_sdk.models.profile_h265 import ProfileH265
 from bitmovin_api_sdk.models.progressive_mov_muxing import ProgressiveMovMuxing
@@ -516,7 +529,6 @@ from bitmovin_api_sdk.models.status import Status
 from bitmovin_api_sdk.models.stream import Stream
 from bitmovin_api_sdk.models.stream_caption_output_format import StreamCaptionOutputFormat
 from bitmovin_api_sdk.models.stream_conditions_mode import StreamConditionsMode
-from bitmovin_api_sdk.models.stream_details import StreamDetails
 from bitmovin_api_sdk.models.stream_filter import StreamFilter
 from bitmovin_api_sdk.models.stream_filter_list import StreamFilterList
 from bitmovin_api_sdk.models.stream_info import StreamInfo
@@ -530,6 +542,7 @@ from bitmovin_api_sdk.models.stream_per_title_settings import StreamPerTitleSett
 from bitmovin_api_sdk.models.stream_selection_mode import StreamSelectionMode
 from bitmovin_api_sdk.models.subtask import Subtask
 from bitmovin_api_sdk.models.subtitle_adaptation_set import SubtitleAdaptationSet
+from bitmovin_api_sdk.models.subtitle_configuration import SubtitleConfiguration
 from bitmovin_api_sdk.models.subtitle_stream import SubtitleStream
 from bitmovin_api_sdk.models.subtitles_media_info import SubtitlesMediaInfo
 from bitmovin_api_sdk.models.task import Task

@@ -46,7 +46,7 @@ class StreamInfos(object):
         # type: () -> datetime
         """Gets the time of this StreamInfos.
 
-        Timestamp of the event formatted in UTC: YYYY-MM-DDThh:mm:ssZ (required)
+        Timestamp of the event, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ (required)
 
         :return: The time of this StreamInfos.
         :rtype: datetime
@@ -58,7 +58,7 @@ class StreamInfos(object):
         # type: (datetime) -> None
         """Sets the time of this StreamInfos.
 
-        Timestamp of the event formatted in UTC: YYYY-MM-DDThh:mm:ssZ (required)
+        Timestamp of the event, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ (required)
 
         :param time: The time of this StreamInfos.
         :type: datetime

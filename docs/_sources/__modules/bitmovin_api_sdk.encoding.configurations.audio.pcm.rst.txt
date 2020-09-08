@@ -1,0 +1,37 @@
+bitmovin\_api\_sdk.encoding.configurations.audio.pcm package
+============================================================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   bitmovin_api_sdk.encoding.configurations.audio.pcm.customdata
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.encoding.configurations.audio.pcm.pcm\_api module
+--------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.configurations.audio.pcm.pcm_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.encoding.configurations.audio.pcm.pcm\_audio\_configuration\_list\_query\_params module
+----------------------------------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.configurations.audio.pcm.pcm_audio_configuration_list_query_params
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.encoding.configurations.audio.pcm
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -135,7 +135,7 @@ class BitmovinResource(BitmovinResponse):
         # type: () -> datetime
         """Gets the created_at of this BitmovinResource.
 
-        Creation timestamp formatted in UTC: YYYY-MM-DDThh:mm:ssZ
+        Creation timestamp, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ
 
         :return: The created_at of this BitmovinResource.
         :rtype: datetime
@@ -147,7 +147,7 @@ class BitmovinResource(BitmovinResponse):
         # type: (datetime) -> None
         """Sets the created_at of this BitmovinResource.
 
-        Creation timestamp formatted in UTC: YYYY-MM-DDThh:mm:ssZ
+        Creation timestamp, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ
 
         :param created_at: The created_at of this BitmovinResource.
         :type: datetime
@@ -164,7 +164,7 @@ class BitmovinResource(BitmovinResponse):
         # type: () -> datetime
         """Gets the modified_at of this BitmovinResource.
 
-        Modified timestamp formatted in UTC: YYYY-MM-DDThh:mm:ssZ
+        Modified timestamp, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ
 
         :return: The modified_at of this BitmovinResource.
         :rtype: datetime
@@ -176,7 +176,7 @@ class BitmovinResource(BitmovinResponse):
         # type: (datetime) -> None
         """Sets the modified_at of this BitmovinResource.
 
-        Modified timestamp formatted in UTC: YYYY-MM-DDThh:mm:ssZ
+        Modified timestamp, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ
 
         :param modified_at: The modified_at of this BitmovinResource.
         :type: datetime

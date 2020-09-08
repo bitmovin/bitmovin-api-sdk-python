@@ -24,8 +24,9 @@ class StartEncodingRequest(object):
                  preview_hls_manifests=None,
                  vod_dash_manifests=None,
                  vod_hls_manifests=None,
+                 vod_smooth_manifests=None,
                  per_title=None):
-        # type: (Trimming, Scheduling, Tweaks, bool, EncodingMode, list[ManifestResource], list[ManifestResource], list[ManifestResource], list[ManifestResource], PerTitle) -> None
+        # type: (Trimming, Scheduling, Tweaks, bool, EncodingMode, list[ManifestResource], list[ManifestResource], list[ManifestResource], list[ManifestResource], list[ManifestResource], PerTitle) -> None
 
         self._trimming = None
         self._scheduling = None
@@ -36,6 +37,7 @@ class StartEncodingRequest(object):
         self._preview_hls_manifests = list()
         self._vod_dash_manifests = list()
         self._vod_hls_manifests = list()
+        self._vod_smooth_manifests = list()
         self._per_title = None
         self.discriminator = None
 
@@ -57,6 +59,8 @@ class StartEncodingRequest(object):
             self.vod_dash_manifests = vod_dash_manifests
         if vod_hls_manifests is not None:
             self.vod_hls_manifests = vod_hls_manifests
+        if vod_smooth_manifests is not None:
+            self.vod_smooth_manifests = vod_smooth_manifests
         if per_title is not None:
             self.per_title = per_title
 
@@ -72,6 +76,7 @@ class StartEncodingRequest(object):
             'preview_hls_manifests': 'list[ManifestResource]',
             'vod_dash_manifests': 'list[ManifestResource]',
             'vod_hls_manifests': 'list[ManifestResource]',
+            'vod_smooth_manifests': 'list[ManifestResource]',
             'per_title': 'PerTitle'
         }
 
@@ -89,6 +94,7 @@ class StartEncodingRequest(object):
             'preview_hls_manifests': 'previewHlsManifests',
             'vod_dash_manifests': 'vodDashManifests',
             'vod_hls_manifests': 'vodHlsManifests',
+            'vod_smooth_manifests': 'vodSmoothManifests',
             'per_title': 'perTitle'
         }
         return attributes
@@ -353,6 +359,35 @@ class StartEncodingRequest(object):
                 raise TypeError("Invalid type for `vod_hls_manifests`, type has to be `list[ManifestResource]`")
 
         self._vod_hls_manifests = vod_hls_manifests
+
+    @property
+    def vod_smooth_manifests(self):
+        # type: () -> list[ManifestResource]
+        """Gets the vod_smooth_manifests of this StartEncodingRequest.
+
+        List of VoD SMOOTH manifests to be created after encoding finished successfully
+
+        :return: The vod_smooth_manifests of this StartEncodingRequest.
+        :rtype: list[ManifestResource]
+        """
+        return self._vod_smooth_manifests
+
+    @vod_smooth_manifests.setter
+    def vod_smooth_manifests(self, vod_smooth_manifests):
+        # type: (list) -> None
+        """Sets the vod_smooth_manifests of this StartEncodingRequest.
+
+        List of VoD SMOOTH manifests to be created after encoding finished successfully
+
+        :param vod_smooth_manifests: The vod_smooth_manifests of this StartEncodingRequest.
+        :type: list[ManifestResource]
+        """
+
+        if vod_smooth_manifests is not None:
+            if not isinstance(vod_smooth_manifests, list):
+                raise TypeError("Invalid type for `vod_smooth_manifests`, type has to be `list[ManifestResource]`")
+
+        self._vod_smooth_manifests = vod_smooth_manifests
 
     @property
     def per_title(self):

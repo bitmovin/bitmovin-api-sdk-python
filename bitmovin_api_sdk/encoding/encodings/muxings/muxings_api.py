@@ -17,6 +17,7 @@ from bitmovin_api_sdk.encoding.encodings.muxings.ts.ts_api import TsApi
 from bitmovin_api_sdk.encoding.encodings.muxings.webm.webm_api import WebmApi
 from bitmovin_api_sdk.encoding.encodings.muxings.mp3.mp3_api import Mp3Api
 from bitmovin_api_sdk.encoding.encodings.muxings.mp4.mp4_api import Mp4Api
+from bitmovin_api_sdk.encoding.encodings.muxings.mxf.mxf_api import MxfApi
 from bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.progressive_ts_api import ProgressiveTsApi
 from bitmovin_api_sdk.encoding.encodings.muxings.broadcast_ts.broadcast_ts_api import BroadcastTsApi
 from bitmovin_api_sdk.encoding.encodings.muxings.progressive_webm.progressive_webm_api import ProgressiveWebmApi
@@ -93,6 +94,13 @@ class MuxingsApi(BaseApi):
         )
 
         self.mp4 = Mp4Api(
+            api_key=api_key,
+            tenant_org_id=tenant_org_id,
+            base_url=base_url,
+            logger=logger
+        )
+
+        self.mxf = MxfApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,

@@ -4,6 +4,7 @@ from __future__ import absolute_import
 
 from bitmovin_api_sdk.common import BaseApi, BitmovinApiLoggerBase
 from bitmovin_api_sdk.common.poscheck import poscheck_except
+from bitmovin_api_sdk.encoding.configurations.video.h262.h262_api import H262Api
 from bitmovin_api_sdk.encoding.configurations.video.h264.h264_api import H264Api
 from bitmovin_api_sdk.encoding.configurations.video.h265.h265_api import H265Api
 from bitmovin_api_sdk.encoding.configurations.video.vp8.vp8_api import Vp8Api
@@ -18,6 +19,13 @@ class VideoApi(BaseApi):
         # type: (str, str, str, BitmovinApiLoggerBase) -> None
 
         super(VideoApi, self).__init__(
+            api_key=api_key,
+            tenant_org_id=tenant_org_id,
+            base_url=base_url,
+            logger=logger
+        )
+
+        self.h262 = H262Api(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,

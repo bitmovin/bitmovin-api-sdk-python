@@ -26,7 +26,10 @@ class CodecConfiguration(BitmovinResource):
         'VORBIS': 'VorbisAudioConfiguration',
         'MJPEG': 'MjpegVideoConfiguration',
         'AV1': 'Av1VideoConfiguration',
-        'DOLBY_ATMOS': 'DolbyAtmosAudioConfiguration'
+        'DOLBY_ATMOS': 'DolbyAtmosAudioConfiguration',
+        'H262': 'H262VideoConfiguration',
+        'PCM': 'PcmAudioConfiguration',
+        'WEBVTT': 'WebVttConfiguration'
     }
 
     def to_dict(self):

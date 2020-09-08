@@ -11,6 +11,7 @@ from bitmovin_api_sdk.encoding.configurations.audio.he_aac_v1.he_aac_v1_api impo
 from bitmovin_api_sdk.encoding.configurations.audio.he_aac_v2.he_aac_v2_api import HeAacV2Api
 from bitmovin_api_sdk.encoding.configurations.audio.vorbis.vorbis_api import VorbisApi
 from bitmovin_api_sdk.encoding.configurations.audio.opus.opus_api import OpusApi
+from bitmovin_api_sdk.encoding.configurations.audio.pcm.pcm_api import PcmApi
 from bitmovin_api_sdk.encoding.configurations.audio.ac3.ac3_api import Ac3Api
 from bitmovin_api_sdk.encoding.configurations.audio.eac3.eac3_api import Eac3Api
 from bitmovin_api_sdk.encoding.configurations.audio.mp2.mp2_api import Mp2Api
@@ -72,6 +73,13 @@ class AudioApi(BaseApi):
         )
 
         self.opus = OpusApi(
+            api_key=api_key,
+            tenant_org_id=tenant_org_id,
+            base_url=base_url,
+            logger=logger
+        )
+
+        self.pcm = PcmApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,

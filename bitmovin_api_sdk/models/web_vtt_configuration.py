@@ -3,24 +3,24 @@
 from enum import Enum
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
-from bitmovin_api_sdk.models.bitmovin_resource import BitmovinResource
+from bitmovin_api_sdk.models.subtitle_configuration import SubtitleConfiguration
 import pprint
 import six
 
 
-class WebVttConfiguration(BitmovinResource):
+class WebVttConfiguration(SubtitleConfiguration):
     @poscheck_model
     def __init__(self,
-                 id_=None,
                  name=None,
                  description=None,
                  created_at=None,
                  modified_at=None,
                  custom_data=None,
+                 id_=None,
                  append_optional_zero_hour=None,
                  ignore_region=None):
-        # type: (string_types, string_types, string_types, datetime, datetime, dict, bool, bool) -> None
-        super(WebVttConfiguration, self).__init__(id_=id_, name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data)
+        # type: (string_types, string_types, datetime, datetime, dict, string_types, bool, bool) -> None
+        super(WebVttConfiguration, self).__init__(name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, id_=id_)
 
         self._append_optional_zero_hour = None
         self._ignore_region = None

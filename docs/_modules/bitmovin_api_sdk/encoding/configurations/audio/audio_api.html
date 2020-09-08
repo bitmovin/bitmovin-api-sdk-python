@@ -167,6 +167,7 @@
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.encoding.configurations.audio.he_aac_v2.he_aac_v2_api</span> <span class="kn">import</span> <span class="n">HeAacV2Api</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.encoding.configurations.audio.vorbis.vorbis_api</span> <span class="kn">import</span> <span class="n">VorbisApi</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.encoding.configurations.audio.opus.opus_api</span> <span class="kn">import</span> <span class="n">OpusApi</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.encoding.configurations.audio.pcm.pcm_api</span> <span class="kn">import</span> <span class="n">PcmApi</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.encoding.configurations.audio.ac3.ac3_api</span> <span class="kn">import</span> <span class="n">Ac3Api</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.encoding.configurations.audio.eac3.eac3_api</span> <span class="kn">import</span> <span class="n">Eac3Api</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.encoding.configurations.audio.mp2.mp2_api</span> <span class="kn">import</span> <span class="n">Mp2Api</span>
@@ -228,6 +229,13 @@
         <span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">opus</span> <span class="o">=</span> <span class="n">OpusApi</span><span class="p">(</span>
+            <span class="n">api_key</span><span class="o">=</span><span class="n">api_key</span><span class="p">,</span>
+            <span class="n">tenant_org_id</span><span class="o">=</span><span class="n">tenant_org_id</span><span class="p">,</span>
+            <span class="n">base_url</span><span class="o">=</span><span class="n">base_url</span><span class="p">,</span>
+            <span class="n">logger</span><span class="o">=</span><span class="n">logger</span>
+        <span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">pcm</span> <span class="o">=</span> <span class="n">PcmApi</span><span class="p">(</span>
             <span class="n">api_key</span><span class="o">=</span><span class="n">api_key</span><span class="p">,</span>
             <span class="n">tenant_org_id</span><span class="o">=</span><span class="n">tenant_org_id</span><span class="p">,</span>
             <span class="n">base_url</span><span class="o">=</span><span class="n">base_url</span><span class="p">,</span>

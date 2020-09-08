@@ -1,11 +1,13 @@
 # coding: utf-8
 
 from enum import Enum
+from datetime import datetime
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
 from bitmovin_api_sdk.models.bitmovin_resource import BitmovinResource
 from bitmovin_api_sdk.models.cloud_region import CloudRegion
 from bitmovin_api_sdk.models.encoding_mode import EncodingMode
+from bitmovin_api_sdk.models.encoding_type import EncodingType
 from bitmovin_api_sdk.models.infrastructure_settings import InfrastructureSettings
 from bitmovin_api_sdk.models.status import Status
 import pprint
@@ -21,6 +23,13 @@ class Encoding(BitmovinResource):
                  created_at=None,
                  modified_at=None,
                  custom_data=None,
+                 type_=None,
+                 started_at=None,
+                 queued_at=None,
+                 running_at=None,
+                 finished_at=None,
+                 error_at=None,
+                 progress=None,
                  cloud_region=None,
                  fallback_cloud_regions=None,
                  encoder_version=None,
@@ -31,9 +40,16 @@ class Encoding(BitmovinResource):
                  selected_cloud_region=None,
                  status=None,
                  labels=None):
-        # type: (string_types, string_types, string_types, datetime, datetime, dict, CloudRegion, list[CloudRegion], string_types, string_types, InfrastructureSettings, string_types, EncodingMode, CloudRegion, Status, list[string_types]) -> None
+        # type: (string_types, string_types, string_types, datetime, datetime, dict, EncodingType, datetime, datetime, datetime, datetime, datetime, int, CloudRegion, list[CloudRegion], string_types, string_types, InfrastructureSettings, string_types, EncodingMode, CloudRegion, Status, list[string_types]) -> None
         super(Encoding, self).__init__(id_=id_, name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data)
 
+        self._type = None
+        self._started_at = None
+        self._queued_at = None
+        self._running_at = None
+        self._finished_at = None
+        self._error_at = None
+        self._progress = None
         self._cloud_region = None
         self._fallback_cloud_regions = list()
         self._encoder_version = None
@@ -46,6 +62,20 @@ class Encoding(BitmovinResource):
         self._labels = list()
         self.discriminator = None
 
+        if type_ is not None:
+            self.type = type_
+        if started_at is not None:
+            self.started_at = started_at
+        if queued_at is not None:
+            self.queued_at = queued_at
+        if running_at is not None:
+            self.running_at = running_at
+        if finished_at is not None:
+            self.finished_at = finished_at
+        if error_at is not None:
+            self.error_at = error_at
+        if progress is not None:
+            self.progress = progress
         if cloud_region is not None:
             self.cloud_region = cloud_region
         if fallback_cloud_regions is not None:
@@ -75,6 +105,13 @@ class Encoding(BitmovinResource):
             types = getattr(super(Encoding, self), 'openapi_types')
 
         types.update({
+            'type': 'EncodingType',
+            'started_at': 'datetime',
+            'queued_at': 'datetime',
+            'running_at': 'datetime',
+            'finished_at': 'datetime',
+            'error_at': 'datetime',
+            'progress': 'int',
             'cloud_region': 'CloudRegion',
             'fallback_cloud_regions': 'list[CloudRegion]',
             'encoder_version': 'string_types',
@@ -97,6 +134,13 @@ class Encoding(BitmovinResource):
             attributes = getattr(super(Encoding, self), 'attribute_map')
 
         attributes.update({
+            'type': 'type',
+            'started_at': 'startedAt',
+            'queued_at': 'queuedAt',
+            'running_at': 'runningAt',
+            'finished_at': 'finishedAt',
+            'error_at': 'errorAt',
+            'progress': 'progress',
             'cloud_region': 'cloudRegion',
             'fallback_cloud_regions': 'fallbackCloudRegions',
             'encoder_version': 'encoderVersion',
@@ -109,6 +153,209 @@ class Encoding(BitmovinResource):
             'labels': 'labels'
         })
         return attributes
+
+    @property
+    def type(self):
+        # type: () -> EncodingType
+        """Gets the type of this Encoding.
+
+        Type of the encoding
+
+        :return: The type of this Encoding.
+        :rtype: EncodingType
+        """
+        return self._type
+
+    @type.setter
+    def type(self, type_):
+        # type: (EncodingType) -> None
+        """Sets the type of this Encoding.
+
+        Type of the encoding
+
+        :param type_: The type of this Encoding.
+        :type: EncodingType
+        """
+
+        if type_ is not None:
+            if not isinstance(type_, EncodingType):
+                raise TypeError("Invalid type for `type`, type has to be `EncodingType`")
+
+        self._type = type_
+
+    @property
+    def started_at(self):
+        # type: () -> datetime
+        """Gets the started_at of this Encoding.
+
+        Timestamp when the encoding was started, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ
+
+        :return: The started_at of this Encoding.
+        :rtype: datetime
+        """
+        return self._started_at
+
+    @started_at.setter
+    def started_at(self, started_at):
+        # type: (datetime) -> None
+        """Sets the started_at of this Encoding.
+
+        Timestamp when the encoding was started, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ
+
+        :param started_at: The started_at of this Encoding.
+        :type: datetime
+        """
+
+        if started_at is not None:
+            if not isinstance(started_at, datetime):
+                raise TypeError("Invalid type for `started_at`, type has to be `datetime`")
+
+        self._started_at = started_at
+
+    @property
+    def queued_at(self):
+        # type: () -> datetime
+        """Gets the queued_at of this Encoding.
+
+        Timestamp when the encoding status changed to \"QUEUED\", returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ
+
+        :return: The queued_at of this Encoding.
+        :rtype: datetime
+        """
+        return self._queued_at
+
+    @queued_at.setter
+    def queued_at(self, queued_at):
+        # type: (datetime) -> None
+        """Sets the queued_at of this Encoding.
+
+        Timestamp when the encoding status changed to \"QUEUED\", returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ
+
+        :param queued_at: The queued_at of this Encoding.
+        :type: datetime
+        """
+
+        if queued_at is not None:
+            if not isinstance(queued_at, datetime):
+                raise TypeError("Invalid type for `queued_at`, type has to be `datetime`")
+
+        self._queued_at = queued_at
+
+    @property
+    def running_at(self):
+        # type: () -> datetime
+        """Gets the running_at of this Encoding.
+
+        Timestamp when the encoding status changed to to \"RUNNING\", returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ
+
+        :return: The running_at of this Encoding.
+        :rtype: datetime
+        """
+        return self._running_at
+
+    @running_at.setter
+    def running_at(self, running_at):
+        # type: (datetime) -> None
+        """Sets the running_at of this Encoding.
+
+        Timestamp when the encoding status changed to to \"RUNNING\", returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ
+
+        :param running_at: The running_at of this Encoding.
+        :type: datetime
+        """
+
+        if running_at is not None:
+            if not isinstance(running_at, datetime):
+                raise TypeError("Invalid type for `running_at`, type has to be `datetime`")
+
+        self._running_at = running_at
+
+    @property
+    def finished_at(self):
+        # type: () -> datetime
+        """Gets the finished_at of this Encoding.
+
+        Timestamp when the encoding status changed to \"FINISHED\", returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ
+
+        :return: The finished_at of this Encoding.
+        :rtype: datetime
+        """
+        return self._finished_at
+
+    @finished_at.setter
+    def finished_at(self, finished_at):
+        # type: (datetime) -> None
+        """Sets the finished_at of this Encoding.
+
+        Timestamp when the encoding status changed to \"FINISHED\", returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ
+
+        :param finished_at: The finished_at of this Encoding.
+        :type: datetime
+        """
+
+        if finished_at is not None:
+            if not isinstance(finished_at, datetime):
+                raise TypeError("Invalid type for `finished_at`, type has to be `datetime`")
+
+        self._finished_at = finished_at
+
+    @property
+    def error_at(self):
+        # type: () -> datetime
+        """Gets the error_at of this Encoding.
+
+        Timestamp when the encoding status changed to \"ERROR\", returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ
+
+        :return: The error_at of this Encoding.
+        :rtype: datetime
+        """
+        return self._error_at
+
+    @error_at.setter
+    def error_at(self, error_at):
+        # type: (datetime) -> None
+        """Sets the error_at of this Encoding.
+
+        Timestamp when the encoding status changed to \"ERROR\", returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ
+
+        :param error_at: The error_at of this Encoding.
+        :type: datetime
+        """
+
+        if error_at is not None:
+            if not isinstance(error_at, datetime):
+                raise TypeError("Invalid type for `error_at`, type has to be `datetime`")
+
+        self._error_at = error_at
+
+    @property
+    def progress(self):
+        # type: () -> int
+        """Gets the progress of this Encoding.
+
+        Progress of the encoding in percent
+
+        :return: The progress of this Encoding.
+        :rtype: int
+        """
+        return self._progress
+
+    @progress.setter
+    def progress(self, progress):
+        # type: (int) -> None
+        """Sets the progress of this Encoding.
+
+        Progress of the encoding in percent
+
+        :param progress: The progress of this Encoding.
+        :type: int
+        """
+
+        if progress is not None:
+            if not isinstance(progress, int):
+                raise TypeError("Invalid type for `progress`, type has to be `int`")
+
+        self._progress = progress
 
     @property
     def cloud_region(self):

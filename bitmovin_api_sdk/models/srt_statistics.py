@@ -133,7 +133,7 @@ class SrtStatistics(object):
         # type: () -> datetime
         """Gets the created_at of this SrtStatistics.
 
-        Timestamp when the srt statistics event was created, formatted in UTC: YYYY-MM-DDThh:mm:ssZ
+        Timestamp when the srt statistics event was created, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ
 
         :return: The created_at of this SrtStatistics.
         :rtype: datetime
@@ -145,7 +145,7 @@ class SrtStatistics(object):
         # type: (datetime) -> None
         """Sets the created_at of this SrtStatistics.
 
-        Timestamp when the srt statistics event was created, formatted in UTC: YYYY-MM-DDThh:mm:ssZ
+        Timestamp when the srt statistics event was created, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ
 
         :param created_at: The created_at of this SrtStatistics.
         :type: datetime

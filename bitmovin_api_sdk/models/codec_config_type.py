@@ -23,3 +23,6 @@ class CodecConfigType(Enum):
     MJPEG = "MJPEG"
     AV1 = "AV1"
     DOLBY_ATMOS = "DOLBY_ATMOS"
+    H262 = "H262"
+    PCM = "PCM"
+    WEBVTT = "WEBVTT"

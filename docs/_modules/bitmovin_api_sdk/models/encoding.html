@@ -157,11 +157,13 @@
 <span></span><span class="c1"># coding: utf-8</span>
 
 <span class="kn">from</span> <span class="nn">enum</span> <span class="kn">import</span> <span class="n">Enum</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
 <span class="kn">from</span> <span class="nn">six</span> <span class="kn">import</span> <span class="n">string_types</span><span class="p">,</span> <span class="n">iteritems</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.common.poscheck</span> <span class="kn">import</span> <span class="n">poscheck_model</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.bitmovin_resource</span> <span class="kn">import</span> <span class="n">BitmovinResource</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.cloud_region</span> <span class="kn">import</span> <span class="n">CloudRegion</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.encoding_mode</span> <span class="kn">import</span> <span class="n">EncodingMode</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.encoding_type</span> <span class="kn">import</span> <span class="n">EncodingType</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.infrastructure_settings</span> <span class="kn">import</span> <span class="n">InfrastructureSettings</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.status</span> <span class="kn">import</span> <span class="n">Status</span>
 <span class="kn">import</span> <span class="nn">pprint</span>
@@ -177,6 +179,13 @@
                  <span class="n">created_at</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">modified_at</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">custom_data</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">type_</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">started_at</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">queued_at</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">running_at</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">finished_at</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">error_at</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">progress</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">cloud_region</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">fallback_cloud_regions</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">encoder_version</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
@@ -187,9 +196,16 @@
                  <span class="n">selected_cloud_region</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">status</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">labels</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (string_types, string_types, string_types, datetime, datetime, dict, CloudRegion, list[CloudRegion], string_types, string_types, InfrastructureSettings, string_types, EncodingMode, CloudRegion, Status, list[string_types]) -&gt; None</span>
+        <span class="c1"># type: (string_types, string_types, string_types, datetime, datetime, dict, EncodingType, datetime, datetime, datetime, datetime, datetime, int, CloudRegion, list[CloudRegion], string_types, string_types, InfrastructureSettings, string_types, EncodingMode, CloudRegion, Status, list[string_types]) -&gt; None</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">Encoding</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">id_</span><span class="o">=</span><span class="n">id_</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="n">description</span><span class="p">,</span> <span class="n">created_at</span><span class="o">=</span><span class="n">created_at</span><span class="p">,</span> <span class="n">modified_at</span><span class="o">=</span><span class="n">modified_at</span><span class="p">,</span> <span class="n">custom_data</span><span class="o">=</span><span class="n">custom_data</span><span class="p">)</span>
 
+        <span class="bp">self</span><span class="o">.</span><span class="n">_type</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_started_at</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_queued_at</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_running_at</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_finished_at</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_error_at</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_progress</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_cloud_region</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_fallback_cloud_regions</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_encoder_version</span> <span class="o">=</span> <span class="kc">None</span>
@@ -202,6 +218,20 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_labels</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>
 
+        <span class="k">if</span> <span class="n">type_</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">type</span> <span class="o">=</span> <span class="n">type_</span>
+        <span class="k">if</span> <span class="n">started_at</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">started_at</span> <span class="o">=</span> <span class="n">started_at</span>
+        <span class="k">if</span> <span class="n">queued_at</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">queued_at</span> <span class="o">=</span> <span class="n">queued_at</span>
+        <span class="k">if</span> <span class="n">running_at</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">running_at</span> <span class="o">=</span> <span class="n">running_at</span>
+        <span class="k">if</span> <span class="n">finished_at</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">finished_at</span> <span class="o">=</span> <span class="n">finished_at</span>
+        <span class="k">if</span> <span class="n">error_at</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">error_at</span> <span class="o">=</span> <span class="n">error_at</span>
+        <span class="k">if</span> <span class="n">progress</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">progress</span> <span class="o">=</span> <span class="n">progress</span>
         <span class="k">if</span> <span class="n">cloud_region</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">cloud_region</span> <span class="o">=</span> <span class="n">cloud_region</span>
         <span class="k">if</span> <span class="n">fallback_cloud_regions</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -231,6 +261,13 @@
             <span class="n">types</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="nb">super</span><span class="p">(</span><span class="n">Encoding</span><span class="p">,</span> <span class="bp">self</span><span class="p">),</span> <span class="s1">&#39;openapi_types&#39;</span><span class="p">)</span>
 
         <span class="n">types</span><span class="o">.</span><span class="n">update</span><span class="p">({</span>
+            <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;EncodingType&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;started_at&#39;</span><span class="p">:</span> <span class="s1">&#39;datetime&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;queued_at&#39;</span><span class="p">:</span> <span class="s1">&#39;datetime&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;running_at&#39;</span><span class="p">:</span> <span class="s1">&#39;datetime&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;finished_at&#39;</span><span class="p">:</span> <span class="s1">&#39;datetime&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;error_at&#39;</span><span class="p">:</span> <span class="s1">&#39;datetime&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;progress&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
             <span class="s1">&#39;cloud_region&#39;</span><span class="p">:</span> <span class="s1">&#39;CloudRegion&#39;</span><span class="p">,</span>
             <span class="s1">&#39;fallback_cloud_regions&#39;</span><span class="p">:</span> <span class="s1">&#39;list[CloudRegion]&#39;</span><span class="p">,</span>
             <span class="s1">&#39;encoder_version&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
@@ -253,6 +290,13 @@
             <span class="n">attributes</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="nb">super</span><span class="p">(</span><span class="n">Encoding</span><span class="p">,</span> <span class="bp">self</span><span class="p">),</span> <span class="s1">&#39;attribute_map&#39;</span><span class="p">)</span>
 
         <span class="n">attributes</span><span class="o">.</span><span class="n">update</span><span class="p">({</span>
+            <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;type&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;started_at&#39;</span><span class="p">:</span> <span class="s1">&#39;startedAt&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;queued_at&#39;</span><span class="p">:</span> <span class="s1">&#39;queuedAt&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;running_at&#39;</span><span class="p">:</span> <span class="s1">&#39;runningAt&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;finished_at&#39;</span><span class="p">:</span> <span class="s1">&#39;finishedAt&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;error_at&#39;</span><span class="p">:</span> <span class="s1">&#39;errorAt&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;progress&#39;</span><span class="p">:</span> <span class="s1">&#39;progress&#39;</span><span class="p">,</span>
             <span class="s1">&#39;cloud_region&#39;</span><span class="p">:</span> <span class="s1">&#39;cloudRegion&#39;</span><span class="p">,</span>
             <span class="s1">&#39;fallback_cloud_regions&#39;</span><span class="p">:</span> <span class="s1">&#39;fallbackCloudRegions&#39;</span><span class="p">,</span>
             <span class="s1">&#39;encoder_version&#39;</span><span class="p">:</span> <span class="s1">&#39;encoderVersion&#39;</span><span class="p">,</span>
@@ -265,6 +309,209 @@
             <span class="s1">&#39;labels&#39;</span><span class="p">:</span> <span class="s1">&#39;labels&#39;</span>
         <span class="p">})</span>
         <span class="k">return</span> <span class="n">attributes</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">type</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; EncodingType</span>
+        <span class="sd">&quot;&quot;&quot;Gets the type of this Encoding.</span>
+
+<span class="sd">        Type of the encoding</span>
+
+<span class="sd">        :return: The type of this Encoding.</span>
+<span class="sd">        :rtype: EncodingType</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_type</span>
+
+    <span class="nd">@type</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">type</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">type_</span><span class="p">):</span>
+        <span class="c1"># type: (EncodingType) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the type of this Encoding.</span>
+
+<span class="sd">        Type of the encoding</span>
+
+<span class="sd">        :param type_: The type of this Encoding.</span>
+<span class="sd">        :type: EncodingType</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">type_</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">type_</span><span class="p">,</span> <span class="n">EncodingType</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `type`, type has to be `EncodingType`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_type</span> <span class="o">=</span> <span class="n">type_</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">started_at</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; datetime</span>
+        <span class="sd">&quot;&quot;&quot;Gets the started_at of this Encoding.</span>
+
+<span class="sd">        Timestamp when the encoding was started, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ</span>
+
+<span class="sd">        :return: The started_at of this Encoding.</span>
+<span class="sd">        :rtype: datetime</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_started_at</span>
+
+    <span class="nd">@started_at</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">started_at</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">started_at</span><span class="p">):</span>
+        <span class="c1"># type: (datetime) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the started_at of this Encoding.</span>
+
+<span class="sd">        Timestamp when the encoding was started, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ</span>
+
+<span class="sd">        :param started_at: The started_at of this Encoding.</span>
+<span class="sd">        :type: datetime</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">started_at</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">started_at</span><span class="p">,</span> <span class="n">datetime</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `started_at`, type has to be `datetime`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_started_at</span> <span class="o">=</span> <span class="n">started_at</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">queued_at</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; datetime</span>
+        <span class="sd">&quot;&quot;&quot;Gets the queued_at of this Encoding.</span>
+
+<span class="sd">        Timestamp when the encoding status changed to \&quot;QUEUED\&quot;, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ</span>
+
+<span class="sd">        :return: The queued_at of this Encoding.</span>
+<span class="sd">        :rtype: datetime</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_queued_at</span>
+
+    <span class="nd">@queued_at</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">queued_at</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">queued_at</span><span class="p">):</span>
+        <span class="c1"># type: (datetime) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the queued_at of this Encoding.</span>
+
+<span class="sd">        Timestamp when the encoding status changed to \&quot;QUEUED\&quot;, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ</span>
+
+<span class="sd">        :param queued_at: The queued_at of this Encoding.</span>
+<span class="sd">        :type: datetime</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">queued_at</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">queued_at</span><span class="p">,</span> <span class="n">datetime</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `queued_at`, type has to be `datetime`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_queued_at</span> <span class="o">=</span> <span class="n">queued_at</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">running_at</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; datetime</span>
+        <span class="sd">&quot;&quot;&quot;Gets the running_at of this Encoding.</span>
+
+<span class="sd">        Timestamp when the encoding status changed to to \&quot;RUNNING\&quot;, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ</span>
+
+<span class="sd">        :return: The running_at of this Encoding.</span>
+<span class="sd">        :rtype: datetime</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_running_at</span>
+
+    <span class="nd">@running_at</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">running_at</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">running_at</span><span class="p">):</span>
+        <span class="c1"># type: (datetime) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the running_at of this Encoding.</span>
+
+<span class="sd">        Timestamp when the encoding status changed to to \&quot;RUNNING\&quot;, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ</span>
+
+<span class="sd">        :param running_at: The running_at of this Encoding.</span>
+<span class="sd">        :type: datetime</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">running_at</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">running_at</span><span class="p">,</span> <span class="n">datetime</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `running_at`, type has to be `datetime`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_running_at</span> <span class="o">=</span> <span class="n">running_at</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">finished_at</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; datetime</span>
+        <span class="sd">&quot;&quot;&quot;Gets the finished_at of this Encoding.</span>
+
+<span class="sd">        Timestamp when the encoding status changed to \&quot;FINISHED\&quot;, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ</span>
+
+<span class="sd">        :return: The finished_at of this Encoding.</span>
+<span class="sd">        :rtype: datetime</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_finished_at</span>
+
+    <span class="nd">@finished_at</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">finished_at</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">finished_at</span><span class="p">):</span>
+        <span class="c1"># type: (datetime) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the finished_at of this Encoding.</span>
+
+<span class="sd">        Timestamp when the encoding status changed to \&quot;FINISHED\&quot;, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ</span>
+
+<span class="sd">        :param finished_at: The finished_at of this Encoding.</span>
+<span class="sd">        :type: datetime</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">finished_at</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">finished_at</span><span class="p">,</span> <span class="n">datetime</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `finished_at`, type has to be `datetime`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_finished_at</span> <span class="o">=</span> <span class="n">finished_at</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">error_at</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; datetime</span>
+        <span class="sd">&quot;&quot;&quot;Gets the error_at of this Encoding.</span>
+
+<span class="sd">        Timestamp when the encoding status changed to \&quot;ERROR\&quot;, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ</span>
+
+<span class="sd">        :return: The error_at of this Encoding.</span>
+<span class="sd">        :rtype: datetime</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_error_at</span>
+
+    <span class="nd">@error_at</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">error_at</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">error_at</span><span class="p">):</span>
+        <span class="c1"># type: (datetime) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the error_at of this Encoding.</span>
+
+<span class="sd">        Timestamp when the encoding status changed to \&quot;ERROR\&quot;, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ</span>
+
+<span class="sd">        :param error_at: The error_at of this Encoding.</span>
+<span class="sd">        :type: datetime</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">error_at</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">error_at</span><span class="p">,</span> <span class="n">datetime</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `error_at`, type has to be `datetime`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_error_at</span> <span class="o">=</span> <span class="n">error_at</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">progress</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; int</span>
+        <span class="sd">&quot;&quot;&quot;Gets the progress of this Encoding.</span>
+
+<span class="sd">        Progress of the encoding in percent</span>
+
+<span class="sd">        :return: The progress of this Encoding.</span>
+<span class="sd">        :rtype: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_progress</span>
+
+    <span class="nd">@progress</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">progress</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">progress</span><span class="p">):</span>
+        <span class="c1"># type: (int) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the progress of this Encoding.</span>
+
+<span class="sd">        Progress of the encoding in percent</span>
+
+<span class="sd">        :param progress: The progress of this Encoding.</span>
+<span class="sd">        :type: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">progress</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">progress</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `progress`, type has to be `int`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_progress</span> <span class="o">=</span> <span class="n">progress</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">cloud_region</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
