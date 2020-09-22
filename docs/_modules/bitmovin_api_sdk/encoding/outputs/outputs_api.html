@@ -282,6 +282,23 @@
             <span class="n">logger</span><span class="o">=</span><span class="n">logger</span>
         <span class="p">)</span>
 
+<div class="viewcode-block" id="OutputsApi.get"><a class="viewcode-back" href="../../../../__modules/bitmovin_api_sdk.encoding.outputs.html#bitmovin_api_sdk.encoding.outputs.outputs_api.OutputsApi.get">[docs]</a>    <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">output_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="c1"># type: (string_types, dict) -&gt; Output</span>
+        <span class="sd">&quot;&quot;&quot;Get Output Details</span>
+
+<span class="sd">        :param output_id: Id of the wanted output</span>
+<span class="sd">        :type output_id: string_types, required</span>
+<span class="sd">        :return: Output details</span>
+<span class="sd">        :rtype: Output</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+            <span class="s1">&#39;/encoding/outputs/</span><span class="si">{output_id}</span><span class="s1">&#39;</span><span class="p">,</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;output_id&#39;</span><span class="p">:</span> <span class="n">output_id</span><span class="p">},</span>
+            <span class="nb">type</span><span class="o">=</span><span class="n">Output</span><span class="p">,</span>
+            <span class="o">**</span><span class="n">kwargs</span>
+        <span class="p">)</span></div>
+
 <div class="viewcode-block" id="OutputsApi.list"><a class="viewcode-back" href="../../../../__modules/bitmovin_api_sdk.encoding.outputs.html#bitmovin_api_sdk.encoding.outputs.outputs_api.OutputsApi.list">[docs]</a>    <span class="k">def</span> <span class="nf">list</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">query_params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (OutputListQueryParams, dict) -&gt; Output</span>
         <span class="sd">&quot;&quot;&quot;List all Outputs</span>

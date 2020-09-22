@@ -317,6 +317,8 @@ from bitmovin_api_sdk.encoding.configurations.subtitles.webvtt.customdata.custom
 
 from bitmovin_api_sdk.encoding.filters.filters_api import FiltersApi
 from bitmovin_api_sdk.encoding.filters.filters_api import FilterListQueryParams
+from bitmovin_api_sdk.encoding.filters.type.type_api import TypeApi
+
 from bitmovin_api_sdk.encoding.filters.conform.conform_api import ConformApi
 from bitmovin_api_sdk.encoding.filters.conform.conform_api import ConformFilterListQueryParams
 from bitmovin_api_sdk.encoding.filters.conform.customdata.customdata_api import CustomdataApi
@@ -374,8 +376,6 @@ from bitmovin_api_sdk.encoding.filters.unsharp.customdata.customdata_api import 
 from bitmovin_api_sdk.encoding.filters.scale.scale_api import ScaleApi
 from bitmovin_api_sdk.encoding.filters.scale.scale_api import ScaleFilterListQueryParams
 from bitmovin_api_sdk.encoding.filters.scale.customdata.customdata_api import CustomdataApi
-
-from bitmovin_api_sdk.encoding.filters.type.type_api import TypeApi
 
 from bitmovin_api_sdk.encoding.encodings.live.live_api import LiveApi
 
@@ -1513,4 +1513,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.48.0"
+__version__ = "1.49.0"

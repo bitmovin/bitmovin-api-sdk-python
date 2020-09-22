@@ -190,6 +190,23 @@ class InputsApi(BaseApi):
             logger=logger
         )
 
+    def get(self, input_id, **kwargs):
+        # type: (string_types, dict) -> Input
+        """Get Input Details
+
+        :param input_id: Id of the Input
+        :type input_id: string_types, required
+        :return: Input details
+        :rtype: Input
+        """
+
+        return self.api_client.get(
+            '/encoding/inputs/{input_id}',
+            path_params={'input_id': input_id},
+            type=Input,
+            **kwargs
+        )
+
     def list(self, query_params=None, **kwargs):
         # type: (InputListQueryParams, dict) -> Input
         """List all Inputs

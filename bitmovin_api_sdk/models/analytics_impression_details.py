@@ -15,7 +15,6 @@ class AnalyticsImpressionDetails(BitmovinResponse):
                  id_=None,
                  ad=None,
                  analytics_version=None,
-                 asn=None,
                  audio_bitrate=None,
                  audio_language=None,
                  autoplay=None,
@@ -90,12 +89,11 @@ class AnalyticsImpressionDetails(BitmovinResponse):
                  video_window_width=None,
                  videostart_failed=None,
                  videostart_failed_reason=None):
-        # type: (string_types, int, string_types, int, int, string_types, bool, string_types, string_types, string_types, int, string_types, string_types, int, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, int, string_types, int, int, int, string_types, string_types, string_types, string_types, bool, bool, bool, string_types, string_types, string_types, string_types, string_types, string_types, int, int, string_types, int, string_types, int, string_types, string_types, int, string_types, string_types, string_types, int, int, int, int, string_types, int, string_types, string_types, bool, string_types, int, string_types, int, int, string_types, string_types, int, int, int, int, int, int, int, bool, AnalyticsVideoStartFailedReason) -> None
+        # type: (string_types, int, string_types, int, string_types, bool, string_types, string_types, string_types, int, string_types, string_types, int, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, int, string_types, int, int, int, string_types, string_types, string_types, string_types, bool, bool, bool, string_types, string_types, string_types, string_types, string_types, string_types, int, int, string_types, int, string_types, int, string_types, string_types, int, string_types, string_types, string_types, int, int, int, int, string_types, int, string_types, string_types, bool, string_types, int, string_types, int, int, string_types, string_types, int, int, int, int, int, int, int, bool, AnalyticsVideoStartFailedReason) -> None
         super(AnalyticsImpressionDetails, self).__init__(id_=id_)
 
         self._ad = None
         self._analytics_version = None
-        self._asn = None
         self._audio_bitrate = None
         self._audio_language = None
         self._autoplay = None
@@ -176,8 +174,6 @@ class AnalyticsImpressionDetails(BitmovinResponse):
             self.ad = ad
         if analytics_version is not None:
             self.analytics_version = analytics_version
-        if asn is not None:
-            self.asn = asn
         if audio_bitrate is not None:
             self.audio_bitrate = audio_bitrate
         if audio_language is not None:
@@ -337,7 +333,6 @@ class AnalyticsImpressionDetails(BitmovinResponse):
         types.update({
             'ad': 'int',
             'analytics_version': 'string_types',
-            'asn': 'int',
             'audio_bitrate': 'int',
             'audio_language': 'string_types',
             'autoplay': 'bool',
@@ -426,7 +421,6 @@ class AnalyticsImpressionDetails(BitmovinResponse):
         attributes.update({
             'ad': 'ad',
             'analytics_version': 'analyticsVersion',
-            'asn': 'asn',
             'audio_bitrate': 'audioBitrate',
             'audio_language': 'audioLanguage',
             'autoplay': 'autoplay',
@@ -561,35 +555,6 @@ class AnalyticsImpressionDetails(BitmovinResponse):
                 raise TypeError("Invalid type for `analytics_version`, type has to be `string_types`")
 
         self._analytics_version = analytics_version
-
-    @property
-    def asn(self):
-        # type: () -> int
-        """Gets the asn of this AnalyticsImpressionDetails.
-
-        Autonomous System Number inferred from the IP address
-
-        :return: The asn of this AnalyticsImpressionDetails.
-        :rtype: int
-        """
-        return self._asn
-
-    @asn.setter
-    def asn(self, asn):
-        # type: (int) -> None
-        """Sets the asn of this AnalyticsImpressionDetails.
-
-        Autonomous System Number inferred from the IP address
-
-        :param asn: The asn of this AnalyticsImpressionDetails.
-        :type: int
-        """
-
-        if asn is not None:
-            if not isinstance(asn, int):
-                raise TypeError("Invalid type for `asn`, type has to be `int`")
-
-        self._asn = asn
 
     @property
     def audio_bitrate(self):

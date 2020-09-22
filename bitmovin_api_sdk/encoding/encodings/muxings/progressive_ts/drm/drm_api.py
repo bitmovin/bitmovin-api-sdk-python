@@ -45,6 +45,27 @@ class DrmApi(BaseApi):
             logger=logger
         )
 
+    def get(self, encoding_id, muxing_id, drm_id, **kwargs):
+        # type: (string_types, string_types, string_types, dict) -> Drm
+        """DRM Details of a Progressive TS muxing
+
+        :param encoding_id: Id of the encoding.
+        :type encoding_id: string_types, required
+        :param muxing_id: Id of the Progressive TS muxing
+        :type muxing_id: string_types, required
+        :param drm_id: Id of the DRM.
+        :type drm_id: string_types, required
+        :return: DRM
+        :rtype: Drm
+        """
+
+        return self.api_client.get(
+            '/encoding/encodings/{encoding_id}/muxings/progressive-ts/{muxing_id}/drm/{drm_id}',
+            path_params={'encoding_id': encoding_id, 'muxing_id': muxing_id, 'drm_id': drm_id},
+            type=Drm,
+            **kwargs
+        )
+
     def list(self, encoding_id, muxing_id, **kwargs):
         # type: (string_types, string_types, dict) -> Drm
         """List all DRM configurations of a Progressive TS muxing

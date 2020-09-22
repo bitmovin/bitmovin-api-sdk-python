@@ -432,6 +432,23 @@
 <em class="property">class </em><code class="sig-prename descclassname">bitmovin_api_sdk.encoding.outputs.outputs_api.</code><code class="sig-name descname">OutputsApi</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/outputs/outputs_api.html#OutputsApi"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.outputs.outputs_api.OutputsApi" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="bitmovin_api_sdk.common.html#bitmovin_api_sdk.common.base_api.BaseApi" title="bitmovin_api_sdk.common.base_api.BaseApi"><code class="xref py py-class docutils literal notranslate"><span class="pre">bitmovin_api_sdk.common.base_api.BaseApi</span></code></a></p>
 <dl class="py method">
+<dt id="bitmovin_api_sdk.encoding.outputs.outputs_api.OutputsApi.get">
+<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">output_id</span><span class="p">:</span> <span class="n">string_types</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">dict</span></em><span class="sig-paren">)</span> &#x2192; Output<a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/outputs/outputs_api.html#OutputsApi.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.outputs.outputs_api.OutputsApi.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get Output Details</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>output_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the wanted output</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Output details</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.output.Output" title="bitmovin_api_sdk.models.output.Output">Output</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt id="bitmovin_api_sdk.encoding.outputs.outputs_api.OutputsApi.list">
 <code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">query_params</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span><a class="reference internal" href="#bitmovin_api_sdk.encoding.outputs.output_list_query_params.OutputListQueryParams" title="bitmovin_api_sdk.encoding.outputs.output_list_query_params.OutputListQueryParams">bitmovin_api_sdk.encoding.outputs.output_list_query_params.OutputListQueryParams</a><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">dict</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.output.Output" title="bitmovin_api_sdk.models.output.Output">bitmovin_api_sdk.models.output.Output</a><a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/outputs/outputs_api.html#OutputsApi.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.outputs.outputs_api.OutputsApi.list" title="Permalink to this definition">¶</a></dt>
 <dd><p>List all Outputs</p>

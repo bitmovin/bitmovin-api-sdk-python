@@ -14,18 +14,22 @@ class AnalyticsImpressionsQuery(AnalyticsQueryTimeframe):
                  start=None,
                  end=None,
                  license_key=None,
-                 filters=None):
-        # type: (datetime, datetime, string_types, list[AnalyticsAbstractFilter]) -> None
+                 filters=None,
+                 limit=None):
+        # type: (datetime, datetime, string_types, list[AnalyticsAbstractFilter], int) -> None
         super(AnalyticsImpressionsQuery, self).__init__(start=start, end=end)
 
         self._license_key = None
         self._filters = list()
+        self._limit = None
         self.discriminator = None
 
         if license_key is not None:
             self.license_key = license_key
         if filters is not None:
             self.filters = filters
+        if limit is not None:
+            self.limit = limit
 
     @property
     def openapi_types(self):
@@ -36,7 +40,8 @@ class AnalyticsImpressionsQuery(AnalyticsQueryTimeframe):
 
         types.update({
             'license_key': 'string_types',
-            'filters': 'list[AnalyticsAbstractFilter]'
+            'filters': 'list[AnalyticsAbstractFilter]',
+            'limit': 'int'
         })
 
         return types
@@ -50,7 +55,8 @@ class AnalyticsImpressionsQuery(AnalyticsQueryTimeframe):
 
         attributes.update({
             'license_key': 'licenseKey',
-            'filters': 'filters'
+            'filters': 'filters',
+            'limit': 'limit'
         })
         return attributes
 
@@ -109,6 +115,35 @@ class AnalyticsImpressionsQuery(AnalyticsQueryTimeframe):
                 raise TypeError("Invalid type for `filters`, type has to be `list[AnalyticsAbstractFilter]`")
 
         self._filters = filters
+
+    @property
+    def limit(self):
+        # type: () -> int
+        """Gets the limit of this AnalyticsImpressionsQuery.
+
+        Number of returned impressions
+
+        :return: The limit of this AnalyticsImpressionsQuery.
+        :rtype: int
+        """
+        return self._limit
+
+    @limit.setter
+    def limit(self, limit):
+        # type: (int) -> None
+        """Sets the limit of this AnalyticsImpressionsQuery.
+
+        Number of returned impressions
+
+        :param limit: The limit of this AnalyticsImpressionsQuery.
+        :type: int
+        """
+
+        if limit is not None:
+            if not isinstance(limit, int):
+                raise TypeError("Invalid type for `limit`, type has to be `int`")
+
+        self._limit = limit
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -135,6 +135,25 @@ class MuxingsApi(BaseApi):
             logger=logger
         )
 
+    def get(self, encoding_id, muxing_id, **kwargs):
+        # type: (string_types, string_types, dict) -> Muxing
+        """Muxing Details
+
+        :param encoding_id: Id of the encoding.
+        :type encoding_id: string_types, required
+        :param muxing_id: Id of the muxing.
+        :type muxing_id: string_types, required
+        :return: Muxing details
+        :rtype: Muxing
+        """
+
+        return self.api_client.get(
+            '/encoding/encodings/{encoding_id}/muxings/{muxing_id}',
+            path_params={'encoding_id': encoding_id, 'muxing_id': muxing_id},
+            type=Muxing,
+            **kwargs
+        )
+
     def list(self, encoding_id, query_params=None, **kwargs):
         # type: (string_types, MuxingListQueryParams, dict) -> Muxing
         """List All Muxings

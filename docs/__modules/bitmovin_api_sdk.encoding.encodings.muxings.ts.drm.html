@@ -269,6 +269,27 @@
 <em class="property">class </em><code class="sig-prename descclassname">bitmovin_api_sdk.encoding.encodings.muxings.ts.drm.drm_api.</code><code class="sig-name descname">DrmApi</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/encodings/muxings/ts/drm/drm_api.html#DrmApi"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.encodings.muxings.ts.drm.drm_api.DrmApi" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="bitmovin_api_sdk.common.html#bitmovin_api_sdk.common.base_api.BaseApi" title="bitmovin_api_sdk.common.base_api.BaseApi"><code class="xref py py-class docutils literal notranslate"><span class="pre">bitmovin_api_sdk.common.base_api.BaseApi</span></code></a></p>
 <dl class="py method">
+<dt id="bitmovin_api_sdk.encoding.encodings.muxings.ts.drm.drm_api.DrmApi.get">
+<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">encoding_id</span><span class="p">:</span> <span class="n">string_types</span></em>, <em class="sig-param"><span class="n">muxing_id</span><span class="p">:</span> <span class="n">string_types</span></em>, <em class="sig-param"><span class="n">drm_id</span><span class="p">:</span> <span class="n">string_types</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">dict</span></em><span class="sig-paren">)</span> &#x2192; Drm<a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/encodings/muxings/ts/drm/drm_api.html#DrmApi.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.encodings.muxings.ts.drm.drm_api.DrmApi.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>DRM Details of a TS muxing</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>encoding_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the encoding.</p></li>
+<li><p><strong>muxing_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the TS muxing</p></li>
+<li><p><strong>drm_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the DRM.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>DRM</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.drm.Drm" title="bitmovin_api_sdk.models.drm.Drm">Drm</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt id="bitmovin_api_sdk.encoding.encodings.muxings.ts.drm.drm_api.DrmApi.list">
 <code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">encoding_id</span><span class="p">:</span> <span class="n">string_types</span></em>, <em class="sig-param"><span class="n">muxing_id</span><span class="p">:</span> <span class="n">string_types</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">dict</span></em><span class="sig-paren">)</span> &#x2192; Drm<a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/encodings/muxings/ts/drm/drm_api.html#DrmApi.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.encodings.muxings.ts.drm.drm_api.DrmApi.list" title="Permalink to this definition">¶</a></dt>
 <dd><p>List all DRM configurations of a TS muxing</p>

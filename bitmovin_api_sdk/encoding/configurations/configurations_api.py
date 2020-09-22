@@ -54,6 +54,23 @@ class ConfigurationsApi(BaseApi):
             logger=logger
         )
 
+    def get(self, configuration_id, **kwargs):
+        # type: (string_types, dict) -> CodecConfiguration
+        """Get Codec Configuration Details
+
+        :param configuration_id: Id of the codec configuration
+        :type configuration_id: string_types, required
+        :return: Codec Configuration details
+        :rtype: CodecConfiguration
+        """
+
+        return self.api_client.get(
+            '/encoding/configurations/{configuration_id}',
+            path_params={'configuration_id': configuration_id},
+            type=CodecConfiguration,
+            **kwargs
+        )
+
     def list(self, query_params=None, **kwargs):
         # type: (CodecConfigurationListQueryParams, dict) -> CodecConfiguration
         """List all Codec Configurations

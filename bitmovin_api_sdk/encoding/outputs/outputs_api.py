@@ -126,6 +126,23 @@ class OutputsApi(BaseApi):
             logger=logger
         )
 
+    def get(self, output_id, **kwargs):
+        # type: (string_types, dict) -> Output
+        """Get Output Details
+
+        :param output_id: Id of the wanted output
+        :type output_id: string_types, required
+        :return: Output details
+        :rtype: Output
+        """
+
+        return self.api_client.get(
+            '/encoding/outputs/{output_id}',
+            path_params={'output_id': output_id},
+            type=Output,
+            **kwargs
+        )
+
     def list(self, query_params=None, **kwargs):
         # type: (OutputListQueryParams, dict) -> Output
         """List all Outputs

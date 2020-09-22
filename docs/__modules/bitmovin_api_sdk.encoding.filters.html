@@ -464,6 +464,23 @@
 <em class="property">class </em><code class="sig-prename descclassname">bitmovin_api_sdk.encoding.filters.filters_api.</code><code class="sig-name descname">FiltersApi</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/filters/filters_api.html#FiltersApi"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.filters.filters_api.FiltersApi" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="bitmovin_api_sdk.common.html#bitmovin_api_sdk.common.base_api.BaseApi" title="bitmovin_api_sdk.common.base_api.BaseApi"><code class="xref py py-class docutils literal notranslate"><span class="pre">bitmovin_api_sdk.common.base_api.BaseApi</span></code></a></p>
 <dl class="py method">
+<dt id="bitmovin_api_sdk.encoding.filters.filters_api.FiltersApi.get">
+<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filter_id</span><span class="p">:</span> <span class="n">string_types</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">dict</span></em><span class="sig-paren">)</span> &#x2192; Filter<a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/filters/filters_api.html#FiltersApi.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.filters.filters_api.FiltersApi.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get Filter Details</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>filter_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the filter</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Filter details</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.filter.Filter" title="bitmovin_api_sdk.models.filter.Filter">Filter</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt id="bitmovin_api_sdk.encoding.filters.filters_api.FiltersApi.list">
 <code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">query_params</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span><a class="reference internal" href="#bitmovin_api_sdk.encoding.filters.filter_list_query_params.FilterListQueryParams" title="bitmovin_api_sdk.encoding.filters.filter_list_query_params.FilterListQueryParams">bitmovin_api_sdk.encoding.filters.filter_list_query_params.FilterListQueryParams</a><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">dict</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.filter.Filter" title="bitmovin_api_sdk.models.filter.Filter">bitmovin_api_sdk.models.filter.Filter</a><a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/filters/filters_api.html#FiltersApi.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.filters.filters_api.FiltersApi.list" title="Permalink to this definition">¶</a></dt>
 <dd><p>List all Filters</p>

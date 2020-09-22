@@ -346,6 +346,23 @@
             <span class="n">logger</span><span class="o">=</span><span class="n">logger</span>
         <span class="p">)</span>
 
+<div class="viewcode-block" id="InputsApi.get"><a class="viewcode-back" href="../../../../__modules/bitmovin_api_sdk.encoding.inputs.html#bitmovin_api_sdk.encoding.inputs.inputs_api.InputsApi.get">[docs]</a>    <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="c1"># type: (string_types, dict) -&gt; Input</span>
+        <span class="sd">&quot;&quot;&quot;Get Input Details</span>
+
+<span class="sd">        :param input_id: Id of the Input</span>
+<span class="sd">        :type input_id: string_types, required</span>
+<span class="sd">        :return: Input details</span>
+<span class="sd">        :rtype: Input</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+            <span class="s1">&#39;/encoding/inputs/</span><span class="si">{input_id}</span><span class="s1">&#39;</span><span class="p">,</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;input_id&#39;</span><span class="p">:</span> <span class="n">input_id</span><span class="p">},</span>
+            <span class="nb">type</span><span class="o">=</span><span class="n">Input</span><span class="p">,</span>
+            <span class="o">**</span><span class="n">kwargs</span>
+        <span class="p">)</span></div>
+
 <div class="viewcode-block" id="InputsApi.list"><a class="viewcode-back" href="../../../../__modules/bitmovin_api_sdk.encoding.inputs.html#bitmovin_api_sdk.encoding.inputs.inputs_api.InputsApi.list">[docs]</a>    <span class="k">def</span> <span class="nf">list</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">query_params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (InputListQueryParams, dict) -&gt; Input</span>
         <span class="sd">&quot;&quot;&quot;List all Inputs</span>

@@ -7,6 +7,7 @@ from bitmovin_api_sdk.common.poscheck import poscheck_except
 from bitmovin_api_sdk.models.filter import Filter
 from bitmovin_api_sdk.models.response_envelope import ResponseEnvelope
 from bitmovin_api_sdk.models.response_error import ResponseError
+from bitmovin_api_sdk.encoding.filters.type.type_api import TypeApi
 from bitmovin_api_sdk.encoding.filters.conform.conform_api import ConformApi
 from bitmovin_api_sdk.encoding.filters.watermark.watermark_api import WatermarkApi
 from bitmovin_api_sdk.encoding.filters.audio_volume.audio_volume_api import AudioVolumeApi
@@ -21,7 +22,6 @@ from bitmovin_api_sdk.encoding.filters.text.text_api import TextApi
 from bitmovin_api_sdk.encoding.filters.interlace.interlace_api import InterlaceApi
 from bitmovin_api_sdk.encoding.filters.unsharp.unsharp_api import UnsharpApi
 from bitmovin_api_sdk.encoding.filters.scale.scale_api import ScaleApi
-from bitmovin_api_sdk.encoding.filters.type.type_api import TypeApi
 from bitmovin_api_sdk.encoding.filters.filter_list_query_params import FilterListQueryParams
 
 
@@ -31,6 +31,13 @@ class FiltersApi(BaseApi):
         # type: (str, str, str, BitmovinApiLoggerBase) -> None
 
         super(FiltersApi, self).__init__(
+            api_key=api_key,
+            tenant_org_id=tenant_org_id,
+            base_url=base_url,
+            logger=logger
+        )
+
+        self.type = TypeApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,
@@ -135,11 +142,21 @@ class FiltersApi(BaseApi):
             logger=logger
         )
 
-        self.type = TypeApi(
-            api_key=api_key,
-            tenant_org_id=tenant_org_id,
-            base_url=base_url,
-            logger=logger
+    def get(self, filter_id, **kwargs):
+        # type: (string_types, dict) -> Filter
+        """Get Filter Details
+
+        :param filter_id: Id of the filter
+        :type filter_id: string_types, required
+        :return: Filter details
+        :rtype: Filter
+        """
+
+        return self.api_client.get(
+            '/encoding/filters/{filter_id}',
+            path_params={'filter_id': filter_id},
+            type=Filter,
+            **kwargs
         )
 
     def list(self, query_params=None, **kwargs):

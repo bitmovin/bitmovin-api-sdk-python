@@ -210,6 +210,23 @@
             <span class="n">logger</span><span class="o">=</span><span class="n">logger</span>
         <span class="p">)</span>
 
+<div class="viewcode-block" id="ConfigurationsApi.get"><a class="viewcode-back" href="../../../../__modules/bitmovin_api_sdk.encoding.configurations.html#bitmovin_api_sdk.encoding.configurations.configurations_api.ConfigurationsApi.get">[docs]</a>    <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">configuration_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="c1"># type: (string_types, dict) -&gt; CodecConfiguration</span>
+        <span class="sd">&quot;&quot;&quot;Get Codec Configuration Details</span>
+
+<span class="sd">        :param configuration_id: Id of the codec configuration</span>
+<span class="sd">        :type configuration_id: string_types, required</span>
+<span class="sd">        :return: Codec Configuration details</span>
+<span class="sd">        :rtype: CodecConfiguration</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+            <span class="s1">&#39;/encoding/configurations/</span><span class="si">{configuration_id}</span><span class="s1">&#39;</span><span class="p">,</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;configuration_id&#39;</span><span class="p">:</span> <span class="n">configuration_id</span><span class="p">},</span>
+            <span class="nb">type</span><span class="o">=</span><span class="n">CodecConfiguration</span><span class="p">,</span>
+            <span class="o">**</span><span class="n">kwargs</span>
+        <span class="p">)</span></div>
+
 <div class="viewcode-block" id="ConfigurationsApi.list"><a class="viewcode-back" href="../../../../__modules/bitmovin_api_sdk.encoding.configurations.html#bitmovin_api_sdk.encoding.configurations.configurations_api.ConfigurationsApi.list">[docs]</a>    <span class="k">def</span> <span class="nf">list</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">query_params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (CodecConfigurationListQueryParams, dict) -&gt; CodecConfiguration</span>
         <span class="sd">&quot;&quot;&quot;List all Codec Configurations</span>

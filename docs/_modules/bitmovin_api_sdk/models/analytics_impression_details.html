@@ -171,7 +171,6 @@
                  <span class="n">id_</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">ad</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">analytics_version</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                 <span class="n">asn</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">audio_bitrate</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">audio_language</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">autoplay</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
@@ -246,12 +245,11 @@
                  <span class="n">video_window_width</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">videostart_failed</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">videostart_failed_reason</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (string_types, int, string_types, int, int, string_types, bool, string_types, string_types, string_types, int, string_types, string_types, int, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, int, string_types, int, int, int, string_types, string_types, string_types, string_types, bool, bool, bool, string_types, string_types, string_types, string_types, string_types, string_types, int, int, string_types, int, string_types, int, string_types, string_types, int, string_types, string_types, string_types, int, int, int, int, string_types, int, string_types, string_types, bool, string_types, int, string_types, int, int, string_types, string_types, int, int, int, int, int, int, int, bool, AnalyticsVideoStartFailedReason) -&gt; None</span>
+        <span class="c1"># type: (string_types, int, string_types, int, string_types, bool, string_types, string_types, string_types, int, string_types, string_types, int, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, int, string_types, int, int, int, string_types, string_types, string_types, string_types, bool, bool, bool, string_types, string_types, string_types, string_types, string_types, string_types, int, int, string_types, int, string_types, int, string_types, string_types, int, string_types, string_types, string_types, int, int, int, int, string_types, int, string_types, string_types, bool, string_types, int, string_types, int, int, string_types, string_types, int, int, int, int, int, int, int, bool, AnalyticsVideoStartFailedReason) -&gt; None</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">AnalyticsImpressionDetails</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">id_</span><span class="o">=</span><span class="n">id_</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_ad</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_analytics_version</span> <span class="o">=</span> <span class="kc">None</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_asn</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_audio_bitrate</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_audio_language</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_autoplay</span> <span class="o">=</span> <span class="kc">None</span>
@@ -332,8 +330,6 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">ad</span> <span class="o">=</span> <span class="n">ad</span>
         <span class="k">if</span> <span class="n">analytics_version</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">analytics_version</span> <span class="o">=</span> <span class="n">analytics_version</span>
-        <span class="k">if</span> <span class="n">asn</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">asn</span> <span class="o">=</span> <span class="n">asn</span>
         <span class="k">if</span> <span class="n">audio_bitrate</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">audio_bitrate</span> <span class="o">=</span> <span class="n">audio_bitrate</span>
         <span class="k">if</span> <span class="n">audio_language</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -493,7 +489,6 @@
         <span class="n">types</span><span class="o">.</span><span class="n">update</span><span class="p">({</span>
             <span class="s1">&#39;ad&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
             <span class="s1">&#39;analytics_version&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;asn&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
             <span class="s1">&#39;audio_bitrate&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
             <span class="s1">&#39;audio_language&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
             <span class="s1">&#39;autoplay&#39;</span><span class="p">:</span> <span class="s1">&#39;bool&#39;</span><span class="p">,</span>
@@ -582,7 +577,6 @@
         <span class="n">attributes</span><span class="o">.</span><span class="n">update</span><span class="p">({</span>
             <span class="s1">&#39;ad&#39;</span><span class="p">:</span> <span class="s1">&#39;ad&#39;</span><span class="p">,</span>
             <span class="s1">&#39;analytics_version&#39;</span><span class="p">:</span> <span class="s1">&#39;analyticsVersion&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;asn&#39;</span><span class="p">:</span> <span class="s1">&#39;asn&#39;</span><span class="p">,</span>
             <span class="s1">&#39;audio_bitrate&#39;</span><span class="p">:</span> <span class="s1">&#39;audioBitrate&#39;</span><span class="p">,</span>
             <span class="s1">&#39;audio_language&#39;</span><span class="p">:</span> <span class="s1">&#39;audioLanguage&#39;</span><span class="p">,</span>
             <span class="s1">&#39;autoplay&#39;</span><span class="p">:</span> <span class="s1">&#39;autoplay&#39;</span><span class="p">,</span>
@@ -717,35 +711,6 @@
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `analytics_version`, type has to be `string_types`&quot;</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_analytics_version</span> <span class="o">=</span> <span class="n">analytics_version</span>
-
-    <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">asn</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="c1"># type: () -&gt; int</span>
-        <span class="sd">&quot;&quot;&quot;Gets the asn of this AnalyticsImpressionDetails.</span>
-
-<span class="sd">        Autonomous System Number inferred from the IP address</span>
-
-<span class="sd">        :return: The asn of this AnalyticsImpressionDetails.</span>
-<span class="sd">        :rtype: int</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_asn</span>
-
-    <span class="nd">@asn</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">asn</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">asn</span><span class="p">):</span>
-        <span class="c1"># type: (int) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the asn of this AnalyticsImpressionDetails.</span>
-
-<span class="sd">        Autonomous System Number inferred from the IP address</span>
-
-<span class="sd">        :param asn: The asn of this AnalyticsImpressionDetails.</span>
-<span class="sd">        :type: int</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-
-        <span class="k">if</span> <span class="n">asn</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">asn</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `asn`, type has to be `int`&quot;</span><span class="p">)</span>
-
-        <span class="bp">self</span><span class="o">.</span><span class="n">_asn</span> <span class="o">=</span> <span class="n">asn</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">audio_bitrate</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
