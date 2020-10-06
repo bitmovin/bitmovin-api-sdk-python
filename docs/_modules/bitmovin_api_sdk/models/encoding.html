@@ -402,7 +402,7 @@
         <span class="c1"># type: () -&gt; datetime</span>
         <span class="sd">&quot;&quot;&quot;Gets the running_at of this Encoding.</span>
 
-<span class="sd">        Timestamp when the encoding status changed to to \&quot;RUNNING\&quot;, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ</span>
+<span class="sd">        Timestamp when the encoding status changed to \&quot;RUNNING\&quot;, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ</span>
 
 <span class="sd">        :return: The running_at of this Encoding.</span>
 <span class="sd">        :rtype: datetime</span>
@@ -414,7 +414,7 @@
         <span class="c1"># type: (datetime) -&gt; None</span>
         <span class="sd">&quot;&quot;&quot;Sets the running_at of this Encoding.</span>
 
-<span class="sd">        Timestamp when the encoding status changed to to \&quot;RUNNING\&quot;, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ</span>
+<span class="sd">        Timestamp when the encoding status changed to \&quot;RUNNING\&quot;, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ</span>
 
 <span class="sd">        :param running_at: The running_at of this Encoding.</span>
 <span class="sd">        :type: datetime</span>
@@ -431,7 +431,7 @@
         <span class="c1"># type: () -&gt; datetime</span>
         <span class="sd">&quot;&quot;&quot;Gets the finished_at of this Encoding.</span>
 
-<span class="sd">        Timestamp when the encoding status changed to \&quot;FINISHED\&quot;, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ</span>
+<span class="sd">        Timestamp when the encoding status changed to &#39;FINISHED&#39;, &#39;ERROR&#39;, &#39;CANCELED&#39;, or &#39;TRANSFER_ERROR&#39;, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ  Note that this timestamp might be inaccurate for encodings which ran prior to the [1.50.0 REST API release](https://bitmovin.com/docs/encoding/changelogs/rest). </span>
 
 <span class="sd">        :return: The finished_at of this Encoding.</span>
 <span class="sd">        :rtype: datetime</span>
@@ -443,7 +443,7 @@
         <span class="c1"># type: (datetime) -&gt; None</span>
         <span class="sd">&quot;&quot;&quot;Sets the finished_at of this Encoding.</span>
 
-<span class="sd">        Timestamp when the encoding status changed to \&quot;FINISHED\&quot;, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ</span>
+<span class="sd">        Timestamp when the encoding status changed to &#39;FINISHED&#39;, &#39;ERROR&#39;, &#39;CANCELED&#39;, or &#39;TRANSFER_ERROR&#39;, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ  Note that this timestamp might be inaccurate for encodings which ran prior to the [1.50.0 REST API release](https://bitmovin.com/docs/encoding/changelogs/rest). </span>
 
 <span class="sd">        :param finished_at: The finished_at of this Encoding.</span>
 <span class="sd">        :type: datetime</span>
@@ -460,7 +460,7 @@
         <span class="c1"># type: () -&gt; datetime</span>
         <span class="sd">&quot;&quot;&quot;Gets the error_at of this Encoding.</span>
 
-<span class="sd">        Timestamp when the encoding status changed to \&quot;ERROR\&quot;, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ</span>
+<span class="sd">        Timestamp when the encoding status changed to &#39;ERROR&#39;, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ  Note that this timestamp is deprecated and is equivalent to finishedAt in case of an &#39;ERROR&#39;. </span>
 
 <span class="sd">        :return: The error_at of this Encoding.</span>
 <span class="sd">        :rtype: datetime</span>
@@ -472,7 +472,7 @@
         <span class="c1"># type: (datetime) -&gt; None</span>
         <span class="sd">&quot;&quot;&quot;Sets the error_at of this Encoding.</span>
 
-<span class="sd">        Timestamp when the encoding status changed to \&quot;ERROR\&quot;, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ</span>
+<span class="sd">        Timestamp when the encoding status changed to &#39;ERROR&#39;, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ  Note that this timestamp is deprecated and is equivalent to finishedAt in case of an &#39;ERROR&#39;. </span>
 
 <span class="sd">        :param error_at: The error_at of this Encoding.</span>
 <span class="sd">        :type: datetime</span>
@@ -659,7 +659,7 @@
         <span class="c1"># type: () -&gt; string_types</span>
         <span class="sd">&quot;&quot;&quot;Gets the selected_encoder_version of this Encoding.</span>
 
-<span class="sd">        Will be set to the encoder version that was actually used for the encoding. This is especially useful when starting an encoding with a version tag like STABLE or BETA.</span>
+<span class="sd">        After the encoding has been started, this will contain the encoder version that was actually used. Especially useful when starting an encoding with a version tag like STABLE or BETA.</span>
 
 <span class="sd">        :return: The selected_encoder_version of this Encoding.</span>
 <span class="sd">        :rtype: string_types</span>
@@ -671,7 +671,7 @@
         <span class="c1"># type: (string_types) -&gt; None</span>
         <span class="sd">&quot;&quot;&quot;Sets the selected_encoder_version of this Encoding.</span>
 
-<span class="sd">        Will be set to the encoder version that was actually used for the encoding. This is especially useful when starting an encoding with a version tag like STABLE or BETA.</span>
+<span class="sd">        After the encoding has been started, this will contain the encoder version that was actually used. Especially useful when starting an encoding with a version tag like STABLE or BETA.</span>
 
 <span class="sd">        :param selected_encoder_version: The selected_encoder_version of this Encoding.</span>
 <span class="sd">        :type: string_types</span>
@@ -688,7 +688,7 @@
         <span class="c1"># type: () -&gt; EncodingMode</span>
         <span class="sd">&quot;&quot;&quot;Gets the selected_encoding_mode of this Encoding.</span>
 
-<span class="sd">        Will be set to the encoding mode that was actually used for the encoding. This is especially useful when starting an encoding with encoding mode STANDARD.</span>
+<span class="sd">        After the encoding has been started, this will contain the encoding mode that was actually used. Especially useful when starting an encoding with encoding mode STANDARD.</span>
 
 <span class="sd">        :return: The selected_encoding_mode of this Encoding.</span>
 <span class="sd">        :rtype: EncodingMode</span>
@@ -700,7 +700,7 @@
         <span class="c1"># type: (EncodingMode) -&gt; None</span>
         <span class="sd">&quot;&quot;&quot;Sets the selected_encoding_mode of this Encoding.</span>
 
-<span class="sd">        Will be set to the encoding mode that was actually used for the encoding. This is especially useful when starting an encoding with encoding mode STANDARD.</span>
+<span class="sd">        After the encoding has been started, this will contain the encoding mode that was actually used. Especially useful when starting an encoding with encoding mode STANDARD.</span>
 
 <span class="sd">        :param selected_encoding_mode: The selected_encoding_mode of this Encoding.</span>
 <span class="sd">        :type: EncodingMode</span>
@@ -717,7 +717,7 @@
         <span class="c1"># type: () -&gt; CloudRegion</span>
         <span class="sd">&quot;&quot;&quot;Gets the selected_cloud_region of this Encoding.</span>
 
-<span class="sd">        Contains the region which was selected when cloudregion:AUTO was specified</span>
+<span class="sd">        After the encoding has been started, this will contain the cloud region that was actually used. This will differ from cloudRegion if cloudRegion was set to an unspecific region (e.g. &#39;AUTO&#39;)</span>
 
 <span class="sd">        :return: The selected_cloud_region of this Encoding.</span>
 <span class="sd">        :rtype: CloudRegion</span>
@@ -729,7 +729,7 @@
         <span class="c1"># type: (CloudRegion) -&gt; None</span>
         <span class="sd">&quot;&quot;&quot;Sets the selected_cloud_region of this Encoding.</span>
 
-<span class="sd">        Contains the region which was selected when cloudregion:AUTO was specified</span>
+<span class="sd">        After the encoding has been started, this will contain the cloud region that was actually used. This will differ from cloudRegion if cloudRegion was set to an unspecific region (e.g. &#39;AUTO&#39;)</span>
 
 <span class="sd">        :param selected_cloud_region: The selected_cloud_region of this Encoding.</span>
 <span class="sd">        :type: CloudRegion</span>

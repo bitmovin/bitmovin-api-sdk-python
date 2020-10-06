@@ -53,7 +53,7 @@ class RegionsApi(BaseApi):
         :type infrastructure_id: string_types, required
         :param region: AWS region.
         :type region: AwsCloudRegion, required
-        :return: Region settigns for specified region
+        :return: Region settings for specified region
         :rtype: AwsAccountRegionSettings
         """
 
@@ -72,7 +72,7 @@ class RegionsApi(BaseApi):
         :type infrastructure_id: string_types, required
         :param region: AWS region.
         :type region: AwsCloudRegion, required
-        :return: Region settigns for specified region
+        :return: Region settings for specified region
         :rtype: AwsAccountRegionSettings
         """
 

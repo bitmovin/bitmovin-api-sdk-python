@@ -11,23 +11,23 @@ class Scheduling(object):
     @poscheck_model
     def __init__(self,
                  priority=None,
-                 prewarmed_instance_pool_ids=None):
+                 prewarmed_encoder_pool_ids=None):
         # type: (int, list[string_types]) -> None
 
         self._priority = None
-        self._prewarmed_instance_pool_ids = list()
+        self._prewarmed_encoder_pool_ids = list()
         self.discriminator = None
 
         if priority is not None:
             self.priority = priority
-        if prewarmed_instance_pool_ids is not None:
-            self.prewarmed_instance_pool_ids = prewarmed_instance_pool_ids
+        if prewarmed_encoder_pool_ids is not None:
+            self.prewarmed_encoder_pool_ids = prewarmed_encoder_pool_ids
 
     @property
     def openapi_types(self):
         types = {
             'priority': 'int',
-            'prewarmed_instance_pool_ids': 'list[string_types]'
+            'prewarmed_encoder_pool_ids': 'list[string_types]'
         }
 
         return types
@@ -36,7 +36,7 @@ class Scheduling(object):
     def attribute_map(self):
         attributes = {
             'priority': 'priority',
-            'prewarmed_instance_pool_ids': 'prewarmedInstancePoolIds'
+            'prewarmed_encoder_pool_ids': 'prewarmedEncoderPoolIds'
         }
         return attributes
 
@@ -74,33 +74,33 @@ class Scheduling(object):
         self._priority = priority
 
     @property
-    def prewarmed_instance_pool_ids(self):
+    def prewarmed_encoder_pool_ids(self):
         # type: () -> list[string_types]
-        """Gets the prewarmed_instance_pool_ids of this Scheduling.
+        """Gets the prewarmed_encoder_pool_ids of this Scheduling.
 
-        List of prewarmed Instance pools. If set, prewarmed instances from pools with these IDs will be used for the Encoding if available. The pool IDs will be tried in the order in which they are passed.
+        List of prewarmed encoder pools. If set, prewarmed encoders from pools with these IDs will be used for the encoding if available. The pool IDs will be tried in the order in which they are passed.
 
-        :return: The prewarmed_instance_pool_ids of this Scheduling.
+        :return: The prewarmed_encoder_pool_ids of this Scheduling.
         :rtype: list[string_types]
         """
-        return self._prewarmed_instance_pool_ids
+        return self._prewarmed_encoder_pool_ids
 
-    @prewarmed_instance_pool_ids.setter
-    def prewarmed_instance_pool_ids(self, prewarmed_instance_pool_ids):
+    @prewarmed_encoder_pool_ids.setter
+    def prewarmed_encoder_pool_ids(self, prewarmed_encoder_pool_ids):
         # type: (list) -> None
-        """Sets the prewarmed_instance_pool_ids of this Scheduling.
+        """Sets the prewarmed_encoder_pool_ids of this Scheduling.
 
-        List of prewarmed Instance pools. If set, prewarmed instances from pools with these IDs will be used for the Encoding if available. The pool IDs will be tried in the order in which they are passed.
+        List of prewarmed encoder pools. If set, prewarmed encoders from pools with these IDs will be used for the encoding if available. The pool IDs will be tried in the order in which they are passed.
 
-        :param prewarmed_instance_pool_ids: The prewarmed_instance_pool_ids of this Scheduling.
+        :param prewarmed_encoder_pool_ids: The prewarmed_encoder_pool_ids of this Scheduling.
         :type: list[string_types]
         """
 
-        if prewarmed_instance_pool_ids is not None:
-            if not isinstance(prewarmed_instance_pool_ids, list):
-                raise TypeError("Invalid type for `prewarmed_instance_pool_ids`, type has to be `list[string_types]`")
+        if prewarmed_encoder_pool_ids is not None:
+            if not isinstance(prewarmed_encoder_pool_ids, list):
+                raise TypeError("Invalid type for `prewarmed_encoder_pool_ids`, type has to be `list[string_types]`")
 
-        self._prewarmed_instance_pool_ids = prewarmed_instance_pool_ids
+        self._prewarmed_encoder_pool_ids = prewarmed_encoder_pool_ids
 
     def to_dict(self):
         """Returns the model properties as a dict"""

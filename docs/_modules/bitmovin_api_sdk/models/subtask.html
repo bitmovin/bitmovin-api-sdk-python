@@ -502,7 +502,7 @@
         <span class="c1"># type: () -&gt; datetime</span>
         <span class="sd">&quot;&quot;&quot;Gets the running_at of this Subtask.</span>
 
-<span class="sd">        Timestamp when the subtask status changed to to &#39;RUNNING&#39;, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ </span>
+<span class="sd">        Timestamp when the subtask status changed to &#39;RUNNING&#39;, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ </span>
 
 <span class="sd">        :return: The running_at of this Subtask.</span>
 <span class="sd">        :rtype: datetime</span>
@@ -514,7 +514,7 @@
         <span class="c1"># type: (datetime) -&gt; None</span>
         <span class="sd">&quot;&quot;&quot;Sets the running_at of this Subtask.</span>
 
-<span class="sd">        Timestamp when the subtask status changed to to &#39;RUNNING&#39;, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ </span>
+<span class="sd">        Timestamp when the subtask status changed to &#39;RUNNING&#39;, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ </span>
 
 <span class="sd">        :param running_at: The running_at of this Subtask.</span>
 <span class="sd">        :type: datetime</span>
@@ -531,7 +531,7 @@
         <span class="c1"># type: () -&gt; datetime</span>
         <span class="sd">&quot;&quot;&quot;Gets the finished_at of this Subtask.</span>
 
-<span class="sd">        Timestamp when the subtask status changed to &#39;FINISHED&#39;, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ </span>
+<span class="sd">        Timestamp when the subtask status changed to a final state like  &#39;FINISHED&#39;, &#39;ERROR&#39;, &#39;CANCELED&#39;, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ  Note that this timestamp might be inaccurate for subtasks which ran prior to the [1.50.0 REST API release](https://bitmovin.com/docs/encoding/changelogs/rest). </span>
 
 <span class="sd">        :return: The finished_at of this Subtask.</span>
 <span class="sd">        :rtype: datetime</span>
@@ -543,7 +543,7 @@
         <span class="c1"># type: (datetime) -&gt; None</span>
         <span class="sd">&quot;&quot;&quot;Sets the finished_at of this Subtask.</span>
 
-<span class="sd">        Timestamp when the subtask status changed to &#39;FINISHED&#39;, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ </span>
+<span class="sd">        Timestamp when the subtask status changed to a final state like  &#39;FINISHED&#39;, &#39;ERROR&#39;, &#39;CANCELED&#39;, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ  Note that this timestamp might be inaccurate for subtasks which ran prior to the [1.50.0 REST API release](https://bitmovin.com/docs/encoding/changelogs/rest). </span>
 
 <span class="sd">        :param finished_at: The finished_at of this Subtask.</span>
 <span class="sd">        :type: datetime</span>
@@ -560,7 +560,7 @@
         <span class="c1"># type: () -&gt; datetime</span>
         <span class="sd">&quot;&quot;&quot;Gets the error_at of this Subtask.</span>
 
-<span class="sd">        Timestamp when the subtask status changed to &#39;ERROR&#39;, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ </span>
+<span class="sd">        Timestamp when the subtask status changed to &#39;ERROR&#39;, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ  Note that this timestamp is deprecated and is equivalent to finishedAt in case of an &#39;ERROR&#39;. </span>
 
 <span class="sd">        :return: The error_at of this Subtask.</span>
 <span class="sd">        :rtype: datetime</span>
@@ -572,7 +572,7 @@
         <span class="c1"># type: (datetime) -&gt; None</span>
         <span class="sd">&quot;&quot;&quot;Sets the error_at of this Subtask.</span>
 
-<span class="sd">        Timestamp when the subtask status changed to &#39;ERROR&#39;, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ </span>
+<span class="sd">        Timestamp when the subtask status changed to &#39;ERROR&#39;, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ  Note that this timestamp is deprecated and is equivalent to finishedAt in case of an &#39;ERROR&#39;. </span>
 
 <span class="sd">        :param error_at: The error_at of this Subtask.</span>
 <span class="sd">        :type: datetime</span>

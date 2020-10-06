@@ -20022,7 +20022,7 @@
 <dt id="bitmovin_api_sdk.models.encoding.Encoding.error_at">
 <em class="property">property </em><code class="sig-name descname">error_at</code><a class="headerlink" href="#bitmovin_api_sdk.models.encoding.Encoding.error_at" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the error_at of this Encoding.</p>
-<p>Timestamp when the encoding status changed to “ERROR”, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ</p>
+<p>Timestamp when the encoding status changed to ‘ERROR’, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ  Note that this timestamp is deprecated and is equivalent to finishedAt in case of an ‘ERROR’.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>The error_at of this Encoding.</p>
@@ -20052,7 +20052,7 @@
 <dt id="bitmovin_api_sdk.models.encoding.Encoding.finished_at">
 <em class="property">property </em><code class="sig-name descname">finished_at</code><a class="headerlink" href="#bitmovin_api_sdk.models.encoding.Encoding.finished_at" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the finished_at of this Encoding.</p>
-<p>Timestamp when the encoding status changed to “FINISHED”, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ</p>
+<p>Timestamp when the encoding status changed to ‘FINISHED’, ‘ERROR’, ‘CANCELED’, or ‘TRANSFER_ERROR’, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ  Note that this timestamp might be inaccurate for encodings which ran prior to the [1.50.0 REST API release](https://bitmovin.com/docs/encoding/changelogs/rest).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>The finished_at of this Encoding.</p>
@@ -20146,7 +20146,7 @@
 <dt id="bitmovin_api_sdk.models.encoding.Encoding.running_at">
 <em class="property">property </em><code class="sig-name descname">running_at</code><a class="headerlink" href="#bitmovin_api_sdk.models.encoding.Encoding.running_at" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the running_at of this Encoding.</p>
-<p>Timestamp when the encoding status changed to to “RUNNING”, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ</p>
+<p>Timestamp when the encoding status changed to “RUNNING”, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>The running_at of this Encoding.</p>
@@ -20161,7 +20161,7 @@
 <dt id="bitmovin_api_sdk.models.encoding.Encoding.selected_cloud_region">
 <em class="property">property </em><code class="sig-name descname">selected_cloud_region</code><a class="headerlink" href="#bitmovin_api_sdk.models.encoding.Encoding.selected_cloud_region" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the selected_cloud_region of this Encoding.</p>
-<p>Contains the region which was selected when cloudregion:AUTO was specified</p>
+<p>After the encoding has been started, this will contain the cloud region that was actually used. This will differ from cloudRegion if cloudRegion was set to an unspecific region (e.g. ‘AUTO’)</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>The selected_cloud_region of this Encoding.</p>
@@ -20176,7 +20176,7 @@
 <dt id="bitmovin_api_sdk.models.encoding.Encoding.selected_encoder_version">
 <em class="property">property </em><code class="sig-name descname">selected_encoder_version</code><a class="headerlink" href="#bitmovin_api_sdk.models.encoding.Encoding.selected_encoder_version" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the selected_encoder_version of this Encoding.</p>
-<p>Will be set to the encoder version that was actually used for the encoding. This is especially useful when starting an encoding with a version tag like STABLE or BETA.</p>
+<p>After the encoding has been started, this will contain the encoder version that was actually used. Especially useful when starting an encoding with a version tag like STABLE or BETA.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>The selected_encoder_version of this Encoding.</p>
@@ -20191,7 +20191,7 @@
 <dt id="bitmovin_api_sdk.models.encoding.Encoding.selected_encoding_mode">
 <em class="property">property </em><code class="sig-name descname">selected_encoding_mode</code><a class="headerlink" href="#bitmovin_api_sdk.models.encoding.Encoding.selected_encoding_mode" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the selected_encoding_mode of this Encoding.</p>
-<p>Will be set to the encoding mode that was actually used for the encoding. This is especially useful when starting an encoding with encoding mode STANDARD.</p>
+<p>After the encoding has been started, this will contain the encoding mode that was actually used. Especially useful when starting an encoding with encoding mode STANDARD.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>The selected_encoding_mode of this Encoding.</p>
@@ -36777,7 +36777,7 @@
 <dt id="bitmovin_api_sdk.models.scheduled_insertable_content.ScheduledInsertableContent.run_at">
 <em class="property">property </em><code class="sig-name descname">run_at</code><a class="headerlink" href="#bitmovin_api_sdk.models.scheduled_insertable_content.ScheduledInsertableContent.run_at" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the run_at of this ScheduledInsertableContent.</p>
-<p>Time to to play the content in UTC: YYYY-MM-DDThh:mm:ssZ, if this property is not set the content will be played as soon as possible.</p>
+<p>Time to play the content in UTC: YYYY-MM-DDThh:mm:ssZ, if this property is not set the content will be played as soon as possible.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>The run_at of this ScheduledInsertableContent.</p>
@@ -36870,13 +36870,13 @@
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="bitmovin_api_sdk.models.scheduling.Scheduling.prewarmed_instance_pool_ids">
-<em class="property">property </em><code class="sig-name descname">prewarmed_instance_pool_ids</code><a class="headerlink" href="#bitmovin_api_sdk.models.scheduling.Scheduling.prewarmed_instance_pool_ids" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the prewarmed_instance_pool_ids of this Scheduling.</p>
-<p>List of prewarmed Instance pools. If set, prewarmed instances from pools with these IDs will be used for the Encoding if available. The pool IDs will be tried in the order in which they are passed.</p>
+<dt id="bitmovin_api_sdk.models.scheduling.Scheduling.prewarmed_encoder_pool_ids">
+<em class="property">property </em><code class="sig-name descname">prewarmed_encoder_pool_ids</code><a class="headerlink" href="#bitmovin_api_sdk.models.scheduling.Scheduling.prewarmed_encoder_pool_ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the prewarmed_encoder_pool_ids of this Scheduling.</p>
+<p>List of prewarmed encoder pools. If set, prewarmed encoders from pools with these IDs will be used for the encoding if available. The pool IDs will be tried in the order in which they are passed.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The prewarmed_instance_pool_ids of this Scheduling.</p>
+<dd class="field-odd"><p>The prewarmed_encoder_pool_ids of this Scheduling.</p>
 </dd>
 <dt class="field-even">Return type</dt>
 <dd class="field-even"><p>list[string_types]</p>
@@ -41722,7 +41722,7 @@
 <dt id="bitmovin_api_sdk.models.subtask.Subtask.error_at">
 <em class="property">property </em><code class="sig-name descname">error_at</code><a class="headerlink" href="#bitmovin_api_sdk.models.subtask.Subtask.error_at" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the error_at of this Subtask.</p>
-<p>Timestamp when the subtask status changed to ‘ERROR’, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ</p>
+<p>Timestamp when the subtask status changed to ‘ERROR’, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ  Note that this timestamp is deprecated and is equivalent to finishedAt in case of an ‘ERROR’.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>The error_at of this Subtask.</p>
@@ -41737,7 +41737,7 @@
 <dt id="bitmovin_api_sdk.models.subtask.Subtask.finished_at">
 <em class="property">property </em><code class="sig-name descname">finished_at</code><a class="headerlink" href="#bitmovin_api_sdk.models.subtask.Subtask.finished_at" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the finished_at of this Subtask.</p>
-<p>Timestamp when the subtask status changed to ‘FINISHED’, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ</p>
+<p>Timestamp when the subtask status changed to a final state like  ‘FINISHED’, ‘ERROR’, ‘CANCELED’, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ  Note that this timestamp might be inaccurate for subtasks which ran prior to the [1.50.0 REST API release](https://bitmovin.com/docs/encoding/changelogs/rest).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>The finished_at of this Subtask.</p>
@@ -41817,7 +41817,7 @@
 <dt id="bitmovin_api_sdk.models.subtask.Subtask.running_at">
 <em class="property">property </em><code class="sig-name descname">running_at</code><a class="headerlink" href="#bitmovin_api_sdk.models.subtask.Subtask.running_at" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the running_at of this Subtask.</p>
-<p>Timestamp when the subtask status changed to to ‘RUNNING’, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ</p>
+<p>Timestamp when the subtask status changed to ‘RUNNING’, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>The running_at of this Subtask.</p>
@@ -42107,7 +42107,7 @@
 <dt id="bitmovin_api_sdk.models.task.Task.error_at">
 <em class="property">property </em><code class="sig-name descname">error_at</code><a class="headerlink" href="#bitmovin_api_sdk.models.task.Task.error_at" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the error_at of this Task.</p>
-<p>Timestamp when the task status changed to “ERROR”, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ</p>
+<p>Timestamp when the subtask status changed to ‘ERROR’, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ  Note that this timestamp is deprecated and is equivalent to finishedAt in case of an ‘ERROR’.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>The error_at of this Task.</p>
@@ -42137,7 +42137,7 @@
 <dt id="bitmovin_api_sdk.models.task.Task.finished_at">
 <em class="property">property </em><code class="sig-name descname">finished_at</code><a class="headerlink" href="#bitmovin_api_sdk.models.task.Task.finished_at" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the finished_at of this Task.</p>
-<p>Timestamp when the task status changed to “FINISHED”, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ</p>
+<p>Timestamp when the subtask status changed to a final state like ‘FINISHED’, ‘ERROR’, ‘CANCELED’, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ  Note that this timestamp might be inaccurate for tasks which ran prior to the [1.50.0 REST API release](https://bitmovin.com/docs/encoding/changelogs/rest).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>The finished_at of this Task.</p>
@@ -42202,7 +42202,7 @@
 <dt id="bitmovin_api_sdk.models.task.Task.running_at">
 <em class="property">property </em><code class="sig-name descname">running_at</code><a class="headerlink" href="#bitmovin_api_sdk.models.task.Task.running_at" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the running_at of this Task.</p>
-<p>Timestamp when the task status changed to to “RUNNING”, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ</p>
+<p>Timestamp when the task status changed to “RUNNING”, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>The running_at of this Task.</p>

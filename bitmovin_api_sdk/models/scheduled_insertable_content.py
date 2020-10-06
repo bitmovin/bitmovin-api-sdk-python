@@ -106,7 +106,7 @@ class ScheduledInsertableContent(BitmovinResource):
         # type: () -> datetime
         """Gets the run_at of this ScheduledInsertableContent.
 
-        Time to to play the content in UTC: YYYY-MM-DDThh:mm:ssZ, if this property is not set the content will be played as soon as possible.
+        Time to play the content in UTC: YYYY-MM-DDThh:mm:ssZ, if this property is not set the content will be played as soon as possible.
 
         :return: The run_at of this ScheduledInsertableContent.
         :rtype: datetime
@@ -118,7 +118,7 @@ class ScheduledInsertableContent(BitmovinResource):
         # type: (datetime) -> None
         """Sets the run_at of this ScheduledInsertableContent.
 
-        Time to to play the content in UTC: YYYY-MM-DDThh:mm:ssZ, if this property is not set the content will be played as soon as possible.
+        Time to play the content in UTC: YYYY-MM-DDThh:mm:ssZ, if this property is not set the content will be played as soon as possible.
 
         :param run_at: The run_at of this ScheduledInsertableContent.
         :type: datetime

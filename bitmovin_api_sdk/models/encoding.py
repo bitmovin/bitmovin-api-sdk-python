@@ -246,7 +246,7 @@ class Encoding(BitmovinResource):
         # type: () -> datetime
         """Gets the running_at of this Encoding.
 
-        Timestamp when the encoding status changed to to \"RUNNING\", returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ
+        Timestamp when the encoding status changed to \"RUNNING\", returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ
 
         :return: The running_at of this Encoding.
         :rtype: datetime
@@ -258,7 +258,7 @@ class Encoding(BitmovinResource):
         # type: (datetime) -> None
         """Sets the running_at of this Encoding.
 
-        Timestamp when the encoding status changed to to \"RUNNING\", returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ
+        Timestamp when the encoding status changed to \"RUNNING\", returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ
 
         :param running_at: The running_at of this Encoding.
         :type: datetime
@@ -275,7 +275,7 @@ class Encoding(BitmovinResource):
         # type: () -> datetime
         """Gets the finished_at of this Encoding.
 
-        Timestamp when the encoding status changed to \"FINISHED\", returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ
+        Timestamp when the encoding status changed to 'FINISHED', 'ERROR', 'CANCELED', or 'TRANSFER_ERROR', returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ  Note that this timestamp might be inaccurate for encodings which ran prior to the [1.50.0 REST API release](https://bitmovin.com/docs/encoding/changelogs/rest). 
 
         :return: The finished_at of this Encoding.
         :rtype: datetime
@@ -287,7 +287,7 @@ class Encoding(BitmovinResource):
         # type: (datetime) -> None
         """Sets the finished_at of this Encoding.
 
-        Timestamp when the encoding status changed to \"FINISHED\", returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ
+        Timestamp when the encoding status changed to 'FINISHED', 'ERROR', 'CANCELED', or 'TRANSFER_ERROR', returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ  Note that this timestamp might be inaccurate for encodings which ran prior to the [1.50.0 REST API release](https://bitmovin.com/docs/encoding/changelogs/rest). 
 
         :param finished_at: The finished_at of this Encoding.
         :type: datetime
@@ -304,7 +304,7 @@ class Encoding(BitmovinResource):
         # type: () -> datetime
         """Gets the error_at of this Encoding.
 
-        Timestamp when the encoding status changed to \"ERROR\", returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ
+        Timestamp when the encoding status changed to 'ERROR', returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ  Note that this timestamp is deprecated and is equivalent to finishedAt in case of an 'ERROR'. 
 
         :return: The error_at of this Encoding.
         :rtype: datetime
@@ -316,7 +316,7 @@ class Encoding(BitmovinResource):
         # type: (datetime) -> None
         """Sets the error_at of this Encoding.
 
-        Timestamp when the encoding status changed to \"ERROR\", returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ
+        Timestamp when the encoding status changed to 'ERROR', returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ  Note that this timestamp is deprecated and is equivalent to finishedAt in case of an 'ERROR'. 
 
         :param error_at: The error_at of this Encoding.
         :type: datetime
@@ -503,7 +503,7 @@ class Encoding(BitmovinResource):
         # type: () -> string_types
         """Gets the selected_encoder_version of this Encoding.
 
-        Will be set to the encoder version that was actually used for the encoding. This is especially useful when starting an encoding with a version tag like STABLE or BETA.
+        After the encoding has been started, this will contain the encoder version that was actually used. Especially useful when starting an encoding with a version tag like STABLE or BETA.
 
         :return: The selected_encoder_version of this Encoding.
         :rtype: string_types
@@ -515,7 +515,7 @@ class Encoding(BitmovinResource):
         # type: (string_types) -> None
         """Sets the selected_encoder_version of this Encoding.
 
-        Will be set to the encoder version that was actually used for the encoding. This is especially useful when starting an encoding with a version tag like STABLE or BETA.
+        After the encoding has been started, this will contain the encoder version that was actually used. Especially useful when starting an encoding with a version tag like STABLE or BETA.
 
         :param selected_encoder_version: The selected_encoder_version of this Encoding.
         :type: string_types
@@ -532,7 +532,7 @@ class Encoding(BitmovinResource):
         # type: () -> EncodingMode
         """Gets the selected_encoding_mode of this Encoding.
 
-        Will be set to the encoding mode that was actually used for the encoding. This is especially useful when starting an encoding with encoding mode STANDARD.
+        After the encoding has been started, this will contain the encoding mode that was actually used. Especially useful when starting an encoding with encoding mode STANDARD.
 
         :return: The selected_encoding_mode of this Encoding.
         :rtype: EncodingMode
@@ -544,7 +544,7 @@ class Encoding(BitmovinResource):
         # type: (EncodingMode) -> None
         """Sets the selected_encoding_mode of this Encoding.
 
-        Will be set to the encoding mode that was actually used for the encoding. This is especially useful when starting an encoding with encoding mode STANDARD.
+        After the encoding has been started, this will contain the encoding mode that was actually used. Especially useful when starting an encoding with encoding mode STANDARD.
 
         :param selected_encoding_mode: The selected_encoding_mode of this Encoding.
         :type: EncodingMode
@@ -561,7 +561,7 @@ class Encoding(BitmovinResource):
         # type: () -> CloudRegion
         """Gets the selected_cloud_region of this Encoding.
 
-        Contains the region which was selected when cloudregion:AUTO was specified
+        After the encoding has been started, this will contain the cloud region that was actually used. This will differ from cloudRegion if cloudRegion was set to an unspecific region (e.g. 'AUTO')
 
         :return: The selected_cloud_region of this Encoding.
         :rtype: CloudRegion
@@ -573,7 +573,7 @@ class Encoding(BitmovinResource):
         # type: (CloudRegion) -> None
         """Sets the selected_cloud_region of this Encoding.
 
-        Contains the region which was selected when cloudregion:AUTO was specified
+        After the encoding has been started, this will contain the cloud region that was actually used. This will differ from cloudRegion if cloudRegion was set to an unspecific region (e.g. 'AUTO')
 
         :param selected_cloud_region: The selected_cloud_region of this Encoding.
         :type: CloudRegion

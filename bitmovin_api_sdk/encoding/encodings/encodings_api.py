@@ -7,6 +7,7 @@ from bitmovin_api_sdk.common.poscheck import poscheck_except
 from bitmovin_api_sdk.models.bitmovin_response import BitmovinResponse
 from bitmovin_api_sdk.models.cloud_region import CloudRegion
 from bitmovin_api_sdk.models.encoding import Encoding
+from bitmovin_api_sdk.models.encoding_mode import EncodingMode
 from bitmovin_api_sdk.models.reprioritize_encoding_request import ReprioritizeEncodingRequest
 from bitmovin_api_sdk.models.reschedule_encoding_request import RescheduleEncodingRequest
 from bitmovin_api_sdk.models.response_envelope import ResponseEnvelope
