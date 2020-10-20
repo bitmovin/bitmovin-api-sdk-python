@@ -14,6 +14,7 @@ Subpackages
    bitmovin_api_sdk.encoding.filters.deinterlace
    bitmovin_api_sdk.encoding.filters.denoise_hqdn3d
    bitmovin_api_sdk.encoding.filters.ebu_r128_single_pass
+   bitmovin_api_sdk.encoding.filters.enhanced_deinterlace
    bitmovin_api_sdk.encoding.filters.enhanced_watermark
    bitmovin_api_sdk.encoding.filters.interlace
    bitmovin_api_sdk.encoding.filters.rotate

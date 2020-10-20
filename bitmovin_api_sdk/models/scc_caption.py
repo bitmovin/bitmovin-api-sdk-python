@@ -5,6 +5,7 @@ from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
 from bitmovin_api_sdk.models.bitmovin_resource import BitmovinResource
 from bitmovin_api_sdk.models.input_path import InputPath
+from bitmovin_api_sdk.models.smpte_timecode_flavor import SmpteTimecodeFlavor
 import pprint
 import six
 
@@ -18,15 +19,19 @@ class SccCaption(BitmovinResource):
                  created_at=None,
                  modified_at=None,
                  custom_data=None,
-                 input_=None):
-        # type: (string_types, string_types, string_types, datetime, datetime, dict, InputPath) -> None
+                 input_=None,
+                 smpte_timecode_flavor=None):
+        # type: (string_types, string_types, string_types, datetime, datetime, dict, InputPath, SmpteTimecodeFlavor) -> None
         super(SccCaption, self).__init__(id_=id_, name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data)
 
         self._input = None
+        self._smpte_timecode_flavor = None
         self.discriminator = None
 
         if input_ is not None:
             self.input = input_
+        if smpte_timecode_flavor is not None:
+            self.smpte_timecode_flavor = smpte_timecode_flavor
 
     @property
     def openapi_types(self):
@@ -36,7 +41,8 @@ class SccCaption(BitmovinResource):
             types = getattr(super(SccCaption, self), 'openapi_types')
 
         types.update({
-            'input': 'InputPath'
+            'input': 'InputPath',
+            'smpte_timecode_flavor': 'SmpteTimecodeFlavor'
         })
 
         return types
@@ -49,7 +55,8 @@ class SccCaption(BitmovinResource):
             attributes = getattr(super(SccCaption, self), 'attribute_map')
 
         attributes.update({
-            'input': 'input'
+            'input': 'input',
+            'smpte_timecode_flavor': 'smpteTimecodeFlavor'
         })
         return attributes
 
@@ -58,7 +65,7 @@ class SccCaption(BitmovinResource):
         # type: () -> InputPath
         """Gets the input of this SccCaption.
 
-        The input location to get the scc file from (required)
+        Input location of the SCC file (required)
 
         :return: The input of this SccCaption.
         :rtype: InputPath
@@ -70,7 +77,7 @@ class SccCaption(BitmovinResource):
         # type: (InputPath) -> None
         """Sets the input of this SccCaption.
 
-        The input location to get the scc file from (required)
+        Input location of the SCC file (required)
 
         :param input_: The input of this SccCaption.
         :type: InputPath
@@ -81,6 +88,33 @@ class SccCaption(BitmovinResource):
                 raise TypeError("Invalid type for `input`, type has to be `InputPath`")
 
         self._input = input_
+
+    @property
+    def smpte_timecode_flavor(self):
+        # type: () -> SmpteTimecodeFlavor
+        """Gets the smpte_timecode_flavor of this SccCaption.
+
+
+        :return: The smpte_timecode_flavor of this SccCaption.
+        :rtype: SmpteTimecodeFlavor
+        """
+        return self._smpte_timecode_flavor
+
+    @smpte_timecode_flavor.setter
+    def smpte_timecode_flavor(self, smpte_timecode_flavor):
+        # type: (SmpteTimecodeFlavor) -> None
+        """Sets the smpte_timecode_flavor of this SccCaption.
+
+
+        :param smpte_timecode_flavor: The smpte_timecode_flavor of this SccCaption.
+        :type: SmpteTimecodeFlavor
+        """
+
+        if smpte_timecode_flavor is not None:
+            if not isinstance(smpte_timecode_flavor, SmpteTimecodeFlavor):
+                raise TypeError("Invalid type for `smpte_timecode_flavor`, type has to be `SmpteTimecodeFlavor`")
+
+        self._smpte_timecode_flavor = smpte_timecode_flavor
 
     def to_dict(self):
         """Returns the model properties as a dict"""

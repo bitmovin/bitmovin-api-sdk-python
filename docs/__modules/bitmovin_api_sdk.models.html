@@ -218,6 +218,9 @@
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.aws_account">bitmovin_api_sdk.models.aws_account module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.aws_account_region_settings">bitmovin_api_sdk.models.aws_account_region_settings module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.aws_cloud_region">bitmovin_api_sdk.models.aws_cloud_region module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.azure_account">bitmovin_api_sdk.models.azure_account module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.azure_account_region_settings">bitmovin_api_sdk.models.azure_account_region_settings module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.azure_cloud_region">bitmovin_api_sdk.models.azure_cloud_region module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.azure_input">bitmovin_api_sdk.models.azure_input module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.azure_output">bitmovin_api_sdk.models.azure_output module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.b_adapt">bitmovin_api_sdk.models.b_adapt module</a></li>
@@ -358,6 +361,10 @@
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.encoding_type">bitmovin_api_sdk.models.encoding_type module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.encryption_mode">bitmovin_api_sdk.models.encryption_mode module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.encryption_type">bitmovin_api_sdk.models.encryption_type module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.enhanced_deinterlace_auto_enable">bitmovin_api_sdk.models.enhanced_deinterlace_auto_enable module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.enhanced_deinterlace_filter">bitmovin_api_sdk.models.enhanced_deinterlace_filter module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.enhanced_deinterlace_mode">bitmovin_api_sdk.models.enhanced_deinterlace_mode module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.enhanced_deinterlace_parity">bitmovin_api_sdk.models.enhanced_deinterlace_parity module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.enhanced_watermark_filter">bitmovin_api_sdk.models.enhanced_watermark_filter module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.error_details">bitmovin_api_sdk.models.error_details module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.error_retry_hint">bitmovin_api_sdk.models.error_retry_hint module</a></li>
@@ -593,6 +600,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.smooth_manifest_default_version">bitmovin_api_sdk.models.smooth_manifest_default_version module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.smooth_streaming_manifest">bitmovin_api_sdk.models.smooth_streaming_manifest module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.smooth_streaming_representation">bitmovin_api_sdk.models.smooth_streaming_representation module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.smpte_timecode_flavor">bitmovin_api_sdk.models.smpte_timecode_flavor module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.source_channel">bitmovin_api_sdk.models.source_channel module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.source_channel_type">bitmovin_api_sdk.models.source_channel_type module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.speke_drm">bitmovin_api_sdk.models.speke_drm module</a></li>
@@ -10194,51 +10202,6 @@
 </dd></dl>
 
 <dl class="py method">
-<dt id="bitmovin_api_sdk.models.aws_account_region_settings.AwsAccountRegionSettings.machine_types">
-<em class="property">property </em><code class="sig-name descname">machine_types</code><a class="headerlink" href="#bitmovin_api_sdk.models.aws_account_region_settings.AwsAccountRegionSettings.machine_types" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the machine_types of this AwsAccountRegionSettings.</p>
-<p>Which machine types are allowed to be deployed. Leave empty for no machine type restrictions.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The machine_types of this AwsAccountRegionSettings.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>list[string_types]</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.aws_account_region_settings.AwsAccountRegionSettings.max_money_to_spend_per_month">
-<em class="property">property </em><code class="sig-name descname">max_money_to_spend_per_month</code><a class="headerlink" href="#bitmovin_api_sdk.models.aws_account_region_settings.AwsAccountRegionSettings.max_money_to_spend_per_month" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the max_money_to_spend_per_month of this AwsAccountRegionSettings.</p>
-<p>Limit the amount of money to spend in this region on this account. Leave empty for no limit.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The max_money_to_spend_per_month of this AwsAccountRegionSettings.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>float</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.aws_account_region_settings.AwsAccountRegionSettings.maximum_amount_of_coordinators_and_workers_in_region">
-<em class="property">property </em><code class="sig-name descname">maximum_amount_of_coordinators_and_workers_in_region</code><a class="headerlink" href="#bitmovin_api_sdk.models.aws_account_region_settings.AwsAccountRegionSettings.maximum_amount_of_coordinators_and_workers_in_region" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the maximum_amount_of_coordinators_and_workers_in_region of this AwsAccountRegionSettings.</p>
-<p>Maximum amount of encoding coordinators and workers allowed in this region at any time. Leave empty for no limit.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The maximum_amount_of_coordinators_and_workers_in_region of this AwsAccountRegionSettings.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>int</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
 <dt id="bitmovin_api_sdk.models.aws_account_region_settings.AwsAccountRegionSettings.openapi_types">
 <em class="property">property </em><code class="sig-name descname">openapi_types</code><a class="headerlink" href="#bitmovin_api_sdk.models.aws_account_region_settings.AwsAccountRegionSettings.openapi_types" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -10383,6 +10346,313 @@
 <dl class="py attribute">
 <dt id="bitmovin_api_sdk.models.aws_cloud_region.AwsCloudRegion.US_WEST_2">
 <code class="sig-name descname">US_WEST_2</code><em class="property"> = 'US_WEST_2'</em><a class="headerlink" href="#bitmovin_api_sdk.models.aws_cloud_region.AwsCloudRegion.US_WEST_2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-bitmovin_api_sdk.models.azure_account">
+<span id="bitmovin-api-sdk-models-azure-account-module"></span><h2>bitmovin_api_sdk.models.azure_account module<a class="headerlink" href="#module-bitmovin_api_sdk.models.azure_account" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="bitmovin_api_sdk.models.azure_account.AzureAccount">
+<em class="property">class </em><code class="sig-prename descclassname">bitmovin_api_sdk.models.azure_account.</code><code class="sig-name descname">AzureAccount</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/models/azure_account.html#AzureAccount"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.models.azure_account.AzureAccount" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bitmovin_api_sdk.models.bitmovin_resource.BitmovinResource" title="bitmovin_api_sdk.models.bitmovin_resource.BitmovinResource"><code class="xref py py-class docutils literal notranslate"><span class="pre">bitmovin_api_sdk.models.bitmovin_resource.BitmovinResource</span></code></a></p>
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.azure_account.AzureAccount.attribute_map">
+<em class="property">property </em><code class="sig-name descname">attribute_map</code><a class="headerlink" href="#bitmovin_api_sdk.models.azure_account.AzureAccount.attribute_map" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.azure_account.AzureAccount.openapi_types">
+<em class="property">property </em><code class="sig-name descname">openapi_types</code><a class="headerlink" href="#bitmovin_api_sdk.models.azure_account.AzureAccount.openapi_types" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.azure_account.AzureAccount.resource_group_id">
+<em class="property">property </em><code class="sig-name descname">resource_group_id</code><a class="headerlink" href="#bitmovin_api_sdk.models.azure_account.AzureAccount.resource_group_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the resource_group_id of this AzureAccount.</p>
+<p>The name of the resource group where you intend to run the Encoding VMs (required)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The resource_group_id of this AzureAccount.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>string_types</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.azure_account.AzureAccount.subscription_id">
+<em class="property">property </em><code class="sig-name descname">subscription_id</code><a class="headerlink" href="#bitmovin_api_sdk.models.azure_account.AzureAccount.subscription_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the subscription_id of this AzureAccount.</p>
+<p>Your Azure Subscription ID (The ID of your subscription where you intend to run the Encoding VMs) (required)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The subscription_id of this AzureAccount.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>string_types</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.azure_account.AzureAccount.tenant_id">
+<em class="property">property </em><code class="sig-name descname">tenant_id</code><a class="headerlink" href="#bitmovin_api_sdk.models.azure_account.AzureAccount.tenant_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the tenant_id of this AzureAccount.</p>
+<p>The ID of your Active Directory where your subscription runs in (required)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The tenant_id of this AzureAccount.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>string_types</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.azure_account.AzureAccount.to_dict">
+<code class="sig-name descname">to_dict</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/models/azure_account.html#AzureAccount.to_dict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.models.azure_account.AzureAccount.to_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the model properties as a dict</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.azure_account.AzureAccount.to_str">
+<code class="sig-name descname">to_str</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/models/azure_account.html#AzureAccount.to_str"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.models.azure_account.AzureAccount.to_str" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the string representation of the model</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-bitmovin_api_sdk.models.azure_account_region_settings">
+<span id="bitmovin-api-sdk-models-azure-account-region-settings-module"></span><h2>bitmovin_api_sdk.models.azure_account_region_settings module<a class="headerlink" href="#module-bitmovin_api_sdk.models.azure_account_region_settings" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="bitmovin_api_sdk.models.azure_account_region_settings.AzureAccountRegionSettings">
+<em class="property">class </em><code class="sig-prename descclassname">bitmovin_api_sdk.models.azure_account_region_settings.</code><code class="sig-name descname">AzureAccountRegionSettings</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/models/azure_account_region_settings.html#AzureAccountRegionSettings"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.models.azure_account_region_settings.AzureAccountRegionSettings" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bitmovin_api_sdk.models.bitmovin_resource.BitmovinResource" title="bitmovin_api_sdk.models.bitmovin_resource.BitmovinResource"><code class="xref py py-class docutils literal notranslate"><span class="pre">bitmovin_api_sdk.models.bitmovin_resource.BitmovinResource</span></code></a></p>
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.azure_account_region_settings.AzureAccountRegionSettings.attribute_map">
+<em class="property">property </em><code class="sig-name descname">attribute_map</code><a class="headerlink" href="#bitmovin_api_sdk.models.azure_account_region_settings.AzureAccountRegionSettings.attribute_map" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.azure_account_region_settings.AzureAccountRegionSettings.network_name">
+<em class="property">property </em><code class="sig-name descname">network_name</code><a class="headerlink" href="#bitmovin_api_sdk.models.azure_account_region_settings.AzureAccountRegionSettings.network_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the network_name of this AzureAccountRegionSettings.</p>
+<p>Name of the virtual network (required)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The network_name of this AzureAccountRegionSettings.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>string_types</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.azure_account_region_settings.AzureAccountRegionSettings.openapi_types">
+<em class="property">property </em><code class="sig-name descname">openapi_types</code><a class="headerlink" href="#bitmovin_api_sdk.models.azure_account_region_settings.AzureAccountRegionSettings.openapi_types" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.azure_account_region_settings.AzureAccountRegionSettings.subnet_name">
+<em class="property">property </em><code class="sig-name descname">subnet_name</code><a class="headerlink" href="#bitmovin_api_sdk.models.azure_account_region_settings.AzureAccountRegionSettings.subnet_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the subnet_name of this AzureAccountRegionSettings.</p>
+<p>Name of the subnet (required)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The subnet_name of this AzureAccountRegionSettings.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>string_types</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.azure_account_region_settings.AzureAccountRegionSettings.to_dict">
+<code class="sig-name descname">to_dict</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/models/azure_account_region_settings.html#AzureAccountRegionSettings.to_dict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.models.azure_account_region_settings.AzureAccountRegionSettings.to_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the model properties as a dict</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.azure_account_region_settings.AzureAccountRegionSettings.to_str">
+<code class="sig-name descname">to_str</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/models/azure_account_region_settings.html#AzureAccountRegionSettings.to_str"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.models.azure_account_region_settings.AzureAccountRegionSettings.to_str" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the string representation of the model</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-bitmovin_api_sdk.models.azure_cloud_region">
+<span id="bitmovin-api-sdk-models-azure-cloud-region-module"></span><h2>bitmovin_api_sdk.models.azure_cloud_region module<a class="headerlink" href="#module-bitmovin_api_sdk.models.azure_cloud_region" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="bitmovin_api_sdk.models.azure_cloud_region.AzureCloudRegion">
+<em class="property">class </em><code class="sig-prename descclassname">bitmovin_api_sdk.models.azure_cloud_region.</code><code class="sig-name descname">AzureCloudRegion</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/models/azure_cloud_region.html#AzureCloudRegion"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.models.azure_cloud_region.AzureCloudRegion" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<p>An enumeration.</p>
+<dl class="py attribute">
+<dt id="bitmovin_api_sdk.models.azure_cloud_region.AzureCloudRegion.ASIA_EAST">
+<code class="sig-name descname">ASIA_EAST</code><em class="property"> = 'ASIA_EAST'</em><a class="headerlink" href="#bitmovin_api_sdk.models.azure_cloud_region.AzureCloudRegion.ASIA_EAST" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="bitmovin_api_sdk.models.azure_cloud_region.AzureCloudRegion.ASIA_SOUTHEAST">
+<code class="sig-name descname">ASIA_SOUTHEAST</code><em class="property"> = 'ASIA_SOUTHEAST'</em><a class="headerlink" href="#bitmovin_api_sdk.models.azure_cloud_region.AzureCloudRegion.ASIA_SOUTHEAST" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="bitmovin_api_sdk.models.azure_cloud_region.AzureCloudRegion.AUSTRALIA_EAST">
+<code class="sig-name descname">AUSTRALIA_EAST</code><em class="property"> = 'AUSTRALIA_EAST'</em><a class="headerlink" href="#bitmovin_api_sdk.models.azure_cloud_region.AzureCloudRegion.AUSTRALIA_EAST" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="bitmovin_api_sdk.models.azure_cloud_region.AzureCloudRegion.AUSTRALIA_SOUTHEAST">
+<code class="sig-name descname">AUSTRALIA_SOUTHEAST</code><em class="property"> = 'AUSTRALIA_SOUTHEAST'</em><a class="headerlink" href="#bitmovin_api_sdk.models.azure_cloud_region.AzureCloudRegion.AUSTRALIA_SOUTHEAST" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="bitmovin_api_sdk.models.azure_cloud_region.AzureCloudRegion.BRAZIL_SOUTH">
+<code class="sig-name descname">BRAZIL_SOUTH</code><em class="property"> = 'BRAZIL_SOUTH'</em><a class="headerlink" href="#bitmovin_api_sdk.models.azure_cloud_region.AzureCloudRegion.BRAZIL_SOUTH" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="bitmovin_api_sdk.models.azure_cloud_region.AzureCloudRegion.CANADA_CENTRAL">
+<code class="sig-name descname">CANADA_CENTRAL</code><em class="property"> = 'CANADA_CENTRAL'</em><a class="headerlink" href="#bitmovin_api_sdk.models.azure_cloud_region.AzureCloudRegion.CANADA_CENTRAL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="bitmovin_api_sdk.models.azure_cloud_region.AzureCloudRegion.CANADA_EAST">
+<code class="sig-name descname">CANADA_EAST</code><em class="property"> = 'CANADA_EAST'</em><a class="headerlink" href="#bitmovin_api_sdk.models.azure_cloud_region.AzureCloudRegion.CANADA_EAST" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="bitmovin_api_sdk.models.azure_cloud_region.AzureCloudRegion.CHINA_EAST">
+<code class="sig-name descname">CHINA_EAST</code><em class="property"> = 'CHINA_EAST'</em><a class="headerlink" href="#bitmovin_api_sdk.models.azure_cloud_region.AzureCloudRegion.CHINA_EAST" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="bitmovin_api_sdk.models.azure_cloud_region.AzureCloudRegion.CHINA_NORTH">
+<code class="sig-name descname">CHINA_NORTH</code><em class="property"> = 'CHINA_NORTH'</em><a class="headerlink" href="#bitmovin_api_sdk.models.azure_cloud_region.AzureCloudRegion.CHINA_NORTH" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="bitmovin_api_sdk.models.azure_cloud_region.AzureCloudRegion.EUROPE_NORTH">
+<code class="sig-name descname">EUROPE_NORTH</code><em class="property"> = 'EUROPE_NORTH'</em><a class="headerlink" href="#bitmovin_api_sdk.models.azure_cloud_region.AzureCloudRegion.EUROPE_NORTH" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="bitmovin_api_sdk.models.azure_cloud_region.AzureCloudRegion.EUROPE_WEST">
+<code class="sig-name descname">EUROPE_WEST</code><em class="property"> = 'EUROPE_WEST'</em><a class="headerlink" href="#bitmovin_api_sdk.models.azure_cloud_region.AzureCloudRegion.EUROPE_WEST" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="bitmovin_api_sdk.models.azure_cloud_region.AzureCloudRegion.GERMANY_CENTRAL">
+<code class="sig-name descname">GERMANY_CENTRAL</code><em class="property"> = 'GERMANY_CENTRAL'</em><a class="headerlink" href="#bitmovin_api_sdk.models.azure_cloud_region.AzureCloudRegion.GERMANY_CENTRAL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="bitmovin_api_sdk.models.azure_cloud_region.AzureCloudRegion.GERMANY_NORTHEAST">
+<code class="sig-name descname">GERMANY_NORTHEAST</code><em class="property"> = 'GERMANY_NORTHEAST'</em><a class="headerlink" href="#bitmovin_api_sdk.models.azure_cloud_region.AzureCloudRegion.GERMANY_NORTHEAST" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="bitmovin_api_sdk.models.azure_cloud_region.AzureCloudRegion.GOV_US_IOWA">
+<code class="sig-name descname">GOV_US_IOWA</code><em class="property"> = 'GOV_US_IOWA'</em><a class="headerlink" href="#bitmovin_api_sdk.models.azure_cloud_region.AzureCloudRegion.GOV_US_IOWA" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="bitmovin_api_sdk.models.azure_cloud_region.AzureCloudRegion.GOV_US_VIRGINIA">
+<code class="sig-name descname">GOV_US_VIRGINIA</code><em class="property"> = 'GOV_US_VIRGINIA'</em><a class="headerlink" href="#bitmovin_api_sdk.models.azure_cloud_region.AzureCloudRegion.GOV_US_VIRGINIA" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="bitmovin_api_sdk.models.azure_cloud_region.AzureCloudRegion.INDIA_CENTRAL">
+<code class="sig-name descname">INDIA_CENTRAL</code><em class="property"> = 'INDIA_CENTRAL'</em><a class="headerlink" href="#bitmovin_api_sdk.models.azure_cloud_region.AzureCloudRegion.INDIA_CENTRAL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="bitmovin_api_sdk.models.azure_cloud_region.AzureCloudRegion.INDIA_SOUTH">
+<code class="sig-name descname">INDIA_SOUTH</code><em class="property"> = 'INDIA_SOUTH'</em><a class="headerlink" href="#bitmovin_api_sdk.models.azure_cloud_region.AzureCloudRegion.INDIA_SOUTH" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="bitmovin_api_sdk.models.azure_cloud_region.AzureCloudRegion.INDIA_WEST">
+<code class="sig-name descname">INDIA_WEST</code><em class="property"> = 'INDIA_WEST'</em><a class="headerlink" href="#bitmovin_api_sdk.models.azure_cloud_region.AzureCloudRegion.INDIA_WEST" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="bitmovin_api_sdk.models.azure_cloud_region.AzureCloudRegion.JAPAN_EAST">
+<code class="sig-name descname">JAPAN_EAST</code><em class="property"> = 'JAPAN_EAST'</em><a class="headerlink" href="#bitmovin_api_sdk.models.azure_cloud_region.AzureCloudRegion.JAPAN_EAST" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="bitmovin_api_sdk.models.azure_cloud_region.AzureCloudRegion.JAPAN_WEST">
+<code class="sig-name descname">JAPAN_WEST</code><em class="property"> = 'JAPAN_WEST'</em><a class="headerlink" href="#bitmovin_api_sdk.models.azure_cloud_region.AzureCloudRegion.JAPAN_WEST" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="bitmovin_api_sdk.models.azure_cloud_region.AzureCloudRegion.KOREA_CENTRAL">
+<code class="sig-name descname">KOREA_CENTRAL</code><em class="property"> = 'KOREA_CENTRAL'</em><a class="headerlink" href="#bitmovin_api_sdk.models.azure_cloud_region.AzureCloudRegion.KOREA_CENTRAL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="bitmovin_api_sdk.models.azure_cloud_region.AzureCloudRegion.KOREA_SOUTH">
+<code class="sig-name descname">KOREA_SOUTH</code><em class="property"> = 'KOREA_SOUTH'</em><a class="headerlink" href="#bitmovin_api_sdk.models.azure_cloud_region.AzureCloudRegion.KOREA_SOUTH" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="bitmovin_api_sdk.models.azure_cloud_region.AzureCloudRegion.UK_SOUTH">
+<code class="sig-name descname">UK_SOUTH</code><em class="property"> = 'UK_SOUTH'</em><a class="headerlink" href="#bitmovin_api_sdk.models.azure_cloud_region.AzureCloudRegion.UK_SOUTH" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="bitmovin_api_sdk.models.azure_cloud_region.AzureCloudRegion.UK_WEST">
+<code class="sig-name descname">UK_WEST</code><em class="property"> = 'UK_WEST'</em><a class="headerlink" href="#bitmovin_api_sdk.models.azure_cloud_region.AzureCloudRegion.UK_WEST" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="bitmovin_api_sdk.models.azure_cloud_region.AzureCloudRegion.US_CENTRAL">
+<code class="sig-name descname">US_CENTRAL</code><em class="property"> = 'US_CENTRAL'</em><a class="headerlink" href="#bitmovin_api_sdk.models.azure_cloud_region.AzureCloudRegion.US_CENTRAL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="bitmovin_api_sdk.models.azure_cloud_region.AzureCloudRegion.US_EAST">
+<code class="sig-name descname">US_EAST</code><em class="property"> = 'US_EAST'</em><a class="headerlink" href="#bitmovin_api_sdk.models.azure_cloud_region.AzureCloudRegion.US_EAST" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="bitmovin_api_sdk.models.azure_cloud_region.AzureCloudRegion.US_EAST2">
+<code class="sig-name descname">US_EAST2</code><em class="property"> = 'US_EAST2'</em><a class="headerlink" href="#bitmovin_api_sdk.models.azure_cloud_region.AzureCloudRegion.US_EAST2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="bitmovin_api_sdk.models.azure_cloud_region.AzureCloudRegion.US_NORTH_CENTRAL">
+<code class="sig-name descname">US_NORTH_CENTRAL</code><em class="property"> = 'US_NORTH_CENTRAL'</em><a class="headerlink" href="#bitmovin_api_sdk.models.azure_cloud_region.AzureCloudRegion.US_NORTH_CENTRAL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="bitmovin_api_sdk.models.azure_cloud_region.AzureCloudRegion.US_SOUTH_CENTRAL">
+<code class="sig-name descname">US_SOUTH_CENTRAL</code><em class="property"> = 'US_SOUTH_CENTRAL'</em><a class="headerlink" href="#bitmovin_api_sdk.models.azure_cloud_region.AzureCloudRegion.US_SOUTH_CENTRAL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="bitmovin_api_sdk.models.azure_cloud_region.AzureCloudRegion.US_WEST">
+<code class="sig-name descname">US_WEST</code><em class="property"> = 'US_WEST'</em><a class="headerlink" href="#bitmovin_api_sdk.models.azure_cloud_region.AzureCloudRegion.US_WEST" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="bitmovin_api_sdk.models.azure_cloud_region.AzureCloudRegion.US_WEST2">
+<code class="sig-name descname">US_WEST2</code><em class="property"> = 'US_WEST2'</em><a class="headerlink" href="#bitmovin_api_sdk.models.azure_cloud_region.AzureCloudRegion.US_WEST2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="bitmovin_api_sdk.models.azure_cloud_region.AzureCloudRegion.US_WEST_CENTRAL">
+<code class="sig-name descname">US_WEST_CENTRAL</code><em class="property"> = 'US_WEST_CENTRAL'</em><a class="headerlink" href="#bitmovin_api_sdk.models.azure_cloud_region.AzureCloudRegion.US_WEST_CENTRAL" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -11006,6 +11276,21 @@
 </dd>
 <dt class="field-even">Return type</dt>
 <dd class="field-even"><p><a class="reference internal" href="#bitmovin_api_sdk.models.encoding_mode.EncodingMode" title="bitmovin_api_sdk.models.encoding_mode.EncodingMode">EncodingMode</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.billable_encoding_minutes.BillableEncodingMinutes.enhanced_deinterlace">
+<em class="property">property </em><code class="sig-name descname">enhanced_deinterlace</code><a class="headerlink" href="#bitmovin_api_sdk.models.billable_encoding_minutes.BillableEncodingMinutes.enhanced_deinterlace" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the enhanced_deinterlace of this BillableEncodingMinutes.</p>
+<p>Indicates if an enhanced interlace filter was used.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The enhanced_deinterlace of this BillableEncodingMinutes.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>bool</p>
 </dd>
 </dl>
 </dd></dl>
@@ -21324,6 +21609,139 @@
 </dd></dl>
 
 </div>
+<div class="section" id="module-bitmovin_api_sdk.models.enhanced_deinterlace_auto_enable">
+<span id="bitmovin-api-sdk-models-enhanced-deinterlace-auto-enable-module"></span><h2>bitmovin_api_sdk.models.enhanced_deinterlace_auto_enable module<a class="headerlink" href="#module-bitmovin_api_sdk.models.enhanced_deinterlace_auto_enable" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="bitmovin_api_sdk.models.enhanced_deinterlace_auto_enable.EnhancedDeinterlaceAutoEnable">
+<em class="property">class </em><code class="sig-prename descclassname">bitmovin_api_sdk.models.enhanced_deinterlace_auto_enable.</code><code class="sig-name descname">EnhancedDeinterlaceAutoEnable</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/models/enhanced_deinterlace_auto_enable.html#EnhancedDeinterlaceAutoEnable"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.models.enhanced_deinterlace_auto_enable.EnhancedDeinterlaceAutoEnable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<p>An enumeration.</p>
+<dl class="py attribute">
+<dt id="bitmovin_api_sdk.models.enhanced_deinterlace_auto_enable.EnhancedDeinterlaceAutoEnable.ALWAYS_ON">
+<code class="sig-name descname">ALWAYS_ON</code><em class="property"> = 'ALWAYS_ON'</em><a class="headerlink" href="#bitmovin_api_sdk.models.enhanced_deinterlace_auto_enable.EnhancedDeinterlaceAutoEnable.ALWAYS_ON" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="bitmovin_api_sdk.models.enhanced_deinterlace_auto_enable.EnhancedDeinterlaceAutoEnable.META_DATA_BASED">
+<code class="sig-name descname">META_DATA_BASED</code><em class="property"> = 'META_DATA_BASED'</em><a class="headerlink" href="#bitmovin_api_sdk.models.enhanced_deinterlace_auto_enable.EnhancedDeinterlaceAutoEnable.META_DATA_BASED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-bitmovin_api_sdk.models.enhanced_deinterlace_filter">
+<span id="bitmovin-api-sdk-models-enhanced-deinterlace-filter-module"></span><h2>bitmovin_api_sdk.models.enhanced_deinterlace_filter module<a class="headerlink" href="#module-bitmovin_api_sdk.models.enhanced_deinterlace_filter" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="bitmovin_api_sdk.models.enhanced_deinterlace_filter.EnhancedDeinterlaceFilter">
+<em class="property">class </em><code class="sig-prename descclassname">bitmovin_api_sdk.models.enhanced_deinterlace_filter.</code><code class="sig-name descname">EnhancedDeinterlaceFilter</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/models/enhanced_deinterlace_filter.html#EnhancedDeinterlaceFilter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.models.enhanced_deinterlace_filter.EnhancedDeinterlaceFilter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bitmovin_api_sdk.models.filter.Filter" title="bitmovin_api_sdk.models.filter.Filter"><code class="xref py py-class docutils literal notranslate"><span class="pre">bitmovin_api_sdk.models.filter.Filter</span></code></a></p>
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.enhanced_deinterlace_filter.EnhancedDeinterlaceFilter.attribute_map">
+<em class="property">property </em><code class="sig-name descname">attribute_map</code><a class="headerlink" href="#bitmovin_api_sdk.models.enhanced_deinterlace_filter.EnhancedDeinterlaceFilter.attribute_map" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.enhanced_deinterlace_filter.EnhancedDeinterlaceFilter.auto_enable">
+<em class="property">property </em><code class="sig-name descname">auto_enable</code><a class="headerlink" href="#bitmovin_api_sdk.models.enhanced_deinterlace_filter.EnhancedDeinterlaceFilter.auto_enable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the auto_enable of this EnhancedDeinterlaceFilter.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The auto_enable of this EnhancedDeinterlaceFilter.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#bitmovin_api_sdk.models.enhanced_deinterlace_auto_enable.EnhancedDeinterlaceAutoEnable" title="bitmovin_api_sdk.models.enhanced_deinterlace_auto_enable.EnhancedDeinterlaceAutoEnable">EnhancedDeinterlaceAutoEnable</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.enhanced_deinterlace_filter.EnhancedDeinterlaceFilter.mode">
+<em class="property">property </em><code class="sig-name descname">mode</code><a class="headerlink" href="#bitmovin_api_sdk.models.enhanced_deinterlace_filter.EnhancedDeinterlaceFilter.mode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the mode of this EnhancedDeinterlaceFilter.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The mode of this EnhancedDeinterlaceFilter.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#bitmovin_api_sdk.models.enhanced_deinterlace_mode.EnhancedDeinterlaceMode" title="bitmovin_api_sdk.models.enhanced_deinterlace_mode.EnhancedDeinterlaceMode">EnhancedDeinterlaceMode</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.enhanced_deinterlace_filter.EnhancedDeinterlaceFilter.openapi_types">
+<em class="property">property </em><code class="sig-name descname">openapi_types</code><a class="headerlink" href="#bitmovin_api_sdk.models.enhanced_deinterlace_filter.EnhancedDeinterlaceFilter.openapi_types" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.enhanced_deinterlace_filter.EnhancedDeinterlaceFilter.parity">
+<em class="property">property </em><code class="sig-name descname">parity</code><a class="headerlink" href="#bitmovin_api_sdk.models.enhanced_deinterlace_filter.EnhancedDeinterlaceFilter.parity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the parity of this EnhancedDeinterlaceFilter.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The parity of this EnhancedDeinterlaceFilter.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#bitmovin_api_sdk.models.enhanced_deinterlace_parity.EnhancedDeinterlaceParity" title="bitmovin_api_sdk.models.enhanced_deinterlace_parity.EnhancedDeinterlaceParity">EnhancedDeinterlaceParity</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.enhanced_deinterlace_filter.EnhancedDeinterlaceFilter.to_dict">
+<code class="sig-name descname">to_dict</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/models/enhanced_deinterlace_filter.html#EnhancedDeinterlaceFilter.to_dict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.models.enhanced_deinterlace_filter.EnhancedDeinterlaceFilter.to_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the model properties as a dict</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.enhanced_deinterlace_filter.EnhancedDeinterlaceFilter.to_str">
+<code class="sig-name descname">to_str</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/models/enhanced_deinterlace_filter.html#EnhancedDeinterlaceFilter.to_str"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.models.enhanced_deinterlace_filter.EnhancedDeinterlaceFilter.to_str" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the string representation of the model</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-bitmovin_api_sdk.models.enhanced_deinterlace_mode">
+<span id="bitmovin-api-sdk-models-enhanced-deinterlace-mode-module"></span><h2>bitmovin_api_sdk.models.enhanced_deinterlace_mode module<a class="headerlink" href="#module-bitmovin_api_sdk.models.enhanced_deinterlace_mode" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="bitmovin_api_sdk.models.enhanced_deinterlace_mode.EnhancedDeinterlaceMode">
+<em class="property">class </em><code class="sig-prename descclassname">bitmovin_api_sdk.models.enhanced_deinterlace_mode.</code><code class="sig-name descname">EnhancedDeinterlaceMode</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/models/enhanced_deinterlace_mode.html#EnhancedDeinterlaceMode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.models.enhanced_deinterlace_mode.EnhancedDeinterlaceMode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<p>An enumeration.</p>
+<dl class="py attribute">
+<dt id="bitmovin_api_sdk.models.enhanced_deinterlace_mode.EnhancedDeinterlaceMode.FIELD">
+<code class="sig-name descname">FIELD</code><em class="property"> = 'FIELD'</em><a class="headerlink" href="#bitmovin_api_sdk.models.enhanced_deinterlace_mode.EnhancedDeinterlaceMode.FIELD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="bitmovin_api_sdk.models.enhanced_deinterlace_mode.EnhancedDeinterlaceMode.FRAME">
+<code class="sig-name descname">FRAME</code><em class="property"> = 'FRAME'</em><a class="headerlink" href="#bitmovin_api_sdk.models.enhanced_deinterlace_mode.EnhancedDeinterlaceMode.FRAME" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-bitmovin_api_sdk.models.enhanced_deinterlace_parity">
+<span id="bitmovin-api-sdk-models-enhanced-deinterlace-parity-module"></span><h2>bitmovin_api_sdk.models.enhanced_deinterlace_parity module<a class="headerlink" href="#module-bitmovin_api_sdk.models.enhanced_deinterlace_parity" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="bitmovin_api_sdk.models.enhanced_deinterlace_parity.EnhancedDeinterlaceParity">
+<em class="property">class </em><code class="sig-prename descclassname">bitmovin_api_sdk.models.enhanced_deinterlace_parity.</code><code class="sig-name descname">EnhancedDeinterlaceParity</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/models/enhanced_deinterlace_parity.html#EnhancedDeinterlaceParity"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.models.enhanced_deinterlace_parity.EnhancedDeinterlaceParity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<p>An enumeration.</p>
+<dl class="py attribute">
+<dt id="bitmovin_api_sdk.models.enhanced_deinterlace_parity.EnhancedDeinterlaceParity.BOTTOM_FIELD_FIRST">
+<code class="sig-name descname">BOTTOM_FIELD_FIRST</code><em class="property"> = 'BOTTOM_FIELD_FIRST'</em><a class="headerlink" href="#bitmovin_api_sdk.models.enhanced_deinterlace_parity.EnhancedDeinterlaceParity.BOTTOM_FIELD_FIRST" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="bitmovin_api_sdk.models.enhanced_deinterlace_parity.EnhancedDeinterlaceParity.TOP_FIELD_FIRST">
+<code class="sig-name descname">TOP_FIELD_FIRST</code><em class="property"> = 'TOP_FIELD_FIRST'</em><a class="headerlink" href="#bitmovin_api_sdk.models.enhanced_deinterlace_parity.EnhancedDeinterlaceParity.TOP_FIELD_FIRST" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
 <div class="section" id="module-bitmovin_api_sdk.models.enhanced_watermark_filter">
 <span id="bitmovin-api-sdk-models-enhanced-watermark-filter-module"></span><h2>bitmovin_api_sdk.models.enhanced_watermark_filter module<a class="headerlink" href="#module-bitmovin_api_sdk.models.enhanced_watermark_filter" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
@@ -21784,7 +22202,7 @@
 <dd><p>Bases: <a class="reference internal" href="#bitmovin_api_sdk.models.bitmovin_resource.BitmovinResource" title="bitmovin_api_sdk.models.bitmovin_resource.BitmovinResource"><code class="xref py py-class docutils literal notranslate"><span class="pre">bitmovin_api_sdk.models.bitmovin_resource.BitmovinResource</span></code></a></p>
 <dl class="py attribute">
 <dt id="bitmovin_api_sdk.models.filter.Filter.discriminator_value_class_map">
-<code class="sig-name descname">discriminator_value_class_map</code><em class="property"> = {'AUDIO_MIX': 'AudioMixFilter', 'AUDIO_VOLUME': 'AudioVolumeFilter', 'CONFORM': 'ConformFilter', 'CROP': 'CropFilter', 'DEINTERLACE': 'DeinterlaceFilter', 'DENOISE_HQDN3D': 'DenoiseHqdn3dFilter', 'EBU_R128_SINGLE_PASS': 'EbuR128SinglePassFilter', 'ENHANCED_WATERMARK': 'EnhancedWatermarkFilter', 'INTERLACE': 'InterlaceFilter', 'ROTATE': 'RotateFilter', 'SCALE': 'ScaleFilter', 'TEXT': 'TextFilter', 'UNSHARP': 'UnsharpFilter', 'WATERMARK': 'WatermarkFilter'}</em><a class="headerlink" href="#bitmovin_api_sdk.models.filter.Filter.discriminator_value_class_map" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">discriminator_value_class_map</code><em class="property"> = {'AUDIO_MIX': 'AudioMixFilter', 'AUDIO_VOLUME': 'AudioVolumeFilter', 'CONFORM': 'ConformFilter', 'CROP': 'CropFilter', 'DEINTERLACE': 'DeinterlaceFilter', 'DENOISE_HQDN3D': 'DenoiseHqdn3dFilter', 'EBU_R128_SINGLE_PASS': 'EbuR128SinglePassFilter', 'ENHANCED_DEINTERLACE': 'EnhancedDeinterlaceFilter', 'ENHANCED_WATERMARK': 'EnhancedWatermarkFilter', 'INTERLACE': 'InterlaceFilter', 'ROTATE': 'RotateFilter', 'SCALE': 'ScaleFilter', 'TEXT': 'TextFilter', 'UNSHARP': 'UnsharpFilter', 'WATERMARK': 'WatermarkFilter'}</em><a class="headerlink" href="#bitmovin_api_sdk.models.filter.Filter.discriminator_value_class_map" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -21842,6 +22260,11 @@
 <dl class="py attribute">
 <dt id="bitmovin_api_sdk.models.filter_type.FilterType.EBU_R128_SINGLE_PASS">
 <code class="sig-name descname">EBU_R128_SINGLE_PASS</code><em class="property"> = 'EBU_R128_SINGLE_PASS'</em><a class="headerlink" href="#bitmovin_api_sdk.models.filter_type.FilterType.EBU_R128_SINGLE_PASS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="bitmovin_api_sdk.models.filter_type.FilterType.ENHANCED_DEINTERLACE">
+<code class="sig-name descname">ENHANCED_DEINTERLACE</code><em class="property"> = 'ENHANCED_DEINTERLACE'</em><a class="headerlink" href="#bitmovin_api_sdk.models.filter_type.FilterType.ENHANCED_DEINTERLACE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
@@ -36696,7 +37119,7 @@
 <dt id="bitmovin_api_sdk.models.scc_caption.SccCaption.input">
 <em class="property">property </em><code class="sig-name descname">input</code><a class="headerlink" href="#bitmovin_api_sdk.models.scc_caption.SccCaption.input" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the input of this SccCaption.</p>
-<p>The input location to get the scc file from (required)</p>
+<p>Input location of the SCC file (required)</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>The input of this SccCaption.</p>
@@ -36711,6 +37134,20 @@
 <dt id="bitmovin_api_sdk.models.scc_caption.SccCaption.openapi_types">
 <em class="property">property </em><code class="sig-name descname">openapi_types</code><a class="headerlink" href="#bitmovin_api_sdk.models.scc_caption.SccCaption.openapi_types" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.scc_caption.SccCaption.smpte_timecode_flavor">
+<em class="property">property </em><code class="sig-name descname">smpte_timecode_flavor</code><a class="headerlink" href="#bitmovin_api_sdk.models.scc_caption.SccCaption.smpte_timecode_flavor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the smpte_timecode_flavor of this SccCaption.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The smpte_timecode_flavor of this SccCaption.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#bitmovin_api_sdk.models.smpte_timecode_flavor.SmpteTimecodeFlavor" title="bitmovin_api_sdk.models.smpte_timecode_flavor.SmpteTimecodeFlavor">SmpteTimecodeFlavor</a></p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt id="bitmovin_api_sdk.models.scc_caption.SccCaption.to_dict">
@@ -37822,6 +38259,31 @@
 </dd>
 </dl>
 </dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-bitmovin_api_sdk.models.smpte_timecode_flavor">
+<span id="bitmovin-api-sdk-models-smpte-timecode-flavor-module"></span><h2>bitmovin_api_sdk.models.smpte_timecode_flavor module<a class="headerlink" href="#module-bitmovin_api_sdk.models.smpte_timecode_flavor" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="bitmovin_api_sdk.models.smpte_timecode_flavor.SmpteTimecodeFlavor">
+<em class="property">class </em><code class="sig-prename descclassname">bitmovin_api_sdk.models.smpte_timecode_flavor.</code><code class="sig-name descname">SmpteTimecodeFlavor</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/models/smpte_timecode_flavor.html#SmpteTimecodeFlavor"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.models.smpte_timecode_flavor.SmpteTimecodeFlavor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<p>An enumeration.</p>
+<dl class="py attribute">
+<dt id="bitmovin_api_sdk.models.smpte_timecode_flavor.SmpteTimecodeFlavor.AUTO">
+<code class="sig-name descname">AUTO</code><em class="property"> = 'AUTO'</em><a class="headerlink" href="#bitmovin_api_sdk.models.smpte_timecode_flavor.SmpteTimecodeFlavor.AUTO" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="bitmovin_api_sdk.models.smpte_timecode_flavor.SmpteTimecodeFlavor.DROP_FRAME">
+<code class="sig-name descname">DROP_FRAME</code><em class="property"> = 'DROP_FRAME'</em><a class="headerlink" href="#bitmovin_api_sdk.models.smpte_timecode_flavor.SmpteTimecodeFlavor.DROP_FRAME" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="bitmovin_api_sdk.models.smpte_timecode_flavor.SmpteTimecodeFlavor.NON_DROP_FRAME">
+<code class="sig-name descname">NON_DROP_FRAME</code><em class="property"> = 'NON_DROP_FRAME'</em><a class="headerlink" href="#bitmovin_api_sdk.models.smpte_timecode_flavor.SmpteTimecodeFlavor.NON_DROP_FRAME" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 </dd></dl>
 
@@ -39992,6 +40454,36 @@
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>The encoding_mode_multiplicator of this StatisticsPerStream.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.statistics_per_stream.StatisticsPerStream.enhanced_deinterlace">
+<em class="property">property </em><code class="sig-name descname">enhanced_deinterlace</code><a class="headerlink" href="#bitmovin_api_sdk.models.statistics_per_stream.StatisticsPerStream.enhanced_deinterlace" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the enhanced_deinterlace of this StatisticsPerStream.</p>
+<p>Indicates if an enhanced interlace filter was used.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The enhanced_deinterlace of this StatisticsPerStream.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.statistics_per_stream.StatisticsPerStream.enhanced_deinterlace_multiplicator">
+<em class="property">property </em><code class="sig-name descname">enhanced_deinterlace_multiplicator</code><a class="headerlink" href="#bitmovin_api_sdk.models.statistics_per_stream.StatisticsPerStream.enhanced_deinterlace_multiplicator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the enhanced_deinterlace_multiplicator of this StatisticsPerStream.</p>
+<p>The output minutes multiplicator for streams using an enhanced deinterlace filter.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The enhanced_deinterlace_multiplicator of this StatisticsPerStream.</p>
 </dd>
 <dt class="field-even">Return type</dt>
 <dd class="field-even"><p>float</p>

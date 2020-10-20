@@ -41,8 +41,10 @@ class StatisticsPerStream(object):
                  preset_multiplicator=None,
                  live=None,
                  live_multiplicator=None,
+                 enhanced_deinterlace=None,
+                 enhanced_deinterlace_multiplicator=None,
                  input_factor=None):
-        # type: (string_types, string_types, float, int, float, float, int, int, float, int, CodecConfigType, StatisticsResolution, EncodingMode, float, StatisticsPerTitleStream, float, PsnrPerStreamMode, float, DolbyVisionPerStreamMode, float, string_types, float, bool, float, InputFactor) -> None
+        # type: (string_types, string_types, float, int, float, float, int, int, float, int, CodecConfigType, StatisticsResolution, EncodingMode, float, StatisticsPerTitleStream, float, PsnrPerStreamMode, float, DolbyVisionPerStreamMode, float, string_types, float, bool, float, bool, float, InputFactor) -> None
 
         self._stream_id = None
         self._codec_config_id = None
@@ -68,6 +70,8 @@ class StatisticsPerStream(object):
         self._preset_multiplicator = None
         self._live = None
         self._live_multiplicator = None
+        self._enhanced_deinterlace = None
+        self._enhanced_deinterlace_multiplicator = None
         self._input_factor = None
         self.discriminator = None
 
@@ -119,6 +123,10 @@ class StatisticsPerStream(object):
             self.live = live
         if live_multiplicator is not None:
             self.live_multiplicator = live_multiplicator
+        if enhanced_deinterlace is not None:
+            self.enhanced_deinterlace = enhanced_deinterlace
+        if enhanced_deinterlace_multiplicator is not None:
+            self.enhanced_deinterlace_multiplicator = enhanced_deinterlace_multiplicator
         if input_factor is not None:
             self.input_factor = input_factor
 
@@ -149,6 +157,8 @@ class StatisticsPerStream(object):
             'preset_multiplicator': 'float',
             'live': 'bool',
             'live_multiplicator': 'float',
+            'enhanced_deinterlace': 'bool',
+            'enhanced_deinterlace_multiplicator': 'float',
             'input_factor': 'InputFactor'
         }
 
@@ -181,6 +191,8 @@ class StatisticsPerStream(object):
             'preset_multiplicator': 'presetMultiplicator',
             'live': 'live',
             'live_multiplicator': 'liveMultiplicator',
+            'enhanced_deinterlace': 'enhancedDeinterlace',
+            'enhanced_deinterlace_multiplicator': 'enhancedDeinterlaceMultiplicator',
             'input_factor': 'inputFactor'
         }
         return attributes
@@ -868,6 +880,64 @@ class StatisticsPerStream(object):
                 raise TypeError("Invalid type for `live_multiplicator`, type has to be `float`")
 
         self._live_multiplicator = live_multiplicator
+
+    @property
+    def enhanced_deinterlace(self):
+        # type: () -> bool
+        """Gets the enhanced_deinterlace of this StatisticsPerStream.
+
+        Indicates if an enhanced interlace filter was used.
+
+        :return: The enhanced_deinterlace of this StatisticsPerStream.
+        :rtype: bool
+        """
+        return self._enhanced_deinterlace
+
+    @enhanced_deinterlace.setter
+    def enhanced_deinterlace(self, enhanced_deinterlace):
+        # type: (bool) -> None
+        """Sets the enhanced_deinterlace of this StatisticsPerStream.
+
+        Indicates if an enhanced interlace filter was used.
+
+        :param enhanced_deinterlace: The enhanced_deinterlace of this StatisticsPerStream.
+        :type: bool
+        """
+
+        if enhanced_deinterlace is not None:
+            if not isinstance(enhanced_deinterlace, bool):
+                raise TypeError("Invalid type for `enhanced_deinterlace`, type has to be `bool`")
+
+        self._enhanced_deinterlace = enhanced_deinterlace
+
+    @property
+    def enhanced_deinterlace_multiplicator(self):
+        # type: () -> float
+        """Gets the enhanced_deinterlace_multiplicator of this StatisticsPerStream.
+
+        The output minutes multiplicator for streams using an enhanced deinterlace filter.
+
+        :return: The enhanced_deinterlace_multiplicator of this StatisticsPerStream.
+        :rtype: float
+        """
+        return self._enhanced_deinterlace_multiplicator
+
+    @enhanced_deinterlace_multiplicator.setter
+    def enhanced_deinterlace_multiplicator(self, enhanced_deinterlace_multiplicator):
+        # type: (float) -> None
+        """Sets the enhanced_deinterlace_multiplicator of this StatisticsPerStream.
+
+        The output minutes multiplicator for streams using an enhanced deinterlace filter.
+
+        :param enhanced_deinterlace_multiplicator: The enhanced_deinterlace_multiplicator of this StatisticsPerStream.
+        :type: float
+        """
+
+        if enhanced_deinterlace_multiplicator is not None:
+            if not isinstance(enhanced_deinterlace_multiplicator, (float, int)):
+                raise TypeError("Invalid type for `enhanced_deinterlace_multiplicator`, type has to be `float`")
+
+        self._enhanced_deinterlace_multiplicator = enhanced_deinterlace_multiplicator
 
     @property
     def input_factor(self):

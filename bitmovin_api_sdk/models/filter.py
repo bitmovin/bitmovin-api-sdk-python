@@ -16,6 +16,7 @@ class Filter(BitmovinResource):
         'ENHANCED_WATERMARK': 'EnhancedWatermarkFilter',
         'ROTATE': 'RotateFilter',
         'DEINTERLACE': 'DeinterlaceFilter',
+        'ENHANCED_DEINTERLACE': 'EnhancedDeinterlaceFilter',
         'AUDIO_MIX': 'AudioMixFilter',
         'DENOISE_HQDN3D': 'DenoiseHqdn3dFilter',
         'TEXT': 'TextFilter',

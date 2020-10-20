@@ -197,8 +197,10 @@
                  <span class="n">preset_multiplicator</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">live</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">live_multiplicator</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">enhanced_deinterlace</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">enhanced_deinterlace_multiplicator</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">input_factor</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (string_types, string_types, float, int, float, float, int, int, float, int, CodecConfigType, StatisticsResolution, EncodingMode, float, StatisticsPerTitleStream, float, PsnrPerStreamMode, float, DolbyVisionPerStreamMode, float, string_types, float, bool, float, InputFactor) -&gt; None</span>
+        <span class="c1"># type: (string_types, string_types, float, int, float, float, int, int, float, int, CodecConfigType, StatisticsResolution, EncodingMode, float, StatisticsPerTitleStream, float, PsnrPerStreamMode, float, DolbyVisionPerStreamMode, float, string_types, float, bool, float, bool, float, InputFactor) -&gt; None</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_stream_id</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_codec_config_id</span> <span class="o">=</span> <span class="kc">None</span>
@@ -224,6 +226,8 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_preset_multiplicator</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_live</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_live_multiplicator</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_enhanced_deinterlace</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_enhanced_deinterlace_multiplicator</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_input_factor</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>
 
@@ -275,6 +279,10 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">live</span> <span class="o">=</span> <span class="n">live</span>
         <span class="k">if</span> <span class="n">live_multiplicator</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">live_multiplicator</span> <span class="o">=</span> <span class="n">live_multiplicator</span>
+        <span class="k">if</span> <span class="n">enhanced_deinterlace</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">enhanced_deinterlace</span> <span class="o">=</span> <span class="n">enhanced_deinterlace</span>
+        <span class="k">if</span> <span class="n">enhanced_deinterlace_multiplicator</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">enhanced_deinterlace_multiplicator</span> <span class="o">=</span> <span class="n">enhanced_deinterlace_multiplicator</span>
         <span class="k">if</span> <span class="n">input_factor</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">input_factor</span> <span class="o">=</span> <span class="n">input_factor</span>
 
@@ -305,6 +313,8 @@
             <span class="s1">&#39;preset_multiplicator&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span><span class="p">,</span>
             <span class="s1">&#39;live&#39;</span><span class="p">:</span> <span class="s1">&#39;bool&#39;</span><span class="p">,</span>
             <span class="s1">&#39;live_multiplicator&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;enhanced_deinterlace&#39;</span><span class="p">:</span> <span class="s1">&#39;bool&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;enhanced_deinterlace_multiplicator&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span><span class="p">,</span>
             <span class="s1">&#39;input_factor&#39;</span><span class="p">:</span> <span class="s1">&#39;InputFactor&#39;</span>
         <span class="p">}</span>
 
@@ -337,6 +347,8 @@
             <span class="s1">&#39;preset_multiplicator&#39;</span><span class="p">:</span> <span class="s1">&#39;presetMultiplicator&#39;</span><span class="p">,</span>
             <span class="s1">&#39;live&#39;</span><span class="p">:</span> <span class="s1">&#39;live&#39;</span><span class="p">,</span>
             <span class="s1">&#39;live_multiplicator&#39;</span><span class="p">:</span> <span class="s1">&#39;liveMultiplicator&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;enhanced_deinterlace&#39;</span><span class="p">:</span> <span class="s1">&#39;enhancedDeinterlace&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;enhanced_deinterlace_multiplicator&#39;</span><span class="p">:</span> <span class="s1">&#39;enhancedDeinterlaceMultiplicator&#39;</span><span class="p">,</span>
             <span class="s1">&#39;input_factor&#39;</span><span class="p">:</span> <span class="s1">&#39;inputFactor&#39;</span>
         <span class="p">}</span>
         <span class="k">return</span> <span class="n">attributes</span>
@@ -1024,6 +1036,64 @@
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `live_multiplicator`, type has to be `float`&quot;</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_live_multiplicator</span> <span class="o">=</span> <span class="n">live_multiplicator</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">enhanced_deinterlace</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; bool</span>
+        <span class="sd">&quot;&quot;&quot;Gets the enhanced_deinterlace of this StatisticsPerStream.</span>
+
+<span class="sd">        Indicates if an enhanced interlace filter was used.</span>
+
+<span class="sd">        :return: The enhanced_deinterlace of this StatisticsPerStream.</span>
+<span class="sd">        :rtype: bool</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_enhanced_deinterlace</span>
+
+    <span class="nd">@enhanced_deinterlace</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">enhanced_deinterlace</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">enhanced_deinterlace</span><span class="p">):</span>
+        <span class="c1"># type: (bool) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the enhanced_deinterlace of this StatisticsPerStream.</span>
+
+<span class="sd">        Indicates if an enhanced interlace filter was used.</span>
+
+<span class="sd">        :param enhanced_deinterlace: The enhanced_deinterlace of this StatisticsPerStream.</span>
+<span class="sd">        :type: bool</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">enhanced_deinterlace</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">enhanced_deinterlace</span><span class="p">,</span> <span class="nb">bool</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `enhanced_deinterlace`, type has to be `bool`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_enhanced_deinterlace</span> <span class="o">=</span> <span class="n">enhanced_deinterlace</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">enhanced_deinterlace_multiplicator</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; float</span>
+        <span class="sd">&quot;&quot;&quot;Gets the enhanced_deinterlace_multiplicator of this StatisticsPerStream.</span>
+
+<span class="sd">        The output minutes multiplicator for streams using an enhanced deinterlace filter.</span>
+
+<span class="sd">        :return: The enhanced_deinterlace_multiplicator of this StatisticsPerStream.</span>
+<span class="sd">        :rtype: float</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_enhanced_deinterlace_multiplicator</span>
+
+    <span class="nd">@enhanced_deinterlace_multiplicator</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">enhanced_deinterlace_multiplicator</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">enhanced_deinterlace_multiplicator</span><span class="p">):</span>
+        <span class="c1"># type: (float) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the enhanced_deinterlace_multiplicator of this StatisticsPerStream.</span>
+
+<span class="sd">        The output minutes multiplicator for streams using an enhanced deinterlace filter.</span>
+
+<span class="sd">        :param enhanced_deinterlace_multiplicator: The enhanced_deinterlace_multiplicator of this StatisticsPerStream.</span>
+<span class="sd">        :type: float</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">enhanced_deinterlace_multiplicator</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">enhanced_deinterlace_multiplicator</span><span class="p">,</span> <span class="p">(</span><span class="nb">float</span><span class="p">,</span> <span class="nb">int</span><span class="p">)):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `enhanced_deinterlace_multiplicator`, type has to be `float`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_enhanced_deinterlace_multiplicator</span> <span class="o">=</span> <span class="n">enhanced_deinterlace_multiplicator</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">input_factor</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>

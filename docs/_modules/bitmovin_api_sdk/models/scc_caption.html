@@ -161,6 +161,7 @@
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.common.poscheck</span> <span class="kn">import</span> <span class="n">poscheck_model</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.bitmovin_resource</span> <span class="kn">import</span> <span class="n">BitmovinResource</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.input_path</span> <span class="kn">import</span> <span class="n">InputPath</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.smpte_timecode_flavor</span> <span class="kn">import</span> <span class="n">SmpteTimecodeFlavor</span>
 <span class="kn">import</span> <span class="nn">pprint</span>
 <span class="kn">import</span> <span class="nn">six</span>
 
@@ -174,15 +175,19 @@
                  <span class="n">created_at</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">modified_at</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">custom_data</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                 <span class="n">input_</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (string_types, string_types, string_types, datetime, datetime, dict, InputPath) -&gt; None</span>
+                 <span class="n">input_</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">smpte_timecode_flavor</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="c1"># type: (string_types, string_types, string_types, datetime, datetime, dict, InputPath, SmpteTimecodeFlavor) -&gt; None</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">SccCaption</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">id_</span><span class="o">=</span><span class="n">id_</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="n">description</span><span class="p">,</span> <span class="n">created_at</span><span class="o">=</span><span class="n">created_at</span><span class="p">,</span> <span class="n">modified_at</span><span class="o">=</span><span class="n">modified_at</span><span class="p">,</span> <span class="n">custom_data</span><span class="o">=</span><span class="n">custom_data</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_input</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_smpte_timecode_flavor</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>
 
         <span class="k">if</span> <span class="n">input_</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">input</span> <span class="o">=</span> <span class="n">input_</span>
+        <span class="k">if</span> <span class="n">smpte_timecode_flavor</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">smpte_timecode_flavor</span> <span class="o">=</span> <span class="n">smpte_timecode_flavor</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -192,7 +197,8 @@
             <span class="n">types</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="nb">super</span><span class="p">(</span><span class="n">SccCaption</span><span class="p">,</span> <span class="bp">self</span><span class="p">),</span> <span class="s1">&#39;openapi_types&#39;</span><span class="p">)</span>
 
         <span class="n">types</span><span class="o">.</span><span class="n">update</span><span class="p">({</span>
-            <span class="s1">&#39;input&#39;</span><span class="p">:</span> <span class="s1">&#39;InputPath&#39;</span>
+            <span class="s1">&#39;input&#39;</span><span class="p">:</span> <span class="s1">&#39;InputPath&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;smpte_timecode_flavor&#39;</span><span class="p">:</span> <span class="s1">&#39;SmpteTimecodeFlavor&#39;</span>
         <span class="p">})</span>
 
         <span class="k">return</span> <span class="n">types</span>
@@ -205,7 +211,8 @@
             <span class="n">attributes</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="nb">super</span><span class="p">(</span><span class="n">SccCaption</span><span class="p">,</span> <span class="bp">self</span><span class="p">),</span> <span class="s1">&#39;attribute_map&#39;</span><span class="p">)</span>
 
         <span class="n">attributes</span><span class="o">.</span><span class="n">update</span><span class="p">({</span>
-            <span class="s1">&#39;input&#39;</span><span class="p">:</span> <span class="s1">&#39;input&#39;</span>
+            <span class="s1">&#39;input&#39;</span><span class="p">:</span> <span class="s1">&#39;input&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;smpte_timecode_flavor&#39;</span><span class="p">:</span> <span class="s1">&#39;smpteTimecodeFlavor&#39;</span>
         <span class="p">})</span>
         <span class="k">return</span> <span class="n">attributes</span>
 
@@ -214,7 +221,7 @@
         <span class="c1"># type: () -&gt; InputPath</span>
         <span class="sd">&quot;&quot;&quot;Gets the input of this SccCaption.</span>
 
-<span class="sd">        The input location to get the scc file from (required)</span>
+<span class="sd">        Input location of the SCC file (required)</span>
 
 <span class="sd">        :return: The input of this SccCaption.</span>
 <span class="sd">        :rtype: InputPath</span>
@@ -226,7 +233,7 @@
         <span class="c1"># type: (InputPath) -&gt; None</span>
         <span class="sd">&quot;&quot;&quot;Sets the input of this SccCaption.</span>
 
-<span class="sd">        The input location to get the scc file from (required)</span>
+<span class="sd">        Input location of the SCC file (required)</span>
 
 <span class="sd">        :param input_: The input of this SccCaption.</span>
 <span class="sd">        :type: InputPath</span>
@@ -237,6 +244,33 @@
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `input`, type has to be `InputPath`&quot;</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_input</span> <span class="o">=</span> <span class="n">input_</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">smpte_timecode_flavor</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; SmpteTimecodeFlavor</span>
+        <span class="sd">&quot;&quot;&quot;Gets the smpte_timecode_flavor of this SccCaption.</span>
+
+
+<span class="sd">        :return: The smpte_timecode_flavor of this SccCaption.</span>
+<span class="sd">        :rtype: SmpteTimecodeFlavor</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_smpte_timecode_flavor</span>
+
+    <span class="nd">@smpte_timecode_flavor</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">smpte_timecode_flavor</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">smpte_timecode_flavor</span><span class="p">):</span>
+        <span class="c1"># type: (SmpteTimecodeFlavor) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the smpte_timecode_flavor of this SccCaption.</span>
+
+
+<span class="sd">        :param smpte_timecode_flavor: The smpte_timecode_flavor of this SccCaption.</span>
+<span class="sd">        :type: SmpteTimecodeFlavor</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">smpte_timecode_flavor</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">smpte_timecode_flavor</span><span class="p">,</span> <span class="n">SmpteTimecodeFlavor</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `smpte_timecode_flavor`, type has to be `SmpteTimecodeFlavor`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_smpte_timecode_flavor</span> <span class="o">=</span> <span class="n">smpte_timecode_flavor</span>
 
 <div class="viewcode-block" id="SccCaption.to_dict"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.scc_caption.SccCaption.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>

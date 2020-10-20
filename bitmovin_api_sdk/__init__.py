@@ -349,6 +349,10 @@ from bitmovin_api_sdk.encoding.filters.deinterlace.deinterlace_api import Deinte
 from bitmovin_api_sdk.encoding.filters.deinterlace.deinterlace_api import DeinterlaceFilterListQueryParams
 from bitmovin_api_sdk.encoding.filters.deinterlace.customdata.customdata_api import CustomdataApi
 
+from bitmovin_api_sdk.encoding.filters.enhanced_deinterlace.enhanced_deinterlace_api import EnhancedDeinterlaceApi
+from bitmovin_api_sdk.encoding.filters.enhanced_deinterlace.enhanced_deinterlace_api import EnhancedDeinterlaceFilterListQueryParams
+from bitmovin_api_sdk.encoding.filters.enhanced_deinterlace.customdata.customdata_api import CustomdataApi
+
 from bitmovin_api_sdk.encoding.filters.audio_mix.audio_mix_api import AudioMixApi
 from bitmovin_api_sdk.encoding.filters.audio_mix.audio_mix_api import AudioMixFilterListQueryParams
 from bitmovin_api_sdk.encoding.filters.audio_mix.customdata.customdata_api import CustomdataApi
@@ -797,6 +801,10 @@ from bitmovin_api_sdk.encoding.infrastructure.aws.aws_api import AwsApi
 from bitmovin_api_sdk.encoding.infrastructure.aws.aws_api import AwsAccountListQueryParams
 from bitmovin_api_sdk.encoding.infrastructure.aws.regions.regions_api import RegionsApi
 from bitmovin_api_sdk.encoding.infrastructure.aws.regions.regions_api import AwsAccountRegionSettingsListQueryParams
+from bitmovin_api_sdk.encoding.infrastructure.azure.azure_api import AzureApi
+from bitmovin_api_sdk.encoding.infrastructure.azure.azure_api import AzureAccountListQueryParams
+from bitmovin_api_sdk.encoding.infrastructure.azure.regions.regions_api import RegionsApi
+from bitmovin_api_sdk.encoding.infrastructure.azure.regions.regions_api import AzureAccountRegionSettingsListQueryParams
 from bitmovin_api_sdk.encoding.infrastructure.gce.gce_api import GceApi
 from bitmovin_api_sdk.encoding.infrastructure.gce.gce_api import GceAccountListQueryParams
 from bitmovin_api_sdk.encoding.infrastructure.gce.regions.regions_api import RegionsApi
@@ -1031,6 +1039,9 @@ from bitmovin_api_sdk.models.availability_start_time_mode import AvailabilitySta
 from bitmovin_api_sdk.models.aws_account import AwsAccount
 from bitmovin_api_sdk.models.aws_account_region_settings import AwsAccountRegionSettings
 from bitmovin_api_sdk.models.aws_cloud_region import AwsCloudRegion
+from bitmovin_api_sdk.models.azure_account import AzureAccount
+from bitmovin_api_sdk.models.azure_account_region_settings import AzureAccountRegionSettings
+from bitmovin_api_sdk.models.azure_cloud_region import AzureCloudRegion
 from bitmovin_api_sdk.models.azure_input import AzureInput
 from bitmovin_api_sdk.models.azure_output import AzureOutput
 from bitmovin_api_sdk.models.b_adapt import BAdapt
@@ -1171,6 +1182,10 @@ from bitmovin_api_sdk.models.encoding_stream_input_details import EncodingStream
 from bitmovin_api_sdk.models.encoding_type import EncodingType
 from bitmovin_api_sdk.models.encryption_mode import EncryptionMode
 from bitmovin_api_sdk.models.encryption_type import EncryptionType
+from bitmovin_api_sdk.models.enhanced_deinterlace_auto_enable import EnhancedDeinterlaceAutoEnable
+from bitmovin_api_sdk.models.enhanced_deinterlace_filter import EnhancedDeinterlaceFilter
+from bitmovin_api_sdk.models.enhanced_deinterlace_mode import EnhancedDeinterlaceMode
+from bitmovin_api_sdk.models.enhanced_deinterlace_parity import EnhancedDeinterlaceParity
 from bitmovin_api_sdk.models.enhanced_watermark_filter import EnhancedWatermarkFilter
 from bitmovin_api_sdk.models.error_details import ErrorDetails
 from bitmovin_api_sdk.models.error_retry_hint import ErrorRetryHint
@@ -1406,6 +1421,7 @@ from bitmovin_api_sdk.models.smooth_manifest_default import SmoothManifestDefaul
 from bitmovin_api_sdk.models.smooth_manifest_default_version import SmoothManifestDefaultVersion
 from bitmovin_api_sdk.models.smooth_streaming_manifest import SmoothStreamingManifest
 from bitmovin_api_sdk.models.smooth_streaming_representation import SmoothStreamingRepresentation
+from bitmovin_api_sdk.models.smpte_timecode_flavor import SmpteTimecodeFlavor
 from bitmovin_api_sdk.models.source_channel import SourceChannel
 from bitmovin_api_sdk.models.source_channel_type import SourceChannelType
 from bitmovin_api_sdk.models.speke_drm import SpekeDrm
@@ -1513,4 +1529,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.50.0"
+__version__ = "1.51.0"

@@ -1004,6 +1004,30 @@ bitmovin\_api\_sdk.models.aws\_cloud\_region module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.azure\_account module
+-----------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.azure_account
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.azure\_account\_region\_settings module
+-----------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.azure_account_region_settings
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.azure\_cloud\_region module
+-----------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.azure_cloud_region
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.azure\_input module
 ---------------------------------------------
 
@@ -2120,6 +2144,38 @@ bitmovin\_api\_sdk.models.encryption\_type module
 -------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.models.encryption_type
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.enhanced\_deinterlace\_auto\_enable module
+--------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.enhanced_deinterlace_auto_enable
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.enhanced\_deinterlace\_filter module
+--------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.enhanced_deinterlace_filter
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.enhanced\_deinterlace\_mode module
+------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.enhanced_deinterlace_mode
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.enhanced\_deinterlace\_parity module
+--------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.enhanced_deinterlace_parity
    :members:
    :undoc-members:
    :show-inheritance:
@@ -4000,6 +4056,14 @@ bitmovin\_api\_sdk.models.smooth\_streaming\_representation module
 ------------------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.models.smooth_streaming_representation
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.smpte\_timecode\_flavor module
+--------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.smpte_timecode_flavor
    :members:
    :undoc-members:
    :show-inheritance:

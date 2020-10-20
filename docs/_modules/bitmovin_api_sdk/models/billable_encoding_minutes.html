@@ -177,8 +177,9 @@
                  <span class="n">psnr_mode</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">preset</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">live</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">enhanced_deinterlace</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">billable_minutes</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (EncodingMode, CodecConfigType, StatisticsPerTitleStream, PsnrPerStreamMode, string_types, bool, BillableEncodingMinutesDetails) -&gt; None</span>
+        <span class="c1"># type: (EncodingMode, CodecConfigType, StatisticsPerTitleStream, PsnrPerStreamMode, string_types, bool, bool, BillableEncodingMinutesDetails) -&gt; None</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_encoding_mode</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_codec</span> <span class="o">=</span> <span class="kc">None</span>
@@ -186,6 +187,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_psnr_mode</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_preset</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_live</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_enhanced_deinterlace</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_billable_minutes</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>
 
@@ -201,6 +203,8 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">preset</span> <span class="o">=</span> <span class="n">preset</span>
         <span class="k">if</span> <span class="n">live</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">live</span> <span class="o">=</span> <span class="n">live</span>
+        <span class="k">if</span> <span class="n">enhanced_deinterlace</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">enhanced_deinterlace</span> <span class="o">=</span> <span class="n">enhanced_deinterlace</span>
         <span class="k">if</span> <span class="n">billable_minutes</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">billable_minutes</span> <span class="o">=</span> <span class="n">billable_minutes</span>
 
@@ -213,6 +217,7 @@
             <span class="s1">&#39;psnr_mode&#39;</span><span class="p">:</span> <span class="s1">&#39;PsnrPerStreamMode&#39;</span><span class="p">,</span>
             <span class="s1">&#39;preset&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
             <span class="s1">&#39;live&#39;</span><span class="p">:</span> <span class="s1">&#39;bool&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;enhanced_deinterlace&#39;</span><span class="p">:</span> <span class="s1">&#39;bool&#39;</span><span class="p">,</span>
             <span class="s1">&#39;billable_minutes&#39;</span><span class="p">:</span> <span class="s1">&#39;BillableEncodingMinutesDetails&#39;</span>
         <span class="p">}</span>
 
@@ -227,6 +232,7 @@
             <span class="s1">&#39;psnr_mode&#39;</span><span class="p">:</span> <span class="s1">&#39;psnrMode&#39;</span><span class="p">,</span>
             <span class="s1">&#39;preset&#39;</span><span class="p">:</span> <span class="s1">&#39;preset&#39;</span><span class="p">,</span>
             <span class="s1">&#39;live&#39;</span><span class="p">:</span> <span class="s1">&#39;live&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;enhanced_deinterlace&#39;</span><span class="p">:</span> <span class="s1">&#39;enhancedDeinterlace&#39;</span><span class="p">,</span>
             <span class="s1">&#39;billable_minutes&#39;</span><span class="p">:</span> <span class="s1">&#39;billableMinutes&#39;</span>
         <span class="p">}</span>
         <span class="k">return</span> <span class="n">attributes</span>
@@ -396,6 +402,35 @@
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `live`, type has to be `bool`&quot;</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_live</span> <span class="o">=</span> <span class="n">live</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">enhanced_deinterlace</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; bool</span>
+        <span class="sd">&quot;&quot;&quot;Gets the enhanced_deinterlace of this BillableEncodingMinutes.</span>
+
+<span class="sd">        Indicates if an enhanced interlace filter was used.</span>
+
+<span class="sd">        :return: The enhanced_deinterlace of this BillableEncodingMinutes.</span>
+<span class="sd">        :rtype: bool</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_enhanced_deinterlace</span>
+
+    <span class="nd">@enhanced_deinterlace</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">enhanced_deinterlace</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">enhanced_deinterlace</span><span class="p">):</span>
+        <span class="c1"># type: (bool) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the enhanced_deinterlace of this BillableEncodingMinutes.</span>
+
+<span class="sd">        Indicates if an enhanced interlace filter was used.</span>
+
+<span class="sd">        :param enhanced_deinterlace: The enhanced_deinterlace of this BillableEncodingMinutes.</span>
+<span class="sd">        :type: bool</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">enhanced_deinterlace</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">enhanced_deinterlace</span><span class="p">,</span> <span class="nb">bool</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `enhanced_deinterlace`, type has to be `bool`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_enhanced_deinterlace</span> <span class="o">=</span> <span class="n">enhanced_deinterlace</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">billable_minutes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>

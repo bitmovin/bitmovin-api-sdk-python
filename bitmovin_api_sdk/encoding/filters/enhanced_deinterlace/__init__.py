@@ -1,0 +1,3 @@
+from bitmovin_api_sdk.encoding.filters.enhanced_deinterlace.enhanced_deinterlace_api import EnhancedDeinterlaceApi
+from bitmovin_api_sdk.encoding.filters.enhanced_deinterlace.customdata.customdata_api import CustomdataApi
+from bitmovin_api_sdk.encoding.filters.enhanced_deinterlace.enhanced_deinterlace_filter_list_query_params import EnhancedDeinterlaceFilterListQueryParams

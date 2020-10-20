@@ -21,8 +21,9 @@ class BillableEncodingMinutes(object):
                  psnr_mode=None,
                  preset=None,
                  live=None,
+                 enhanced_deinterlace=None,
                  billable_minutes=None):
-        # type: (EncodingMode, CodecConfigType, StatisticsPerTitleStream, PsnrPerStreamMode, string_types, bool, BillableEncodingMinutesDetails) -> None
+        # type: (EncodingMode, CodecConfigType, StatisticsPerTitleStream, PsnrPerStreamMode, string_types, bool, bool, BillableEncodingMinutesDetails) -> None
 
         self._encoding_mode = None
         self._codec = None
@@ -30,6 +31,7 @@ class BillableEncodingMinutes(object):
         self._psnr_mode = None
         self._preset = None
         self._live = None
+        self._enhanced_deinterlace = None
         self._billable_minutes = None
         self.discriminator = None
 
@@ -45,6 +47,8 @@ class BillableEncodingMinutes(object):
             self.preset = preset
         if live is not None:
             self.live = live
+        if enhanced_deinterlace is not None:
+            self.enhanced_deinterlace = enhanced_deinterlace
         if billable_minutes is not None:
             self.billable_minutes = billable_minutes
 
@@ -57,6 +61,7 @@ class BillableEncodingMinutes(object):
             'psnr_mode': 'PsnrPerStreamMode',
             'preset': 'string_types',
             'live': 'bool',
+            'enhanced_deinterlace': 'bool',
             'billable_minutes': 'BillableEncodingMinutesDetails'
         }
 
@@ -71,6 +76,7 @@ class BillableEncodingMinutes(object):
             'psnr_mode': 'psnrMode',
             'preset': 'preset',
             'live': 'live',
+            'enhanced_deinterlace': 'enhancedDeinterlace',
             'billable_minutes': 'billableMinutes'
         }
         return attributes
@@ -240,6 +246,35 @@ class BillableEncodingMinutes(object):
                 raise TypeError("Invalid type for `live`, type has to be `bool`")
 
         self._live = live
+
+    @property
+    def enhanced_deinterlace(self):
+        # type: () -> bool
+        """Gets the enhanced_deinterlace of this BillableEncodingMinutes.
+
+        Indicates if an enhanced interlace filter was used.
+
+        :return: The enhanced_deinterlace of this BillableEncodingMinutes.
+        :rtype: bool
+        """
+        return self._enhanced_deinterlace
+
+    @enhanced_deinterlace.setter
+    def enhanced_deinterlace(self, enhanced_deinterlace):
+        # type: (bool) -> None
+        """Sets the enhanced_deinterlace of this BillableEncodingMinutes.
+
+        Indicates if an enhanced interlace filter was used.
+
+        :param enhanced_deinterlace: The enhanced_deinterlace of this BillableEncodingMinutes.
+        :type: bool
+        """
+
+        if enhanced_deinterlace is not None:
+            if not isinstance(enhanced_deinterlace, bool):
+                raise TypeError("Invalid type for `enhanced_deinterlace`, type has to be `bool`")
+
+        self._enhanced_deinterlace = enhanced_deinterlace
 
     @property
     def billable_minutes(self):

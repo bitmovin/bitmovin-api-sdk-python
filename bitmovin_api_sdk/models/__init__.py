@@ -128,6 +128,9 @@ from bitmovin_api_sdk.models.availability_start_time_mode import AvailabilitySta
 from bitmovin_api_sdk.models.aws_account import AwsAccount
 from bitmovin_api_sdk.models.aws_account_region_settings import AwsAccountRegionSettings
 from bitmovin_api_sdk.models.aws_cloud_region import AwsCloudRegion
+from bitmovin_api_sdk.models.azure_account import AzureAccount
+from bitmovin_api_sdk.models.azure_account_region_settings import AzureAccountRegionSettings
+from bitmovin_api_sdk.models.azure_cloud_region import AzureCloudRegion
 from bitmovin_api_sdk.models.azure_input import AzureInput
 from bitmovin_api_sdk.models.azure_output import AzureOutput
 from bitmovin_api_sdk.models.b_adapt import BAdapt
@@ -268,6 +271,10 @@ from bitmovin_api_sdk.models.encoding_stream_input_details import EncodingStream
 from bitmovin_api_sdk.models.encoding_type import EncodingType
 from bitmovin_api_sdk.models.encryption_mode import EncryptionMode
 from bitmovin_api_sdk.models.encryption_type import EncryptionType
+from bitmovin_api_sdk.models.enhanced_deinterlace_auto_enable import EnhancedDeinterlaceAutoEnable
+from bitmovin_api_sdk.models.enhanced_deinterlace_filter import EnhancedDeinterlaceFilter
+from bitmovin_api_sdk.models.enhanced_deinterlace_mode import EnhancedDeinterlaceMode
+from bitmovin_api_sdk.models.enhanced_deinterlace_parity import EnhancedDeinterlaceParity
 from bitmovin_api_sdk.models.enhanced_watermark_filter import EnhancedWatermarkFilter
 from bitmovin_api_sdk.models.error_details import ErrorDetails
 from bitmovin_api_sdk.models.error_retry_hint import ErrorRetryHint
@@ -503,6 +510,7 @@ from bitmovin_api_sdk.models.smooth_manifest_default import SmoothManifestDefaul
 from bitmovin_api_sdk.models.smooth_manifest_default_version import SmoothManifestDefaultVersion
 from bitmovin_api_sdk.models.smooth_streaming_manifest import SmoothStreamingManifest
 from bitmovin_api_sdk.models.smooth_streaming_representation import SmoothStreamingRepresentation
+from bitmovin_api_sdk.models.smpte_timecode_flavor import SmpteTimecodeFlavor
 from bitmovin_api_sdk.models.source_channel import SourceChannel
 from bitmovin_api_sdk.models.source_channel_type import SourceChannelType
 from bitmovin_api_sdk.models.speke_drm import SpekeDrm

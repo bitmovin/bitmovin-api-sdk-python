@@ -174,36 +174,24 @@
                  <span class="n">modified_at</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">custom_data</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">limit_parallel_encodings</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                 <span class="n">maximum_amount_of_coordinators_and_workers_in_region</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                 <span class="n">max_money_to_spend_per_month</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">security_group_id</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">subnet_id</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                 <span class="n">machine_types</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">ssh_port</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (string_types, string_types, string_types, datetime, datetime, dict, int, int, float, string_types, string_types, list[string_types], int) -&gt; None</span>
+        <span class="c1"># type: (string_types, string_types, string_types, datetime, datetime, dict, int, string_types, string_types, int) -&gt; None</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">AwsAccountRegionSettings</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">id_</span><span class="o">=</span><span class="n">id_</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="n">description</span><span class="p">,</span> <span class="n">created_at</span><span class="o">=</span><span class="n">created_at</span><span class="p">,</span> <span class="n">modified_at</span><span class="o">=</span><span class="n">modified_at</span><span class="p">,</span> <span class="n">custom_data</span><span class="o">=</span><span class="n">custom_data</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_limit_parallel_encodings</span> <span class="o">=</span> <span class="kc">None</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_maximum_amount_of_coordinators_and_workers_in_region</span> <span class="o">=</span> <span class="kc">None</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_max_money_to_spend_per_month</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_security_group_id</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_subnet_id</span> <span class="o">=</span> <span class="kc">None</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_machine_types</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_ssh_port</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>
 
         <span class="k">if</span> <span class="n">limit_parallel_encodings</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">limit_parallel_encodings</span> <span class="o">=</span> <span class="n">limit_parallel_encodings</span>
-        <span class="k">if</span> <span class="n">maximum_amount_of_coordinators_and_workers_in_region</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">maximum_amount_of_coordinators_and_workers_in_region</span> <span class="o">=</span> <span class="n">maximum_amount_of_coordinators_and_workers_in_region</span>
-        <span class="k">if</span> <span class="n">max_money_to_spend_per_month</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">max_money_to_spend_per_month</span> <span class="o">=</span> <span class="n">max_money_to_spend_per_month</span>
         <span class="k">if</span> <span class="n">security_group_id</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">security_group_id</span> <span class="o">=</span> <span class="n">security_group_id</span>
         <span class="k">if</span> <span class="n">subnet_id</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">subnet_id</span> <span class="o">=</span> <span class="n">subnet_id</span>
-        <span class="k">if</span> <span class="n">machine_types</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">machine_types</span> <span class="o">=</span> <span class="n">machine_types</span>
         <span class="k">if</span> <span class="n">ssh_port</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">ssh_port</span> <span class="o">=</span> <span class="n">ssh_port</span>
 
@@ -216,11 +204,8 @@
 
         <span class="n">types</span><span class="o">.</span><span class="n">update</span><span class="p">({</span>
             <span class="s1">&#39;limit_parallel_encodings&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;maximum_amount_of_coordinators_and_workers_in_region&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;max_money_to_spend_per_month&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span><span class="p">,</span>
             <span class="s1">&#39;security_group_id&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
             <span class="s1">&#39;subnet_id&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;machine_types&#39;</span><span class="p">:</span> <span class="s1">&#39;list[string_types]&#39;</span><span class="p">,</span>
             <span class="s1">&#39;ssh_port&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span>
         <span class="p">})</span>
 
@@ -235,11 +220,8 @@
 
         <span class="n">attributes</span><span class="o">.</span><span class="n">update</span><span class="p">({</span>
             <span class="s1">&#39;limit_parallel_encodings&#39;</span><span class="p">:</span> <span class="s1">&#39;limitParallelEncodings&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;maximum_amount_of_coordinators_and_workers_in_region&#39;</span><span class="p">:</span> <span class="s1">&#39;maximumAmountOfCoordinatorsAndWorkersInRegion&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;max_money_to_spend_per_month&#39;</span><span class="p">:</span> <span class="s1">&#39;maxMoneyToSpendPerMonth&#39;</span><span class="p">,</span>
             <span class="s1">&#39;security_group_id&#39;</span><span class="p">:</span> <span class="s1">&#39;securityGroupId&#39;</span><span class="p">,</span>
             <span class="s1">&#39;subnet_id&#39;</span><span class="p">:</span> <span class="s1">&#39;subnetId&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;machine_types&#39;</span><span class="p">:</span> <span class="s1">&#39;machineTypes&#39;</span><span class="p">,</span>
             <span class="s1">&#39;ssh_port&#39;</span><span class="p">:</span> <span class="s1">&#39;sshPort&#39;</span>
         <span class="p">})</span>
         <span class="k">return</span> <span class="n">attributes</span>
@@ -272,64 +254,6 @@
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `limit_parallel_encodings`, type has to be `int`&quot;</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_limit_parallel_encodings</span> <span class="o">=</span> <span class="n">limit_parallel_encodings</span>
-
-    <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">maximum_amount_of_coordinators_and_workers_in_region</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="c1"># type: () -&gt; int</span>
-        <span class="sd">&quot;&quot;&quot;Gets the maximum_amount_of_coordinators_and_workers_in_region of this AwsAccountRegionSettings.</span>
-
-<span class="sd">        Maximum amount of encoding coordinators and workers allowed in this region at any time. Leave empty for no limit.</span>
-
-<span class="sd">        :return: The maximum_amount_of_coordinators_and_workers_in_region of this AwsAccountRegionSettings.</span>
-<span class="sd">        :rtype: int</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_maximum_amount_of_coordinators_and_workers_in_region</span>
-
-    <span class="nd">@maximum_amount_of_coordinators_and_workers_in_region</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">maximum_amount_of_coordinators_and_workers_in_region</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">maximum_amount_of_coordinators_and_workers_in_region</span><span class="p">):</span>
-        <span class="c1"># type: (int) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the maximum_amount_of_coordinators_and_workers_in_region of this AwsAccountRegionSettings.</span>
-
-<span class="sd">        Maximum amount of encoding coordinators and workers allowed in this region at any time. Leave empty for no limit.</span>
-
-<span class="sd">        :param maximum_amount_of_coordinators_and_workers_in_region: The maximum_amount_of_coordinators_and_workers_in_region of this AwsAccountRegionSettings.</span>
-<span class="sd">        :type: int</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-
-        <span class="k">if</span> <span class="n">maximum_amount_of_coordinators_and_workers_in_region</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">maximum_amount_of_coordinators_and_workers_in_region</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `maximum_amount_of_coordinators_and_workers_in_region`, type has to be `int`&quot;</span><span class="p">)</span>
-
-        <span class="bp">self</span><span class="o">.</span><span class="n">_maximum_amount_of_coordinators_and_workers_in_region</span> <span class="o">=</span> <span class="n">maximum_amount_of_coordinators_and_workers_in_region</span>
-
-    <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">max_money_to_spend_per_month</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="c1"># type: () -&gt; float</span>
-        <span class="sd">&quot;&quot;&quot;Gets the max_money_to_spend_per_month of this AwsAccountRegionSettings.</span>
-
-<span class="sd">        Limit the amount of money to spend in this region on this account. Leave empty for no limit.</span>
-
-<span class="sd">        :return: The max_money_to_spend_per_month of this AwsAccountRegionSettings.</span>
-<span class="sd">        :rtype: float</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_max_money_to_spend_per_month</span>
-
-    <span class="nd">@max_money_to_spend_per_month</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">max_money_to_spend_per_month</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">max_money_to_spend_per_month</span><span class="p">):</span>
-        <span class="c1"># type: (float) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the max_money_to_spend_per_month of this AwsAccountRegionSettings.</span>
-
-<span class="sd">        Limit the amount of money to spend in this region on this account. Leave empty for no limit.</span>
-
-<span class="sd">        :param max_money_to_spend_per_month: The max_money_to_spend_per_month of this AwsAccountRegionSettings.</span>
-<span class="sd">        :type: float</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-
-        <span class="k">if</span> <span class="n">max_money_to_spend_per_month</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">max_money_to_spend_per_month</span><span class="p">,</span> <span class="p">(</span><span class="nb">float</span><span class="p">,</span> <span class="nb">int</span><span class="p">)):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `max_money_to_spend_per_month`, type has to be `float`&quot;</span><span class="p">)</span>
-
-        <span class="bp">self</span><span class="o">.</span><span class="n">_max_money_to_spend_per_month</span> <span class="o">=</span> <span class="n">max_money_to_spend_per_month</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">security_group_id</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -388,35 +312,6 @@
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `subnet_id`, type has to be `string_types`&quot;</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_subnet_id</span> <span class="o">=</span> <span class="n">subnet_id</span>
-
-    <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">machine_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="c1"># type: () -&gt; list[string_types]</span>
-        <span class="sd">&quot;&quot;&quot;Gets the machine_types of this AwsAccountRegionSettings.</span>
-
-<span class="sd">        Which machine types are allowed to be deployed. Leave empty for no machine type restrictions.</span>
-
-<span class="sd">        :return: The machine_types of this AwsAccountRegionSettings.</span>
-<span class="sd">        :rtype: list[string_types]</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_machine_types</span>
-
-    <span class="nd">@machine_types</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">machine_types</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">machine_types</span><span class="p">):</span>
-        <span class="c1"># type: (list) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the machine_types of this AwsAccountRegionSettings.</span>
-
-<span class="sd">        Which machine types are allowed to be deployed. Leave empty for no machine type restrictions.</span>
-
-<span class="sd">        :param machine_types: The machine_types of this AwsAccountRegionSettings.</span>
-<span class="sd">        :type: list[string_types]</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-
-        <span class="k">if</span> <span class="n">machine_types</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">machine_types</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `machine_types`, type has to be `list[string_types]`&quot;</span><span class="p">)</span>
-
-        <span class="bp">self</span><span class="o">.</span><span class="n">_machine_types</span> <span class="o">=</span> <span class="n">machine_types</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">ssh_port</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>

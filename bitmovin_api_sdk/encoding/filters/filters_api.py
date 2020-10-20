@@ -15,6 +15,7 @@ from bitmovin_api_sdk.encoding.filters.enhanced_watermark.enhanced_watermark_api
 from bitmovin_api_sdk.encoding.filters.crop.crop_api import CropApi
 from bitmovin_api_sdk.encoding.filters.rotate.rotate_api import RotateApi
 from bitmovin_api_sdk.encoding.filters.deinterlace.deinterlace_api import DeinterlaceApi
+from bitmovin_api_sdk.encoding.filters.enhanced_deinterlace.enhanced_deinterlace_api import EnhancedDeinterlaceApi
 from bitmovin_api_sdk.encoding.filters.audio_mix.audio_mix_api import AudioMixApi
 from bitmovin_api_sdk.encoding.filters.denoise_hqdn3d.denoise_hqdn3d_api import DenoiseHqdn3dApi
 from bitmovin_api_sdk.encoding.filters.ebu_r128_single_pass.ebu_r128_single_pass_api import EbuR128SinglePassApi
@@ -87,6 +88,13 @@ class FiltersApi(BaseApi):
         )
 
         self.deinterlace = DeinterlaceApi(
+            api_key=api_key,
+            tenant_org_id=tenant_org_id,
+            base_url=base_url,
+            logger=logger
+        )
+
+        self.enhanced_deinterlace = EnhancedDeinterlaceApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,
