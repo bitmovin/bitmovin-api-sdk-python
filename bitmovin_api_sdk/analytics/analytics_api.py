@@ -12,6 +12,7 @@ from bitmovin_api_sdk.analytics.ads.ads_api import AdsApi
 from bitmovin_api_sdk.analytics.queries.queries_api import QueriesApi
 from bitmovin_api_sdk.analytics.licenses.licenses_api import LicensesApi
 from bitmovin_api_sdk.analytics.outputs.outputs_api import OutputsApi
+from bitmovin_api_sdk.analytics.alerting.alerting_api import AlertingApi
 
 
 class AnalyticsApi(BaseApi):
@@ -76,6 +77,13 @@ class AnalyticsApi(BaseApi):
         )
 
         self.outputs = OutputsApi(
+            api_key=api_key,
+            tenant_org_id=tenant_org_id,
+            base_url=base_url,
+            logger=logger
+        )
+
+        self.alerting = AlertingApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,

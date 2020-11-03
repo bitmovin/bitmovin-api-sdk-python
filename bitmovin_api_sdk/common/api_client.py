@@ -1,7 +1,8 @@
 import re
+import pytz
+import datetime
 
 from enum import Enum
-from datetime import datetime, date
 from requests import RequestException
 from six.moves import urllib
 from six import iteritems
@@ -50,6 +51,12 @@ class ApiClient(object):
             for k, v in iteritems(query_params):
                 if isinstance(v, Enum):
                     values_to_replace[k] = v.value
+                if isinstance(v, datetime.datetime):
+                    if v.tzinfo is not None and v.tzinfo.utcoffset(v) is not None:
+                        values_to_replace[k] = str(v.astimezone(pytz.utc).isoformat()).replace('+00:00', 'Z')
+                    else:
+                        datetime_tz_aware = v.replace(tzinfo=pytz.utc).astimezone(pytz.utc).isoformat()
+                        values_to_replace[k] = str(datetime_tz_aware).replace('+00:00', 'Z')
 
             for k, v in iteritems(values_to_replace):
                 query_params[k] = v
@@ -68,7 +75,7 @@ class ApiClient(object):
             raise TypeError('path_params has to be dict')
 
         for k in path_params:
-            if isinstance(path_params[k], date) or isinstance(path_params[k], datetime):
+            if isinstance(path_params[k], datetime.date) or isinstance(path_params[k], datetime.datetime):
                 path_params[k] = path_params[k].isoformat()
 
             relative_url = relative_url.replace(

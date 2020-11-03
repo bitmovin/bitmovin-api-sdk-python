@@ -8,6 +8,7 @@ Subpackages
    :maxdepth: 4
 
    bitmovin_api_sdk.analytics.ads
+   bitmovin_api_sdk.analytics.alerting
    bitmovin_api_sdk.analytics.exports
    bitmovin_api_sdk.analytics.impressions
    bitmovin_api_sdk.analytics.insights

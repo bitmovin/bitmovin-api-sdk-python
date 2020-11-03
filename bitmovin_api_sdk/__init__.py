@@ -95,6 +95,14 @@ from bitmovin_api_sdk.analytics.outputs.s3_role_based.s3_role_based_api import S
 from bitmovin_api_sdk.analytics.outputs.s3_role_based.s3_role_based_api import S3RoleBasedOutputListQueryParams
 from bitmovin_api_sdk.analytics.outputs.s3_role_based.customdata.customdata_api import CustomdataApi
 
+from bitmovin_api_sdk.analytics.alerting.alerting_api import AlertingApi
+
+from bitmovin_api_sdk.analytics.alerting.rules.rules_api import RulesApi
+from bitmovin_api_sdk.analytics.alerting.rules.rules_api import AnalyticsAlertingRuleListQueryParams
+from bitmovin_api_sdk.analytics.alerting.rules.threshold.threshold_api import ThresholdApi
+
+from bitmovin_api_sdk.analytics.alerting.incidents.incidents_api import IncidentsApi
+from bitmovin_api_sdk.analytics.alerting.incidents.incidents_api import AnalyticsIncidentListQueryParams, AnalyticsIncidentListByLicenseKeyQueryParams
 from bitmovin_api_sdk.encoding.encoding_api import EncodingApi
 
 from bitmovin_api_sdk.encoding.inputs.inputs_api import InputsApi
@@ -873,6 +881,8 @@ from bitmovin_api_sdk.notifications.webhooks.encoding.manifest.error.error_api i
 
 from bitmovin_api_sdk.notifications.webhooks.encoding.manifest.finished.finished_api import FinishedApi
 
+from bitmovin_api_sdk.notifications.webhooks.encoding.encodings.live_input_stream_changed.live_input_stream_changed_api import LiveInputStreamChangedApi
+
 from bitmovin_api_sdk.notifications.states.states_api import StatesApi
 from bitmovin_api_sdk.notifications.states.states_api import NotificationStateEntryListQueryParams
 from bitmovin_api_sdk.notifications.emails.emails_api import EmailsApi
@@ -959,6 +969,9 @@ from bitmovin_api_sdk.models.akamai_msl_version import AkamaiMslVersion
 from bitmovin_api_sdk.models.akamai_net_storage_input import AkamaiNetStorageInput
 from bitmovin_api_sdk.models.akamai_net_storage_output import AkamaiNetStorageOutput
 from bitmovin_api_sdk.models.analytics_abstract_filter import AnalyticsAbstractFilter
+from bitmovin_api_sdk.models.analytics_alerting_notification import AnalyticsAlertingNotification
+from bitmovin_api_sdk.models.analytics_alerting_rule import AnalyticsAlertingRule
+from bitmovin_api_sdk.models.analytics_alerting_webhook import AnalyticsAlertingWebhook
 from bitmovin_api_sdk.models.analytics_attribute import AnalyticsAttribute
 from bitmovin_api_sdk.models.analytics_avg_concurrent_viewers_response import AnalyticsAvgConcurrentViewersResponse
 from bitmovin_api_sdk.models.analytics_avg_dropped_frames_response import AnalyticsAvgDroppedFramesResponse
@@ -978,6 +991,7 @@ from bitmovin_api_sdk.models.analytics_impression_list_item import AnalyticsImpr
 from bitmovin_api_sdk.models.analytics_impressions_query import AnalyticsImpressionsQuery
 from bitmovin_api_sdk.models.analytics_impressions_response import AnalyticsImpressionsResponse
 from bitmovin_api_sdk.models.analytics_in_filter import AnalyticsInFilter
+from bitmovin_api_sdk.models.analytics_incident import AnalyticsIncident
 from bitmovin_api_sdk.models.analytics_insights_organization_settings import AnalyticsInsightsOrganizationSettings
 from bitmovin_api_sdk.models.analytics_insights_organization_settings_request import AnalyticsInsightsOrganizationSettingsRequest
 from bitmovin_api_sdk.models.analytics_interval import AnalyticsInterval
@@ -1002,8 +1016,10 @@ from bitmovin_api_sdk.models.analytics_query_operator import AnalyticsQueryOpera
 from bitmovin_api_sdk.models.analytics_query_request import AnalyticsQueryRequest
 from bitmovin_api_sdk.models.analytics_query_timeframe import AnalyticsQueryTimeframe
 from bitmovin_api_sdk.models.analytics_response import AnalyticsResponse
+from bitmovin_api_sdk.models.analytics_rule_metric import AnalyticsRuleMetric
 from bitmovin_api_sdk.models.analytics_stddev_query_request import AnalyticsStddevQueryRequest
 from bitmovin_api_sdk.models.analytics_sum_query_request import AnalyticsSumQueryRequest
+from bitmovin_api_sdk.models.analytics_threshold_rule_options import AnalyticsThresholdRuleOptions
 from bitmovin_api_sdk.models.analytics_variance_query_request import AnalyticsVarianceQueryRequest
 from bitmovin_api_sdk.models.analytics_video_start_failed_reason import AnalyticsVideoStartFailedReason
 from bitmovin_api_sdk.models.and_conjunction import AndConjunction
@@ -1521,6 +1537,9 @@ from bitmovin_api_sdk.models.web_vtt_sidecar_file_segmentation import WebVttSide
 from bitmovin_api_sdk.models.webhook import Webhook
 from bitmovin_api_sdk.models.webhook_encryption import WebhookEncryption
 from bitmovin_api_sdk.models.webhook_http_method import WebhookHttpMethod
+from bitmovin_api_sdk.models.webhook_notification import WebhookNotification
+from bitmovin_api_sdk.models.webhook_notification_with_stream_conditions import WebhookNotificationWithStreamConditions
+from bitmovin_api_sdk.models.webhook_notification_with_stream_conditions_request import WebhookNotificationWithStreamConditionsRequest
 from bitmovin_api_sdk.models.webhook_signature import WebhookSignature
 from bitmovin_api_sdk.models.webm_muxing import WebmMuxing
 from bitmovin_api_sdk.models.weighted_prediction_p_frames import WeightedPredictionPFrames
@@ -1529,4 +1548,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.51.0"
+__version__ = "1.52.0"

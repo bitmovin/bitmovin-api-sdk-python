@@ -1,0 +1,30 @@
+bitmovin\_api\_sdk.analytics.alerting package
+=============================================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   bitmovin_api_sdk.analytics.alerting.incidents
+   bitmovin_api_sdk.analytics.alerting.rules
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.analytics.alerting.alerting\_api module
+----------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.analytics.alerting.alerting_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.analytics.alerting
+   :members:
+   :undoc-members:
+   :show-inheritance:

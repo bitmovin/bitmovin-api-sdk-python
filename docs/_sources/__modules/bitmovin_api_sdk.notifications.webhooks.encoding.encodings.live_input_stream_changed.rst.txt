@@ -1,0 +1,21 @@
+bitmovin\_api\_sdk.notifications.webhooks.encoding.encodings.live\_input\_stream\_changed package
+=================================================================================================
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.notifications.webhooks.encoding.encodings.live\_input\_stream\_changed.live\_input\_stream\_changed\_api module
+----------------------------------------------------------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.notifications.webhooks.encoding.encodings.live_input_stream_changed.live_input_stream_changed_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.notifications.webhooks.encoding.encodings.live_input_stream_changed
+   :members:
+   :undoc-members:
+   :show-inheritance:

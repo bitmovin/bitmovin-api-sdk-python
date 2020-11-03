@@ -364,6 +364,30 @@ bitmovin\_api\_sdk.models.analytics\_abstract\_filter module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.analytics\_alerting\_notification module
+------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.analytics_alerting_notification
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.analytics\_alerting\_rule module
+----------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.analytics_alerting_rule
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.analytics\_alerting\_webhook module
+-------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.analytics_alerting_webhook
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.analytics\_attribute module
 -----------------------------------------------------
 
@@ -512,6 +536,14 @@ bitmovin\_api\_sdk.models.analytics\_in\_filter module
 ------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.models.analytics_in_filter
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.analytics\_incident module
+----------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.analytics_incident
    :members:
    :undoc-members:
    :show-inheritance:
@@ -708,6 +740,14 @@ bitmovin\_api\_sdk.models.analytics\_response module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.analytics\_rule\_metric module
+--------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.analytics_rule_metric
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.analytics\_stddev\_query\_request module
 ------------------------------------------------------------------
 
@@ -720,6 +760,14 @@ bitmovin\_api\_sdk.models.analytics\_sum\_query\_request module
 ---------------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.models.analytics_sum_query_request
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.analytics\_threshold\_rule\_options module
+--------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.analytics_threshold_rule_options
    :members:
    :undoc-members:
    :show-inheritance:
@@ -4856,6 +4904,30 @@ bitmovin\_api\_sdk.models.webhook\_http\_method module
 ------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.models.webhook_http_method
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.webhook\_notification module
+------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.webhook_notification
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.webhook\_notification\_with\_stream\_conditions module
+--------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.webhook_notification_with_stream_conditions
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.webhook\_notification\_with\_stream\_conditions\_request module
+-----------------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.webhook_notification_with_stream_conditions_request
    :members:
    :undoc-members:
    :show-inheritance:
