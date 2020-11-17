@@ -3,3 +3,4 @@ from bitmovin_api_sdk.encoding.infrastructure.kubernetes.kubernetes_api import K
 from bitmovin_api_sdk.encoding.infrastructure.aws.aws_api import AwsApi
 from bitmovin_api_sdk.encoding.infrastructure.azure.azure_api import AzureApi
 from bitmovin_api_sdk.encoding.infrastructure.gce.gce_api import GceApi
+from bitmovin_api_sdk.encoding.infrastructure.prewarmed_encoder_pools.prewarmed_encoder_pools_api import PrewarmedEncoderPoolsApi

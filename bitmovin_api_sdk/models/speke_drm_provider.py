@@ -3,6 +3,7 @@
 from enum import Enum
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
+from bitmovin_api_sdk.models.external_id_mode import ExternalIdMode
 import pprint
 import six
 
@@ -15,14 +16,16 @@ class SpekeDrmProvider(object):
                  password=None,
                  role_arn=None,
                  external_id=None,
+                 external_id_mode=None,
                  gateway_region=None):
-        # type: (string_types, string_types, string_types, string_types, string_types, string_types) -> None
+        # type: (string_types, string_types, string_types, string_types, string_types, ExternalIdMode, string_types) -> None
 
         self._url = None
         self._username = None
         self._password = None
         self._role_arn = None
         self._external_id = None
+        self._external_id_mode = None
         self._gateway_region = None
         self.discriminator = None
 
@@ -36,6 +39,8 @@ class SpekeDrmProvider(object):
             self.role_arn = role_arn
         if external_id is not None:
             self.external_id = external_id
+        if external_id_mode is not None:
+            self.external_id_mode = external_id_mode
         if gateway_region is not None:
             self.gateway_region = gateway_region
 
@@ -47,6 +52,7 @@ class SpekeDrmProvider(object):
             'password': 'string_types',
             'role_arn': 'string_types',
             'external_id': 'string_types',
+            'external_id_mode': 'ExternalIdMode',
             'gateway_region': 'string_types'
         }
 
@@ -60,6 +66,7 @@ class SpekeDrmProvider(object):
             'password': 'password',
             'role_arn': 'roleArn',
             'external_id': 'externalId',
+            'external_id_mode': 'externalIdMode',
             'gateway_region': 'gatewayRegion'
         }
         return attributes
@@ -208,6 +215,33 @@ class SpekeDrmProvider(object):
                 raise TypeError("Invalid type for `external_id`, type has to be `string_types`")
 
         self._external_id = external_id
+
+    @property
+    def external_id_mode(self):
+        # type: () -> ExternalIdMode
+        """Gets the external_id_mode of this SpekeDrmProvider.
+
+
+        :return: The external_id_mode of this SpekeDrmProvider.
+        :rtype: ExternalIdMode
+        """
+        return self._external_id_mode
+
+    @external_id_mode.setter
+    def external_id_mode(self, external_id_mode):
+        # type: (ExternalIdMode) -> None
+        """Sets the external_id_mode of this SpekeDrmProvider.
+
+
+        :param external_id_mode: The external_id_mode of this SpekeDrmProvider.
+        :type: ExternalIdMode
+        """
+
+        if external_id_mode is not None:
+            if not isinstance(external_id_mode, ExternalIdMode):
+                raise TypeError("Invalid type for `external_id_mode`, type has to be `ExternalIdMode`")
+
+        self._external_id_mode = external_id_mode
 
     @property
     def gateway_region(self):

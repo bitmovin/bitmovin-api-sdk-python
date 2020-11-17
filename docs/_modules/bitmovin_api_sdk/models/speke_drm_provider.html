@@ -159,6 +159,7 @@
 <span class="kn">from</span> <span class="nn">enum</span> <span class="kn">import</span> <span class="n">Enum</span>
 <span class="kn">from</span> <span class="nn">six</span> <span class="kn">import</span> <span class="n">string_types</span><span class="p">,</span> <span class="n">iteritems</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.common.poscheck</span> <span class="kn">import</span> <span class="n">poscheck_model</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.external_id_mode</span> <span class="kn">import</span> <span class="n">ExternalIdMode</span>
 <span class="kn">import</span> <span class="nn">pprint</span>
 <span class="kn">import</span> <span class="nn">six</span>
 
@@ -171,14 +172,16 @@
                  <span class="n">password</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">role_arn</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">external_id</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">external_id_mode</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">gateway_region</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (string_types, string_types, string_types, string_types, string_types, string_types) -&gt; None</span>
+        <span class="c1"># type: (string_types, string_types, string_types, string_types, string_types, ExternalIdMode, string_types) -&gt; None</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_url</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_username</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_password</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_role_arn</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_external_id</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_external_id_mode</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_gateway_region</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>
 
@@ -192,6 +195,8 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">role_arn</span> <span class="o">=</span> <span class="n">role_arn</span>
         <span class="k">if</span> <span class="n">external_id</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">external_id</span> <span class="o">=</span> <span class="n">external_id</span>
+        <span class="k">if</span> <span class="n">external_id_mode</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">external_id_mode</span> <span class="o">=</span> <span class="n">external_id_mode</span>
         <span class="k">if</span> <span class="n">gateway_region</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">gateway_region</span> <span class="o">=</span> <span class="n">gateway_region</span>
 
@@ -203,6 +208,7 @@
             <span class="s1">&#39;password&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
             <span class="s1">&#39;role_arn&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
             <span class="s1">&#39;external_id&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;external_id_mode&#39;</span><span class="p">:</span> <span class="s1">&#39;ExternalIdMode&#39;</span><span class="p">,</span>
             <span class="s1">&#39;gateway_region&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span>
         <span class="p">}</span>
 
@@ -216,6 +222,7 @@
             <span class="s1">&#39;password&#39;</span><span class="p">:</span> <span class="s1">&#39;password&#39;</span><span class="p">,</span>
             <span class="s1">&#39;role_arn&#39;</span><span class="p">:</span> <span class="s1">&#39;roleArn&#39;</span><span class="p">,</span>
             <span class="s1">&#39;external_id&#39;</span><span class="p">:</span> <span class="s1">&#39;externalId&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;external_id_mode&#39;</span><span class="p">:</span> <span class="s1">&#39;externalIdMode&#39;</span><span class="p">,</span>
             <span class="s1">&#39;gateway_region&#39;</span><span class="p">:</span> <span class="s1">&#39;gatewayRegion&#39;</span>
         <span class="p">}</span>
         <span class="k">return</span> <span class="n">attributes</span>
@@ -364,6 +371,33 @@
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `external_id`, type has to be `string_types`&quot;</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_external_id</span> <span class="o">=</span> <span class="n">external_id</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">external_id_mode</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; ExternalIdMode</span>
+        <span class="sd">&quot;&quot;&quot;Gets the external_id_mode of this SpekeDrmProvider.</span>
+
+
+<span class="sd">        :return: The external_id_mode of this SpekeDrmProvider.</span>
+<span class="sd">        :rtype: ExternalIdMode</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_external_id_mode</span>
+
+    <span class="nd">@external_id_mode</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">external_id_mode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">external_id_mode</span><span class="p">):</span>
+        <span class="c1"># type: (ExternalIdMode) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the external_id_mode of this SpekeDrmProvider.</span>
+
+
+<span class="sd">        :param external_id_mode: The external_id_mode of this SpekeDrmProvider.</span>
+<span class="sd">        :type: ExternalIdMode</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">external_id_mode</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">external_id_mode</span><span class="p">,</span> <span class="n">ExternalIdMode</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `external_id_mode`, type has to be `ExternalIdMode`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_external_id_mode</span> <span class="o">=</span> <span class="n">external_id_mode</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">gateway_region</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>

@@ -160,6 +160,7 @@
 <span class="kn">from</span> <span class="nn">six</span> <span class="kn">import</span> <span class="n">string_types</span><span class="p">,</span> <span class="n">iteritems</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.common.poscheck</span> <span class="kn">import</span> <span class="n">poscheck_model</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.aws_cloud_region</span> <span class="kn">import</span> <span class="n">AwsCloudRegion</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.external_id_mode</span> <span class="kn">import</span> <span class="n">ExternalIdMode</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.output</span> <span class="kn">import</span> <span class="n">Output</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.s3_signature_version</span> <span class="kn">import</span> <span class="n">S3SignatureVersion</span>
 <span class="kn">import</span> <span class="nn">pprint</span>
@@ -179,15 +180,17 @@
                  <span class="n">bucket_name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">role_arn</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">external_id</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">external_id_mode</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">md5_meta_tag</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">cloud_region</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">signature_version</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (string_types, string_types, datetime, datetime, dict, string_types, list[AclEntry], string_types, string_types, string_types, string_types, AwsCloudRegion, S3SignatureVersion) -&gt; None</span>
+        <span class="c1"># type: (string_types, string_types, datetime, datetime, dict, string_types, list[AclEntry], string_types, string_types, string_types, ExternalIdMode, string_types, AwsCloudRegion, S3SignatureVersion) -&gt; None</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">S3RoleBasedOutput</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="n">description</span><span class="p">,</span> <span class="n">created_at</span><span class="o">=</span><span class="n">created_at</span><span class="p">,</span> <span class="n">modified_at</span><span class="o">=</span><span class="n">modified_at</span><span class="p">,</span> <span class="n">custom_data</span><span class="o">=</span><span class="n">custom_data</span><span class="p">,</span> <span class="n">id_</span><span class="o">=</span><span class="n">id_</span><span class="p">,</span> <span class="n">acl</span><span class="o">=</span><span class="n">acl</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_bucket_name</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_role_arn</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_external_id</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_external_id_mode</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_md5_meta_tag</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_cloud_region</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_signature_version</span> <span class="o">=</span> <span class="kc">None</span>
@@ -199,6 +202,8 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">role_arn</span> <span class="o">=</span> <span class="n">role_arn</span>
         <span class="k">if</span> <span class="n">external_id</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">external_id</span> <span class="o">=</span> <span class="n">external_id</span>
+        <span class="k">if</span> <span class="n">external_id_mode</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">external_id_mode</span> <span class="o">=</span> <span class="n">external_id_mode</span>
         <span class="k">if</span> <span class="n">md5_meta_tag</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">md5_meta_tag</span> <span class="o">=</span> <span class="n">md5_meta_tag</span>
         <span class="k">if</span> <span class="n">cloud_region</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -217,6 +222,7 @@
             <span class="s1">&#39;bucket_name&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
             <span class="s1">&#39;role_arn&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
             <span class="s1">&#39;external_id&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;external_id_mode&#39;</span><span class="p">:</span> <span class="s1">&#39;ExternalIdMode&#39;</span><span class="p">,</span>
             <span class="s1">&#39;md5_meta_tag&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
             <span class="s1">&#39;cloud_region&#39;</span><span class="p">:</span> <span class="s1">&#39;AwsCloudRegion&#39;</span><span class="p">,</span>
             <span class="s1">&#39;signature_version&#39;</span><span class="p">:</span> <span class="s1">&#39;S3SignatureVersion&#39;</span>
@@ -235,6 +241,7 @@
             <span class="s1">&#39;bucket_name&#39;</span><span class="p">:</span> <span class="s1">&#39;bucketName&#39;</span><span class="p">,</span>
             <span class="s1">&#39;role_arn&#39;</span><span class="p">:</span> <span class="s1">&#39;roleArn&#39;</span><span class="p">,</span>
             <span class="s1">&#39;external_id&#39;</span><span class="p">:</span> <span class="s1">&#39;externalId&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;external_id_mode&#39;</span><span class="p">:</span> <span class="s1">&#39;externalIdMode&#39;</span><span class="p">,</span>
             <span class="s1">&#39;md5_meta_tag&#39;</span><span class="p">:</span> <span class="s1">&#39;md5MetaTag&#39;</span><span class="p">,</span>
             <span class="s1">&#39;cloud_region&#39;</span><span class="p">:</span> <span class="s1">&#39;cloudRegion&#39;</span><span class="p">,</span>
             <span class="s1">&#39;signature_version&#39;</span><span class="p">:</span> <span class="s1">&#39;signatureVersion&#39;</span>
@@ -304,7 +311,7 @@
         <span class="c1"># type: () -&gt; string_types</span>
         <span class="sd">&quot;&quot;&quot;Gets the external_id of this S3RoleBasedOutput.</span>
 
-<span class="sd">        External ID used together with the IAM role identified by `roleArn` to assume S3 access.  This ID is generated once by the owner of the account with the S3 bucket (i.e., you as a customer) and added to the IAM role on AWS. Although it can be any string we recommend using a randomly generated UUID for better uniqueness. This ID then should be added to the trust policy of the IAM role `roleArn` configured above so that it looks something like this:  ``` {   \&quot;Effect\&quot;: \&quot;Allow\&quot;,   \&quot;Principal\&quot;: {     \&quot;AWS\&quot;: \&quot;arn:aws:iam::630681592166:user/bitmovinCustomerS3Access\&quot;   },   \&quot;Action\&quot;: \&quot;sts:AssumeRole\&quot;,   \&quot;Condition\&quot;: {     \&quot;StringEquals\&quot;: {       \&quot;sts:ExternalId\&quot;: \&quot;{{externalId}}\&quot;     }   } } ```  where \&quot;{{externalId}}\&quot; is the generated ID.  This property is optional but we recommend it as an additional security feature. We will use both the `roleArn` and the `externalId` to access your S3 data. If the Amazon IAM role has an external ID configured but it is not provided in the output configuration Bitmovin won&#39;t be able to write to the S3 bucket. Also if the provided external ID does not match the one configured for the IAM role on AWS side, Bitmovin won&#39;t be able to access the S3 bucket.  You can change the external ID whenever you want, just update the trust policy of the IAM role and provide the new external ID in the output configuration. Note that we then won&#39;t be able to access your S3 buckets with the old external ID anymore, so you have to provide new output configuration.  For more information please visit https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user_externalid.html </span>
+<span class="sd">        External ID used together with the IAM role identified by `roleArn` to assume S3 access.  This ID is provided by the API if `externalIdMode` is set to `GLOBAL` or `GENERATED`. If present, it has to be added to the trust policy of the IAM role `roleArn` configured above, otherwise the API won&#39;t be able to write to the S3 bucket. An appropriate trust policy would look like this:  ``` {   \&quot;Effect\&quot;: \&quot;Allow\&quot;,   \&quot;Principal\&quot;: {     \&quot;AWS\&quot;: \&quot;arn:aws:iam::630681592166:user/bitmovinCustomerS3Access\&quot;   },   \&quot;Action\&quot;: \&quot;sts:AssumeRole\&quot;,   \&quot;Condition\&quot;: {     \&quot;StringEquals\&quot;: {       \&quot;sts:ExternalId\&quot;: \&quot;{{externalId}}\&quot;     }   } } ```  where \&quot;{{externalId}}\&quot; is the generated ID.  This property is optional but we recommend it as an additional security feature. We will use both the `roleArn` and the `externalId` to access your S3 data. If the Amazon IAM role has an external ID configured but it is not provided in the output configuration Bitmovin won&#39;t be able to write to the S3 bucket. Also if the external ID does not match the one configured for the IAM role on AWS side, Bitmovin won&#39;t be able to access the S3 bucket.  If you need to change the external ID that is used by your IAM role, you need to create a new output, and use the external ID provided by the API to update your IAM role.  For more information please visit https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user_externalid.html </span>
 
 <span class="sd">        :return: The external_id of this S3RoleBasedOutput.</span>
 <span class="sd">        :rtype: string_types</span>
@@ -316,7 +323,7 @@
         <span class="c1"># type: (string_types) -&gt; None</span>
         <span class="sd">&quot;&quot;&quot;Sets the external_id of this S3RoleBasedOutput.</span>
 
-<span class="sd">        External ID used together with the IAM role identified by `roleArn` to assume S3 access.  This ID is generated once by the owner of the account with the S3 bucket (i.e., you as a customer) and added to the IAM role on AWS. Although it can be any string we recommend using a randomly generated UUID for better uniqueness. This ID then should be added to the trust policy of the IAM role `roleArn` configured above so that it looks something like this:  ``` {   \&quot;Effect\&quot;: \&quot;Allow\&quot;,   \&quot;Principal\&quot;: {     \&quot;AWS\&quot;: \&quot;arn:aws:iam::630681592166:user/bitmovinCustomerS3Access\&quot;   },   \&quot;Action\&quot;: \&quot;sts:AssumeRole\&quot;,   \&quot;Condition\&quot;: {     \&quot;StringEquals\&quot;: {       \&quot;sts:ExternalId\&quot;: \&quot;{{externalId}}\&quot;     }   } } ```  where \&quot;{{externalId}}\&quot; is the generated ID.  This property is optional but we recommend it as an additional security feature. We will use both the `roleArn` and the `externalId` to access your S3 data. If the Amazon IAM role has an external ID configured but it is not provided in the output configuration Bitmovin won&#39;t be able to write to the S3 bucket. Also if the provided external ID does not match the one configured for the IAM role on AWS side, Bitmovin won&#39;t be able to access the S3 bucket.  You can change the external ID whenever you want, just update the trust policy of the IAM role and provide the new external ID in the output configuration. Note that we then won&#39;t be able to access your S3 buckets with the old external ID anymore, so you have to provide new output configuration.  For more information please visit https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user_externalid.html </span>
+<span class="sd">        External ID used together with the IAM role identified by `roleArn` to assume S3 access.  This ID is provided by the API if `externalIdMode` is set to `GLOBAL` or `GENERATED`. If present, it has to be added to the trust policy of the IAM role `roleArn` configured above, otherwise the API won&#39;t be able to write to the S3 bucket. An appropriate trust policy would look like this:  ``` {   \&quot;Effect\&quot;: \&quot;Allow\&quot;,   \&quot;Principal\&quot;: {     \&quot;AWS\&quot;: \&quot;arn:aws:iam::630681592166:user/bitmovinCustomerS3Access\&quot;   },   \&quot;Action\&quot;: \&quot;sts:AssumeRole\&quot;,   \&quot;Condition\&quot;: {     \&quot;StringEquals\&quot;: {       \&quot;sts:ExternalId\&quot;: \&quot;{{externalId}}\&quot;     }   } } ```  where \&quot;{{externalId}}\&quot; is the generated ID.  This property is optional but we recommend it as an additional security feature. We will use both the `roleArn` and the `externalId` to access your S3 data. If the Amazon IAM role has an external ID configured but it is not provided in the output configuration Bitmovin won&#39;t be able to write to the S3 bucket. Also if the external ID does not match the one configured for the IAM role on AWS side, Bitmovin won&#39;t be able to access the S3 bucket.  If you need to change the external ID that is used by your IAM role, you need to create a new output, and use the external ID provided by the API to update your IAM role.  For more information please visit https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user_externalid.html </span>
 
 <span class="sd">        :param external_id: The external_id of this S3RoleBasedOutput.</span>
 <span class="sd">        :type: string_types</span>
@@ -327,6 +334,33 @@
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `external_id`, type has to be `string_types`&quot;</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_external_id</span> <span class="o">=</span> <span class="n">external_id</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">external_id_mode</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; ExternalIdMode</span>
+        <span class="sd">&quot;&quot;&quot;Gets the external_id_mode of this S3RoleBasedOutput.</span>
+
+
+<span class="sd">        :return: The external_id_mode of this S3RoleBasedOutput.</span>
+<span class="sd">        :rtype: ExternalIdMode</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_external_id_mode</span>
+
+    <span class="nd">@external_id_mode</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">external_id_mode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">external_id_mode</span><span class="p">):</span>
+        <span class="c1"># type: (ExternalIdMode) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the external_id_mode of this S3RoleBasedOutput.</span>
+
+
+<span class="sd">        :param external_id_mode: The external_id_mode of this S3RoleBasedOutput.</span>
+<span class="sd">        :type: ExternalIdMode</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">external_id_mode</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">external_id_mode</span><span class="p">,</span> <span class="n">ExternalIdMode</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `external_id_mode`, type has to be `ExternalIdMode`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_external_id_mode</span> <span class="o">=</span> <span class="n">external_id_mode</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">md5_meta_tag</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>

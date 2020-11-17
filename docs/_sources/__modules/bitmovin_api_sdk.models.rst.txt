@@ -1348,6 +1348,14 @@ bitmovin\_api\_sdk.models.channel\_layout module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.channels\_attribute\_for\_audio module
+----------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.channels_attribute_for_audio
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.chroma\_location module
 -------------------------------------------------
 
@@ -2188,14 +2196,6 @@ bitmovin\_api\_sdk.models.encryption\_mode module
    :undoc-members:
    :show-inheritance:
 
-bitmovin\_api\_sdk.models.encryption\_type module
--------------------------------------------------
-
-.. automodule:: bitmovin_api_sdk.models.encryption_type
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
 bitmovin\_api\_sdk.models.enhanced\_deinterlace\_auto\_enable module
 --------------------------------------------------------------------
 
@@ -2248,6 +2248,14 @@ bitmovin\_api\_sdk.models.error\_retry\_hint module
 ---------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.models.error_retry_hint
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.external\_id\_mode module
+---------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.external_id_mode
    :members:
    :undoc-members:
    :show-inheritance:
@@ -3636,6 +3644,46 @@ bitmovin\_api\_sdk.models.prewarm\_encoder\_settings module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.prewarmed\_encoder\_disk\_size module
+---------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.prewarmed_encoder_disk_size
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.prewarmed\_encoder\_pool module
+---------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.prewarmed_encoder_pool
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.prewarmed\_encoder\_pool\_action module
+-----------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.prewarmed_encoder_pool_action
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.prewarmed\_encoder\_pool\_schedule module
+-------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.prewarmed_encoder_pool_schedule
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.prewarmed\_encoder\_pool\_status module
+-----------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.prewarmed_encoder_pool_status
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.prime\_time\_drm module
 -------------------------------------------------
 
@@ -4888,14 +4936,6 @@ bitmovin\_api\_sdk.models.webhook module
 ----------------------------------------
 
 .. automodule:: bitmovin_api_sdk.models.webhook
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-bitmovin\_api\_sdk.models.webhook\_encryption module
-----------------------------------------------------
-
-.. automodule:: bitmovin_api_sdk.models.webhook_encryption
    :members:
    :undoc-members:
    :show-inheritance:

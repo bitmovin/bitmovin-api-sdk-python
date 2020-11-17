@@ -3,6 +3,7 @@
 from enum import Enum
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
+from bitmovin_api_sdk.models.channels_attribute_for_audio import ChannelsAttributeForAudio
 from bitmovin_api_sdk.models.hls_manifest import HlsManifest
 from bitmovin_api_sdk.models.hls_manifest_default_version import HlsManifestDefaultVersion
 from bitmovin_api_sdk.models.hls_version import HlsVersion
@@ -27,10 +28,11 @@ class HlsManifestDefault(HlsManifest):
                  manifest_name=None,
                  hls_media_playlist_version=None,
                  hls_master_playlist_version=None,
+                 channels_attribute_for_audio=None,
                  encoding_id=None,
                  version=None):
-        # type: (string_types, string_types, datetime, datetime, dict, string_types, ManifestType, list[EncodingOutput], Status, string_types, HlsVersion, HlsVersion, string_types, HlsManifestDefaultVersion) -> None
-        super(HlsManifestDefault, self).__init__(name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, id_=id_, type_=type_, outputs=outputs, status=status, manifest_name=manifest_name, hls_media_playlist_version=hls_media_playlist_version, hls_master_playlist_version=hls_master_playlist_version)
+        # type: (string_types, string_types, datetime, datetime, dict, string_types, ManifestType, list[EncodingOutput], Status, string_types, HlsVersion, HlsVersion, ChannelsAttributeForAudio, string_types, HlsManifestDefaultVersion) -> None
+        super(HlsManifestDefault, self).__init__(name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, id_=id_, type_=type_, outputs=outputs, status=status, manifest_name=manifest_name, hls_media_playlist_version=hls_media_playlist_version, hls_master_playlist_version=hls_master_playlist_version, channels_attribute_for_audio=channels_attribute_for_audio)
 
         self._encoding_id = None
         self._version = None

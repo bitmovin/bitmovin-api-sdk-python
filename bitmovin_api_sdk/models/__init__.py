@@ -171,6 +171,7 @@ from bitmovin_api_sdk.models.cenc_marlin import CencMarlin
 from bitmovin_api_sdk.models.cenc_play_ready import CencPlayReady
 from bitmovin_api_sdk.models.cenc_widevine import CencWidevine
 from bitmovin_api_sdk.models.channel_layout import ChannelLayout
+from bitmovin_api_sdk.models.channels_attribute_for_audio import ChannelsAttributeForAudio
 from bitmovin_api_sdk.models.chroma_location import ChromaLocation
 from bitmovin_api_sdk.models.chunked_text_muxing import ChunkedTextMuxing
 from bitmovin_api_sdk.models.clear_key_drm import ClearKeyDrm
@@ -276,7 +277,6 @@ from bitmovin_api_sdk.models.encoding_stream_input import EncodingStreamInput
 from bitmovin_api_sdk.models.encoding_stream_input_details import EncodingStreamInputDetails
 from bitmovin_api_sdk.models.encoding_type import EncodingType
 from bitmovin_api_sdk.models.encryption_mode import EncryptionMode
-from bitmovin_api_sdk.models.encryption_type import EncryptionType
 from bitmovin_api_sdk.models.enhanced_deinterlace_auto_enable import EnhancedDeinterlaceAutoEnable
 from bitmovin_api_sdk.models.enhanced_deinterlace_filter import EnhancedDeinterlaceFilter
 from bitmovin_api_sdk.models.enhanced_deinterlace_mode import EnhancedDeinterlaceMode
@@ -284,6 +284,7 @@ from bitmovin_api_sdk.models.enhanced_deinterlace_parity import EnhancedDeinterl
 from bitmovin_api_sdk.models.enhanced_watermark_filter import EnhancedWatermarkFilter
 from bitmovin_api_sdk.models.error_details import ErrorDetails
 from bitmovin_api_sdk.models.error_retry_hint import ErrorRetryHint
+from bitmovin_api_sdk.models.external_id_mode import ExternalIdMode
 from bitmovin_api_sdk.models.fair_play_drm import FairPlayDrm
 from bitmovin_api_sdk.models.file_input_stream import FileInputStream
 from bitmovin_api_sdk.models.file_input_stream_type import FileInputStreamType
@@ -457,6 +458,11 @@ from bitmovin_api_sdk.models.position_mode import PositionMode
 from bitmovin_api_sdk.models.position_unit import PositionUnit
 from bitmovin_api_sdk.models.preset_configuration import PresetConfiguration
 from bitmovin_api_sdk.models.prewarm_encoder_settings import PrewarmEncoderSettings
+from bitmovin_api_sdk.models.prewarmed_encoder_disk_size import PrewarmedEncoderDiskSize
+from bitmovin_api_sdk.models.prewarmed_encoder_pool import PrewarmedEncoderPool
+from bitmovin_api_sdk.models.prewarmed_encoder_pool_action import PrewarmedEncoderPoolAction
+from bitmovin_api_sdk.models.prewarmed_encoder_pool_schedule import PrewarmedEncoderPoolSchedule
+from bitmovin_api_sdk.models.prewarmed_encoder_pool_status import PrewarmedEncoderPoolStatus
 from bitmovin_api_sdk.models.prime_time_drm import PrimeTimeDrm
 from bitmovin_api_sdk.models.profile_h262 import ProfileH262
 from bitmovin_api_sdk.models.profile_h264 import ProfileH264
@@ -614,7 +620,6 @@ from bitmovin_api_sdk.models.web_vtt_configuration import WebVttConfiguration
 from bitmovin_api_sdk.models.web_vtt_sidecar_file import WebVttSidecarFile
 from bitmovin_api_sdk.models.web_vtt_sidecar_file_segmentation import WebVttSidecarFileSegmentation
 from bitmovin_api_sdk.models.webhook import Webhook
-from bitmovin_api_sdk.models.webhook_encryption import WebhookEncryption
 from bitmovin_api_sdk.models.webhook_http_method import WebhookHttpMethod
 from bitmovin_api_sdk.models.webhook_notification import WebhookNotification
 from bitmovin_api_sdk.models.webhook_notification_with_stream_conditions import WebhookNotificationWithStreamConditions

@@ -5,8 +5,7 @@ from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
 
 
-class EncryptionType(Enum):
-    AES = "AES"
-    DESEDE = "DESede"
-    BLOWFISH = "Blowfish"
-    RSA = "RSA"
+class ExternalIdMode(Enum):
+    CUSTOM = "CUSTOM"
+    GLOBAL = "GLOBAL"
+    GENERATED = "GENERATED"

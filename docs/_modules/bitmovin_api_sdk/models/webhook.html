@@ -160,7 +160,6 @@
 <span class="kn">from</span> <span class="nn">six</span> <span class="kn">import</span> <span class="n">string_types</span><span class="p">,</span> <span class="n">iteritems</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.common.poscheck</span> <span class="kn">import</span> <span class="n">poscheck_model</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.bitmovin_resource</span> <span class="kn">import</span> <span class="n">BitmovinResource</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.webhook_encryption</span> <span class="kn">import</span> <span class="n">WebhookEncryption</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.webhook_http_method</span> <span class="kn">import</span> <span class="n">WebhookHttpMethod</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.webhook_signature</span> <span class="kn">import</span> <span class="n">WebhookSignature</span>
 <span class="kn">import</span> <span class="nn">pprint</span>
@@ -179,16 +178,14 @@
                  <span class="n">url</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">method</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">insecure_ssl</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                 <span class="n">encryption</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">signature</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">schema</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (string_types, string_types, string_types, datetime, datetime, dict, string_types, WebhookHttpMethod, bool, WebhookEncryption, WebhookSignature, object) -&gt; None</span>
+        <span class="c1"># type: (string_types, string_types, string_types, datetime, datetime, dict, string_types, WebhookHttpMethod, bool, WebhookSignature, object) -&gt; None</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">Webhook</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">id_</span><span class="o">=</span><span class="n">id_</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="n">description</span><span class="p">,</span> <span class="n">created_at</span><span class="o">=</span><span class="n">created_at</span><span class="p">,</span> <span class="n">modified_at</span><span class="o">=</span><span class="n">modified_at</span><span class="p">,</span> <span class="n">custom_data</span><span class="o">=</span><span class="n">custom_data</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_url</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_method</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_insecure_ssl</span> <span class="o">=</span> <span class="kc">None</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_encryption</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_signature</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_schema</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>
@@ -199,8 +196,6 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">method</span> <span class="o">=</span> <span class="n">method</span>
         <span class="k">if</span> <span class="n">insecure_ssl</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">insecure_ssl</span> <span class="o">=</span> <span class="n">insecure_ssl</span>
-        <span class="k">if</span> <span class="n">encryption</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">encryption</span> <span class="o">=</span> <span class="n">encryption</span>
         <span class="k">if</span> <span class="n">signature</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">signature</span> <span class="o">=</span> <span class="n">signature</span>
         <span class="k">if</span> <span class="n">schema</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -217,7 +212,6 @@
             <span class="s1">&#39;url&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
             <span class="s1">&#39;method&#39;</span><span class="p">:</span> <span class="s1">&#39;WebhookHttpMethod&#39;</span><span class="p">,</span>
             <span class="s1">&#39;insecure_ssl&#39;</span><span class="p">:</span> <span class="s1">&#39;bool&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;encryption&#39;</span><span class="p">:</span> <span class="s1">&#39;WebhookEncryption&#39;</span><span class="p">,</span>
             <span class="s1">&#39;signature&#39;</span><span class="p">:</span> <span class="s1">&#39;WebhookSignature&#39;</span><span class="p">,</span>
             <span class="s1">&#39;schema&#39;</span><span class="p">:</span> <span class="s1">&#39;object&#39;</span>
         <span class="p">})</span>
@@ -235,7 +229,6 @@
             <span class="s1">&#39;url&#39;</span><span class="p">:</span> <span class="s1">&#39;url&#39;</span><span class="p">,</span>
             <span class="s1">&#39;method&#39;</span><span class="p">:</span> <span class="s1">&#39;method&#39;</span><span class="p">,</span>
             <span class="s1">&#39;insecure_ssl&#39;</span><span class="p">:</span> <span class="s1">&#39;insecureSsl&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;encryption&#39;</span><span class="p">:</span> <span class="s1">&#39;encryption&#39;</span><span class="p">,</span>
             <span class="s1">&#39;signature&#39;</span><span class="p">:</span> <span class="s1">&#39;signature&#39;</span><span class="p">,</span>
             <span class="s1">&#39;schema&#39;</span><span class="p">:</span> <span class="s1">&#39;schema&#39;</span>
         <span class="p">})</span>
@@ -327,35 +320,6 @@
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `insecure_ssl`, type has to be `bool`&quot;</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_insecure_ssl</span> <span class="o">=</span> <span class="n">insecure_ssl</span>
-
-    <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">encryption</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="c1"># type: () -&gt; WebhookEncryption</span>
-        <span class="sd">&quot;&quot;&quot;Gets the encryption of this Webhook.</span>
-
-<span class="sd">        Encryption used for the webhook</span>
-
-<span class="sd">        :return: The encryption of this Webhook.</span>
-<span class="sd">        :rtype: WebhookEncryption</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_encryption</span>
-
-    <span class="nd">@encryption</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">encryption</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">encryption</span><span class="p">):</span>
-        <span class="c1"># type: (WebhookEncryption) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the encryption of this Webhook.</span>
-
-<span class="sd">        Encryption used for the webhook</span>
-
-<span class="sd">        :param encryption: The encryption of this Webhook.</span>
-<span class="sd">        :type: WebhookEncryption</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-
-        <span class="k">if</span> <span class="n">encryption</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">encryption</span><span class="p">,</span> <span class="n">WebhookEncryption</span><span class="p">):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `encryption`, type has to be `WebhookEncryption`&quot;</span><span class="p">)</span>
-
-        <span class="bp">self</span><span class="o">.</span><span class="n">_encryption</span> <span class="o">=</span> <span class="n">encryption</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">signature</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>

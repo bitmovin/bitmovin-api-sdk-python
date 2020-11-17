@@ -1,0 +1,505 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>bitmovin_api_sdk.models.prewarmed_encoder_pool &mdash; Bitmovin Python API SDK {{packageVersion}} documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: blue" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home" alt="Documentation Home"> Bitmovin Python API SDK
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../__modules/modules.html">python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../__modules/bitmovin_api_sdk.encoding.html">bitmovin_api_sdk.encoding package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../__modules/bitmovin_api_sdk.analytics.html">bitmovin_api_sdk.analytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../__modules/bitmovin_api_sdk.player.html">bitmovin_api_sdk.player package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../__modules/bitmovin_api_sdk.account.html">bitmovin_api_sdk.account package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../__modules/bitmovin_api_sdk.notifications.html">bitmovin_api_sdk.notifications package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../__modules/bitmovin_api_sdk.general.html">bitmovin_api_sdk.general package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../__modules/bitmovin_api_sdk.common.html">bitmovin_api_sdk.common package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../__modules/bitmovin_api_sdk.models.html">bitmovin_api_sdk.models package</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Bitmovin Python API SDK</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+      <li>bitmovin_api_sdk.models.prewarmed_encoder_pool</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for bitmovin_api_sdk.models.prewarmed_encoder_pool</h1><div class="highlight"><pre>
+<span></span><span class="c1"># coding: utf-8</span>
+
+<span class="kn">from</span> <span class="nn">enum</span> <span class="kn">import</span> <span class="n">Enum</span>
+<span class="kn">from</span> <span class="nn">six</span> <span class="kn">import</span> <span class="n">string_types</span><span class="p">,</span> <span class="n">iteritems</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.common.poscheck</span> <span class="kn">import</span> <span class="n">poscheck_model</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.bitmovin_resource</span> <span class="kn">import</span> <span class="n">BitmovinResource</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.cloud_region</span> <span class="kn">import</span> <span class="n">CloudRegion</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.prewarmed_encoder_disk_size</span> <span class="kn">import</span> <span class="n">PrewarmedEncoderDiskSize</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.prewarmed_encoder_pool_status</span> <span class="kn">import</span> <span class="n">PrewarmedEncoderPoolStatus</span>
+<span class="kn">import</span> <span class="nn">pprint</span>
+<span class="kn">import</span> <span class="nn">six</span>
+
+
+<div class="viewcode-block" id="PrewarmedEncoderPool"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.prewarmed_encoder_pool.PrewarmedEncoderPool">[docs]</a><span class="k">class</span> <span class="nc">PrewarmedEncoderPool</span><span class="p">(</span><span class="n">BitmovinResource</span><span class="p">):</span>
+    <span class="nd">@poscheck_model</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                 <span class="n">id_</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">description</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">created_at</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">modified_at</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">custom_data</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">encoder_version</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">cloud_region</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">infrastructure_id</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">disk_size</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">target_pool_size</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">status</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="c1"># type: (string_types, string_types, string_types, datetime, datetime, dict, string_types, CloudRegion, string_types, PrewarmedEncoderDiskSize, int, PrewarmedEncoderPoolStatus) -&gt; None</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">PrewarmedEncoderPool</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">id_</span><span class="o">=</span><span class="n">id_</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="n">description</span><span class="p">,</span> <span class="n">created_at</span><span class="o">=</span><span class="n">created_at</span><span class="p">,</span> <span class="n">modified_at</span><span class="o">=</span><span class="n">modified_at</span><span class="p">,</span> <span class="n">custom_data</span><span class="o">=</span><span class="n">custom_data</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_encoder_version</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_cloud_region</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_infrastructure_id</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_disk_size</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_target_pool_size</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_status</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="k">if</span> <span class="n">encoder_version</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">encoder_version</span> <span class="o">=</span> <span class="n">encoder_version</span>
+        <span class="k">if</span> <span class="n">cloud_region</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">cloud_region</span> <span class="o">=</span> <span class="n">cloud_region</span>
+        <span class="k">if</span> <span class="n">infrastructure_id</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">infrastructure_id</span> <span class="o">=</span> <span class="n">infrastructure_id</span>
+        <span class="k">if</span> <span class="n">disk_size</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">disk_size</span> <span class="o">=</span> <span class="n">disk_size</span>
+        <span class="k">if</span> <span class="n">target_pool_size</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">target_pool_size</span> <span class="o">=</span> <span class="n">target_pool_size</span>
+        <span class="k">if</span> <span class="n">status</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">status</span> <span class="o">=</span> <span class="n">status</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">types</span> <span class="o">=</span> <span class="p">{}</span>
+
+        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="nb">super</span><span class="p">(</span><span class="n">PrewarmedEncoderPool</span><span class="p">,</span> <span class="bp">self</span><span class="p">),</span> <span class="s1">&#39;openapi_types&#39;</span><span class="p">):</span>
+            <span class="n">types</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="nb">super</span><span class="p">(</span><span class="n">PrewarmedEncoderPool</span><span class="p">,</span> <span class="bp">self</span><span class="p">),</span> <span class="s1">&#39;openapi_types&#39;</span><span class="p">)</span>
+
+        <span class="n">types</span><span class="o">.</span><span class="n">update</span><span class="p">({</span>
+            <span class="s1">&#39;encoder_version&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;cloud_region&#39;</span><span class="p">:</span> <span class="s1">&#39;CloudRegion&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;infrastructure_id&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;disk_size&#39;</span><span class="p">:</span> <span class="s1">&#39;PrewarmedEncoderDiskSize&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;target_pool_size&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;status&#39;</span><span class="p">:</span> <span class="s1">&#39;PrewarmedEncoderPoolStatus&#39;</span>
+        <span class="p">})</span>
+
+        <span class="k">return</span> <span class="n">types</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">attribute_map</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">attributes</span> <span class="o">=</span> <span class="p">{}</span>
+
+        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="nb">super</span><span class="p">(</span><span class="n">PrewarmedEncoderPool</span><span class="p">,</span> <span class="bp">self</span><span class="p">),</span> <span class="s1">&#39;attribute_map&#39;</span><span class="p">):</span>
+            <span class="n">attributes</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="nb">super</span><span class="p">(</span><span class="n">PrewarmedEncoderPool</span><span class="p">,</span> <span class="bp">self</span><span class="p">),</span> <span class="s1">&#39;attribute_map&#39;</span><span class="p">)</span>
+
+        <span class="n">attributes</span><span class="o">.</span><span class="n">update</span><span class="p">({</span>
+            <span class="s1">&#39;encoder_version&#39;</span><span class="p">:</span> <span class="s1">&#39;encoderVersion&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;cloud_region&#39;</span><span class="p">:</span> <span class="s1">&#39;cloudRegion&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;infrastructure_id&#39;</span><span class="p">:</span> <span class="s1">&#39;infrastructureId&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;disk_size&#39;</span><span class="p">:</span> <span class="s1">&#39;diskSize&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;target_pool_size&#39;</span><span class="p">:</span> <span class="s1">&#39;targetPoolSize&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;status&#39;</span><span class="p">:</span> <span class="s1">&#39;status&#39;</span>
+        <span class="p">})</span>
+        <span class="k">return</span> <span class="n">attributes</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">encoder_version</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; string_types</span>
+        <span class="sd">&quot;&quot;&quot;Gets the encoder_version of this PrewarmedEncoderPool.</span>
+
+<span class="sd">        The encoder version which the pool&#39;s instances will be running (required)</span>
+
+<span class="sd">        :return: The encoder_version of this PrewarmedEncoderPool.</span>
+<span class="sd">        :rtype: string_types</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_encoder_version</span>
+
+    <span class="nd">@encoder_version</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">encoder_version</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">encoder_version</span><span class="p">):</span>
+        <span class="c1"># type: (string_types) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the encoder_version of this PrewarmedEncoderPool.</span>
+
+<span class="sd">        The encoder version which the pool&#39;s instances will be running (required)</span>
+
+<span class="sd">        :param encoder_version: The encoder_version of this PrewarmedEncoderPool.</span>
+<span class="sd">        :type: string_types</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">encoder_version</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">encoder_version</span><span class="p">,</span> <span class="n">string_types</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `encoder_version`, type has to be `string_types`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_encoder_version</span> <span class="o">=</span> <span class="n">encoder_version</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">cloud_region</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; CloudRegion</span>
+        <span class="sd">&quot;&quot;&quot;Gets the cloud_region of this PrewarmedEncoderPool.</span>
+
+
+<span class="sd">        :return: The cloud_region of this PrewarmedEncoderPool.</span>
+<span class="sd">        :rtype: CloudRegion</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cloud_region</span>
+
+    <span class="nd">@cloud_region</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">cloud_region</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cloud_region</span><span class="p">):</span>
+        <span class="c1"># type: (CloudRegion) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the cloud_region of this PrewarmedEncoderPool.</span>
+
+
+<span class="sd">        :param cloud_region: The cloud_region of this PrewarmedEncoderPool.</span>
+<span class="sd">        :type: CloudRegion</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">cloud_region</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">cloud_region</span><span class="p">,</span> <span class="n">CloudRegion</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `cloud_region`, type has to be `CloudRegion`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_cloud_region</span> <span class="o">=</span> <span class="n">cloud_region</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">infrastructure_id</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; string_types</span>
+        <span class="sd">&quot;&quot;&quot;Gets the infrastructure_id of this PrewarmedEncoderPool.</span>
+
+<span class="sd">        Define an external infrastructure to run the pool on.</span>
+
+<span class="sd">        :return: The infrastructure_id of this PrewarmedEncoderPool.</span>
+<span class="sd">        :rtype: string_types</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_infrastructure_id</span>
+
+    <span class="nd">@infrastructure_id</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">infrastructure_id</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">infrastructure_id</span><span class="p">):</span>
+        <span class="c1"># type: (string_types) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the infrastructure_id of this PrewarmedEncoderPool.</span>
+
+<span class="sd">        Define an external infrastructure to run the pool on.</span>
+
+<span class="sd">        :param infrastructure_id: The infrastructure_id of this PrewarmedEncoderPool.</span>
+<span class="sd">        :type: string_types</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">infrastructure_id</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">infrastructure_id</span><span class="p">,</span> <span class="n">string_types</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `infrastructure_id`, type has to be `string_types`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_infrastructure_id</span> <span class="o">=</span> <span class="n">infrastructure_id</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">disk_size</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; PrewarmedEncoderDiskSize</span>
+        <span class="sd">&quot;&quot;&quot;Gets the disk_size of this PrewarmedEncoderPool.</span>
+
+
+<span class="sd">        :return: The disk_size of this PrewarmedEncoderPool.</span>
+<span class="sd">        :rtype: PrewarmedEncoderDiskSize</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_disk_size</span>
+
+    <span class="nd">@disk_size</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">disk_size</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">disk_size</span><span class="p">):</span>
+        <span class="c1"># type: (PrewarmedEncoderDiskSize) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the disk_size of this PrewarmedEncoderPool.</span>
+
+
+<span class="sd">        :param disk_size: The disk_size of this PrewarmedEncoderPool.</span>
+<span class="sd">        :type: PrewarmedEncoderDiskSize</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">disk_size</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">disk_size</span><span class="p">,</span> <span class="n">PrewarmedEncoderDiskSize</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `disk_size`, type has to be `PrewarmedEncoderDiskSize`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_disk_size</span> <span class="o">=</span> <span class="n">disk_size</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">target_pool_size</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; int</span>
+        <span class="sd">&quot;&quot;&quot;Gets the target_pool_size of this PrewarmedEncoderPool.</span>
+
+<span class="sd">        Number of instances to keep prewarmed while the pool is running (required)</span>
+
+<span class="sd">        :return: The target_pool_size of this PrewarmedEncoderPool.</span>
+<span class="sd">        :rtype: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_target_pool_size</span>
+
+    <span class="nd">@target_pool_size</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">target_pool_size</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">target_pool_size</span><span class="p">):</span>
+        <span class="c1"># type: (int) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the target_pool_size of this PrewarmedEncoderPool.</span>
+
+<span class="sd">        Number of instances to keep prewarmed while the pool is running (required)</span>
+
+<span class="sd">        :param target_pool_size: The target_pool_size of this PrewarmedEncoderPool.</span>
+<span class="sd">        :type: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">target_pool_size</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">target_pool_size</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">target_pool_size</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid value for `target_pool_size`, must be a value greater than or equal to `1`&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">target_pool_size</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `target_pool_size`, type has to be `int`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_target_pool_size</span> <span class="o">=</span> <span class="n">target_pool_size</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">status</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; PrewarmedEncoderPoolStatus</span>
+        <span class="sd">&quot;&quot;&quot;Gets the status of this PrewarmedEncoderPool.</span>
+
+
+<span class="sd">        :return: The status of this PrewarmedEncoderPool.</span>
+<span class="sd">        :rtype: PrewarmedEncoderPoolStatus</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_status</span>
+
+    <span class="nd">@status</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">status</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">status</span><span class="p">):</span>
+        <span class="c1"># type: (PrewarmedEncoderPoolStatus) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the status of this PrewarmedEncoderPool.</span>
+
+
+<span class="sd">        :param status: The status of this PrewarmedEncoderPool.</span>
+<span class="sd">        :type: PrewarmedEncoderPoolStatus</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">status</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">status</span><span class="p">,</span> <span class="n">PrewarmedEncoderPoolStatus</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `status`, type has to be `PrewarmedEncoderPoolStatus`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_status</span> <span class="o">=</span> <span class="n">status</span>
+
+<div class="viewcode-block" id="PrewarmedEncoderPool.to_dict"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.prewarmed_encoder_pool.PrewarmedEncoderPool.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="p">{}</span>
+
+        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="nb">super</span><span class="p">(</span><span class="n">PrewarmedEncoderPool</span><span class="p">,</span> <span class="bp">self</span><span class="p">),</span> <span class="s2">&quot;to_dict&quot;</span><span class="p">):</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="nb">super</span><span class="p">(</span><span class="n">PrewarmedEncoderPool</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">attr</span><span class="p">,</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">six</span><span class="o">.</span><span class="n">iteritems</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">openapi_types</span><span class="p">):</span>
+            <span class="n">value</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">attr</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="k">continue</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+                <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="k">continue</span>
+                <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="p">[</span><span class="n">y</span><span class="o">.</span><span class="n">value</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">Enum</span><span class="p">)</span> <span class="k">else</span> <span class="n">y</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span> <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="s2">&quot;to_dict&quot;</span><span class="p">)</span> <span class="k">else</span> <span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">value</span><span class="p">]]</span>
+            <span class="k">elif</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="s2">&quot;to_dict&quot;</span><span class="p">):</span>
+                <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="n">value</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span>
+            <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">Enum</span><span class="p">):</span>
+                <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="n">value</span><span class="o">.</span><span class="n">value</span>
+            <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+                <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="p">(</span><span class="n">v</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span> <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="s2">&quot;to_dict&quot;</span><span class="p">)</span> <span class="k">else</span> <span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span> <span class="ow">in</span> <span class="n">value</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="n">value</span>
+
+        <span class="k">return</span> <span class="n">result</span></div>
+
+<div class="viewcode-block" id="PrewarmedEncoderPool.to_str"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.prewarmed_encoder_pool.PrewarmedEncoderPool.to_str">[docs]</a>    <span class="k">def</span> <span class="nf">to_str</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns the string representation of the model&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">pprint</span><span class="o">.</span><span class="n">pformat</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">to_dict</span><span class="p">())</span></div>
+
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;For `print` and `pprint`&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">to_str</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns true if both objects are equal&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">PrewarmedEncoderPool</span><span class="p">):</span>
+            <span class="k">return</span> <span class="kc">False</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="vm">__dict__</span>
+
+    <span class="k">def</span> <span class="fm">__ne__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns true if both objects are not equal&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="ow">not</span> <span class="bp">self</span> <span class="o">==</span> <span class="n">other</span></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Bitmovin Inc
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

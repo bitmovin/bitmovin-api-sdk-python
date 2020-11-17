@@ -4,7 +4,6 @@ from enum import Enum
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
 from bitmovin_api_sdk.models.bitmovin_resource import BitmovinResource
-from bitmovin_api_sdk.models.webhook_encryption import WebhookEncryption
 from bitmovin_api_sdk.models.webhook_http_method import WebhookHttpMethod
 from bitmovin_api_sdk.models.webhook_signature import WebhookSignature
 import pprint
@@ -23,16 +22,14 @@ class Webhook(BitmovinResource):
                  url=None,
                  method=None,
                  insecure_ssl=None,
-                 encryption=None,
                  signature=None,
                  schema=None):
-        # type: (string_types, string_types, string_types, datetime, datetime, dict, string_types, WebhookHttpMethod, bool, WebhookEncryption, WebhookSignature, object) -> None
+        # type: (string_types, string_types, string_types, datetime, datetime, dict, string_types, WebhookHttpMethod, bool, WebhookSignature, object) -> None
         super(Webhook, self).__init__(id_=id_, name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data)
 
         self._url = None
         self._method = None
         self._insecure_ssl = None
-        self._encryption = None
         self._signature = None
         self._schema = None
         self.discriminator = None
@@ -43,8 +40,6 @@ class Webhook(BitmovinResource):
             self.method = method
         if insecure_ssl is not None:
             self.insecure_ssl = insecure_ssl
-        if encryption is not None:
-            self.encryption = encryption
         if signature is not None:
             self.signature = signature
         if schema is not None:
@@ -61,7 +56,6 @@ class Webhook(BitmovinResource):
             'url': 'string_types',
             'method': 'WebhookHttpMethod',
             'insecure_ssl': 'bool',
-            'encryption': 'WebhookEncryption',
             'signature': 'WebhookSignature',
             'schema': 'object'
         })
@@ -79,7 +73,6 @@ class Webhook(BitmovinResource):
             'url': 'url',
             'method': 'method',
             'insecure_ssl': 'insecureSsl',
-            'encryption': 'encryption',
             'signature': 'signature',
             'schema': 'schema'
         })
@@ -171,35 +164,6 @@ class Webhook(BitmovinResource):
                 raise TypeError("Invalid type for `insecure_ssl`, type has to be `bool`")
 
         self._insecure_ssl = insecure_ssl
-
-    @property
-    def encryption(self):
-        # type: () -> WebhookEncryption
-        """Gets the encryption of this Webhook.
-
-        Encryption used for the webhook
-
-        :return: The encryption of this Webhook.
-        :rtype: WebhookEncryption
-        """
-        return self._encryption
-
-    @encryption.setter
-    def encryption(self, encryption):
-        # type: (WebhookEncryption) -> None
-        """Sets the encryption of this Webhook.
-
-        Encryption used for the webhook
-
-        :param encryption: The encryption of this Webhook.
-        :type: WebhookEncryption
-        """
-
-        if encryption is not None:
-            if not isinstance(encryption, WebhookEncryption):
-                raise TypeError("Invalid type for `encryption`, type has to be `WebhookEncryption`")
-
-        self._encryption = encryption
 
     @property
     def signature(self):

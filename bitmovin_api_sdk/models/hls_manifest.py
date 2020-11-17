@@ -3,6 +3,7 @@
 from enum import Enum
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
+from bitmovin_api_sdk.models.channels_attribute_for_audio import ChannelsAttributeForAudio
 from bitmovin_api_sdk.models.hls_version import HlsVersion
 from bitmovin_api_sdk.models.manifest import Manifest
 from bitmovin_api_sdk.models.manifest_type import ManifestType
@@ -25,13 +26,15 @@ class HlsManifest(Manifest):
                  status=None,
                  manifest_name=None,
                  hls_media_playlist_version=None,
-                 hls_master_playlist_version=None):
-        # type: (string_types, string_types, datetime, datetime, dict, string_types, ManifestType, list[EncodingOutput], Status, string_types, HlsVersion, HlsVersion) -> None
+                 hls_master_playlist_version=None,
+                 channels_attribute_for_audio=None):
+        # type: (string_types, string_types, datetime, datetime, dict, string_types, ManifestType, list[EncodingOutput], Status, string_types, HlsVersion, HlsVersion, ChannelsAttributeForAudio) -> None
         super(HlsManifest, self).__init__(name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, id_=id_, type_=type_, outputs=outputs, status=status)
 
         self._manifest_name = None
         self._hls_media_playlist_version = None
         self._hls_master_playlist_version = None
+        self._channels_attribute_for_audio = None
         self.discriminator = None
 
         if manifest_name is not None:
@@ -40,6 +43,8 @@ class HlsManifest(Manifest):
             self.hls_media_playlist_version = hls_media_playlist_version
         if hls_master_playlist_version is not None:
             self.hls_master_playlist_version = hls_master_playlist_version
+        if channels_attribute_for_audio is not None:
+            self.channels_attribute_for_audio = channels_attribute_for_audio
 
     @property
     def openapi_types(self):
@@ -51,7 +56,8 @@ class HlsManifest(Manifest):
         types.update({
             'manifest_name': 'string_types',
             'hls_media_playlist_version': 'HlsVersion',
-            'hls_master_playlist_version': 'HlsVersion'
+            'hls_master_playlist_version': 'HlsVersion',
+            'channels_attribute_for_audio': 'ChannelsAttributeForAudio'
         })
 
         return types
@@ -66,7 +72,8 @@ class HlsManifest(Manifest):
         attributes.update({
             'manifest_name': 'manifestName',
             'hls_media_playlist_version': 'hlsMediaPlaylistVersion',
-            'hls_master_playlist_version': 'hlsMasterPlaylistVersion'
+            'hls_master_playlist_version': 'hlsMasterPlaylistVersion',
+            'channels_attribute_for_audio': 'channelsAttributeForAudio'
         })
         return attributes
 
@@ -156,6 +163,35 @@ class HlsManifest(Manifest):
                 raise TypeError("Invalid type for `hls_master_playlist_version`, type has to be `HlsVersion`")
 
         self._hls_master_playlist_version = hls_master_playlist_version
+
+    @property
+    def channels_attribute_for_audio(self):
+        # type: () -> ChannelsAttributeForAudio
+        """Gets the channels_attribute_for_audio of this HlsManifest.
+
+        Controls the behaviour of the CHANNELS attribute for the EXT-X-VERSION tag
+
+        :return: The channels_attribute_for_audio of this HlsManifest.
+        :rtype: ChannelsAttributeForAudio
+        """
+        return self._channels_attribute_for_audio
+
+    @channels_attribute_for_audio.setter
+    def channels_attribute_for_audio(self, channels_attribute_for_audio):
+        # type: (ChannelsAttributeForAudio) -> None
+        """Sets the channels_attribute_for_audio of this HlsManifest.
+
+        Controls the behaviour of the CHANNELS attribute for the EXT-X-VERSION tag
+
+        :param channels_attribute_for_audio: The channels_attribute_for_audio of this HlsManifest.
+        :type: ChannelsAttributeForAudio
+        """
+
+        if channels_attribute_for_audio is not None:
+            if not isinstance(channels_attribute_for_audio, ChannelsAttributeForAudio):
+                raise TypeError("Invalid type for `channels_attribute_for_audio`, type has to be `ChannelsAttributeForAudio`")
+
+        self._channels_attribute_for_audio = channels_attribute_for_audio
 
     def to_dict(self):
         """Returns the model properties as a dict"""

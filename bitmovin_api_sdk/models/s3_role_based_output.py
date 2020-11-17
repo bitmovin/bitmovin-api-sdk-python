@@ -4,6 +4,7 @@ from enum import Enum
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
 from bitmovin_api_sdk.models.aws_cloud_region import AwsCloudRegion
+from bitmovin_api_sdk.models.external_id_mode import ExternalIdMode
 from bitmovin_api_sdk.models.output import Output
 from bitmovin_api_sdk.models.s3_signature_version import S3SignatureVersion
 import pprint
@@ -23,15 +24,17 @@ class S3RoleBasedOutput(Output):
                  bucket_name=None,
                  role_arn=None,
                  external_id=None,
+                 external_id_mode=None,
                  md5_meta_tag=None,
                  cloud_region=None,
                  signature_version=None):
-        # type: (string_types, string_types, datetime, datetime, dict, string_types, list[AclEntry], string_types, string_types, string_types, string_types, AwsCloudRegion, S3SignatureVersion) -> None
+        # type: (string_types, string_types, datetime, datetime, dict, string_types, list[AclEntry], string_types, string_types, string_types, ExternalIdMode, string_types, AwsCloudRegion, S3SignatureVersion) -> None
         super(S3RoleBasedOutput, self).__init__(name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, id_=id_, acl=acl)
 
         self._bucket_name = None
         self._role_arn = None
         self._external_id = None
+        self._external_id_mode = None
         self._md5_meta_tag = None
         self._cloud_region = None
         self._signature_version = None
@@ -43,6 +46,8 @@ class S3RoleBasedOutput(Output):
             self.role_arn = role_arn
         if external_id is not None:
             self.external_id = external_id
+        if external_id_mode is not None:
+            self.external_id_mode = external_id_mode
         if md5_meta_tag is not None:
             self.md5_meta_tag = md5_meta_tag
         if cloud_region is not None:
@@ -61,6 +66,7 @@ class S3RoleBasedOutput(Output):
             'bucket_name': 'string_types',
             'role_arn': 'string_types',
             'external_id': 'string_types',
+            'external_id_mode': 'ExternalIdMode',
             'md5_meta_tag': 'string_types',
             'cloud_region': 'AwsCloudRegion',
             'signature_version': 'S3SignatureVersion'
@@ -79,6 +85,7 @@ class S3RoleBasedOutput(Output):
             'bucket_name': 'bucketName',
             'role_arn': 'roleArn',
             'external_id': 'externalId',
+            'external_id_mode': 'externalIdMode',
             'md5_meta_tag': 'md5MetaTag',
             'cloud_region': 'cloudRegion',
             'signature_version': 'signatureVersion'
@@ -148,7 +155,7 @@ class S3RoleBasedOutput(Output):
         # type: () -> string_types
         """Gets the external_id of this S3RoleBasedOutput.
 
-        External ID used together with the IAM role identified by `roleArn` to assume S3 access.  This ID is generated once by the owner of the account with the S3 bucket (i.e., you as a customer) and added to the IAM role on AWS. Although it can be any string we recommend using a randomly generated UUID for better uniqueness. This ID then should be added to the trust policy of the IAM role `roleArn` configured above so that it looks something like this:  ``` {   \"Effect\": \"Allow\",   \"Principal\": {     \"AWS\": \"arn:aws:iam::630681592166:user/bitmovinCustomerS3Access\"   },   \"Action\": \"sts:AssumeRole\",   \"Condition\": {     \"StringEquals\": {       \"sts:ExternalId\": \"{{externalId}}\"     }   } } ```  where \"{{externalId}}\" is the generated ID.  This property is optional but we recommend it as an additional security feature. We will use both the `roleArn` and the `externalId` to access your S3 data. If the Amazon IAM role has an external ID configured but it is not provided in the output configuration Bitmovin won't be able to write to the S3 bucket. Also if the provided external ID does not match the one configured for the IAM role on AWS side, Bitmovin won't be able to access the S3 bucket.  You can change the external ID whenever you want, just update the trust policy of the IAM role and provide the new external ID in the output configuration. Note that we then won't be able to access your S3 buckets with the old external ID anymore, so you have to provide new output configuration.  For more information please visit https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user_externalid.html 
+        External ID used together with the IAM role identified by `roleArn` to assume S3 access.  This ID is provided by the API if `externalIdMode` is set to `GLOBAL` or `GENERATED`. If present, it has to be added to the trust policy of the IAM role `roleArn` configured above, otherwise the API won't be able to write to the S3 bucket. An appropriate trust policy would look like this:  ``` {   \"Effect\": \"Allow\",   \"Principal\": {     \"AWS\": \"arn:aws:iam::630681592166:user/bitmovinCustomerS3Access\"   },   \"Action\": \"sts:AssumeRole\",   \"Condition\": {     \"StringEquals\": {       \"sts:ExternalId\": \"{{externalId}}\"     }   } } ```  where \"{{externalId}}\" is the generated ID.  This property is optional but we recommend it as an additional security feature. We will use both the `roleArn` and the `externalId` to access your S3 data. If the Amazon IAM role has an external ID configured but it is not provided in the output configuration Bitmovin won't be able to write to the S3 bucket. Also if the external ID does not match the one configured for the IAM role on AWS side, Bitmovin won't be able to access the S3 bucket.  If you need to change the external ID that is used by your IAM role, you need to create a new output, and use the external ID provided by the API to update your IAM role.  For more information please visit https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user_externalid.html 
 
         :return: The external_id of this S3RoleBasedOutput.
         :rtype: string_types
@@ -160,7 +167,7 @@ class S3RoleBasedOutput(Output):
         # type: (string_types) -> None
         """Sets the external_id of this S3RoleBasedOutput.
 
-        External ID used together with the IAM role identified by `roleArn` to assume S3 access.  This ID is generated once by the owner of the account with the S3 bucket (i.e., you as a customer) and added to the IAM role on AWS. Although it can be any string we recommend using a randomly generated UUID for better uniqueness. This ID then should be added to the trust policy of the IAM role `roleArn` configured above so that it looks something like this:  ``` {   \"Effect\": \"Allow\",   \"Principal\": {     \"AWS\": \"arn:aws:iam::630681592166:user/bitmovinCustomerS3Access\"   },   \"Action\": \"sts:AssumeRole\",   \"Condition\": {     \"StringEquals\": {       \"sts:ExternalId\": \"{{externalId}}\"     }   } } ```  where \"{{externalId}}\" is the generated ID.  This property is optional but we recommend it as an additional security feature. We will use both the `roleArn` and the `externalId` to access your S3 data. If the Amazon IAM role has an external ID configured but it is not provided in the output configuration Bitmovin won't be able to write to the S3 bucket. Also if the provided external ID does not match the one configured for the IAM role on AWS side, Bitmovin won't be able to access the S3 bucket.  You can change the external ID whenever you want, just update the trust policy of the IAM role and provide the new external ID in the output configuration. Note that we then won't be able to access your S3 buckets with the old external ID anymore, so you have to provide new output configuration.  For more information please visit https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user_externalid.html 
+        External ID used together with the IAM role identified by `roleArn` to assume S3 access.  This ID is provided by the API if `externalIdMode` is set to `GLOBAL` or `GENERATED`. If present, it has to be added to the trust policy of the IAM role `roleArn` configured above, otherwise the API won't be able to write to the S3 bucket. An appropriate trust policy would look like this:  ``` {   \"Effect\": \"Allow\",   \"Principal\": {     \"AWS\": \"arn:aws:iam::630681592166:user/bitmovinCustomerS3Access\"   },   \"Action\": \"sts:AssumeRole\",   \"Condition\": {     \"StringEquals\": {       \"sts:ExternalId\": \"{{externalId}}\"     }   } } ```  where \"{{externalId}}\" is the generated ID.  This property is optional but we recommend it as an additional security feature. We will use both the `roleArn` and the `externalId` to access your S3 data. If the Amazon IAM role has an external ID configured but it is not provided in the output configuration Bitmovin won't be able to write to the S3 bucket. Also if the external ID does not match the one configured for the IAM role on AWS side, Bitmovin won't be able to access the S3 bucket.  If you need to change the external ID that is used by your IAM role, you need to create a new output, and use the external ID provided by the API to update your IAM role.  For more information please visit https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user_externalid.html 
 
         :param external_id: The external_id of this S3RoleBasedOutput.
         :type: string_types
@@ -171,6 +178,33 @@ class S3RoleBasedOutput(Output):
                 raise TypeError("Invalid type for `external_id`, type has to be `string_types`")
 
         self._external_id = external_id
+
+    @property
+    def external_id_mode(self):
+        # type: () -> ExternalIdMode
+        """Gets the external_id_mode of this S3RoleBasedOutput.
+
+
+        :return: The external_id_mode of this S3RoleBasedOutput.
+        :rtype: ExternalIdMode
+        """
+        return self._external_id_mode
+
+    @external_id_mode.setter
+    def external_id_mode(self, external_id_mode):
+        # type: (ExternalIdMode) -> None
+        """Sets the external_id_mode of this S3RoleBasedOutput.
+
+
+        :param external_id_mode: The external_id_mode of this S3RoleBasedOutput.
+        :type: ExternalIdMode
+        """
+
+        if external_id_mode is not None:
+            if not isinstance(external_id_mode, ExternalIdMode):
+                raise TypeError("Invalid type for `external_id_mode`, type has to be `ExternalIdMode`")
+
+        self._external_id_mode = external_id_mode
 
     @property
     def md5_meta_tag(self):
