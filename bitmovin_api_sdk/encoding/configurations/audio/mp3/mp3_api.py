@@ -88,7 +88,7 @@ class Mp3Api(BaseApi):
 
         :param query_params: Query parameters
         :type query_params: Mp3AudioConfigurationListQueryParams
-        :return: List of MP3 codec configuration ids
+        :return: List of MP3 codec configurations
         :rtype: Mp3AudioConfiguration
         """
 

@@ -3,8 +3,8 @@ from bitmovin_api_sdk.models import EncodingMode
 
 
 class EncodingListQueryParams(object):
-    def __init__(self, offset=None, limit=None, sort=None, type_=None, status=None, cloud_region=None, selected_cloud_region=None, encoder_version=None, selected_encoder_version=None, selected_encoding_mode=None, name=None, search=None, created_at_newer_than=None, created_at_older_than=None, started_at_newer_than=None, started_at_older_than=None):
-        # type: (int, int, string_types, string_types, string_types, CloudRegion, CloudRegion, string_types, string_types, EncodingMode, string_types, string_types, datetime, datetime, datetime, datetime) -> None
+    def __init__(self, offset=None, limit=None, sort=None, type_=None, status=None, cloud_region=None, selected_cloud_region=None, encoder_version=None, selected_encoder_version=None, selected_encoding_mode=None, name=None, search=None, created_at_newer_than=None, created_at_older_than=None, started_at_newer_than=None, started_at_older_than=None, finished_at_newer_than=None, finished_at_older_than=None):
+        # type: (int, int, string_types, string_types, string_types, CloudRegion, CloudRegion, string_types, string_types, EncodingMode, string_types, string_types, datetime, datetime, datetime, datetime, datetime, datetime) -> None
         super(EncodingListQueryParams, self).__init__()
 
         self.offset = offset
@@ -23,6 +23,8 @@ class EncodingListQueryParams(object):
         self.created_at_older_than = created_at_older_than
         self.started_at_newer_than = started_at_newer_than
         self.started_at_older_than = started_at_older_than
+        self.finished_at_newer_than = finished_at_newer_than
+        self.finished_at_older_than = finished_at_older_than
 
     @property
     def openapi_types(self):
@@ -42,7 +44,9 @@ class EncodingListQueryParams(object):
             'created_at_newer_than': 'datetime',
             'created_at_older_than': 'datetime',
             'started_at_newer_than': 'datetime',
-            'started_at_older_than': 'datetime'
+            'started_at_older_than': 'datetime',
+            'finished_at_newer_than': 'datetime',
+            'finished_at_older_than': 'datetime'
         }
 
         return types
@@ -65,7 +69,9 @@ class EncodingListQueryParams(object):
             'created_at_newer_than': 'createdAtNewerThan',
             'created_at_older_than': 'createdAtOlderThan',
             'started_at_newer_than': 'startedAtNewerThan',
-            'started_at_older_than': 'startedAtOlderThan'
+            'started_at_older_than': 'startedAtOlderThan',
+            'finished_at_newer_than': 'finishedAtNewerThan',
+            'finished_at_older_than': 'finishedAtOlderThan'
         }
 
         return attributes

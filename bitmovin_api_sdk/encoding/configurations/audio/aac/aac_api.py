@@ -88,7 +88,7 @@ class AacApi(BaseApi):
 
         :param query_params: Query parameters
         :type query_params: AacAudioConfigurationListQueryParams
-        :return: List of AAC codec configuration ids
+        :return: List of AAC codec configurations
         :rtype: AacAudioConfiguration
         """
 

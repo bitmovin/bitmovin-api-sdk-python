@@ -88,7 +88,7 @@ class HeAacV1Api(BaseApi):
 
         :param query_params: Query parameters
         :type query_params: HeAacV1AudioConfigurationListQueryParams
-        :return: List of HE-AAC v1 codec configuration ids
+        :return: List of HE-AAC v1 codec configurations
         :rtype: HeAacV1AudioConfiguration
         """
 

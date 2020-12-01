@@ -42,7 +42,7 @@ class LabelsApi(BaseApi):
         """
 
         return self.api_client.get(
-            '/encoding/statistics/labels/',
+            '/encoding/statistics/labels',
             query_params=query_params,
             pagination_response=True,
             type=StatisticsPerLabel,

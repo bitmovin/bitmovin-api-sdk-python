@@ -88,7 +88,7 @@ class OpusApi(BaseApi):
 
         :param query_params: Query parameters
         :type query_params: OpusAudioConfigurationListQueryParams
-        :return: List of Opus codec configuration ids
+        :return: List of Opus codec configurations
         :rtype: OpusAudioConfiguration
         """
 

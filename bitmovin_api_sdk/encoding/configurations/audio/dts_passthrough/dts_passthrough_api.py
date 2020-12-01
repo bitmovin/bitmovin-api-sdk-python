@@ -89,7 +89,7 @@ class DtsPassthroughApi(BaseApi):
 
         :param query_params: Query parameters
         :type query_params: DtsPassthroughAudioConfigurationListQueryParams
-        :return: List of DTS Passthrough codec configuration ids
+        :return: List of DTS Passthrough codec configurations
         :rtype: DtsPassthroughAudioConfiguration
         """
 

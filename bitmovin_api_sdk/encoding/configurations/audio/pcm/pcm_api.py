@@ -88,7 +88,7 @@ class PcmApi(BaseApi):
 
         :param query_params: Query parameters
         :type query_params: PcmAudioConfigurationListQueryParams
-        :return: List of PCM codec configuration ids
+        :return: List of PCM codec configurations
         :rtype: PcmAudioConfiguration
         """
 

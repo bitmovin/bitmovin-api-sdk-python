@@ -33,16 +33,16 @@ class WebvttApi(BaseApi):
 
     def create(self, web_vtt_configuration, **kwargs):
         # type: (WebVttConfiguration, dict) -> WebVttConfiguration
-        """Create WebVtt Subtitle Configuration
+        """Create WebVtt subtitle configuration
 
-        :param web_vtt_configuration: The WebVtt Subtitle Configuration to be created
+        :param web_vtt_configuration: The WebVtt subtitle configuration to be created
         :type web_vtt_configuration: WebVttConfiguration, required
-        :return: WebVtt Video Configuration
+        :return: The created WebVtt subtitle configuration
         :rtype: WebVttConfiguration
         """
 
         return self.api_client.post(
-            '/encoding/configurations/subtitles/webvtt/',
+            '/encoding/configurations/subtitles/webvtt',
             web_vtt_configuration,
             type=WebVttConfiguration,
             **kwargs
@@ -50,11 +50,11 @@ class WebvttApi(BaseApi):
 
     def delete(self, configuration_id, **kwargs):
         # type: (string_types, dict) -> BitmovinResponse
-        """Delete WebVtt Subtitle Configuration
+        """Delete WebVtt subtitle configuration
 
         :param configuration_id: Id of the subtitle configuration
         :type configuration_id: string_types, required
-        :return: Id of the codec configuration
+        :return: Id of the deleted configuration
         :rtype: BitmovinResponse
         """
 
@@ -67,11 +67,11 @@ class WebvttApi(BaseApi):
 
     def get(self, configuration_id, **kwargs):
         # type: (string_types, dict) -> WebVttConfiguration
-        """WebVtt Subtitle Configuration Details
+        """WebVtt subtitle configuration details
 
         :param configuration_id: Id of the codec configuration
         :type configuration_id: string_types, required
-        :return: WebVtt video configuration
+        :return: WebVtt subtitle configuration
         :rtype: WebVttConfiguration
         """
 
@@ -84,16 +84,16 @@ class WebvttApi(BaseApi):
 
     def list(self, query_params=None, **kwargs):
         # type: (WebVttConfigurationListQueryParams, dict) -> WebVttConfiguration
-        """List WebVtt Configurations
+        """List WebVtt subtitle configurations
 
         :param query_params: Query parameters
         :type query_params: WebVttConfigurationListQueryParams
-        :return: List of WebVtt codec configuration ids
+        :return: List of WebVtt subtitle configurations
         :rtype: WebVttConfiguration
         """
 
         return self.api_client.get(
-            '/encoding/configurations/subtitles/webvtt/',
+            '/encoding/configurations/subtitles/webvtt',
             query_params=query_params,
             pagination_response=True,
             type=WebVttConfiguration,

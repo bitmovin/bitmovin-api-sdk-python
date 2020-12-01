@@ -246,13 +246,13 @@
 <dl class="py method">
 <dt id="bitmovin_api_sdk.encoding.configurations.subtitles.webvtt.webvtt_api.WebvttApi.create">
 <code class="sig-name descname">create</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">web_vtt_configuration</span><span class="p">:</span> <span class="n"><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.web_vtt_configuration.WebVttConfiguration" title="bitmovin_api_sdk.models.web_vtt_configuration.WebVttConfiguration">bitmovin_api_sdk.models.web_vtt_configuration.WebVttConfiguration</a></span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">dict</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.web_vtt_configuration.WebVttConfiguration" title="bitmovin_api_sdk.models.web_vtt_configuration.WebVttConfiguration">bitmovin_api_sdk.models.web_vtt_configuration.WebVttConfiguration</a><a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/configurations/subtitles/webvtt/webvtt_api.html#WebvttApi.create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.configurations.subtitles.webvtt.webvtt_api.WebvttApi.create" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create WebVtt Subtitle Configuration</p>
+<dd><p>Create WebVtt subtitle configuration</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>web_vtt_configuration</strong> (<a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.web_vtt_configuration.WebVttConfiguration" title="bitmovin_api_sdk.models.web_vtt_configuration.WebVttConfiguration"><em>WebVttConfiguration</em></a><em>, </em><em>required</em>) – The WebVtt Subtitle Configuration to be created</p>
+<dd class="field-odd"><p><strong>web_vtt_configuration</strong> (<a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.web_vtt_configuration.WebVttConfiguration" title="bitmovin_api_sdk.models.web_vtt_configuration.WebVttConfiguration"><em>WebVttConfiguration</em></a><em>, </em><em>required</em>) – The WebVtt subtitle configuration to be created</p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>WebVtt Video Configuration</p>
+<dd class="field-even"><p>The created WebVtt subtitle configuration</p>
 </dd>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.web_vtt_configuration.WebVttConfiguration" title="bitmovin_api_sdk.models.web_vtt_configuration.WebVttConfiguration">WebVttConfiguration</a></p>
@@ -263,13 +263,13 @@
 <dl class="py method">
 <dt id="bitmovin_api_sdk.encoding.configurations.subtitles.webvtt.webvtt_api.WebvttApi.delete">
 <code class="sig-name descname">delete</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">configuration_id</span><span class="p">:</span> <span class="n">string_types</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">dict</span></em><span class="sig-paren">)</span> &#x2192; BitmovinResponse<a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/configurations/subtitles/webvtt/webvtt_api.html#WebvttApi.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.configurations.subtitles.webvtt.webvtt_api.WebvttApi.delete" title="Permalink to this definition">¶</a></dt>
-<dd><p>Delete WebVtt Subtitle Configuration</p>
+<dd><p>Delete WebVtt subtitle configuration</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>configuration_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the subtitle configuration</p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Id of the codec configuration</p>
+<dd class="field-even"><p>Id of the deleted configuration</p>
 </dd>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.bitmovin_response.BitmovinResponse" title="bitmovin_api_sdk.models.bitmovin_response.BitmovinResponse">BitmovinResponse</a></p>
@@ -280,13 +280,13 @@
 <dl class="py method">
 <dt id="bitmovin_api_sdk.encoding.configurations.subtitles.webvtt.webvtt_api.WebvttApi.get">
 <code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">configuration_id</span><span class="p">:</span> <span class="n">string_types</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">dict</span></em><span class="sig-paren">)</span> &#x2192; WebVttConfiguration<a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/configurations/subtitles/webvtt/webvtt_api.html#WebvttApi.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.configurations.subtitles.webvtt.webvtt_api.WebvttApi.get" title="Permalink to this definition">¶</a></dt>
-<dd><p>WebVtt Subtitle Configuration Details</p>
+<dd><p>WebVtt subtitle configuration details</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>configuration_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the codec configuration</p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>WebVtt video configuration</p>
+<dd class="field-even"><p>WebVtt subtitle configuration</p>
 </dd>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.web_vtt_configuration.WebVttConfiguration" title="bitmovin_api_sdk.models.web_vtt_configuration.WebVttConfiguration">WebVttConfiguration</a></p>
@@ -297,13 +297,13 @@
 <dl class="py method">
 <dt id="bitmovin_api_sdk.encoding.configurations.subtitles.webvtt.webvtt_api.WebvttApi.list">
 <code class="sig-name descname">list</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">query_params</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span><a class="reference internal" href="#bitmovin_api_sdk.encoding.configurations.subtitles.webvtt.web_vtt_configuration_list_query_params.WebVttConfigurationListQueryParams" title="bitmovin_api_sdk.encoding.configurations.subtitles.webvtt.web_vtt_configuration_list_query_params.WebVttConfigurationListQueryParams">bitmovin_api_sdk.encoding.configurations.subtitles.webvtt.web_vtt_configuration_list_query_params.WebVttConfigurationListQueryParams</a><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">dict</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.web_vtt_configuration.WebVttConfiguration" title="bitmovin_api_sdk.models.web_vtt_configuration.WebVttConfiguration">bitmovin_api_sdk.models.web_vtt_configuration.WebVttConfiguration</a><a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/configurations/subtitles/webvtt/webvtt_api.html#WebvttApi.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.configurations.subtitles.webvtt.webvtt_api.WebvttApi.list" title="Permalink to this definition">¶</a></dt>
-<dd><p>List WebVtt Configurations</p>
+<dd><p>List WebVtt subtitle configurations</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>query_params</strong> (<a class="reference internal" href="#bitmovin_api_sdk.encoding.configurations.subtitles.webvtt.web_vtt_configuration_list_query_params.WebVttConfigurationListQueryParams" title="bitmovin_api_sdk.encoding.configurations.subtitles.webvtt.web_vtt_configuration_list_query_params.WebVttConfigurationListQueryParams"><em>WebVttConfigurationListQueryParams</em></a>) – Query parameters</p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>List of WebVtt codec configuration ids</p>
+<dd class="field-even"><p>List of WebVtt subtitle configurations</p>
 </dd>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.web_vtt_configuration.WebVttConfiguration" title="bitmovin_api_sdk.models.web_vtt_configuration.WebVttConfiguration">WebVttConfiguration</a></p>

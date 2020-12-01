@@ -88,7 +88,7 @@ class VorbisApi(BaseApi):
 
         :param query_params: Query parameters
         :type query_params: VorbisAudioConfigurationListQueryParams
-        :return: List of Vorbis codec configuration ids
+        :return: List of Vorbis codec configurations
         :rtype: VorbisAudioConfiguration
         """
 

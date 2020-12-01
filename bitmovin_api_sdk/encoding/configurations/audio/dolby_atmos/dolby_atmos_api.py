@@ -88,7 +88,7 @@ class DolbyAtmosApi(BaseApi):
 
         :param query_params: Query parameters
         :type query_params: DolbyAtmosAudioConfigurationListQueryParams
-        :return: List of Dolby Atmos codec configuration ids
+        :return: List of Dolby Atmos codec configurations
         :rtype: DolbyAtmosAudioConfiguration
         """
 

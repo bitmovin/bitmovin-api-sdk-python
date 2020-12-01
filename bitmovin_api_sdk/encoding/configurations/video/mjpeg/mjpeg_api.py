@@ -88,7 +88,7 @@ class MjpegApi(BaseApi):
 
         :param query_params: Query parameters
         :type query_params: MjpegVideoConfigurationListQueryParams
-        :return: List of MJPEG codec configuration ids
+        :return: List of MJPEG codec configurations
         :rtype: MjpegVideoConfiguration
         """
 

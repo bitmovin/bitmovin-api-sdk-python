@@ -88,7 +88,7 @@ class Eac3Api(BaseApi):
 
         :param query_params: Query parameters
         :type query_params: Eac3AudioConfigurationListQueryParams
-        :return: List of E-AC3 codec configuration ids
+        :return: List of E-AC3 codec configurations
         :rtype: Eac3AudioConfiguration
         """
 

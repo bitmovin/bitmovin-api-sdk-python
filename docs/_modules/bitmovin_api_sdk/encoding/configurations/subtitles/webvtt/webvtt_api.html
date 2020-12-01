@@ -189,16 +189,16 @@
 
 <div class="viewcode-block" id="WebvttApi.create"><a class="viewcode-back" href="../../../../../../__modules/bitmovin_api_sdk.encoding.configurations.subtitles.webvtt.html#bitmovin_api_sdk.encoding.configurations.subtitles.webvtt.webvtt_api.WebvttApi.create">[docs]</a>    <span class="k">def</span> <span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">web_vtt_configuration</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (WebVttConfiguration, dict) -&gt; WebVttConfiguration</span>
-        <span class="sd">&quot;&quot;&quot;Create WebVtt Subtitle Configuration</span>
+        <span class="sd">&quot;&quot;&quot;Create WebVtt subtitle configuration</span>
 
-<span class="sd">        :param web_vtt_configuration: The WebVtt Subtitle Configuration to be created</span>
+<span class="sd">        :param web_vtt_configuration: The WebVtt subtitle configuration to be created</span>
 <span class="sd">        :type web_vtt_configuration: WebVttConfiguration, required</span>
-<span class="sd">        :return: WebVtt Video Configuration</span>
+<span class="sd">        :return: The created WebVtt subtitle configuration</span>
 <span class="sd">        :rtype: WebVttConfiguration</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">post</span><span class="p">(</span>
-            <span class="s1">&#39;/encoding/configurations/subtitles/webvtt/&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;/encoding/configurations/subtitles/webvtt&#39;</span><span class="p">,</span>
             <span class="n">web_vtt_configuration</span><span class="p">,</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">WebVttConfiguration</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>
@@ -206,11 +206,11 @@
 
 <div class="viewcode-block" id="WebvttApi.delete"><a class="viewcode-back" href="../../../../../../__modules/bitmovin_api_sdk.encoding.configurations.subtitles.webvtt.html#bitmovin_api_sdk.encoding.configurations.subtitles.webvtt.webvtt_api.WebvttApi.delete">[docs]</a>    <span class="k">def</span> <span class="nf">delete</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">configuration_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, dict) -&gt; BitmovinResponse</span>
-        <span class="sd">&quot;&quot;&quot;Delete WebVtt Subtitle Configuration</span>
+        <span class="sd">&quot;&quot;&quot;Delete WebVtt subtitle configuration</span>
 
 <span class="sd">        :param configuration_id: Id of the subtitle configuration</span>
 <span class="sd">        :type configuration_id: string_types, required</span>
-<span class="sd">        :return: Id of the codec configuration</span>
+<span class="sd">        :return: Id of the deleted configuration</span>
 <span class="sd">        :rtype: BitmovinResponse</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
@@ -223,11 +223,11 @@
 
 <div class="viewcode-block" id="WebvttApi.get"><a class="viewcode-back" href="../../../../../../__modules/bitmovin_api_sdk.encoding.configurations.subtitles.webvtt.html#bitmovin_api_sdk.encoding.configurations.subtitles.webvtt.webvtt_api.WebvttApi.get">[docs]</a>    <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">configuration_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, dict) -&gt; WebVttConfiguration</span>
-        <span class="sd">&quot;&quot;&quot;WebVtt Subtitle Configuration Details</span>
+        <span class="sd">&quot;&quot;&quot;WebVtt subtitle configuration details</span>
 
 <span class="sd">        :param configuration_id: Id of the codec configuration</span>
 <span class="sd">        :type configuration_id: string_types, required</span>
-<span class="sd">        :return: WebVtt video configuration</span>
+<span class="sd">        :return: WebVtt subtitle configuration</span>
 <span class="sd">        :rtype: WebVttConfiguration</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
@@ -240,16 +240,16 @@
 
 <div class="viewcode-block" id="WebvttApi.list"><a class="viewcode-back" href="../../../../../../__modules/bitmovin_api_sdk.encoding.configurations.subtitles.webvtt.html#bitmovin_api_sdk.encoding.configurations.subtitles.webvtt.webvtt_api.WebvttApi.list">[docs]</a>    <span class="k">def</span> <span class="nf">list</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">query_params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (WebVttConfigurationListQueryParams, dict) -&gt; WebVttConfiguration</span>
-        <span class="sd">&quot;&quot;&quot;List WebVtt Configurations</span>
+        <span class="sd">&quot;&quot;&quot;List WebVtt subtitle configurations</span>
 
 <span class="sd">        :param query_params: Query parameters</span>
 <span class="sd">        :type query_params: WebVttConfigurationListQueryParams</span>
-<span class="sd">        :return: List of WebVtt codec configuration ids</span>
+<span class="sd">        :return: List of WebVtt subtitle configurations</span>
 <span class="sd">        :rtype: WebVttConfiguration</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
-            <span class="s1">&#39;/encoding/configurations/subtitles/webvtt/&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;/encoding/configurations/subtitles/webvtt&#39;</span><span class="p">,</span>
             <span class="n">query_params</span><span class="o">=</span><span class="n">query_params</span><span class="p">,</span>
             <span class="n">pagination_response</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">WebVttConfiguration</span><span class="p">,</span>
