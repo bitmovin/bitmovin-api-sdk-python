@@ -3,3 +3,4 @@ from bitmovin_api_sdk.notifications.webhooks.encoding.encodings.finished.finishe
 from bitmovin_api_sdk.notifications.webhooks.encoding.encodings.error.error_api import ErrorApi
 from bitmovin_api_sdk.notifications.webhooks.encoding.encodings.transfer_error.transfer_error_api import TransferErrorApi
 from bitmovin_api_sdk.notifications.webhooks.encoding.encodings.live_input_stream_changed.live_input_stream_changed_api import LiveInputStreamChangedApi
+from bitmovin_api_sdk.notifications.webhooks.encoding.encodings.encoding_status_changed.encoding_status_changed_api import EncodingStatusChangedApi

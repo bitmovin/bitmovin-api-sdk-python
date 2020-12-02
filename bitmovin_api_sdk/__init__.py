@@ -887,6 +887,8 @@ from bitmovin_api_sdk.notifications.webhooks.encoding.manifest.finished.finished
 
 from bitmovin_api_sdk.notifications.webhooks.encoding.encodings.live_input_stream_changed.live_input_stream_changed_api import LiveInputStreamChangedApi
 
+from bitmovin_api_sdk.notifications.webhooks.encoding.encodings.encoding_status_changed.encoding_status_changed_api import EncodingStatusChangedApi
+
 from bitmovin_api_sdk.notifications.states.states_api import StatesApi
 from bitmovin_api_sdk.notifications.states.states_api import NotificationStateEntryListQueryParams
 from bitmovin_api_sdk.notifications.emails.emails_api import EmailsApi
@@ -1557,4 +1559,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.54.0"
+__version__ = "1.54.1"

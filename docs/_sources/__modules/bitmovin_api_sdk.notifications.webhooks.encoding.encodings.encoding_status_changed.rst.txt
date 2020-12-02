@@ -1,0 +1,21 @@
+bitmovin\_api\_sdk.notifications.webhooks.encoding.encodings.encoding\_status\_changed package
+==============================================================================================
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.notifications.webhooks.encoding.encodings.encoding\_status\_changed.encoding\_status\_changed\_api module
+----------------------------------------------------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.notifications.webhooks.encoding.encodings.encoding_status_changed.encoding_status_changed_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.notifications.webhooks.encoding.encodings.encoding_status_changed
+   :members:
+   :undoc-members:
+   :show-inheritance:
