@@ -26,3 +26,4 @@ class CodecConfigType(Enum):
     H262 = "H262"
     PCM = "PCM"
     WEBVTT = "WEBVTT"
+    DVB_SUBTITLE = "DVB_SUBTITLE"

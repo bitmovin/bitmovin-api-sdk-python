@@ -12,6 +12,7 @@ class CodecConfiguration(BitmovinResource):
     discriminator_value_class_map = {
         'AAC': 'AacAudioConfiguration',
         'DTS_PASSTHROUGH': 'DtsPassthroughAudioConfiguration',
+        'DVB_SUBTITLE': 'DvbSubtitleConfiguration',
         'HE_AAC_V1': 'HeAacV1AudioConfiguration',
         'HE_AAC_V2': 'HeAacV2AudioConfiguration',
         'H264': 'H264VideoConfiguration',

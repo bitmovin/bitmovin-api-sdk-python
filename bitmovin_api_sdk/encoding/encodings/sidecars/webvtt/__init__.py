@@ -1,1 +1,2 @@
 from bitmovin_api_sdk.encoding.encodings.sidecars.webvtt.webvtt_api import WebvttApi
+from bitmovin_api_sdk.encoding.encodings.sidecars.webvtt.web_vtt_sidecar_file_list_query_params import WebVttSidecarFileListQueryParams

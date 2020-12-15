@@ -82,7 +82,7 @@ class CropFilter(Filter):
         # type: () -> int
         """Gets the left of this CropFilter.
 
-        Amount of pixels which will be cropped of the input video from the left side.
+        Amount of pixels that will be cropped of the input video from the left side. Must be zero or a positive value.
 
         :return: The left of this CropFilter.
         :rtype: int
@@ -94,7 +94,7 @@ class CropFilter(Filter):
         # type: (int) -> None
         """Sets the left of this CropFilter.
 
-        Amount of pixels which will be cropped of the input video from the left side.
+        Amount of pixels that will be cropped of the input video from the left side. Must be zero or a positive value.
 
         :param left: The left of this CropFilter.
         :type: int
@@ -111,7 +111,7 @@ class CropFilter(Filter):
         # type: () -> int
         """Gets the right of this CropFilter.
 
-        Amount of pixels which will be cropped of the input video from the right side.
+        Amount of pixels that will be cropped of the input video from the right side. Must be zero or a positive value.
 
         :return: The right of this CropFilter.
         :rtype: int
@@ -123,7 +123,7 @@ class CropFilter(Filter):
         # type: (int) -> None
         """Sets the right of this CropFilter.
 
-        Amount of pixels which will be cropped of the input video from the right side.
+        Amount of pixels that will be cropped of the input video from the right side. Must be zero or a positive value.
 
         :param right: The right of this CropFilter.
         :type: int
@@ -140,7 +140,7 @@ class CropFilter(Filter):
         # type: () -> int
         """Gets the top of this CropFilter.
 
-        Amount of pixels which will be cropped of the input video from the top.
+        Amount of pixels that will be cropped of the input video from the top. Must be zero or a positive value.
 
         :return: The top of this CropFilter.
         :rtype: int
@@ -152,7 +152,7 @@ class CropFilter(Filter):
         # type: (int) -> None
         """Sets the top of this CropFilter.
 
-        Amount of pixels which will be cropped of the input video from the top.
+        Amount of pixels that will be cropped of the input video from the top. Must be zero or a positive value.
 
         :param top: The top of this CropFilter.
         :type: int
@@ -169,7 +169,7 @@ class CropFilter(Filter):
         # type: () -> int
         """Gets the bottom of this CropFilter.
 
-        Amount of pixels which will be cropped of the input video from the bottom.
+        Amount of pixels that will be cropped of the input video from the bottom. Must be zero or a positive value.
 
         :return: The bottom of this CropFilter.
         :rtype: int
@@ -181,7 +181,7 @@ class CropFilter(Filter):
         # type: (int) -> None
         """Sets the bottom of this CropFilter.
 
-        Amount of pixels which will be cropped of the input video from the bottom.
+        Amount of pixels that will be cropped of the input video from the bottom. Must be zero or a positive value.
 
         :param bottom: The bottom of this CropFilter.
         :type: int

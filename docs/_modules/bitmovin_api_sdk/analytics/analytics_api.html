@@ -168,7 +168,6 @@
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.analytics.queries.queries_api</span> <span class="kn">import</span> <span class="n">QueriesApi</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.analytics.licenses.licenses_api</span> <span class="kn">import</span> <span class="n">LicensesApi</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.analytics.outputs.outputs_api</span> <span class="kn">import</span> <span class="n">OutputsApi</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.analytics.alerting.alerting_api</span> <span class="kn">import</span> <span class="n">AlertingApi</span>
 
 
 <div class="viewcode-block" id="AnalyticsApi"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.analytics.html#bitmovin_api_sdk.analytics.analytics_api.AnalyticsApi">[docs]</a><span class="k">class</span> <span class="nc">AnalyticsApi</span><span class="p">(</span><span class="n">BaseApi</span><span class="p">):</span>
@@ -233,13 +232,6 @@
         <span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">outputs</span> <span class="o">=</span> <span class="n">OutputsApi</span><span class="p">(</span>
-            <span class="n">api_key</span><span class="o">=</span><span class="n">api_key</span><span class="p">,</span>
-            <span class="n">tenant_org_id</span><span class="o">=</span><span class="n">tenant_org_id</span><span class="p">,</span>
-            <span class="n">base_url</span><span class="o">=</span><span class="n">base_url</span><span class="p">,</span>
-            <span class="n">logger</span><span class="o">=</span><span class="n">logger</span>
-        <span class="p">)</span>
-
-        <span class="bp">self</span><span class="o">.</span><span class="n">alerting</span> <span class="o">=</span> <span class="n">AlertingApi</span><span class="p">(</span>
             <span class="n">api_key</span><span class="o">=</span><span class="n">api_key</span><span class="p">,</span>
             <span class="n">tenant_org_id</span><span class="o">=</span><span class="n">tenant_org_id</span><span class="p">,</span>
             <span class="n">base_url</span><span class="o">=</span><span class="n">base_url</span><span class="p">,</span>

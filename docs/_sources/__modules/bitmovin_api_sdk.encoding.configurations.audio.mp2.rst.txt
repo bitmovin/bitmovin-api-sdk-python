@@ -20,6 +20,14 @@ bitmovin\_api\_sdk.encoding.configurations.audio.mp2.mp2\_api module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.encoding.configurations.audio.mp2.mp2\_audio\_configuration\_list\_query\_params module
+----------------------------------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.configurations.audio.mp2.mp2_audio_configuration_list_query_params
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 Module contents
 ---------------
 

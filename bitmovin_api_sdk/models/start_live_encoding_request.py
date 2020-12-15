@@ -18,9 +18,8 @@ class StartLiveEncodingRequest(object):
                  dash_manifests=None,
                  live_encoding_mode=None,
                  reupload_settings=None,
-                 auto_restart_configuration=None,
-                 static_ip_id=None):
-        # type: (string_types, list[LiveHlsManifest], list[LiveDashManifest], EncodingMode, ReuploadSettings, AutoRestartConfiguration, list[string_types]) -> None
+                 auto_restart_configuration=None):
+        # type: (string_types, list[LiveHlsManifest], list[LiveDashManifest], EncodingMode, ReuploadSettings, AutoRestartConfiguration) -> None
 
         self._stream_key = None
         self._hls_manifests = list()
@@ -28,7 +27,6 @@ class StartLiveEncodingRequest(object):
         self._live_encoding_mode = None
         self._reupload_settings = None
         self._auto_restart_configuration = None
-        self._static_ip_id = list()
         self.discriminator = None
 
         if stream_key is not None:
@@ -43,8 +41,6 @@ class StartLiveEncodingRequest(object):
             self.reupload_settings = reupload_settings
         if auto_restart_configuration is not None:
             self.auto_restart_configuration = auto_restart_configuration
-        if static_ip_id is not None:
-            self.static_ip_id = static_ip_id
 
     @property
     def openapi_types(self):
@@ -54,8 +50,7 @@ class StartLiveEncodingRequest(object):
             'dash_manifests': 'list[LiveDashManifest]',
             'live_encoding_mode': 'EncodingMode',
             'reupload_settings': 'ReuploadSettings',
-            'auto_restart_configuration': 'AutoRestartConfiguration',
-            'static_ip_id': 'list[string_types]'
+            'auto_restart_configuration': 'AutoRestartConfiguration'
         }
 
         return types
@@ -68,8 +63,7 @@ class StartLiveEncodingRequest(object):
             'dash_manifests': 'dashManifests',
             'live_encoding_mode': 'liveEncodingMode',
             'reupload_settings': 'reuploadSettings',
-            'auto_restart_configuration': 'autoRestartConfiguration',
-            'static_ip_id': 'staticIpId'
+            'auto_restart_configuration': 'autoRestartConfiguration'
         }
         return attributes
 
@@ -246,35 +240,6 @@ class StartLiveEncodingRequest(object):
                 raise TypeError("Invalid type for `auto_restart_configuration`, type has to be `AutoRestartConfiguration`")
 
         self._auto_restart_configuration = auto_restart_configuration
-
-    @property
-    def static_ip_id(self):
-        # type: () -> list[string_types]
-        """Gets the static_ip_id of this StartLiveEncodingRequest.
-
-        The static IP that will be used for the live encoding. If the provider and the region do not match the encoding start call will fail.
-
-        :return: The static_ip_id of this StartLiveEncodingRequest.
-        :rtype: list[string_types]
-        """
-        return self._static_ip_id
-
-    @static_ip_id.setter
-    def static_ip_id(self, static_ip_id):
-        # type: (list) -> None
-        """Sets the static_ip_id of this StartLiveEncodingRequest.
-
-        The static IP that will be used for the live encoding. If the provider and the region do not match the encoding start call will fail.
-
-        :param static_ip_id: The static_ip_id of this StartLiveEncodingRequest.
-        :type: list[string_types]
-        """
-
-        if static_ip_id is not None:
-            if not isinstance(static_ip_id, list):
-                raise TypeError("Invalid type for `static_ip_id`, type has to be `list[string_types]`")
-
-        self._static_ip_id = static_ip_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -12,6 +12,7 @@ Subpackages
    bitmovin_api_sdk.encoding.infrastructure.gce
    bitmovin_api_sdk.encoding.infrastructure.kubernetes
    bitmovin_api_sdk.encoding.infrastructure.prewarmed_encoder_pools
+   bitmovin_api_sdk.encoding.infrastructure.static_ips
 
 Submodules
 ----------

@@ -7,4 +7,3 @@ from bitmovin_api_sdk.analytics.ads.ads_api import AdsApi
 from bitmovin_api_sdk.analytics.queries.queries_api import QueriesApi
 from bitmovin_api_sdk.analytics.licenses.licenses_api import LicensesApi
 from bitmovin_api_sdk.analytics.outputs.outputs_api import OutputsApi
-from bitmovin_api_sdk.analytics.alerting.alerting_api import AlertingApi

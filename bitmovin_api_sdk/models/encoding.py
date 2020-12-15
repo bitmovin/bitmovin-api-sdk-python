@@ -35,12 +35,13 @@ class Encoding(BitmovinResource):
                  encoder_version=None,
                  infrastructure_id=None,
                  infrastructure=None,
+                 static_ip_id=None,
                  selected_encoder_version=None,
                  selected_encoding_mode=None,
                  selected_cloud_region=None,
                  status=None,
                  labels=None):
-        # type: (string_types, string_types, string_types, datetime, datetime, dict, EncodingType, datetime, datetime, datetime, datetime, datetime, int, CloudRegion, list[CloudRegion], string_types, string_types, InfrastructureSettings, string_types, EncodingMode, CloudRegion, Status, list[string_types]) -> None
+        # type: (string_types, string_types, string_types, datetime, datetime, dict, EncodingType, datetime, datetime, datetime, datetime, datetime, int, CloudRegion, list[CloudRegion], string_types, string_types, InfrastructureSettings, string_types, string_types, EncodingMode, CloudRegion, Status, list[string_types]) -> None
         super(Encoding, self).__init__(id_=id_, name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data)
 
         self._type = None
@@ -55,6 +56,7 @@ class Encoding(BitmovinResource):
         self._encoder_version = None
         self._infrastructure_id = None
         self._infrastructure = None
+        self._static_ip_id = None
         self._selected_encoder_version = None
         self._selected_encoding_mode = None
         self._selected_cloud_region = None
@@ -86,6 +88,8 @@ class Encoding(BitmovinResource):
             self.infrastructure_id = infrastructure_id
         if infrastructure is not None:
             self.infrastructure = infrastructure
+        if static_ip_id is not None:
+            self.static_ip_id = static_ip_id
         if selected_encoder_version is not None:
             self.selected_encoder_version = selected_encoder_version
         if selected_encoding_mode is not None:
@@ -117,6 +121,7 @@ class Encoding(BitmovinResource):
             'encoder_version': 'string_types',
             'infrastructure_id': 'string_types',
             'infrastructure': 'InfrastructureSettings',
+            'static_ip_id': 'string_types',
             'selected_encoder_version': 'string_types',
             'selected_encoding_mode': 'EncodingMode',
             'selected_cloud_region': 'CloudRegion',
@@ -146,6 +151,7 @@ class Encoding(BitmovinResource):
             'encoder_version': 'encoderVersion',
             'infrastructure_id': 'infrastructureId',
             'infrastructure': 'infrastructure',
+            'static_ip_id': 'staticIpId',
             'selected_encoder_version': 'selectedEncoderVersion',
             'selected_encoding_mode': 'selectedEncodingMode',
             'selected_cloud_region': 'selectedCloudRegion',
@@ -497,6 +503,35 @@ class Encoding(BitmovinResource):
                 raise TypeError("Invalid type for `infrastructure`, type has to be `InfrastructureSettings`")
 
         self._infrastructure = infrastructure
+
+    @property
+    def static_ip_id(self):
+        # type: () -> string_types
+        """Gets the static_ip_id of this Encoding.
+
+        Specify an ID of a Static IP infrastructure resource this encoding should use. A Static IP cannot be used by multiple encodings at once. The encoding will go to an error state if the Static IP is already in use. This is currently only supported for live encodings.
+
+        :return: The static_ip_id of this Encoding.
+        :rtype: string_types
+        """
+        return self._static_ip_id
+
+    @static_ip_id.setter
+    def static_ip_id(self, static_ip_id):
+        # type: (string_types) -> None
+        """Sets the static_ip_id of this Encoding.
+
+        Specify an ID of a Static IP infrastructure resource this encoding should use. A Static IP cannot be used by multiple encodings at once. The encoding will go to an error state if the Static IP is already in use. This is currently only supported for live encodings.
+
+        :param static_ip_id: The static_ip_id of this Encoding.
+        :type: string_types
+        """
+
+        if static_ip_id is not None:
+            if not isinstance(static_ip_id, string_types):
+                raise TypeError("Invalid type for `static_ip_id`, type has to be `string_types`")
+
+        self._static_ip_id = static_ip_id
 
     @property
     def selected_encoder_version(self):

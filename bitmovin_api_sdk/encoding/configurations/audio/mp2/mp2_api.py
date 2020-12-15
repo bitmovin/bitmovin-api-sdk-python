@@ -9,6 +9,7 @@ from bitmovin_api_sdk.models.mp2_audio_configuration import Mp2AudioConfiguratio
 from bitmovin_api_sdk.models.response_envelope import ResponseEnvelope
 from bitmovin_api_sdk.models.response_error import ResponseError
 from bitmovin_api_sdk.encoding.configurations.audio.mp2.customdata.customdata_api import CustomdataApi
+from bitmovin_api_sdk.encoding.configurations.audio.mp2.mp2_audio_configuration_list_query_params import Mp2AudioConfigurationListQueryParams
 
 
 class Mp2Api(BaseApi):
@@ -77,6 +78,24 @@ class Mp2Api(BaseApi):
         return self.api_client.get(
             '/encoding/configurations/audio/mp2/{configuration_id}',
             path_params={'configuration_id': configuration_id},
+            type=Mp2AudioConfiguration,
+            **kwargs
+        )
+
+    def list(self, query_params=None, **kwargs):
+        # type: (Mp2AudioConfigurationListQueryParams, dict) -> Mp2AudioConfiguration
+        """List MP2 Configurations
+
+        :param query_params: Query parameters
+        :type query_params: Mp2AudioConfigurationListQueryParams
+        :return: List of MP2 codec configurations
+        :rtype: Mp2AudioConfiguration
+        """
+
+        return self.api_client.get(
+            '/encoding/configurations/audio/mp2',
+            query_params=query_params,
+            pagination_response=True,
             type=Mp2AudioConfiguration,
             **kwargs
         )

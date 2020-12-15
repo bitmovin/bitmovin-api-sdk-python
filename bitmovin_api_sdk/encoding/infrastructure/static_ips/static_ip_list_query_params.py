@@ -1,7 +1,7 @@
-class AnalyticsAlertingRuleListQueryParams(object):
+class StaticIpListQueryParams(object):
     def __init__(self, offset=None, limit=None):
         # type: (int, int) -> None
-        super(AnalyticsAlertingRuleListQueryParams, self).__init__()
+        super(StaticIpListQueryParams, self).__init__()
 
         self.offset = offset
         self.limit = limit

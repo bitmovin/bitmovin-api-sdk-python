@@ -8,6 +8,7 @@ from bitmovin_api_sdk.models.bitmovin_response import BitmovinResponse
 from bitmovin_api_sdk.models.response_envelope import ResponseEnvelope
 from bitmovin_api_sdk.models.response_error import ResponseError
 from bitmovin_api_sdk.models.web_vtt_sidecar_file import WebVttSidecarFile
+from bitmovin_api_sdk.encoding.encodings.sidecars.webvtt.web_vtt_sidecar_file_list_query_params import WebVttSidecarFileListQueryParams
 
 
 class WebvttApi(BaseApi):
@@ -76,6 +77,27 @@ class WebvttApi(BaseApi):
         return self.api_client.get(
             '/encoding/encodings/{encoding_id}/sidecars/webvtt/{sidecar_id}',
             path_params={'encoding_id': encoding_id, 'sidecar_id': sidecar_id},
+            type=WebVttSidecarFile,
+            **kwargs
+        )
+
+    def list(self, encoding_id, query_params=None, **kwargs):
+        # type: (string_types, WebVttSidecarFileListQueryParams, dict) -> WebVttSidecarFile
+        """List WebVTT sidecar files
+
+        :param encoding_id: Id of the encoding.
+        :type encoding_id: string_types, required
+        :param query_params: Query parameters
+        :type query_params: WebVttSidecarFileListQueryParams
+        :return: List of WebVTT sidecar files
+        :rtype: WebVttSidecarFile
+        """
+
+        return self.api_client.get(
+            '/encoding/encodings/{encoding_id}/sidecars/webvtt',
+            path_params={'encoding_id': encoding_id},
+            query_params=query_params,
+            pagination_response=True,
             type=WebVttSidecarFile,
             **kwargs
         )

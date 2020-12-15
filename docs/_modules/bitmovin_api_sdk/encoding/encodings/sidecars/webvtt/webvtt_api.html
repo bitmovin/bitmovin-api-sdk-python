@@ -164,6 +164,7 @@
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.response_envelope</span> <span class="kn">import</span> <span class="n">ResponseEnvelope</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.response_error</span> <span class="kn">import</span> <span class="n">ResponseError</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.web_vtt_sidecar_file</span> <span class="kn">import</span> <span class="n">WebVttSidecarFile</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.encoding.encodings.sidecars.webvtt.web_vtt_sidecar_file_list_query_params</span> <span class="kn">import</span> <span class="n">WebVttSidecarFileListQueryParams</span>
 
 
 <div class="viewcode-block" id="WebvttApi"><a class="viewcode-back" href="../../../../../../__modules/bitmovin_api_sdk.encoding.encodings.sidecars.webvtt.html#bitmovin_api_sdk.encoding.encodings.sidecars.webvtt.webvtt_api.WebvttApi">[docs]</a><span class="k">class</span> <span class="nc">WebvttApi</span><span class="p">(</span><span class="n">BaseApi</span><span class="p">):</span>
@@ -232,6 +233,27 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
             <span class="s1">&#39;/encoding/encodings/</span><span class="si">{encoding_id}</span><span class="s1">/sidecars/webvtt/</span><span class="si">{sidecar_id}</span><span class="s1">&#39;</span><span class="p">,</span>
             <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;encoding_id&#39;</span><span class="p">:</span> <span class="n">encoding_id</span><span class="p">,</span> <span class="s1">&#39;sidecar_id&#39;</span><span class="p">:</span> <span class="n">sidecar_id</span><span class="p">},</span>
+            <span class="nb">type</span><span class="o">=</span><span class="n">WebVttSidecarFile</span><span class="p">,</span>
+            <span class="o">**</span><span class="n">kwargs</span>
+        <span class="p">)</span></div>
+
+<div class="viewcode-block" id="WebvttApi.list"><a class="viewcode-back" href="../../../../../../__modules/bitmovin_api_sdk.encoding.encodings.sidecars.webvtt.html#bitmovin_api_sdk.encoding.encodings.sidecars.webvtt.webvtt_api.WebvttApi.list">[docs]</a>    <span class="k">def</span> <span class="nf">list</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">encoding_id</span><span class="p">,</span> <span class="n">query_params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="c1"># type: (string_types, WebVttSidecarFileListQueryParams, dict) -&gt; WebVttSidecarFile</span>
+        <span class="sd">&quot;&quot;&quot;List WebVTT sidecar files</span>
+
+<span class="sd">        :param encoding_id: Id of the encoding.</span>
+<span class="sd">        :type encoding_id: string_types, required</span>
+<span class="sd">        :param query_params: Query parameters</span>
+<span class="sd">        :type query_params: WebVttSidecarFileListQueryParams</span>
+<span class="sd">        :return: List of WebVTT sidecar files</span>
+<span class="sd">        :rtype: WebVttSidecarFile</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+            <span class="s1">&#39;/encoding/encodings/</span><span class="si">{encoding_id}</span><span class="s1">/sidecars/webvtt&#39;</span><span class="p">,</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;encoding_id&#39;</span><span class="p">:</span> <span class="n">encoding_id</span><span class="p">},</span>
+            <span class="n">query_params</span><span class="o">=</span><span class="n">query_params</span><span class="p">,</span>
+            <span class="n">pagination_response</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">WebVttSidecarFile</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>
         <span class="p">)</span></div></div>
