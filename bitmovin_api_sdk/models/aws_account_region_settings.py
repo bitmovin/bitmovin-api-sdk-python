@@ -3,6 +3,7 @@
 from enum import Enum
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
+from bitmovin_api_sdk.models.aws_cloud_region import AwsCloudRegion
 from bitmovin_api_sdk.models.bitmovin_resource import BitmovinResource
 import pprint
 import six
@@ -20,14 +21,16 @@ class AwsAccountRegionSettings(BitmovinResource):
                  limit_parallel_encodings=None,
                  security_group_id=None,
                  subnet_id=None,
-                 ssh_port=None):
-        # type: (string_types, string_types, string_types, datetime, datetime, dict, int, string_types, string_types, int) -> None
+                 ssh_port=None,
+                 region=None):
+        # type: (string_types, string_types, string_types, datetime, datetime, dict, int, string_types, string_types, int, AwsCloudRegion) -> None
         super(AwsAccountRegionSettings, self).__init__(id_=id_, name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data)
 
         self._limit_parallel_encodings = None
         self._security_group_id = None
         self._subnet_id = None
         self._ssh_port = None
+        self._region = None
         self.discriminator = None
 
         if limit_parallel_encodings is not None:
@@ -38,6 +41,8 @@ class AwsAccountRegionSettings(BitmovinResource):
             self.subnet_id = subnet_id
         if ssh_port is not None:
             self.ssh_port = ssh_port
+        if region is not None:
+            self.region = region
 
     @property
     def openapi_types(self):
@@ -50,7 +55,8 @@ class AwsAccountRegionSettings(BitmovinResource):
             'limit_parallel_encodings': 'int',
             'security_group_id': 'string_types',
             'subnet_id': 'string_types',
-            'ssh_port': 'int'
+            'ssh_port': 'int',
+            'region': 'AwsCloudRegion'
         })
 
         return types
@@ -66,7 +72,8 @@ class AwsAccountRegionSettings(BitmovinResource):
             'limit_parallel_encodings': 'limitParallelEncodings',
             'security_group_id': 'securityGroupId',
             'subnet_id': 'subnetId',
-            'ssh_port': 'sshPort'
+            'ssh_port': 'sshPort',
+            'region': 'region'
         })
         return attributes
 
@@ -189,6 +196,33 @@ class AwsAccountRegionSettings(BitmovinResource):
                 raise TypeError("Invalid type for `ssh_port`, type has to be `int`")
 
         self._ssh_port = ssh_port
+
+    @property
+    def region(self):
+        # type: () -> AwsCloudRegion
+        """Gets the region of this AwsAccountRegionSettings.
+
+
+        :return: The region of this AwsAccountRegionSettings.
+        :rtype: AwsCloudRegion
+        """
+        return self._region
+
+    @region.setter
+    def region(self, region):
+        # type: (AwsCloudRegion) -> None
+        """Sets the region of this AwsAccountRegionSettings.
+
+
+        :param region: The region of this AwsAccountRegionSettings.
+        :type: AwsCloudRegion
+        """
+
+        if region is not None:
+            if not isinstance(region, AwsCloudRegion):
+                raise TypeError("Invalid type for `region`, type has to be `AwsCloudRegion`")
+
+        self._region = region
 
     def to_dict(self):
         """Returns the model properties as a dict"""

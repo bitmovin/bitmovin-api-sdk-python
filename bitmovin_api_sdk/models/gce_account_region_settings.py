@@ -4,6 +4,7 @@ from enum import Enum
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
 from bitmovin_api_sdk.models.bitmovin_resource import BitmovinResource
+from bitmovin_api_sdk.models.google_cloud_region import GoogleCloudRegion
 import pprint
 import six
 
@@ -18,18 +19,22 @@ class GceAccountRegionSettings(BitmovinResource):
                  modified_at=None,
                  custom_data=None,
                  network=None,
-                 subnet_id=None):
-        # type: (string_types, string_types, string_types, datetime, datetime, dict, string_types, string_types) -> None
+                 subnet_id=None,
+                 region=None):
+        # type: (string_types, string_types, string_types, datetime, datetime, dict, string_types, string_types, GoogleCloudRegion) -> None
         super(GceAccountRegionSettings, self).__init__(id_=id_, name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data)
 
         self._network = None
         self._subnet_id = None
+        self._region = None
         self.discriminator = None
 
         if network is not None:
             self.network = network
         if subnet_id is not None:
             self.subnet_id = subnet_id
+        if region is not None:
+            self.region = region
 
     @property
     def openapi_types(self):
@@ -40,7 +45,8 @@ class GceAccountRegionSettings(BitmovinResource):
 
         types.update({
             'network': 'string_types',
-            'subnet_id': 'string_types'
+            'subnet_id': 'string_types',
+            'region': 'GoogleCloudRegion'
         })
 
         return types
@@ -54,7 +60,8 @@ class GceAccountRegionSettings(BitmovinResource):
 
         attributes.update({
             'network': 'network',
-            'subnet_id': 'subnetId'
+            'subnet_id': 'subnetId',
+            'region': 'region'
         })
         return attributes
 
@@ -115,6 +122,33 @@ class GceAccountRegionSettings(BitmovinResource):
                 raise TypeError("Invalid type for `subnet_id`, type has to be `string_types`")
 
         self._subnet_id = subnet_id
+
+    @property
+    def region(self):
+        # type: () -> GoogleCloudRegion
+        """Gets the region of this GceAccountRegionSettings.
+
+
+        :return: The region of this GceAccountRegionSettings.
+        :rtype: GoogleCloudRegion
+        """
+        return self._region
+
+    @region.setter
+    def region(self, region):
+        # type: (GoogleCloudRegion) -> None
+        """Sets the region of this GceAccountRegionSettings.
+
+
+        :param region: The region of this GceAccountRegionSettings.
+        :type: GoogleCloudRegion
+        """
+
+        if region is not None:
+            if not isinstance(region, GoogleCloudRegion):
+                raise TypeError("Invalid type for `region`, type has to be `GoogleCloudRegion`")
+
+        self._region = region
 
     def to_dict(self):
         """Returns the model properties as a dict"""

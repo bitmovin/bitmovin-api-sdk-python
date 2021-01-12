@@ -3,9 +3,9 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>bitmovin_api_sdk.models.aws_account_region_settings &mdash; Bitmovin Python API SDK {{packageVersion}} documentation</title>
   
@@ -16,7 +16,10 @@
 
   
   
+
   
+  
+
   
 
   
@@ -29,7 +32,6 @@
         <script src="../../../_static/jquery.js"></script>
         <script src="../../../_static/underscore.js"></script>
         <script src="../../../_static/doctools.js"></script>
-        <script src="../../../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../../../_static/js/theme.js"></script>
 
@@ -49,7 +51,7 @@
           
 
           
-            <a href="../../../index.html" class="icon icon-home" alt="Documentation Home"> Bitmovin Python API SDK
+            <a href="../../../index.html" class="icon icon-home"> Bitmovin Python API SDK
           
 
           
@@ -130,6 +132,8 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
@@ -159,6 +163,7 @@
 <span class="kn">from</span> <span class="nn">enum</span> <span class="kn">import</span> <span class="n">Enum</span>
 <span class="kn">from</span> <span class="nn">six</span> <span class="kn">import</span> <span class="n">string_types</span><span class="p">,</span> <span class="n">iteritems</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.common.poscheck</span> <span class="kn">import</span> <span class="n">poscheck_model</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.aws_cloud_region</span> <span class="kn">import</span> <span class="n">AwsCloudRegion</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.bitmovin_resource</span> <span class="kn">import</span> <span class="n">BitmovinResource</span>
 <span class="kn">import</span> <span class="nn">pprint</span>
 <span class="kn">import</span> <span class="nn">six</span>
@@ -176,14 +181,16 @@
                  <span class="n">limit_parallel_encodings</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">security_group_id</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">subnet_id</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                 <span class="n">ssh_port</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (string_types, string_types, string_types, datetime, datetime, dict, int, string_types, string_types, int) -&gt; None</span>
+                 <span class="n">ssh_port</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">region</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="c1"># type: (string_types, string_types, string_types, datetime, datetime, dict, int, string_types, string_types, int, AwsCloudRegion) -&gt; None</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">AwsAccountRegionSettings</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">id_</span><span class="o">=</span><span class="n">id_</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="n">description</span><span class="p">,</span> <span class="n">created_at</span><span class="o">=</span><span class="n">created_at</span><span class="p">,</span> <span class="n">modified_at</span><span class="o">=</span><span class="n">modified_at</span><span class="p">,</span> <span class="n">custom_data</span><span class="o">=</span><span class="n">custom_data</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_limit_parallel_encodings</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_security_group_id</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_subnet_id</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_ssh_port</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_region</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>
 
         <span class="k">if</span> <span class="n">limit_parallel_encodings</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -194,6 +201,8 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">subnet_id</span> <span class="o">=</span> <span class="n">subnet_id</span>
         <span class="k">if</span> <span class="n">ssh_port</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">ssh_port</span> <span class="o">=</span> <span class="n">ssh_port</span>
+        <span class="k">if</span> <span class="n">region</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">region</span> <span class="o">=</span> <span class="n">region</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -206,7 +215,8 @@
             <span class="s1">&#39;limit_parallel_encodings&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
             <span class="s1">&#39;security_group_id&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
             <span class="s1">&#39;subnet_id&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;ssh_port&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span>
+            <span class="s1">&#39;ssh_port&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;region&#39;</span><span class="p">:</span> <span class="s1">&#39;AwsCloudRegion&#39;</span>
         <span class="p">})</span>
 
         <span class="k">return</span> <span class="n">types</span>
@@ -222,7 +232,8 @@
             <span class="s1">&#39;limit_parallel_encodings&#39;</span><span class="p">:</span> <span class="s1">&#39;limitParallelEncodings&#39;</span><span class="p">,</span>
             <span class="s1">&#39;security_group_id&#39;</span><span class="p">:</span> <span class="s1">&#39;securityGroupId&#39;</span><span class="p">,</span>
             <span class="s1">&#39;subnet_id&#39;</span><span class="p">:</span> <span class="s1">&#39;subnetId&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;ssh_port&#39;</span><span class="p">:</span> <span class="s1">&#39;sshPort&#39;</span>
+            <span class="s1">&#39;ssh_port&#39;</span><span class="p">:</span> <span class="s1">&#39;sshPort&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;region&#39;</span><span class="p">:</span> <span class="s1">&#39;region&#39;</span>
         <span class="p">})</span>
         <span class="k">return</span> <span class="n">attributes</span>
 
@@ -346,6 +357,33 @@
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_ssh_port</span> <span class="o">=</span> <span class="n">ssh_port</span>
 
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">region</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; AwsCloudRegion</span>
+        <span class="sd">&quot;&quot;&quot;Gets the region of this AwsAccountRegionSettings.</span>
+
+
+<span class="sd">        :return: The region of this AwsAccountRegionSettings.</span>
+<span class="sd">        :rtype: AwsCloudRegion</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_region</span>
+
+    <span class="nd">@region</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">region</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">region</span><span class="p">):</span>
+        <span class="c1"># type: (AwsCloudRegion) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the region of this AwsAccountRegionSettings.</span>
+
+
+<span class="sd">        :param region: The region of this AwsAccountRegionSettings.</span>
+<span class="sd">        :type: AwsCloudRegion</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">region</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">region</span><span class="p">,</span> <span class="n">AwsCloudRegion</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `region`, type has to be `AwsCloudRegion`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_region</span> <span class="o">=</span> <span class="n">region</span>
+
 <div class="viewcode-block" id="AwsAccountRegionSettings.to_dict"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.aws_account_region_settings.AwsAccountRegionSettings.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>
         <span class="n">result</span> <span class="o">=</span> <span class="p">{}</span>
@@ -395,28 +433,25 @@
            
           </div>
           <footer>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2020, Bitmovin Inc
+        &#169; Copyright 2020, Bitmovin Inc.
 
     </p>
   </div>
     
     
     
-    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     
-    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     
     provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 

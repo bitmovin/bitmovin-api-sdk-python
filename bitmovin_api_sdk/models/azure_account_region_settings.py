@@ -3,6 +3,7 @@
 from enum import Enum
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
+from bitmovin_api_sdk.models.azure_cloud_region import AzureCloudRegion
 from bitmovin_api_sdk.models.bitmovin_resource import BitmovinResource
 import pprint
 import six
@@ -18,18 +19,22 @@ class AzureAccountRegionSettings(BitmovinResource):
                  modified_at=None,
                  custom_data=None,
                  network_name=None,
-                 subnet_name=None):
-        # type: (string_types, string_types, string_types, datetime, datetime, dict, string_types, string_types) -> None
+                 subnet_name=None,
+                 region=None):
+        # type: (string_types, string_types, string_types, datetime, datetime, dict, string_types, string_types, AzureCloudRegion) -> None
         super(AzureAccountRegionSettings, self).__init__(id_=id_, name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data)
 
         self._network_name = None
         self._subnet_name = None
+        self._region = None
         self.discriminator = None
 
         if network_name is not None:
             self.network_name = network_name
         if subnet_name is not None:
             self.subnet_name = subnet_name
+        if region is not None:
+            self.region = region
 
     @property
     def openapi_types(self):
@@ -40,7 +45,8 @@ class AzureAccountRegionSettings(BitmovinResource):
 
         types.update({
             'network_name': 'string_types',
-            'subnet_name': 'string_types'
+            'subnet_name': 'string_types',
+            'region': 'AzureCloudRegion'
         })
 
         return types
@@ -54,7 +60,8 @@ class AzureAccountRegionSettings(BitmovinResource):
 
         attributes.update({
             'network_name': 'networkName',
-            'subnet_name': 'subnetName'
+            'subnet_name': 'subnetName',
+            'region': 'region'
         })
         return attributes
 
@@ -115,6 +122,33 @@ class AzureAccountRegionSettings(BitmovinResource):
                 raise TypeError("Invalid type for `subnet_name`, type has to be `string_types`")
 
         self._subnet_name = subnet_name
+
+    @property
+    def region(self):
+        # type: () -> AzureCloudRegion
+        """Gets the region of this AzureAccountRegionSettings.
+
+
+        :return: The region of this AzureAccountRegionSettings.
+        :rtype: AzureCloudRegion
+        """
+        return self._region
+
+    @region.setter
+    def region(self, region):
+        # type: (AzureCloudRegion) -> None
+        """Sets the region of this AzureAccountRegionSettings.
+
+
+        :param region: The region of this AzureAccountRegionSettings.
+        :type: AzureCloudRegion
+        """
+
+        if region is not None:
+            if not isinstance(region, AzureCloudRegion):
+                raise TypeError("Invalid type for `region`, type has to be `AzureCloudRegion`")
+
+        self._region = region
 
     def to_dict(self):
         """Returns the model properties as a dict"""
