@@ -492,6 +492,14 @@ bitmovin\_api\_sdk.models.analytics\_impression\_list\_item module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.analytics\_impression\_sample module
+--------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.analytics_impression_sample
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.analytics\_impressions\_query module
 --------------------------------------------------------------
 
@@ -3352,6 +3360,22 @@ bitmovin\_api\_sdk.models.output\_type\_response module
 -------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.models.output_type_response
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.packed\_audio\_muxing module
+------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.packed_audio_muxing
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.packed\_audio\_muxing\_information module
+-------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.packed_audio_muxing_information
    :members:
    :undoc-members:
    :show-inheritance:

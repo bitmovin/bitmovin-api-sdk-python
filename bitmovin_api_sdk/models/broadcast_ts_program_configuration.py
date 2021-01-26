@@ -12,12 +12,14 @@ class BroadcastTsProgramConfiguration(object):
     def __init__(self,
                  program_number=None,
                  pid_for_pmt=None,
-                 insert_program_clock_ref_on_pes=None):
-        # type: (int, int, bool) -> None
+                 insert_program_clock_ref_on_pes=None,
+                 program_clock_ref_interval=None):
+        # type: (int, int, bool, int) -> None
 
         self._program_number = None
         self._pid_for_pmt = None
         self._insert_program_clock_ref_on_pes = None
+        self._program_clock_ref_interval = None
         self.discriminator = None
 
         if program_number is not None:
@@ -26,13 +28,16 @@ class BroadcastTsProgramConfiguration(object):
             self.pid_for_pmt = pid_for_pmt
         if insert_program_clock_ref_on_pes is not None:
             self.insert_program_clock_ref_on_pes = insert_program_clock_ref_on_pes
+        if program_clock_ref_interval is not None:
+            self.program_clock_ref_interval = program_clock_ref_interval
 
     @property
     def openapi_types(self):
         types = {
             'program_number': 'int',
             'pid_for_pmt': 'int',
-            'insert_program_clock_ref_on_pes': 'bool'
+            'insert_program_clock_ref_on_pes': 'bool',
+            'program_clock_ref_interval': 'int'
         }
 
         return types
@@ -42,7 +47,8 @@ class BroadcastTsProgramConfiguration(object):
         attributes = {
             'program_number': 'programNumber',
             'pid_for_pmt': 'pidForPMT',
-            'insert_program_clock_ref_on_pes': 'insertProgramClockRefOnPes'
+            'insert_program_clock_ref_on_pes': 'insertProgramClockRefOnPes',
+            'program_clock_ref_interval': 'programClockRefInterval'
         }
         return attributes
 
@@ -140,6 +146,39 @@ class BroadcastTsProgramConfiguration(object):
                 raise TypeError("Invalid type for `insert_program_clock_ref_on_pes`, type has to be `bool`")
 
         self._insert_program_clock_ref_on_pes = insert_program_clock_ref_on_pes
+
+    @property
+    def program_clock_ref_interval(self):
+        # type: () -> int
+        """Gets the program_clock_ref_interval of this BroadcastTsProgramConfiguration.
+
+        Interval between Program Clock References (PCRs) in milliseconds. Defines the period between PCR fields inserted in the stream. The default value is 90ms.
+
+        :return: The program_clock_ref_interval of this BroadcastTsProgramConfiguration.
+        :rtype: int
+        """
+        return self._program_clock_ref_interval
+
+    @program_clock_ref_interval.setter
+    def program_clock_ref_interval(self, program_clock_ref_interval):
+        # type: (int) -> None
+        """Sets the program_clock_ref_interval of this BroadcastTsProgramConfiguration.
+
+        Interval between Program Clock References (PCRs) in milliseconds. Defines the period between PCR fields inserted in the stream. The default value is 90ms.
+
+        :param program_clock_ref_interval: The program_clock_ref_interval of this BroadcastTsProgramConfiguration.
+        :type: int
+        """
+
+        if program_clock_ref_interval is not None:
+            if program_clock_ref_interval is not None and program_clock_ref_interval > 100:
+                raise ValueError("Invalid value for `program_clock_ref_interval`, must be a value less than or equal to `100`")
+            if program_clock_ref_interval is not None and program_clock_ref_interval < 1:
+                raise ValueError("Invalid value for `program_clock_ref_interval`, must be a value greater than or equal to `1`")
+            if not isinstance(program_clock_ref_interval, int):
+                raise TypeError("Invalid type for `program_clock_ref_interval`, type has to be `int`")
+
+        self._program_clock_ref_interval = program_clock_ref_interval
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -95,6 +95,10 @@ from bitmovin_api_sdk.analytics.outputs.s3_role_based.s3_role_based_api import S
 from bitmovin_api_sdk.analytics.outputs.s3_role_based.s3_role_based_api import S3RoleBasedOutputListQueryParams
 from bitmovin_api_sdk.analytics.outputs.s3_role_based.customdata.customdata_api import CustomdataApi
 
+from bitmovin_api_sdk.analytics.outputs.gcs_service_account.gcs_service_account_api import GcsServiceAccountApi
+from bitmovin_api_sdk.analytics.outputs.gcs_service_account.gcs_service_account_api import GcsServiceAccountOutputListQueryParams
+from bitmovin_api_sdk.analytics.outputs.gcs_service_account.customdata.customdata_api import CustomdataApi
+
 from bitmovin_api_sdk.encoding.encoding_api import EncodingApi
 
 from bitmovin_api_sdk.encoding.inputs.inputs_api import InputsApi
@@ -464,6 +468,12 @@ from bitmovin_api_sdk.encoding.encodings.muxings.cmaf.customdata.customdata_api 
 from bitmovin_api_sdk.encoding.encodings.muxings.segmented_raw.segmented_raw_api import SegmentedRawApi
 from bitmovin_api_sdk.encoding.encodings.muxings.segmented_raw.segmented_raw_api import SegmentedRawMuxingListQueryParams
 from bitmovin_api_sdk.encoding.encodings.muxings.segmented_raw.customdata.customdata_api import CustomdataApi
+
+from bitmovin_api_sdk.encoding.encodings.muxings.packed_audio.packed_audio_api import PackedAudioApi
+from bitmovin_api_sdk.encoding.encodings.muxings.packed_audio.packed_audio_api import PackedAudioMuxingListQueryParams
+from bitmovin_api_sdk.encoding.encodings.muxings.packed_audio.customdata.customdata_api import CustomdataApi
+
+from bitmovin_api_sdk.encoding.encodings.muxings.packed_audio.information.information_api import InformationApi
 
 from bitmovin_api_sdk.encoding.encodings.muxings.text.text_api import TextApi
 from bitmovin_api_sdk.encoding.encodings.muxings.text.text_api import TextMuxingListQueryParams
@@ -989,6 +999,7 @@ from bitmovin_api_sdk.models.analytics_greater_than_filter import AnalyticsGreat
 from bitmovin_api_sdk.models.analytics_greater_than_or_equal_filter import AnalyticsGreaterThanOrEqualFilter
 from bitmovin_api_sdk.models.analytics_impression_details import AnalyticsImpressionDetails
 from bitmovin_api_sdk.models.analytics_impression_list_item import AnalyticsImpressionListItem
+from bitmovin_api_sdk.models.analytics_impression_sample import AnalyticsImpressionSample
 from bitmovin_api_sdk.models.analytics_impressions_query import AnalyticsImpressionsQuery
 from bitmovin_api_sdk.models.analytics_impressions_response import AnalyticsImpressionsResponse
 from bitmovin_api_sdk.models.analytics_in_filter import AnalyticsInFilter
@@ -1347,6 +1358,8 @@ from bitmovin_api_sdk.models.organization_type import OrganizationType
 from bitmovin_api_sdk.models.output import Output
 from bitmovin_api_sdk.models.output_type import OutputType
 from bitmovin_api_sdk.models.output_type_response import OutputTypeResponse
+from bitmovin_api_sdk.models.packed_audio_muxing import PackedAudioMuxing
+from bitmovin_api_sdk.models.packed_audio_muxing_information import PackedAudioMuxingInformation
 from bitmovin_api_sdk.models.padding_duration_unit import PaddingDurationUnit
 from bitmovin_api_sdk.models.padding_sequence import PaddingSequence
 from bitmovin_api_sdk.models.pagination_response import PaginationResponse
@@ -1554,4 +1567,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.56.0"
+__version__ = "1.57.0"

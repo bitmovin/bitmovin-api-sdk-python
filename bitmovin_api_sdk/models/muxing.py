@@ -103,7 +103,8 @@ class Muxing(BitmovinResource):
         'BROADCAST_TS': 'BroadcastTsMuxing',
         'CHUNKED_TEXT': 'ChunkedTextMuxing',
         'TEXT': 'TextMuxing',
-        'SEGMENTED_RAW': 'SegmentedRawMuxing'
+        'SEGMENTED_RAW': 'SegmentedRawMuxing',
+        'PACKED_AUDIO': 'PackedAudioMuxing'
     }
 
     @property

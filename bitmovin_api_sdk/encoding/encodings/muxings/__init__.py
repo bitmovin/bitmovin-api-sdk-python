@@ -3,6 +3,7 @@ from bitmovin_api_sdk.encoding.encodings.muxings.fmp4.fmp4_api import Fmp4Api
 from bitmovin_api_sdk.encoding.encodings.muxings.chunked_text.chunked_text_api import ChunkedTextApi
 from bitmovin_api_sdk.encoding.encodings.muxings.cmaf.cmaf_api import CmafApi
 from bitmovin_api_sdk.encoding.encodings.muxings.segmented_raw.segmented_raw_api import SegmentedRawApi
+from bitmovin_api_sdk.encoding.encodings.muxings.packed_audio.packed_audio_api import PackedAudioApi
 from bitmovin_api_sdk.encoding.encodings.muxings.text.text_api import TextApi
 from bitmovin_api_sdk.encoding.encodings.muxings.ts.ts_api import TsApi
 from bitmovin_api_sdk.encoding.encodings.muxings.webm.webm_api import WebmApi

@@ -14,6 +14,7 @@ Subpackages
    bitmovin_api_sdk.encoding.encodings.muxings.mp3
    bitmovin_api_sdk.encoding.encodings.muxings.mp4
    bitmovin_api_sdk.encoding.encodings.muxings.mxf
+   bitmovin_api_sdk.encoding.encodings.muxings.packed_audio
    bitmovin_api_sdk.encoding.encodings.muxings.progressive_mov
    bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts
    bitmovin_api_sdk.encoding.encodings.muxings.progressive_webm

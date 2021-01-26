@@ -156,6 +156,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.analytics_greater_than_or_equal_filter">bitmovin_api_sdk.models.analytics_greater_than_or_equal_filter module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.analytics_impression_details">bitmovin_api_sdk.models.analytics_impression_details module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.analytics_impression_list_item">bitmovin_api_sdk.models.analytics_impression_list_item module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.analytics_impression_sample">bitmovin_api_sdk.models.analytics_impression_sample module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.analytics_impressions_query">bitmovin_api_sdk.models.analytics_impressions_query module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.analytics_impressions_response">bitmovin_api_sdk.models.analytics_impressions_response module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.analytics_in_filter">bitmovin_api_sdk.models.analytics_in_filter module</a></li>
@@ -514,6 +515,8 @@
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.output">bitmovin_api_sdk.models.output module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.output_type">bitmovin_api_sdk.models.output_type module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.output_type_response">bitmovin_api_sdk.models.output_type_response module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.packed_audio_muxing">bitmovin_api_sdk.models.packed_audio_muxing module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.packed_audio_muxing_information">bitmovin_api_sdk.models.packed_audio_muxing_information module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.padding_duration_unit">bitmovin_api_sdk.models.padding_duration_unit module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.padding_sequence">bitmovin_api_sdk.models.padding_sequence module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.pagination_response">bitmovin_api_sdk.models.pagination_response module</a></li>
@@ -4840,948 +4843,8 @@
 <span id="bitmovin-api-sdk-models-analytics-impression-details-module"></span><h2>bitmovin_api_sdk.models.analytics_impression_details module<a class="headerlink" href="#module-bitmovin_api_sdk.models.analytics_impression_details" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails">
-<em class="property">class </em><code class="sig-prename descclassname">bitmovin_api_sdk.models.analytics_impression_details.</code><code class="sig-name descname">AnalyticsImpressionDetails</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/models/analytics_impression_details.html#AnalyticsImpressionDetails"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#bitmovin_api_sdk.models.bitmovin_response.BitmovinResponse" title="bitmovin_api_sdk.models.bitmovin_response.BitmovinResponse"><code class="xref py py-class docutils literal notranslate"><span class="pre">bitmovin_api_sdk.models.bitmovin_response.BitmovinResponse</span></code></a></p>
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.ad">
-<em class="property">property </em><code class="sig-name descname">ad</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.ad" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the ad of this AnalyticsImpressionDetails.</p>
-<p>Is an ad playing. 0 indicates no, 1 indicates yes</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The ad of this AnalyticsImpressionDetails.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>int</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.analytics_version">
-<em class="property">property </em><code class="sig-name descname">analytics_version</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.analytics_version" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the analytics_version of this AnalyticsImpressionDetails.</p>
-<p>Collector version</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The analytics_version of this AnalyticsImpressionDetails.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>string_types</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.attribute_map">
-<em class="property">property </em><code class="sig-name descname">attribute_map</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.attribute_map" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.audio_bitrate">
-<em class="property">property </em><code class="sig-name descname">audio_bitrate</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.audio_bitrate" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the audio_bitrate of this AnalyticsImpressionDetails.</p>
-<p>Audio Bitrate</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The audio_bitrate of this AnalyticsImpressionDetails.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>int</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.audio_language">
-<em class="property">property </em><code class="sig-name descname">audio_language</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.audio_language" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the audio_language of this AnalyticsImpressionDetails.</p>
-<p>Selected audio language</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The audio_language of this AnalyticsImpressionDetails.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>string_types</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.autoplay">
-<em class="property">property </em><code class="sig-name descname">autoplay</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.autoplay" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the autoplay of this AnalyticsImpressionDetails.</p>
-<p>Autoplay enabled</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The autoplay of this AnalyticsImpressionDetails.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>bool</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.browser">
-<em class="property">property </em><code class="sig-name descname">browser</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.browser" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the browser of this AnalyticsImpressionDetails.</p>
-<p>Browser name</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The browser of this AnalyticsImpressionDetails.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>string_types</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.browser_version_major">
-<em class="property">property </em><code class="sig-name descname">browser_version_major</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.browser_version_major" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the browser_version_major of this AnalyticsImpressionDetails.</p>
-<p>Browser version major</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The browser_version_major of this AnalyticsImpressionDetails.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>string_types</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.browser_version_minor">
-<em class="property">property </em><code class="sig-name descname">browser_version_minor</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.browser_version_minor" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the browser_version_minor of this AnalyticsImpressionDetails.</p>
-<p>Browser version minor</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The browser_version_minor of this AnalyticsImpressionDetails.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>string_types</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.buffered">
-<em class="property">property </em><code class="sig-name descname">buffered</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.buffered" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the buffered of this AnalyticsImpressionDetails.</p>
-<p>Milliseconds the player buffered</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The buffered of this AnalyticsImpressionDetails.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>int</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.cdn_provider">
-<em class="property">property </em><code class="sig-name descname">cdn_provider</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.cdn_provider" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the cdn_provider of this AnalyticsImpressionDetails.</p>
-<p>CDN Provider</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The cdn_provider of this AnalyticsImpressionDetails.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>string_types</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.city">
-<em class="property">property </em><code class="sig-name descname">city</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.city" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the city of this AnalyticsImpressionDetails.</p>
-<p>City</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The city of this AnalyticsImpressionDetails.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>string_types</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.client_time">
-<em class="property">property </em><code class="sig-name descname">client_time</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.client_time" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the client_time of this AnalyticsImpressionDetails.</p>
-<p>Current time of the client</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The client_time of this AnalyticsImpressionDetails.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>int</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.country">
-<em class="property">property </em><code class="sig-name descname">country</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.country" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the country of this AnalyticsImpressionDetails.</p>
-<p>Country</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The country of this AnalyticsImpressionDetails.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>string_types</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.custom_data1">
-<em class="property">property </em><code class="sig-name descname">custom_data1</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.custom_data1" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the custom_data1 of this AnalyticsImpressionDetails.</p>
-<p>Free form data set via the customData1 field in the analytics collector configuration</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The custom_data1 of this AnalyticsImpressionDetails.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>string_types</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.custom_data2">
-<em class="property">property </em><code class="sig-name descname">custom_data2</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.custom_data2" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the custom_data2 of this AnalyticsImpressionDetails.</p>
-<p>Free form data set via the customData2 field in the analytics collector configuration</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The custom_data2 of this AnalyticsImpressionDetails.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>string_types</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.custom_data3">
-<em class="property">property </em><code class="sig-name descname">custom_data3</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.custom_data3" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the custom_data3 of this AnalyticsImpressionDetails.</p>
-<p>Free form data set via the customData3 field in the analytics collector configuration</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The custom_data3 of this AnalyticsImpressionDetails.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>string_types</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.custom_data4">
-<em class="property">property </em><code class="sig-name descname">custom_data4</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.custom_data4" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the custom_data4 of this AnalyticsImpressionDetails.</p>
-<p>Free form data set via the customData4 field in the analytics collector configuration</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The custom_data4 of this AnalyticsImpressionDetails.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>string_types</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.custom_data5">
-<em class="property">property </em><code class="sig-name descname">custom_data5</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.custom_data5" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the custom_data5 of this AnalyticsImpressionDetails.</p>
-<p>Free form data set via the customData5 field in the analytics collector configuration</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The custom_data5 of this AnalyticsImpressionDetails.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>string_types</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.custom_user_id">
-<em class="property">property </em><code class="sig-name descname">custom_user_id</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.custom_user_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the custom_user_id of this AnalyticsImpressionDetails.</p>
-<p>Custom user ID</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The custom_user_id of this AnalyticsImpressionDetails.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>string_types</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.device_type">
-<em class="property">property </em><code class="sig-name descname">device_type</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.device_type" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the device_type of this AnalyticsImpressionDetails.</p>
-<p>Type of the device detected via User Agent</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The device_type of this AnalyticsImpressionDetails.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>string_types</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.domain">
-<em class="property">property </em><code class="sig-name descname">domain</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.domain" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the domain of this AnalyticsImpressionDetails.</p>
-<p>Domain the player was loaded on (.www is stripped away)</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The domain of this AnalyticsImpressionDetails.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>string_types</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.drm_load_time">
-<em class="property">property </em><code class="sig-name descname">drm_load_time</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.drm_load_time" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the drm_load_time of this AnalyticsImpressionDetails.</p>
-<p>Time in milliseconds it took the DRM server to respond</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The drm_load_time of this AnalyticsImpressionDetails.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>int</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.drm_type">
-<em class="property">property </em><code class="sig-name descname">drm_type</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.drm_type" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the drm_type of this AnalyticsImpressionDetails.</p>
-<p>DRM system used for this impression</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The drm_type of this AnalyticsImpressionDetails.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>string_types</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.dropped_frames">
-<em class="property">property </em><code class="sig-name descname">dropped_frames</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.dropped_frames" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the dropped_frames of this AnalyticsImpressionDetails.</p>
-<p>Dropped frames during playback</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The dropped_frames of this AnalyticsImpressionDetails.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>int</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.duration">
-<em class="property">property </em><code class="sig-name descname">duration</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.duration" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the duration of this AnalyticsImpressionDetails.</p>
-<p>Duration of the sample in milliseconds</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The duration of this AnalyticsImpressionDetails.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>int</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.error_code">
-<em class="property">property </em><code class="sig-name descname">error_code</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.error_code" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the error_code of this AnalyticsImpressionDetails.</p>
-<p>Error code</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The error_code of this AnalyticsImpressionDetails.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>int</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.error_message">
-<em class="property">property </em><code class="sig-name descname">error_message</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.error_message" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the error_message of this AnalyticsImpressionDetails.</p>
-<p>Error message</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The error_message of this AnalyticsImpressionDetails.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>string_types</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.experiment_name">
-<em class="property">property </em><code class="sig-name descname">experiment_name</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.experiment_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the experiment_name of this AnalyticsImpressionDetails.</p>
-<p>A/B test experiment name</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The experiment_name of this AnalyticsImpressionDetails.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>string_types</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.impression_id">
-<em class="property">property </em><code class="sig-name descname">impression_id</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.impression_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the impression_id of this AnalyticsImpressionDetails.</p>
-<p>Random UUID that is used to identify a sessions (required)</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The impression_id of this AnalyticsImpressionDetails.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>string_types</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.ip_address">
-<em class="property">property </em><code class="sig-name descname">ip_address</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.ip_address" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the ip_address of this AnalyticsImpressionDetails.</p>
-<p>IP Address of the client</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The ip_address of this AnalyticsImpressionDetails.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>string_types</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.is_casting">
-<em class="property">property </em><code class="sig-name descname">is_casting</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.is_casting" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the is_casting of this AnalyticsImpressionDetails.</p>
-<p>Is chromecast active</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The is_casting of this AnalyticsImpressionDetails.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>bool</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.is_live">
-<em class="property">property </em><code class="sig-name descname">is_live</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.is_live" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the is_live of this AnalyticsImpressionDetails.</p>
-<p>Is the stream live or VoD</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The is_live of this AnalyticsImpressionDetails.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>bool</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.is_muted">
-<em class="property">property </em><code class="sig-name descname">is_muted</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.is_muted" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the is_muted of this AnalyticsImpressionDetails.</p>
-<p>Is the player muted</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The is_muted of this AnalyticsImpressionDetails.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>bool</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.isp">
-<em class="property">property </em><code class="sig-name descname">isp</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.isp" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the isp of this AnalyticsImpressionDetails.</p>
-<p>The users Internet Service Provider inferred via the IP address</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The isp of this AnalyticsImpressionDetails.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>string_types</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.language">
-<em class="property">property </em><code class="sig-name descname">language</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.language" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the language of this AnalyticsImpressionDetails.</p>
-<p>Language set in the browser</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The language of this AnalyticsImpressionDetails.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>string_types</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.license_key">
-<em class="property">property </em><code class="sig-name descname">license_key</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.license_key" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the license_key of this AnalyticsImpressionDetails.</p>
-<p>Analytics license key</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The license_key of this AnalyticsImpressionDetails.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>string_types</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.openapi_types">
-<em class="property">property </em><code class="sig-name descname">openapi_types</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.openapi_types" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.operating_system">
-<em class="property">property </em><code class="sig-name descname">operating_system</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.operating_system" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the operating_system of this AnalyticsImpressionDetails.</p>
-<p>Operating system</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The operating_system of this AnalyticsImpressionDetails.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>string_types</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.operating_system_version_major">
-<em class="property">property </em><code class="sig-name descname">operating_system_version_major</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.operating_system_version_major" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the operating_system_version_major of this AnalyticsImpressionDetails.</p>
-<p>Operating system version major</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The operating_system_version_major of this AnalyticsImpressionDetails.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>string_types</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.operating_system_version_minor">
-<em class="property">property </em><code class="sig-name descname">operating_system_version_minor</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.operating_system_version_minor" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the operating_system_version_minor of this AnalyticsImpressionDetails.</p>
-<p>Operating system version minor</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The operating_system_version_minor of this AnalyticsImpressionDetails.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>string_types</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.page_load_time">
-<em class="property">property </em><code class="sig-name descname">page_load_time</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.page_load_time" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the page_load_time of this AnalyticsImpressionDetails.</p>
-<p>Time in milliseconds the page took to load</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The page_load_time of this AnalyticsImpressionDetails.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>int</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.page_load_type">
-<em class="property">property </em><code class="sig-name descname">page_load_type</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.page_load_type" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the page_load_type of this AnalyticsImpressionDetails.</p>
-<p>Player load type. 1 = Foreground, 2 = Background</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The page_load_type of this AnalyticsImpressionDetails.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>int</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.path">
-<em class="property">property </em><code class="sig-name descname">path</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.path" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the path of this AnalyticsImpressionDetails.</p>
-<p>path on the website</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The path of this AnalyticsImpressionDetails.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>string_types</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.paused">
-<em class="property">property </em><code class="sig-name descname">paused</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.paused" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the paused of this AnalyticsImpressionDetails.</p>
-<p>Milliseconds the player was paused</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The paused of this AnalyticsImpressionDetails.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>int</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.platform">
-<em class="property">property </em><code class="sig-name descname">platform</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.platform" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the platform of this AnalyticsImpressionDetails.</p>
-<p>Platform the player is running on (web, android, ios)</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The platform of this AnalyticsImpressionDetails.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>string_types</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.played">
-<em class="property">property </em><code class="sig-name descname">played</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.played" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the played of this AnalyticsImpressionDetails.</p>
-<p>Milliseconds the player played</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The played of this AnalyticsImpressionDetails.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>int</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.player">
-<em class="property">property </em><code class="sig-name descname">player</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.player" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the player of this AnalyticsImpressionDetails.</p>
-<p>Video player being used for this session</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The player of this AnalyticsImpressionDetails.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>string_types</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.player_key">
-<em class="property">property </em><code class="sig-name descname">player_key</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.player_key" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the player_key of this AnalyticsImpressionDetails.</p>
-<p>Player license key</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The player_key of this AnalyticsImpressionDetails.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>string_types</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.player_startuptime">
-<em class="property">property </em><code class="sig-name descname">player_startuptime</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.player_startuptime" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the player_startuptime of this AnalyticsImpressionDetails.</p>
-<p>Time in milliseconds the player took to start up</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The player_startuptime of this AnalyticsImpressionDetails.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>int</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.player_tech">
-<em class="property">property </em><code class="sig-name descname">player_tech</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.player_tech" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the player_tech of this AnalyticsImpressionDetails.</p>
-<p>HTML or native playback</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The player_tech of this AnalyticsImpressionDetails.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>string_types</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.player_version">
-<em class="property">property </em><code class="sig-name descname">player_version</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.player_version" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the player_version of this AnalyticsImpressionDetails.</p>
-<p>Player software version</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The player_version of this AnalyticsImpressionDetails.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>string_types</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.region">
-<em class="property">property </em><code class="sig-name descname">region</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.region" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the region of this AnalyticsImpressionDetails.</p>
-<p>Geographic region (ISO 3166-2 code)</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The region of this AnalyticsImpressionDetails.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>string_types</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.screen_height">
-<em class="property">property </em><code class="sig-name descname">screen_height</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.screen_height" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the screen_height of this AnalyticsImpressionDetails.</p>
-<p>Screen as reported by the browser</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The screen_height of this AnalyticsImpressionDetails.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>int</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.screen_width">
-<em class="property">property </em><code class="sig-name descname">screen_width</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.screen_width" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the screen_width of this AnalyticsImpressionDetails.</p>
-<p>Screen as reported by the browser</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The screen_width of this AnalyticsImpressionDetails.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>int</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.seeked">
-<em class="property">property </em><code class="sig-name descname">seeked</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.seeked" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the seeked of this AnalyticsImpressionDetails.</p>
-<p>Milliseconds it took the player to seek</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The seeked of this AnalyticsImpressionDetails.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>int</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.sequence_number">
-<em class="property">property </em><code class="sig-name descname">sequence_number</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.sequence_number" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the sequence_number of this AnalyticsImpressionDetails.</p>
-<p>Sequence number of the sample in which it occured in the session</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The sequence_number of this AnalyticsImpressionDetails.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>int</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.size">
-<em class="property">property </em><code class="sig-name descname">size</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.size" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the size of this AnalyticsImpressionDetails.</p>
-<p>Video size (FULLSCREEN or WINDOW)</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The size of this AnalyticsImpressionDetails.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>string_types</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.startup_time">
-<em class="property">property </em><code class="sig-name descname">startup_time</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.startup_time" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the startup_time of this AnalyticsImpressionDetails.</p>
-<p>Combination of player- and videoStartuptime</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The startup_time of this AnalyticsImpressionDetails.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>int</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.state">
-<em class="property">property </em><code class="sig-name descname">state</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.state" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the state of this AnalyticsImpressionDetails.</p>
-<p>Internal state of the analytics state machine</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The state of this AnalyticsImpressionDetails.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>string_types</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.stream_format">
-<em class="property">property </em><code class="sig-name descname">stream_format</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.stream_format" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the stream_format of this AnalyticsImpressionDetails.</p>
-<p>Format of the stream (HLS, DASH, Progressive MP4)</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The stream_format of this AnalyticsImpressionDetails.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>string_types</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.subtitle_enabled">
-<em class="property">property </em><code class="sig-name descname">subtitle_enabled</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.subtitle_enabled" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the subtitle_enabled of this AnalyticsImpressionDetails.</p>
-<p>Subtitle enabled</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The subtitle_enabled of this AnalyticsImpressionDetails.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>bool</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.subtitle_language">
-<em class="property">property </em><code class="sig-name descname">subtitle_language</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.subtitle_language" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the subtitle_language of this AnalyticsImpressionDetails.</p>
-<p>Selected subtitle language</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The subtitle_language of this AnalyticsImpressionDetails.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>string_types</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.time">
-<em class="property">property </em><code class="sig-name descname">time</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.time" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the time of this AnalyticsImpressionDetails.</p>
-<p>Current time in milliseconds</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The time of this AnalyticsImpressionDetails.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>int</p>
-</dd>
-</dl>
-</dd></dl>
-
+<em class="property">class </em><code class="sig-prename descclassname">bitmovin_api_sdk.models.analytics_impression_details.</code><code class="sig-name descname">AnalyticsImpressionDetails</code><a class="reference internal" href="../_modules/bitmovin_api_sdk/models/analytics_impression_details.html#AnalyticsImpressionDetails"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></p>
 <dl class="py method">
 <dt id="bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.to_dict">
 <code class="sig-name descname">to_dict</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/models/analytics_impression_details.html#AnalyticsImpressionDetails.to_dict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.to_dict" title="Permalink to this definition">¶</a></dt>
@@ -5792,215 +4855,6 @@
 <dt id="bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.to_str">
 <code class="sig-name descname">to_str</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/models/analytics_impression_details.html#AnalyticsImpressionDetails.to_str"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.to_str" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the string representation of the model</p>
-</dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.user_id">
-<em class="property">property </em><code class="sig-name descname">user_id</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.user_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the user_id of this AnalyticsImpressionDetails.</p>
-<p>ID that is persisted across sessions to identify a browser</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The user_id of this AnalyticsImpressionDetails.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>string_types</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.video_bitrate">
-<em class="property">property </em><code class="sig-name descname">video_bitrate</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.video_bitrate" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the video_bitrate of this AnalyticsImpressionDetails.</p>
-<p>Bitrate of the played back video rendition</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The video_bitrate of this AnalyticsImpressionDetails.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>int</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.video_duration">
-<em class="property">property </em><code class="sig-name descname">video_duration</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.video_duration" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the video_duration of this AnalyticsImpressionDetails.</p>
-<p>Length of the video in milliseconds</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The video_duration of this AnalyticsImpressionDetails.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>int</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.video_id">
-<em class="property">property </em><code class="sig-name descname">video_id</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.video_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the video_id of this AnalyticsImpressionDetails.</p>
-<p>ID of the video as configured via the analytics config</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The video_id of this AnalyticsImpressionDetails.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>string_types</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.video_playback_height">
-<em class="property">property </em><code class="sig-name descname">video_playback_height</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.video_playback_height" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the video_playback_height of this AnalyticsImpressionDetails.</p>
-<p>Resolution of the played back Video Rendition</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The video_playback_height of this AnalyticsImpressionDetails.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>int</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.video_playback_width">
-<em class="property">property </em><code class="sig-name descname">video_playback_width</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.video_playback_width" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the video_playback_width of this AnalyticsImpressionDetails.</p>
-<p>Resolution of the played back Video Rendition</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The video_playback_width of this AnalyticsImpressionDetails.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>int</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.video_startup_time">
-<em class="property">property </em><code class="sig-name descname">video_startup_time</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.video_startup_time" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the video_startup_time of this AnalyticsImpressionDetails.</p>
-<p>Time in milliseconds it took to start video playback</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The video_startup_time of this AnalyticsImpressionDetails.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>int</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.video_title">
-<em class="property">property </em><code class="sig-name descname">video_title</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.video_title" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the video_title of this AnalyticsImpressionDetails.</p>
-<p>Free form human readable video title as configured in the analytics config</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The video_title of this AnalyticsImpressionDetails.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>string_types</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.video_window_height">
-<em class="property">property </em><code class="sig-name descname">video_window_height</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.video_window_height" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the video_window_height of this AnalyticsImpressionDetails.</p>
-<p>Height of the video player on the page</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The video_window_height of this AnalyticsImpressionDetails.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>int</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.video_window_width">
-<em class="property">property </em><code class="sig-name descname">video_window_width</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.video_window_width" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the video_window_width of this AnalyticsImpressionDetails.</p>
-<p>Width of the video player on the page</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The video_window_width of this AnalyticsImpressionDetails.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>int</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.videostart_failed">
-<em class="property">property </em><code class="sig-name descname">videostart_failed</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.videostart_failed" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the videostart_failed of this AnalyticsImpressionDetails.</p>
-<p>True if starting the video failed</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The videostart_failed of this AnalyticsImpressionDetails.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>bool</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.videostart_failed_reason">
-<em class="property">property </em><code class="sig-name descname">videostart_failed_reason</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.videostart_failed_reason" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the videostart_failed_reason of this AnalyticsImpressionDetails.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The videostart_failed_reason of this AnalyticsImpressionDetails.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p><a class="reference internal" href="#bitmovin_api_sdk.models.analytics_video_start_failed_reason.AnalyticsVideoStartFailedReason" title="bitmovin_api_sdk.models.analytics_video_start_failed_reason.AnalyticsVideoStartFailedReason">AnalyticsVideoStartFailedReason</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.videotime_end">
-<em class="property">property </em><code class="sig-name descname">videotime_end</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.videotime_end" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the videotime_end of this AnalyticsImpressionDetails.</p>
-<p>End time of the sample in the video (milliseconds)</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The videotime_end of this AnalyticsImpressionDetails.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>int</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.videotime_start">
-<em class="property">property </em><code class="sig-name descname">videotime_start</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails.videotime_start" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the videotime_start of this AnalyticsImpressionDetails.</p>
-<p>Start time of the sample in the video (milliseconds)</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The videotime_start of this AnalyticsImpressionDetails.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>int</p>
-</dd>
-</dl>
 </dd></dl>
 
 </dd></dl>
@@ -6047,6 +4901,1356 @@
 <dt id="bitmovin_api_sdk.models.analytics_impression_list_item.AnalyticsImpressionListItem.to_str">
 <code class="sig-name descname">to_str</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/models/analytics_impression_list_item.html#AnalyticsImpressionListItem.to_str"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_list_item.AnalyticsImpressionListItem.to_str" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the string representation of the model</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-bitmovin_api_sdk.models.analytics_impression_sample">
+<span id="bitmovin-api-sdk-models-analytics-impression-sample-module"></span><h2>bitmovin_api_sdk.models.analytics_impression_sample module<a class="headerlink" href="#module-bitmovin_api_sdk.models.analytics_impression_sample" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample">
+<em class="property">class </em><code class="sig-prename descclassname">bitmovin_api_sdk.models.analytics_impression_sample.</code><code class="sig-name descname">AnalyticsImpressionSample</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/models/analytics_impression_sample.html#AnalyticsImpressionSample"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.ad">
+<em class="property">property </em><code class="sig-name descname">ad</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.ad" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the ad of this AnalyticsImpressionSample.</p>
+<p>Is an ad playing. 0 indicates no, 1 indicates yes</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The ad of this AnalyticsImpressionSample.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.analytics_version">
+<em class="property">property </em><code class="sig-name descname">analytics_version</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.analytics_version" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the analytics_version of this AnalyticsImpressionSample.</p>
+<p>Collector version</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The analytics_version of this AnalyticsImpressionSample.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>string_types</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.attribute_map">
+<em class="property">property </em><code class="sig-name descname">attribute_map</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.attribute_map" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.audio_bitrate">
+<em class="property">property </em><code class="sig-name descname">audio_bitrate</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.audio_bitrate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the audio_bitrate of this AnalyticsImpressionSample.</p>
+<p>Audio Bitrate</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The audio_bitrate of this AnalyticsImpressionSample.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.audio_codec">
+<em class="property">property </em><code class="sig-name descname">audio_codec</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.audio_codec" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the audio_codec of this AnalyticsImpressionSample.</p>
+<p>Audio codec of currently playing stream</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The audio_codec of this AnalyticsImpressionSample.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>string_types</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.audio_language">
+<em class="property">property </em><code class="sig-name descname">audio_language</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.audio_language" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the audio_language of this AnalyticsImpressionSample.</p>
+<p>Selected audio language</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The audio_language of this AnalyticsImpressionSample.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>string_types</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.autoplay">
+<em class="property">property </em><code class="sig-name descname">autoplay</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.autoplay" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the autoplay of this AnalyticsImpressionSample.</p>
+<p>Autoplay enabled</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The autoplay of this AnalyticsImpressionSample.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.browser">
+<em class="property">property </em><code class="sig-name descname">browser</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.browser" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the browser of this AnalyticsImpressionSample.</p>
+<p>Browser name</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The browser of this AnalyticsImpressionSample.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>string_types</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.browser_version_major">
+<em class="property">property </em><code class="sig-name descname">browser_version_major</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.browser_version_major" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the browser_version_major of this AnalyticsImpressionSample.</p>
+<p>Browser version major</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The browser_version_major of this AnalyticsImpressionSample.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>string_types</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.browser_version_minor">
+<em class="property">property </em><code class="sig-name descname">browser_version_minor</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.browser_version_minor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the browser_version_minor of this AnalyticsImpressionSample.</p>
+<p>Browser version minor</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The browser_version_minor of this AnalyticsImpressionSample.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>string_types</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.buffered">
+<em class="property">property </em><code class="sig-name descname">buffered</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.buffered" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the buffered of this AnalyticsImpressionSample.</p>
+<p>Milliseconds the player buffered</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The buffered of this AnalyticsImpressionSample.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.cdn_provider">
+<em class="property">property </em><code class="sig-name descname">cdn_provider</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.cdn_provider" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the cdn_provider of this AnalyticsImpressionSample.</p>
+<p>CDN Provider</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The cdn_provider of this AnalyticsImpressionSample.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>string_types</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.city">
+<em class="property">property </em><code class="sig-name descname">city</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.city" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the city of this AnalyticsImpressionSample.</p>
+<p>City</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The city of this AnalyticsImpressionSample.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>string_types</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.client_time">
+<em class="property">property </em><code class="sig-name descname">client_time</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.client_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the client_time of this AnalyticsImpressionSample.</p>
+<p>Current time of the client</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The client_time of this AnalyticsImpressionSample.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.country">
+<em class="property">property </em><code class="sig-name descname">country</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.country" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the country of this AnalyticsImpressionSample.</p>
+<p>Country</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The country of this AnalyticsImpressionSample.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>string_types</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.custom_data_1">
+<em class="property">property </em><code class="sig-name descname">custom_data_1</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.custom_data_1" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the custom_data_1 of this AnalyticsImpressionSample.</p>
+<p>Free form data set via the customData1 field in the analytics collector configuration</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The custom_data_1 of this AnalyticsImpressionSample.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>string_types</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.custom_data_2">
+<em class="property">property </em><code class="sig-name descname">custom_data_2</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.custom_data_2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the custom_data_2 of this AnalyticsImpressionSample.</p>
+<p>Free form data set via the customData2 field in the analytics collector configuration</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The custom_data_2 of this AnalyticsImpressionSample.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>string_types</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.custom_data_3">
+<em class="property">property </em><code class="sig-name descname">custom_data_3</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.custom_data_3" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the custom_data_3 of this AnalyticsImpressionSample.</p>
+<p>Free form data set via the customData3 field in the analytics collector configuration</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The custom_data_3 of this AnalyticsImpressionSample.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>string_types</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.custom_data_4">
+<em class="property">property </em><code class="sig-name descname">custom_data_4</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.custom_data_4" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the custom_data_4 of this AnalyticsImpressionSample.</p>
+<p>Free form data set via the customData4 field in the analytics collector configuration</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The custom_data_4 of this AnalyticsImpressionSample.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>string_types</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.custom_data_5">
+<em class="property">property </em><code class="sig-name descname">custom_data_5</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.custom_data_5" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the custom_data_5 of this AnalyticsImpressionSample.</p>
+<p>Free form data set via the customData5 field in the analytics collector configuration</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The custom_data_5 of this AnalyticsImpressionSample.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>string_types</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.custom_data_6">
+<em class="property">property </em><code class="sig-name descname">custom_data_6</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.custom_data_6" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the custom_data_6 of this AnalyticsImpressionSample.</p>
+<p>Free form data set via the customData6 field in the analytics collector configuration</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The custom_data_6 of this AnalyticsImpressionSample.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>string_types</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.custom_data_7">
+<em class="property">property </em><code class="sig-name descname">custom_data_7</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.custom_data_7" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the custom_data_7 of this AnalyticsImpressionSample.</p>
+<p>Free form data set via the customData7 field in the analytics collector configuration</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The custom_data_7 of this AnalyticsImpressionSample.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>string_types</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.custom_user_id">
+<em class="property">property </em><code class="sig-name descname">custom_user_id</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.custom_user_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the custom_user_id of this AnalyticsImpressionSample.</p>
+<p>Custom user ID</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The custom_user_id of this AnalyticsImpressionSample.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>string_types</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.device_class">
+<em class="property">property </em><code class="sig-name descname">device_class</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.device_class" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the device_class of this AnalyticsImpressionSample.</p>
+<p>Type of device (Desktop, Phone, Tablet)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The device_class of this AnalyticsImpressionSample.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>string_types</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.device_type">
+<em class="property">property </em><code class="sig-name descname">device_type</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.device_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the device_type of this AnalyticsImpressionSample.</p>
+<p>Type of the device detected via User Agent</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The device_type of this AnalyticsImpressionSample.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>string_types</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.domain">
+<em class="property">property </em><code class="sig-name descname">domain</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.domain" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the domain of this AnalyticsImpressionSample.</p>
+<p>Domain the player was loaded on (.www is stripped away)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The domain of this AnalyticsImpressionSample.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>string_types</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.drm_load_time">
+<em class="property">property </em><code class="sig-name descname">drm_load_time</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.drm_load_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the drm_load_time of this AnalyticsImpressionSample.</p>
+<p>Time in milliseconds it took the DRM server to respond</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The drm_load_time of this AnalyticsImpressionSample.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.drm_type">
+<em class="property">property </em><code class="sig-name descname">drm_type</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.drm_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the drm_type of this AnalyticsImpressionSample.</p>
+<p>DRM system used for this impression</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The drm_type of this AnalyticsImpressionSample.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>string_types</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.dropped_frames">
+<em class="property">property </em><code class="sig-name descname">dropped_frames</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.dropped_frames" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the dropped_frames of this AnalyticsImpressionSample.</p>
+<p>Dropped frames during playback</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The dropped_frames of this AnalyticsImpressionSample.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.duration">
+<em class="property">property </em><code class="sig-name descname">duration</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.duration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the duration of this AnalyticsImpressionSample.</p>
+<p>Duration of the sample in milliseconds</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The duration of this AnalyticsImpressionSample.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.error_code">
+<em class="property">property </em><code class="sig-name descname">error_code</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.error_code" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the error_code of this AnalyticsImpressionSample.</p>
+<p>Error code</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The error_code of this AnalyticsImpressionSample.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.error_message">
+<em class="property">property </em><code class="sig-name descname">error_message</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.error_message" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the error_message of this AnalyticsImpressionSample.</p>
+<p>Error message</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The error_message of this AnalyticsImpressionSample.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>string_types</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.experiment_name">
+<em class="property">property </em><code class="sig-name descname">experiment_name</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.experiment_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the experiment_name of this AnalyticsImpressionSample.</p>
+<p>A/B test experiment name</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The experiment_name of this AnalyticsImpressionSample.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>string_types</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.impression_id">
+<em class="property">property </em><code class="sig-name descname">impression_id</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.impression_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the impression_id of this AnalyticsImpressionSample.</p>
+<p>Random UUID that is used to identify a sessions (required)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The impression_id of this AnalyticsImpressionSample.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>string_types</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.ip_address">
+<em class="property">property </em><code class="sig-name descname">ip_address</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.ip_address" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the ip_address of this AnalyticsImpressionSample.</p>
+<p>IP Address of the client</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The ip_address of this AnalyticsImpressionSample.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>string_types</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.is_casting">
+<em class="property">property </em><code class="sig-name descname">is_casting</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.is_casting" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the is_casting of this AnalyticsImpressionSample.</p>
+<p>Is chromecast active</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The is_casting of this AnalyticsImpressionSample.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.is_live">
+<em class="property">property </em><code class="sig-name descname">is_live</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.is_live" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the is_live of this AnalyticsImpressionSample.</p>
+<p>Is the stream live or VoD</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The is_live of this AnalyticsImpressionSample.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.is_muted">
+<em class="property">property </em><code class="sig-name descname">is_muted</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.is_muted" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the is_muted of this AnalyticsImpressionSample.</p>
+<p>Is the player muted</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The is_muted of this AnalyticsImpressionSample.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.isp">
+<em class="property">property </em><code class="sig-name descname">isp</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.isp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the isp of this AnalyticsImpressionSample.</p>
+<p>The users Internet Service Provider inferred via the IP address</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The isp of this AnalyticsImpressionSample.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>string_types</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.language">
+<em class="property">property </em><code class="sig-name descname">language</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.language" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the language of this AnalyticsImpressionSample.</p>
+<p>Language set in the browser</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The language of this AnalyticsImpressionSample.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>string_types</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.license_key">
+<em class="property">property </em><code class="sig-name descname">license_key</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.license_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the license_key of this AnalyticsImpressionSample.</p>
+<p>Analytics license key</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The license_key of this AnalyticsImpressionSample.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>string_types</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.m3u8_url">
+<em class="property">property </em><code class="sig-name descname">m3u8_url</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.m3u8_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the m3u8_url of this AnalyticsImpressionSample.</p>
+<p>URL of the HLS source</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The m3u8_url of this AnalyticsImpressionSample.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>string_types</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.mpd_url">
+<em class="property">property </em><code class="sig-name descname">mpd_url</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.mpd_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the mpd_url of this AnalyticsImpressionSample.</p>
+<p>URL of the DASH source</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The mpd_url of this AnalyticsImpressionSample.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>string_types</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.openapi_types">
+<em class="property">property </em><code class="sig-name descname">openapi_types</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.openapi_types" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.operatingsystem">
+<em class="property">property </em><code class="sig-name descname">operatingsystem</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.operatingsystem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the operatingsystem of this AnalyticsImpressionSample.</p>
+<p>Operating system</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The operatingsystem of this AnalyticsImpressionSample.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>string_types</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.operatingsystem_version_major">
+<em class="property">property </em><code class="sig-name descname">operatingsystem_version_major</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.operatingsystem_version_major" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the operatingsystem_version_major of this AnalyticsImpressionSample.</p>
+<p>Operating system version major</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The operatingsystem_version_major of this AnalyticsImpressionSample.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>string_types</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.operatingsystem_version_minor">
+<em class="property">property </em><code class="sig-name descname">operatingsystem_version_minor</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.operatingsystem_version_minor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the operatingsystem_version_minor of this AnalyticsImpressionSample.</p>
+<p>Operating system version minor</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The operatingsystem_version_minor of this AnalyticsImpressionSample.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>string_types</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.page_load_time">
+<em class="property">property </em><code class="sig-name descname">page_load_time</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.page_load_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the page_load_time of this AnalyticsImpressionSample.</p>
+<p>Time in milliseconds the page took to load</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The page_load_time of this AnalyticsImpressionSample.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.page_load_type">
+<em class="property">property </em><code class="sig-name descname">page_load_type</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.page_load_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the page_load_type of this AnalyticsImpressionSample.</p>
+<p>Player load type. 1 = Foreground, 2 = Background</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The page_load_type of this AnalyticsImpressionSample.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.path">
+<em class="property">property </em><code class="sig-name descname">path</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.path" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the path of this AnalyticsImpressionSample.</p>
+<p>path on the website</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The path of this AnalyticsImpressionSample.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>string_types</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.paused">
+<em class="property">property </em><code class="sig-name descname">paused</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.paused" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the paused of this AnalyticsImpressionSample.</p>
+<p>Milliseconds the player was paused</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The paused of this AnalyticsImpressionSample.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.platform">
+<em class="property">property </em><code class="sig-name descname">platform</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.platform" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the platform of this AnalyticsImpressionSample.</p>
+<p>Platform the player is running on (web, android, ios)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The platform of this AnalyticsImpressionSample.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>string_types</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.played">
+<em class="property">property </em><code class="sig-name descname">played</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.played" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the played of this AnalyticsImpressionSample.</p>
+<p>Milliseconds the player played</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The played of this AnalyticsImpressionSample.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.player">
+<em class="property">property </em><code class="sig-name descname">player</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.player" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the player of this AnalyticsImpressionSample.</p>
+<p>Video player being used for this session</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The player of this AnalyticsImpressionSample.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>string_types</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.player_key">
+<em class="property">property </em><code class="sig-name descname">player_key</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.player_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the player_key of this AnalyticsImpressionSample.</p>
+<p>Player license key</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The player_key of this AnalyticsImpressionSample.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>string_types</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.player_startuptime">
+<em class="property">property </em><code class="sig-name descname">player_startuptime</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.player_startuptime" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the player_startuptime of this AnalyticsImpressionSample.</p>
+<p>Time in milliseconds the player took to start up</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The player_startuptime of this AnalyticsImpressionSample.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.player_tech">
+<em class="property">property </em><code class="sig-name descname">player_tech</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.player_tech" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the player_tech of this AnalyticsImpressionSample.</p>
+<p>HTML or native playback</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The player_tech of this AnalyticsImpressionSample.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>string_types</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.player_version">
+<em class="property">property </em><code class="sig-name descname">player_version</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.player_version" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the player_version of this AnalyticsImpressionSample.</p>
+<p>Player software version</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The player_version of this AnalyticsImpressionSample.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>string_types</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.prog_url">
+<em class="property">property </em><code class="sig-name descname">prog_url</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.prog_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the prog_url of this AnalyticsImpressionSample.</p>
+<p>URL of the progressive MP4 source</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The prog_url of this AnalyticsImpressionSample.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>string_types</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.region">
+<em class="property">property </em><code class="sig-name descname">region</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.region" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the region of this AnalyticsImpressionSample.</p>
+<p>Geographic region (ISO 3166-2 code)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The region of this AnalyticsImpressionSample.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>string_types</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.screen_height">
+<em class="property">property </em><code class="sig-name descname">screen_height</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.screen_height" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the screen_height of this AnalyticsImpressionSample.</p>
+<p>Screen as reported by the browser</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The screen_height of this AnalyticsImpressionSample.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.screen_width">
+<em class="property">property </em><code class="sig-name descname">screen_width</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.screen_width" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the screen_width of this AnalyticsImpressionSample.</p>
+<p>Screen as reported by the browser</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The screen_width of this AnalyticsImpressionSample.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.seeked">
+<em class="property">property </em><code class="sig-name descname">seeked</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.seeked" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the seeked of this AnalyticsImpressionSample.</p>
+<p>Milliseconds it took the player to seek</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The seeked of this AnalyticsImpressionSample.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.segment_download_count">
+<em class="property">property </em><code class="sig-name descname">segment_download_count</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.segment_download_count" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the segment_download_count of this AnalyticsImpressionSample.</p>
+<p>Number of video segments downloaded</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The segment_download_count of this AnalyticsImpressionSample.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.segment_download_size">
+<em class="property">property </em><code class="sig-name descname">segment_download_size</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.segment_download_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the segment_download_size of this AnalyticsImpressionSample.</p>
+<p>Size of downloaded video segments (byte)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The segment_download_size of this AnalyticsImpressionSample.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.segment_download_time">
+<em class="property">property </em><code class="sig-name descname">segment_download_time</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.segment_download_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the segment_download_time of this AnalyticsImpressionSample.</p>
+<p>Cumulative time needed to download video segments</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The segment_download_time of this AnalyticsImpressionSample.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.sequence_number">
+<em class="property">property </em><code class="sig-name descname">sequence_number</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.sequence_number" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the sequence_number of this AnalyticsImpressionSample.</p>
+<p>Sequence number of the sample in which it occured in the session</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The sequence_number of this AnalyticsImpressionSample.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.size">
+<em class="property">property </em><code class="sig-name descname">size</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the size of this AnalyticsImpressionSample.</p>
+<p>Video size (FULLSCREEN or WINDOW)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The size of this AnalyticsImpressionSample.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>string_types</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.startuptime">
+<em class="property">property </em><code class="sig-name descname">startuptime</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.startuptime" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the startuptime of this AnalyticsImpressionSample.</p>
+<p>Combination of player- and videoStartuptime</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The startuptime of this AnalyticsImpressionSample.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.state">
+<em class="property">property </em><code class="sig-name descname">state</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the state of this AnalyticsImpressionSample.</p>
+<p>Internal state of the analytics state machine</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The state of this AnalyticsImpressionSample.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>string_types</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.stream_format">
+<em class="property">property </em><code class="sig-name descname">stream_format</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.stream_format" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the stream_format of this AnalyticsImpressionSample.</p>
+<p>Format of the stream (HLS, DASH, Progressive MP4)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The stream_format of this AnalyticsImpressionSample.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>string_types</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.subtitle_enabled">
+<em class="property">property </em><code class="sig-name descname">subtitle_enabled</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.subtitle_enabled" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the subtitle_enabled of this AnalyticsImpressionSample.</p>
+<p>Subtitle enabled</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The subtitle_enabled of this AnalyticsImpressionSample.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.subtitle_language">
+<em class="property">property </em><code class="sig-name descname">subtitle_language</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.subtitle_language" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the subtitle_language of this AnalyticsImpressionSample.</p>
+<p>Selected subtitle language</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The subtitle_language of this AnalyticsImpressionSample.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>string_types</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.supported_video_codes">
+<em class="property">property </em><code class="sig-name descname">supported_video_codes</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.supported_video_codes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the supported_video_codes of this AnalyticsImpressionSample.</p>
+<p>Video codecs supported by platform/browser</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The supported_video_codes of this AnalyticsImpressionSample.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>list[string_types]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.time">
+<em class="property">property </em><code class="sig-name descname">time</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.time" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the time of this AnalyticsImpressionSample.</p>
+<p>Current time in milliseconds</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The time of this AnalyticsImpressionSample.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.to_dict">
+<code class="sig-name descname">to_dict</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/models/analytics_impression_sample.html#AnalyticsImpressionSample.to_dict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.to_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the model properties as a dict</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.to_str">
+<code class="sig-name descname">to_str</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/models/analytics_impression_sample.html#AnalyticsImpressionSample.to_str"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.to_str" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the string representation of the model</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.user_id">
+<em class="property">property </em><code class="sig-name descname">user_id</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.user_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the user_id of this AnalyticsImpressionSample.</p>
+<p>ID that is persisted across sessions to identify a browser</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The user_id of this AnalyticsImpressionSample.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>string_types</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.video_bitrate">
+<em class="property">property </em><code class="sig-name descname">video_bitrate</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.video_bitrate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the video_bitrate of this AnalyticsImpressionSample.</p>
+<p>Bitrate of the played back video rendition</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The video_bitrate of this AnalyticsImpressionSample.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.video_codec">
+<em class="property">property </em><code class="sig-name descname">video_codec</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.video_codec" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the video_codec of this AnalyticsImpressionSample.</p>
+<p>Video codec of current stream</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The video_codec of this AnalyticsImpressionSample.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>string_types</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.video_duration">
+<em class="property">property </em><code class="sig-name descname">video_duration</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.video_duration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the video_duration of this AnalyticsImpressionSample.</p>
+<p>Length of the video in milliseconds</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The video_duration of this AnalyticsImpressionSample.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.video_id">
+<em class="property">property </em><code class="sig-name descname">video_id</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.video_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the video_id of this AnalyticsImpressionSample.</p>
+<p>ID of the video as configured via the analytics config</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The video_id of this AnalyticsImpressionSample.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>string_types</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.video_playback_height">
+<em class="property">property </em><code class="sig-name descname">video_playback_height</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.video_playback_height" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the video_playback_height of this AnalyticsImpressionSample.</p>
+<p>Resolution of the played back Video Rendition</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The video_playback_height of this AnalyticsImpressionSample.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.video_playback_width">
+<em class="property">property </em><code class="sig-name descname">video_playback_width</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.video_playback_width" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the video_playback_width of this AnalyticsImpressionSample.</p>
+<p>Resolution of the played back Video Rendition</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The video_playback_width of this AnalyticsImpressionSample.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.video_startuptime">
+<em class="property">property </em><code class="sig-name descname">video_startuptime</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.video_startuptime" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the video_startuptime of this AnalyticsImpressionSample.</p>
+<p>Time in milliseconds it took to start video playback</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The video_startuptime of this AnalyticsImpressionSample.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.video_title">
+<em class="property">property </em><code class="sig-name descname">video_title</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.video_title" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the video_title of this AnalyticsImpressionSample.</p>
+<p>Free form human readable video title as configured in the analytics config</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The video_title of this AnalyticsImpressionSample.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>string_types</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.video_window_height">
+<em class="property">property </em><code class="sig-name descname">video_window_height</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.video_window_height" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the video_window_height of this AnalyticsImpressionSample.</p>
+<p>Height of the video player on the page</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The video_window_height of this AnalyticsImpressionSample.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.video_window_width">
+<em class="property">property </em><code class="sig-name descname">video_window_width</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.video_window_width" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the video_window_width of this AnalyticsImpressionSample.</p>
+<p>Width of the video player on the page</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The video_window_width of this AnalyticsImpressionSample.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.videostart_failed">
+<em class="property">property </em><code class="sig-name descname">videostart_failed</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.videostart_failed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the videostart_failed of this AnalyticsImpressionSample.</p>
+<p>True if starting the video failed</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The videostart_failed of this AnalyticsImpressionSample.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.videostart_failed_reason">
+<em class="property">property </em><code class="sig-name descname">videostart_failed_reason</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.videostart_failed_reason" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the videostart_failed_reason of this AnalyticsImpressionSample.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The videostart_failed_reason of this AnalyticsImpressionSample.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#bitmovin_api_sdk.models.analytics_video_start_failed_reason.AnalyticsVideoStartFailedReason" title="bitmovin_api_sdk.models.analytics_video_start_failed_reason.AnalyticsVideoStartFailedReason">AnalyticsVideoStartFailedReason</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.videotime_end">
+<em class="property">property </em><code class="sig-name descname">videotime_end</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.videotime_end" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the videotime_end of this AnalyticsImpressionSample.</p>
+<p>End time of the sample in the video (milliseconds)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The videotime_end of this AnalyticsImpressionSample.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.videotime_start">
+<em class="property">property </em><code class="sig-name descname">videotime_start</code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_impression_sample.AnalyticsImpressionSample.videotime_start" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the videotime_start of this AnalyticsImpressionSample.</p>
+<p>Start time of the sample in the video (milliseconds)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The videotime_start of this AnalyticsImpressionSample.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
@@ -8821,8 +9025,33 @@
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
 <p>An enumeration.</p>
 <dl class="py attribute">
+<dt id="bitmovin_api_sdk.models.audio_mix_input_channel_layout.AudioMixInputChannelLayout.CL_2_1">
+<code class="sig-name descname">CL_2_1</code><em class="property"> = '2.1'</em><a class="headerlink" href="#bitmovin_api_sdk.models.audio_mix_input_channel_layout.AudioMixInputChannelLayout.CL_2_1" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="bitmovin_api_sdk.models.audio_mix_input_channel_layout.AudioMixInputChannelLayout.CL_2_2">
+<code class="sig-name descname">CL_2_2</code><em class="property"> = '2.2'</em><a class="headerlink" href="#bitmovin_api_sdk.models.audio_mix_input_channel_layout.AudioMixInputChannelLayout.CL_2_2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="bitmovin_api_sdk.models.audio_mix_input_channel_layout.AudioMixInputChannelLayout.CL_3_1">
+<code class="sig-name descname">CL_3_1</code><em class="property"> = '3.1'</em><a class="headerlink" href="#bitmovin_api_sdk.models.audio_mix_input_channel_layout.AudioMixInputChannelLayout.CL_3_1" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
 <dt id="bitmovin_api_sdk.models.audio_mix_input_channel_layout.AudioMixInputChannelLayout.CL_4_0">
 <code class="sig-name descname">CL_4_0</code><em class="property"> = '4.0'</em><a class="headerlink" href="#bitmovin_api_sdk.models.audio_mix_input_channel_layout.AudioMixInputChannelLayout.CL_4_0" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="bitmovin_api_sdk.models.audio_mix_input_channel_layout.AudioMixInputChannelLayout.CL_4_1">
+<code class="sig-name descname">CL_4_1</code><em class="property"> = '4.1'</em><a class="headerlink" href="#bitmovin_api_sdk.models.audio_mix_input_channel_layout.AudioMixInputChannelLayout.CL_4_1" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="bitmovin_api_sdk.models.audio_mix_input_channel_layout.AudioMixInputChannelLayout.CL_5_0">
+<code class="sig-name descname">CL_5_0</code><em class="property"> = '5.0'</em><a class="headerlink" href="#bitmovin_api_sdk.models.audio_mix_input_channel_layout.AudioMixInputChannelLayout.CL_5_0" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
@@ -8831,8 +9060,48 @@
 <dd></dd></dl>
 
 <dl class="py attribute">
+<dt id="bitmovin_api_sdk.models.audio_mix_input_channel_layout.AudioMixInputChannelLayout.CL_5_1">
+<code class="sig-name descname">CL_5_1</code><em class="property"> = '5.1'</em><a class="headerlink" href="#bitmovin_api_sdk.models.audio_mix_input_channel_layout.AudioMixInputChannelLayout.CL_5_1" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
 <dt id="bitmovin_api_sdk.models.audio_mix_input_channel_layout.AudioMixInputChannelLayout.CL_5_1_BACK">
 <code class="sig-name descname">CL_5_1_BACK</code><em class="property"> = '5.1_BACK'</em><a class="headerlink" href="#bitmovin_api_sdk.models.audio_mix_input_channel_layout.AudioMixInputChannelLayout.CL_5_1_BACK" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="bitmovin_api_sdk.models.audio_mix_input_channel_layout.AudioMixInputChannelLayout.CL_6_0">
+<code class="sig-name descname">CL_6_0</code><em class="property"> = '6.0'</em><a class="headerlink" href="#bitmovin_api_sdk.models.audio_mix_input_channel_layout.AudioMixInputChannelLayout.CL_6_0" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="bitmovin_api_sdk.models.audio_mix_input_channel_layout.AudioMixInputChannelLayout.CL_6_0_FRONT">
+<code class="sig-name descname">CL_6_0_FRONT</code><em class="property"> = '6.0_FRONT'</em><a class="headerlink" href="#bitmovin_api_sdk.models.audio_mix_input_channel_layout.AudioMixInputChannelLayout.CL_6_0_FRONT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="bitmovin_api_sdk.models.audio_mix_input_channel_layout.AudioMixInputChannelLayout.CL_6_1">
+<code class="sig-name descname">CL_6_1</code><em class="property"> = '6.1'</em><a class="headerlink" href="#bitmovin_api_sdk.models.audio_mix_input_channel_layout.AudioMixInputChannelLayout.CL_6_1" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="bitmovin_api_sdk.models.audio_mix_input_channel_layout.AudioMixInputChannelLayout.CL_6_1_BACK">
+<code class="sig-name descname">CL_6_1_BACK</code><em class="property"> = '6.1_BACK'</em><a class="headerlink" href="#bitmovin_api_sdk.models.audio_mix_input_channel_layout.AudioMixInputChannelLayout.CL_6_1_BACK" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="bitmovin_api_sdk.models.audio_mix_input_channel_layout.AudioMixInputChannelLayout.CL_6_1_FRONT">
+<code class="sig-name descname">CL_6_1_FRONT</code><em class="property"> = '6.1_FRONT'</em><a class="headerlink" href="#bitmovin_api_sdk.models.audio_mix_input_channel_layout.AudioMixInputChannelLayout.CL_6_1_FRONT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="bitmovin_api_sdk.models.audio_mix_input_channel_layout.AudioMixInputChannelLayout.CL_7_0">
+<code class="sig-name descname">CL_7_0</code><em class="property"> = '7.0'</em><a class="headerlink" href="#bitmovin_api_sdk.models.audio_mix_input_channel_layout.AudioMixInputChannelLayout.CL_7_0" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="bitmovin_api_sdk.models.audio_mix_input_channel_layout.AudioMixInputChannelLayout.CL_7_0_FRONT">
+<code class="sig-name descname">CL_7_0_FRONT</code><em class="property"> = '7.0_FRONT'</em><a class="headerlink" href="#bitmovin_api_sdk.models.audio_mix_input_channel_layout.AudioMixInputChannelLayout.CL_7_0_FRONT" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
@@ -8841,13 +9110,38 @@
 <dd></dd></dl>
 
 <dl class="py attribute">
+<dt id="bitmovin_api_sdk.models.audio_mix_input_channel_layout.AudioMixInputChannelLayout.CL_7_1_WIDE">
+<code class="sig-name descname">CL_7_1_WIDE</code><em class="property"> = '7.1_WIDE'</em><a class="headerlink" href="#bitmovin_api_sdk.models.audio_mix_input_channel_layout.AudioMixInputChannelLayout.CL_7_1_WIDE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
 <dt id="bitmovin_api_sdk.models.audio_mix_input_channel_layout.AudioMixInputChannelLayout.CL_7_1_WIDE_BACK">
 <code class="sig-name descname">CL_7_1_WIDE_BACK</code><em class="property"> = '7.1_WIDE_BACK'</em><a class="headerlink" href="#bitmovin_api_sdk.models.audio_mix_input_channel_layout.AudioMixInputChannelLayout.CL_7_1_WIDE_BACK" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
+<dt id="bitmovin_api_sdk.models.audio_mix_input_channel_layout.AudioMixInputChannelLayout.CL_HEXAGONAL">
+<code class="sig-name descname">CL_HEXAGONAL</code><em class="property"> = 'HEXAGONAL'</em><a class="headerlink" href="#bitmovin_api_sdk.models.audio_mix_input_channel_layout.AudioMixInputChannelLayout.CL_HEXAGONAL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="bitmovin_api_sdk.models.audio_mix_input_channel_layout.AudioMixInputChannelLayout.CL_OCTAGONAL">
+<code class="sig-name descname">CL_OCTAGONAL</code><em class="property"> = 'OCTAGONAL'</em><a class="headerlink" href="#bitmovin_api_sdk.models.audio_mix_input_channel_layout.AudioMixInputChannelLayout.CL_OCTAGONAL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="bitmovin_api_sdk.models.audio_mix_input_channel_layout.AudioMixInputChannelLayout.CL_QUAD">
+<code class="sig-name descname">CL_QUAD</code><em class="property"> = 'QUAD'</em><a class="headerlink" href="#bitmovin_api_sdk.models.audio_mix_input_channel_layout.AudioMixInputChannelLayout.CL_QUAD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
 <dt id="bitmovin_api_sdk.models.audio_mix_input_channel_layout.AudioMixInputChannelLayout.CL_STEREO">
 <code class="sig-name descname">CL_STEREO</code><em class="property"> = 'STEREO'</em><a class="headerlink" href="#bitmovin_api_sdk.models.audio_mix_input_channel_layout.AudioMixInputChannelLayout.CL_STEREO" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="bitmovin_api_sdk.models.audio_mix_input_channel_layout.AudioMixInputChannelLayout.CL_STEREO_DOWNMIX">
+<code class="sig-name descname">CL_STEREO_DOWNMIX</code><em class="property"> = 'STEREO_DOWNMIX'</em><a class="headerlink" href="#bitmovin_api_sdk.models.audio_mix_input_channel_layout.AudioMixInputChannelLayout.CL_STEREO_DOWNMIX" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
@@ -12115,6 +12409,21 @@
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>The pid_for_pmt of this BroadcastTsProgramConfiguration.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.broadcast_ts_program_configuration.BroadcastTsProgramConfiguration.program_clock_ref_interval">
+<em class="property">property </em><code class="sig-name descname">program_clock_ref_interval</code><a class="headerlink" href="#bitmovin_api_sdk.models.broadcast_ts_program_configuration.BroadcastTsProgramConfiguration.program_clock_ref_interval" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the program_clock_ref_interval of this BroadcastTsProgramConfiguration.</p>
+<p>Interval between Program Clock References (PCRs) in milliseconds. Defines the period between PCR fields inserted in the stream. The default value is 90ms.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The program_clock_ref_interval of this BroadcastTsProgramConfiguration.</p>
 </dd>
 <dt class="field-even">Return type</dt>
 <dd class="field-even"><p>int</p>
@@ -31336,7 +31645,7 @@
 
 <dl class="py attribute">
 <dt id="bitmovin_api_sdk.models.muxing.Muxing.discriminator_value_class_map">
-<code class="sig-name descname">discriminator_value_class_map</code><em class="property"> = {'BROADCAST_TS': 'BroadcastTsMuxing', 'CHUNKED_TEXT': 'ChunkedTextMuxing', 'CMAF': 'CmafMuxing', 'FMP4': 'Fmp4Muxing', 'MP3': 'Mp3Muxing', 'MP4': 'Mp4Muxing', 'MXF': 'MxfMuxing', 'PROGRESSIVE_MOV': 'ProgressiveMovMuxing', 'PROGRESSIVE_TS': 'ProgressiveTsMuxing', 'PROGRESSIVE_WEBM': 'ProgressiveWebmMuxing', 'SEGMENTED_RAW': 'SegmentedRawMuxing', 'TEXT': 'TextMuxing', 'TS': 'TsMuxing', 'WEBM': 'WebmMuxing'}</em><a class="headerlink" href="#bitmovin_api_sdk.models.muxing.Muxing.discriminator_value_class_map" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">discriminator_value_class_map</code><em class="property"> = {'BROADCAST_TS': 'BroadcastTsMuxing', 'CHUNKED_TEXT': 'ChunkedTextMuxing', 'CMAF': 'CmafMuxing', 'FMP4': 'Fmp4Muxing', 'MP3': 'Mp3Muxing', 'MP4': 'Mp4Muxing', 'MXF': 'MxfMuxing', 'PACKED_AUDIO': 'PackedAudioMuxing', 'PROGRESSIVE_MOV': 'ProgressiveMovMuxing', 'PROGRESSIVE_TS': 'ProgressiveTsMuxing', 'PROGRESSIVE_WEBM': 'ProgressiveWebmMuxing', 'SEGMENTED_RAW': 'SegmentedRawMuxing', 'TEXT': 'TextMuxing', 'TS': 'TsMuxing', 'WEBM': 'WebmMuxing'}</em><a class="headerlink" href="#bitmovin_api_sdk.models.muxing.Muxing.discriminator_value_class_map" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -31923,6 +32232,11 @@
 <dl class="py attribute">
 <dt id="bitmovin_api_sdk.models.muxing_type.MuxingType.MXF">
 <code class="sig-name descname">MXF</code><em class="property"> = 'MXF'</em><a class="headerlink" href="#bitmovin_api_sdk.models.muxing_type.MuxingType.MXF" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="bitmovin_api_sdk.models.muxing_type.MuxingType.PACKED_AUDIO">
+<code class="sig-name descname">PACKED_AUDIO</code><em class="property"> = 'PACKED_AUDIO'</em><a class="headerlink" href="#bitmovin_api_sdk.models.muxing_type.MuxingType.PACKED_AUDIO" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
@@ -32970,6 +33284,133 @@
 <dd class="field-even"><p><a class="reference internal" href="#bitmovin_api_sdk.models.output_type.OutputType" title="bitmovin_api_sdk.models.output_type.OutputType">OutputType</a></p>
 </dd>
 </dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-bitmovin_api_sdk.models.packed_audio_muxing">
+<span id="bitmovin-api-sdk-models-packed-audio-muxing-module"></span><h2>bitmovin_api_sdk.models.packed_audio_muxing module<a class="headerlink" href="#module-bitmovin_api_sdk.models.packed_audio_muxing" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="bitmovin_api_sdk.models.packed_audio_muxing.PackedAudioMuxing">
+<em class="property">class </em><code class="sig-prename descclassname">bitmovin_api_sdk.models.packed_audio_muxing.</code><code class="sig-name descname">PackedAudioMuxing</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/models/packed_audio_muxing.html#PackedAudioMuxing"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.models.packed_audio_muxing.PackedAudioMuxing" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bitmovin_api_sdk.models.muxing.Muxing" title="bitmovin_api_sdk.models.muxing.Muxing"><code class="xref py py-class docutils literal notranslate"><span class="pre">bitmovin_api_sdk.models.muxing.Muxing</span></code></a></p>
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.packed_audio_muxing.PackedAudioMuxing.attribute_map">
+<em class="property">property </em><code class="sig-name descname">attribute_map</code><a class="headerlink" href="#bitmovin_api_sdk.models.packed_audio_muxing.PackedAudioMuxing.attribute_map" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.packed_audio_muxing.PackedAudioMuxing.openapi_types">
+<em class="property">property </em><code class="sig-name descname">openapi_types</code><a class="headerlink" href="#bitmovin_api_sdk.models.packed_audio_muxing.PackedAudioMuxing.openapi_types" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.packed_audio_muxing.PackedAudioMuxing.segment_length">
+<em class="property">property </em><code class="sig-name descname">segment_length</code><a class="headerlink" href="#bitmovin_api_sdk.models.packed_audio_muxing.PackedAudioMuxing.segment_length" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the segment_length of this PackedAudioMuxing.</p>
+<p>Duration of a segment, given in seconds (required)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The segment_length of this PackedAudioMuxing.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.packed_audio_muxing.PackedAudioMuxing.segment_naming">
+<em class="property">property </em><code class="sig-name descname">segment_naming</code><a class="headerlink" href="#bitmovin_api_sdk.models.packed_audio_muxing.PackedAudioMuxing.segment_naming" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the segment_naming of this PackedAudioMuxing.</p>
+<p>Segment naming policy. The required filename extension depends on the codec (e.g. ‘.aac’ for AAC).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The segment_naming of this PackedAudioMuxing.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>string_types</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.packed_audio_muxing.PackedAudioMuxing.segment_naming_template">
+<em class="property">property </em><code class="sig-name descname">segment_naming_template</code><a class="headerlink" href="#bitmovin_api_sdk.models.packed_audio_muxing.PackedAudioMuxing.segment_naming_template" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the segment_naming_template of this PackedAudioMuxing.</p>
+<p>Segment naming policy containing a placeholder of the format ‘{rand_chars:x}’, which will be replaced by a random alphanumeric string of length x (default 32) on each (re)start of the encoding. The resulting string will be copied to the segmentNaming property. Intended to avoid re-use of segment names after restarting a live encoding. If segmentNamingTemplate is set, segmentNaming must not be set. The required filename extension depends on the codec (e.g. ‘.aac’ for AAC).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The segment_naming_template of this PackedAudioMuxing.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>string_types</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.packed_audio_muxing.PackedAudioMuxing.segments_muxed">
+<em class="property">property </em><code class="sig-name descname">segments_muxed</code><a class="headerlink" href="#bitmovin_api_sdk.models.packed_audio_muxing.PackedAudioMuxing.segments_muxed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the segments_muxed of this PackedAudioMuxing.</p>
+<p>Number of segments which have been encoded</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The segments_muxed of this PackedAudioMuxing.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.packed_audio_muxing.PackedAudioMuxing.start_offset">
+<em class="property">property </em><code class="sig-name descname">start_offset</code><a class="headerlink" href="#bitmovin_api_sdk.models.packed_audio_muxing.PackedAudioMuxing.start_offset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the start_offset of this PackedAudioMuxing.</p>
+<p>Offset of MPEG-TS timestamps in seconds. E.g., first packet will start with PTS 900,000 for a 10 seconds offset (90,000 MPEG-TS timescale).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The start_offset of this PackedAudioMuxing.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.packed_audio_muxing.PackedAudioMuxing.to_dict">
+<code class="sig-name descname">to_dict</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/models/packed_audio_muxing.html#PackedAudioMuxing.to_dict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.models.packed_audio_muxing.PackedAudioMuxing.to_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the model properties as a dict</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.packed_audio_muxing.PackedAudioMuxing.to_str">
+<code class="sig-name descname">to_str</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/models/packed_audio_muxing.html#PackedAudioMuxing.to_str"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.models.packed_audio_muxing.PackedAudioMuxing.to_str" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the string representation of the model</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-bitmovin_api_sdk.models.packed_audio_muxing_information">
+<span id="bitmovin-api-sdk-models-packed-audio-muxing-information-module"></span><h2>bitmovin_api_sdk.models.packed_audio_muxing_information module<a class="headerlink" href="#module-bitmovin_api_sdk.models.packed_audio_muxing_information" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="bitmovin_api_sdk.models.packed_audio_muxing_information.PackedAudioMuxingInformation">
+<em class="property">class </em><code class="sig-prename descclassname">bitmovin_api_sdk.models.packed_audio_muxing_information.</code><code class="sig-name descname">PackedAudioMuxingInformation</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/models/packed_audio_muxing_information.html#PackedAudioMuxingInformation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.models.packed_audio_muxing_information.PackedAudioMuxingInformation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bitmovin_api_sdk.models.fragmented_muxing_information.FragmentedMuxingInformation" title="bitmovin_api_sdk.models.fragmented_muxing_information.FragmentedMuxingInformation"><code class="xref py py-class docutils literal notranslate"><span class="pre">bitmovin_api_sdk.models.fragmented_muxing_information.FragmentedMuxingInformation</span></code></a></p>
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.packed_audio_muxing_information.PackedAudioMuxingInformation.to_dict">
+<code class="sig-name descname">to_dict</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/models/packed_audio_muxing_information.html#PackedAudioMuxingInformation.to_dict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.models.packed_audio_muxing_information.PackedAudioMuxingInformation.to_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the model properties as a dict</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.packed_audio_muxing_information.PackedAudioMuxingInformation.to_str">
+<code class="sig-name descname">to_str</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/models/packed_audio_muxing_information.html#PackedAudioMuxingInformation.to_str"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bitmovin_api_sdk.models.packed_audio_muxing_information.PackedAudioMuxingInformation.to_str" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the string representation of the model</p>
 </dd></dl>
 
 </dd></dl>
@@ -36679,6 +37120,11 @@
 <code class="sig-name descname">RETRY_IN_DIFFERENT_REGION</code><em class="property"> = 'RETRY_IN_DIFFERENT_REGION'</em><a class="headerlink" href="#bitmovin_api_sdk.models.retry_hint.RetryHint.RETRY_IN_DIFFERENT_REGION" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
+<dl class="py attribute">
+<dt id="bitmovin_api_sdk.models.retry_hint.RetryHint.UNDEFINED">
+<code class="sig-name descname">UNDEFINED</code><em class="property"> = 'UNDEFINED'</em><a class="headerlink" href="#bitmovin_api_sdk.models.retry_hint.RetryHint.UNDEFINED" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 </dd></dl>
 
 </div>
@@ -39023,7 +39469,7 @@
 <dt id="bitmovin_api_sdk.models.speke_drm_provider.SpekeDrmProvider.role_arn">
 <em class="property">property </em><code class="sig-name descname">role_arn</code><a class="headerlink" href="#bitmovin_api_sdk.models.speke_drm_provider.SpekeDrmProvider.role_arn" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the role_arn of this SpekeDrmProvider.</p>
-<p>AWS role that will be assumed for the key exchange in case the provider runs on AWS.  During the key exchange the role will be assumed to be able to access the key provider.  This role has to be created by the owner of the account with the SPEKE server. For Bitmovin to be able to assume this role, the following has to be added to the trust policy of the role:  <code class="docutils literal notranslate"><span class="pre">`</span> <span class="pre">{</span>&#160;&#160; <span class="pre">&quot;Effect&quot;:</span> <span class="pre">&quot;Allow&quot;,</span>&#160;&#160; <span class="pre">&quot;Principal&quot;:</span> <span class="pre">{</span>&#160;&#160;&#160;&#160; <span class="pre">&quot;AWS&quot;:</span> <span class="pre">&quot;arn:aws:iam::630681592166:user/bitmovinCustomerSpekeAccess&quot;</span>&#160;&#160; <span class="pre">},</span>&#160;&#160; <span class="pre">&quot;Action&quot;:</span> <span class="pre">&quot;sts:AssumeRole&quot;,</span>&#160;&#160; <span class="pre">&quot;Condition&quot;:</span> <span class="pre">{</span>&#160;&#160;&#160;&#160; <span class="pre">&quot;StringEquals&quot;:</span> <span class="pre">{</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">&quot;sts:ExternalId&quot;:</span> <span class="pre">&quot;{{externalId}}&quot;</span>&#160;&#160;&#160;&#160; <span class="pre">}</span>&#160;&#160; <span class="pre">}</span> <span class="pre">}</span> <span class="pre">`</span></code> It is recommended to also set the {{externalId}} due to security reasons but it can also be ommitted.  Additionally the role needs a policy similar to the following to be able to invoke the API gateway: <code class="docutils literal notranslate"><span class="pre">`</span> <span class="pre">{</span>&#160;&#160; <span class="pre">&quot;Version&quot;:</span> <span class="pre">&quot;2012-10-17&quot;,</span>&#160;&#160; <span class="pre">&quot;Statement&quot;:</span> <span class="pre">[</span>&#160;&#160;&#160;&#160; <span class="pre">{</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">&quot;Effect&quot;:</span> <span class="pre">&quot;Allow&quot;,</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">&quot;Action&quot;:</span> <span class="pre">[</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">&quot;execute-api:Invoke&quot;</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">],</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">&quot;Resource&quot;:</span> <span class="pre">[</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">&quot;arn:aws:execute-api:{{region}}:*:*/*/POST/*&quot;</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">]</span>&#160;&#160;&#160;&#160; <span class="pre">}</span>&#160;&#160; <span class="pre">]</span> <span class="pre">}</span> <span class="pre">`</span></code> where <cite>{{region}}</cite> is the region of the API gateway (for example <cite>us-west-2</cite>), the same has to be set in the property ‘gatewayRegion’. It’s also possible to set <cite>{{region}</cite> to <cite>*</cite> to give the role access to all regions.</p>
+<p>AWS role that will be assumed for the key exchange in case the provider runs on AWS.  During the key exchange the role will be assumed to be able to access the key provider.  This role is to be created in the customer’s account and must be granted access to the API Gateway of the SPEKE server. For Bitmovin to be able to assume this role, the following has to be added to the trust policy of the role:  <code class="docutils literal notranslate"><span class="pre">`</span> <span class="pre">{</span>&#160;&#160; <span class="pre">&quot;Effect&quot;:</span> <span class="pre">&quot;Allow&quot;,</span>&#160;&#160; <span class="pre">&quot;Principal&quot;:</span> <span class="pre">{</span>&#160;&#160;&#160;&#160; <span class="pre">&quot;AWS&quot;:</span> <span class="pre">&quot;arn:aws:iam::630681592166:user/bitmovinCustomerSpekeAccess&quot;</span>&#160;&#160; <span class="pre">},</span>&#160;&#160; <span class="pre">&quot;Action&quot;:</span> <span class="pre">&quot;sts:AssumeRole&quot;,</span>&#160;&#160; <span class="pre">&quot;Condition&quot;:</span> <span class="pre">{</span>&#160;&#160;&#160;&#160; <span class="pre">&quot;StringEquals&quot;:</span> <span class="pre">{</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">&quot;sts:ExternalId&quot;:</span> <span class="pre">&quot;{{externalId}}&quot;</span>&#160;&#160;&#160;&#160; <span class="pre">}</span>&#160;&#160; <span class="pre">}</span> <span class="pre">}</span> <span class="pre">`</span></code> It is recommended to also set the {{externalId}} due to security reasons but it can also be ommitted.  Additionally the role needs a policy similar to the following to be able to invoke the API gateway: <code class="docutils literal notranslate"><span class="pre">`</span> <span class="pre">{</span>&#160;&#160; <span class="pre">&quot;Version&quot;:</span> <span class="pre">&quot;2012-10-17&quot;,</span>&#160;&#160; <span class="pre">&quot;Statement&quot;:</span> <span class="pre">[</span>&#160;&#160;&#160;&#160; <span class="pre">{</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">&quot;Effect&quot;:</span> <span class="pre">&quot;Allow&quot;,</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">&quot;Action&quot;:</span> <span class="pre">[</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">&quot;execute-api:Invoke&quot;</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">],</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">&quot;Resource&quot;:</span> <span class="pre">[</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">&quot;arn:aws:execute-api:{{region}}:*:*/*/POST/*&quot;</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">]</span>&#160;&#160;&#160;&#160; <span class="pre">}</span>&#160;&#160; <span class="pre">]</span> <span class="pre">}</span> <span class="pre">`</span></code> where <cite>{{region}}</cite> is the region of the API gateway (for example <cite>us-west-2</cite>), the same has to be set in the property ‘gatewayRegion’. It’s also possible to set <cite>{{region}</cite> to <cite>*</cite> to give the role access to all regions.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>The role_arn of this SpekeDrmProvider.</p>

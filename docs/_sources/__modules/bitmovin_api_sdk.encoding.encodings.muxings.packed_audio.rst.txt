@@ -1,0 +1,38 @@
+bitmovin\_api\_sdk.encoding.encodings.muxings.packed\_audio package
+===================================================================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   bitmovin_api_sdk.encoding.encodings.muxings.packed_audio.customdata
+   bitmovin_api_sdk.encoding.encodings.muxings.packed_audio.information
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.encoding.encodings.muxings.packed\_audio.packed\_audio\_api module
+-------------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.encodings.muxings.packed_audio.packed_audio_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.encoding.encodings.muxings.packed\_audio.packed\_audio\_muxing\_list\_query\_params module
+-------------------------------------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.encodings.muxings.packed_audio.packed_audio_muxing_list_query_params
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.encoding.encodings.muxings.packed_audio
+   :members:
+   :undoc-members:
+   :show-inheritance:
