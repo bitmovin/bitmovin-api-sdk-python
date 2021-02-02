@@ -1,0 +1,21 @@
+bitmovin\_api\_sdk.encoding.encodings.streams.watermarking.nexguard\_file\_marker.customdata package
+====================================================================================================
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.encoding.encodings.streams.watermarking.nexguard\_file\_marker.customdata.customdata\_api module
+-------------------------------------------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.encodings.streams.watermarking.nexguard_file_marker.customdata.customdata_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.encoding.encodings.streams.watermarking.nexguard_file_marker.customdata
+   :members:
+   :undoc-members:
+   :show-inheritance:

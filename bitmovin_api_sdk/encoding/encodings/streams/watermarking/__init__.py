@@ -1,0 +1,2 @@
+from bitmovin_api_sdk.encoding.encodings.streams.watermarking.watermarking_api import WatermarkingApi
+from bitmovin_api_sdk.encoding.encodings.streams.watermarking.nexguard_file_marker.nexguard_file_marker_api import NexguardFileMarkerApi

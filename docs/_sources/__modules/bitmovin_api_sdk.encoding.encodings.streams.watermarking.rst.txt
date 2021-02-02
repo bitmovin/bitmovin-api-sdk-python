@@ -1,0 +1,29 @@
+bitmovin\_api\_sdk.encoding.encodings.streams.watermarking package
+==================================================================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   bitmovin_api_sdk.encoding.encodings.streams.watermarking.nexguard_file_marker
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.encoding.encodings.streams.watermarking.watermarking\_api module
+-----------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.encodings.streams.watermarking.watermarking_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.encoding.encodings.streams.watermarking
+   :members:
+   :undoc-members:
+   :show-inheritance:

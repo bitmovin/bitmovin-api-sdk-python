@@ -3244,6 +3244,38 @@ bitmovin\_api\_sdk.models.mxf\_muxing module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.nex\_guard\_ab\_watermarking\_feature module
+----------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.nex_guard_ab_watermarking_feature
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.nex\_guard\_file\_marker module
+---------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.nex_guard_file_marker
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.nex\_guard\_watermarking\_strength module
+-------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.nex_guard_watermarking_strength
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.nex\_guard\_watermarking\_type module
+---------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.nex_guard_watermarking_type
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.notification module
 ---------------------------------------------
 
@@ -4912,6 +4944,14 @@ bitmovin\_api\_sdk.models.web\_vtt\_configuration module
 --------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.models.web_vtt_configuration
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.web\_vtt\_cue\_identifier\_policy module
+------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.web_vtt_cue_identifier_policy
    :members:
    :undoc-members:
    :show-inheritance:

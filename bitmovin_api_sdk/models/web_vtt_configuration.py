@@ -4,6 +4,7 @@ from enum import Enum
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
 from bitmovin_api_sdk.models.subtitle_configuration import SubtitleConfiguration
+from bitmovin_api_sdk.models.web_vtt_cue_identifier_policy import WebVttCueIdentifierPolicy
 import pprint
 import six
 
@@ -18,18 +19,22 @@ class WebVttConfiguration(SubtitleConfiguration):
                  custom_data=None,
                  id_=None,
                  append_optional_zero_hour=None,
-                 ignore_region=None):
-        # type: (string_types, string_types, datetime, datetime, dict, string_types, bool, bool) -> None
+                 ignore_region=None,
+                 cue_identifier_policy=None):
+        # type: (string_types, string_types, datetime, datetime, dict, string_types, bool, bool, WebVttCueIdentifierPolicy) -> None
         super(WebVttConfiguration, self).__init__(name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, id_=id_)
 
         self._append_optional_zero_hour = None
         self._ignore_region = None
+        self._cue_identifier_policy = None
         self.discriminator = None
 
         if append_optional_zero_hour is not None:
             self.append_optional_zero_hour = append_optional_zero_hour
         if ignore_region is not None:
             self.ignore_region = ignore_region
+        if cue_identifier_policy is not None:
+            self.cue_identifier_policy = cue_identifier_policy
 
     @property
     def openapi_types(self):
@@ -40,7 +45,8 @@ class WebVttConfiguration(SubtitleConfiguration):
 
         types.update({
             'append_optional_zero_hour': 'bool',
-            'ignore_region': 'bool'
+            'ignore_region': 'bool',
+            'cue_identifier_policy': 'WebVttCueIdentifierPolicy'
         })
 
         return types
@@ -54,7 +60,8 @@ class WebVttConfiguration(SubtitleConfiguration):
 
         attributes.update({
             'append_optional_zero_hour': 'appendOptionalZeroHour',
-            'ignore_region': 'ignoreRegion'
+            'ignore_region': 'ignoreRegion',
+            'cue_identifier_policy': 'cueIdentifierPolicy'
         })
         return attributes
 
@@ -115,6 +122,33 @@ class WebVttConfiguration(SubtitleConfiguration):
                 raise TypeError("Invalid type for `ignore_region`, type has to be `bool`")
 
         self._ignore_region = ignore_region
+
+    @property
+    def cue_identifier_policy(self):
+        # type: () -> WebVttCueIdentifierPolicy
+        """Gets the cue_identifier_policy of this WebVttConfiguration.
+
+
+        :return: The cue_identifier_policy of this WebVttConfiguration.
+        :rtype: WebVttCueIdentifierPolicy
+        """
+        return self._cue_identifier_policy
+
+    @cue_identifier_policy.setter
+    def cue_identifier_policy(self, cue_identifier_policy):
+        # type: (WebVttCueIdentifierPolicy) -> None
+        """Sets the cue_identifier_policy of this WebVttConfiguration.
+
+
+        :param cue_identifier_policy: The cue_identifier_policy of this WebVttConfiguration.
+        :type: WebVttCueIdentifierPolicy
+        """
+
+        if cue_identifier_policy is not None:
+            if not isinstance(cue_identifier_policy, WebVttCueIdentifierPolicy):
+                raise TypeError("Invalid type for `cue_identifier_policy`, type has to be `WebVttCueIdentifierPolicy`")
+
+        self._cue_identifier_policy = cue_identifier_policy
 
     def to_dict(self):
         """Returns the model properties as a dict"""

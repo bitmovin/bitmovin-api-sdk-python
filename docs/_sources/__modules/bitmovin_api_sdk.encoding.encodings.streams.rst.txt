@@ -18,6 +18,7 @@ Subpackages
    bitmovin_api_sdk.encoding.encodings.streams.qc
    bitmovin_api_sdk.encoding.encodings.streams.sprites
    bitmovin_api_sdk.encoding.encodings.streams.thumbnails
+   bitmovin_api_sdk.encoding.encodings.streams.watermarking
 
 Submodules
 ----------

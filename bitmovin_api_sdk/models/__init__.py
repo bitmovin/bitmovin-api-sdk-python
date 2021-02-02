@@ -408,6 +408,10 @@ from bitmovin_api_sdk.models.muxing_stream import MuxingStream
 from bitmovin_api_sdk.models.muxing_type import MuxingType
 from bitmovin_api_sdk.models.mv_prediction_mode import MvPredictionMode
 from bitmovin_api_sdk.models.mxf_muxing import MxfMuxing
+from bitmovin_api_sdk.models.nex_guard_ab_watermarking_feature import NexGuardABWatermarkingFeature
+from bitmovin_api_sdk.models.nex_guard_file_marker import NexGuardFileMarker
+from bitmovin_api_sdk.models.nex_guard_watermarking_strength import NexGuardWatermarkingStrength
+from bitmovin_api_sdk.models.nex_guard_watermarking_type import NexGuardWatermarkingType
 from bitmovin_api_sdk.models.notification import Notification
 from bitmovin_api_sdk.models.notification_state_entry import NotificationStateEntry
 from bitmovin_api_sdk.models.notification_states import NotificationStates
@@ -617,6 +621,7 @@ from bitmovin_api_sdk.models.vp9_video_configuration import Vp9VideoConfiguratio
 from bitmovin_api_sdk.models.vtt_media_info import VttMediaInfo
 from bitmovin_api_sdk.models.watermark_filter import WatermarkFilter
 from bitmovin_api_sdk.models.web_vtt_configuration import WebVttConfiguration
+from bitmovin_api_sdk.models.web_vtt_cue_identifier_policy import WebVttCueIdentifierPolicy
 from bitmovin_api_sdk.models.web_vtt_sidecar_file import WebVttSidecarFile
 from bitmovin_api_sdk.models.web_vtt_sidecar_file_segmentation import WebVttSidecarFileSegmentation
 from bitmovin_api_sdk.models.webhook import Webhook

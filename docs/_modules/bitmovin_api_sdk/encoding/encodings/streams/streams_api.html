@@ -173,6 +173,7 @@
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.encoding.encodings.streams.inputs.inputs_api</span> <span class="kn">import</span> <span class="n">InputsApi</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.encoding.encodings.streams.filters.filters_api</span> <span class="kn">import</span> <span class="n">FiltersApi</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.encoding.encodings.streams.burn_in_subtitles.burn_in_subtitles_api</span> <span class="kn">import</span> <span class="n">BurnInSubtitlesApi</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.encoding.encodings.streams.watermarking.watermarking_api</span> <span class="kn">import</span> <span class="n">WatermarkingApi</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.encoding.encodings.streams.captions.captions_api</span> <span class="kn">import</span> <span class="n">CaptionsApi</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.encoding.encodings.streams.bifs.bifs_api</span> <span class="kn">import</span> <span class="n">BifsApi</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.encoding.encodings.streams.hdr.hdr_api</span> <span class="kn">import</span> <span class="n">HdrApi</span>
@@ -223,6 +224,13 @@
         <span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">burn_in_subtitles</span> <span class="o">=</span> <span class="n">BurnInSubtitlesApi</span><span class="p">(</span>
+            <span class="n">api_key</span><span class="o">=</span><span class="n">api_key</span><span class="p">,</span>
+            <span class="n">tenant_org_id</span><span class="o">=</span><span class="n">tenant_org_id</span><span class="p">,</span>
+            <span class="n">base_url</span><span class="o">=</span><span class="n">base_url</span><span class="p">,</span>
+            <span class="n">logger</span><span class="o">=</span><span class="n">logger</span>
+        <span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">watermarking</span> <span class="o">=</span> <span class="n">WatermarkingApi</span><span class="p">(</span>
             <span class="n">api_key</span><span class="o">=</span><span class="n">api_key</span><span class="p">,</span>
             <span class="n">tenant_org_id</span><span class="o">=</span><span class="n">tenant_org_id</span><span class="p">,</span>
             <span class="n">base_url</span><span class="o">=</span><span class="n">base_url</span><span class="p">,</span>

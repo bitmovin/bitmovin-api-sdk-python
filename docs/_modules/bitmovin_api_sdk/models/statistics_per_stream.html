@@ -167,6 +167,7 @@
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.dolby_vision_per_stream_mode</span> <span class="kn">import</span> <span class="n">DolbyVisionPerStreamMode</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.encoding_mode</span> <span class="kn">import</span> <span class="n">EncodingMode</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.input_factor</span> <span class="kn">import</span> <span class="n">InputFactor</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.nex_guard_ab_watermarking_feature</span> <span class="kn">import</span> <span class="n">NexGuardABWatermarkingFeature</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.psnr_per_stream_mode</span> <span class="kn">import</span> <span class="n">PsnrPerStreamMode</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.statistics_per_title_stream</span> <span class="kn">import</span> <span class="n">StatisticsPerTitleStream</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.statistics_resolution</span> <span class="kn">import</span> <span class="n">StatisticsResolution</span>
@@ -203,8 +204,10 @@
                  <span class="n">live_multiplicator</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">enhanced_deinterlace</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">enhanced_deinterlace_multiplicator</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">nex_guard_ab_watermarking_type</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">nex_guard_ab_watermarking_multiplicator</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">input_factor</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (string_types, string_types, float, int, float, float, int, int, float, int, CodecConfigType, StatisticsResolution, EncodingMode, float, StatisticsPerTitleStream, float, PsnrPerStreamMode, float, DolbyVisionPerStreamMode, float, string_types, float, bool, float, bool, float, InputFactor) -&gt; None</span>
+        <span class="c1"># type: (string_types, string_types, float, int, float, float, int, int, float, int, CodecConfigType, StatisticsResolution, EncodingMode, float, StatisticsPerTitleStream, float, PsnrPerStreamMode, float, DolbyVisionPerStreamMode, float, string_types, float, bool, float, bool, float, NexGuardABWatermarkingFeature, float, InputFactor) -&gt; None</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_stream_id</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_codec_config_id</span> <span class="o">=</span> <span class="kc">None</span>
@@ -232,6 +235,8 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_live_multiplicator</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_enhanced_deinterlace</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_enhanced_deinterlace_multiplicator</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_nex_guard_ab_watermarking_type</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_nex_guard_ab_watermarking_multiplicator</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_input_factor</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>
 
@@ -287,6 +292,10 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">enhanced_deinterlace</span> <span class="o">=</span> <span class="n">enhanced_deinterlace</span>
         <span class="k">if</span> <span class="n">enhanced_deinterlace_multiplicator</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">enhanced_deinterlace_multiplicator</span> <span class="o">=</span> <span class="n">enhanced_deinterlace_multiplicator</span>
+        <span class="k">if</span> <span class="n">nex_guard_ab_watermarking_type</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">nex_guard_ab_watermarking_type</span> <span class="o">=</span> <span class="n">nex_guard_ab_watermarking_type</span>
+        <span class="k">if</span> <span class="n">nex_guard_ab_watermarking_multiplicator</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">nex_guard_ab_watermarking_multiplicator</span> <span class="o">=</span> <span class="n">nex_guard_ab_watermarking_multiplicator</span>
         <span class="k">if</span> <span class="n">input_factor</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">input_factor</span> <span class="o">=</span> <span class="n">input_factor</span>
 
@@ -319,6 +328,8 @@
             <span class="s1">&#39;live_multiplicator&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span><span class="p">,</span>
             <span class="s1">&#39;enhanced_deinterlace&#39;</span><span class="p">:</span> <span class="s1">&#39;bool&#39;</span><span class="p">,</span>
             <span class="s1">&#39;enhanced_deinterlace_multiplicator&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;nex_guard_ab_watermarking_type&#39;</span><span class="p">:</span> <span class="s1">&#39;NexGuardABWatermarkingFeature&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;nex_guard_ab_watermarking_multiplicator&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span><span class="p">,</span>
             <span class="s1">&#39;input_factor&#39;</span><span class="p">:</span> <span class="s1">&#39;InputFactor&#39;</span>
         <span class="p">}</span>
 
@@ -353,6 +364,8 @@
             <span class="s1">&#39;live_multiplicator&#39;</span><span class="p">:</span> <span class="s1">&#39;liveMultiplicator&#39;</span><span class="p">,</span>
             <span class="s1">&#39;enhanced_deinterlace&#39;</span><span class="p">:</span> <span class="s1">&#39;enhancedDeinterlace&#39;</span><span class="p">,</span>
             <span class="s1">&#39;enhanced_deinterlace_multiplicator&#39;</span><span class="p">:</span> <span class="s1">&#39;enhancedDeinterlaceMultiplicator&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;nex_guard_ab_watermarking_type&#39;</span><span class="p">:</span> <span class="s1">&#39;nexGuardABWatermarkingType&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;nex_guard_ab_watermarking_multiplicator&#39;</span><span class="p">:</span> <span class="s1">&#39;nexGuardABWatermarkingMultiplicator&#39;</span><span class="p">,</span>
             <span class="s1">&#39;input_factor&#39;</span><span class="p">:</span> <span class="s1">&#39;inputFactor&#39;</span>
         <span class="p">}</span>
         <span class="k">return</span> <span class="n">attributes</span>
@@ -1098,6 +1111,62 @@
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `enhanced_deinterlace_multiplicator`, type has to be `float`&quot;</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_enhanced_deinterlace_multiplicator</span> <span class="o">=</span> <span class="n">enhanced_deinterlace_multiplicator</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">nex_guard_ab_watermarking_type</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; NexGuardABWatermarkingFeature</span>
+        <span class="sd">&quot;&quot;&quot;Gets the nex_guard_ab_watermarking_type of this StatisticsPerStream.</span>
+
+
+<span class="sd">        :return: The nex_guard_ab_watermarking_type of this StatisticsPerStream.</span>
+<span class="sd">        :rtype: NexGuardABWatermarkingFeature</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_nex_guard_ab_watermarking_type</span>
+
+    <span class="nd">@nex_guard_ab_watermarking_type</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">nex_guard_ab_watermarking_type</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nex_guard_ab_watermarking_type</span><span class="p">):</span>
+        <span class="c1"># type: (NexGuardABWatermarkingFeature) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the nex_guard_ab_watermarking_type of this StatisticsPerStream.</span>
+
+
+<span class="sd">        :param nex_guard_ab_watermarking_type: The nex_guard_ab_watermarking_type of this StatisticsPerStream.</span>
+<span class="sd">        :type: NexGuardABWatermarkingFeature</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">nex_guard_ab_watermarking_type</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">nex_guard_ab_watermarking_type</span><span class="p">,</span> <span class="n">NexGuardABWatermarkingFeature</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `nex_guard_ab_watermarking_type`, type has to be `NexGuardABWatermarkingFeature`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_nex_guard_ab_watermarking_type</span> <span class="o">=</span> <span class="n">nex_guard_ab_watermarking_type</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">nex_guard_ab_watermarking_multiplicator</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; float</span>
+        <span class="sd">&quot;&quot;&quot;Gets the nex_guard_ab_watermarking_multiplicator of this StatisticsPerStream.</span>
+
+<span class="sd">        The output minutes multiplicator for streams using a NexGuard A/B Watermarking.</span>
+
+<span class="sd">        :return: The nex_guard_ab_watermarking_multiplicator of this StatisticsPerStream.</span>
+<span class="sd">        :rtype: float</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_nex_guard_ab_watermarking_multiplicator</span>
+
+    <span class="nd">@nex_guard_ab_watermarking_multiplicator</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">nex_guard_ab_watermarking_multiplicator</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nex_guard_ab_watermarking_multiplicator</span><span class="p">):</span>
+        <span class="c1"># type: (float) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the nex_guard_ab_watermarking_multiplicator of this StatisticsPerStream.</span>
+
+<span class="sd">        The output minutes multiplicator for streams using a NexGuard A/B Watermarking.</span>
+
+<span class="sd">        :param nex_guard_ab_watermarking_multiplicator: The nex_guard_ab_watermarking_multiplicator of this StatisticsPerStream.</span>
+<span class="sd">        :type: float</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">nex_guard_ab_watermarking_multiplicator</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">nex_guard_ab_watermarking_multiplicator</span><span class="p">,</span> <span class="p">(</span><span class="nb">float</span><span class="p">,</span> <span class="nb">int</span><span class="p">)):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `nex_guard_ab_watermarking_multiplicator`, type has to be `float`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_nex_guard_ab_watermarking_multiplicator</span> <span class="o">=</span> <span class="n">nex_guard_ab_watermarking_multiplicator</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">input_factor</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>

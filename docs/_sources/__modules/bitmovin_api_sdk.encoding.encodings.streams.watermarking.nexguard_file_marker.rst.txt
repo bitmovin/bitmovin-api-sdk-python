@@ -1,0 +1,37 @@
+bitmovin\_api\_sdk.encoding.encodings.streams.watermarking.nexguard\_file\_marker package
+=========================================================================================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   bitmovin_api_sdk.encoding.encodings.streams.watermarking.nexguard_file_marker.customdata
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.encoding.encodings.streams.watermarking.nexguard\_file\_marker.nex\_guard\_file\_marker\_list\_query\_params module
+--------------------------------------------------------------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.encodings.streams.watermarking.nexguard_file_marker.nex_guard_file_marker_list_query_params
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.encoding.encodings.streams.watermarking.nexguard\_file\_marker.nexguard\_file\_marker\_api module
+--------------------------------------------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.encodings.streams.watermarking.nexguard_file_marker.nexguard_file_marker_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.encoding.encodings.streams.watermarking.nexguard_file_marker
+   :members:
+   :undoc-members:
+   :show-inheritance:

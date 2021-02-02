@@ -7,6 +7,7 @@ from bitmovin_api_sdk.models.codec_config_type import CodecConfigType
 from bitmovin_api_sdk.models.dolby_vision_per_stream_mode import DolbyVisionPerStreamMode
 from bitmovin_api_sdk.models.encoding_mode import EncodingMode
 from bitmovin_api_sdk.models.input_factor import InputFactor
+from bitmovin_api_sdk.models.nex_guard_ab_watermarking_feature import NexGuardABWatermarkingFeature
 from bitmovin_api_sdk.models.psnr_per_stream_mode import PsnrPerStreamMode
 from bitmovin_api_sdk.models.statistics_per_title_stream import StatisticsPerTitleStream
 from bitmovin_api_sdk.models.statistics_resolution import StatisticsResolution
@@ -43,8 +44,10 @@ class StatisticsPerStream(object):
                  live_multiplicator=None,
                  enhanced_deinterlace=None,
                  enhanced_deinterlace_multiplicator=None,
+                 nex_guard_ab_watermarking_type=None,
+                 nex_guard_ab_watermarking_multiplicator=None,
                  input_factor=None):
-        # type: (string_types, string_types, float, int, float, float, int, int, float, int, CodecConfigType, StatisticsResolution, EncodingMode, float, StatisticsPerTitleStream, float, PsnrPerStreamMode, float, DolbyVisionPerStreamMode, float, string_types, float, bool, float, bool, float, InputFactor) -> None
+        # type: (string_types, string_types, float, int, float, float, int, int, float, int, CodecConfigType, StatisticsResolution, EncodingMode, float, StatisticsPerTitleStream, float, PsnrPerStreamMode, float, DolbyVisionPerStreamMode, float, string_types, float, bool, float, bool, float, NexGuardABWatermarkingFeature, float, InputFactor) -> None
 
         self._stream_id = None
         self._codec_config_id = None
@@ -72,6 +75,8 @@ class StatisticsPerStream(object):
         self._live_multiplicator = None
         self._enhanced_deinterlace = None
         self._enhanced_deinterlace_multiplicator = None
+        self._nex_guard_ab_watermarking_type = None
+        self._nex_guard_ab_watermarking_multiplicator = None
         self._input_factor = None
         self.discriminator = None
 
@@ -127,6 +132,10 @@ class StatisticsPerStream(object):
             self.enhanced_deinterlace = enhanced_deinterlace
         if enhanced_deinterlace_multiplicator is not None:
             self.enhanced_deinterlace_multiplicator = enhanced_deinterlace_multiplicator
+        if nex_guard_ab_watermarking_type is not None:
+            self.nex_guard_ab_watermarking_type = nex_guard_ab_watermarking_type
+        if nex_guard_ab_watermarking_multiplicator is not None:
+            self.nex_guard_ab_watermarking_multiplicator = nex_guard_ab_watermarking_multiplicator
         if input_factor is not None:
             self.input_factor = input_factor
 
@@ -159,6 +168,8 @@ class StatisticsPerStream(object):
             'live_multiplicator': 'float',
             'enhanced_deinterlace': 'bool',
             'enhanced_deinterlace_multiplicator': 'float',
+            'nex_guard_ab_watermarking_type': 'NexGuardABWatermarkingFeature',
+            'nex_guard_ab_watermarking_multiplicator': 'float',
             'input_factor': 'InputFactor'
         }
 
@@ -193,6 +204,8 @@ class StatisticsPerStream(object):
             'live_multiplicator': 'liveMultiplicator',
             'enhanced_deinterlace': 'enhancedDeinterlace',
             'enhanced_deinterlace_multiplicator': 'enhancedDeinterlaceMultiplicator',
+            'nex_guard_ab_watermarking_type': 'nexGuardABWatermarkingType',
+            'nex_guard_ab_watermarking_multiplicator': 'nexGuardABWatermarkingMultiplicator',
             'input_factor': 'inputFactor'
         }
         return attributes
@@ -938,6 +951,62 @@ class StatisticsPerStream(object):
                 raise TypeError("Invalid type for `enhanced_deinterlace_multiplicator`, type has to be `float`")
 
         self._enhanced_deinterlace_multiplicator = enhanced_deinterlace_multiplicator
+
+    @property
+    def nex_guard_ab_watermarking_type(self):
+        # type: () -> NexGuardABWatermarkingFeature
+        """Gets the nex_guard_ab_watermarking_type of this StatisticsPerStream.
+
+
+        :return: The nex_guard_ab_watermarking_type of this StatisticsPerStream.
+        :rtype: NexGuardABWatermarkingFeature
+        """
+        return self._nex_guard_ab_watermarking_type
+
+    @nex_guard_ab_watermarking_type.setter
+    def nex_guard_ab_watermarking_type(self, nex_guard_ab_watermarking_type):
+        # type: (NexGuardABWatermarkingFeature) -> None
+        """Sets the nex_guard_ab_watermarking_type of this StatisticsPerStream.
+
+
+        :param nex_guard_ab_watermarking_type: The nex_guard_ab_watermarking_type of this StatisticsPerStream.
+        :type: NexGuardABWatermarkingFeature
+        """
+
+        if nex_guard_ab_watermarking_type is not None:
+            if not isinstance(nex_guard_ab_watermarking_type, NexGuardABWatermarkingFeature):
+                raise TypeError("Invalid type for `nex_guard_ab_watermarking_type`, type has to be `NexGuardABWatermarkingFeature`")
+
+        self._nex_guard_ab_watermarking_type = nex_guard_ab_watermarking_type
+
+    @property
+    def nex_guard_ab_watermarking_multiplicator(self):
+        # type: () -> float
+        """Gets the nex_guard_ab_watermarking_multiplicator of this StatisticsPerStream.
+
+        The output minutes multiplicator for streams using a NexGuard A/B Watermarking.
+
+        :return: The nex_guard_ab_watermarking_multiplicator of this StatisticsPerStream.
+        :rtype: float
+        """
+        return self._nex_guard_ab_watermarking_multiplicator
+
+    @nex_guard_ab_watermarking_multiplicator.setter
+    def nex_guard_ab_watermarking_multiplicator(self, nex_guard_ab_watermarking_multiplicator):
+        # type: (float) -> None
+        """Sets the nex_guard_ab_watermarking_multiplicator of this StatisticsPerStream.
+
+        The output minutes multiplicator for streams using a NexGuard A/B Watermarking.
+
+        :param nex_guard_ab_watermarking_multiplicator: The nex_guard_ab_watermarking_multiplicator of this StatisticsPerStream.
+        :type: float
+        """
+
+        if nex_guard_ab_watermarking_multiplicator is not None:
+            if not isinstance(nex_guard_ab_watermarking_multiplicator, (float, int)):
+                raise TypeError("Invalid type for `nex_guard_ab_watermarking_multiplicator`, type has to be `float`")
+
+        self._nex_guard_ab_watermarking_multiplicator = nex_guard_ab_watermarking_multiplicator
 
     @property
     def input_factor(self):
