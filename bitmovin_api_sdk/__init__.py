@@ -92,11 +92,11 @@ from bitmovin_api_sdk.analytics.licenses.domains.domains_api import DomainsApi
 from bitmovin_api_sdk.analytics.outputs.outputs_api import OutputsApi
 
 from bitmovin_api_sdk.analytics.outputs.s3_role_based.s3_role_based_api import S3RoleBasedApi
-from bitmovin_api_sdk.analytics.outputs.s3_role_based.s3_role_based_api import S3RoleBasedOutputListQueryParams
+from bitmovin_api_sdk.analytics.outputs.s3_role_based.s3_role_based_api import AnalyticsS3RoleBasedOutputListQueryParams
 from bitmovin_api_sdk.analytics.outputs.s3_role_based.customdata.customdata_api import CustomdataApi
 
 from bitmovin_api_sdk.analytics.outputs.gcs_service_account.gcs_service_account_api import GcsServiceAccountApi
-from bitmovin_api_sdk.analytics.outputs.gcs_service_account.gcs_service_account_api import GcsServiceAccountOutputListQueryParams
+from bitmovin_api_sdk.analytics.outputs.gcs_service_account.gcs_service_account_api import AnalyticsGcsServiceAccountOutputListQueryParams
 from bitmovin_api_sdk.analytics.outputs.gcs_service_account.customdata.customdata_api import CustomdataApi
 
 from bitmovin_api_sdk.encoding.encoding_api import EncodingApi
@@ -1001,6 +1001,7 @@ from bitmovin_api_sdk.models.analytics_equal_filter import AnalyticsEqualFilter
 from bitmovin_api_sdk.models.analytics_export_status import AnalyticsExportStatus
 from bitmovin_api_sdk.models.analytics_export_task import AnalyticsExportTask
 from bitmovin_api_sdk.models.analytics_export_task_output_target import AnalyticsExportTaskOutputTarget
+from bitmovin_api_sdk.models.analytics_gcs_service_account_output import AnalyticsGcsServiceAccountOutput
 from bitmovin_api_sdk.models.analytics_greater_than_filter import AnalyticsGreaterThanFilter
 from bitmovin_api_sdk.models.analytics_greater_than_or_equal_filter import AnalyticsGreaterThanOrEqualFilter
 from bitmovin_api_sdk.models.analytics_impression_details import AnalyticsImpressionDetails
@@ -1028,11 +1029,14 @@ from bitmovin_api_sdk.models.analytics_not_contains_filter import AnalyticsNotCo
 from bitmovin_api_sdk.models.analytics_not_equal_filter import AnalyticsNotEqualFilter
 from bitmovin_api_sdk.models.analytics_order import AnalyticsOrder
 from bitmovin_api_sdk.models.analytics_order_by_entry import AnalyticsOrderByEntry
+from bitmovin_api_sdk.models.analytics_output import AnalyticsOutput
+from bitmovin_api_sdk.models.analytics_output_type import AnalyticsOutputType
 from bitmovin_api_sdk.models.analytics_percentile_query_request import AnalyticsPercentileQueryRequest
 from bitmovin_api_sdk.models.analytics_query_operator import AnalyticsQueryOperator
 from bitmovin_api_sdk.models.analytics_query_request import AnalyticsQueryRequest
 from bitmovin_api_sdk.models.analytics_query_timeframe import AnalyticsQueryTimeframe
 from bitmovin_api_sdk.models.analytics_response import AnalyticsResponse
+from bitmovin_api_sdk.models.analytics_s3_role_based_output import AnalyticsS3RoleBasedOutput
 from bitmovin_api_sdk.models.analytics_stddev_query_request import AnalyticsStddevQueryRequest
 from bitmovin_api_sdk.models.analytics_sum_query_request import AnalyticsSumQueryRequest
 from bitmovin_api_sdk.models.analytics_variance_query_request import AnalyticsVarianceQueryRequest
@@ -1578,4 +1582,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.58.0"
+__version__ = "1.59.0"

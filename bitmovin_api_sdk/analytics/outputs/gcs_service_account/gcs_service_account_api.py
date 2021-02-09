@@ -4,11 +4,12 @@ from __future__ import absolute_import
 
 from bitmovin_api_sdk.common import BaseApi, BitmovinApiLoggerBase
 from bitmovin_api_sdk.common.poscheck import poscheck_except
+from bitmovin_api_sdk.models.analytics_gcs_service_account_output import AnalyticsGcsServiceAccountOutput
 from bitmovin_api_sdk.models.gcs_service_account_output import GcsServiceAccountOutput
 from bitmovin_api_sdk.models.response_envelope import ResponseEnvelope
 from bitmovin_api_sdk.models.response_error import ResponseError
 from bitmovin_api_sdk.analytics.outputs.gcs_service_account.customdata.customdata_api import CustomdataApi
-from bitmovin_api_sdk.analytics.outputs.gcs_service_account.gcs_service_account_output_list_query_params import GcsServiceAccountOutputListQueryParams
+from bitmovin_api_sdk.analytics.outputs.gcs_service_account.analytics_gcs_service_account_output_list_query_params import AnalyticsGcsServiceAccountOutputListQueryParams
 
 
 class GcsServiceAccountApi(BaseApi):
@@ -30,20 +31,20 @@ class GcsServiceAccountApi(BaseApi):
             logger=logger
         )
 
-    def create(self, gcs_service_account_output, **kwargs):
-        # type: (GcsServiceAccountOutput, dict) -> GcsServiceAccountOutput
+    def create(self, analytics_gcs_service_account_output, **kwargs):
+        # type: (AnalyticsGcsServiceAccountOutput, dict) -> AnalyticsGcsServiceAccountOutput
         """Create Service Account based GCS Output
 
-        :param gcs_service_account_output: The GCS output to be created
-        :type gcs_service_account_output: GcsServiceAccountOutput, required
+        :param analytics_gcs_service_account_output: The GCS output to be created
+        :type analytics_gcs_service_account_output: AnalyticsGcsServiceAccountOutput, required
         :return: GCS output
-        :rtype: GcsServiceAccountOutput
+        :rtype: AnalyticsGcsServiceAccountOutput
         """
 
         return self.api_client.post(
             '/analytics/outputs/gcs-service-account',
-            gcs_service_account_output,
-            type=GcsServiceAccountOutput,
+            analytics_gcs_service_account_output,
+            type=AnalyticsGcsServiceAccountOutput,
             **kwargs
         )
 
@@ -82,19 +83,19 @@ class GcsServiceAccountApi(BaseApi):
         )
 
     def list(self, query_params=None, **kwargs):
-        # type: (GcsServiceAccountOutputListQueryParams, dict) -> GcsServiceAccountOutput
+        # type: (AnalyticsGcsServiceAccountOutputListQueryParams, dict) -> AnalyticsGcsServiceAccountOutput
         """List Service Account based GCS Outputs
 
         :param query_params: Query parameters
-        :type query_params: GcsServiceAccountOutputListQueryParams
+        :type query_params: AnalyticsGcsServiceAccountOutputListQueryParams
         :return: List of GCS outputs
-        :rtype: GcsServiceAccountOutput
+        :rtype: AnalyticsGcsServiceAccountOutput
         """
 
         return self.api_client.get(
             '/analytics/outputs/gcs-service-account',
             query_params=query_params,
             pagination_response=True,
-            type=GcsServiceAccountOutput,
+            type=AnalyticsGcsServiceAccountOutput,
             **kwargs
         )

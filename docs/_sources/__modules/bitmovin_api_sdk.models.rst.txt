@@ -460,6 +460,14 @@ bitmovin\_api\_sdk.models.analytics\_export\_task\_output\_target module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.analytics\_gcs\_service\_account\_output module
+-------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.analytics_gcs_service_account_output
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.analytics\_greater\_than\_filter module
 -----------------------------------------------------------------
 
@@ -676,6 +684,22 @@ bitmovin\_api\_sdk.models.analytics\_order\_by\_entry module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.analytics\_output module
+--------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.analytics_output
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.analytics\_output\_type module
+--------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.analytics_output_type
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.analytics\_percentile\_query\_request module
 ----------------------------------------------------------------------
 
@@ -712,6 +736,14 @@ bitmovin\_api\_sdk.models.analytics\_response module
 ----------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.models.analytics_response
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.analytics\_s3\_role\_based\_output module
+-------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.analytics_s3_role_based_output
    :members:
    :undoc-members:
    :show-inheritance:

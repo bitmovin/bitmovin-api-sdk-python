@@ -4,11 +4,12 @@ from __future__ import absolute_import
 
 from bitmovin_api_sdk.common import BaseApi, BitmovinApiLoggerBase
 from bitmovin_api_sdk.common.poscheck import poscheck_except
+from bitmovin_api_sdk.models.analytics_s3_role_based_output import AnalyticsS3RoleBasedOutput
 from bitmovin_api_sdk.models.response_envelope import ResponseEnvelope
 from bitmovin_api_sdk.models.response_error import ResponseError
 from bitmovin_api_sdk.models.s3_role_based_output import S3RoleBasedOutput
 from bitmovin_api_sdk.analytics.outputs.s3_role_based.customdata.customdata_api import CustomdataApi
-from bitmovin_api_sdk.analytics.outputs.s3_role_based.s3_role_based_output_list_query_params import S3RoleBasedOutputListQueryParams
+from bitmovin_api_sdk.analytics.outputs.s3_role_based.analytics_s3_role_based_output_list_query_params import AnalyticsS3RoleBasedOutputListQueryParams
 
 
 class S3RoleBasedApi(BaseApi):
@@ -30,20 +31,20 @@ class S3RoleBasedApi(BaseApi):
             logger=logger
         )
 
-    def create(self, s3_role_based_output, **kwargs):
-        # type: (S3RoleBasedOutput, dict) -> S3RoleBasedOutput
+    def create(self, analytics_s3_role_based_output, **kwargs):
+        # type: (AnalyticsS3RoleBasedOutput, dict) -> AnalyticsS3RoleBasedOutput
         """Create S3 Role-based Output
 
-        :param s3_role_based_output: The S3 Role-based output to be created
-        :type s3_role_based_output: S3RoleBasedOutput, required
+        :param analytics_s3_role_based_output: The S3 Role-based output to be created
+        :type analytics_s3_role_based_output: AnalyticsS3RoleBasedOutput, required
         :return: S3 Role-based Output
-        :rtype: S3RoleBasedOutput
+        :rtype: AnalyticsS3RoleBasedOutput
         """
 
         return self.api_client.post(
             '/analytics/outputs/s3-role-based',
-            s3_role_based_output,
-            type=S3RoleBasedOutput,
+            analytics_s3_role_based_output,
+            type=AnalyticsS3RoleBasedOutput,
             **kwargs
         )
 
@@ -82,19 +83,19 @@ class S3RoleBasedApi(BaseApi):
         )
 
     def list(self, query_params=None, **kwargs):
-        # type: (S3RoleBasedOutputListQueryParams, dict) -> S3RoleBasedOutput
+        # type: (AnalyticsS3RoleBasedOutputListQueryParams, dict) -> AnalyticsS3RoleBasedOutput
         """List S3 Role-based Outputs
 
         :param query_params: Query parameters
-        :type query_params: S3RoleBasedOutputListQueryParams
+        :type query_params: AnalyticsS3RoleBasedOutputListQueryParams
         :return: List of S3 Role-based Outputs
-        :rtype: S3RoleBasedOutput
+        :rtype: AnalyticsS3RoleBasedOutput
         """
 
         return self.api_client.get(
             '/analytics/outputs/s3-role-based',
             query_params=query_params,
             pagination_response=True,
-            type=S3RoleBasedOutput,
+            type=AnalyticsS3RoleBasedOutput,
             **kwargs
         )
