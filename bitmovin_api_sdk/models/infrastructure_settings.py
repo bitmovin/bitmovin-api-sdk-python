@@ -46,7 +46,7 @@ class InfrastructureSettings(object):
         # type: () -> string_types
         """Gets the infrastructure_id of this InfrastructureSettings.
 
-        Id of a custom infrastructure, e.g., Kubernetes Cluster
+        Id of a custom infrastructure, e.g., AWS Cloud Connect
 
         :return: The infrastructure_id of this InfrastructureSettings.
         :rtype: string_types
@@ -58,7 +58,7 @@ class InfrastructureSettings(object):
         # type: (string_types) -> None
         """Sets the infrastructure_id of this InfrastructureSettings.
 
-        Id of a custom infrastructure, e.g., Kubernetes Cluster
+        Id of a custom infrastructure, e.g., AWS Cloud Connect
 
         :param infrastructure_id: The infrastructure_id of this InfrastructureSettings.
         :type: string_types

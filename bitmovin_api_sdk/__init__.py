@@ -805,18 +805,6 @@ from bitmovin_api_sdk.encoding.manifests.smooth.contentprotection.contentprotect
 from bitmovin_api_sdk.encoding.manifests.smooth.contentprotection.contentprotection_api import SmoothManifestContentProtectionListQueryParams
 from bitmovin_api_sdk.encoding.infrastructure.infrastructure_api import InfrastructureApi
 
-from bitmovin_api_sdk.encoding.infrastructure.kubernetes.kubernetes_api import KubernetesApi
-from bitmovin_api_sdk.encoding.infrastructure.kubernetes.kubernetes_api import KubernetesClusterListQueryParams
-from bitmovin_api_sdk.encoding.infrastructure.kubernetes.status.status_api import StatusApi
-
-from bitmovin_api_sdk.encoding.infrastructure.kubernetes.customdata.customdata_api import CustomdataApi
-
-from bitmovin_api_sdk.encoding.infrastructure.kubernetes.configuration.configuration_api import ConfigurationApi
-
-from bitmovin_api_sdk.encoding.infrastructure.kubernetes.agent_deployment.agent_deployment_api import AgentDeploymentApi
-
-from bitmovin_api_sdk.encoding.infrastructure.kubernetes.prewarmed_deployment.prewarmed_deployment_api import PrewarmedDeploymentApi
-from bitmovin_api_sdk.encoding.infrastructure.kubernetes.prewarmed_deployment.prewarmed_deployment_api import PrewarmEncoderSettingsListQueryParams
 from bitmovin_api_sdk.encoding.infrastructure.aws.aws_api import AwsApi
 from bitmovin_api_sdk.encoding.infrastructure.aws.aws_api import AwsAccountListQueryParams
 from bitmovin_api_sdk.encoding.infrastructure.aws.regions.regions_api import RegionsApi
@@ -1303,8 +1291,6 @@ from bitmovin_api_sdk.models.invitation import Invitation
 from bitmovin_api_sdk.models.invitation_status import InvitationStatus
 from bitmovin_api_sdk.models.iv_size import IvSize
 from bitmovin_api_sdk.models.keyframe import Keyframe
-from bitmovin_api_sdk.models.kubernetes_cluster import KubernetesCluster
-from bitmovin_api_sdk.models.kubernetes_cluster_configuration import KubernetesClusterConfiguration
 from bitmovin_api_sdk.models.level_h262 import LevelH262
 from bitmovin_api_sdk.models.level_h264 import LevelH264
 from bitmovin_api_sdk.models.level_h265 import LevelH265
@@ -1323,7 +1309,6 @@ from bitmovin_api_sdk.models.live_hls_manifest import LiveHlsManifest
 from bitmovin_api_sdk.models.live_media_ingest_output import LiveMediaIngestOutput
 from bitmovin_api_sdk.models.local_input import LocalInput
 from bitmovin_api_sdk.models.local_output import LocalOutput
-from bitmovin_api_sdk.models.log_level import LogLevel
 from bitmovin_api_sdk.models.manifest import Manifest
 from bitmovin_api_sdk.models.manifest_resource import ManifestResource
 from bitmovin_api_sdk.models.manifest_type import ManifestType
@@ -1404,7 +1389,6 @@ from bitmovin_api_sdk.models.policy import Policy
 from bitmovin_api_sdk.models.position_mode import PositionMode
 from bitmovin_api_sdk.models.position_unit import PositionUnit
 from bitmovin_api_sdk.models.preset_configuration import PresetConfiguration
-from bitmovin_api_sdk.models.prewarm_encoder_settings import PrewarmEncoderSettings
 from bitmovin_api_sdk.models.prewarmed_encoder_disk_size import PrewarmedEncoderDiskSize
 from bitmovin_api_sdk.models.prewarmed_encoder_pool import PrewarmedEncoderPool
 from bitmovin_api_sdk.models.prewarmed_encoder_pool_action import PrewarmedEncoderPoolAction
@@ -1582,4 +1566,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.60.0"
+__version__ = "1.61.0"

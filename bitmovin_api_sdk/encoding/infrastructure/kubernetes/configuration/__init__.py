@@ -1,1 +1,0 @@
-from bitmovin_api_sdk.encoding.infrastructure.kubernetes.configuration.configuration_api import ConfigurationApi

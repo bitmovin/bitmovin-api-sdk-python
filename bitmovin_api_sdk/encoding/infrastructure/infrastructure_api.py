@@ -4,7 +4,6 @@ from __future__ import absolute_import
 
 from bitmovin_api_sdk.common import BaseApi, BitmovinApiLoggerBase
 from bitmovin_api_sdk.common.poscheck import poscheck_except
-from bitmovin_api_sdk.encoding.infrastructure.kubernetes.kubernetes_api import KubernetesApi
 from bitmovin_api_sdk.encoding.infrastructure.aws.aws_api import AwsApi
 from bitmovin_api_sdk.encoding.infrastructure.static_ips.static_ips_api import StaticIpsApi
 from bitmovin_api_sdk.encoding.infrastructure.azure.azure_api import AzureApi
@@ -18,13 +17,6 @@ class InfrastructureApi(BaseApi):
         # type: (str, str, str, BitmovinApiLoggerBase) -> None
 
         super(InfrastructureApi, self).__init__(
-            api_key=api_key,
-            tenant_org_id=tenant_org_id,
-            base_url=base_url,
-            logger=logger
-        )
-
-        self.kubernetes = KubernetesApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,

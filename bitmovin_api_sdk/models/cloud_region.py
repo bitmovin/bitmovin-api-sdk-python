@@ -51,6 +51,5 @@ class CloudRegion(Enum):
     AUSTRALIA = "AUSTRALIA"
     AWS = "AWS"
     GOOGLE = "GOOGLE"
-    KUBERNETES = "KUBERNETES"
     EXTERNAL = "EXTERNAL"
     AUTO = "AUTO"

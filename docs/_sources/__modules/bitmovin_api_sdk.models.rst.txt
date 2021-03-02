@@ -2876,22 +2876,6 @@ bitmovin\_api\_sdk.models.keyframe module
    :undoc-members:
    :show-inheritance:
 
-bitmovin\_api\_sdk.models.kubernetes\_cluster module
-----------------------------------------------------
-
-.. automodule:: bitmovin_api_sdk.models.kubernetes_cluster
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-bitmovin\_api\_sdk.models.kubernetes\_cluster\_configuration module
--------------------------------------------------------------------
-
-.. automodule:: bitmovin_api_sdk.models.kubernetes_cluster_configuration
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
 bitmovin\_api\_sdk.models.level\_h262 module
 --------------------------------------------
 
@@ -3032,14 +3016,6 @@ bitmovin\_api\_sdk.models.local\_output module
 ----------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.models.local_output
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-bitmovin\_api\_sdk.models.log\_level module
--------------------------------------------
-
-.. automodule:: bitmovin_api_sdk.models.log_level
    :members:
    :undoc-members:
    :show-inheritance:
@@ -3680,14 +3656,6 @@ bitmovin\_api\_sdk.models.preset\_configuration module
 ------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.models.preset_configuration
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-bitmovin\_api\_sdk.models.prewarm\_encoder\_settings module
------------------------------------------------------------
-
-.. automodule:: bitmovin_api_sdk.models.prewarm_encoder_settings
    :members:
    :undoc-members:
    :show-inheritance:

@@ -454,8 +454,6 @@
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.invitation_status">bitmovin_api_sdk.models.invitation_status module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.iv_size">bitmovin_api_sdk.models.iv_size module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.keyframe">bitmovin_api_sdk.models.keyframe module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.kubernetes_cluster">bitmovin_api_sdk.models.kubernetes_cluster module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.kubernetes_cluster_configuration">bitmovin_api_sdk.models.kubernetes_cluster_configuration module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.level_h262">bitmovin_api_sdk.models.level_h262 module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.level_h264">bitmovin_api_sdk.models.level_h264 module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.level_h265">bitmovin_api_sdk.models.level_h265 module</a></li>
@@ -474,7 +472,6 @@
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.live_media_ingest_output">bitmovin_api_sdk.models.live_media_ingest_output module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.local_input">bitmovin_api_sdk.models.local_input module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.local_output">bitmovin_api_sdk.models.local_output module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.log_level">bitmovin_api_sdk.models.log_level module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.manifest">bitmovin_api_sdk.models.manifest module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.manifest_resource">bitmovin_api_sdk.models.manifest_resource module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.manifest_type">bitmovin_api_sdk.models.manifest_type module</a></li>
@@ -555,7 +552,6 @@
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.position_mode">bitmovin_api_sdk.models.position_mode module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.position_unit">bitmovin_api_sdk.models.position_unit module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.preset_configuration">bitmovin_api_sdk.models.preset_configuration module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.prewarm_encoder_settings">bitmovin_api_sdk.models.prewarm_encoder_settings module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.prewarmed_encoder_disk_size">bitmovin_api_sdk.models.prewarmed_encoder_disk_size module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.prewarmed_encoder_pool">bitmovin_api_sdk.models.prewarmed_encoder_pool module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.prewarmed_encoder_pool_action">bitmovin_api_sdk.models.prewarmed_encoder_pool_action module</a></li>
@@ -15874,11 +15870,6 @@
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt id="bitmovin_api_sdk.models.cloud_region.CloudRegion.KUBERNETES">
-<code class="sig-name descname"><span class="pre">KUBERNETES</span></code><em class="property"> <span class="pre">=</span> <span class="pre">'KUBERNETES'</span></em><a class="headerlink" href="#bitmovin_api_sdk.models.cloud_region.CloudRegion.KUBERNETES" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
 <dt id="bitmovin_api_sdk.models.cloud_region.CloudRegion.NORTH_AMERICA">
 <code class="sig-name descname"><span class="pre">NORTH_AMERICA</span></code><em class="property"> <span class="pre">=</span> <span class="pre">'NORTH_AMERICA'</span></em><a class="headerlink" href="#bitmovin_api_sdk.models.cloud_region.CloudRegion.NORTH_AMERICA" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -28254,7 +28245,7 @@
 <dt id="bitmovin_api_sdk.models.infrastructure_settings.InfrastructureSettings.infrastructure_id">
 <em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">infrastructure_id</span></code><a class="headerlink" href="#bitmovin_api_sdk.models.infrastructure_settings.InfrastructureSettings.infrastructure_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the infrastructure_id of this InfrastructureSettings.</p>
-<p>Id of a custom infrastructure, e.g., Kubernetes Cluster</p>
+<p>Id of a custom infrastructure, e.g., AWS Cloud Connect</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>The infrastructure_id of this InfrastructureSettings.</p>
@@ -29574,142 +29565,6 @@
 </dd></dl>
 
 </div>
-<div class="section" id="module-bitmovin_api_sdk.models.kubernetes_cluster">
-<span id="bitmovin-api-sdk-models-kubernetes-cluster-module"></span><h2>bitmovin_api_sdk.models.kubernetes_cluster module<a class="headerlink" href="#module-bitmovin_api_sdk.models.kubernetes_cluster" title="Permalink to this headline">¶</a></h2>
-<dl class="py class">
-<dt id="bitmovin_api_sdk.models.kubernetes_cluster.KubernetesCluster">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">bitmovin_api_sdk.models.kubernetes_cluster.</span></code><code class="sig-name descname"><span class="pre">KubernetesCluster</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/models/kubernetes_cluster.html#KubernetesCluster"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bitmovin_api_sdk.models.kubernetes_cluster.KubernetesCluster" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#bitmovin_api_sdk.models.bitmovin_resource.BitmovinResource" title="bitmovin_api_sdk.models.bitmovin_resource.BitmovinResource"><code class="xref py py-class docutils literal notranslate"><span class="pre">bitmovin_api_sdk.models.bitmovin_resource.BitmovinResource</span></code></a></p>
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.kubernetes_cluster.KubernetesCluster.agent_deployment_download_url">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">agent_deployment_download_url</span></code><a class="headerlink" href="#bitmovin_api_sdk.models.kubernetes_cluster.KubernetesCluster.agent_deployment_download_url" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the agent_deployment_download_url of this KubernetesCluster.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The agent_deployment_download_url of this KubernetesCluster.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>string_types</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.kubernetes_cluster.KubernetesCluster.attribute_map">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">attribute_map</span></code><a class="headerlink" href="#bitmovin_api_sdk.models.kubernetes_cluster.KubernetesCluster.attribute_map" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.kubernetes_cluster.KubernetesCluster.connected">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">connected</span></code><a class="headerlink" href="#bitmovin_api_sdk.models.kubernetes_cluster.KubernetesCluster.connected" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the connected of this KubernetesCluster.</p>
-<p>Shows if the Kubernetes cluster is accessible by the Bitmovin Agent (required)</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The connected of this KubernetesCluster.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>bool</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.kubernetes_cluster.KubernetesCluster.online">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">online</span></code><a class="headerlink" href="#bitmovin_api_sdk.models.kubernetes_cluster.KubernetesCluster.online" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the online of this KubernetesCluster.</p>
-<p>Shows if the Bitmovin Agent is alive (required)</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The online of this KubernetesCluster.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>bool</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.kubernetes_cluster.KubernetesCluster.openapi_types">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">openapi_types</span></code><a class="headerlink" href="#bitmovin_api_sdk.models.kubernetes_cluster.KubernetesCluster.openapi_types" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.kubernetes_cluster.KubernetesCluster.to_dict">
-<code class="sig-name descname"><span class="pre">to_dict</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/models/kubernetes_cluster.html#KubernetesCluster.to_dict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bitmovin_api_sdk.models.kubernetes_cluster.KubernetesCluster.to_dict" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the model properties as a dict</p>
-</dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.kubernetes_cluster.KubernetesCluster.to_str">
-<code class="sig-name descname"><span class="pre">to_str</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/models/kubernetes_cluster.html#KubernetesCluster.to_str"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bitmovin_api_sdk.models.kubernetes_cluster.KubernetesCluster.to_str" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the string representation of the model</p>
-</dd></dl>
-
-</dd></dl>
-
-</div>
-<div class="section" id="module-bitmovin_api_sdk.models.kubernetes_cluster_configuration">
-<span id="bitmovin-api-sdk-models-kubernetes-cluster-configuration-module"></span><h2>bitmovin_api_sdk.models.kubernetes_cluster_configuration module<a class="headerlink" href="#module-bitmovin_api_sdk.models.kubernetes_cluster_configuration" title="Permalink to this headline">¶</a></h2>
-<dl class="py class">
-<dt id="bitmovin_api_sdk.models.kubernetes_cluster_configuration.KubernetesClusterConfiguration">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">bitmovin_api_sdk.models.kubernetes_cluster_configuration.</span></code><code class="sig-name descname"><span class="pre">KubernetesClusterConfiguration</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/models/kubernetes_cluster_configuration.html#KubernetesClusterConfiguration"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bitmovin_api_sdk.models.kubernetes_cluster_configuration.KubernetesClusterConfiguration" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.kubernetes_cluster_configuration.KubernetesClusterConfiguration.attribute_map">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">attribute_map</span></code><a class="headerlink" href="#bitmovin_api_sdk.models.kubernetes_cluster_configuration.KubernetesClusterConfiguration.attribute_map" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.kubernetes_cluster_configuration.KubernetesClusterConfiguration.openapi_types">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">openapi_types</span></code><a class="headerlink" href="#bitmovin_api_sdk.models.kubernetes_cluster_configuration.KubernetesClusterConfiguration.openapi_types" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.kubernetes_cluster_configuration.KubernetesClusterConfiguration.parallel_encodings">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">parallel_encodings</span></code><a class="headerlink" href="#bitmovin_api_sdk.models.kubernetes_cluster_configuration.KubernetesClusterConfiguration.parallel_encodings" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the parallel_encodings of this KubernetesClusterConfiguration.</p>
-<p>Number of parallel scheduled encodings on the Kubernetes cluster (required)</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The parallel_encodings of this KubernetesClusterConfiguration.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>int</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.kubernetes_cluster_configuration.KubernetesClusterConfiguration.to_dict">
-<code class="sig-name descname"><span class="pre">to_dict</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/models/kubernetes_cluster_configuration.html#KubernetesClusterConfiguration.to_dict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bitmovin_api_sdk.models.kubernetes_cluster_configuration.KubernetesClusterConfiguration.to_dict" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the model properties as a dict</p>
-</dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.kubernetes_cluster_configuration.KubernetesClusterConfiguration.to_str">
-<code class="sig-name descname"><span class="pre">to_str</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/models/kubernetes_cluster_configuration.html#KubernetesClusterConfiguration.to_str"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bitmovin_api_sdk.models.kubernetes_cluster_configuration.KubernetesClusterConfiguration.to_str" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the string representation of the model</p>
-</dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.kubernetes_cluster_configuration.KubernetesClusterConfiguration.workers_per_encoding">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">workers_per_encoding</span></code><a class="headerlink" href="#bitmovin_api_sdk.models.kubernetes_cluster_configuration.KubernetesClusterConfiguration.workers_per_encoding" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the workers_per_encoding of this KubernetesClusterConfiguration.</p>
-<p>Number of worker nodes used for each encoding on the Kubernetes cluster (required)</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The workers_per_encoding of this KubernetesClusterConfiguration.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>int</p>
-</dd>
-</dl>
-</dd></dl>
-
-</dd></dl>
-
-</div>
 <div class="section" id="module-bitmovin_api_sdk.models.level_h262">
 <span id="bitmovin-api-sdk-models-level-h262-module"></span><h2>bitmovin_api_sdk.models.level_h262 module<a class="headerlink" href="#module-bitmovin_api_sdk.models.level_h262" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
@@ -30778,51 +30633,6 @@
 <code class="sig-name descname"><span class="pre">to_str</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/models/local_output.html#LocalOutput.to_str"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bitmovin_api_sdk.models.local_output.LocalOutput.to_str" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the string representation of the model</p>
 </dd></dl>
-
-</dd></dl>
-
-</div>
-<div class="section" id="module-bitmovin_api_sdk.models.log_level">
-<span id="bitmovin-api-sdk-models-log-level-module"></span><h2>bitmovin_api_sdk.models.log_level module<a class="headerlink" href="#module-bitmovin_api_sdk.models.log_level" title="Permalink to this headline">¶</a></h2>
-<dl class="py class">
-<dt id="bitmovin_api_sdk.models.log_level.LogLevel">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">bitmovin_api_sdk.models.log_level.</span></code><code class="sig-name descname"><span class="pre">LogLevel</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/models/log_level.html#LogLevel"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bitmovin_api_sdk.models.log_level.LogLevel" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
-<p>An enumeration.</p>
-<dl class="py attribute">
-<dt id="bitmovin_api_sdk.models.log_level.LogLevel.DEBUG">
-<code class="sig-name descname"><span class="pre">DEBUG</span></code><em class="property"> <span class="pre">=</span> <span class="pre">'DEBUG'</span></em><a class="headerlink" href="#bitmovin_api_sdk.models.log_level.LogLevel.DEBUG" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt id="bitmovin_api_sdk.models.log_level.LogLevel.ERROR">
-<code class="sig-name descname"><span class="pre">ERROR</span></code><em class="property"> <span class="pre">=</span> <span class="pre">'ERROR'</span></em><a class="headerlink" href="#bitmovin_api_sdk.models.log_level.LogLevel.ERROR" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt id="bitmovin_api_sdk.models.log_level.LogLevel.FATAL">
-<code class="sig-name descname"><span class="pre">FATAL</span></code><em class="property"> <span class="pre">=</span> <span class="pre">'FATAL'</span></em><a class="headerlink" href="#bitmovin_api_sdk.models.log_level.LogLevel.FATAL" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt id="bitmovin_api_sdk.models.log_level.LogLevel.INFO">
-<code class="sig-name descname"><span class="pre">INFO</span></code><em class="property"> <span class="pre">=</span> <span class="pre">'INFO'</span></em><a class="headerlink" href="#bitmovin_api_sdk.models.log_level.LogLevel.INFO" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt id="bitmovin_api_sdk.models.log_level.LogLevel.OFF">
-<code class="sig-name descname"><span class="pre">OFF</span></code><em class="property"> <span class="pre">=</span> <span class="pre">'OFF'</span></em><a class="headerlink" href="#bitmovin_api_sdk.models.log_level.LogLevel.OFF" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt id="bitmovin_api_sdk.models.log_level.LogLevel.TRACE">
-<code class="sig-name descname"><span class="pre">TRACE</span></code><em class="property"> <span class="pre">=</span> <span class="pre">'TRACE'</span></em><a class="headerlink" href="#bitmovin_api_sdk.models.log_level.LogLevel.TRACE" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt id="bitmovin_api_sdk.models.log_level.LogLevel.WARN">
-<code class="sig-name descname"><span class="pre">WARN</span></code><em class="property"> <span class="pre">=</span> <span class="pre">'WARN'</span></em><a class="headerlink" href="#bitmovin_api_sdk.models.log_level.LogLevel.WARN" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
 
 </dd></dl>
 
@@ -35690,96 +35500,6 @@
 </dd></dl>
 
 </div>
-<div class="section" id="module-bitmovin_api_sdk.models.prewarm_encoder_settings">
-<span id="bitmovin-api-sdk-models-prewarm-encoder-settings-module"></span><h2>bitmovin_api_sdk.models.prewarm_encoder_settings module<a class="headerlink" href="#module-bitmovin_api_sdk.models.prewarm_encoder_settings" title="Permalink to this headline">¶</a></h2>
-<dl class="py class">
-<dt id="bitmovin_api_sdk.models.prewarm_encoder_settings.PrewarmEncoderSettings">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">bitmovin_api_sdk.models.prewarm_encoder_settings.</span></code><code class="sig-name descname"><span class="pre">PrewarmEncoderSettings</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/models/prewarm_encoder_settings.html#PrewarmEncoderSettings"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bitmovin_api_sdk.models.prewarm_encoder_settings.PrewarmEncoderSettings" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#bitmovin_api_sdk.models.bitmovin_resource.BitmovinResource" title="bitmovin_api_sdk.models.bitmovin_resource.BitmovinResource"><code class="xref py py-class docutils literal notranslate"><span class="pre">bitmovin_api_sdk.models.bitmovin_resource.BitmovinResource</span></code></a></p>
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.prewarm_encoder_settings.PrewarmEncoderSettings.attribute_map">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">attribute_map</span></code><a class="headerlink" href="#bitmovin_api_sdk.models.prewarm_encoder_settings.PrewarmEncoderSettings.attribute_map" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.prewarm_encoder_settings.PrewarmEncoderSettings.encoder_version">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">encoder_version</span></code><a class="headerlink" href="#bitmovin_api_sdk.models.prewarm_encoder_settings.PrewarmEncoderSettings.encoder_version" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the encoder_version of this PrewarmEncoderSettings.</p>
-<p>Encoder Version to be prewarmed. Only one encoder of this version can be prewarmed per cluster. (required)</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The encoder_version of this PrewarmEncoderSettings.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>string_types</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.prewarm_encoder_settings.PrewarmEncoderSettings.log_level">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">log_level</span></code><a class="headerlink" href="#bitmovin_api_sdk.models.prewarm_encoder_settings.PrewarmEncoderSettings.log_level" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the log_level of this PrewarmEncoderSettings.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The log_level of this PrewarmEncoderSettings.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p><a class="reference internal" href="#bitmovin_api_sdk.models.log_level.LogLevel" title="bitmovin_api_sdk.models.log_level.LogLevel">LogLevel</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.prewarm_encoder_settings.PrewarmEncoderSettings.max_prewarmed">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">max_prewarmed</span></code><a class="headerlink" href="#bitmovin_api_sdk.models.prewarm_encoder_settings.PrewarmEncoderSettings.max_prewarmed" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the max_prewarmed of this PrewarmEncoderSettings.</p>
-<p>The maximum number of concurrent prewarmed encoders of this Version</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The max_prewarmed of this PrewarmEncoderSettings.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>int</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.prewarm_encoder_settings.PrewarmEncoderSettings.min_prewarmed">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">min_prewarmed</span></code><a class="headerlink" href="#bitmovin_api_sdk.models.prewarm_encoder_settings.PrewarmEncoderSettings.min_prewarmed" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the min_prewarmed of this PrewarmEncoderSettings.</p>
-<p>The minimum number of prewarmed encoders of this Version (required)</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The min_prewarmed of this PrewarmEncoderSettings.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>int</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.prewarm_encoder_settings.PrewarmEncoderSettings.openapi_types">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">openapi_types</span></code><a class="headerlink" href="#bitmovin_api_sdk.models.prewarm_encoder_settings.PrewarmEncoderSettings.openapi_types" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.prewarm_encoder_settings.PrewarmEncoderSettings.to_dict">
-<code class="sig-name descname"><span class="pre">to_dict</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/models/prewarm_encoder_settings.html#PrewarmEncoderSettings.to_dict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bitmovin_api_sdk.models.prewarm_encoder_settings.PrewarmEncoderSettings.to_dict" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the model properties as a dict</p>
-</dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.prewarm_encoder_settings.PrewarmEncoderSettings.to_str">
-<code class="sig-name descname"><span class="pre">to_str</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/models/prewarm_encoder_settings.html#PrewarmEncoderSettings.to_str"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bitmovin_api_sdk.models.prewarm_encoder_settings.PrewarmEncoderSettings.to_str" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the string representation of the model</p>
-</dd></dl>
-
-</dd></dl>
-
-</div>
 <div class="section" id="module-bitmovin_api_sdk.models.prewarmed_encoder_disk_size">
 <span id="bitmovin-api-sdk-models-prewarmed-encoder-disk-size-module"></span><h2>bitmovin_api_sdk.models.prewarmed_encoder_disk_size module<a class="headerlink" href="#module-bitmovin_api_sdk.models.prewarmed_encoder_disk_size" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
@@ -37049,7 +36769,7 @@
 <dt id="bitmovin_api_sdk.models.reschedule_encoding_request.RescheduleEncodingRequest.infrastructure_id">
 <em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">infrastructure_id</span></code><a class="headerlink" href="#bitmovin_api_sdk.models.reschedule_encoding_request.RescheduleEncodingRequest.infrastructure_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the infrastructure_id of this RescheduleEncodingRequest.</p>
-<p>Id of a custom infrastructure, e.g., Kubernetes Cluster</p>
+<p>Id of a custom infrastructure, e.g., AWS Cloud Connect</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>The infrastructure_id of this RescheduleEncodingRequest.</p>
