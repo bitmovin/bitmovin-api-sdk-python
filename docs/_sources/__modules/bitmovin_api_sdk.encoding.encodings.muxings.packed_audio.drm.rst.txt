@@ -1,0 +1,29 @@
+bitmovin\_api\_sdk.encoding.encodings.muxings.packed\_audio.drm package
+=======================================================================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   bitmovin_api_sdk.encoding.encodings.muxings.packed_audio.drm.aes
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.encoding.encodings.muxings.packed\_audio.drm.drm\_api module
+-------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.encodings.muxings.packed_audio.drm.drm_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.encoding.encodings.muxings.packed_audio.drm
+   :members:
+   :undoc-members:
+   :show-inheritance:

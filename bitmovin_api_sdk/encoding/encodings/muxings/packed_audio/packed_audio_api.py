@@ -10,6 +10,7 @@ from bitmovin_api_sdk.models.response_envelope import ResponseEnvelope
 from bitmovin_api_sdk.models.response_error import ResponseError
 from bitmovin_api_sdk.encoding.encodings.muxings.packed_audio.customdata.customdata_api import CustomdataApi
 from bitmovin_api_sdk.encoding.encodings.muxings.packed_audio.information.information_api import InformationApi
+from bitmovin_api_sdk.encoding.encodings.muxings.packed_audio.drm.drm_api import DrmApi
 from bitmovin_api_sdk.encoding.encodings.muxings.packed_audio.packed_audio_muxing_list_query_params import PackedAudioMuxingListQueryParams
 
 
@@ -33,6 +34,13 @@ class PackedAudioApi(BaseApi):
         )
 
         self.information = InformationApi(
+            api_key=api_key,
+            tenant_org_id=tenant_org_id,
+            base_url=base_url,
+            logger=logger
+        )
+
+        self.drm = DrmApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,

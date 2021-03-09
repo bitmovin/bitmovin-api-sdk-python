@@ -163,6 +163,7 @@
 <span class="kn">from</span> <span class="nn">enum</span> <span class="kn">import</span> <span class="n">Enum</span>
 <span class="kn">from</span> <span class="nn">six</span> <span class="kn">import</span> <span class="n">string_types</span><span class="p">,</span> <span class="n">iteritems</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.common.poscheck</span> <span class="kn">import</span> <span class="n">poscheck_model</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.encoding_stream_input_details</span> <span class="kn">import</span> <span class="n">EncodingStreamInputDetails</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.stream_selection_mode</span> <span class="kn">import</span> <span class="n">StreamSelectionMode</span>
 <span class="kn">import</span> <span class="nn">pprint</span>
 <span class="kn">import</span> <span class="nn">six</span>
@@ -175,14 +176,16 @@
                  <span class="n">input_path</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">selection_mode</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">position</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                 <span class="n">input_stream_id</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (string_types, string_types, StreamSelectionMode, int, string_types) -&gt; None</span>
+                 <span class="n">input_stream_id</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">analysis_details</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="c1"># type: (string_types, string_types, StreamSelectionMode, int, string_types, EncodingStreamInputDetails) -&gt; None</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_input_id</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_input_path</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_selection_mode</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_position</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_input_stream_id</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_analysis_details</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>
 
         <span class="k">if</span> <span class="n">input_id</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -195,6 +198,8 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">position</span> <span class="o">=</span> <span class="n">position</span>
         <span class="k">if</span> <span class="n">input_stream_id</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">input_stream_id</span> <span class="o">=</span> <span class="n">input_stream_id</span>
+        <span class="k">if</span> <span class="n">analysis_details</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">analysis_details</span> <span class="o">=</span> <span class="n">analysis_details</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -203,7 +208,8 @@
             <span class="s1">&#39;input_path&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
             <span class="s1">&#39;selection_mode&#39;</span><span class="p">:</span> <span class="s1">&#39;StreamSelectionMode&#39;</span><span class="p">,</span>
             <span class="s1">&#39;position&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;input_stream_id&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span>
+            <span class="s1">&#39;input_stream_id&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;analysis_details&#39;</span><span class="p">:</span> <span class="s1">&#39;EncodingStreamInputDetails&#39;</span>
         <span class="p">}</span>
 
         <span class="k">return</span> <span class="n">types</span>
@@ -215,7 +221,8 @@
             <span class="s1">&#39;input_path&#39;</span><span class="p">:</span> <span class="s1">&#39;inputPath&#39;</span><span class="p">,</span>
             <span class="s1">&#39;selection_mode&#39;</span><span class="p">:</span> <span class="s1">&#39;selectionMode&#39;</span><span class="p">,</span>
             <span class="s1">&#39;position&#39;</span><span class="p">:</span> <span class="s1">&#39;position&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;input_stream_id&#39;</span><span class="p">:</span> <span class="s1">&#39;inputStreamId&#39;</span>
+            <span class="s1">&#39;input_stream_id&#39;</span><span class="p">:</span> <span class="s1">&#39;inputStreamId&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;analysis_details&#39;</span><span class="p">:</span> <span class="s1">&#39;analysisDetails&#39;</span>
         <span class="p">}</span>
         <span class="k">return</span> <span class="n">attributes</span>
 
@@ -363,6 +370,35 @@
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `input_stream_id`, type has to be `string_types`&quot;</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_input_stream_id</span> <span class="o">=</span> <span class="n">input_stream_id</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">analysis_details</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; EncodingStreamInputDetails</span>
+        <span class="sd">&quot;&quot;&quot;Gets the analysis_details of this StreamInput.</span>
+
+<span class="sd">        Input analysis details  This property is populated after the encoding has finished </span>
+
+<span class="sd">        :return: The analysis_details of this StreamInput.</span>
+<span class="sd">        :rtype: EncodingStreamInputDetails</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_analysis_details</span>
+
+    <span class="nd">@analysis_details</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">analysis_details</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">analysis_details</span><span class="p">):</span>
+        <span class="c1"># type: (EncodingStreamInputDetails) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the analysis_details of this StreamInput.</span>
+
+<span class="sd">        Input analysis details  This property is populated after the encoding has finished </span>
+
+<span class="sd">        :param analysis_details: The analysis_details of this StreamInput.</span>
+<span class="sd">        :type: EncodingStreamInputDetails</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">analysis_details</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">analysis_details</span><span class="p">,</span> <span class="n">EncodingStreamInputDetails</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `analysis_details`, type has to be `EncodingStreamInputDetails`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_analysis_details</span> <span class="o">=</span> <span class="n">analysis_details</span>
 
 <div class="viewcode-block" id="StreamInput.to_dict"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.stream_input.StreamInput.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>

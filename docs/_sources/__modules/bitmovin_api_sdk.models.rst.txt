@@ -460,6 +460,14 @@ bitmovin\_api\_sdk.models.analytics\_export\_task\_output\_target module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.analytics\_export\_type module
+--------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.analytics_export_type
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.analytics\_gcs\_service\_account\_output module
 -------------------------------------------------------------------------
 

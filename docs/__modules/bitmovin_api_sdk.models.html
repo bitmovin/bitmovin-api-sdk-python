@@ -152,6 +152,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.analytics_export_status">bitmovin_api_sdk.models.analytics_export_status module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.analytics_export_task">bitmovin_api_sdk.models.analytics_export_task module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.analytics_export_task_output_target">bitmovin_api_sdk.models.analytics_export_task_output_target module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.analytics_export_type">bitmovin_api_sdk.models.analytics_export_type module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.analytics_gcs_service_account_output">bitmovin_api_sdk.models.analytics_gcs_service_account_output module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.analytics_greater_than_filter">bitmovin_api_sdk.models.analytics_greater_than_filter module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.analytics_greater_than_or_equal_filter">bitmovin_api_sdk.models.analytics_greater_than_or_equal_filter module</a></li>
@@ -4526,6 +4527,20 @@
 <dd></dd></dl>
 
 <dl class="py method">
+<dt id="bitmovin_api_sdk.models.analytics_export_task.AnalyticsExportTask.columns">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">columns</span></code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_export_task.AnalyticsExportTask.columns" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the columns of this AnalyticsExportTask.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The columns of this AnalyticsExportTask.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>list[string_types]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt id="bitmovin_api_sdk.models.analytics_export_task.AnalyticsExportTask.description">
 <em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">description</span></code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_export_task.AnalyticsExportTask.description" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the description of this AnalyticsExportTask.</p>
@@ -4690,6 +4705,20 @@
 <dd><p>Returns the string representation of the model</p>
 </dd></dl>
 
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.analytics_export_task.AnalyticsExportTask.type">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">type</span></code><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_export_task.AnalyticsExportTask.type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the type of this AnalyticsExportTask.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The type of this AnalyticsExportTask.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#bitmovin_api_sdk.models.analytics_export_type.AnalyticsExportType" title="bitmovin_api_sdk.models.analytics_export_type.AnalyticsExportType">AnalyticsExportType</a></p>
+</dd>
+</dl>
+</dd></dl>
+
 </dd></dl>
 
 </div>
@@ -4750,6 +4779,26 @@
 <code class="sig-name descname"><span class="pre">to_str</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/models/analytics_export_task_output_target.html#AnalyticsExportTaskOutputTarget.to_str"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_export_task_output_target.AnalyticsExportTaskOutputTarget.to_str" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the string representation of the model</p>
 </dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-bitmovin_api_sdk.models.analytics_export_type">
+<span id="bitmovin-api-sdk-models-analytics-export-type-module"></span><h2>bitmovin_api_sdk.models.analytics_export_type module<a class="headerlink" href="#module-bitmovin_api_sdk.models.analytics_export_type" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="bitmovin_api_sdk.models.analytics_export_type.AnalyticsExportType">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">bitmovin_api_sdk.models.analytics_export_type.</span></code><code class="sig-name descname"><span class="pre">AnalyticsExportType</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/models/analytics_export_type.html#AnalyticsExportType"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_export_type.AnalyticsExportType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<p>An enumeration.</p>
+<dl class="py attribute">
+<dt id="bitmovin_api_sdk.models.analytics_export_type.AnalyticsExportType.ADS">
+<code class="sig-name descname"><span class="pre">ADS</span></code><em class="property"> <span class="pre">=</span> <span class="pre">'ADS'</span></em><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_export_type.AnalyticsExportType.ADS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="bitmovin_api_sdk.models.analytics_export_type.AnalyticsExportType.SESSIONS">
+<code class="sig-name descname"><span class="pre">SESSIONS</span></code><em class="property"> <span class="pre">=</span> <span class="pre">'SESSIONS'</span></em><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_export_type.AnalyticsExportType.SESSIONS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 </dd></dl>
 
@@ -43049,6 +43098,21 @@
 <dt id="bitmovin_api_sdk.models.stream_input.StreamInput">
 <em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">bitmovin_api_sdk.models.stream_input.</span></code><code class="sig-name descname"><span class="pre">StreamInput</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/models/stream_input.html#StreamInput"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bitmovin_api_sdk.models.stream_input.StreamInput" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.stream_input.StreamInput.analysis_details">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">analysis_details</span></code><a class="headerlink" href="#bitmovin_api_sdk.models.stream_input.StreamInput.analysis_details" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the analysis_details of this StreamInput.</p>
+<p>Input analysis details  This property is populated after the encoding has finished</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The analysis_details of this StreamInput.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#bitmovin_api_sdk.models.encoding_stream_input_details.EncodingStreamInputDetails" title="bitmovin_api_sdk.models.encoding_stream_input_details.EncodingStreamInputDetails">EncodingStreamInputDetails</a></p>
+</dd>
+</dl>
+</dd></dl>
+
 <dl class="py method">
 <dt id="bitmovin_api_sdk.models.stream_input.StreamInput.attribute_map">
 <em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">attribute_map</span></code><a class="headerlink" href="#bitmovin_api_sdk.models.stream_input.StreamInput.attribute_map" title="Permalink to this definition">¶</a></dt>

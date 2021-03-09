@@ -475,6 +475,12 @@ from bitmovin_api_sdk.encoding.encodings.muxings.packed_audio.customdata.customd
 
 from bitmovin_api_sdk.encoding.encodings.muxings.packed_audio.information.information_api import InformationApi
 
+from bitmovin_api_sdk.encoding.encodings.muxings.packed_audio.drm.drm_api import DrmApi
+
+from bitmovin_api_sdk.encoding.encodings.muxings.packed_audio.drm.aes.aes_api import AesApi
+from bitmovin_api_sdk.encoding.encodings.muxings.packed_audio.drm.aes.aes_api import AesEncryptionDrmListQueryParams
+from bitmovin_api_sdk.encoding.encodings.muxings.packed_audio.drm.aes.customdata.customdata_api import CustomdataApi
+
 from bitmovin_api_sdk.encoding.encodings.muxings.text.text_api import TextApi
 from bitmovin_api_sdk.encoding.encodings.muxings.text.text_api import TextMuxingListQueryParams
 from bitmovin_api_sdk.encoding.encodings.muxings.text.customdata.customdata_api import CustomdataApi
@@ -989,6 +995,7 @@ from bitmovin_api_sdk.models.analytics_equal_filter import AnalyticsEqualFilter
 from bitmovin_api_sdk.models.analytics_export_status import AnalyticsExportStatus
 from bitmovin_api_sdk.models.analytics_export_task import AnalyticsExportTask
 from bitmovin_api_sdk.models.analytics_export_task_output_target import AnalyticsExportTaskOutputTarget
+from bitmovin_api_sdk.models.analytics_export_type import AnalyticsExportType
 from bitmovin_api_sdk.models.analytics_gcs_service_account_output import AnalyticsGcsServiceAccountOutput
 from bitmovin_api_sdk.models.analytics_greater_than_filter import AnalyticsGreaterThanFilter
 from bitmovin_api_sdk.models.analytics_greater_than_or_equal_filter import AnalyticsGreaterThanOrEqualFilter
@@ -1566,4 +1573,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.61.0"
+__version__ = "1.62.0"

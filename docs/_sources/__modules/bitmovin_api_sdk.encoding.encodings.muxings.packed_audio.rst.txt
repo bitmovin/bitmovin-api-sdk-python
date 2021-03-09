@@ -8,6 +8,7 @@ Subpackages
    :maxdepth: 4
 
    bitmovin_api_sdk.encoding.encodings.muxings.packed_audio.customdata
+   bitmovin_api_sdk.encoding.encodings.muxings.packed_audio.drm
    bitmovin_api_sdk.encoding.encodings.muxings.packed_audio.information
 
 Submodules

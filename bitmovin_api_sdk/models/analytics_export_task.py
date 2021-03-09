@@ -6,6 +6,7 @@ from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
 from bitmovin_api_sdk.models.analytics_export_status import AnalyticsExportStatus
 from bitmovin_api_sdk.models.analytics_export_task_output_target import AnalyticsExportTaskOutputTarget
+from bitmovin_api_sdk.models.analytics_export_type import AnalyticsExportType
 from bitmovin_api_sdk.models.bitmovin_response import BitmovinResponse
 import pprint
 import six
@@ -24,8 +25,10 @@ class AnalyticsExportTask(BitmovinResponse):
                  progress=None,
                  status=None,
                  started_at=None,
-                 finished_at=None):
-        # type: (string_types, datetime, datetime, string_types, string_types, string_types, AnalyticsExportTaskOutputTarget, int, AnalyticsExportStatus, datetime, datetime) -> None
+                 finished_at=None,
+                 type_=None,
+                 columns=None):
+        # type: (string_types, datetime, datetime, string_types, string_types, string_types, AnalyticsExportTaskOutputTarget, int, AnalyticsExportStatus, datetime, datetime, AnalyticsExportType, list[string_types]) -> None
         super(AnalyticsExportTask, self).__init__(id_=id_)
 
         self._start_time = None
@@ -38,6 +41,8 @@ class AnalyticsExportTask(BitmovinResponse):
         self._status = None
         self._started_at = None
         self._finished_at = None
+        self._type = None
+        self._columns = list()
         self.discriminator = None
 
         if start_time is not None:
@@ -60,6 +65,10 @@ class AnalyticsExportTask(BitmovinResponse):
             self.started_at = started_at
         if finished_at is not None:
             self.finished_at = finished_at
+        if type_ is not None:
+            self.type = type_
+        if columns is not None:
+            self.columns = columns
 
     @property
     def openapi_types(self):
@@ -78,7 +87,9 @@ class AnalyticsExportTask(BitmovinResponse):
             'progress': 'int',
             'status': 'AnalyticsExportStatus',
             'started_at': 'datetime',
-            'finished_at': 'datetime'
+            'finished_at': 'datetime',
+            'type': 'AnalyticsExportType',
+            'columns': 'list[string_types]'
         })
 
         return types
@@ -100,7 +111,9 @@ class AnalyticsExportTask(BitmovinResponse):
             'progress': 'progress',
             'status': 'status',
             'started_at': 'startedAt',
-            'finished_at': 'finishedAt'
+            'finished_at': 'finishedAt',
+            'type': 'type',
+            'columns': 'columns'
         })
         return attributes
 
@@ -389,6 +402,60 @@ class AnalyticsExportTask(BitmovinResponse):
                 raise TypeError("Invalid type for `finished_at`, type has to be `datetime`")
 
         self._finished_at = finished_at
+
+    @property
+    def type(self):
+        # type: () -> AnalyticsExportType
+        """Gets the type of this AnalyticsExportTask.
+
+
+        :return: The type of this AnalyticsExportTask.
+        :rtype: AnalyticsExportType
+        """
+        return self._type
+
+    @type.setter
+    def type(self, type_):
+        # type: (AnalyticsExportType) -> None
+        """Sets the type of this AnalyticsExportTask.
+
+
+        :param type_: The type of this AnalyticsExportTask.
+        :type: AnalyticsExportType
+        """
+
+        if type_ is not None:
+            if not isinstance(type_, AnalyticsExportType):
+                raise TypeError("Invalid type for `type`, type has to be `AnalyticsExportType`")
+
+        self._type = type_
+
+    @property
+    def columns(self):
+        # type: () -> list[string_types]
+        """Gets the columns of this AnalyticsExportTask.
+
+
+        :return: The columns of this AnalyticsExportTask.
+        :rtype: list[string_types]
+        """
+        return self._columns
+
+    @columns.setter
+    def columns(self, columns):
+        # type: (list) -> None
+        """Sets the columns of this AnalyticsExportTask.
+
+
+        :param columns: The columns of this AnalyticsExportTask.
+        :type: list[string_types]
+        """
+
+        if columns is not None:
+            if not isinstance(columns, list):
+                raise TypeError("Invalid type for `columns`, type has to be `list[string_types]`")
+
+        self._columns = columns
 
     def to_dict(self):
         """Returns the model properties as a dict"""

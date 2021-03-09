@@ -3,6 +3,7 @@
 from enum import Enum
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
+from bitmovin_api_sdk.models.encoding_stream_input_details import EncodingStreamInputDetails
 from bitmovin_api_sdk.models.stream_selection_mode import StreamSelectionMode
 import pprint
 import six
@@ -15,14 +16,16 @@ class StreamInput(object):
                  input_path=None,
                  selection_mode=None,
                  position=None,
-                 input_stream_id=None):
-        # type: (string_types, string_types, StreamSelectionMode, int, string_types) -> None
+                 input_stream_id=None,
+                 analysis_details=None):
+        # type: (string_types, string_types, StreamSelectionMode, int, string_types, EncodingStreamInputDetails) -> None
 
         self._input_id = None
         self._input_path = None
         self._selection_mode = None
         self._position = None
         self._input_stream_id = None
+        self._analysis_details = None
         self.discriminator = None
 
         if input_id is not None:
@@ -35,6 +38,8 @@ class StreamInput(object):
             self.position = position
         if input_stream_id is not None:
             self.input_stream_id = input_stream_id
+        if analysis_details is not None:
+            self.analysis_details = analysis_details
 
     @property
     def openapi_types(self):
@@ -43,7 +48,8 @@ class StreamInput(object):
             'input_path': 'string_types',
             'selection_mode': 'StreamSelectionMode',
             'position': 'int',
-            'input_stream_id': 'string_types'
+            'input_stream_id': 'string_types',
+            'analysis_details': 'EncodingStreamInputDetails'
         }
 
         return types
@@ -55,7 +61,8 @@ class StreamInput(object):
             'input_path': 'inputPath',
             'selection_mode': 'selectionMode',
             'position': 'position',
-            'input_stream_id': 'inputStreamId'
+            'input_stream_id': 'inputStreamId',
+            'analysis_details': 'analysisDetails'
         }
         return attributes
 
@@ -203,6 +210,35 @@ class StreamInput(object):
                 raise TypeError("Invalid type for `input_stream_id`, type has to be `string_types`")
 
         self._input_stream_id = input_stream_id
+
+    @property
+    def analysis_details(self):
+        # type: () -> EncodingStreamInputDetails
+        """Gets the analysis_details of this StreamInput.
+
+        Input analysis details  This property is populated after the encoding has finished 
+
+        :return: The analysis_details of this StreamInput.
+        :rtype: EncodingStreamInputDetails
+        """
+        return self._analysis_details
+
+    @analysis_details.setter
+    def analysis_details(self, analysis_details):
+        # type: (EncodingStreamInputDetails) -> None
+        """Sets the analysis_details of this StreamInput.
+
+        Input analysis details  This property is populated after the encoding has finished 
+
+        :param analysis_details: The analysis_details of this StreamInput.
+        :type: EncodingStreamInputDetails
+        """
+
+        if analysis_details is not None:
+            if not isinstance(analysis_details, EncodingStreamInputDetails):
+                raise TypeError("Invalid type for `analysis_details`, type has to be `EncodingStreamInputDetails`")
+
+        self._analysis_details = analysis_details
 
     def to_dict(self):
         """Returns the model properties as a dict"""
