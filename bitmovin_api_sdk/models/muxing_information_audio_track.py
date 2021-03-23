@@ -282,7 +282,7 @@ class MuxingInformationAudioTrack(object):
         # type: () -> float
         """Gets the duration of this MuxingInformationAudioTrack.
 
-        TODO add description
+        The duration in seconds
 
         :return: The duration of this MuxingInformationAudioTrack.
         :rtype: float
@@ -294,7 +294,7 @@ class MuxingInformationAudioTrack(object):
         # type: (float) -> None
         """Sets the duration of this MuxingInformationAudioTrack.
 
-        TODO add description
+        The duration in seconds
 
         :param duration: The duration of this MuxingInformationAudioTrack.
         :type: float

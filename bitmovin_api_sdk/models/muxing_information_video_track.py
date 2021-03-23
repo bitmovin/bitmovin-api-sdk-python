@@ -233,7 +233,6 @@ class MuxingInformationVideoTrack(object):
         # type: () -> int
         """Gets the rate of this MuxingInformationVideoTrack.
 
-        TODO add description
 
         :return: The rate of this MuxingInformationVideoTrack.
         :rtype: int
@@ -245,7 +244,6 @@ class MuxingInformationVideoTrack(object):
         # type: (int) -> None
         """Sets the rate of this MuxingInformationVideoTrack.
 
-        TODO add description
 
         :param rate: The rate of this MuxingInformationVideoTrack.
         :type: int
