@@ -15,13 +15,15 @@ class BroadcastTsMuxingConfiguration(object):
                  transport=None,
                  program=None,
                  video_streams=None,
-                 audio_streams=None):
-        # type: (BroadcastTsTransportConfiguration, BroadcastTsProgramConfiguration, list[BroadcastTsVideoInputStreamConfiguration], list[BroadcastTsAudioInputStreamConfiguration]) -> None
+                 audio_streams=None,
+                 subtitle_streams=None):
+        # type: (BroadcastTsTransportConfiguration, BroadcastTsProgramConfiguration, list[BroadcastTsVideoInputStreamConfiguration], list[BroadcastTsAudioInputStreamConfiguration], list[BroadcastTsSubtitleInputStreamConfiguration]) -> None
 
         self._transport = None
         self._program = None
         self._video_streams = list()
         self._audio_streams = list()
+        self._subtitle_streams = list()
         self.discriminator = None
 
         if transport is not None:
@@ -32,6 +34,8 @@ class BroadcastTsMuxingConfiguration(object):
             self.video_streams = video_streams
         if audio_streams is not None:
             self.audio_streams = audio_streams
+        if subtitle_streams is not None:
+            self.subtitle_streams = subtitle_streams
 
     @property
     def openapi_types(self):
@@ -39,7 +43,8 @@ class BroadcastTsMuxingConfiguration(object):
             'transport': 'BroadcastTsTransportConfiguration',
             'program': 'BroadcastTsProgramConfiguration',
             'video_streams': 'list[BroadcastTsVideoInputStreamConfiguration]',
-            'audio_streams': 'list[BroadcastTsAudioInputStreamConfiguration]'
+            'audio_streams': 'list[BroadcastTsAudioInputStreamConfiguration]',
+            'subtitle_streams': 'list[BroadcastTsSubtitleInputStreamConfiguration]'
         }
 
         return types
@@ -50,7 +55,8 @@ class BroadcastTsMuxingConfiguration(object):
             'transport': 'transport',
             'program': 'program',
             'video_streams': 'videoStreams',
-            'audio_streams': 'audioStreams'
+            'audio_streams': 'audioStreams',
+            'subtitle_streams': 'subtitleStreams'
         }
         return attributes
 
@@ -165,6 +171,33 @@ class BroadcastTsMuxingConfiguration(object):
                 raise TypeError("Invalid type for `audio_streams`, type has to be `list[BroadcastTsAudioInputStreamConfiguration]`")
 
         self._audio_streams = audio_streams
+
+    @property
+    def subtitle_streams(self):
+        # type: () -> list[BroadcastTsSubtitleInputStreamConfiguration]
+        """Gets the subtitle_streams of this BroadcastTsMuxingConfiguration.
+
+
+        :return: The subtitle_streams of this BroadcastTsMuxingConfiguration.
+        :rtype: list[BroadcastTsSubtitleInputStreamConfiguration]
+        """
+        return self._subtitle_streams
+
+    @subtitle_streams.setter
+    def subtitle_streams(self, subtitle_streams):
+        # type: (list) -> None
+        """Sets the subtitle_streams of this BroadcastTsMuxingConfiguration.
+
+
+        :param subtitle_streams: The subtitle_streams of this BroadcastTsMuxingConfiguration.
+        :type: list[BroadcastTsSubtitleInputStreamConfiguration]
+        """
+
+        if subtitle_streams is not None:
+            if not isinstance(subtitle_streams, list):
+                raise TypeError("Invalid type for `subtitle_streams`, type has to be `list[BroadcastTsSubtitleInputStreamConfiguration]`")
+
+        self._subtitle_streams = subtitle_streams
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -5,6 +5,7 @@ from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
 from bitmovin_api_sdk.models.auto_restart_configuration import AutoRestartConfiguration
 from bitmovin_api_sdk.models.encoding_mode import EncodingMode
+from bitmovin_api_sdk.models.manifest_generator import ManifestGenerator
 from bitmovin_api_sdk.models.reupload_settings import ReuploadSettings
 import pprint
 import six
@@ -18,14 +19,16 @@ class StartLiveEncodingRequest(object):
                  dash_manifests=None,
                  live_encoding_mode=None,
                  reupload_settings=None,
+                 manifest_generator=None,
                  auto_restart_configuration=None):
-        # type: (string_types, list[LiveHlsManifest], list[LiveDashManifest], EncodingMode, ReuploadSettings, AutoRestartConfiguration) -> None
+        # type: (string_types, list[LiveHlsManifest], list[LiveDashManifest], EncodingMode, ReuploadSettings, ManifestGenerator, AutoRestartConfiguration) -> None
 
         self._stream_key = None
         self._hls_manifests = list()
         self._dash_manifests = list()
         self._live_encoding_mode = None
         self._reupload_settings = None
+        self._manifest_generator = None
         self._auto_restart_configuration = None
         self.discriminator = None
 
@@ -39,6 +42,8 @@ class StartLiveEncodingRequest(object):
             self.live_encoding_mode = live_encoding_mode
         if reupload_settings is not None:
             self.reupload_settings = reupload_settings
+        if manifest_generator is not None:
+            self.manifest_generator = manifest_generator
         if auto_restart_configuration is not None:
             self.auto_restart_configuration = auto_restart_configuration
 
@@ -50,6 +55,7 @@ class StartLiveEncodingRequest(object):
             'dash_manifests': 'list[LiveDashManifest]',
             'live_encoding_mode': 'EncodingMode',
             'reupload_settings': 'ReuploadSettings',
+            'manifest_generator': 'ManifestGenerator',
             'auto_restart_configuration': 'AutoRestartConfiguration'
         }
 
@@ -63,6 +69,7 @@ class StartLiveEncodingRequest(object):
             'dash_manifests': 'dashManifests',
             'live_encoding_mode': 'liveEncodingMode',
             'reupload_settings': 'reuploadSettings',
+            'manifest_generator': 'manifestGenerator',
             'auto_restart_configuration': 'autoRestartConfiguration'
         }
         return attributes
@@ -211,6 +218,35 @@ class StartLiveEncodingRequest(object):
                 raise TypeError("Invalid type for `reupload_settings`, type has to be `ReuploadSettings`")
 
         self._reupload_settings = reupload_settings
+
+    @property
+    def manifest_generator(self):
+        # type: () -> ManifestGenerator
+        """Gets the manifest_generator of this StartLiveEncodingRequest.
+
+        Sets the version of the manifest generation engine
+
+        :return: The manifest_generator of this StartLiveEncodingRequest.
+        :rtype: ManifestGenerator
+        """
+        return self._manifest_generator
+
+    @manifest_generator.setter
+    def manifest_generator(self, manifest_generator):
+        # type: (ManifestGenerator) -> None
+        """Sets the manifest_generator of this StartLiveEncodingRequest.
+
+        Sets the version of the manifest generation engine
+
+        :param manifest_generator: The manifest_generator of this StartLiveEncodingRequest.
+        :type: ManifestGenerator
+        """
+
+        if manifest_generator is not None:
+            if not isinstance(manifest_generator, ManifestGenerator):
+                raise TypeError("Invalid type for `manifest_generator`, type has to be `ManifestGenerator`")
+
+        self._manifest_generator = manifest_generator
 
     @property
     def auto_restart_configuration(self):

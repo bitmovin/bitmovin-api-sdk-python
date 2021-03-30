@@ -1228,6 +1228,14 @@ bitmovin\_api\_sdk.models.broadcast\_ts\_program\_configuration module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.broadcast\_ts\_subtitle\_input\_stream\_configuration module
+--------------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.broadcast_ts_subtitle_input_stream_configuration
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.broadcast\_ts\_transport\_configuration module
 ------------------------------------------------------------------------
 
@@ -3032,6 +3040,14 @@ bitmovin\_api\_sdk.models.manifest module
 -----------------------------------------
 
 .. automodule:: bitmovin_api_sdk.models.manifest
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.manifest\_generator module
+----------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.manifest_generator
    :members:
    :undoc-members:
    :show-inheritance:

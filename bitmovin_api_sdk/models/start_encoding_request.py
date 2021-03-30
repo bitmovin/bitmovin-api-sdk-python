@@ -4,6 +4,7 @@ from enum import Enum
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
 from bitmovin_api_sdk.models.encoding_mode import EncodingMode
+from bitmovin_api_sdk.models.manifest_generator import ManifestGenerator
 from bitmovin_api_sdk.models.per_title import PerTitle
 from bitmovin_api_sdk.models.scheduling import Scheduling
 from bitmovin_api_sdk.models.trimming import Trimming
@@ -25,8 +26,9 @@ class StartEncodingRequest(object):
                  vod_dash_manifests=None,
                  vod_hls_manifests=None,
                  vod_smooth_manifests=None,
+                 manifest_generator=None,
                  per_title=None):
-        # type: (Trimming, Scheduling, Tweaks, bool, EncodingMode, list[ManifestResource], list[ManifestResource], list[ManifestResource], list[ManifestResource], list[ManifestResource], PerTitle) -> None
+        # type: (Trimming, Scheduling, Tweaks, bool, EncodingMode, list[ManifestResource], list[ManifestResource], list[ManifestResource], list[ManifestResource], list[ManifestResource], ManifestGenerator, PerTitle) -> None
 
         self._trimming = None
         self._scheduling = None
@@ -38,6 +40,7 @@ class StartEncodingRequest(object):
         self._vod_dash_manifests = list()
         self._vod_hls_manifests = list()
         self._vod_smooth_manifests = list()
+        self._manifest_generator = None
         self._per_title = None
         self.discriminator = None
 
@@ -61,6 +64,8 @@ class StartEncodingRequest(object):
             self.vod_hls_manifests = vod_hls_manifests
         if vod_smooth_manifests is not None:
             self.vod_smooth_manifests = vod_smooth_manifests
+        if manifest_generator is not None:
+            self.manifest_generator = manifest_generator
         if per_title is not None:
             self.per_title = per_title
 
@@ -77,6 +82,7 @@ class StartEncodingRequest(object):
             'vod_dash_manifests': 'list[ManifestResource]',
             'vod_hls_manifests': 'list[ManifestResource]',
             'vod_smooth_manifests': 'list[ManifestResource]',
+            'manifest_generator': 'ManifestGenerator',
             'per_title': 'PerTitle'
         }
 
@@ -95,6 +101,7 @@ class StartEncodingRequest(object):
             'vod_dash_manifests': 'vodDashManifests',
             'vod_hls_manifests': 'vodHlsManifests',
             'vod_smooth_manifests': 'vodSmoothManifests',
+            'manifest_generator': 'manifestGenerator',
             'per_title': 'perTitle'
         }
         return attributes
@@ -388,6 +395,35 @@ class StartEncodingRequest(object):
                 raise TypeError("Invalid type for `vod_smooth_manifests`, type has to be `list[ManifestResource]`")
 
         self._vod_smooth_manifests = vod_smooth_manifests
+
+    @property
+    def manifest_generator(self):
+        # type: () -> ManifestGenerator
+        """Gets the manifest_generator of this StartEncodingRequest.
+
+        Sets the version of the manifest generation engine
+
+        :return: The manifest_generator of this StartEncodingRequest.
+        :rtype: ManifestGenerator
+        """
+        return self._manifest_generator
+
+    @manifest_generator.setter
+    def manifest_generator(self, manifest_generator):
+        # type: (ManifestGenerator) -> None
+        """Sets the manifest_generator of this StartEncodingRequest.
+
+        Sets the version of the manifest generation engine
+
+        :param manifest_generator: The manifest_generator of this StartEncodingRequest.
+        :type: ManifestGenerator
+        """
+
+        if manifest_generator is not None:
+            if not isinstance(manifest_generator, ManifestGenerator):
+                raise TypeError("Invalid type for `manifest_generator`, type has to be `ManifestGenerator`")
+
+        self._manifest_generator = manifest_generator
 
     @property
     def per_title(self):

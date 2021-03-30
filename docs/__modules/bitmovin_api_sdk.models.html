@@ -248,6 +248,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.broadcast_ts_muxing_configuration">bitmovin_api_sdk.models.broadcast_ts_muxing_configuration module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.broadcast_ts_muxing_information">bitmovin_api_sdk.models.broadcast_ts_muxing_information module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.broadcast_ts_program_configuration">bitmovin_api_sdk.models.broadcast_ts_program_configuration module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.broadcast_ts_subtitle_input_stream_configuration">bitmovin_api_sdk.models.broadcast_ts_subtitle_input_stream_configuration module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.broadcast_ts_transport_configuration">bitmovin_api_sdk.models.broadcast_ts_transport_configuration module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.broadcast_ts_video_input_stream_configuration">bitmovin_api_sdk.models.broadcast_ts_video_input_stream_configuration module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.burn_in_subtitle_dvb_sub">bitmovin_api_sdk.models.burn_in_subtitle_dvb_sub module</a></li>
@@ -474,6 +475,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.local_input">bitmovin_api_sdk.models.local_input module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.local_output">bitmovin_api_sdk.models.local_output module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.manifest">bitmovin_api_sdk.models.manifest module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.manifest_generator">bitmovin_api_sdk.models.manifest_generator module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.manifest_resource">bitmovin_api_sdk.models.manifest_resource module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.manifest_type">bitmovin_api_sdk.models.manifest_type module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.manifest_type_response">bitmovin_api_sdk.models.manifest_type_response module</a></li>
@@ -12653,6 +12655,20 @@
 </dd></dl>
 
 <dl class="py method">
+<dt id="bitmovin_api_sdk.models.broadcast_ts_muxing_configuration.BroadcastTsMuxingConfiguration.subtitle_streams">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">subtitle_streams</span></code><a class="headerlink" href="#bitmovin_api_sdk.models.broadcast_ts_muxing_configuration.BroadcastTsMuxingConfiguration.subtitle_streams" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the subtitle_streams of this BroadcastTsMuxingConfiguration.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The subtitle_streams of this BroadcastTsMuxingConfiguration.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>list[<a class="reference internal" href="#bitmovin_api_sdk.models.broadcast_ts_subtitle_input_stream_configuration.BroadcastTsSubtitleInputStreamConfiguration" title="bitmovin_api_sdk.models.broadcast_ts_subtitle_input_stream_configuration.BroadcastTsSubtitleInputStreamConfiguration">BroadcastTsSubtitleInputStreamConfiguration</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt id="bitmovin_api_sdk.models.broadcast_ts_muxing_configuration.BroadcastTsMuxingConfiguration.to_dict">
 <code class="sig-name descname"><span class="pre">to_dict</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/models/broadcast_ts_muxing_configuration.html#BroadcastTsMuxingConfiguration.to_dict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bitmovin_api_sdk.models.broadcast_ts_muxing_configuration.BroadcastTsMuxingConfiguration.to_dict" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the model properties as a dict</p>
@@ -12802,6 +12818,82 @@
 <dl class="py method">
 <dt id="bitmovin_api_sdk.models.broadcast_ts_program_configuration.BroadcastTsProgramConfiguration.to_str">
 <code class="sig-name descname"><span class="pre">to_str</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/models/broadcast_ts_program_configuration.html#BroadcastTsProgramConfiguration.to_str"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bitmovin_api_sdk.models.broadcast_ts_program_configuration.BroadcastTsProgramConfiguration.to_str" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the string representation of the model</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-bitmovin_api_sdk.models.broadcast_ts_subtitle_input_stream_configuration">
+<span id="bitmovin-api-sdk-models-broadcast-ts-subtitle-input-stream-configuration-module"></span><h2>bitmovin_api_sdk.models.broadcast_ts_subtitle_input_stream_configuration module<a class="headerlink" href="#module-bitmovin_api_sdk.models.broadcast_ts_subtitle_input_stream_configuration" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="bitmovin_api_sdk.models.broadcast_ts_subtitle_input_stream_configuration.BroadcastTsSubtitleInputStreamConfiguration">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">bitmovin_api_sdk.models.broadcast_ts_subtitle_input_stream_configuration.</span></code><code class="sig-name descname"><span class="pre">BroadcastTsSubtitleInputStreamConfiguration</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/models/broadcast_ts_subtitle_input_stream_configuration.html#BroadcastTsSubtitleInputStreamConfiguration"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bitmovin_api_sdk.models.broadcast_ts_subtitle_input_stream_configuration.BroadcastTsSubtitleInputStreamConfiguration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.broadcast_ts_subtitle_input_stream_configuration.BroadcastTsSubtitleInputStreamConfiguration.attribute_map">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">attribute_map</span></code><a class="headerlink" href="#bitmovin_api_sdk.models.broadcast_ts_subtitle_input_stream_configuration.BroadcastTsSubtitleInputStreamConfiguration.attribute_map" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.broadcast_ts_subtitle_input_stream_configuration.BroadcastTsSubtitleInputStreamConfiguration.openapi_types">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">openapi_types</span></code><a class="headerlink" href="#bitmovin_api_sdk.models.broadcast_ts_subtitle_input_stream_configuration.BroadcastTsSubtitleInputStreamConfiguration.openapi_types" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.broadcast_ts_subtitle_input_stream_configuration.BroadcastTsSubtitleInputStreamConfiguration.packet_identifier">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">packet_identifier</span></code><a class="headerlink" href="#bitmovin_api_sdk.models.broadcast_ts_subtitle_input_stream_configuration.BroadcastTsSubtitleInputStreamConfiguration.packet_identifier" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the packet_identifier of this BroadcastTsSubtitleInputStreamConfiguration.</p>
+<p>An integer value. Packet Identifier (PID) for this stream.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The packet_identifier of this BroadcastTsSubtitleInputStreamConfiguration.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.broadcast_ts_subtitle_input_stream_configuration.BroadcastTsSubtitleInputStreamConfiguration.rate">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">rate</span></code><a class="headerlink" href="#bitmovin_api_sdk.models.broadcast_ts_subtitle_input_stream_configuration.BroadcastTsSubtitleInputStreamConfiguration.rate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the rate of this BroadcastTsSubtitleInputStreamConfiguration.</p>
+<p>The rate parameter determines the maximum rate in bits per second that should be used for the subtitle stream. The valid range is <cite>100</cite> to <cite>60 000 000</cite> bps or <cite>0</cite>. If the value is set to 0, we will examine the first 100 packets of subtitle packet data and use the highest rate that was computed. If the value is set too low, not enough to accommodate the subtitle bit-rate, then some PES packets corresponding to DVB subtitle stream will be dropped. This parameter is optional and the default value is 0.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The rate of this BroadcastTsSubtitleInputStreamConfiguration.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.broadcast_ts_subtitle_input_stream_configuration.BroadcastTsSubtitleInputStreamConfiguration.stream_id">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">stream_id</span></code><a class="headerlink" href="#bitmovin_api_sdk.models.broadcast_ts_subtitle_input_stream_configuration.BroadcastTsSubtitleInputStreamConfiguration.stream_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the stream_id of this BroadcastTsSubtitleInputStreamConfiguration.</p>
+<p>The UUID of the subtitle stream to which this configuration belongs to. This has to be an ID of an subtitle stream that has been added to the current muxing.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The stream_id of this BroadcastTsSubtitleInputStreamConfiguration.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>string_types</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.broadcast_ts_subtitle_input_stream_configuration.BroadcastTsSubtitleInputStreamConfiguration.to_dict">
+<code class="sig-name descname"><span class="pre">to_dict</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/models/broadcast_ts_subtitle_input_stream_configuration.html#BroadcastTsSubtitleInputStreamConfiguration.to_dict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bitmovin_api_sdk.models.broadcast_ts_subtitle_input_stream_configuration.BroadcastTsSubtitleInputStreamConfiguration.to_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the model properties as a dict</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.broadcast_ts_subtitle_input_stream_configuration.BroadcastTsSubtitleInputStreamConfiguration.to_str">
+<code class="sig-name descname"><span class="pre">to_str</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/models/broadcast_ts_subtitle_input_stream_configuration.html#BroadcastTsSubtitleInputStreamConfiguration.to_str"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bitmovin_api_sdk.models.broadcast_ts_subtitle_input_stream_configuration.BroadcastTsSubtitleInputStreamConfiguration.to_str" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the string representation of the model</p>
 </dd></dl>
 
@@ -30761,6 +30853,26 @@
 </dd></dl>
 
 </div>
+<div class="section" id="module-bitmovin_api_sdk.models.manifest_generator">
+<span id="bitmovin-api-sdk-models-manifest-generator-module"></span><h2>bitmovin_api_sdk.models.manifest_generator module<a class="headerlink" href="#module-bitmovin_api_sdk.models.manifest_generator" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="bitmovin_api_sdk.models.manifest_generator.ManifestGenerator">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">bitmovin_api_sdk.models.manifest_generator.</span></code><code class="sig-name descname"><span class="pre">ManifestGenerator</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/models/manifest_generator.html#ManifestGenerator"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bitmovin_api_sdk.models.manifest_generator.ManifestGenerator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<p>An enumeration.</p>
+<dl class="py attribute">
+<dt id="bitmovin_api_sdk.models.manifest_generator.ManifestGenerator.LEGACY">
+<code class="sig-name descname"><span class="pre">LEGACY</span></code><em class="property"> <span class="pre">=</span> <span class="pre">'LEGACY'</span></em><a class="headerlink" href="#bitmovin_api_sdk.models.manifest_generator.ManifestGenerator.LEGACY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="bitmovin_api_sdk.models.manifest_generator.ManifestGenerator.V2_BETA">
+<code class="sig-name descname"><span class="pre">V2_BETA</span></code><em class="property"> <span class="pre">=</span> <span class="pre">'V2_BETA'</span></em><a class="headerlink" href="#bitmovin_api_sdk.models.manifest_generator.ManifestGenerator.V2_BETA" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
 <div class="section" id="module-bitmovin_api_sdk.models.manifest_resource">
 <span id="bitmovin-api-sdk-models-manifest-resource-module"></span><h2>bitmovin_api_sdk.models.manifest_resource module<a class="headerlink" href="#module-bitmovin_api_sdk.models.manifest_resource" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
@@ -40842,6 +40954,21 @@
 </dd></dl>
 
 <dl class="py method">
+<dt id="bitmovin_api_sdk.models.start_encoding_request.StartEncodingRequest.manifest_generator">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">manifest_generator</span></code><a class="headerlink" href="#bitmovin_api_sdk.models.start_encoding_request.StartEncodingRequest.manifest_generator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the manifest_generator of this StartEncodingRequest.</p>
+<p>Sets the version of the manifest generation engine</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The manifest_generator of this StartEncodingRequest.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#bitmovin_api_sdk.models.manifest_generator.ManifestGenerator" title="bitmovin_api_sdk.models.manifest_generator.ManifestGenerator">ManifestGenerator</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt id="bitmovin_api_sdk.models.start_encoding_request.StartEncodingRequest.openapi_types">
 <em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">openapi_types</span></code><a class="headerlink" href="#bitmovin_api_sdk.models.start_encoding_request.StartEncodingRequest.openapi_types" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -41063,6 +41190,21 @@
 </dd>
 <dt class="field-even">Return type</dt>
 <dd class="field-even"><p><a class="reference internal" href="#bitmovin_api_sdk.models.encoding_mode.EncodingMode" title="bitmovin_api_sdk.models.encoding_mode.EncodingMode">EncodingMode</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.start_live_encoding_request.StartLiveEncodingRequest.manifest_generator">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">manifest_generator</span></code><a class="headerlink" href="#bitmovin_api_sdk.models.start_live_encoding_request.StartLiveEncodingRequest.manifest_generator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the manifest_generator of this StartLiveEncodingRequest.</p>
+<p>Sets the version of the manifest generation engine</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The manifest_generator of this StartLiveEncodingRequest.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#bitmovin_api_sdk.models.manifest_generator.ManifestGenerator" title="bitmovin_api_sdk.models.manifest_generator.ManifestGenerator">ManifestGenerator</a></p>
 </dd>
 </dl>
 </dd></dl>

@@ -165,6 +165,7 @@
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.common.poscheck</span> <span class="kn">import</span> <span class="n">poscheck_model</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.auto_restart_configuration</span> <span class="kn">import</span> <span class="n">AutoRestartConfiguration</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.encoding_mode</span> <span class="kn">import</span> <span class="n">EncodingMode</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.manifest_generator</span> <span class="kn">import</span> <span class="n">ManifestGenerator</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.reupload_settings</span> <span class="kn">import</span> <span class="n">ReuploadSettings</span>
 <span class="kn">import</span> <span class="nn">pprint</span>
 <span class="kn">import</span> <span class="nn">six</span>
@@ -178,14 +179,16 @@
                  <span class="n">dash_manifests</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">live_encoding_mode</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">reupload_settings</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">manifest_generator</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">auto_restart_configuration</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (string_types, list[LiveHlsManifest], list[LiveDashManifest], EncodingMode, ReuploadSettings, AutoRestartConfiguration) -&gt; None</span>
+        <span class="c1"># type: (string_types, list[LiveHlsManifest], list[LiveDashManifest], EncodingMode, ReuploadSettings, ManifestGenerator, AutoRestartConfiguration) -&gt; None</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_stream_key</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_hls_manifests</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_dash_manifests</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_live_encoding_mode</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_reupload_settings</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_manifest_generator</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_auto_restart_configuration</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>
 
@@ -199,6 +202,8 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">live_encoding_mode</span> <span class="o">=</span> <span class="n">live_encoding_mode</span>
         <span class="k">if</span> <span class="n">reupload_settings</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">reupload_settings</span> <span class="o">=</span> <span class="n">reupload_settings</span>
+        <span class="k">if</span> <span class="n">manifest_generator</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">manifest_generator</span> <span class="o">=</span> <span class="n">manifest_generator</span>
         <span class="k">if</span> <span class="n">auto_restart_configuration</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">auto_restart_configuration</span> <span class="o">=</span> <span class="n">auto_restart_configuration</span>
 
@@ -210,6 +215,7 @@
             <span class="s1">&#39;dash_manifests&#39;</span><span class="p">:</span> <span class="s1">&#39;list[LiveDashManifest]&#39;</span><span class="p">,</span>
             <span class="s1">&#39;live_encoding_mode&#39;</span><span class="p">:</span> <span class="s1">&#39;EncodingMode&#39;</span><span class="p">,</span>
             <span class="s1">&#39;reupload_settings&#39;</span><span class="p">:</span> <span class="s1">&#39;ReuploadSettings&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;manifest_generator&#39;</span><span class="p">:</span> <span class="s1">&#39;ManifestGenerator&#39;</span><span class="p">,</span>
             <span class="s1">&#39;auto_restart_configuration&#39;</span><span class="p">:</span> <span class="s1">&#39;AutoRestartConfiguration&#39;</span>
         <span class="p">}</span>
 
@@ -223,6 +229,7 @@
             <span class="s1">&#39;dash_manifests&#39;</span><span class="p">:</span> <span class="s1">&#39;dashManifests&#39;</span><span class="p">,</span>
             <span class="s1">&#39;live_encoding_mode&#39;</span><span class="p">:</span> <span class="s1">&#39;liveEncodingMode&#39;</span><span class="p">,</span>
             <span class="s1">&#39;reupload_settings&#39;</span><span class="p">:</span> <span class="s1">&#39;reuploadSettings&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;manifest_generator&#39;</span><span class="p">:</span> <span class="s1">&#39;manifestGenerator&#39;</span><span class="p">,</span>
             <span class="s1">&#39;auto_restart_configuration&#39;</span><span class="p">:</span> <span class="s1">&#39;autoRestartConfiguration&#39;</span>
         <span class="p">}</span>
         <span class="k">return</span> <span class="n">attributes</span>
@@ -371,6 +378,35 @@
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `reupload_settings`, type has to be `ReuploadSettings`&quot;</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_reupload_settings</span> <span class="o">=</span> <span class="n">reupload_settings</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">manifest_generator</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; ManifestGenerator</span>
+        <span class="sd">&quot;&quot;&quot;Gets the manifest_generator of this StartLiveEncodingRequest.</span>
+
+<span class="sd">        Sets the version of the manifest generation engine</span>
+
+<span class="sd">        :return: The manifest_generator of this StartLiveEncodingRequest.</span>
+<span class="sd">        :rtype: ManifestGenerator</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_manifest_generator</span>
+
+    <span class="nd">@manifest_generator</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">manifest_generator</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">manifest_generator</span><span class="p">):</span>
+        <span class="c1"># type: (ManifestGenerator) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the manifest_generator of this StartLiveEncodingRequest.</span>
+
+<span class="sd">        Sets the version of the manifest generation engine</span>
+
+<span class="sd">        :param manifest_generator: The manifest_generator of this StartLiveEncodingRequest.</span>
+<span class="sd">        :type: ManifestGenerator</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">manifest_generator</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">manifest_generator</span><span class="p">,</span> <span class="n">ManifestGenerator</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `manifest_generator`, type has to be `ManifestGenerator`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_manifest_generator</span> <span class="o">=</span> <span class="n">manifest_generator</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">auto_restart_configuration</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>

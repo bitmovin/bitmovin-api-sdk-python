@@ -1091,6 +1091,7 @@ from bitmovin_api_sdk.models.broadcast_ts_muxing import BroadcastTsMuxing
 from bitmovin_api_sdk.models.broadcast_ts_muxing_configuration import BroadcastTsMuxingConfiguration
 from bitmovin_api_sdk.models.broadcast_ts_muxing_information import BroadcastTsMuxingInformation
 from bitmovin_api_sdk.models.broadcast_ts_program_configuration import BroadcastTsProgramConfiguration
+from bitmovin_api_sdk.models.broadcast_ts_subtitle_input_stream_configuration import BroadcastTsSubtitleInputStreamConfiguration
 from bitmovin_api_sdk.models.broadcast_ts_transport_configuration import BroadcastTsTransportConfiguration
 from bitmovin_api_sdk.models.broadcast_ts_video_input_stream_configuration import BroadcastTsVideoInputStreamConfiguration
 from bitmovin_api_sdk.models.burn_in_subtitle_dvb_sub import BurnInSubtitleDvbSub
@@ -1317,6 +1318,7 @@ from bitmovin_api_sdk.models.live_media_ingest_output import LiveMediaIngestOutp
 from bitmovin_api_sdk.models.local_input import LocalInput
 from bitmovin_api_sdk.models.local_output import LocalOutput
 from bitmovin_api_sdk.models.manifest import Manifest
+from bitmovin_api_sdk.models.manifest_generator import ManifestGenerator
 from bitmovin_api_sdk.models.manifest_resource import ManifestResource
 from bitmovin_api_sdk.models.manifest_type import ManifestType
 from bitmovin_api_sdk.models.manifest_type_response import ManifestTypeResponse
@@ -1573,4 +1575,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.64.0"
+__version__ = "1.65.0"
