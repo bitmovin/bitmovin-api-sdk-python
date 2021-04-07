@@ -928,7 +928,7 @@ class StatisticsPerStream(object):
         # type: () -> float
         """Gets the enhanced_deinterlace_multiplicator of this StatisticsPerStream.
 
-        The output minutes multiplicator for streams using an enhanced deinterlace filter.
+        The output minutes multiplicator for streams using an enhanced Deinterlace Filter.
 
         :return: The enhanced_deinterlace_multiplicator of this StatisticsPerStream.
         :rtype: float
@@ -940,7 +940,7 @@ class StatisticsPerStream(object):
         # type: (float) -> None
         """Sets the enhanced_deinterlace_multiplicator of this StatisticsPerStream.
 
-        The output minutes multiplicator for streams using an enhanced deinterlace filter.
+        The output minutes multiplicator for streams using an enhanced Deinterlace Filter.
 
         :param enhanced_deinterlace_multiplicator: The enhanced_deinterlace_multiplicator of this StatisticsPerStream.
         :type: float

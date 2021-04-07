@@ -52,7 +52,7 @@ class CropApi(BaseApi):
         # type: (string_types, dict) -> BitmovinResponse
         """Delete Crop Filter
 
-        :param filter_id: Id of the Crop configuration.
+        :param filter_id: Id of the Crop Filter.
         :type filter_id: string_types, required
         :return:
         :rtype: BitmovinResponse
@@ -69,7 +69,7 @@ class CropApi(BaseApi):
         # type: (string_types, dict) -> CropFilter
         """Crop Filter Details
 
-        :param filter_id: Id of the Crop configuration.
+        :param filter_id: Id of the Crop Filter.
         :type filter_id: string_types, required
         :return: Crop details
         :rtype: CropFilter
@@ -88,7 +88,7 @@ class CropApi(BaseApi):
 
         :param query_params: Query parameters
         :type query_params: CropFilterListQueryParams
-        :return: List of watermark ids
+        :return: List of Crop Filters
         :rtype: CropFilter
         """
 

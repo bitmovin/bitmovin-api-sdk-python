@@ -37,7 +37,7 @@ class RotateApi(BaseApi):
 
         :param rotate_filter: The Rotate Filter to be created
         :type rotate_filter: RotateFilter, required
-        :return: Rotate Configuration
+        :return: Rotate Filter details
         :rtype: RotateFilter
         """
 
@@ -52,9 +52,9 @@ class RotateApi(BaseApi):
         # type: (string_types, dict) -> BitmovinResponse
         """Delete Rotate Filter
 
-        :param filter_id: Id of the Rotate configuration.
+        :param filter_id: Id of the Rotate Filter.
         :type filter_id: string_types, required
-        :return: Id of the rotate configuration
+        :return: Id of the Rotate Filter
         :rtype: BitmovinResponse
         """
 
@@ -69,7 +69,7 @@ class RotateApi(BaseApi):
         # type: (string_types, dict) -> RotateFilter
         """Rotate Filter Details
 
-        :param filter_id: Id of the Rotate configuration.
+        :param filter_id: Id of the Rotate Filter.
         :type filter_id: string_types, required
         :return: Rotate Configuration
         :rtype: RotateFilter
@@ -88,7 +88,7 @@ class RotateApi(BaseApi):
 
         :param query_params: Query parameters
         :type query_params: RotateFilterListQueryParams
-        :return: List of watermark ids
+        :return: List of Rotate Filters
         :rtype: RotateFilter
         """
 

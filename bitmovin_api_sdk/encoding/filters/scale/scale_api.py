@@ -54,7 +54,7 @@ class ScaleApi(BaseApi):
 
         :param filter_id: Id of the scale filter
         :type filter_id: string_types, required
-        :return: Id of the watermark.
+        :return: Id of the Scale Filter.
         :rtype: BitmovinResponse
         """
 
@@ -88,7 +88,7 @@ class ScaleApi(BaseApi):
 
         :param query_params: Query parameters
         :type query_params: ScaleFilterListQueryParams
-        :return: List of scale ids
+        :return: List of Scale Filers
         :rtype: ScaleFilter
         """
 

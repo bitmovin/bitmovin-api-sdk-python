@@ -57,7 +57,7 @@ class LiveHlsManifest(object):
         # type: () -> string_types
         """Gets the manifest_id of this LiveHlsManifest.
 
-        HLS manifest ids (required)
+        HLS manifest id (required)
 
         :return: The manifest_id of this LiveHlsManifest.
         :rtype: string_types
@@ -69,7 +69,7 @@ class LiveHlsManifest(object):
         # type: (string_types) -> None
         """Sets the manifest_id of this LiveHlsManifest.
 
-        HLS manifest ids (required)
+        HLS manifest id (required)
 
         :param manifest_id: The manifest_id of this LiveHlsManifest.
         :type: string_types

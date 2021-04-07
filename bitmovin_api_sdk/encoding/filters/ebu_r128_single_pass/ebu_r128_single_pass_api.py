@@ -88,7 +88,7 @@ class EbuR128SinglePassApi(BaseApi):
 
         :param query_params: Query parameters
         :type query_params: EbuR128SinglePassFilterListQueryParams
-        :return: List of EBU R128 Single Pass Filter ids
+        :return: List of EBU R128 Single Pass Filters
         :rtype: EbuR128SinglePassFilter
         """
 

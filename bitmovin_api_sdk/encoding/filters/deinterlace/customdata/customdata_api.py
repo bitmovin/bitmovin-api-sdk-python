@@ -25,9 +25,9 @@ class CustomdataApi(BaseApi):
         # type: (string_types, dict) -> CustomData
         """Deinterlace Filter Custom Data
 
-        :param filter_id: Id of the deinterlace filter
+        :param filter_id: Id of the Deinterlace Filter
         :type filter_id: string_types, required
-        :return: Deinterlace filter custom data
+        :return: Deinterlace Filter custom data
         :rtype: CustomData
         """
 

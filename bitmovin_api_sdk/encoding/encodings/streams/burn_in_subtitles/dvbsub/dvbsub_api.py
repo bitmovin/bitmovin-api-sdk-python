@@ -97,7 +97,7 @@ class DvbsubApi(BaseApi):
         :type stream_id: string_types, required
         :param query_params: Query parameters
         :type query_params: BurnInSubtitleDvbSubListQueryParams
-        :return: List of subtitle ids
+        :return: List of Burn-In DVB-SUB subtitles
         :rtype: BurnInSubtitleDvbSub
         """
 

@@ -70,7 +70,7 @@ class LiveDashManifest(object):
         # type: () -> string_types
         """Gets the manifest_id of this LiveDashManifest.
 
-        Dash manifest ids (required)
+        Dash manifest id (required)
 
         :return: The manifest_id of this LiveDashManifest.
         :rtype: string_types
@@ -82,7 +82,7 @@ class LiveDashManifest(object):
         # type: (string_types) -> None
         """Sets the manifest_id of this LiveDashManifest.
 
-        Dash manifest ids (required)
+        Dash manifest id (required)
 
         :param manifest_id: The manifest_id of this LiveDashManifest.
         :type: string_types

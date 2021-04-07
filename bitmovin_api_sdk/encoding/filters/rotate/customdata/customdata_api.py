@@ -25,7 +25,7 @@ class CustomdataApi(BaseApi):
         # type: (string_types, dict) -> CustomData
         """Rotate Filter Custom Data
 
-        :param filter_id: Id of the Rotate configuration.
+        :param filter_id: Id of the Rotate Filter.
         :type filter_id: string_types, required
         :return: Rotate Config custom data
         :rtype: CustomData

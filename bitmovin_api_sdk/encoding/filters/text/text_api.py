@@ -54,7 +54,7 @@ class TextApi(BaseApi):
 
         :param filter_id: Id of the Text Filter
         :type filter_id: string_types, required
-        :return: Id of the watermark.
+        :return: Id of the Text Filter.
         :rtype: BitmovinResponse
         """
 
@@ -88,7 +88,7 @@ class TextApi(BaseApi):
 
         :param query_params: Query parameters
         :type query_params: TextFilterListQueryParams
-        :return: List of text ids
+        :return: List of Text Filters
         :rtype: TextFilter
         """
 

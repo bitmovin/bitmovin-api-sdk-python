@@ -33,7 +33,6 @@ class Encoding(BitmovinResource):
                  cloud_region=None,
                  fallback_cloud_regions=None,
                  encoder_version=None,
-                 infrastructure_id=None,
                  infrastructure=None,
                  static_ip_id=None,
                  selected_encoder_version=None,
@@ -41,7 +40,7 @@ class Encoding(BitmovinResource):
                  selected_cloud_region=None,
                  status=None,
                  labels=None):
-        # type: (string_types, string_types, string_types, datetime, datetime, dict, EncodingType, datetime, datetime, datetime, datetime, datetime, int, CloudRegion, list[CloudRegion], string_types, string_types, InfrastructureSettings, string_types, string_types, EncodingMode, CloudRegion, Status, list[string_types]) -> None
+        # type: (string_types, string_types, string_types, datetime, datetime, dict, EncodingType, datetime, datetime, datetime, datetime, datetime, int, CloudRegion, list[CloudRegion], string_types, InfrastructureSettings, string_types, string_types, EncodingMode, CloudRegion, Status, list[string_types]) -> None
         super(Encoding, self).__init__(id_=id_, name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data)
 
         self._type = None
@@ -54,7 +53,6 @@ class Encoding(BitmovinResource):
         self._cloud_region = None
         self._fallback_cloud_regions = list()
         self._encoder_version = None
-        self._infrastructure_id = None
         self._infrastructure = None
         self._static_ip_id = None
         self._selected_encoder_version = None
@@ -84,8 +82,6 @@ class Encoding(BitmovinResource):
             self.fallback_cloud_regions = fallback_cloud_regions
         if encoder_version is not None:
             self.encoder_version = encoder_version
-        if infrastructure_id is not None:
-            self.infrastructure_id = infrastructure_id
         if infrastructure is not None:
             self.infrastructure = infrastructure
         if static_ip_id is not None:
@@ -119,7 +115,6 @@ class Encoding(BitmovinResource):
             'cloud_region': 'CloudRegion',
             'fallback_cloud_regions': 'list[CloudRegion]',
             'encoder_version': 'string_types',
-            'infrastructure_id': 'string_types',
             'infrastructure': 'InfrastructureSettings',
             'static_ip_id': 'string_types',
             'selected_encoder_version': 'string_types',
@@ -149,7 +144,6 @@ class Encoding(BitmovinResource):
             'cloud_region': 'cloudRegion',
             'fallback_cloud_regions': 'fallbackCloudRegions',
             'encoder_version': 'encoderVersion',
-            'infrastructure_id': 'infrastructureId',
             'infrastructure': 'infrastructure',
             'static_ip_id': 'staticIpId',
             'selected_encoder_version': 'selectedEncoderVersion',
@@ -447,35 +441,6 @@ class Encoding(BitmovinResource):
                 raise TypeError("Invalid type for `encoder_version`, type has to be `string_types`")
 
         self._encoder_version = encoder_version
-
-    @property
-    def infrastructure_id(self):
-        # type: () -> string_types
-        """Gets the infrastructure_id of this Encoding.
-
-        Define an external infrastructure to run the encoding on. Note If you set this value, the `cloudRegion` must be 'EXTERNAL'.
-
-        :return: The infrastructure_id of this Encoding.
-        :rtype: string_types
-        """
-        return self._infrastructure_id
-
-    @infrastructure_id.setter
-    def infrastructure_id(self, infrastructure_id):
-        # type: (string_types) -> None
-        """Sets the infrastructure_id of this Encoding.
-
-        Define an external infrastructure to run the encoding on. Note If you set this value, the `cloudRegion` must be 'EXTERNAL'.
-
-        :param infrastructure_id: The infrastructure_id of this Encoding.
-        :type: string_types
-        """
-
-        if infrastructure_id is not None:
-            if not isinstance(infrastructure_id, string_types):
-                raise TypeError("Invalid type for `infrastructure_id`, type has to be `string_types`")
-
-        self._infrastructure_id = infrastructure_id
 
     @property
     def infrastructure(self):

@@ -25,7 +25,7 @@ class CustomdataApi(BaseApi):
         # type: (string_types, dict) -> CustomData
         """Audio Volume Filter Custom Data
 
-        :param filter_id: Id of the Audio volume configuration.
+        :param filter_id: Id of the Audio Volume Filter.
         :type filter_id: string_types, required
         :return: Audio volume custom data
         :rtype: CustomData

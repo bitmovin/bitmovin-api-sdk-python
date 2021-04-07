@@ -37,7 +37,7 @@ class InterlaceApi(BaseApi):
 
         :param interlace_filter: The Interlace Filter to be created
         :type interlace_filter: InterlaceFilter, required
-        :return: Watermark details
+        :return: Interlace Filter details
         :rtype: InterlaceFilter
         """
 
@@ -54,7 +54,7 @@ class InterlaceApi(BaseApi):
 
         :param filter_id: Id of the Interlace Filter
         :type filter_id: string_types, required
-        :return: Id of the watermark.
+        :return: Id of the Interlace Filter.
         :rtype: BitmovinResponse
         """
 
@@ -88,7 +88,7 @@ class InterlaceApi(BaseApi):
 
         :param query_params: Query parameters
         :type query_params: InterlaceFilterListQueryParams
-        :return: List of interlace ids
+        :return: List of Interlace Filters
         :rtype: InterlaceFilter
         """
 

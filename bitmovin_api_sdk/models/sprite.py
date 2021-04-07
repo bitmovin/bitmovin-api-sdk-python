@@ -278,7 +278,7 @@ class Sprite(BitmovinResource):
         # type: () -> string_types
         """Gets the vtt_name of this Sprite.
 
-        Filename of the vtt-file. The file-extension \".vtt\" is required. (required)
+        Filename of the vtt-file. The file-extension \".vtt\" is required.
 
         :return: The vtt_name of this Sprite.
         :rtype: string_types
@@ -290,7 +290,7 @@ class Sprite(BitmovinResource):
         # type: (string_types) -> None
         """Sets the vtt_name of this Sprite.
 
-        Filename of the vtt-file. The file-extension \".vtt\" is required. (required)
+        Filename of the vtt-file. The file-extension \".vtt\" is required.
 
         :param vtt_name: The vtt_name of this Sprite.
         :type: string_types
@@ -334,7 +334,7 @@ class Sprite(BitmovinResource):
         # type: () -> int
         """Gets the images_per_file of this Sprite.
 
-        Number of images per file. If more images are generated than specified in this value, multiple sprites will be created. You can use the placeholder '%number%' in the spriteName to specify the naming policy.
+        Number of images per file. If more images are generated than specified in this value, multiple sprites will be created. You can use the placeholder '%number%' in the spriteName to specify the naming policy. Either this property must be set or hTiles and vTiles. 
 
         :return: The images_per_file of this Sprite.
         :rtype: int
@@ -346,7 +346,7 @@ class Sprite(BitmovinResource):
         # type: (int) -> None
         """Sets the images_per_file of this Sprite.
 
-        Number of images per file. If more images are generated than specified in this value, multiple sprites will be created. You can use the placeholder '%number%' in the spriteName to specify the naming policy.
+        Number of images per file. If more images are generated than specified in this value, multiple sprites will be created. You can use the placeholder '%number%' in the spriteName to specify the naming policy. Either this property must be set or hTiles and vTiles. 
 
         :param images_per_file: The images_per_file of this Sprite.
         :type: int

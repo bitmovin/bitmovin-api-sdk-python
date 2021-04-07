@@ -37,7 +37,7 @@ class WatermarkApi(BaseApi):
 
         :param watermark_filter: The Watermark Filter to be created. Only one horizontal and one vertical distance parameter is allowed, either top or bottom, and either left or right. See example body.
         :type watermark_filter: WatermarkFilter, required
-        :return: Watermark details
+        :return: Watermark Filter details
         :rtype: WatermarkFilter
         """
 
@@ -52,9 +52,9 @@ class WatermarkApi(BaseApi):
         # type: (string_types, dict) -> BitmovinResponse
         """Delete Watermark Filter
 
-        :param filter_id: Id of the watermark configuration.
+        :param filter_id: Id of the Watermark Filter.
         :type filter_id: string_types, required
-        :return: Id of the watermark.
+        :return: Id of the Watermark Filter
         :rtype: BitmovinResponse
         """
 
@@ -69,7 +69,7 @@ class WatermarkApi(BaseApi):
         # type: (string_types, dict) -> WatermarkFilter
         """Watermark Filter Details
 
-        :param filter_id: Id of the watermark configuration.
+        :param filter_id: Id of the Watermark Filter.
         :type filter_id: string_types, required
         :return: Watermark details
         :rtype: WatermarkFilter
@@ -88,7 +88,7 @@ class WatermarkApi(BaseApi):
 
         :param query_params: Query parameters
         :type query_params: WatermarkFilterListQueryParams
-        :return: List of watermark ids
+        :return: List of Watermark Filters
         :rtype: WatermarkFilter
         """
 

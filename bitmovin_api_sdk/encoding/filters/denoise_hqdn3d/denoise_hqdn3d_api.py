@@ -54,7 +54,7 @@ class DenoiseHqdn3dApi(BaseApi):
 
         :param filter_id: Id of the denoise hqdn3d filter
         :type filter_id: string_types, required
-        :return: Id of the watermark.
+        :return: Id of the denoise hqdn3d filter.
         :rtype: BitmovinResponse
         """
 
@@ -88,7 +88,7 @@ class DenoiseHqdn3dApi(BaseApi):
 
         :param query_params: Query parameters
         :type query_params: DenoiseHqdn3dFilterListQueryParams
-        :return: List of denoise hqdn3d ids
+        :return: List of Denoise hqdn3d Filters
         :rtype: DenoiseHqdn3dFilter
         """
 

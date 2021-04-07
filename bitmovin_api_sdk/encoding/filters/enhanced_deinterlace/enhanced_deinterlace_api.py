@@ -88,7 +88,7 @@ class EnhancedDeinterlaceApi(BaseApi):
 
         :param query_params: Query parameters
         :type query_params: EnhancedDeinterlaceFilterListQueryParams
-        :return: List of Enhanced Deinterlace Filter ids
+        :return: List of Enhanced Deinterlace Filters
         :rtype: EnhancedDeinterlaceFilter
         """
 

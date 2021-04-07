@@ -25,7 +25,7 @@ class CustomdataApi(BaseApi):
         # type: (string_types, dict) -> CustomData
         """Watermark Filter Custom Data
 
-        :param filter_id: Id of the watermark configuration.
+        :param filter_id: Id of the Watermark Filter.
         :type filter_id: string_types, required
         :return: Watermark custom data
         :rtype: CustomData

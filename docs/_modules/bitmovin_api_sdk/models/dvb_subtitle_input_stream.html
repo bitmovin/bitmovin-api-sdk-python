@@ -294,7 +294,7 @@
         <span class="c1"># type: () -&gt; StreamSelectionMode</span>
         <span class="sd">&quot;&quot;&quot;Gets the selection_mode of this DvbSubtitleInputStream.</span>
 
-<span class="sd">        Specifies the algorithm how the stream in the input file will be selected. Only POSITION_ABSOLUTE is supported.</span>
+<span class="sd">        Specifies the algorithm for selecting a stream from the input file. Supported values for VOD encodings: AUTO, POSITION_ABSOLUTE, SUBTITLE_RELATIVE. Supported values for LIVE encodings: POSITION_ABSOLUTE</span>
 
 <span class="sd">        :return: The selection_mode of this DvbSubtitleInputStream.</span>
 <span class="sd">        :rtype: StreamSelectionMode</span>
@@ -306,7 +306,7 @@
         <span class="c1"># type: (StreamSelectionMode) -&gt; None</span>
         <span class="sd">&quot;&quot;&quot;Sets the selection_mode of this DvbSubtitleInputStream.</span>
 
-<span class="sd">        Specifies the algorithm how the stream in the input file will be selected. Only POSITION_ABSOLUTE is supported.</span>
+<span class="sd">        Specifies the algorithm for selecting a stream from the input file. Supported values for VOD encodings: AUTO, POSITION_ABSOLUTE, SUBTITLE_RELATIVE. Supported values for LIVE encodings: POSITION_ABSOLUTE</span>
 
 <span class="sd">        :param selection_mode: The selection_mode of this DvbSubtitleInputStream.</span>
 <span class="sd">        :type: StreamSelectionMode</span>

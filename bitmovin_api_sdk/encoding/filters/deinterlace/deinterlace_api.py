@@ -37,7 +37,7 @@ class DeinterlaceApi(BaseApi):
 
         :param deinterlace_filter: The Deinterlace Filter to be created
         :type deinterlace_filter: DeinterlaceFilter, required
-        :return: Deinterlace filter details
+        :return: Deinterlace Filter details
         :rtype: DeinterlaceFilter
         """
 
@@ -52,9 +52,9 @@ class DeinterlaceApi(BaseApi):
         # type: (string_types, dict) -> BitmovinResponse
         """Delete Deinterlace Filter
 
-        :param filter_id: Id of the deinterlace filter
+        :param filter_id: Id of the Deinterlace Filter
         :type filter_id: string_types, required
-        :return: Id of the watermark.
+        :return: Id of the Deinterlace Filter.
         :rtype: BitmovinResponse
         """
 
@@ -69,9 +69,9 @@ class DeinterlaceApi(BaseApi):
         # type: (string_types, dict) -> DeinterlaceFilter
         """Deinterlace Filter Details
 
-        :param filter_id: Id of the deinterlace filter
+        :param filter_id: Id of the Deinterlace Filter
         :type filter_id: string_types, required
-        :return: Deinterlace filter details
+        :return: Deinterlace Filter details
         :rtype: DeinterlaceFilter
         """
 
@@ -88,7 +88,7 @@ class DeinterlaceApi(BaseApi):
 
         :param query_params: Query parameters
         :type query_params: DeinterlaceFilterListQueryParams
-        :return: List of deinterlace ids
+        :return: List of Deinterlace Filters
         :rtype: DeinterlaceFilter
         """
 

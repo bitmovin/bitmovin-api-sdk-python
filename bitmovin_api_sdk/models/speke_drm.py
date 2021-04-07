@@ -141,7 +141,7 @@ class SpekeDrm(Drm):
         # type: () -> string_types
         """Gets the iv of this SpekeDrm.
 
-        16 byte initialization vector represented by a 32-character text string. It is mandatory if systemIds contains AES128 and FairPlay. 
+        16 byte initialization vector represented by a 32-character text string. It is mandatory if systemIds contains AES128 or FairPlay. 
 
         :return: The iv of this SpekeDrm.
         :rtype: string_types
@@ -153,7 +153,7 @@ class SpekeDrm(Drm):
         # type: (string_types) -> None
         """Sets the iv of this SpekeDrm.
 
-        16 byte initialization vector represented by a 32-character text string. It is mandatory if systemIds contains AES128 and FairPlay. 
+        16 byte initialization vector represented by a 32-character text string. It is mandatory if systemIds contains AES128 or FairPlay. 
 
         :param iv: The iv of this SpekeDrm.
         :type: string_types

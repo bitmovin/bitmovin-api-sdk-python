@@ -25,7 +25,7 @@ class CustomdataApi(BaseApi):
         # type: (string_types, dict) -> CustomData
         """Audio Mix Filter Custom Data
 
-        :param filter_id: Id of the Audio Mix configuration.
+        :param filter_id: Id of the Audio Mix Filter.
         :type filter_id: string_types, required
         :return: Audio Mix Config custom data
         :rtype: CustomData

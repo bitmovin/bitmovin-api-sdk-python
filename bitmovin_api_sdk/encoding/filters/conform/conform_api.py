@@ -54,7 +54,7 @@ class ConformApi(BaseApi):
 
         :param filter_id: Id of the conform filter
         :type filter_id: string_types, required
-        :return: Id of the conform.
+        :return: Id of the Conform Filter.
         :rtype: BitmovinResponse
         """
 
@@ -88,7 +88,7 @@ class ConformApi(BaseApi):
 
         :param query_params: Query parameters
         :type query_params: ConformFilterListQueryParams
-        :return: List of conform ids
+        :return: List of Conform Filters
         :rtype: ConformFilter
         """
 

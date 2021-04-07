@@ -37,7 +37,7 @@ class EnhancedWatermarkApi(BaseApi):
 
         :param enhanced_watermark_filter: The Enhanced Watermark Filter to be created. Only one horizontal and one vertical distance parameter is allowed, either top or bottom, and either left or right. See example body.
         :type enhanced_watermark_filter: EnhancedWatermarkFilter, required
-        :return: Enhanced Watermark details
+        :return: Enhanced Watermark Filter details
         :rtype: EnhancedWatermarkFilter
         """
 
@@ -52,9 +52,9 @@ class EnhancedWatermarkApi(BaseApi):
         # type: (string_types, dict) -> BitmovinResponse
         """Delete Enhanced Watermark Filter
 
-        :param filter_id: Id of the enhanced watermark configuration.
+        :param filter_id: Id of the enhanced Watermark Filter.
         :type filter_id: string_types, required
-        :return: Id of the enhanced watermark.
+        :return: Id of the Enhanced Watermark Filter.
         :rtype: BitmovinResponse
         """
 
@@ -69,7 +69,7 @@ class EnhancedWatermarkApi(BaseApi):
         # type: (string_types, dict) -> EnhancedWatermarkFilter
         """Enhanced Watermark Filter Details
 
-        :param filter_id: Id of the enhanced watermark configuration.
+        :param filter_id: Id of the enhanced Watermark Filter.
         :type filter_id: string_types, required
         :return: Enhanced Watermark details
         :rtype: EnhancedWatermarkFilter
@@ -88,7 +88,7 @@ class EnhancedWatermarkApi(BaseApi):
 
         :param query_params: Query parameters
         :type query_params: EnhancedWatermarkFilterListQueryParams
-        :return: List of watermark ids
+        :return: List of Enhanced Watermark Filters
         :rtype: EnhancedWatermarkFilter
         """
 

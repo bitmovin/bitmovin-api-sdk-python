@@ -52,7 +52,7 @@ class AudioVolumeApi(BaseApi):
         # type: (string_types, dict) -> BitmovinResponse
         """Delete Audio Volume Filter
 
-        :param filter_id: Id of the Audio volume configuration.
+        :param filter_id: Id of the Audio Volume Filter.
         :type filter_id: string_types, required
         :return: Id of the Audio volume.
         :rtype: BitmovinResponse
@@ -69,7 +69,7 @@ class AudioVolumeApi(BaseApi):
         # type: (string_types, dict) -> AudioVolumeFilter
         """Audio Volume Filter Details
 
-        :param filter_id: Id of the audio volume configuration.
+        :param filter_id: Id of the Audio Volume Filter.
         :type filter_id: string_types, required
         :return: Audio volume details
         :rtype: AudioVolumeFilter
@@ -88,7 +88,7 @@ class AudioVolumeApi(BaseApi):
 
         :param query_params: Query parameters
         :type query_params: AudioVolumeFilterListQueryParams
-        :return: List of Audio volume ids
+        :return: List of Audio Volume Filters
         :rtype: AudioVolumeFilter
         """
 

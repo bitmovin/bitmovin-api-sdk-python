@@ -613,6 +613,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.sftp_output">bitmovin_api_sdk.models.sftp_output module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.sidecar_error_mode">bitmovin_api_sdk.models.sidecar_error_mode module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.sidecar_file">bitmovin_api_sdk.models.sidecar_file module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.sidecar_file_type">bitmovin_api_sdk.models.sidecar_file_type module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.signature_type">bitmovin_api_sdk.models.signature_type module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.smooth_manifest_content_protection">bitmovin_api_sdk.models.smooth_manifest_content_protection module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.smooth_manifest_default">bitmovin_api_sdk.models.smooth_manifest_default module</a></li>
@@ -12915,7 +12916,7 @@
 <dt id="bitmovin_api_sdk.models.broadcast_ts_transport_configuration.BroadcastTsTransportConfiguration.initial_presentation_time_stamp">
 <em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">initial_presentation_time_stamp</span></code><a class="headerlink" href="#bitmovin_api_sdk.models.broadcast_ts_transport_configuration.BroadcastTsTransportConfiguration.initial_presentation_time_stamp" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the initial_presentation_time_stamp of this BroadcastTsTransportConfiguration.</p>
-<p>Sets the presentation time stamp value for the first video frame. The timestamp is specified in the timescale of 90000. Default: 0</p>
+<p>Sets the presentation time stamp value for the first video frame. The timestamp is specified in the timescale of 90000</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>The initial_presentation_time_stamp of this BroadcastTsTransportConfiguration.</p>
@@ -12930,7 +12931,7 @@
 <dt id="bitmovin_api_sdk.models.broadcast_ts_transport_configuration.BroadcastTsTransportConfiguration.initial_program_clock_reference">
 <em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">initial_program_clock_reference</span></code><a class="headerlink" href="#bitmovin_api_sdk.models.broadcast_ts_transport_configuration.BroadcastTsTransportConfiguration.initial_program_clock_reference" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the initial_program_clock_reference of this BroadcastTsTransportConfiguration.</p>
-<p>Sets the Program Clock Reference value at the beginning of the first packet for the transport stream. The PCR is specified in the timescale of 90000. Default: 0</p>
+<p>Sets the Program Clock Reference value at the beginning of the first packet for the transport stream. The PCR is specified in the timescale of 90000</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>The initial_program_clock_reference of this BroadcastTsTransportConfiguration.</p>
@@ -13037,7 +13038,7 @@
 <dt id="bitmovin_api_sdk.models.broadcast_ts_transport_configuration.BroadcastTsTransportConfiguration.variable_mux_rate">
 <em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">variable_mux_rate</span></code><a class="headerlink" href="#bitmovin_api_sdk.models.broadcast_ts_transport_configuration.BroadcastTsTransportConfiguration.variable_mux_rate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the variable_mux_rate of this BroadcastTsTransportConfiguration.</p>
-<p>When false, the output stream is created at a constant bit rate. When true, the output rate is allowed to vary from a maximum rate set by the muxrate parameter down to the minimum required to carry the stream. Default: false</p>
+<p>When false, the output stream is created at a constant bit rate. When true, the output rate is allowed to vary from a maximum rate set by the muxrate parameter down to the minimum required to carry the stream.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>The variable_mux_rate of this BroadcastTsTransportConfiguration.</p>
@@ -15968,6 +15969,11 @@
 <dl class="py attribute">
 <dt id="bitmovin_api_sdk.models.cloud_region.CloudRegion.GOOGLE_EUROPE_WEST_2">
 <code class="sig-name descname"><span class="pre">GOOGLE_EUROPE_WEST_2</span></code><em class="property"> <span class="pre">=</span> <span class="pre">'GOOGLE_EUROPE_WEST_2'</span></em><a class="headerlink" href="#bitmovin_api_sdk.models.cloud_region.CloudRegion.GOOGLE_EUROPE_WEST_2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="bitmovin_api_sdk.models.cloud_region.CloudRegion.GOOGLE_EUROPE_WEST_3">
+<code class="sig-name descname"><span class="pre">GOOGLE_EUROPE_WEST_3</span></code><em class="property"> <span class="pre">=</span> <span class="pre">'GOOGLE_EUROPE_WEST_3'</span></em><a class="headerlink" href="#bitmovin_api_sdk.models.cloud_region.CloudRegion.GOOGLE_EUROPE_WEST_3" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
@@ -20555,7 +20561,7 @@
 <dt id="bitmovin_api_sdk.models.dvb_subtitle_input_stream.DvbSubtitleInputStream.selection_mode">
 <em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">selection_mode</span></code><a class="headerlink" href="#bitmovin_api_sdk.models.dvb_subtitle_input_stream.DvbSubtitleInputStream.selection_mode" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the selection_mode of this DvbSubtitleInputStream.</p>
-<p>Specifies the algorithm how the stream in the input file will be selected. Only POSITION_ABSOLUTE is supported.</p>
+<p>Specifies the algorithm for selecting a stream from the input file. Supported values for VOD encodings: AUTO, POSITION_ABSOLUTE, SUBTITLE_RELATIVE. Supported values for LIVE encodings: POSITION_ABSOLUTE</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>The selection_mode of this DvbSubtitleInputStream.</p>
@@ -21205,21 +21211,6 @@
 </dd>
 <dt class="field-even">Return type</dt>
 <dd class="field-even"><p><a class="reference internal" href="#bitmovin_api_sdk.models.infrastructure_settings.InfrastructureSettings" title="bitmovin_api_sdk.models.infrastructure_settings.InfrastructureSettings">InfrastructureSettings</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="bitmovin_api_sdk.models.encoding.Encoding.infrastructure_id">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">infrastructure_id</span></code><a class="headerlink" href="#bitmovin_api_sdk.models.encoding.Encoding.infrastructure_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the infrastructure_id of this Encoding.</p>
-<p>Define an external infrastructure to run the encoding on. Note If you set this value, the <cite>cloudRegion</cite> must be ‘EXTERNAL’.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The infrastructure_id of this Encoding.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>string_types</p>
 </dd>
 </dl>
 </dd></dl>
@@ -30067,7 +30058,7 @@
 <dt id="bitmovin_api_sdk.models.live_dash_manifest.LiveDashManifest.manifest_id">
 <em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">manifest_id</span></code><a class="headerlink" href="#bitmovin_api_sdk.models.live_dash_manifest.LiveDashManifest.manifest_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the manifest_id of this LiveDashManifest.</p>
-<p>Dash manifest ids (required)</p>
+<p>Dash manifest id (required)</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>The manifest_id of this LiveDashManifest.</p>
@@ -30594,7 +30585,7 @@
 <dt id="bitmovin_api_sdk.models.live_hls_manifest.LiveHlsManifest.manifest_id">
 <em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">manifest_id</span></code><a class="headerlink" href="#bitmovin_api_sdk.models.live_hls_manifest.LiveHlsManifest.manifest_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the manifest_id of this LiveHlsManifest.</p>
-<p>HLS manifest ids (required)</p>
+<p>HLS manifest id (required)</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>The manifest_id of this LiveHlsManifest.</p>
@@ -39065,6 +39056,11 @@
 <em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">attribute_map</span></code><a class="headerlink" href="#bitmovin_api_sdk.models.sidecar_file.SidecarFile.attribute_map" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
+<dl class="py attribute">
+<dt id="bitmovin_api_sdk.models.sidecar_file.SidecarFile.discriminator_value_class_map">
+<code class="sig-name descname"><span class="pre">discriminator_value_class_map</span></code><em class="property"> <span class="pre">=</span> <span class="pre">{'WEB_VTT':</span> <span class="pre">'WebVttSidecarFile'}</span></em><a class="headerlink" href="#bitmovin_api_sdk.models.sidecar_file.SidecarFile.discriminator_value_class_map" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 <dl class="py method">
 <dt id="bitmovin_api_sdk.models.sidecar_file.SidecarFile.error_mode">
 <em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">error_mode</span></code><a class="headerlink" href="#bitmovin_api_sdk.models.sidecar_file.SidecarFile.error_mode" title="Permalink to this definition">¶</a></dt>
@@ -39139,6 +39135,21 @@
 <code class="sig-name descname"><span class="pre">to_str</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/models/sidecar_file.html#SidecarFile.to_str"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bitmovin_api_sdk.models.sidecar_file.SidecarFile.to_str" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the string representation of the model</p>
 </dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-bitmovin_api_sdk.models.sidecar_file_type">
+<span id="bitmovin-api-sdk-models-sidecar-file-type-module"></span><h2>bitmovin_api_sdk.models.sidecar_file_type module<a class="headerlink" href="#module-bitmovin_api_sdk.models.sidecar_file_type" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="bitmovin_api_sdk.models.sidecar_file_type.SidecarFileType">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">bitmovin_api_sdk.models.sidecar_file_type.</span></code><code class="sig-name descname"><span class="pre">SidecarFileType</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/models/sidecar_file_type.html#SidecarFileType"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bitmovin_api_sdk.models.sidecar_file_type.SidecarFileType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<p>An enumeration.</p>
+<dl class="py attribute">
+<dt id="bitmovin_api_sdk.models.sidecar_file_type.SidecarFileType.WEB_VTT">
+<code class="sig-name descname"><span class="pre">WEB_VTT</span></code><em class="property"> <span class="pre">=</span> <span class="pre">'WEB_VTT'</span></em><a class="headerlink" href="#bitmovin_api_sdk.models.sidecar_file_type.SidecarFileType.WEB_VTT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 </dd></dl>
 
@@ -39677,7 +39688,7 @@
 <dt id="bitmovin_api_sdk.models.speke_drm.SpekeDrm.iv">
 <em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">iv</span></code><a class="headerlink" href="#bitmovin_api_sdk.models.speke_drm.SpekeDrm.iv" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the iv of this SpekeDrm.</p>
-<p>16 byte initialization vector represented by a 32-character text string. It is mandatory if systemIds contains AES128 and FairPlay.</p>
+<p>16 byte initialization vector represented by a 32-character text string. It is mandatory if systemIds contains AES128 or FairPlay.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>The iv of this SpekeDrm.</p>
@@ -39948,7 +39959,7 @@
 <dt id="bitmovin_api_sdk.models.sprite.Sprite.images_per_file">
 <em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">images_per_file</span></code><a class="headerlink" href="#bitmovin_api_sdk.models.sprite.Sprite.images_per_file" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the images_per_file of this Sprite.</p>
-<p>Number of images per file. If more images are generated than specified in this value, multiple sprites will be created. You can use the placeholder ‘%number%’ in the spriteName to specify the naming policy.</p>
+<p>Number of images per file. If more images are generated than specified in this value, multiple sprites will be created. You can use the placeholder ‘%number%’ in the spriteName to specify the naming policy. Either this property must be set or hTiles and vTiles.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>The images_per_file of this Sprite.</p>
@@ -40023,7 +40034,7 @@
 <dt id="bitmovin_api_sdk.models.sprite.Sprite.vtt_name">
 <em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">vtt_name</span></code><a class="headerlink" href="#bitmovin_api_sdk.models.sprite.Sprite.vtt_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the vtt_name of this Sprite.</p>
-<p>Filename of the vtt-file. The file-extension “.vtt” is required. (required)</p>
+<p>Filename of the vtt-file. The file-extension “.vtt” is required.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>The vtt_name of this Sprite.</p>
@@ -41874,7 +41885,7 @@
 <dt id="bitmovin_api_sdk.models.statistics_per_stream.StatisticsPerStream.enhanced_deinterlace_multiplicator">
 <em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">enhanced_deinterlace_multiplicator</span></code><a class="headerlink" href="#bitmovin_api_sdk.models.statistics_per_stream.StatisticsPerStream.enhanced_deinterlace_multiplicator" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the enhanced_deinterlace_multiplicator of this StatisticsPerStream.</p>
-<p>The output minutes multiplicator for streams using an enhanced deinterlace filter.</p>
+<p>The output minutes multiplicator for streams using an enhanced Deinterlace Filter.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>The enhanced_deinterlace_multiplicator of this StatisticsPerStream.</p>

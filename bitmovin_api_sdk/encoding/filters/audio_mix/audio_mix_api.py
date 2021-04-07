@@ -37,7 +37,7 @@ class AudioMixApi(BaseApi):
 
         :param audio_mix_filter: The Audio Mix Filter to be created
         :type audio_mix_filter: AudioMixFilter, required
-        :return: Audio Mix configuration
+        :return: Audio Mix Filter
         :rtype: AudioMixFilter
         """
 
@@ -52,9 +52,9 @@ class AudioMixApi(BaseApi):
         # type: (string_types, dict) -> BitmovinResponse
         """Delete Audio Mix Filter
 
-        :param filter_id: Id of the Audio Mix configuration.
+        :param filter_id: Id of the Audio Mix Filter.
         :type filter_id: string_types, required
-        :return: Id of the Audio Mix configuration
+        :return: Id of the Audio Mix Filter
         :rtype: BitmovinResponse
         """
 
@@ -69,9 +69,9 @@ class AudioMixApi(BaseApi):
         # type: (string_types, dict) -> AudioMixFilter
         """Audio Mix Filter Details
 
-        :param filter_id: Id of the Audio Mix configuration.
+        :param filter_id: Id of the Audio Mix Filter.
         :type filter_id: string_types, required
-        :return: Audio Mix configuration
+        :return: Audio Mix Filter
         :rtype: AudioMixFilter
         """
 
@@ -88,7 +88,7 @@ class AudioMixApi(BaseApi):
 
         :param query_params: Query parameters
         :type query_params: AudioMixFilterListQueryParams
-        :return: List of Audio Mix configurations
+        :return: List of Audio Mix Filters
         :rtype: AudioMixFilter
         """
 

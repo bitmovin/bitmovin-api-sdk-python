@@ -521,6 +521,7 @@ from bitmovin_api_sdk.models.sftp_input import SftpInput
 from bitmovin_api_sdk.models.sftp_output import SftpOutput
 from bitmovin_api_sdk.models.sidecar_error_mode import SidecarErrorMode
 from bitmovin_api_sdk.models.sidecar_file import SidecarFile
+from bitmovin_api_sdk.models.sidecar_file_type import SidecarFileType
 from bitmovin_api_sdk.models.signature_type import SignatureType
 from bitmovin_api_sdk.models.smooth_manifest_content_protection import SmoothManifestContentProtection
 from bitmovin_api_sdk.models.smooth_manifest_default import SmoothManifestDefault

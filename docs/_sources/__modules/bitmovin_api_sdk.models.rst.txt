@@ -4148,6 +4148,14 @@ bitmovin\_api\_sdk.models.sidecar\_file module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.sidecar\_file\_type module
+----------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.sidecar_file_type
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.signature\_type module
 ------------------------------------------------
 

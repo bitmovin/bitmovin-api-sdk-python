@@ -88,7 +88,7 @@ class UnsharpApi(BaseApi):
 
         :param query_params: Query parameters
         :type query_params: UnsharpFilterListQueryParams
-        :return: List of unsharp ids
+        :return: List of Unsharp Filters
         :rtype: UnsharpFilter
         """
 

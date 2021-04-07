@@ -29,7 +29,7 @@ class SidecarFile(BitmovinResource):
         self._input_path = None
         self._outputs = list()
         self._error_mode = None
-        self.discriminator = None
+        self.discriminator = 'type'
 
         if input_id is not None:
             self.input_id = input_id
@@ -70,6 +70,10 @@ class SidecarFile(BitmovinResource):
             'error_mode': 'errorMode'
         })
         return attributes
+
+    discriminator_value_class_map = {
+        'WEB_VTT': 'WebVttSidecarFile'
+    }
 
     @property
     def input_id(self):
@@ -189,6 +193,10 @@ class SidecarFile(BitmovinResource):
 
         if hasattr(super(SidecarFile, self), "to_dict"):
             result = super(SidecarFile, self).to_dict()
+        for k, v in iteritems(self.discriminator_value_class_map):
+            if v == type(self).__name__:
+                result['type'] = k
+                break
         for attr, _ in six.iteritems(self.openapi_types):
             value = getattr(self, attr)
             if value is None:
