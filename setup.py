@@ -3,7 +3,7 @@
 from setuptools import setup, find_packages
 
 NAME = 'bitmovin-api-sdk'
-VERSION = '1.66.0'
+VERSION = '1.67.0'
 DESCRIPTION = 'Python-Client which enables you to seamlessly integrate the Bitmovin API into your projects. Using this API client requires an active account.'
 AUTHOR = 'Bitmovin Inc'
 EMAIL = 'support@bitmovin.com'
