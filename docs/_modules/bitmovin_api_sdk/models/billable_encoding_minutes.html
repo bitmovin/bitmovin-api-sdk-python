@@ -167,6 +167,7 @@
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.codec_config_type</span> <span class="kn">import</span> <span class="n">CodecConfigType</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.encoding_mode</span> <span class="kn">import</span> <span class="n">EncodingMode</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.nex_guard_ab_watermarking_feature</span> <span class="kn">import</span> <span class="n">NexGuardABWatermarkingFeature</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.pixel_format_bit_depth</span> <span class="kn">import</span> <span class="n">PixelFormatBitDepth</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.psnr_per_stream_mode</span> <span class="kn">import</span> <span class="n">PsnrPerStreamMode</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.statistics_per_title_stream</span> <span class="kn">import</span> <span class="n">StatisticsPerTitleStream</span>
 <span class="kn">import</span> <span class="nn">pprint</span>
@@ -184,8 +185,9 @@
                  <span class="n">live</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">enhanced_deinterlace</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">nex_guard_ab_watermarking_type</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">pixel_format_bit_depth</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">billable_minutes</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (EncodingMode, CodecConfigType, StatisticsPerTitleStream, PsnrPerStreamMode, string_types, bool, bool, NexGuardABWatermarkingFeature, BillableEncodingMinutesDetails) -&gt; None</span>
+        <span class="c1"># type: (EncodingMode, CodecConfigType, StatisticsPerTitleStream, PsnrPerStreamMode, string_types, bool, bool, NexGuardABWatermarkingFeature, PixelFormatBitDepth, BillableEncodingMinutesDetails) -&gt; None</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_encoding_mode</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_codec</span> <span class="o">=</span> <span class="kc">None</span>
@@ -195,6 +197,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_live</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_enhanced_deinterlace</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_nex_guard_ab_watermarking_type</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_pixel_format_bit_depth</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_billable_minutes</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>
 
@@ -214,6 +217,8 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">enhanced_deinterlace</span> <span class="o">=</span> <span class="n">enhanced_deinterlace</span>
         <span class="k">if</span> <span class="n">nex_guard_ab_watermarking_type</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">nex_guard_ab_watermarking_type</span> <span class="o">=</span> <span class="n">nex_guard_ab_watermarking_type</span>
+        <span class="k">if</span> <span class="n">pixel_format_bit_depth</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">pixel_format_bit_depth</span> <span class="o">=</span> <span class="n">pixel_format_bit_depth</span>
         <span class="k">if</span> <span class="n">billable_minutes</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">billable_minutes</span> <span class="o">=</span> <span class="n">billable_minutes</span>
 
@@ -228,6 +233,7 @@
             <span class="s1">&#39;live&#39;</span><span class="p">:</span> <span class="s1">&#39;bool&#39;</span><span class="p">,</span>
             <span class="s1">&#39;enhanced_deinterlace&#39;</span><span class="p">:</span> <span class="s1">&#39;bool&#39;</span><span class="p">,</span>
             <span class="s1">&#39;nex_guard_ab_watermarking_type&#39;</span><span class="p">:</span> <span class="s1">&#39;NexGuardABWatermarkingFeature&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;pixel_format_bit_depth&#39;</span><span class="p">:</span> <span class="s1">&#39;PixelFormatBitDepth&#39;</span><span class="p">,</span>
             <span class="s1">&#39;billable_minutes&#39;</span><span class="p">:</span> <span class="s1">&#39;BillableEncodingMinutesDetails&#39;</span>
         <span class="p">}</span>
 
@@ -244,6 +250,7 @@
             <span class="s1">&#39;live&#39;</span><span class="p">:</span> <span class="s1">&#39;live&#39;</span><span class="p">,</span>
             <span class="s1">&#39;enhanced_deinterlace&#39;</span><span class="p">:</span> <span class="s1">&#39;enhancedDeinterlace&#39;</span><span class="p">,</span>
             <span class="s1">&#39;nex_guard_ab_watermarking_type&#39;</span><span class="p">:</span> <span class="s1">&#39;nexGuardABWatermarkingType&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;pixel_format_bit_depth&#39;</span><span class="p">:</span> <span class="s1">&#39;pixelFormatBitDepth&#39;</span><span class="p">,</span>
             <span class="s1">&#39;billable_minutes&#39;</span><span class="p">:</span> <span class="s1">&#39;billableMinutes&#39;</span>
         <span class="p">}</span>
         <span class="k">return</span> <span class="n">attributes</span>
@@ -469,6 +476,33 @@
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `nex_guard_ab_watermarking_type`, type has to be `NexGuardABWatermarkingFeature`&quot;</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_nex_guard_ab_watermarking_type</span> <span class="o">=</span> <span class="n">nex_guard_ab_watermarking_type</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">pixel_format_bit_depth</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; PixelFormatBitDepth</span>
+        <span class="sd">&quot;&quot;&quot;Gets the pixel_format_bit_depth of this BillableEncodingMinutes.</span>
+
+
+<span class="sd">        :return: The pixel_format_bit_depth of this BillableEncodingMinutes.</span>
+<span class="sd">        :rtype: PixelFormatBitDepth</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_pixel_format_bit_depth</span>
+
+    <span class="nd">@pixel_format_bit_depth</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">pixel_format_bit_depth</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pixel_format_bit_depth</span><span class="p">):</span>
+        <span class="c1"># type: (PixelFormatBitDepth) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the pixel_format_bit_depth of this BillableEncodingMinutes.</span>
+
+
+<span class="sd">        :param pixel_format_bit_depth: The pixel_format_bit_depth of this BillableEncodingMinutes.</span>
+<span class="sd">        :type: PixelFormatBitDepth</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">pixel_format_bit_depth</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">pixel_format_bit_depth</span><span class="p">,</span> <span class="n">PixelFormatBitDepth</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `pixel_format_bit_depth`, type has to be `PixelFormatBitDepth`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_pixel_format_bit_depth</span> <span class="o">=</span> <span class="n">pixel_format_bit_depth</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">billable_minutes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>

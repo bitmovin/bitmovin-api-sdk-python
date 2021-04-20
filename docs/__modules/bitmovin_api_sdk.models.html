@@ -541,6 +541,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.permission">bitmovin_api_sdk.models.permission module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.picture_field_parity">bitmovin_api_sdk.models.picture_field_parity module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.pixel_format">bitmovin_api_sdk.models.pixel_format module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.pixel_format_bit_depth">bitmovin_api_sdk.models.pixel_format_bit_depth module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.plaintext_id3_tag">bitmovin_api_sdk.models.plaintext_id3_tag module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.play_ready_additional_information">bitmovin_api_sdk.models.play_ready_additional_information module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.play_ready_drm">bitmovin_api_sdk.models.play_ready_drm module</a></li>
@@ -12022,6 +12023,20 @@
 </dd>
 <dt class="field-even">Return type</dt>
 <dd class="field-even"><p><a class="reference internal" href="#bitmovin_api_sdk.models.statistics_per_title_stream.StatisticsPerTitleStream" title="bitmovin_api_sdk.models.statistics_per_title_stream.StatisticsPerTitleStream">StatisticsPerTitleStream</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.billable_encoding_minutes.BillableEncodingMinutes.pixel_format_bit_depth">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">pixel_format_bit_depth</span></code><a class="headerlink" href="#bitmovin_api_sdk.models.billable_encoding_minutes.BillableEncodingMinutes.pixel_format_bit_depth" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the pixel_format_bit_depth of this BillableEncodingMinutes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The pixel_format_bit_depth of this BillableEncodingMinutes.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#bitmovin_api_sdk.models.pixel_format_bit_depth.PixelFormatBitDepth" title="bitmovin_api_sdk.models.pixel_format_bit_depth.PixelFormatBitDepth">PixelFormatBitDepth</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -34790,6 +34805,26 @@
 </dd></dl>
 
 </div>
+<div class="section" id="module-bitmovin_api_sdk.models.pixel_format_bit_depth">
+<span id="bitmovin-api-sdk-models-pixel-format-bit-depth-module"></span><h2>bitmovin_api_sdk.models.pixel_format_bit_depth module<a class="headerlink" href="#module-bitmovin_api_sdk.models.pixel_format_bit_depth" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="bitmovin_api_sdk.models.pixel_format_bit_depth.PixelFormatBitDepth">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">bitmovin_api_sdk.models.pixel_format_bit_depth.</span></code><code class="sig-name descname"><span class="pre">PixelFormatBitDepth</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/models/pixel_format_bit_depth.html#PixelFormatBitDepth"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bitmovin_api_sdk.models.pixel_format_bit_depth.PixelFormatBitDepth" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<p>An enumeration.</p>
+<dl class="py attribute">
+<dt id="bitmovin_api_sdk.models.pixel_format_bit_depth.PixelFormatBitDepth.EIGHT_BIT">
+<code class="sig-name descname"><span class="pre">EIGHT_BIT</span></code><em class="property"> <span class="pre">=</span> <span class="pre">'EIGHT_BIT'</span></em><a class="headerlink" href="#bitmovin_api_sdk.models.pixel_format_bit_depth.PixelFormatBitDepth.EIGHT_BIT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="bitmovin_api_sdk.models.pixel_format_bit_depth.PixelFormatBitDepth.TEN_BIT">
+<code class="sig-name descname"><span class="pre">TEN_BIT</span></code><em class="property"> <span class="pre">=</span> <span class="pre">'TEN_BIT'</span></em><a class="headerlink" href="#bitmovin_api_sdk.models.pixel_format_bit_depth.PixelFormatBitDepth.TEN_BIT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
 <div class="section" id="module-bitmovin_api_sdk.models.plaintext_id3_tag">
 <span id="bitmovin-api-sdk-models-plaintext-id3-tag-module"></span><h2>bitmovin_api_sdk.models.plaintext_id3_tag module<a class="headerlink" href="#module-bitmovin_api_sdk.models.plaintext_id3_tag" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
@@ -42029,6 +42064,35 @@
 </dd>
 <dt class="field-even">Return type</dt>
 <dd class="field-even"><p><a class="reference internal" href="#bitmovin_api_sdk.models.statistics_per_title_stream.StatisticsPerTitleStream" title="bitmovin_api_sdk.models.statistics_per_title_stream.StatisticsPerTitleStream">StatisticsPerTitleStream</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.statistics_per_stream.StatisticsPerStream.pixel_format_bit_depth">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">pixel_format_bit_depth</span></code><a class="headerlink" href="#bitmovin_api_sdk.models.statistics_per_stream.StatisticsPerStream.pixel_format_bit_depth" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the pixel_format_bit_depth of this StatisticsPerStream.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The pixel_format_bit_depth of this StatisticsPerStream.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#bitmovin_api_sdk.models.pixel_format_bit_depth.PixelFormatBitDepth" title="bitmovin_api_sdk.models.pixel_format_bit_depth.PixelFormatBitDepth">PixelFormatBitDepth</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bitmovin_api_sdk.models.statistics_per_stream.StatisticsPerStream.pixel_format_multiplicator">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">pixel_format_multiplicator</span></code><a class="headerlink" href="#bitmovin_api_sdk.models.statistics_per_stream.StatisticsPerStream.pixel_format_multiplicator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the pixel_format_multiplicator of this StatisticsPerStream.</p>
+<p>The output minutes multiplicator for the pixel format bit depth</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The pixel_format_multiplicator of this StatisticsPerStream.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>float</p>
 </dd>
 </dl>
 </dd></dl>

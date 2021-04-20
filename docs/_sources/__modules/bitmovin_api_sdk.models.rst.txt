@@ -3572,6 +3572,14 @@ bitmovin\_api\_sdk.models.pixel\_format module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.pixel\_format\_bit\_depth module
+----------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.pixel_format_bit_depth
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.plaintext\_id3\_tag module
 ----------------------------------------------------
 

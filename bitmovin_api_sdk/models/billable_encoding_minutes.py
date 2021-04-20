@@ -7,6 +7,7 @@ from bitmovin_api_sdk.models.billable_encoding_minutes_details import BillableEn
 from bitmovin_api_sdk.models.codec_config_type import CodecConfigType
 from bitmovin_api_sdk.models.encoding_mode import EncodingMode
 from bitmovin_api_sdk.models.nex_guard_ab_watermarking_feature import NexGuardABWatermarkingFeature
+from bitmovin_api_sdk.models.pixel_format_bit_depth import PixelFormatBitDepth
 from bitmovin_api_sdk.models.psnr_per_stream_mode import PsnrPerStreamMode
 from bitmovin_api_sdk.models.statistics_per_title_stream import StatisticsPerTitleStream
 import pprint
@@ -24,8 +25,9 @@ class BillableEncodingMinutes(object):
                  live=None,
                  enhanced_deinterlace=None,
                  nex_guard_ab_watermarking_type=None,
+                 pixel_format_bit_depth=None,
                  billable_minutes=None):
-        # type: (EncodingMode, CodecConfigType, StatisticsPerTitleStream, PsnrPerStreamMode, string_types, bool, bool, NexGuardABWatermarkingFeature, BillableEncodingMinutesDetails) -> None
+        # type: (EncodingMode, CodecConfigType, StatisticsPerTitleStream, PsnrPerStreamMode, string_types, bool, bool, NexGuardABWatermarkingFeature, PixelFormatBitDepth, BillableEncodingMinutesDetails) -> None
 
         self._encoding_mode = None
         self._codec = None
@@ -35,6 +37,7 @@ class BillableEncodingMinutes(object):
         self._live = None
         self._enhanced_deinterlace = None
         self._nex_guard_ab_watermarking_type = None
+        self._pixel_format_bit_depth = None
         self._billable_minutes = None
         self.discriminator = None
 
@@ -54,6 +57,8 @@ class BillableEncodingMinutes(object):
             self.enhanced_deinterlace = enhanced_deinterlace
         if nex_guard_ab_watermarking_type is not None:
             self.nex_guard_ab_watermarking_type = nex_guard_ab_watermarking_type
+        if pixel_format_bit_depth is not None:
+            self.pixel_format_bit_depth = pixel_format_bit_depth
         if billable_minutes is not None:
             self.billable_minutes = billable_minutes
 
@@ -68,6 +73,7 @@ class BillableEncodingMinutes(object):
             'live': 'bool',
             'enhanced_deinterlace': 'bool',
             'nex_guard_ab_watermarking_type': 'NexGuardABWatermarkingFeature',
+            'pixel_format_bit_depth': 'PixelFormatBitDepth',
             'billable_minutes': 'BillableEncodingMinutesDetails'
         }
 
@@ -84,6 +90,7 @@ class BillableEncodingMinutes(object):
             'live': 'live',
             'enhanced_deinterlace': 'enhancedDeinterlace',
             'nex_guard_ab_watermarking_type': 'nexGuardABWatermarkingType',
+            'pixel_format_bit_depth': 'pixelFormatBitDepth',
             'billable_minutes': 'billableMinutes'
         }
         return attributes
@@ -309,6 +316,33 @@ class BillableEncodingMinutes(object):
                 raise TypeError("Invalid type for `nex_guard_ab_watermarking_type`, type has to be `NexGuardABWatermarkingFeature`")
 
         self._nex_guard_ab_watermarking_type = nex_guard_ab_watermarking_type
+
+    @property
+    def pixel_format_bit_depth(self):
+        # type: () -> PixelFormatBitDepth
+        """Gets the pixel_format_bit_depth of this BillableEncodingMinutes.
+
+
+        :return: The pixel_format_bit_depth of this BillableEncodingMinutes.
+        :rtype: PixelFormatBitDepth
+        """
+        return self._pixel_format_bit_depth
+
+    @pixel_format_bit_depth.setter
+    def pixel_format_bit_depth(self, pixel_format_bit_depth):
+        # type: (PixelFormatBitDepth) -> None
+        """Sets the pixel_format_bit_depth of this BillableEncodingMinutes.
+
+
+        :param pixel_format_bit_depth: The pixel_format_bit_depth of this BillableEncodingMinutes.
+        :type: PixelFormatBitDepth
+        """
+
+        if pixel_format_bit_depth is not None:
+            if not isinstance(pixel_format_bit_depth, PixelFormatBitDepth):
+                raise TypeError("Invalid type for `pixel_format_bit_depth`, type has to be `PixelFormatBitDepth`")
+
+        self._pixel_format_bit_depth = pixel_format_bit_depth
 
     @property
     def billable_minutes(self):

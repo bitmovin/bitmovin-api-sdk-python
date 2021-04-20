@@ -1384,6 +1384,7 @@ from bitmovin_api_sdk.models.period import Period
 from bitmovin_api_sdk.models.permission import Permission
 from bitmovin_api_sdk.models.picture_field_parity import PictureFieldParity
 from bitmovin_api_sdk.models.pixel_format import PixelFormat
+from bitmovin_api_sdk.models.pixel_format_bit_depth import PixelFormatBitDepth
 from bitmovin_api_sdk.models.plaintext_id3_tag import PlaintextId3Tag
 from bitmovin_api_sdk.models.play_ready_additional_information import PlayReadyAdditionalInformation
 from bitmovin_api_sdk.models.play_ready_drm import PlayReadyDrm
@@ -1576,4 +1577,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.67.0"
+__version__ = "1.68.0"

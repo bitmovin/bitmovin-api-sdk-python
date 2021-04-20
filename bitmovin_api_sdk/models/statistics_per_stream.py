@@ -8,6 +8,7 @@ from bitmovin_api_sdk.models.dolby_vision_per_stream_mode import DolbyVisionPerS
 from bitmovin_api_sdk.models.encoding_mode import EncodingMode
 from bitmovin_api_sdk.models.input_factor import InputFactor
 from bitmovin_api_sdk.models.nex_guard_ab_watermarking_feature import NexGuardABWatermarkingFeature
+from bitmovin_api_sdk.models.pixel_format_bit_depth import PixelFormatBitDepth
 from bitmovin_api_sdk.models.psnr_per_stream_mode import PsnrPerStreamMode
 from bitmovin_api_sdk.models.statistics_per_title_stream import StatisticsPerTitleStream
 from bitmovin_api_sdk.models.statistics_resolution import StatisticsResolution
@@ -46,8 +47,10 @@ class StatisticsPerStream(object):
                  enhanced_deinterlace_multiplicator=None,
                  nex_guard_ab_watermarking_type=None,
                  nex_guard_ab_watermarking_multiplicator=None,
+                 pixel_format_bit_depth=None,
+                 pixel_format_multiplicator=None,
                  input_factor=None):
-        # type: (string_types, string_types, float, int, float, float, int, int, float, int, CodecConfigType, StatisticsResolution, EncodingMode, float, StatisticsPerTitleStream, float, PsnrPerStreamMode, float, DolbyVisionPerStreamMode, float, string_types, float, bool, float, bool, float, NexGuardABWatermarkingFeature, float, InputFactor) -> None
+        # type: (string_types, string_types, float, int, float, float, int, int, float, int, CodecConfigType, StatisticsResolution, EncodingMode, float, StatisticsPerTitleStream, float, PsnrPerStreamMode, float, DolbyVisionPerStreamMode, float, string_types, float, bool, float, bool, float, NexGuardABWatermarkingFeature, float, PixelFormatBitDepth, float, InputFactor) -> None
 
         self._stream_id = None
         self._codec_config_id = None
@@ -77,6 +80,8 @@ class StatisticsPerStream(object):
         self._enhanced_deinterlace_multiplicator = None
         self._nex_guard_ab_watermarking_type = None
         self._nex_guard_ab_watermarking_multiplicator = None
+        self._pixel_format_bit_depth = None
+        self._pixel_format_multiplicator = None
         self._input_factor = None
         self.discriminator = None
 
@@ -136,6 +141,10 @@ class StatisticsPerStream(object):
             self.nex_guard_ab_watermarking_type = nex_guard_ab_watermarking_type
         if nex_guard_ab_watermarking_multiplicator is not None:
             self.nex_guard_ab_watermarking_multiplicator = nex_guard_ab_watermarking_multiplicator
+        if pixel_format_bit_depth is not None:
+            self.pixel_format_bit_depth = pixel_format_bit_depth
+        if pixel_format_multiplicator is not None:
+            self.pixel_format_multiplicator = pixel_format_multiplicator
         if input_factor is not None:
             self.input_factor = input_factor
 
@@ -170,6 +179,8 @@ class StatisticsPerStream(object):
             'enhanced_deinterlace_multiplicator': 'float',
             'nex_guard_ab_watermarking_type': 'NexGuardABWatermarkingFeature',
             'nex_guard_ab_watermarking_multiplicator': 'float',
+            'pixel_format_bit_depth': 'PixelFormatBitDepth',
+            'pixel_format_multiplicator': 'float',
             'input_factor': 'InputFactor'
         }
 
@@ -206,6 +217,8 @@ class StatisticsPerStream(object):
             'enhanced_deinterlace_multiplicator': 'enhancedDeinterlaceMultiplicator',
             'nex_guard_ab_watermarking_type': 'nexGuardABWatermarkingType',
             'nex_guard_ab_watermarking_multiplicator': 'nexGuardABWatermarkingMultiplicator',
+            'pixel_format_bit_depth': 'pixelFormatBitDepth',
+            'pixel_format_multiplicator': 'pixelFormatMultiplicator',
             'input_factor': 'inputFactor'
         }
         return attributes
@@ -1007,6 +1020,62 @@ class StatisticsPerStream(object):
                 raise TypeError("Invalid type for `nex_guard_ab_watermarking_multiplicator`, type has to be `float`")
 
         self._nex_guard_ab_watermarking_multiplicator = nex_guard_ab_watermarking_multiplicator
+
+    @property
+    def pixel_format_bit_depth(self):
+        # type: () -> PixelFormatBitDepth
+        """Gets the pixel_format_bit_depth of this StatisticsPerStream.
+
+
+        :return: The pixel_format_bit_depth of this StatisticsPerStream.
+        :rtype: PixelFormatBitDepth
+        """
+        return self._pixel_format_bit_depth
+
+    @pixel_format_bit_depth.setter
+    def pixel_format_bit_depth(self, pixel_format_bit_depth):
+        # type: (PixelFormatBitDepth) -> None
+        """Sets the pixel_format_bit_depth of this StatisticsPerStream.
+
+
+        :param pixel_format_bit_depth: The pixel_format_bit_depth of this StatisticsPerStream.
+        :type: PixelFormatBitDepth
+        """
+
+        if pixel_format_bit_depth is not None:
+            if not isinstance(pixel_format_bit_depth, PixelFormatBitDepth):
+                raise TypeError("Invalid type for `pixel_format_bit_depth`, type has to be `PixelFormatBitDepth`")
+
+        self._pixel_format_bit_depth = pixel_format_bit_depth
+
+    @property
+    def pixel_format_multiplicator(self):
+        # type: () -> float
+        """Gets the pixel_format_multiplicator of this StatisticsPerStream.
+
+        The output minutes multiplicator for the pixel format bit depth
+
+        :return: The pixel_format_multiplicator of this StatisticsPerStream.
+        :rtype: float
+        """
+        return self._pixel_format_multiplicator
+
+    @pixel_format_multiplicator.setter
+    def pixel_format_multiplicator(self, pixel_format_multiplicator):
+        # type: (float) -> None
+        """Sets the pixel_format_multiplicator of this StatisticsPerStream.
+
+        The output minutes multiplicator for the pixel format bit depth
+
+        :param pixel_format_multiplicator: The pixel_format_multiplicator of this StatisticsPerStream.
+        :type: float
+        """
+
+        if pixel_format_multiplicator is not None:
+            if not isinstance(pixel_format_multiplicator, (float, int)):
+                raise TypeError("Invalid type for `pixel_format_multiplicator`, type has to be `float`")
+
+        self._pixel_format_multiplicator = pixel_format_multiplicator
 
     @property
     def input_factor(self):
