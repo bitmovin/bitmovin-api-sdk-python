@@ -1564,6 +1564,8 @@ from bitmovin_api_sdk.models.web_vtt_configuration import WebVttConfiguration
 from bitmovin_api_sdk.models.web_vtt_cue_identifier_policy import WebVttCueIdentifierPolicy
 from bitmovin_api_sdk.models.web_vtt_sidecar_file import WebVttSidecarFile
 from bitmovin_api_sdk.models.web_vtt_sidecar_file_segmentation import WebVttSidecarFileSegmentation
+from bitmovin_api_sdk.models.web_vtt_styling import WebVttStyling
+from bitmovin_api_sdk.models.web_vtt_styling_mode import WebVttStylingMode
 from bitmovin_api_sdk.models.webhook import Webhook
 from bitmovin_api_sdk.models.webhook_http_method import WebhookHttpMethod
 from bitmovin_api_sdk.models.webhook_notification import WebhookNotification
@@ -1577,4 +1579,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.68.0"
+__version__ = "1.69.0"

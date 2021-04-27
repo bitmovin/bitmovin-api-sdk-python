@@ -5,6 +5,7 @@ from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
 from bitmovin_api_sdk.models.subtitle_configuration import SubtitleConfiguration
 from bitmovin_api_sdk.models.web_vtt_cue_identifier_policy import WebVttCueIdentifierPolicy
+from bitmovin_api_sdk.models.web_vtt_styling import WebVttStyling
 import pprint
 import six
 
@@ -20,13 +21,15 @@ class WebVttConfiguration(SubtitleConfiguration):
                  id_=None,
                  append_optional_zero_hour=None,
                  ignore_region=None,
-                 cue_identifier_policy=None):
-        # type: (string_types, string_types, datetime, datetime, dict, string_types, bool, bool, WebVttCueIdentifierPolicy) -> None
+                 cue_identifier_policy=None,
+                 styling=None):
+        # type: (string_types, string_types, datetime, datetime, dict, string_types, bool, bool, WebVttCueIdentifierPolicy, WebVttStyling) -> None
         super(WebVttConfiguration, self).__init__(name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, id_=id_)
 
         self._append_optional_zero_hour = None
         self._ignore_region = None
         self._cue_identifier_policy = None
+        self._styling = None
         self.discriminator = None
 
         if append_optional_zero_hour is not None:
@@ -35,6 +38,8 @@ class WebVttConfiguration(SubtitleConfiguration):
             self.ignore_region = ignore_region
         if cue_identifier_policy is not None:
             self.cue_identifier_policy = cue_identifier_policy
+        if styling is not None:
+            self.styling = styling
 
     @property
     def openapi_types(self):
@@ -46,7 +51,8 @@ class WebVttConfiguration(SubtitleConfiguration):
         types.update({
             'append_optional_zero_hour': 'bool',
             'ignore_region': 'bool',
-            'cue_identifier_policy': 'WebVttCueIdentifierPolicy'
+            'cue_identifier_policy': 'WebVttCueIdentifierPolicy',
+            'styling': 'WebVttStyling'
         })
 
         return types
@@ -61,7 +67,8 @@ class WebVttConfiguration(SubtitleConfiguration):
         attributes.update({
             'append_optional_zero_hour': 'appendOptionalZeroHour',
             'ignore_region': 'ignoreRegion',
-            'cue_identifier_policy': 'cueIdentifierPolicy'
+            'cue_identifier_policy': 'cueIdentifierPolicy',
+            'styling': 'styling'
         })
         return attributes
 
@@ -149,6 +156,33 @@ class WebVttConfiguration(SubtitleConfiguration):
                 raise TypeError("Invalid type for `cue_identifier_policy`, type has to be `WebVttCueIdentifierPolicy`")
 
         self._cue_identifier_policy = cue_identifier_policy
+
+    @property
+    def styling(self):
+        # type: () -> WebVttStyling
+        """Gets the styling of this WebVttConfiguration.
+
+
+        :return: The styling of this WebVttConfiguration.
+        :rtype: WebVttStyling
+        """
+        return self._styling
+
+    @styling.setter
+    def styling(self, styling):
+        # type: (WebVttStyling) -> None
+        """Sets the styling of this WebVttConfiguration.
+
+
+        :param styling: The styling of this WebVttConfiguration.
+        :type: WebVttStyling
+        """
+
+        if styling is not None:
+            if not isinstance(styling, WebVttStyling):
+                raise TypeError("Invalid type for `styling`, type has to be `WebVttStyling`")
+
+        self._styling = styling
 
     def to_dict(self):
         """Returns the model properties as a dict"""

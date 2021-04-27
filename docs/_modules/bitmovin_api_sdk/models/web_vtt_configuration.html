@@ -165,6 +165,7 @@
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.common.poscheck</span> <span class="kn">import</span> <span class="n">poscheck_model</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.subtitle_configuration</span> <span class="kn">import</span> <span class="n">SubtitleConfiguration</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.web_vtt_cue_identifier_policy</span> <span class="kn">import</span> <span class="n">WebVttCueIdentifierPolicy</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.web_vtt_styling</span> <span class="kn">import</span> <span class="n">WebVttStyling</span>
 <span class="kn">import</span> <span class="nn">pprint</span>
 <span class="kn">import</span> <span class="nn">six</span>
 
@@ -180,13 +181,15 @@
                  <span class="n">id_</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">append_optional_zero_hour</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">ignore_region</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                 <span class="n">cue_identifier_policy</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (string_types, string_types, datetime, datetime, dict, string_types, bool, bool, WebVttCueIdentifierPolicy) -&gt; None</span>
+                 <span class="n">cue_identifier_policy</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">styling</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="c1"># type: (string_types, string_types, datetime, datetime, dict, string_types, bool, bool, WebVttCueIdentifierPolicy, WebVttStyling) -&gt; None</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">WebVttConfiguration</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="n">description</span><span class="p">,</span> <span class="n">created_at</span><span class="o">=</span><span class="n">created_at</span><span class="p">,</span> <span class="n">modified_at</span><span class="o">=</span><span class="n">modified_at</span><span class="p">,</span> <span class="n">custom_data</span><span class="o">=</span><span class="n">custom_data</span><span class="p">,</span> <span class="n">id_</span><span class="o">=</span><span class="n">id_</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_append_optional_zero_hour</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_ignore_region</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_cue_identifier_policy</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_styling</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>
 
         <span class="k">if</span> <span class="n">append_optional_zero_hour</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -195,6 +198,8 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">ignore_region</span> <span class="o">=</span> <span class="n">ignore_region</span>
         <span class="k">if</span> <span class="n">cue_identifier_policy</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">cue_identifier_policy</span> <span class="o">=</span> <span class="n">cue_identifier_policy</span>
+        <span class="k">if</span> <span class="n">styling</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">styling</span> <span class="o">=</span> <span class="n">styling</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -206,7 +211,8 @@
         <span class="n">types</span><span class="o">.</span><span class="n">update</span><span class="p">({</span>
             <span class="s1">&#39;append_optional_zero_hour&#39;</span><span class="p">:</span> <span class="s1">&#39;bool&#39;</span><span class="p">,</span>
             <span class="s1">&#39;ignore_region&#39;</span><span class="p">:</span> <span class="s1">&#39;bool&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;cue_identifier_policy&#39;</span><span class="p">:</span> <span class="s1">&#39;WebVttCueIdentifierPolicy&#39;</span>
+            <span class="s1">&#39;cue_identifier_policy&#39;</span><span class="p">:</span> <span class="s1">&#39;WebVttCueIdentifierPolicy&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;styling&#39;</span><span class="p">:</span> <span class="s1">&#39;WebVttStyling&#39;</span>
         <span class="p">})</span>
 
         <span class="k">return</span> <span class="n">types</span>
@@ -221,7 +227,8 @@
         <span class="n">attributes</span><span class="o">.</span><span class="n">update</span><span class="p">({</span>
             <span class="s1">&#39;append_optional_zero_hour&#39;</span><span class="p">:</span> <span class="s1">&#39;appendOptionalZeroHour&#39;</span><span class="p">,</span>
             <span class="s1">&#39;ignore_region&#39;</span><span class="p">:</span> <span class="s1">&#39;ignoreRegion&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;cue_identifier_policy&#39;</span><span class="p">:</span> <span class="s1">&#39;cueIdentifierPolicy&#39;</span>
+            <span class="s1">&#39;cue_identifier_policy&#39;</span><span class="p">:</span> <span class="s1">&#39;cueIdentifierPolicy&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;styling&#39;</span><span class="p">:</span> <span class="s1">&#39;styling&#39;</span>
         <span class="p">})</span>
         <span class="k">return</span> <span class="n">attributes</span>
 
@@ -309,6 +316,33 @@
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `cue_identifier_policy`, type has to be `WebVttCueIdentifierPolicy`&quot;</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_cue_identifier_policy</span> <span class="o">=</span> <span class="n">cue_identifier_policy</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">styling</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; WebVttStyling</span>
+        <span class="sd">&quot;&quot;&quot;Gets the styling of this WebVttConfiguration.</span>
+
+
+<span class="sd">        :return: The styling of this WebVttConfiguration.</span>
+<span class="sd">        :rtype: WebVttStyling</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_styling</span>
+
+    <span class="nd">@styling</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">styling</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">styling</span><span class="p">):</span>
+        <span class="c1"># type: (WebVttStyling) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the styling of this WebVttConfiguration.</span>
+
+
+<span class="sd">        :param styling: The styling of this WebVttConfiguration.</span>
+<span class="sd">        :type: WebVttStyling</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">styling</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">styling</span><span class="p">,</span> <span class="n">WebVttStyling</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `styling`, type has to be `WebVttStyling`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_styling</span> <span class="o">=</span> <span class="n">styling</span>
 
 <div class="viewcode-block" id="WebVttConfiguration.to_dict"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.web_vtt_configuration.WebVttConfiguration.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>

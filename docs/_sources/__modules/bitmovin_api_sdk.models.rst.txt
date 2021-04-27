@@ -5012,6 +5012,22 @@ bitmovin\_api\_sdk.models.web\_vtt\_sidecar\_file\_segmentation module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.web\_vtt\_styling module
+--------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.web_vtt_styling
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.web\_vtt\_styling\_mode module
+--------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.web_vtt_styling_mode
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.webhook module
 ----------------------------------------
 
