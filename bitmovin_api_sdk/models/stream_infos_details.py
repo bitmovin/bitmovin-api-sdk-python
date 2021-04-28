@@ -96,7 +96,7 @@ class StreamInfosDetails(object):
             'media_type': 'MediaType',
             'width': 'int',
             'height': 'int',
-            'rate': 'int',
+            'rate': 'float',
             'codec': 'LiveEncodingCodec',
             'samples_read_per_second_min': 'float',
             'samples_read_per_second_max': 'float',
