@@ -30,7 +30,7 @@ class StreamInfosDetails(object):
                  bytes_backup_per_second_min=None,
                  bytes_backup_per_second_max=None,
                  bytes_backup_per_second_avg=None):
-        # type: (string_types, MediaType, int, int, int, LiveEncodingCodec, float, float, float, float, float, float, float, float, float, float, float, float) -> None
+        # type: (string_types, MediaType, int, int, float, LiveEncodingCodec, float, float, float, float, float, float, float, float, float, float, float, float) -> None
 
         self._id = None
         self._media_type = None
@@ -96,7 +96,7 @@ class StreamInfosDetails(object):
             'media_type': 'MediaType',
             'width': 'int',
             'height': 'int',
-            'rate': 'int',
+            'rate': 'float',
             'codec': 'LiveEncodingCodec',
             'samples_read_per_second_min': 'float',
             'samples_read_per_second_max': 'float',
@@ -256,30 +256,30 @@ class StreamInfosDetails(object):
 
     @property
     def rate(self):
-        # type: () -> int
+        # type: () -> float
         """Gets the rate of this StreamInfosDetails.
 
         The rate (sample rate / fps) of the stream (required)
 
         :return: The rate of this StreamInfosDetails.
-        :rtype: int
+        :rtype: float
         """
         return self._rate
 
     @rate.setter
     def rate(self, rate):
-        # type: (int) -> None
+        # type: (float) -> None
         """Sets the rate of this StreamInfosDetails.
 
         The rate (sample rate / fps) of the stream (required)
 
         :param rate: The rate of this StreamInfosDetails.
-        :type: int
+        :type: float
         """
 
         if rate is not None:
-            if not isinstance(rate, int):
-                raise TypeError("Invalid type for `rate`, type has to be `int`")
+            if not isinstance(rate, (float, int)):
+                raise TypeError("Invalid type for `rate`, type has to be `float`")
 
         self._rate = rate
 
