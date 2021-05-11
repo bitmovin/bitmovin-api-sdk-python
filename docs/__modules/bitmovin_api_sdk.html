@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
 
   
   
@@ -29,6 +31,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
@@ -738,6 +741,7 @@
 <li class="toctree-l2"><a class="reference internal" href="bitmovin_api_sdk.models.html#module-bitmovin_api_sdk.models.id3_tag_type">bitmovin_api_sdk.models.id3_tag_type module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="bitmovin_api_sdk.models.html#module-bitmovin_api_sdk.models.ignored_by">bitmovin_api_sdk.models.ignored_by module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="bitmovin_api_sdk.models.html#module-bitmovin_api_sdk.models.ignoring">bitmovin_api_sdk.models.ignoring module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bitmovin_api_sdk.models.html#module-bitmovin_api_sdk.models.image_adaptation_set">bitmovin_api_sdk.models.image_adaptation_set module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="bitmovin_api_sdk.models.html#module-bitmovin_api_sdk.models.infrastructure_settings">bitmovin_api_sdk.models.infrastructure_settings module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="bitmovin_api_sdk.models.html#module-bitmovin_api_sdk.models.ingest_input_stream">bitmovin_api_sdk.models.ingest_input_stream module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="bitmovin_api_sdk.models.html#module-bitmovin_api_sdk.models.input">bitmovin_api_sdk.models.input module</a></li>
@@ -932,6 +936,9 @@
 <li class="toctree-l2"><a class="reference internal" href="bitmovin_api_sdk.models.html#module-bitmovin_api_sdk.models.speke_drm">bitmovin_api_sdk.models.speke_drm module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="bitmovin_api_sdk.models.html#module-bitmovin_api_sdk.models.speke_drm_provider">bitmovin_api_sdk.models.speke_drm_provider module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="bitmovin_api_sdk.models.html#module-bitmovin_api_sdk.models.sprite">bitmovin_api_sdk.models.sprite module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bitmovin_api_sdk.models.html#module-bitmovin_api_sdk.models.sprite_creation_mode">bitmovin_api_sdk.models.sprite_creation_mode module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bitmovin_api_sdk.models.html#module-bitmovin_api_sdk.models.sprite_jpeg_config">bitmovin_api_sdk.models.sprite_jpeg_config module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bitmovin_api_sdk.models.html#module-bitmovin_api_sdk.models.sprite_representation">bitmovin_api_sdk.models.sprite_representation module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="bitmovin_api_sdk.models.html#module-bitmovin_api_sdk.models.sprite_unit">bitmovin_api_sdk.models.sprite_unit module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="bitmovin_api_sdk.models.html#module-bitmovin_api_sdk.models.srt_input">bitmovin_api_sdk.models.srt_input module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="bitmovin_api_sdk.models.html#module-bitmovin_api_sdk.models.srt_mode">bitmovin_api_sdk.models.srt_mode module</a></li>
@@ -1115,8 +1122,8 @@
 <div class="section" id="module-bitmovin_api_sdk.bitmovin_api">
 <span id="bitmovin-api-sdk-bitmovin-api-module"></span><h2>bitmovin_api_sdk.bitmovin_api module<a class="headerlink" href="#module-bitmovin_api_sdk.bitmovin_api" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
-<dt id="bitmovin_api_sdk.bitmovin_api.BitmovinApi">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">bitmovin_api_sdk.bitmovin_api.</span></code><code class="sig-name descname"><span class="pre">BitmovinApi</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/bitmovin_api.html#BitmovinApi"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bitmovin_api_sdk.bitmovin_api.BitmovinApi" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="bitmovin_api_sdk.bitmovin_api.BitmovinApi">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">bitmovin_api_sdk.bitmovin_api.</span></span><span class="sig-name descname"><span class="pre">BitmovinApi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/bitmovin_api.html#BitmovinApi"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bitmovin_api_sdk.bitmovin_api.BitmovinApi" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="bitmovin_api_sdk.common.html#bitmovin_api_sdk.common.base_api.BaseApi" title="bitmovin_api_sdk.common.base_api.BaseApi"><code class="xref py py-class docutils literal notranslate"><span class="pre">bitmovin_api_sdk.common.base_api.BaseApi</span></code></a></p>
 </dd></dl>
 

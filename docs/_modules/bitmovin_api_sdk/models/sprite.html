@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
 
   
   
@@ -29,6 +31,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
         <script src="../../../_static/jquery.js"></script>
         <script src="../../../_static/underscore.js"></script>
         <script src="../../../_static/doctools.js"></script>
@@ -164,6 +167,8 @@
 <span class="kn">from</span> <span class="nn">six</span> <span class="kn">import</span> <span class="n">string_types</span><span class="p">,</span> <span class="n">iteritems</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.common.poscheck</span> <span class="kn">import</span> <span class="n">poscheck_model</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.bitmovin_resource</span> <span class="kn">import</span> <span class="n">BitmovinResource</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.sprite_creation_mode</span> <span class="kn">import</span> <span class="n">SpriteCreationMode</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.sprite_jpeg_config</span> <span class="kn">import</span> <span class="n">SpriteJpegConfig</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.sprite_unit</span> <span class="kn">import</span> <span class="n">SpriteUnit</span>
 <span class="kn">import</span> <span class="nn">pprint</span>
 <span class="kn">import</span> <span class="nn">six</span>
@@ -186,8 +191,12 @@
                  <span class="n">filename</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">vtt_name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">outputs</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                 <span class="n">images_per_file</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (string_types, string_types, string_types, datetime, datetime, dict, int, int, SpriteUnit, float, string_types, string_types, string_types, list[EncodingOutput], int) -&gt; None</span>
+                 <span class="n">images_per_file</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">h_tiles</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">v_tiles</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">jpeg_config</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">creation_mode</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="c1"># type: (string_types, string_types, string_types, datetime, datetime, dict, int, int, SpriteUnit, float, string_types, string_types, string_types, list[EncodingOutput], int, int, int, SpriteJpegConfig, SpriteCreationMode) -&gt; None</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">Sprite</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">id_</span><span class="o">=</span><span class="n">id_</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="n">description</span><span class="p">,</span> <span class="n">created_at</span><span class="o">=</span><span class="n">created_at</span><span class="p">,</span> <span class="n">modified_at</span><span class="o">=</span><span class="n">modified_at</span><span class="p">,</span> <span class="n">custom_data</span><span class="o">=</span><span class="n">custom_data</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_height</span> <span class="o">=</span> <span class="kc">None</span>
@@ -199,6 +208,10 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_vtt_name</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_outputs</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_images_per_file</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_h_tiles</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_v_tiles</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_jpeg_config</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_creation_mode</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>
 
         <span class="k">if</span> <span class="n">height</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -219,6 +232,14 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">outputs</span> <span class="o">=</span> <span class="n">outputs</span>
         <span class="k">if</span> <span class="n">images_per_file</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">images_per_file</span> <span class="o">=</span> <span class="n">images_per_file</span>
+        <span class="k">if</span> <span class="n">h_tiles</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">h_tiles</span> <span class="o">=</span> <span class="n">h_tiles</span>
+        <span class="k">if</span> <span class="n">v_tiles</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">v_tiles</span> <span class="o">=</span> <span class="n">v_tiles</span>
+        <span class="k">if</span> <span class="n">jpeg_config</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">jpeg_config</span> <span class="o">=</span> <span class="n">jpeg_config</span>
+        <span class="k">if</span> <span class="n">creation_mode</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">creation_mode</span> <span class="o">=</span> <span class="n">creation_mode</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -236,7 +257,11 @@
             <span class="s1">&#39;filename&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
             <span class="s1">&#39;vtt_name&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
             <span class="s1">&#39;outputs&#39;</span><span class="p">:</span> <span class="s1">&#39;list[EncodingOutput]&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;images_per_file&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span>
+            <span class="s1">&#39;images_per_file&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;h_tiles&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;v_tiles&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;jpeg_config&#39;</span><span class="p">:</span> <span class="s1">&#39;SpriteJpegConfig&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;creation_mode&#39;</span><span class="p">:</span> <span class="s1">&#39;SpriteCreationMode&#39;</span>
         <span class="p">})</span>
 
         <span class="k">return</span> <span class="n">types</span>
@@ -257,7 +282,11 @@
             <span class="s1">&#39;filename&#39;</span><span class="p">:</span> <span class="s1">&#39;filename&#39;</span><span class="p">,</span>
             <span class="s1">&#39;vtt_name&#39;</span><span class="p">:</span> <span class="s1">&#39;vttName&#39;</span><span class="p">,</span>
             <span class="s1">&#39;outputs&#39;</span><span class="p">:</span> <span class="s1">&#39;outputs&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;images_per_file&#39;</span><span class="p">:</span> <span class="s1">&#39;imagesPerFile&#39;</span>
+            <span class="s1">&#39;images_per_file&#39;</span><span class="p">:</span> <span class="s1">&#39;imagesPerFile&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;h_tiles&#39;</span><span class="p">:</span> <span class="s1">&#39;hTiles&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;v_tiles&#39;</span><span class="p">:</span> <span class="s1">&#39;vTiles&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;jpeg_config&#39;</span><span class="p">:</span> <span class="s1">&#39;jpegConfig&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;creation_mode&#39;</span><span class="p">:</span> <span class="s1">&#39;creationMode&#39;</span>
         <span class="p">})</span>
         <span class="k">return</span> <span class="n">attributes</span>
 
@@ -380,7 +409,7 @@
         <span class="c1"># type: () -&gt; string_types</span>
         <span class="sd">&quot;&quot;&quot;Gets the sprite_name of this Sprite.</span>
 
-<span class="sd">        Name of the sprite image. File extension \&quot;.jpg\&quot; or \&quot;.png\&quot; is required. (required)</span>
+<span class="sd">        Name of the sprite image. File extension \&quot;.jpg\&quot;/\&quot;.jpeg\&quot; or \&quot;.png\&quot; is required. (required)</span>
 
 <span class="sd">        :return: The sprite_name of this Sprite.</span>
 <span class="sd">        :rtype: string_types</span>
@@ -392,7 +421,7 @@
         <span class="c1"># type: (string_types) -&gt; None</span>
         <span class="sd">&quot;&quot;&quot;Sets the sprite_name of this Sprite.</span>
 
-<span class="sd">        Name of the sprite image. File extension \&quot;.jpg\&quot; or \&quot;.png\&quot; is required. (required)</span>
+<span class="sd">        Name of the sprite image. File extension \&quot;.jpg\&quot;/\&quot;.jpeg\&quot; or \&quot;.png\&quot; is required. (required)</span>
 
 <span class="sd">        :param sprite_name: The sprite_name of this Sprite.</span>
 <span class="sd">        :type: string_types</span>
@@ -517,6 +546,126 @@
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `images_per_file`, type has to be `int`&quot;</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_images_per_file</span> <span class="o">=</span> <span class="n">images_per_file</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">h_tiles</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; int</span>
+        <span class="sd">&quot;&quot;&quot;Gets the h_tiles of this Sprite.</span>
+
+<span class="sd">        Number of rows of images per file.  Has to be set together with vTiles. If this property and vTiles are set, the imagesPerFile property must not be set.  It is recommended to use the placeholder &#39;%number%&#39; in the spriteName to allow the generation of multiple sprites.  Only supported starting with encoder version `2.76.0`. </span>
+
+<span class="sd">        :return: The h_tiles of this Sprite.</span>
+<span class="sd">        :rtype: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_h_tiles</span>
+
+    <span class="nd">@h_tiles</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">h_tiles</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">h_tiles</span><span class="p">):</span>
+        <span class="c1"># type: (int) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the h_tiles of this Sprite.</span>
+
+<span class="sd">        Number of rows of images per file.  Has to be set together with vTiles. If this property and vTiles are set, the imagesPerFile property must not be set.  It is recommended to use the placeholder &#39;%number%&#39; in the spriteName to allow the generation of multiple sprites.  Only supported starting with encoder version `2.76.0`. </span>
+
+<span class="sd">        :param h_tiles: The h_tiles of this Sprite.</span>
+<span class="sd">        :type: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">h_tiles</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">h_tiles</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">h_tiles</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid value for `h_tiles`, must be a value greater than or equal to `1`&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">h_tiles</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `h_tiles`, type has to be `int`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_h_tiles</span> <span class="o">=</span> <span class="n">h_tiles</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">v_tiles</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; int</span>
+        <span class="sd">&quot;&quot;&quot;Gets the v_tiles of this Sprite.</span>
+
+<span class="sd">        Number of columns of images per file.  Has to be set together with hTiles. If this property and hTiles are set, the imagesPerFile property must not be set.  It is recommended to use the placeholder &#39;%number%&#39; in the spriteName to allow the generation of multiple sprites.  Only supported starting with encoder version `2.76.0`. </span>
+
+<span class="sd">        :return: The v_tiles of this Sprite.</span>
+<span class="sd">        :rtype: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_v_tiles</span>
+
+    <span class="nd">@v_tiles</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">v_tiles</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">v_tiles</span><span class="p">):</span>
+        <span class="c1"># type: (int) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the v_tiles of this Sprite.</span>
+
+<span class="sd">        Number of columns of images per file.  Has to be set together with hTiles. If this property and hTiles are set, the imagesPerFile property must not be set.  It is recommended to use the placeholder &#39;%number%&#39; in the spriteName to allow the generation of multiple sprites.  Only supported starting with encoder version `2.76.0`. </span>
+
+<span class="sd">        :param v_tiles: The v_tiles of this Sprite.</span>
+<span class="sd">        :type: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">v_tiles</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">v_tiles</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">v_tiles</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid value for `v_tiles`, must be a value greater than or equal to `1`&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">v_tiles</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `v_tiles`, type has to be `int`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_v_tiles</span> <span class="o">=</span> <span class="n">v_tiles</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">jpeg_config</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; SpriteJpegConfig</span>
+        <span class="sd">&quot;&quot;&quot;Gets the jpeg_config of this Sprite.</span>
+
+<span class="sd">        Additional configuration for JPEG sprite generation.  If this property is set the extension of the file must be &#39;.jpg.&#39; or &#39;.jpeg&#39;  Only supported starting with encoder version `2.76.0` </span>
+
+<span class="sd">        :return: The jpeg_config of this Sprite.</span>
+<span class="sd">        :rtype: SpriteJpegConfig</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_jpeg_config</span>
+
+    <span class="nd">@jpeg_config</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">jpeg_config</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">jpeg_config</span><span class="p">):</span>
+        <span class="c1"># type: (SpriteJpegConfig) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the jpeg_config of this Sprite.</span>
+
+<span class="sd">        Additional configuration for JPEG sprite generation.  If this property is set the extension of the file must be &#39;.jpg.&#39; or &#39;.jpeg&#39;  Only supported starting with encoder version `2.76.0` </span>
+
+<span class="sd">        :param jpeg_config: The jpeg_config of this Sprite.</span>
+<span class="sd">        :type: SpriteJpegConfig</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">jpeg_config</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">jpeg_config</span><span class="p">,</span> <span class="n">SpriteJpegConfig</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `jpeg_config`, type has to be `SpriteJpegConfig`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_jpeg_config</span> <span class="o">=</span> <span class="n">jpeg_config</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">creation_mode</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; SpriteCreationMode</span>
+        <span class="sd">&quot;&quot;&quot;Gets the creation_mode of this Sprite.</span>
+
+<span class="sd">        The creation mode for the thumbnails in the Sprite.  Two possible creation modes exist: generate thumbnails starting with the beginning of the video or after the first configured period.  When using distance=10 and unit=SECONDS and INTERVAL_END, the first image of the sprite is from the second 10 of the video. When using distance=10 and unit=SECONDS and INTERVAL_START, the first image of the sprite is from the very start of the video, while the second image is from second 10 of the video.  It is recommended to use &#39;INTERVAL_START&#39; when using the sprites for trick play so that there is an additional thumbnail from the beginning of the video.  Only supported starting with encoder version `2.76.0`. </span>
+
+<span class="sd">        :return: The creation_mode of this Sprite.</span>
+<span class="sd">        :rtype: SpriteCreationMode</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_creation_mode</span>
+
+    <span class="nd">@creation_mode</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">creation_mode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">creation_mode</span><span class="p">):</span>
+        <span class="c1"># type: (SpriteCreationMode) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the creation_mode of this Sprite.</span>
+
+<span class="sd">        The creation mode for the thumbnails in the Sprite.  Two possible creation modes exist: generate thumbnails starting with the beginning of the video or after the first configured period.  When using distance=10 and unit=SECONDS and INTERVAL_END, the first image of the sprite is from the second 10 of the video. When using distance=10 and unit=SECONDS and INTERVAL_START, the first image of the sprite is from the very start of the video, while the second image is from second 10 of the video.  It is recommended to use &#39;INTERVAL_START&#39; when using the sprites for trick play so that there is an additional thumbnail from the beginning of the video.  Only supported starting with encoder version `2.76.0`. </span>
+
+<span class="sd">        :param creation_mode: The creation_mode of this Sprite.</span>
+<span class="sd">        :type: SpriteCreationMode</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">creation_mode</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">creation_mode</span><span class="p">,</span> <span class="n">SpriteCreationMode</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `creation_mode`, type has to be `SpriteCreationMode`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_creation_mode</span> <span class="o">=</span> <span class="n">creation_mode</span>
 
 <div class="viewcode-block" id="Sprite.to_dict"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.sprite.Sprite.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>

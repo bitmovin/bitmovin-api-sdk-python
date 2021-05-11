@@ -739,10 +739,14 @@ from bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.video.video
 from bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.video.video_api import VideoAdaptationSetListQueryParams
 from bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.subtitle.subtitle_api import SubtitleApi
 from bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.subtitle.subtitle_api import SubtitleAdaptationSetListQueryParams
+from bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.image.image_api import ImageApi
+from bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.image.image_api import ImageAdaptationSetListQueryParams
 from bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.representations_api import RepresentationsApi
 
 from bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.vtt.vtt_api import VttApi
 from bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.vtt.vtt_api import DashVttRepresentationListQueryParams
+from bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.sprite.sprite_api import SpriteApi
+from bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.sprite.sprite_api import SpriteRepresentationListQueryParams
 from bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.fmp4.fmp4_api import Fmp4Api
 from bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.fmp4.fmp4_api import DashFmp4RepresentationListQueryParams
 from bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.chunked_text.chunked_text_api import ChunkedTextApi
@@ -1276,6 +1280,7 @@ from bitmovin_api_sdk.models.id3_tag_position_mode import Id3TagPositionMode
 from bitmovin_api_sdk.models.id3_tag_type import Id3TagType
 from bitmovin_api_sdk.models.ignored_by import IgnoredBy
 from bitmovin_api_sdk.models.ignoring import Ignoring
+from bitmovin_api_sdk.models.image_adaptation_set import ImageAdaptationSet
 from bitmovin_api_sdk.models.infrastructure_settings import InfrastructureSettings
 from bitmovin_api_sdk.models.ingest_input_stream import IngestInputStream
 from bitmovin_api_sdk.models.input import Input
@@ -1470,6 +1475,9 @@ from bitmovin_api_sdk.models.source_channel_type import SourceChannelType
 from bitmovin_api_sdk.models.speke_drm import SpekeDrm
 from bitmovin_api_sdk.models.speke_drm_provider import SpekeDrmProvider
 from bitmovin_api_sdk.models.sprite import Sprite
+from bitmovin_api_sdk.models.sprite_creation_mode import SpriteCreationMode
+from bitmovin_api_sdk.models.sprite_jpeg_config import SpriteJpegConfig
+from bitmovin_api_sdk.models.sprite_representation import SpriteRepresentation
 from bitmovin_api_sdk.models.sprite_unit import SpriteUnit
 from bitmovin_api_sdk.models.srt_input import SrtInput
 from bitmovin_api_sdk.models.srt_mode import SrtMode
@@ -1579,4 +1587,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.70.0"
+__version__ = "1.71.0"

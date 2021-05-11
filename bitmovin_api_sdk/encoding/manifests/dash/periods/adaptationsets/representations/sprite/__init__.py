@@ -1,0 +1,2 @@
+from bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.sprite.sprite_api import SpriteApi
+from bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.sprite.sprite_representation_list_query_params import SpriteRepresentationListQueryParams

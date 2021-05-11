@@ -4,6 +4,8 @@ from enum import Enum
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
 from bitmovin_api_sdk.models.bitmovin_resource import BitmovinResource
+from bitmovin_api_sdk.models.sprite_creation_mode import SpriteCreationMode
+from bitmovin_api_sdk.models.sprite_jpeg_config import SpriteJpegConfig
 from bitmovin_api_sdk.models.sprite_unit import SpriteUnit
 import pprint
 import six
@@ -26,8 +28,12 @@ class Sprite(BitmovinResource):
                  filename=None,
                  vtt_name=None,
                  outputs=None,
-                 images_per_file=None):
-        # type: (string_types, string_types, string_types, datetime, datetime, dict, int, int, SpriteUnit, float, string_types, string_types, string_types, list[EncodingOutput], int) -> None
+                 images_per_file=None,
+                 h_tiles=None,
+                 v_tiles=None,
+                 jpeg_config=None,
+                 creation_mode=None):
+        # type: (string_types, string_types, string_types, datetime, datetime, dict, int, int, SpriteUnit, float, string_types, string_types, string_types, list[EncodingOutput], int, int, int, SpriteJpegConfig, SpriteCreationMode) -> None
         super(Sprite, self).__init__(id_=id_, name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data)
 
         self._height = None
@@ -39,6 +45,10 @@ class Sprite(BitmovinResource):
         self._vtt_name = None
         self._outputs = list()
         self._images_per_file = None
+        self._h_tiles = None
+        self._v_tiles = None
+        self._jpeg_config = None
+        self._creation_mode = None
         self.discriminator = None
 
         if height is not None:
@@ -59,6 +69,14 @@ class Sprite(BitmovinResource):
             self.outputs = outputs
         if images_per_file is not None:
             self.images_per_file = images_per_file
+        if h_tiles is not None:
+            self.h_tiles = h_tiles
+        if v_tiles is not None:
+            self.v_tiles = v_tiles
+        if jpeg_config is not None:
+            self.jpeg_config = jpeg_config
+        if creation_mode is not None:
+            self.creation_mode = creation_mode
 
     @property
     def openapi_types(self):
@@ -76,7 +94,11 @@ class Sprite(BitmovinResource):
             'filename': 'string_types',
             'vtt_name': 'string_types',
             'outputs': 'list[EncodingOutput]',
-            'images_per_file': 'int'
+            'images_per_file': 'int',
+            'h_tiles': 'int',
+            'v_tiles': 'int',
+            'jpeg_config': 'SpriteJpegConfig',
+            'creation_mode': 'SpriteCreationMode'
         })
 
         return types
@@ -97,7 +119,11 @@ class Sprite(BitmovinResource):
             'filename': 'filename',
             'vtt_name': 'vttName',
             'outputs': 'outputs',
-            'images_per_file': 'imagesPerFile'
+            'images_per_file': 'imagesPerFile',
+            'h_tiles': 'hTiles',
+            'v_tiles': 'vTiles',
+            'jpeg_config': 'jpegConfig',
+            'creation_mode': 'creationMode'
         })
         return attributes
 
@@ -220,7 +246,7 @@ class Sprite(BitmovinResource):
         # type: () -> string_types
         """Gets the sprite_name of this Sprite.
 
-        Name of the sprite image. File extension \".jpg\" or \".png\" is required. (required)
+        Name of the sprite image. File extension \".jpg\"/\".jpeg\" or \".png\" is required. (required)
 
         :return: The sprite_name of this Sprite.
         :rtype: string_types
@@ -232,7 +258,7 @@ class Sprite(BitmovinResource):
         # type: (string_types) -> None
         """Sets the sprite_name of this Sprite.
 
-        Name of the sprite image. File extension \".jpg\" or \".png\" is required. (required)
+        Name of the sprite image. File extension \".jpg\"/\".jpeg\" or \".png\" is required. (required)
 
         :param sprite_name: The sprite_name of this Sprite.
         :type: string_types
@@ -357,6 +383,126 @@ class Sprite(BitmovinResource):
                 raise TypeError("Invalid type for `images_per_file`, type has to be `int`")
 
         self._images_per_file = images_per_file
+
+    @property
+    def h_tiles(self):
+        # type: () -> int
+        """Gets the h_tiles of this Sprite.
+
+        Number of rows of images per file.  Has to be set together with vTiles. If this property and vTiles are set, the imagesPerFile property must not be set.  It is recommended to use the placeholder '%number%' in the spriteName to allow the generation of multiple sprites.  Only supported starting with encoder version `2.76.0`. 
+
+        :return: The h_tiles of this Sprite.
+        :rtype: int
+        """
+        return self._h_tiles
+
+    @h_tiles.setter
+    def h_tiles(self, h_tiles):
+        # type: (int) -> None
+        """Sets the h_tiles of this Sprite.
+
+        Number of rows of images per file.  Has to be set together with vTiles. If this property and vTiles are set, the imagesPerFile property must not be set.  It is recommended to use the placeholder '%number%' in the spriteName to allow the generation of multiple sprites.  Only supported starting with encoder version `2.76.0`. 
+
+        :param h_tiles: The h_tiles of this Sprite.
+        :type: int
+        """
+
+        if h_tiles is not None:
+            if h_tiles is not None and h_tiles < 1:
+                raise ValueError("Invalid value for `h_tiles`, must be a value greater than or equal to `1`")
+            if not isinstance(h_tiles, int):
+                raise TypeError("Invalid type for `h_tiles`, type has to be `int`")
+
+        self._h_tiles = h_tiles
+
+    @property
+    def v_tiles(self):
+        # type: () -> int
+        """Gets the v_tiles of this Sprite.
+
+        Number of columns of images per file.  Has to be set together with hTiles. If this property and hTiles are set, the imagesPerFile property must not be set.  It is recommended to use the placeholder '%number%' in the spriteName to allow the generation of multiple sprites.  Only supported starting with encoder version `2.76.0`. 
+
+        :return: The v_tiles of this Sprite.
+        :rtype: int
+        """
+        return self._v_tiles
+
+    @v_tiles.setter
+    def v_tiles(self, v_tiles):
+        # type: (int) -> None
+        """Sets the v_tiles of this Sprite.
+
+        Number of columns of images per file.  Has to be set together with hTiles. If this property and hTiles are set, the imagesPerFile property must not be set.  It is recommended to use the placeholder '%number%' in the spriteName to allow the generation of multiple sprites.  Only supported starting with encoder version `2.76.0`. 
+
+        :param v_tiles: The v_tiles of this Sprite.
+        :type: int
+        """
+
+        if v_tiles is not None:
+            if v_tiles is not None and v_tiles < 1:
+                raise ValueError("Invalid value for `v_tiles`, must be a value greater than or equal to `1`")
+            if not isinstance(v_tiles, int):
+                raise TypeError("Invalid type for `v_tiles`, type has to be `int`")
+
+        self._v_tiles = v_tiles
+
+    @property
+    def jpeg_config(self):
+        # type: () -> SpriteJpegConfig
+        """Gets the jpeg_config of this Sprite.
+
+        Additional configuration for JPEG sprite generation.  If this property is set the extension of the file must be '.jpg.' or '.jpeg'  Only supported starting with encoder version `2.76.0` 
+
+        :return: The jpeg_config of this Sprite.
+        :rtype: SpriteJpegConfig
+        """
+        return self._jpeg_config
+
+    @jpeg_config.setter
+    def jpeg_config(self, jpeg_config):
+        # type: (SpriteJpegConfig) -> None
+        """Sets the jpeg_config of this Sprite.
+
+        Additional configuration for JPEG sprite generation.  If this property is set the extension of the file must be '.jpg.' or '.jpeg'  Only supported starting with encoder version `2.76.0` 
+
+        :param jpeg_config: The jpeg_config of this Sprite.
+        :type: SpriteJpegConfig
+        """
+
+        if jpeg_config is not None:
+            if not isinstance(jpeg_config, SpriteJpegConfig):
+                raise TypeError("Invalid type for `jpeg_config`, type has to be `SpriteJpegConfig`")
+
+        self._jpeg_config = jpeg_config
+
+    @property
+    def creation_mode(self):
+        # type: () -> SpriteCreationMode
+        """Gets the creation_mode of this Sprite.
+
+        The creation mode for the thumbnails in the Sprite.  Two possible creation modes exist: generate thumbnails starting with the beginning of the video or after the first configured period.  When using distance=10 and unit=SECONDS and INTERVAL_END, the first image of the sprite is from the second 10 of the video. When using distance=10 and unit=SECONDS and INTERVAL_START, the first image of the sprite is from the very start of the video, while the second image is from second 10 of the video.  It is recommended to use 'INTERVAL_START' when using the sprites for trick play so that there is an additional thumbnail from the beginning of the video.  Only supported starting with encoder version `2.76.0`. 
+
+        :return: The creation_mode of this Sprite.
+        :rtype: SpriteCreationMode
+        """
+        return self._creation_mode
+
+    @creation_mode.setter
+    def creation_mode(self, creation_mode):
+        # type: (SpriteCreationMode) -> None
+        """Sets the creation_mode of this Sprite.
+
+        The creation mode for the thumbnails in the Sprite.  Two possible creation modes exist: generate thumbnails starting with the beginning of the video or after the first configured period.  When using distance=10 and unit=SECONDS and INTERVAL_END, the first image of the sprite is from the second 10 of the video. When using distance=10 and unit=SECONDS and INTERVAL_START, the first image of the sprite is from the very start of the video, while the second image is from second 10 of the video.  It is recommended to use 'INTERVAL_START' when using the sprites for trick play so that there is an additional thumbnail from the beginning of the video.  Only supported starting with encoder version `2.76.0`. 
+
+        :param creation_mode: The creation_mode of this Sprite.
+        :type: SpriteCreationMode
+        """
+
+        if creation_mode is not None:
+            if not isinstance(creation_mode, SpriteCreationMode):
+                raise TypeError("Invalid type for `creation_mode`, type has to be `SpriteCreationMode`")
+
+        self._creation_mode = creation_mode
 
     def to_dict(self):
         """Returns the model properties as a dict"""

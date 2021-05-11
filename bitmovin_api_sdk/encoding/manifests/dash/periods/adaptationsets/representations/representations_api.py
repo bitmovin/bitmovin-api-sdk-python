@@ -5,6 +5,7 @@ from __future__ import absolute_import
 from bitmovin_api_sdk.common import BaseApi, BitmovinApiLoggerBase
 from bitmovin_api_sdk.common.poscheck import poscheck_except
 from bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.vtt.vtt_api import VttApi
+from bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.sprite.sprite_api import SpriteApi
 from bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.fmp4.fmp4_api import Fmp4Api
 from bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.chunked_text.chunked_text_api import ChunkedTextApi
 from bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.cmaf.cmaf_api import CmafApi
@@ -26,6 +27,13 @@ class RepresentationsApi(BaseApi):
         )
 
         self.vtt = VttApi(
+            api_key=api_key,
+            tenant_org_id=tenant_org_id,
+            base_url=base_url,
+            logger=logger
+        )
+
+        self.sprite = SpriteApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,

@@ -2708,6 +2708,14 @@ bitmovin\_api\_sdk.models.ignoring module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.image\_adaptation\_set module
+-------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.image_adaptation_set
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.infrastructure\_settings module
 ---------------------------------------------------------
 
@@ -4256,6 +4264,30 @@ bitmovin\_api\_sdk.models.sprite module
 ---------------------------------------
 
 .. automodule:: bitmovin_api_sdk.models.sprite
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.sprite\_creation\_mode module
+-------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.sprite_creation_mode
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.sprite\_jpeg\_config module
+-----------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.sprite_jpeg_config
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.sprite\_representation module
+-------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.sprite_representation
    :members:
    :undoc-members:
    :show-inheritance:

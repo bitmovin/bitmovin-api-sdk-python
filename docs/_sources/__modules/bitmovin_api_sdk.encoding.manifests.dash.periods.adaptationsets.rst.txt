@@ -9,6 +9,7 @@ Subpackages
 
    bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.audio
    bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.contentprotection
+   bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.image
    bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations
    bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.subtitle
    bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.video
