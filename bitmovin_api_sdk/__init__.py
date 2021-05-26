@@ -91,6 +91,10 @@ from bitmovin_api_sdk.analytics.licenses.domains.domains_api import DomainsApi
 
 from bitmovin_api_sdk.analytics.outputs.outputs_api import OutputsApi
 
+from bitmovin_api_sdk.analytics.outputs.azure.azure_api import AzureApi
+from bitmovin_api_sdk.analytics.outputs.azure.azure_api import AnalyticsAzureOutputListQueryParams
+from bitmovin_api_sdk.analytics.outputs.azure.customdata.customdata_api import CustomdataApi
+
 from bitmovin_api_sdk.analytics.outputs.s3_role_based.s3_role_based_api import S3RoleBasedApi
 from bitmovin_api_sdk.analytics.outputs.s3_role_based.s3_role_based_api import AnalyticsS3RoleBasedOutputListQueryParams
 from bitmovin_api_sdk.analytics.outputs.s3_role_based.customdata.customdata_api import CustomdataApi
@@ -991,6 +995,7 @@ from bitmovin_api_sdk.models.analytics_attribute import AnalyticsAttribute
 from bitmovin_api_sdk.models.analytics_avg_concurrent_viewers_response import AnalyticsAvgConcurrentViewersResponse
 from bitmovin_api_sdk.models.analytics_avg_dropped_frames_response import AnalyticsAvgDroppedFramesResponse
 from bitmovin_api_sdk.models.analytics_avg_query_request import AnalyticsAvgQueryRequest
+from bitmovin_api_sdk.models.analytics_azure_output import AnalyticsAzureOutput
 from bitmovin_api_sdk.models.analytics_column_label import AnalyticsColumnLabel
 from bitmovin_api_sdk.models.analytics_contains_filter import AnalyticsContainsFilter
 from bitmovin_api_sdk.models.analytics_context_description import AnalyticsContextDescription
@@ -1587,4 +1592,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.71.0"
+__version__ = "1.72.0"

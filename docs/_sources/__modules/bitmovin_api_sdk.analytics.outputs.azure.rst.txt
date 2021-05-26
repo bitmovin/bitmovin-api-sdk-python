@@ -1,0 +1,37 @@
+bitmovin\_api\_sdk.analytics.outputs.azure package
+==================================================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   bitmovin_api_sdk.analytics.outputs.azure.customdata
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.analytics.outputs.azure.analytics\_azure\_output\_list\_query\_params module
+-----------------------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.analytics.outputs.azure.analytics_azure_output_list_query_params
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.analytics.outputs.azure.azure\_api module
+------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.analytics.outputs.azure.azure_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.analytics.outputs.azure
+   :members:
+   :undoc-members:
+   :show-inheritance:

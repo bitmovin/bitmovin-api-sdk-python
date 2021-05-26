@@ -396,6 +396,14 @@ bitmovin\_api\_sdk.models.analytics\_avg\_query\_request module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.analytics\_azure\_output module
+---------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.analytics_azure_output
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.analytics\_column\_label module
 ---------------------------------------------------------
 

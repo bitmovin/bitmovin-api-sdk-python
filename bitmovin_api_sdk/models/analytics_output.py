@@ -54,7 +54,8 @@ class AnalyticsOutput(BitmovinResource):
 
     discriminator_value_class_map = {
         'S3_ROLE_BASED': 'AnalyticsS3RoleBasedOutput',
-        'GCS_SERVICE_ACCOUNT': 'AnalyticsGcsServiceAccountOutput'
+        'GCS_SERVICE_ACCOUNT': 'AnalyticsGcsServiceAccountOutput',
+        'AZURE': 'AnalyticsAzureOutput'
     }
 
     @property

@@ -167,6 +167,7 @@
 
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.common</span> <span class="kn">import</span> <span class="n">BaseApi</span><span class="p">,</span> <span class="n">BitmovinApiLoggerBase</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.common.poscheck</span> <span class="kn">import</span> <span class="n">poscheck_except</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.analytics.outputs.azure.azure_api</span> <span class="kn">import</span> <span class="n">AzureApi</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.analytics.outputs.s3_role_based.s3_role_based_api</span> <span class="kn">import</span> <span class="n">S3RoleBasedApi</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.analytics.outputs.gcs_service_account.gcs_service_account_api</span> <span class="kn">import</span> <span class="n">GcsServiceAccountApi</span>
 
@@ -177,6 +178,13 @@
         <span class="c1"># type: (str, str, str, BitmovinApiLoggerBase) -&gt; None</span>
 
         <span class="nb">super</span><span class="p">(</span><span class="n">OutputsApi</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span>
+            <span class="n">api_key</span><span class="o">=</span><span class="n">api_key</span><span class="p">,</span>
+            <span class="n">tenant_org_id</span><span class="o">=</span><span class="n">tenant_org_id</span><span class="p">,</span>
+            <span class="n">base_url</span><span class="o">=</span><span class="n">base_url</span><span class="p">,</span>
+            <span class="n">logger</span><span class="o">=</span><span class="n">logger</span>
+        <span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">azure</span> <span class="o">=</span> <span class="n">AzureApi</span><span class="p">(</span>
             <span class="n">api_key</span><span class="o">=</span><span class="n">api_key</span><span class="p">,</span>
             <span class="n">tenant_org_id</span><span class="o">=</span><span class="n">tenant_org_id</span><span class="p">,</span>
             <span class="n">base_url</span><span class="o">=</span><span class="n">base_url</span><span class="p">,</span>

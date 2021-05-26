@@ -1,0 +1,21 @@
+bitmovin\_api\_sdk.analytics.outputs.azure.customdata package
+=============================================================
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.analytics.outputs.azure.customdata.customdata\_api module
+----------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.analytics.outputs.azure.customdata.customdata_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.analytics.outputs.azure.customdata
+   :members:
+   :undoc-members:
+   :show-inheritance:
