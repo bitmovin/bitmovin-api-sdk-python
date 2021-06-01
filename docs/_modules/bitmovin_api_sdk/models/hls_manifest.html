@@ -167,6 +167,7 @@
 <span class="kn">from</span> <span class="nn">six</span> <span class="kn">import</span> <span class="n">string_types</span><span class="p">,</span> <span class="n">iteritems</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.common.poscheck</span> <span class="kn">import</span> <span class="n">poscheck_model</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.channels_attribute_for_audio</span> <span class="kn">import</span> <span class="n">ChannelsAttributeForAudio</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.hls_target_duration_rounding_mode</span> <span class="kn">import</span> <span class="n">HlsTargetDurationRoundingMode</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.hls_version</span> <span class="kn">import</span> <span class="n">HlsVersion</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.manifest</span> <span class="kn">import</span> <span class="n">Manifest</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.manifest_type</span> <span class="kn">import</span> <span class="n">ManifestType</span>
@@ -190,14 +191,16 @@
                  <span class="n">manifest_name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">hls_media_playlist_version</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">hls_master_playlist_version</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                 <span class="n">channels_attribute_for_audio</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (string_types, string_types, datetime, datetime, dict, string_types, ManifestType, list[EncodingOutput], Status, string_types, HlsVersion, HlsVersion, ChannelsAttributeForAudio) -&gt; None</span>
+                 <span class="n">channels_attribute_for_audio</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">target_duration_rounding_mode</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="c1"># type: (string_types, string_types, datetime, datetime, dict, string_types, ManifestType, list[EncodingOutput], Status, string_types, HlsVersion, HlsVersion, ChannelsAttributeForAudio, HlsTargetDurationRoundingMode) -&gt; None</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">HlsManifest</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="n">description</span><span class="p">,</span> <span class="n">created_at</span><span class="o">=</span><span class="n">created_at</span><span class="p">,</span> <span class="n">modified_at</span><span class="o">=</span><span class="n">modified_at</span><span class="p">,</span> <span class="n">custom_data</span><span class="o">=</span><span class="n">custom_data</span><span class="p">,</span> <span class="n">id_</span><span class="o">=</span><span class="n">id_</span><span class="p">,</span> <span class="n">type_</span><span class="o">=</span><span class="n">type_</span><span class="p">,</span> <span class="n">outputs</span><span class="o">=</span><span class="n">outputs</span><span class="p">,</span> <span class="n">status</span><span class="o">=</span><span class="n">status</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_manifest_name</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_hls_media_playlist_version</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_hls_master_playlist_version</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_channels_attribute_for_audio</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_target_duration_rounding_mode</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>
 
         <span class="k">if</span> <span class="n">manifest_name</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -208,6 +211,8 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">hls_master_playlist_version</span> <span class="o">=</span> <span class="n">hls_master_playlist_version</span>
         <span class="k">if</span> <span class="n">channels_attribute_for_audio</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">channels_attribute_for_audio</span> <span class="o">=</span> <span class="n">channels_attribute_for_audio</span>
+        <span class="k">if</span> <span class="n">target_duration_rounding_mode</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">target_duration_rounding_mode</span> <span class="o">=</span> <span class="n">target_duration_rounding_mode</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -220,7 +225,8 @@
             <span class="s1">&#39;manifest_name&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
             <span class="s1">&#39;hls_media_playlist_version&#39;</span><span class="p">:</span> <span class="s1">&#39;HlsVersion&#39;</span><span class="p">,</span>
             <span class="s1">&#39;hls_master_playlist_version&#39;</span><span class="p">:</span> <span class="s1">&#39;HlsVersion&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;channels_attribute_for_audio&#39;</span><span class="p">:</span> <span class="s1">&#39;ChannelsAttributeForAudio&#39;</span>
+            <span class="s1">&#39;channels_attribute_for_audio&#39;</span><span class="p">:</span> <span class="s1">&#39;ChannelsAttributeForAudio&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;target_duration_rounding_mode&#39;</span><span class="p">:</span> <span class="s1">&#39;HlsTargetDurationRoundingMode&#39;</span>
         <span class="p">})</span>
 
         <span class="k">return</span> <span class="n">types</span>
@@ -236,7 +242,8 @@
             <span class="s1">&#39;manifest_name&#39;</span><span class="p">:</span> <span class="s1">&#39;manifestName&#39;</span><span class="p">,</span>
             <span class="s1">&#39;hls_media_playlist_version&#39;</span><span class="p">:</span> <span class="s1">&#39;hlsMediaPlaylistVersion&#39;</span><span class="p">,</span>
             <span class="s1">&#39;hls_master_playlist_version&#39;</span><span class="p">:</span> <span class="s1">&#39;hlsMasterPlaylistVersion&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;channels_attribute_for_audio&#39;</span><span class="p">:</span> <span class="s1">&#39;channelsAttributeForAudio&#39;</span>
+            <span class="s1">&#39;channels_attribute_for_audio&#39;</span><span class="p">:</span> <span class="s1">&#39;channelsAttributeForAudio&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;target_duration_rounding_mode&#39;</span><span class="p">:</span> <span class="s1">&#39;targetDurationRoundingMode&#39;</span>
         <span class="p">})</span>
         <span class="k">return</span> <span class="n">attributes</span>
 
@@ -355,6 +362,35 @@
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `channels_attribute_for_audio`, type has to be `ChannelsAttributeForAudio`&quot;</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_channels_attribute_for_audio</span> <span class="o">=</span> <span class="n">channels_attribute_for_audio</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">target_duration_rounding_mode</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; HlsTargetDurationRoundingMode</span>
+        <span class="sd">&quot;&quot;&quot;Gets the target_duration_rounding_mode of this HlsManifest.</span>
+
+<span class="sd">        The rounding applied to target duration. Two possible rouding modes exist: NORMAL_ROUNDING, when the target duration is rounded to the nearest integer, or UPWARDS_ROUNDING, when the target duration is rounded to the highest integer. </span>
+
+<span class="sd">        :return: The target_duration_rounding_mode of this HlsManifest.</span>
+<span class="sd">        :rtype: HlsTargetDurationRoundingMode</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_target_duration_rounding_mode</span>
+
+    <span class="nd">@target_duration_rounding_mode</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">target_duration_rounding_mode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">target_duration_rounding_mode</span><span class="p">):</span>
+        <span class="c1"># type: (HlsTargetDurationRoundingMode) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the target_duration_rounding_mode of this HlsManifest.</span>
+
+<span class="sd">        The rounding applied to target duration. Two possible rouding modes exist: NORMAL_ROUNDING, when the target duration is rounded to the nearest integer, or UPWARDS_ROUNDING, when the target duration is rounded to the highest integer. </span>
+
+<span class="sd">        :param target_duration_rounding_mode: The target_duration_rounding_mode of this HlsManifest.</span>
+<span class="sd">        :type: HlsTargetDurationRoundingMode</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">target_duration_rounding_mode</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">target_duration_rounding_mode</span><span class="p">,</span> <span class="n">HlsTargetDurationRoundingMode</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `target_duration_rounding_mode`, type has to be `HlsTargetDurationRoundingMode`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_target_duration_rounding_mode</span> <span class="o">=</span> <span class="n">target_duration_rounding_mode</span>
 
 <div class="viewcode-block" id="HlsManifest.to_dict"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.hls_manifest.HlsManifest.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>

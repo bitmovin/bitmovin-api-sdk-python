@@ -2644,6 +2644,14 @@ bitmovin\_api\_sdk.models.hls\_manifest\_default\_version module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.hls\_target\_duration\_rounding\_mode module
+----------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.hls_target_duration_rounding_mode
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.hls\_version module
 ---------------------------------------------
 

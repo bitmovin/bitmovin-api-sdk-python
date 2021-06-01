@@ -1276,6 +1276,7 @@ from bitmovin_api_sdk.models.he_aac_v2_signaling import HeAacV2Signaling
 from bitmovin_api_sdk.models.hls_manifest import HlsManifest
 from bitmovin_api_sdk.models.hls_manifest_default import HlsManifestDefault
 from bitmovin_api_sdk.models.hls_manifest_default_version import HlsManifestDefaultVersion
+from bitmovin_api_sdk.models.hls_target_duration_rounding_mode import HlsTargetDurationRoundingMode
 from bitmovin_api_sdk.models.hls_version import HlsVersion
 from bitmovin_api_sdk.models.http_input import HttpInput
 from bitmovin_api_sdk.models.https_input import HttpsInput
@@ -1592,4 +1593,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.72.0"
+__version__ = "1.73.0"

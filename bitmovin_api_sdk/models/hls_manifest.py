@@ -4,6 +4,7 @@ from enum import Enum
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
 from bitmovin_api_sdk.models.channels_attribute_for_audio import ChannelsAttributeForAudio
+from bitmovin_api_sdk.models.hls_target_duration_rounding_mode import HlsTargetDurationRoundingMode
 from bitmovin_api_sdk.models.hls_version import HlsVersion
 from bitmovin_api_sdk.models.manifest import Manifest
 from bitmovin_api_sdk.models.manifest_type import ManifestType
@@ -27,14 +28,16 @@ class HlsManifest(Manifest):
                  manifest_name=None,
                  hls_media_playlist_version=None,
                  hls_master_playlist_version=None,
-                 channels_attribute_for_audio=None):
-        # type: (string_types, string_types, datetime, datetime, dict, string_types, ManifestType, list[EncodingOutput], Status, string_types, HlsVersion, HlsVersion, ChannelsAttributeForAudio) -> None
+                 channels_attribute_for_audio=None,
+                 target_duration_rounding_mode=None):
+        # type: (string_types, string_types, datetime, datetime, dict, string_types, ManifestType, list[EncodingOutput], Status, string_types, HlsVersion, HlsVersion, ChannelsAttributeForAudio, HlsTargetDurationRoundingMode) -> None
         super(HlsManifest, self).__init__(name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, id_=id_, type_=type_, outputs=outputs, status=status)
 
         self._manifest_name = None
         self._hls_media_playlist_version = None
         self._hls_master_playlist_version = None
         self._channels_attribute_for_audio = None
+        self._target_duration_rounding_mode = None
         self.discriminator = None
 
         if manifest_name is not None:
@@ -45,6 +48,8 @@ class HlsManifest(Manifest):
             self.hls_master_playlist_version = hls_master_playlist_version
         if channels_attribute_for_audio is not None:
             self.channels_attribute_for_audio = channels_attribute_for_audio
+        if target_duration_rounding_mode is not None:
+            self.target_duration_rounding_mode = target_duration_rounding_mode
 
     @property
     def openapi_types(self):
@@ -57,7 +62,8 @@ class HlsManifest(Manifest):
             'manifest_name': 'string_types',
             'hls_media_playlist_version': 'HlsVersion',
             'hls_master_playlist_version': 'HlsVersion',
-            'channels_attribute_for_audio': 'ChannelsAttributeForAudio'
+            'channels_attribute_for_audio': 'ChannelsAttributeForAudio',
+            'target_duration_rounding_mode': 'HlsTargetDurationRoundingMode'
         })
 
         return types
@@ -73,7 +79,8 @@ class HlsManifest(Manifest):
             'manifest_name': 'manifestName',
             'hls_media_playlist_version': 'hlsMediaPlaylistVersion',
             'hls_master_playlist_version': 'hlsMasterPlaylistVersion',
-            'channels_attribute_for_audio': 'channelsAttributeForAudio'
+            'channels_attribute_for_audio': 'channelsAttributeForAudio',
+            'target_duration_rounding_mode': 'targetDurationRoundingMode'
         })
         return attributes
 
@@ -192,6 +199,35 @@ class HlsManifest(Manifest):
                 raise TypeError("Invalid type for `channels_attribute_for_audio`, type has to be `ChannelsAttributeForAudio`")
 
         self._channels_attribute_for_audio = channels_attribute_for_audio
+
+    @property
+    def target_duration_rounding_mode(self):
+        # type: () -> HlsTargetDurationRoundingMode
+        """Gets the target_duration_rounding_mode of this HlsManifest.
+
+        The rounding applied to target duration. Two possible rouding modes exist: NORMAL_ROUNDING, when the target duration is rounded to the nearest integer, or UPWARDS_ROUNDING, when the target duration is rounded to the highest integer. 
+
+        :return: The target_duration_rounding_mode of this HlsManifest.
+        :rtype: HlsTargetDurationRoundingMode
+        """
+        return self._target_duration_rounding_mode
+
+    @target_duration_rounding_mode.setter
+    def target_duration_rounding_mode(self, target_duration_rounding_mode):
+        # type: (HlsTargetDurationRoundingMode) -> None
+        """Sets the target_duration_rounding_mode of this HlsManifest.
+
+        The rounding applied to target duration. Two possible rouding modes exist: NORMAL_ROUNDING, when the target duration is rounded to the nearest integer, or UPWARDS_ROUNDING, when the target duration is rounded to the highest integer. 
+
+        :param target_duration_rounding_mode: The target_duration_rounding_mode of this HlsManifest.
+        :type: HlsTargetDurationRoundingMode
+        """
+
+        if target_duration_rounding_mode is not None:
+            if not isinstance(target_duration_rounding_mode, HlsTargetDurationRoundingMode):
+                raise TypeError("Invalid type for `target_duration_rounding_mode`, type has to be `HlsTargetDurationRoundingMode`")
+
+        self._target_duration_rounding_mode = target_duration_rounding_mode
 
     def to_dict(self):
         """Returns the model properties as a dict"""
