@@ -10,6 +10,7 @@ from bitmovin_api_sdk.models.response_envelope import ResponseEnvelope
 from bitmovin_api_sdk.models.response_error import ResponseError
 from bitmovin_api_sdk.models.start_live_encoding_request import StartLiveEncodingRequest
 from bitmovin_api_sdk.encoding.encodings.live.insertable_content.insertable_content_api import InsertableContentApi
+from bitmovin_api_sdk.encoding.encodings.live.scte35_cue.scte35_cue_api import Scte35CueApi
 
 
 class LiveApi(BaseApi):
@@ -25,6 +26,13 @@ class LiveApi(BaseApi):
         )
 
         self.insertable_content = InsertableContentApi(
+            api_key=api_key,
+            tenant_org_id=tenant_org_id,
+            base_url=base_url,
+            logger=logger
+        )
+
+        self.scte35_cue = Scte35CueApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,

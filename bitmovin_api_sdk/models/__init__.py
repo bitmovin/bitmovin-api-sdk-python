@@ -519,6 +519,7 @@ from bitmovin_api_sdk.models.scc_caption import SccCaption
 from bitmovin_api_sdk.models.scheduled_insertable_content import ScheduledInsertableContent
 from bitmovin_api_sdk.models.scheduled_insertable_content_status import ScheduledInsertableContentStatus
 from bitmovin_api_sdk.models.scheduling import Scheduling
+from bitmovin_api_sdk.models.scte35_cue import Scte35Cue
 from bitmovin_api_sdk.models.segmented_raw_muxing import SegmentedRawMuxing
 from bitmovin_api_sdk.models.segments_media_info import SegmentsMediaInfo
 from bitmovin_api_sdk.models.sftp_input import SftpInput

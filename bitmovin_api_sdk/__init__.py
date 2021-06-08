@@ -945,6 +945,8 @@ from bitmovin_api_sdk.player.custom_builds.web.status.status_api import StatusAp
 
 from bitmovin_api_sdk.player.custom_builds.web.download.download_api import DownloadApi
 
+from bitmovin_api_sdk.encoding.encodings.live.scte35_cue.scte35_cue_api import Scte35CueApi
+
 
 from bitmovin_api_sdk.models.aac_audio_configuration import AacAudioConfiguration
 from bitmovin_api_sdk.models.aac_channel_layout import AacChannelLayout
@@ -1462,6 +1464,7 @@ from bitmovin_api_sdk.models.scc_caption import SccCaption
 from bitmovin_api_sdk.models.scheduled_insertable_content import ScheduledInsertableContent
 from bitmovin_api_sdk.models.scheduled_insertable_content_status import ScheduledInsertableContentStatus
 from bitmovin_api_sdk.models.scheduling import Scheduling
+from bitmovin_api_sdk.models.scte35_cue import Scte35Cue
 from bitmovin_api_sdk.models.segmented_raw_muxing import SegmentedRawMuxing
 from bitmovin_api_sdk.models.segments_media_info import SegmentsMediaInfo
 from bitmovin_api_sdk.models.sftp_input import SftpInput
@@ -1593,4 +1596,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.73.0"
+__version__ = "1.74.0"

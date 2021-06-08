@@ -4132,6 +4132,14 @@ bitmovin\_api\_sdk.models.scheduling module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.scte35\_cue module
+--------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.scte35_cue
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.segmented\_raw\_muxing module
 -------------------------------------------------------
 

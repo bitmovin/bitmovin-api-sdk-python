@@ -173,6 +173,7 @@
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.response_error</span> <span class="kn">import</span> <span class="n">ResponseError</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.start_live_encoding_request</span> <span class="kn">import</span> <span class="n">StartLiveEncodingRequest</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.encoding.encodings.live.insertable_content.insertable_content_api</span> <span class="kn">import</span> <span class="n">InsertableContentApi</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.encoding.encodings.live.scte35_cue.scte35_cue_api</span> <span class="kn">import</span> <span class="n">Scte35CueApi</span>
 
 
 <div class="viewcode-block" id="LiveApi"><a class="viewcode-back" href="../../../../../__modules/bitmovin_api_sdk.encoding.encodings.live.html#bitmovin_api_sdk.encoding.encodings.live.live_api.LiveApi">[docs]</a><span class="k">class</span> <span class="nc">LiveApi</span><span class="p">(</span><span class="n">BaseApi</span><span class="p">):</span>
@@ -188,6 +189,13 @@
         <span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">insertable_content</span> <span class="o">=</span> <span class="n">InsertableContentApi</span><span class="p">(</span>
+            <span class="n">api_key</span><span class="o">=</span><span class="n">api_key</span><span class="p">,</span>
+            <span class="n">tenant_org_id</span><span class="o">=</span><span class="n">tenant_org_id</span><span class="p">,</span>
+            <span class="n">base_url</span><span class="o">=</span><span class="n">base_url</span><span class="p">,</span>
+            <span class="n">logger</span><span class="o">=</span><span class="n">logger</span>
+        <span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">scte35_cue</span> <span class="o">=</span> <span class="n">Scte35CueApi</span><span class="p">(</span>
             <span class="n">api_key</span><span class="o">=</span><span class="n">api_key</span><span class="p">,</span>
             <span class="n">tenant_org_id</span><span class="o">=</span><span class="n">tenant_org_id</span><span class="p">,</span>
             <span class="n">base_url</span><span class="o">=</span><span class="n">base_url</span><span class="p">,</span>
