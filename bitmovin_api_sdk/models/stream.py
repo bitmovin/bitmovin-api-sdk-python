@@ -136,6 +136,7 @@ class Stream(BitmovinResource):
         # type: () -> list[StreamInput]
         """Gets the input_streams of this Stream.
 
+        Determines the input source(s) for the stream. All video streams of an encoding need to have identical input configurations (required)
 
         :return: The input_streams of this Stream.
         :rtype: list[StreamInput]
@@ -147,6 +148,7 @@ class Stream(BitmovinResource):
         # type: (list) -> None
         """Sets the input_streams of this Stream.
 
+        Determines the input source(s) for the stream. All video streams of an encoding need to have identical input configurations (required)
 
         :param input_streams: The input_streams of this Stream.
         :type: list[StreamInput]

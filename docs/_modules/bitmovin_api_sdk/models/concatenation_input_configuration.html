@@ -234,7 +234,7 @@
         <span class="c1"># type: () -&gt; string_types</span>
         <span class="sd">&quot;&quot;&quot;Gets the input_stream_id of this ConcatenationInputConfiguration.</span>
 
-<span class="sd">        The ID of the input stream to be concatenated. This can be an ingest input stream or a trimming input stream</span>
+<span class="sd">        The ID of the input stream to be concatenated. This can be an ingest input stream or a trimming input stream (required)</span>
 
 <span class="sd">        :return: The input_stream_id of this ConcatenationInputConfiguration.</span>
 <span class="sd">        :rtype: string_types</span>
@@ -246,7 +246,7 @@
         <span class="c1"># type: (string_types) -&gt; None</span>
         <span class="sd">&quot;&quot;&quot;Sets the input_stream_id of this ConcatenationInputConfiguration.</span>
 
-<span class="sd">        The ID of the input stream to be concatenated. This can be an ingest input stream or a trimming input stream</span>
+<span class="sd">        The ID of the input stream to be concatenated. This can be an ingest input stream or a trimming input stream (required)</span>
 
 <span class="sd">        :param input_stream_id: The input_stream_id of this ConcatenationInputConfiguration.</span>
 <span class="sd">        :type: string_types</span>
@@ -292,7 +292,7 @@
         <span class="c1"># type: () -&gt; int</span>
         <span class="sd">&quot;&quot;&quot;Gets the position of this ConcatenationInputConfiguration.</span>
 
-<span class="sd">        Position of the stream</span>
+<span class="sd">        A unique integer value that determines concatenation order (required)</span>
 
 <span class="sd">        :return: The position of this ConcatenationInputConfiguration.</span>
 <span class="sd">        :rtype: int</span>
@@ -304,7 +304,7 @@
         <span class="c1"># type: (int) -&gt; None</span>
         <span class="sd">&quot;&quot;&quot;Sets the position of this ConcatenationInputConfiguration.</span>
 
-<span class="sd">        Position of the stream</span>
+<span class="sd">        A unique integer value that determines concatenation order (required)</span>
 
 <span class="sd">        :param position: The position of this ConcatenationInputConfiguration.</span>
 <span class="sd">        :type: int</span>
@@ -321,7 +321,7 @@
         <span class="c1"># type: () -&gt; PaddingSequence</span>
         <span class="sd">&quot;&quot;&quot;Gets the padding_before of this ConcatenationInputConfiguration.</span>
 
-<span class="sd">        Inserts a padding sequence (black frames and/or silent audio) before the input stream. If this is set, all video output streams of the encoding need to use the same ConcatenationInputStream.</span>
+<span class="sd">        Inserts a padding sequence (black frames and/or silent audio) before the input stream.</span>
 
 <span class="sd">        :return: The padding_before of this ConcatenationInputConfiguration.</span>
 <span class="sd">        :rtype: PaddingSequence</span>
@@ -333,7 +333,7 @@
         <span class="c1"># type: (PaddingSequence) -&gt; None</span>
         <span class="sd">&quot;&quot;&quot;Sets the padding_before of this ConcatenationInputConfiguration.</span>
 
-<span class="sd">        Inserts a padding sequence (black frames and/or silent audio) before the input stream. If this is set, all video output streams of the encoding need to use the same ConcatenationInputStream.</span>
+<span class="sd">        Inserts a padding sequence (black frames and/or silent audio) before the input stream.</span>
 
 <span class="sd">        :param padding_before: The padding_before of this ConcatenationInputConfiguration.</span>
 <span class="sd">        :type: PaddingSequence</span>
@@ -350,7 +350,7 @@
         <span class="c1"># type: () -&gt; PaddingSequence</span>
         <span class="sd">&quot;&quot;&quot;Gets the padding_after of this ConcatenationInputConfiguration.</span>
 
-<span class="sd">        Inserts a padding sequence (black frames and/or silent audio) after the input stream. If this is set, all video output streams of the encoding need to use the same ConcatenationInputStream.</span>
+<span class="sd">        Inserts a padding sequence (black frames and/or silent audio) after the input stream.</span>
 
 <span class="sd">        :return: The padding_after of this ConcatenationInputConfiguration.</span>
 <span class="sd">        :rtype: PaddingSequence</span>
@@ -362,7 +362,7 @@
         <span class="c1"># type: (PaddingSequence) -&gt; None</span>
         <span class="sd">&quot;&quot;&quot;Sets the padding_after of this ConcatenationInputConfiguration.</span>
 
-<span class="sd">        Inserts a padding sequence (black frames and/or silent audio) after the input stream. If this is set, all video output streams of the encoding need to use the same ConcatenationInputStream.</span>
+<span class="sd">        Inserts a padding sequence (black frames and/or silent audio) after the input stream.</span>
 
 <span class="sd">        :param padding_after: The padding_after of this ConcatenationInputConfiguration.</span>
 <span class="sd">        :type: PaddingSequence</span>

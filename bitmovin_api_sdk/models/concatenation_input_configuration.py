@@ -71,7 +71,7 @@ class ConcatenationInputConfiguration(object):
         # type: () -> string_types
         """Gets the input_stream_id of this ConcatenationInputConfiguration.
 
-        The ID of the input stream to be concatenated. This can be an ingest input stream or a trimming input stream
+        The ID of the input stream to be concatenated. This can be an ingest input stream or a trimming input stream (required)
 
         :return: The input_stream_id of this ConcatenationInputConfiguration.
         :rtype: string_types
@@ -83,7 +83,7 @@ class ConcatenationInputConfiguration(object):
         # type: (string_types) -> None
         """Sets the input_stream_id of this ConcatenationInputConfiguration.
 
-        The ID of the input stream to be concatenated. This can be an ingest input stream or a trimming input stream
+        The ID of the input stream to be concatenated. This can be an ingest input stream or a trimming input stream (required)
 
         :param input_stream_id: The input_stream_id of this ConcatenationInputConfiguration.
         :type: string_types
@@ -129,7 +129,7 @@ class ConcatenationInputConfiguration(object):
         # type: () -> int
         """Gets the position of this ConcatenationInputConfiguration.
 
-        Position of the stream
+        A unique integer value that determines concatenation order (required)
 
         :return: The position of this ConcatenationInputConfiguration.
         :rtype: int
@@ -141,7 +141,7 @@ class ConcatenationInputConfiguration(object):
         # type: (int) -> None
         """Sets the position of this ConcatenationInputConfiguration.
 
-        Position of the stream
+        A unique integer value that determines concatenation order (required)
 
         :param position: The position of this ConcatenationInputConfiguration.
         :type: int
@@ -158,7 +158,7 @@ class ConcatenationInputConfiguration(object):
         # type: () -> PaddingSequence
         """Gets the padding_before of this ConcatenationInputConfiguration.
 
-        Inserts a padding sequence (black frames and/or silent audio) before the input stream. If this is set, all video output streams of the encoding need to use the same ConcatenationInputStream.
+        Inserts a padding sequence (black frames and/or silent audio) before the input stream.
 
         :return: The padding_before of this ConcatenationInputConfiguration.
         :rtype: PaddingSequence
@@ -170,7 +170,7 @@ class ConcatenationInputConfiguration(object):
         # type: (PaddingSequence) -> None
         """Sets the padding_before of this ConcatenationInputConfiguration.
 
-        Inserts a padding sequence (black frames and/or silent audio) before the input stream. If this is set, all video output streams of the encoding need to use the same ConcatenationInputStream.
+        Inserts a padding sequence (black frames and/or silent audio) before the input stream.
 
         :param padding_before: The padding_before of this ConcatenationInputConfiguration.
         :type: PaddingSequence
@@ -187,7 +187,7 @@ class ConcatenationInputConfiguration(object):
         # type: () -> PaddingSequence
         """Gets the padding_after of this ConcatenationInputConfiguration.
 
-        Inserts a padding sequence (black frames and/or silent audio) after the input stream. If this is set, all video output streams of the encoding need to use the same ConcatenationInputStream.
+        Inserts a padding sequence (black frames and/or silent audio) after the input stream.
 
         :return: The padding_after of this ConcatenationInputConfiguration.
         :rtype: PaddingSequence
@@ -199,7 +199,7 @@ class ConcatenationInputConfiguration(object):
         # type: (PaddingSequence) -> None
         """Sets the padding_after of this ConcatenationInputConfiguration.
 
-        Inserts a padding sequence (black frames and/or silent audio) after the input stream. If this is set, all video output streams of the encoding need to use the same ConcatenationInputStream.
+        Inserts a padding sequence (black frames and/or silent audio) after the input stream.
 
         :param padding_after: The padding_after of this ConcatenationInputConfiguration.
         :type: PaddingSequence
