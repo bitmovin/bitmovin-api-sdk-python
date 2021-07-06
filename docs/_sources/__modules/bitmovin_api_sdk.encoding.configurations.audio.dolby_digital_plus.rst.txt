@@ -1,0 +1,37 @@
+bitmovin\_api\_sdk.encoding.configurations.audio.dolby\_digital\_plus package
+=============================================================================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   bitmovin_api_sdk.encoding.configurations.audio.dolby_digital_plus.customdata
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.encoding.configurations.audio.dolby\_digital\_plus.dolby\_digital\_plus\_api module
+------------------------------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.configurations.audio.dolby_digital_plus.dolby_digital_plus_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.encoding.configurations.audio.dolby\_digital\_plus.dolby\_digital\_plus\_audio\_configuration\_list\_query\_params module
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.configurations.audio.dolby_digital_plus.dolby_digital_plus_audio_configuration_list_query_params
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.encoding.configurations.audio.dolby_digital_plus
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1940,6 +1940,310 @@ bitmovin\_api\_sdk.models.dolby\_atmos\_metering\_mode module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.dolby\_digital\_audio\_configuration module
+---------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.dolby_digital_audio_configuration
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.dolby\_digital\_bitstream\_info module
+----------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.dolby_digital_bitstream_info
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.dolby\_digital\_center\_mix\_level module
+-------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.dolby_digital_center_mix_level
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.dolby\_digital\_channel\_layout module
+----------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.dolby_digital_channel_layout
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.dolby\_digital\_dialogue\_intelligence module
+-----------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.dolby_digital_dialogue_intelligence
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.dolby\_digital\_downmixing module
+-----------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.dolby_digital_downmixing
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.dolby\_digital\_downmixing\_preferred\_mode module
+----------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.dolby_digital_downmixing_preferred_mode
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.dolby\_digital\_dynamic\_range\_compression module
+----------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.dolby_digital_dynamic_range_compression
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.dolby\_digital\_dynamic\_range\_compression\_mode module
+----------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.dolby_digital_dynamic_range_compression_mode
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.dolby\_digital\_evolution\_framework\_control module
+------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.dolby_digital_evolution_framework_control
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.dolby\_digital\_lfe\_low\_pass\_filter module
+-----------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.dolby_digital_lfe_low_pass_filter
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.dolby\_digital\_loudness\_control module
+------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.dolby_digital_loudness_control
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.dolby\_digital\_loudness\_control\_mode module
+------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.dolby_digital_loudness_control_mode
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.dolby\_digital\_loudness\_control\_regulation\_type module
+------------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.dolby_digital_loudness_control_regulation_type
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.dolby\_digital\_ninety\_degree\_phase\_shift module
+-----------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.dolby_digital_ninety_degree_phase_shift
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.dolby\_digital\_plus\_audio\_configuration module
+---------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.dolby_digital_plus_audio_configuration
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.dolby\_digital\_plus\_bitstream\_info module
+----------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.dolby_digital_plus_bitstream_info
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.dolby\_digital\_plus\_center\_mix\_level module
+-------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.dolby_digital_plus_center_mix_level
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.dolby\_digital\_plus\_channel\_layout module
+----------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.dolby_digital_plus_channel_layout
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.dolby\_digital\_plus\_dialogue\_intelligence module
+-----------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.dolby_digital_plus_dialogue_intelligence
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.dolby\_digital\_plus\_downmixing module
+-----------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.dolby_digital_plus_downmixing
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.dolby\_digital\_plus\_downmixing\_preferred\_mode module
+----------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.dolby_digital_plus_downmixing_preferred_mode
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.dolby\_digital\_plus\_dynamic\_range\_compression module
+----------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.dolby_digital_plus_dynamic_range_compression
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.dolby\_digital\_plus\_dynamic\_range\_compression\_mode module
+----------------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.dolby_digital_plus_dynamic_range_compression_mode
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.dolby\_digital\_plus\_evolution\_framework\_control module
+------------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.dolby_digital_plus_evolution_framework_control
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.dolby\_digital\_plus\_lfe\_low\_pass\_filter module
+-----------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.dolby_digital_plus_lfe_low_pass_filter
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.dolby\_digital\_plus\_loudness\_control module
+------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.dolby_digital_plus_loudness_control
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.dolby\_digital\_plus\_loudness\_control\_mode module
+------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.dolby_digital_plus_loudness_control_mode
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.dolby\_digital\_plus\_loudness\_control\_regulation\_type module
+------------------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.dolby_digital_plus_loudness_control_regulation_type
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.dolby\_digital\_plus\_ninety\_degree\_phase\_shift module
+-----------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.dolby_digital_plus_ninety_degree_phase_shift
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.dolby\_digital\_plus\_preprocessing module
+--------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.dolby_digital_plus_preprocessing
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.dolby\_digital\_plus\_surround\_mix\_level module
+---------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.dolby_digital_plus_surround_mix_level
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.dolby\_digital\_plus\_surround\_mode module
+---------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.dolby_digital_plus_surround_mode
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.dolby\_digital\_plus\_three\_db\_attenuation module
+-----------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.dolby_digital_plus_three_db_attenuation
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.dolby\_digital\_preprocessing module
+--------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.dolby_digital_preprocessing
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.dolby\_digital\_surround\_mix\_level module
+---------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.dolby_digital_surround_mix_level
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.dolby\_digital\_surround\_mode module
+---------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.dolby_digital_surround_mode
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.dolby\_digital\_three\_db\_attenuation module
+-----------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.dolby_digital_three_db_attenuation
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.dolby\_vision\_metadata module
 --------------------------------------------------------
 

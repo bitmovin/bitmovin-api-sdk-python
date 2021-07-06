@@ -132,7 +132,7 @@ class Sprite(BitmovinResource):
         # type: () -> int
         """Gets the height of this Sprite.
 
-        Height of one thumbnail (required)
+        Height of one thumbnail, either height or width are required fields. If only one is given the encoder will calculate the other way value based on the aspect ratio of the video file. If the encoder version is below 2.83.0 both are required 
 
         :return: The height of this Sprite.
         :rtype: int
@@ -144,7 +144,7 @@ class Sprite(BitmovinResource):
         # type: (int) -> None
         """Sets the height of this Sprite.
 
-        Height of one thumbnail (required)
+        Height of one thumbnail, either height or width are required fields. If only one is given the encoder will calculate the other way value based on the aspect ratio of the video file. If the encoder version is below 2.83.0 both are required 
 
         :param height: The height of this Sprite.
         :type: int
@@ -161,7 +161,7 @@ class Sprite(BitmovinResource):
         # type: () -> int
         """Gets the width of this Sprite.
 
-        Width of one thumbnail (required)
+        Width of one thumbnail, either height or width are required fields. If only one is given the encoder will calculate the other way value based on the aspect ratio of the video file. If the encoder version is below 2.83.0 both are required 
 
         :return: The width of this Sprite.
         :rtype: int
@@ -173,7 +173,7 @@ class Sprite(BitmovinResource):
         # type: (int) -> None
         """Sets the width of this Sprite.
 
-        Width of one thumbnail (required)
+        Width of one thumbnail, either height or width are required fields. If only one is given the encoder will calculate the other way value based on the aspect ratio of the video file. If the encoder version is below 2.83.0 both are required 
 
         :param width: The width of this Sprite.
         :type: int

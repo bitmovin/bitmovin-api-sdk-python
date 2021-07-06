@@ -176,6 +176,8 @@
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.encoding.configurations.audio.opus.opus_api</span> <span class="kn">import</span> <span class="n">OpusApi</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.encoding.configurations.audio.pcm.pcm_api</span> <span class="kn">import</span> <span class="n">PcmApi</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.encoding.configurations.audio.ac3.ac3_api</span> <span class="kn">import</span> <span class="n">Ac3Api</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.encoding.configurations.audio.dolby_digital.dolby_digital_api</span> <span class="kn">import</span> <span class="n">DolbyDigitalApi</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.encoding.configurations.audio.dolby_digital_plus.dolby_digital_plus_api</span> <span class="kn">import</span> <span class="n">DolbyDigitalPlusApi</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.encoding.configurations.audio.eac3.eac3_api</span> <span class="kn">import</span> <span class="n">Eac3Api</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.encoding.configurations.audio.mp2.mp2_api</span> <span class="kn">import</span> <span class="n">Mp2Api</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.encoding.configurations.audio.mp3.mp3_api</span> <span class="kn">import</span> <span class="n">Mp3Api</span>
@@ -250,6 +252,20 @@
         <span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">ac3</span> <span class="o">=</span> <span class="n">Ac3Api</span><span class="p">(</span>
+            <span class="n">api_key</span><span class="o">=</span><span class="n">api_key</span><span class="p">,</span>
+            <span class="n">tenant_org_id</span><span class="o">=</span><span class="n">tenant_org_id</span><span class="p">,</span>
+            <span class="n">base_url</span><span class="o">=</span><span class="n">base_url</span><span class="p">,</span>
+            <span class="n">logger</span><span class="o">=</span><span class="n">logger</span>
+        <span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">dolby_digital</span> <span class="o">=</span> <span class="n">DolbyDigitalApi</span><span class="p">(</span>
+            <span class="n">api_key</span><span class="o">=</span><span class="n">api_key</span><span class="p">,</span>
+            <span class="n">tenant_org_id</span><span class="o">=</span><span class="n">tenant_org_id</span><span class="p">,</span>
+            <span class="n">base_url</span><span class="o">=</span><span class="n">base_url</span><span class="p">,</span>
+            <span class="n">logger</span><span class="o">=</span><span class="n">logger</span>
+        <span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">dolby_digital_plus</span> <span class="o">=</span> <span class="n">DolbyDigitalPlusApi</span><span class="p">(</span>
             <span class="n">api_key</span><span class="o">=</span><span class="n">api_key</span><span class="p">,</span>
             <span class="n">tenant_org_id</span><span class="o">=</span><span class="n">tenant_org_id</span><span class="p">,</span>
             <span class="n">base_url</span><span class="o">=</span><span class="n">base_url</span><span class="p">,</span>

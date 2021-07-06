@@ -19,15 +19,17 @@ class Thumbnail(BitmovinResource):
                  modified_at=None,
                  custom_data=None,
                  height=None,
+                 width=None,
                  pattern=None,
                  interval=None,
                  positions=None,
                  outputs=None,
                  unit=None):
-        # type: (string_types, string_types, string_types, datetime, datetime, dict, int, string_types, float, list[float], list[EncodingOutput], ThumbnailUnit) -> None
+        # type: (string_types, string_types, string_types, datetime, datetime, dict, int, int, string_types, float, list[float], list[EncodingOutput], ThumbnailUnit) -> None
         super(Thumbnail, self).__init__(id_=id_, name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data)
 
         self._height = None
+        self._width = None
         self._pattern = None
         self._interval = None
         self._positions = list()
@@ -37,6 +39,8 @@ class Thumbnail(BitmovinResource):
 
         if height is not None:
             self.height = height
+        if width is not None:
+            self.width = width
         if pattern is not None:
             self.pattern = pattern
         if interval is not None:
@@ -57,6 +61,7 @@ class Thumbnail(BitmovinResource):
 
         types.update({
             'height': 'int',
+            'width': 'int',
             'pattern': 'string_types',
             'interval': 'float',
             'positions': 'list[float]',
@@ -75,6 +80,7 @@ class Thumbnail(BitmovinResource):
 
         attributes.update({
             'height': 'height',
+            'width': 'width',
             'pattern': 'pattern',
             'interval': 'interval',
             'positions': 'positions',
@@ -88,7 +94,7 @@ class Thumbnail(BitmovinResource):
         # type: () -> int
         """Gets the height of this Thumbnail.
 
-        Height of the thumbnail. (required)
+        Height of the thumbnail, either height or width are required fields. If only one is given the encoder will calculate the other way value based on the aspect ratio of the video file. If the encoder version is below 2.83.0 only height is supported and mandatory. 
 
         :return: The height of this Thumbnail.
         :rtype: int
@@ -100,7 +106,7 @@ class Thumbnail(BitmovinResource):
         # type: (int) -> None
         """Sets the height of this Thumbnail.
 
-        Height of the thumbnail. (required)
+        Height of the thumbnail, either height or width are required fields. If only one is given the encoder will calculate the other way value based on the aspect ratio of the video file. If the encoder version is below 2.83.0 only height is supported and mandatory. 
 
         :param height: The height of this Thumbnail.
         :type: int
@@ -113,11 +119,40 @@ class Thumbnail(BitmovinResource):
         self._height = height
 
     @property
+    def width(self):
+        # type: () -> int
+        """Gets the width of this Thumbnail.
+
+        Width of the thumbnail, either height or width are required fields. If only one is given the encoder will calculate the other way value based on the aspect ratio of the video file. If the encoder version is below 2.83.0 only height is supported 
+
+        :return: The width of this Thumbnail.
+        :rtype: int
+        """
+        return self._width
+
+    @width.setter
+    def width(self, width):
+        # type: (int) -> None
+        """Sets the width of this Thumbnail.
+
+        Width of the thumbnail, either height or width are required fields. If only one is given the encoder will calculate the other way value based on the aspect ratio of the video file. If the encoder version is below 2.83.0 only height is supported 
+
+        :param width: The width of this Thumbnail.
+        :type: int
+        """
+
+        if width is not None:
+            if not isinstance(width, int):
+                raise TypeError("Invalid type for `width`, type has to be `int`")
+
+        self._width = width
+
+    @property
     def pattern(self):
         # type: () -> string_types
         """Gets the pattern of this Thumbnail.
 
-         Pattern which describes the thumbnail filenames. For example with thumbnail-%number%.png as pattern and 3 positions: thumbnail-3_0.png, thumbnail-5_0.png and thumbnail-25_5.png. (The number represents the position in the source video in seconds, in the previous example the first filename represents the thumbnail at 3s, the second one at 5s and the third one at 25.5s).
+         Pattern which describes the thumbnail filenames. For example with thumbnail-%number%.png as pattern and 3 positions: thumbnail-3_0.png, thumbnail-5_0.png and thumbnail-25_5.png. (The number represents the position in the source video in seconds, in the previous example the first filename represents the thumbnail at 3s, the second one at 5s and the third one at 25.5s). (required)
 
         :return: The pattern of this Thumbnail.
         :rtype: string_types
@@ -129,7 +164,7 @@ class Thumbnail(BitmovinResource):
         # type: (string_types) -> None
         """Sets the pattern of this Thumbnail.
 
-         Pattern which describes the thumbnail filenames. For example with thumbnail-%number%.png as pattern and 3 positions: thumbnail-3_0.png, thumbnail-5_0.png and thumbnail-25_5.png. (The number represents the position in the source video in seconds, in the previous example the first filename represents the thumbnail at 3s, the second one at 5s and the third one at 25.5s).
+         Pattern which describes the thumbnail filenames. For example with thumbnail-%number%.png as pattern and 3 positions: thumbnail-3_0.png, thumbnail-5_0.png and thumbnail-25_5.png. (The number represents the position in the source video in seconds, in the previous example the first filename represents the thumbnail at 3s, the second one at 5s and the third one at 25.5s). (required)
 
         :param pattern: The pattern of this Thumbnail.
         :type: string_types

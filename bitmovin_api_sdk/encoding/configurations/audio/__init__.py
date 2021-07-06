@@ -8,6 +8,8 @@ from bitmovin_api_sdk.encoding.configurations.audio.vorbis.vorbis_api import Vor
 from bitmovin_api_sdk.encoding.configurations.audio.opus.opus_api import OpusApi
 from bitmovin_api_sdk.encoding.configurations.audio.pcm.pcm_api import PcmApi
 from bitmovin_api_sdk.encoding.configurations.audio.ac3.ac3_api import Ac3Api
+from bitmovin_api_sdk.encoding.configurations.audio.dolby_digital.dolby_digital_api import DolbyDigitalApi
+from bitmovin_api_sdk.encoding.configurations.audio.dolby_digital_plus.dolby_digital_plus_api import DolbyDigitalPlusApi
 from bitmovin_api_sdk.encoding.configurations.audio.eac3.eac3_api import Eac3Api
 from bitmovin_api_sdk.encoding.configurations.audio.mp2.mp2_api import Mp2Api
 from bitmovin_api_sdk.encoding.configurations.audio.mp3.mp3_api import Mp3Api

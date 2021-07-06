@@ -182,15 +182,17 @@
                  <span class="n">modified_at</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">custom_data</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">height</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">width</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">pattern</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">interval</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">positions</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">outputs</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">unit</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (string_types, string_types, string_types, datetime, datetime, dict, int, string_types, float, list[float], list[EncodingOutput], ThumbnailUnit) -&gt; None</span>
+        <span class="c1"># type: (string_types, string_types, string_types, datetime, datetime, dict, int, int, string_types, float, list[float], list[EncodingOutput], ThumbnailUnit) -&gt; None</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">Thumbnail</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">id_</span><span class="o">=</span><span class="n">id_</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="n">description</span><span class="p">,</span> <span class="n">created_at</span><span class="o">=</span><span class="n">created_at</span><span class="p">,</span> <span class="n">modified_at</span><span class="o">=</span><span class="n">modified_at</span><span class="p">,</span> <span class="n">custom_data</span><span class="o">=</span><span class="n">custom_data</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_height</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_width</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_pattern</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_interval</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_positions</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
@@ -200,6 +202,8 @@
 
         <span class="k">if</span> <span class="n">height</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">height</span> <span class="o">=</span> <span class="n">height</span>
+        <span class="k">if</span> <span class="n">width</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">width</span> <span class="o">=</span> <span class="n">width</span>
         <span class="k">if</span> <span class="n">pattern</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">pattern</span> <span class="o">=</span> <span class="n">pattern</span>
         <span class="k">if</span> <span class="n">interval</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -220,6 +224,7 @@
 
         <span class="n">types</span><span class="o">.</span><span class="n">update</span><span class="p">({</span>
             <span class="s1">&#39;height&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;width&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
             <span class="s1">&#39;pattern&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
             <span class="s1">&#39;interval&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span><span class="p">,</span>
             <span class="s1">&#39;positions&#39;</span><span class="p">:</span> <span class="s1">&#39;list[float]&#39;</span><span class="p">,</span>
@@ -238,6 +243,7 @@
 
         <span class="n">attributes</span><span class="o">.</span><span class="n">update</span><span class="p">({</span>
             <span class="s1">&#39;height&#39;</span><span class="p">:</span> <span class="s1">&#39;height&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;width&#39;</span><span class="p">:</span> <span class="s1">&#39;width&#39;</span><span class="p">,</span>
             <span class="s1">&#39;pattern&#39;</span><span class="p">:</span> <span class="s1">&#39;pattern&#39;</span><span class="p">,</span>
             <span class="s1">&#39;interval&#39;</span><span class="p">:</span> <span class="s1">&#39;interval&#39;</span><span class="p">,</span>
             <span class="s1">&#39;positions&#39;</span><span class="p">:</span> <span class="s1">&#39;positions&#39;</span><span class="p">,</span>
@@ -251,7 +257,7 @@
         <span class="c1"># type: () -&gt; int</span>
         <span class="sd">&quot;&quot;&quot;Gets the height of this Thumbnail.</span>
 
-<span class="sd">        Height of the thumbnail. (required)</span>
+<span class="sd">        Height of the thumbnail, either height or width are required fields. If only one is given the encoder will calculate the other way value based on the aspect ratio of the video file. If the encoder version is below 2.83.0 only height is supported and mandatory. </span>
 
 <span class="sd">        :return: The height of this Thumbnail.</span>
 <span class="sd">        :rtype: int</span>
@@ -263,7 +269,7 @@
         <span class="c1"># type: (int) -&gt; None</span>
         <span class="sd">&quot;&quot;&quot;Sets the height of this Thumbnail.</span>
 
-<span class="sd">        Height of the thumbnail. (required)</span>
+<span class="sd">        Height of the thumbnail, either height or width are required fields. If only one is given the encoder will calculate the other way value based on the aspect ratio of the video file. If the encoder version is below 2.83.0 only height is supported and mandatory. </span>
 
 <span class="sd">        :param height: The height of this Thumbnail.</span>
 <span class="sd">        :type: int</span>
@@ -276,11 +282,40 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_height</span> <span class="o">=</span> <span class="n">height</span>
 
     <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">width</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; int</span>
+        <span class="sd">&quot;&quot;&quot;Gets the width of this Thumbnail.</span>
+
+<span class="sd">        Width of the thumbnail, either height or width are required fields. If only one is given the encoder will calculate the other way value based on the aspect ratio of the video file. If the encoder version is below 2.83.0 only height is supported </span>
+
+<span class="sd">        :return: The width of this Thumbnail.</span>
+<span class="sd">        :rtype: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_width</span>
+
+    <span class="nd">@width</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">width</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">width</span><span class="p">):</span>
+        <span class="c1"># type: (int) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the width of this Thumbnail.</span>
+
+<span class="sd">        Width of the thumbnail, either height or width are required fields. If only one is given the encoder will calculate the other way value based on the aspect ratio of the video file. If the encoder version is below 2.83.0 only height is supported </span>
+
+<span class="sd">        :param width: The width of this Thumbnail.</span>
+<span class="sd">        :type: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">width</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `width`, type has to be `int`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_width</span> <span class="o">=</span> <span class="n">width</span>
+
+    <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">pattern</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; string_types</span>
         <span class="sd">&quot;&quot;&quot;Gets the pattern of this Thumbnail.</span>
 
-<span class="sd">         Pattern which describes the thumbnail filenames. For example with thumbnail-%number%.png as pattern and 3 positions: thumbnail-3_0.png, thumbnail-5_0.png and thumbnail-25_5.png. (The number represents the position in the source video in seconds, in the previous example the first filename represents the thumbnail at 3s, the second one at 5s and the third one at 25.5s).</span>
+<span class="sd">         Pattern which describes the thumbnail filenames. For example with thumbnail-%number%.png as pattern and 3 positions: thumbnail-3_0.png, thumbnail-5_0.png and thumbnail-25_5.png. (The number represents the position in the source video in seconds, in the previous example the first filename represents the thumbnail at 3s, the second one at 5s and the third one at 25.5s). (required)</span>
 
 <span class="sd">        :return: The pattern of this Thumbnail.</span>
 <span class="sd">        :rtype: string_types</span>
@@ -292,7 +327,7 @@
         <span class="c1"># type: (string_types) -&gt; None</span>
         <span class="sd">&quot;&quot;&quot;Sets the pattern of this Thumbnail.</span>
 
-<span class="sd">         Pattern which describes the thumbnail filenames. For example with thumbnail-%number%.png as pattern and 3 positions: thumbnail-3_0.png, thumbnail-5_0.png and thumbnail-25_5.png. (The number represents the position in the source video in seconds, in the previous example the first filename represents the thumbnail at 3s, the second one at 5s and the third one at 25.5s).</span>
+<span class="sd">         Pattern which describes the thumbnail filenames. For example with thumbnail-%number%.png as pattern and 3 positions: thumbnail-3_0.png, thumbnail-5_0.png and thumbnail-25_5.png. (The number represents the position in the source video in seconds, in the previous example the first filename represents the thumbnail at 3s, the second one at 5s and the third one at 25.5s). (required)</span>
 
 <span class="sd">        :param pattern: The pattern of this Thumbnail.</span>
 <span class="sd">        :type: string_types</span>
