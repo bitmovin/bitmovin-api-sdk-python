@@ -101,7 +101,7 @@ class StaticIp(BitmovinResponse):
         # type: () -> string_types
         """Gets the infrastructure_id of this StaticIp.
 
-        Required if the static IP should be created for an AWS infrastructure account.
+        Required if the static IP should be created for an AWS infrastructure account. If this is left blank the static Ip will be created for the managed cloud.
 
         :return: The infrastructure_id of this StaticIp.
         :rtype: string_types
@@ -113,7 +113,7 @@ class StaticIp(BitmovinResponse):
         # type: (string_types) -> None
         """Sets the infrastructure_id of this StaticIp.
 
-        Required if the static IP should be created for an AWS infrastructure account.
+        Required if the static IP should be created for an AWS infrastructure account. If this is left blank the static Ip will be created for the managed cloud.
 
         :param infrastructure_id: The infrastructure_id of this StaticIp.
         :type: string_types

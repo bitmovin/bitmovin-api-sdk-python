@@ -1,3 +1,4 @@
 from bitmovin_api_sdk.encoding.configurations.subtitles.subtitles_api import SubtitlesApi
 from bitmovin_api_sdk.encoding.configurations.subtitles.dvb_subtitle.dvb_subtitle_api import DvbSubtitleApi
 from bitmovin_api_sdk.encoding.configurations.subtitles.webvtt.webvtt_api import WebvttApi
+from bitmovin_api_sdk.encoding.configurations.subtitles.imsc.imsc_api import ImscApi

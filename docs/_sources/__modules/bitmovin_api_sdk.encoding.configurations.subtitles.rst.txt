@@ -8,6 +8,7 @@ Subpackages
    :maxdepth: 4
 
    bitmovin_api_sdk.encoding.configurations.subtitles.dvb_subtitle
+   bitmovin_api_sdk.encoding.configurations.subtitles.imsc
    bitmovin_api_sdk.encoding.configurations.subtitles.webvtt
 
 Submodules

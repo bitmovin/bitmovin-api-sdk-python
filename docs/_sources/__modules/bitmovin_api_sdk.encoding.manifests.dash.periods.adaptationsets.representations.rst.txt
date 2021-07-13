@@ -10,6 +10,7 @@ Subpackages
    bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.chunked_text
    bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.cmaf
    bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.fmp4
+   bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.imsc
    bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.mp4
    bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.progressive_webm
    bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.sprite

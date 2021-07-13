@@ -364,6 +364,22 @@ bitmovin\_api\_sdk.models.analytics\_abstract\_filter module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.analytics\_ads\_impression\_sample module
+-------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.analytics_ads_impression_sample
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.analytics\_ads\_impressions\_response module
+----------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.analytics_ads_impressions_response
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.analytics\_attribute module
 -----------------------------------------------------
 
@@ -1680,6 +1696,14 @@ bitmovin\_api\_sdk.models.dash\_fmp4\_representation module
 -----------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.models.dash_fmp4_representation
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.dash\_imsc\_representation module
+-----------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.dash_imsc_representation
    :members:
    :undoc-members:
    :show-inheritance:
@@ -3032,6 +3056,30 @@ bitmovin\_api\_sdk.models.image\_adaptation\_set module
 -------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.models.image_adaptation_set
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.imsc\_configuration module
+----------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.imsc_configuration
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.imsc\_styling module
+----------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.imsc_styling
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.imsc\_styling\_mode module
+----------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.imsc_styling_mode
    :members:
    :undoc-members:
    :show-inheritance:

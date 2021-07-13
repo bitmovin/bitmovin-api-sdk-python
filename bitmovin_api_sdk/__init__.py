@@ -29,6 +29,8 @@ from bitmovin_api_sdk.analytics.exports.exports_api import ExportsApi
 from bitmovin_api_sdk.analytics.exports.exports_api import AnalyticsExportTaskListQueryParams
 from bitmovin_api_sdk.analytics.impressions.impressions_api import ImpressionsApi
 
+from bitmovin_api_sdk.analytics.impressions.ads.ads_api import AdsApi
+
 from bitmovin_api_sdk.analytics.insights.insights_api import InsightsApi
 
 from bitmovin_api_sdk.analytics.insights.organizations.organizations_api import OrganizationsApi
@@ -334,6 +336,10 @@ from bitmovin_api_sdk.encoding.configurations.subtitles.dvb_subtitle.customdata.
 from bitmovin_api_sdk.encoding.configurations.subtitles.webvtt.webvtt_api import WebvttApi
 from bitmovin_api_sdk.encoding.configurations.subtitles.webvtt.webvtt_api import WebVttConfigurationListQueryParams
 from bitmovin_api_sdk.encoding.configurations.subtitles.webvtt.customdata.customdata_api import CustomdataApi
+
+from bitmovin_api_sdk.encoding.configurations.subtitles.imsc.imsc_api import ImscApi
+from bitmovin_api_sdk.encoding.configurations.subtitles.imsc.imsc_api import ImscConfigurationListQueryParams
+from bitmovin_api_sdk.encoding.configurations.subtitles.imsc.customdata.customdata_api import CustomdataApi
 
 from bitmovin_api_sdk.encoding.filters.filters_api import FiltersApi
 from bitmovin_api_sdk.encoding.filters.filters_api import FilterListQueryParams
@@ -757,6 +763,8 @@ from bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representat
 
 from bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.vtt.vtt_api import VttApi
 from bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.vtt.vtt_api import DashVttRepresentationListQueryParams
+from bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.imsc.imsc_api import ImscApi
+from bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.imsc.imsc_api import DashImscRepresentationListQueryParams
 from bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.sprite.sprite_api import SpriteApi
 from bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.sprite.sprite_api import SpriteRepresentationListQueryParams
 from bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.fmp4.fmp4_api import Fmp4Api
@@ -1001,6 +1009,8 @@ from bitmovin_api_sdk.models.akamai_msl_version import AkamaiMslVersion
 from bitmovin_api_sdk.models.akamai_net_storage_input import AkamaiNetStorageInput
 from bitmovin_api_sdk.models.akamai_net_storage_output import AkamaiNetStorageOutput
 from bitmovin_api_sdk.models.analytics_abstract_filter import AnalyticsAbstractFilter
+from bitmovin_api_sdk.models.analytics_ads_impression_sample import AnalyticsAdsImpressionSample
+from bitmovin_api_sdk.models.analytics_ads_impressions_response import AnalyticsAdsImpressionsResponse
 from bitmovin_api_sdk.models.analytics_attribute import AnalyticsAttribute
 from bitmovin_api_sdk.models.analytics_avg_concurrent_viewers_response import AnalyticsAvgConcurrentViewersResponse
 from bitmovin_api_sdk.models.analytics_avg_dropped_frames_response import AnalyticsAvgDroppedFramesResponse
@@ -1166,6 +1176,7 @@ from bitmovin_api_sdk.models.dash_chunked_text_representation import DashChunked
 from bitmovin_api_sdk.models.dash_cmaf_representation import DashCmafRepresentation
 from bitmovin_api_sdk.models.dash_fmp4_drm_representation import DashFmp4DrmRepresentation
 from bitmovin_api_sdk.models.dash_fmp4_representation import DashFmp4Representation
+from bitmovin_api_sdk.models.dash_imsc_representation import DashImscRepresentation
 from bitmovin_api_sdk.models.dash_manifest import DashManifest
 from bitmovin_api_sdk.models.dash_manifest_default import DashManifestDefault
 from bitmovin_api_sdk.models.dash_manifest_default_version import DashManifestDefaultVersion
@@ -1335,6 +1346,9 @@ from bitmovin_api_sdk.models.id3_tag_type import Id3TagType
 from bitmovin_api_sdk.models.ignored_by import IgnoredBy
 from bitmovin_api_sdk.models.ignoring import Ignoring
 from bitmovin_api_sdk.models.image_adaptation_set import ImageAdaptationSet
+from bitmovin_api_sdk.models.imsc_configuration import ImscConfiguration
+from bitmovin_api_sdk.models.imsc_styling import ImscStyling
+from bitmovin_api_sdk.models.imsc_styling_mode import ImscStylingMode
 from bitmovin_api_sdk.models.infrastructure_settings import InfrastructureSettings
 from bitmovin_api_sdk.models.ingest_input_stream import IngestInputStream
 from bitmovin_api_sdk.models.input import Input
@@ -1642,4 +1656,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.78.0"
+__version__ = "1.79.0"

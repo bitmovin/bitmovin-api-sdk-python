@@ -1,0 +1,37 @@
+bitmovin\_api\_sdk.encoding.configurations.subtitles.imsc package
+=================================================================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   bitmovin_api_sdk.encoding.configurations.subtitles.imsc.customdata
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.encoding.configurations.subtitles.imsc.imsc\_api module
+--------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.configurations.subtitles.imsc.imsc_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.encoding.configurations.subtitles.imsc.imsc\_configuration\_list\_query\_params module
+---------------------------------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.configurations.subtitles.imsc.imsc_configuration_list_query_params
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.encoding.configurations.subtitles.imsc
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,6 +1,14 @@
 bitmovin\_api\_sdk.analytics.impressions package
 ================================================
 
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   bitmovin_api_sdk.analytics.impressions.ads
+
 Submodules
 ----------
 

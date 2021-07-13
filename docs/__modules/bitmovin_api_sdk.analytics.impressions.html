@@ -41,7 +41,7 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="bitmovin_api_sdk.analytics.insights package" href="bitmovin_api_sdk.analytics.insights.html" />
+    <link rel="next" title="bitmovin_api_sdk.analytics.impressions.ads package" href="bitmovin_api_sdk.analytics.impressions.ads.html" />
     <link rel="prev" title="bitmovin_api_sdk.analytics.exports package" href="bitmovin_api_sdk.analytics.exports.html" /> 
 </head>
 
@@ -95,6 +95,7 @@
 <li class="toctree-l3"><a class="reference internal" href="bitmovin_api_sdk.analytics.ads.html">bitmovin_api_sdk.analytics.ads package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bitmovin_api_sdk.analytics.exports.html">bitmovin_api_sdk.analytics.exports package</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">bitmovin_api_sdk.analytics.impressions package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#subpackages">Subpackages</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#submodules">Submodules</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#module-bitmovin_api_sdk.analytics.impressions.impressions_api">bitmovin_api_sdk.analytics.impressions.impressions_api module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#module-bitmovin_api_sdk.analytics.impressions">Module contents</a></li>
@@ -188,7 +189,7 @@
   
   <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
       
-        <a href="bitmovin_api_sdk.analytics.insights.html" class="btn btn-neutral float-right" title="bitmovin_api_sdk.analytics.insights package" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="bitmovin_api_sdk.analytics.impressions.ads.html" class="btn btn-neutral float-right" title="bitmovin_api_sdk.analytics.impressions.ads package" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
       
       
         <a href="bitmovin_api_sdk.analytics.exports.html" class="btn btn-neutral float-left" title="bitmovin_api_sdk.analytics.exports package" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
@@ -202,6 +203,19 @@
             
   <div class="section" id="bitmovin-api-sdk-analytics-impressions-package">
 <h1>bitmovin_api_sdk.analytics.impressions package<a class="headerlink" href="#bitmovin-api-sdk-analytics-impressions-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="bitmovin_api_sdk.analytics.impressions.ads.html">bitmovin_api_sdk.analytics.impressions.ads package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="bitmovin_api_sdk.analytics.impressions.ads.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bitmovin_api_sdk.analytics.impressions.ads.html#module-bitmovin_api_sdk.analytics.impressions.ads.ads_api">bitmovin_api_sdk.analytics.impressions.ads.ads_api module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bitmovin_api_sdk.analytics.impressions.ads.html#module-bitmovin_api_sdk.analytics.impressions.ads">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
 <div class="section" id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
 </div>
@@ -213,7 +227,7 @@
 <dd><p>Bases: <a class="reference internal" href="bitmovin_api_sdk.common.html#bitmovin_api_sdk.common.base_api.BaseApi" title="bitmovin_api_sdk.common.base_api.BaseApi"><code class="xref py py-class docutils literal notranslate"><span class="pre">bitmovin_api_sdk.common.base_api.BaseApi</span></code></a></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="bitmovin_api_sdk.analytics.impressions.impressions_api.ImpressionsApi.create">
-<span class="sig-name descname"><span class="pre">create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">impression_id</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">string_types</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">analytics_license_key</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">AnalyticsLicenseKey</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">AnalyticsImpressionDetails</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/analytics/impressions/impressions_api.html#ImpressionsApi.create"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bitmovin_api_sdk.analytics.impressions.impressions_api.ImpressionsApi.create" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">impression_id</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">string_types</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">analytics_license_key</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">AnalyticsLicenseKey</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">AnalyticsImpressionDetails</span></span></span><a class="reference internal" href="../_modules/bitmovin_api_sdk/analytics/impressions/impressions_api.html#ImpressionsApi.create"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bitmovin_api_sdk.analytics.impressions.impressions_api.ImpressionsApi.create" title="Permalink to this definition">¶</a></dt>
 <dd><p>Impression Details</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -233,7 +247,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="bitmovin_api_sdk.analytics.impressions.impressions_api.ImpressionsApi.get_impressions">
-<span class="sig-name descname"><span class="pre">get_impressions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">analytics_impressions_query</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.analytics_impressions_query.AnalyticsImpressionsQuery" title="bitmovin_api_sdk.models.analytics_impressions_query.AnalyticsImpressionsQuery"><span class="pre">bitmovin_api_sdk.models.analytics_impressions_query.AnalyticsImpressionsQuery</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.analytics_impressions_response.AnalyticsImpressionsResponse" title="bitmovin_api_sdk.models.analytics_impressions_response.AnalyticsImpressionsResponse"><span class="pre">bitmovin_api_sdk.models.analytics_impressions_response.AnalyticsImpressionsResponse</span></a><a class="reference internal" href="../_modules/bitmovin_api_sdk/analytics/impressions/impressions_api.html#ImpressionsApi.get_impressions"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bitmovin_api_sdk.analytics.impressions.impressions_api.ImpressionsApi.get_impressions" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_impressions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">analytics_impressions_query</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.analytics_impressions_query.AnalyticsImpressionsQuery" title="bitmovin_api_sdk.models.analytics_impressions_query.AnalyticsImpressionsQuery"><span class="pre">bitmovin_api_sdk.models.analytics_impressions_query.AnalyticsImpressionsQuery</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.analytics_impressions_response.AnalyticsImpressionsResponse" title="bitmovin_api_sdk.models.analytics_impressions_response.AnalyticsImpressionsResponse"><span class="pre">bitmovin_api_sdk.models.analytics_impressions_response.AnalyticsImpressionsResponse</span></a></span></span><a class="reference internal" href="../_modules/bitmovin_api_sdk/analytics/impressions/impressions_api.html#ImpressionsApi.get_impressions"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bitmovin_api_sdk.analytics.impressions.impressions_api.ImpressionsApi.get_impressions" title="Permalink to this definition">¶</a></dt>
 <dd><p>List impressions</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -262,7 +276,7 @@
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="bitmovin_api_sdk.analytics.insights.html" class="btn btn-neutral float-right" title="bitmovin_api_sdk.analytics.insights package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="bitmovin_api_sdk.analytics.impressions.ads.html" class="btn btn-neutral float-right" title="bitmovin_api_sdk.analytics.impressions.ads package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
         <a href="bitmovin_api_sdk.analytics.exports.html" class="btn btn-neutral float-left" title="bitmovin_api_sdk.analytics.exports package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 

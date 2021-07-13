@@ -32,7 +32,8 @@ class CodecConfiguration(BitmovinResource):
         'DOLBY_ATMOS': 'DolbyAtmosAudioConfiguration',
         'H262': 'H262VideoConfiguration',
         'PCM': 'PcmAudioConfiguration',
-        'WEBVTT': 'WebVttConfiguration'
+        'WEBVTT': 'WebVttConfiguration',
+        'IMSC': 'ImscConfiguration'
     }
 
     def to_dict(self):
