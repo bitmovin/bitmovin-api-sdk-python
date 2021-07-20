@@ -175,18 +175,18 @@
 <div class="viewcode-block" id="IngestInputStream"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.ingest_input_stream.IngestInputStream">[docs]</a><span class="k">class</span> <span class="nc">IngestInputStream</span><span class="p">(</span><span class="n">InputStream</span><span class="p">):</span>
     <span class="nd">@poscheck_model</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                 <span class="n">id_</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">description</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">created_at</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">modified_at</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">custom_data</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                 <span class="n">id_</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">input_id</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">input_path</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">selection_mode</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">position</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (string_types, string_types, datetime, datetime, dict, string_types, string_types, string_types, StreamSelectionMode, int) -&gt; None</span>
-        <span class="nb">super</span><span class="p">(</span><span class="n">IngestInputStream</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="n">description</span><span class="p">,</span> <span class="n">created_at</span><span class="o">=</span><span class="n">created_at</span><span class="p">,</span> <span class="n">modified_at</span><span class="o">=</span><span class="n">modified_at</span><span class="p">,</span> <span class="n">custom_data</span><span class="o">=</span><span class="n">custom_data</span><span class="p">,</span> <span class="n">id_</span><span class="o">=</span><span class="n">id_</span><span class="p">)</span>
+        <span class="c1"># type: (string_types, string_types, string_types, datetime, datetime, dict, string_types, string_types, StreamSelectionMode, int) -&gt; None</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">IngestInputStream</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">id_</span><span class="o">=</span><span class="n">id_</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="n">description</span><span class="p">,</span> <span class="n">created_at</span><span class="o">=</span><span class="n">created_at</span><span class="p">,</span> <span class="n">modified_at</span><span class="o">=</span><span class="n">modified_at</span><span class="p">,</span> <span class="n">custom_data</span><span class="o">=</span><span class="n">custom_data</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_input_id</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_input_path</span> <span class="o">=</span> <span class="kc">None</span>
@@ -326,7 +326,7 @@
         <span class="c1"># type: () -&gt; int</span>
         <span class="sd">&quot;&quot;&quot;Gets the position of this IngestInputStream.</span>
 
-<span class="sd">        Position of the stream</span>
+<span class="sd">        Position of the stream, starting from 0.</span>
 
 <span class="sd">        :return: The position of this IngestInputStream.</span>
 <span class="sd">        :rtype: int</span>
@@ -338,13 +338,15 @@
         <span class="c1"># type: (int) -&gt; None</span>
         <span class="sd">&quot;&quot;&quot;Sets the position of this IngestInputStream.</span>
 
-<span class="sd">        Position of the stream</span>
+<span class="sd">        Position of the stream, starting from 0.</span>
 
 <span class="sd">        :param position: The position of this IngestInputStream.</span>
 <span class="sd">        :type: int</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
         <span class="k">if</span> <span class="n">position</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">position</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">position</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid value for `position`, must be a value greater than or equal to `0`&quot;</span><span class="p">)</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">position</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `position`, type has to be `int`&quot;</span><span class="p">)</span>
 

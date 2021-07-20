@@ -158,7 +158,7 @@ class StreamInput(object):
         # type: () -> int
         """Gets the position of this StreamInput.
 
-        Position of the stream
+        Position of the stream, starting from 0.
 
         :return: The position of this StreamInput.
         :rtype: int
@@ -170,13 +170,15 @@ class StreamInput(object):
         # type: (int) -> None
         """Sets the position of this StreamInput.
 
-        Position of the stream
+        Position of the stream, starting from 0.
 
         :param position: The position of this StreamInput.
         :type: int
         """
 
         if position is not None:
+            if position is not None and position < 0:
+                raise ValueError("Invalid value for `position`, must be a value greater than or equal to `0`")
             if not isinstance(position, int):
                 raise TypeError("Invalid type for `position`, type has to be `int`")
 

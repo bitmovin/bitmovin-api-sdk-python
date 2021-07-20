@@ -167,6 +167,7 @@
 <span class="kn">from</span> <span class="nn">six</span> <span class="kn">import</span> <span class="n">string_types</span><span class="p">,</span> <span class="n">iteritems</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.common.poscheck</span> <span class="kn">import</span> <span class="n">poscheck_model</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.bitmovin_resource</span> <span class="kn">import</span> <span class="n">BitmovinResource</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.thumbnail_aspect_mode</span> <span class="kn">import</span> <span class="n">ThumbnailAspectMode</span>
 <span class="kn">import</span> <span class="nn">pprint</span>
 <span class="kn">import</span> <span class="nn">six</span>
 
@@ -184,8 +185,9 @@
                  <span class="n">width</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">distance</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">filename</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                 <span class="n">outputs</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (string_types, string_types, string_types, datetime, datetime, dict, int, int, float, string_types, list[EncodingOutput]) -&gt; None</span>
+                 <span class="n">outputs</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">aspect_mode</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="c1"># type: (string_types, string_types, string_types, datetime, datetime, dict, int, int, float, string_types, list[EncodingOutput], ThumbnailAspectMode) -&gt; None</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">Bif</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">id_</span><span class="o">=</span><span class="n">id_</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="n">description</span><span class="p">,</span> <span class="n">created_at</span><span class="o">=</span><span class="n">created_at</span><span class="p">,</span> <span class="n">modified_at</span><span class="o">=</span><span class="n">modified_at</span><span class="p">,</span> <span class="n">custom_data</span><span class="o">=</span><span class="n">custom_data</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_height</span> <span class="o">=</span> <span class="kc">None</span>
@@ -193,6 +195,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_distance</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_filename</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_outputs</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_aspect_mode</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>
 
         <span class="k">if</span> <span class="n">height</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -205,6 +208,8 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">filename</span> <span class="o">=</span> <span class="n">filename</span>
         <span class="k">if</span> <span class="n">outputs</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">outputs</span> <span class="o">=</span> <span class="n">outputs</span>
+        <span class="k">if</span> <span class="n">aspect_mode</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">aspect_mode</span> <span class="o">=</span> <span class="n">aspect_mode</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -218,7 +223,8 @@
             <span class="s1">&#39;width&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
             <span class="s1">&#39;distance&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span><span class="p">,</span>
             <span class="s1">&#39;filename&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;outputs&#39;</span><span class="p">:</span> <span class="s1">&#39;list[EncodingOutput]&#39;</span>
+            <span class="s1">&#39;outputs&#39;</span><span class="p">:</span> <span class="s1">&#39;list[EncodingOutput]&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;aspect_mode&#39;</span><span class="p">:</span> <span class="s1">&#39;ThumbnailAspectMode&#39;</span>
         <span class="p">})</span>
 
         <span class="k">return</span> <span class="n">types</span>
@@ -235,7 +241,8 @@
             <span class="s1">&#39;width&#39;</span><span class="p">:</span> <span class="s1">&#39;width&#39;</span><span class="p">,</span>
             <span class="s1">&#39;distance&#39;</span><span class="p">:</span> <span class="s1">&#39;distance&#39;</span><span class="p">,</span>
             <span class="s1">&#39;filename&#39;</span><span class="p">:</span> <span class="s1">&#39;filename&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;outputs&#39;</span><span class="p">:</span> <span class="s1">&#39;outputs&#39;</span>
+            <span class="s1">&#39;outputs&#39;</span><span class="p">:</span> <span class="s1">&#39;outputs&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;aspect_mode&#39;</span><span class="p">:</span> <span class="s1">&#39;aspectMode&#39;</span>
         <span class="p">})</span>
         <span class="k">return</span> <span class="n">attributes</span>
 
@@ -381,6 +388,35 @@
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `outputs`, type has to be `list[EncodingOutput]`&quot;</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_outputs</span> <span class="o">=</span> <span class="n">outputs</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">aspect_mode</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; ThumbnailAspectMode</span>
+        <span class="sd">&quot;&quot;&quot;Gets the aspect_mode of this Bif.</span>
+
+<span class="sd">        Specifies the aspect mode that is used when both height and width are specified Only supported starting with encoder version `2.85.0`. </span>
+
+<span class="sd">        :return: The aspect_mode of this Bif.</span>
+<span class="sd">        :rtype: ThumbnailAspectMode</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_aspect_mode</span>
+
+    <span class="nd">@aspect_mode</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">aspect_mode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">aspect_mode</span><span class="p">):</span>
+        <span class="c1"># type: (ThumbnailAspectMode) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the aspect_mode of this Bif.</span>
+
+<span class="sd">        Specifies the aspect mode that is used when both height and width are specified Only supported starting with encoder version `2.85.0`. </span>
+
+<span class="sd">        :param aspect_mode: The aspect_mode of this Bif.</span>
+<span class="sd">        :type: ThumbnailAspectMode</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">aspect_mode</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">aspect_mode</span><span class="p">,</span> <span class="n">ThumbnailAspectMode</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `aspect_mode`, type has to be `ThumbnailAspectMode`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_aspect_mode</span> <span class="o">=</span> <span class="n">aspect_mode</span>
 
 <div class="viewcode-block" id="Bif.to_dict"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.bif.Bif.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>

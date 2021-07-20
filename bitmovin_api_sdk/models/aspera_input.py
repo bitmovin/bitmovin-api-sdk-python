@@ -11,12 +11,12 @@ import six
 class AsperaInput(Input):
     @poscheck_model
     def __init__(self,
+                 id_=None,
                  name=None,
                  description=None,
                  created_at=None,
                  modified_at=None,
                  custom_data=None,
-                 id_=None,
                  min_bandwidth=None,
                  max_bandwidth=None,
                  host=None,
@@ -25,8 +25,8 @@ class AsperaInput(Input):
                  token=None,
                  ssh_port=None,
                  fasp_port=None):
-        # type: (string_types, string_types, datetime, datetime, dict, string_types, string_types, string_types, string_types, string_types, string_types, string_types, int, int) -> None
-        super(AsperaInput, self).__init__(name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, id_=id_)
+        # type: (string_types, string_types, string_types, datetime, datetime, dict, string_types, string_types, string_types, string_types, string_types, string_types, int, int) -> None
+        super(AsperaInput, self).__init__(id_=id_, name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data)
 
         self._min_bandwidth = None
         self._max_bandwidth = None

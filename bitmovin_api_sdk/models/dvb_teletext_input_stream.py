@@ -12,19 +12,19 @@ import six
 class DvbTeletextInputStream(InputStream):
     @poscheck_model
     def __init__(self,
+                 id_=None,
                  name=None,
                  description=None,
                  created_at=None,
                  modified_at=None,
                  custom_data=None,
-                 id_=None,
                  input_id=None,
                  input_path=None,
                  selection_mode=None,
                  position=None,
                  page=None):
-        # type: (string_types, string_types, datetime, datetime, dict, string_types, string_types, string_types, StreamSelectionMode, int, int) -> None
-        super(DvbTeletextInputStream, self).__init__(name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, id_=id_)
+        # type: (string_types, string_types, string_types, datetime, datetime, dict, string_types, string_types, StreamSelectionMode, int, int) -> None
+        super(DvbTeletextInputStream, self).__init__(id_=id_, name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data)
 
         self._input_id = None
         self._input_path = None
@@ -169,7 +169,7 @@ class DvbTeletextInputStream(InputStream):
         # type: () -> int
         """Gets the position of this DvbTeletextInputStream.
 
-        Position of the stream
+        Position of the stream, starting from 0.
 
         :return: The position of this DvbTeletextInputStream.
         :rtype: int
@@ -181,13 +181,15 @@ class DvbTeletextInputStream(InputStream):
         # type: (int) -> None
         """Sets the position of this DvbTeletextInputStream.
 
-        Position of the stream
+        Position of the stream, starting from 0.
 
         :param position: The position of this DvbTeletextInputStream.
         :type: int
         """
 
         if position is not None:
+            if position is not None and position < 0:
+                raise ValueError("Invalid value for `position`, must be a value greater than or equal to `0`")
             if not isinstance(position, int):
                 raise TypeError("Invalid type for `position`, type has to be `int`")
 

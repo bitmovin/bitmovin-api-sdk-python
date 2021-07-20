@@ -14,12 +14,12 @@ import six
 class SmoothManifestDefault(SmoothStreamingManifest):
     @poscheck_model
     def __init__(self,
+                 id_=None,
                  name=None,
                  description=None,
                  created_at=None,
                  modified_at=None,
                  custom_data=None,
-                 id_=None,
                  type_=None,
                  outputs=None,
                  status=None,
@@ -27,8 +27,8 @@ class SmoothManifestDefault(SmoothStreamingManifest):
                  client_manifest_name=None,
                  encoding_id=None,
                  version=None):
-        # type: (string_types, string_types, datetime, datetime, dict, string_types, ManifestType, list[EncodingOutput], Status, string_types, string_types, string_types, SmoothManifestDefaultVersion) -> None
-        super(SmoothManifestDefault, self).__init__(name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, id_=id_, type_=type_, outputs=outputs, status=status, server_manifest_name=server_manifest_name, client_manifest_name=client_manifest_name)
+        # type: (string_types, string_types, string_types, datetime, datetime, dict, ManifestType, list[EncodingOutput], Status, string_types, string_types, string_types, SmoothManifestDefaultVersion) -> None
+        super(SmoothManifestDefault, self).__init__(id_=id_, name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, type_=type_, outputs=outputs, status=status, server_manifest_name=server_manifest_name, client_manifest_name=client_manifest_name)
 
         self._encoding_id = None
         self._version = None

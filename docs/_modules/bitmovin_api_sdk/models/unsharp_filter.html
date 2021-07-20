@@ -174,20 +174,20 @@
 <div class="viewcode-block" id="UnsharpFilter"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.unsharp_filter.UnsharpFilter">[docs]</a><span class="k">class</span> <span class="nc">UnsharpFilter</span><span class="p">(</span><span class="n">Filter</span><span class="p">):</span>
     <span class="nd">@poscheck_model</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                 <span class="n">id_</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">description</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">created_at</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">modified_at</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">custom_data</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                 <span class="n">id_</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">luma_matrix_horizontal_size</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">luma_matrix_vertical_size</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">luma_effect_strength</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">chroma_matrix_horizontal_size</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">chroma_matrix_vertical_size</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">chroma_effect_strength</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (string_types, string_types, datetime, datetime, dict, string_types, int, int, float, int, int, float) -&gt; None</span>
-        <span class="nb">super</span><span class="p">(</span><span class="n">UnsharpFilter</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="n">description</span><span class="p">,</span> <span class="n">created_at</span><span class="o">=</span><span class="n">created_at</span><span class="p">,</span> <span class="n">modified_at</span><span class="o">=</span><span class="n">modified_at</span><span class="p">,</span> <span class="n">custom_data</span><span class="o">=</span><span class="n">custom_data</span><span class="p">,</span> <span class="n">id_</span><span class="o">=</span><span class="n">id_</span><span class="p">)</span>
+        <span class="c1"># type: (string_types, string_types, string_types, datetime, datetime, dict, int, int, float, int, int, float) -&gt; None</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">UnsharpFilter</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">id_</span><span class="o">=</span><span class="n">id_</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="n">description</span><span class="p">,</span> <span class="n">created_at</span><span class="o">=</span><span class="n">created_at</span><span class="p">,</span> <span class="n">modified_at</span><span class="o">=</span><span class="n">modified_at</span><span class="p">,</span> <span class="n">custom_data</span><span class="o">=</span><span class="n">custom_data</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_luma_matrix_horizontal_size</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_luma_matrix_vertical_size</span> <span class="o">=</span> <span class="kc">None</span>

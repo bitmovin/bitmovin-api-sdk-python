@@ -13,19 +13,19 @@ import six
 class WebVttSidecarFile(SidecarFile):
     @poscheck_model
     def __init__(self,
+                 id_=None,
                  name=None,
                  description=None,
                  created_at=None,
                  modified_at=None,
                  custom_data=None,
-                 id_=None,
                  input_id=None,
                  input_path=None,
                  outputs=None,
                  error_mode=None,
                  segmentation=None):
-        # type: (string_types, string_types, datetime, datetime, dict, string_types, string_types, string_types, list[EncodingOutput], SidecarErrorMode, WebVttSidecarFileSegmentation) -> None
-        super(WebVttSidecarFile, self).__init__(name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, id_=id_, input_id=input_id, input_path=input_path, outputs=outputs, error_mode=error_mode)
+        # type: (string_types, string_types, string_types, datetime, datetime, dict, string_types, string_types, list[EncodingOutput], SidecarErrorMode, WebVttSidecarFileSegmentation) -> None
+        super(WebVttSidecarFile, self).__init__(id_=id_, name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, input_id=input_id, input_path=input_path, outputs=outputs, error_mode=error_mode)
 
         self._segmentation = None
         self.discriminator = None

@@ -11,6 +11,7 @@ import six
 class StandardMediaInfo(SegmentsMediaInfo):
     @poscheck_model
     def __init__(self,
+                 id_=None,
                  group_id=None,
                  language=None,
                  assoc_language=None,
@@ -18,7 +19,6 @@ class StandardMediaInfo(SegmentsMediaInfo):
                  is_default=None,
                  autoselect=None,
                  characteristics=None,
-                 id_=None,
                  segment_path=None,
                  encoding_id=None,
                  stream_id=None,
@@ -27,8 +27,8 @@ class StandardMediaInfo(SegmentsMediaInfo):
                  start_segment_number=None,
                  end_segment_number=None,
                  uri=None):
-        # type: (string_types, string_types, string_types, string_types, bool, bool, list[string_types], string_types, string_types, string_types, string_types, string_types, string_types, int, int, string_types) -> None
-        super(StandardMediaInfo, self).__init__(group_id=group_id, language=language, assoc_language=assoc_language, name=name, is_default=is_default, autoselect=autoselect, characteristics=characteristics, id_=id_, segment_path=segment_path, encoding_id=encoding_id, stream_id=stream_id, muxing_id=muxing_id, drm_id=drm_id, start_segment_number=start_segment_number, end_segment_number=end_segment_number)
+        # type: (string_types, string_types, string_types, string_types, string_types, bool, bool, list[string_types], string_types, string_types, string_types, string_types, string_types, int, int, string_types) -> None
+        super(StandardMediaInfo, self).__init__(id_=id_, group_id=group_id, language=language, assoc_language=assoc_language, name=name, is_default=is_default, autoselect=autoselect, characteristics=characteristics, segment_path=segment_path, encoding_id=encoding_id, stream_id=stream_id, muxing_id=muxing_id, drm_id=drm_id, start_segment_number=start_segment_number, end_segment_number=end_segment_number)
 
         self._uri = None
         self.discriminator = None

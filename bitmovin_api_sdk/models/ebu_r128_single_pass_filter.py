@@ -11,17 +11,17 @@ import six
 class EbuR128SinglePassFilter(Filter):
     @poscheck_model
     def __init__(self,
+                 id_=None,
                  name=None,
                  description=None,
                  created_at=None,
                  modified_at=None,
                  custom_data=None,
-                 id_=None,
                  integrated_loudness=None,
                  loudness_range=None,
                  maximum_true_peak_level=None):
-        # type: (string_types, string_types, datetime, datetime, dict, string_types, float, float, float) -> None
-        super(EbuR128SinglePassFilter, self).__init__(name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, id_=id_)
+        # type: (string_types, string_types, string_types, datetime, datetime, dict, float, float, float) -> None
+        super(EbuR128SinglePassFilter, self).__init__(id_=id_, name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data)
 
         self._integrated_loudness = None
         self._loudness_range = None

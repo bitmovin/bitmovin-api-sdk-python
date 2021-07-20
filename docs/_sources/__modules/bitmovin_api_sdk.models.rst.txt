@@ -5036,6 +5036,14 @@ bitmovin\_api\_sdk.models.thumbnail module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.thumbnail\_aspect\_mode module
+--------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.thumbnail_aspect_mode
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.thumbnail\_unit module
 ------------------------------------------------
 

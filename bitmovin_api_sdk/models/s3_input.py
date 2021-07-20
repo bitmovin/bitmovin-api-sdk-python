@@ -12,18 +12,18 @@ import six
 class S3Input(Input):
     @poscheck_model
     def __init__(self,
+                 id_=None,
                  name=None,
                  description=None,
                  created_at=None,
                  modified_at=None,
                  custom_data=None,
-                 id_=None,
                  cloud_region=None,
                  bucket_name=None,
                  access_key=None,
                  secret_key=None):
-        # type: (string_types, string_types, datetime, datetime, dict, string_types, AwsCloudRegion, string_types, string_types, string_types) -> None
-        super(S3Input, self).__init__(name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, id_=id_)
+        # type: (string_types, string_types, string_types, datetime, datetime, dict, AwsCloudRegion, string_types, string_types, string_types) -> None
+        super(S3Input, self).__init__(id_=id_, name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data)
 
         self._cloud_region = None
         self._bucket_name = None

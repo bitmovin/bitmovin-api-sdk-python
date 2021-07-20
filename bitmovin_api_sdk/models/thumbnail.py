@@ -4,6 +4,7 @@ from enum import Enum
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
 from bitmovin_api_sdk.models.bitmovin_resource import BitmovinResource
+from bitmovin_api_sdk.models.thumbnail_aspect_mode import ThumbnailAspectMode
 from bitmovin_api_sdk.models.thumbnail_unit import ThumbnailUnit
 import pprint
 import six
@@ -24,8 +25,9 @@ class Thumbnail(BitmovinResource):
                  interval=None,
                  positions=None,
                  outputs=None,
-                 unit=None):
-        # type: (string_types, string_types, string_types, datetime, datetime, dict, int, int, string_types, float, list[float], list[EncodingOutput], ThumbnailUnit) -> None
+                 unit=None,
+                 aspect_mode=None):
+        # type: (string_types, string_types, string_types, datetime, datetime, dict, int, int, string_types, float, list[float], list[EncodingOutput], ThumbnailUnit, ThumbnailAspectMode) -> None
         super(Thumbnail, self).__init__(id_=id_, name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data)
 
         self._height = None
@@ -35,6 +37,7 @@ class Thumbnail(BitmovinResource):
         self._positions = list()
         self._outputs = list()
         self._unit = None
+        self._aspect_mode = None
         self.discriminator = None
 
         if height is not None:
@@ -51,6 +54,8 @@ class Thumbnail(BitmovinResource):
             self.outputs = outputs
         if unit is not None:
             self.unit = unit
+        if aspect_mode is not None:
+            self.aspect_mode = aspect_mode
 
     @property
     def openapi_types(self):
@@ -66,7 +71,8 @@ class Thumbnail(BitmovinResource):
             'interval': 'float',
             'positions': 'list[float]',
             'outputs': 'list[EncodingOutput]',
-            'unit': 'ThumbnailUnit'
+            'unit': 'ThumbnailUnit',
+            'aspect_mode': 'ThumbnailAspectMode'
         })
 
         return types
@@ -85,7 +91,8 @@ class Thumbnail(BitmovinResource):
             'interval': 'interval',
             'positions': 'positions',
             'outputs': 'outputs',
-            'unit': 'unit'
+            'unit': 'unit',
+            'aspect_mode': 'aspectMode'
         })
         return attributes
 
@@ -289,6 +296,35 @@ class Thumbnail(BitmovinResource):
                 raise TypeError("Invalid type for `unit`, type has to be `ThumbnailUnit`")
 
         self._unit = unit
+
+    @property
+    def aspect_mode(self):
+        # type: () -> ThumbnailAspectMode
+        """Gets the aspect_mode of this Thumbnail.
+
+        Specifies the aspect mode that is used when both height and width are specified Only supported starting with encoder version `2.85.0`. 
+
+        :return: The aspect_mode of this Thumbnail.
+        :rtype: ThumbnailAspectMode
+        """
+        return self._aspect_mode
+
+    @aspect_mode.setter
+    def aspect_mode(self, aspect_mode):
+        # type: (ThumbnailAspectMode) -> None
+        """Sets the aspect_mode of this Thumbnail.
+
+        Specifies the aspect mode that is used when both height and width are specified Only supported starting with encoder version `2.85.0`. 
+
+        :param aspect_mode: The aspect_mode of this Thumbnail.
+        :type: ThumbnailAspectMode
+        """
+
+        if aspect_mode is not None:
+            if not isinstance(aspect_mode, ThumbnailAspectMode):
+                raise TypeError("Invalid type for `aspect_mode`, type has to be `ThumbnailAspectMode`")
+
+        self._aspect_mode = aspect_mode
 
     def to_dict(self):
         """Returns the model properties as a dict"""

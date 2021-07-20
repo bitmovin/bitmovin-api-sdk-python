@@ -17,12 +17,12 @@ import six
 class HlsManifestDefault(HlsManifest):
     @poscheck_model
     def __init__(self,
+                 id_=None,
                  name=None,
                  description=None,
                  created_at=None,
                  modified_at=None,
                  custom_data=None,
-                 id_=None,
                  type_=None,
                  outputs=None,
                  status=None,
@@ -33,8 +33,8 @@ class HlsManifestDefault(HlsManifest):
                  target_duration_rounding_mode=None,
                  encoding_id=None,
                  version=None):
-        # type: (string_types, string_types, datetime, datetime, dict, string_types, ManifestType, list[EncodingOutput], Status, string_types, HlsVersion, HlsVersion, ChannelsAttributeForAudio, HlsTargetDurationRoundingMode, string_types, HlsManifestDefaultVersion) -> None
-        super(HlsManifestDefault, self).__init__(name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, id_=id_, type_=type_, outputs=outputs, status=status, manifest_name=manifest_name, hls_media_playlist_version=hls_media_playlist_version, hls_master_playlist_version=hls_master_playlist_version, channels_attribute_for_audio=channels_attribute_for_audio, target_duration_rounding_mode=target_duration_rounding_mode)
+        # type: (string_types, string_types, string_types, datetime, datetime, dict, ManifestType, list[EncodingOutput], Status, string_types, HlsVersion, HlsVersion, ChannelsAttributeForAudio, HlsTargetDurationRoundingMode, string_types, HlsManifestDefaultVersion) -> None
+        super(HlsManifestDefault, self).__init__(id_=id_, name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, type_=type_, outputs=outputs, status=status, manifest_name=manifest_name, hls_media_playlist_version=hls_media_playlist_version, hls_master_playlist_version=hls_master_playlist_version, channels_attribute_for_audio=channels_attribute_for_audio, target_duration_rounding_mode=target_duration_rounding_mode)
 
         self._encoding_id = None
         self._version = None

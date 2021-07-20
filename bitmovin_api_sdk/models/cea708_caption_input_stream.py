@@ -11,17 +11,17 @@ import six
 class Cea708CaptionInputStream(InputStream):
     @poscheck_model
     def __init__(self,
+                 id_=None,
                  name=None,
                  description=None,
                  created_at=None,
                  modified_at=None,
                  custom_data=None,
-                 id_=None,
                  input_id=None,
                  input_path=None,
                  channel=None):
-        # type: (string_types, string_types, datetime, datetime, dict, string_types, string_types, string_types, int) -> None
-        super(Cea708CaptionInputStream, self).__init__(name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, id_=id_)
+        # type: (string_types, string_types, string_types, datetime, datetime, dict, string_types, string_types, int) -> None
+        super(Cea708CaptionInputStream, self).__init__(id_=id_, name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data)
 
         self._input_id = None
         self._input_path = None

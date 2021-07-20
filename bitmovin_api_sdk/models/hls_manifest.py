@@ -16,12 +16,12 @@ import six
 class HlsManifest(Manifest):
     @poscheck_model
     def __init__(self,
+                 id_=None,
                  name=None,
                  description=None,
                  created_at=None,
                  modified_at=None,
                  custom_data=None,
-                 id_=None,
                  type_=None,
                  outputs=None,
                  status=None,
@@ -30,8 +30,8 @@ class HlsManifest(Manifest):
                  hls_master_playlist_version=None,
                  channels_attribute_for_audio=None,
                  target_duration_rounding_mode=None):
-        # type: (string_types, string_types, datetime, datetime, dict, string_types, ManifestType, list[EncodingOutput], Status, string_types, HlsVersion, HlsVersion, ChannelsAttributeForAudio, HlsTargetDurationRoundingMode) -> None
-        super(HlsManifest, self).__init__(name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, id_=id_, type_=type_, outputs=outputs, status=status)
+        # type: (string_types, string_types, string_types, datetime, datetime, dict, ManifestType, list[EncodingOutput], Status, string_types, HlsVersion, HlsVersion, ChannelsAttributeForAudio, HlsTargetDurationRoundingMode) -> None
+        super(HlsManifest, self).__init__(id_=id_, name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, type_=type_, outputs=outputs, status=status)
 
         self._manifest_name = None
         self._hls_media_playlist_version = None

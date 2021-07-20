@@ -632,6 +632,7 @@ from bitmovin_api_sdk.models.text_filter import TextFilter
 from bitmovin_api_sdk.models.text_filter_font import TextFilterFont
 from bitmovin_api_sdk.models.text_muxing import TextMuxing
 from bitmovin_api_sdk.models.thumbnail import Thumbnail
+from bitmovin_api_sdk.models.thumbnail_aspect_mode import ThumbnailAspectMode
 from bitmovin_api_sdk.models.thumbnail_unit import ThumbnailUnit
 from bitmovin_api_sdk.models.time_based_trimming_input_stream import TimeBasedTrimmingInputStream
 from bitmovin_api_sdk.models.time_code import TimeCode

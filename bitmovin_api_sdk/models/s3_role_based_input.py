@@ -13,19 +13,19 @@ import six
 class S3RoleBasedInput(Input):
     @poscheck_model
     def __init__(self,
+                 id_=None,
                  name=None,
                  description=None,
                  created_at=None,
                  modified_at=None,
                  custom_data=None,
-                 id_=None,
                  bucket_name=None,
                  role_arn=None,
                  external_id=None,
                  external_id_mode=None,
                  cloud_region=None):
-        # type: (string_types, string_types, datetime, datetime, dict, string_types, string_types, string_types, string_types, ExternalIdMode, AwsCloudRegion) -> None
-        super(S3RoleBasedInput, self).__init__(name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, id_=id_)
+        # type: (string_types, string_types, string_types, datetime, datetime, dict, string_types, string_types, string_types, ExternalIdMode, AwsCloudRegion) -> None
+        super(S3RoleBasedInput, self).__init__(id_=id_, name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data)
 
         self._bucket_name = None
         self._role_arn = None

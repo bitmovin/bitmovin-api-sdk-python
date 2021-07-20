@@ -175,12 +175,12 @@
 <div class="viewcode-block" id="EnhancedWatermarkFilter"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.enhanced_watermark_filter.EnhancedWatermarkFilter">[docs]</a><span class="k">class</span> <span class="nc">EnhancedWatermarkFilter</span><span class="p">(</span><span class="n">Filter</span><span class="p">):</span>
     <span class="nd">@poscheck_model</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                 <span class="n">id_</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">description</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">created_at</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">modified_at</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">custom_data</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                 <span class="n">id_</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">image</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">left</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">right</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
@@ -190,8 +190,8 @@
                  <span class="n">opacity</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">width</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">height</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (string_types, string_types, datetime, datetime, dict, string_types, string_types, float, float, float, float, PositionUnit, float, float, float) -&gt; None</span>
-        <span class="nb">super</span><span class="p">(</span><span class="n">EnhancedWatermarkFilter</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="n">description</span><span class="p">,</span> <span class="n">created_at</span><span class="o">=</span><span class="n">created_at</span><span class="p">,</span> <span class="n">modified_at</span><span class="o">=</span><span class="n">modified_at</span><span class="p">,</span> <span class="n">custom_data</span><span class="o">=</span><span class="n">custom_data</span><span class="p">,</span> <span class="n">id_</span><span class="o">=</span><span class="n">id_</span><span class="p">)</span>
+        <span class="c1"># type: (string_types, string_types, string_types, datetime, datetime, dict, string_types, float, float, float, float, PositionUnit, float, float, float) -&gt; None</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">EnhancedWatermarkFilter</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">id_</span><span class="o">=</span><span class="n">id_</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="n">description</span><span class="p">,</span> <span class="n">created_at</span><span class="o">=</span><span class="n">created_at</span><span class="p">,</span> <span class="n">modified_at</span><span class="o">=</span><span class="n">modified_at</span><span class="p">,</span> <span class="n">custom_data</span><span class="o">=</span><span class="n">custom_data</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_image</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_left</span> <span class="o">=</span> <span class="kc">None</span>

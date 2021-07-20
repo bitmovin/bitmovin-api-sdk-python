@@ -4,6 +4,7 @@ from enum import Enum
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
 from bitmovin_api_sdk.models.bitmovin_resource import BitmovinResource
+from bitmovin_api_sdk.models.thumbnail_aspect_mode import ThumbnailAspectMode
 import pprint
 import six
 
@@ -21,8 +22,9 @@ class Bif(BitmovinResource):
                  width=None,
                  distance=None,
                  filename=None,
-                 outputs=None):
-        # type: (string_types, string_types, string_types, datetime, datetime, dict, int, int, float, string_types, list[EncodingOutput]) -> None
+                 outputs=None,
+                 aspect_mode=None):
+        # type: (string_types, string_types, string_types, datetime, datetime, dict, int, int, float, string_types, list[EncodingOutput], ThumbnailAspectMode) -> None
         super(Bif, self).__init__(id_=id_, name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data)
 
         self._height = None
@@ -30,6 +32,7 @@ class Bif(BitmovinResource):
         self._distance = None
         self._filename = None
         self._outputs = list()
+        self._aspect_mode = None
         self.discriminator = None
 
         if height is not None:
@@ -42,6 +45,8 @@ class Bif(BitmovinResource):
             self.filename = filename
         if outputs is not None:
             self.outputs = outputs
+        if aspect_mode is not None:
+            self.aspect_mode = aspect_mode
 
     @property
     def openapi_types(self):
@@ -55,7 +60,8 @@ class Bif(BitmovinResource):
             'width': 'int',
             'distance': 'float',
             'filename': 'string_types',
-            'outputs': 'list[EncodingOutput]'
+            'outputs': 'list[EncodingOutput]',
+            'aspect_mode': 'ThumbnailAspectMode'
         })
 
         return types
@@ -72,7 +78,8 @@ class Bif(BitmovinResource):
             'width': 'width',
             'distance': 'distance',
             'filename': 'filename',
-            'outputs': 'outputs'
+            'outputs': 'outputs',
+            'aspect_mode': 'aspectMode'
         })
         return attributes
 
@@ -218,6 +225,35 @@ class Bif(BitmovinResource):
                 raise TypeError("Invalid type for `outputs`, type has to be `list[EncodingOutput]`")
 
         self._outputs = outputs
+
+    @property
+    def aspect_mode(self):
+        # type: () -> ThumbnailAspectMode
+        """Gets the aspect_mode of this Bif.
+
+        Specifies the aspect mode that is used when both height and width are specified Only supported starting with encoder version `2.85.0`. 
+
+        :return: The aspect_mode of this Bif.
+        :rtype: ThumbnailAspectMode
+        """
+        return self._aspect_mode
+
+    @aspect_mode.setter
+    def aspect_mode(self, aspect_mode):
+        # type: (ThumbnailAspectMode) -> None
+        """Sets the aspect_mode of this Bif.
+
+        Specifies the aspect mode that is used when both height and width are specified Only supported starting with encoder version `2.85.0`. 
+
+        :param aspect_mode: The aspect_mode of this Bif.
+        :type: ThumbnailAspectMode
+        """
+
+        if aspect_mode is not None:
+            if not isinstance(aspect_mode, ThumbnailAspectMode):
+                raise TypeError("Invalid type for `aspect_mode`, type has to be `ThumbnailAspectMode`")
+
+        self._aspect_mode = aspect_mode
 
     def to_dict(self):
         """Returns the model properties as a dict"""

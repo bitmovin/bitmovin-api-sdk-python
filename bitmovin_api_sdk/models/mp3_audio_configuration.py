@@ -12,17 +12,17 @@ import six
 class Mp3AudioConfiguration(AudioConfiguration):
     @poscheck_model
     def __init__(self,
+                 id_=None,
                  name=None,
                  description=None,
                  created_at=None,
                  modified_at=None,
                  custom_data=None,
-                 id_=None,
                  bitrate=None,
                  rate=None,
                  channel_layout=None):
-        # type: (string_types, string_types, datetime, datetime, dict, string_types, int, float, ChannelLayout) -> None
-        super(Mp3AudioConfiguration, self).__init__(name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, id_=id_, bitrate=bitrate, rate=rate)
+        # type: (string_types, string_types, string_types, datetime, datetime, dict, int, float, ChannelLayout) -> None
+        super(Mp3AudioConfiguration, self).__init__(id_=id_, name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, bitrate=bitrate, rate=rate)
 
         self._channel_layout = None
         self.discriminator = None

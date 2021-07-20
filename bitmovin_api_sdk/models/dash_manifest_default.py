@@ -15,12 +15,12 @@ import six
 class DashManifestDefault(DashManifest):
     @poscheck_model
     def __init__(self,
+                 id_=None,
                  name=None,
                  description=None,
                  created_at=None,
                  modified_at=None,
                  custom_data=None,
-                 id_=None,
                  type_=None,
                  outputs=None,
                  status=None,
@@ -31,8 +31,8 @@ class DashManifestDefault(DashManifest):
                  encoding_id=None,
                  version=None,
                  periods=None):
-        # type: (string_types, string_types, datetime, datetime, dict, string_types, ManifestType, list[EncodingOutput], Status, DashProfile, string_types, list[XmlNamespace], list[UtcTiming], string_types, DashManifestDefaultVersion, list[DefaultDashManifestPeriod]) -> None
-        super(DashManifestDefault, self).__init__(name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, id_=id_, type_=type_, outputs=outputs, status=status, profile=profile, manifest_name=manifest_name, namespaces=namespaces, utc_timings=utc_timings)
+        # type: (string_types, string_types, string_types, datetime, datetime, dict, ManifestType, list[EncodingOutput], Status, DashProfile, string_types, list[XmlNamespace], list[UtcTiming], string_types, DashManifestDefaultVersion, list[DefaultDashManifestPeriod]) -> None
+        super(DashManifestDefault, self).__init__(id_=id_, name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, type_=type_, outputs=outputs, status=status, profile=profile, manifest_name=manifest_name, namespaces=namespaces, utc_timings=utc_timings)
 
         self._encoding_id = None
         self._version = None

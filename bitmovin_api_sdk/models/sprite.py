@@ -7,6 +7,7 @@ from bitmovin_api_sdk.models.bitmovin_resource import BitmovinResource
 from bitmovin_api_sdk.models.sprite_creation_mode import SpriteCreationMode
 from bitmovin_api_sdk.models.sprite_jpeg_config import SpriteJpegConfig
 from bitmovin_api_sdk.models.sprite_unit import SpriteUnit
+from bitmovin_api_sdk.models.thumbnail_aspect_mode import ThumbnailAspectMode
 import pprint
 import six
 
@@ -32,8 +33,9 @@ class Sprite(BitmovinResource):
                  h_tiles=None,
                  v_tiles=None,
                  jpeg_config=None,
-                 creation_mode=None):
-        # type: (string_types, string_types, string_types, datetime, datetime, dict, int, int, SpriteUnit, float, string_types, string_types, string_types, list[EncodingOutput], int, int, int, SpriteJpegConfig, SpriteCreationMode) -> None
+                 creation_mode=None,
+                 aspect_mode=None):
+        # type: (string_types, string_types, string_types, datetime, datetime, dict, int, int, SpriteUnit, float, string_types, string_types, string_types, list[EncodingOutput], int, int, int, SpriteJpegConfig, SpriteCreationMode, ThumbnailAspectMode) -> None
         super(Sprite, self).__init__(id_=id_, name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data)
 
         self._height = None
@@ -49,6 +51,7 @@ class Sprite(BitmovinResource):
         self._v_tiles = None
         self._jpeg_config = None
         self._creation_mode = None
+        self._aspect_mode = None
         self.discriminator = None
 
         if height is not None:
@@ -77,6 +80,8 @@ class Sprite(BitmovinResource):
             self.jpeg_config = jpeg_config
         if creation_mode is not None:
             self.creation_mode = creation_mode
+        if aspect_mode is not None:
+            self.aspect_mode = aspect_mode
 
     @property
     def openapi_types(self):
@@ -98,7 +103,8 @@ class Sprite(BitmovinResource):
             'h_tiles': 'int',
             'v_tiles': 'int',
             'jpeg_config': 'SpriteJpegConfig',
-            'creation_mode': 'SpriteCreationMode'
+            'creation_mode': 'SpriteCreationMode',
+            'aspect_mode': 'ThumbnailAspectMode'
         })
 
         return types
@@ -123,7 +129,8 @@ class Sprite(BitmovinResource):
             'h_tiles': 'hTiles',
             'v_tiles': 'vTiles',
             'jpeg_config': 'jpegConfig',
-            'creation_mode': 'creationMode'
+            'creation_mode': 'creationMode',
+            'aspect_mode': 'aspectMode'
         })
         return attributes
 
@@ -503,6 +510,35 @@ class Sprite(BitmovinResource):
                 raise TypeError("Invalid type for `creation_mode`, type has to be `SpriteCreationMode`")
 
         self._creation_mode = creation_mode
+
+    @property
+    def aspect_mode(self):
+        # type: () -> ThumbnailAspectMode
+        """Gets the aspect_mode of this Sprite.
+
+        Specifies the aspect mode that is used when both height and width are specified Only supported starting with encoder version `2.85.0`. 
+
+        :return: The aspect_mode of this Sprite.
+        :rtype: ThumbnailAspectMode
+        """
+        return self._aspect_mode
+
+    @aspect_mode.setter
+    def aspect_mode(self, aspect_mode):
+        # type: (ThumbnailAspectMode) -> None
+        """Sets the aspect_mode of this Sprite.
+
+        Specifies the aspect mode that is used when both height and width are specified Only supported starting with encoder version `2.85.0`. 
+
+        :param aspect_mode: The aspect_mode of this Sprite.
+        :type: ThumbnailAspectMode
+        """
+
+        if aspect_mode is not None:
+            if not isinstance(aspect_mode, ThumbnailAspectMode):
+                raise TypeError("Invalid type for `aspect_mode`, type has to be `ThumbnailAspectMode`")
+
+        self._aspect_mode = aspect_mode
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -64,7 +64,7 @@ class MediaStream(BitmovinResponse):
         # type: () -> int
         """Gets the position of this MediaStream.
 
-        Position starts from 0 and indicates the position of the stream in the media. 0 means that this is the first stream found in the media
+        Position of the stream in the media, starting from 0.
 
         :return: The position of this MediaStream.
         :rtype: int
@@ -76,13 +76,15 @@ class MediaStream(BitmovinResponse):
         # type: (int) -> None
         """Sets the position of this MediaStream.
 
-        Position starts from 0 and indicates the position of the stream in the media. 0 means that this is the first stream found in the media
+        Position of the stream in the media, starting from 0.
 
         :param position: The position of this MediaStream.
         :type: int
         """
 
         if position is not None:
+            if position is not None and position < 0:
+                raise ValueError("Invalid value for `position`, must be a value greater than or equal to `0`")
             if not isinstance(position, int):
                 raise TypeError("Invalid type for `position`, type has to be `int`")
 

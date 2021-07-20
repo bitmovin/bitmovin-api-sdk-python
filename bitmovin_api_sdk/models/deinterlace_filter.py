@@ -15,18 +15,18 @@ import six
 class DeinterlaceFilter(Filter):
     @poscheck_model
     def __init__(self,
+                 id_=None,
                  name=None,
                  description=None,
                  created_at=None,
                  modified_at=None,
                  custom_data=None,
-                 id_=None,
                  parity=None,
                  mode=None,
                  frame_selection_mode=None,
                  auto_enable=None):
-        # type: (string_types, string_types, datetime, datetime, dict, string_types, PictureFieldParity, DeinterlaceMode, DeinterlaceFrameSelectionMode, DeinterlaceAutoEnable) -> None
-        super(DeinterlaceFilter, self).__init__(name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, id_=id_)
+        # type: (string_types, string_types, string_types, datetime, datetime, dict, PictureFieldParity, DeinterlaceMode, DeinterlaceFrameSelectionMode, DeinterlaceAutoEnable) -> None
+        super(DeinterlaceFilter, self).__init__(id_=id_, name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data)
 
         self._parity = None
         self._mode = None

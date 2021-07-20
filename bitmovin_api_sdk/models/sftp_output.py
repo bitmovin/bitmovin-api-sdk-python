@@ -12,12 +12,12 @@ import six
 class SftpOutput(Output):
     @poscheck_model
     def __init__(self,
+                 id_=None,
                  name=None,
                  description=None,
                  created_at=None,
                  modified_at=None,
                  custom_data=None,
-                 id_=None,
                  acl=None,
                  host=None,
                  port=None,
@@ -26,8 +26,8 @@ class SftpOutput(Output):
                  password=None,
                  transfer_version=None,
                  max_concurrent_connections=None):
-        # type: (string_types, string_types, datetime, datetime, dict, string_types, list[AclEntry], string_types, int, bool, string_types, string_types, TransferVersion, int) -> None
-        super(SftpOutput, self).__init__(name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, id_=id_, acl=acl)
+        # type: (string_types, string_types, string_types, datetime, datetime, dict, list[AclEntry], string_types, int, bool, string_types, string_types, TransferVersion, int) -> None
+        super(SftpOutput, self).__init__(id_=id_, name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, acl=acl)
 
         self._host = None
         self._port = None

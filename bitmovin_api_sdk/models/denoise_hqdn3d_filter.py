@@ -11,18 +11,18 @@ import six
 class DenoiseHqdn3dFilter(Filter):
     @poscheck_model
     def __init__(self,
+                 id_=None,
                  name=None,
                  description=None,
                  created_at=None,
                  modified_at=None,
                  custom_data=None,
-                 id_=None,
                  luma_spatial=None,
                  chroma_spatial=None,
                  luma_tmp=None,
                  chroma_tmp=None):
-        # type: (string_types, string_types, datetime, datetime, dict, string_types, float, float, float, float) -> None
-        super(DenoiseHqdn3dFilter, self).__init__(name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, id_=id_)
+        # type: (string_types, string_types, string_types, datetime, datetime, dict, float, float, float, float) -> None
+        super(DenoiseHqdn3dFilter, self).__init__(id_=id_, name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data)
 
         self._luma_spatial = None
         self._chroma_spatial = None

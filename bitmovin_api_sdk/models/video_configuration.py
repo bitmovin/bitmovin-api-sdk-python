@@ -15,12 +15,12 @@ import six
 class VideoConfiguration(CodecConfiguration):
     @poscheck_model
     def __init__(self,
+                 id_=None,
                  name=None,
                  description=None,
                  created_at=None,
                  modified_at=None,
                  custom_data=None,
-                 id_=None,
                  width=None,
                  height=None,
                  bitrate=None,
@@ -31,8 +31,8 @@ class VideoConfiguration(CodecConfiguration):
                  sample_aspect_ratio_denominator=None,
                  display_aspect_ratio=None,
                  encoding_mode=None):
-        # type: (string_types, string_types, datetime, datetime, dict, string_types, int, int, int, float, PixelFormat, ColorConfig, int, int, DisplayAspectRatio, EncodingMode) -> None
-        super(VideoConfiguration, self).__init__(name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, id_=id_)
+        # type: (string_types, string_types, string_types, datetime, datetime, dict, int, int, int, float, PixelFormat, ColorConfig, int, int, DisplayAspectRatio, EncodingMode) -> None
+        super(VideoConfiguration, self).__init__(id_=id_, name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data)
 
         self._width = None
         self._height = None

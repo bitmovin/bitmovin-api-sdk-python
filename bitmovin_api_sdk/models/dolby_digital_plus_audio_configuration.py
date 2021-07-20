@@ -17,12 +17,12 @@ import six
 class DolbyDigitalPlusAudioConfiguration(AudioConfiguration):
     @poscheck_model
     def __init__(self,
+                 id_=None,
                  name=None,
                  description=None,
                  created_at=None,
                  modified_at=None,
                  custom_data=None,
-                 id_=None,
                  bitrate=None,
                  rate=None,
                  bitstream_info=None,
@@ -31,8 +31,8 @@ class DolbyDigitalPlusAudioConfiguration(AudioConfiguration):
                  evolution_framework_control=None,
                  loudness_control=None,
                  preprocessing=None):
-        # type: (string_types, string_types, datetime, datetime, dict, string_types, int, float, DolbyDigitalPlusBitstreamInfo, DolbyDigitalPlusChannelLayout, DolbyDigitalPlusDownmixing, DolbyDigitalPlusEvolutionFrameworkControl, DolbyDigitalPlusLoudnessControl, DolbyDigitalPlusPreprocessing) -> None
-        super(DolbyDigitalPlusAudioConfiguration, self).__init__(name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, id_=id_, bitrate=bitrate, rate=rate)
+        # type: (string_types, string_types, string_types, datetime, datetime, dict, int, float, DolbyDigitalPlusBitstreamInfo, DolbyDigitalPlusChannelLayout, DolbyDigitalPlusDownmixing, DolbyDigitalPlusEvolutionFrameworkControl, DolbyDigitalPlusLoudnessControl, DolbyDigitalPlusPreprocessing) -> None
+        super(DolbyDigitalPlusAudioConfiguration, self).__init__(id_=id_, name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, bitrate=bitrate, rate=rate)
 
         self._bitstream_info = None
         self._channel_layout = None

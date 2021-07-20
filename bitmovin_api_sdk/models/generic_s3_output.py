@@ -12,12 +12,12 @@ import six
 class GenericS3Output(Output):
     @poscheck_model
     def __init__(self,
+                 id_=None,
                  name=None,
                  description=None,
                  created_at=None,
                  modified_at=None,
                  custom_data=None,
-                 id_=None,
                  acl=None,
                  access_key=None,
                  secret_key=None,
@@ -26,8 +26,8 @@ class GenericS3Output(Output):
                  port=None,
                  ssl=None,
                  signature_version=None):
-        # type: (string_types, string_types, datetime, datetime, dict, string_types, list[AclEntry], string_types, string_types, string_types, string_types, int, bool, S3SignatureVersion) -> None
-        super(GenericS3Output, self).__init__(name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, id_=id_, acl=acl)
+        # type: (string_types, string_types, string_types, datetime, datetime, dict, list[AclEntry], string_types, string_types, string_types, string_types, int, bool, S3SignatureVersion) -> None
+        super(GenericS3Output, self).__init__(id_=id_, name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, acl=acl)
 
         self._access_key = None
         self._secret_key = None

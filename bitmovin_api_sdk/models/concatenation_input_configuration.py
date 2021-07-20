@@ -148,6 +148,8 @@ class ConcatenationInputConfiguration(object):
         """
 
         if position is not None:
+            if position is not None and position < 0:
+                raise ValueError("Invalid value for `position`, must be a value greater than or equal to `0`")
             if not isinstance(position, int):
                 raise TypeError("Invalid type for `position`, type has to be `int`")
 

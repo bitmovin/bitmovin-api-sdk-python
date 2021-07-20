@@ -12,12 +12,12 @@ import six
 class TextFilter(Filter):
     @poscheck_model
     def __init__(self,
+                 id_=None,
                  name=None,
                  description=None,
                  created_at=None,
                  modified_at=None,
                  custom_data=None,
-                 id_=None,
                  font=None,
                  box=None,
                  box_border_width=None,
@@ -37,8 +37,8 @@ class TextFilter(Filter):
                  x=None,
                  y=None,
                  rate=None):
-        # type: (string_types, string_types, datetime, datetime, dict, string_types, TextFilterFont, bool, int, string_types, int, int, bool, string_types, int, string_types, float, string_types, int, int, string_types, string_types, string_types, string_types, string_types) -> None
-        super(TextFilter, self).__init__(name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, id_=id_)
+        # type: (string_types, string_types, string_types, datetime, datetime, dict, TextFilterFont, bool, int, string_types, int, int, bool, string_types, int, string_types, float, string_types, int, int, string_types, string_types, string_types, string_types, string_types) -> None
+        super(TextFilter, self).__init__(id_=id_, name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data)
 
         self._font = None
         self._box = None
