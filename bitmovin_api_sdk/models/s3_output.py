@@ -206,6 +206,7 @@ class S3Output(Output):
         # type: () -> AwsCloudRegion
         """Gets the cloud_region of this S3Output.
 
+        The cloud region in which the bucket is located. Is used to determine the ideal location for your encodings automatically.
 
         :return: The cloud_region of this S3Output.
         :rtype: AwsCloudRegion
@@ -217,6 +218,7 @@ class S3Output(Output):
         # type: (AwsCloudRegion) -> None
         """Sets the cloud_region of this S3Output.
 
+        The cloud region in which the bucket is located. Is used to determine the ideal location for your encodings automatically.
 
         :param cloud_region: The cloud_region of this S3Output.
         :type: AwsCloudRegion
@@ -233,6 +235,7 @@ class S3Output(Output):
         # type: () -> S3SignatureVersion
         """Gets the signature_version of this S3Output.
 
+        Specifies the method used for authentication. Must be set to S3_V2 if the region supports both V2 and V4, but the bucket allows V2 only (see https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region)
 
         :return: The signature_version of this S3Output.
         :rtype: S3SignatureVersion
@@ -244,6 +247,7 @@ class S3Output(Output):
         # type: (S3SignatureVersion) -> None
         """Sets the signature_version of this S3Output.
 
+        Specifies the method used for authentication. Must be set to S3_V2 if the region supports both V2 and V4, but the bucket allows V2 only (see https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region)
 
         :param signature_version: The signature_version of this S3Output.
         :type: S3SignatureVersion

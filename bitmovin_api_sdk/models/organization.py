@@ -76,6 +76,7 @@ class Organization(BitmovinResource):
         # type: () -> OrganizationType
         """Gets the type of this Organization.
 
+        Specifies the type of the organization in the hierachy. Only sub-organizations can be newly created. (required)
 
         :return: The type of this Organization.
         :rtype: OrganizationType
@@ -87,6 +88,7 @@ class Organization(BitmovinResource):
         # type: (OrganizationType) -> None
         """Sets the type of this Organization.
 
+        Specifies the type of the organization in the hierachy. Only sub-organizations can be newly created. (required)
 
         :param type_: The type of this Organization.
         :type: OrganizationType

@@ -136,6 +136,7 @@ class AkamaiMslOutput(Output):
         # type: () -> AkamaiMslStreamFormat
         """Gets the stream_format of this AkamaiMslOutput.
 
+        The stream format. Only DASH is supported at the moment. (required)
 
         :return: The stream_format of this AkamaiMslOutput.
         :rtype: AkamaiMslStreamFormat
@@ -147,6 +148,7 @@ class AkamaiMslOutput(Output):
         # type: (AkamaiMslStreamFormat) -> None
         """Sets the stream_format of this AkamaiMslOutput.
 
+        The stream format. Only DASH is supported at the moment. (required)
 
         :param stream_format: The stream_format of this AkamaiMslOutput.
         :type: AkamaiMslStreamFormat
@@ -163,6 +165,7 @@ class AkamaiMslOutput(Output):
         # type: () -> AkamaiMslVersion
         """Gets the msl_version of this AkamaiMslOutput.
 
+        The Akamai MSL Version. Only MSL4 is supported at the moment. (required)
 
         :return: The msl_version of this AkamaiMslOutput.
         :rtype: AkamaiMslVersion
@@ -174,6 +177,7 @@ class AkamaiMslOutput(Output):
         # type: (AkamaiMslVersion) -> None
         """Sets the msl_version of this AkamaiMslOutput.
 
+        The Akamai MSL Version. Only MSL4 is supported at the moment. (required)
 
         :param msl_version: The msl_version of this AkamaiMslOutput.
         :type: AkamaiMslVersion

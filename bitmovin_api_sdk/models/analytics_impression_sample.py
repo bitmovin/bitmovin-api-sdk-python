@@ -22,6 +22,7 @@ class AnalyticsImpressionSample(object):
                  browser_version_minor=None,
                  buffered=None,
                  cdn_provider=None,
+                 cast_tech=None,
                  city=None,
                  client_time=None,
                  country=None,
@@ -99,7 +100,7 @@ class AnalyticsImpressionSample(object):
                  video_window_width=None,
                  videostart_failed=None,
                  videostart_failed_reason=None):
-        # type: (int, string_types, int, string_types, string_types, bool, string_types, string_types, string_types, int, string_types, string_types, int, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, int, string_types, int, int, int, string_types, string_types, string_types, string_types, bool, bool, bool, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, int, int, string_types, int, string_types, int, string_types, string_types, int, string_types, string_types, string_types, string_types, int, int, int, int, int, int, int, string_types, int, string_types, string_types, bool, string_types, list[string_types], int, string_types, int, string_types, int, string_types, string_types, int, int, int, int, int, int, int, bool, AnalyticsVideoStartFailedReason) -> None
+        # type: (int, string_types, int, string_types, string_types, bool, string_types, string_types, string_types, int, string_types, string_types, string_types, int, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, int, string_types, int, int, int, string_types, string_types, string_types, string_types, bool, bool, bool, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, int, int, string_types, int, string_types, int, string_types, string_types, int, string_types, string_types, string_types, string_types, int, int, int, int, int, int, int, string_types, int, string_types, string_types, bool, string_types, list[string_types], int, string_types, int, string_types, int, string_types, string_types, int, int, int, int, int, int, int, bool, AnalyticsVideoStartFailedReason) -> None
 
         self._ad = None
         self._analytics_version = None
@@ -112,6 +113,7 @@ class AnalyticsImpressionSample(object):
         self._browser_version_minor = None
         self._buffered = None
         self._cdn_provider = None
+        self._cast_tech = None
         self._city = None
         self._client_time = None
         self._country = None
@@ -213,6 +215,8 @@ class AnalyticsImpressionSample(object):
             self.buffered = buffered
         if cdn_provider is not None:
             self.cdn_provider = cdn_provider
+        if cast_tech is not None:
+            self.cast_tech = cast_tech
         if city is not None:
             self.city = city
         if client_time is not None:
@@ -382,6 +386,7 @@ class AnalyticsImpressionSample(object):
             'browser_version_minor': 'string_types',
             'buffered': 'int',
             'cdn_provider': 'string_types',
+            'cast_tech': 'string_types',
             'city': 'string_types',
             'client_time': 'int',
             'country': 'string_types',
@@ -477,6 +482,7 @@ class AnalyticsImpressionSample(object):
             'browser_version_minor': 'browser_version_minor',
             'buffered': 'buffered',
             'cdn_provider': 'cdn_provider',
+            'cast_tech': 'cast_tech',
             'city': 'city',
             'client_time': 'client_time',
             'country': 'country',
@@ -875,6 +881,35 @@ class AnalyticsImpressionSample(object):
                 raise TypeError("Invalid type for `cdn_provider`, type has to be `string_types`")
 
         self._cdn_provider = cdn_provider
+
+    @property
+    def cast_tech(self):
+        # type: () -> string_types
+        """Gets the cast_tech of this AnalyticsImpressionSample.
+
+        Casting Technology
+
+        :return: The cast_tech of this AnalyticsImpressionSample.
+        :rtype: string_types
+        """
+        return self._cast_tech
+
+    @cast_tech.setter
+    def cast_tech(self, cast_tech):
+        # type: (string_types) -> None
+        """Sets the cast_tech of this AnalyticsImpressionSample.
+
+        Casting Technology
+
+        :param cast_tech: The cast_tech of this AnalyticsImpressionSample.
+        :type: string_types
+        """
+
+        if cast_tech is not None:
+            if not isinstance(cast_tech, string_types):
+                raise TypeError("Invalid type for `cast_tech`, type has to be `string_types`")
+
+        self._cast_tech = cast_tech
 
     @property
     def city(self):
@@ -3085,6 +3120,7 @@ class AnalyticsImpressionSample(object):
         # type: () -> AnalyticsVideoStartFailedReason
         """Gets the videostart_failed_reason of this AnalyticsImpressionSample.
 
+        Reason why starting the video failed
 
         :return: The videostart_failed_reason of this AnalyticsImpressionSample.
         :rtype: AnalyticsVideoStartFailedReason
@@ -3096,6 +3132,7 @@ class AnalyticsImpressionSample(object):
         # type: (AnalyticsVideoStartFailedReason) -> None
         """Sets the videostart_failed_reason of this AnalyticsImpressionSample.
 
+        Reason why starting the video failed
 
         :param videostart_failed_reason: The videostart_failed_reason of this AnalyticsImpressionSample.
         :type: AnalyticsVideoStartFailedReason

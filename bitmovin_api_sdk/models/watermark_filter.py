@@ -233,6 +233,7 @@ class WatermarkFilter(Filter):
         # type: () -> PositionUnit
         """Gets the unit of this WatermarkFilter.
 
+        Specifies if the values of 'left', 'right', 'top' and 'bottom' are interpreted as pixels or as a percentage of the input video's dimensions.
 
         :return: The unit of this WatermarkFilter.
         :rtype: PositionUnit
@@ -244,6 +245,7 @@ class WatermarkFilter(Filter):
         # type: (PositionUnit) -> None
         """Sets the unit of this WatermarkFilter.
 
+        Specifies if the values of 'left', 'right', 'top' and 'bottom' are interpreted as pixels or as a percentage of the input video's dimensions.
 
         :param unit: The unit of this WatermarkFilter.
         :type: PositionUnit

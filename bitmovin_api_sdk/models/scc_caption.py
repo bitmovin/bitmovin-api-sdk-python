@@ -94,6 +94,7 @@ class SccCaption(BitmovinResource):
         # type: () -> SmpteTimecodeFlavor
         """Gets the smpte_timecode_flavor of this SccCaption.
 
+        Flavor of SMPTE timecodes in the SCC file (drop-frame or non-drop)
 
         :return: The smpte_timecode_flavor of this SccCaption.
         :rtype: SmpteTimecodeFlavor
@@ -105,6 +106,7 @@ class SccCaption(BitmovinResource):
         # type: (SmpteTimecodeFlavor) -> None
         """Sets the smpte_timecode_flavor of this SccCaption.
 
+        Flavor of SMPTE timecodes in the SCC file (drop-frame or non-drop)
 
         :param smpte_timecode_flavor: The smpte_timecode_flavor of this SccCaption.
         :type: SmpteTimecodeFlavor

@@ -128,6 +128,7 @@ class GcsServiceAccountInput(Input):
         # type: () -> GoogleCloudRegion
         """Gets the cloud_region of this GcsServiceAccountInput.
 
+        The cloud region in which the bucket is located. Is used to determine the ideal location for your encodings automatically.
 
         :return: The cloud_region of this GcsServiceAccountInput.
         :rtype: GoogleCloudRegion
@@ -139,6 +140,7 @@ class GcsServiceAccountInput(Input):
         # type: (GoogleCloudRegion) -> None
         """Sets the cloud_region of this GcsServiceAccountInput.
 
+        The cloud region in which the bucket is located. Is used to determine the ideal location for your encodings automatically.
 
         :param cloud_region: The cloud_region of this GcsServiceAccountInput.
         :type: GoogleCloudRegion

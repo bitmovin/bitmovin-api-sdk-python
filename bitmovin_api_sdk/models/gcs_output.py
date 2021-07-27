@@ -164,6 +164,7 @@ class GcsOutput(Output):
         # type: () -> GoogleCloudRegion
         """Gets the cloud_region of this GcsOutput.
 
+        The cloud region in which the bucket is located. Is used to determine the ideal location for your encodings automatically.
 
         :return: The cloud_region of this GcsOutput.
         :rtype: GoogleCloudRegion
@@ -175,6 +176,7 @@ class GcsOutput(Output):
         # type: (GoogleCloudRegion) -> None
         """Sets the cloud_region of this GcsOutput.
 
+        The cloud region in which the bucket is located. Is used to determine the ideal location for your encodings automatically.
 
         :param cloud_region: The cloud_region of this GcsOutput.
         :type: GoogleCloudRegion

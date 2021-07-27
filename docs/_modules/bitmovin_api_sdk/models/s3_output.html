@@ -369,6 +369,7 @@
         <span class="c1"># type: () -&gt; AwsCloudRegion</span>
         <span class="sd">&quot;&quot;&quot;Gets the cloud_region of this S3Output.</span>
 
+<span class="sd">        The cloud region in which the bucket is located. Is used to determine the ideal location for your encodings automatically.</span>
 
 <span class="sd">        :return: The cloud_region of this S3Output.</span>
 <span class="sd">        :rtype: AwsCloudRegion</span>
@@ -380,6 +381,7 @@
         <span class="c1"># type: (AwsCloudRegion) -&gt; None</span>
         <span class="sd">&quot;&quot;&quot;Sets the cloud_region of this S3Output.</span>
 
+<span class="sd">        The cloud region in which the bucket is located. Is used to determine the ideal location for your encodings automatically.</span>
 
 <span class="sd">        :param cloud_region: The cloud_region of this S3Output.</span>
 <span class="sd">        :type: AwsCloudRegion</span>
@@ -396,6 +398,7 @@
         <span class="c1"># type: () -&gt; S3SignatureVersion</span>
         <span class="sd">&quot;&quot;&quot;Gets the signature_version of this S3Output.</span>
 
+<span class="sd">        Specifies the method used for authentication. Must be set to S3_V2 if the region supports both V2 and V4, but the bucket allows V2 only (see https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region)</span>
 
 <span class="sd">        :return: The signature_version of this S3Output.</span>
 <span class="sd">        :rtype: S3SignatureVersion</span>
@@ -407,6 +410,7 @@
         <span class="c1"># type: (S3SignatureVersion) -&gt; None</span>
         <span class="sd">&quot;&quot;&quot;Sets the signature_version of this S3Output.</span>
 
+<span class="sd">        Specifies the method used for authentication. Must be set to S3_V2 if the region supports both V2 and V4, but the bucket allows V2 only (see https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region)</span>
 
 <span class="sd">        :param signature_version: The signature_version of this S3Output.</span>
 <span class="sd">        :type: S3SignatureVersion</span>

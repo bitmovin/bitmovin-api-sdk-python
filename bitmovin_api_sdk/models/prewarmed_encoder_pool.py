@@ -119,6 +119,7 @@ class PrewarmedEncoderPool(BitmovinResource):
         # type: () -> CloudRegion
         """Gets the cloud_region of this PrewarmedEncoderPool.
 
+        The cloud region in which the pool's instances will be running. Must be a specific region (e.g. not 'AUTO', 'GOOGLE' or 'EUROPE') (required)
 
         :return: The cloud_region of this PrewarmedEncoderPool.
         :rtype: CloudRegion
@@ -130,6 +131,7 @@ class PrewarmedEncoderPool(BitmovinResource):
         # type: (CloudRegion) -> None
         """Sets the cloud_region of this PrewarmedEncoderPool.
 
+        The cloud region in which the pool's instances will be running. Must be a specific region (e.g. not 'AUTO', 'GOOGLE' or 'EUROPE') (required)
 
         :param cloud_region: The cloud_region of this PrewarmedEncoderPool.
         :type: CloudRegion
@@ -175,6 +177,7 @@ class PrewarmedEncoderPool(BitmovinResource):
         # type: () -> PrewarmedEncoderDiskSize
         """Gets the disk_size of this PrewarmedEncoderPool.
 
+        Disk size of the prewarmed instances in GB. Needs to be chosen depending on input file sizes and encoding features used. (required)
 
         :return: The disk_size of this PrewarmedEncoderPool.
         :rtype: PrewarmedEncoderDiskSize
@@ -186,6 +189,7 @@ class PrewarmedEncoderPool(BitmovinResource):
         # type: (PrewarmedEncoderDiskSize) -> None
         """Sets the disk_size of this PrewarmedEncoderPool.
 
+        Disk size of the prewarmed instances in GB. Needs to be chosen depending on input file sizes and encoding features used. (required)
 
         :param disk_size: The disk_size of this PrewarmedEncoderPool.
         :type: PrewarmedEncoderDiskSize
@@ -233,6 +237,7 @@ class PrewarmedEncoderPool(BitmovinResource):
         # type: () -> PrewarmedEncoderPoolStatus
         """Gets the status of this PrewarmedEncoderPool.
 
+        Current status of the pool.
 
         :return: The status of this PrewarmedEncoderPool.
         :rtype: PrewarmedEncoderPoolStatus
@@ -244,6 +249,7 @@ class PrewarmedEncoderPool(BitmovinResource):
         # type: (PrewarmedEncoderPoolStatus) -> None
         """Sets the status of this PrewarmedEncoderPool.
 
+        Current status of the pool.
 
         :param status: The status of this PrewarmedEncoderPool.
         :type: PrewarmedEncoderPoolStatus

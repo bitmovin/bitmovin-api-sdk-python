@@ -165,6 +165,7 @@ class SidecarFile(BitmovinResource):
         # type: () -> SidecarErrorMode
         """Gets the error_mode of this SidecarFile.
 
+        This defines how errors should be handled
 
         :return: The error_mode of this SidecarFile.
         :rtype: SidecarErrorMode
@@ -176,6 +177,7 @@ class SidecarFile(BitmovinResource):
         # type: (SidecarErrorMode) -> None
         """Sets the error_mode of this SidecarFile.
 
+        This defines how errors should be handled
 
         :param error_mode: The error_mode of this SidecarFile.
         :type: SidecarErrorMode
