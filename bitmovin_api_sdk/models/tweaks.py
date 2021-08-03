@@ -40,7 +40,7 @@ class Tweaks(object):
         # type: () -> AudioVideoSyncMode
         """Gets the audio_video_sync_mode of this Tweaks.
 
-        Defines special audio video sync handling
+        Different modes for syncing the start and end of audio input streams with the video inputs. This feature does not work with Dolby Digital (Plus) or Dolby Atmos.
 
         :return: The audio_video_sync_mode of this Tweaks.
         :rtype: AudioVideoSyncMode
@@ -52,7 +52,7 @@ class Tweaks(object):
         # type: (AudioVideoSyncMode) -> None
         """Sets the audio_video_sync_mode of this Tweaks.
 
-        Defines special audio video sync handling
+        Different modes for syncing the start and end of audio input streams with the video inputs. This feature does not work with Dolby Digital (Plus) or Dolby Atmos.
 
         :param audio_video_sync_mode: The audio_video_sync_mode of this Tweaks.
         :type: AudioVideoSyncMode
