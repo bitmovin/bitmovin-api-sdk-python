@@ -60,6 +60,9 @@ from bitmovin_api_sdk.models.analytics_contains_filter import AnalyticsContainsF
 from bitmovin_api_sdk.models.analytics_context_description import AnalyticsContextDescription
 from bitmovin_api_sdk.models.analytics_count_query_request import AnalyticsCountQueryRequest
 from bitmovin_api_sdk.models.analytics_equal_filter import AnalyticsEqualFilter
+from bitmovin_api_sdk.models.analytics_error_data import AnalyticsErrorData
+from bitmovin_api_sdk.models.analytics_error_detail import AnalyticsErrorDetail
+from bitmovin_api_sdk.models.analytics_error_details_response import AnalyticsErrorDetailsResponse
 from bitmovin_api_sdk.models.analytics_export_status import AnalyticsExportStatus
 from bitmovin_api_sdk.models.analytics_export_task import AnalyticsExportTask
 from bitmovin_api_sdk.models.analytics_export_task_output_target import AnalyticsExportTaskOutputTarget
@@ -67,6 +70,8 @@ from bitmovin_api_sdk.models.analytics_export_type import AnalyticsExportType
 from bitmovin_api_sdk.models.analytics_gcs_service_account_output import AnalyticsGcsServiceAccountOutput
 from bitmovin_api_sdk.models.analytics_greater_than_filter import AnalyticsGreaterThanFilter
 from bitmovin_api_sdk.models.analytics_greater_than_or_equal_filter import AnalyticsGreaterThanOrEqualFilter
+from bitmovin_api_sdk.models.analytics_http_request import AnalyticsHttpRequest
+from bitmovin_api_sdk.models.analytics_http_request_type import AnalyticsHttpRequestType
 from bitmovin_api_sdk.models.analytics_impression_details import AnalyticsImpressionDetails
 from bitmovin_api_sdk.models.analytics_impression_list_item import AnalyticsImpressionListItem
 from bitmovin_api_sdk.models.analytics_impression_sample import AnalyticsImpressionSample
@@ -297,7 +302,11 @@ from bitmovin_api_sdk.models.domain import Domain
 from bitmovin_api_sdk.models.domain_list import DomainList
 from bitmovin_api_sdk.models.drm import Drm
 from bitmovin_api_sdk.models.drm_type import DrmType
+from bitmovin_api_sdk.models.dts_audio_configuration import DtsAudioConfiguration
+from bitmovin_api_sdk.models.dts_mode import DtsMode
 from bitmovin_api_sdk.models.dts_passthrough_audio_configuration import DtsPassthroughAudioConfiguration
+from bitmovin_api_sdk.models.dts_x_audio_configuration import DtsXAudioConfiguration
+from bitmovin_api_sdk.models.dts_x_channel_layout import DtsXChannelLayout
 from bitmovin_api_sdk.models.dvb_subtitle_configuration import DvbSubtitleConfiguration
 from bitmovin_api_sdk.models.dvb_subtitle_input_stream import DvbSubtitleInputStream
 from bitmovin_api_sdk.models.dvb_teletext_input_stream import DvbTeletextInputStream
@@ -437,6 +446,7 @@ from bitmovin_api_sdk.models.manifest_type_response import ManifestTypeResponse
 from bitmovin_api_sdk.models.marlin_drm import MarlinDrm
 from bitmovin_api_sdk.models.max_ctu_size import MaxCtuSize
 from bitmovin_api_sdk.models.max_transform_unit_size import MaxTransformUnitSize
+from bitmovin_api_sdk.models.media_config_bitrate import MediaConfigBitrate
 from bitmovin_api_sdk.models.media_info_type import MediaInfoType
 from bitmovin_api_sdk.models.media_info_type_response import MediaInfoTypeResponse
 from bitmovin_api_sdk.models.media_stream import MediaStream
@@ -475,6 +485,7 @@ from bitmovin_api_sdk.models.opus_channel_layout import OpusChannelLayout
 from bitmovin_api_sdk.models.or_conjunction import OrConjunction
 from bitmovin_api_sdk.models.organization import Organization
 from bitmovin_api_sdk.models.organization_type import OrganizationType
+from bitmovin_api_sdk.models.ott_loudness_mode import OttLoudnessMode
 from bitmovin_api_sdk.models.output import Output
 from bitmovin_api_sdk.models.output_type import OutputType
 from bitmovin_api_sdk.models.output_type_response import OutputTypeResponse

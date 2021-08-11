@@ -460,6 +460,30 @@ bitmovin\_api\_sdk.models.analytics\_equal\_filter module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.analytics\_error\_data module
+-------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.analytics_error_data
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.analytics\_error\_detail module
+---------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.analytics_error_detail
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.analytics\_error\_details\_response module
+--------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.analytics_error_details_response
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.analytics\_export\_status module
 ----------------------------------------------------------
 
@@ -512,6 +536,22 @@ bitmovin\_api\_sdk.models.analytics\_greater\_than\_or\_equal\_filter module
 ----------------------------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.models.analytics_greater_than_or_equal_filter
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.analytics\_http\_request module
+---------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.analytics_http_request
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.analytics\_http\_request\_type module
+---------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.analytics_http_request_type
    :members:
    :undoc-members:
    :show-inheritance:
@@ -2356,10 +2396,42 @@ bitmovin\_api\_sdk.models.drm\_type module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.dts\_audio\_configuration module
+----------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.dts_audio_configuration
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.dts\_mode module
+------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.dts_mode
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.dts\_passthrough\_audio\_configuration module
 -----------------------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.models.dts_passthrough_audio_configuration
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.dts\_x\_audio\_configuration module
+-------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.dts_x_audio_configuration
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.dts\_x\_channel\_layout module
+--------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.dts_x_channel_layout
    :members:
    :undoc-members:
    :show-inheritance:
@@ -3476,6 +3548,14 @@ bitmovin\_api\_sdk.models.max\_transform\_unit\_size module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.media\_config\_bitrate module
+-------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.media_config_bitrate
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.media\_info\_type module
 --------------------------------------------------
 
@@ -3776,6 +3856,14 @@ bitmovin\_api\_sdk.models.organization\_type module
 ---------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.models.organization_type
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.ott\_loudness\_mode module
+----------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.ott_loudness_mode
    :members:
    :undoc-members:
    :show-inheritance:

@@ -1,0 +1,21 @@
+bitmovin\_api\_sdk.encoding.configurations.audio.dts.customdata package
+=======================================================================
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.encoding.configurations.audio.dts.customdata.customdata\_api module
+--------------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.configurations.audio.dts.customdata.customdata_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.encoding.configurations.audio.dts.customdata
+   :members:
+   :undoc-members:
+   :show-inheritance:

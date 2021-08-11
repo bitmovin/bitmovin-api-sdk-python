@@ -12,7 +12,9 @@ Subpackages
    bitmovin_api_sdk.encoding.configurations.audio.dolby_atmos
    bitmovin_api_sdk.encoding.configurations.audio.dolby_digital
    bitmovin_api_sdk.encoding.configurations.audio.dolby_digital_plus
+   bitmovin_api_sdk.encoding.configurations.audio.dts
    bitmovin_api_sdk.encoding.configurations.audio.dts_passthrough
+   bitmovin_api_sdk.encoding.configurations.audio.dtsx
    bitmovin_api_sdk.encoding.configurations.audio.eac3
    bitmovin_api_sdk.encoding.configurations.audio.he_aac_v1
    bitmovin_api_sdk.encoding.configurations.audio.he_aac_v2

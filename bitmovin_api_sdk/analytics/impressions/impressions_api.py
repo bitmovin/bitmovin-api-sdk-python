@@ -11,6 +11,7 @@ from bitmovin_api_sdk.models.analytics_license_key import AnalyticsLicenseKey
 from bitmovin_api_sdk.models.response_envelope import ResponseEnvelope
 from bitmovin_api_sdk.models.response_error import ResponseError
 from bitmovin_api_sdk.analytics.impressions.ads.ads_api import AdsApi
+from bitmovin_api_sdk.analytics.impressions.errors.errors_api import ErrorsApi
 
 
 class ImpressionsApi(BaseApi):
@@ -26,6 +27,13 @@ class ImpressionsApi(BaseApi):
         )
 
         self.ads = AdsApi(
+            api_key=api_key,
+            tenant_org_id=tenant_org_id,
+            base_url=base_url,
+            logger=logger
+        )
+
+        self.errors = ErrorsApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,

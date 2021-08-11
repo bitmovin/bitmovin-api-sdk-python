@@ -69,7 +69,7 @@ class TimecodeTrackTrimmingInputStream(InputStream):
         # type: () -> string_types
         """Gets the input_stream_id of this TimecodeTrackTrimmingInputStream.
 
-        The id of the ingest input stream that should be trimmed
+        The id of the ingest input stream that should be trimmed (required)
 
         :return: The input_stream_id of this TimecodeTrackTrimmingInputStream.
         :rtype: string_types
@@ -81,7 +81,7 @@ class TimecodeTrackTrimmingInputStream(InputStream):
         # type: (string_types) -> None
         """Sets the input_stream_id of this TimecodeTrackTrimmingInputStream.
 
-        The id of the ingest input stream that should be trimmed
+        The id of the ingest input stream that should be trimmed (required)
 
         :param input_stream_id: The input_stream_id of this TimecodeTrackTrimmingInputStream.
         :type: string_types
@@ -98,7 +98,7 @@ class TimecodeTrackTrimmingInputStream(InputStream):
         # type: () -> string_types
         """Gets the start_time_code of this TimecodeTrackTrimmingInputStream.
 
-        Defines the timecode, in SMPTE-12M format, of the frame from which the encoding should start. The frame indicated by this value will be included in the encoding
+        Defines the timecode, in SMPTE-12M format, of the frame from which the encoding should start. The frame indicated by this value will be included in the encoding (required)
 
         :return: The start_time_code of this TimecodeTrackTrimmingInputStream.
         :rtype: string_types
@@ -110,7 +110,7 @@ class TimecodeTrackTrimmingInputStream(InputStream):
         # type: (string_types) -> None
         """Sets the start_time_code of this TimecodeTrackTrimmingInputStream.
 
-        Defines the timecode, in SMPTE-12M format, of the frame from which the encoding should start. The frame indicated by this value will be included in the encoding
+        Defines the timecode, in SMPTE-12M format, of the frame from which the encoding should start. The frame indicated by this value will be included in the encoding (required)
 
         :param start_time_code: The start_time_code of this TimecodeTrackTrimmingInputStream.
         :type: string_types
@@ -127,7 +127,7 @@ class TimecodeTrackTrimmingInputStream(InputStream):
         # type: () -> string_types
         """Gets the end_time_code of this TimecodeTrackTrimmingInputStream.
 
-        Defines the timecode, in SMPTE-12M format, of the frame at which the encoding should stop. The frame indicated by this value will be included in the encoding
+        Defines the timecode, in SMPTE-12M format, of the frame at which the encoding should stop. The frame indicated by this value will be included in the encoding (required)
 
         :return: The end_time_code of this TimecodeTrackTrimmingInputStream.
         :rtype: string_types
@@ -139,7 +139,7 @@ class TimecodeTrackTrimmingInputStream(InputStream):
         # type: (string_types) -> None
         """Sets the end_time_code of this TimecodeTrackTrimmingInputStream.
 
-        Defines the timecode, in SMPTE-12M format, of the frame at which the encoding should stop. The frame indicated by this value will be included in the encoding
+        Defines the timecode, in SMPTE-12M format, of the frame at which the encoding should stop. The frame indicated by this value will be included in the encoding (required)
 
         :param end_time_code: The end_time_code of this TimecodeTrackTrimmingInputStream.
         :type: string_types
