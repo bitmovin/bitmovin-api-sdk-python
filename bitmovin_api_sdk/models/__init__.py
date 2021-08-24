@@ -687,6 +687,10 @@ from bitmovin_api_sdk.models.vp9_per_title_configuration import Vp9PerTitleConfi
 from bitmovin_api_sdk.models.vp9_quality import Vp9Quality
 from bitmovin_api_sdk.models.vp9_video_configuration import Vp9VideoConfiguration
 from bitmovin_api_sdk.models.vtt_media_info import VttMediaInfo
+from bitmovin_api_sdk.models.watch_folder import WatchFolder
+from bitmovin_api_sdk.models.watch_folder_input import WatchFolderInput
+from bitmovin_api_sdk.models.watch_folder_output import WatchFolderOutput
+from bitmovin_api_sdk.models.watch_folder_status import WatchFolderStatus
 from bitmovin_api_sdk.models.watermark_filter import WatermarkFilter
 from bitmovin_api_sdk.models.web_vtt_configuration import WebVttConfiguration
 from bitmovin_api_sdk.models.web_vtt_cue_identifier_policy import WebVttCueIdentifierPolicy

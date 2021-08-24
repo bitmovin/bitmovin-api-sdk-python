@@ -12,6 +12,7 @@ from bitmovin_api_sdk.encoding.encodings.encodings_api import EncodingsApi
 from bitmovin_api_sdk.encoding.manifests.manifests_api import ManifestsApi
 from bitmovin_api_sdk.encoding.infrastructure.infrastructure_api import InfrastructureApi
 from bitmovin_api_sdk.encoding.statistics.statistics_api import StatisticsApi
+from bitmovin_api_sdk.encoding.watch_folders.watch_folders_api import WatchFoldersApi
 from bitmovin_api_sdk.encoding.error_definitions.error_definitions_api import ErrorDefinitionsApi
 
 
@@ -77,6 +78,13 @@ class EncodingApi(BaseApi):
         )
 
         self.statistics = StatisticsApi(
+            api_key=api_key,
+            tenant_org_id=tenant_org_id,
+            base_url=base_url,
+            logger=logger
+        )
+
+        self.watch_folders = WatchFoldersApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,

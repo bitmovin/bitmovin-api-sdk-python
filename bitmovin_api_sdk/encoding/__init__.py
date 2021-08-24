@@ -7,4 +7,5 @@ from bitmovin_api_sdk.encoding.encodings.encodings_api import EncodingsApi
 from bitmovin_api_sdk.encoding.manifests.manifests_api import ManifestsApi
 from bitmovin_api_sdk.encoding.infrastructure.infrastructure_api import InfrastructureApi
 from bitmovin_api_sdk.encoding.statistics.statistics_api import StatisticsApi
+from bitmovin_api_sdk.encoding.watch_folders.watch_folders_api import WatchFoldersApi
 from bitmovin_api_sdk.encoding.error_definitions.error_definitions_api import ErrorDefinitionsApi

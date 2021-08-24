@@ -5476,6 +5476,38 @@ bitmovin\_api\_sdk.models.vtt\_media\_info module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.watch\_folder module
+----------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.watch_folder
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.watch\_folder\_input module
+-----------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.watch_folder_input
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.watch\_folder\_output module
+------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.watch_folder_output
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.watch\_folder\_status module
+------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.watch_folder_status
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.watermark\_filter module
 --------------------------------------------------
 

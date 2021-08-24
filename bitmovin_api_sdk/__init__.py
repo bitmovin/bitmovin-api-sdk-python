@@ -887,6 +887,8 @@ from bitmovin_api_sdk.encoding.statistics.labels.labels_api import LabelsApi
 from bitmovin_api_sdk.encoding.statistics.labels.labels_api import StatisticsPerLabelListQueryParams, StatisticsPerLabelListByDateRangeQueryParams
 from bitmovin_api_sdk.encoding.statistics.labels.daily.daily_api import DailyApi
 from bitmovin_api_sdk.encoding.statistics.labels.daily.daily_api import DailyStatisticsPerLabelListQueryParams, DailyStatisticsPerLabelListByDateRangeQueryParams
+from bitmovin_api_sdk.encoding.watch_folders.watch_folders_api import WatchFoldersApi
+from bitmovin_api_sdk.encoding.watch_folders.watch_folders_api import WatchFolderListQueryParams
 from bitmovin_api_sdk.general.general_api import GeneralApi
 
 from bitmovin_api_sdk.general.error_definitions.error_definitions_api import ErrorDefinitionsApi
@@ -1658,6 +1660,10 @@ from bitmovin_api_sdk.models.vp9_per_title_configuration import Vp9PerTitleConfi
 from bitmovin_api_sdk.models.vp9_quality import Vp9Quality
 from bitmovin_api_sdk.models.vp9_video_configuration import Vp9VideoConfiguration
 from bitmovin_api_sdk.models.vtt_media_info import VttMediaInfo
+from bitmovin_api_sdk.models.watch_folder import WatchFolder
+from bitmovin_api_sdk.models.watch_folder_input import WatchFolderInput
+from bitmovin_api_sdk.models.watch_folder_output import WatchFolderOutput
+from bitmovin_api_sdk.models.watch_folder_status import WatchFolderStatus
 from bitmovin_api_sdk.models.watermark_filter import WatermarkFilter
 from bitmovin_api_sdk.models.web_vtt_configuration import WebVttConfiguration
 from bitmovin_api_sdk.models.web_vtt_cue_identifier_policy import WebVttCueIdentifierPolicy
@@ -1678,4 +1684,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.83.0"
+__version__ = "1.84.0"
