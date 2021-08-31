@@ -261,7 +261,7 @@ class Vp9VideoConfiguration(VideoConfiguration):
         # type: () -> PresetConfiguration
         """Gets the preset_configuration of this Vp9VideoConfiguration.
 
-        Use a set of well defined configurations preset to support certain use cases. Can be overwritten with more specific values. Valid values [VOD_HIGH_QUALITY, VOD_STANDARD, VOD_SPEED] 
+        Choose from a set of preset configurations tailored for common use cases. Check out [VP9 Presets](https://bitmovin.com/docs/encoding/tutorials/vp9-presets) to see which values get applied by each preset. Explicitly setting a property to a different value will override the preset's value for that property.
 
         :return: The preset_configuration of this Vp9VideoConfiguration.
         :rtype: PresetConfiguration
@@ -273,7 +273,7 @@ class Vp9VideoConfiguration(VideoConfiguration):
         # type: (PresetConfiguration) -> None
         """Sets the preset_configuration of this Vp9VideoConfiguration.
 
-        Use a set of well defined configurations preset to support certain use cases. Can be overwritten with more specific values. Valid values [VOD_HIGH_QUALITY, VOD_STANDARD, VOD_SPEED] 
+        Choose from a set of preset configurations tailored for common use cases. Check out [VP9 Presets](https://bitmovin.com/docs/encoding/tutorials/vp9-presets) to see which values get applied by each preset. Explicitly setting a property to a different value will override the preset's value for that property.
 
         :param preset_configuration: The preset_configuration of this Vp9VideoConfiguration.
         :type: PresetConfiguration
