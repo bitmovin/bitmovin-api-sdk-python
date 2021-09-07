@@ -3,6 +3,7 @@
 from enum import Enum
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
+from bitmovin_api_sdk.models.dash_edition_compatibility import DashEditionCompatibility
 from bitmovin_api_sdk.models.dash_profile import DashProfile
 from bitmovin_api_sdk.models.manifest import Manifest
 from bitmovin_api_sdk.models.manifest_type import ManifestType
@@ -26,14 +27,16 @@ class DashManifest(Manifest):
                  profile=None,
                  manifest_name=None,
                  namespaces=None,
-                 utc_timings=None):
-        # type: (string_types, string_types, string_types, datetime, datetime, dict, ManifestType, list[EncodingOutput], Status, DashProfile, string_types, list[XmlNamespace], list[UtcTiming]) -> None
+                 utc_timings=None,
+                 dash_edition_compatibility=None):
+        # type: (string_types, string_types, string_types, datetime, datetime, dict, ManifestType, list[EncodingOutput], Status, DashProfile, string_types, list[XmlNamespace], list[UtcTiming], DashEditionCompatibility) -> None
         super(DashManifest, self).__init__(id_=id_, name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, type_=type_, outputs=outputs, status=status)
 
         self._profile = None
         self._manifest_name = None
         self._namespaces = list()
         self._utc_timings = list()
+        self._dash_edition_compatibility = None
         self.discriminator = None
 
         if profile is not None:
@@ -44,6 +47,8 @@ class DashManifest(Manifest):
             self.namespaces = namespaces
         if utc_timings is not None:
             self.utc_timings = utc_timings
+        if dash_edition_compatibility is not None:
+            self.dash_edition_compatibility = dash_edition_compatibility
 
     @property
     def openapi_types(self):
@@ -56,7 +61,8 @@ class DashManifest(Manifest):
             'profile': 'DashProfile',
             'manifest_name': 'string_types',
             'namespaces': 'list[XmlNamespace]',
-            'utc_timings': 'list[UtcTiming]'
+            'utc_timings': 'list[UtcTiming]',
+            'dash_edition_compatibility': 'DashEditionCompatibility'
         })
 
         return types
@@ -72,7 +78,8 @@ class DashManifest(Manifest):
             'profile': 'profile',
             'manifest_name': 'manifestName',
             'namespaces': 'namespaces',
-            'utc_timings': 'utcTimings'
+            'utc_timings': 'utcTimings',
+            'dash_edition_compatibility': 'dashEditionCompatibility'
         })
         return attributes
 
@@ -189,6 +196,35 @@ class DashManifest(Manifest):
                 raise TypeError("Invalid type for `utc_timings`, type has to be `list[UtcTiming]`")
 
         self._utc_timings = utc_timings
+
+    @property
+    def dash_edition_compatibility(self):
+        # type: () -> DashEditionCompatibility
+        """Gets the dash_edition_compatibility of this DashManifest.
+
+        The manifest compatibility with the standard DASH Edition.
+
+        :return: The dash_edition_compatibility of this DashManifest.
+        :rtype: DashEditionCompatibility
+        """
+        return self._dash_edition_compatibility
+
+    @dash_edition_compatibility.setter
+    def dash_edition_compatibility(self, dash_edition_compatibility):
+        # type: (DashEditionCompatibility) -> None
+        """Sets the dash_edition_compatibility of this DashManifest.
+
+        The manifest compatibility with the standard DASH Edition.
+
+        :param dash_edition_compatibility: The dash_edition_compatibility of this DashManifest.
+        :type: DashEditionCompatibility
+        """
+
+        if dash_edition_compatibility is not None:
+            if not isinstance(dash_edition_compatibility, DashEditionCompatibility):
+                raise TypeError("Invalid type for `dash_edition_compatibility`, type has to be `DashEditionCompatibility`")
+
+        self._dash_edition_compatibility = dash_edition_compatibility
 
     def to_dict(self):
         """Returns the model properties as a dict"""

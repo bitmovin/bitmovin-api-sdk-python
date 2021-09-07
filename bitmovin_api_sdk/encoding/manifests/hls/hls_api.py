@@ -125,18 +125,21 @@ class HlsApi(BaseApi):
             **kwargs
         )
 
-    def start(self, manifest_id, **kwargs):
-        # type: (string_types, dict) -> BitmovinResponse
+    def start(self, manifest_id, body=None, **kwargs):
+        # type: (string_types, object, dict) -> BitmovinResponse
         """Start HLS Manifest Creation
 
         :param manifest_id: Id of the HLS manifest.
         :type manifest_id: string_types, required
+        :param body: Manifest Startup Options
+        :type body: object
         :return: Id of the manifest
         :rtype: BitmovinResponse
         """
 
         return self.api_client.post(
             '/encoding/manifests/hls/{manifest_id}/start',
+            body,
             path_params={'manifest_id': manifest_id},
             type=BitmovinResponse,
             **kwargs

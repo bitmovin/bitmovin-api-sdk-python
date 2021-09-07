@@ -387,11 +387,14 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="bitmovin_api_sdk.encoding.manifests.hls.hls_api.HlsApi.start">
-<span class="sig-name descname"><span class="pre">start</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">manifest_id</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">string_types</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">BitmovinResponse</span></span></span><a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/manifests/hls/hls_api.html#HlsApi.start"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.manifests.hls.hls_api.HlsApi.start" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">start</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">manifest_id</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">string_types</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">object</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">BitmovinResponse</span></span></span><a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/manifests/hls/hls_api.html#HlsApi.start"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.manifests.hls.hls_api.HlsApi.start" title="Permalink to this definition">¶</a></dt>
 <dd><p>Start HLS Manifest Creation</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>manifest_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the HLS manifest.</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>manifest_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the HLS manifest.</p></li>
+<li><p><strong>body</strong> (<em>object</em>) – Manifest Startup Options</p></li>
+</ul>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>Id of the manifest</p>

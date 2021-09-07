@@ -1724,6 +1724,14 @@ bitmovin\_api\_sdk.models.dash\_cmaf\_representation module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.dash\_edition\_compatibility module
+-------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.dash_edition_compatibility
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.dash\_fmp4\_drm\_representation module
 ----------------------------------------------------------------
 
@@ -4840,6 +4848,14 @@ bitmovin\_api\_sdk.models.start\_live\_encoding\_request module
 ---------------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.models.start_live_encoding_request
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.start\_manifest\_request module
+---------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.start_manifest_request
    :members:
    :undoc-members:
    :show-inheritance:

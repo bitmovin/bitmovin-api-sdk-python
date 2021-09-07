@@ -166,6 +166,7 @@
 <span class="kn">from</span> <span class="nn">enum</span> <span class="kn">import</span> <span class="n">Enum</span>
 <span class="kn">from</span> <span class="nn">six</span> <span class="kn">import</span> <span class="n">string_types</span><span class="p">,</span> <span class="n">iteritems</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.common.poscheck</span> <span class="kn">import</span> <span class="n">poscheck_model</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.dash_edition_compatibility</span> <span class="kn">import</span> <span class="n">DashEditionCompatibility</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.dash_profile</span> <span class="kn">import</span> <span class="n">DashProfile</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.manifest</span> <span class="kn">import</span> <span class="n">Manifest</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.manifest_type</span> <span class="kn">import</span> <span class="n">ManifestType</span>
@@ -189,14 +190,16 @@
                  <span class="n">profile</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">manifest_name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">namespaces</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                 <span class="n">utc_timings</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (string_types, string_types, string_types, datetime, datetime, dict, ManifestType, list[EncodingOutput], Status, DashProfile, string_types, list[XmlNamespace], list[UtcTiming]) -&gt; None</span>
+                 <span class="n">utc_timings</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">dash_edition_compatibility</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="c1"># type: (string_types, string_types, string_types, datetime, datetime, dict, ManifestType, list[EncodingOutput], Status, DashProfile, string_types, list[XmlNamespace], list[UtcTiming], DashEditionCompatibility) -&gt; None</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">DashManifest</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">id_</span><span class="o">=</span><span class="n">id_</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="n">description</span><span class="p">,</span> <span class="n">created_at</span><span class="o">=</span><span class="n">created_at</span><span class="p">,</span> <span class="n">modified_at</span><span class="o">=</span><span class="n">modified_at</span><span class="p">,</span> <span class="n">custom_data</span><span class="o">=</span><span class="n">custom_data</span><span class="p">,</span> <span class="n">type_</span><span class="o">=</span><span class="n">type_</span><span class="p">,</span> <span class="n">outputs</span><span class="o">=</span><span class="n">outputs</span><span class="p">,</span> <span class="n">status</span><span class="o">=</span><span class="n">status</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_profile</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_manifest_name</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_namespaces</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_utc_timings</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_dash_edition_compatibility</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>
 
         <span class="k">if</span> <span class="n">profile</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -207,6 +210,8 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">namespaces</span> <span class="o">=</span> <span class="n">namespaces</span>
         <span class="k">if</span> <span class="n">utc_timings</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">utc_timings</span> <span class="o">=</span> <span class="n">utc_timings</span>
+        <span class="k">if</span> <span class="n">dash_edition_compatibility</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">dash_edition_compatibility</span> <span class="o">=</span> <span class="n">dash_edition_compatibility</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -219,7 +224,8 @@
             <span class="s1">&#39;profile&#39;</span><span class="p">:</span> <span class="s1">&#39;DashProfile&#39;</span><span class="p">,</span>
             <span class="s1">&#39;manifest_name&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
             <span class="s1">&#39;namespaces&#39;</span><span class="p">:</span> <span class="s1">&#39;list[XmlNamespace]&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;utc_timings&#39;</span><span class="p">:</span> <span class="s1">&#39;list[UtcTiming]&#39;</span>
+            <span class="s1">&#39;utc_timings&#39;</span><span class="p">:</span> <span class="s1">&#39;list[UtcTiming]&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;dash_edition_compatibility&#39;</span><span class="p">:</span> <span class="s1">&#39;DashEditionCompatibility&#39;</span>
         <span class="p">})</span>
 
         <span class="k">return</span> <span class="n">types</span>
@@ -235,7 +241,8 @@
             <span class="s1">&#39;profile&#39;</span><span class="p">:</span> <span class="s1">&#39;profile&#39;</span><span class="p">,</span>
             <span class="s1">&#39;manifest_name&#39;</span><span class="p">:</span> <span class="s1">&#39;manifestName&#39;</span><span class="p">,</span>
             <span class="s1">&#39;namespaces&#39;</span><span class="p">:</span> <span class="s1">&#39;namespaces&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;utc_timings&#39;</span><span class="p">:</span> <span class="s1">&#39;utcTimings&#39;</span>
+            <span class="s1">&#39;utc_timings&#39;</span><span class="p">:</span> <span class="s1">&#39;utcTimings&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;dash_edition_compatibility&#39;</span><span class="p">:</span> <span class="s1">&#39;dashEditionCompatibility&#39;</span>
         <span class="p">})</span>
         <span class="k">return</span> <span class="n">attributes</span>
 
@@ -352,6 +359,35 @@
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `utc_timings`, type has to be `list[UtcTiming]`&quot;</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_utc_timings</span> <span class="o">=</span> <span class="n">utc_timings</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">dash_edition_compatibility</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; DashEditionCompatibility</span>
+        <span class="sd">&quot;&quot;&quot;Gets the dash_edition_compatibility of this DashManifest.</span>
+
+<span class="sd">        The manifest compatibility with the standard DASH Edition.</span>
+
+<span class="sd">        :return: The dash_edition_compatibility of this DashManifest.</span>
+<span class="sd">        :rtype: DashEditionCompatibility</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_dash_edition_compatibility</span>
+
+    <span class="nd">@dash_edition_compatibility</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">dash_edition_compatibility</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dash_edition_compatibility</span><span class="p">):</span>
+        <span class="c1"># type: (DashEditionCompatibility) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the dash_edition_compatibility of this DashManifest.</span>
+
+<span class="sd">        The manifest compatibility with the standard DASH Edition.</span>
+
+<span class="sd">        :param dash_edition_compatibility: The dash_edition_compatibility of this DashManifest.</span>
+<span class="sd">        :type: DashEditionCompatibility</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">dash_edition_compatibility</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">dash_edition_compatibility</span><span class="p">,</span> <span class="n">DashEditionCompatibility</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `dash_edition_compatibility`, type has to be `DashEditionCompatibility`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_dash_edition_compatibility</span> <span class="o">=</span> <span class="n">dash_edition_compatibility</span>
 
 <div class="viewcode-block" id="DashManifest.to_dict"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.dash_manifest.DashManifest.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>

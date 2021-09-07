@@ -218,6 +218,7 @@ from bitmovin_api_sdk.models.daily_statistics import DailyStatistics
 from bitmovin_api_sdk.models.daily_statistics_per_label import DailyStatisticsPerLabel
 from bitmovin_api_sdk.models.dash_chunked_text_representation import DashChunkedTextRepresentation
 from bitmovin_api_sdk.models.dash_cmaf_representation import DashCmafRepresentation
+from bitmovin_api_sdk.models.dash_edition_compatibility import DashEditionCompatibility
 from bitmovin_api_sdk.models.dash_fmp4_drm_representation import DashFmp4DrmRepresentation
 from bitmovin_api_sdk.models.dash_fmp4_representation import DashFmp4Representation
 from bitmovin_api_sdk.models.dash_imsc_representation import DashImscRepresentation
@@ -608,6 +609,7 @@ from bitmovin_api_sdk.models.srt_statistics import SrtStatistics
 from bitmovin_api_sdk.models.standard_media_info import StandardMediaInfo
 from bitmovin_api_sdk.models.start_encoding_request import StartEncodingRequest
 from bitmovin_api_sdk.models.start_live_encoding_request import StartLiveEncodingRequest
+from bitmovin_api_sdk.models.start_manifest_request import StartManifestRequest
 from bitmovin_api_sdk.models.static_ip import StaticIp
 from bitmovin_api_sdk.models.static_ip_status import StaticIpStatus
 from bitmovin_api_sdk.models.statistics import Statistics
