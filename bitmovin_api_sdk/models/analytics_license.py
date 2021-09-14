@@ -5,6 +5,7 @@ from datetime import datetime
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
 from bitmovin_api_sdk.models.analytics_license_custom_data_field_labels import AnalyticsLicenseCustomDataFieldLabels
+from bitmovin_api_sdk.models.analytics_license_features import AnalyticsLicenseFeatures
 from bitmovin_api_sdk.models.bitmovin_response import BitmovinResponse
 import pprint
 import six
@@ -22,8 +23,9 @@ class AnalyticsLicense(BitmovinResponse):
                  domains=None,
                  ignore_dnt=None,
                  time_zone=None,
-                 custom_data_field_labels=None):
-        # type: (string_types, string_types, string_types, datetime, int, int, list[AnalyticsLicenseDomain], bool, string_types, AnalyticsLicenseCustomDataFieldLabels) -> None
+                 custom_data_field_labels=None,
+                 features=None):
+        # type: (string_types, string_types, string_types, datetime, int, int, list[AnalyticsLicenseDomain], bool, string_types, AnalyticsLicenseCustomDataFieldLabels, AnalyticsLicenseFeatures) -> None
         super(AnalyticsLicense, self).__init__(id_=id_)
 
         self._name = None
@@ -35,6 +37,7 @@ class AnalyticsLicense(BitmovinResponse):
         self._ignore_dnt = None
         self._time_zone = None
         self._custom_data_field_labels = None
+        self._features = None
         self.discriminator = None
 
         if name is not None:
@@ -55,6 +58,8 @@ class AnalyticsLicense(BitmovinResponse):
             self.time_zone = time_zone
         if custom_data_field_labels is not None:
             self.custom_data_field_labels = custom_data_field_labels
+        if features is not None:
+            self.features = features
 
     @property
     def openapi_types(self):
@@ -72,7 +77,8 @@ class AnalyticsLicense(BitmovinResponse):
             'domains': 'list[AnalyticsLicenseDomain]',
             'ignore_dnt': 'bool',
             'time_zone': 'string_types',
-            'custom_data_field_labels': 'AnalyticsLicenseCustomDataFieldLabels'
+            'custom_data_field_labels': 'AnalyticsLicenseCustomDataFieldLabels',
+            'features': 'AnalyticsLicenseFeatures'
         })
 
         return types
@@ -93,7 +99,8 @@ class AnalyticsLicense(BitmovinResponse):
             'domains': 'domains',
             'ignore_dnt': 'ignoreDNT',
             'time_zone': 'timeZone',
-            'custom_data_field_labels': 'customDataFieldLabels'
+            'custom_data_field_labels': 'customDataFieldLabels',
+            'features': 'features'
         })
         return attributes
 
@@ -357,6 +364,33 @@ class AnalyticsLicense(BitmovinResponse):
                 raise TypeError("Invalid type for `custom_data_field_labels`, type has to be `AnalyticsLicenseCustomDataFieldLabels`")
 
         self._custom_data_field_labels = custom_data_field_labels
+
+    @property
+    def features(self):
+        # type: () -> AnalyticsLicenseFeatures
+        """Gets the features of this AnalyticsLicense.
+
+
+        :return: The features of this AnalyticsLicense.
+        :rtype: AnalyticsLicenseFeatures
+        """
+        return self._features
+
+    @features.setter
+    def features(self, features):
+        # type: (AnalyticsLicenseFeatures) -> None
+        """Sets the features of this AnalyticsLicense.
+
+
+        :param features: The features of this AnalyticsLicense.
+        :type: AnalyticsLicenseFeatures
+        """
+
+        if features is not None:
+            if not isinstance(features, AnalyticsLicenseFeatures):
+                raise TypeError("Invalid type for `features`, type has to be `AnalyticsLicenseFeatures`")
+
+        self._features = features
 
     def to_dict(self):
         """Returns the model properties as a dict"""

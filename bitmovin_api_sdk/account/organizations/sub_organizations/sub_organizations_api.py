@@ -7,6 +7,7 @@ from bitmovin_api_sdk.common.poscheck import poscheck_except
 from bitmovin_api_sdk.models.organization import Organization
 from bitmovin_api_sdk.models.response_envelope import ResponseEnvelope
 from bitmovin_api_sdk.models.response_error import ResponseError
+from bitmovin_api_sdk.account.organizations.sub_organizations.organization_list_query_params import OrganizationListQueryParams
 
 
 class SubOrganizationsApi(BaseApi):
@@ -21,12 +22,14 @@ class SubOrganizationsApi(BaseApi):
             logger=logger
         )
 
-    def list(self, organization_id, **kwargs):
-        # type: (string_types, dict) -> Organization
+    def list(self, organization_id, query_params=None, **kwargs):
+        # type: (string_types, OrganizationListQueryParams, dict) -> Organization
         """Organizations under given parent organization
 
         :param organization_id: ID of the parent organization
         :type organization_id: string_types, required
+        :param query_params: Query parameters
+        :type query_params: OrganizationListQueryParams
         :return: Sub-Organizations
         :rtype: Organization
         """
@@ -34,6 +37,7 @@ class SubOrganizationsApi(BaseApi):
         return self.api_client.get(
             '/account/organizations/{organization_id}/sub-organizations',
             path_params={'organization_id': organization_id},
+            query_params=query_params,
             pagination_response=True,
             type=Organization,
             **kwargs

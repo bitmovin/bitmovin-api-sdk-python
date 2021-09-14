@@ -14,7 +14,7 @@ from bitmovin_api_sdk.account.api_keys.api_keys_api import ApiKeysApi
 from bitmovin_api_sdk.account.organizations.organizations_api import OrganizationsApi
 
 from bitmovin_api_sdk.account.organizations.sub_organizations.sub_organizations_api import SubOrganizationsApi
-
+from bitmovin_api_sdk.account.organizations.sub_organizations.sub_organizations_api import OrganizationListQueryParams
 from bitmovin_api_sdk.account.organizations.groups.groups_api import GroupsApi
 
 from bitmovin_api_sdk.account.organizations.groups.tenants.tenants_api import TenantsApi
@@ -92,6 +92,8 @@ from bitmovin_api_sdk.analytics.queries.median.median_api import MedianApi
 from bitmovin_api_sdk.analytics.licenses.licenses_api import LicensesApi
 
 from bitmovin_api_sdk.analytics.licenses.domains.domains_api import DomainsApi
+
+from bitmovin_api_sdk.analytics.virtual_licenses.virtual_licenses_api import VirtualLicensesApi
 
 from bitmovin_api_sdk.analytics.outputs.outputs_api import OutputsApi
 
@@ -1059,6 +1061,8 @@ from bitmovin_api_sdk.models.analytics_less_than_or_equal_filter import Analytic
 from bitmovin_api_sdk.models.analytics_license import AnalyticsLicense
 from bitmovin_api_sdk.models.analytics_license_custom_data_field_labels import AnalyticsLicenseCustomDataFieldLabels
 from bitmovin_api_sdk.models.analytics_license_domain import AnalyticsLicenseDomain
+from bitmovin_api_sdk.models.analytics_license_error_details_config import AnalyticsLicenseErrorDetailsConfig
+from bitmovin_api_sdk.models.analytics_license_features import AnalyticsLicenseFeatures
 from bitmovin_api_sdk.models.analytics_license_key import AnalyticsLicenseKey
 from bitmovin_api_sdk.models.analytics_license_update_request import AnalyticsLicenseUpdateRequest
 from bitmovin_api_sdk.models.analytics_max_concurrent_viewers_response import AnalyticsMaxConcurrentViewersResponse
@@ -1400,6 +1404,7 @@ from bitmovin_api_sdk.models.level_h265 import LevelH265
 from bitmovin_api_sdk.models.limit_references import LimitReferences
 from bitmovin_api_sdk.models.limit_transform_unit_depth_recursion_mode import LimitTransformUnitDepthRecursionMode
 from bitmovin_api_sdk.models.link import Link
+from bitmovin_api_sdk.models.live_auto_shutdown_configuration import LiveAutoShutdownConfiguration
 from bitmovin_api_sdk.models.live_dash_manifest import LiveDashManifest
 from bitmovin_api_sdk.models.live_encoding import LiveEncoding
 from bitmovin_api_sdk.models.live_encoding_codec import LiveEncodingCodec
@@ -1650,6 +1655,9 @@ from bitmovin_api_sdk.models.video_configuration import VideoConfiguration
 from bitmovin_api_sdk.models.video_format import VideoFormat
 from bitmovin_api_sdk.models.video_media_info import VideoMediaInfo
 from bitmovin_api_sdk.models.video_stream import VideoStream
+from bitmovin_api_sdk.models.virtual_license import VirtualLicense
+from bitmovin_api_sdk.models.virtual_license_create_request import VirtualLicenseCreateRequest
+from bitmovin_api_sdk.models.virtual_license_licenses_list_item import VirtualLicenseLicensesListItem
 from bitmovin_api_sdk.models.vorbis_audio_configuration import VorbisAudioConfiguration
 from bitmovin_api_sdk.models.vorbis_channel_layout import VorbisChannelLayout
 from bitmovin_api_sdk.models.vp8_arnr_type import Vp8ArnrType
@@ -1686,4 +1694,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.86.0"
+__version__ = "1.87.0"

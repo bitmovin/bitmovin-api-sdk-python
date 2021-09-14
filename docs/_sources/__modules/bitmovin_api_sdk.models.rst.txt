@@ -668,6 +668,22 @@ bitmovin\_api\_sdk.models.analytics\_license\_domain module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.analytics\_license\_error\_details\_config module
+---------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.analytics_license_error_details_config
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.analytics\_license\_features module
+-------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.analytics_license_features
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.analytics\_license\_key module
 --------------------------------------------------------
 
@@ -3396,6 +3412,14 @@ bitmovin\_api\_sdk.models.link module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.live\_auto\_shutdown\_configuration module
+--------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.live_auto_shutdown_configuration
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.live\_dash\_manifest module
 -----------------------------------------------------
 
@@ -5392,6 +5416,30 @@ bitmovin\_api\_sdk.models.video\_stream module
 ----------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.models.video_stream
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.virtual\_license module
+-------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.virtual_license
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.virtual\_license\_create\_request module
+------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.virtual_license_create_request
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.virtual\_license\_licenses\_list\_item module
+-----------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.virtual_license_licenses_list_item
    :members:
    :undoc-members:
    :show-inheritance:

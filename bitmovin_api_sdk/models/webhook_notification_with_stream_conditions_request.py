@@ -21,10 +21,11 @@ class WebhookNotificationWithStreamConditionsRequest(WebhookNotification):
                  category=None,
                  resource_type=None,
                  muted=None,
+                 custom_data=None,
                  url=None,
                  conditions=None):
-        # type: (string_types, bool, string_types, datetime, string_types, string_types, string_types, string_types, bool, string_types, AbstractCondition) -> None
-        super(WebhookNotificationWithStreamConditionsRequest, self).__init__(id_=id_, resolve=resolve, resource_id=resource_id, triggered_at=triggered_at, type_=type_, event_type=event_type, category=category, resource_type=resource_type, muted=muted, url=url)
+        # type: (string_types, bool, string_types, datetime, string_types, string_types, string_types, string_types, bool, dict, string_types, AbstractCondition) -> None
+        super(WebhookNotificationWithStreamConditionsRequest, self).__init__(id_=id_, resolve=resolve, resource_id=resource_id, triggered_at=triggered_at, type_=type_, event_type=event_type, category=category, resource_type=resource_type, muted=muted, custom_data=custom_data, url=url)
 
         self._conditions = None
         self.discriminator = None

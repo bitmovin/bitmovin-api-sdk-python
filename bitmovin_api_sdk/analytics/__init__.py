@@ -6,4 +6,5 @@ from bitmovin_api_sdk.analytics.metrics.metrics_api import MetricsApi
 from bitmovin_api_sdk.analytics.ads.ads_api import AdsApi
 from bitmovin_api_sdk.analytics.queries.queries_api import QueriesApi
 from bitmovin_api_sdk.analytics.licenses.licenses_api import LicensesApi
+from bitmovin_api_sdk.analytics.virtual_licenses.virtual_licenses_api import VirtualLicensesApi
 from bitmovin_api_sdk.analytics.outputs.outputs_api import OutputsApi

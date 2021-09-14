@@ -6,7 +6,6 @@ from bitmovin_api_sdk.common.poscheck import poscheck_model
 
 
 class HeAacV1Signaling(Enum):
-    DEFAULT = "DEFAULT"
     IMPLICIT = "IMPLICIT"
     EXPLICIT_SBR = "EXPLICIT_SBR"
-    EXPLICIT_HIERACHICAL = "EXPLICIT_HIERACHICAL"
+    EXPLICIT_HIERARCHICAL = "EXPLICIT_HIERARCHICAL"

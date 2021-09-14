@@ -20,8 +20,9 @@ class Notification(BitmovinResponse):
                  event_type=None,
                  category=None,
                  resource_type=None,
-                 muted=None):
-        # type: (string_types, bool, string_types, datetime, string_types, string_types, string_types, string_types, bool) -> None
+                 muted=None,
+                 custom_data=None):
+        # type: (string_types, bool, string_types, datetime, string_types, string_types, string_types, string_types, bool, dict) -> None
         super(Notification, self).__init__(id_=id_)
 
         self._resolve = None
@@ -32,6 +33,7 @@ class Notification(BitmovinResponse):
         self._category = None
         self._resource_type = None
         self._muted = None
+        self._custom_data = None
         self.discriminator = None
 
         if resolve is not None:
@@ -50,6 +52,8 @@ class Notification(BitmovinResponse):
             self.resource_type = resource_type
         if muted is not None:
             self.muted = muted
+        if custom_data is not None:
+            self.custom_data = custom_data
 
     @property
     def openapi_types(self):
@@ -66,7 +70,8 @@ class Notification(BitmovinResponse):
             'event_type': 'string_types',
             'category': 'string_types',
             'resource_type': 'string_types',
-            'muted': 'bool'
+            'muted': 'bool',
+            'custom_data': 'dict(str, object)'
         })
 
         return types
@@ -86,7 +91,8 @@ class Notification(BitmovinResponse):
             'event_type': 'eventType',
             'category': 'category',
             'resource_type': 'resourceType',
-            'muted': 'muted'
+            'muted': 'muted',
+            'custom_data': 'customData'
         })
         return attributes
 
@@ -311,6 +317,35 @@ class Notification(BitmovinResponse):
                 raise TypeError("Invalid type for `muted`, type has to be `bool`")
 
         self._muted = muted
+
+    @property
+    def custom_data(self):
+        # type: () -> dict(str, object)
+        """Gets the custom_data of this Notification.
+
+        User-specific meta data. This can hold anything.
+
+        :return: The custom_data of this Notification.
+        :rtype: dict(str, object)
+        """
+        return self._custom_data
+
+    @custom_data.setter
+    def custom_data(self, custom_data):
+        # type: (dict) -> None
+        """Sets the custom_data of this Notification.
+
+        User-specific meta data. This can hold anything.
+
+        :param custom_data: The custom_data of this Notification.
+        :type: dict(str, object)
+        """
+
+        if custom_data is not None:
+            if not isinstance(custom_data, dict):
+                raise TypeError("Invalid type for `custom_data`, type has to be `dict(str, object)`")
+
+        self._custom_data = custom_data
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -5,6 +5,7 @@ from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
 from bitmovin_api_sdk.models.auto_restart_configuration import AutoRestartConfiguration
 from bitmovin_api_sdk.models.encoding_mode import EncodingMode
+from bitmovin_api_sdk.models.live_auto_shutdown_configuration import LiveAutoShutdownConfiguration
 from bitmovin_api_sdk.models.manifest_generator import ManifestGenerator
 from bitmovin_api_sdk.models.reupload_settings import ReuploadSettings
 import pprint
@@ -20,8 +21,9 @@ class StartLiveEncodingRequest(object):
                  live_encoding_mode=None,
                  reupload_settings=None,
                  manifest_generator=None,
-                 auto_restart_configuration=None):
-        # type: (string_types, list[LiveHlsManifest], list[LiveDashManifest], EncodingMode, ReuploadSettings, ManifestGenerator, AutoRestartConfiguration) -> None
+                 auto_restart_configuration=None,
+                 auto_shutdown_configuration=None):
+        # type: (string_types, list[LiveHlsManifest], list[LiveDashManifest], EncodingMode, ReuploadSettings, ManifestGenerator, AutoRestartConfiguration, LiveAutoShutdownConfiguration) -> None
 
         self._stream_key = None
         self._hls_manifests = list()
@@ -30,6 +32,7 @@ class StartLiveEncodingRequest(object):
         self._reupload_settings = None
         self._manifest_generator = None
         self._auto_restart_configuration = None
+        self._auto_shutdown_configuration = None
         self.discriminator = None
 
         if stream_key is not None:
@@ -46,6 +49,8 @@ class StartLiveEncodingRequest(object):
             self.manifest_generator = manifest_generator
         if auto_restart_configuration is not None:
             self.auto_restart_configuration = auto_restart_configuration
+        if auto_shutdown_configuration is not None:
+            self.auto_shutdown_configuration = auto_shutdown_configuration
 
     @property
     def openapi_types(self):
@@ -56,7 +61,8 @@ class StartLiveEncodingRequest(object):
             'live_encoding_mode': 'EncodingMode',
             'reupload_settings': 'ReuploadSettings',
             'manifest_generator': 'ManifestGenerator',
-            'auto_restart_configuration': 'AutoRestartConfiguration'
+            'auto_restart_configuration': 'AutoRestartConfiguration',
+            'auto_shutdown_configuration': 'LiveAutoShutdownConfiguration'
         }
 
         return types
@@ -70,7 +76,8 @@ class StartLiveEncodingRequest(object):
             'live_encoding_mode': 'liveEncodingMode',
             'reupload_settings': 'reuploadSettings',
             'manifest_generator': 'manifestGenerator',
-            'auto_restart_configuration': 'autoRestartConfiguration'
+            'auto_restart_configuration': 'autoRestartConfiguration',
+            'auto_shutdown_configuration': 'autoShutdownConfiguration'
         }
         return attributes
 
@@ -276,6 +283,35 @@ class StartLiveEncodingRequest(object):
                 raise TypeError("Invalid type for `auto_restart_configuration`, type has to be `AutoRestartConfiguration`")
 
         self._auto_restart_configuration = auto_restart_configuration
+
+    @property
+    def auto_shutdown_configuration(self):
+        # type: () -> LiveAutoShutdownConfiguration
+        """Gets the auto_shutdown_configuration of this StartLiveEncodingRequest.
+
+        Configuration for auto shutdown of the live encoding
+
+        :return: The auto_shutdown_configuration of this StartLiveEncodingRequest.
+        :rtype: LiveAutoShutdownConfiguration
+        """
+        return self._auto_shutdown_configuration
+
+    @auto_shutdown_configuration.setter
+    def auto_shutdown_configuration(self, auto_shutdown_configuration):
+        # type: (LiveAutoShutdownConfiguration) -> None
+        """Sets the auto_shutdown_configuration of this StartLiveEncodingRequest.
+
+        Configuration for auto shutdown of the live encoding
+
+        :param auto_shutdown_configuration: The auto_shutdown_configuration of this StartLiveEncodingRequest.
+        :type: LiveAutoShutdownConfiguration
+        """
+
+        if auto_shutdown_configuration is not None:
+            if not isinstance(auto_shutdown_configuration, LiveAutoShutdownConfiguration):
+                raise TypeError("Invalid type for `auto_shutdown_configuration`, type has to be `LiveAutoShutdownConfiguration`")
+
+        self._auto_shutdown_configuration = auto_shutdown_configuration
 
     def to_dict(self):
         """Returns the model properties as a dict"""

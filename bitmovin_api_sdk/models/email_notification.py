@@ -20,9 +20,10 @@ class EmailNotification(Notification):
                  category=None,
                  resource_type=None,
                  muted=None,
+                 custom_data=None,
                  emails=None):
-        # type: (string_types, bool, string_types, datetime, string_types, string_types, string_types, string_types, bool, list[string_types]) -> None
-        super(EmailNotification, self).__init__(id_=id_, resolve=resolve, resource_id=resource_id, triggered_at=triggered_at, type_=type_, event_type=event_type, category=category, resource_type=resource_type, muted=muted)
+        # type: (string_types, bool, string_types, datetime, string_types, string_types, string_types, string_types, bool, dict, list[string_types]) -> None
+        super(EmailNotification, self).__init__(id_=id_, resolve=resolve, resource_id=resource_id, triggered_at=triggered_at, type_=type_, event_type=event_type, category=category, resource_type=resource_type, muted=muted, custom_data=custom_data)
 
         self._emails = list()
         self.discriminator = None
