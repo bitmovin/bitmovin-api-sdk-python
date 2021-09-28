@@ -82,6 +82,7 @@
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.response_envelope</span> <span class="kn">import</span> <span class="n">ResponseEnvelope</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.response_error</span> <span class="kn">import</span> <span class="n">ResponseError</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.analytics.licenses.domains.domains_api</span> <span class="kn">import</span> <span class="n">DomainsApi</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.analytics.licenses.analytics_license_list_query_params</span> <span class="kn">import</span> <span class="n">AnalyticsLicenseListQueryParams</span>
 
 
 <div class="viewcode-block" id="LicensesApi"><a class="viewcode-back" href="../../../../__modules/bitmovin_api_sdk.analytics.licenses.html#bitmovin_api_sdk.analytics.licenses.licenses_api.LicensesApi">[docs]</a><span class="k">class</span> <span class="nc">LicensesApi</span><span class="p">(</span><span class="n">BaseApi</span><span class="p">):</span>
@@ -137,16 +138,19 @@
             <span class="o">**</span><span class="n">kwargs</span>
         <span class="p">)</span></div>
 
-<div class="viewcode-block" id="LicensesApi.list"><a class="viewcode-back" href="../../../../__modules/bitmovin_api_sdk.analytics.licenses.html#bitmovin_api_sdk.analytics.licenses.licenses_api.LicensesApi.list">[docs]</a>    <span class="k">def</span> <span class="nf">list</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-        <span class="c1"># type: (dict) -&gt; AnalyticsLicense</span>
+<div class="viewcode-block" id="LicensesApi.list"><a class="viewcode-back" href="../../../../__modules/bitmovin_api_sdk.analytics.licenses.html#bitmovin_api_sdk.analytics.licenses.licenses_api.LicensesApi.list">[docs]</a>    <span class="k">def</span> <span class="nf">list</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">query_params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="c1"># type: (AnalyticsLicenseListQueryParams, dict) -&gt; AnalyticsLicense</span>
         <span class="sd">&quot;&quot;&quot;List Analytics Licenses</span>
 
+<span class="sd">        :param query_params: Query parameters</span>
+<span class="sd">        :type query_params: AnalyticsLicenseListQueryParams</span>
 <span class="sd">        :return: Service specific result</span>
 <span class="sd">        :rtype: AnalyticsLicense</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
             <span class="s1">&#39;/analytics/licenses&#39;</span><span class="p">,</span>
+            <span class="n">query_params</span><span class="o">=</span><span class="n">query_params</span><span class="p">,</span>
             <span class="n">pagination_response</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">AnalyticsLicense</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>

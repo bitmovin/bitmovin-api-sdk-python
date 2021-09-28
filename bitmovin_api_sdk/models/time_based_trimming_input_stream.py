@@ -129,7 +129,7 @@ class TimeBasedTrimmingInputStream(InputStream):
         # type: () -> float
         """Gets the duration of this TimeBasedTrimmingInputStream.
 
-        Defines how many seconds of the input will be encoded
+        Defines how many seconds of the input will be encoded. Not defining or setting it to null indicates that the remaining input (considering offset) will be encoded.
 
         :return: The duration of this TimeBasedTrimmingInputStream.
         :rtype: float
@@ -141,7 +141,7 @@ class TimeBasedTrimmingInputStream(InputStream):
         # type: (float) -> None
         """Sets the duration of this TimeBasedTrimmingInputStream.
 
-        Defines how many seconds of the input will be encoded
+        Defines how many seconds of the input will be encoded. Not defining or setting it to null indicates that the remaining input (considering offset) will be encoded.
 
         :param duration: The duration of this TimeBasedTrimmingInputStream.
         :type: float

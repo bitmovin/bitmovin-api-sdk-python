@@ -9,6 +9,7 @@ from bitmovin_api_sdk.models.analytics_license_update_request import AnalyticsLi
 from bitmovin_api_sdk.models.response_envelope import ResponseEnvelope
 from bitmovin_api_sdk.models.response_error import ResponseError
 from bitmovin_api_sdk.analytics.licenses.domains.domains_api import DomainsApi
+from bitmovin_api_sdk.analytics.licenses.analytics_license_list_query_params import AnalyticsLicenseListQueryParams
 
 
 class LicensesApi(BaseApi):
@@ -64,16 +65,19 @@ class LicensesApi(BaseApi):
             **kwargs
         )
 
-    def list(self, **kwargs):
-        # type: (dict) -> AnalyticsLicense
+    def list(self, query_params=None, **kwargs):
+        # type: (AnalyticsLicenseListQueryParams, dict) -> AnalyticsLicense
         """List Analytics Licenses
 
+        :param query_params: Query parameters
+        :type query_params: AnalyticsLicenseListQueryParams
         :return: Service specific result
         :rtype: AnalyticsLicense
         """
 
         return self.api_client.get(
             '/analytics/licenses',
+            query_params=query_params,
             pagination_response=True,
             type=AnalyticsLicense,
             **kwargs

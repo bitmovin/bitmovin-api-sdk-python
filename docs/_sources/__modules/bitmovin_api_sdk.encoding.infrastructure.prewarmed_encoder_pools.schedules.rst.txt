@@ -4,10 +4,10 @@ bitmovin\_api\_sdk.encoding.infrastructure.prewarmed\_encoder\_pools.schedules p
 Submodules
 ----------
 
-bitmovin\_api\_sdk.encoding.infrastructure.prewarmed\_encoder\_pools.schedules.prewarmed\_encoder\_pool\_list\_query\_params module
------------------------------------------------------------------------------------------------------------------------------------
+bitmovin\_api\_sdk.encoding.infrastructure.prewarmed\_encoder\_pools.schedules.prewarmed\_encoder\_pool\_schedule\_list\_query\_params module
+---------------------------------------------------------------------------------------------------------------------------------------------
 
-.. automodule:: bitmovin_api_sdk.encoding.infrastructure.prewarmed_encoder_pools.schedules.prewarmed_encoder_pool_list_query_params
+.. automodule:: bitmovin_api_sdk.encoding.infrastructure.prewarmed_encoder_pools.schedules.prewarmed_encoder_pool_schedule_list_query_params
    :members:
    :undoc-members:
    :show-inheritance:

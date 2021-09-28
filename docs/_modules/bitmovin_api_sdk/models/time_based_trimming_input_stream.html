@@ -202,7 +202,7 @@
         <span class="c1"># type: () -&gt; float</span>
         <span class="sd">&quot;&quot;&quot;Gets the duration of this TimeBasedTrimmingInputStream.</span>
 
-<span class="sd">        Defines how many seconds of the input will be encoded</span>
+<span class="sd">        Defines how many seconds of the input will be encoded. Not defining or setting it to null indicates that the remaining input (considering offset) will be encoded.</span>
 
 <span class="sd">        :return: The duration of this TimeBasedTrimmingInputStream.</span>
 <span class="sd">        :rtype: float</span>
@@ -214,7 +214,7 @@
         <span class="c1"># type: (float) -&gt; None</span>
         <span class="sd">&quot;&quot;&quot;Sets the duration of this TimeBasedTrimmingInputStream.</span>
 
-<span class="sd">        Defines how many seconds of the input will be encoded</span>
+<span class="sd">        Defines how many seconds of the input will be encoded. Not defining or setting it to null indicates that the remaining input (considering offset) will be encoded.</span>
 
 <span class="sd">        :param duration: The duration of this TimeBasedTrimmingInputStream.</span>
 <span class="sd">        :type: float</span>

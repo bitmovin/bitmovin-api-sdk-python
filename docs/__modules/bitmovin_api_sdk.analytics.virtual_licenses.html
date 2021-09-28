@@ -52,6 +52,7 @@
 <li class="toctree-l3"><a class="reference internal" href="bitmovin_api_sdk.analytics.queries.html">bitmovin_api_sdk.analytics.queries package</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">bitmovin_api_sdk.analytics.virtual_licenses package</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-bitmovin_api_sdk.analytics.virtual_licenses.analytics_virtual_license_list_query_params">bitmovin_api_sdk.analytics.virtual_licenses.analytics_virtual_license_list_query_params module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#module-bitmovin_api_sdk.analytics.virtual_licenses.virtual_licenses_api">bitmovin_api_sdk.analytics.virtual_licenses.virtual_licenses_api module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#module-bitmovin_api_sdk.analytics.virtual_licenses">Module contents</a></li>
 </ul>
@@ -106,6 +107,25 @@
 <section id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline"></a></h2>
 </section>
+<section id="module-bitmovin_api_sdk.analytics.virtual_licenses.analytics_virtual_license_list_query_params">
+<span id="bitmovin-api-sdk-analytics-virtual-licenses-analytics-virtual-license-list-query-params-module"></span><h2>bitmovin_api_sdk.analytics.virtual_licenses.analytics_virtual_license_list_query_params module<a class="headerlink" href="#module-bitmovin_api_sdk.analytics.virtual_licenses.analytics_virtual_license_list_query_params" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="bitmovin_api_sdk.analytics.virtual_licenses.analytics_virtual_license_list_query_params.AnalyticsVirtualLicenseListQueryParams">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">bitmovin_api_sdk.analytics.virtual_licenses.analytics_virtual_license_list_query_params.</span></span><span class="sig-name descname"><span class="pre">AnalyticsVirtualLicenseListQueryParams</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">offset</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/analytics/virtual_licenses/analytics_virtual_license_list_query_params.html#AnalyticsVirtualLicenseListQueryParams"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bitmovin_api_sdk.analytics.virtual_licenses.analytics_virtual_license_list_query_params.AnalyticsVirtualLicenseListQueryParams" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py property">
+<dt class="sig sig-object py" id="bitmovin_api_sdk.analytics.virtual_licenses.analytics_virtual_license_list_query_params.AnalyticsVirtualLicenseListQueryParams.attribute_map">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">attribute_map</span></span><a class="headerlink" href="#bitmovin_api_sdk.analytics.virtual_licenses.analytics_virtual_license_list_query_params.AnalyticsVirtualLicenseListQueryParams.attribute_map" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="bitmovin_api_sdk.analytics.virtual_licenses.analytics_virtual_license_list_query_params.AnalyticsVirtualLicenseListQueryParams.openapi_types">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">openapi_types</span></span><a class="headerlink" href="#bitmovin_api_sdk.analytics.virtual_licenses.analytics_virtual_license_list_query_params.AnalyticsVirtualLicenseListQueryParams.openapi_types" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
 <section id="module-bitmovin_api_sdk.analytics.virtual_licenses.virtual_licenses_api">
 <span id="bitmovin-api-sdk-analytics-virtual-licenses-virtual-licenses-api-module"></span><h2>bitmovin_api_sdk.analytics.virtual_licenses.virtual_licenses_api module<a class="headerlink" href="#module-bitmovin_api_sdk.analytics.virtual_licenses.virtual_licenses_api" title="Permalink to this headline"></a></h2>
 <dl class="py class">
@@ -114,17 +134,71 @@
 <dd><p>Bases: <a class="reference internal" href="bitmovin_api_sdk.common.html#bitmovin_api_sdk.common.base_api.BaseApi" title="bitmovin_api_sdk.common.base_api.BaseApi"><code class="xref py py-class docutils literal notranslate"><span class="pre">bitmovin_api_sdk.common.base_api.BaseApi</span></code></a></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="bitmovin_api_sdk.analytics.virtual_licenses.virtual_licenses_api.VirtualLicensesApi.create">
-<span class="sig-name descname"><span class="pre">create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">virtual_license_create_request</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.virtual_license_create_request.VirtualLicenseCreateRequest" title="bitmovin_api_sdk.models.virtual_license_create_request.VirtualLicenseCreateRequest"><span class="pre">bitmovin_api_sdk.models.virtual_license_create_request.VirtualLicenseCreateRequest</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.virtual_license.VirtualLicense" title="bitmovin_api_sdk.models.virtual_license.VirtualLicense"><span class="pre">bitmovin_api_sdk.models.virtual_license.VirtualLicense</span></a></span></span><a class="reference internal" href="../_modules/bitmovin_api_sdk/analytics/virtual_licenses/virtual_licenses_api.html#VirtualLicensesApi.create"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bitmovin_api_sdk.analytics.virtual_licenses.virtual_licenses_api.VirtualLicensesApi.create" title="Permalink to this definition"></a></dt>
-<dd><p>Create Virtual License</p>
+<span class="sig-name descname"><span class="pre">create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">analytics_virtual_license_request</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.analytics_virtual_license_request.AnalyticsVirtualLicenseRequest" title="bitmovin_api_sdk.models.analytics_virtual_license_request.AnalyticsVirtualLicenseRequest"><span class="pre">bitmovin_api_sdk.models.analytics_virtual_license_request.AnalyticsVirtualLicenseRequest</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.analytics_virtual_license.AnalyticsVirtualLicense" title="bitmovin_api_sdk.models.analytics_virtual_license.AnalyticsVirtualLicense"><span class="pre">bitmovin_api_sdk.models.analytics_virtual_license.AnalyticsVirtualLicense</span></a></span></span><a class="reference internal" href="../_modules/bitmovin_api_sdk/analytics/virtual_licenses/virtual_licenses_api.html#VirtualLicensesApi.create"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bitmovin_api_sdk.analytics.virtual_licenses.virtual_licenses_api.VirtualLicensesApi.create" title="Permalink to this definition"></a></dt>
+<dd><p>Create Analytics Virtual License</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>virtual_license_create_request</strong> (<a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.virtual_license_create_request.VirtualLicenseCreateRequest" title="bitmovin_api_sdk.models.virtual_license_create_request.VirtualLicenseCreateRequest"><em>VirtualLicenseCreateRequest</em></a><em>, </em><em>required</em>) – Virtual License to be created</p>
+<dd class="field-odd"><p><strong>analytics_virtual_license_request</strong> (<a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.analytics_virtual_license_request.AnalyticsVirtualLicenseRequest" title="bitmovin_api_sdk.models.analytics_virtual_license_request.AnalyticsVirtualLicenseRequest"><em>AnalyticsVirtualLicenseRequest</em></a><em>, </em><em>required</em>) – Analytics Virtual License to be created</p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Created Virtual license</p>
+<dd class="field-even"><p>Created Analytics Virtual license</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.virtual_license.VirtualLicense" title="bitmovin_api_sdk.models.virtual_license.VirtualLicense">VirtualLicense</a></p>
+<dd class="field-odd"><p><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.analytics_virtual_license.AnalyticsVirtualLicense" title="bitmovin_api_sdk.models.analytics_virtual_license.AnalyticsVirtualLicense">AnalyticsVirtualLicense</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bitmovin_api_sdk.analytics.virtual_licenses.virtual_licenses_api.VirtualLicensesApi.delete">
+<span class="sig-name descname"><span class="pre">delete</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">virtual_license_id</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">string_types</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">BitmovinResponse</span></span></span><a class="reference internal" href="../_modules/bitmovin_api_sdk/analytics/virtual_licenses/virtual_licenses_api.html#VirtualLicensesApi.delete"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bitmovin_api_sdk.analytics.virtual_licenses.virtual_licenses_api.VirtualLicensesApi.delete" title="Permalink to this definition"></a></dt>
+<dd><p>Delete Analytics Virtual License</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>virtual_license_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Virtual License id</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Id of deleted Virtual License</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.bitmovin_response.BitmovinResponse" title="bitmovin_api_sdk.models.bitmovin_response.BitmovinResponse">BitmovinResponse</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bitmovin_api_sdk.analytics.virtual_licenses.virtual_licenses_api.VirtualLicensesApi.list">
+<span class="sig-name descname"><span class="pre">list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query_params</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#bitmovin_api_sdk.analytics.virtual_licenses.analytics_virtual_license_list_query_params.AnalyticsVirtualLicenseListQueryParams" title="bitmovin_api_sdk.analytics.virtual_licenses.analytics_virtual_license_list_query_params.AnalyticsVirtualLicenseListQueryParams"><span class="pre">bitmovin_api_sdk.analytics.virtual_licenses.analytics_virtual_license_list_query_params.AnalyticsVirtualLicenseListQueryParams</span></a><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.analytics_virtual_license.AnalyticsVirtualLicense" title="bitmovin_api_sdk.models.analytics_virtual_license.AnalyticsVirtualLicense"><span class="pre">bitmovin_api_sdk.models.analytics_virtual_license.AnalyticsVirtualLicense</span></a></span></span><a class="reference internal" href="../_modules/bitmovin_api_sdk/analytics/virtual_licenses/virtual_licenses_api.html#VirtualLicensesApi.list"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bitmovin_api_sdk.analytics.virtual_licenses.virtual_licenses_api.VirtualLicensesApi.list" title="Permalink to this definition"></a></dt>
+<dd><p>List Analytics Virtual Licenses</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>query_params</strong> (<a class="reference internal" href="#bitmovin_api_sdk.analytics.virtual_licenses.analytics_virtual_license_list_query_params.AnalyticsVirtualLicenseListQueryParams" title="bitmovin_api_sdk.analytics.virtual_licenses.analytics_virtual_license_list_query_params.AnalyticsVirtualLicenseListQueryParams"><em>AnalyticsVirtualLicenseListQueryParams</em></a>) – Query parameters</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>List of Analytics Virtual licenses</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.analytics_virtual_license.AnalyticsVirtualLicense" title="bitmovin_api_sdk.models.analytics_virtual_license.AnalyticsVirtualLicense">AnalyticsVirtualLicense</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bitmovin_api_sdk.analytics.virtual_licenses.virtual_licenses_api.VirtualLicensesApi.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">virtual_license_id</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">string_types</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">analytics_virtual_license_request</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">AnalyticsVirtualLicenseRequest</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">AnalyticsVirtualLicense</span></span></span><a class="reference internal" href="../_modules/bitmovin_api_sdk/analytics/virtual_licenses/virtual_licenses_api.html#VirtualLicensesApi.update"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bitmovin_api_sdk.analytics.virtual_licenses.virtual_licenses_api.VirtualLicensesApi.update" title="Permalink to this definition"></a></dt>
+<dd><p>Update Analytics Virtual License</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>virtual_license_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Virtual license id</p></li>
+<li><p><strong>analytics_virtual_license_request</strong> (<a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.analytics_virtual_license_request.AnalyticsVirtualLicenseRequest" title="bitmovin_api_sdk.models.analytics_virtual_license_request.AnalyticsVirtualLicenseRequest"><em>AnalyticsVirtualLicenseRequest</em></a><em>, </em><em>required</em>) – Analytics Virtual License details to be updated</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Updated Analytics Virtual License</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.analytics_virtual_license.AnalyticsVirtualLicense" title="bitmovin_api_sdk.models.analytics_virtual_license.AnalyticsVirtualLicense">AnalyticsVirtualLicense</a></p>
 </dd>
 </dl>
 </dd></dl>

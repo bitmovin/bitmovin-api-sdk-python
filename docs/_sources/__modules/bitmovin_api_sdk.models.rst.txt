@@ -868,6 +868,30 @@ bitmovin\_api\_sdk.models.analytics\_video\_start\_failed\_reason module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.analytics\_virtual\_license module
+------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.analytics_virtual_license
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.analytics\_virtual\_license\_licenses\_list\_item module
+----------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.analytics_virtual_license_licenses_list_item
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.analytics\_virtual\_license\_request module
+---------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.analytics_virtual_license_request
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.and\_conjunction module
 -------------------------------------------------
 
@@ -5416,30 +5440,6 @@ bitmovin\_api\_sdk.models.video\_stream module
 ----------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.models.video_stream
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-bitmovin\_api\_sdk.models.virtual\_license module
--------------------------------------------------
-
-.. automodule:: bitmovin_api_sdk.models.virtual_license
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-bitmovin\_api\_sdk.models.virtual\_license\_create\_request module
-------------------------------------------------------------------
-
-.. automodule:: bitmovin_api_sdk.models.virtual_license_create_request
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-bitmovin\_api\_sdk.models.virtual\_license\_licenses\_list\_item module
------------------------------------------------------------------------
-
-.. automodule:: bitmovin_api_sdk.models.virtual_license_licenses_list_item
    :members:
    :undoc-members:
    :show-inheritance:

@@ -90,11 +90,11 @@ from bitmovin_api_sdk.analytics.queries.variance.variance_api import VarianceApi
 from bitmovin_api_sdk.analytics.queries.median.median_api import MedianApi
 
 from bitmovin_api_sdk.analytics.licenses.licenses_api import LicensesApi
-
+from bitmovin_api_sdk.analytics.licenses.licenses_api import AnalyticsLicenseListQueryParams
 from bitmovin_api_sdk.analytics.licenses.domains.domains_api import DomainsApi
 
 from bitmovin_api_sdk.analytics.virtual_licenses.virtual_licenses_api import VirtualLicensesApi
-
+from bitmovin_api_sdk.analytics.virtual_licenses.virtual_licenses_api import AnalyticsVirtualLicenseListQueryParams
 from bitmovin_api_sdk.analytics.outputs.outputs_api import OutputsApi
 
 from bitmovin_api_sdk.analytics.outputs.azure.azure_api import AzureApi
@@ -864,7 +864,7 @@ from bitmovin_api_sdk.encoding.infrastructure.gce.regions.regions_api import Gce
 from bitmovin_api_sdk.encoding.infrastructure.prewarmed_encoder_pools.prewarmed_encoder_pools_api import PrewarmedEncoderPoolsApi
 from bitmovin_api_sdk.encoding.infrastructure.prewarmed_encoder_pools.prewarmed_encoder_pools_api import PrewarmedEncoderPoolListQueryParams
 from bitmovin_api_sdk.encoding.infrastructure.prewarmed_encoder_pools.schedules.schedules_api import SchedulesApi
-from bitmovin_api_sdk.encoding.infrastructure.prewarmed_encoder_pools.schedules.schedules_api import PrewarmedEncoderPoolListQueryParams
+from bitmovin_api_sdk.encoding.infrastructure.prewarmed_encoder_pools.schedules.schedules_api import PrewarmedEncoderPoolScheduleListQueryParams
 from bitmovin_api_sdk.encoding.statistics.statistics_api import StatisticsApi
 from bitmovin_api_sdk.encoding.statistics.statistics_api import StatisticsListQueryParams
 from bitmovin_api_sdk.encoding.statistics.daily.daily_api import DailyApi
@@ -1086,6 +1086,9 @@ from bitmovin_api_sdk.models.analytics_stddev_query_request import AnalyticsStdd
 from bitmovin_api_sdk.models.analytics_sum_query_request import AnalyticsSumQueryRequest
 from bitmovin_api_sdk.models.analytics_variance_query_request import AnalyticsVarianceQueryRequest
 from bitmovin_api_sdk.models.analytics_video_start_failed_reason import AnalyticsVideoStartFailedReason
+from bitmovin_api_sdk.models.analytics_virtual_license import AnalyticsVirtualLicense
+from bitmovin_api_sdk.models.analytics_virtual_license_licenses_list_item import AnalyticsVirtualLicenseLicensesListItem
+from bitmovin_api_sdk.models.analytics_virtual_license_request import AnalyticsVirtualLicenseRequest
 from bitmovin_api_sdk.models.and_conjunction import AndConjunction
 from bitmovin_api_sdk.models.api_error_definition import ApiErrorDefinition
 from bitmovin_api_sdk.models.applied_stream_settings import AppliedStreamSettings
@@ -1655,9 +1658,6 @@ from bitmovin_api_sdk.models.video_configuration import VideoConfiguration
 from bitmovin_api_sdk.models.video_format import VideoFormat
 from bitmovin_api_sdk.models.video_media_info import VideoMediaInfo
 from bitmovin_api_sdk.models.video_stream import VideoStream
-from bitmovin_api_sdk.models.virtual_license import VirtualLicense
-from bitmovin_api_sdk.models.virtual_license_create_request import VirtualLicenseCreateRequest
-from bitmovin_api_sdk.models.virtual_license_licenses_list_item import VirtualLicenseLicensesListItem
 from bitmovin_api_sdk.models.vorbis_audio_configuration import VorbisAudioConfiguration
 from bitmovin_api_sdk.models.vorbis_channel_layout import VorbisChannelLayout
 from bitmovin_api_sdk.models.vp8_arnr_type import Vp8ArnrType
@@ -1694,4 +1694,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.88.0"
+__version__ = "1.89.0"

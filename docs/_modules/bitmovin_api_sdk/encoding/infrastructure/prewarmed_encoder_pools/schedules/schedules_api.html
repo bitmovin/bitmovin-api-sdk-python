@@ -78,11 +78,10 @@
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.common</span> <span class="kn">import</span> <span class="n">BaseApi</span><span class="p">,</span> <span class="n">BitmovinApiLoggerBase</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.common.poscheck</span> <span class="kn">import</span> <span class="n">poscheck_except</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.bitmovin_response</span> <span class="kn">import</span> <span class="n">BitmovinResponse</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.prewarmed_encoder_pool</span> <span class="kn">import</span> <span class="n">PrewarmedEncoderPool</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.prewarmed_encoder_pool_schedule</span> <span class="kn">import</span> <span class="n">PrewarmedEncoderPoolSchedule</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.response_envelope</span> <span class="kn">import</span> <span class="n">ResponseEnvelope</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.response_error</span> <span class="kn">import</span> <span class="n">ResponseError</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.encoding.infrastructure.prewarmed_encoder_pools.schedules.prewarmed_encoder_pool_list_query_params</span> <span class="kn">import</span> <span class="n">PrewarmedEncoderPoolListQueryParams</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.encoding.infrastructure.prewarmed_encoder_pools.schedules.prewarmed_encoder_pool_schedule_list_query_params</span> <span class="kn">import</span> <span class="n">PrewarmedEncoderPoolScheduleListQueryParams</span>
 
 
 <div class="viewcode-block" id="SchedulesApi"><a class="viewcode-back" href="../../../../../../__modules/bitmovin_api_sdk.encoding.infrastructure.prewarmed_encoder_pools.schedules.html#bitmovin_api_sdk.encoding.infrastructure.prewarmed_encoder_pools.schedules.schedules_api.SchedulesApi">[docs]</a><span class="k">class</span> <span class="nc">SchedulesApi</span><span class="p">(</span><span class="n">BaseApi</span><span class="p">):</span>
@@ -156,15 +155,15 @@
         <span class="p">)</span></div>
 
 <div class="viewcode-block" id="SchedulesApi.list"><a class="viewcode-back" href="../../../../../../__modules/bitmovin_api_sdk.encoding.infrastructure.prewarmed_encoder_pools.schedules.html#bitmovin_api_sdk.encoding.infrastructure.prewarmed_encoder_pools.schedules.schedules_api.SchedulesApi.list">[docs]</a>    <span class="k">def</span> <span class="nf">list</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pool_id</span><span class="p">,</span> <span class="n">query_params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-        <span class="c1"># type: (string_types, PrewarmedEncoderPoolListQueryParams, dict) -&gt; PrewarmedEncoderPool</span>
+        <span class="c1"># type: (string_types, PrewarmedEncoderPoolScheduleListQueryParams, dict) -&gt; PrewarmedEncoderPoolSchedule</span>
         <span class="sd">&quot;&quot;&quot;List prewarmed encoder pool schedules</span>
 
 <span class="sd">        :param pool_id: Id of the scheduled encoder pool</span>
 <span class="sd">        :type pool_id: string_types, required</span>
 <span class="sd">        :param query_params: Query parameters</span>
-<span class="sd">        :type query_params: PrewarmedEncoderPoolListQueryParams</span>
+<span class="sd">        :type query_params: PrewarmedEncoderPoolScheduleListQueryParams</span>
 <span class="sd">        :return: List of prewarmed encoder pool schedules</span>
-<span class="sd">        :rtype: PrewarmedEncoderPool</span>
+<span class="sd">        :rtype: PrewarmedEncoderPoolSchedule</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
@@ -172,7 +171,7 @@
             <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;pool_id&#39;</span><span class="p">:</span> <span class="n">pool_id</span><span class="p">},</span>
             <span class="n">query_params</span><span class="o">=</span><span class="n">query_params</span><span class="p">,</span>
             <span class="n">pagination_response</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-            <span class="nb">type</span><span class="o">=</span><span class="n">PrewarmedEncoderPool</span><span class="p">,</span>
+            <span class="nb">type</span><span class="o">=</span><span class="n">PrewarmedEncoderPoolSchedule</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>
         <span class="p">)</span></div></div>
 </pre></div>

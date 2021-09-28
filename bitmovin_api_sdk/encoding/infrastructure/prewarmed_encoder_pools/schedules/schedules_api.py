@@ -5,11 +5,10 @@ from __future__ import absolute_import
 from bitmovin_api_sdk.common import BaseApi, BitmovinApiLoggerBase
 from bitmovin_api_sdk.common.poscheck import poscheck_except
 from bitmovin_api_sdk.models.bitmovin_response import BitmovinResponse
-from bitmovin_api_sdk.models.prewarmed_encoder_pool import PrewarmedEncoderPool
 from bitmovin_api_sdk.models.prewarmed_encoder_pool_schedule import PrewarmedEncoderPoolSchedule
 from bitmovin_api_sdk.models.response_envelope import ResponseEnvelope
 from bitmovin_api_sdk.models.response_error import ResponseError
-from bitmovin_api_sdk.encoding.infrastructure.prewarmed_encoder_pools.schedules.prewarmed_encoder_pool_list_query_params import PrewarmedEncoderPoolListQueryParams
+from bitmovin_api_sdk.encoding.infrastructure.prewarmed_encoder_pools.schedules.prewarmed_encoder_pool_schedule_list_query_params import PrewarmedEncoderPoolScheduleListQueryParams
 
 
 class SchedulesApi(BaseApi):
@@ -83,15 +82,15 @@ class SchedulesApi(BaseApi):
         )
 
     def list(self, pool_id, query_params=None, **kwargs):
-        # type: (string_types, PrewarmedEncoderPoolListQueryParams, dict) -> PrewarmedEncoderPool
+        # type: (string_types, PrewarmedEncoderPoolScheduleListQueryParams, dict) -> PrewarmedEncoderPoolSchedule
         """List prewarmed encoder pool schedules
 
         :param pool_id: Id of the scheduled encoder pool
         :type pool_id: string_types, required
         :param query_params: Query parameters
-        :type query_params: PrewarmedEncoderPoolListQueryParams
+        :type query_params: PrewarmedEncoderPoolScheduleListQueryParams
         :return: List of prewarmed encoder pool schedules
-        :rtype: PrewarmedEncoderPool
+        :rtype: PrewarmedEncoderPoolSchedule
         """
 
         return self.api_client.get(
@@ -99,6 +98,6 @@ class SchedulesApi(BaseApi):
             path_params={'pool_id': pool_id},
             query_params=query_params,
             pagination_response=True,
-            type=PrewarmedEncoderPool,
+            type=PrewarmedEncoderPoolSchedule,
             **kwargs
         )
