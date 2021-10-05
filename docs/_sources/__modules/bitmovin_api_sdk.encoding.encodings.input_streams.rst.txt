@@ -11,6 +11,7 @@ Subpackages
    bitmovin_api_sdk.encoding.encodings.input_streams.captions
    bitmovin_api_sdk.encoding.encodings.input_streams.concatenation
    bitmovin_api_sdk.encoding.encodings.input_streams.dolby_atmos
+   bitmovin_api_sdk.encoding.encodings.input_streams.dolby_vision
    bitmovin_api_sdk.encoding.encodings.input_streams.file
    bitmovin_api_sdk.encoding.encodings.input_streams.ingest
    bitmovin_api_sdk.encoding.encodings.input_streams.sidecar

@@ -58,6 +58,23 @@ class VirtualLicensesApi(BaseApi):
             **kwargs
         )
 
+    def get(self, virtual_license_id, **kwargs):
+        # type: (string_types, dict) -> AnalyticsVirtualLicense
+        """Analytics Virtual License
+
+        :param virtual_license_id: Virtual license id
+        :type virtual_license_id: string_types, required
+        :return: Analytics Virtual License
+        :rtype: AnalyticsVirtualLicense
+        """
+
+        return self.api_client.get(
+            '/analytics/virtual-licenses/{virtual_license_id}',
+            path_params={'virtual_license_id': virtual_license_id},
+            type=AnalyticsVirtualLicense,
+            **kwargs
+        )
+
     def list(self, query_params=None, **kwargs):
         # type: (AnalyticsVirtualLicenseListQueryParams, dict) -> AnalyticsVirtualLicense
         """List Analytics Virtual Licenses

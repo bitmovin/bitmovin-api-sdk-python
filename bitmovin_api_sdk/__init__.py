@@ -479,6 +479,8 @@ from bitmovin_api_sdk.encoding.encodings.input_streams.captions.cea708.cea708_ap
 from bitmovin_api_sdk.encoding.encodings.input_streams.captions.cea708.cea708_api import Cea708CaptionInputStreamListQueryParams
 from bitmovin_api_sdk.encoding.encodings.input_streams.dolby_atmos.dolby_atmos_api import DolbyAtmosApi
 from bitmovin_api_sdk.encoding.encodings.input_streams.dolby_atmos.dolby_atmos_api import DolbyAtmosIngestInputStreamListQueryParams
+from bitmovin_api_sdk.encoding.encodings.input_streams.dolby_vision.dolby_vision_api import DolbyVisionApi
+from bitmovin_api_sdk.encoding.encodings.input_streams.dolby_vision.dolby_vision_api import DolbyVisionInputStreamListQueryParams
 from bitmovin_api_sdk.encoding.encodings.muxings.muxings_api import MuxingsApi
 from bitmovin_api_sdk.encoding.encodings.muxings.muxings_api import MuxingListQueryParams
 from bitmovin_api_sdk.encoding.encodings.muxings.fmp4.fmp4_api import Fmp4Api
@@ -1272,6 +1274,7 @@ from bitmovin_api_sdk.models.dolby_digital_preprocessing import DolbyDigitalPrep
 from bitmovin_api_sdk.models.dolby_digital_surround_mix_level import DolbyDigitalSurroundMixLevel
 from bitmovin_api_sdk.models.dolby_digital_surround_mode import DolbyDigitalSurroundMode
 from bitmovin_api_sdk.models.dolby_digital_three_db_attenuation import DolbyDigitalThreeDbAttenuation
+from bitmovin_api_sdk.models.dolby_vision_input_stream import DolbyVisionInputStream
 from bitmovin_api_sdk.models.dolby_vision_metadata import DolbyVisionMetadata
 from bitmovin_api_sdk.models.dolby_vision_metadata_ingest_input_stream import DolbyVisionMetadataIngestInputStream
 from bitmovin_api_sdk.models.dolby_vision_metadata_source import DolbyVisionMetadataSource
@@ -1355,6 +1358,7 @@ from bitmovin_api_sdk.models.h264_picture_timing_trimming_input_stream import H2
 from bitmovin_api_sdk.models.h264_sub_me import H264SubMe
 from bitmovin_api_sdk.models.h264_trellis import H264Trellis
 from bitmovin_api_sdk.models.h264_video_configuration import H264VideoConfiguration
+from bitmovin_api_sdk.models.h265_dynamic_range_format import H265DynamicRangeFormat
 from bitmovin_api_sdk.models.h265_per_title_configuration import H265PerTitleConfiguration
 from bitmovin_api_sdk.models.h265_video_configuration import H265VideoConfiguration
 from bitmovin_api_sdk.models.he_aac_v1_audio_configuration import HeAacV1AudioConfiguration
@@ -1694,4 +1698,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.89.0"
+__version__ = "1.90.0"

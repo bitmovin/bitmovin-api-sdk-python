@@ -10,6 +10,7 @@ from bitmovin_api_sdk.models.color_config import ColorConfig
 from bitmovin_api_sdk.models.display_aspect_ratio import DisplayAspectRatio
 from bitmovin_api_sdk.models.encoding_mode import EncodingMode
 from bitmovin_api_sdk.models.force_flush_mode import ForceFlushMode
+from bitmovin_api_sdk.models.h265_dynamic_range_format import H265DynamicRangeFormat
 from bitmovin_api_sdk.models.level_h265 import LevelH265
 from bitmovin_api_sdk.models.limit_references import LimitReferences
 from bitmovin_api_sdk.models.limit_transform_unit_depth_recursion_mode import LimitTransformUnitDepthRecursionMode
@@ -52,6 +53,7 @@ class H265VideoConfiguration(VideoConfiguration):
                  display_aspect_ratio=None,
                  encoding_mode=None,
                  preset_configuration=None,
+                 dynamic_range_format=None,
                  crf=None,
                  profile=None,
                  bframes=None,
@@ -146,10 +148,11 @@ class H265VideoConfiguration(VideoConfiguration):
                  limit_sao=None,
                  lowpass_dct=None,
                  cea608708_subtitle_config=None):
-        # type: (string_types, string_types, string_types, datetime, datetime, dict, int, int, int, float, PixelFormat, ColorConfig, int, int, DisplayAspectRatio, EncodingMode, PresetConfiguration, float, ProfileH265, int, int, int, int, int, int, int, int, bool, float, float, LevelH265, int, BAdapt, MaxCtuSize, TuIntraDepth, TuInterDepth, MotionSearch, int, int, bool, bool, bool, string_types, int, int, bool, int, AdaptiveQuantMode, bool, VideoFormat, float, float, bool, bool, MinCodingUnitSize, int, LimitReferences, bool, bool, bool, int, bool, bool, bool, bool, bool, int, RateDistortionLevelForQuantization, int, int, bool, int, bool, bool, bool, bool, TransformSkipMode, bool, LimitTransformUnitDepthRecursionMode, int, int, RateDistortionPenaltyMode, MaxTransformUnitSize, int, bool, bool, bool, bool, bool, float, int, int, int, ForceFlushMode, float, bool, QuantizationGroupSize, bool, int, int, float, float, float, int, bool, float, float, bool, bool, bool, Cea608708SubtitleConfiguration) -> None
+        # type: (string_types, string_types, string_types, datetime, datetime, dict, int, int, int, float, PixelFormat, ColorConfig, int, int, DisplayAspectRatio, EncodingMode, PresetConfiguration, H265DynamicRangeFormat, float, ProfileH265, int, int, int, int, int, int, int, int, bool, float, float, LevelH265, int, BAdapt, MaxCtuSize, TuIntraDepth, TuInterDepth, MotionSearch, int, int, bool, bool, bool, string_types, int, int, bool, int, AdaptiveQuantMode, bool, VideoFormat, float, float, bool, bool, MinCodingUnitSize, int, LimitReferences, bool, bool, bool, int, bool, bool, bool, bool, bool, int, RateDistortionLevelForQuantization, int, int, bool, int, bool, bool, bool, bool, TransformSkipMode, bool, LimitTransformUnitDepthRecursionMode, int, int, RateDistortionPenaltyMode, MaxTransformUnitSize, int, bool, bool, bool, bool, bool, float, int, int, int, ForceFlushMode, float, bool, QuantizationGroupSize, bool, int, int, float, float, float, int, bool, float, float, bool, bool, bool, Cea608708SubtitleConfiguration) -> None
         super(H265VideoConfiguration, self).__init__(id_=id_, name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, width=width, height=height, bitrate=bitrate, rate=rate, pixel_format=pixel_format, color_config=color_config, sample_aspect_ratio_numerator=sample_aspect_ratio_numerator, sample_aspect_ratio_denominator=sample_aspect_ratio_denominator, display_aspect_ratio=display_aspect_ratio, encoding_mode=encoding_mode)
 
         self._preset_configuration = None
+        self._dynamic_range_format = None
         self._crf = None
         self._profile = None
         self._bframes = None
@@ -248,6 +251,8 @@ class H265VideoConfiguration(VideoConfiguration):
 
         if preset_configuration is not None:
             self.preset_configuration = preset_configuration
+        if dynamic_range_format is not None:
+            self.dynamic_range_format = dynamic_range_format
         if crf is not None:
             self.crf = crf
         if profile is not None:
@@ -446,6 +451,7 @@ class H265VideoConfiguration(VideoConfiguration):
 
         types.update({
             'preset_configuration': 'PresetConfiguration',
+            'dynamic_range_format': 'H265DynamicRangeFormat',
             'crf': 'float',
             'profile': 'ProfileH265',
             'bframes': 'int',
@@ -553,6 +559,7 @@ class H265VideoConfiguration(VideoConfiguration):
 
         attributes.update({
             'preset_configuration': 'presetConfiguration',
+            'dynamic_range_format': 'dynamicRangeFormat',
             'crf': 'crf',
             'profile': 'profile',
             'bframes': 'bframes',
@@ -678,6 +685,35 @@ class H265VideoConfiguration(VideoConfiguration):
                 raise TypeError("Invalid type for `preset_configuration`, type has to be `PresetConfiguration`")
 
         self._preset_configuration = preset_configuration
+
+    @property
+    def dynamic_range_format(self):
+        # type: () -> H265DynamicRangeFormat
+        """Gets the dynamic_range_format of this H265VideoConfiguration.
+
+        Automatically configures the H265 Video Codec to be compatible with the given SDR/HDR format. Bitmovin recommends to use the dynamic range format together with a preset configuration to achieve good results. Explicitly configured properties will take precedence over dynamic range format settings, which in turn will take precedence over preset configurations.
+
+        :return: The dynamic_range_format of this H265VideoConfiguration.
+        :rtype: H265DynamicRangeFormat
+        """
+        return self._dynamic_range_format
+
+    @dynamic_range_format.setter
+    def dynamic_range_format(self, dynamic_range_format):
+        # type: (H265DynamicRangeFormat) -> None
+        """Sets the dynamic_range_format of this H265VideoConfiguration.
+
+        Automatically configures the H265 Video Codec to be compatible with the given SDR/HDR format. Bitmovin recommends to use the dynamic range format together with a preset configuration to achieve good results. Explicitly configured properties will take precedence over dynamic range format settings, which in turn will take precedence over preset configurations.
+
+        :param dynamic_range_format: The dynamic_range_format of this H265VideoConfiguration.
+        :type: H265DynamicRangeFormat
+        """
+
+        if dynamic_range_format is not None:
+            if not isinstance(dynamic_range_format, H265DynamicRangeFormat):
+                raise TypeError("Invalid type for `dynamic_range_format`, type has to be `H265DynamicRangeFormat`")
+
+        self._dynamic_range_format = dynamic_range_format
 
     @property
     def crf(self):

@@ -22,7 +22,8 @@ class InputStream(BitmovinResource):
         'FILE': 'FileInputStream',
         'DVB_SUBTITLE': 'DvbSubtitleInputStream',
         'DVB_TELETEXT': 'DvbTeletextInputStream',
-        'DOLBY_ATMOS': 'DolbyAtmosIngestInputStream'
+        'DOLBY_ATMOS': 'DolbyAtmosIngestInputStream',
+        'DOLBY_VISION': 'DolbyVisionInputStream'
     }
 
     def to_dict(self):

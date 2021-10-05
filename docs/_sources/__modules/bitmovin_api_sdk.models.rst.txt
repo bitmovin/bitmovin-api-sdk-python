@@ -2356,6 +2356,14 @@ bitmovin\_api\_sdk.models.dolby\_digital\_three\_db\_attenuation module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.dolby\_vision\_input\_stream module
+-------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.dolby_vision_input_stream
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.dolby\_vision\_metadata module
 --------------------------------------------------------
 
@@ -3016,6 +3024,14 @@ bitmovin\_api\_sdk.models.h264\_video\_configuration module
 -----------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.models.h264_video_configuration
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.h265\_dynamic\_range\_format module
+-------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.h265_dynamic_range_format
    :members:
    :undoc-members:
    :show-inheritance:

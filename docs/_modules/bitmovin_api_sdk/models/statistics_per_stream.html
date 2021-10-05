@@ -118,12 +118,16 @@
                  <span class="n">live_multiplicator</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">enhanced_deinterlace</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">enhanced_deinterlace_multiplicator</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">dolby_vision_to_hdr</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">dolby_vision_to_hdr_multiplicator</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">dolby_vision_to_sdr</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">dolby_vision_to_sdr_multiplicator</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">nex_guard_ab_watermarking_type</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">nex_guard_ab_watermarking_multiplicator</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">pixel_format_bit_depth</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">pixel_format_multiplicator</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">input_factor</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (string_types, string_types, float, int, float, float, int, int, float, int, CodecConfigType, StatisticsResolution, EncodingMode, float, StatisticsPerTitleStream, float, PsnrPerStreamMode, float, DolbyVisionPerStreamMode, float, string_types, float, bool, float, bool, float, NexGuardABWatermarkingFeature, float, PixelFormatBitDepth, float, InputFactor) -&gt; None</span>
+        <span class="c1"># type: (string_types, string_types, float, int, float, float, int, int, float, int, CodecConfigType, StatisticsResolution, EncodingMode, float, StatisticsPerTitleStream, float, PsnrPerStreamMode, float, DolbyVisionPerStreamMode, float, string_types, float, bool, float, bool, float, bool, float, bool, float, NexGuardABWatermarkingFeature, float, PixelFormatBitDepth, float, InputFactor) -&gt; None</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_stream_id</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_codec_config_id</span> <span class="o">=</span> <span class="kc">None</span>
@@ -151,6 +155,10 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_live_multiplicator</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_enhanced_deinterlace</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_enhanced_deinterlace_multiplicator</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_dolby_vision_to_hdr</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_dolby_vision_to_hdr_multiplicator</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_dolby_vision_to_sdr</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_dolby_vision_to_sdr_multiplicator</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_nex_guard_ab_watermarking_type</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_nex_guard_ab_watermarking_multiplicator</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_pixel_format_bit_depth</span> <span class="o">=</span> <span class="kc">None</span>
@@ -210,6 +218,14 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">enhanced_deinterlace</span> <span class="o">=</span> <span class="n">enhanced_deinterlace</span>
         <span class="k">if</span> <span class="n">enhanced_deinterlace_multiplicator</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">enhanced_deinterlace_multiplicator</span> <span class="o">=</span> <span class="n">enhanced_deinterlace_multiplicator</span>
+        <span class="k">if</span> <span class="n">dolby_vision_to_hdr</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">dolby_vision_to_hdr</span> <span class="o">=</span> <span class="n">dolby_vision_to_hdr</span>
+        <span class="k">if</span> <span class="n">dolby_vision_to_hdr_multiplicator</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">dolby_vision_to_hdr_multiplicator</span> <span class="o">=</span> <span class="n">dolby_vision_to_hdr_multiplicator</span>
+        <span class="k">if</span> <span class="n">dolby_vision_to_sdr</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">dolby_vision_to_sdr</span> <span class="o">=</span> <span class="n">dolby_vision_to_sdr</span>
+        <span class="k">if</span> <span class="n">dolby_vision_to_sdr_multiplicator</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">dolby_vision_to_sdr_multiplicator</span> <span class="o">=</span> <span class="n">dolby_vision_to_sdr_multiplicator</span>
         <span class="k">if</span> <span class="n">nex_guard_ab_watermarking_type</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">nex_guard_ab_watermarking_type</span> <span class="o">=</span> <span class="n">nex_guard_ab_watermarking_type</span>
         <span class="k">if</span> <span class="n">nex_guard_ab_watermarking_multiplicator</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -250,6 +266,10 @@
             <span class="s1">&#39;live_multiplicator&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span><span class="p">,</span>
             <span class="s1">&#39;enhanced_deinterlace&#39;</span><span class="p">:</span> <span class="s1">&#39;bool&#39;</span><span class="p">,</span>
             <span class="s1">&#39;enhanced_deinterlace_multiplicator&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;dolby_vision_to_hdr&#39;</span><span class="p">:</span> <span class="s1">&#39;bool&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;dolby_vision_to_hdr_multiplicator&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;dolby_vision_to_sdr&#39;</span><span class="p">:</span> <span class="s1">&#39;bool&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;dolby_vision_to_sdr_multiplicator&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span><span class="p">,</span>
             <span class="s1">&#39;nex_guard_ab_watermarking_type&#39;</span><span class="p">:</span> <span class="s1">&#39;NexGuardABWatermarkingFeature&#39;</span><span class="p">,</span>
             <span class="s1">&#39;nex_guard_ab_watermarking_multiplicator&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span><span class="p">,</span>
             <span class="s1">&#39;pixel_format_bit_depth&#39;</span><span class="p">:</span> <span class="s1">&#39;PixelFormatBitDepth&#39;</span><span class="p">,</span>
@@ -288,6 +308,10 @@
             <span class="s1">&#39;live_multiplicator&#39;</span><span class="p">:</span> <span class="s1">&#39;liveMultiplicator&#39;</span><span class="p">,</span>
             <span class="s1">&#39;enhanced_deinterlace&#39;</span><span class="p">:</span> <span class="s1">&#39;enhancedDeinterlace&#39;</span><span class="p">,</span>
             <span class="s1">&#39;enhanced_deinterlace_multiplicator&#39;</span><span class="p">:</span> <span class="s1">&#39;enhancedDeinterlaceMultiplicator&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;dolby_vision_to_hdr&#39;</span><span class="p">:</span> <span class="s1">&#39;dolbyVisionToHdr&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;dolby_vision_to_hdr_multiplicator&#39;</span><span class="p">:</span> <span class="s1">&#39;dolbyVisionToHdrMultiplicator&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;dolby_vision_to_sdr&#39;</span><span class="p">:</span> <span class="s1">&#39;dolbyVisionToSdr&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;dolby_vision_to_sdr_multiplicator&#39;</span><span class="p">:</span> <span class="s1">&#39;dolbyVisionToSdrMultiplicator&#39;</span><span class="p">,</span>
             <span class="s1">&#39;nex_guard_ab_watermarking_type&#39;</span><span class="p">:</span> <span class="s1">&#39;nexGuardABWatermarkingType&#39;</span><span class="p">,</span>
             <span class="s1">&#39;nex_guard_ab_watermarking_multiplicator&#39;</span><span class="p">:</span> <span class="s1">&#39;nexGuardABWatermarkingMultiplicator&#39;</span><span class="p">,</span>
             <span class="s1">&#39;pixel_format_bit_depth&#39;</span><span class="p">:</span> <span class="s1">&#39;pixelFormatBitDepth&#39;</span><span class="p">,</span>
@@ -1037,6 +1061,122 @@
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `enhanced_deinterlace_multiplicator`, type has to be `float`&quot;</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_enhanced_deinterlace_multiplicator</span> <span class="o">=</span> <span class="n">enhanced_deinterlace_multiplicator</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">dolby_vision_to_hdr</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; bool</span>
+        <span class="sd">&quot;&quot;&quot;Gets the dolby_vision_to_hdr of this StatisticsPerStream.</span>
+
+<span class="sd">        Indicates if the conversion from Dolby Vision to HDR was triggered.</span>
+
+<span class="sd">        :return: The dolby_vision_to_hdr of this StatisticsPerStream.</span>
+<span class="sd">        :rtype: bool</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_dolby_vision_to_hdr</span>
+
+    <span class="nd">@dolby_vision_to_hdr</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">dolby_vision_to_hdr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dolby_vision_to_hdr</span><span class="p">):</span>
+        <span class="c1"># type: (bool) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the dolby_vision_to_hdr of this StatisticsPerStream.</span>
+
+<span class="sd">        Indicates if the conversion from Dolby Vision to HDR was triggered.</span>
+
+<span class="sd">        :param dolby_vision_to_hdr: The dolby_vision_to_hdr of this StatisticsPerStream.</span>
+<span class="sd">        :type: bool</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">dolby_vision_to_hdr</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">dolby_vision_to_hdr</span><span class="p">,</span> <span class="nb">bool</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `dolby_vision_to_hdr`, type has to be `bool`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_dolby_vision_to_hdr</span> <span class="o">=</span> <span class="n">dolby_vision_to_hdr</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">dolby_vision_to_hdr_multiplicator</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; float</span>
+        <span class="sd">&quot;&quot;&quot;Gets the dolby_vision_to_hdr_multiplicator of this StatisticsPerStream.</span>
+
+<span class="sd">        The output minutes multiplicator for streams using the conversion from Dolby Vision to HDR.</span>
+
+<span class="sd">        :return: The dolby_vision_to_hdr_multiplicator of this StatisticsPerStream.</span>
+<span class="sd">        :rtype: float</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_dolby_vision_to_hdr_multiplicator</span>
+
+    <span class="nd">@dolby_vision_to_hdr_multiplicator</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">dolby_vision_to_hdr_multiplicator</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dolby_vision_to_hdr_multiplicator</span><span class="p">):</span>
+        <span class="c1"># type: (float) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the dolby_vision_to_hdr_multiplicator of this StatisticsPerStream.</span>
+
+<span class="sd">        The output minutes multiplicator for streams using the conversion from Dolby Vision to HDR.</span>
+
+<span class="sd">        :param dolby_vision_to_hdr_multiplicator: The dolby_vision_to_hdr_multiplicator of this StatisticsPerStream.</span>
+<span class="sd">        :type: float</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">dolby_vision_to_hdr_multiplicator</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">dolby_vision_to_hdr_multiplicator</span><span class="p">,</span> <span class="p">(</span><span class="nb">float</span><span class="p">,</span> <span class="nb">int</span><span class="p">)):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `dolby_vision_to_hdr_multiplicator`, type has to be `float`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_dolby_vision_to_hdr_multiplicator</span> <span class="o">=</span> <span class="n">dolby_vision_to_hdr_multiplicator</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">dolby_vision_to_sdr</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; bool</span>
+        <span class="sd">&quot;&quot;&quot;Gets the dolby_vision_to_sdr of this StatisticsPerStream.</span>
+
+<span class="sd">        Indicates if the conversion from Dolby Vision to SDR was triggered.</span>
+
+<span class="sd">        :return: The dolby_vision_to_sdr of this StatisticsPerStream.</span>
+<span class="sd">        :rtype: bool</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_dolby_vision_to_sdr</span>
+
+    <span class="nd">@dolby_vision_to_sdr</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">dolby_vision_to_sdr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dolby_vision_to_sdr</span><span class="p">):</span>
+        <span class="c1"># type: (bool) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the dolby_vision_to_sdr of this StatisticsPerStream.</span>
+
+<span class="sd">        Indicates if the conversion from Dolby Vision to SDR was triggered.</span>
+
+<span class="sd">        :param dolby_vision_to_sdr: The dolby_vision_to_sdr of this StatisticsPerStream.</span>
+<span class="sd">        :type: bool</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">dolby_vision_to_sdr</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">dolby_vision_to_sdr</span><span class="p">,</span> <span class="nb">bool</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `dolby_vision_to_sdr`, type has to be `bool`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_dolby_vision_to_sdr</span> <span class="o">=</span> <span class="n">dolby_vision_to_sdr</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">dolby_vision_to_sdr_multiplicator</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; float</span>
+        <span class="sd">&quot;&quot;&quot;Gets the dolby_vision_to_sdr_multiplicator of this StatisticsPerStream.</span>
+
+<span class="sd">        The output minutes multiplicator for streams using the conversion from Dolby Vision to SDR.</span>
+
+<span class="sd">        :return: The dolby_vision_to_sdr_multiplicator of this StatisticsPerStream.</span>
+<span class="sd">        :rtype: float</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_dolby_vision_to_sdr_multiplicator</span>
+
+    <span class="nd">@dolby_vision_to_sdr_multiplicator</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">dolby_vision_to_sdr_multiplicator</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dolby_vision_to_sdr_multiplicator</span><span class="p">):</span>
+        <span class="c1"># type: (float) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the dolby_vision_to_sdr_multiplicator of this StatisticsPerStream.</span>
+
+<span class="sd">        The output minutes multiplicator for streams using the conversion from Dolby Vision to SDR.</span>
+
+<span class="sd">        :param dolby_vision_to_sdr_multiplicator: The dolby_vision_to_sdr_multiplicator of this StatisticsPerStream.</span>
+<span class="sd">        :type: float</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">dolby_vision_to_sdr_multiplicator</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">dolby_vision_to_sdr_multiplicator</span><span class="p">,</span> <span class="p">(</span><span class="nb">float</span><span class="p">,</span> <span class="nb">int</span><span class="p">)):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `dolby_vision_to_sdr_multiplicator`, type has to be `float`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_dolby_vision_to_sdr_multiplicator</span> <span class="o">=</span> <span class="n">dolby_vision_to_sdr_multiplicator</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">nex_guard_ab_watermarking_type</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>

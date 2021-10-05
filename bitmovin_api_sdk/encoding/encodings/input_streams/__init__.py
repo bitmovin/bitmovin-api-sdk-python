@@ -9,4 +9,5 @@ from bitmovin_api_sdk.encoding.encodings.input_streams.trimming.trimming_api imp
 from bitmovin_api_sdk.encoding.encodings.input_streams.subtitles.subtitles_api import SubtitlesApi
 from bitmovin_api_sdk.encoding.encodings.input_streams.captions.captions_api import CaptionsApi
 from bitmovin_api_sdk.encoding.encodings.input_streams.dolby_atmos.dolby_atmos_api import DolbyAtmosApi
+from bitmovin_api_sdk.encoding.encodings.input_streams.dolby_vision.dolby_vision_api import DolbyVisionApi
 from bitmovin_api_sdk.encoding.encodings.input_streams.input_stream_list_query_params import InputStreamListQueryParams
