@@ -692,14 +692,6 @@ bitmovin\_api\_sdk.models.analytics\_license\_key module
    :undoc-members:
    :show-inheritance:
 
-bitmovin\_api\_sdk.models.analytics\_license\_update\_request module
---------------------------------------------------------------------
-
-.. automodule:: bitmovin_api_sdk.models.analytics_license_update_request
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
 bitmovin\_api\_sdk.models.analytics\_max\_concurrent\_viewers\_response module
 ------------------------------------------------------------------------------
 

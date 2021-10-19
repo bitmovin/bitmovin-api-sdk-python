@@ -14,14 +14,18 @@ class AnalyticsLicenseCustomDataFieldLabels(object):
                  custom_data2=None,
                  custom_data3=None,
                  custom_data4=None,
-                 custom_data5=None):
-        # type: (string_types, string_types, string_types, string_types, string_types) -> None
+                 custom_data5=None,
+                 custom_data6=None,
+                 custom_data7=None):
+        # type: (string_types, string_types, string_types, string_types, string_types, string_types, string_types) -> None
 
         self._custom_data1 = None
         self._custom_data2 = None
         self._custom_data3 = None
         self._custom_data4 = None
         self._custom_data5 = None
+        self._custom_data6 = None
+        self._custom_data7 = None
         self.discriminator = None
 
         if custom_data1 is not None:
@@ -34,6 +38,10 @@ class AnalyticsLicenseCustomDataFieldLabels(object):
             self.custom_data4 = custom_data4
         if custom_data5 is not None:
             self.custom_data5 = custom_data5
+        if custom_data6 is not None:
+            self.custom_data6 = custom_data6
+        if custom_data7 is not None:
+            self.custom_data7 = custom_data7
 
     @property
     def openapi_types(self):
@@ -42,7 +50,9 @@ class AnalyticsLicenseCustomDataFieldLabels(object):
             'custom_data2': 'string_types',
             'custom_data3': 'string_types',
             'custom_data4': 'string_types',
-            'custom_data5': 'string_types'
+            'custom_data5': 'string_types',
+            'custom_data6': 'string_types',
+            'custom_data7': 'string_types'
         }
 
         return types
@@ -54,7 +64,9 @@ class AnalyticsLicenseCustomDataFieldLabels(object):
             'custom_data2': 'customData2',
             'custom_data3': 'customData3',
             'custom_data4': 'customData4',
-            'custom_data5': 'customData5'
+            'custom_data5': 'customData5',
+            'custom_data6': 'customData6',
+            'custom_data7': 'customData7'
         }
         return attributes
 
@@ -202,6 +214,64 @@ class AnalyticsLicenseCustomDataFieldLabels(object):
                 raise TypeError("Invalid type for `custom_data5`, type has to be `string_types`")
 
         self._custom_data5 = custom_data5
+
+    @property
+    def custom_data6(self):
+        # type: () -> string_types
+        """Gets the custom_data6 of this AnalyticsLicenseCustomDataFieldLabels.
+
+        Custom Data 6
+
+        :return: The custom_data6 of this AnalyticsLicenseCustomDataFieldLabels.
+        :rtype: string_types
+        """
+        return self._custom_data6
+
+    @custom_data6.setter
+    def custom_data6(self, custom_data6):
+        # type: (string_types) -> None
+        """Sets the custom_data6 of this AnalyticsLicenseCustomDataFieldLabels.
+
+        Custom Data 6
+
+        :param custom_data6: The custom_data6 of this AnalyticsLicenseCustomDataFieldLabels.
+        :type: string_types
+        """
+
+        if custom_data6 is not None:
+            if not isinstance(custom_data6, string_types):
+                raise TypeError("Invalid type for `custom_data6`, type has to be `string_types`")
+
+        self._custom_data6 = custom_data6
+
+    @property
+    def custom_data7(self):
+        # type: () -> string_types
+        """Gets the custom_data7 of this AnalyticsLicenseCustomDataFieldLabels.
+
+        Custom Data 7
+
+        :return: The custom_data7 of this AnalyticsLicenseCustomDataFieldLabels.
+        :rtype: string_types
+        """
+        return self._custom_data7
+
+    @custom_data7.setter
+    def custom_data7(self, custom_data7):
+        # type: (string_types) -> None
+        """Sets the custom_data7 of this AnalyticsLicenseCustomDataFieldLabels.
+
+        Custom Data 7
+
+        :param custom_data7: The custom_data7 of this AnalyticsLicenseCustomDataFieldLabels.
+        :type: string_types
+        """
+
+        if custom_data7 is not None:
+            if not isinstance(custom_data7, string_types):
+                raise TypeError("Invalid type for `custom_data7`, type has to be `string_types`")
+
+        self._custom_data7 = custom_data7
 
     def to_dict(self):
         """Returns the model properties as a dict"""

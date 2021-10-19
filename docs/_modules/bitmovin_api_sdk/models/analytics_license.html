@@ -79,161 +79,173 @@
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.common.poscheck</span> <span class="kn">import</span> <span class="n">poscheck_model</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.analytics_license_custom_data_field_labels</span> <span class="kn">import</span> <span class="n">AnalyticsLicenseCustomDataFieldLabels</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.analytics_license_features</span> <span class="kn">import</span> <span class="n">AnalyticsLicenseFeatures</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.bitmovin_response</span> <span class="kn">import</span> <span class="n">BitmovinResponse</span>
 <span class="kn">import</span> <span class="nn">pprint</span>
 <span class="kn">import</span> <span class="nn">six</span>
 
 
-<div class="viewcode-block" id="AnalyticsLicense"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.analytics_license.AnalyticsLicense">[docs]</a><span class="k">class</span> <span class="nc">AnalyticsLicense</span><span class="p">(</span><span class="n">BitmovinResponse</span><span class="p">):</span>
+<div class="viewcode-block" id="AnalyticsLicense"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.analytics_license.AnalyticsLicense">[docs]</a><span class="k">class</span> <span class="nc">AnalyticsLicense</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="nd">@poscheck_model</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
                  <span class="n">id_</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                 <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                 <span class="n">license_key</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">created_at</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                 <span class="n">max_impressions</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                 <span class="n">impressions</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                 <span class="n">domains</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">custom_data</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">license_key</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">industry</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">sub_industry</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">ignore_dnt</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">impressions</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">max_impressions</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">time_zone</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">retention_time</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">domains</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">include_in_insights</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">custom_data_field_labels</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">custom_data_fields_count</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">order_index</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">rate_limit</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">features</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (string_types, string_types, string_types, datetime, int, int, list[AnalyticsLicenseDomain], bool, string_types, AnalyticsLicenseCustomDataFieldLabels, AnalyticsLicenseFeatures) -&gt; None</span>
-        <span class="nb">super</span><span class="p">(</span><span class="n">AnalyticsLicense</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">id_</span><span class="o">=</span><span class="n">id_</span><span class="p">)</span>
+        <span class="c1"># type: (string_types, datetime, dict, string_types, string_types, string_types, string_types, bool, int, int, string_types, string_types, list[AnalyticsLicenseDomain], bool, AnalyticsLicenseCustomDataFieldLabels, int, int, string_types, AnalyticsLicenseFeatures) -&gt; None</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">_name</span> <span class="o">=</span> <span class="kc">None</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_license_key</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_id</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_created_at</span> <span class="o">=</span> <span class="kc">None</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_max_impressions</span> <span class="o">=</span> <span class="kc">None</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_impressions</span> <span class="o">=</span> <span class="kc">None</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_domains</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_custom_data</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_license_key</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_name</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_industry</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_sub_industry</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_ignore_dnt</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_impressions</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_max_impressions</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_time_zone</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_retention_time</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_domains</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_include_in_insights</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_custom_data_field_labels</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_custom_data_fields_count</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_order_index</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_rate_limit</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_features</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>
 
-        <span class="k">if</span> <span class="n">name</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
-        <span class="k">if</span> <span class="n">license_key</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">license_key</span> <span class="o">=</span> <span class="n">license_key</span>
+        <span class="k">if</span> <span class="n">id_</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">id</span> <span class="o">=</span> <span class="n">id_</span>
         <span class="k">if</span> <span class="n">created_at</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">created_at</span> <span class="o">=</span> <span class="n">created_at</span>
-        <span class="k">if</span> <span class="n">max_impressions</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">max_impressions</span> <span class="o">=</span> <span class="n">max_impressions</span>
-        <span class="k">if</span> <span class="n">impressions</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">impressions</span> <span class="o">=</span> <span class="n">impressions</span>
-        <span class="k">if</span> <span class="n">domains</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">domains</span> <span class="o">=</span> <span class="n">domains</span>
+        <span class="k">if</span> <span class="n">custom_data</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">custom_data</span> <span class="o">=</span> <span class="n">custom_data</span>
+        <span class="k">if</span> <span class="n">license_key</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">license_key</span> <span class="o">=</span> <span class="n">license_key</span>
+        <span class="k">if</span> <span class="n">name</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="k">if</span> <span class="n">industry</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">industry</span> <span class="o">=</span> <span class="n">industry</span>
+        <span class="k">if</span> <span class="n">sub_industry</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">sub_industry</span> <span class="o">=</span> <span class="n">sub_industry</span>
         <span class="k">if</span> <span class="n">ignore_dnt</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">ignore_dnt</span> <span class="o">=</span> <span class="n">ignore_dnt</span>
+        <span class="k">if</span> <span class="n">impressions</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">impressions</span> <span class="o">=</span> <span class="n">impressions</span>
+        <span class="k">if</span> <span class="n">max_impressions</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">max_impressions</span> <span class="o">=</span> <span class="n">max_impressions</span>
         <span class="k">if</span> <span class="n">time_zone</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">time_zone</span> <span class="o">=</span> <span class="n">time_zone</span>
+        <span class="k">if</span> <span class="n">retention_time</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">retention_time</span> <span class="o">=</span> <span class="n">retention_time</span>
+        <span class="k">if</span> <span class="n">domains</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">domains</span> <span class="o">=</span> <span class="n">domains</span>
+        <span class="k">if</span> <span class="n">include_in_insights</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">include_in_insights</span> <span class="o">=</span> <span class="n">include_in_insights</span>
         <span class="k">if</span> <span class="n">custom_data_field_labels</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">custom_data_field_labels</span> <span class="o">=</span> <span class="n">custom_data_field_labels</span>
+        <span class="k">if</span> <span class="n">custom_data_fields_count</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">custom_data_fields_count</span> <span class="o">=</span> <span class="n">custom_data_fields_count</span>
+        <span class="k">if</span> <span class="n">order_index</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">order_index</span> <span class="o">=</span> <span class="n">order_index</span>
+        <span class="k">if</span> <span class="n">rate_limit</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">rate_limit</span> <span class="o">=</span> <span class="n">rate_limit</span>
         <span class="k">if</span> <span class="n">features</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">features</span> <span class="o">=</span> <span class="n">features</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">types</span> <span class="o">=</span> <span class="p">{}</span>
-
-        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="nb">super</span><span class="p">(</span><span class="n">AnalyticsLicense</span><span class="p">,</span> <span class="bp">self</span><span class="p">),</span> <span class="s1">&#39;openapi_types&#39;</span><span class="p">):</span>
-            <span class="n">types</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="nb">super</span><span class="p">(</span><span class="n">AnalyticsLicense</span><span class="p">,</span> <span class="bp">self</span><span class="p">),</span> <span class="s1">&#39;openapi_types&#39;</span><span class="p">)</span>
-
-        <span class="n">types</span><span class="o">.</span><span class="n">update</span><span class="p">({</span>
-            <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;license_key&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
+        <span class="n">types</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
             <span class="s1">&#39;created_at&#39;</span><span class="p">:</span> <span class="s1">&#39;datetime&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;max_impressions&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;impressions&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;domains&#39;</span><span class="p">:</span> <span class="s1">&#39;list[AnalyticsLicenseDomain]&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;custom_data&#39;</span><span class="p">:</span> <span class="s1">&#39;dict(str, object)&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;license_key&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;industry&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;sub_industry&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
             <span class="s1">&#39;ignore_dnt&#39;</span><span class="p">:</span> <span class="s1">&#39;bool&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;impressions&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;max_impressions&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
             <span class="s1">&#39;time_zone&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;retention_time&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;domains&#39;</span><span class="p">:</span> <span class="s1">&#39;list[AnalyticsLicenseDomain]&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;include_in_insights&#39;</span><span class="p">:</span> <span class="s1">&#39;bool&#39;</span><span class="p">,</span>
             <span class="s1">&#39;custom_data_field_labels&#39;</span><span class="p">:</span> <span class="s1">&#39;AnalyticsLicenseCustomDataFieldLabels&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;custom_data_fields_count&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;order_index&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;rate_limit&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
             <span class="s1">&#39;features&#39;</span><span class="p">:</span> <span class="s1">&#39;AnalyticsLicenseFeatures&#39;</span>
-        <span class="p">})</span>
+        <span class="p">}</span>
 
         <span class="k">return</span> <span class="n">types</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">attribute_map</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">attributes</span> <span class="o">=</span> <span class="p">{}</span>
-
-        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="nb">super</span><span class="p">(</span><span class="n">AnalyticsLicense</span><span class="p">,</span> <span class="bp">self</span><span class="p">),</span> <span class="s1">&#39;attribute_map&#39;</span><span class="p">):</span>
-            <span class="n">attributes</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="nb">super</span><span class="p">(</span><span class="n">AnalyticsLicense</span><span class="p">,</span> <span class="bp">self</span><span class="p">),</span> <span class="s1">&#39;attribute_map&#39;</span><span class="p">)</span>
-
-        <span class="n">attributes</span><span class="o">.</span><span class="n">update</span><span class="p">({</span>
-            <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;name&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;license_key&#39;</span><span class="p">:</span> <span class="s1">&#39;licenseKey&#39;</span><span class="p">,</span>
+        <span class="n">attributes</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="s1">&#39;id&#39;</span><span class="p">,</span>
             <span class="s1">&#39;created_at&#39;</span><span class="p">:</span> <span class="s1">&#39;createdAt&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;max_impressions&#39;</span><span class="p">:</span> <span class="s1">&#39;maxImpressions&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;impressions&#39;</span><span class="p">:</span> <span class="s1">&#39;impressions&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;domains&#39;</span><span class="p">:</span> <span class="s1">&#39;domains&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;custom_data&#39;</span><span class="p">:</span> <span class="s1">&#39;customData&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;license_key&#39;</span><span class="p">:</span> <span class="s1">&#39;licenseKey&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;name&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;industry&#39;</span><span class="p">:</span> <span class="s1">&#39;industry&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;sub_industry&#39;</span><span class="p">:</span> <span class="s1">&#39;subIndustry&#39;</span><span class="p">,</span>
             <span class="s1">&#39;ignore_dnt&#39;</span><span class="p">:</span> <span class="s1">&#39;ignoreDNT&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;impressions&#39;</span><span class="p">:</span> <span class="s1">&#39;impressions&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;max_impressions&#39;</span><span class="p">:</span> <span class="s1">&#39;maxImpressions&#39;</span><span class="p">,</span>
             <span class="s1">&#39;time_zone&#39;</span><span class="p">:</span> <span class="s1">&#39;timeZone&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;retention_time&#39;</span><span class="p">:</span> <span class="s1">&#39;retentionTime&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;domains&#39;</span><span class="p">:</span> <span class="s1">&#39;domains&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;include_in_insights&#39;</span><span class="p">:</span> <span class="s1">&#39;includeInInsights&#39;</span><span class="p">,</span>
             <span class="s1">&#39;custom_data_field_labels&#39;</span><span class="p">:</span> <span class="s1">&#39;customDataFieldLabels&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;custom_data_fields_count&#39;</span><span class="p">:</span> <span class="s1">&#39;customDataFieldsCount&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;order_index&#39;</span><span class="p">:</span> <span class="s1">&#39;orderIndex&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;rate_limit&#39;</span><span class="p">:</span> <span class="s1">&#39;rateLimit&#39;</span><span class="p">,</span>
             <span class="s1">&#39;features&#39;</span><span class="p">:</span> <span class="s1">&#39;features&#39;</span>
-        <span class="p">})</span>
+        <span class="p">}</span>
         <span class="k">return</span> <span class="n">attributes</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">id</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; string_types</span>
-        <span class="sd">&quot;&quot;&quot;Gets the name of this AnalyticsLicense.</span>
+        <span class="sd">&quot;&quot;&quot;Gets the id of this AnalyticsLicense.</span>
 
-<span class="sd">        Name of the Analytics License</span>
+<span class="sd">        Id of the Analytics License</span>
 
-<span class="sd">        :return: The name of this AnalyticsLicense.</span>
+<span class="sd">        :return: The id of this AnalyticsLicense.</span>
 <span class="sd">        :rtype: string_types</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_name</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_id</span>
 
-    <span class="nd">@name</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">name</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+    <span class="nd">@id</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">id</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">id_</span><span class="p">):</span>
         <span class="c1"># type: (string_types) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the name of this AnalyticsLicense.</span>
+        <span class="sd">&quot;&quot;&quot;Sets the id of this AnalyticsLicense.</span>
 
-<span class="sd">        Name of the Analytics License</span>
+<span class="sd">        Id of the Analytics License</span>
 
-<span class="sd">        :param name: The name of this AnalyticsLicense.</span>
+<span class="sd">        :param id_: The id of this AnalyticsLicense.</span>
 <span class="sd">        :type: string_types</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
-        <span class="k">if</span> <span class="n">name</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">string_types</span><span class="p">):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `name`, type has to be `string_types`&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">id_</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">id_</span><span class="p">,</span> <span class="n">string_types</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `id`, type has to be `string_types`&quot;</span><span class="p">)</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">_name</span> <span class="o">=</span> <span class="n">name</span>
-
-    <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">license_key</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="c1"># type: () -&gt; string_types</span>
-        <span class="sd">&quot;&quot;&quot;Gets the license_key of this AnalyticsLicense.</span>
-
-<span class="sd">        License Key</span>
-
-<span class="sd">        :return: The license_key of this AnalyticsLicense.</span>
-<span class="sd">        :rtype: string_types</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_license_key</span>
-
-    <span class="nd">@license_key</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">license_key</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">license_key</span><span class="p">):</span>
-        <span class="c1"># type: (string_types) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the license_key of this AnalyticsLicense.</span>
-
-<span class="sd">        License Key</span>
-
-<span class="sd">        :param license_key: The license_key of this AnalyticsLicense.</span>
-<span class="sd">        :type: string_types</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-
-        <span class="k">if</span> <span class="n">license_key</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">license_key</span><span class="p">,</span> <span class="n">string_types</span><span class="p">):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `license_key`, type has to be `string_types`&quot;</span><span class="p">)</span>
-
-        <span class="bp">self</span><span class="o">.</span><span class="n">_license_key</span> <span class="o">=</span> <span class="n">license_key</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_id</span> <span class="o">=</span> <span class="n">id_</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">created_at</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -265,91 +277,149 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_created_at</span> <span class="o">=</span> <span class="n">created_at</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">max_impressions</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="c1"># type: () -&gt; int</span>
-        <span class="sd">&quot;&quot;&quot;Gets the max_impressions of this AnalyticsLicense.</span>
+    <span class="k">def</span> <span class="nf">custom_data</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; dict(str, object)</span>
+        <span class="sd">&quot;&quot;&quot;Gets the custom_data of this AnalyticsLicense.</span>
 
-<span class="sd">        Maximum number of impressions</span>
+<span class="sd">        User-specific meta data. This can hold anything.</span>
 
-<span class="sd">        :return: The max_impressions of this AnalyticsLicense.</span>
-<span class="sd">        :rtype: int</span>
+<span class="sd">        :return: The custom_data of this AnalyticsLicense.</span>
+<span class="sd">        :rtype: dict(str, object)</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_max_impressions</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_custom_data</span>
 
-    <span class="nd">@max_impressions</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">max_impressions</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">max_impressions</span><span class="p">):</span>
-        <span class="c1"># type: (int) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the max_impressions of this AnalyticsLicense.</span>
+    <span class="nd">@custom_data</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">custom_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">custom_data</span><span class="p">):</span>
+        <span class="c1"># type: (dict) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the custom_data of this AnalyticsLicense.</span>
 
-<span class="sd">        Maximum number of impressions</span>
+<span class="sd">        User-specific meta data. This can hold anything.</span>
 
-<span class="sd">        :param max_impressions: The max_impressions of this AnalyticsLicense.</span>
-<span class="sd">        :type: int</span>
+<span class="sd">        :param custom_data: The custom_data of this AnalyticsLicense.</span>
+<span class="sd">        :type: dict(str, object)</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
-        <span class="k">if</span> <span class="n">max_impressions</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">max_impressions</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `max_impressions`, type has to be `int`&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">custom_data</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">custom_data</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `custom_data`, type has to be `dict(str, object)`&quot;</span><span class="p">)</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">_max_impressions</span> <span class="o">=</span> <span class="n">max_impressions</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_custom_data</span> <span class="o">=</span> <span class="n">custom_data</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">impressions</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="c1"># type: () -&gt; int</span>
-        <span class="sd">&quot;&quot;&quot;Gets the impressions of this AnalyticsLicense.</span>
+    <span class="k">def</span> <span class="nf">license_key</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; string_types</span>
+        <span class="sd">&quot;&quot;&quot;Gets the license_key of this AnalyticsLicense.</span>
 
-<span class="sd">        Number of impressions recorded</span>
+<span class="sd">        License Key</span>
 
-<span class="sd">        :return: The impressions of this AnalyticsLicense.</span>
-<span class="sd">        :rtype: int</span>
+<span class="sd">        :return: The license_key of this AnalyticsLicense.</span>
+<span class="sd">        :rtype: string_types</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_impressions</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_license_key</span>
 
-    <span class="nd">@impressions</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">impressions</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">impressions</span><span class="p">):</span>
-        <span class="c1"># type: (int) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the impressions of this AnalyticsLicense.</span>
+    <span class="nd">@license_key</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">license_key</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">license_key</span><span class="p">):</span>
+        <span class="c1"># type: (string_types) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the license_key of this AnalyticsLicense.</span>
 
-<span class="sd">        Number of impressions recorded</span>
+<span class="sd">        License Key</span>
 
-<span class="sd">        :param impressions: The impressions of this AnalyticsLicense.</span>
-<span class="sd">        :type: int</span>
+<span class="sd">        :param license_key: The license_key of this AnalyticsLicense.</span>
+<span class="sd">        :type: string_types</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
-        <span class="k">if</span> <span class="n">impressions</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">impressions</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `impressions`, type has to be `int`&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">license_key</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">license_key</span><span class="p">,</span> <span class="n">string_types</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `license_key`, type has to be `string_types`&quot;</span><span class="p">)</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">_impressions</span> <span class="o">=</span> <span class="n">impressions</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_license_key</span> <span class="o">=</span> <span class="n">license_key</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">domains</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="c1"># type: () -&gt; list[AnalyticsLicenseDomain]</span>
-        <span class="sd">&quot;&quot;&quot;Gets the domains of this AnalyticsLicense.</span>
+    <span class="k">def</span> <span class="nf">name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; string_types</span>
+        <span class="sd">&quot;&quot;&quot;Gets the name of this AnalyticsLicense.</span>
 
-<span class="sd">        Whitelisted domains</span>
+<span class="sd">        Name of the Analytics License</span>
 
-<span class="sd">        :return: The domains of this AnalyticsLicense.</span>
-<span class="sd">        :rtype: list[AnalyticsLicenseDomain]</span>
+<span class="sd">        :return: The name of this AnalyticsLicense.</span>
+<span class="sd">        :rtype: string_types</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_domains</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_name</span>
 
-    <span class="nd">@domains</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">domains</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">domains</span><span class="p">):</span>
-        <span class="c1"># type: (list) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the domains of this AnalyticsLicense.</span>
+    <span class="nd">@name</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">name</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+        <span class="c1"># type: (string_types) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the name of this AnalyticsLicense.</span>
 
-<span class="sd">        Whitelisted domains</span>
+<span class="sd">        Name of the Analytics License</span>
 
-<span class="sd">        :param domains: The domains of this AnalyticsLicense.</span>
-<span class="sd">        :type: list[AnalyticsLicenseDomain]</span>
+<span class="sd">        :param name: The name of this AnalyticsLicense.</span>
+<span class="sd">        :type: string_types</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
-        <span class="k">if</span> <span class="n">domains</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">domains</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `domains`, type has to be `list[AnalyticsLicenseDomain]`&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">name</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">string_types</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `name`, type has to be `string_types`&quot;</span><span class="p">)</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">_domains</span> <span class="o">=</span> <span class="n">domains</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_name</span> <span class="o">=</span> <span class="n">name</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">industry</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; string_types</span>
+        <span class="sd">&quot;&quot;&quot;Gets the industry of this AnalyticsLicense.</span>
+
+<span class="sd">        The industry of the organization associated with the Analytics License</span>
+
+<span class="sd">        :return: The industry of this AnalyticsLicense.</span>
+<span class="sd">        :rtype: string_types</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_industry</span>
+
+    <span class="nd">@industry</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">industry</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">industry</span><span class="p">):</span>
+        <span class="c1"># type: (string_types) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the industry of this AnalyticsLicense.</span>
+
+<span class="sd">        The industry of the organization associated with the Analytics License</span>
+
+<span class="sd">        :param industry: The industry of this AnalyticsLicense.</span>
+<span class="sd">        :type: string_types</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">industry</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">industry</span><span class="p">,</span> <span class="n">string_types</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `industry`, type has to be `string_types`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_industry</span> <span class="o">=</span> <span class="n">industry</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">sub_industry</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; string_types</span>
+        <span class="sd">&quot;&quot;&quot;Gets the sub_industry of this AnalyticsLicense.</span>
+
+<span class="sd">        The subindustry of the organization associated with the Analytics License</span>
+
+<span class="sd">        :return: The sub_industry of this AnalyticsLicense.</span>
+<span class="sd">        :rtype: string_types</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sub_industry</span>
+
+    <span class="nd">@sub_industry</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">sub_industry</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sub_industry</span><span class="p">):</span>
+        <span class="c1"># type: (string_types) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the sub_industry of this AnalyticsLicense.</span>
+
+<span class="sd">        The subindustry of the organization associated with the Analytics License</span>
+
+<span class="sd">        :param sub_industry: The sub_industry of this AnalyticsLicense.</span>
+<span class="sd">        :type: string_types</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">sub_industry</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">sub_industry</span><span class="p">,</span> <span class="n">string_types</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `sub_industry`, type has to be `string_types`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_sub_industry</span> <span class="o">=</span> <span class="n">sub_industry</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">ignore_dnt</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -381,6 +451,64 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_ignore_dnt</span> <span class="o">=</span> <span class="n">ignore_dnt</span>
 
     <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">impressions</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; int</span>
+        <span class="sd">&quot;&quot;&quot;Gets the impressions of this AnalyticsLicense.</span>
+
+<span class="sd">        Number of impressions recorded</span>
+
+<span class="sd">        :return: The impressions of this AnalyticsLicense.</span>
+<span class="sd">        :rtype: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_impressions</span>
+
+    <span class="nd">@impressions</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">impressions</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">impressions</span><span class="p">):</span>
+        <span class="c1"># type: (int) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the impressions of this AnalyticsLicense.</span>
+
+<span class="sd">        Number of impressions recorded</span>
+
+<span class="sd">        :param impressions: The impressions of this AnalyticsLicense.</span>
+<span class="sd">        :type: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">impressions</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">impressions</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `impressions`, type has to be `int`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_impressions</span> <span class="o">=</span> <span class="n">impressions</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">max_impressions</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; int</span>
+        <span class="sd">&quot;&quot;&quot;Gets the max_impressions of this AnalyticsLicense.</span>
+
+<span class="sd">        Maximum number of impressions</span>
+
+<span class="sd">        :return: The max_impressions of this AnalyticsLicense.</span>
+<span class="sd">        :rtype: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_max_impressions</span>
+
+    <span class="nd">@max_impressions</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">max_impressions</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">max_impressions</span><span class="p">):</span>
+        <span class="c1"># type: (int) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the max_impressions of this AnalyticsLicense.</span>
+
+<span class="sd">        Maximum number of impressions</span>
+
+<span class="sd">        :param max_impressions: The max_impressions of this AnalyticsLicense.</span>
+<span class="sd">        :type: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">max_impressions</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">max_impressions</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `max_impressions`, type has to be `int`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_max_impressions</span> <span class="o">=</span> <span class="n">max_impressions</span>
+
+    <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">time_zone</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; string_types</span>
         <span class="sd">&quot;&quot;&quot;Gets the time_zone of this AnalyticsLicense.</span>
@@ -410,6 +538,93 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_time_zone</span> <span class="o">=</span> <span class="n">time_zone</span>
 
     <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">retention_time</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; string_types</span>
+        <span class="sd">&quot;&quot;&quot;Gets the retention_time of this AnalyticsLicense.</span>
+
+<span class="sd">        Retention time of impressions, returned as ISO 8601 duration format: P(n)Y(n)M(n)DT(n)H(n)M(n)S</span>
+
+<span class="sd">        :return: The retention_time of this AnalyticsLicense.</span>
+<span class="sd">        :rtype: string_types</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_retention_time</span>
+
+    <span class="nd">@retention_time</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">retention_time</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">retention_time</span><span class="p">):</span>
+        <span class="c1"># type: (string_types) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the retention_time of this AnalyticsLicense.</span>
+
+<span class="sd">        Retention time of impressions, returned as ISO 8601 duration format: P(n)Y(n)M(n)DT(n)H(n)M(n)S</span>
+
+<span class="sd">        :param retention_time: The retention_time of this AnalyticsLicense.</span>
+<span class="sd">        :type: string_types</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">retention_time</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">retention_time</span><span class="p">,</span> <span class="n">string_types</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `retention_time`, type has to be `string_types`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_retention_time</span> <span class="o">=</span> <span class="n">retention_time</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">domains</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; list[AnalyticsLicenseDomain]</span>
+        <span class="sd">&quot;&quot;&quot;Gets the domains of this AnalyticsLicense.</span>
+
+<span class="sd">        Whitelisted domains</span>
+
+<span class="sd">        :return: The domains of this AnalyticsLicense.</span>
+<span class="sd">        :rtype: list[AnalyticsLicenseDomain]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_domains</span>
+
+    <span class="nd">@domains</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">domains</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">domains</span><span class="p">):</span>
+        <span class="c1"># type: (list) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the domains of this AnalyticsLicense.</span>
+
+<span class="sd">        Whitelisted domains</span>
+
+<span class="sd">        :param domains: The domains of this AnalyticsLicense.</span>
+<span class="sd">        :type: list[AnalyticsLicenseDomain]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">domains</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">domains</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `domains`, type has to be `list[AnalyticsLicenseDomain]`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_domains</span> <span class="o">=</span> <span class="n">domains</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">include_in_insights</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; bool</span>
+        <span class="sd">&quot;&quot;&quot;Gets the include_in_insights of this AnalyticsLicense.</span>
+
+<span class="sd">        Whether the data of this license should be included in the industry insights or not</span>
+
+<span class="sd">        :return: The include_in_insights of this AnalyticsLicense.</span>
+<span class="sd">        :rtype: bool</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_include_in_insights</span>
+
+    <span class="nd">@include_in_insights</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">include_in_insights</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">include_in_insights</span><span class="p">):</span>
+        <span class="c1"># type: (bool) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the include_in_insights of this AnalyticsLicense.</span>
+
+<span class="sd">        Whether the data of this license should be included in the industry insights or not</span>
+
+<span class="sd">        :param include_in_insights: The include_in_insights of this AnalyticsLicense.</span>
+<span class="sd">        :type: bool</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">include_in_insights</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">include_in_insights</span><span class="p">,</span> <span class="nb">bool</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `include_in_insights`, type has to be `bool`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_include_in_insights</span> <span class="o">=</span> <span class="n">include_in_insights</span>
+
+    <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">custom_data_field_labels</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; AnalyticsLicenseCustomDataFieldLabels</span>
         <span class="sd">&quot;&quot;&quot;Gets the custom_data_field_labels of this AnalyticsLicense.</span>
@@ -437,6 +652,93 @@
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `custom_data_field_labels`, type has to be `AnalyticsLicenseCustomDataFieldLabels`&quot;</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_custom_data_field_labels</span> <span class="o">=</span> <span class="n">custom_data_field_labels</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">custom_data_fields_count</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; int</span>
+        <span class="sd">&quot;&quot;&quot;Gets the custom_data_fields_count of this AnalyticsLicense.</span>
+
+<span class="sd">        The number of customData fields available</span>
+
+<span class="sd">        :return: The custom_data_fields_count of this AnalyticsLicense.</span>
+<span class="sd">        :rtype: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_custom_data_fields_count</span>
+
+    <span class="nd">@custom_data_fields_count</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">custom_data_fields_count</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">custom_data_fields_count</span><span class="p">):</span>
+        <span class="c1"># type: (int) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the custom_data_fields_count of this AnalyticsLicense.</span>
+
+<span class="sd">        The number of customData fields available</span>
+
+<span class="sd">        :param custom_data_fields_count: The custom_data_fields_count of this AnalyticsLicense.</span>
+<span class="sd">        :type: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">custom_data_fields_count</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">custom_data_fields_count</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `custom_data_fields_count`, type has to be `int`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_custom_data_fields_count</span> <span class="o">=</span> <span class="n">custom_data_fields_count</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">order_index</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; int</span>
+        <span class="sd">&quot;&quot;&quot;Gets the order_index of this AnalyticsLicense.</span>
+
+<span class="sd">        Order index of license</span>
+
+<span class="sd">        :return: The order_index of this AnalyticsLicense.</span>
+<span class="sd">        :rtype: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_order_index</span>
+
+    <span class="nd">@order_index</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">order_index</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">order_index</span><span class="p">):</span>
+        <span class="c1"># type: (int) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the order_index of this AnalyticsLicense.</span>
+
+<span class="sd">        Order index of license</span>
+
+<span class="sd">        :param order_index: The order_index of this AnalyticsLicense.</span>
+<span class="sd">        :type: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">order_index</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">order_index</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `order_index`, type has to be `int`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_order_index</span> <span class="o">=</span> <span class="n">order_index</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">rate_limit</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; string_types</span>
+        <span class="sd">&quot;&quot;&quot;Gets the rate_limit of this AnalyticsLicense.</span>
+
+<span class="sd">        The rate limit of this license</span>
+
+<span class="sd">        :return: The rate_limit of this AnalyticsLicense.</span>
+<span class="sd">        :rtype: string_types</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_rate_limit</span>
+
+    <span class="nd">@rate_limit</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">rate_limit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rate_limit</span><span class="p">):</span>
+        <span class="c1"># type: (string_types) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the rate_limit of this AnalyticsLicense.</span>
+
+<span class="sd">        The rate limit of this license</span>
+
+<span class="sd">        :param rate_limit: The rate_limit of this AnalyticsLicense.</span>
+<span class="sd">        :type: string_types</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">rate_limit</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">rate_limit</span><span class="p">,</span> <span class="n">string_types</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `rate_limit`, type has to be `string_types`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_rate_limit</span> <span class="o">=</span> <span class="n">rate_limit</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">features</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -469,8 +771,6 @@
         <span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>
         <span class="n">result</span> <span class="o">=</span> <span class="p">{}</span>
 
-        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="nb">super</span><span class="p">(</span><span class="n">AnalyticsLicense</span><span class="p">,</span> <span class="bp">self</span><span class="p">),</span> <span class="s2">&quot;to_dict&quot;</span><span class="p">):</span>
-            <span class="n">result</span> <span class="o">=</span> <span class="nb">super</span><span class="p">(</span><span class="n">AnalyticsLicense</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span>
         <span class="k">for</span> <span class="n">attr</span><span class="p">,</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">six</span><span class="o">.</span><span class="n">iteritems</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">openapi_types</span><span class="p">):</span>
             <span class="n">value</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">attr</span><span class="p">)</span>
             <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>

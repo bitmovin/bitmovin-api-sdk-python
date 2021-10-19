@@ -1066,7 +1066,6 @@ from bitmovin_api_sdk.models.analytics_license_domain import AnalyticsLicenseDom
 from bitmovin_api_sdk.models.analytics_license_error_details_config import AnalyticsLicenseErrorDetailsConfig
 from bitmovin_api_sdk.models.analytics_license_features import AnalyticsLicenseFeatures
 from bitmovin_api_sdk.models.analytics_license_key import AnalyticsLicenseKey
-from bitmovin_api_sdk.models.analytics_license_update_request import AnalyticsLicenseUpdateRequest
 from bitmovin_api_sdk.models.analytics_max_concurrent_viewers_response import AnalyticsMaxConcurrentViewersResponse
 from bitmovin_api_sdk.models.analytics_max_query_request import AnalyticsMaxQueryRequest
 from bitmovin_api_sdk.models.analytics_median_query_request import AnalyticsMedianQueryRequest
@@ -1698,4 +1697,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.91.0"
+__version__ = "1.92.0"

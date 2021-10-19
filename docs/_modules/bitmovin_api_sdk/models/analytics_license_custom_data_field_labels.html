@@ -87,14 +87,18 @@
                  <span class="n">custom_data2</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">custom_data3</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">custom_data4</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                 <span class="n">custom_data5</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (string_types, string_types, string_types, string_types, string_types) -&gt; None</span>
+                 <span class="n">custom_data5</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">custom_data6</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">custom_data7</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="c1"># type: (string_types, string_types, string_types, string_types, string_types, string_types, string_types) -&gt; None</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_custom_data1</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_custom_data2</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_custom_data3</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_custom_data4</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_custom_data5</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_custom_data6</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_custom_data7</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>
 
         <span class="k">if</span> <span class="n">custom_data1</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -107,6 +111,10 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">custom_data4</span> <span class="o">=</span> <span class="n">custom_data4</span>
         <span class="k">if</span> <span class="n">custom_data5</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">custom_data5</span> <span class="o">=</span> <span class="n">custom_data5</span>
+        <span class="k">if</span> <span class="n">custom_data6</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">custom_data6</span> <span class="o">=</span> <span class="n">custom_data6</span>
+        <span class="k">if</span> <span class="n">custom_data7</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">custom_data7</span> <span class="o">=</span> <span class="n">custom_data7</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -115,7 +123,9 @@
             <span class="s1">&#39;custom_data2&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
             <span class="s1">&#39;custom_data3&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
             <span class="s1">&#39;custom_data4&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;custom_data5&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span>
+            <span class="s1">&#39;custom_data5&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;custom_data6&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;custom_data7&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span>
         <span class="p">}</span>
 
         <span class="k">return</span> <span class="n">types</span>
@@ -127,7 +137,9 @@
             <span class="s1">&#39;custom_data2&#39;</span><span class="p">:</span> <span class="s1">&#39;customData2&#39;</span><span class="p">,</span>
             <span class="s1">&#39;custom_data3&#39;</span><span class="p">:</span> <span class="s1">&#39;customData3&#39;</span><span class="p">,</span>
             <span class="s1">&#39;custom_data4&#39;</span><span class="p">:</span> <span class="s1">&#39;customData4&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;custom_data5&#39;</span><span class="p">:</span> <span class="s1">&#39;customData5&#39;</span>
+            <span class="s1">&#39;custom_data5&#39;</span><span class="p">:</span> <span class="s1">&#39;customData5&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;custom_data6&#39;</span><span class="p">:</span> <span class="s1">&#39;customData6&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;custom_data7&#39;</span><span class="p">:</span> <span class="s1">&#39;customData7&#39;</span>
         <span class="p">}</span>
         <span class="k">return</span> <span class="n">attributes</span>
 
@@ -275,6 +287,64 @@
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `custom_data5`, type has to be `string_types`&quot;</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_custom_data5</span> <span class="o">=</span> <span class="n">custom_data5</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">custom_data6</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; string_types</span>
+        <span class="sd">&quot;&quot;&quot;Gets the custom_data6 of this AnalyticsLicenseCustomDataFieldLabels.</span>
+
+<span class="sd">        Custom Data 6</span>
+
+<span class="sd">        :return: The custom_data6 of this AnalyticsLicenseCustomDataFieldLabels.</span>
+<span class="sd">        :rtype: string_types</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_custom_data6</span>
+
+    <span class="nd">@custom_data6</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">custom_data6</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">custom_data6</span><span class="p">):</span>
+        <span class="c1"># type: (string_types) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the custom_data6 of this AnalyticsLicenseCustomDataFieldLabels.</span>
+
+<span class="sd">        Custom Data 6</span>
+
+<span class="sd">        :param custom_data6: The custom_data6 of this AnalyticsLicenseCustomDataFieldLabels.</span>
+<span class="sd">        :type: string_types</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">custom_data6</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">custom_data6</span><span class="p">,</span> <span class="n">string_types</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `custom_data6`, type has to be `string_types`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_custom_data6</span> <span class="o">=</span> <span class="n">custom_data6</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">custom_data7</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; string_types</span>
+        <span class="sd">&quot;&quot;&quot;Gets the custom_data7 of this AnalyticsLicenseCustomDataFieldLabels.</span>
+
+<span class="sd">        Custom Data 7</span>
+
+<span class="sd">        :return: The custom_data7 of this AnalyticsLicenseCustomDataFieldLabels.</span>
+<span class="sd">        :rtype: string_types</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_custom_data7</span>
+
+    <span class="nd">@custom_data7</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">custom_data7</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">custom_data7</span><span class="p">):</span>
+        <span class="c1"># type: (string_types) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the custom_data7 of this AnalyticsLicenseCustomDataFieldLabels.</span>
+
+<span class="sd">        Custom Data 7</span>
+
+<span class="sd">        :param custom_data7: The custom_data7 of this AnalyticsLicenseCustomDataFieldLabels.</span>
+<span class="sd">        :type: string_types</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">custom_data7</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">custom_data7</span><span class="p">,</span> <span class="n">string_types</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `custom_data7`, type has to be `string_types`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_custom_data7</span> <span class="o">=</span> <span class="n">custom_data7</span>
 
 <div class="viewcode-block" id="AnalyticsLicenseCustomDataFieldLabels.to_dict"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.analytics_license_custom_data_field_labels.AnalyticsLicenseCustomDataFieldLabels.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>

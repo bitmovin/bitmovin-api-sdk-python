@@ -5,7 +5,6 @@ from __future__ import absolute_import
 from bitmovin_api_sdk.common import BaseApi, BitmovinApiLoggerBase
 from bitmovin_api_sdk.common.poscheck import poscheck_except
 from bitmovin_api_sdk.models.analytics_license import AnalyticsLicense
-from bitmovin_api_sdk.models.analytics_license_update_request import AnalyticsLicenseUpdateRequest
 from bitmovin_api_sdk.models.response_envelope import ResponseEnvelope
 from bitmovin_api_sdk.models.response_error import ResponseError
 from bitmovin_api_sdk.analytics.licenses.domains.domains_api import DomainsApi
@@ -54,7 +53,7 @@ class LicensesApi(BaseApi):
 
         :param license_id: License id
         :type license_id: string_types, required
-        :return: Id of Analytics License
+        :return: Analytics License
         :rtype: AnalyticsLicense
         """
 
@@ -71,7 +70,7 @@ class LicensesApi(BaseApi):
 
         :param query_params: Query parameters
         :type query_params: AnalyticsLicenseListQueryParams
-        :return: Service specific result
+        :return: List of Analytics Licenses
         :rtype: AnalyticsLicense
         """
 
@@ -83,21 +82,21 @@ class LicensesApi(BaseApi):
             **kwargs
         )
 
-    def update(self, license_id, analytics_license_update_request, **kwargs):
-        # type: (string_types, AnalyticsLicenseUpdateRequest, dict) -> AnalyticsLicense
+    def update(self, license_id, analytics_license, **kwargs):
+        # type: (string_types, AnalyticsLicense, dict) -> AnalyticsLicense
         """Update Analytics License
 
         :param license_id: License id
         :type license_id: string_types, required
-        :param analytics_license_update_request: Analytics License details to be updated
-        :type analytics_license_update_request: AnalyticsLicenseUpdateRequest, required
+        :param analytics_license: Analytics License details to be updated
+        :type analytics_license: AnalyticsLicense, required
         :return: Updated Analytics License
         :rtype: AnalyticsLicense
         """
 
         return self.api_client.put(
             '/analytics/licenses/{license_id}',
-            analytics_license_update_request,
+            analytics_license,
             path_params={'license_id': license_id},
             type=AnalyticsLicense,
             **kwargs

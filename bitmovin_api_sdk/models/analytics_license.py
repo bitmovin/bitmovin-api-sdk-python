@@ -6,161 +6,173 @@ from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
 from bitmovin_api_sdk.models.analytics_license_custom_data_field_labels import AnalyticsLicenseCustomDataFieldLabels
 from bitmovin_api_sdk.models.analytics_license_features import AnalyticsLicenseFeatures
-from bitmovin_api_sdk.models.bitmovin_response import BitmovinResponse
 import pprint
 import six
 
 
-class AnalyticsLicense(BitmovinResponse):
+class AnalyticsLicense(object):
     @poscheck_model
     def __init__(self,
                  id_=None,
-                 name=None,
-                 license_key=None,
                  created_at=None,
-                 max_impressions=None,
-                 impressions=None,
-                 domains=None,
+                 custom_data=None,
+                 license_key=None,
+                 name=None,
+                 industry=None,
+                 sub_industry=None,
                  ignore_dnt=None,
+                 impressions=None,
+                 max_impressions=None,
                  time_zone=None,
+                 retention_time=None,
+                 domains=None,
+                 include_in_insights=None,
                  custom_data_field_labels=None,
+                 custom_data_fields_count=None,
+                 order_index=None,
+                 rate_limit=None,
                  features=None):
-        # type: (string_types, string_types, string_types, datetime, int, int, list[AnalyticsLicenseDomain], bool, string_types, AnalyticsLicenseCustomDataFieldLabels, AnalyticsLicenseFeatures) -> None
-        super(AnalyticsLicense, self).__init__(id_=id_)
+        # type: (string_types, datetime, dict, string_types, string_types, string_types, string_types, bool, int, int, string_types, string_types, list[AnalyticsLicenseDomain], bool, AnalyticsLicenseCustomDataFieldLabels, int, int, string_types, AnalyticsLicenseFeatures) -> None
 
-        self._name = None
-        self._license_key = None
+        self._id = None
         self._created_at = None
-        self._max_impressions = None
-        self._impressions = None
-        self._domains = list()
+        self._custom_data = None
+        self._license_key = None
+        self._name = None
+        self._industry = None
+        self._sub_industry = None
         self._ignore_dnt = None
+        self._impressions = None
+        self._max_impressions = None
         self._time_zone = None
+        self._retention_time = None
+        self._domains = list()
+        self._include_in_insights = None
         self._custom_data_field_labels = None
+        self._custom_data_fields_count = None
+        self._order_index = None
+        self._rate_limit = None
         self._features = None
         self.discriminator = None
 
-        if name is not None:
-            self.name = name
-        if license_key is not None:
-            self.license_key = license_key
+        if id_ is not None:
+            self.id = id_
         if created_at is not None:
             self.created_at = created_at
-        if max_impressions is not None:
-            self.max_impressions = max_impressions
-        if impressions is not None:
-            self.impressions = impressions
-        if domains is not None:
-            self.domains = domains
+        if custom_data is not None:
+            self.custom_data = custom_data
+        if license_key is not None:
+            self.license_key = license_key
+        if name is not None:
+            self.name = name
+        if industry is not None:
+            self.industry = industry
+        if sub_industry is not None:
+            self.sub_industry = sub_industry
         if ignore_dnt is not None:
             self.ignore_dnt = ignore_dnt
+        if impressions is not None:
+            self.impressions = impressions
+        if max_impressions is not None:
+            self.max_impressions = max_impressions
         if time_zone is not None:
             self.time_zone = time_zone
+        if retention_time is not None:
+            self.retention_time = retention_time
+        if domains is not None:
+            self.domains = domains
+        if include_in_insights is not None:
+            self.include_in_insights = include_in_insights
         if custom_data_field_labels is not None:
             self.custom_data_field_labels = custom_data_field_labels
+        if custom_data_fields_count is not None:
+            self.custom_data_fields_count = custom_data_fields_count
+        if order_index is not None:
+            self.order_index = order_index
+        if rate_limit is not None:
+            self.rate_limit = rate_limit
         if features is not None:
             self.features = features
 
     @property
     def openapi_types(self):
-        types = {}
-
-        if hasattr(super(AnalyticsLicense, self), 'openapi_types'):
-            types = getattr(super(AnalyticsLicense, self), 'openapi_types')
-
-        types.update({
-            'name': 'string_types',
-            'license_key': 'string_types',
+        types = {
+            'id': 'string_types',
             'created_at': 'datetime',
-            'max_impressions': 'int',
-            'impressions': 'int',
-            'domains': 'list[AnalyticsLicenseDomain]',
+            'custom_data': 'dict(str, object)',
+            'license_key': 'string_types',
+            'name': 'string_types',
+            'industry': 'string_types',
+            'sub_industry': 'string_types',
             'ignore_dnt': 'bool',
+            'impressions': 'int',
+            'max_impressions': 'int',
             'time_zone': 'string_types',
+            'retention_time': 'string_types',
+            'domains': 'list[AnalyticsLicenseDomain]',
+            'include_in_insights': 'bool',
             'custom_data_field_labels': 'AnalyticsLicenseCustomDataFieldLabels',
+            'custom_data_fields_count': 'int',
+            'order_index': 'int',
+            'rate_limit': 'string_types',
             'features': 'AnalyticsLicenseFeatures'
-        })
+        }
 
         return types
 
     @property
     def attribute_map(self):
-        attributes = {}
-
-        if hasattr(super(AnalyticsLicense, self), 'attribute_map'):
-            attributes = getattr(super(AnalyticsLicense, self), 'attribute_map')
-
-        attributes.update({
-            'name': 'name',
-            'license_key': 'licenseKey',
+        attributes = {
+            'id': 'id',
             'created_at': 'createdAt',
-            'max_impressions': 'maxImpressions',
-            'impressions': 'impressions',
-            'domains': 'domains',
+            'custom_data': 'customData',
+            'license_key': 'licenseKey',
+            'name': 'name',
+            'industry': 'industry',
+            'sub_industry': 'subIndustry',
             'ignore_dnt': 'ignoreDNT',
+            'impressions': 'impressions',
+            'max_impressions': 'maxImpressions',
             'time_zone': 'timeZone',
+            'retention_time': 'retentionTime',
+            'domains': 'domains',
+            'include_in_insights': 'includeInInsights',
             'custom_data_field_labels': 'customDataFieldLabels',
+            'custom_data_fields_count': 'customDataFieldsCount',
+            'order_index': 'orderIndex',
+            'rate_limit': 'rateLimit',
             'features': 'features'
-        })
+        }
         return attributes
 
     @property
-    def name(self):
+    def id(self):
         # type: () -> string_types
-        """Gets the name of this AnalyticsLicense.
+        """Gets the id of this AnalyticsLicense.
 
-        Name of the Analytics License
+        Id of the Analytics License
 
-        :return: The name of this AnalyticsLicense.
+        :return: The id of this AnalyticsLicense.
         :rtype: string_types
         """
-        return self._name
+        return self._id
 
-    @name.setter
-    def name(self, name):
+    @id.setter
+    def id(self, id_):
         # type: (string_types) -> None
-        """Sets the name of this AnalyticsLicense.
+        """Sets the id of this AnalyticsLicense.
 
-        Name of the Analytics License
+        Id of the Analytics License
 
-        :param name: The name of this AnalyticsLicense.
+        :param id_: The id of this AnalyticsLicense.
         :type: string_types
         """
 
-        if name is not None:
-            if not isinstance(name, string_types):
-                raise TypeError("Invalid type for `name`, type has to be `string_types`")
+        if id_ is not None:
+            if not isinstance(id_, string_types):
+                raise TypeError("Invalid type for `id`, type has to be `string_types`")
 
-        self._name = name
-
-    @property
-    def license_key(self):
-        # type: () -> string_types
-        """Gets the license_key of this AnalyticsLicense.
-
-        License Key
-
-        :return: The license_key of this AnalyticsLicense.
-        :rtype: string_types
-        """
-        return self._license_key
-
-    @license_key.setter
-    def license_key(self, license_key):
-        # type: (string_types) -> None
-        """Sets the license_key of this AnalyticsLicense.
-
-        License Key
-
-        :param license_key: The license_key of this AnalyticsLicense.
-        :type: string_types
-        """
-
-        if license_key is not None:
-            if not isinstance(license_key, string_types):
-                raise TypeError("Invalid type for `license_key`, type has to be `string_types`")
-
-        self._license_key = license_key
+        self._id = id_
 
     @property
     def created_at(self):
@@ -192,91 +204,149 @@ class AnalyticsLicense(BitmovinResponse):
         self._created_at = created_at
 
     @property
-    def max_impressions(self):
-        # type: () -> int
-        """Gets the max_impressions of this AnalyticsLicense.
+    def custom_data(self):
+        # type: () -> dict(str, object)
+        """Gets the custom_data of this AnalyticsLicense.
 
-        Maximum number of impressions
+        User-specific meta data. This can hold anything.
 
-        :return: The max_impressions of this AnalyticsLicense.
-        :rtype: int
+        :return: The custom_data of this AnalyticsLicense.
+        :rtype: dict(str, object)
         """
-        return self._max_impressions
+        return self._custom_data
 
-    @max_impressions.setter
-    def max_impressions(self, max_impressions):
-        # type: (int) -> None
-        """Sets the max_impressions of this AnalyticsLicense.
+    @custom_data.setter
+    def custom_data(self, custom_data):
+        # type: (dict) -> None
+        """Sets the custom_data of this AnalyticsLicense.
 
-        Maximum number of impressions
+        User-specific meta data. This can hold anything.
 
-        :param max_impressions: The max_impressions of this AnalyticsLicense.
-        :type: int
+        :param custom_data: The custom_data of this AnalyticsLicense.
+        :type: dict(str, object)
         """
 
-        if max_impressions is not None:
-            if not isinstance(max_impressions, int):
-                raise TypeError("Invalid type for `max_impressions`, type has to be `int`")
+        if custom_data is not None:
+            if not isinstance(custom_data, dict):
+                raise TypeError("Invalid type for `custom_data`, type has to be `dict(str, object)`")
 
-        self._max_impressions = max_impressions
+        self._custom_data = custom_data
 
     @property
-    def impressions(self):
-        # type: () -> int
-        """Gets the impressions of this AnalyticsLicense.
+    def license_key(self):
+        # type: () -> string_types
+        """Gets the license_key of this AnalyticsLicense.
 
-        Number of impressions recorded
+        License Key
 
-        :return: The impressions of this AnalyticsLicense.
-        :rtype: int
+        :return: The license_key of this AnalyticsLicense.
+        :rtype: string_types
         """
-        return self._impressions
+        return self._license_key
 
-    @impressions.setter
-    def impressions(self, impressions):
-        # type: (int) -> None
-        """Sets the impressions of this AnalyticsLicense.
+    @license_key.setter
+    def license_key(self, license_key):
+        # type: (string_types) -> None
+        """Sets the license_key of this AnalyticsLicense.
 
-        Number of impressions recorded
+        License Key
 
-        :param impressions: The impressions of this AnalyticsLicense.
-        :type: int
+        :param license_key: The license_key of this AnalyticsLicense.
+        :type: string_types
         """
 
-        if impressions is not None:
-            if not isinstance(impressions, int):
-                raise TypeError("Invalid type for `impressions`, type has to be `int`")
+        if license_key is not None:
+            if not isinstance(license_key, string_types):
+                raise TypeError("Invalid type for `license_key`, type has to be `string_types`")
 
-        self._impressions = impressions
+        self._license_key = license_key
 
     @property
-    def domains(self):
-        # type: () -> list[AnalyticsLicenseDomain]
-        """Gets the domains of this AnalyticsLicense.
+    def name(self):
+        # type: () -> string_types
+        """Gets the name of this AnalyticsLicense.
 
-        Whitelisted domains
+        Name of the Analytics License
 
-        :return: The domains of this AnalyticsLicense.
-        :rtype: list[AnalyticsLicenseDomain]
+        :return: The name of this AnalyticsLicense.
+        :rtype: string_types
         """
-        return self._domains
+        return self._name
 
-    @domains.setter
-    def domains(self, domains):
-        # type: (list) -> None
-        """Sets the domains of this AnalyticsLicense.
+    @name.setter
+    def name(self, name):
+        # type: (string_types) -> None
+        """Sets the name of this AnalyticsLicense.
 
-        Whitelisted domains
+        Name of the Analytics License
 
-        :param domains: The domains of this AnalyticsLicense.
-        :type: list[AnalyticsLicenseDomain]
+        :param name: The name of this AnalyticsLicense.
+        :type: string_types
         """
 
-        if domains is not None:
-            if not isinstance(domains, list):
-                raise TypeError("Invalid type for `domains`, type has to be `list[AnalyticsLicenseDomain]`")
+        if name is not None:
+            if not isinstance(name, string_types):
+                raise TypeError("Invalid type for `name`, type has to be `string_types`")
 
-        self._domains = domains
+        self._name = name
+
+    @property
+    def industry(self):
+        # type: () -> string_types
+        """Gets the industry of this AnalyticsLicense.
+
+        The industry of the organization associated with the Analytics License
+
+        :return: The industry of this AnalyticsLicense.
+        :rtype: string_types
+        """
+        return self._industry
+
+    @industry.setter
+    def industry(self, industry):
+        # type: (string_types) -> None
+        """Sets the industry of this AnalyticsLicense.
+
+        The industry of the organization associated with the Analytics License
+
+        :param industry: The industry of this AnalyticsLicense.
+        :type: string_types
+        """
+
+        if industry is not None:
+            if not isinstance(industry, string_types):
+                raise TypeError("Invalid type for `industry`, type has to be `string_types`")
+
+        self._industry = industry
+
+    @property
+    def sub_industry(self):
+        # type: () -> string_types
+        """Gets the sub_industry of this AnalyticsLicense.
+
+        The subindustry of the organization associated with the Analytics License
+
+        :return: The sub_industry of this AnalyticsLicense.
+        :rtype: string_types
+        """
+        return self._sub_industry
+
+    @sub_industry.setter
+    def sub_industry(self, sub_industry):
+        # type: (string_types) -> None
+        """Sets the sub_industry of this AnalyticsLicense.
+
+        The subindustry of the organization associated with the Analytics License
+
+        :param sub_industry: The sub_industry of this AnalyticsLicense.
+        :type: string_types
+        """
+
+        if sub_industry is not None:
+            if not isinstance(sub_industry, string_types):
+                raise TypeError("Invalid type for `sub_industry`, type has to be `string_types`")
+
+        self._sub_industry = sub_industry
 
     @property
     def ignore_dnt(self):
@@ -308,6 +378,64 @@ class AnalyticsLicense(BitmovinResponse):
         self._ignore_dnt = ignore_dnt
 
     @property
+    def impressions(self):
+        # type: () -> int
+        """Gets the impressions of this AnalyticsLicense.
+
+        Number of impressions recorded
+
+        :return: The impressions of this AnalyticsLicense.
+        :rtype: int
+        """
+        return self._impressions
+
+    @impressions.setter
+    def impressions(self, impressions):
+        # type: (int) -> None
+        """Sets the impressions of this AnalyticsLicense.
+
+        Number of impressions recorded
+
+        :param impressions: The impressions of this AnalyticsLicense.
+        :type: int
+        """
+
+        if impressions is not None:
+            if not isinstance(impressions, int):
+                raise TypeError("Invalid type for `impressions`, type has to be `int`")
+
+        self._impressions = impressions
+
+    @property
+    def max_impressions(self):
+        # type: () -> int
+        """Gets the max_impressions of this AnalyticsLicense.
+
+        Maximum number of impressions
+
+        :return: The max_impressions of this AnalyticsLicense.
+        :rtype: int
+        """
+        return self._max_impressions
+
+    @max_impressions.setter
+    def max_impressions(self, max_impressions):
+        # type: (int) -> None
+        """Sets the max_impressions of this AnalyticsLicense.
+
+        Maximum number of impressions
+
+        :param max_impressions: The max_impressions of this AnalyticsLicense.
+        :type: int
+        """
+
+        if max_impressions is not None:
+            if not isinstance(max_impressions, int):
+                raise TypeError("Invalid type for `max_impressions`, type has to be `int`")
+
+        self._max_impressions = max_impressions
+
+    @property
     def time_zone(self):
         # type: () -> string_types
         """Gets the time_zone of this AnalyticsLicense.
@@ -337,6 +465,93 @@ class AnalyticsLicense(BitmovinResponse):
         self._time_zone = time_zone
 
     @property
+    def retention_time(self):
+        # type: () -> string_types
+        """Gets the retention_time of this AnalyticsLicense.
+
+        Retention time of impressions, returned as ISO 8601 duration format: P(n)Y(n)M(n)DT(n)H(n)M(n)S
+
+        :return: The retention_time of this AnalyticsLicense.
+        :rtype: string_types
+        """
+        return self._retention_time
+
+    @retention_time.setter
+    def retention_time(self, retention_time):
+        # type: (string_types) -> None
+        """Sets the retention_time of this AnalyticsLicense.
+
+        Retention time of impressions, returned as ISO 8601 duration format: P(n)Y(n)M(n)DT(n)H(n)M(n)S
+
+        :param retention_time: The retention_time of this AnalyticsLicense.
+        :type: string_types
+        """
+
+        if retention_time is not None:
+            if not isinstance(retention_time, string_types):
+                raise TypeError("Invalid type for `retention_time`, type has to be `string_types`")
+
+        self._retention_time = retention_time
+
+    @property
+    def domains(self):
+        # type: () -> list[AnalyticsLicenseDomain]
+        """Gets the domains of this AnalyticsLicense.
+
+        Whitelisted domains
+
+        :return: The domains of this AnalyticsLicense.
+        :rtype: list[AnalyticsLicenseDomain]
+        """
+        return self._domains
+
+    @domains.setter
+    def domains(self, domains):
+        # type: (list) -> None
+        """Sets the domains of this AnalyticsLicense.
+
+        Whitelisted domains
+
+        :param domains: The domains of this AnalyticsLicense.
+        :type: list[AnalyticsLicenseDomain]
+        """
+
+        if domains is not None:
+            if not isinstance(domains, list):
+                raise TypeError("Invalid type for `domains`, type has to be `list[AnalyticsLicenseDomain]`")
+
+        self._domains = domains
+
+    @property
+    def include_in_insights(self):
+        # type: () -> bool
+        """Gets the include_in_insights of this AnalyticsLicense.
+
+        Whether the data of this license should be included in the industry insights or not
+
+        :return: The include_in_insights of this AnalyticsLicense.
+        :rtype: bool
+        """
+        return self._include_in_insights
+
+    @include_in_insights.setter
+    def include_in_insights(self, include_in_insights):
+        # type: (bool) -> None
+        """Sets the include_in_insights of this AnalyticsLicense.
+
+        Whether the data of this license should be included in the industry insights or not
+
+        :param include_in_insights: The include_in_insights of this AnalyticsLicense.
+        :type: bool
+        """
+
+        if include_in_insights is not None:
+            if not isinstance(include_in_insights, bool):
+                raise TypeError("Invalid type for `include_in_insights`, type has to be `bool`")
+
+        self._include_in_insights = include_in_insights
+
+    @property
     def custom_data_field_labels(self):
         # type: () -> AnalyticsLicenseCustomDataFieldLabels
         """Gets the custom_data_field_labels of this AnalyticsLicense.
@@ -364,6 +579,93 @@ class AnalyticsLicense(BitmovinResponse):
                 raise TypeError("Invalid type for `custom_data_field_labels`, type has to be `AnalyticsLicenseCustomDataFieldLabels`")
 
         self._custom_data_field_labels = custom_data_field_labels
+
+    @property
+    def custom_data_fields_count(self):
+        # type: () -> int
+        """Gets the custom_data_fields_count of this AnalyticsLicense.
+
+        The number of customData fields available
+
+        :return: The custom_data_fields_count of this AnalyticsLicense.
+        :rtype: int
+        """
+        return self._custom_data_fields_count
+
+    @custom_data_fields_count.setter
+    def custom_data_fields_count(self, custom_data_fields_count):
+        # type: (int) -> None
+        """Sets the custom_data_fields_count of this AnalyticsLicense.
+
+        The number of customData fields available
+
+        :param custom_data_fields_count: The custom_data_fields_count of this AnalyticsLicense.
+        :type: int
+        """
+
+        if custom_data_fields_count is not None:
+            if not isinstance(custom_data_fields_count, int):
+                raise TypeError("Invalid type for `custom_data_fields_count`, type has to be `int`")
+
+        self._custom_data_fields_count = custom_data_fields_count
+
+    @property
+    def order_index(self):
+        # type: () -> int
+        """Gets the order_index of this AnalyticsLicense.
+
+        Order index of license
+
+        :return: The order_index of this AnalyticsLicense.
+        :rtype: int
+        """
+        return self._order_index
+
+    @order_index.setter
+    def order_index(self, order_index):
+        # type: (int) -> None
+        """Sets the order_index of this AnalyticsLicense.
+
+        Order index of license
+
+        :param order_index: The order_index of this AnalyticsLicense.
+        :type: int
+        """
+
+        if order_index is not None:
+            if not isinstance(order_index, int):
+                raise TypeError("Invalid type for `order_index`, type has to be `int`")
+
+        self._order_index = order_index
+
+    @property
+    def rate_limit(self):
+        # type: () -> string_types
+        """Gets the rate_limit of this AnalyticsLicense.
+
+        The rate limit of this license
+
+        :return: The rate_limit of this AnalyticsLicense.
+        :rtype: string_types
+        """
+        return self._rate_limit
+
+    @rate_limit.setter
+    def rate_limit(self, rate_limit):
+        # type: (string_types) -> None
+        """Sets the rate_limit of this AnalyticsLicense.
+
+        The rate limit of this license
+
+        :param rate_limit: The rate_limit of this AnalyticsLicense.
+        :type: string_types
+        """
+
+        if rate_limit is not None:
+            if not isinstance(rate_limit, string_types):
+                raise TypeError("Invalid type for `rate_limit`, type has to be `string_types`")
+
+        self._rate_limit = rate_limit
 
     @property
     def features(self):
@@ -396,8 +698,6 @@ class AnalyticsLicense(BitmovinResponse):
         """Returns the model properties as a dict"""
         result = {}
 
-        if hasattr(super(AnalyticsLicense, self), "to_dict"):
-            result = super(AnalyticsLicense, self).to_dict()
         for attr, _ in six.iteritems(self.openapi_types):
             value = getattr(self, attr)
             if value is None:
