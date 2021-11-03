@@ -146,7 +146,7 @@ class Bif(BitmovinResource):
         # type: () -> float
         """Gets the distance of this Bif.
 
-        Distance in seconds between a screenshot
+        Distance in seconds between a screenshot (required)
 
         :return: The distance of this Bif.
         :rtype: float
@@ -158,13 +158,15 @@ class Bif(BitmovinResource):
         # type: (float) -> None
         """Sets the distance of this Bif.
 
-        Distance in seconds between a screenshot
+        Distance in seconds between a screenshot (required)
 
         :param distance: The distance of this Bif.
         :type: float
         """
 
         if distance is not None:
+            if distance is not None and distance < 0:
+                raise ValueError("Invalid value for `distance`, must be a value greater than or equal to `0`")
             if not isinstance(distance, (float, int)):
                 raise TypeError("Invalid type for `distance`, type has to be `float`")
 

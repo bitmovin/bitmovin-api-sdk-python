@@ -115,10 +115,10 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="bitmovin_api_sdk.notifications.webhooks.encoding.manifest.error.error_api.ErrorApi.create">
 <span class="sig-name descname"><span class="pre">create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">webhook</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.webhook.Webhook" title="bitmovin_api_sdk.models.webhook.Webhook"><span class="pre">bitmovin_api_sdk.models.webhook.Webhook</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.webhook.Webhook" title="bitmovin_api_sdk.models.webhook.Webhook"><span class="pre">bitmovin_api_sdk.models.webhook.Webhook</span></a></span></span><a class="reference internal" href="../_modules/bitmovin_api_sdk/notifications/webhooks/encoding/manifest/error/error_api.html#ErrorApi.create"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bitmovin_api_sdk.notifications.webhooks.encoding.manifest.error.error_api.ErrorApi.create" title="Permalink to this definition"></a></dt>
-<dd><p>Add Manifest Error Webhook (All Manifests)</p>
+<dd><p>Add 'Manifest Error' Webhook (All Manifests)</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>webhook</strong> (<a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.webhook.Webhook" title="bitmovin_api_sdk.models.webhook.Webhook"><em>Webhook</em></a><em>, </em><em>required</em>) – Add a new webhook notification if a manifest creation failed with an error. <strong>Note:</strong> A maximum number of 5 webhooks is allowed</p>
+<dd class="field-odd"><p><strong>webhook</strong> (<a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.webhook.Webhook" title="bitmovin_api_sdk.models.webhook.Webhook"><em>Webhook</em></a><em>, </em><em>required</em>) – Add a new webhook notification if a manifest creation failed with an error. A maximum number of 5 webhooks is allowed</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>Webhook Details</p>
@@ -132,12 +132,12 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="bitmovin_api_sdk.notifications.webhooks.encoding.manifest.error.error_api.ErrorApi.create_by_manifest_id">
 <span class="sig-name descname"><span class="pre">create_by_manifest_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">manifest_id</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">string_types</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">webhook</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Webhook</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Webhook</span></span></span><a class="reference internal" href="../_modules/bitmovin_api_sdk/notifications/webhooks/encoding/manifest/error/error_api.html#ErrorApi.create_by_manifest_id"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bitmovin_api_sdk.notifications.webhooks.encoding.manifest.error.error_api.ErrorApi.create_by_manifest_id" title="Permalink to this definition"></a></dt>
-<dd><p>Add Manifest Error Webhook Notification (Specific Manifest)</p>
+<dd><p>Add 'Manifest Error' Webhook Notification (Specific Manifest)</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>manifest_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the manifest resource</p></li>
-<li><p><strong>webhook</strong> (<a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.webhook.Webhook" title="bitmovin_api_sdk.models.webhook.Webhook"><em>Webhook</em></a><em>, </em><em>required</em>) – The webhook notifications object. <strong>Note:</strong> A maximum number of 5 webhooks is allowed</p></li>
+<li><p><strong>webhook</strong> (<a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.webhook.Webhook" title="bitmovin_api_sdk.models.webhook.Webhook"><em>Webhook</em></a><em>, </em><em>required</em>) – The webhook notifications object. A maximum number of 5 webhooks per Manifest is allowed</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -152,7 +152,7 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="bitmovin_api_sdk.notifications.webhooks.encoding.manifest.error.error_api.ErrorApi.delete">
 <span class="sig-name descname"><span class="pre">delete</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">notification_id</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">string_types</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">BitmovinResponse</span></span></span><a class="reference internal" href="../_modules/bitmovin_api_sdk/notifications/webhooks/encoding/manifest/error/error_api.html#ErrorApi.delete"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bitmovin_api_sdk.notifications.webhooks.encoding.manifest.error.error_api.ErrorApi.delete" title="Permalink to this definition"></a></dt>
-<dd><p>Delete Manifest Error Webhook</p>
+<dd><p>Delete 'Manifest Error' Webhook</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>notification_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the webhook notification</p>
@@ -169,7 +169,7 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="bitmovin_api_sdk.notifications.webhooks.encoding.manifest.error.error_api.ErrorApi.update">
 <span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">notification_id</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">string_types</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">webhook</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Webhook</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Webhook</span></span></span><a class="reference internal" href="../_modules/bitmovin_api_sdk/notifications/webhooks/encoding/manifest/error/error_api.html#ErrorApi.update"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bitmovin_api_sdk.notifications.webhooks.encoding.manifest.error.error_api.ErrorApi.update" title="Permalink to this definition"></a></dt>
-<dd><p>Replace Manifest Error Webhook Notification</p>
+<dd><p>Replace 'Manifest Error' Webhook Notification</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

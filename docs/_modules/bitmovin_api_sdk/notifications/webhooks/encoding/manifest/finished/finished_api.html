@@ -97,9 +97,9 @@
 
 <div class="viewcode-block" id="FinishedApi.create"><a class="viewcode-back" href="../../../../../../../__modules/bitmovin_api_sdk.notifications.webhooks.encoding.manifest.finished.html#bitmovin_api_sdk.notifications.webhooks.encoding.manifest.finished.finished_api.FinishedApi.create">[docs]</a>    <span class="k">def</span> <span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">webhook</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (Webhook, dict) -&gt; Webhook</span>
-        <span class="sd">&quot;&quot;&quot;Add Manifest Finished Successfully Webhook (All Manifests)</span>
+        <span class="sd">&quot;&quot;&quot;Add &amp;#39;Manifest Finished Successfully&amp;#39; Webhook (All Manifests)</span>
 
-<span class="sd">        :param webhook: Add a new webhook notification if a manifest creation finished successfully. **Note:** A maximum number of 5 webhooks is allowed</span>
+<span class="sd">        :param webhook: Add a new webhook notification if a manifest creation finished successfully. A maximum number of 5 webhooks is allowed</span>
 <span class="sd">        :type webhook: Webhook, required</span>
 <span class="sd">        :return: Webhook Details</span>
 <span class="sd">        :rtype: Webhook</span>
@@ -114,11 +114,11 @@
 
 <div class="viewcode-block" id="FinishedApi.create_by_manifest_id"><a class="viewcode-back" href="../../../../../../../__modules/bitmovin_api_sdk.notifications.webhooks.encoding.manifest.finished.html#bitmovin_api_sdk.notifications.webhooks.encoding.manifest.finished.finished_api.FinishedApi.create_by_manifest_id">[docs]</a>    <span class="k">def</span> <span class="nf">create_by_manifest_id</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">manifest_id</span><span class="p">,</span> <span class="n">webhook</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, Webhook, dict) -&gt; Webhook</span>
-        <span class="sd">&quot;&quot;&quot;Add Manifest Finished Successfully Webhook Notification (Specific Manifest)</span>
+        <span class="sd">&quot;&quot;&quot;Add &amp;#39;Manifest Finished Successfully&amp;#39; Webhook Notification (Specific Manifest)</span>
 
 <span class="sd">        :param manifest_id: Id of the manifest resource</span>
 <span class="sd">        :type manifest_id: string_types, required</span>
-<span class="sd">        :param webhook: The webhook notifications object. **Note:** A maximum number of 5 webhooks is allowed</span>
+<span class="sd">        :param webhook: The webhook notifications object. A maximum number of 5 webhooks per Manifest is allowed</span>
 <span class="sd">        :type webhook: Webhook, required</span>
 <span class="sd">        :return: Notification Details</span>
 <span class="sd">        :rtype: Webhook</span>

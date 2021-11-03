@@ -49,12 +49,14 @@ class StatisticsPerStream(object):
                  dolby_vision_to_hdr_multiplicator=None,
                  dolby_vision_to_sdr=None,
                  dolby_vision_to_sdr_multiplicator=None,
+                 hdr_hlg_to_sdr=None,
+                 hdr_hlg_to_sdr_multiplicator=None,
                  nex_guard_ab_watermarking_type=None,
                  nex_guard_ab_watermarking_multiplicator=None,
                  pixel_format_bit_depth=None,
                  pixel_format_multiplicator=None,
                  input_factor=None):
-        # type: (string_types, string_types, float, int, float, float, int, int, float, int, CodecConfigType, StatisticsResolution, EncodingMode, float, StatisticsPerTitleStream, float, PsnrPerStreamMode, float, DolbyVisionPerStreamMode, float, string_types, float, bool, float, bool, float, bool, float, bool, float, NexGuardABWatermarkingFeature, float, PixelFormatBitDepth, float, InputFactor) -> None
+        # type: (string_types, string_types, float, int, float, float, int, int, float, int, CodecConfigType, StatisticsResolution, EncodingMode, float, StatisticsPerTitleStream, float, PsnrPerStreamMode, float, DolbyVisionPerStreamMode, float, string_types, float, bool, float, bool, float, bool, float, bool, float, bool, float, NexGuardABWatermarkingFeature, float, PixelFormatBitDepth, float, InputFactor) -> None
 
         self._stream_id = None
         self._codec_config_id = None
@@ -86,6 +88,8 @@ class StatisticsPerStream(object):
         self._dolby_vision_to_hdr_multiplicator = None
         self._dolby_vision_to_sdr = None
         self._dolby_vision_to_sdr_multiplicator = None
+        self._hdr_hlg_to_sdr = None
+        self._hdr_hlg_to_sdr_multiplicator = None
         self._nex_guard_ab_watermarking_type = None
         self._nex_guard_ab_watermarking_multiplicator = None
         self._pixel_format_bit_depth = None
@@ -153,6 +157,10 @@ class StatisticsPerStream(object):
             self.dolby_vision_to_sdr = dolby_vision_to_sdr
         if dolby_vision_to_sdr_multiplicator is not None:
             self.dolby_vision_to_sdr_multiplicator = dolby_vision_to_sdr_multiplicator
+        if hdr_hlg_to_sdr is not None:
+            self.hdr_hlg_to_sdr = hdr_hlg_to_sdr
+        if hdr_hlg_to_sdr_multiplicator is not None:
+            self.hdr_hlg_to_sdr_multiplicator = hdr_hlg_to_sdr_multiplicator
         if nex_guard_ab_watermarking_type is not None:
             self.nex_guard_ab_watermarking_type = nex_guard_ab_watermarking_type
         if nex_guard_ab_watermarking_multiplicator is not None:
@@ -197,6 +205,8 @@ class StatisticsPerStream(object):
             'dolby_vision_to_hdr_multiplicator': 'float',
             'dolby_vision_to_sdr': 'bool',
             'dolby_vision_to_sdr_multiplicator': 'float',
+            'hdr_hlg_to_sdr': 'bool',
+            'hdr_hlg_to_sdr_multiplicator': 'float',
             'nex_guard_ab_watermarking_type': 'NexGuardABWatermarkingFeature',
             'nex_guard_ab_watermarking_multiplicator': 'float',
             'pixel_format_bit_depth': 'PixelFormatBitDepth',
@@ -239,6 +249,8 @@ class StatisticsPerStream(object):
             'dolby_vision_to_hdr_multiplicator': 'dolbyVisionToHdrMultiplicator',
             'dolby_vision_to_sdr': 'dolbyVisionToSdr',
             'dolby_vision_to_sdr_multiplicator': 'dolbyVisionToSdrMultiplicator',
+            'hdr_hlg_to_sdr': 'hdrHlgToSdr',
+            'hdr_hlg_to_sdr_multiplicator': 'hdrHlgToSdrMultiplicator',
             'nex_guard_ab_watermarking_type': 'nexGuardABWatermarkingType',
             'nex_guard_ab_watermarking_multiplicator': 'nexGuardABWatermarkingMultiplicator',
             'pixel_format_bit_depth': 'pixelFormatBitDepth',
@@ -1104,6 +1116,64 @@ class StatisticsPerStream(object):
                 raise TypeError("Invalid type for `dolby_vision_to_sdr_multiplicator`, type has to be `float`")
 
         self._dolby_vision_to_sdr_multiplicator = dolby_vision_to_sdr_multiplicator
+
+    @property
+    def hdr_hlg_to_sdr(self):
+        # type: () -> bool
+        """Gets the hdr_hlg_to_sdr of this StatisticsPerStream.
+
+        Indicates if the conversion from HDR10/HLG to SDR was triggered.
+
+        :return: The hdr_hlg_to_sdr of this StatisticsPerStream.
+        :rtype: bool
+        """
+        return self._hdr_hlg_to_sdr
+
+    @hdr_hlg_to_sdr.setter
+    def hdr_hlg_to_sdr(self, hdr_hlg_to_sdr):
+        # type: (bool) -> None
+        """Sets the hdr_hlg_to_sdr of this StatisticsPerStream.
+
+        Indicates if the conversion from HDR10/HLG to SDR was triggered.
+
+        :param hdr_hlg_to_sdr: The hdr_hlg_to_sdr of this StatisticsPerStream.
+        :type: bool
+        """
+
+        if hdr_hlg_to_sdr is not None:
+            if not isinstance(hdr_hlg_to_sdr, bool):
+                raise TypeError("Invalid type for `hdr_hlg_to_sdr`, type has to be `bool`")
+
+        self._hdr_hlg_to_sdr = hdr_hlg_to_sdr
+
+    @property
+    def hdr_hlg_to_sdr_multiplicator(self):
+        # type: () -> float
+        """Gets the hdr_hlg_to_sdr_multiplicator of this StatisticsPerStream.
+
+        The output minutes multiplicator for streams using the conversion from HDR10/HLG to SDR.
+
+        :return: The hdr_hlg_to_sdr_multiplicator of this StatisticsPerStream.
+        :rtype: float
+        """
+        return self._hdr_hlg_to_sdr_multiplicator
+
+    @hdr_hlg_to_sdr_multiplicator.setter
+    def hdr_hlg_to_sdr_multiplicator(self, hdr_hlg_to_sdr_multiplicator):
+        # type: (float) -> None
+        """Sets the hdr_hlg_to_sdr_multiplicator of this StatisticsPerStream.
+
+        The output minutes multiplicator for streams using the conversion from HDR10/HLG to SDR.
+
+        :param hdr_hlg_to_sdr_multiplicator: The hdr_hlg_to_sdr_multiplicator of this StatisticsPerStream.
+        :type: float
+        """
+
+        if hdr_hlg_to_sdr_multiplicator is not None:
+            if not isinstance(hdr_hlg_to_sdr_multiplicator, (float, int)):
+                raise TypeError("Invalid type for `hdr_hlg_to_sdr_multiplicator`, type has to be `float`")
+
+        self._hdr_hlg_to_sdr_multiplicator = hdr_hlg_to_sdr_multiplicator
 
     @property
     def nex_guard_ab_watermarking_type(self):

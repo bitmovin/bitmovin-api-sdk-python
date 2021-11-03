@@ -24,9 +24,9 @@ class FinishedApi(BaseApi):
 
     def create(self, webhook, **kwargs):
         # type: (Webhook, dict) -> Webhook
-        """Add Manifest Finished Successfully Webhook (All Manifests)
+        """Add &#39;Manifest Finished Successfully&#39; Webhook (All Manifests)
 
-        :param webhook: Add a new webhook notification if a manifest creation finished successfully. **Note:** A maximum number of 5 webhooks is allowed
+        :param webhook: Add a new webhook notification if a manifest creation finished successfully. A maximum number of 5 webhooks is allowed
         :type webhook: Webhook, required
         :return: Webhook Details
         :rtype: Webhook
@@ -41,11 +41,11 @@ class FinishedApi(BaseApi):
 
     def create_by_manifest_id(self, manifest_id, webhook, **kwargs):
         # type: (string_types, Webhook, dict) -> Webhook
-        """Add Manifest Finished Successfully Webhook Notification (Specific Manifest)
+        """Add &#39;Manifest Finished Successfully&#39; Webhook Notification (Specific Manifest)
 
         :param manifest_id: Id of the manifest resource
         :type manifest_id: string_types, required
-        :param webhook: The webhook notifications object. **Note:** A maximum number of 5 webhooks is allowed
+        :param webhook: The webhook notifications object. A maximum number of 5 webhooks per Manifest is allowed
         :type webhook: Webhook, required
         :return: Notification Details
         :rtype: Webhook

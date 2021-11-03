@@ -23,7 +23,7 @@ class CustomdataApi(BaseApi):
 
     def get_custom_data_by_encoding_id_and_webhook_id(self, encoding_id, webhook_id, **kwargs):
         # type: (string_types, string_types, dict) -> CustomData
-        """Encoding Finished Webhook Custom Data for specific Encoding Resource
+        """&#39;Encoding Finished&#39; Webhook Custom Data for a specific Encoding
 
         :param encoding_id: Id of the encoding
         :type encoding_id: string_types, required
@@ -42,7 +42,7 @@ class CustomdataApi(BaseApi):
 
     def get_custom_data_by_webhook_id(self, webhook_id, **kwargs):
         # type: (string_types, dict) -> CustomData
-        """Encoding Finished Webhook Custom Data
+        """&#39;Encoding Finished&#39; Webhook Custom Data
 
         :param webhook_id: Id of the webhook
         :type webhook_id: string_types, required

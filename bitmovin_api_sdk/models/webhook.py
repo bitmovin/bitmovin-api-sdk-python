@@ -83,7 +83,7 @@ class Webhook(BitmovinResource):
         # type: () -> string_types
         """Gets the url of this Webhook.
 
-        Webhook url (required)
+        Webhook URL (required)
 
         :return: The url of this Webhook.
         :rtype: string_types
@@ -95,7 +95,7 @@ class Webhook(BitmovinResource):
         # type: (string_types) -> None
         """Sets the url of this Webhook.
 
-        Webhook url (required)
+        Webhook URL (required)
 
         :param url: The url of this Webhook.
         :type: string_types
@@ -141,7 +141,7 @@ class Webhook(BitmovinResource):
         # type: () -> bool
         """Gets the insecure_ssl of this Webhook.
 
-        Whether to skip SSL certification verification or not
+        Skip verification of the SSL certificate
 
         :return: The insecure_ssl of this Webhook.
         :rtype: bool
@@ -153,7 +153,7 @@ class Webhook(BitmovinResource):
         # type: (bool) -> None
         """Sets the insecure_ssl of this Webhook.
 
-        Whether to skip SSL certification verification or not
+        Skip verification of the SSL certificate
 
         :param insecure_ssl: The insecure_ssl of this Webhook.
         :type: bool
@@ -199,7 +199,7 @@ class Webhook(BitmovinResource):
         # type: () -> object
         """Gets the schema of this Webhook.
 
-        The json schema of the data that is send as webhook payload
+        JSON schema of the webhook payload
 
         :return: The schema of this Webhook.
         :rtype: object
@@ -211,7 +211,7 @@ class Webhook(BitmovinResource):
         # type: (object) -> None
         """Sets the schema of this Webhook.
 
-        The json schema of the data that is send as webhook payload
+        JSON schema of the webhook payload
 
         :param schema: The schema of this Webhook.
         :type: object

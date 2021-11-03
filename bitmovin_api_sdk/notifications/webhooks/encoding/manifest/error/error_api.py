@@ -24,9 +24,9 @@ class ErrorApi(BaseApi):
 
     def create(self, webhook, **kwargs):
         # type: (Webhook, dict) -> Webhook
-        """Add Manifest Error Webhook (All Manifests)
+        """Add &#39;Manifest Error&#39; Webhook (All Manifests)
 
-        :param webhook: Add a new webhook notification if a manifest creation failed with an error. **Note:** A maximum number of 5 webhooks is allowed
+        :param webhook: Add a new webhook notification if a manifest creation failed with an error. A maximum number of 5 webhooks is allowed
         :type webhook: Webhook, required
         :return: Webhook Details
         :rtype: Webhook
@@ -41,11 +41,11 @@ class ErrorApi(BaseApi):
 
     def create_by_manifest_id(self, manifest_id, webhook, **kwargs):
         # type: (string_types, Webhook, dict) -> Webhook
-        """Add Manifest Error Webhook Notification (Specific Manifest)
+        """Add &#39;Manifest Error&#39; Webhook Notification (Specific Manifest)
 
         :param manifest_id: Id of the manifest resource
         :type manifest_id: string_types, required
-        :param webhook: The webhook notifications object. **Note:** A maximum number of 5 webhooks is allowed
+        :param webhook: The webhook notifications object. A maximum number of 5 webhooks per Manifest is allowed
         :type webhook: Webhook, required
         :return: Notification Details
         :rtype: Webhook
@@ -61,7 +61,7 @@ class ErrorApi(BaseApi):
 
     def delete(self, notification_id, **kwargs):
         # type: (string_types, dict) -> BitmovinResponse
-        """Delete Manifest Error Webhook
+        """Delete &#39;Manifest Error&#39; Webhook
 
         :param notification_id: Id of the webhook notification
         :type notification_id: string_types, required
@@ -78,7 +78,7 @@ class ErrorApi(BaseApi):
 
     def update(self, notification_id, webhook, **kwargs):
         # type: (string_types, Webhook, dict) -> Webhook
-        """Replace Manifest Error Webhook Notification
+        """Replace &#39;Manifest Error&#39; Webhook Notification
 
         :param notification_id: Id of the webhook notification
         :type notification_id: string_types, required

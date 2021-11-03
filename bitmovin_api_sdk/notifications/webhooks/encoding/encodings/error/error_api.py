@@ -34,9 +34,9 @@ class ErrorApi(BaseApi):
 
     def create(self, webhook, **kwargs):
         # type: (Webhook, dict) -> Webhook
-        """Add Encoding Error Webhook
+        """Add &#39;Encoding Error&#39; Webhook
 
-        :param webhook: The Encoding Error Webhook to be added. **Note:** A maximum number of 5 webhooks is allowed
+        :param webhook: The &#39;Encoding Error&#39; Webhook to be added. A maximum number of 5 webhooks is allowed
         :type webhook: Webhook, required
         :return: Webhook Details
         :rtype: Webhook
@@ -51,11 +51,11 @@ class ErrorApi(BaseApi):
 
     def create_by_encoding_id(self, encoding_id, webhook, **kwargs):
         # type: (string_types, Webhook, dict) -> Webhook
-        """Add Encoding Error Webhook for specific Encoding Resource. **Note:** A maximum number of 5 webhooks is allowed
+        """Add Error Webhook for a specific Encoding
 
         :param encoding_id: Id of the encoding
         :type encoding_id: string_types, required
-        :param webhook: The Encoding Error Webhook to be added
+        :param webhook: The &#39;Encoding Error&#39; Webhook to be added. A maximum number of 5 webhooks per Encoding is allowed
         :type webhook: Webhook, required
         :return: Webhook Details
         :rtype: Webhook
@@ -71,7 +71,7 @@ class ErrorApi(BaseApi):
 
     def delete_by_encoding_id_and_webhook_id(self, encoding_id, webhook_id, **kwargs):
         # type: (string_types, string_types, dict) -> BitmovinResponse
-        """Delete Encoding Error Webhook for specific Encoding Resource
+        """Delete &#39;Encoding Error&#39; Webhook for a specific Encoding
 
         :param encoding_id: Id of the encoding
         :type encoding_id: string_types, required
@@ -90,7 +90,7 @@ class ErrorApi(BaseApi):
 
     def delete_by_webhook_id(self, webhook_id, **kwargs):
         # type: (string_types, dict) -> BitmovinResponse
-        """Delete Encoding Error Webhook
+        """Delete &#39;Encoding Error&#39; Webhook
 
         :param webhook_id: Id of the webhook
         :type webhook_id: string_types, required
@@ -107,7 +107,7 @@ class ErrorApi(BaseApi):
 
     def get_by_encoding_id_and_webhook_id(self, encoding_id, webhook_id, **kwargs):
         # type: (string_types, string_types, dict) -> Webhook
-        """Encoding Error Webhook Details for specific Encoding Resource
+        """&#39;Encoding Error&#39; Webhook Details for a specific Encoding
 
         :param encoding_id: Id of the encoding
         :type encoding_id: string_types, required
@@ -126,7 +126,7 @@ class ErrorApi(BaseApi):
 
     def get_by_webhook_id(self, webhook_id, **kwargs):
         # type: (string_types, dict) -> Webhook
-        """Encoding Error Webhook Details
+        """&#39;Encoding Error&#39; Webhook Details
 
         :param webhook_id: Id of the webhook
         :type webhook_id: string_types, required
@@ -143,11 +143,11 @@ class ErrorApi(BaseApi):
 
     def list(self, query_params=None, **kwargs):
         # type: (WebhookListQueryParams, dict) -> Webhook
-        """List Encoding Error Webhooks
+        """List &#39;Encoding Error&#39; Webhooks
 
         :param query_params: Query parameters
         :type query_params: WebhookListQueryParams
-        :return: List of Encoding Error Webhooks
+        :return: List of 'Encoding Error' Webhooks
         :rtype: Webhook
         """
 
@@ -161,13 +161,13 @@ class ErrorApi(BaseApi):
 
     def list_by_encoding_id(self, encoding_id, query_params=None, **kwargs):
         # type: (string_types, WebhookListByEncodingIdQueryParams, dict) -> Webhook
-        """List Encoding Error Webhooks for specific Encoding Resource
+        """List &#39;Encoding Error&#39; Webhooks for a specific Encoding
 
         :param encoding_id: Id of the encoding
         :type encoding_id: string_types, required
         :param query_params: Query parameters
         :type query_params: WebhookListByEncodingIdQueryParams
-        :return: List of Encoding Error Webhooks
+        :return: List of 'Encoding Error' Webhooks
         :rtype: Webhook
         """
 
