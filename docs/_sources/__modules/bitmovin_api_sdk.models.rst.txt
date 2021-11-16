@@ -1092,22 +1092,6 @@ bitmovin\_api\_sdk.models.auto\_restart\_configuration module
    :undoc-members:
    :show-inheritance:
 
-bitmovin\_api\_sdk.models.av1\_adaptive\_quant\_mode module
------------------------------------------------------------
-
-.. automodule:: bitmovin_api_sdk.models.av1_adaptive_quant_mode
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-bitmovin\_api\_sdk.models.av1\_key\_placement\_mode module
-----------------------------------------------------------
-
-.. automodule:: bitmovin_api_sdk.models.av1_key_placement_mode
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
 bitmovin\_api\_sdk.models.av1\_video\_configuration module
 ----------------------------------------------------------
 
@@ -2944,6 +2928,14 @@ bitmovin\_api\_sdk.models.h264\_b\_pyramid module
 -------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.models.h264_b_pyramid
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.h264\_dynamic\_range\_format module
+-------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.h264_dynamic_range_format
    :members:
    :undoc-members:
    :show-inheritance:
@@ -5512,6 +5504,14 @@ bitmovin\_api\_sdk.models.vp9\_arnr\_type module
 ------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.models.vp9_arnr_type
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.vp9\_dynamic\_range\_format module
+------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.vp9_dynamic_range_format
    :members:
    :undoc-members:
    :show-inheritance:

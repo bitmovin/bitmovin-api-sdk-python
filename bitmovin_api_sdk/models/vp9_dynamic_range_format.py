@@ -5,7 +5,6 @@ from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
 
 
-class Av1KeyPlacementMode(Enum):
-    AUTO = "AUTO"
-    FIXED = "FIXED"
-    DISABLED = "DISABLED"
+class Vp9DynamicRangeFormat(Enum):
+    HLG = "HLG"
+    SDR = "SDR"

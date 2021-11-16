@@ -4,6 +4,14 @@ bitmovin\_api\_sdk.account.organizations.groups.tenants package
 Submodules
 ----------
 
+bitmovin\_api\_sdk.account.organizations.groups.tenants.tenant\_list\_query\_params module
+------------------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.account.organizations.groups.tenants.tenant_list_query_params
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.account.organizations.groups.tenants.tenants\_api module
 ---------------------------------------------------------------------------
 

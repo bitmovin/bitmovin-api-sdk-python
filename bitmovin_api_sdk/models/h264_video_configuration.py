@@ -10,6 +10,7 @@ from bitmovin_api_sdk.models.color_config import ColorConfig
 from bitmovin_api_sdk.models.display_aspect_ratio import DisplayAspectRatio
 from bitmovin_api_sdk.models.encoding_mode import EncodingMode
 from bitmovin_api_sdk.models.h264_b_pyramid import H264BPyramid
+from bitmovin_api_sdk.models.h264_dynamic_range_format import H264DynamicRangeFormat
 from bitmovin_api_sdk.models.h264_interlace_mode import H264InterlaceMode
 from bitmovin_api_sdk.models.h264_motion_estimation_method import H264MotionEstimationMethod
 from bitmovin_api_sdk.models.h264_nal_hrd import H264NalHrd
@@ -46,6 +47,7 @@ class H264VideoConfiguration(VideoConfiguration):
                  display_aspect_ratio=None,
                  encoding_mode=None,
                  preset_configuration=None,
+                 dynamic_range_format=None,
                  crf=None,
                  profile=None,
                  bframes=None,
@@ -89,10 +91,11 @@ class H264VideoConfiguration(VideoConfiguration):
                  quantizer_curve_compression=None,
                  psy_rate_distortion_optimization=None,
                  psy_trellis=None):
-        # type: (string_types, string_types, string_types, datetime, datetime, dict, int, int, int, float, PixelFormat, ColorConfig, int, int, DisplayAspectRatio, EncodingMode, PresetConfiguration, float, ProfileH264, int, int, int, int, MvPredictionMode, int, bool, int, int, int, int, int, bool, float, float, LevelH264, BAdapt, H264MotionEstimationMethod, int, H264SubMe, H264Trellis, list[H264Partition], int, H264InterlaceMode, int, H264NalHrd, H264BPyramid, Cea608708SubtitleConfiguration, int, int, AdaptiveQuantMode, float, bool, bool, bool, bool, WeightedPredictionPFrames, bool, float, float, float) -> None
+        # type: (string_types, string_types, string_types, datetime, datetime, dict, int, int, int, float, PixelFormat, ColorConfig, int, int, DisplayAspectRatio, EncodingMode, PresetConfiguration, H264DynamicRangeFormat, float, ProfileH264, int, int, int, int, MvPredictionMode, int, bool, int, int, int, int, int, bool, float, float, LevelH264, BAdapt, H264MotionEstimationMethod, int, H264SubMe, H264Trellis, list[H264Partition], int, H264InterlaceMode, int, H264NalHrd, H264BPyramid, Cea608708SubtitleConfiguration, int, int, AdaptiveQuantMode, float, bool, bool, bool, bool, WeightedPredictionPFrames, bool, float, float, float) -> None
         super(H264VideoConfiguration, self).__init__(id_=id_, name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, width=width, height=height, bitrate=bitrate, rate=rate, pixel_format=pixel_format, color_config=color_config, sample_aspect_ratio_numerator=sample_aspect_ratio_numerator, sample_aspect_ratio_denominator=sample_aspect_ratio_denominator, display_aspect_ratio=display_aspect_ratio, encoding_mode=encoding_mode)
 
         self._preset_configuration = None
+        self._dynamic_range_format = None
         self._crf = None
         self._profile = None
         self._bframes = None
@@ -140,6 +143,8 @@ class H264VideoConfiguration(VideoConfiguration):
 
         if preset_configuration is not None:
             self.preset_configuration = preset_configuration
+        if dynamic_range_format is not None:
+            self.dynamic_range_format = dynamic_range_format
         if crf is not None:
             self.crf = crf
         if profile is not None:
@@ -236,6 +241,7 @@ class H264VideoConfiguration(VideoConfiguration):
 
         types.update({
             'preset_configuration': 'PresetConfiguration',
+            'dynamic_range_format': 'H264DynamicRangeFormat',
             'crf': 'float',
             'profile': 'ProfileH264',
             'bframes': 'int',
@@ -292,6 +298,7 @@ class H264VideoConfiguration(VideoConfiguration):
 
         attributes.update({
             'preset_configuration': 'presetConfiguration',
+            'dynamic_range_format': 'dynamicRangeFormat',
             'crf': 'crf',
             'profile': 'profile',
             'bframes': 'bframes',
@@ -366,6 +373,35 @@ class H264VideoConfiguration(VideoConfiguration):
                 raise TypeError("Invalid type for `preset_configuration`, type has to be `PresetConfiguration`")
 
         self._preset_configuration = preset_configuration
+
+    @property
+    def dynamic_range_format(self):
+        # type: () -> H264DynamicRangeFormat
+        """Gets the dynamic_range_format of this H264VideoConfiguration.
+
+        Automatically configures the H264 Video Codec to be compatible with the given SDR format. Bitmovin recommends to use the dynamic range format together with a preset configuration to achieve good results. Explicitly configured properties will take precedence over dynamic range format settings, which in turn will take precedence over preset configurations.
+
+        :return: The dynamic_range_format of this H264VideoConfiguration.
+        :rtype: H264DynamicRangeFormat
+        """
+        return self._dynamic_range_format
+
+    @dynamic_range_format.setter
+    def dynamic_range_format(self, dynamic_range_format):
+        # type: (H264DynamicRangeFormat) -> None
+        """Sets the dynamic_range_format of this H264VideoConfiguration.
+
+        Automatically configures the H264 Video Codec to be compatible with the given SDR format. Bitmovin recommends to use the dynamic range format together with a preset configuration to achieve good results. Explicitly configured properties will take precedence over dynamic range format settings, which in turn will take precedence over preset configurations.
+
+        :param dynamic_range_format: The dynamic_range_format of this H264VideoConfiguration.
+        :type: H264DynamicRangeFormat
+        """
+
+        if dynamic_range_format is not None:
+            if not isinstance(dynamic_range_format, H264DynamicRangeFormat):
+                raise TypeError("Invalid type for `dynamic_range_format`, type has to be `H264DynamicRangeFormat`")
+
+        self._dynamic_range_format = dynamic_range_format
 
     @property
     def crf(self):

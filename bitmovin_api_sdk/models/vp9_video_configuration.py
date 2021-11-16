@@ -11,6 +11,7 @@ from bitmovin_api_sdk.models.preset_configuration import PresetConfiguration
 from bitmovin_api_sdk.models.video_configuration import VideoConfiguration
 from bitmovin_api_sdk.models.vp9_aq_mode import Vp9AqMode
 from bitmovin_api_sdk.models.vp9_arnr_type import Vp9ArnrType
+from bitmovin_api_sdk.models.vp9_dynamic_range_format import Vp9DynamicRangeFormat
 from bitmovin_api_sdk.models.vp9_quality import Vp9Quality
 import pprint
 import six
@@ -36,6 +37,7 @@ class Vp9VideoConfiguration(VideoConfiguration):
                  display_aspect_ratio=None,
                  encoding_mode=None,
                  preset_configuration=None,
+                 dynamic_range_format=None,
                  crf=None,
                  lag_in_frames=None,
                  error_resiliency_enabled=None,
@@ -67,10 +69,11 @@ class Vp9VideoConfiguration(VideoConfiguration):
                  arnr_max_frames=None,
                  arnr_strength=None,
                  arnr_type=None):
-        # type: (string_types, string_types, string_types, datetime, datetime, dict, int, int, int, float, PixelFormat, ColorConfig, int, int, DisplayAspectRatio, EncodingMode, PresetConfiguration, int, int, bool, int, int, bool, int, int, int, int, int, int, int, int, bool, int, bool, int, bool, int, int, int, float, float, Vp9Quality, bool, int, Vp9AqMode, int, int, Vp9ArnrType) -> None
+        # type: (string_types, string_types, string_types, datetime, datetime, dict, int, int, int, float, PixelFormat, ColorConfig, int, int, DisplayAspectRatio, EncodingMode, PresetConfiguration, Vp9DynamicRangeFormat, int, int, bool, int, int, bool, int, int, int, int, int, int, int, int, bool, int, bool, int, bool, int, int, int, float, float, Vp9Quality, bool, int, Vp9AqMode, int, int, Vp9ArnrType) -> None
         super(Vp9VideoConfiguration, self).__init__(id_=id_, name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, width=width, height=height, bitrate=bitrate, rate=rate, pixel_format=pixel_format, color_config=color_config, sample_aspect_ratio_numerator=sample_aspect_ratio_numerator, sample_aspect_ratio_denominator=sample_aspect_ratio_denominator, display_aspect_ratio=display_aspect_ratio, encoding_mode=encoding_mode)
 
         self._preset_configuration = None
+        self._dynamic_range_format = None
         self._crf = None
         self._lag_in_frames = None
         self._error_resiliency_enabled = None
@@ -106,6 +109,8 @@ class Vp9VideoConfiguration(VideoConfiguration):
 
         if preset_configuration is not None:
             self.preset_configuration = preset_configuration
+        if dynamic_range_format is not None:
+            self.dynamic_range_format = dynamic_range_format
         if crf is not None:
             self.crf = crf
         if lag_in_frames is not None:
@@ -178,6 +183,7 @@ class Vp9VideoConfiguration(VideoConfiguration):
 
         types.update({
             'preset_configuration': 'PresetConfiguration',
+            'dynamic_range_format': 'Vp9DynamicRangeFormat',
             'crf': 'int',
             'lag_in_frames': 'int',
             'error_resiliency_enabled': 'bool',
@@ -222,6 +228,7 @@ class Vp9VideoConfiguration(VideoConfiguration):
 
         attributes.update({
             'preset_configuration': 'presetConfiguration',
+            'dynamic_range_format': 'dynamicRangeFormat',
             'crf': 'crf',
             'lag_in_frames': 'lagInFrames',
             'error_resiliency_enabled': 'errorResiliencyEnabled',
@@ -284,6 +291,35 @@ class Vp9VideoConfiguration(VideoConfiguration):
                 raise TypeError("Invalid type for `preset_configuration`, type has to be `PresetConfiguration`")
 
         self._preset_configuration = preset_configuration
+
+    @property
+    def dynamic_range_format(self):
+        # type: () -> Vp9DynamicRangeFormat
+        """Gets the dynamic_range_format of this Vp9VideoConfiguration.
+
+        Automatically configures the VP9 Video Codec to be compatible with the given SDR/HLG format. Bitmovin recommends to use the dynamic range format together with a preset configuration to achieve good results. Explicitly configured properties will take precedence over dynamic range format settings, which in turn will take precedence over preset configurations.
+
+        :return: The dynamic_range_format of this Vp9VideoConfiguration.
+        :rtype: Vp9DynamicRangeFormat
+        """
+        return self._dynamic_range_format
+
+    @dynamic_range_format.setter
+    def dynamic_range_format(self, dynamic_range_format):
+        # type: (Vp9DynamicRangeFormat) -> None
+        """Sets the dynamic_range_format of this Vp9VideoConfiguration.
+
+        Automatically configures the VP9 Video Codec to be compatible with the given SDR/HLG format. Bitmovin recommends to use the dynamic range format together with a preset configuration to achieve good results. Explicitly configured properties will take precedence over dynamic range format settings, which in turn will take precedence over preset configurations.
+
+        :param dynamic_range_format: The dynamic_range_format of this Vp9VideoConfiguration.
+        :type: Vp9DynamicRangeFormat
+        """
+
+        if dynamic_range_format is not None:
+            if not isinstance(dynamic_range_format, Vp9DynamicRangeFormat):
+                raise TypeError("Invalid type for `dynamic_range_format`, type has to be `Vp9DynamicRangeFormat`")
+
+        self._dynamic_range_format = dynamic_range_format
 
     @property
     def crf(self):

@@ -1,1 +1,2 @@
 from bitmovin_api_sdk.account.organizations.groups.invitations.invitations_api import InvitationsApi
+from bitmovin_api_sdk.account.organizations.groups.invitations.invitation_list_query_params import InvitationListQueryParams

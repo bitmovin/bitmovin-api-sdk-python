@@ -18,9 +18,9 @@ from bitmovin_api_sdk.account.organizations.sub_organizations.sub_organizations_
 from bitmovin_api_sdk.account.organizations.groups.groups_api import GroupsApi
 
 from bitmovin_api_sdk.account.organizations.groups.tenants.tenants_api import TenantsApi
-
+from bitmovin_api_sdk.account.organizations.groups.tenants.tenants_api import TenantListQueryParams
 from bitmovin_api_sdk.account.organizations.groups.invitations.invitations_api import InvitationsApi
-
+from bitmovin_api_sdk.account.organizations.groups.invitations.invitations_api import InvitationListQueryParams
 from bitmovin_api_sdk.account.organizations.groups.permissions.permissions_api import PermissionsApi
 
 from bitmovin_api_sdk.analytics.analytics_api import AnalyticsApi
@@ -1116,8 +1116,6 @@ from bitmovin_api_sdk.models.audio_volume_format import AudioVolumeFormat
 from bitmovin_api_sdk.models.audio_volume_unit import AudioVolumeUnit
 from bitmovin_api_sdk.models.auto_representation import AutoRepresentation
 from bitmovin_api_sdk.models.auto_restart_configuration import AutoRestartConfiguration
-from bitmovin_api_sdk.models.av1_adaptive_quant_mode import Av1AdaptiveQuantMode
-from bitmovin_api_sdk.models.av1_key_placement_mode import Av1KeyPlacementMode
 from bitmovin_api_sdk.models.av1_video_configuration import Av1VideoConfiguration
 from bitmovin_api_sdk.models.availability_start_time_mode import AvailabilityStartTimeMode
 from bitmovin_api_sdk.models.aws_account import AwsAccount
@@ -1348,6 +1346,7 @@ from bitmovin_api_sdk.models.h262_interlace_mode import H262InterlaceMode
 from bitmovin_api_sdk.models.h262_preset_configuration import H262PresetConfiguration
 from bitmovin_api_sdk.models.h262_video_configuration import H262VideoConfiguration
 from bitmovin_api_sdk.models.h264_b_pyramid import H264BPyramid
+from bitmovin_api_sdk.models.h264_dynamic_range_format import H264DynamicRangeFormat
 from bitmovin_api_sdk.models.h264_interlace_mode import H264InterlaceMode
 from bitmovin_api_sdk.models.h264_motion_estimation_method import H264MotionEstimationMethod
 from bitmovin_api_sdk.models.h264_nal_hrd import H264NalHrd
@@ -1669,6 +1668,7 @@ from bitmovin_api_sdk.models.vp8_quality import Vp8Quality
 from bitmovin_api_sdk.models.vp8_video_configuration import Vp8VideoConfiguration
 from bitmovin_api_sdk.models.vp9_aq_mode import Vp9AqMode
 from bitmovin_api_sdk.models.vp9_arnr_type import Vp9ArnrType
+from bitmovin_api_sdk.models.vp9_dynamic_range_format import Vp9DynamicRangeFormat
 from bitmovin_api_sdk.models.vp9_per_title_configuration import Vp9PerTitleConfiguration
 from bitmovin_api_sdk.models.vp9_quality import Vp9Quality
 from bitmovin_api_sdk.models.vp9_video_configuration import Vp9VideoConfiguration
@@ -1697,4 +1697,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.93.0"
+__version__ = "1.94.0"

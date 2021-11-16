@@ -1,1 +1,2 @@
 from bitmovin_api_sdk.account.organizations.groups.tenants.tenants_api import TenantsApi
+from bitmovin_api_sdk.account.organizations.groups.tenants.tenant_list_query_params import TenantListQueryParams

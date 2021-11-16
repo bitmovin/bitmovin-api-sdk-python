@@ -81,6 +81,7 @@
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.response_envelope</span> <span class="kn">import</span> <span class="n">ResponseEnvelope</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.response_error</span> <span class="kn">import</span> <span class="n">ResponseError</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.tenant</span> <span class="kn">import</span> <span class="n">Tenant</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.account.organizations.groups.tenants.tenant_list_query_params</span> <span class="kn">import</span> <span class="n">TenantListQueryParams</span>
 
 
 <div class="viewcode-block" id="TenantsApi"><a class="viewcode-back" href="../../../../../../__modules/bitmovin_api_sdk.account.organizations.groups.tenants.html#bitmovin_api_sdk.account.organizations.groups.tenants.tenants_api.TenantsApi">[docs]</a><span class="k">class</span> <span class="nc">TenantsApi</span><span class="p">(</span><span class="n">BaseApi</span><span class="p">):</span>
@@ -159,14 +160,16 @@
             <span class="o">**</span><span class="n">kwargs</span>
         <span class="p">)</span></div>
 
-<div class="viewcode-block" id="TenantsApi.list"><a class="viewcode-back" href="../../../../../../__modules/bitmovin_api_sdk.account.organizations.groups.tenants.html#bitmovin_api_sdk.account.organizations.groups.tenants.tenants_api.TenantsApi.list">[docs]</a>    <span class="k">def</span> <span class="nf">list</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">organization_id</span><span class="p">,</span> <span class="n">group_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-        <span class="c1"># type: (string_types, string_types, dict) -&gt; Tenant</span>
+<div class="viewcode-block" id="TenantsApi.list"><a class="viewcode-back" href="../../../../../../__modules/bitmovin_api_sdk.account.organizations.groups.tenants.html#bitmovin_api_sdk.account.organizations.groups.tenants.tenants_api.TenantsApi.list">[docs]</a>    <span class="k">def</span> <span class="nf">list</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">organization_id</span><span class="p">,</span> <span class="n">group_id</span><span class="p">,</span> <span class="n">query_params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="c1"># type: (string_types, string_types, TenantListQueryParams, dict) -&gt; Tenant</span>
         <span class="sd">&quot;&quot;&quot;List Tenants</span>
 
 <span class="sd">        :param organization_id: Id of the organization</span>
 <span class="sd">        :type organization_id: string_types, required</span>
 <span class="sd">        :param group_id: Id of the group</span>
 <span class="sd">        :type group_id: string_types, required</span>
+<span class="sd">        :param query_params: Query parameters</span>
+<span class="sd">        :type query_params: TenantListQueryParams</span>
 <span class="sd">        :return: Service specific result</span>
 <span class="sd">        :rtype: Tenant</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -174,6 +177,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
             <span class="s1">&#39;/account/organizations/</span><span class="si">{organization_id}</span><span class="s1">/groups/</span><span class="si">{group_id}</span><span class="s1">/tenants&#39;</span><span class="p">,</span>
             <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;organization_id&#39;</span><span class="p">:</span> <span class="n">organization_id</span><span class="p">,</span> <span class="s1">&#39;group_id&#39;</span><span class="p">:</span> <span class="n">group_id</span><span class="p">},</span>
+            <span class="n">query_params</span><span class="o">=</span><span class="n">query_params</span><span class="p">,</span>
             <span class="n">pagination_response</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">Tenant</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>

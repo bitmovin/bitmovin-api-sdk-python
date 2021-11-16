@@ -8,6 +8,7 @@ from bitmovin_api_sdk.models.bitmovin_response import BitmovinResponse
 from bitmovin_api_sdk.models.response_envelope import ResponseEnvelope
 from bitmovin_api_sdk.models.response_error import ResponseError
 from bitmovin_api_sdk.models.tenant import Tenant
+from bitmovin_api_sdk.account.organizations.groups.tenants.tenant_list_query_params import TenantListQueryParams
 
 
 class TenantsApi(BaseApi):
@@ -86,14 +87,16 @@ class TenantsApi(BaseApi):
             **kwargs
         )
 
-    def list(self, organization_id, group_id, **kwargs):
-        # type: (string_types, string_types, dict) -> Tenant
+    def list(self, organization_id, group_id, query_params=None, **kwargs):
+        # type: (string_types, string_types, TenantListQueryParams, dict) -> Tenant
         """List Tenants
 
         :param organization_id: Id of the organization
         :type organization_id: string_types, required
         :param group_id: Id of the group
         :type group_id: string_types, required
+        :param query_params: Query parameters
+        :type query_params: TenantListQueryParams
         :return: Service specific result
         :rtype: Tenant
         """
@@ -101,6 +104,7 @@ class TenantsApi(BaseApi):
         return self.api_client.get(
             '/account/organizations/{organization_id}/groups/{group_id}/tenants',
             path_params={'organization_id': organization_id, 'group_id': group_id},
+            query_params=query_params,
             pagination_response=True,
             type=Tenant,
             **kwargs

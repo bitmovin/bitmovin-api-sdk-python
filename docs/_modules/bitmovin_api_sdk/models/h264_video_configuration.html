@@ -83,6 +83,7 @@
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.display_aspect_ratio</span> <span class="kn">import</span> <span class="n">DisplayAspectRatio</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.encoding_mode</span> <span class="kn">import</span> <span class="n">EncodingMode</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.h264_b_pyramid</span> <span class="kn">import</span> <span class="n">H264BPyramid</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.h264_dynamic_range_format</span> <span class="kn">import</span> <span class="n">H264DynamicRangeFormat</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.h264_interlace_mode</span> <span class="kn">import</span> <span class="n">H264InterlaceMode</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.h264_motion_estimation_method</span> <span class="kn">import</span> <span class="n">H264MotionEstimationMethod</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.h264_nal_hrd</span> <span class="kn">import</span> <span class="n">H264NalHrd</span>
@@ -119,6 +120,7 @@
                  <span class="n">display_aspect_ratio</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">encoding_mode</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">preset_configuration</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">dynamic_range_format</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">crf</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">profile</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">bframes</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
@@ -162,10 +164,11 @@
                  <span class="n">quantizer_curve_compression</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">psy_rate_distortion_optimization</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">psy_trellis</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (string_types, string_types, string_types, datetime, datetime, dict, int, int, int, float, PixelFormat, ColorConfig, int, int, DisplayAspectRatio, EncodingMode, PresetConfiguration, float, ProfileH264, int, int, int, int, MvPredictionMode, int, bool, int, int, int, int, int, bool, float, float, LevelH264, BAdapt, H264MotionEstimationMethod, int, H264SubMe, H264Trellis, list[H264Partition], int, H264InterlaceMode, int, H264NalHrd, H264BPyramid, Cea608708SubtitleConfiguration, int, int, AdaptiveQuantMode, float, bool, bool, bool, bool, WeightedPredictionPFrames, bool, float, float, float) -&gt; None</span>
+        <span class="c1"># type: (string_types, string_types, string_types, datetime, datetime, dict, int, int, int, float, PixelFormat, ColorConfig, int, int, DisplayAspectRatio, EncodingMode, PresetConfiguration, H264DynamicRangeFormat, float, ProfileH264, int, int, int, int, MvPredictionMode, int, bool, int, int, int, int, int, bool, float, float, LevelH264, BAdapt, H264MotionEstimationMethod, int, H264SubMe, H264Trellis, list[H264Partition], int, H264InterlaceMode, int, H264NalHrd, H264BPyramid, Cea608708SubtitleConfiguration, int, int, AdaptiveQuantMode, float, bool, bool, bool, bool, WeightedPredictionPFrames, bool, float, float, float) -&gt; None</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">H264VideoConfiguration</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">id_</span><span class="o">=</span><span class="n">id_</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="n">description</span><span class="p">,</span> <span class="n">created_at</span><span class="o">=</span><span class="n">created_at</span><span class="p">,</span> <span class="n">modified_at</span><span class="o">=</span><span class="n">modified_at</span><span class="p">,</span> <span class="n">custom_data</span><span class="o">=</span><span class="n">custom_data</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="n">height</span><span class="p">,</span> <span class="n">bitrate</span><span class="o">=</span><span class="n">bitrate</span><span class="p">,</span> <span class="n">rate</span><span class="o">=</span><span class="n">rate</span><span class="p">,</span> <span class="n">pixel_format</span><span class="o">=</span><span class="n">pixel_format</span><span class="p">,</span> <span class="n">color_config</span><span class="o">=</span><span class="n">color_config</span><span class="p">,</span> <span class="n">sample_aspect_ratio_numerator</span><span class="o">=</span><span class="n">sample_aspect_ratio_numerator</span><span class="p">,</span> <span class="n">sample_aspect_ratio_denominator</span><span class="o">=</span><span class="n">sample_aspect_ratio_denominator</span><span class="p">,</span> <span class="n">display_aspect_ratio</span><span class="o">=</span><span class="n">display_aspect_ratio</span><span class="p">,</span> <span class="n">encoding_mode</span><span class="o">=</span><span class="n">encoding_mode</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_preset_configuration</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_dynamic_range_format</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_crf</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_profile</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_bframes</span> <span class="o">=</span> <span class="kc">None</span>
@@ -213,6 +216,8 @@
 
         <span class="k">if</span> <span class="n">preset_configuration</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">preset_configuration</span> <span class="o">=</span> <span class="n">preset_configuration</span>
+        <span class="k">if</span> <span class="n">dynamic_range_format</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">dynamic_range_format</span> <span class="o">=</span> <span class="n">dynamic_range_format</span>
         <span class="k">if</span> <span class="n">crf</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">crf</span> <span class="o">=</span> <span class="n">crf</span>
         <span class="k">if</span> <span class="n">profile</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -309,6 +314,7 @@
 
         <span class="n">types</span><span class="o">.</span><span class="n">update</span><span class="p">({</span>
             <span class="s1">&#39;preset_configuration&#39;</span><span class="p">:</span> <span class="s1">&#39;PresetConfiguration&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;dynamic_range_format&#39;</span><span class="p">:</span> <span class="s1">&#39;H264DynamicRangeFormat&#39;</span><span class="p">,</span>
             <span class="s1">&#39;crf&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span><span class="p">,</span>
             <span class="s1">&#39;profile&#39;</span><span class="p">:</span> <span class="s1">&#39;ProfileH264&#39;</span><span class="p">,</span>
             <span class="s1">&#39;bframes&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
@@ -365,6 +371,7 @@
 
         <span class="n">attributes</span><span class="o">.</span><span class="n">update</span><span class="p">({</span>
             <span class="s1">&#39;preset_configuration&#39;</span><span class="p">:</span> <span class="s1">&#39;presetConfiguration&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;dynamic_range_format&#39;</span><span class="p">:</span> <span class="s1">&#39;dynamicRangeFormat&#39;</span><span class="p">,</span>
             <span class="s1">&#39;crf&#39;</span><span class="p">:</span> <span class="s1">&#39;crf&#39;</span><span class="p">,</span>
             <span class="s1">&#39;profile&#39;</span><span class="p">:</span> <span class="s1">&#39;profile&#39;</span><span class="p">,</span>
             <span class="s1">&#39;bframes&#39;</span><span class="p">:</span> <span class="s1">&#39;bframes&#39;</span><span class="p">,</span>
@@ -439,6 +446,35 @@
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `preset_configuration`, type has to be `PresetConfiguration`&quot;</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_preset_configuration</span> <span class="o">=</span> <span class="n">preset_configuration</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">dynamic_range_format</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; H264DynamicRangeFormat</span>
+        <span class="sd">&quot;&quot;&quot;Gets the dynamic_range_format of this H264VideoConfiguration.</span>
+
+<span class="sd">        Automatically configures the H264 Video Codec to be compatible with the given SDR format. Bitmovin recommends to use the dynamic range format together with a preset configuration to achieve good results. Explicitly configured properties will take precedence over dynamic range format settings, which in turn will take precedence over preset configurations.</span>
+
+<span class="sd">        :return: The dynamic_range_format of this H264VideoConfiguration.</span>
+<span class="sd">        :rtype: H264DynamicRangeFormat</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_dynamic_range_format</span>
+
+    <span class="nd">@dynamic_range_format</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">dynamic_range_format</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dynamic_range_format</span><span class="p">):</span>
+        <span class="c1"># type: (H264DynamicRangeFormat) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the dynamic_range_format of this H264VideoConfiguration.</span>
+
+<span class="sd">        Automatically configures the H264 Video Codec to be compatible with the given SDR format. Bitmovin recommends to use the dynamic range format together with a preset configuration to achieve good results. Explicitly configured properties will take precedence over dynamic range format settings, which in turn will take precedence over preset configurations.</span>
+
+<span class="sd">        :param dynamic_range_format: The dynamic_range_format of this H264VideoConfiguration.</span>
+<span class="sd">        :type: H264DynamicRangeFormat</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">dynamic_range_format</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">dynamic_range_format</span><span class="p">,</span> <span class="n">H264DynamicRangeFormat</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `dynamic_range_format`, type has to be `H264DynamicRangeFormat`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_dynamic_range_format</span> <span class="o">=</span> <span class="n">dynamic_range_format</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">crf</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>

@@ -77,9 +77,11 @@
 
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.common</span> <span class="kn">import</span> <span class="n">BaseApi</span><span class="p">,</span> <span class="n">BitmovinApiLoggerBase</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.common.poscheck</span> <span class="kn">import</span> <span class="n">poscheck_except</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.bitmovin_response</span> <span class="kn">import</span> <span class="n">BitmovinResponse</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.invitation</span> <span class="kn">import</span> <span class="n">Invitation</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.response_envelope</span> <span class="kn">import</span> <span class="n">ResponseEnvelope</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.response_error</span> <span class="kn">import</span> <span class="n">ResponseError</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.account.organizations.groups.invitations.invitation_list_query_params</span> <span class="kn">import</span> <span class="n">InvitationListQueryParams</span>
 
 
 <div class="viewcode-block" id="InvitationsApi"><a class="viewcode-back" href="../../../../../../__modules/bitmovin_api_sdk.account.organizations.groups.invitations.html#bitmovin_api_sdk.account.organizations.groups.invitations.invitations_api.InvitationsApi">[docs]</a><span class="k">class</span> <span class="nc">InvitationsApi</span><span class="p">(</span><span class="n">BaseApi</span><span class="p">):</span>
@@ -116,14 +118,58 @@
             <span class="o">**</span><span class="n">kwargs</span>
         <span class="p">)</span></div>
 
-<div class="viewcode-block" id="InvitationsApi.list"><a class="viewcode-back" href="../../../../../../__modules/bitmovin_api_sdk.account.organizations.groups.invitations.html#bitmovin_api_sdk.account.organizations.groups.invitations.invitations_api.InvitationsApi.list">[docs]</a>    <span class="k">def</span> <span class="nf">list</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">organization_id</span><span class="p">,</span> <span class="n">group_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-        <span class="c1"># type: (string_types, string_types, dict) -&gt; Invitation</span>
+<div class="viewcode-block" id="InvitationsApi.delete"><a class="viewcode-back" href="../../../../../../__modules/bitmovin_api_sdk.account.organizations.groups.invitations.html#bitmovin_api_sdk.account.organizations.groups.invitations.invitations_api.InvitationsApi.delete">[docs]</a>    <span class="k">def</span> <span class="nf">delete</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">organization_id</span><span class="p">,</span> <span class="n">group_id</span><span class="p">,</span> <span class="n">invitation_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="c1"># type: (string_types, string_types, string_types, dict) -&gt; BitmovinResponse</span>
+        <span class="sd">&quot;&quot;&quot;Delete Invitation</span>
+
+<span class="sd">        :param organization_id: Id of the organization</span>
+<span class="sd">        :type organization_id: string_types, required</span>
+<span class="sd">        :param group_id: Id of the group</span>
+<span class="sd">        :type group_id: string_types, required</span>
+<span class="sd">        :param invitation_id: Id of the invitation.</span>
+<span class="sd">        :type invitation_id: string_types, required</span>
+<span class="sd">        :return: Id of the group</span>
+<span class="sd">        :rtype: BitmovinResponse</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span>
+            <span class="s1">&#39;/account/organizations/</span><span class="si">{organization_id}</span><span class="s1">/groups/</span><span class="si">{group_id}</span><span class="s1">/invitations/</span><span class="si">{invitation_id}</span><span class="s1">&#39;</span><span class="p">,</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;organization_id&#39;</span><span class="p">:</span> <span class="n">organization_id</span><span class="p">,</span> <span class="s1">&#39;group_id&#39;</span><span class="p">:</span> <span class="n">group_id</span><span class="p">,</span> <span class="s1">&#39;invitation_id&#39;</span><span class="p">:</span> <span class="n">invitation_id</span><span class="p">},</span>
+            <span class="nb">type</span><span class="o">=</span><span class="n">BitmovinResponse</span><span class="p">,</span>
+            <span class="o">**</span><span class="n">kwargs</span>
+        <span class="p">)</span></div>
+
+<div class="viewcode-block" id="InvitationsApi.get"><a class="viewcode-back" href="../../../../../../__modules/bitmovin_api_sdk.account.organizations.groups.invitations.html#bitmovin_api_sdk.account.organizations.groups.invitations.invitations_api.InvitationsApi.get">[docs]</a>    <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">organization_id</span><span class="p">,</span> <span class="n">group_id</span><span class="p">,</span> <span class="n">invitation_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="c1"># type: (string_types, string_types, string_types, dict) -&gt; Invitation</span>
+        <span class="sd">&quot;&quot;&quot;Invitation Details</span>
+
+<span class="sd">        :param organization_id: Id of the organization</span>
+<span class="sd">        :type organization_id: string_types, required</span>
+<span class="sd">        :param group_id: Id of the group</span>
+<span class="sd">        :type group_id: string_types, required</span>
+<span class="sd">        :param invitation_id: Id of the invitation.</span>
+<span class="sd">        :type invitation_id: string_types, required</span>
+<span class="sd">        :return: Invitation details</span>
+<span class="sd">        :rtype: Invitation</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+            <span class="s1">&#39;/account/organizations/</span><span class="si">{organization_id}</span><span class="s1">/groups/</span><span class="si">{group_id}</span><span class="s1">/invitations/</span><span class="si">{invitation_id}</span><span class="s1">&#39;</span><span class="p">,</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;organization_id&#39;</span><span class="p">:</span> <span class="n">organization_id</span><span class="p">,</span> <span class="s1">&#39;group_id&#39;</span><span class="p">:</span> <span class="n">group_id</span><span class="p">,</span> <span class="s1">&#39;invitation_id&#39;</span><span class="p">:</span> <span class="n">invitation_id</span><span class="p">},</span>
+            <span class="nb">type</span><span class="o">=</span><span class="n">Invitation</span><span class="p">,</span>
+            <span class="o">**</span><span class="n">kwargs</span>
+        <span class="p">)</span></div>
+
+<div class="viewcode-block" id="InvitationsApi.list"><a class="viewcode-back" href="../../../../../../__modules/bitmovin_api_sdk.account.organizations.groups.invitations.html#bitmovin_api_sdk.account.organizations.groups.invitations.invitations_api.InvitationsApi.list">[docs]</a>    <span class="k">def</span> <span class="nf">list</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">organization_id</span><span class="p">,</span> <span class="n">group_id</span><span class="p">,</span> <span class="n">query_params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="c1"># type: (string_types, string_types, InvitationListQueryParams, dict) -&gt; Invitation</span>
         <span class="sd">&quot;&quot;&quot;List Invitations</span>
 
 <span class="sd">        :param organization_id: Id of the organization</span>
 <span class="sd">        :type organization_id: string_types, required</span>
 <span class="sd">        :param group_id: Id of the group</span>
 <span class="sd">        :type group_id: string_types, required</span>
+<span class="sd">        :param query_params: Query parameters</span>
+<span class="sd">        :type query_params: InvitationListQueryParams</span>
 <span class="sd">        :return: List of invitations</span>
 <span class="sd">        :rtype: Invitation</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -131,6 +177,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
             <span class="s1">&#39;/account/organizations/</span><span class="si">{organization_id}</span><span class="s1">/groups/</span><span class="si">{group_id}</span><span class="s1">/invitations&#39;</span><span class="p">,</span>
             <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;organization_id&#39;</span><span class="p">:</span> <span class="n">organization_id</span><span class="p">,</span> <span class="s1">&#39;group_id&#39;</span><span class="p">:</span> <span class="n">group_id</span><span class="p">},</span>
+            <span class="n">query_params</span><span class="o">=</span><span class="n">query_params</span><span class="p">,</span>
             <span class="n">pagination_response</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">Invitation</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>
