@@ -426,6 +426,7 @@ from bitmovin_api_sdk.models.invitation import Invitation
 from bitmovin_api_sdk.models.invitation_status import InvitationStatus
 from bitmovin_api_sdk.models.iv_size import IvSize
 from bitmovin_api_sdk.models.keyframe import Keyframe
+from bitmovin_api_sdk.models.label import Label
 from bitmovin_api_sdk.models.level_h262 import LevelH262
 from bitmovin_api_sdk.models.level_h264 import LevelH264
 from bitmovin_api_sdk.models.level_h265 import LevelH265

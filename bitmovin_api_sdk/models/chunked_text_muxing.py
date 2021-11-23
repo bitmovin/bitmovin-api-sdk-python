@@ -28,13 +28,15 @@ class ChunkedTextMuxing(Muxing):
                  segment_length=None,
                  segment_naming=None,
                  segment_naming_template=None,
+                 start_offset=None,
                  segments_muxed=None):
-        # type: (string_types, string_types, string_types, datetime, datetime, dict, list[MuxingStream], list[EncodingOutput], int, int, int, list[Ignoring], StreamConditionsMode, float, string_types, string_types, int) -> None
+        # type: (string_types, string_types, string_types, datetime, datetime, dict, list[MuxingStream], list[EncodingOutput], int, int, int, list[Ignoring], StreamConditionsMode, float, string_types, string_types, int, int) -> None
         super(ChunkedTextMuxing, self).__init__(id_=id_, name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, streams=streams, outputs=outputs, avg_bitrate=avg_bitrate, min_bitrate=min_bitrate, max_bitrate=max_bitrate, ignored_by=ignored_by, stream_conditions_mode=stream_conditions_mode)
 
         self._segment_length = None
         self._segment_naming = None
         self._segment_naming_template = None
+        self._start_offset = None
         self._segments_muxed = None
         self.discriminator = None
 
@@ -44,6 +46,8 @@ class ChunkedTextMuxing(Muxing):
             self.segment_naming = segment_naming
         if segment_naming_template is not None:
             self.segment_naming_template = segment_naming_template
+        if start_offset is not None:
+            self.start_offset = start_offset
         if segments_muxed is not None:
             self.segments_muxed = segments_muxed
 
@@ -58,6 +62,7 @@ class ChunkedTextMuxing(Muxing):
             'segment_length': 'float',
             'segment_naming': 'string_types',
             'segment_naming_template': 'string_types',
+            'start_offset': 'int',
             'segments_muxed': 'int'
         })
 
@@ -74,6 +79,7 @@ class ChunkedTextMuxing(Muxing):
             'segment_length': 'segmentLength',
             'segment_naming': 'segmentNaming',
             'segment_naming_template': 'segmentNamingTemplate',
+            'start_offset': 'startOffset',
             'segments_muxed': 'segmentsMuxed'
         })
         return attributes
@@ -164,6 +170,35 @@ class ChunkedTextMuxing(Muxing):
                 raise TypeError("Invalid type for `segment_naming_template`, type has to be `string_types`")
 
         self._segment_naming_template = segment_naming_template
+
+    @property
+    def start_offset(self):
+        # type: () -> int
+        """Gets the start_offset of this ChunkedTextMuxing.
+
+        Offset of MPEG-TS timestamps in seconds. This only affects streams with [WebVttConfiguration](#/Encoding/PostEncodingConfigurationsSubtitlesWebVtt). If set, the X-TIMESTAMP-MAP will be added as described in the [HLS specification](https://datatracker.ietf.org/doc/html/rfc8216#section-3.5). For example, if set to 10 seconds, *X-TIMESTAMP-MAP=MPEGTS:900000,LOCAL:00:00:00.000* will be added after each *WEBVTT* header. The default for ChunkedTextMuxing is that the X-TIMESTAMP-MAP will not be written. Important to note is that the default for `startOffset` for [TsMuxings](#/Encoding/PostEncodingEncodingsMuxingsTsByEncodingId) and [ProgressiveTsMuxings](#/Encoding/PostEncodingEncodingsMuxingsProgressiveTsByEncodingId) is 10 seconds. If the output of this muxing is used for HLS together with video/audio streams using TsMuxings and ProgressiveTsMuxings, this value should be set to the same `startOffset`.
+
+        :return: The start_offset of this ChunkedTextMuxing.
+        :rtype: int
+        """
+        return self._start_offset
+
+    @start_offset.setter
+    def start_offset(self, start_offset):
+        # type: (int) -> None
+        """Sets the start_offset of this ChunkedTextMuxing.
+
+        Offset of MPEG-TS timestamps in seconds. This only affects streams with [WebVttConfiguration](#/Encoding/PostEncodingConfigurationsSubtitlesWebVtt). If set, the X-TIMESTAMP-MAP will be added as described in the [HLS specification](https://datatracker.ietf.org/doc/html/rfc8216#section-3.5). For example, if set to 10 seconds, *X-TIMESTAMP-MAP=MPEGTS:900000,LOCAL:00:00:00.000* will be added after each *WEBVTT* header. The default for ChunkedTextMuxing is that the X-TIMESTAMP-MAP will not be written. Important to note is that the default for `startOffset` for [TsMuxings](#/Encoding/PostEncodingEncodingsMuxingsTsByEncodingId) and [ProgressiveTsMuxings](#/Encoding/PostEncodingEncodingsMuxingsProgressiveTsByEncodingId) is 10 seconds. If the output of this muxing is used for HLS together with video/audio streams using TsMuxings and ProgressiveTsMuxings, this value should be set to the same `startOffset`.
+
+        :param start_offset: The start_offset of this ChunkedTextMuxing.
+        :type: int
+        """
+
+        if start_offset is not None:
+            if not isinstance(start_offset, int):
+                raise TypeError("Invalid type for `start_offset`, type has to be `int`")
+
+        self._start_offset = start_offset
 
     @property
     def segments_muxed(self):

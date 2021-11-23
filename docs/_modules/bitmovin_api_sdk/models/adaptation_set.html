@@ -87,13 +87,15 @@
                  <span class="n">id_</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">custom_attributes</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">roles</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                 <span class="n">accessibilities</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (string_types, list[CustomAttribute], list[AdaptationSetRole], list[Accessibility]) -&gt; None</span>
+                 <span class="n">accessibilities</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">labels</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="c1"># type: (string_types, list[CustomAttribute], list[AdaptationSetRole], list[Accessibility], list[Label]) -&gt; None</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">AdaptationSet</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">id_</span><span class="o">=</span><span class="n">id_</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_custom_attributes</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_roles</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_accessibilities</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_labels</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>
 
         <span class="k">if</span> <span class="n">custom_attributes</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -102,6 +104,8 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">roles</span> <span class="o">=</span> <span class="n">roles</span>
         <span class="k">if</span> <span class="n">accessibilities</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">accessibilities</span> <span class="o">=</span> <span class="n">accessibilities</span>
+        <span class="k">if</span> <span class="n">labels</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">labels</span> <span class="o">=</span> <span class="n">labels</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -113,7 +117,8 @@
         <span class="n">types</span><span class="o">.</span><span class="n">update</span><span class="p">({</span>
             <span class="s1">&#39;custom_attributes&#39;</span><span class="p">:</span> <span class="s1">&#39;list[CustomAttribute]&#39;</span><span class="p">,</span>
             <span class="s1">&#39;roles&#39;</span><span class="p">:</span> <span class="s1">&#39;list[AdaptationSetRole]&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;accessibilities&#39;</span><span class="p">:</span> <span class="s1">&#39;list[Accessibility]&#39;</span>
+            <span class="s1">&#39;accessibilities&#39;</span><span class="p">:</span> <span class="s1">&#39;list[Accessibility]&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;labels&#39;</span><span class="p">:</span> <span class="s1">&#39;list[Label]&#39;</span>
         <span class="p">})</span>
 
         <span class="k">return</span> <span class="n">types</span>
@@ -128,7 +133,8 @@
         <span class="n">attributes</span><span class="o">.</span><span class="n">update</span><span class="p">({</span>
             <span class="s1">&#39;custom_attributes&#39;</span><span class="p">:</span> <span class="s1">&#39;customAttributes&#39;</span><span class="p">,</span>
             <span class="s1">&#39;roles&#39;</span><span class="p">:</span> <span class="s1">&#39;roles&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;accessibilities&#39;</span><span class="p">:</span> <span class="s1">&#39;accessibilities&#39;</span>
+            <span class="s1">&#39;accessibilities&#39;</span><span class="p">:</span> <span class="s1">&#39;accessibilities&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;labels&#39;</span><span class="p">:</span> <span class="s1">&#39;labels&#39;</span>
         <span class="p">})</span>
         <span class="k">return</span> <span class="n">attributes</span>
 
@@ -218,6 +224,35 @@
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `accessibilities`, type has to be `list[Accessibility]`&quot;</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_accessibilities</span> <span class="o">=</span> <span class="n">accessibilities</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">labels</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; list[Label]</span>
+        <span class="sd">&quot;&quot;&quot;Gets the labels of this AdaptationSet.</span>
+
+<span class="sd">        List of labels</span>
+
+<span class="sd">        :return: The labels of this AdaptationSet.</span>
+<span class="sd">        :rtype: list[Label]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_labels</span>
+
+    <span class="nd">@labels</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">labels</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">labels</span><span class="p">):</span>
+        <span class="c1"># type: (list) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the labels of this AdaptationSet.</span>
+
+<span class="sd">        List of labels</span>
+
+<span class="sd">        :param labels: The labels of this AdaptationSet.</span>
+<span class="sd">        :type: list[Label]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">labels</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">labels</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `labels`, type has to be `list[Label]`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_labels</span> <span class="o">=</span> <span class="n">labels</span>
 
 <div class="viewcode-block" id="AdaptationSet.to_dict"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.adaptation_set.AdaptationSet.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>

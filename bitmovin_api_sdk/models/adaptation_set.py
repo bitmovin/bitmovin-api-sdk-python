@@ -14,13 +14,15 @@ class AdaptationSet(BitmovinResponse):
                  id_=None,
                  custom_attributes=None,
                  roles=None,
-                 accessibilities=None):
-        # type: (string_types, list[CustomAttribute], list[AdaptationSetRole], list[Accessibility]) -> None
+                 accessibilities=None,
+                 labels=None):
+        # type: (string_types, list[CustomAttribute], list[AdaptationSetRole], list[Accessibility], list[Label]) -> None
         super(AdaptationSet, self).__init__(id_=id_)
 
         self._custom_attributes = list()
         self._roles = list()
         self._accessibilities = list()
+        self._labels = list()
         self.discriminator = None
 
         if custom_attributes is not None:
@@ -29,6 +31,8 @@ class AdaptationSet(BitmovinResponse):
             self.roles = roles
         if accessibilities is not None:
             self.accessibilities = accessibilities
+        if labels is not None:
+            self.labels = labels
 
     @property
     def openapi_types(self):
@@ -40,7 +44,8 @@ class AdaptationSet(BitmovinResponse):
         types.update({
             'custom_attributes': 'list[CustomAttribute]',
             'roles': 'list[AdaptationSetRole]',
-            'accessibilities': 'list[Accessibility]'
+            'accessibilities': 'list[Accessibility]',
+            'labels': 'list[Label]'
         })
 
         return types
@@ -55,7 +60,8 @@ class AdaptationSet(BitmovinResponse):
         attributes.update({
             'custom_attributes': 'customAttributes',
             'roles': 'roles',
-            'accessibilities': 'accessibilities'
+            'accessibilities': 'accessibilities',
+            'labels': 'labels'
         })
         return attributes
 
@@ -145,6 +151,35 @@ class AdaptationSet(BitmovinResponse):
                 raise TypeError("Invalid type for `accessibilities`, type has to be `list[Accessibility]`")
 
         self._accessibilities = accessibilities
+
+    @property
+    def labels(self):
+        # type: () -> list[Label]
+        """Gets the labels of this AdaptationSet.
+
+        List of labels
+
+        :return: The labels of this AdaptationSet.
+        :rtype: list[Label]
+        """
+        return self._labels
+
+    @labels.setter
+    def labels(self, labels):
+        # type: (list) -> None
+        """Sets the labels of this AdaptationSet.
+
+        List of labels
+
+        :param labels: The labels of this AdaptationSet.
+        :type: list[Label]
+        """
+
+        if labels is not None:
+            if not isinstance(labels, list):
+                raise TypeError("Invalid type for `labels`, type has to be `list[Label]`")
+
+        self._labels = labels
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -15,9 +15,10 @@ class AudioAdaptationSet(AdaptationSet):
                  custom_attributes=None,
                  roles=None,
                  accessibilities=None,
+                 labels=None,
                  lang=None):
-        # type: (string_types, list[CustomAttribute], list[AdaptationSetRole], list[Accessibility], string_types) -> None
-        super(AudioAdaptationSet, self).__init__(id_=id_, custom_attributes=custom_attributes, roles=roles, accessibilities=accessibilities)
+        # type: (string_types, list[CustomAttribute], list[AdaptationSetRole], list[Accessibility], list[Label], string_types) -> None
+        super(AudioAdaptationSet, self).__init__(id_=id_, custom_attributes=custom_attributes, roles=roles, accessibilities=accessibilities, labels=labels)
 
         self._lang = None
         self.discriminator = None

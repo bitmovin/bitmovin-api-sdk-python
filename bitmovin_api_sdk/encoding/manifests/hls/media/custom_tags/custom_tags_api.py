@@ -25,11 +25,11 @@ class CustomTagsApi(BaseApi):
 
     def create(self, manifest_id, media_id, custom_tag, **kwargs):
         # type: (string_types, string_types, CustomTag, dict) -> CustomTag
-        """Add Custom Tag to Audio Media
+        """Add Custom Tag to a Audio Media or a Subtitle media
 
         :param manifest_id: Id of the hls manifest.
         :type manifest_id: string_types, required
-        :param media_id: Id of the audio media.
+        :param media_id: Id of the media.
         :type media_id: string_types, required
         :param custom_tag: The Custom Tag to be added
         :type custom_tag: CustomTag, required
@@ -51,7 +51,7 @@ class CustomTagsApi(BaseApi):
 
         :param manifest_id: Id of the hls manifest.
         :type manifest_id: string_types, required
-        :param media_id: Id of the audio media.
+        :param media_id: Id of the media.
         :type media_id: string_types, required
         :param custom_tag_id: Id of the custom tag.
         :type custom_tag_id: string_types, required
@@ -72,7 +72,7 @@ class CustomTagsApi(BaseApi):
 
         :param manifest_id: Id of the hls manifest.
         :type manifest_id: string_types, required
-        :param media_id: Id of the audio media
+        :param media_id: Id of the media
         :type media_id: string_types, required
         :param custom_tag_id: Id of the custom tag.
         :type custom_tag_id: string_types, required
@@ -89,11 +89,11 @@ class CustomTagsApi(BaseApi):
 
     def list(self, manifest_id, media_id, query_params=None, **kwargs):
         # type: (string_types, string_types, CustomTagListQueryParams, dict) -> CustomTag
-        """List all Custom Tags of a Audio media
+        """List all Custom Tags of a Audio media or a Subtitle media
 
         :param manifest_id: Id of the hls manifest.
         :type manifest_id: string_types, required
-        :param media_id: Id of the audio media.
+        :param media_id: Id of the media.
         :type media_id: string_types, required
         :param query_params: Query parameters
         :type query_params: CustomTagListQueryParams

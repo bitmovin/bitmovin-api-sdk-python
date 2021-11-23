@@ -3388,6 +3388,14 @@ bitmovin\_api\_sdk.models.keyframe module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.label module
+--------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.label
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.level\_h262 module
 --------------------------------------------
 

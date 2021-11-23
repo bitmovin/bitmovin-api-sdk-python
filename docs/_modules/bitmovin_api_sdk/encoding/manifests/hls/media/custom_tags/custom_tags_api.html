@@ -98,11 +98,11 @@
 
 <div class="viewcode-block" id="CustomTagsApi.create"><a class="viewcode-back" href="../../../../../../../__modules/bitmovin_api_sdk.encoding.manifests.hls.media.custom_tags.html#bitmovin_api_sdk.encoding.manifests.hls.media.custom_tags.custom_tags_api.CustomTagsApi.create">[docs]</a>    <span class="k">def</span> <span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">manifest_id</span><span class="p">,</span> <span class="n">media_id</span><span class="p">,</span> <span class="n">custom_tag</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, string_types, CustomTag, dict) -&gt; CustomTag</span>
-        <span class="sd">&quot;&quot;&quot;Add Custom Tag to Audio Media</span>
+        <span class="sd">&quot;&quot;&quot;Add Custom Tag to a Audio Media or a Subtitle media</span>
 
 <span class="sd">        :param manifest_id: Id of the hls manifest.</span>
 <span class="sd">        :type manifest_id: string_types, required</span>
-<span class="sd">        :param media_id: Id of the audio media.</span>
+<span class="sd">        :param media_id: Id of the media.</span>
 <span class="sd">        :type media_id: string_types, required</span>
 <span class="sd">        :param custom_tag: The Custom Tag to be added</span>
 <span class="sd">        :type custom_tag: CustomTag, required</span>
@@ -124,7 +124,7 @@
 
 <span class="sd">        :param manifest_id: Id of the hls manifest.</span>
 <span class="sd">        :type manifest_id: string_types, required</span>
-<span class="sd">        :param media_id: Id of the audio media.</span>
+<span class="sd">        :param media_id: Id of the media.</span>
 <span class="sd">        :type media_id: string_types, required</span>
 <span class="sd">        :param custom_tag_id: Id of the custom tag.</span>
 <span class="sd">        :type custom_tag_id: string_types, required</span>
@@ -145,7 +145,7 @@
 
 <span class="sd">        :param manifest_id: Id of the hls manifest.</span>
 <span class="sd">        :type manifest_id: string_types, required</span>
-<span class="sd">        :param media_id: Id of the audio media</span>
+<span class="sd">        :param media_id: Id of the media</span>
 <span class="sd">        :type media_id: string_types, required</span>
 <span class="sd">        :param custom_tag_id: Id of the custom tag.</span>
 <span class="sd">        :type custom_tag_id: string_types, required</span>
@@ -162,11 +162,11 @@
 
 <div class="viewcode-block" id="CustomTagsApi.list"><a class="viewcode-back" href="../../../../../../../__modules/bitmovin_api_sdk.encoding.manifests.hls.media.custom_tags.html#bitmovin_api_sdk.encoding.manifests.hls.media.custom_tags.custom_tags_api.CustomTagsApi.list">[docs]</a>    <span class="k">def</span> <span class="nf">list</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">manifest_id</span><span class="p">,</span> <span class="n">media_id</span><span class="p">,</span> <span class="n">query_params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, string_types, CustomTagListQueryParams, dict) -&gt; CustomTag</span>
-        <span class="sd">&quot;&quot;&quot;List all Custom Tags of a Audio media</span>
+        <span class="sd">&quot;&quot;&quot;List all Custom Tags of a Audio media or a Subtitle media</span>
 
 <span class="sd">        :param manifest_id: Id of the hls manifest.</span>
 <span class="sd">        :type manifest_id: string_types, required</span>
-<span class="sd">        :param media_id: Id of the audio media.</span>
+<span class="sd">        :param media_id: Id of the media.</span>
 <span class="sd">        :type media_id: string_types, required</span>
 <span class="sd">        :param query_params: Query parameters</span>
 <span class="sd">        :type query_params: CustomTagListQueryParams</span>

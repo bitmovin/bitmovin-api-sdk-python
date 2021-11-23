@@ -3,62 +3,88 @@
 from enum import Enum
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
-from bitmovin_api_sdk.models.adaptation_set import AdaptationSet
 import pprint
 import six
 
 
-class SubtitleAdaptationSet(AdaptationSet):
+class Label(object):
     @poscheck_model
     def __init__(self,
                  id_=None,
-                 custom_attributes=None,
-                 roles=None,
-                 accessibilities=None,
-                 labels=None,
-                 lang=None):
-        # type: (string_types, list[CustomAttribute], list[AdaptationSetRole], list[Accessibility], list[Label], string_types) -> None
-        super(SubtitleAdaptationSet, self).__init__(id_=id_, custom_attributes=custom_attributes, roles=roles, accessibilities=accessibilities, labels=labels)
+                 lang=None,
+                 value=None):
+        # type: (int, string_types, string_types) -> None
 
+        self._id = None
         self._lang = None
+        self._value = None
         self.discriminator = None
 
+        if id_ is not None:
+            self.id = id_
         if lang is not None:
             self.lang = lang
+        if value is not None:
+            self.value = value
 
     @property
     def openapi_types(self):
-        types = {}
-
-        if hasattr(super(SubtitleAdaptationSet, self), 'openapi_types'):
-            types = getattr(super(SubtitleAdaptationSet, self), 'openapi_types')
-
-        types.update({
-            'lang': 'string_types'
-        })
+        types = {
+            'id': 'int',
+            'lang': 'string_types',
+            'value': 'string_types'
+        }
 
         return types
 
     @property
     def attribute_map(self):
-        attributes = {}
-
-        if hasattr(super(SubtitleAdaptationSet, self), 'attribute_map'):
-            attributes = getattr(super(SubtitleAdaptationSet, self), 'attribute_map')
-
-        attributes.update({
-            'lang': 'lang'
-        })
+        attributes = {
+            'id': 'id',
+            'lang': 'lang',
+            'value': 'value'
+        }
         return attributes
+
+    @property
+    def id(self):
+        # type: () -> int
+        """Gets the id of this Label.
+
+        Identifier of the label.
+
+        :return: The id of this Label.
+        :rtype: int
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id_):
+        # type: (int) -> None
+        """Sets the id of this Label.
+
+        Identifier of the label.
+
+        :param id_: The id of this Label.
+        :type: int
+        """
+
+        if id_ is not None:
+            if id_ is not None and id_ < 0:
+                raise ValueError("Invalid value for `id`, must be a value greater than or equal to `0`")
+            if not isinstance(id_, int):
+                raise TypeError("Invalid type for `id`, type has to be `int`")
+
+        self._id = id_
 
     @property
     def lang(self):
         # type: () -> string_types
-        """Gets the lang of this SubtitleAdaptationSet.
+        """Gets the lang of this Label.
 
-        ISO 639-1 (Alpha-2) code identifying the language of the subtitle adaptation set (required)
+        Specifies the language of the label.
 
-        :return: The lang of this SubtitleAdaptationSet.
+        :return: The lang of this Label.
         :rtype: string_types
         """
         return self._lang
@@ -66,11 +92,11 @@ class SubtitleAdaptationSet(AdaptationSet):
     @lang.setter
     def lang(self, lang):
         # type: (string_types) -> None
-        """Sets the lang of this SubtitleAdaptationSet.
+        """Sets the lang of this Label.
 
-        ISO 639-1 (Alpha-2) code identifying the language of the subtitle adaptation set (required)
+        Specifies the language of the label.
 
-        :param lang: The lang of this SubtitleAdaptationSet.
+        :param lang: The lang of this Label.
         :type: string_types
         """
 
@@ -80,12 +106,39 @@ class SubtitleAdaptationSet(AdaptationSet):
 
         self._lang = lang
 
+    @property
+    def value(self):
+        # type: () -> string_types
+        """Gets the value of this Label.
+
+        Content of the label. (required)
+
+        :return: The value of this Label.
+        :rtype: string_types
+        """
+        return self._value
+
+    @value.setter
+    def value(self, value):
+        # type: (string_types) -> None
+        """Sets the value of this Label.
+
+        Content of the label. (required)
+
+        :param value: The value of this Label.
+        :type: string_types
+        """
+
+        if value is not None:
+            if not isinstance(value, string_types):
+                raise TypeError("Invalid type for `value`, type has to be `string_types`")
+
+        self._value = value
+
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}
 
-        if hasattr(super(SubtitleAdaptationSet, self), "to_dict"):
-            result = super(SubtitleAdaptationSet, self).to_dict()
         for attr, _ in six.iteritems(self.openapi_types):
             value = getattr(self, attr)
             if value is None:
@@ -115,7 +168,7 @@ class SubtitleAdaptationSet(AdaptationSet):
 
     def __eq__(self, other):
         """Returns true if both objects are equal"""
-        if not isinstance(other, SubtitleAdaptationSet):
+        if not isinstance(other, Label):
             return False
 
         return self.__dict__ == other.__dict__
