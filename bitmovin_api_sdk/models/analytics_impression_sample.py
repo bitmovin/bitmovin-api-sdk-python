@@ -34,6 +34,24 @@ class AnalyticsImpressionSample(object):
                  custom_data_5=None,
                  custom_data_6=None,
                  custom_data_7=None,
+                 custom_data_8=None,
+                 custom_data_9=None,
+                 custom_data_10=None,
+                 custom_data_11=None,
+                 custom_data_12=None,
+                 custom_data_13=None,
+                 custom_data_14=None,
+                 custom_data_15=None,
+                 custom_data_16=None,
+                 custom_data_17=None,
+                 custom_data_18=None,
+                 custom_data_19=None,
+                 custom_data_20=None,
+                 custom_data_21=None,
+                 custom_data_22=None,
+                 custom_data_23=None,
+                 custom_data_24=None,
+                 custom_data_25=None,
                  device_class=None,
                  device_type=None,
                  domain=None,
@@ -100,7 +118,7 @@ class AnalyticsImpressionSample(object):
                  video_window_width=None,
                  videostart_failed=None,
                  videostart_failed_reason=None):
-        # type: (int, string_types, int, string_types, string_types, bool, string_types, string_types, string_types, int, string_types, string_types, string_types, int, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, int, string_types, int, int, int, string_types, string_types, string_types, string_types, bool, bool, bool, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, int, int, string_types, int, string_types, int, string_types, string_types, int, string_types, string_types, string_types, string_types, int, int, int, int, int, int, int, string_types, int, string_types, string_types, bool, string_types, list[string_types], int, string_types, int, string_types, int, string_types, string_types, int, int, int, int, int, int, int, bool, AnalyticsVideoStartFailedReason) -> None
+        # type: (int, string_types, int, string_types, string_types, bool, string_types, string_types, string_types, int, string_types, string_types, string_types, int, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, int, string_types, int, int, int, string_types, string_types, string_types, string_types, bool, bool, bool, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, int, int, string_types, int, string_types, int, string_types, string_types, int, string_types, string_types, string_types, string_types, int, int, int, int, int, int, int, string_types, int, string_types, string_types, bool, string_types, list[string_types], int, string_types, int, string_types, int, string_types, string_types, int, int, int, int, int, int, int, bool, AnalyticsVideoStartFailedReason) -> None
 
         self._ad = None
         self._analytics_version = None
@@ -125,6 +143,24 @@ class AnalyticsImpressionSample(object):
         self._custom_data_5 = None
         self._custom_data_6 = None
         self._custom_data_7 = None
+        self._custom_data_8 = None
+        self._custom_data_9 = None
+        self._custom_data_10 = None
+        self._custom_data_11 = None
+        self._custom_data_12 = None
+        self._custom_data_13 = None
+        self._custom_data_14 = None
+        self._custom_data_15 = None
+        self._custom_data_16 = None
+        self._custom_data_17 = None
+        self._custom_data_18 = None
+        self._custom_data_19 = None
+        self._custom_data_20 = None
+        self._custom_data_21 = None
+        self._custom_data_22 = None
+        self._custom_data_23 = None
+        self._custom_data_24 = None
+        self._custom_data_25 = None
         self._device_class = None
         self._device_type = None
         self._domain = None
@@ -239,6 +275,42 @@ class AnalyticsImpressionSample(object):
             self.custom_data_6 = custom_data_6
         if custom_data_7 is not None:
             self.custom_data_7 = custom_data_7
+        if custom_data_8 is not None:
+            self.custom_data_8 = custom_data_8
+        if custom_data_9 is not None:
+            self.custom_data_9 = custom_data_9
+        if custom_data_10 is not None:
+            self.custom_data_10 = custom_data_10
+        if custom_data_11 is not None:
+            self.custom_data_11 = custom_data_11
+        if custom_data_12 is not None:
+            self.custom_data_12 = custom_data_12
+        if custom_data_13 is not None:
+            self.custom_data_13 = custom_data_13
+        if custom_data_14 is not None:
+            self.custom_data_14 = custom_data_14
+        if custom_data_15 is not None:
+            self.custom_data_15 = custom_data_15
+        if custom_data_16 is not None:
+            self.custom_data_16 = custom_data_16
+        if custom_data_17 is not None:
+            self.custom_data_17 = custom_data_17
+        if custom_data_18 is not None:
+            self.custom_data_18 = custom_data_18
+        if custom_data_19 is not None:
+            self.custom_data_19 = custom_data_19
+        if custom_data_20 is not None:
+            self.custom_data_20 = custom_data_20
+        if custom_data_21 is not None:
+            self.custom_data_21 = custom_data_21
+        if custom_data_22 is not None:
+            self.custom_data_22 = custom_data_22
+        if custom_data_23 is not None:
+            self.custom_data_23 = custom_data_23
+        if custom_data_24 is not None:
+            self.custom_data_24 = custom_data_24
+        if custom_data_25 is not None:
+            self.custom_data_25 = custom_data_25
         if device_class is not None:
             self.device_class = device_class
         if device_type is not None:
@@ -398,6 +470,24 @@ class AnalyticsImpressionSample(object):
             'custom_data_5': 'string_types',
             'custom_data_6': 'string_types',
             'custom_data_7': 'string_types',
+            'custom_data_8': 'string_types',
+            'custom_data_9': 'string_types',
+            'custom_data_10': 'string_types',
+            'custom_data_11': 'string_types',
+            'custom_data_12': 'string_types',
+            'custom_data_13': 'string_types',
+            'custom_data_14': 'string_types',
+            'custom_data_15': 'string_types',
+            'custom_data_16': 'string_types',
+            'custom_data_17': 'string_types',
+            'custom_data_18': 'string_types',
+            'custom_data_19': 'string_types',
+            'custom_data_20': 'string_types',
+            'custom_data_21': 'string_types',
+            'custom_data_22': 'string_types',
+            'custom_data_23': 'string_types',
+            'custom_data_24': 'string_types',
+            'custom_data_25': 'string_types',
             'device_class': 'string_types',
             'device_type': 'string_types',
             'domain': 'string_types',
@@ -494,6 +584,24 @@ class AnalyticsImpressionSample(object):
             'custom_data_5': 'custom_data_5',
             'custom_data_6': 'custom_data_6',
             'custom_data_7': 'custom_data_7',
+            'custom_data_8': 'custom_data_8',
+            'custom_data_9': 'custom_data_9',
+            'custom_data_10': 'custom_data_10',
+            'custom_data_11': 'custom_data_11',
+            'custom_data_12': 'custom_data_12',
+            'custom_data_13': 'custom_data_13',
+            'custom_data_14': 'custom_data_14',
+            'custom_data_15': 'custom_data_15',
+            'custom_data_16': 'custom_data_16',
+            'custom_data_17': 'custom_data_17',
+            'custom_data_18': 'custom_data_18',
+            'custom_data_19': 'custom_data_19',
+            'custom_data_20': 'custom_data_20',
+            'custom_data_21': 'custom_data_21',
+            'custom_data_22': 'custom_data_22',
+            'custom_data_23': 'custom_data_23',
+            'custom_data_24': 'custom_data_24',
+            'custom_data_25': 'custom_data_25',
             'device_class': 'device_class',
             'device_type': 'device_type',
             'domain': 'domain',
@@ -1229,6 +1337,528 @@ class AnalyticsImpressionSample(object):
                 raise TypeError("Invalid type for `custom_data_7`, type has to be `string_types`")
 
         self._custom_data_7 = custom_data_7
+
+    @property
+    def custom_data_8(self):
+        # type: () -> string_types
+        """Gets the custom_data_8 of this AnalyticsImpressionSample.
+
+        Free form data set via the customData8 field in the analytics collector configuration
+
+        :return: The custom_data_8 of this AnalyticsImpressionSample.
+        :rtype: string_types
+        """
+        return self._custom_data_8
+
+    @custom_data_8.setter
+    def custom_data_8(self, custom_data_8):
+        # type: (string_types) -> None
+        """Sets the custom_data_8 of this AnalyticsImpressionSample.
+
+        Free form data set via the customData8 field in the analytics collector configuration
+
+        :param custom_data_8: The custom_data_8 of this AnalyticsImpressionSample.
+        :type: string_types
+        """
+
+        if custom_data_8 is not None:
+            if not isinstance(custom_data_8, string_types):
+                raise TypeError("Invalid type for `custom_data_8`, type has to be `string_types`")
+
+        self._custom_data_8 = custom_data_8
+
+    @property
+    def custom_data_9(self):
+        # type: () -> string_types
+        """Gets the custom_data_9 of this AnalyticsImpressionSample.
+
+        Free form data set via the customData9 field in the analytics collector configuration
+
+        :return: The custom_data_9 of this AnalyticsImpressionSample.
+        :rtype: string_types
+        """
+        return self._custom_data_9
+
+    @custom_data_9.setter
+    def custom_data_9(self, custom_data_9):
+        # type: (string_types) -> None
+        """Sets the custom_data_9 of this AnalyticsImpressionSample.
+
+        Free form data set via the customData9 field in the analytics collector configuration
+
+        :param custom_data_9: The custom_data_9 of this AnalyticsImpressionSample.
+        :type: string_types
+        """
+
+        if custom_data_9 is not None:
+            if not isinstance(custom_data_9, string_types):
+                raise TypeError("Invalid type for `custom_data_9`, type has to be `string_types`")
+
+        self._custom_data_9 = custom_data_9
+
+    @property
+    def custom_data_10(self):
+        # type: () -> string_types
+        """Gets the custom_data_10 of this AnalyticsImpressionSample.
+
+        Free form data set via the customData10 field in the analytics collector configuration
+
+        :return: The custom_data_10 of this AnalyticsImpressionSample.
+        :rtype: string_types
+        """
+        return self._custom_data_10
+
+    @custom_data_10.setter
+    def custom_data_10(self, custom_data_10):
+        # type: (string_types) -> None
+        """Sets the custom_data_10 of this AnalyticsImpressionSample.
+
+        Free form data set via the customData10 field in the analytics collector configuration
+
+        :param custom_data_10: The custom_data_10 of this AnalyticsImpressionSample.
+        :type: string_types
+        """
+
+        if custom_data_10 is not None:
+            if not isinstance(custom_data_10, string_types):
+                raise TypeError("Invalid type for `custom_data_10`, type has to be `string_types`")
+
+        self._custom_data_10 = custom_data_10
+
+    @property
+    def custom_data_11(self):
+        # type: () -> string_types
+        """Gets the custom_data_11 of this AnalyticsImpressionSample.
+
+        Free form data set via the customData11 field in the analytics collector configuration
+
+        :return: The custom_data_11 of this AnalyticsImpressionSample.
+        :rtype: string_types
+        """
+        return self._custom_data_11
+
+    @custom_data_11.setter
+    def custom_data_11(self, custom_data_11):
+        # type: (string_types) -> None
+        """Sets the custom_data_11 of this AnalyticsImpressionSample.
+
+        Free form data set via the customData11 field in the analytics collector configuration
+
+        :param custom_data_11: The custom_data_11 of this AnalyticsImpressionSample.
+        :type: string_types
+        """
+
+        if custom_data_11 is not None:
+            if not isinstance(custom_data_11, string_types):
+                raise TypeError("Invalid type for `custom_data_11`, type has to be `string_types`")
+
+        self._custom_data_11 = custom_data_11
+
+    @property
+    def custom_data_12(self):
+        # type: () -> string_types
+        """Gets the custom_data_12 of this AnalyticsImpressionSample.
+
+        Free form data set via the customData12 field in the analytics collector configuration
+
+        :return: The custom_data_12 of this AnalyticsImpressionSample.
+        :rtype: string_types
+        """
+        return self._custom_data_12
+
+    @custom_data_12.setter
+    def custom_data_12(self, custom_data_12):
+        # type: (string_types) -> None
+        """Sets the custom_data_12 of this AnalyticsImpressionSample.
+
+        Free form data set via the customData12 field in the analytics collector configuration
+
+        :param custom_data_12: The custom_data_12 of this AnalyticsImpressionSample.
+        :type: string_types
+        """
+
+        if custom_data_12 is not None:
+            if not isinstance(custom_data_12, string_types):
+                raise TypeError("Invalid type for `custom_data_12`, type has to be `string_types`")
+
+        self._custom_data_12 = custom_data_12
+
+    @property
+    def custom_data_13(self):
+        # type: () -> string_types
+        """Gets the custom_data_13 of this AnalyticsImpressionSample.
+
+        Free form data set via the customData13 field in the analytics collector configuration
+
+        :return: The custom_data_13 of this AnalyticsImpressionSample.
+        :rtype: string_types
+        """
+        return self._custom_data_13
+
+    @custom_data_13.setter
+    def custom_data_13(self, custom_data_13):
+        # type: (string_types) -> None
+        """Sets the custom_data_13 of this AnalyticsImpressionSample.
+
+        Free form data set via the customData13 field in the analytics collector configuration
+
+        :param custom_data_13: The custom_data_13 of this AnalyticsImpressionSample.
+        :type: string_types
+        """
+
+        if custom_data_13 is not None:
+            if not isinstance(custom_data_13, string_types):
+                raise TypeError("Invalid type for `custom_data_13`, type has to be `string_types`")
+
+        self._custom_data_13 = custom_data_13
+
+    @property
+    def custom_data_14(self):
+        # type: () -> string_types
+        """Gets the custom_data_14 of this AnalyticsImpressionSample.
+
+        Free form data set via the customData14 field in the analytics collector configuration
+
+        :return: The custom_data_14 of this AnalyticsImpressionSample.
+        :rtype: string_types
+        """
+        return self._custom_data_14
+
+    @custom_data_14.setter
+    def custom_data_14(self, custom_data_14):
+        # type: (string_types) -> None
+        """Sets the custom_data_14 of this AnalyticsImpressionSample.
+
+        Free form data set via the customData14 field in the analytics collector configuration
+
+        :param custom_data_14: The custom_data_14 of this AnalyticsImpressionSample.
+        :type: string_types
+        """
+
+        if custom_data_14 is not None:
+            if not isinstance(custom_data_14, string_types):
+                raise TypeError("Invalid type for `custom_data_14`, type has to be `string_types`")
+
+        self._custom_data_14 = custom_data_14
+
+    @property
+    def custom_data_15(self):
+        # type: () -> string_types
+        """Gets the custom_data_15 of this AnalyticsImpressionSample.
+
+        Free form data set via the customData15 field in the analytics collector configuration
+
+        :return: The custom_data_15 of this AnalyticsImpressionSample.
+        :rtype: string_types
+        """
+        return self._custom_data_15
+
+    @custom_data_15.setter
+    def custom_data_15(self, custom_data_15):
+        # type: (string_types) -> None
+        """Sets the custom_data_15 of this AnalyticsImpressionSample.
+
+        Free form data set via the customData15 field in the analytics collector configuration
+
+        :param custom_data_15: The custom_data_15 of this AnalyticsImpressionSample.
+        :type: string_types
+        """
+
+        if custom_data_15 is not None:
+            if not isinstance(custom_data_15, string_types):
+                raise TypeError("Invalid type for `custom_data_15`, type has to be `string_types`")
+
+        self._custom_data_15 = custom_data_15
+
+    @property
+    def custom_data_16(self):
+        # type: () -> string_types
+        """Gets the custom_data_16 of this AnalyticsImpressionSample.
+
+        Free form data set via the customData16 field in the analytics collector configuration
+
+        :return: The custom_data_16 of this AnalyticsImpressionSample.
+        :rtype: string_types
+        """
+        return self._custom_data_16
+
+    @custom_data_16.setter
+    def custom_data_16(self, custom_data_16):
+        # type: (string_types) -> None
+        """Sets the custom_data_16 of this AnalyticsImpressionSample.
+
+        Free form data set via the customData16 field in the analytics collector configuration
+
+        :param custom_data_16: The custom_data_16 of this AnalyticsImpressionSample.
+        :type: string_types
+        """
+
+        if custom_data_16 is not None:
+            if not isinstance(custom_data_16, string_types):
+                raise TypeError("Invalid type for `custom_data_16`, type has to be `string_types`")
+
+        self._custom_data_16 = custom_data_16
+
+    @property
+    def custom_data_17(self):
+        # type: () -> string_types
+        """Gets the custom_data_17 of this AnalyticsImpressionSample.
+
+        Free form data set via the customData17 field in the analytics collector configuration
+
+        :return: The custom_data_17 of this AnalyticsImpressionSample.
+        :rtype: string_types
+        """
+        return self._custom_data_17
+
+    @custom_data_17.setter
+    def custom_data_17(self, custom_data_17):
+        # type: (string_types) -> None
+        """Sets the custom_data_17 of this AnalyticsImpressionSample.
+
+        Free form data set via the customData17 field in the analytics collector configuration
+
+        :param custom_data_17: The custom_data_17 of this AnalyticsImpressionSample.
+        :type: string_types
+        """
+
+        if custom_data_17 is not None:
+            if not isinstance(custom_data_17, string_types):
+                raise TypeError("Invalid type for `custom_data_17`, type has to be `string_types`")
+
+        self._custom_data_17 = custom_data_17
+
+    @property
+    def custom_data_18(self):
+        # type: () -> string_types
+        """Gets the custom_data_18 of this AnalyticsImpressionSample.
+
+        Free form data set via the customData18 field in the analytics collector configuration
+
+        :return: The custom_data_18 of this AnalyticsImpressionSample.
+        :rtype: string_types
+        """
+        return self._custom_data_18
+
+    @custom_data_18.setter
+    def custom_data_18(self, custom_data_18):
+        # type: (string_types) -> None
+        """Sets the custom_data_18 of this AnalyticsImpressionSample.
+
+        Free form data set via the customData18 field in the analytics collector configuration
+
+        :param custom_data_18: The custom_data_18 of this AnalyticsImpressionSample.
+        :type: string_types
+        """
+
+        if custom_data_18 is not None:
+            if not isinstance(custom_data_18, string_types):
+                raise TypeError("Invalid type for `custom_data_18`, type has to be `string_types`")
+
+        self._custom_data_18 = custom_data_18
+
+    @property
+    def custom_data_19(self):
+        # type: () -> string_types
+        """Gets the custom_data_19 of this AnalyticsImpressionSample.
+
+        Free form data set via the customData19 field in the analytics collector configuration
+
+        :return: The custom_data_19 of this AnalyticsImpressionSample.
+        :rtype: string_types
+        """
+        return self._custom_data_19
+
+    @custom_data_19.setter
+    def custom_data_19(self, custom_data_19):
+        # type: (string_types) -> None
+        """Sets the custom_data_19 of this AnalyticsImpressionSample.
+
+        Free form data set via the customData19 field in the analytics collector configuration
+
+        :param custom_data_19: The custom_data_19 of this AnalyticsImpressionSample.
+        :type: string_types
+        """
+
+        if custom_data_19 is not None:
+            if not isinstance(custom_data_19, string_types):
+                raise TypeError("Invalid type for `custom_data_19`, type has to be `string_types`")
+
+        self._custom_data_19 = custom_data_19
+
+    @property
+    def custom_data_20(self):
+        # type: () -> string_types
+        """Gets the custom_data_20 of this AnalyticsImpressionSample.
+
+        Free form data set via the customData20 field in the analytics collector configuration
+
+        :return: The custom_data_20 of this AnalyticsImpressionSample.
+        :rtype: string_types
+        """
+        return self._custom_data_20
+
+    @custom_data_20.setter
+    def custom_data_20(self, custom_data_20):
+        # type: (string_types) -> None
+        """Sets the custom_data_20 of this AnalyticsImpressionSample.
+
+        Free form data set via the customData20 field in the analytics collector configuration
+
+        :param custom_data_20: The custom_data_20 of this AnalyticsImpressionSample.
+        :type: string_types
+        """
+
+        if custom_data_20 is not None:
+            if not isinstance(custom_data_20, string_types):
+                raise TypeError("Invalid type for `custom_data_20`, type has to be `string_types`")
+
+        self._custom_data_20 = custom_data_20
+
+    @property
+    def custom_data_21(self):
+        # type: () -> string_types
+        """Gets the custom_data_21 of this AnalyticsImpressionSample.
+
+        Free form data set via the customData21 field in the analytics collector configuration
+
+        :return: The custom_data_21 of this AnalyticsImpressionSample.
+        :rtype: string_types
+        """
+        return self._custom_data_21
+
+    @custom_data_21.setter
+    def custom_data_21(self, custom_data_21):
+        # type: (string_types) -> None
+        """Sets the custom_data_21 of this AnalyticsImpressionSample.
+
+        Free form data set via the customData21 field in the analytics collector configuration
+
+        :param custom_data_21: The custom_data_21 of this AnalyticsImpressionSample.
+        :type: string_types
+        """
+
+        if custom_data_21 is not None:
+            if not isinstance(custom_data_21, string_types):
+                raise TypeError("Invalid type for `custom_data_21`, type has to be `string_types`")
+
+        self._custom_data_21 = custom_data_21
+
+    @property
+    def custom_data_22(self):
+        # type: () -> string_types
+        """Gets the custom_data_22 of this AnalyticsImpressionSample.
+
+        Free form data set via the customData22 field in the analytics collector configuration
+
+        :return: The custom_data_22 of this AnalyticsImpressionSample.
+        :rtype: string_types
+        """
+        return self._custom_data_22
+
+    @custom_data_22.setter
+    def custom_data_22(self, custom_data_22):
+        # type: (string_types) -> None
+        """Sets the custom_data_22 of this AnalyticsImpressionSample.
+
+        Free form data set via the customData22 field in the analytics collector configuration
+
+        :param custom_data_22: The custom_data_22 of this AnalyticsImpressionSample.
+        :type: string_types
+        """
+
+        if custom_data_22 is not None:
+            if not isinstance(custom_data_22, string_types):
+                raise TypeError("Invalid type for `custom_data_22`, type has to be `string_types`")
+
+        self._custom_data_22 = custom_data_22
+
+    @property
+    def custom_data_23(self):
+        # type: () -> string_types
+        """Gets the custom_data_23 of this AnalyticsImpressionSample.
+
+        Free form data set via the customData23 field in the analytics collector configuration
+
+        :return: The custom_data_23 of this AnalyticsImpressionSample.
+        :rtype: string_types
+        """
+        return self._custom_data_23
+
+    @custom_data_23.setter
+    def custom_data_23(self, custom_data_23):
+        # type: (string_types) -> None
+        """Sets the custom_data_23 of this AnalyticsImpressionSample.
+
+        Free form data set via the customData23 field in the analytics collector configuration
+
+        :param custom_data_23: The custom_data_23 of this AnalyticsImpressionSample.
+        :type: string_types
+        """
+
+        if custom_data_23 is not None:
+            if not isinstance(custom_data_23, string_types):
+                raise TypeError("Invalid type for `custom_data_23`, type has to be `string_types`")
+
+        self._custom_data_23 = custom_data_23
+
+    @property
+    def custom_data_24(self):
+        # type: () -> string_types
+        """Gets the custom_data_24 of this AnalyticsImpressionSample.
+
+        Free form data set via the customData24 field in the analytics collector configuration
+
+        :return: The custom_data_24 of this AnalyticsImpressionSample.
+        :rtype: string_types
+        """
+        return self._custom_data_24
+
+    @custom_data_24.setter
+    def custom_data_24(self, custom_data_24):
+        # type: (string_types) -> None
+        """Sets the custom_data_24 of this AnalyticsImpressionSample.
+
+        Free form data set via the customData24 field in the analytics collector configuration
+
+        :param custom_data_24: The custom_data_24 of this AnalyticsImpressionSample.
+        :type: string_types
+        """
+
+        if custom_data_24 is not None:
+            if not isinstance(custom_data_24, string_types):
+                raise TypeError("Invalid type for `custom_data_24`, type has to be `string_types`")
+
+        self._custom_data_24 = custom_data_24
+
+    @property
+    def custom_data_25(self):
+        # type: () -> string_types
+        """Gets the custom_data_25 of this AnalyticsImpressionSample.
+
+        Free form data set via the customData25 field in the analytics collector configuration
+
+        :return: The custom_data_25 of this AnalyticsImpressionSample.
+        :rtype: string_types
+        """
+        return self._custom_data_25
+
+    @custom_data_25.setter
+    def custom_data_25(self, custom_data_25):
+        # type: (string_types) -> None
+        """Sets the custom_data_25 of this AnalyticsImpressionSample.
+
+        Free form data set via the customData25 field in the analytics collector configuration
+
+        :param custom_data_25: The custom_data_25 of this AnalyticsImpressionSample.
+        :type: string_types
+        """
+
+        if custom_data_25 is not None:
+            if not isinstance(custom_data_25, string_types):
+                raise TypeError("Invalid type for `custom_data_25`, type has to be `string_types`")
+
+        self._custom_data_25 = custom_data_25
 
     @property
     def device_class(self):
