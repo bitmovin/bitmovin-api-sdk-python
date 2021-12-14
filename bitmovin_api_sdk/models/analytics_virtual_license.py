@@ -3,6 +3,7 @@
 from enum import Enum
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
+from bitmovin_api_sdk.models.analytics_license_custom_data_field_labels import AnalyticsLicenseCustomDataFieldLabels
 import pprint
 import six
 
@@ -13,13 +14,17 @@ class AnalyticsVirtualLicense(object):
                  id_=None,
                  name=None,
                  timezone=None,
-                 licenses=None):
-        # type: (string_types, string_types, string_types, list[AnalyticsVirtualLicenseLicensesListItem]) -> None
+                 licenses=None,
+                 custom_data_fields_count=None,
+                 custom_data_field_labels=None):
+        # type: (string_types, string_types, string_types, list[AnalyticsVirtualLicenseLicensesListItem], int, AnalyticsLicenseCustomDataFieldLabels) -> None
 
         self._id = None
         self._name = None
         self._timezone = None
         self._licenses = list()
+        self._custom_data_fields_count = None
+        self._custom_data_field_labels = None
         self.discriminator = None
 
         if id_ is not None:
@@ -30,6 +35,10 @@ class AnalyticsVirtualLicense(object):
             self.timezone = timezone
         if licenses is not None:
             self.licenses = licenses
+        if custom_data_fields_count is not None:
+            self.custom_data_fields_count = custom_data_fields_count
+        if custom_data_field_labels is not None:
+            self.custom_data_field_labels = custom_data_field_labels
 
     @property
     def openapi_types(self):
@@ -37,7 +46,9 @@ class AnalyticsVirtualLicense(object):
             'id': 'string_types',
             'name': 'string_types',
             'timezone': 'string_types',
-            'licenses': 'list[AnalyticsVirtualLicenseLicensesListItem]'
+            'licenses': 'list[AnalyticsVirtualLicenseLicensesListItem]',
+            'custom_data_fields_count': 'int',
+            'custom_data_field_labels': 'AnalyticsLicenseCustomDataFieldLabels'
         }
 
         return types
@@ -48,7 +59,9 @@ class AnalyticsVirtualLicense(object):
             'id': 'id',
             'name': 'name',
             'timezone': 'timezone',
-            'licenses': 'licenses'
+            'licenses': 'licenses',
+            'custom_data_fields_count': 'customDataFieldsCount',
+            'custom_data_field_labels': 'customDataFieldLabels'
         }
         return attributes
 
@@ -167,6 +180,64 @@ class AnalyticsVirtualLicense(object):
                 raise TypeError("Invalid type for `licenses`, type has to be `list[AnalyticsVirtualLicenseLicensesListItem]`")
 
         self._licenses = licenses
+
+    @property
+    def custom_data_fields_count(self):
+        # type: () -> int
+        """Gets the custom_data_fields_count of this AnalyticsVirtualLicense.
+
+        The number of customData fields available
+
+        :return: The custom_data_fields_count of this AnalyticsVirtualLicense.
+        :rtype: int
+        """
+        return self._custom_data_fields_count
+
+    @custom_data_fields_count.setter
+    def custom_data_fields_count(self, custom_data_fields_count):
+        # type: (int) -> None
+        """Sets the custom_data_fields_count of this AnalyticsVirtualLicense.
+
+        The number of customData fields available
+
+        :param custom_data_fields_count: The custom_data_fields_count of this AnalyticsVirtualLicense.
+        :type: int
+        """
+
+        if custom_data_fields_count is not None:
+            if not isinstance(custom_data_fields_count, int):
+                raise TypeError("Invalid type for `custom_data_fields_count`, type has to be `int`")
+
+        self._custom_data_fields_count = custom_data_fields_count
+
+    @property
+    def custom_data_field_labels(self):
+        # type: () -> AnalyticsLicenseCustomDataFieldLabels
+        """Gets the custom_data_field_labels of this AnalyticsVirtualLicense.
+
+        Labels for Custom Data fields
+
+        :return: The custom_data_field_labels of this AnalyticsVirtualLicense.
+        :rtype: AnalyticsLicenseCustomDataFieldLabels
+        """
+        return self._custom_data_field_labels
+
+    @custom_data_field_labels.setter
+    def custom_data_field_labels(self, custom_data_field_labels):
+        # type: (AnalyticsLicenseCustomDataFieldLabels) -> None
+        """Sets the custom_data_field_labels of this AnalyticsVirtualLicense.
+
+        Labels for Custom Data fields
+
+        :param custom_data_field_labels: The custom_data_field_labels of this AnalyticsVirtualLicense.
+        :type: AnalyticsLicenseCustomDataFieldLabels
+        """
+
+        if custom_data_field_labels is not None:
+            if not isinstance(custom_data_field_labels, AnalyticsLicenseCustomDataFieldLabels):
+                raise TypeError("Invalid type for `custom_data_field_labels`, type has to be `AnalyticsLicenseCustomDataFieldLabels`")
+
+        self._custom_data_field_labels = custom_data_field_labels
 
     def to_dict(self):
         """Returns the model properties as a dict"""

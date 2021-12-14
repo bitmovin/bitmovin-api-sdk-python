@@ -23,7 +23,7 @@ class AdaptationSet(BitmovinResponse):
         self._roles = list()
         self._accessibilities = list()
         self._labels = list()
-        self.discriminator = None
+        self.discriminator = 'type'
 
         if custom_attributes is not None:
             self.custom_attributes = custom_attributes
@@ -64,6 +64,13 @@ class AdaptationSet(BitmovinResponse):
             'labels': 'labels'
         })
         return attributes
+
+    discriminator_value_class_map = {
+        'VIDEO': 'VideoAdaptationSet',
+        'AUDIO': 'AudioAdaptationSet',
+        'IMAGE': 'ImageAdaptationSet',
+        'SUBTITLE': 'SubtitleAdaptationSet'
+    }
 
     @property
     def custom_attributes(self):
@@ -187,6 +194,10 @@ class AdaptationSet(BitmovinResponse):
 
         if hasattr(super(AdaptationSet, self), "to_dict"):
             result = super(AdaptationSet, self).to_dict()
+        for k, v in iteritems(self.discriminator_value_class_map):
+            if v == type(self).__name__:
+                result['type'] = k
+                break
         for attr, _ in six.iteritems(self.openapi_types):
             value = getattr(self, attr)
             if value is None:

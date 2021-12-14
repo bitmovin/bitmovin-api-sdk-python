@@ -12,10 +12,19 @@ Subpackages
    bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.image
    bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations
    bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.subtitle
+   bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.type
    bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.video
 
 Submodules
 ----------
+
+bitmovin\_api\_sdk.encoding.manifests.dash.periods.adaptationsets.adaptation\_set\_list\_query\_params module
+-------------------------------------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.adaptation_set_list_query_params
+   :members:
+   :undoc-members:
+   :show-inheritance:
 
 bitmovin\_api\_sdk.encoding.manifests.dash.periods.adaptationsets.adaptationsets\_api module
 --------------------------------------------------------------------------------------------

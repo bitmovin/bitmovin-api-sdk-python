@@ -292,6 +292,22 @@ bitmovin\_api\_sdk.models.adaptation\_set\_role module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.adaptation\_set\_type module
+------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.adaptation_set_type
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.adaptation\_set\_type\_response module
+----------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.adaptation_set_type_response
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.adaptive\_quant\_mode module
 ------------------------------------------------------
 
@@ -4704,6 +4720,110 @@ bitmovin\_api\_sdk.models.signature\_type module
 ------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.models.signature_type
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.simple\_encoding\_vod\_job\_access\_key\_credentials module
+-------------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.simple_encoding_vod_job_access_key_credentials
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.simple\_encoding\_vod\_job\_azure\_credentials module
+-------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.simple_encoding_vod_job_azure_credentials
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.simple\_encoding\_vod\_job\_credentials module
+------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.simple_encoding_vod_job_credentials
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.simple\_encoding\_vod\_job\_errors module
+-------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.simple_encoding_vod_job_errors
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.simple\_encoding\_vod\_job\_gcs\_service\_account\_credentials module
+-----------------------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.simple_encoding_vod_job_gcs_service_account_credentials
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.simple\_encoding\_vod\_job\_input\_type module
+------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.simple_encoding_vod_job_input_type
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.simple\_encoding\_vod\_job\_request module
+--------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.simple_encoding_vod_job_request
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.simple\_encoding\_vod\_job\_response module
+---------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.simple_encoding_vod_job_response
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.simple\_encoding\_vod\_job\_s3\_role\_based\_credentials module
+-----------------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.simple_encoding_vod_job_s3_role_based_credentials
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.simple\_encoding\_vod\_job\_status module
+-------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.simple_encoding_vod_job_status
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.simple\_encoding\_vod\_job\_url\_input module
+-----------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.simple_encoding_vod_job_url_input
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.simple\_encoding\_vod\_job\_url\_output module
+------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.simple_encoding_vod_job_url_output
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.simple\_encoding\_vod\_job\_username\_password\_credentials module
+--------------------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.simple_encoding_vod_job_username_password_credentials
    :members:
    :undoc-members:
    :show-inheritance:
