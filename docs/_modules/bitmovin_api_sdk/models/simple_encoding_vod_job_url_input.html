@@ -190,7 +190,7 @@
         <span class="c1"># type: () -&gt; SimpleEncodingVodJobInputType</span>
         <span class="sd">&quot;&quot;&quot;Gets the input_type of this SimpleEncodingVodJobUrlInput.</span>
 
-<span class="sd">        Defines the type of the input file, if no type is set it is assumed that the input file contains at least one video stream and optionally one or multiple audio streams. </span>
+<span class="sd">        Defines the type of the input file, if no type is set it is assumed that the input file contains at least one video stream and optionally one or multiple audio streams.  Note that when defining video and audio inputs, you can either - add one single input without inputType, in which case that source file must contain a video stream and (if you want audio) one audio stream, or - add one single input with inputType=VIDEO and (if you want audio) one or more inputs with inputType=AUDIO (each containing one audio stream)  Other combinations are not valid. </span>
 
 <span class="sd">        :return: The input_type of this SimpleEncodingVodJobUrlInput.</span>
 <span class="sd">        :rtype: SimpleEncodingVodJobInputType</span>
@@ -202,7 +202,7 @@
         <span class="c1"># type: (SimpleEncodingVodJobInputType) -&gt; None</span>
         <span class="sd">&quot;&quot;&quot;Sets the input_type of this SimpleEncodingVodJobUrlInput.</span>
 
-<span class="sd">        Defines the type of the input file, if no type is set it is assumed that the input file contains at least one video stream and optionally one or multiple audio streams. </span>
+<span class="sd">        Defines the type of the input file, if no type is set it is assumed that the input file contains at least one video stream and optionally one or multiple audio streams.  Note that when defining video and audio inputs, you can either - add one single input without inputType, in which case that source file must contain a video stream and (if you want audio) one audio stream, or - add one single input with inputType=VIDEO and (if you want audio) one or more inputs with inputType=AUDIO (each containing one audio stream)  Other combinations are not valid. </span>
 
 <span class="sd">        :param input_type: The input_type of this SimpleEncodingVodJobUrlInput.</span>
 <span class="sd">        :type: SimpleEncodingVodJobInputType</span>
