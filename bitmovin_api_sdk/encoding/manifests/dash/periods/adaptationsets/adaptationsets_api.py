@@ -82,13 +82,13 @@ class AdaptationsetsApi(BaseApi):
         # type: (string_types, string_types, AdaptationSetListQueryParams, dict) -> AdaptationSet
         """List all AdaptationSets
 
-        :param manifest_id: Id of the manifest
+        :param manifest_id: Id of the Manifest
         :type manifest_id: string_types, required
-        :param period_id: Id of the adaptation set
+        :param period_id: Id of the Period
         :type period_id: string_types, required
         :param query_params: Query parameters
         :type query_params: AdaptationSetListQueryParams
-        :return: All ...
+        :return: AdaptationSets of the Period
         :rtype: AdaptationSet
         """
 

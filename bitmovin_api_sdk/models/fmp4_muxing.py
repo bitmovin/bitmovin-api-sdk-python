@@ -4,6 +4,7 @@ from enum import Enum
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
 from bitmovin_api_sdk.models.muxing import Muxing
+from bitmovin_api_sdk.models.pts_align_mode import PTSAlignMode
 from bitmovin_api_sdk.models.stream_conditions_mode import StreamConditionsMode
 import pprint
 import six
@@ -31,8 +32,9 @@ class Fmp4Muxing(Muxing):
                  init_segment_name=None,
                  init_segment_name_template=None,
                  write_duration_per_sample=None,
-                 segments_muxed=None):
-        # type: (string_types, string_types, string_types, datetime, datetime, dict, list[MuxingStream], list[EncodingOutput], int, int, int, list[Ignoring], StreamConditionsMode, float, string_types, string_types, string_types, string_types, bool, int) -> None
+                 segments_muxed=None,
+                 pts_align_mode=None):
+        # type: (string_types, string_types, string_types, datetime, datetime, dict, list[MuxingStream], list[EncodingOutput], int, int, int, list[Ignoring], StreamConditionsMode, float, string_types, string_types, string_types, string_types, bool, int, PTSAlignMode) -> None
         super(Fmp4Muxing, self).__init__(id_=id_, name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, streams=streams, outputs=outputs, avg_bitrate=avg_bitrate, min_bitrate=min_bitrate, max_bitrate=max_bitrate, ignored_by=ignored_by, stream_conditions_mode=stream_conditions_mode)
 
         self._segment_length = None
@@ -42,6 +44,7 @@ class Fmp4Muxing(Muxing):
         self._init_segment_name_template = None
         self._write_duration_per_sample = None
         self._segments_muxed = None
+        self._pts_align_mode = None
         self.discriminator = None
 
         if segment_length is not None:
@@ -58,6 +61,8 @@ class Fmp4Muxing(Muxing):
             self.write_duration_per_sample = write_duration_per_sample
         if segments_muxed is not None:
             self.segments_muxed = segments_muxed
+        if pts_align_mode is not None:
+            self.pts_align_mode = pts_align_mode
 
     @property
     def openapi_types(self):
@@ -73,7 +78,8 @@ class Fmp4Muxing(Muxing):
             'init_segment_name': 'string_types',
             'init_segment_name_template': 'string_types',
             'write_duration_per_sample': 'bool',
-            'segments_muxed': 'int'
+            'segments_muxed': 'int',
+            'pts_align_mode': 'PTSAlignMode'
         })
 
         return types
@@ -92,7 +98,8 @@ class Fmp4Muxing(Muxing):
             'init_segment_name': 'initSegmentName',
             'init_segment_name_template': 'initSegmentNameTemplate',
             'write_duration_per_sample': 'writeDurationPerSample',
-            'segments_muxed': 'segmentsMuxed'
+            'segments_muxed': 'segmentsMuxed',
+            'pts_align_mode': 'ptsAlignMode'
         })
         return attributes
 
@@ -298,6 +305,35 @@ class Fmp4Muxing(Muxing):
                 raise TypeError("Invalid type for `segments_muxed`, type has to be `int`")
 
         self._segments_muxed = segments_muxed
+
+    @property
+    def pts_align_mode(self):
+        # type: () -> PTSAlignMode
+        """Gets the pts_align_mode of this Fmp4Muxing.
+
+        Alignment mode for composition / presentation timestamps (CTS/PTS). Only applies to h.264 and h.265
+
+        :return: The pts_align_mode of this Fmp4Muxing.
+        :rtype: PTSAlignMode
+        """
+        return self._pts_align_mode
+
+    @pts_align_mode.setter
+    def pts_align_mode(self, pts_align_mode):
+        # type: (PTSAlignMode) -> None
+        """Sets the pts_align_mode of this Fmp4Muxing.
+
+        Alignment mode for composition / presentation timestamps (CTS/PTS). Only applies to h.264 and h.265
+
+        :param pts_align_mode: The pts_align_mode of this Fmp4Muxing.
+        :type: PTSAlignMode
+        """
+
+        if pts_align_mode is not None:
+            if not isinstance(pts_align_mode, PTSAlignMode):
+                raise TypeError("Invalid type for `pts_align_mode`, type has to be `PTSAlignMode`")
+
+        self._pts_align_mode = pts_align_mode
 
     def to_dict(self):
         """Returns the model properties as a dict"""

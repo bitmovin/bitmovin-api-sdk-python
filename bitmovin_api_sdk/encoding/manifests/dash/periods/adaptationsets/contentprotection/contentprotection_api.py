@@ -35,7 +35,7 @@ class ContentprotectionApi(BaseApi):
         :type adaptationset_id: string_types, required
         :param content_protection: The content protection to be added to the adaptation set
         :type content_protection: ContentProtection, required
-        :return: Id of the DRM Fmp4 representation
+        :return: AdaptationSet Content Protection
         :rtype: ContentProtection
         """
 

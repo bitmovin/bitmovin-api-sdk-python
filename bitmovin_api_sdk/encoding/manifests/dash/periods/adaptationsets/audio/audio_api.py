@@ -33,7 +33,7 @@ class AudioApi(BaseApi):
         :type period_id: string_types, required
         :param audio_adaptation_set: The audio adaptation set to be added to the period
         :type audio_adaptation_set: AudioAdaptationSet, required
-        :return: Id of the AudioAdaptationSet
+        :return: AudioAdaptationSet
         :rtype: AudioAdaptationSet
         """
 

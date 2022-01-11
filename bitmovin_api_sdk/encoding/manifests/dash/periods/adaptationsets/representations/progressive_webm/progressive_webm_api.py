@@ -35,7 +35,7 @@ class ProgressiveWebmApi(BaseApi):
         :type adaptationset_id: string_types, required
         :param dash_progressive_webm_representation: The Progressive WebM representation to be added to the adaptation set
         :type dash_progressive_webm_representation: DashProgressiveWebmRepresentation, required
-        :return: Id of the Progressive WebM representation
+        :return: Progressive WebM representation
         :rtype: DashProgressiveWebmRepresentation
         """
 

@@ -27,7 +27,7 @@ class TypeApi(BaseApi):
 
         :param input_id: Id of the input
         :type input_id: string_types, required
-        :return: Service specific result
+        :return: Input type response
         :rtype: InputTypeResponse
         """
 

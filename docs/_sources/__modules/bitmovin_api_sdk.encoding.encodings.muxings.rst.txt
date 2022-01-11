@@ -21,6 +21,7 @@ Subpackages
    bitmovin_api_sdk.encoding.encodings.muxings.segmented_raw
    bitmovin_api_sdk.encoding.encodings.muxings.text
    bitmovin_api_sdk.encoding.encodings.muxings.ts
+   bitmovin_api_sdk.encoding.encodings.muxings.type
    bitmovin_api_sdk.encoding.encodings.muxings.webm
 
 Submodules

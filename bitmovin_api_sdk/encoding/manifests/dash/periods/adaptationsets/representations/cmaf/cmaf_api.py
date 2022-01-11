@@ -44,7 +44,7 @@ class CmafApi(BaseApi):
         :type adaptationset_id: string_types, required
         :param dash_cmaf_representation: The CMAF representation to be added to the adaptation set
         :type dash_cmaf_representation: DashCmafRepresentation, required
-        :return: Id of the CMAF representation
+        :return: CMAF representation
         :rtype: DashCmafRepresentation
         """
 

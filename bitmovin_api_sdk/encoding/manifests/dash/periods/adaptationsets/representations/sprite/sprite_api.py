@@ -31,11 +31,11 @@ class SpriteApi(BaseApi):
         :type manifest_id: string_types, required
         :param period_id: Id of the period
         :type period_id: string_types, required
-        :param adaptationset_id: Id of the adaptation set
+        :param adaptationset_id: Id of the image adaptation set
         :type adaptationset_id: string_types, required
         :param sprite_representation: The Sprite representation to be added to the adaptation set. Note that the adaptation set has to be an image adaptation set.  Only supported for sprites generated with encoder version &#x60;2.76.0&#x60; or above. 
         :type sprite_representation: SpriteRepresentation, required
-        :return: Id of the Sprite representation
+        :return: Sprite representation
         :rtype: SpriteRepresentation
         """
 

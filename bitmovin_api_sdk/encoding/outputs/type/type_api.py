@@ -27,7 +27,7 @@ class TypeApi(BaseApi):
 
         :param output_id: Id of the wanted output
         :type output_id: string_types, required
-        :return: Service specific result
+        :return: Output type response
         :rtype: OutputTypeResponse
         """
 

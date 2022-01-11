@@ -3,12 +3,12 @@
 from enum import Enum
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
-from bitmovin_api_sdk.models.bitmovin_response import BitmovinResponse
+from bitmovin_api_sdk.models.dash_representation import DashRepresentation
 import pprint
 import six
 
 
-class SpriteRepresentation(BitmovinResponse):
+class SpriteRepresentation(DashRepresentation):
     @poscheck_model
     def __init__(self,
                  id_=None,

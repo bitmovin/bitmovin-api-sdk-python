@@ -483,6 +483,8 @@ from bitmovin_api_sdk.encoding.encodings.input_streams.dolby_vision.dolby_vision
 from bitmovin_api_sdk.encoding.encodings.input_streams.dolby_vision.dolby_vision_api import DolbyVisionInputStreamListQueryParams
 from bitmovin_api_sdk.encoding.encodings.muxings.muxings_api import MuxingsApi
 from bitmovin_api_sdk.encoding.encodings.muxings.muxings_api import MuxingListQueryParams
+from bitmovin_api_sdk.encoding.encodings.muxings.type.type_api import TypeApi
+
 from bitmovin_api_sdk.encoding.encodings.muxings.fmp4.fmp4_api import Fmp4Api
 from bitmovin_api_sdk.encoding.encodings.muxings.fmp4.fmp4_api import Fmp4MuxingListQueryParams
 from bitmovin_api_sdk.encoding.encodings.muxings.fmp4.customdata.customdata_api import CustomdataApi
@@ -776,7 +778,9 @@ from bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.subtitle.su
 from bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.image.image_api import ImageApi
 from bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.image.image_api import ImageAdaptationSetListQueryParams
 from bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.representations_api import RepresentationsApi
-
+from bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.representations_api import DashRepresentationListQueryParams
+from bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.type.type_api import TypeApi
+from bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.type.type_api import DashRepresentationTypeResponseGetQueryParams
 from bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.vtt.vtt_api import VttApi
 from bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.vtt.vtt_api import DashVttRepresentationListQueryParams
 from bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.imsc.imsc_api import ImscApi
@@ -1216,12 +1220,15 @@ from bitmovin_api_sdk.models.dash_manifest_default import DashManifestDefault
 from bitmovin_api_sdk.models.dash_manifest_default_version import DashManifestDefaultVersion
 from bitmovin_api_sdk.models.dash_mp4_drm_representation import DashMp4DrmRepresentation
 from bitmovin_api_sdk.models.dash_mp4_representation import DashMp4Representation
+from bitmovin_api_sdk.models.dash_muxing_representation import DashMuxingRepresentation
 from bitmovin_api_sdk.models.dash_on_demand_representation_type import DashOnDemandRepresentationType
 from bitmovin_api_sdk.models.dash_profile import DashProfile
 from bitmovin_api_sdk.models.dash_progressive_webm_representation import DashProgressiveWebmRepresentation
 from bitmovin_api_sdk.models.dash_representation import DashRepresentation
 from bitmovin_api_sdk.models.dash_representation_type import DashRepresentationType
+from bitmovin_api_sdk.models.dash_representation_type_discriminator import DashRepresentationTypeDiscriminator
 from bitmovin_api_sdk.models.dash_representation_type_mode import DashRepresentationTypeMode
+from bitmovin_api_sdk.models.dash_representation_type_response import DashRepresentationTypeResponse
 from bitmovin_api_sdk.models.dash_segmented_representation import DashSegmentedRepresentation
 from bitmovin_api_sdk.models.dash_vtt_representation import DashVttRepresentation
 from bitmovin_api_sdk.models.dash_webm_representation import DashWebmRepresentation
@@ -1462,6 +1469,7 @@ from bitmovin_api_sdk.models.muxing_information_audio_track import MuxingInforma
 from bitmovin_api_sdk.models.muxing_information_video_track import MuxingInformationVideoTrack
 from bitmovin_api_sdk.models.muxing_stream import MuxingStream
 from bitmovin_api_sdk.models.muxing_type import MuxingType
+from bitmovin_api_sdk.models.muxing_type_response import MuxingTypeResponse
 from bitmovin_api_sdk.models.mv_prediction_mode import MvPredictionMode
 from bitmovin_api_sdk.models.mxf_muxing import MxfMuxing
 from bitmovin_api_sdk.models.nex_guard_ab_watermarking_feature import NexGuardABWatermarkingFeature
@@ -1484,6 +1492,7 @@ from bitmovin_api_sdk.models.ott_loudness_mode import OttLoudnessMode
 from bitmovin_api_sdk.models.output import Output
 from bitmovin_api_sdk.models.output_type import OutputType
 from bitmovin_api_sdk.models.output_type_response import OutputTypeResponse
+from bitmovin_api_sdk.models.pts_align_mode import PTSAlignMode
 from bitmovin_api_sdk.models.packed_audio_muxing import PackedAudioMuxing
 from bitmovin_api_sdk.models.packed_audio_muxing_information import PackedAudioMuxingInformation
 from bitmovin_api_sdk.models.padding_duration_unit import PaddingDurationUnit
@@ -1721,4 +1730,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.99.0"
+__version__ = "1.100.0"

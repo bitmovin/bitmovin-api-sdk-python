@@ -77,6 +77,7 @@
 <span class="kn">from</span> <span class="nn">six</span> <span class="kn">import</span> <span class="n">string_types</span><span class="p">,</span> <span class="n">iteritems</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.common.poscheck</span> <span class="kn">import</span> <span class="n">poscheck_model</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.muxing</span> <span class="kn">import</span> <span class="n">Muxing</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.pts_align_mode</span> <span class="kn">import</span> <span class="n">PTSAlignMode</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.stream_conditions_mode</span> <span class="kn">import</span> <span class="n">StreamConditionsMode</span>
 <span class="kn">import</span> <span class="nn">pprint</span>
 <span class="kn">import</span> <span class="nn">six</span>
@@ -104,8 +105,9 @@
                  <span class="n">init_segment_name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">init_segment_name_template</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">write_duration_per_sample</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                 <span class="n">segments_muxed</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (string_types, string_types, string_types, datetime, datetime, dict, list[MuxingStream], list[EncodingOutput], int, int, int, list[Ignoring], StreamConditionsMode, float, string_types, string_types, string_types, string_types, bool, int) -&gt; None</span>
+                 <span class="n">segments_muxed</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">pts_align_mode</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="c1"># type: (string_types, string_types, string_types, datetime, datetime, dict, list[MuxingStream], list[EncodingOutput], int, int, int, list[Ignoring], StreamConditionsMode, float, string_types, string_types, string_types, string_types, bool, int, PTSAlignMode) -&gt; None</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">Fmp4Muxing</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">id_</span><span class="o">=</span><span class="n">id_</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="n">description</span><span class="p">,</span> <span class="n">created_at</span><span class="o">=</span><span class="n">created_at</span><span class="p">,</span> <span class="n">modified_at</span><span class="o">=</span><span class="n">modified_at</span><span class="p">,</span> <span class="n">custom_data</span><span class="o">=</span><span class="n">custom_data</span><span class="p">,</span> <span class="n">streams</span><span class="o">=</span><span class="n">streams</span><span class="p">,</span> <span class="n">outputs</span><span class="o">=</span><span class="n">outputs</span><span class="p">,</span> <span class="n">avg_bitrate</span><span class="o">=</span><span class="n">avg_bitrate</span><span class="p">,</span> <span class="n">min_bitrate</span><span class="o">=</span><span class="n">min_bitrate</span><span class="p">,</span> <span class="n">max_bitrate</span><span class="o">=</span><span class="n">max_bitrate</span><span class="p">,</span> <span class="n">ignored_by</span><span class="o">=</span><span class="n">ignored_by</span><span class="p">,</span> <span class="n">stream_conditions_mode</span><span class="o">=</span><span class="n">stream_conditions_mode</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_segment_length</span> <span class="o">=</span> <span class="kc">None</span>
@@ -115,6 +117,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_init_segment_name_template</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_write_duration_per_sample</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_segments_muxed</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_pts_align_mode</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>
 
         <span class="k">if</span> <span class="n">segment_length</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -131,6 +134,8 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">write_duration_per_sample</span> <span class="o">=</span> <span class="n">write_duration_per_sample</span>
         <span class="k">if</span> <span class="n">segments_muxed</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">segments_muxed</span> <span class="o">=</span> <span class="n">segments_muxed</span>
+        <span class="k">if</span> <span class="n">pts_align_mode</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">pts_align_mode</span> <span class="o">=</span> <span class="n">pts_align_mode</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -146,7 +151,8 @@
             <span class="s1">&#39;init_segment_name&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
             <span class="s1">&#39;init_segment_name_template&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
             <span class="s1">&#39;write_duration_per_sample&#39;</span><span class="p">:</span> <span class="s1">&#39;bool&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;segments_muxed&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span>
+            <span class="s1">&#39;segments_muxed&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;pts_align_mode&#39;</span><span class="p">:</span> <span class="s1">&#39;PTSAlignMode&#39;</span>
         <span class="p">})</span>
 
         <span class="k">return</span> <span class="n">types</span>
@@ -165,7 +171,8 @@
             <span class="s1">&#39;init_segment_name&#39;</span><span class="p">:</span> <span class="s1">&#39;initSegmentName&#39;</span><span class="p">,</span>
             <span class="s1">&#39;init_segment_name_template&#39;</span><span class="p">:</span> <span class="s1">&#39;initSegmentNameTemplate&#39;</span><span class="p">,</span>
             <span class="s1">&#39;write_duration_per_sample&#39;</span><span class="p">:</span> <span class="s1">&#39;writeDurationPerSample&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;segments_muxed&#39;</span><span class="p">:</span> <span class="s1">&#39;segmentsMuxed&#39;</span>
+            <span class="s1">&#39;segments_muxed&#39;</span><span class="p">:</span> <span class="s1">&#39;segmentsMuxed&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;pts_align_mode&#39;</span><span class="p">:</span> <span class="s1">&#39;ptsAlignMode&#39;</span>
         <span class="p">})</span>
         <span class="k">return</span> <span class="n">attributes</span>
 
@@ -371,6 +378,35 @@
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `segments_muxed`, type has to be `int`&quot;</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_segments_muxed</span> <span class="o">=</span> <span class="n">segments_muxed</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">pts_align_mode</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; PTSAlignMode</span>
+        <span class="sd">&quot;&quot;&quot;Gets the pts_align_mode of this Fmp4Muxing.</span>
+
+<span class="sd">        Alignment mode for composition / presentation timestamps (CTS/PTS). Only applies to h.264 and h.265</span>
+
+<span class="sd">        :return: The pts_align_mode of this Fmp4Muxing.</span>
+<span class="sd">        :rtype: PTSAlignMode</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_pts_align_mode</span>
+
+    <span class="nd">@pts_align_mode</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">pts_align_mode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pts_align_mode</span><span class="p">):</span>
+        <span class="c1"># type: (PTSAlignMode) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the pts_align_mode of this Fmp4Muxing.</span>
+
+<span class="sd">        Alignment mode for composition / presentation timestamps (CTS/PTS). Only applies to h.264 and h.265</span>
+
+<span class="sd">        :param pts_align_mode: The pts_align_mode of this Fmp4Muxing.</span>
+<span class="sd">        :type: PTSAlignMode</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">pts_align_mode</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">pts_align_mode</span><span class="p">,</span> <span class="n">PTSAlignMode</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `pts_align_mode`, type has to be `PTSAlignMode`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_pts_align_mode</span> <span class="o">=</span> <span class="n">pts_align_mode</span>
 
 <div class="viewcode-block" id="Fmp4Muxing.to_dict"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.fmp4_muxing.Fmp4Muxing.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>

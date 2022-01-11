@@ -35,7 +35,7 @@ class VttApi(BaseApi):
         :type adaptationset_id: string_types, required
         :param dash_vtt_representation: The VTT representation to be added to the adaptation set
         :type dash_vtt_representation: DashVttRepresentation, required
-        :return: Id of the VTT representation
+        :return: VTT representation
         :rtype: DashVttRepresentation
         """
 

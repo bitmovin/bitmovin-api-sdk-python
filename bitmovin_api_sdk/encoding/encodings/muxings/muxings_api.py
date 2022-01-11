@@ -8,6 +8,7 @@ from bitmovin_api_sdk.models.muxing import Muxing
 from bitmovin_api_sdk.models.response_envelope import ResponseEnvelope
 from bitmovin_api_sdk.models.response_error import ResponseError
 from bitmovin_api_sdk.models.stream_mode import StreamMode
+from bitmovin_api_sdk.encoding.encodings.muxings.type.type_api import TypeApi
 from bitmovin_api_sdk.encoding.encodings.muxings.fmp4.fmp4_api import Fmp4Api
 from bitmovin_api_sdk.encoding.encodings.muxings.chunked_text.chunked_text_api import ChunkedTextApi
 from bitmovin_api_sdk.encoding.encodings.muxings.cmaf.cmaf_api import CmafApi
@@ -32,6 +33,13 @@ class MuxingsApi(BaseApi):
         # type: (str, str, str, BitmovinApiLoggerBase) -> None
 
         super(MuxingsApi, self).__init__(
+            api_key=api_key,
+            tenant_org_id=tenant_org_id,
+            base_url=base_url,
+            logger=logger
+        )
+
+        self.type = TypeApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,

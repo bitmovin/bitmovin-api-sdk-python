@@ -3,23 +3,18 @@
 from enum import Enum
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
-from bitmovin_api_sdk.models.bitmovin_resource import BitmovinResource
+from bitmovin_api_sdk.models.dash_representation import DashRepresentation
 import pprint
 import six
 
 
-class DashVttRepresentation(BitmovinResource):
+class DashVttRepresentation(DashRepresentation):
     @poscheck_model
     def __init__(self,
                  id_=None,
-                 name=None,
-                 description=None,
-                 created_at=None,
-                 modified_at=None,
-                 custom_data=None,
                  vtt_url=None):
-        # type: (string_types, string_types, string_types, datetime, datetime, dict, string_types) -> None
-        super(DashVttRepresentation, self).__init__(id_=id_, name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data)
+        # type: (string_types, string_types) -> None
+        super(DashVttRepresentation, self).__init__(id_=id_)
 
         self._vtt_url = None
         self.discriminator = None

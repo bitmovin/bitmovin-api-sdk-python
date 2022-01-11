@@ -77,6 +77,10 @@
 
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.common</span> <span class="kn">import</span> <span class="n">BaseApi</span><span class="p">,</span> <span class="n">BitmovinApiLoggerBase</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.common.poscheck</span> <span class="kn">import</span> <span class="n">poscheck_except</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.dash_representation</span> <span class="kn">import</span> <span class="n">DashRepresentation</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.response_envelope</span> <span class="kn">import</span> <span class="n">ResponseEnvelope</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.response_error</span> <span class="kn">import</span> <span class="n">ResponseError</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.type.type_api</span> <span class="kn">import</span> <span class="n">TypeApi</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.vtt.vtt_api</span> <span class="kn">import</span> <span class="n">VttApi</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.imsc.imsc_api</span> <span class="kn">import</span> <span class="n">ImscApi</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.sprite.sprite_api</span> <span class="kn">import</span> <span class="n">SpriteApi</span>
@@ -86,6 +90,7 @@
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.mp4.mp4_api</span> <span class="kn">import</span> <span class="n">Mp4Api</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.webm.webm_api</span> <span class="kn">import</span> <span class="n">WebmApi</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.progressive_webm.progressive_webm_api</span> <span class="kn">import</span> <span class="n">ProgressiveWebmApi</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.dash_representation_list_query_params</span> <span class="kn">import</span> <span class="n">DashRepresentationListQueryParams</span>
 
 
 <div class="viewcode-block" id="RepresentationsApi"><a class="viewcode-back" href="../../../../../../../../__modules/bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.html#bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.representations_api.RepresentationsApi">[docs]</a><span class="k">class</span> <span class="nc">RepresentationsApi</span><span class="p">(</span><span class="n">BaseApi</span><span class="p">):</span>
@@ -94,6 +99,13 @@
         <span class="c1"># type: (str, str, str, BitmovinApiLoggerBase) -&gt; None</span>
 
         <span class="nb">super</span><span class="p">(</span><span class="n">RepresentationsApi</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span>
+            <span class="n">api_key</span><span class="o">=</span><span class="n">api_key</span><span class="p">,</span>
+            <span class="n">tenant_org_id</span><span class="o">=</span><span class="n">tenant_org_id</span><span class="p">,</span>
+            <span class="n">base_url</span><span class="o">=</span><span class="n">base_url</span><span class="p">,</span>
+            <span class="n">logger</span><span class="o">=</span><span class="n">logger</span>
+        <span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">type</span> <span class="o">=</span> <span class="n">TypeApi</span><span class="p">(</span>
             <span class="n">api_key</span><span class="o">=</span><span class="n">api_key</span><span class="p">,</span>
             <span class="n">tenant_org_id</span><span class="o">=</span><span class="n">tenant_org_id</span><span class="p">,</span>
             <span class="n">base_url</span><span class="o">=</span><span class="n">base_url</span><span class="p">,</span>
@@ -161,7 +173,32 @@
             <span class="n">tenant_org_id</span><span class="o">=</span><span class="n">tenant_org_id</span><span class="p">,</span>
             <span class="n">base_url</span><span class="o">=</span><span class="n">base_url</span><span class="p">,</span>
             <span class="n">logger</span><span class="o">=</span><span class="n">logger</span>
-        <span class="p">)</span></div>
+        <span class="p">)</span>
+
+<div class="viewcode-block" id="RepresentationsApi.list"><a class="viewcode-back" href="../../../../../../../../__modules/bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.html#bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.representations_api.RepresentationsApi.list">[docs]</a>    <span class="k">def</span> <span class="nf">list</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">manifest_id</span><span class="p">,</span> <span class="n">period_id</span><span class="p">,</span> <span class="n">adaptationset_id</span><span class="p">,</span> <span class="n">query_params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="c1"># type: (string_types, string_types, string_types, DashRepresentationListQueryParams, dict) -&gt; DashRepresentation</span>
+        <span class="sd">&quot;&quot;&quot;List all DASH Representations</span>
+
+<span class="sd">        :param manifest_id: Id of the manifest</span>
+<span class="sd">        :type manifest_id: string_types, required</span>
+<span class="sd">        :param period_id: Id of the period</span>
+<span class="sd">        :type period_id: string_types, required</span>
+<span class="sd">        :param adaptationset_id: Id of the adaptation set</span>
+<span class="sd">        :type adaptationset_id: string_types, required</span>
+<span class="sd">        :param query_params: Query parameters</span>
+<span class="sd">        :type query_params: DashRepresentationListQueryParams</span>
+<span class="sd">        :return: Representations of the AdaptationSet</span>
+<span class="sd">        :rtype: DashRepresentation</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+            <span class="s1">&#39;/encoding/manifests/dash/</span><span class="si">{manifest_id}</span><span class="s1">/periods/</span><span class="si">{period_id}</span><span class="s1">/adaptationsets/</span><span class="si">{adaptationset_id}</span><span class="s1">/representations&#39;</span><span class="p">,</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;manifest_id&#39;</span><span class="p">:</span> <span class="n">manifest_id</span><span class="p">,</span> <span class="s1">&#39;period_id&#39;</span><span class="p">:</span> <span class="n">period_id</span><span class="p">,</span> <span class="s1">&#39;adaptationset_id&#39;</span><span class="p">:</span> <span class="n">adaptationset_id</span><span class="p">},</span>
+            <span class="n">query_params</span><span class="o">=</span><span class="n">query_params</span><span class="p">,</span>
+            <span class="n">pagination_response</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+            <span class="nb">type</span><span class="o">=</span><span class="n">DashRepresentation</span><span class="p">,</span>
+            <span class="o">**</span><span class="n">kwargs</span>
+        <span class="p">)</span></div></div>
 </pre></div>
 
            </div>

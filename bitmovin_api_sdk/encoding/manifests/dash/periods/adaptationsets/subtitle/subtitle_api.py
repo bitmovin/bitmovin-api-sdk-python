@@ -33,7 +33,7 @@ class SubtitleApi(BaseApi):
         :type period_id: string_types, required
         :param subtitle_adaptation_set: The subtitle adaptation set to be added to the period
         :type subtitle_adaptation_set: SubtitleAdaptationSet, required
-        :return: Id of the SubtitleAdaptationSet
+        :return: SubtitleAdaptationSet
         :rtype: SubtitleAdaptationSet
         """
 

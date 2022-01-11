@@ -36,7 +36,7 @@ class ChunkedTextApi(BaseApi):
         :type adaptationset_id: string_types, required
         :param dash_chunked_text_representation: The Chunked Text Representation to be added to the adaptation set
         :type dash_chunked_text_representation: DashChunkedTextRepresentation, required
-        :return: Id of the Chunked Text Representation
+        :return: Chunked Text Representation
         :rtype: DashChunkedTextRepresentation
         """
 

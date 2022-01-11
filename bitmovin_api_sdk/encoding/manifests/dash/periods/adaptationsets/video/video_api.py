@@ -34,7 +34,7 @@ class VideoApi(BaseApi):
         :type period_id: string_types, required
         :param video_adaptation_set: The video adaptation set to be added to the period
         :type video_adaptation_set: VideoAdaptationSet, required
-        :return: Id of the VideoAdaptationSet
+        :return: VideoAdaptationSet
         :rtype: VideoAdaptationSet
         """
 

@@ -3,14 +3,14 @@
 from enum import Enum
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
-from bitmovin_api_sdk.models.dash_representation import DashRepresentation
+from bitmovin_api_sdk.models.dash_muxing_representation import DashMuxingRepresentation
 from bitmovin_api_sdk.models.dash_representation_type import DashRepresentationType
 from bitmovin_api_sdk.models.dash_representation_type_mode import DashRepresentationTypeMode
 import pprint
 import six
 
 
-class DashSegmentedRepresentation(DashRepresentation):
+class DashSegmentedRepresentation(DashMuxingRepresentation):
     @poscheck_model
     def __init__(self,
                  id_=None,

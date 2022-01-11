@@ -52,7 +52,7 @@ class Fmp4Api(BaseApi):
         :type adaptationset_id: string_types, required
         :param dash_fmp4_representation: The fMP4 representation to be added to the adaptation set
         :type dash_fmp4_representation: DashFmp4Representation, required
-        :return: Id of the Fmp4 representation
+        :return: Fmp4 representation
         :rtype: DashFmp4Representation
         """
 

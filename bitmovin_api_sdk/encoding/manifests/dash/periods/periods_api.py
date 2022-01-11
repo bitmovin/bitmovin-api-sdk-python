@@ -47,7 +47,7 @@ class PeriodsApi(BaseApi):
         :type manifest_id: string_types, required
         :param period: The Period to be added to the manifest
         :type period: Period, required
-        :return: Id of the period
+        :return: Period
         :rtype: Period
         """
 

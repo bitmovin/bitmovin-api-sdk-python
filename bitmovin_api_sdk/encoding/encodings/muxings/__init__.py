@@ -1,4 +1,5 @@
 from bitmovin_api_sdk.encoding.encodings.muxings.muxings_api import MuxingsApi
+from bitmovin_api_sdk.encoding.encodings.muxings.type.type_api import TypeApi
 from bitmovin_api_sdk.encoding.encodings.muxings.fmp4.fmp4_api import Fmp4Api
 from bitmovin_api_sdk.encoding.encodings.muxings.chunked_text.chunked_text_api import ChunkedTextApi
 from bitmovin_api_sdk.encoding.encodings.muxings.cmaf.cmaf_api import CmafApi

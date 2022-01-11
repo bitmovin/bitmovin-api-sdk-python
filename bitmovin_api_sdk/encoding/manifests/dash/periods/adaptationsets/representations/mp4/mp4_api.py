@@ -43,7 +43,7 @@ class Mp4Api(BaseApi):
         :type adaptationset_id: string_types, required
         :param dash_mp4_representation: The MP4 representation to be added to the adaptation set
         :type dash_mp4_representation: DashMp4Representation, required
-        :return: Id of the MP4 representation
+        :return: MP4 representation
         :rtype: DashMp4Representation
         """
 

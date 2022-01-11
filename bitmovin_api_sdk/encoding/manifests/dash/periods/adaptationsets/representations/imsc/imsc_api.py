@@ -31,11 +31,11 @@ class ImscApi(BaseApi):
         :type manifest_id: string_types, required
         :param period_id: Id of the period
         :type period_id: string_types, required
-        :param adaptationset_id: Id of the adaptation set
+        :param adaptationset_id: Id of the subtitle adaptation set
         :type adaptationset_id: string_types, required
-        :param dash_imsc_representation: The IMSC representation to be added to the adaptation set
+        :param dash_imsc_representation: The IMSC representation to be added to the adaptation set. Note that the adaptation set has to be a subtitle adaptation set. 
         :type dash_imsc_representation: DashImscRepresentation, required
-        :return: Id of the Imsc representation
+        :return: Imsc representation
         :rtype: DashImscRepresentation
         """
 

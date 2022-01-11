@@ -1828,6 +1828,14 @@ bitmovin\_api\_sdk.models.dash\_mp4\_representation module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.dash\_muxing\_representation module
+-------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.dash_muxing_representation
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.dash\_on\_demand\_representation\_type module
 -----------------------------------------------------------------------
 
@@ -1868,10 +1876,26 @@ bitmovin\_api\_sdk.models.dash\_representation\_type module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.dash\_representation\_type\_discriminator module
+--------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.dash_representation_type_discriminator
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.dash\_representation\_type\_mode module
 -----------------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.models.dash_representation_type_mode
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.dash\_representation\_type\_response module
+---------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.dash_representation_type_response
    :members:
    :undoc-members:
    :show-inheritance:
@@ -3796,6 +3820,14 @@ bitmovin\_api\_sdk.models.muxing\_type module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.muxing\_type\_response module
+-------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.muxing_type_response
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.mv\_prediction\_mode module
 -----------------------------------------------------
 
@@ -4392,6 +4424,14 @@ bitmovin\_api\_sdk.models.psnr\_quality\_metric module
 ------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.models.psnr_quality_metric
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.pts\_align\_mode module
+-------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.pts_align_mode
    :members:
    :undoc-members:
    :show-inheritance:

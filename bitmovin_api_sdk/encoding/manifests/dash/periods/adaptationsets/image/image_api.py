@@ -34,7 +34,7 @@ class ImageApi(BaseApi):
         :type period_id: string_types, required
         :param image_adaptation_set: The image adaptation set to be added to the period
         :type image_adaptation_set: ImageAdaptationSet, required
-        :return: Id of the ImageAdaptationSet
+        :return: ImageAdaptationSet
         :rtype: ImageAdaptationSet
         """
 

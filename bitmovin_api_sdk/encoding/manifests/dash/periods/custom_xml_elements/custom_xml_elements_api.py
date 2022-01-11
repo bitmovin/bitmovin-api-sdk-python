@@ -33,7 +33,7 @@ class CustomXmlElementsApi(BaseApi):
         :type period_id: string_types, required
         :param custom_xml_element: Data of the custom XML element to be added to the period
         :type custom_xml_element: CustomXmlElement, required
-        :return: Id of the Custom XML Element
+        :return: Custom XML Element
         :rtype: CustomXmlElement
         """
 

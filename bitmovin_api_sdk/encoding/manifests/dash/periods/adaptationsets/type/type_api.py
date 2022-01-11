@@ -23,15 +23,15 @@ class TypeApi(BaseApi):
 
     def get(self, manifest_id, period_id, adaptationset_id, **kwargs):
         # type: (string_types, string_types, string_types, dict) -> AdaptationSetTypeResponse
-        """Get Input Type
+        """Get adaptation set type
 
         :param manifest_id: Id of the manifest
         :type manifest_id: string_types, required
         :param period_id: Id of the period
         :type period_id: string_types, required
-        :param adaptationset_id: Id of the input
+        :param adaptationset_id: Id of the adaptation set
         :type adaptationset_id: string_types, required
-        :return: Service specific result
+        :return: AdaptationSet type response
         :rtype: AdaptationSetTypeResponse
         """
 

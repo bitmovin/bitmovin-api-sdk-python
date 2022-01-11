@@ -44,7 +44,7 @@ class WebmApi(BaseApi):
         :type adaptationset_id: string_types, required
         :param dash_webm_representation: The WebM representation to be added to the adaptation set
         :type dash_webm_representation: DashWebmRepresentation, required
-        :return: Id of the WebM representation
+        :return: WebM representation
         :rtype: DashWebmRepresentation
         """
 

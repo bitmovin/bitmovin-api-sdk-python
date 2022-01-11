@@ -27,7 +27,7 @@ class TypeApi(BaseApi):
 
         :param manifest_id: UUID of the manifest
         :type manifest_id: string_types, required
-        :return: Service specific result
+        :return: Manifest type response
         :rtype: ManifestTypeResponse
         """
 
