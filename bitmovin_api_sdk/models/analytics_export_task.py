@@ -4,6 +4,7 @@ from enum import Enum
 from datetime import datetime
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
+from bitmovin_api_sdk.models.analytics_export_file_format import AnalyticsExportFileFormat
 from bitmovin_api_sdk.models.analytics_export_status import AnalyticsExportStatus
 from bitmovin_api_sdk.models.analytics_export_task_output_target import AnalyticsExportTaskOutputTarget
 from bitmovin_api_sdk.models.analytics_export_type import AnalyticsExportType
@@ -27,8 +28,9 @@ class AnalyticsExportTask(BitmovinResponse):
                  started_at=None,
                  finished_at=None,
                  type_=None,
-                 columns=None):
-        # type: (string_types, datetime, datetime, string_types, string_types, string_types, AnalyticsExportTaskOutputTarget, int, AnalyticsExportStatus, datetime, datetime, AnalyticsExportType, list[string_types]) -> None
+                 columns=None,
+                 file_format=None):
+        # type: (string_types, datetime, datetime, string_types, string_types, string_types, AnalyticsExportTaskOutputTarget, int, AnalyticsExportStatus, datetime, datetime, AnalyticsExportType, list[string_types], AnalyticsExportFileFormat) -> None
         super(AnalyticsExportTask, self).__init__(id_=id_)
 
         self._start_time = None
@@ -43,6 +45,7 @@ class AnalyticsExportTask(BitmovinResponse):
         self._finished_at = None
         self._type = None
         self._columns = list()
+        self._file_format = None
         self.discriminator = None
 
         if start_time is not None:
@@ -69,6 +72,8 @@ class AnalyticsExportTask(BitmovinResponse):
             self.type = type_
         if columns is not None:
             self.columns = columns
+        if file_format is not None:
+            self.file_format = file_format
 
     @property
     def openapi_types(self):
@@ -89,7 +94,8 @@ class AnalyticsExportTask(BitmovinResponse):
             'started_at': 'datetime',
             'finished_at': 'datetime',
             'type': 'AnalyticsExportType',
-            'columns': 'list[string_types]'
+            'columns': 'list[string_types]',
+            'file_format': 'AnalyticsExportFileFormat'
         })
 
         return types
@@ -113,7 +119,8 @@ class AnalyticsExportTask(BitmovinResponse):
             'started_at': 'startedAt',
             'finished_at': 'finishedAt',
             'type': 'type',
-            'columns': 'columns'
+            'columns': 'columns',
+            'file_format': 'fileFormat'
         })
         return attributes
 
@@ -456,6 +463,35 @@ class AnalyticsExportTask(BitmovinResponse):
                 raise TypeError("Invalid type for `columns`, type has to be `list[string_types]`")
 
         self._columns = columns
+
+    @property
+    def file_format(self):
+        # type: () -> AnalyticsExportFileFormat
+        """Gets the file_format of this AnalyticsExportTask.
+
+        File format of export file
+
+        :return: The file_format of this AnalyticsExportTask.
+        :rtype: AnalyticsExportFileFormat
+        """
+        return self._file_format
+
+    @file_format.setter
+    def file_format(self, file_format):
+        # type: (AnalyticsExportFileFormat) -> None
+        """Sets the file_format of this AnalyticsExportTask.
+
+        File format of export file
+
+        :param file_format: The file_format of this AnalyticsExportTask.
+        :type: AnalyticsExportFileFormat
+        """
+
+        if file_format is not None:
+            if not isinstance(file_format, AnalyticsExportFileFormat):
+                raise TypeError("Invalid type for `file_format`, type has to be `AnalyticsExportFileFormat`")
+
+        self._file_format = file_format
 
     def to_dict(self):
         """Returns the model properties as a dict"""

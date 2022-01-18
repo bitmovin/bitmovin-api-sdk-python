@@ -21,7 +21,7 @@ class StopApi(BaseApi):
 
     def create(self, encoding_id, **kwargs):
         # type: (string_types, dict) -> None
-        """Stops Currently Running Inserted Content
+        """Stops currently running Inserted Content
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required

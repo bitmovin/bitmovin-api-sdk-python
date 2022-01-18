@@ -6,6 +6,7 @@ from bitmovin_api_sdk.common import BaseApi, BitmovinApiLoggerBase
 from bitmovin_api_sdk.common.poscheck import poscheck_except
 from bitmovin_api_sdk.models.bitmovin_response import BitmovinResponse
 from bitmovin_api_sdk.models.response_envelope import ResponseEnvelope
+from bitmovin_api_sdk.models.response_error import ResponseError
 from bitmovin_api_sdk.models.static_ip import StaticIp
 from bitmovin_api_sdk.encoding.infrastructure.static_ips.static_ip_list_query_params import StaticIpListQueryParams
 

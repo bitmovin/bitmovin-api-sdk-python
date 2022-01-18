@@ -117,7 +117,6 @@
 <li class="toctree-l3"><a class="reference internal" href="bitmovin_api_sdk.encoding.statistics.encodings.live.daily.html">bitmovin_api_sdk.encoding.statistics.encodings.live.daily package</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="bitmovin_api_sdk.encoding.statistics.encodings.live.daily.html#submodules">Submodules</a></li>
 <li class="toctree-l4"><a class="reference internal" href="bitmovin_api_sdk.encoding.statistics.encodings.live.daily.html#module-bitmovin_api_sdk.encoding.statistics.encodings.live.daily.daily_api">bitmovin_api_sdk.encoding.statistics.encodings.live.daily.daily_api module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="bitmovin_api_sdk.encoding.statistics.encodings.live.daily.html#module-bitmovin_api_sdk.encoding.statistics.encodings.live.daily.encoding_statistics_live_list_by_date_range_query_params">bitmovin_api_sdk.encoding.statistics.encodings.live.daily.encoding_statistics_live_list_by_date_range_query_params module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="bitmovin_api_sdk.encoding.statistics.encodings.live.daily.html#module-bitmovin_api_sdk.encoding.statistics.encodings.live.daily">Module contents</a></li>
 </ul>
 </li>
@@ -162,6 +161,15 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="bitmovin_api_sdk.encoding.statistics.encodings.vod.html">bitmovin_api_sdk.encoding.statistics.encodings.vod package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="bitmovin_api_sdk.encoding.statistics.encodings.vod.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="bitmovin_api_sdk.encoding.statistics.encodings.vod.daily.html">bitmovin_api_sdk.encoding.statistics.encodings.vod.daily package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="bitmovin_api_sdk.encoding.statistics.encodings.vod.daily.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bitmovin_api_sdk.encoding.statistics.encodings.vod.daily.html#module-bitmovin_api_sdk.encoding.statistics.encodings.vod.daily.daily_api">bitmovin_api_sdk.encoding.statistics.encodings.vod.daily.daily_api module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bitmovin_api_sdk.encoding.statistics.encodings.vod.daily.html#module-bitmovin_api_sdk.encoding.statistics.encodings.vod.daily">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="bitmovin_api_sdk.encoding.statistics.encodings.vod.html#submodules">Submodules</a></li>
 <li class="toctree-l2"><a class="reference internal" href="bitmovin_api_sdk.encoding.statistics.encodings.vod.html#module-bitmovin_api_sdk.encoding.statistics.encodings.vod.encoding_statistics_vod_list_by_date_range_query_params">bitmovin_api_sdk.encoding.statistics.encodings.vod.encoding_statistics_vod_list_by_date_range_query_params module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="bitmovin_api_sdk.encoding.statistics.encodings.vod.html#module-bitmovin_api_sdk.encoding.statistics.encodings.vod.encoding_statistics_vod_list_query_params">bitmovin_api_sdk.encoding.statistics.encodings.vod.encoding_statistics_vod_list_query_params module</a></li>
@@ -183,7 +191,7 @@
 <dd><p>Bases: <a class="reference internal" href="bitmovin_api_sdk.common.html#bitmovin_api_sdk.common.base_api.BaseApi" title="bitmovin_api_sdk.common.base_api.BaseApi"><code class="xref py py-class docutils literal notranslate"><span class="pre">bitmovin_api_sdk.common.base_api.BaseApi</span></code></a></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="bitmovin_api_sdk.encoding.statistics.encodings.encodings_api.EncodingsApi.get">
-<span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">encoding_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">string_types</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">EncodingStats</span></span></span><a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/statistics/encodings/encodings_api.html#EncodingsApi.get"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.statistics.encodings.encodings_api.EncodingsApi.get" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">encoding_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">string_types</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.encoding_stats.EncodingStats" title="bitmovin_api_sdk.models.encoding_stats.EncodingStats"><span class="pre">EncodingStats</span></a></span></span><a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/statistics/encodings/encodings_api.html#EncodingsApi.get"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.statistics.encodings.encodings_api.EncodingsApi.get" title="Permalink to this definition"></a></dt>
 <dd><p>Get Statistics from an Encoding</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>

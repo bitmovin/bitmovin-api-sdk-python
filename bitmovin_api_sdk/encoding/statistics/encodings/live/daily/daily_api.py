@@ -7,7 +7,6 @@ from bitmovin_api_sdk.common.poscheck import poscheck_except
 from bitmovin_api_sdk.models.encoding_statistics_live import EncodingStatisticsLive
 from bitmovin_api_sdk.models.response_envelope import ResponseEnvelope
 from bitmovin_api_sdk.models.response_error import ResponseError
-from bitmovin_api_sdk.encoding.statistics.encodings.live.daily.encoding_statistics_live_list_by_date_range_query_params import EncodingStatisticsLiveListByDateRangeQueryParams
 
 
 class DailyApi(BaseApi):
@@ -22,16 +21,14 @@ class DailyApi(BaseApi):
             logger=logger
         )
 
-    def list_by_date_range(self, from_, to, query_params=None, **kwargs):
-        # type: (date, date, EncodingStatisticsLiveListByDateRangeQueryParams, dict) -> EncodingStatisticsLive
+    def list_by_date_range(self, from_, to, **kwargs):
+        # type: (date, date, dict) -> EncodingStatisticsLive
         """List daily live encoding statistics within specific dates
 
         :param from_: Start date, format: yyyy-MM-dd
         :type from_: date, required
         :param to: End date, format: yyyy-MM-dd
         :type to: date, required
-        :param query_params: Query parameters
-        :type query_params: EncodingStatisticsLiveListByDateRangeQueryParams
         :return: List of encoding statistics
         :rtype: EncodingStatisticsLive
         """
@@ -39,7 +36,6 @@ class DailyApi(BaseApi):
         return self.api_client.get(
             '/encoding/statistics/encodings/live/daily/{from}/{to}',
             path_params={'from': from_, 'to': to},
-            query_params=query_params,
             pagination_response=True,
             type=EncodingStatisticsLive,
             **kwargs

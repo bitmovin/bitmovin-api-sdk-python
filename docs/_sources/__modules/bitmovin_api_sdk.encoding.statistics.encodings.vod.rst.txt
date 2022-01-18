@@ -1,6 +1,14 @@
 bitmovin\_api\_sdk.encoding.statistics.encodings.vod package
 ============================================================
 
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   bitmovin_api_sdk.encoding.statistics.encodings.vod.daily
+
 Submodules
 ----------
 

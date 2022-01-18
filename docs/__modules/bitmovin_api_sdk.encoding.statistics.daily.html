@@ -136,14 +136,13 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="bitmovin_api_sdk.encoding.statistics.daily.daily_api.DailyApi.list_by_date_range">
-<span class="sig-name descname"><span class="pre">list_by_date_range</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">from_</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">date</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">to</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">date</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">query_params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DailyStatisticsListByDateRangeQueryParams</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DailyStatistics</span></span></span><a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/statistics/daily/daily_api.html#DailyApi.list_by_date_range"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.statistics.daily.daily_api.DailyApi.list_by_date_range" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">list_by_date_range</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">from_</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">date</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">to</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">date</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.daily_statistics.DailyStatistics" title="bitmovin_api_sdk.models.daily_statistics.DailyStatistics"><span class="pre">DailyStatistics</span></a></span></span><a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/statistics/daily/daily_api.html#DailyApi.list_by_date_range"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.statistics.daily.daily_api.DailyApi.list_by_date_range" title="Permalink to this definition"></a></dt>
 <dd><p>List daily statistics within specific dates</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>from</strong> (<em>date</em><em>, </em><em>required</em>) – Start date, format: yyyy-MM-dd</p></li>
 <li><p><strong>to</strong> (<em>date</em><em>, </em><em>required</em>) – End date, format: yyyy-MM-dd</p></li>
-<li><p><strong>query_params</strong> (<a class="reference internal" href="#bitmovin_api_sdk.encoding.statistics.daily.daily_statistics_list_by_date_range_query_params.DailyStatisticsListByDateRangeQueryParams" title="bitmovin_api_sdk.encoding.statistics.daily.daily_statistics_list_by_date_range_query_params.DailyStatisticsListByDateRangeQueryParams"><em>DailyStatisticsListByDateRangeQueryParams</em></a>) – Query parameters</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -154,25 +153,6 @@
 </dd>
 </dl>
 </dd></dl>
-
-</dd></dl>
-
-</section>
-<section id="module-bitmovin_api_sdk.encoding.statistics.daily.daily_statistics_list_by_date_range_query_params">
-<span id="bitmovin-api-sdk-encoding-statistics-daily-daily-statistics-list-by-date-range-query-params-module"></span><h2>bitmovin_api_sdk.encoding.statistics.daily.daily_statistics_list_by_date_range_query_params module<a class="headerlink" href="#module-bitmovin_api_sdk.encoding.statistics.daily.daily_statistics_list_by_date_range_query_params" title="Permalink to this headline"></a></h2>
-<dl class="py class">
-<dt class="sig sig-object py" id="bitmovin_api_sdk.encoding.statistics.daily.daily_statistics_list_by_date_range_query_params.DailyStatisticsListByDateRangeQueryParams">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bitmovin_api_sdk.encoding.statistics.daily.daily_statistics_list_by_date_range_query_params.</span></span><span class="sig-name descname"><span class="pre">DailyStatisticsListByDateRangeQueryParams</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">offset</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/statistics/daily/daily_statistics_list_by_date_range_query_params.html#DailyStatisticsListByDateRangeQueryParams"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.statistics.daily.daily_statistics_list_by_date_range_query_params.DailyStatisticsListByDateRangeQueryParams" title="Permalink to this definition"></a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<dl class="py property">
-<dt class="sig sig-object py" id="bitmovin_api_sdk.encoding.statistics.daily.daily_statistics_list_by_date_range_query_params.DailyStatisticsListByDateRangeQueryParams.attribute_map">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">attribute_map</span></span><a class="headerlink" href="#bitmovin_api_sdk.encoding.statistics.daily.daily_statistics_list_by_date_range_query_params.DailyStatisticsListByDateRangeQueryParams.attribute_map" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="bitmovin_api_sdk.encoding.statistics.daily.daily_statistics_list_by_date_range_query_params.DailyStatisticsListByDateRangeQueryParams.openapi_types">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">openapi_types</span></span><a class="headerlink" href="#bitmovin_api_sdk.encoding.statistics.daily.daily_statistics_list_by_date_range_query_params.DailyStatisticsListByDateRangeQueryParams.openapi_types" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
 
 </dd></dl>
 

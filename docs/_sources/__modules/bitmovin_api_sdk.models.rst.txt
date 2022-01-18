@@ -500,6 +500,14 @@ bitmovin\_api\_sdk.models.analytics\_error\_details\_response module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.analytics\_export\_file\_format module
+----------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.analytics_export_file_format
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.analytics\_export\_status module
 ----------------------------------------------------------
 

@@ -77,6 +77,7 @@
 <span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
 <span class="kn">from</span> <span class="nn">six</span> <span class="kn">import</span> <span class="n">string_types</span><span class="p">,</span> <span class="n">iteritems</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.common.poscheck</span> <span class="kn">import</span> <span class="n">poscheck_model</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.analytics_export_file_format</span> <span class="kn">import</span> <span class="n">AnalyticsExportFileFormat</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.analytics_export_status</span> <span class="kn">import</span> <span class="n">AnalyticsExportStatus</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.analytics_export_task_output_target</span> <span class="kn">import</span> <span class="n">AnalyticsExportTaskOutputTarget</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.analytics_export_type</span> <span class="kn">import</span> <span class="n">AnalyticsExportType</span>
@@ -100,8 +101,9 @@
                  <span class="n">started_at</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">finished_at</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">type_</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                 <span class="n">columns</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (string_types, datetime, datetime, string_types, string_types, string_types, AnalyticsExportTaskOutputTarget, int, AnalyticsExportStatus, datetime, datetime, AnalyticsExportType, list[string_types]) -&gt; None</span>
+                 <span class="n">columns</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">file_format</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="c1"># type: (string_types, datetime, datetime, string_types, string_types, string_types, AnalyticsExportTaskOutputTarget, int, AnalyticsExportStatus, datetime, datetime, AnalyticsExportType, list[string_types], AnalyticsExportFileFormat) -&gt; None</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">AnalyticsExportTask</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">id_</span><span class="o">=</span><span class="n">id_</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_start_time</span> <span class="o">=</span> <span class="kc">None</span>
@@ -116,6 +118,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_finished_at</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_type</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_columns</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_file_format</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>
 
         <span class="k">if</span> <span class="n">start_time</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -142,6 +145,8 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">type</span> <span class="o">=</span> <span class="n">type_</span>
         <span class="k">if</span> <span class="n">columns</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="n">columns</span>
+        <span class="k">if</span> <span class="n">file_format</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">file_format</span> <span class="o">=</span> <span class="n">file_format</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -162,7 +167,8 @@
             <span class="s1">&#39;started_at&#39;</span><span class="p">:</span> <span class="s1">&#39;datetime&#39;</span><span class="p">,</span>
             <span class="s1">&#39;finished_at&#39;</span><span class="p">:</span> <span class="s1">&#39;datetime&#39;</span><span class="p">,</span>
             <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;AnalyticsExportType&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;columns&#39;</span><span class="p">:</span> <span class="s1">&#39;list[string_types]&#39;</span>
+            <span class="s1">&#39;columns&#39;</span><span class="p">:</span> <span class="s1">&#39;list[string_types]&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;file_format&#39;</span><span class="p">:</span> <span class="s1">&#39;AnalyticsExportFileFormat&#39;</span>
         <span class="p">})</span>
 
         <span class="k">return</span> <span class="n">types</span>
@@ -186,7 +192,8 @@
             <span class="s1">&#39;started_at&#39;</span><span class="p">:</span> <span class="s1">&#39;startedAt&#39;</span><span class="p">,</span>
             <span class="s1">&#39;finished_at&#39;</span><span class="p">:</span> <span class="s1">&#39;finishedAt&#39;</span><span class="p">,</span>
             <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;type&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;columns&#39;</span><span class="p">:</span> <span class="s1">&#39;columns&#39;</span>
+            <span class="s1">&#39;columns&#39;</span><span class="p">:</span> <span class="s1">&#39;columns&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;file_format&#39;</span><span class="p">:</span> <span class="s1">&#39;fileFormat&#39;</span>
         <span class="p">})</span>
         <span class="k">return</span> <span class="n">attributes</span>
 
@@ -529,6 +536,35 @@
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `columns`, type has to be `list[string_types]`&quot;</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_columns</span> <span class="o">=</span> <span class="n">columns</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">file_format</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; AnalyticsExportFileFormat</span>
+        <span class="sd">&quot;&quot;&quot;Gets the file_format of this AnalyticsExportTask.</span>
+
+<span class="sd">        File format of export file</span>
+
+<span class="sd">        :return: The file_format of this AnalyticsExportTask.</span>
+<span class="sd">        :rtype: AnalyticsExportFileFormat</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_file_format</span>
+
+    <span class="nd">@file_format</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">file_format</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">file_format</span><span class="p">):</span>
+        <span class="c1"># type: (AnalyticsExportFileFormat) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the file_format of this AnalyticsExportTask.</span>
+
+<span class="sd">        File format of export file</span>
+
+<span class="sd">        :param file_format: The file_format of this AnalyticsExportTask.</span>
+<span class="sd">        :type: AnalyticsExportFileFormat</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">file_format</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">file_format</span><span class="p">,</span> <span class="n">AnalyticsExportFileFormat</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `file_format`, type has to be `AnalyticsExportFileFormat`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_file_format</span> <span class="o">=</span> <span class="n">file_format</span>
 
 <div class="viewcode-block" id="AnalyticsExportTask.to_dict"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.analytics_export_task.AnalyticsExportTask.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>

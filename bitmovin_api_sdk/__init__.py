@@ -876,15 +876,17 @@ from bitmovin_api_sdk.encoding.infrastructure.prewarmed_encoder_pools.schedules.
 from bitmovin_api_sdk.encoding.statistics.statistics_api import StatisticsApi
 from bitmovin_api_sdk.encoding.statistics.statistics_api import StatisticsListQueryParams
 from bitmovin_api_sdk.encoding.statistics.daily.daily_api import DailyApi
-from bitmovin_api_sdk.encoding.statistics.daily.daily_api import DailyStatisticsListQueryParams, DailyStatisticsListByDateRangeQueryParams
+from bitmovin_api_sdk.encoding.statistics.daily.daily_api import DailyStatisticsListQueryParams
 from bitmovin_api_sdk.encoding.statistics.encodings.encodings_api import EncodingsApi
 
 from bitmovin_api_sdk.encoding.statistics.encodings.live.live_api import LiveApi
 from bitmovin_api_sdk.encoding.statistics.encodings.live.live_api import EncodingStatisticsLiveListQueryParams, EncodingStatisticsLiveListByDateRangeQueryParams
 from bitmovin_api_sdk.encoding.statistics.encodings.vod.vod_api import VodApi
 from bitmovin_api_sdk.encoding.statistics.encodings.vod.vod_api import EncodingStatisticsVodListQueryParams, EncodingStatisticsVodListByDateRangeQueryParams
+from bitmovin_api_sdk.encoding.statistics.encodings.vod.daily.daily_api import DailyApi
+
 from bitmovin_api_sdk.encoding.statistics.encodings.live.daily.daily_api import DailyApi
-from bitmovin_api_sdk.encoding.statistics.encodings.live.daily.daily_api import EncodingStatisticsLiveListByDateRangeQueryParams
+
 from bitmovin_api_sdk.encoding.statistics.encodings.live_statistics.live_statistics_api import LiveStatisticsApi
 
 from bitmovin_api_sdk.encoding.statistics.encodings.live_statistics.events.events_api import EventsApi
@@ -1054,6 +1056,7 @@ from bitmovin_api_sdk.models.analytics_equal_filter import AnalyticsEqualFilter
 from bitmovin_api_sdk.models.analytics_error_data import AnalyticsErrorData
 from bitmovin_api_sdk.models.analytics_error_detail import AnalyticsErrorDetail
 from bitmovin_api_sdk.models.analytics_error_details_response import AnalyticsErrorDetailsResponse
+from bitmovin_api_sdk.models.analytics_export_file_format import AnalyticsExportFileFormat
 from bitmovin_api_sdk.models.analytics_export_status import AnalyticsExportStatus
 from bitmovin_api_sdk.models.analytics_export_task import AnalyticsExportTask
 from bitmovin_api_sdk.models.analytics_export_task_output_target import AnalyticsExportTaskOutputTarget
@@ -1730,4 +1733,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.100.0"
+__version__ = "1.101.0"
