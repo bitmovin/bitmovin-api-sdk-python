@@ -21,3 +21,4 @@ class AwsCloudRegion(Enum):
     EU_WEST_2 = "EU_WEST_2"
     EU_WEST_3 = "EU_WEST_3"
     CA_CENTRAL_1 = "CA_CENTRAL_1"
+    EU_NORTH_1 = "EU_NORTH_1"
