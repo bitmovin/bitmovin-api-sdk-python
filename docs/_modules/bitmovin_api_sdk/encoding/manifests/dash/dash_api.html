@@ -81,6 +81,7 @@
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.dash_manifest</span> <span class="kn">import</span> <span class="n">DashManifest</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.response_envelope</span> <span class="kn">import</span> <span class="n">ResponseEnvelope</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.response_error</span> <span class="kn">import</span> <span class="n">ResponseError</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.start_manifest_request</span> <span class="kn">import</span> <span class="n">StartManifestRequest</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.task</span> <span class="kn">import</span> <span class="n">Task</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.encoding.manifests.dash.default.default_api</span> <span class="kn">import</span> <span class="n">DefaultApi</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.encoding.manifests.dash.customdata.customdata_api</span> <span class="kn">import</span> <span class="n">CustomdataApi</span>
@@ -190,21 +191,21 @@
             <span class="o">**</span><span class="n">kwargs</span>
         <span class="p">)</span></div>
 
-<div class="viewcode-block" id="DashApi.start"><a class="viewcode-back" href="../../../../../__modules/bitmovin_api_sdk.encoding.manifests.dash.html#bitmovin_api_sdk.encoding.manifests.dash.dash_api.DashApi.start">[docs]</a>    <span class="k">def</span> <span class="nf">start</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">manifest_id</span><span class="p">,</span> <span class="n">body</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-        <span class="c1"># type: (string_types, object, dict) -&gt; BitmovinResponse</span>
+<div class="viewcode-block" id="DashApi.start"><a class="viewcode-back" href="../../../../../__modules/bitmovin_api_sdk.encoding.manifests.dash.html#bitmovin_api_sdk.encoding.manifests.dash.dash_api.DashApi.start">[docs]</a>    <span class="k">def</span> <span class="nf">start</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">manifest_id</span><span class="p">,</span> <span class="n">start_manifest_request</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="c1"># type: (string_types, StartManifestRequest, dict) -&gt; BitmovinResponse</span>
         <span class="sd">&quot;&quot;&quot;Start DASH Manifest Creation</span>
 
 <span class="sd">        :param manifest_id: Id of the DASH manifest.</span>
 <span class="sd">        :type manifest_id: string_types, required</span>
-<span class="sd">        :param body: Manifest Startup Options</span>
-<span class="sd">        :type body: object</span>
+<span class="sd">        :param start_manifest_request: Manifest Startup Options</span>
+<span class="sd">        :type start_manifest_request: StartManifestRequest</span>
 <span class="sd">        :return: Id of the manifest</span>
 <span class="sd">        :rtype: BitmovinResponse</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">post</span><span class="p">(</span>
             <span class="s1">&#39;/encoding/manifests/dash/</span><span class="si">{manifest_id}</span><span class="s1">/start&#39;</span><span class="p">,</span>
-            <span class="n">body</span><span class="p">,</span>
+            <span class="n">start_manifest_request</span><span class="p">,</span>
             <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;manifest_id&#39;</span><span class="p">:</span> <span class="n">manifest_id</span><span class="p">},</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">BitmovinResponse</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>

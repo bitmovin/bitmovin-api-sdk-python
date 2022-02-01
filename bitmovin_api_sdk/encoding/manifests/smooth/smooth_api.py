@@ -8,6 +8,7 @@ from bitmovin_api_sdk.models.bitmovin_response import BitmovinResponse
 from bitmovin_api_sdk.models.response_envelope import ResponseEnvelope
 from bitmovin_api_sdk.models.response_error import ResponseError
 from bitmovin_api_sdk.models.smooth_streaming_manifest import SmoothStreamingManifest
+from bitmovin_api_sdk.models.start_manifest_request import StartManifestRequest
 from bitmovin_api_sdk.models.task import Task
 from bitmovin_api_sdk.encoding.manifests.smooth.default.default_api import DefaultApi
 from bitmovin_api_sdk.encoding.manifests.smooth.customdata.customdata_api import CustomdataApi
@@ -125,21 +126,21 @@ class SmoothApi(BaseApi):
             **kwargs
         )
 
-    def start(self, manifest_id, body=None, **kwargs):
-        # type: (string_types, object, dict) -> BitmovinResponse
+    def start(self, manifest_id, start_manifest_request=None, **kwargs):
+        # type: (string_types, StartManifestRequest, dict) -> BitmovinResponse
         """Start Smooth Streaming Manifest Creation
 
         :param manifest_id: Id of the Smooth Streaming manifest.
         :type manifest_id: string_types, required
-        :param body: Manifest Startup Options
-        :type body: object
+        :param start_manifest_request: Manifest Startup Options
+        :type start_manifest_request: StartManifestRequest
         :return: Id of the manifest
         :rtype: BitmovinResponse
         """
 
         return self.api_client.post(
             '/encoding/manifests/smooth/{manifest_id}/start',
-            body,
+            start_manifest_request,
             path_params={'manifest_id': manifest_id},
             type=BitmovinResponse,
             **kwargs
