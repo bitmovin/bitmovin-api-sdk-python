@@ -76,6 +76,7 @@
 <span class="kn">from</span> <span class="nn">enum</span> <span class="kn">import</span> <span class="n">Enum</span>
 <span class="kn">from</span> <span class="nn">six</span> <span class="kn">import</span> <span class="n">string_types</span><span class="p">,</span> <span class="n">iteritems</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.common.poscheck</span> <span class="kn">import</span> <span class="n">poscheck_model</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.encoding_template</span> <span class="kn">import</span> <span class="n">EncodingTemplate</span>
 <span class="kn">import</span> <span class="nn">pprint</span>
 <span class="kn">import</span> <span class="nn">six</span>
 
@@ -83,16 +84,20 @@
 <div class="viewcode-block" id="SimpleEncodingVodJobRequest"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.simple_encoding_vod_job_request.SimpleEncodingVodJobRequest">[docs]</a><span class="k">class</span> <span class="nc">SimpleEncodingVodJobRequest</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="nd">@poscheck_model</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                 <span class="n">encoding_template</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">inputs</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">outputs</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (list[SimpleEncodingVodJobUrlInput], list[SimpleEncodingVodJobUrlOutput], string_types) -&gt; None</span>
+        <span class="c1"># type: (EncodingTemplate, list[SimpleEncodingVodJobUrlInput], list[SimpleEncodingVodJobUrlOutput], string_types) -&gt; None</span>
 
+        <span class="bp">self</span><span class="o">.</span><span class="n">_encoding_template</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_inputs</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_outputs</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_name</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>
 
+        <span class="k">if</span> <span class="n">encoding_template</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">encoding_template</span> <span class="o">=</span> <span class="n">encoding_template</span>
         <span class="k">if</span> <span class="n">inputs</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">inputs</span> <span class="o">=</span> <span class="n">inputs</span>
         <span class="k">if</span> <span class="n">outputs</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -103,6 +108,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">types</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;encoding_template&#39;</span><span class="p">:</span> <span class="s1">&#39;EncodingTemplate&#39;</span><span class="p">,</span>
             <span class="s1">&#39;inputs&#39;</span><span class="p">:</span> <span class="s1">&#39;list[SimpleEncodingVodJobUrlInput]&#39;</span><span class="p">,</span>
             <span class="s1">&#39;outputs&#39;</span><span class="p">:</span> <span class="s1">&#39;list[SimpleEncodingVodJobUrlOutput]&#39;</span><span class="p">,</span>
             <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span>
@@ -113,11 +119,41 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">attribute_map</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">attributes</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;encoding_template&#39;</span><span class="p">:</span> <span class="s1">&#39;encodingTemplate&#39;</span><span class="p">,</span>
             <span class="s1">&#39;inputs&#39;</span><span class="p">:</span> <span class="s1">&#39;inputs&#39;</span><span class="p">,</span>
             <span class="s1">&#39;outputs&#39;</span><span class="p">:</span> <span class="s1">&#39;outputs&#39;</span><span class="p">,</span>
             <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;name&#39;</span>
         <span class="p">}</span>
         <span class="k">return</span> <span class="n">attributes</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">encoding_template</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; EncodingTemplate</span>
+        <span class="sd">&quot;&quot;&quot;Gets the encoding_template of this SimpleEncodingVodJobRequest.</span>
+
+<span class="sd">        The template that will be used for the encoding.</span>
+
+<span class="sd">        :return: The encoding_template of this SimpleEncodingVodJobRequest.</span>
+<span class="sd">        :rtype: EncodingTemplate</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_encoding_template</span>
+
+    <span class="nd">@encoding_template</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">encoding_template</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">encoding_template</span><span class="p">):</span>
+        <span class="c1"># type: (EncodingTemplate) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the encoding_template of this SimpleEncodingVodJobRequest.</span>
+
+<span class="sd">        The template that will be used for the encoding.</span>
+
+<span class="sd">        :param encoding_template: The encoding_template of this SimpleEncodingVodJobRequest.</span>
+<span class="sd">        :type: EncodingTemplate</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">encoding_template</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">encoding_template</span><span class="p">,</span> <span class="n">EncodingTemplate</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `encoding_template`, type has to be `EncodingTemplate`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_encoding_template</span> <span class="o">=</span> <span class="n">encoding_template</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">inputs</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>

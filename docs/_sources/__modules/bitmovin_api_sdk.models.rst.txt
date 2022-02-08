@@ -1116,6 +1116,14 @@ bitmovin\_api\_sdk.models.auto\_restart\_configuration module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.av1\_per\_title\_configuration module
+---------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.av1_per_title_configuration
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.av1\_video\_configuration module
 ----------------------------------------------------------
 
@@ -2680,6 +2688,14 @@ bitmovin\_api\_sdk.models.encoding\_stream\_input\_details module
 -----------------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.models.encoding_stream_input_details
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.encoding\_template module
+---------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.encoding_template
    :members:
    :undoc-members:
    :show-inheritance:

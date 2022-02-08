@@ -3,6 +3,7 @@
 from enum import Enum
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
+from bitmovin_api_sdk.models.encoding_template import EncodingTemplate
 import pprint
 import six
 
@@ -10,16 +11,20 @@ import six
 class SimpleEncodingVodJobRequest(object):
     @poscheck_model
     def __init__(self,
+                 encoding_template=None,
                  inputs=None,
                  outputs=None,
                  name=None):
-        # type: (list[SimpleEncodingVodJobUrlInput], list[SimpleEncodingVodJobUrlOutput], string_types) -> None
+        # type: (EncodingTemplate, list[SimpleEncodingVodJobUrlInput], list[SimpleEncodingVodJobUrlOutput], string_types) -> None
 
+        self._encoding_template = None
         self._inputs = list()
         self._outputs = list()
         self._name = None
         self.discriminator = None
 
+        if encoding_template is not None:
+            self.encoding_template = encoding_template
         if inputs is not None:
             self.inputs = inputs
         if outputs is not None:
@@ -30,6 +35,7 @@ class SimpleEncodingVodJobRequest(object):
     @property
     def openapi_types(self):
         types = {
+            'encoding_template': 'EncodingTemplate',
             'inputs': 'list[SimpleEncodingVodJobUrlInput]',
             'outputs': 'list[SimpleEncodingVodJobUrlOutput]',
             'name': 'string_types'
@@ -40,11 +46,41 @@ class SimpleEncodingVodJobRequest(object):
     @property
     def attribute_map(self):
         attributes = {
+            'encoding_template': 'encodingTemplate',
             'inputs': 'inputs',
             'outputs': 'outputs',
             'name': 'name'
         }
         return attributes
+
+    @property
+    def encoding_template(self):
+        # type: () -> EncodingTemplate
+        """Gets the encoding_template of this SimpleEncodingVodJobRequest.
+
+        The template that will be used for the encoding.
+
+        :return: The encoding_template of this SimpleEncodingVodJobRequest.
+        :rtype: EncodingTemplate
+        """
+        return self._encoding_template
+
+    @encoding_template.setter
+    def encoding_template(self, encoding_template):
+        # type: (EncodingTemplate) -> None
+        """Sets the encoding_template of this SimpleEncodingVodJobRequest.
+
+        The template that will be used for the encoding.
+
+        :param encoding_template: The encoding_template of this SimpleEncodingVodJobRequest.
+        :type: EncodingTemplate
+        """
+
+        if encoding_template is not None:
+            if not isinstance(encoding_template, EncodingTemplate):
+                raise TypeError("Invalid type for `encoding_template`, type has to be `EncodingTemplate`")
+
+        self._encoding_template = encoding_template
 
     @property
     def inputs(self):

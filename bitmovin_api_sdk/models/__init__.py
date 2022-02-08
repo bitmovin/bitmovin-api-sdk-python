@@ -142,6 +142,7 @@ from bitmovin_api_sdk.models.audio_volume_format import AudioVolumeFormat
 from bitmovin_api_sdk.models.audio_volume_unit import AudioVolumeUnit
 from bitmovin_api_sdk.models.auto_representation import AutoRepresentation
 from bitmovin_api_sdk.models.auto_restart_configuration import AutoRestartConfiguration
+from bitmovin_api_sdk.models.av1_per_title_configuration import Av1PerTitleConfiguration
 from bitmovin_api_sdk.models.av1_video_configuration import Av1VideoConfiguration
 from bitmovin_api_sdk.models.availability_start_time_mode import AvailabilityStartTimeMode
 from bitmovin_api_sdk.models.aws_account import AwsAccount
@@ -338,6 +339,7 @@ from bitmovin_api_sdk.models.encoding_statistics_vod import EncodingStatisticsVo
 from bitmovin_api_sdk.models.encoding_stats import EncodingStats
 from bitmovin_api_sdk.models.encoding_stream_input import EncodingStreamInput
 from bitmovin_api_sdk.models.encoding_stream_input_details import EncodingStreamInputDetails
+from bitmovin_api_sdk.models.encoding_template import EncodingTemplate
 from bitmovin_api_sdk.models.encoding_type import EncodingType
 from bitmovin_api_sdk.models.encryption_mode import EncryptionMode
 from bitmovin_api_sdk.models.enhanced_deinterlace_auto_enable import EnhancedDeinterlaceAutoEnable

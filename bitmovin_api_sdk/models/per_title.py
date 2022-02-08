@@ -3,6 +3,7 @@
 from enum import Enum
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
+from bitmovin_api_sdk.models.av1_per_title_configuration import Av1PerTitleConfiguration
 from bitmovin_api_sdk.models.h264_per_title_configuration import H264PerTitleConfiguration
 from bitmovin_api_sdk.models.h265_per_title_configuration import H265PerTitleConfiguration
 from bitmovin_api_sdk.models.vp9_per_title_configuration import Vp9PerTitleConfiguration
@@ -15,12 +16,14 @@ class PerTitle(object):
     def __init__(self,
                  h264_configuration=None,
                  h265_configuration=None,
-                 vp9_configuration=None):
-        # type: (H264PerTitleConfiguration, H265PerTitleConfiguration, Vp9PerTitleConfiguration) -> None
+                 vp9_configuration=None,
+                 av1_configuration=None):
+        # type: (H264PerTitleConfiguration, H265PerTitleConfiguration, Vp9PerTitleConfiguration, Av1PerTitleConfiguration) -> None
 
         self._h264_configuration = None
         self._h265_configuration = None
         self._vp9_configuration = None
+        self._av1_configuration = None
         self.discriminator = None
 
         if h264_configuration is not None:
@@ -29,13 +32,16 @@ class PerTitle(object):
             self.h265_configuration = h265_configuration
         if vp9_configuration is not None:
             self.vp9_configuration = vp9_configuration
+        if av1_configuration is not None:
+            self.av1_configuration = av1_configuration
 
     @property
     def openapi_types(self):
         types = {
             'h264_configuration': 'H264PerTitleConfiguration',
             'h265_configuration': 'H265PerTitleConfiguration',
-            'vp9_configuration': 'Vp9PerTitleConfiguration'
+            'vp9_configuration': 'Vp9PerTitleConfiguration',
+            'av1_configuration': 'Av1PerTitleConfiguration'
         }
 
         return types
@@ -45,7 +51,8 @@ class PerTitle(object):
         attributes = {
             'h264_configuration': 'h264Configuration',
             'h265_configuration': 'h265Configuration',
-            'vp9_configuration': 'vp9Configuration'
+            'vp9_configuration': 'vp9Configuration',
+            'av1_configuration': 'av1Configuration'
         }
         return attributes
 
@@ -135,6 +142,35 @@ class PerTitle(object):
                 raise TypeError("Invalid type for `vp9_configuration`, type has to be `Vp9PerTitleConfiguration`")
 
         self._vp9_configuration = vp9_configuration
+
+    @property
+    def av1_configuration(self):
+        # type: () -> Av1PerTitleConfiguration
+        """Gets the av1_configuration of this PerTitle.
+
+        Per-Title configuration for AV1
+
+        :return: The av1_configuration of this PerTitle.
+        :rtype: Av1PerTitleConfiguration
+        """
+        return self._av1_configuration
+
+    @av1_configuration.setter
+    def av1_configuration(self, av1_configuration):
+        # type: (Av1PerTitleConfiguration) -> None
+        """Sets the av1_configuration of this PerTitle.
+
+        Per-Title configuration for AV1
+
+        :param av1_configuration: The av1_configuration of this PerTitle.
+        :type: Av1PerTitleConfiguration
+        """
+
+        if av1_configuration is not None:
+            if not isinstance(av1_configuration, Av1PerTitleConfiguration):
+                raise TypeError("Invalid type for `av1_configuration`, type has to be `Av1PerTitleConfiguration`")
+
+        self._av1_configuration = av1_configuration
 
     def to_dict(self):
         """Returns the model properties as a dict"""
