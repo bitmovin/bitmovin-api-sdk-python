@@ -4,6 +4,7 @@ from enum import Enum
 from datetime import datetime
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
+from bitmovin_api_sdk.models.encoding_template import EncodingTemplate
 from bitmovin_api_sdk.models.simple_encoding_vod_job_status import SimpleEncodingVodJobStatus
 import pprint
 import six
@@ -14,6 +15,7 @@ class SimpleEncodingVodJobResponse(object):
     def __init__(self,
                  id_=None,
                  status=None,
+                 encoding_template=None,
                  encoding_id=None,
                  inputs=None,
                  outputs=None,
@@ -21,10 +23,11 @@ class SimpleEncodingVodJobResponse(object):
                  created_at=None,
                  modified_at=None,
                  name=None):
-        # type: (string_types, SimpleEncodingVodJobStatus, string_types, list[SimpleEncodingVodJobUrlInput], list[SimpleEncodingVodJobUrlOutput], list[SimpleEncodingVodJobErrors], datetime, datetime, string_types) -> None
+        # type: (string_types, SimpleEncodingVodJobStatus, EncodingTemplate, string_types, list[SimpleEncodingVodJobUrlInput], list[SimpleEncodingVodJobUrlOutput], list[SimpleEncodingVodJobErrors], datetime, datetime, string_types) -> None
 
         self._id = None
         self._status = None
+        self._encoding_template = None
         self._encoding_id = None
         self._inputs = list()
         self._outputs = list()
@@ -38,6 +41,8 @@ class SimpleEncodingVodJobResponse(object):
             self.id = id_
         if status is not None:
             self.status = status
+        if encoding_template is not None:
+            self.encoding_template = encoding_template
         if encoding_id is not None:
             self.encoding_id = encoding_id
         if inputs is not None:
@@ -58,6 +63,7 @@ class SimpleEncodingVodJobResponse(object):
         types = {
             'id': 'string_types',
             'status': 'SimpleEncodingVodJobStatus',
+            'encoding_template': 'EncodingTemplate',
             'encoding_id': 'string_types',
             'inputs': 'list[SimpleEncodingVodJobUrlInput]',
             'outputs': 'list[SimpleEncodingVodJobUrlOutput]',
@@ -74,6 +80,7 @@ class SimpleEncodingVodJobResponse(object):
         attributes = {
             'id': 'id',
             'status': 'status',
+            'encoding_template': 'encodingTemplate',
             'encoding_id': 'encodingId',
             'inputs': 'inputs',
             'outputs': 'outputs',
@@ -141,6 +148,35 @@ class SimpleEncodingVodJobResponse(object):
                 raise TypeError("Invalid type for `status`, type has to be `SimpleEncodingVodJobStatus`")
 
         self._status = status
+
+    @property
+    def encoding_template(self):
+        # type: () -> EncodingTemplate
+        """Gets the encoding_template of this SimpleEncodingVodJobResponse.
+
+        The template that has been used for the encoding.
+
+        :return: The encoding_template of this SimpleEncodingVodJobResponse.
+        :rtype: EncodingTemplate
+        """
+        return self._encoding_template
+
+    @encoding_template.setter
+    def encoding_template(self, encoding_template):
+        # type: (EncodingTemplate) -> None
+        """Sets the encoding_template of this SimpleEncodingVodJobResponse.
+
+        The template that has been used for the encoding.
+
+        :param encoding_template: The encoding_template of this SimpleEncodingVodJobResponse.
+        :type: EncodingTemplate
+        """
+
+        if encoding_template is not None:
+            if not isinstance(encoding_template, EncodingTemplate):
+                raise TypeError("Invalid type for `encoding_template`, type has to be `EncodingTemplate`")
+
+        self._encoding_template = encoding_template
 
     @property
     def encoding_id(self):

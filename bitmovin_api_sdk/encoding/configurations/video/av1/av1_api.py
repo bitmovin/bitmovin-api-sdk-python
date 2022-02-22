@@ -8,7 +8,6 @@ from bitmovin_api_sdk.models.av1_video_configuration import Av1VideoConfiguratio
 from bitmovin_api_sdk.models.bitmovin_response import BitmovinResponse
 from bitmovin_api_sdk.models.response_envelope import ResponseEnvelope
 from bitmovin_api_sdk.models.response_error import ResponseError
-from bitmovin_api_sdk.models.video_configuration import VideoConfiguration
 from bitmovin_api_sdk.encoding.configurations.video.av1.customdata.customdata_api import CustomdataApi
 from bitmovin_api_sdk.encoding.configurations.video.av1.av1_video_configuration_list_query_params import Av1VideoConfigurationListQueryParams
 

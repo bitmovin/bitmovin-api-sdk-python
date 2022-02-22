@@ -1124,6 +1124,14 @@ bitmovin\_api\_sdk.models.av1\_per\_title\_configuration module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.av1\_preset\_configuration module
+-----------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.av1_preset_configuration
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.av1\_video\_configuration module
 ----------------------------------------------------------
 
@@ -2024,6 +2032,14 @@ bitmovin\_api\_sdk.models.denoise\_hqdn3d\_filter module
 --------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.models.denoise_hqdn3d_filter
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.direct\_file\_upload\_input module
+------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.direct_file_upload_input
    :members:
    :undoc-members:
    :show-inheritance:
