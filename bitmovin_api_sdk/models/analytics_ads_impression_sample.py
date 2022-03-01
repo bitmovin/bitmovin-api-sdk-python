@@ -136,12 +136,8 @@ class AnalyticsAdsImpressionSample(object):
                  stream_format=None,
                  survey_url=None,
                  time=None,
-                 time_from_content=None,
-                 time_hovered=None,
                  time_in_viewport=None,
                  time_played=None,
-                 time_to_content=None,
-                 time_to_hover=None,
                  universal_ad_id_registry=None,
                  universal_ad_id_value=None,
                  user_id=None,
@@ -151,7 +147,7 @@ class AnalyticsAdsImpressionSample(object):
                  video_title=None,
                  video_window_height=None,
                  video_window_width=None):
-        # type: (string_types, string_types, int, int, string_types, string_types, string_types, bool, string_types, string_types, string_types, int, int, int, string_types, int, int, int, int, bool, int, string_types, string_types, string_types, string_types, string_types, string_types, int, string_types, string_types, string_types, string_types, string_types, int, bool, string_types, bool, string_types, string_types, string_types, string_types, int, int, int, int, int, int, int, int, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, int, string_types, string_types, int, int, int, string_types, string_types, string_types, string_types, string_types, int, string_types, string_types, string_types, int, int, string_types, string_types, string_types, int, int, string_types, int, string_types, string_types, string_types, int, string_types, string_types, int, int, int, string_types, int, int, string_types, int, int, int, int, string_types, string_types, int, int, int, int, int, int, int, string_types, string_types, string_types, int, string_types, string_types, string_types, int, int) -> None
+        # type: (string_types, string_types, int, int, string_types, string_types, string_types, bool, string_types, string_types, string_types, int, int, int, string_types, int, int, int, int, bool, int, string_types, string_types, string_types, string_types, string_types, string_types, int, string_types, string_types, string_types, string_types, string_types, int, bool, string_types, bool, string_types, string_types, string_types, string_types, int, int, int, int, int, int, int, int, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, int, string_types, string_types, int, int, int, string_types, string_types, string_types, string_types, string_types, int, string_types, string_types, string_types, int, int, string_types, string_types, string_types, int, int, string_types, int, string_types, string_types, string_types, int, string_types, string_types, int, int, int, string_types, int, int, string_types, int, int, int, int, string_types, string_types, int, int, int, string_types, string_types, string_types, int, string_types, string_types, string_types, int, int) -> None
 
         self._ad_clickthrough_url = None
         self._ad_description = None
@@ -279,12 +275,8 @@ class AnalyticsAdsImpressionSample(object):
         self._stream_format = None
         self._survey_url = None
         self._time = None
-        self._time_from_content = None
-        self._time_hovered = None
         self._time_in_viewport = None
         self._time_played = None
-        self._time_to_content = None
-        self._time_to_hover = None
         self._universal_ad_id_registry = None
         self._universal_ad_id_value = None
         self._user_id = None
@@ -548,18 +540,10 @@ class AnalyticsAdsImpressionSample(object):
             self.survey_url = survey_url
         if time is not None:
             self.time = time
-        if time_from_content is not None:
-            self.time_from_content = time_from_content
-        if time_hovered is not None:
-            self.time_hovered = time_hovered
         if time_in_viewport is not None:
             self.time_in_viewport = time_in_viewport
         if time_played is not None:
             self.time_played = time_played
-        if time_to_content is not None:
-            self.time_to_content = time_to_content
-        if time_to_hover is not None:
-            self.time_to_hover = time_to_hover
         if universal_ad_id_registry is not None:
             self.universal_ad_id_registry = universal_ad_id_registry
         if universal_ad_id_value is not None:
@@ -708,12 +692,8 @@ class AnalyticsAdsImpressionSample(object):
             'stream_format': 'string_types',
             'survey_url': 'string_types',
             'time': 'int',
-            'time_from_content': 'int',
-            'time_hovered': 'int',
             'time_in_viewport': 'int',
             'time_played': 'int',
-            'time_to_content': 'int',
-            'time_to_hover': 'int',
             'universal_ad_id_registry': 'string_types',
             'universal_ad_id_value': 'string_types',
             'user_id': 'string_types',
@@ -856,12 +836,8 @@ class AnalyticsAdsImpressionSample(object):
             'stream_format': 'stream_format',
             'survey_url': 'survey_url',
             'time': 'time',
-            'time_from_content': 'time_from_content',
-            'time_hovered': 'time_hovered',
             'time_in_viewport': 'time_in_viewport',
             'time_played': 'time_played',
-            'time_to_content': 'time_to_content',
-            'time_to_hover': 'time_to_hover',
             'universal_ad_id_registry': 'universal_ad_id_registry',
             'universal_ad_id_value': 'universal_ad_id_value',
             'user_id': 'user_id',
@@ -4529,64 +4505,6 @@ class AnalyticsAdsImpressionSample(object):
         self._time = time
 
     @property
-    def time_from_content(self):
-        # type: () -> int
-        """Gets the time_from_content of this AnalyticsAdsImpressionSample.
-
-        Time from content
-
-        :return: The time_from_content of this AnalyticsAdsImpressionSample.
-        :rtype: int
-        """
-        return self._time_from_content
-
-    @time_from_content.setter
-    def time_from_content(self, time_from_content):
-        # type: (int) -> None
-        """Sets the time_from_content of this AnalyticsAdsImpressionSample.
-
-        Time from content
-
-        :param time_from_content: The time_from_content of this AnalyticsAdsImpressionSample.
-        :type: int
-        """
-
-        if time_from_content is not None:
-            if not isinstance(time_from_content, int):
-                raise TypeError("Invalid type for `time_from_content`, type has to be `int`")
-
-        self._time_from_content = time_from_content
-
-    @property
-    def time_hovered(self):
-        # type: () -> int
-        """Gets the time_hovered of this AnalyticsAdsImpressionSample.
-
-        Time hovered
-
-        :return: The time_hovered of this AnalyticsAdsImpressionSample.
-        :rtype: int
-        """
-        return self._time_hovered
-
-    @time_hovered.setter
-    def time_hovered(self, time_hovered):
-        # type: (int) -> None
-        """Sets the time_hovered of this AnalyticsAdsImpressionSample.
-
-        Time hovered
-
-        :param time_hovered: The time_hovered of this AnalyticsAdsImpressionSample.
-        :type: int
-        """
-
-        if time_hovered is not None:
-            if not isinstance(time_hovered, int):
-                raise TypeError("Invalid type for `time_hovered`, type has to be `int`")
-
-        self._time_hovered = time_hovered
-
-    @property
     def time_in_viewport(self):
         # type: () -> int
         """Gets the time_in_viewport of this AnalyticsAdsImpressionSample.
@@ -4643,64 +4561,6 @@ class AnalyticsAdsImpressionSample(object):
                 raise TypeError("Invalid type for `time_played`, type has to be `int`")
 
         self._time_played = time_played
-
-    @property
-    def time_to_content(self):
-        # type: () -> int
-        """Gets the time_to_content of this AnalyticsAdsImpressionSample.
-
-        Time to content
-
-        :return: The time_to_content of this AnalyticsAdsImpressionSample.
-        :rtype: int
-        """
-        return self._time_to_content
-
-    @time_to_content.setter
-    def time_to_content(self, time_to_content):
-        # type: (int) -> None
-        """Sets the time_to_content of this AnalyticsAdsImpressionSample.
-
-        Time to content
-
-        :param time_to_content: The time_to_content of this AnalyticsAdsImpressionSample.
-        :type: int
-        """
-
-        if time_to_content is not None:
-            if not isinstance(time_to_content, int):
-                raise TypeError("Invalid type for `time_to_content`, type has to be `int`")
-
-        self._time_to_content = time_to_content
-
-    @property
-    def time_to_hover(self):
-        # type: () -> int
-        """Gets the time_to_hover of this AnalyticsAdsImpressionSample.
-
-        Time to hover
-
-        :return: The time_to_hover of this AnalyticsAdsImpressionSample.
-        :rtype: int
-        """
-        return self._time_to_hover
-
-    @time_to_hover.setter
-    def time_to_hover(self, time_to_hover):
-        # type: (int) -> None
-        """Sets the time_to_hover of this AnalyticsAdsImpressionSample.
-
-        Time to hover
-
-        :param time_to_hover: The time_to_hover of this AnalyticsAdsImpressionSample.
-        :type: int
-        """
-
-        if time_to_hover is not None:
-            if not isinstance(time_to_hover, int):
-                raise TypeError("Invalid type for `time_to_hover`, type has to be `int`")
-
-        self._time_to_hover = time_to_hover
 
     @property
     def universal_ad_id_registry(self):
