@@ -42,9 +42,9 @@ class OrganizationsApi(BaseApi):
         # type: (Organization, dict) -> Organization
         """Add Organization
 
-        :param organization: Orgnaization Details
+        :param organization: Organization Details
         :type organization: Organization, required
-        :return: Orgnaization Details
+        :return: Organization Details
         :rtype: Organization
         """
 
@@ -95,7 +95,7 @@ class OrganizationsApi(BaseApi):
         :type organization_id: string_types, required
         :param update_organization_request: Organization Details fields to be updated
         :type update_organization_request: UpdateOrganizationRequest, required
-        :return: Orgnaization Details
+        :return: Organization Details
         :rtype: Organization
         """
 
