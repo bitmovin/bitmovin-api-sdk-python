@@ -34,8 +34,13 @@ class AnalyticsLicenseCustomDataFieldLabels(object):
                  custom_data22=None,
                  custom_data23=None,
                  custom_data24=None,
-                 custom_data25=None):
-        # type: (string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types) -> None
+                 custom_data25=None,
+                 custom_data26=None,
+                 custom_data27=None,
+                 custom_data28=None,
+                 custom_data29=None,
+                 custom_data30=None):
+        # type: (string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types) -> None
 
         self._custom_data1 = None
         self._custom_data2 = None
@@ -62,6 +67,11 @@ class AnalyticsLicenseCustomDataFieldLabels(object):
         self._custom_data23 = None
         self._custom_data24 = None
         self._custom_data25 = None
+        self._custom_data26 = None
+        self._custom_data27 = None
+        self._custom_data28 = None
+        self._custom_data29 = None
+        self._custom_data30 = None
         self.discriminator = None
 
         if custom_data1 is not None:
@@ -114,6 +124,16 @@ class AnalyticsLicenseCustomDataFieldLabels(object):
             self.custom_data24 = custom_data24
         if custom_data25 is not None:
             self.custom_data25 = custom_data25
+        if custom_data26 is not None:
+            self.custom_data26 = custom_data26
+        if custom_data27 is not None:
+            self.custom_data27 = custom_data27
+        if custom_data28 is not None:
+            self.custom_data28 = custom_data28
+        if custom_data29 is not None:
+            self.custom_data29 = custom_data29
+        if custom_data30 is not None:
+            self.custom_data30 = custom_data30
 
     @property
     def openapi_types(self):
@@ -142,7 +162,12 @@ class AnalyticsLicenseCustomDataFieldLabels(object):
             'custom_data22': 'string_types',
             'custom_data23': 'string_types',
             'custom_data24': 'string_types',
-            'custom_data25': 'string_types'
+            'custom_data25': 'string_types',
+            'custom_data26': 'string_types',
+            'custom_data27': 'string_types',
+            'custom_data28': 'string_types',
+            'custom_data29': 'string_types',
+            'custom_data30': 'string_types'
         }
 
         return types
@@ -174,7 +199,12 @@ class AnalyticsLicenseCustomDataFieldLabels(object):
             'custom_data22': 'customData22',
             'custom_data23': 'customData23',
             'custom_data24': 'customData24',
-            'custom_data25': 'customData25'
+            'custom_data25': 'customData25',
+            'custom_data26': 'customData26',
+            'custom_data27': 'customData27',
+            'custom_data28': 'customData28',
+            'custom_data29': 'customData29',
+            'custom_data30': 'customData30'
         }
         return attributes
 
@@ -952,6 +982,161 @@ class AnalyticsLicenseCustomDataFieldLabels(object):
                 raise TypeError("Invalid type for `custom_data25`, type has to be `string_types`")
 
         self._custom_data25 = custom_data25
+
+    @property
+    def custom_data26(self):
+        # type: () -> string_types
+        """Gets the custom_data26 of this AnalyticsLicenseCustomDataFieldLabels.
+
+        Label for field Custom Data 26
+
+        :return: The custom_data26 of this AnalyticsLicenseCustomDataFieldLabels.
+        :rtype: string_types
+        """
+        return self._custom_data26
+
+    @custom_data26.setter
+    def custom_data26(self, custom_data26):
+        # type: (string_types) -> None
+        """Sets the custom_data26 of this AnalyticsLicenseCustomDataFieldLabels.
+
+        Label for field Custom Data 26
+
+        :param custom_data26: The custom_data26 of this AnalyticsLicenseCustomDataFieldLabels.
+        :type: string_types
+        """
+
+        if custom_data26 is not None:
+            if custom_data26 is not None and len(custom_data26) > 100:
+                raise ValueError("Invalid value for `custom_data26`, length must be less than or equal to `100`")
+            if not isinstance(custom_data26, string_types):
+                raise TypeError("Invalid type for `custom_data26`, type has to be `string_types`")
+
+        self._custom_data26 = custom_data26
+
+    @property
+    def custom_data27(self):
+        # type: () -> string_types
+        """Gets the custom_data27 of this AnalyticsLicenseCustomDataFieldLabels.
+
+        Label for field Custom Data 27
+
+        :return: The custom_data27 of this AnalyticsLicenseCustomDataFieldLabels.
+        :rtype: string_types
+        """
+        return self._custom_data27
+
+    @custom_data27.setter
+    def custom_data27(self, custom_data27):
+        # type: (string_types) -> None
+        """Sets the custom_data27 of this AnalyticsLicenseCustomDataFieldLabels.
+
+        Label for field Custom Data 27
+
+        :param custom_data27: The custom_data27 of this AnalyticsLicenseCustomDataFieldLabels.
+        :type: string_types
+        """
+
+        if custom_data27 is not None:
+            if custom_data27 is not None and len(custom_data27) > 100:
+                raise ValueError("Invalid value for `custom_data27`, length must be less than or equal to `100`")
+            if not isinstance(custom_data27, string_types):
+                raise TypeError("Invalid type for `custom_data27`, type has to be `string_types`")
+
+        self._custom_data27 = custom_data27
+
+    @property
+    def custom_data28(self):
+        # type: () -> string_types
+        """Gets the custom_data28 of this AnalyticsLicenseCustomDataFieldLabels.
+
+        Label for field Custom Data 28
+
+        :return: The custom_data28 of this AnalyticsLicenseCustomDataFieldLabels.
+        :rtype: string_types
+        """
+        return self._custom_data28
+
+    @custom_data28.setter
+    def custom_data28(self, custom_data28):
+        # type: (string_types) -> None
+        """Sets the custom_data28 of this AnalyticsLicenseCustomDataFieldLabels.
+
+        Label for field Custom Data 28
+
+        :param custom_data28: The custom_data28 of this AnalyticsLicenseCustomDataFieldLabels.
+        :type: string_types
+        """
+
+        if custom_data28 is not None:
+            if custom_data28 is not None and len(custom_data28) > 100:
+                raise ValueError("Invalid value for `custom_data28`, length must be less than or equal to `100`")
+            if not isinstance(custom_data28, string_types):
+                raise TypeError("Invalid type for `custom_data28`, type has to be `string_types`")
+
+        self._custom_data28 = custom_data28
+
+    @property
+    def custom_data29(self):
+        # type: () -> string_types
+        """Gets the custom_data29 of this AnalyticsLicenseCustomDataFieldLabels.
+
+        Label for field Custom Data 29
+
+        :return: The custom_data29 of this AnalyticsLicenseCustomDataFieldLabels.
+        :rtype: string_types
+        """
+        return self._custom_data29
+
+    @custom_data29.setter
+    def custom_data29(self, custom_data29):
+        # type: (string_types) -> None
+        """Sets the custom_data29 of this AnalyticsLicenseCustomDataFieldLabels.
+
+        Label for field Custom Data 29
+
+        :param custom_data29: The custom_data29 of this AnalyticsLicenseCustomDataFieldLabels.
+        :type: string_types
+        """
+
+        if custom_data29 is not None:
+            if custom_data29 is not None and len(custom_data29) > 100:
+                raise ValueError("Invalid value for `custom_data29`, length must be less than or equal to `100`")
+            if not isinstance(custom_data29, string_types):
+                raise TypeError("Invalid type for `custom_data29`, type has to be `string_types`")
+
+        self._custom_data29 = custom_data29
+
+    @property
+    def custom_data30(self):
+        # type: () -> string_types
+        """Gets the custom_data30 of this AnalyticsLicenseCustomDataFieldLabels.
+
+        Label for field Custom Data 30
+
+        :return: The custom_data30 of this AnalyticsLicenseCustomDataFieldLabels.
+        :rtype: string_types
+        """
+        return self._custom_data30
+
+    @custom_data30.setter
+    def custom_data30(self, custom_data30):
+        # type: (string_types) -> None
+        """Sets the custom_data30 of this AnalyticsLicenseCustomDataFieldLabels.
+
+        Label for field Custom Data 30
+
+        :param custom_data30: The custom_data30 of this AnalyticsLicenseCustomDataFieldLabels.
+        :type: string_types
+        """
+
+        if custom_data30 is not None:
+            if custom_data30 is not None and len(custom_data30) > 100:
+                raise ValueError("Invalid value for `custom_data30`, length must be less than or equal to `100`")
+            if not isinstance(custom_data30, string_types):
+                raise TypeError("Invalid type for `custom_data30`, type has to be `string_types`")
+
+        self._custom_data30 = custom_data30
 
     def to_dict(self):
         """Returns the model properties as a dict"""
