@@ -308,7 +308,7 @@ class SimpleEncodingLiveJobResponse(object):
         # type: () -> list[SimpleEncodingVodJobErrors]
         """Gets the errors of this SimpleEncodingLiveJobResponse.
 
-        Describes all the errors in cases the status of the job is 'error'.   TODO right now this is the same for VOD and LIVE? maybe rename the schema and use the same for both? 
+        Describes all the errors in cases the status of the job is 'error'. 
 
         :return: The errors of this SimpleEncodingLiveJobResponse.
         :rtype: list[SimpleEncodingVodJobErrors]
@@ -320,7 +320,7 @@ class SimpleEncodingLiveJobResponse(object):
         # type: (list) -> None
         """Sets the errors of this SimpleEncodingLiveJobResponse.
 
-        Describes all the errors in cases the status of the job is 'error'.   TODO right now this is the same for VOD and LIVE? maybe rename the schema and use the same for both? 
+        Describes all the errors in cases the status of the job is 'error'. 
 
         :param errors: The errors of this SimpleEncodingLiveJobResponse.
         :type: list[SimpleEncodingVodJobErrors]

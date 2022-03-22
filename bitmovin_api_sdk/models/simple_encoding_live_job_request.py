@@ -14,12 +14,14 @@ class SimpleEncodingLiveJobRequest(object):
     def __init__(self,
                  input_=None,
                  outputs=None,
-                 cloud_region=None):
-        # type: (SimpleEncodingLiveJobInput, list[SimpleEncodingLiveJobUrlOutput], SimpleEncodingLiveCloudRegion) -> None
+                 cloud_region=None,
+                 name=None):
+        # type: (SimpleEncodingLiveJobInput, list[SimpleEncodingLiveJobUrlOutput], SimpleEncodingLiveCloudRegion, string_types) -> None
 
         self._input = None
         self._outputs = list()
         self._cloud_region = None
+        self._name = None
         self.discriminator = None
 
         if input_ is not None:
@@ -28,13 +30,16 @@ class SimpleEncodingLiveJobRequest(object):
             self.outputs = outputs
         if cloud_region is not None:
             self.cloud_region = cloud_region
+        if name is not None:
+            self.name = name
 
     @property
     def openapi_types(self):
         types = {
             'input': 'SimpleEncodingLiveJobInput',
             'outputs': 'list[SimpleEncodingLiveJobUrlOutput]',
-            'cloud_region': 'SimpleEncodingLiveCloudRegion'
+            'cloud_region': 'SimpleEncodingLiveCloudRegion',
+            'name': 'string_types'
         }
 
         return types
@@ -44,7 +49,8 @@ class SimpleEncodingLiveJobRequest(object):
         attributes = {
             'input': 'input',
             'outputs': 'outputs',
-            'cloud_region': 'cloudRegion'
+            'cloud_region': 'cloudRegion',
+            'name': 'name'
         }
         return attributes
 
@@ -132,6 +138,35 @@ class SimpleEncodingLiveJobRequest(object):
                 raise TypeError("Invalid type for `cloud_region`, type has to be `SimpleEncodingLiveCloudRegion`")
 
         self._cloud_region = cloud_region
+
+    @property
+    def name(self):
+        # type: () -> string_types
+        """Gets the name of this SimpleEncodingLiveJobRequest.
+
+        This property will be used for naming the encoding.
+
+        :return: The name of this SimpleEncodingLiveJobRequest.
+        :rtype: string_types
+        """
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        # type: (string_types) -> None
+        """Sets the name of this SimpleEncodingLiveJobRequest.
+
+        This property will be used for naming the encoding.
+
+        :param name: The name of this SimpleEncodingLiveJobRequest.
+        :type: string_types
+        """
+
+        if name is not None:
+            if not isinstance(name, string_types):
+                raise TypeError("Invalid type for `name`, type has to be `string_types`")
+
+        self._name = name
 
     def to_dict(self):
         """Returns the model properties as a dict"""
