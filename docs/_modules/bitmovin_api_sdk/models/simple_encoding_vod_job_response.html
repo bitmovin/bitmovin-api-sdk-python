@@ -96,7 +96,7 @@
                  <span class="n">created_at</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">modified_at</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (string_types, SimpleEncodingVodJobStatus, EncodingTemplate, string_types, list[SimpleEncodingVodJobUrlInput], list[SimpleEncodingVodJobUrlOutput], list[SimpleEncodingVodJobErrors], datetime, datetime, string_types) -&gt; None</span>
+        <span class="c1"># type: (string_types, SimpleEncodingVodJobStatus, EncodingTemplate, string_types, list[SimpleEncodingVodJobUrlInput], list[SimpleEncodingVodJobOutput], list[SimpleEncodingVodJobErrors], datetime, datetime, string_types) -&gt; None</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_id</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_status</span> <span class="o">=</span> <span class="kc">None</span>
@@ -139,7 +139,7 @@
             <span class="s1">&#39;encoding_template&#39;</span><span class="p">:</span> <span class="s1">&#39;EncodingTemplate&#39;</span><span class="p">,</span>
             <span class="s1">&#39;encoding_id&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
             <span class="s1">&#39;inputs&#39;</span><span class="p">:</span> <span class="s1">&#39;list[SimpleEncodingVodJobUrlInput]&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;outputs&#39;</span><span class="p">:</span> <span class="s1">&#39;list[SimpleEncodingVodJobUrlOutput]&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;outputs&#39;</span><span class="p">:</span> <span class="s1">&#39;list[SimpleEncodingVodJobOutput]&#39;</span><span class="p">,</span>
             <span class="s1">&#39;errors&#39;</span><span class="p">:</span> <span class="s1">&#39;list[SimpleEncodingVodJobErrors]&#39;</span><span class="p">,</span>
             <span class="s1">&#39;created_at&#39;</span><span class="p">:</span> <span class="s1">&#39;datetime&#39;</span><span class="p">,</span>
             <span class="s1">&#39;modified_at&#39;</span><span class="p">:</span> <span class="s1">&#39;datetime&#39;</span><span class="p">,</span>
@@ -309,12 +309,12 @@
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">outputs</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="c1"># type: () -&gt; list[SimpleEncodingVodJobUrlOutput]</span>
+        <span class="c1"># type: () -&gt; list[SimpleEncodingVodJobOutput]</span>
         <span class="sd">&quot;&quot;&quot;Gets the outputs of this SimpleEncodingVodJobResponse.</span>
 
 
 <span class="sd">        :return: The outputs of this SimpleEncodingVodJobResponse.</span>
-<span class="sd">        :rtype: list[SimpleEncodingVodJobUrlOutput]</span>
+<span class="sd">        :rtype: list[SimpleEncodingVodJobOutput]</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_outputs</span>
 
@@ -325,12 +325,12 @@
 
 
 <span class="sd">        :param outputs: The outputs of this SimpleEncodingVodJobResponse.</span>
-<span class="sd">        :type: list[SimpleEncodingVodJobUrlOutput]</span>
+<span class="sd">        :type: list[SimpleEncodingVodJobOutput]</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
         <span class="k">if</span> <span class="n">outputs</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">outputs</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `outputs`, type has to be `list[SimpleEncodingVodJobUrlOutput]`&quot;</span><span class="p">)</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `outputs`, type has to be `list[SimpleEncodingVodJobOutput]`&quot;</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_outputs</span> <span class="o">=</span> <span class="n">outputs</span>
 

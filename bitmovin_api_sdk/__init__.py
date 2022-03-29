@@ -1616,6 +1616,8 @@ from bitmovin_api_sdk.models.simple_encoding_vod_job_credentials import SimpleEn
 from bitmovin_api_sdk.models.simple_encoding_vod_job_errors import SimpleEncodingVodJobErrors
 from bitmovin_api_sdk.models.simple_encoding_vod_job_gcs_service_account_credentials import SimpleEncodingVodJobGcsServiceAccountCredentials
 from bitmovin_api_sdk.models.simple_encoding_vod_job_input_type import SimpleEncodingVodJobInputType
+from bitmovin_api_sdk.models.simple_encoding_vod_job_output import SimpleEncodingVodJobOutput
+from bitmovin_api_sdk.models.simple_encoding_vod_job_output_type import SimpleEncodingVodJobOutputType
 from bitmovin_api_sdk.models.simple_encoding_vod_job_request import SimpleEncodingVodJobRequest
 from bitmovin_api_sdk.models.simple_encoding_vod_job_response import SimpleEncodingVodJobResponse
 from bitmovin_api_sdk.models.simple_encoding_vod_job_s3_role_based_credentials import SimpleEncodingVodJobS3RoleBasedCredentials
@@ -1753,4 +1755,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.109.0"
+__version__ = "1.110.0"

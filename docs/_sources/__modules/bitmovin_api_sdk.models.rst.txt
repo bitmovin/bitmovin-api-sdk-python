@@ -4964,6 +4964,22 @@ bitmovin\_api\_sdk.models.simple\_encoding\_vod\_job\_input\_type module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.simple\_encoding\_vod\_job\_output module
+-------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.simple_encoding_vod_job_output
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.simple\_encoding\_vod\_job\_output\_type module
+-------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.simple_encoding_vod_job_output_type
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.simple\_encoding\_vod\_job\_request module
 --------------------------------------------------------------------
 

@@ -4,17 +4,19 @@ from enum import Enum
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
 from bitmovin_api_sdk.models.simple_encoding_vod_job_credentials import SimpleEncodingVodJobCredentials
+from bitmovin_api_sdk.models.simple_encoding_vod_job_output import SimpleEncodingVodJobOutput
 import pprint
 import six
 
 
-class SimpleEncodingVodJobUrlOutput(object):
+class SimpleEncodingVodJobUrlOutput(SimpleEncodingVodJobOutput):
     @poscheck_model
     def __init__(self,
                  url=None,
                  credentials=None,
                  make_public=None):
         # type: (string_types, SimpleEncodingVodJobCredentials, bool) -> None
+        super(SimpleEncodingVodJobUrlOutput, self).__init__()
 
         self._url = None
         self._credentials = None
@@ -30,21 +32,31 @@ class SimpleEncodingVodJobUrlOutput(object):
 
     @property
     def openapi_types(self):
-        types = {
+        types = {}
+
+        if hasattr(super(SimpleEncodingVodJobUrlOutput, self), 'openapi_types'):
+            types = getattr(super(SimpleEncodingVodJobUrlOutput, self), 'openapi_types')
+
+        types.update({
             'url': 'string_types',
             'credentials': 'SimpleEncodingVodJobCredentials',
             'make_public': 'bool'
-        }
+        })
 
         return types
 
     @property
     def attribute_map(self):
-        attributes = {
+        attributes = {}
+
+        if hasattr(super(SimpleEncodingVodJobUrlOutput, self), 'attribute_map'):
+            attributes = getattr(super(SimpleEncodingVodJobUrlOutput, self), 'attribute_map')
+
+        attributes.update({
             'url': 'url',
             'credentials': 'credentials',
             'make_public': 'makePublic'
-        }
+        })
         return attributes
 
     @property
@@ -138,6 +150,8 @@ class SimpleEncodingVodJobUrlOutput(object):
         """Returns the model properties as a dict"""
         result = {}
 
+        if hasattr(super(SimpleEncodingVodJobUrlOutput, self), "to_dict"):
+            result = super(SimpleEncodingVodJobUrlOutput, self).to_dict()
         for attr, _ in six.iteritems(self.openapi_types):
             value = getattr(self, attr)
             if value is None:

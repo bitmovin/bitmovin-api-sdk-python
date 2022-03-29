@@ -15,7 +15,7 @@ class SimpleEncodingVodJobRequest(object):
                  inputs=None,
                  outputs=None,
                  name=None):
-        # type: (EncodingTemplate, list[SimpleEncodingVodJobUrlInput], list[SimpleEncodingVodJobUrlOutput], string_types) -> None
+        # type: (EncodingTemplate, list[SimpleEncodingVodJobUrlInput], list[SimpleEncodingVodJobOutput], string_types) -> None
 
         self._encoding_template = None
         self._inputs = list()
@@ -37,7 +37,7 @@ class SimpleEncodingVodJobRequest(object):
         types = {
             'encoding_template': 'EncodingTemplate',
             'inputs': 'list[SimpleEncodingVodJobUrlInput]',
-            'outputs': 'list[SimpleEncodingVodJobUrlOutput]',
+            'outputs': 'list[SimpleEncodingVodJobOutput]',
             'name': 'string_types'
         }
 
@@ -111,12 +111,13 @@ class SimpleEncodingVodJobRequest(object):
 
     @property
     def outputs(self):
-        # type: () -> list[SimpleEncodingVodJobUrlOutput]
+        # type: () -> list[SimpleEncodingVodJobOutput]
         """Gets the outputs of this SimpleEncodingVodJobRequest.
 
+        Please take a look at the [documentation](https://bitmovin.com/docs/encoding/articles/simple-encoding-api) (required)
 
         :return: The outputs of this SimpleEncodingVodJobRequest.
-        :rtype: list[SimpleEncodingVodJobUrlOutput]
+        :rtype: list[SimpleEncodingVodJobOutput]
         """
         return self._outputs
 
@@ -125,14 +126,15 @@ class SimpleEncodingVodJobRequest(object):
         # type: (list) -> None
         """Sets the outputs of this SimpleEncodingVodJobRequest.
 
+        Please take a look at the [documentation](https://bitmovin.com/docs/encoding/articles/simple-encoding-api) (required)
 
         :param outputs: The outputs of this SimpleEncodingVodJobRequest.
-        :type: list[SimpleEncodingVodJobUrlOutput]
+        :type: list[SimpleEncodingVodJobOutput]
         """
 
         if outputs is not None:
             if not isinstance(outputs, list):
-                raise TypeError("Invalid type for `outputs`, type has to be `list[SimpleEncodingVodJobUrlOutput]`")
+                raise TypeError("Invalid type for `outputs`, type has to be `list[SimpleEncodingVodJobOutput]`")
 
         self._outputs = outputs
 
