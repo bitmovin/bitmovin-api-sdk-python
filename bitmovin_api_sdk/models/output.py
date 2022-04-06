@@ -55,6 +55,7 @@ class Output(BitmovinResource):
     discriminator_value_class_map = {
         'AKAMAI_NETSTORAGE': 'AkamaiNetStorageOutput',
         'AZURE': 'AzureOutput',
+        'CDN': 'CdnOutput',
         'GENERIC_S3': 'GenericS3Output',
         'GCS': 'GcsOutput',
         'FTP': 'FtpOutput',

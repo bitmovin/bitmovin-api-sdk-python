@@ -23,7 +23,7 @@ class AccountInformation(BitmovinResource):
                  last_name=None,
                  phone=None,
                  company=None,
-                 is_verified=None):
+                 verified=None):
         # type: (string_types, string_types, string_types, datetime, datetime, dict, string_types, list[AccountApiKey], string_types, string_types, string_types, string_types, bool) -> None
         super(AccountInformation, self).__init__(id_=id_, name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data)
 
@@ -33,7 +33,7 @@ class AccountInformation(BitmovinResource):
         self._last_name = None
         self._phone = None
         self._company = None
-        self._is_verified = None
+        self._verified = None
         self.discriminator = None
 
         if email is not None:
@@ -48,8 +48,8 @@ class AccountInformation(BitmovinResource):
             self.phone = phone
         if company is not None:
             self.company = company
-        if is_verified is not None:
-            self.is_verified = is_verified
+        if verified is not None:
+            self.verified = verified
 
     @property
     def openapi_types(self):
@@ -65,7 +65,7 @@ class AccountInformation(BitmovinResource):
             'last_name': 'string_types',
             'phone': 'string_types',
             'company': 'string_types',
-            'is_verified': 'bool'
+            'verified': 'bool'
         })
 
         return types
@@ -84,7 +84,7 @@ class AccountInformation(BitmovinResource):
             'last_name': 'lastName',
             'phone': 'phone',
             'company': 'company',
-            'is_verified': 'isVerified'
+            'verified': 'verified'
         })
         return attributes
 
@@ -263,31 +263,31 @@ class AccountInformation(BitmovinResource):
         self._company = company
 
     @property
-    def is_verified(self):
+    def verified(self):
         # type: () -> bool
-        """Gets the is_verified of this AccountInformation.
+        """Gets the verified of this AccountInformation.
 
 
-        :return: The is_verified of this AccountInformation.
+        :return: The verified of this AccountInformation.
         :rtype: bool
         """
-        return self._is_verified
+        return self._verified
 
-    @is_verified.setter
-    def is_verified(self, is_verified):
+    @verified.setter
+    def verified(self, verified):
         # type: (bool) -> None
-        """Sets the is_verified of this AccountInformation.
+        """Sets the verified of this AccountInformation.
 
 
-        :param is_verified: The is_verified of this AccountInformation.
+        :param verified: The verified of this AccountInformation.
         :type: bool
         """
 
-        if is_verified is not None:
-            if not isinstance(is_verified, bool):
-                raise TypeError("Invalid type for `is_verified`, type has to be `bool`")
+        if verified is not None:
+            if not isinstance(verified, bool):
+                raise TypeError("Invalid type for `verified`, type has to be `bool`")
 
-        self._is_verified = is_verified
+        self._verified = verified
 
     def to_dict(self):
         """Returns the model properties as a dict"""

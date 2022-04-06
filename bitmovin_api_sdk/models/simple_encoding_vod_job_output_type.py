@@ -7,3 +7,4 @@ from bitmovin_api_sdk.common.poscheck import poscheck_model
 
 class SimpleEncodingVodJobOutputType(Enum):
     URL = "URL"
+    CDN = "CDN"

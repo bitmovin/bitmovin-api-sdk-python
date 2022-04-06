@@ -10,6 +10,7 @@ Subpackages
    bitmovin_api_sdk.encoding.outputs.akamai_msl
    bitmovin_api_sdk.encoding.outputs.akamai_netstorage
    bitmovin_api_sdk.encoding.outputs.azure
+   bitmovin_api_sdk.encoding.outputs.cdn
    bitmovin_api_sdk.encoding.outputs.ftp
    bitmovin_api_sdk.encoding.outputs.gcs
    bitmovin_api_sdk.encoding.outputs.gcs_service_account

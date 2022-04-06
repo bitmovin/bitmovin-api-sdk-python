@@ -1396,6 +1396,14 @@ bitmovin\_api\_sdk.models.caption\_character\_encoding module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.cdn\_output module
+--------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.cdn_output
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.cea608708\_subtitle\_configuration module
 -------------------------------------------------------------------
 
@@ -4928,6 +4936,14 @@ bitmovin\_api\_sdk.models.simple\_encoding\_vod\_job\_azure\_credentials module
 -------------------------------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.models.simple_encoding_vod_job_azure_credentials
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.simple\_encoding\_vod\_job\_cdn\_output module
+------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.simple_encoding_vod_job_cdn_output
    :members:
    :undoc-members:
    :show-inheritance:

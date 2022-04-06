@@ -239,6 +239,8 @@ from bitmovin_api_sdk.encoding.outputs.live_media_ingest.live_media_ingest_api i
 from bitmovin_api_sdk.encoding.outputs.live_media_ingest.live_media_ingest_api import LiveMediaIngestOutputListQueryParams
 from bitmovin_api_sdk.encoding.outputs.live_media_ingest.customdata.customdata_api import CustomdataApi
 
+from bitmovin_api_sdk.encoding.outputs.cdn.cdn_api import CdnApi
+from bitmovin_api_sdk.encoding.outputs.cdn.cdn_api import CdnOutputListQueryParams
 from bitmovin_api_sdk.encoding.configurations.configurations_api import ConfigurationsApi
 from bitmovin_api_sdk.encoding.configurations.configurations_api import CodecConfigurationListQueryParams
 from bitmovin_api_sdk.encoding.configurations.type.type_api import TypeApi
@@ -1170,6 +1172,7 @@ from bitmovin_api_sdk.models.broadcast_ts_video_input_stream_configuration impor
 from bitmovin_api_sdk.models.burn_in_subtitle_dvb_sub import BurnInSubtitleDvbSub
 from bitmovin_api_sdk.models.burn_in_subtitle_srt import BurnInSubtitleSrt
 from bitmovin_api_sdk.models.caption_character_encoding import CaptionCharacterEncoding
+from bitmovin_api_sdk.models.cdn_output import CdnOutput
 from bitmovin_api_sdk.models.cea608708_subtitle_configuration import Cea608708SubtitleConfiguration
 from bitmovin_api_sdk.models.cea608_caption_input_stream import Cea608CaptionInputStream
 from bitmovin_api_sdk.models.cea608_channel_type import Cea608ChannelType
@@ -1612,6 +1615,7 @@ from bitmovin_api_sdk.models.simple_encoding_live_job_username_password_credenti
 from bitmovin_api_sdk.models.simple_encoding_live_max_resolution import SimpleEncodingLiveMaxResolution
 from bitmovin_api_sdk.models.simple_encoding_vod_job_access_key_credentials import SimpleEncodingVodJobAccessKeyCredentials
 from bitmovin_api_sdk.models.simple_encoding_vod_job_azure_credentials import SimpleEncodingVodJobAzureCredentials
+from bitmovin_api_sdk.models.simple_encoding_vod_job_cdn_output import SimpleEncodingVodJobCdnOutput
 from bitmovin_api_sdk.models.simple_encoding_vod_job_credentials import SimpleEncodingVodJobCredentials
 from bitmovin_api_sdk.models.simple_encoding_vod_job_errors import SimpleEncodingVodJobErrors
 from bitmovin_api_sdk.models.simple_encoding_vod_job_gcs_service_account_credentials import SimpleEncodingVodJobGcsServiceAccountCredentials
@@ -1755,4 +1759,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.110.0"
+__version__ = "1.111.0"

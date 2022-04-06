@@ -9,7 +9,8 @@ import pprint
 class SimpleEncodingVodJobOutput(object):
 
     discriminator_value_class_map = {
-        'URL': 'SimpleEncodingVodJobUrlOutput'
+        'URL': 'SimpleEncodingVodJobUrlOutput',
+        'CDN': 'SimpleEncodingVodJobCdnOutput'
     }
 
     def to_dict(self):

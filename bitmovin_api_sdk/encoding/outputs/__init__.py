@@ -12,4 +12,5 @@ from bitmovin_api_sdk.encoding.outputs.sftp.sftp_api import SftpApi
 from bitmovin_api_sdk.encoding.outputs.akamai_msl.akamai_msl_api import AkamaiMslApi
 from bitmovin_api_sdk.encoding.outputs.akamai_netstorage.akamai_netstorage_api import AkamaiNetstorageApi
 from bitmovin_api_sdk.encoding.outputs.live_media_ingest.live_media_ingest_api import LiveMediaIngestApi
+from bitmovin_api_sdk.encoding.outputs.cdn.cdn_api import CdnApi
 from bitmovin_api_sdk.encoding.outputs.output_list_query_params import OutputListQueryParams
