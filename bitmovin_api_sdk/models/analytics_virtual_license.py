@@ -14,14 +14,16 @@ class AnalyticsVirtualLicense(object):
                  id_=None,
                  name=None,
                  timezone=None,
+                 retention_time=None,
                  licenses=None,
                  custom_data_fields_count=None,
                  custom_data_field_labels=None):
-        # type: (string_types, string_types, string_types, list[AnalyticsVirtualLicenseLicensesListItem], int, AnalyticsLicenseCustomDataFieldLabels) -> None
+        # type: (string_types, string_types, string_types, string_types, list[AnalyticsVirtualLicenseLicensesListItem], int, AnalyticsLicenseCustomDataFieldLabels) -> None
 
         self._id = None
         self._name = None
         self._timezone = None
+        self._retention_time = None
         self._licenses = list()
         self._custom_data_fields_count = None
         self._custom_data_field_labels = None
@@ -33,6 +35,8 @@ class AnalyticsVirtualLicense(object):
             self.name = name
         if timezone is not None:
             self.timezone = timezone
+        if retention_time is not None:
+            self.retention_time = retention_time
         if licenses is not None:
             self.licenses = licenses
         if custom_data_fields_count is not None:
@@ -46,6 +50,7 @@ class AnalyticsVirtualLicense(object):
             'id': 'string_types',
             'name': 'string_types',
             'timezone': 'string_types',
+            'retention_time': 'string_types',
             'licenses': 'list[AnalyticsVirtualLicenseLicensesListItem]',
             'custom_data_fields_count': 'int',
             'custom_data_field_labels': 'AnalyticsLicenseCustomDataFieldLabels'
@@ -59,6 +64,7 @@ class AnalyticsVirtualLicense(object):
             'id': 'id',
             'name': 'name',
             'timezone': 'timezone',
+            'retention_time': 'retentionTime',
             'licenses': 'licenses',
             'custom_data_fields_count': 'customDataFieldsCount',
             'custom_data_field_labels': 'customDataFieldLabels'
@@ -151,6 +157,35 @@ class AnalyticsVirtualLicense(object):
                 raise TypeError("Invalid type for `timezone`, type has to be `string_types`")
 
         self._timezone = timezone
+
+    @property
+    def retention_time(self):
+        # type: () -> string_types
+        """Gets the retention_time of this AnalyticsVirtualLicense.
+
+        Retention time of impressions, returned as ISO 8601 duration format: P(n)Y(n)M(n)DT(n)H(n)M(n)S
+
+        :return: The retention_time of this AnalyticsVirtualLicense.
+        :rtype: string_types
+        """
+        return self._retention_time
+
+    @retention_time.setter
+    def retention_time(self, retention_time):
+        # type: (string_types) -> None
+        """Sets the retention_time of this AnalyticsVirtualLicense.
+
+        Retention time of impressions, returned as ISO 8601 duration format: P(n)Y(n)M(n)DT(n)H(n)M(n)S
+
+        :param retention_time: The retention_time of this AnalyticsVirtualLicense.
+        :type: string_types
+        """
+
+        if retention_time is not None:
+            if not isinstance(retention_time, string_types):
+                raise TypeError("Invalid type for `retention_time`, type has to be `string_types`")
+
+        self._retention_time = retention_time
 
     @property
     def licenses(self):
