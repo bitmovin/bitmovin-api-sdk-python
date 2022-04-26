@@ -16,7 +16,7 @@ class SimpleEncodingLiveJobRequest(object):
                  outputs=None,
                  cloud_region=None,
                  name=None):
-        # type: (SimpleEncodingLiveJobInput, list[SimpleEncodingLiveJobUrlOutput], SimpleEncodingLiveCloudRegion, string_types) -> None
+        # type: (SimpleEncodingLiveJobInput, list[SimpleEncodingLiveJobOutput], SimpleEncodingLiveCloudRegion, string_types) -> None
 
         self._input = None
         self._outputs = list()
@@ -37,7 +37,7 @@ class SimpleEncodingLiveJobRequest(object):
     def openapi_types(self):
         types = {
             'input': 'SimpleEncodingLiveJobInput',
-            'outputs': 'list[SimpleEncodingLiveJobUrlOutput]',
+            'outputs': 'list[SimpleEncodingLiveJobOutput]',
             'cloud_region': 'SimpleEncodingLiveCloudRegion',
             'name': 'string_types'
         }
@@ -83,13 +83,13 @@ class SimpleEncodingLiveJobRequest(object):
 
     @property
     def outputs(self):
-        # type: () -> list[SimpleEncodingLiveJobUrlOutput]
+        # type: () -> list[SimpleEncodingLiveJobOutput]
         """Gets the outputs of this SimpleEncodingLiveJobRequest.
 
-        output of the live encoding job (required)
+        Please take a look at the [documentation](https://bitmovin.com/docs/encoding/articles/simple-encoding-api-live#outputs) (required)
 
         :return: The outputs of this SimpleEncodingLiveJobRequest.
-        :rtype: list[SimpleEncodingLiveJobUrlOutput]
+        :rtype: list[SimpleEncodingLiveJobOutput]
         """
         return self._outputs
 
@@ -98,15 +98,15 @@ class SimpleEncodingLiveJobRequest(object):
         # type: (list) -> None
         """Sets the outputs of this SimpleEncodingLiveJobRequest.
 
-        output of the live encoding job (required)
+        Please take a look at the [documentation](https://bitmovin.com/docs/encoding/articles/simple-encoding-api-live#outputs) (required)
 
         :param outputs: The outputs of this SimpleEncodingLiveJobRequest.
-        :type: list[SimpleEncodingLiveJobUrlOutput]
+        :type: list[SimpleEncodingLiveJobOutput]
         """
 
         if outputs is not None:
             if not isinstance(outputs, list):
-                raise TypeError("Invalid type for `outputs`, type has to be `list[SimpleEncodingLiveJobUrlOutput]`")
+                raise TypeError("Invalid type for `outputs`, type has to be `list[SimpleEncodingLiveJobOutput]`")
 
         self._outputs = outputs
 

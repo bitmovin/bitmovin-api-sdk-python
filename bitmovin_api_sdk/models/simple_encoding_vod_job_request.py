@@ -114,7 +114,7 @@ class SimpleEncodingVodJobRequest(object):
         # type: () -> list[SimpleEncodingVodJobOutput]
         """Gets the outputs of this SimpleEncodingVodJobRequest.
 
-        Please take a look at the [documentation](https://bitmovin.com/docs/encoding/articles/simple-encoding-api) (required)
+        Please take a look at the [documentation](https://bitmovin.com/docs/encoding/articles/simple-encoding-api#inputs-outputs) (required)
 
         :return: The outputs of this SimpleEncodingVodJobRequest.
         :rtype: list[SimpleEncodingVodJobOutput]
@@ -126,7 +126,7 @@ class SimpleEncodingVodJobRequest(object):
         # type: (list) -> None
         """Sets the outputs of this SimpleEncodingVodJobRequest.
 
-        Please take a look at the [documentation](https://bitmovin.com/docs/encoding/articles/simple-encoding-api) (required)
+        Please take a look at the [documentation](https://bitmovin.com/docs/encoding/articles/simple-encoding-api#inputs-outputs) (required)
 
         :param outputs: The outputs of this SimpleEncodingVodJobRequest.
         :type: list[SimpleEncodingVodJobOutput]

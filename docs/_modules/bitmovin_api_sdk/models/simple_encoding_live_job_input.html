@@ -76,7 +76,6 @@
 <span class="kn">from</span> <span class="nn">enum</span> <span class="kn">import</span> <span class="n">Enum</span>
 <span class="kn">from</span> <span class="nn">six</span> <span class="kn">import</span> <span class="n">string_types</span><span class="p">,</span> <span class="n">iteritems</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.common.poscheck</span> <span class="kn">import</span> <span class="n">poscheck_model</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.simple_encoding_live_input_aspect_ratio</span> <span class="kn">import</span> <span class="n">SimpleEncodingLiveInputAspectRatio</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.simple_encoding_live_job_input_type</span> <span class="kn">import</span> <span class="n">SimpleEncodingLiveJobInputType</span>
 <span class="kn">import</span> <span class="nn">pprint</span>
 <span class="kn">import</span> <span class="nn">six</span>
@@ -85,24 +84,19 @@
 <div class="viewcode-block" id="SimpleEncodingLiveJobInput"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.simple_encoding_live_job_input.SimpleEncodingLiveJobInput">[docs]</a><span class="k">class</span> <span class="nc">SimpleEncodingLiveJobInput</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="nd">@poscheck_model</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
-                 <span class="n">input_type</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                 <span class="n">input_aspect_ratio</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (SimpleEncodingLiveJobInputType, SimpleEncodingLiveInputAspectRatio) -&gt; None</span>
+                 <span class="n">input_type</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="c1"># type: (SimpleEncodingLiveJobInputType) -&gt; None</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_input_type</span> <span class="o">=</span> <span class="kc">None</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_input_aspect_ratio</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>
 
         <span class="k">if</span> <span class="n">input_type</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">input_type</span> <span class="o">=</span> <span class="n">input_type</span>
-        <span class="k">if</span> <span class="n">input_aspect_ratio</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">input_aspect_ratio</span> <span class="o">=</span> <span class="n">input_aspect_ratio</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">types</span> <span class="o">=</span> <span class="p">{</span>
-            <span class="s1">&#39;input_type&#39;</span><span class="p">:</span> <span class="s1">&#39;SimpleEncodingLiveJobInputType&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;input_aspect_ratio&#39;</span><span class="p">:</span> <span class="s1">&#39;SimpleEncodingLiveInputAspectRatio&#39;</span>
+            <span class="s1">&#39;input_type&#39;</span><span class="p">:</span> <span class="s1">&#39;SimpleEncodingLiveJobInputType&#39;</span>
         <span class="p">}</span>
 
         <span class="k">return</span> <span class="n">types</span>
@@ -110,8 +104,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">attribute_map</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">attributes</span> <span class="o">=</span> <span class="p">{</span>
-            <span class="s1">&#39;input_type&#39;</span><span class="p">:</span> <span class="s1">&#39;inputType&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;input_aspect_ratio&#39;</span><span class="p">:</span> <span class="s1">&#39;inputAspectRatio&#39;</span>
+            <span class="s1">&#39;input_type&#39;</span><span class="p">:</span> <span class="s1">&#39;inputType&#39;</span>
         <span class="p">}</span>
         <span class="k">return</span> <span class="n">attributes</span>
 
@@ -143,35 +136,6 @@
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `input_type`, type has to be `SimpleEncodingLiveJobInputType`&quot;</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_input_type</span> <span class="o">=</span> <span class="n">input_type</span>
-
-    <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">input_aspect_ratio</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="c1"># type: () -&gt; SimpleEncodingLiveInputAspectRatio</span>
-        <span class="sd">&quot;&quot;&quot;Gets the input_aspect_ratio of this SimpleEncodingLiveJobInput.</span>
-
-<span class="sd">        The aspect ratio of the input video stream</span>
-
-<span class="sd">        :return: The input_aspect_ratio of this SimpleEncodingLiveJobInput.</span>
-<span class="sd">        :rtype: SimpleEncodingLiveInputAspectRatio</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_input_aspect_ratio</span>
-
-    <span class="nd">@input_aspect_ratio</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">input_aspect_ratio</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_aspect_ratio</span><span class="p">):</span>
-        <span class="c1"># type: (SimpleEncodingLiveInputAspectRatio) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the input_aspect_ratio of this SimpleEncodingLiveJobInput.</span>
-
-<span class="sd">        The aspect ratio of the input video stream</span>
-
-<span class="sd">        :param input_aspect_ratio: The input_aspect_ratio of this SimpleEncodingLiveJobInput.</span>
-<span class="sd">        :type: SimpleEncodingLiveInputAspectRatio</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-
-        <span class="k">if</span> <span class="n">input_aspect_ratio</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">input_aspect_ratio</span><span class="p">,</span> <span class="n">SimpleEncodingLiveInputAspectRatio</span><span class="p">):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `input_aspect_ratio`, type has to be `SimpleEncodingLiveInputAspectRatio`&quot;</span><span class="p">)</span>
-
-        <span class="bp">self</span><span class="o">.</span><span class="n">_input_aspect_ratio</span> <span class="o">=</span> <span class="n">input_aspect_ratio</span>
 
 <div class="viewcode-block" id="SimpleEncodingLiveJobInput.to_dict"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.simple_encoding_live_job_input.SimpleEncodingLiveJobInput.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>

@@ -4812,14 +4812,6 @@ bitmovin\_api\_sdk.models.simple\_encoding\_live\_cloud\_region module
    :undoc-members:
    :show-inheritance:
 
-bitmovin\_api\_sdk.models.simple\_encoding\_live\_input\_aspect\_ratio module
------------------------------------------------------------------------------
-
-.. automodule:: bitmovin_api_sdk.models.simple_encoding_live_input_aspect_ratio
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
 bitmovin\_api\_sdk.models.simple\_encoding\_live\_job\_access\_key\_credentials module
 --------------------------------------------------------------------------------------
 
@@ -4832,6 +4824,14 @@ bitmovin\_api\_sdk.models.simple\_encoding\_live\_job\_azure\_credentials module
 --------------------------------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.models.simple_encoding_live_job_azure_credentials
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.simple\_encoding\_live\_job\_cdn\_output module
+-------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.simple_encoding_live_job_cdn_output
    :members:
    :undoc-members:
    :show-inheritance:
@@ -4864,6 +4864,22 @@ bitmovin\_api\_sdk.models.simple\_encoding\_live\_job\_input\_type module
 -------------------------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.models.simple_encoding_live_job_input_type
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.simple\_encoding\_live\_job\_output module
+--------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.simple_encoding_live_job_output
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.simple\_encoding\_live\_job\_output\_type module
+--------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.simple_encoding_live_job_output_type
    :members:
    :undoc-members:
    :show-inheritance:

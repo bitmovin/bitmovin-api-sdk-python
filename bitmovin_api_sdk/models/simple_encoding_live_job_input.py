@@ -3,7 +3,6 @@
 from enum import Enum
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
-from bitmovin_api_sdk.models.simple_encoding_live_input_aspect_ratio import SimpleEncodingLiveInputAspectRatio
 from bitmovin_api_sdk.models.simple_encoding_live_job_input_type import SimpleEncodingLiveJobInputType
 import pprint
 import six
@@ -12,24 +11,19 @@ import six
 class SimpleEncodingLiveJobInput(object):
     @poscheck_model
     def __init__(self,
-                 input_type=None,
-                 input_aspect_ratio=None):
-        # type: (SimpleEncodingLiveJobInputType, SimpleEncodingLiveInputAspectRatio) -> None
+                 input_type=None):
+        # type: (SimpleEncodingLiveJobInputType) -> None
 
         self._input_type = None
-        self._input_aspect_ratio = None
         self.discriminator = None
 
         if input_type is not None:
             self.input_type = input_type
-        if input_aspect_ratio is not None:
-            self.input_aspect_ratio = input_aspect_ratio
 
     @property
     def openapi_types(self):
         types = {
-            'input_type': 'SimpleEncodingLiveJobInputType',
-            'input_aspect_ratio': 'SimpleEncodingLiveInputAspectRatio'
+            'input_type': 'SimpleEncodingLiveJobInputType'
         }
 
         return types
@@ -37,8 +31,7 @@ class SimpleEncodingLiveJobInput(object):
     @property
     def attribute_map(self):
         attributes = {
-            'input_type': 'inputType',
-            'input_aspect_ratio': 'inputAspectRatio'
+            'input_type': 'inputType'
         }
         return attributes
 
@@ -70,35 +63,6 @@ class SimpleEncodingLiveJobInput(object):
                 raise TypeError("Invalid type for `input_type`, type has to be `SimpleEncodingLiveJobInputType`")
 
         self._input_type = input_type
-
-    @property
-    def input_aspect_ratio(self):
-        # type: () -> SimpleEncodingLiveInputAspectRatio
-        """Gets the input_aspect_ratio of this SimpleEncodingLiveJobInput.
-
-        The aspect ratio of the input video stream
-
-        :return: The input_aspect_ratio of this SimpleEncodingLiveJobInput.
-        :rtype: SimpleEncodingLiveInputAspectRatio
-        """
-        return self._input_aspect_ratio
-
-    @input_aspect_ratio.setter
-    def input_aspect_ratio(self, input_aspect_ratio):
-        # type: (SimpleEncodingLiveInputAspectRatio) -> None
-        """Sets the input_aspect_ratio of this SimpleEncodingLiveJobInput.
-
-        The aspect ratio of the input video stream
-
-        :param input_aspect_ratio: The input_aspect_ratio of this SimpleEncodingLiveJobInput.
-        :type: SimpleEncodingLiveInputAspectRatio
-        """
-
-        if input_aspect_ratio is not None:
-            if not isinstance(input_aspect_ratio, SimpleEncodingLiveInputAspectRatio):
-                raise TypeError("Invalid type for `input_aspect_ratio`, type has to be `SimpleEncodingLiveInputAspectRatio`")
-
-        self._input_aspect_ratio = input_aspect_ratio
 
     def to_dict(self):
         """Returns the model properties as a dict"""

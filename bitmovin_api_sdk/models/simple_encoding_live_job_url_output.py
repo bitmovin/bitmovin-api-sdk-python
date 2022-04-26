@@ -4,24 +4,25 @@ from enum import Enum
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
 from bitmovin_api_sdk.models.simple_encoding_live_job_credentials import SimpleEncodingLiveJobCredentials
+from bitmovin_api_sdk.models.simple_encoding_live_job_output import SimpleEncodingLiveJobOutput
 from bitmovin_api_sdk.models.simple_encoding_live_max_resolution import SimpleEncodingLiveMaxResolution
 import pprint
 import six
 
 
-class SimpleEncodingLiveJobUrlOutput(object):
+class SimpleEncodingLiveJobUrlOutput(SimpleEncodingLiveJobOutput):
     @poscheck_model
     def __init__(self,
+                 max_resolution=None,
                  url=None,
                  credentials=None,
-                 make_public=None,
-                 max_resolution=None):
-        # type: (string_types, SimpleEncodingLiveJobCredentials, bool, SimpleEncodingLiveMaxResolution) -> None
+                 make_public=None):
+        # type: (SimpleEncodingLiveMaxResolution, string_types, SimpleEncodingLiveJobCredentials, bool) -> None
+        super(SimpleEncodingLiveJobUrlOutput, self).__init__(max_resolution=max_resolution)
 
         self._url = None
         self._credentials = None
         self._make_public = None
-        self._max_resolution = None
         self.discriminator = None
 
         if url is not None:
@@ -30,28 +31,34 @@ class SimpleEncodingLiveJobUrlOutput(object):
             self.credentials = credentials
         if make_public is not None:
             self.make_public = make_public
-        if max_resolution is not None:
-            self.max_resolution = max_resolution
 
     @property
     def openapi_types(self):
-        types = {
+        types = {}
+
+        if hasattr(super(SimpleEncodingLiveJobUrlOutput, self), 'openapi_types'):
+            types = getattr(super(SimpleEncodingLiveJobUrlOutput, self), 'openapi_types')
+
+        types.update({
             'url': 'string_types',
             'credentials': 'SimpleEncodingLiveJobCredentials',
-            'make_public': 'bool',
-            'max_resolution': 'SimpleEncodingLiveMaxResolution'
-        }
+            'make_public': 'bool'
+        })
 
         return types
 
     @property
     def attribute_map(self):
-        attributes = {
+        attributes = {}
+
+        if hasattr(super(SimpleEncodingLiveJobUrlOutput, self), 'attribute_map'):
+            attributes = getattr(super(SimpleEncodingLiveJobUrlOutput, self), 'attribute_map')
+
+        attributes.update({
             'url': 'url',
             'credentials': 'credentials',
-            'make_public': 'makePublic',
-            'max_resolution': 'maxResolution'
-        }
+            'make_public': 'makePublic'
+        })
         return attributes
 
     @property
@@ -59,7 +66,7 @@ class SimpleEncodingLiveJobUrlOutput(object):
         # type: () -> string_types
         """Gets the url of this SimpleEncodingLiveJobUrlOutput.
 
-        Define a URL pointing to a folder which will be used to upload the encoded assets.  The output folder structure used looks the following way: <br><br> `http://host/my-folder`     <ul>       <li>         `/video`         <ul>           <li>`/{width}x{height}/` (multiple subfolders containing different output renditions)</li>         </ul>       </li>       <li>`/audio` </li>       <li>`/index.m3u8` (HLS manifest file) </li>       <li>`/stream.mpd` (DASH manifest file) </li>     </ul>  Currently the following protocols/storages systems are supported: S3, GCS, Azure Blob Storage, Akamai NetStorage.  Note that most protocols will require `credentials` to access the asset. Check the description below which ones are applicable. See below how to construct the URLs for the individual protocals/storage systems.  **S3**: * `s3://<my-bucket>/path/`  Authentication can be done via accesskey/secretkey or role-based authentication. Generic S3 is currently NOT supported.  **GCS**: * `gcs://<my-bucket>/path/`  Authentication can be done via accesskey/secretkey or a service account  **Azure Blob Storage (ABS)**: * `https://<account>.blob.core.windows.net/<container>/path/`  It is required to provide the Azure key credentials for authentication.  **Akamai NetStorage**: * `https://<host>-nsu.akamaihd.net/<CP-code>/path/`  It is required to provide username/password credentials for authentication. (required)
+        Define a URL pointing to a folder which will be used to upload the encoded assets.  The output folder structure used looks the following way: <br><br> `http://host/my-folder`     <ul>       <li>         `/video`         <ul>           <li>`/{width}x{height}_{bitrate}/` (multiple subfolders containing different output renditions)</li>         </ul>       </li>       <li>`/audio` </li>       <li>`/index.m3u8` (HLS manifest file) </li>       <li>`/stream.mpd` (DASH manifest file) </li>     </ul>  Currently the following protocols/storages systems are supported: S3, GCS, Azure Blob Storage, Akamai NetStorage.  Note that most protocols will require `credentials` to access the asset. Check the description below which ones are applicable. See below how to construct the URLs for the individual protocals/storage systems.  **S3**: * `s3://<my-bucket>/path/`  Authentication can be done via accesskey/secretkey or role-based authentication. Generic S3 is currently NOT supported.  **GCS**: * `gcs://<my-bucket>/path/`  Authentication can be done via accesskey/secretkey or a service account  **Azure Blob Storage (ABS)**: * `https://<account>.blob.core.windows.net/<container>/path/`  It is required to provide the Azure key credentials for authentication.  **Akamai NetStorage**: * `https://<host>-nsu.akamaihd.net/<CP-code>/path/`  It is required to provide username/password credentials for authentication. (required)
 
         :return: The url of this SimpleEncodingLiveJobUrlOutput.
         :rtype: string_types
@@ -71,7 +78,7 @@ class SimpleEncodingLiveJobUrlOutput(object):
         # type: (string_types) -> None
         """Sets the url of this SimpleEncodingLiveJobUrlOutput.
 
-        Define a URL pointing to a folder which will be used to upload the encoded assets.  The output folder structure used looks the following way: <br><br> `http://host/my-folder`     <ul>       <li>         `/video`         <ul>           <li>`/{width}x{height}/` (multiple subfolders containing different output renditions)</li>         </ul>       </li>       <li>`/audio` </li>       <li>`/index.m3u8` (HLS manifest file) </li>       <li>`/stream.mpd` (DASH manifest file) </li>     </ul>  Currently the following protocols/storages systems are supported: S3, GCS, Azure Blob Storage, Akamai NetStorage.  Note that most protocols will require `credentials` to access the asset. Check the description below which ones are applicable. See below how to construct the URLs for the individual protocals/storage systems.  **S3**: * `s3://<my-bucket>/path/`  Authentication can be done via accesskey/secretkey or role-based authentication. Generic S3 is currently NOT supported.  **GCS**: * `gcs://<my-bucket>/path/`  Authentication can be done via accesskey/secretkey or a service account  **Azure Blob Storage (ABS)**: * `https://<account>.blob.core.windows.net/<container>/path/`  It is required to provide the Azure key credentials for authentication.  **Akamai NetStorage**: * `https://<host>-nsu.akamaihd.net/<CP-code>/path/`  It is required to provide username/password credentials for authentication. (required)
+        Define a URL pointing to a folder which will be used to upload the encoded assets.  The output folder structure used looks the following way: <br><br> `http://host/my-folder`     <ul>       <li>         `/video`         <ul>           <li>`/{width}x{height}_{bitrate}/` (multiple subfolders containing different output renditions)</li>         </ul>       </li>       <li>`/audio` </li>       <li>`/index.m3u8` (HLS manifest file) </li>       <li>`/stream.mpd` (DASH manifest file) </li>     </ul>  Currently the following protocols/storages systems are supported: S3, GCS, Azure Blob Storage, Akamai NetStorage.  Note that most protocols will require `credentials` to access the asset. Check the description below which ones are applicable. See below how to construct the URLs for the individual protocals/storage systems.  **S3**: * `s3://<my-bucket>/path/`  Authentication can be done via accesskey/secretkey or role-based authentication. Generic S3 is currently NOT supported.  **GCS**: * `gcs://<my-bucket>/path/`  Authentication can be done via accesskey/secretkey or a service account  **Azure Blob Storage (ABS)**: * `https://<account>.blob.core.windows.net/<container>/path/`  It is required to provide the Azure key credentials for authentication.  **Akamai NetStorage**: * `https://<host>-nsu.akamaihd.net/<CP-code>/path/`  It is required to provide username/password credentials for authentication. (required)
 
         :param url: The url of this SimpleEncodingLiveJobUrlOutput.
         :type: string_types
@@ -141,39 +148,12 @@ class SimpleEncodingLiveJobUrlOutput(object):
 
         self._make_public = make_public
 
-    @property
-    def max_resolution(self):
-        # type: () -> SimpleEncodingLiveMaxResolution
-        """Gets the max_resolution of this SimpleEncodingLiveJobUrlOutput.
-
-        This sets the maximum output resolution that will be generated.
-
-        :return: The max_resolution of this SimpleEncodingLiveJobUrlOutput.
-        :rtype: SimpleEncodingLiveMaxResolution
-        """
-        return self._max_resolution
-
-    @max_resolution.setter
-    def max_resolution(self, max_resolution):
-        # type: (SimpleEncodingLiveMaxResolution) -> None
-        """Sets the max_resolution of this SimpleEncodingLiveJobUrlOutput.
-
-        This sets the maximum output resolution that will be generated.
-
-        :param max_resolution: The max_resolution of this SimpleEncodingLiveJobUrlOutput.
-        :type: SimpleEncodingLiveMaxResolution
-        """
-
-        if max_resolution is not None:
-            if not isinstance(max_resolution, SimpleEncodingLiveMaxResolution):
-                raise TypeError("Invalid type for `max_resolution`, type has to be `SimpleEncodingLiveMaxResolution`")
-
-        self._max_resolution = max_resolution
-
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}
 
+        if hasattr(super(SimpleEncodingLiveJobUrlOutput, self), "to_dict"):
+            result = super(SimpleEncodingLiveJobUrlOutput, self).to_dict()
         for attr, _ in six.iteritems(self.openapi_types):
             value = getattr(self, attr)
             if value is None:

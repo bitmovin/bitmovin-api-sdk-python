@@ -26,7 +26,7 @@ class SimpleEncodingLiveJobResponse(object):
                  modified_at=None,
                  name=None,
                  cloud_region=None):
-        # type: (string_types, SimpleEncodingLiveJobStatus, string_types, string_types, string_types, SimpleEncodingLiveJobInput, list[SimpleEncodingLiveJobUrlOutput], list[SimpleEncodingVodJobErrors], datetime, datetime, string_types, SimpleEncodingLiveCloudRegion) -> None
+        # type: (string_types, SimpleEncodingLiveJobStatus, string_types, string_types, string_types, SimpleEncodingLiveJobInput, list[SimpleEncodingLiveJobOutput], list[SimpleEncodingVodJobErrors], datetime, datetime, string_types, SimpleEncodingLiveCloudRegion) -> None
 
         self._id = None
         self._status = None
@@ -76,7 +76,7 @@ class SimpleEncodingLiveJobResponse(object):
             'encoder_ip': 'string_types',
             'stream_key': 'string_types',
             'input': 'SimpleEncodingLiveJobInput',
-            'outputs': 'list[SimpleEncodingLiveJobUrlOutput]',
+            'outputs': 'list[SimpleEncodingLiveJobOutput]',
             'errors': 'list[SimpleEncodingVodJobErrors]',
             'created_at': 'datetime',
             'modified_at': 'datetime',
@@ -278,12 +278,12 @@ class SimpleEncodingLiveJobResponse(object):
 
     @property
     def outputs(self):
-        # type: () -> list[SimpleEncodingLiveJobUrlOutput]
+        # type: () -> list[SimpleEncodingLiveJobOutput]
         """Gets the outputs of this SimpleEncodingLiveJobResponse.
 
 
         :return: The outputs of this SimpleEncodingLiveJobResponse.
-        :rtype: list[SimpleEncodingLiveJobUrlOutput]
+        :rtype: list[SimpleEncodingLiveJobOutput]
         """
         return self._outputs
 
@@ -294,12 +294,12 @@ class SimpleEncodingLiveJobResponse(object):
 
 
         :param outputs: The outputs of this SimpleEncodingLiveJobResponse.
-        :type: list[SimpleEncodingLiveJobUrlOutput]
+        :type: list[SimpleEncodingLiveJobOutput]
         """
 
         if outputs is not None:
             if not isinstance(outputs, list):
-                raise TypeError("Invalid type for `outputs`, type has to be `list[SimpleEncodingLiveJobUrlOutput]`")
+                raise TypeError("Invalid type for `outputs`, type has to be `list[SimpleEncodingLiveJobOutput]`")
 
         self._outputs = outputs
 
