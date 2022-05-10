@@ -71,7 +71,7 @@ class StreamInput(object):
         # type: () -> string_types
         """Gets the input_id of this StreamInput.
 
-        Id of input
+        ID of an Input resource defining the input storage. Required if 'inputStreamId' is not set.
 
         :return: The input_id of this StreamInput.
         :rtype: string_types
@@ -83,7 +83,7 @@ class StreamInput(object):
         # type: (string_types) -> None
         """Sets the input_id of this StreamInput.
 
-        Id of input
+        ID of an Input resource defining the input storage. Required if 'inputStreamId' is not set.
 
         :param input_id: The input_id of this StreamInput.
         :type: string_types
@@ -100,7 +100,7 @@ class StreamInput(object):
         # type: () -> string_types
         """Gets the input_path of this StreamInput.
 
-        Path to media file
+        Path to an input media file. Required if 'inputStreamId' is not set.
 
         :return: The input_path of this StreamInput.
         :rtype: string_types
@@ -112,7 +112,7 @@ class StreamInput(object):
         # type: (string_types) -> None
         """Sets the input_path of this StreamInput.
 
-        Path to media file
+        Path to an input media file. Required if 'inputStreamId' is not set.
 
         :param input_path: The input_path of this StreamInput.
         :type: string_types
@@ -129,7 +129,7 @@ class StreamInput(object):
         # type: () -> StreamSelectionMode
         """Gets the selection_mode of this StreamInput.
 
-        Specifies the algorithm how the stream in the input file will be selected
+        Specifies the strategy for selecting a stream from the input file. Must not be set when 'inputStreamId' is set.
 
         :return: The selection_mode of this StreamInput.
         :rtype: StreamSelectionMode
@@ -141,7 +141,7 @@ class StreamInput(object):
         # type: (StreamSelectionMode) -> None
         """Sets the selection_mode of this StreamInput.
 
-        Specifies the algorithm how the stream in the input file will be selected
+        Specifies the strategy for selecting a stream from the input file. Must not be set when 'inputStreamId' is set.
 
         :param selection_mode: The selection_mode of this StreamInput.
         :type: StreamSelectionMode
@@ -158,7 +158,7 @@ class StreamInput(object):
         # type: () -> int
         """Gets the position of this StreamInput.
 
-        Position of the stream, starting from 0.
+        Position of the stream to be selected from the input file (zero-based). Must not be set in combination with selectionMode 'AUTO', defaults to 0 for any other selectionMode.
 
         :return: The position of this StreamInput.
         :rtype: int
@@ -170,7 +170,7 @@ class StreamInput(object):
         # type: (int) -> None
         """Sets the position of this StreamInput.
 
-        Position of the stream, starting from 0.
+        Position of the stream to be selected from the input file (zero-based). Must not be set in combination with selectionMode 'AUTO', defaults to 0 for any other selectionMode.
 
         :param position: The position of this StreamInput.
         :type: int
@@ -189,7 +189,7 @@ class StreamInput(object):
         # type: () -> string_types
         """Gets the input_stream_id of this StreamInput.
 
-        Set this property instead of all others to reference an ingest, trimming or concatenation input stream
+        Set this property instead of all others to reference an InputStream resource (e.g. an Ingest-, Trimming- or ConcatenationInputStream)
 
         :return: The input_stream_id of this StreamInput.
         :rtype: string_types
@@ -201,7 +201,7 @@ class StreamInput(object):
         # type: (string_types) -> None
         """Sets the input_stream_id of this StreamInput.
 
-        Set this property instead of all others to reference an ingest, trimming or concatenation input stream
+        Set this property instead of all others to reference an InputStream resource (e.g. an Ingest-, Trimming- or ConcatenationInputStream)
 
         :param input_stream_id: The input_stream_id of this StreamInput.
         :type: string_types

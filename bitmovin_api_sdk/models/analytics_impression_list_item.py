@@ -39,7 +39,7 @@ class AnalyticsImpressionListItem(object):
         # type: () -> string_types
         """Gets the impression_id of this AnalyticsImpressionListItem.
 
-        Impression ID (required)
+        Random UUID that is used to identify a session (required)
 
         :return: The impression_id of this AnalyticsImpressionListItem.
         :rtype: string_types
@@ -51,7 +51,7 @@ class AnalyticsImpressionListItem(object):
         # type: (string_types) -> None
         """Sets the impression_id of this AnalyticsImpressionListItem.
 
-        Impression ID (required)
+        Random UUID that is used to identify a session (required)
 
         :param impression_id: The impression_id of this AnalyticsImpressionListItem.
         :type: string_types

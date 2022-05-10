@@ -82,7 +82,7 @@ class DvbTeletextInputStream(InputStream):
         # type: () -> string_types
         """Gets the input_id of this DvbTeletextInputStream.
 
-        Id of input
+        ID of an Input resource defining the input storage
 
         :return: The input_id of this DvbTeletextInputStream.
         :rtype: string_types
@@ -94,7 +94,7 @@ class DvbTeletextInputStream(InputStream):
         # type: (string_types) -> None
         """Sets the input_id of this DvbTeletextInputStream.
 
-        Id of input
+        ID of an Input resource defining the input storage
 
         :param input_id: The input_id of this DvbTeletextInputStream.
         :type: string_types
@@ -111,7 +111,7 @@ class DvbTeletextInputStream(InputStream):
         # type: () -> string_types
         """Gets the input_path of this DvbTeletextInputStream.
 
-        Path to media file
+        Path to an input media file
 
         :return: The input_path of this DvbTeletextInputStream.
         :rtype: string_types
@@ -123,7 +123,7 @@ class DvbTeletextInputStream(InputStream):
         # type: (string_types) -> None
         """Sets the input_path of this DvbTeletextInputStream.
 
-        Path to media file
+        Path to an input media file
 
         :param input_path: The input_path of this DvbTeletextInputStream.
         :type: string_types
@@ -140,7 +140,7 @@ class DvbTeletextInputStream(InputStream):
         # type: () -> StreamSelectionMode
         """Gets the selection_mode of this DvbTeletextInputStream.
 
-        Specifies the algorithm how the stream in the input file will be selected
+        Specifies the strategy for selecting a stream from the input file
 
         :return: The selection_mode of this DvbTeletextInputStream.
         :rtype: StreamSelectionMode
@@ -152,7 +152,7 @@ class DvbTeletextInputStream(InputStream):
         # type: (StreamSelectionMode) -> None
         """Sets the selection_mode of this DvbTeletextInputStream.
 
-        Specifies the algorithm how the stream in the input file will be selected
+        Specifies the strategy for selecting a stream from the input file
 
         :param selection_mode: The selection_mode of this DvbTeletextInputStream.
         :type: StreamSelectionMode
@@ -169,7 +169,7 @@ class DvbTeletextInputStream(InputStream):
         # type: () -> int
         """Gets the position of this DvbTeletextInputStream.
 
-        Position of the stream, starting from 0.
+        Position of the stream to be selected from the input file (zero-based). Must not be set in combination with selectionMode 'AUTO', defaults to 0 for any other selectionMode.
 
         :return: The position of this DvbTeletextInputStream.
         :rtype: int
@@ -181,7 +181,7 @@ class DvbTeletextInputStream(InputStream):
         # type: (int) -> None
         """Sets the position of this DvbTeletextInputStream.
 
-        Position of the stream, starting from 0.
+        Position of the stream to be selected from the input file (zero-based). Must not be set in combination with selectionMode 'AUTO', defaults to 0 for any other selectionMode.
 
         :param position: The position of this DvbTeletextInputStream.
         :type: int

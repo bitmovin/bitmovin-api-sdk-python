@@ -76,7 +76,7 @@ class DvbSubtitleInputStream(InputStream):
         # type: () -> string_types
         """Gets the input_id of this DvbSubtitleInputStream.
 
-        Id of input
+        ID of an Input resource defining the input storage
 
         :return: The input_id of this DvbSubtitleInputStream.
         :rtype: string_types
@@ -88,7 +88,7 @@ class DvbSubtitleInputStream(InputStream):
         # type: (string_types) -> None
         """Sets the input_id of this DvbSubtitleInputStream.
 
-        Id of input
+        ID of an Input resource defining the input storage
 
         :param input_id: The input_id of this DvbSubtitleInputStream.
         :type: string_types
@@ -105,7 +105,7 @@ class DvbSubtitleInputStream(InputStream):
         # type: () -> string_types
         """Gets the input_path of this DvbSubtitleInputStream.
 
-        Path to media file
+        Path to an input media file
 
         :return: The input_path of this DvbSubtitleInputStream.
         :rtype: string_types
@@ -117,7 +117,7 @@ class DvbSubtitleInputStream(InputStream):
         # type: (string_types) -> None
         """Sets the input_path of this DvbSubtitleInputStream.
 
-        Path to media file
+        Path to an input media file
 
         :param input_path: The input_path of this DvbSubtitleInputStream.
         :type: string_types
@@ -134,7 +134,7 @@ class DvbSubtitleInputStream(InputStream):
         # type: () -> StreamSelectionMode
         """Gets the selection_mode of this DvbSubtitleInputStream.
 
-        Specifies the algorithm for selecting a stream from the input file. Supported values for VOD encodings: AUTO, POSITION_ABSOLUTE, SUBTITLE_RELATIVE. Supported values for LIVE encodings: POSITION_ABSOLUTE
+        Specifies the strategy for selecting a stream from the input file. Supported values for VOD encodings: AUTO, POSITION_ABSOLUTE, SUBTITLE_RELATIVE. Supported values for LIVE encodings: POSITION_ABSOLUTE
 
         :return: The selection_mode of this DvbSubtitleInputStream.
         :rtype: StreamSelectionMode
@@ -146,7 +146,7 @@ class DvbSubtitleInputStream(InputStream):
         # type: (StreamSelectionMode) -> None
         """Sets the selection_mode of this DvbSubtitleInputStream.
 
-        Specifies the algorithm for selecting a stream from the input file. Supported values for VOD encodings: AUTO, POSITION_ABSOLUTE, SUBTITLE_RELATIVE. Supported values for LIVE encodings: POSITION_ABSOLUTE
+        Specifies the strategy for selecting a stream from the input file. Supported values for VOD encodings: AUTO, POSITION_ABSOLUTE, SUBTITLE_RELATIVE. Supported values for LIVE encodings: POSITION_ABSOLUTE
 
         :param selection_mode: The selection_mode of this DvbSubtitleInputStream.
         :type: StreamSelectionMode
@@ -163,7 +163,7 @@ class DvbSubtitleInputStream(InputStream):
         # type: () -> int
         """Gets the position of this DvbSubtitleInputStream.
 
-        Position of the stream, starting from 0.
+        Position of the stream to be selected from the input file (zero-based). Must not be set in combination with selectionMode 'AUTO', defaults to 0 for any other selectionMode.
 
         :return: The position of this DvbSubtitleInputStream.
         :rtype: int
@@ -175,7 +175,7 @@ class DvbSubtitleInputStream(InputStream):
         # type: (int) -> None
         """Sets the position of this DvbSubtitleInputStream.
 
-        Position of the stream, starting from 0.
+        Position of the stream to be selected from the input file (zero-based). Must not be set in combination with selectionMode 'AUTO', defaults to 0 for any other selectionMode.
 
         :param position: The position of this DvbSubtitleInputStream.
         :type: int

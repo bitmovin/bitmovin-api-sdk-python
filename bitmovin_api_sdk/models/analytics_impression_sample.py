@@ -2330,7 +2330,7 @@ class AnalyticsImpressionSample(object):
         # type: () -> string_types
         """Gets the impression_id of this AnalyticsImpressionSample.
 
-        Random UUID that is used to identify a sessions (required)
+        Random UUID that is used to identify a session (required)
 
         :return: The impression_id of this AnalyticsImpressionSample.
         :rtype: string_types
@@ -2342,7 +2342,7 @@ class AnalyticsImpressionSample(object):
         # type: (string_types) -> None
         """Sets the impression_id of this AnalyticsImpressionSample.
 
-        Random UUID that is used to identify a sessions (required)
+        Random UUID that is used to identify a session (required)
 
         :param impression_id: The impression_id of this AnalyticsImpressionSample.
         :type: string_types

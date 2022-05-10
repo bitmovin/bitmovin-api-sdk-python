@@ -155,7 +155,7 @@
         <span class="c1"># type: () -&gt; string_types</span>
         <span class="sd">&quot;&quot;&quot;Gets the input_id of this DvbTeletextInputStream.</span>
 
-<span class="sd">        Id of input</span>
+<span class="sd">        ID of an Input resource defining the input storage</span>
 
 <span class="sd">        :return: The input_id of this DvbTeletextInputStream.</span>
 <span class="sd">        :rtype: string_types</span>
@@ -167,7 +167,7 @@
         <span class="c1"># type: (string_types) -&gt; None</span>
         <span class="sd">&quot;&quot;&quot;Sets the input_id of this DvbTeletextInputStream.</span>
 
-<span class="sd">        Id of input</span>
+<span class="sd">        ID of an Input resource defining the input storage</span>
 
 <span class="sd">        :param input_id: The input_id of this DvbTeletextInputStream.</span>
 <span class="sd">        :type: string_types</span>
@@ -184,7 +184,7 @@
         <span class="c1"># type: () -&gt; string_types</span>
         <span class="sd">&quot;&quot;&quot;Gets the input_path of this DvbTeletextInputStream.</span>
 
-<span class="sd">        Path to media file</span>
+<span class="sd">        Path to an input media file</span>
 
 <span class="sd">        :return: The input_path of this DvbTeletextInputStream.</span>
 <span class="sd">        :rtype: string_types</span>
@@ -196,7 +196,7 @@
         <span class="c1"># type: (string_types) -&gt; None</span>
         <span class="sd">&quot;&quot;&quot;Sets the input_path of this DvbTeletextInputStream.</span>
 
-<span class="sd">        Path to media file</span>
+<span class="sd">        Path to an input media file</span>
 
 <span class="sd">        :param input_path: The input_path of this DvbTeletextInputStream.</span>
 <span class="sd">        :type: string_types</span>
@@ -213,7 +213,7 @@
         <span class="c1"># type: () -&gt; StreamSelectionMode</span>
         <span class="sd">&quot;&quot;&quot;Gets the selection_mode of this DvbTeletextInputStream.</span>
 
-<span class="sd">        Specifies the algorithm how the stream in the input file will be selected</span>
+<span class="sd">        Specifies the strategy for selecting a stream from the input file</span>
 
 <span class="sd">        :return: The selection_mode of this DvbTeletextInputStream.</span>
 <span class="sd">        :rtype: StreamSelectionMode</span>
@@ -225,7 +225,7 @@
         <span class="c1"># type: (StreamSelectionMode) -&gt; None</span>
         <span class="sd">&quot;&quot;&quot;Sets the selection_mode of this DvbTeletextInputStream.</span>
 
-<span class="sd">        Specifies the algorithm how the stream in the input file will be selected</span>
+<span class="sd">        Specifies the strategy for selecting a stream from the input file</span>
 
 <span class="sd">        :param selection_mode: The selection_mode of this DvbTeletextInputStream.</span>
 <span class="sd">        :type: StreamSelectionMode</span>
@@ -242,7 +242,7 @@
         <span class="c1"># type: () -&gt; int</span>
         <span class="sd">&quot;&quot;&quot;Gets the position of this DvbTeletextInputStream.</span>
 
-<span class="sd">        Position of the stream, starting from 0.</span>
+<span class="sd">        Position of the stream to be selected from the input file (zero-based). Must not be set in combination with selectionMode &#39;AUTO&#39;, defaults to 0 for any other selectionMode.</span>
 
 <span class="sd">        :return: The position of this DvbTeletextInputStream.</span>
 <span class="sd">        :rtype: int</span>
@@ -254,7 +254,7 @@
         <span class="c1"># type: (int) -&gt; None</span>
         <span class="sd">&quot;&quot;&quot;Sets the position of this DvbTeletextInputStream.</span>
 
-<span class="sd">        Position of the stream, starting from 0.</span>
+<span class="sd">        Position of the stream to be selected from the input file (zero-based). Must not be set in combination with selectionMode &#39;AUTO&#39;, defaults to 0 for any other selectionMode.</span>
 
 <span class="sd">        :param position: The position of this DvbTeletextInputStream.</span>
 <span class="sd">        :type: int</span>

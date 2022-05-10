@@ -76,7 +76,7 @@ class IngestInputStream(InputStream):
         # type: () -> string_types
         """Gets the input_id of this IngestInputStream.
 
-        Id of input
+        ID of an Input resource defining the input storage (required)
 
         :return: The input_id of this IngestInputStream.
         :rtype: string_types
@@ -88,7 +88,7 @@ class IngestInputStream(InputStream):
         # type: (string_types) -> None
         """Sets the input_id of this IngestInputStream.
 
-        Id of input
+        ID of an Input resource defining the input storage (required)
 
         :param input_id: The input_id of this IngestInputStream.
         :type: string_types
@@ -105,7 +105,7 @@ class IngestInputStream(InputStream):
         # type: () -> string_types
         """Gets the input_path of this IngestInputStream.
 
-        Path to media file
+        Path to an input media file (required)
 
         :return: The input_path of this IngestInputStream.
         :rtype: string_types
@@ -117,7 +117,7 @@ class IngestInputStream(InputStream):
         # type: (string_types) -> None
         """Sets the input_path of this IngestInputStream.
 
-        Path to media file
+        Path to an input media file (required)
 
         :param input_path: The input_path of this IngestInputStream.
         :type: string_types
@@ -134,7 +134,7 @@ class IngestInputStream(InputStream):
         # type: () -> StreamSelectionMode
         """Gets the selection_mode of this IngestInputStream.
 
-        Specifies the algorithm how the stream in the input file will be selected
+        Specifies the strategy for selecting a stream from the input file
 
         :return: The selection_mode of this IngestInputStream.
         :rtype: StreamSelectionMode
@@ -146,7 +146,7 @@ class IngestInputStream(InputStream):
         # type: (StreamSelectionMode) -> None
         """Sets the selection_mode of this IngestInputStream.
 
-        Specifies the algorithm how the stream in the input file will be selected
+        Specifies the strategy for selecting a stream from the input file
 
         :param selection_mode: The selection_mode of this IngestInputStream.
         :type: StreamSelectionMode
@@ -163,7 +163,7 @@ class IngestInputStream(InputStream):
         # type: () -> int
         """Gets the position of this IngestInputStream.
 
-        Position of the stream, starting from 0.
+        Position of the stream to be selected from the input file (zero-based). Must not be set in combination with selectionMode 'AUTO', defaults to 0 for any other selectionMode.
 
         :return: The position of this IngestInputStream.
         :rtype: int
@@ -175,7 +175,7 @@ class IngestInputStream(InputStream):
         # type: (int) -> None
         """Sets the position of this IngestInputStream.
 
-        Position of the stream, starting from 0.
+        Position of the stream to be selected from the input file (zero-based). Must not be set in combination with selectionMode 'AUTO', defaults to 0 for any other selectionMode.
 
         :param position: The position of this IngestInputStream.
         :type: int
