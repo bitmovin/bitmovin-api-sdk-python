@@ -24,9 +24,6 @@ from bitmovin_api_sdk.encoding.inputs.https.https_api import HttpsApi
 from bitmovin_api_sdk.encoding.inputs.aspera.aspera_api import AsperaApi
 from bitmovin_api_sdk.encoding.inputs.akamai_netstorage.akamai_netstorage_api import AkamaiNetstorageApi
 from bitmovin_api_sdk.encoding.inputs.srt.srt_api import SrtApi
-from bitmovin_api_sdk.encoding.inputs.tcp.tcp_api import TcpApi
-from bitmovin_api_sdk.encoding.inputs.udp.udp_api import UdpApi
-from bitmovin_api_sdk.encoding.inputs.udp_multicast.udp_multicast_api import UdpMulticastApi
 from bitmovin_api_sdk.encoding.inputs.zixi.zixi_api import ZixiApi
 from bitmovin_api_sdk.encoding.inputs.input_list_query_params import InputListQueryParams
 
@@ -156,27 +153,6 @@ class InputsApi(BaseApi):
         )
 
         self.srt = SrtApi(
-            api_key=api_key,
-            tenant_org_id=tenant_org_id,
-            base_url=base_url,
-            logger=logger
-        )
-
-        self.tcp = TcpApi(
-            api_key=api_key,
-            tenant_org_id=tenant_org_id,
-            base_url=base_url,
-            logger=logger
-        )
-
-        self.udp = UdpApi(
-            api_key=api_key,
-            tenant_org_id=tenant_org_id,
-            base_url=base_url,
-            logger=logger
-        )
-
-        self.udp_multicast = UdpMulticastApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,

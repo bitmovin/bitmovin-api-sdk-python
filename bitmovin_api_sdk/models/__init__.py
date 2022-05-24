@@ -335,6 +335,11 @@ from bitmovin_api_sdk.models.encoding_error_definition import EncodingErrorDefin
 from bitmovin_api_sdk.models.encoding_error_email_notification import EncodingErrorEmailNotification
 from bitmovin_api_sdk.models.encoding_mode import EncodingMode
 from bitmovin_api_sdk.models.encoding_output import EncodingOutput
+from bitmovin_api_sdk.models.encoding_output_paths import EncodingOutputPaths
+from bitmovin_api_sdk.models.encoding_output_paths_dash_manifest import EncodingOutputPathsDashManifest
+from bitmovin_api_sdk.models.encoding_output_paths_for_output import EncodingOutputPathsForOutput
+from bitmovin_api_sdk.models.encoding_output_paths_hls_manifest import EncodingOutputPathsHlsManifest
+from bitmovin_api_sdk.models.encoding_output_paths_smooth_manifest import EncodingOutputPathsSmoothManifest
 from bitmovin_api_sdk.models.encoding_statistics import EncodingStatistics
 from bitmovin_api_sdk.models.encoding_statistics_live import EncodingStatisticsLive
 from bitmovin_api_sdk.models.encoding_statistics_vod import EncodingStatisticsVod
@@ -691,7 +696,6 @@ from bitmovin_api_sdk.models.subtitle_configuration import SubtitleConfiguration
 from bitmovin_api_sdk.models.subtitle_stream import SubtitleStream
 from bitmovin_api_sdk.models.subtitles_media_info import SubtitlesMediaInfo
 from bitmovin_api_sdk.models.task import Task
-from bitmovin_api_sdk.models.tcp_input import TcpInput
 from bitmovin_api_sdk.models.tenant import Tenant
 from bitmovin_api_sdk.models.text_filter import TextFilter
 from bitmovin_api_sdk.models.text_filter_font import TextFilterFont
@@ -717,8 +721,6 @@ from bitmovin_api_sdk.models.ts_video_stream_configuration import TsVideoStreamC
 from bitmovin_api_sdk.models.tu_inter_depth import TuInterDepth
 from bitmovin_api_sdk.models.tu_intra_depth import TuIntraDepth
 from bitmovin_api_sdk.models.tweaks import Tweaks
-from bitmovin_api_sdk.models.udp_input import UdpInput
-from bitmovin_api_sdk.models.udp_multicast_input import UdpMulticastInput
 from bitmovin_api_sdk.models.unsharp_filter import UnsharpFilter
 from bitmovin_api_sdk.models.update_organization_request import UpdateOrganizationRequest
 from bitmovin_api_sdk.models.utc_timing import UtcTiming

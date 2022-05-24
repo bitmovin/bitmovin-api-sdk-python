@@ -175,14 +175,6 @@ from bitmovin_api_sdk.encoding.inputs.srt.srt_api import SrtApi
 from bitmovin_api_sdk.encoding.inputs.srt.srt_api import SrtInputListQueryParams
 from bitmovin_api_sdk.encoding.inputs.srt.customdata.customdata_api import CustomdataApi
 
-from bitmovin_api_sdk.encoding.inputs.tcp.tcp_api import TcpApi
-from bitmovin_api_sdk.encoding.inputs.tcp.tcp_api import TcpInputListQueryParams
-from bitmovin_api_sdk.encoding.inputs.udp.udp_api import UdpApi
-from bitmovin_api_sdk.encoding.inputs.udp.udp_api import UdpInputListQueryParams
-from bitmovin_api_sdk.encoding.inputs.udp_multicast.udp_multicast_api import UdpMulticastApi
-from bitmovin_api_sdk.encoding.inputs.udp_multicast.udp_multicast_api import UdpMulticastInputListQueryParams
-from bitmovin_api_sdk.encoding.inputs.udp_multicast.customdata.customdata_api import CustomdataApi
-
 from bitmovin_api_sdk.encoding.inputs.zixi.zixi_api import ZixiApi
 from bitmovin_api_sdk.encoding.inputs.zixi.zixi_api import ZixiInputListQueryParams
 from bitmovin_api_sdk.encoding.inputs.zixi.customdata.customdata_api import CustomdataApi
@@ -718,6 +710,8 @@ from bitmovin_api_sdk.encoding.encodings.streams.captions.cea.cea_api import Cea
 from bitmovin_api_sdk.encoding.encodings.streams.captions.cea.scc.scc_api import SccApi
 from bitmovin_api_sdk.encoding.encodings.streams.captions.cea.scc.scc_api import SccCaptionListQueryParams
 from bitmovin_api_sdk.encoding.encodings.streams.captions.cea.scc.customdata.customdata_api import CustomdataApi
+
+from bitmovin_api_sdk.encoding.encodings.output_paths.output_paths_api import OutputPathsApi
 
 from bitmovin_api_sdk.encoding.encodings.captions.captions_api import CaptionsApi
 
@@ -1330,6 +1324,11 @@ from bitmovin_api_sdk.models.encoding_error_definition import EncodingErrorDefin
 from bitmovin_api_sdk.models.encoding_error_email_notification import EncodingErrorEmailNotification
 from bitmovin_api_sdk.models.encoding_mode import EncodingMode
 from bitmovin_api_sdk.models.encoding_output import EncodingOutput
+from bitmovin_api_sdk.models.encoding_output_paths import EncodingOutputPaths
+from bitmovin_api_sdk.models.encoding_output_paths_dash_manifest import EncodingOutputPathsDashManifest
+from bitmovin_api_sdk.models.encoding_output_paths_for_output import EncodingOutputPathsForOutput
+from bitmovin_api_sdk.models.encoding_output_paths_hls_manifest import EncodingOutputPathsHlsManifest
+from bitmovin_api_sdk.models.encoding_output_paths_smooth_manifest import EncodingOutputPathsSmoothManifest
 from bitmovin_api_sdk.models.encoding_statistics import EncodingStatistics
 from bitmovin_api_sdk.models.encoding_statistics_live import EncodingStatisticsLive
 from bitmovin_api_sdk.models.encoding_statistics_vod import EncodingStatisticsVod
@@ -1686,7 +1685,6 @@ from bitmovin_api_sdk.models.subtitle_configuration import SubtitleConfiguration
 from bitmovin_api_sdk.models.subtitle_stream import SubtitleStream
 from bitmovin_api_sdk.models.subtitles_media_info import SubtitlesMediaInfo
 from bitmovin_api_sdk.models.task import Task
-from bitmovin_api_sdk.models.tcp_input import TcpInput
 from bitmovin_api_sdk.models.tenant import Tenant
 from bitmovin_api_sdk.models.text_filter import TextFilter
 from bitmovin_api_sdk.models.text_filter_font import TextFilterFont
@@ -1712,8 +1710,6 @@ from bitmovin_api_sdk.models.ts_video_stream_configuration import TsVideoStreamC
 from bitmovin_api_sdk.models.tu_inter_depth import TuInterDepth
 from bitmovin_api_sdk.models.tu_intra_depth import TuIntraDepth
 from bitmovin_api_sdk.models.tweaks import Tweaks
-from bitmovin_api_sdk.models.udp_input import UdpInput
-from bitmovin_api_sdk.models.udp_multicast_input import UdpMulticastInput
 from bitmovin_api_sdk.models.unsharp_filter import UnsharpFilter
 from bitmovin_api_sdk.models.update_organization_request import UpdateOrganizationRequest
 from bitmovin_api_sdk.models.utc_timing import UtcTiming
@@ -1761,4 +1757,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.115.0"
+__version__ = "1.116.0"

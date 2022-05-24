@@ -24,9 +24,6 @@ class Input(BitmovinResource):
         'S3': 'S3Input',
         'S3_ROLE_BASED': 'S3RoleBasedInput',
         'SFTP': 'SftpInput',
-        'TCP': 'TcpInput',
-        'UDP': 'UdpInput',
-        'UDP_MULTICAST': 'UdpMulticastInput',
         'ZIXI': 'ZixiInput',
         'SRT': 'SrtInput',
         'GCS_SERVICE_ACCOUNT': 'GcsServiceAccountInput'

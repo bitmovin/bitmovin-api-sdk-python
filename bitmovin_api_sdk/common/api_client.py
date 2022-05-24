@@ -151,6 +151,8 @@ class ApiClient(object):
                 response_success = response['data']['result']
                 if 'pagination_response' in kwargs and kwargs['pagination_response']:
                     return BitmovinJsonDecoder.map_dict_to_pagination_response(response_success, kwargs['type'])
+                elif 'list_response' in kwargs and kwargs['list_response']:
+                    return BitmovinJsonDecoder.map_dict_to_list(response_success, kwargs['type'])
                 else:
                     return BitmovinJsonDecoder.map_dict_to_model(response_success, kwargs['type'])
             else:

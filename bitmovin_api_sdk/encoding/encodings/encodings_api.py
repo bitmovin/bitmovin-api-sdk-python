@@ -21,6 +21,7 @@ from bitmovin_api_sdk.encoding.encodings.streams.streams_api import StreamsApi
 from bitmovin_api_sdk.encoding.encodings.input_streams.input_streams_api import InputStreamsApi
 from bitmovin_api_sdk.encoding.encodings.muxings.muxings_api import MuxingsApi
 from bitmovin_api_sdk.encoding.encodings.transfer_retries.transfer_retries_api import TransferRetriesApi
+from bitmovin_api_sdk.encoding.encodings.output_paths.output_paths_api import OutputPathsApi
 from bitmovin_api_sdk.encoding.encodings.captions.captions_api import CaptionsApi
 from bitmovin_api_sdk.encoding.encodings.sidecars.sidecars_api import SidecarsApi
 from bitmovin_api_sdk.encoding.encodings.keyframes.keyframes_api import KeyframesApi
@@ -82,6 +83,13 @@ class EncodingsApi(BaseApi):
         )
 
         self.transfer_retries = TransferRetriesApi(
+            api_key=api_key,
+            tenant_org_id=tenant_org_id,
+            base_url=base_url,
+            logger=logger
+        )
+
+        self.output_paths = OutputPathsApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,

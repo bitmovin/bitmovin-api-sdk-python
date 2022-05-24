@@ -97,9 +97,6 @@
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.encoding.inputs.aspera.aspera_api</span> <span class="kn">import</span> <span class="n">AsperaApi</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.encoding.inputs.akamai_netstorage.akamai_netstorage_api</span> <span class="kn">import</span> <span class="n">AkamaiNetstorageApi</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.encoding.inputs.srt.srt_api</span> <span class="kn">import</span> <span class="n">SrtApi</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.encoding.inputs.tcp.tcp_api</span> <span class="kn">import</span> <span class="n">TcpApi</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.encoding.inputs.udp.udp_api</span> <span class="kn">import</span> <span class="n">UdpApi</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.encoding.inputs.udp_multicast.udp_multicast_api</span> <span class="kn">import</span> <span class="n">UdpMulticastApi</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.encoding.inputs.zixi.zixi_api</span> <span class="kn">import</span> <span class="n">ZixiApi</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.encoding.inputs.input_list_query_params</span> <span class="kn">import</span> <span class="n">InputListQueryParams</span>
 
@@ -229,27 +226,6 @@
         <span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">srt</span> <span class="o">=</span> <span class="n">SrtApi</span><span class="p">(</span>
-            <span class="n">api_key</span><span class="o">=</span><span class="n">api_key</span><span class="p">,</span>
-            <span class="n">tenant_org_id</span><span class="o">=</span><span class="n">tenant_org_id</span><span class="p">,</span>
-            <span class="n">base_url</span><span class="o">=</span><span class="n">base_url</span><span class="p">,</span>
-            <span class="n">logger</span><span class="o">=</span><span class="n">logger</span>
-        <span class="p">)</span>
-
-        <span class="bp">self</span><span class="o">.</span><span class="n">tcp</span> <span class="o">=</span> <span class="n">TcpApi</span><span class="p">(</span>
-            <span class="n">api_key</span><span class="o">=</span><span class="n">api_key</span><span class="p">,</span>
-            <span class="n">tenant_org_id</span><span class="o">=</span><span class="n">tenant_org_id</span><span class="p">,</span>
-            <span class="n">base_url</span><span class="o">=</span><span class="n">base_url</span><span class="p">,</span>
-            <span class="n">logger</span><span class="o">=</span><span class="n">logger</span>
-        <span class="p">)</span>
-
-        <span class="bp">self</span><span class="o">.</span><span class="n">udp</span> <span class="o">=</span> <span class="n">UdpApi</span><span class="p">(</span>
-            <span class="n">api_key</span><span class="o">=</span><span class="n">api_key</span><span class="p">,</span>
-            <span class="n">tenant_org_id</span><span class="o">=</span><span class="n">tenant_org_id</span><span class="p">,</span>
-            <span class="n">base_url</span><span class="o">=</span><span class="n">base_url</span><span class="p">,</span>
-            <span class="n">logger</span><span class="o">=</span><span class="n">logger</span>
-        <span class="p">)</span>
-
-        <span class="bp">self</span><span class="o">.</span><span class="n">udp_multicast</span> <span class="o">=</span> <span class="n">UdpMulticastApi</span><span class="p">(</span>
             <span class="n">api_key</span><span class="o">=</span><span class="n">api_key</span><span class="p">,</span>
             <span class="n">tenant_org_id</span><span class="o">=</span><span class="n">tenant_org_id</span><span class="p">,</span>
             <span class="n">base_url</span><span class="o">=</span><span class="n">base_url</span><span class="p">,</span>

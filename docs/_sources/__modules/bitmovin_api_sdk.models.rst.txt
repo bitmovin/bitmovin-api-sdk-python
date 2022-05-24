@@ -2660,6 +2660,46 @@ bitmovin\_api\_sdk.models.encoding\_output module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.encoding\_output\_paths module
+--------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.encoding_output_paths
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.encoding\_output\_paths\_dash\_manifest module
+------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.encoding_output_paths_dash_manifest
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.encoding\_output\_paths\_for\_output module
+---------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.encoding_output_paths_for_output
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.encoding\_output\_paths\_hls\_manifest module
+-----------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.encoding_output_paths_hls_manifest
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.encoding\_output\_paths\_smooth\_manifest module
+--------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.encoding_output_paths_smooth_manifest
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.encoding\_statistics module
 -----------------------------------------------------
 
@@ -5508,14 +5548,6 @@ bitmovin\_api\_sdk.models.task module
    :undoc-members:
    :show-inheritance:
 
-bitmovin\_api\_sdk.models.tcp\_input module
--------------------------------------------
-
-.. automodule:: bitmovin_api_sdk.models.tcp_input
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
 bitmovin\_api\_sdk.models.tenant module
 ---------------------------------------
 
@@ -5712,22 +5744,6 @@ bitmovin\_api\_sdk.models.tweaks module
 ---------------------------------------
 
 .. automodule:: bitmovin_api_sdk.models.tweaks
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-bitmovin\_api\_sdk.models.udp\_input module
--------------------------------------------
-
-.. automodule:: bitmovin_api_sdk.models.udp_input
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-bitmovin\_api\_sdk.models.udp\_multicast\_input module
-------------------------------------------------------
-
-.. automodule:: bitmovin_api_sdk.models.udp_multicast_input
    :members:
    :undoc-members:
    :show-inheritance:
