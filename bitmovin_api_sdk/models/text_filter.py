@@ -570,7 +570,7 @@ class TextFilter(Filter):
         # type: () -> string_types
         """Gets the timecode of this TextFilter.
 
-        If set, the timecode representation in \"hh:mm:ss[:;.]ff\" format will be applied
+        If set, the timecode representation in \"hh:mm:ss[:;.]ff\" format will be applied. Drop-frame timecodes (containing \";\" or \".\") must only be used with video frame rates of 29.97, 30, 59.94 or 60 FPS, according to the SMPTE standard
 
         :return: The timecode of this TextFilter.
         :rtype: string_types
@@ -582,7 +582,7 @@ class TextFilter(Filter):
         # type: (string_types) -> None
         """Sets the timecode of this TextFilter.
 
-        If set, the timecode representation in \"hh:mm:ss[:;.]ff\" format will be applied
+        If set, the timecode representation in \"hh:mm:ss[:;.]ff\" format will be applied. Drop-frame timecodes (containing \";\" or \".\") must only be used with video frame rates of 29.97, 30, 59.94 or 60 FPS, according to the SMPTE standard
 
         :param timecode: The timecode of this TextFilter.
         :type: string_types
@@ -686,6 +686,7 @@ class TextFilter(Filter):
         # type: () -> string_types
         """Gets the rate of this TextFilter.
 
+        Video frame rate
 
         :return: The rate of this TextFilter.
         :rtype: string_types
@@ -697,6 +698,7 @@ class TextFilter(Filter):
         # type: (string_types) -> None
         """Sets the rate of this TextFilter.
 
+        Video frame rate
 
         :param rate: The rate of this TextFilter.
         :type: string_types

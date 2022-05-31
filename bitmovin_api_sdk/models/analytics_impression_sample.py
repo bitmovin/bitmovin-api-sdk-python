@@ -3258,7 +3258,7 @@ class AnalyticsImpressionSample(object):
         # type: () -> int
         """Gets the sequence_number of this AnalyticsImpressionSample.
 
-        Sequence number of the sample in which it occured in the session
+        Sequence number of the sample in which it occurred in the session
 
         :return: The sequence_number of this AnalyticsImpressionSample.
         :rtype: int
@@ -3270,7 +3270,7 @@ class AnalyticsImpressionSample(object):
         # type: (int) -> None
         """Sets the sequence_number of this AnalyticsImpressionSample.
 
-        Sequence number of the sample in which it occured in the session
+        Sequence number of the sample in which it occurred in the session
 
         :param sequence_number: The sequence_number of this AnalyticsImpressionSample.
         :type: int

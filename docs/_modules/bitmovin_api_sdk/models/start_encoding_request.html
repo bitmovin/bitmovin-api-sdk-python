@@ -13,6 +13,7 @@
         <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
         <script src="../../../_static/jquery.js"></script>
         <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../../_static/doctools.js"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
@@ -184,7 +185,7 @@
         <span class="c1"># type: () -&gt; Trimming</span>
         <span class="sd">&quot;&quot;&quot;Gets the trimming of this StartEncodingRequest.</span>
 
-<span class="sd">        Allows to encode only part of the input. Defines start (offset) and duration of the desired section.</span>
+<span class="sd">        Allows to encode only part of the input. Defines start (offset) and duration of the desired section. This is not allowed when the Encoding uses any kind of Input Stream resource.</span>
 
 <span class="sd">        :return: The trimming of this StartEncodingRequest.</span>
 <span class="sd">        :rtype: Trimming</span>
@@ -196,7 +197,7 @@
         <span class="c1"># type: (Trimming) -&gt; None</span>
         <span class="sd">&quot;&quot;&quot;Sets the trimming of this StartEncodingRequest.</span>
 
-<span class="sd">        Allows to encode only part of the input. Defines start (offset) and duration of the desired section.</span>
+<span class="sd">        Allows to encode only part of the input. Defines start (offset) and duration of the desired section. This is not allowed when the Encoding uses any kind of Input Stream resource.</span>
 
 <span class="sd">        :param trimming: The trimming of this StartEncodingRequest.</span>
 <span class="sd">        :type: Trimming</span>

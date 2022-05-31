@@ -13,6 +13,7 @@
         <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
         <script src="../../../_static/jquery.js"></script>
         <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../../_static/doctools.js"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
@@ -643,7 +644,7 @@
         <span class="c1"># type: () -&gt; string_types</span>
         <span class="sd">&quot;&quot;&quot;Gets the timecode of this TextFilter.</span>
 
-<span class="sd">        If set, the timecode representation in \&quot;hh:mm:ss[:;.]ff\&quot; format will be applied</span>
+<span class="sd">        If set, the timecode representation in \&quot;hh:mm:ss[:;.]ff\&quot; format will be applied. Drop-frame timecodes (containing \&quot;;\&quot; or \&quot;.\&quot;) must only be used with video frame rates of 29.97, 30, 59.94 or 60 FPS, according to the SMPTE standard</span>
 
 <span class="sd">        :return: The timecode of this TextFilter.</span>
 <span class="sd">        :rtype: string_types</span>
@@ -655,7 +656,7 @@
         <span class="c1"># type: (string_types) -&gt; None</span>
         <span class="sd">&quot;&quot;&quot;Sets the timecode of this TextFilter.</span>
 
-<span class="sd">        If set, the timecode representation in \&quot;hh:mm:ss[:;.]ff\&quot; format will be applied</span>
+<span class="sd">        If set, the timecode representation in \&quot;hh:mm:ss[:;.]ff\&quot; format will be applied. Drop-frame timecodes (containing \&quot;;\&quot; or \&quot;.\&quot;) must only be used with video frame rates of 29.97, 30, 59.94 or 60 FPS, according to the SMPTE standard</span>
 
 <span class="sd">        :param timecode: The timecode of this TextFilter.</span>
 <span class="sd">        :type: string_types</span>
@@ -759,6 +760,7 @@
         <span class="c1"># type: () -&gt; string_types</span>
         <span class="sd">&quot;&quot;&quot;Gets the rate of this TextFilter.</span>
 
+<span class="sd">        Video frame rate</span>
 
 <span class="sd">        :return: The rate of this TextFilter.</span>
 <span class="sd">        :rtype: string_types</span>
@@ -770,6 +772,7 @@
         <span class="c1"># type: (string_types) -&gt; None</span>
         <span class="sd">&quot;&quot;&quot;Sets the rate of this TextFilter.</span>
 
+<span class="sd">        Video frame rate</span>
 
 <span class="sd">        :param rate: The rate of this TextFilter.</span>
 <span class="sd">        :type: string_types</span>

@@ -82,6 +82,8 @@ class Trimming(object):
         """
 
         if offset is not None:
+            if offset is not None and offset < 0:
+                raise ValueError("Invalid value for `offset`, must be a value greater than or equal to `0`")
             if not isinstance(offset, (float, int)):
                 raise TypeError("Invalid type for `offset`, type has to be `float`")
 
@@ -92,7 +94,7 @@ class Trimming(object):
         # type: () -> float
         """Gets the duration of this Trimming.
 
-        Defines how many seconds from the input will be encoded.
+        Defines how many seconds from the input will be encoded. If not set, the input will be encoded until its end.
 
         :return: The duration of this Trimming.
         :rtype: float
@@ -104,13 +106,15 @@ class Trimming(object):
         # type: (float) -> None
         """Sets the duration of this Trimming.
 
-        Defines how many seconds from the input will be encoded.
+        Defines how many seconds from the input will be encoded. If not set, the input will be encoded until its end.
 
         :param duration: The duration of this Trimming.
         :type: float
         """
 
         if duration is not None:
+            if duration is not None and duration <= 0:
+                raise ValueError("Invalid value for `duration`, must be a value greater than `0`")
             if not isinstance(duration, (float, int)):
                 raise TypeError("Invalid type for `duration`, type has to be `float`")
 
@@ -121,7 +125,7 @@ class Trimming(object):
         # type: () -> bool
         """Gets the ignore_duration_if_input_too_short of this Trimming.
 
-        If set, \"duration\" will be interpreted as a maximum and not cause an error if the input is too short
+        When true, \"duration\" will be interpreted as a maximum and not cause an error if the input is too short
 
         :return: The ignore_duration_if_input_too_short of this Trimming.
         :rtype: bool
@@ -133,7 +137,7 @@ class Trimming(object):
         # type: (bool) -> None
         """Sets the ignore_duration_if_input_too_short of this Trimming.
 
-        If set, \"duration\" will be interpreted as a maximum and not cause an error if the input is too short
+        When true, \"duration\" will be interpreted as a maximum and not cause an error if the input is too short
 
         :param ignore_duration_if_input_too_short: The ignore_duration_if_input_too_short of this Trimming.
         :type: bool

@@ -111,7 +111,7 @@ class StartEncodingRequest(object):
         # type: () -> Trimming
         """Gets the trimming of this StartEncodingRequest.
 
-        Allows to encode only part of the input. Defines start (offset) and duration of the desired section.
+        Allows to encode only part of the input. Defines start (offset) and duration of the desired section. This is not allowed when the Encoding uses any kind of Input Stream resource.
 
         :return: The trimming of this StartEncodingRequest.
         :rtype: Trimming
@@ -123,7 +123,7 @@ class StartEncodingRequest(object):
         # type: (Trimming) -> None
         """Sets the trimming of this StartEncodingRequest.
 
-        Allows to encode only part of the input. Defines start (offset) and duration of the desired section.
+        Allows to encode only part of the input. Defines start (offset) and duration of the desired section. This is not allowed when the Encoding uses any kind of Input Stream resource.
 
         :param trimming: The trimming of this StartEncodingRequest.
         :type: Trimming
