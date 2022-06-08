@@ -4,12 +4,13 @@ from enum import Enum
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
 from bitmovin_api_sdk.models.simple_encoding_vod_job_credentials import SimpleEncodingVodJobCredentials
+from bitmovin_api_sdk.models.simple_encoding_vod_job_input import SimpleEncodingVodJobInput
 from bitmovin_api_sdk.models.simple_encoding_vod_job_input_type import SimpleEncodingVodJobInputType
 import pprint
 import six
 
 
-class SimpleEncodingVodJobUrlInput(object):
+class SimpleEncodingVodJobUrlInput(SimpleEncodingVodJobInput):
     @poscheck_model
     def __init__(self,
                  url=None,
@@ -17,6 +18,7 @@ class SimpleEncodingVodJobUrlInput(object):
                  input_type=None,
                  language=None):
         # type: (string_types, SimpleEncodingVodJobCredentials, SimpleEncodingVodJobInputType, string_types) -> None
+        super(SimpleEncodingVodJobUrlInput, self).__init__()
 
         self._url = None
         self._credentials = None
@@ -35,23 +37,33 @@ class SimpleEncodingVodJobUrlInput(object):
 
     @property
     def openapi_types(self):
-        types = {
+        types = {}
+
+        if hasattr(super(SimpleEncodingVodJobUrlInput, self), 'openapi_types'):
+            types = getattr(super(SimpleEncodingVodJobUrlInput, self), 'openapi_types')
+
+        types.update({
             'url': 'string_types',
             'credentials': 'SimpleEncodingVodJobCredentials',
             'input_type': 'SimpleEncodingVodJobInputType',
             'language': 'string_types'
-        }
+        })
 
         return types
 
     @property
     def attribute_map(self):
-        attributes = {
+        attributes = {}
+
+        if hasattr(super(SimpleEncodingVodJobUrlInput, self), 'attribute_map'):
+            attributes = getattr(super(SimpleEncodingVodJobUrlInput, self), 'attribute_map')
+
+        attributes.update({
             'url': 'url',
             'credentials': 'credentials',
             'input_type': 'inputType',
             'language': 'language'
-        }
+        })
         return attributes
 
     @property
@@ -174,6 +186,8 @@ class SimpleEncodingVodJobUrlInput(object):
         """Returns the model properties as a dict"""
         result = {}
 
+        if hasattr(super(SimpleEncodingVodJobUrlInput, self), "to_dict"):
+            result = super(SimpleEncodingVodJobUrlInput, self).to_dict()
         for attr, _ in six.iteritems(self.openapi_types):
             value = getattr(self, attr)
             if value is None:

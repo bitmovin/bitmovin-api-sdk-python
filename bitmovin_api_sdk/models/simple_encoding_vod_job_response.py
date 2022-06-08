@@ -23,7 +23,7 @@ class SimpleEncodingVodJobResponse(object):
                  created_at=None,
                  modified_at=None,
                  name=None):
-        # type: (string_types, SimpleEncodingVodJobStatus, EncodingTemplate, string_types, list[SimpleEncodingVodJobUrlInput], list[SimpleEncodingVodJobOutput], list[SimpleEncodingVodJobErrors], datetime, datetime, string_types) -> None
+        # type: (string_types, SimpleEncodingVodJobStatus, EncodingTemplate, string_types, list[SimpleEncodingVodJobInput], list[SimpleEncodingVodJobOutput], list[SimpleEncodingVodJobErrors], datetime, datetime, string_types) -> None
 
         self._id = None
         self._status = None
@@ -65,7 +65,7 @@ class SimpleEncodingVodJobResponse(object):
             'status': 'SimpleEncodingVodJobStatus',
             'encoding_template': 'EncodingTemplate',
             'encoding_id': 'string_types',
-            'inputs': 'list[SimpleEncodingVodJobUrlInput]',
+            'inputs': 'list[SimpleEncodingVodJobInput]',
             'outputs': 'list[SimpleEncodingVodJobOutput]',
             'errors': 'list[SimpleEncodingVodJobErrors]',
             'created_at': 'datetime',
@@ -209,12 +209,12 @@ class SimpleEncodingVodJobResponse(object):
 
     @property
     def inputs(self):
-        # type: () -> list[SimpleEncodingVodJobUrlInput]
+        # type: () -> list[SimpleEncodingVodJobInput]
         """Gets the inputs of this SimpleEncodingVodJobResponse.
 
 
         :return: The inputs of this SimpleEncodingVodJobResponse.
-        :rtype: list[SimpleEncodingVodJobUrlInput]
+        :rtype: list[SimpleEncodingVodJobInput]
         """
         return self._inputs
 
@@ -225,12 +225,12 @@ class SimpleEncodingVodJobResponse(object):
 
 
         :param inputs: The inputs of this SimpleEncodingVodJobResponse.
-        :type: list[SimpleEncodingVodJobUrlInput]
+        :type: list[SimpleEncodingVodJobInput]
         """
 
         if inputs is not None:
             if not isinstance(inputs, list):
-                raise TypeError("Invalid type for `inputs`, type has to be `list[SimpleEncodingVodJobUrlInput]`")
+                raise TypeError("Invalid type for `inputs`, type has to be `list[SimpleEncodingVodJobInput]`")
 
         self._inputs = inputs
 

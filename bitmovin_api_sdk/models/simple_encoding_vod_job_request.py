@@ -15,7 +15,7 @@ class SimpleEncodingVodJobRequest(object):
                  inputs=None,
                  outputs=None,
                  name=None):
-        # type: (EncodingTemplate, list[SimpleEncodingVodJobUrlInput], list[SimpleEncodingVodJobOutput], string_types) -> None
+        # type: (EncodingTemplate, list[SimpleEncodingVodJobInput], list[SimpleEncodingVodJobOutput], string_types) -> None
 
         self._encoding_template = None
         self._inputs = list()
@@ -36,7 +36,7 @@ class SimpleEncodingVodJobRequest(object):
     def openapi_types(self):
         types = {
             'encoding_template': 'EncodingTemplate',
-            'inputs': 'list[SimpleEncodingVodJobUrlInput]',
+            'inputs': 'list[SimpleEncodingVodJobInput]',
             'outputs': 'list[SimpleEncodingVodJobOutput]',
             'name': 'string_types'
         }
@@ -84,12 +84,12 @@ class SimpleEncodingVodJobRequest(object):
 
     @property
     def inputs(self):
-        # type: () -> list[SimpleEncodingVodJobUrlInput]
+        # type: () -> list[SimpleEncodingVodJobInput]
         """Gets the inputs of this SimpleEncodingVodJobRequest.
 
 
         :return: The inputs of this SimpleEncodingVodJobRequest.
-        :rtype: list[SimpleEncodingVodJobUrlInput]
+        :rtype: list[SimpleEncodingVodJobInput]
         """
         return self._inputs
 
@@ -100,12 +100,12 @@ class SimpleEncodingVodJobRequest(object):
 
 
         :param inputs: The inputs of this SimpleEncodingVodJobRequest.
-        :type: list[SimpleEncodingVodJobUrlInput]
+        :type: list[SimpleEncodingVodJobInput]
         """
 
         if inputs is not None:
             if not isinstance(inputs, list):
-                raise TypeError("Invalid type for `inputs`, type has to be `list[SimpleEncodingVodJobUrlInput]`")
+                raise TypeError("Invalid type for `inputs`, type has to be `list[SimpleEncodingVodJobInput]`")
 
         self._inputs = inputs
 
