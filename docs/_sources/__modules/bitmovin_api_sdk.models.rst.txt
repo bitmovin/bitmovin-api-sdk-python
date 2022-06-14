@@ -2044,6 +2044,14 @@ bitmovin\_api\_sdk.models.denoise\_hqdn3d\_filter module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.direct\_file\_upload\_input module
+------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.direct_file_upload_input
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.display\_aspect\_ratio module
 -------------------------------------------------------
 
@@ -5008,6 +5016,14 @@ bitmovin\_api\_sdk.models.simple\_encoding\_vod\_job\_credentials module
 ------------------------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.models.simple_encoding_vod_job_credentials
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.simple\_encoding\_vod\_job\_direct\_file\_upload\_input module
+----------------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.simple_encoding_vod_job_direct_file_upload_input
    :members:
    :undoc-members:
    :show-inheritance:

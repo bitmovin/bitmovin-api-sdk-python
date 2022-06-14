@@ -26,7 +26,8 @@ class Input(BitmovinResource):
         'SFTP': 'SftpInput',
         'ZIXI': 'ZixiInput',
         'SRT': 'SrtInput',
-        'GCS_SERVICE_ACCOUNT': 'GcsServiceAccountInput'
+        'GCS_SERVICE_ACCOUNT': 'GcsServiceAccountInput',
+        'DIRECT_FILE_UPLOAD': 'DirectFileUploadInput'
     }
 
     def to_dict(self):

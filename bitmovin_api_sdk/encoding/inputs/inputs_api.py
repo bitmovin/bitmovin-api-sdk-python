@@ -25,6 +25,7 @@ from bitmovin_api_sdk.encoding.inputs.aspera.aspera_api import AsperaApi
 from bitmovin_api_sdk.encoding.inputs.akamai_netstorage.akamai_netstorage_api import AkamaiNetstorageApi
 from bitmovin_api_sdk.encoding.inputs.srt.srt_api import SrtApi
 from bitmovin_api_sdk.encoding.inputs.zixi.zixi_api import ZixiApi
+from bitmovin_api_sdk.encoding.inputs.direct_file_upload.direct_file_upload_api import DirectFileUploadApi
 from bitmovin_api_sdk.encoding.inputs.input_list_query_params import InputListQueryParams
 
 
@@ -160,6 +161,13 @@ class InputsApi(BaseApi):
         )
 
         self.zixi = ZixiApi(
+            api_key=api_key,
+            tenant_org_id=tenant_org_id,
+            base_url=base_url,
+            logger=logger
+        )
+
+        self.direct_file_upload = DirectFileUploadApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,

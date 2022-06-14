@@ -179,6 +179,10 @@ from bitmovin_api_sdk.encoding.inputs.zixi.zixi_api import ZixiApi
 from bitmovin_api_sdk.encoding.inputs.zixi.zixi_api import ZixiInputListQueryParams
 from bitmovin_api_sdk.encoding.inputs.zixi.customdata.customdata_api import CustomdataApi
 
+from bitmovin_api_sdk.encoding.inputs.direct_file_upload.direct_file_upload_api import DirectFileUploadApi
+from bitmovin_api_sdk.encoding.inputs.direct_file_upload.direct_file_upload_api import DirectFileUploadInputListQueryParams
+from bitmovin_api_sdk.encoding.inputs.direct_file_upload.customdata.customdata_api import CustomdataApi
+
 from bitmovin_api_sdk.encoding.outputs.outputs_api import OutputsApi
 from bitmovin_api_sdk.encoding.outputs.outputs_api import OutputListQueryParams
 from bitmovin_api_sdk.encoding.outputs.type.type_api import TypeApi
@@ -1247,6 +1251,7 @@ from bitmovin_api_sdk.models.deinterlace_filter import DeinterlaceFilter
 from bitmovin_api_sdk.models.deinterlace_frame_selection_mode import DeinterlaceFrameSelectionMode
 from bitmovin_api_sdk.models.deinterlace_mode import DeinterlaceMode
 from bitmovin_api_sdk.models.denoise_hqdn3d_filter import DenoiseHqdn3dFilter
+from bitmovin_api_sdk.models.direct_file_upload_input import DirectFileUploadInput
 from bitmovin_api_sdk.models.display_aspect_ratio import DisplayAspectRatio
 from bitmovin_api_sdk.models.dolby_atmos_audio_configuration import DolbyAtmosAudioConfiguration
 from bitmovin_api_sdk.models.dolby_atmos_dialogue_intelligence import DolbyAtmosDialogueIntelligence
@@ -1618,6 +1623,7 @@ from bitmovin_api_sdk.models.simple_encoding_vod_job_access_key_credentials impo
 from bitmovin_api_sdk.models.simple_encoding_vod_job_azure_credentials import SimpleEncodingVodJobAzureCredentials
 from bitmovin_api_sdk.models.simple_encoding_vod_job_cdn_output import SimpleEncodingVodJobCdnOutput
 from bitmovin_api_sdk.models.simple_encoding_vod_job_credentials import SimpleEncodingVodJobCredentials
+from bitmovin_api_sdk.models.simple_encoding_vod_job_direct_file_upload_input import SimpleEncodingVodJobDirectFileUploadInput
 from bitmovin_api_sdk.models.simple_encoding_vod_job_errors import SimpleEncodingVodJobErrors
 from bitmovin_api_sdk.models.simple_encoding_vod_job_gcs_service_account_credentials import SimpleEncodingVodJobGcsServiceAccountCredentials
 from bitmovin_api_sdk.models.simple_encoding_vod_job_input import SimpleEncodingVodJobInput
@@ -1759,4 +1765,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.118.0"
+__version__ = "1.119.0"

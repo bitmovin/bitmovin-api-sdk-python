@@ -10,6 +10,7 @@ Subpackages
    bitmovin_api_sdk.encoding.inputs.akamai_netstorage
    bitmovin_api_sdk.encoding.inputs.aspera
    bitmovin_api_sdk.encoding.inputs.azure
+   bitmovin_api_sdk.encoding.inputs.direct_file_upload
    bitmovin_api_sdk.encoding.inputs.ftp
    bitmovin_api_sdk.encoding.inputs.gcs
    bitmovin_api_sdk.encoding.inputs.gcs_service_account
