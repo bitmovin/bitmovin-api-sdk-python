@@ -63,7 +63,7 @@ class AdAnalyticsPercentileQueryRequest(AdAnalyticsQueryRequest):
         # type: () -> int
         """Gets the percentile of this AdAnalyticsPercentileQueryRequest.
 
-        The percentage (0-99) used for percentile queries.
+        The percentage (0-99) used for percentile queries. (required)
 
         :return: The percentile of this AdAnalyticsPercentileQueryRequest.
         :rtype: int
@@ -75,7 +75,7 @@ class AdAnalyticsPercentileQueryRequest(AdAnalyticsQueryRequest):
         # type: (int) -> None
         """Sets the percentile of this AdAnalyticsPercentileQueryRequest.
 
-        The percentage (0-99) used for percentile queries.
+        The percentage (0-99) used for percentile queries. (required)
 
         :param percentile: The percentile of this AdAnalyticsPercentileQueryRequest.
         :type: int

@@ -126,6 +126,7 @@ class AdAnalyticsQueryRequest(AnalyticsQueryTimeframe):
         # type: () -> list[AdAnalyticsAbstractFilter]
         """Gets the filters of this AdAnalyticsQueryRequest.
 
+        Analytics Query Filters  Each filter requires 3 properties: name, operator and value.   Valid operators are [IN, EQ, NE, LT, LTE, GT, GTE, CONTAINS, NOTCONTAINS] 
 
         :return: The filters of this AdAnalyticsQueryRequest.
         :rtype: list[AdAnalyticsAbstractFilter]
@@ -137,6 +138,7 @@ class AdAnalyticsQueryRequest(AnalyticsQueryTimeframe):
         # type: (list) -> None
         """Sets the filters of this AdAnalyticsQueryRequest.
 
+        Analytics Query Filters  Each filter requires 3 properties: name, operator and value.   Valid operators are [IN, EQ, NE, LT, LTE, GT, GTE, CONTAINS, NOTCONTAINS] 
 
         :param filters: The filters of this AdAnalyticsQueryRequest.
         :type: list[AdAnalyticsAbstractFilter]

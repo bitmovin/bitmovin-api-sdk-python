@@ -65,7 +65,7 @@ class AnalyticsImpressionsQuery(AnalyticsQueryTimeframe):
         # type: () -> string_types
         """Gets the license_key of this AnalyticsImpressionsQuery.
 
-        Analytics license key
+        Analytics license key (required)
 
         :return: The license_key of this AnalyticsImpressionsQuery.
         :rtype: string_types
@@ -77,7 +77,7 @@ class AnalyticsImpressionsQuery(AnalyticsQueryTimeframe):
         # type: (string_types) -> None
         """Sets the license_key of this AnalyticsImpressionsQuery.
 
-        Analytics license key
+        Analytics license key (required)
 
         :param license_key: The license_key of this AnalyticsImpressionsQuery.
         :type: string_types
@@ -94,6 +94,7 @@ class AnalyticsImpressionsQuery(AnalyticsQueryTimeframe):
         # type: () -> list[AnalyticsAbstractFilter]
         """Gets the filters of this AnalyticsImpressionsQuery.
 
+        Analytics Query Filters  Each filter requires 3 properties: name, operator and value.  Valid operators are [IN, EQ, NE, LT, LTE, GT, GTE, CONTAINS, NOTCONTAINS] 
 
         :return: The filters of this AnalyticsImpressionsQuery.
         :rtype: list[AnalyticsAbstractFilter]
@@ -105,6 +106,7 @@ class AnalyticsImpressionsQuery(AnalyticsQueryTimeframe):
         # type: (list) -> None
         """Sets the filters of this AnalyticsImpressionsQuery.
 
+        Analytics Query Filters  Each filter requires 3 properties: name, operator and value.  Valid operators are [IN, EQ, NE, LT, LTE, GT, GTE, CONTAINS, NOTCONTAINS] 
 
         :param filters: The filters of this AnalyticsImpressionsQuery.
         :type: list[AnalyticsAbstractFilter]

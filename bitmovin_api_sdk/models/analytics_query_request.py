@@ -132,6 +132,7 @@ class AnalyticsQueryRequest(AnalyticsQueryTimeframe):
         # type: () -> list[AnalyticsAbstractFilter]
         """Gets the filters of this AnalyticsQueryRequest.
 
+        Analytics Query Filters  Each filter requires 3 properties: name, operator and value.   Valid operators are [IN, EQ, NE, LT, LTE, GT, GTE, CONTAINS, NOTCONTAINS] 
 
         :return: The filters of this AnalyticsQueryRequest.
         :rtype: list[AnalyticsAbstractFilter]
@@ -143,6 +144,7 @@ class AnalyticsQueryRequest(AnalyticsQueryTimeframe):
         # type: (list) -> None
         """Sets the filters of this AnalyticsQueryRequest.
 
+        Analytics Query Filters  Each filter requires 3 properties: name, operator and value.   Valid operators are [IN, EQ, NE, LT, LTE, GT, GTE, CONTAINS, NOTCONTAINS] 
 
         :param filters: The filters of this AnalyticsQueryRequest.
         :type: list[AnalyticsAbstractFilter]

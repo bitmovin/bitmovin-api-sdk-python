@@ -64,7 +64,7 @@ class AnalyticsPercentileQueryRequest(AnalyticsQueryRequest):
         # type: () -> int
         """Gets the percentile of this AnalyticsPercentileQueryRequest.
 
-        The percentage (0-99) used for percentile queries.
+        The percentage (0-99) used for percentile queries. (required)
 
         :return: The percentile of this AnalyticsPercentileQueryRequest.
         :rtype: int
@@ -76,7 +76,7 @@ class AnalyticsPercentileQueryRequest(AnalyticsQueryRequest):
         # type: (int) -> None
         """Sets the percentile of this AnalyticsPercentileQueryRequest.
 
-        The percentage (0-99) used for percentile queries.
+        The percentage (0-99) used for percentile queries. (required)
 
         :param percentile: The percentile of this AnalyticsPercentileQueryRequest.
         :type: int
