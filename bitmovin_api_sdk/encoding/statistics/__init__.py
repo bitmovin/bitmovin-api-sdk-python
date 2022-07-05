@@ -1,4 +1,5 @@
 from bitmovin_api_sdk.encoding.statistics.statistics_api import StatisticsApi
+from bitmovin_api_sdk.encoding.statistics.cdn.cdn_api import CdnApi
 from bitmovin_api_sdk.encoding.statistics.daily.daily_api import DailyApi
 from bitmovin_api_sdk.encoding.statistics.encodings.encodings_api import EncodingsApi
 from bitmovin_api_sdk.encoding.statistics.labels.labels_api import LabelsApi

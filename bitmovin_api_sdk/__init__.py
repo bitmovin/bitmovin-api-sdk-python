@@ -875,6 +875,10 @@ from bitmovin_api_sdk.encoding.infrastructure.prewarmed_encoder_pools.schedules.
 from bitmovin_api_sdk.encoding.infrastructure.prewarmed_encoder_pools.schedules.schedules_api import PrewarmedEncoderPoolScheduleListQueryParams
 from bitmovin_api_sdk.encoding.statistics.statistics_api import StatisticsApi
 from bitmovin_api_sdk.encoding.statistics.statistics_api import StatisticsListQueryParams
+from bitmovin_api_sdk.encoding.statistics.cdn.cdn_api import CdnApi
+
+from bitmovin_api_sdk.encoding.statistics.cdn.usage.usage_api import UsageApi
+from bitmovin_api_sdk.encoding.statistics.cdn.usage.usage_api import CdnUsageStatisticsGetQueryParams
 from bitmovin_api_sdk.encoding.statistics.daily.daily_api import DailyApi
 from bitmovin_api_sdk.encoding.statistics.daily.daily_api import DailyStatisticsListQueryParams
 from bitmovin_api_sdk.encoding.statistics.encodings.encodings_api import EncodingsApi
@@ -1171,6 +1175,8 @@ from bitmovin_api_sdk.models.burn_in_subtitle_dvb_sub import BurnInSubtitleDvbSu
 from bitmovin_api_sdk.models.burn_in_subtitle_srt import BurnInSubtitleSrt
 from bitmovin_api_sdk.models.caption_character_encoding import CaptionCharacterEncoding
 from bitmovin_api_sdk.models.cdn_output import CdnOutput
+from bitmovin_api_sdk.models.cdn_usage import CdnUsage
+from bitmovin_api_sdk.models.cdn_usage_statistics import CdnUsageStatistics
 from bitmovin_api_sdk.models.cea608708_subtitle_configuration import Cea608708SubtitleConfiguration
 from bitmovin_api_sdk.models.cea608_caption_input_stream import Cea608CaptionInputStream
 from bitmovin_api_sdk.models.cea608_channel_type import Cea608ChannelType
@@ -1765,4 +1771,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.121.0"
+__version__ = "1.122.0"

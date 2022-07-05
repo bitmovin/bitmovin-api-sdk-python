@@ -7,6 +7,7 @@ Subpackages
 .. toctree::
    :maxdepth: 4
 
+   bitmovin_api_sdk.encoding.statistics.cdn
    bitmovin_api_sdk.encoding.statistics.daily
    bitmovin_api_sdk.encoding.statistics.encodings
    bitmovin_api_sdk.encoding.statistics.labels

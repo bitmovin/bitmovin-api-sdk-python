@@ -1404,6 +1404,22 @@ bitmovin\_api\_sdk.models.cdn\_output module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.cdn\_usage module
+-------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.cdn_usage
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.cdn\_usage\_statistics module
+-------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.cdn_usage_statistics
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.cea608708\_subtitle\_configuration module
 -------------------------------------------------------------------
 

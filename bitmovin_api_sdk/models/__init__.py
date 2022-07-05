@@ -178,6 +178,8 @@ from bitmovin_api_sdk.models.burn_in_subtitle_dvb_sub import BurnInSubtitleDvbSu
 from bitmovin_api_sdk.models.burn_in_subtitle_srt import BurnInSubtitleSrt
 from bitmovin_api_sdk.models.caption_character_encoding import CaptionCharacterEncoding
 from bitmovin_api_sdk.models.cdn_output import CdnOutput
+from bitmovin_api_sdk.models.cdn_usage import CdnUsage
+from bitmovin_api_sdk.models.cdn_usage_statistics import CdnUsageStatistics
 from bitmovin_api_sdk.models.cea608708_subtitle_configuration import Cea608708SubtitleConfiguration
 from bitmovin_api_sdk.models.cea608_caption_input_stream import Cea608CaptionInputStream
 from bitmovin_api_sdk.models.cea608_channel_type import Cea608ChannelType

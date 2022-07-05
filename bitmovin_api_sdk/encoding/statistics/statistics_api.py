@@ -7,6 +7,7 @@ from bitmovin_api_sdk.common.poscheck import poscheck_except
 from bitmovin_api_sdk.models.response_envelope import ResponseEnvelope
 from bitmovin_api_sdk.models.response_error import ResponseError
 from bitmovin_api_sdk.models.statistics import Statistics
+from bitmovin_api_sdk.encoding.statistics.cdn.cdn_api import CdnApi
 from bitmovin_api_sdk.encoding.statistics.daily.daily_api import DailyApi
 from bitmovin_api_sdk.encoding.statistics.encodings.encodings_api import EncodingsApi
 from bitmovin_api_sdk.encoding.statistics.labels.labels_api import LabelsApi
@@ -19,6 +20,13 @@ class StatisticsApi(BaseApi):
         # type: (str, str, str, BitmovinApiLoggerBase) -> None
 
         super(StatisticsApi, self).__init__(
+            api_key=api_key,
+            tenant_org_id=tenant_org_id,
+            base_url=base_url,
+            logger=logger
+        )
+
+        self.cdn = CdnApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,
