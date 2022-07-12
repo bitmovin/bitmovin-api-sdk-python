@@ -87,7 +87,7 @@ class Period(BitmovinResponse):
         # type: () -> float
         """Gets the duration of this Period.
 
-        Duration in seconds
+        Duration in seconds.<br/>Please note that the duration of a Period is usually determined by the media contained therein.<br/>Setting the `duration` property to a specific value will override this default behaviour.<br/>Warning: Use at your own risk!
 
         :return: The duration of this Period.
         :rtype: float
@@ -99,7 +99,7 @@ class Period(BitmovinResponse):
         # type: (float) -> None
         """Sets the duration of this Period.
 
-        Duration in seconds
+        Duration in seconds.<br/>Please note that the duration of a Period is usually determined by the media contained therein.<br/>Setting the `duration` property to a specific value will override this default behaviour.<br/>Warning: Use at your own risk!
 
         :param duration: The duration of this Period.
         :type: float
