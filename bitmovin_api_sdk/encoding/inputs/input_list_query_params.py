@@ -1,18 +1,20 @@
 class InputListQueryParams(object):
-    def __init__(self, offset=None, limit=None, name=None):
-        # type: (int, int, string_types) -> None
+    def __init__(self, offset=None, limit=None, name=None, sort=None):
+        # type: (int, int, string_types, string_types) -> None
         super(InputListQueryParams, self).__init__()
 
         self.offset = offset
         self.limit = limit
         self.name = name
+        self.sort = sort
 
     @property
     def openapi_types(self):
         types = {
             'offset': 'int',
             'limit': 'int',
-            'name': 'string_types'
+            'name': 'string_types',
+            'sort': 'string_types'
         }
 
         return types
@@ -22,7 +24,8 @@ class InputListQueryParams(object):
         attributes = {
             'offset': 'offset',
             'limit': 'limit',
-            'name': 'name'
+            'name': 'name',
+            'sort': 'sort'
         }
 
         return attributes

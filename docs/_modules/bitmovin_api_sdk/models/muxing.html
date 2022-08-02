@@ -327,7 +327,7 @@
         <span class="c1"># type: () -&gt; list[Ignoring]</span>
         <span class="sd">&quot;&quot;&quot;Gets the ignored_by of this Muxing.</span>
 
-<span class="sd">        If this is set and contains objects, then this muxing has been ignored during the encoding process</span>
+<span class="sd">        This read-only property is set during the analysis step of the encoding. If it contains items, the Muxing has been ignored during the encoding process according to its &#39;streamConditionsMode&#39;</span>
 
 <span class="sd">        :return: The ignored_by of this Muxing.</span>
 <span class="sd">        :rtype: list[Ignoring]</span>
@@ -339,7 +339,7 @@
         <span class="c1"># type: (list) -&gt; None</span>
         <span class="sd">&quot;&quot;&quot;Sets the ignored_by of this Muxing.</span>
 
-<span class="sd">        If this is set and contains objects, then this muxing has been ignored during the encoding process</span>
+<span class="sd">        This read-only property is set during the analysis step of the encoding. If it contains items, the Muxing has been ignored during the encoding process according to its &#39;streamConditionsMode&#39;</span>
 
 <span class="sd">        :param ignored_by: The ignored_by of this Muxing.</span>
 <span class="sd">        :type: list[Ignoring]</span>
@@ -356,7 +356,7 @@
         <span class="c1"># type: () -&gt; StreamConditionsMode</span>
         <span class="sd">&quot;&quot;&quot;Gets the stream_conditions_mode of this Muxing.</span>
 
-<span class="sd">        Specifies how to handle streams that don&#39;t fulfill stream conditions</span>
+<span class="sd">        Specifies how to proceed with the Muxing when some of its Streams are ignored (see &#39;condition&#39; property of the Stream resource). The settings only make a difference for Muxings with more than one Stream. When retrieving the resource after the analysis step of the encoding has finished, &#39;ignoredBy&#39; will indicate if and why it has been ignored.</span>
 
 <span class="sd">        :return: The stream_conditions_mode of this Muxing.</span>
 <span class="sd">        :rtype: StreamConditionsMode</span>
@@ -368,7 +368,7 @@
         <span class="c1"># type: (StreamConditionsMode) -&gt; None</span>
         <span class="sd">&quot;&quot;&quot;Sets the stream_conditions_mode of this Muxing.</span>
 
-<span class="sd">        Specifies how to handle streams that don&#39;t fulfill stream conditions</span>
+<span class="sd">        Specifies how to proceed with the Muxing when some of its Streams are ignored (see &#39;condition&#39; property of the Stream resource). The settings only make a difference for Muxings with more than one Stream. When retrieving the resource after the analysis step of the encoding has finished, &#39;ignoredBy&#39; will indicate if and why it has been ignored.</span>
 
 <span class="sd">        :param stream_conditions_mode: The stream_conditions_mode of this Muxing.</span>
 <span class="sd">        :type: StreamConditionsMode</span>

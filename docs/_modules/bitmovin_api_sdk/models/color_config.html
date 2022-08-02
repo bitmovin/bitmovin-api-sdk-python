@@ -82,8 +82,10 @@
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.color_range</span> <span class="kn">import</span> <span class="n">ColorRange</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.color_space</span> <span class="kn">import</span> <span class="n">ColorSpace</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.color_transfer</span> <span class="kn">import</span> <span class="n">ColorTransfer</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.input_color_primaries</span> <span class="kn">import</span> <span class="n">InputColorPrimaries</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.input_color_range</span> <span class="kn">import</span> <span class="n">InputColorRange</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.input_color_space</span> <span class="kn">import</span> <span class="n">InputColorSpace</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.input_color_transfer</span> <span class="kn">import</span> <span class="n">InputColorTransfer</span>
 <span class="kn">import</span> <span class="nn">pprint</span>
 <span class="kn">import</span> <span class="nn">six</span>
 
@@ -102,8 +104,10 @@
                  <span class="n">color_range</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">color_transfer</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">input_color_space</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                 <span class="n">input_color_range</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (bool, bool, bool, bool, bool, ChromaLocation, ColorSpace, ColorPrimaries, ColorRange, ColorTransfer, InputColorSpace, InputColorRange) -&gt; None</span>
+                 <span class="n">input_color_range</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">input_color_primaries</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">input_color_transfer</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="c1"># type: (bool, bool, bool, bool, bool, ChromaLocation, ColorSpace, ColorPrimaries, ColorRange, ColorTransfer, InputColorSpace, InputColorRange, InputColorPrimaries, InputColorTransfer) -&gt; None</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_copy_chroma_location_flag</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_copy_color_space_flag</span> <span class="o">=</span> <span class="kc">None</span>
@@ -117,6 +121,8 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_color_transfer</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_input_color_space</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_input_color_range</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_input_color_primaries</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_input_color_transfer</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>
 
         <span class="k">if</span> <span class="n">copy_chroma_location_flag</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -143,6 +149,10 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">input_color_space</span> <span class="o">=</span> <span class="n">input_color_space</span>
         <span class="k">if</span> <span class="n">input_color_range</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">input_color_range</span> <span class="o">=</span> <span class="n">input_color_range</span>
+        <span class="k">if</span> <span class="n">input_color_primaries</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">input_color_primaries</span> <span class="o">=</span> <span class="n">input_color_primaries</span>
+        <span class="k">if</span> <span class="n">input_color_transfer</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">input_color_transfer</span> <span class="o">=</span> <span class="n">input_color_transfer</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -158,7 +168,9 @@
             <span class="s1">&#39;color_range&#39;</span><span class="p">:</span> <span class="s1">&#39;ColorRange&#39;</span><span class="p">,</span>
             <span class="s1">&#39;color_transfer&#39;</span><span class="p">:</span> <span class="s1">&#39;ColorTransfer&#39;</span><span class="p">,</span>
             <span class="s1">&#39;input_color_space&#39;</span><span class="p">:</span> <span class="s1">&#39;InputColorSpace&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;input_color_range&#39;</span><span class="p">:</span> <span class="s1">&#39;InputColorRange&#39;</span>
+            <span class="s1">&#39;input_color_range&#39;</span><span class="p">:</span> <span class="s1">&#39;InputColorRange&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;input_color_primaries&#39;</span><span class="p">:</span> <span class="s1">&#39;InputColorPrimaries&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;input_color_transfer&#39;</span><span class="p">:</span> <span class="s1">&#39;InputColorTransfer&#39;</span>
         <span class="p">}</span>
 
         <span class="k">return</span> <span class="n">types</span>
@@ -177,7 +189,9 @@
             <span class="s1">&#39;color_range&#39;</span><span class="p">:</span> <span class="s1">&#39;colorRange&#39;</span><span class="p">,</span>
             <span class="s1">&#39;color_transfer&#39;</span><span class="p">:</span> <span class="s1">&#39;colorTransfer&#39;</span><span class="p">,</span>
             <span class="s1">&#39;input_color_space&#39;</span><span class="p">:</span> <span class="s1">&#39;inputColorSpace&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;input_color_range&#39;</span><span class="p">:</span> <span class="s1">&#39;inputColorRange&#39;</span>
+            <span class="s1">&#39;input_color_range&#39;</span><span class="p">:</span> <span class="s1">&#39;inputColorRange&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;input_color_primaries&#39;</span><span class="p">:</span> <span class="s1">&#39;inputColorPrimaries&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;input_color_transfer&#39;</span><span class="p">:</span> <span class="s1">&#39;inputColorTransfer&#39;</span>
         <span class="p">}</span>
         <span class="k">return</span> <span class="n">attributes</span>
 
@@ -528,6 +542,64 @@
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `input_color_range`, type has to be `InputColorRange`&quot;</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_input_color_range</span> <span class="o">=</span> <span class="n">input_color_range</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">input_color_primaries</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; InputColorPrimaries</span>
+        <span class="sd">&quot;&quot;&quot;Gets the input_color_primaries of this ColorConfig.</span>
+
+<span class="sd">        Override the color primaries detected in the input file. If not set the input color primaries will be automatically detected if possible.</span>
+
+<span class="sd">        :return: The input_color_primaries of this ColorConfig.</span>
+<span class="sd">        :rtype: InputColorPrimaries</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_input_color_primaries</span>
+
+    <span class="nd">@input_color_primaries</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">input_color_primaries</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_color_primaries</span><span class="p">):</span>
+        <span class="c1"># type: (InputColorPrimaries) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the input_color_primaries of this ColorConfig.</span>
+
+<span class="sd">        Override the color primaries detected in the input file. If not set the input color primaries will be automatically detected if possible.</span>
+
+<span class="sd">        :param input_color_primaries: The input_color_primaries of this ColorConfig.</span>
+<span class="sd">        :type: InputColorPrimaries</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">input_color_primaries</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">input_color_primaries</span><span class="p">,</span> <span class="n">InputColorPrimaries</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `input_color_primaries`, type has to be `InputColorPrimaries`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_input_color_primaries</span> <span class="o">=</span> <span class="n">input_color_primaries</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">input_color_transfer</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; InputColorTransfer</span>
+        <span class="sd">&quot;&quot;&quot;Gets the input_color_transfer of this ColorConfig.</span>
+
+<span class="sd">        Override the color transfer detected in the input file. If not set the input color transfer will be automatically detected if possible.</span>
+
+<span class="sd">        :return: The input_color_transfer of this ColorConfig.</span>
+<span class="sd">        :rtype: InputColorTransfer</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_input_color_transfer</span>
+
+    <span class="nd">@input_color_transfer</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">input_color_transfer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_color_transfer</span><span class="p">):</span>
+        <span class="c1"># type: (InputColorTransfer) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the input_color_transfer of this ColorConfig.</span>
+
+<span class="sd">        Override the color transfer detected in the input file. If not set the input color transfer will be automatically detected if possible.</span>
+
+<span class="sd">        :param input_color_transfer: The input_color_transfer of this ColorConfig.</span>
+<span class="sd">        :type: InputColorTransfer</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">input_color_transfer</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">input_color_transfer</span><span class="p">,</span> <span class="n">InputColorTransfer</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `input_color_transfer`, type has to be `InputColorTransfer`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_input_color_transfer</span> <span class="o">=</span> <span class="n">input_color_transfer</span>
 
 <div class="viewcode-block" id="ColorConfig.to_dict"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.color_config.ColorConfig.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>

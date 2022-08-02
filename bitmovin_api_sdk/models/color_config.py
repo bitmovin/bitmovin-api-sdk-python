@@ -8,8 +8,10 @@ from bitmovin_api_sdk.models.color_primaries import ColorPrimaries
 from bitmovin_api_sdk.models.color_range import ColorRange
 from bitmovin_api_sdk.models.color_space import ColorSpace
 from bitmovin_api_sdk.models.color_transfer import ColorTransfer
+from bitmovin_api_sdk.models.input_color_primaries import InputColorPrimaries
 from bitmovin_api_sdk.models.input_color_range import InputColorRange
 from bitmovin_api_sdk.models.input_color_space import InputColorSpace
+from bitmovin_api_sdk.models.input_color_transfer import InputColorTransfer
 import pprint
 import six
 
@@ -28,8 +30,10 @@ class ColorConfig(object):
                  color_range=None,
                  color_transfer=None,
                  input_color_space=None,
-                 input_color_range=None):
-        # type: (bool, bool, bool, bool, bool, ChromaLocation, ColorSpace, ColorPrimaries, ColorRange, ColorTransfer, InputColorSpace, InputColorRange) -> None
+                 input_color_range=None,
+                 input_color_primaries=None,
+                 input_color_transfer=None):
+        # type: (bool, bool, bool, bool, bool, ChromaLocation, ColorSpace, ColorPrimaries, ColorRange, ColorTransfer, InputColorSpace, InputColorRange, InputColorPrimaries, InputColorTransfer) -> None
 
         self._copy_chroma_location_flag = None
         self._copy_color_space_flag = None
@@ -43,6 +47,8 @@ class ColorConfig(object):
         self._color_transfer = None
         self._input_color_space = None
         self._input_color_range = None
+        self._input_color_primaries = None
+        self._input_color_transfer = None
         self.discriminator = None
 
         if copy_chroma_location_flag is not None:
@@ -69,6 +75,10 @@ class ColorConfig(object):
             self.input_color_space = input_color_space
         if input_color_range is not None:
             self.input_color_range = input_color_range
+        if input_color_primaries is not None:
+            self.input_color_primaries = input_color_primaries
+        if input_color_transfer is not None:
+            self.input_color_transfer = input_color_transfer
 
     @property
     def openapi_types(self):
@@ -84,7 +94,9 @@ class ColorConfig(object):
             'color_range': 'ColorRange',
             'color_transfer': 'ColorTransfer',
             'input_color_space': 'InputColorSpace',
-            'input_color_range': 'InputColorRange'
+            'input_color_range': 'InputColorRange',
+            'input_color_primaries': 'InputColorPrimaries',
+            'input_color_transfer': 'InputColorTransfer'
         }
 
         return types
@@ -103,7 +115,9 @@ class ColorConfig(object):
             'color_range': 'colorRange',
             'color_transfer': 'colorTransfer',
             'input_color_space': 'inputColorSpace',
-            'input_color_range': 'inputColorRange'
+            'input_color_range': 'inputColorRange',
+            'input_color_primaries': 'inputColorPrimaries',
+            'input_color_transfer': 'inputColorTransfer'
         }
         return attributes
 
@@ -454,6 +468,64 @@ class ColorConfig(object):
                 raise TypeError("Invalid type for `input_color_range`, type has to be `InputColorRange`")
 
         self._input_color_range = input_color_range
+
+    @property
+    def input_color_primaries(self):
+        # type: () -> InputColorPrimaries
+        """Gets the input_color_primaries of this ColorConfig.
+
+        Override the color primaries detected in the input file. If not set the input color primaries will be automatically detected if possible.
+
+        :return: The input_color_primaries of this ColorConfig.
+        :rtype: InputColorPrimaries
+        """
+        return self._input_color_primaries
+
+    @input_color_primaries.setter
+    def input_color_primaries(self, input_color_primaries):
+        # type: (InputColorPrimaries) -> None
+        """Sets the input_color_primaries of this ColorConfig.
+
+        Override the color primaries detected in the input file. If not set the input color primaries will be automatically detected if possible.
+
+        :param input_color_primaries: The input_color_primaries of this ColorConfig.
+        :type: InputColorPrimaries
+        """
+
+        if input_color_primaries is not None:
+            if not isinstance(input_color_primaries, InputColorPrimaries):
+                raise TypeError("Invalid type for `input_color_primaries`, type has to be `InputColorPrimaries`")
+
+        self._input_color_primaries = input_color_primaries
+
+    @property
+    def input_color_transfer(self):
+        # type: () -> InputColorTransfer
+        """Gets the input_color_transfer of this ColorConfig.
+
+        Override the color transfer detected in the input file. If not set the input color transfer will be automatically detected if possible.
+
+        :return: The input_color_transfer of this ColorConfig.
+        :rtype: InputColorTransfer
+        """
+        return self._input_color_transfer
+
+    @input_color_transfer.setter
+    def input_color_transfer(self, input_color_transfer):
+        # type: (InputColorTransfer) -> None
+        """Sets the input_color_transfer of this ColorConfig.
+
+        Override the color transfer detected in the input file. If not set the input color transfer will be automatically detected if possible.
+
+        :param input_color_transfer: The input_color_transfer of this ColorConfig.
+        :type: InputColorTransfer
+        """
+
+        if input_color_transfer is not None:
+            if not isinstance(input_color_transfer, InputColorTransfer):
+                raise TypeError("Invalid type for `input_color_transfer`, type has to be `InputColorTransfer`")
+
+        self._input_color_transfer = input_color_transfer
 
     def to_dict(self):
         """Returns the model properties as a dict"""

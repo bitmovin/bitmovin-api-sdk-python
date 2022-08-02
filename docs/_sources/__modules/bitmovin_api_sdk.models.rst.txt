@@ -3372,6 +3372,14 @@ bitmovin\_api\_sdk.models.input module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.input\_color\_primaries module
+--------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.input_color_primaries
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.input\_color\_range module
 ----------------------------------------------------
 
@@ -3384,6 +3392,14 @@ bitmovin\_api\_sdk.models.input\_color\_space module
 ----------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.models.input_color_space
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.input\_color\_transfer module
+-------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.input_color_transfer
    :members:
    :undoc-members:
    :show-inheritance:

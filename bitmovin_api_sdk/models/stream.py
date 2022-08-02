@@ -279,7 +279,7 @@ class Stream(BitmovinResource):
         # type: () -> AbstractCondition
         """Gets the conditions of this Stream.
 
-        Conditions to evaluate before creating the stream. If this evaluation fails, the stream won't be created. All muxings that depend on the stream will also not be created.
+        Defines a condition that is evaluated against the input of the Stream. If the condition is not fulfilled, the Stream will be ignored during the encoding process. The 'streamConditionMode' of a Muxing allows to control how ignored Streams affect the Muxing. When retrieving the resource after the analysis step of the encoding has finished, 'ignoredBy' will indicate if and why it has been ignored. See [Stream Conditions](https://bitmovin.com/docs/encoding/articles/stream-conditions) for more information
 
         :return: The conditions of this Stream.
         :rtype: AbstractCondition
@@ -291,7 +291,7 @@ class Stream(BitmovinResource):
         # type: (AbstractCondition) -> None
         """Sets the conditions of this Stream.
 
-        Conditions to evaluate before creating the stream. If this evaluation fails, the stream won't be created. All muxings that depend on the stream will also not be created.
+        Defines a condition that is evaluated against the input of the Stream. If the condition is not fulfilled, the Stream will be ignored during the encoding process. The 'streamConditionMode' of a Muxing allows to control how ignored Streams affect the Muxing. When retrieving the resource after the analysis step of the encoding has finished, 'ignoredBy' will indicate if and why it has been ignored. See [Stream Conditions](https://bitmovin.com/docs/encoding/articles/stream-conditions) for more information
 
         :param conditions: The conditions of this Stream.
         :type: AbstractCondition
@@ -308,7 +308,7 @@ class Stream(BitmovinResource):
         # type: () -> list[Ignoring]
         """Gets the ignored_by of this Stream.
 
-        If this is set and contains objects, then this stream has been ignored during the encoding process
+        This read-only property is set during the analysis step of the encoding. If it contains items, the Stream has been ignored during the encoding process due to its 'conditions'
 
         :return: The ignored_by of this Stream.
         :rtype: list[Ignoring]
@@ -320,7 +320,7 @@ class Stream(BitmovinResource):
         # type: (list) -> None
         """Sets the ignored_by of this Stream.
 
-        If this is set and contains objects, then this stream has been ignored during the encoding process
+        This read-only property is set during the analysis step of the encoding. If it contains items, the Stream has been ignored during the encoding process due to its 'conditions'
 
         :param ignored_by: The ignored_by of this Stream.
         :type: list[Ignoring]

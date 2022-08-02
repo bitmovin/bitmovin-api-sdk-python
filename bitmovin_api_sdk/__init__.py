@@ -1421,8 +1421,10 @@ from bitmovin_api_sdk.models.imsc_styling_mode import ImscStylingMode
 from bitmovin_api_sdk.models.infrastructure_settings import InfrastructureSettings
 from bitmovin_api_sdk.models.ingest_input_stream import IngestInputStream
 from bitmovin_api_sdk.models.input import Input
+from bitmovin_api_sdk.models.input_color_primaries import InputColorPrimaries
 from bitmovin_api_sdk.models.input_color_range import InputColorRange
 from bitmovin_api_sdk.models.input_color_space import InputColorSpace
+from bitmovin_api_sdk.models.input_color_transfer import InputColorTransfer
 from bitmovin_api_sdk.models.input_factor import InputFactor
 from bitmovin_api_sdk.models.input_factor_bitrate import InputFactorBitrate
 from bitmovin_api_sdk.models.input_factor_codec import InputFactorCodec
@@ -1771,4 +1773,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.124.0"
+__version__ = "1.125.0"

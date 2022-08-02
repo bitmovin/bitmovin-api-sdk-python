@@ -253,7 +253,7 @@ class Muxing(BitmovinResource):
         # type: () -> list[Ignoring]
         """Gets the ignored_by of this Muxing.
 
-        If this is set and contains objects, then this muxing has been ignored during the encoding process
+        This read-only property is set during the analysis step of the encoding. If it contains items, the Muxing has been ignored during the encoding process according to its 'streamConditionsMode'
 
         :return: The ignored_by of this Muxing.
         :rtype: list[Ignoring]
@@ -265,7 +265,7 @@ class Muxing(BitmovinResource):
         # type: (list) -> None
         """Sets the ignored_by of this Muxing.
 
-        If this is set and contains objects, then this muxing has been ignored during the encoding process
+        This read-only property is set during the analysis step of the encoding. If it contains items, the Muxing has been ignored during the encoding process according to its 'streamConditionsMode'
 
         :param ignored_by: The ignored_by of this Muxing.
         :type: list[Ignoring]
@@ -282,7 +282,7 @@ class Muxing(BitmovinResource):
         # type: () -> StreamConditionsMode
         """Gets the stream_conditions_mode of this Muxing.
 
-        Specifies how to handle streams that don't fulfill stream conditions
+        Specifies how to proceed with the Muxing when some of its Streams are ignored (see 'condition' property of the Stream resource). The settings only make a difference for Muxings with more than one Stream. When retrieving the resource after the analysis step of the encoding has finished, 'ignoredBy' will indicate if and why it has been ignored.
 
         :return: The stream_conditions_mode of this Muxing.
         :rtype: StreamConditionsMode
@@ -294,7 +294,7 @@ class Muxing(BitmovinResource):
         # type: (StreamConditionsMode) -> None
         """Sets the stream_conditions_mode of this Muxing.
 
-        Specifies how to handle streams that don't fulfill stream conditions
+        Specifies how to proceed with the Muxing when some of its Streams are ignored (see 'condition' property of the Stream resource). The settings only make a difference for Muxings with more than one Stream. When retrieving the resource after the analysis step of the encoding has finished, 'ignoredBy' will indicate if and why it has been ignored.
 
         :param stream_conditions_mode: The stream_conditions_mode of this Muxing.
         :type: StreamConditionsMode
