@@ -1,11 +1,12 @@
 class InputListQueryParams(object):
-    def __init__(self, offset=None, limit=None, name=None, sort=None):
-        # type: (int, int, string_types, string_types) -> None
+    def __init__(self, offset=None, limit=None, name=None, type_=None, sort=None):
+        # type: (int, int, string_types, string_types, string_types) -> None
         super(InputListQueryParams, self).__init__()
 
         self.offset = offset
         self.limit = limit
         self.name = name
+        self.type = type_
         self.sort = sort
 
     @property
@@ -14,6 +15,7 @@ class InputListQueryParams(object):
             'offset': 'int',
             'limit': 'int',
             'name': 'string_types',
+            'type': 'string_types',
             'sort': 'string_types'
         }
 
@@ -25,6 +27,7 @@ class InputListQueryParams(object):
             'offset': 'offset',
             'limit': 'limit',
             'name': 'name',
+            'type': 'type',
             'sort': 'sort'
         }
 
