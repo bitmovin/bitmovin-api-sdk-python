@@ -419,16 +419,6 @@ from bitmovin_api_sdk.encoding.filters.scale.customdata.customdata_api import Cu
 
 from bitmovin_api_sdk.encoding.encodings.live.live_api import LiveApi
 
-from bitmovin_api_sdk.encoding.encodings.machine_learning.machine_learning_api import MachineLearningApi
-
-from bitmovin_api_sdk.encoding.encodings.machine_learning.object_detection.object_detection_api import ObjectDetectionApi
-from bitmovin_api_sdk.encoding.encodings.machine_learning.object_detection.object_detection_api import ObjectDetectionConfigurationListQueryParams
-from bitmovin_api_sdk.encoding.encodings.machine_learning.object_detection.customdata.customdata_api import CustomdataApi
-
-from bitmovin_api_sdk.encoding.encodings.machine_learning.object_detection.results.results_api import ResultsApi
-from bitmovin_api_sdk.encoding.encodings.machine_learning.object_detection.results.results_api import ObjectDetectionResultListQueryParams
-from bitmovin_api_sdk.encoding.encodings.machine_learning.object_detection.results.by_timestamp.by_timestamp_api import ByTimestampApi
-from bitmovin_api_sdk.encoding.encodings.machine_learning.object_detection.results.by_timestamp.by_timestamp_api import ObjectDetectionTimestampResultListQueryParams
 from bitmovin_api_sdk.encoding.encodings.customdata.customdata_api import CustomdataApi
 
 from bitmovin_api_sdk.encoding.encodings.streams.streams_api import StreamsApi
@@ -1502,10 +1492,6 @@ from bitmovin_api_sdk.models.nex_guard_watermarking_type import NexGuardWatermar
 from bitmovin_api_sdk.models.notification import Notification
 from bitmovin_api_sdk.models.notification_state_entry import NotificationStateEntry
 from bitmovin_api_sdk.models.notification_states import NotificationStates
-from bitmovin_api_sdk.models.object_detection_bounding_box import ObjectDetectionBoundingBox
-from bitmovin_api_sdk.models.object_detection_configuration import ObjectDetectionConfiguration
-from bitmovin_api_sdk.models.object_detection_result import ObjectDetectionResult
-from bitmovin_api_sdk.models.object_detection_timestamp_result import ObjectDetectionTimestampResult
 from bitmovin_api_sdk.models.opus_audio_configuration import OpusAudioConfiguration
 from bitmovin_api_sdk.models.opus_channel_layout import OpusChannelLayout
 from bitmovin_api_sdk.models.or_conjunction import OrConjunction
@@ -1773,4 +1759,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.127.0"
+__version__ = "1.128.0"

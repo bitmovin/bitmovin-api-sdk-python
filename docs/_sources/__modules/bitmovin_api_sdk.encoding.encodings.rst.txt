@@ -12,7 +12,6 @@ Subpackages
    bitmovin_api_sdk.encoding.encodings.input_streams
    bitmovin_api_sdk.encoding.encodings.keyframes
    bitmovin_api_sdk.encoding.encodings.live
-   bitmovin_api_sdk.encoding.encodings.machine_learning
    bitmovin_api_sdk.encoding.encodings.muxings
    bitmovin_api_sdk.encoding.encodings.output_paths
    bitmovin_api_sdk.encoding.encodings.sidecars

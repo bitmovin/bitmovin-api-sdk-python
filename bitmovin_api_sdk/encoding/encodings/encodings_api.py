@@ -15,7 +15,6 @@ from bitmovin_api_sdk.models.response_error import ResponseError
 from bitmovin_api_sdk.models.start_encoding_request import StartEncodingRequest
 from bitmovin_api_sdk.models.task import Task
 from bitmovin_api_sdk.encoding.encodings.live.live_api import LiveApi
-from bitmovin_api_sdk.encoding.encodings.machine_learning.machine_learning_api import MachineLearningApi
 from bitmovin_api_sdk.encoding.encodings.customdata.customdata_api import CustomdataApi
 from bitmovin_api_sdk.encoding.encodings.streams.streams_api import StreamsApi
 from bitmovin_api_sdk.encoding.encodings.input_streams.input_streams_api import InputStreamsApi
@@ -41,13 +40,6 @@ class EncodingsApi(BaseApi):
         )
 
         self.live = LiveApi(
-            api_key=api_key,
-            tenant_org_id=tenant_org_id,
-            base_url=base_url,
-            logger=logger
-        )
-
-        self.machine_learning = MachineLearningApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,

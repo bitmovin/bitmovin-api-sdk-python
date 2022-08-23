@@ -4020,38 +4020,6 @@ bitmovin\_api\_sdk.models.notification\_states module
    :undoc-members:
    :show-inheritance:
 
-bitmovin\_api\_sdk.models.object\_detection\_bounding\_box module
------------------------------------------------------------------
-
-.. automodule:: bitmovin_api_sdk.models.object_detection_bounding_box
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-bitmovin\_api\_sdk.models.object\_detection\_configuration module
------------------------------------------------------------------
-
-.. automodule:: bitmovin_api_sdk.models.object_detection_configuration
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-bitmovin\_api\_sdk.models.object\_detection\_result module
-----------------------------------------------------------
-
-.. automodule:: bitmovin_api_sdk.models.object_detection_result
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-bitmovin\_api\_sdk.models.object\_detection\_timestamp\_result module
----------------------------------------------------------------------
-
-.. automodule:: bitmovin_api_sdk.models.object_detection_timestamp_result
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
 bitmovin\_api\_sdk.models.opus\_audio\_configuration module
 -----------------------------------------------------------
 
