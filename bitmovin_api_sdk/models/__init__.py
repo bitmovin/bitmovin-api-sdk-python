@@ -164,6 +164,9 @@ from bitmovin_api_sdk.models.billable_encoding_minutes_details import BillableEn
 from bitmovin_api_sdk.models.bitmovin_resource import BitmovinResource
 from bitmovin_api_sdk.models.bitmovin_response import BitmovinResponse
 from bitmovin_api_sdk.models.bitmovin_response_list import BitmovinResponseList
+from bitmovin_api_sdk.models.bitmovin_stream_quality import BitmovinStreamQuality
+from bitmovin_api_sdk.models.bitmovin_stream_response import BitmovinStreamResponse
+from bitmovin_api_sdk.models.bitmovin_stream_status import BitmovinStreamStatus
 from bitmovin_api_sdk.models.bitrate_selection_mode import BitrateSelectionMode
 from bitmovin_api_sdk.models.broadcast_ts_audio_input_stream_configuration import BroadcastTsAudioInputStreamConfiguration
 from bitmovin_api_sdk.models.broadcast_ts_input_stream_configuration import BroadcastTsInputStreamConfiguration
@@ -215,6 +218,7 @@ from bitmovin_api_sdk.models.content_protection import ContentProtection
 from bitmovin_api_sdk.models.convert_scc_caption import ConvertSccCaption
 from bitmovin_api_sdk.models.convert_scc_caption_web_vtt_settings import ConvertSccCaptionWebVttSettings
 from bitmovin_api_sdk.models.convert_scc_position_mode import ConvertSccPositionMode
+from bitmovin_api_sdk.models.create_bitmovin_stream_request import CreateBitmovinStreamRequest
 from bitmovin_api_sdk.models.crop_filter import CropFilter
 from bitmovin_api_sdk.models.custom_attribute import CustomAttribute
 from bitmovin_api_sdk.models.custom_data import CustomData
@@ -726,6 +730,7 @@ from bitmovin_api_sdk.models.tu_inter_depth import TuInterDepth
 from bitmovin_api_sdk.models.tu_intra_depth import TuIntraDepth
 from bitmovin_api_sdk.models.tweaks import Tweaks
 from bitmovin_api_sdk.models.unsharp_filter import UnsharpFilter
+from bitmovin_api_sdk.models.update_bitmovin_stream_request import UpdateBitmovinStreamRequest
 from bitmovin_api_sdk.models.update_organization_request import UpdateOrganizationRequest
 from bitmovin_api_sdk.models.utc_timing import UtcTiming
 from bitmovin_api_sdk.models.variant_stream_dropping_mode import VariantStreamDroppingMode

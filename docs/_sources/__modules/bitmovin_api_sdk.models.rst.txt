@@ -1292,6 +1292,30 @@ bitmovin\_api\_sdk.models.bitmovin\_response\_list module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.bitmovin\_stream\_quality module
+----------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.bitmovin_stream_quality
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.bitmovin\_stream\_response module
+-----------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.bitmovin_stream_response
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.bitmovin\_stream\_status module
+---------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.bitmovin_stream_status
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.bitrate\_selection\_mode module
 ---------------------------------------------------------
 
@@ -1696,6 +1720,14 @@ bitmovin\_api\_sdk.models.convert\_scc\_position\_mode module
 -------------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.models.convert_scc_position_mode
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.create\_bitmovin\_stream\_request module
+------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.create_bitmovin_stream_request
    :members:
    :undoc-members:
    :show-inheritance:
@@ -5784,6 +5816,14 @@ bitmovin\_api\_sdk.models.unsharp\_filter module
 ------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.models.unsharp_filter
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.update\_bitmovin\_stream\_request module
+------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.update_bitmovin_stream_request
    :members:
    :undoc-members:
    :show-inheritance:
