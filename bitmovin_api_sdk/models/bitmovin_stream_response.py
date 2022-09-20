@@ -20,8 +20,9 @@ class BitmovinStreamResponse(object):
                  created_at=None,
                  status=None,
                  target_quality=None,
-                 available_qualities=None):
-        # type: (string_types, string_types, string_types, string_types, datetime, BitmovinStreamStatus, BitmovinStreamQuality, list[BitmovinStreamQuality]) -> None
+                 available_qualities=None,
+                 encoding_tasks=None):
+        # type: (string_types, string_types, string_types, string_types, datetime, BitmovinStreamStatus, BitmovinStreamQuality, list[BitmovinStreamQuality], list[BitmovinStreamEncodingTask]) -> None
 
         self._id = None
         self._asset_url = None
@@ -31,6 +32,7 @@ class BitmovinStreamResponse(object):
         self._status = None
         self._target_quality = None
         self._available_qualities = list()
+        self._encoding_tasks = list()
         self.discriminator = None
 
         if id_ is not None:
@@ -49,6 +51,8 @@ class BitmovinStreamResponse(object):
             self.target_quality = target_quality
         if available_qualities is not None:
             self.available_qualities = available_qualities
+        if encoding_tasks is not None:
+            self.encoding_tasks = encoding_tasks
 
     @property
     def openapi_types(self):
@@ -60,7 +64,8 @@ class BitmovinStreamResponse(object):
             'created_at': 'datetime',
             'status': 'BitmovinStreamStatus',
             'target_quality': 'BitmovinStreamQuality',
-            'available_qualities': 'list[BitmovinStreamQuality]'
+            'available_qualities': 'list[BitmovinStreamQuality]',
+            'encoding_tasks': 'list[BitmovinStreamEncodingTask]'
         }
 
         return types
@@ -75,7 +80,8 @@ class BitmovinStreamResponse(object):
             'created_at': 'createdAt',
             'status': 'status',
             'target_quality': 'targetQuality',
-            'available_qualities': 'availableQualities'
+            'available_qualities': 'availableQualities',
+            'encoding_tasks': 'encodingTasks'
         }
         return attributes
 
@@ -258,7 +264,7 @@ class BitmovinStreamResponse(object):
         # type: () -> BitmovinStreamQuality
         """Gets the target_quality of this BitmovinStreamResponse.
 
-        The target quality of the Stream
+        The target quality of the Stream (OBSOLETE!)
 
         :return: The target_quality of this BitmovinStreamResponse.
         :rtype: BitmovinStreamQuality
@@ -270,7 +276,7 @@ class BitmovinStreamResponse(object):
         # type: (BitmovinStreamQuality) -> None
         """Sets the target_quality of this BitmovinStreamResponse.
 
-        The target quality of the Stream
+        The target quality of the Stream (OBSOLETE!)
 
         :param target_quality: The target_quality of this BitmovinStreamResponse.
         :type: BitmovinStreamQuality
@@ -287,7 +293,7 @@ class BitmovinStreamResponse(object):
         # type: () -> list[BitmovinStreamQuality]
         """Gets the available_qualities of this BitmovinStreamResponse.
 
-        List of available stream qualities
+        List of available stream qualities (OBSOLETE!)
 
         :return: The available_qualities of this BitmovinStreamResponse.
         :rtype: list[BitmovinStreamQuality]
@@ -299,7 +305,7 @@ class BitmovinStreamResponse(object):
         # type: (list) -> None
         """Sets the available_qualities of this BitmovinStreamResponse.
 
-        List of available stream qualities
+        List of available stream qualities (OBSOLETE!)
 
         :param available_qualities: The available_qualities of this BitmovinStreamResponse.
         :type: list[BitmovinStreamQuality]
@@ -310,6 +316,35 @@ class BitmovinStreamResponse(object):
                 raise TypeError("Invalid type for `available_qualities`, type has to be `list[BitmovinStreamQuality]`")
 
         self._available_qualities = available_qualities
+
+    @property
+    def encoding_tasks(self):
+        # type: () -> list[BitmovinStreamEncodingTask]
+        """Gets the encoding_tasks of this BitmovinStreamResponse.
+
+        List of encoding status information
+
+        :return: The encoding_tasks of this BitmovinStreamResponse.
+        :rtype: list[BitmovinStreamEncodingTask]
+        """
+        return self._encoding_tasks
+
+    @encoding_tasks.setter
+    def encoding_tasks(self, encoding_tasks):
+        # type: (list) -> None
+        """Sets the encoding_tasks of this BitmovinStreamResponse.
+
+        List of encoding status information
+
+        :param encoding_tasks: The encoding_tasks of this BitmovinStreamResponse.
+        :type: list[BitmovinStreamEncodingTask]
+        """
+
+        if encoding_tasks is not None:
+            if not isinstance(encoding_tasks, list):
+                raise TypeError("Invalid type for `encoding_tasks`, type has to be `list[BitmovinStreamEncodingTask]`")
+
+        self._encoding_tasks = encoding_tasks
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -1153,6 +1153,8 @@ from bitmovin_api_sdk.models.billable_encoding_minutes_details import BillableEn
 from bitmovin_api_sdk.models.bitmovin_resource import BitmovinResource
 from bitmovin_api_sdk.models.bitmovin_response import BitmovinResponse
 from bitmovin_api_sdk.models.bitmovin_response_list import BitmovinResponseList
+from bitmovin_api_sdk.models.bitmovin_stream_encoding_status import BitmovinStreamEncodingStatus
+from bitmovin_api_sdk.models.bitmovin_stream_encoding_task import BitmovinStreamEncodingTask
 from bitmovin_api_sdk.models.bitmovin_stream_quality import BitmovinStreamQuality
 from bitmovin_api_sdk.models.bitmovin_stream_response import BitmovinStreamResponse
 from bitmovin_api_sdk.models.bitmovin_stream_status import BitmovinStreamStatus
@@ -1766,4 +1768,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.131.0"
+__version__ = "1.132.0"

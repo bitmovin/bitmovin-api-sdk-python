@@ -1292,6 +1292,22 @@ bitmovin\_api\_sdk.models.bitmovin\_response\_list module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.bitmovin\_stream\_encoding\_status module
+-------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.bitmovin_stream_encoding_status
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.bitmovin\_stream\_encoding\_task module
+-----------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.bitmovin_stream_encoding_task
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.bitmovin\_stream\_quality module
 ----------------------------------------------------------
 
