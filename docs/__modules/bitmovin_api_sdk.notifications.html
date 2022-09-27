@@ -16,6 +16,7 @@
         <script src="../_static/underscore.js"></script>
         <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -52,9 +53,34 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.notifications.notification_list_query_params">bitmovin_api_sdk.notifications.notification_list_query_params module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.notifications.notification_state_entry_list_by_notification_id_query_params">bitmovin_api_sdk.notifications.notification_state_entry_list_by_notification_id_query_params module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.notifications.notifications_api">bitmovin_api_sdk.notifications.notifications_api module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.notifications.notification_list_query_params">bitmovin_api_sdk.notifications.notification_list_query_params module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#bitmovin_api_sdk.notifications.notification_list_query_params.NotificationListQueryParams"><code class="docutils literal notranslate"><span class="pre">NotificationListQueryParams</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#bitmovin_api_sdk.notifications.notification_list_query_params.NotificationListQueryParams.attribute_map"><code class="docutils literal notranslate"><span class="pre">NotificationListQueryParams.attribute_map</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#bitmovin_api_sdk.notifications.notification_list_query_params.NotificationListQueryParams.openapi_types"><code class="docutils literal notranslate"><span class="pre">NotificationListQueryParams.openapi_types</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.notifications.notification_state_entry_list_by_notification_id_query_params">bitmovin_api_sdk.notifications.notification_state_entry_list_by_notification_id_query_params module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#bitmovin_api_sdk.notifications.notification_state_entry_list_by_notification_id_query_params.NotificationStateEntryListByNotificationIdQueryParams"><code class="docutils literal notranslate"><span class="pre">NotificationStateEntryListByNotificationIdQueryParams</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#bitmovin_api_sdk.notifications.notification_state_entry_list_by_notification_id_query_params.NotificationStateEntryListByNotificationIdQueryParams.attribute_map"><code class="docutils literal notranslate"><span class="pre">NotificationStateEntryListByNotificationIdQueryParams.attribute_map</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#bitmovin_api_sdk.notifications.notification_state_entry_list_by_notification_id_query_params.NotificationStateEntryListByNotificationIdQueryParams.openapi_types"><code class="docutils literal notranslate"><span class="pre">NotificationStateEntryListByNotificationIdQueryParams.openapi_types</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.notifications.notifications_api">bitmovin_api_sdk.notifications.notifications_api module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#bitmovin_api_sdk.notifications.notifications_api.NotificationsApi"><code class="docutils literal notranslate"><span class="pre">NotificationsApi</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#bitmovin_api_sdk.notifications.notifications_api.NotificationsApi.delete"><code class="docutils literal notranslate"><span class="pre">NotificationsApi.delete()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#bitmovin_api_sdk.notifications.notifications_api.NotificationsApi.get"><code class="docutils literal notranslate"><span class="pre">NotificationsApi.get()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#bitmovin_api_sdk.notifications.notifications_api.NotificationsApi.list"><code class="docutils literal notranslate"><span class="pre">NotificationsApi.list()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#bitmovin_api_sdk.notifications.notifications_api.NotificationsApi.list_by_notification_id"><code class="docutils literal notranslate"><span class="pre">NotificationsApi.list_by_notification_id()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#bitmovin_api_sdk.notifications.notifications_api.NotificationsApi.mute"><code class="docutils literal notranslate"><span class="pre">NotificationsApi.mute()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#bitmovin_api_sdk.notifications.notifications_api.NotificationsApi.unmute"><code class="docutils literal notranslate"><span class="pre">NotificationsApi.unmute()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.notifications">Module contents</a></li>
 </ul>
 </li>
@@ -118,15 +144,41 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="bitmovin_api_sdk.notifications.emails.html#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="bitmovin_api_sdk.notifications.emails.html#module-bitmovin_api_sdk.notifications.emails.emails_api">bitmovin_api_sdk.notifications.emails.emails_api module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="bitmovin_api_sdk.notifications.emails.html#module-bitmovin_api_sdk.notifications.emails.notification_list_query_params">bitmovin_api_sdk.notifications.emails.notification_list_query_params module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bitmovin_api_sdk.notifications.emails.html#module-bitmovin_api_sdk.notifications.emails.emails_api">bitmovin_api_sdk.notifications.emails.emails_api module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="bitmovin_api_sdk.notifications.emails.html#bitmovin_api_sdk.notifications.emails.emails_api.EmailsApi"><code class="docutils literal notranslate"><span class="pre">EmailsApi</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="bitmovin_api_sdk.notifications.emails.html#bitmovin_api_sdk.notifications.emails.emails_api.EmailsApi.list"><code class="docutils literal notranslate"><span class="pre">EmailsApi.list()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="bitmovin_api_sdk.notifications.emails.html#module-bitmovin_api_sdk.notifications.emails.notification_list_query_params">bitmovin_api_sdk.notifications.emails.notification_list_query_params module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="bitmovin_api_sdk.notifications.emails.html#bitmovin_api_sdk.notifications.emails.notification_list_query_params.NotificationListQueryParams"><code class="docutils literal notranslate"><span class="pre">NotificationListQueryParams</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="bitmovin_api_sdk.notifications.emails.html#bitmovin_api_sdk.notifications.emails.notification_list_query_params.NotificationListQueryParams.attribute_map"><code class="docutils literal notranslate"><span class="pre">NotificationListQueryParams.attribute_map</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="bitmovin_api_sdk.notifications.emails.html#bitmovin_api_sdk.notifications.emails.notification_list_query_params.NotificationListQueryParams.openapi_types"><code class="docutils literal notranslate"><span class="pre">NotificationListQueryParams.openapi_types</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="bitmovin_api_sdk.notifications.emails.html#module-bitmovin_api_sdk.notifications.emails">Module contents</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="bitmovin_api_sdk.notifications.states.html">bitmovin_api_sdk.notifications.states package</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="bitmovin_api_sdk.notifications.states.html#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="bitmovin_api_sdk.notifications.states.html#module-bitmovin_api_sdk.notifications.states.notification_state_entry_list_query_params">bitmovin_api_sdk.notifications.states.notification_state_entry_list_query_params module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="bitmovin_api_sdk.notifications.states.html#module-bitmovin_api_sdk.notifications.states.states_api">bitmovin_api_sdk.notifications.states.states_api module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bitmovin_api_sdk.notifications.states.html#module-bitmovin_api_sdk.notifications.states.notification_state_entry_list_query_params">bitmovin_api_sdk.notifications.states.notification_state_entry_list_query_params module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="bitmovin_api_sdk.notifications.states.html#bitmovin_api_sdk.notifications.states.notification_state_entry_list_query_params.NotificationStateEntryListQueryParams"><code class="docutils literal notranslate"><span class="pre">NotificationStateEntryListQueryParams</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="bitmovin_api_sdk.notifications.states.html#bitmovin_api_sdk.notifications.states.notification_state_entry_list_query_params.NotificationStateEntryListQueryParams.attribute_map"><code class="docutils literal notranslate"><span class="pre">NotificationStateEntryListQueryParams.attribute_map</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="bitmovin_api_sdk.notifications.states.html#bitmovin_api_sdk.notifications.states.notification_state_entry_list_query_params.NotificationStateEntryListQueryParams.openapi_types"><code class="docutils literal notranslate"><span class="pre">NotificationStateEntryListQueryParams.openapi_types</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="bitmovin_api_sdk.notifications.states.html#module-bitmovin_api_sdk.notifications.states.states_api">bitmovin_api_sdk.notifications.states.states_api module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="bitmovin_api_sdk.notifications.states.html#bitmovin_api_sdk.notifications.states.states_api.StatesApi"><code class="docutils literal notranslate"><span class="pre">StatesApi</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="bitmovin_api_sdk.notifications.states.html#bitmovin_api_sdk.notifications.states.states_api.StatesApi.list"><code class="docutils literal notranslate"><span class="pre">StatesApi.list()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="bitmovin_api_sdk.notifications.states.html#module-bitmovin_api_sdk.notifications.states">Module contents</a></li>
 </ul>
 </li>
@@ -142,7 +194,10 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="bitmovin_api_sdk.notifications.webhooks.html#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="bitmovin_api_sdk.notifications.webhooks.html#module-bitmovin_api_sdk.notifications.webhooks.webhooks_api">bitmovin_api_sdk.notifications.webhooks.webhooks_api module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bitmovin_api_sdk.notifications.webhooks.html#module-bitmovin_api_sdk.notifications.webhooks.webhooks_api">bitmovin_api_sdk.notifications.webhooks.webhooks_api module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="bitmovin_api_sdk.notifications.webhooks.html#bitmovin_api_sdk.notifications.webhooks.webhooks_api.WebhooksApi"><code class="docutils literal notranslate"><span class="pre">WebhooksApi</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="bitmovin_api_sdk.notifications.webhooks.html#module-bitmovin_api_sdk.notifications.webhooks">Module contents</a></li>
 </ul>
 </li>

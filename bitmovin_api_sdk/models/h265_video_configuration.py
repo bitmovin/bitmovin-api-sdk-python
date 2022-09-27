@@ -1637,7 +1637,7 @@ class H265VideoConfiguration(VideoConfiguration):
         # type: () -> bool
         """Gets the enable_hlg_signaling of this H265VideoConfiguration.
 
-        By enabling this video stream will be signaled as HLG
+        Enable SDR compatible HLG signaling. The container and bitstream will indicate BT.2020 but ARIB STD-B67 will be signaled in the alternative transfer characteristics SEI message.
 
         :return: The enable_hlg_signaling of this H265VideoConfiguration.
         :rtype: bool
@@ -1649,7 +1649,7 @@ class H265VideoConfiguration(VideoConfiguration):
         # type: (bool) -> None
         """Sets the enable_hlg_signaling of this H265VideoConfiguration.
 
-        By enabling this video stream will be signaled as HLG
+        Enable SDR compatible HLG signaling. The container and bitstream will indicate BT.2020 but ARIB STD-B67 will be signaled in the alternative transfer characteristics SEI message.
 
         :param enable_hlg_signaling: The enable_hlg_signaling of this H265VideoConfiguration.
         :type: bool
