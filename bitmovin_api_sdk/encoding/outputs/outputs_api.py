@@ -5,6 +5,7 @@ from __future__ import absolute_import
 from bitmovin_api_sdk.common import BaseApi, BitmovinApiLoggerBase
 from bitmovin_api_sdk.common.poscheck import poscheck_except
 from bitmovin_api_sdk.models.output import Output
+from bitmovin_api_sdk.models.output_type import OutputType
 from bitmovin_api_sdk.models.response_envelope import ResponseEnvelope
 from bitmovin_api_sdk.models.response_error import ResponseError
 from bitmovin_api_sdk.encoding.outputs.type.type_api import TypeApi

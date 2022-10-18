@@ -73,21 +73,26 @@
            <div itemprop="articleBody">
              
   <h1>Source code for bitmovin_api_sdk.encoding.outputs.output_list_query_params</h1><div class="highlight"><pre>
-<div class="viewcode-block" id="OutputListQueryParams"><a class="viewcode-back" href="../../../../__modules/bitmovin_api_sdk.encoding.outputs.html#bitmovin_api_sdk.encoding.outputs.output_list_query_params.OutputListQueryParams">[docs]</a><span></span><span class="k">class</span> <span class="nc">OutputListQueryParams</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">offset</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (int, int, string_types) -&gt; None</span>
+<span></span><span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models</span> <span class="kn">import</span> <span class="n">OutputType</span>
+
+
+<div class="viewcode-block" id="OutputListQueryParams"><a class="viewcode-back" href="../../../../__modules/bitmovin_api_sdk.encoding.outputs.html#bitmovin_api_sdk.encoding.outputs.output_list_query_params.OutputListQueryParams">[docs]</a><span class="k">class</span> <span class="nc">OutputListQueryParams</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">offset</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">type_</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="c1"># type: (int, int, string_types, OutputType) -&gt; None</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">OutputListQueryParams</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">offset</span> <span class="o">=</span> <span class="n">offset</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">limit</span> <span class="o">=</span> <span class="n">limit</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">type</span> <span class="o">=</span> <span class="n">type_</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">types</span> <span class="o">=</span> <span class="p">{</span>
             <span class="s1">&#39;offset&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
             <span class="s1">&#39;limit&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span>
+            <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;OutputType&#39;</span>
         <span class="p">}</span>
 
         <span class="k">return</span> <span class="n">types</span>
@@ -97,7 +102,8 @@
         <span class="n">attributes</span> <span class="o">=</span> <span class="p">{</span>
             <span class="s1">&#39;offset&#39;</span><span class="p">:</span> <span class="s1">&#39;offset&#39;</span><span class="p">,</span>
             <span class="s1">&#39;limit&#39;</span><span class="p">:</span> <span class="s1">&#39;limit&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;name&#39;</span>
+            <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;name&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;type&#39;</span>
         <span class="p">}</span>
 
         <span class="k">return</span> <span class="n">attributes</span></div>
