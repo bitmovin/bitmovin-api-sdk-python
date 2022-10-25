@@ -1621,6 +1621,7 @@ from bitmovin_api_sdk.models.simple_encoding_live_job_status import SimpleEncodi
 from bitmovin_api_sdk.models.simple_encoding_live_job_url_output import SimpleEncodingLiveJobUrlOutput
 from bitmovin_api_sdk.models.simple_encoding_live_job_username_password_credentials import SimpleEncodingLiveJobUsernamePasswordCredentials
 from bitmovin_api_sdk.models.simple_encoding_live_max_resolution import SimpleEncodingLiveMaxResolution
+from bitmovin_api_sdk.models.simple_encoding_live_profile import SimpleEncodingLiveProfile
 from bitmovin_api_sdk.models.simple_encoding_vod_job_access_key_credentials import SimpleEncodingVodJobAccessKeyCredentials
 from bitmovin_api_sdk.models.simple_encoding_vod_job_azure_credentials import SimpleEncodingVodJobAzureCredentials
 from bitmovin_api_sdk.models.simple_encoding_vod_job_cdn_output import SimpleEncodingVodJobCdnOutput
@@ -1768,4 +1769,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.136.0"
+__version__ = "1.137.0"

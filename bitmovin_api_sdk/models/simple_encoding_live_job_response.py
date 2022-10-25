@@ -7,6 +7,7 @@ from bitmovin_api_sdk.common.poscheck import poscheck_model
 from bitmovin_api_sdk.models.simple_encoding_live_cloud_region import SimpleEncodingLiveCloudRegion
 from bitmovin_api_sdk.models.simple_encoding_live_job_input import SimpleEncodingLiveJobInput
 from bitmovin_api_sdk.models.simple_encoding_live_job_status import SimpleEncodingLiveJobStatus
+from bitmovin_api_sdk.models.simple_encoding_live_profile import SimpleEncodingLiveProfile
 import pprint
 import six
 
@@ -25,8 +26,9 @@ class SimpleEncodingLiveJobResponse(object):
                  created_at=None,
                  modified_at=None,
                  name=None,
-                 cloud_region=None):
-        # type: (string_types, SimpleEncodingLiveJobStatus, string_types, string_types, string_types, SimpleEncodingLiveJobInput, list[SimpleEncodingLiveJobOutput], list[SimpleEncodingVodJobErrors], datetime, datetime, string_types, SimpleEncodingLiveCloudRegion) -> None
+                 cloud_region=None,
+                 encoding_profile=None):
+        # type: (string_types, SimpleEncodingLiveJobStatus, string_types, string_types, string_types, SimpleEncodingLiveJobInput, list[SimpleEncodingLiveJobOutput], list[SimpleEncodingVodJobErrors], datetime, datetime, string_types, SimpleEncodingLiveCloudRegion, SimpleEncodingLiveProfile) -> None
 
         self._id = None
         self._status = None
@@ -40,6 +42,7 @@ class SimpleEncodingLiveJobResponse(object):
         self._modified_at = None
         self._name = None
         self._cloud_region = None
+        self._encoding_profile = None
         self.discriminator = None
 
         if id_ is not None:
@@ -66,6 +69,8 @@ class SimpleEncodingLiveJobResponse(object):
             self.name = name
         if cloud_region is not None:
             self.cloud_region = cloud_region
+        if encoding_profile is not None:
+            self.encoding_profile = encoding_profile
 
     @property
     def openapi_types(self):
@@ -81,7 +86,8 @@ class SimpleEncodingLiveJobResponse(object):
             'created_at': 'datetime',
             'modified_at': 'datetime',
             'name': 'string_types',
-            'cloud_region': 'SimpleEncodingLiveCloudRegion'
+            'cloud_region': 'SimpleEncodingLiveCloudRegion',
+            'encoding_profile': 'SimpleEncodingLiveProfile'
         }
 
         return types
@@ -100,7 +106,8 @@ class SimpleEncodingLiveJobResponse(object):
             'created_at': 'createdAt',
             'modified_at': 'modifiedAt',
             'name': 'name',
-            'cloud_region': 'cloudRegion'
+            'cloud_region': 'cloudRegion',
+            'encoding_profile': 'encodingProfile'
         }
         return attributes
 
@@ -447,6 +454,35 @@ class SimpleEncodingLiveJobResponse(object):
                 raise TypeError("Invalid type for `cloud_region`, type has to be `SimpleEncodingLiveCloudRegion`")
 
         self._cloud_region = cloud_region
+
+    @property
+    def encoding_profile(self):
+        # type: () -> SimpleEncodingLiveProfile
+        """Gets the encoding_profile of this SimpleEncodingLiveJobResponse.
+
+        The profile that will be used for the live encoding.
+
+        :return: The encoding_profile of this SimpleEncodingLiveJobResponse.
+        :rtype: SimpleEncodingLiveProfile
+        """
+        return self._encoding_profile
+
+    @encoding_profile.setter
+    def encoding_profile(self, encoding_profile):
+        # type: (SimpleEncodingLiveProfile) -> None
+        """Sets the encoding_profile of this SimpleEncodingLiveJobResponse.
+
+        The profile that will be used for the live encoding.
+
+        :param encoding_profile: The encoding_profile of this SimpleEncodingLiveJobResponse.
+        :type: SimpleEncodingLiveProfile
+        """
+
+        if encoding_profile is not None:
+            if not isinstance(encoding_profile, SimpleEncodingLiveProfile):
+                raise TypeError("Invalid type for `encoding_profile`, type has to be `SimpleEncodingLiveProfile`")
+
+        self._encoding_profile = encoding_profile
 
     def to_dict(self):
         """Returns the model properties as a dict"""

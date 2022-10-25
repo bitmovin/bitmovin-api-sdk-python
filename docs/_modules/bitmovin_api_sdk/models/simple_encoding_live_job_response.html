@@ -82,6 +82,7 @@
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.simple_encoding_live_cloud_region</span> <span class="kn">import</span> <span class="n">SimpleEncodingLiveCloudRegion</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.simple_encoding_live_job_input</span> <span class="kn">import</span> <span class="n">SimpleEncodingLiveJobInput</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.simple_encoding_live_job_status</span> <span class="kn">import</span> <span class="n">SimpleEncodingLiveJobStatus</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.simple_encoding_live_profile</span> <span class="kn">import</span> <span class="n">SimpleEncodingLiveProfile</span>
 <span class="kn">import</span> <span class="nn">pprint</span>
 <span class="kn">import</span> <span class="nn">six</span>
 
@@ -100,8 +101,9 @@
                  <span class="n">created_at</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">modified_at</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                 <span class="n">cloud_region</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (string_types, SimpleEncodingLiveJobStatus, string_types, string_types, string_types, SimpleEncodingLiveJobInput, list[SimpleEncodingLiveJobOutput], list[SimpleEncodingVodJobErrors], datetime, datetime, string_types, SimpleEncodingLiveCloudRegion) -&gt; None</span>
+                 <span class="n">cloud_region</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">encoding_profile</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="c1"># type: (string_types, SimpleEncodingLiveJobStatus, string_types, string_types, string_types, SimpleEncodingLiveJobInput, list[SimpleEncodingLiveJobOutput], list[SimpleEncodingVodJobErrors], datetime, datetime, string_types, SimpleEncodingLiveCloudRegion, SimpleEncodingLiveProfile) -&gt; None</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_id</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_status</span> <span class="o">=</span> <span class="kc">None</span>
@@ -115,6 +117,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_modified_at</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_name</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_cloud_region</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_encoding_profile</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>
 
         <span class="k">if</span> <span class="n">id_</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -141,6 +144,8 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
         <span class="k">if</span> <span class="n">cloud_region</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">cloud_region</span> <span class="o">=</span> <span class="n">cloud_region</span>
+        <span class="k">if</span> <span class="n">encoding_profile</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">encoding_profile</span> <span class="o">=</span> <span class="n">encoding_profile</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -156,7 +161,8 @@
             <span class="s1">&#39;created_at&#39;</span><span class="p">:</span> <span class="s1">&#39;datetime&#39;</span><span class="p">,</span>
             <span class="s1">&#39;modified_at&#39;</span><span class="p">:</span> <span class="s1">&#39;datetime&#39;</span><span class="p">,</span>
             <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;cloud_region&#39;</span><span class="p">:</span> <span class="s1">&#39;SimpleEncodingLiveCloudRegion&#39;</span>
+            <span class="s1">&#39;cloud_region&#39;</span><span class="p">:</span> <span class="s1">&#39;SimpleEncodingLiveCloudRegion&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;encoding_profile&#39;</span><span class="p">:</span> <span class="s1">&#39;SimpleEncodingLiveProfile&#39;</span>
         <span class="p">}</span>
 
         <span class="k">return</span> <span class="n">types</span>
@@ -175,7 +181,8 @@
             <span class="s1">&#39;created_at&#39;</span><span class="p">:</span> <span class="s1">&#39;createdAt&#39;</span><span class="p">,</span>
             <span class="s1">&#39;modified_at&#39;</span><span class="p">:</span> <span class="s1">&#39;modifiedAt&#39;</span><span class="p">,</span>
             <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;name&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;cloud_region&#39;</span><span class="p">:</span> <span class="s1">&#39;cloudRegion&#39;</span>
+            <span class="s1">&#39;cloud_region&#39;</span><span class="p">:</span> <span class="s1">&#39;cloudRegion&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;encoding_profile&#39;</span><span class="p">:</span> <span class="s1">&#39;encodingProfile&#39;</span>
         <span class="p">}</span>
         <span class="k">return</span> <span class="n">attributes</span>
 
@@ -522,6 +529,35 @@
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `cloud_region`, type has to be `SimpleEncodingLiveCloudRegion`&quot;</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_cloud_region</span> <span class="o">=</span> <span class="n">cloud_region</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">encoding_profile</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; SimpleEncodingLiveProfile</span>
+        <span class="sd">&quot;&quot;&quot;Gets the encoding_profile of this SimpleEncodingLiveJobResponse.</span>
+
+<span class="sd">        The profile that will be used for the live encoding.</span>
+
+<span class="sd">        :return: The encoding_profile of this SimpleEncodingLiveJobResponse.</span>
+<span class="sd">        :rtype: SimpleEncodingLiveProfile</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_encoding_profile</span>
+
+    <span class="nd">@encoding_profile</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">encoding_profile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">encoding_profile</span><span class="p">):</span>
+        <span class="c1"># type: (SimpleEncodingLiveProfile) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Sets the encoding_profile of this SimpleEncodingLiveJobResponse.</span>
+
+<span class="sd">        The profile that will be used for the live encoding.</span>
+
+<span class="sd">        :param encoding_profile: The encoding_profile of this SimpleEncodingLiveJobResponse.</span>
+<span class="sd">        :type: SimpleEncodingLiveProfile</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">encoding_profile</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">encoding_profile</span><span class="p">,</span> <span class="n">SimpleEncodingLiveProfile</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `encoding_profile`, type has to be `SimpleEncodingLiveProfile`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_encoding_profile</span> <span class="o">=</span> <span class="n">encoding_profile</span>
 
 <div class="viewcode-block" id="SimpleEncodingLiveJobResponse.to_dict"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.simple_encoding_live_job_response.SimpleEncodingLiveJobResponse.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>

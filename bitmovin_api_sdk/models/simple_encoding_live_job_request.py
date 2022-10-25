@@ -5,6 +5,7 @@ from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
 from bitmovin_api_sdk.models.simple_encoding_live_cloud_region import SimpleEncodingLiveCloudRegion
 from bitmovin_api_sdk.models.simple_encoding_live_job_input import SimpleEncodingLiveJobInput
+from bitmovin_api_sdk.models.simple_encoding_live_profile import SimpleEncodingLiveProfile
 import pprint
 import six
 
@@ -12,18 +13,22 @@ import six
 class SimpleEncodingLiveJobRequest(object):
     @poscheck_model
     def __init__(self,
+                 encoding_profile=None,
                  input_=None,
                  outputs=None,
                  cloud_region=None,
                  name=None):
-        # type: (SimpleEncodingLiveJobInput, list[SimpleEncodingLiveJobOutput], SimpleEncodingLiveCloudRegion, string_types) -> None
+        # type: (SimpleEncodingLiveProfile, SimpleEncodingLiveJobInput, list[SimpleEncodingLiveJobOutput], SimpleEncodingLiveCloudRegion, string_types) -> None
 
+        self._encoding_profile = None
         self._input = None
         self._outputs = list()
         self._cloud_region = None
         self._name = None
         self.discriminator = None
 
+        if encoding_profile is not None:
+            self.encoding_profile = encoding_profile
         if input_ is not None:
             self.input = input_
         if outputs is not None:
@@ -36,6 +41,7 @@ class SimpleEncodingLiveJobRequest(object):
     @property
     def openapi_types(self):
         types = {
+            'encoding_profile': 'SimpleEncodingLiveProfile',
             'input': 'SimpleEncodingLiveJobInput',
             'outputs': 'list[SimpleEncodingLiveJobOutput]',
             'cloud_region': 'SimpleEncodingLiveCloudRegion',
@@ -47,12 +53,42 @@ class SimpleEncodingLiveJobRequest(object):
     @property
     def attribute_map(self):
         attributes = {
+            'encoding_profile': 'encodingProfile',
             'input': 'input',
             'outputs': 'outputs',
             'cloud_region': 'cloudRegion',
             'name': 'name'
         }
         return attributes
+
+    @property
+    def encoding_profile(self):
+        # type: () -> SimpleEncodingLiveProfile
+        """Gets the encoding_profile of this SimpleEncodingLiveJobRequest.
+
+        The profile that will be used for the live encoding.
+
+        :return: The encoding_profile of this SimpleEncodingLiveJobRequest.
+        :rtype: SimpleEncodingLiveProfile
+        """
+        return self._encoding_profile
+
+    @encoding_profile.setter
+    def encoding_profile(self, encoding_profile):
+        # type: (SimpleEncodingLiveProfile) -> None
+        """Sets the encoding_profile of this SimpleEncodingLiveJobRequest.
+
+        The profile that will be used for the live encoding.
+
+        :param encoding_profile: The encoding_profile of this SimpleEncodingLiveJobRequest.
+        :type: SimpleEncodingLiveProfile
+        """
+
+        if encoding_profile is not None:
+            if not isinstance(encoding_profile, SimpleEncodingLiveProfile):
+                raise TypeError("Invalid type for `encoding_profile`, type has to be `SimpleEncodingLiveProfile`")
+
+        self._encoding_profile = encoding_profile
 
     @property
     def input(self):

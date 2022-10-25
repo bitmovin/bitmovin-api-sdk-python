@@ -5036,6 +5036,14 @@ bitmovin\_api\_sdk.models.simple\_encoding\_live\_max\_resolution module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.simple\_encoding\_live\_profile module
+----------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.simple_encoding_live_profile
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.simple\_encoding\_vod\_job\_access\_key\_credentials module
 -------------------------------------------------------------------------------------
 
