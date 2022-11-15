@@ -12,11 +12,12 @@ import six
 class SimpleEncodingVodJobUrlOutput(SimpleEncodingVodJobOutput):
     @poscheck_model
     def __init__(self,
+                 artifacts=None,
                  url=None,
                  credentials=None,
                  make_public=None):
-        # type: (string_types, SimpleEncodingVodJobCredentials, bool) -> None
-        super(SimpleEncodingVodJobUrlOutput, self).__init__()
+        # type: (list[SimpleEncodingVodJobOutputArtifact], string_types, SimpleEncodingVodJobCredentials, bool) -> None
+        super(SimpleEncodingVodJobUrlOutput, self).__init__(artifacts=artifacts)
 
         self._url = None
         self._credentials = None

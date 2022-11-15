@@ -81,11 +81,11 @@
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.common.poscheck</span> <span class="kn">import</span> <span class="n">poscheck_except</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.account.account_api</span> <span class="kn">import</span> <span class="n">AccountApi</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.analytics.analytics_api</span> <span class="kn">import</span> <span class="n">AnalyticsApi</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.streams.streams_api</span> <span class="kn">import</span> <span class="n">StreamsApi</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.encoding.encoding_api</span> <span class="kn">import</span> <span class="n">EncodingApi</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.general.general_api</span> <span class="kn">import</span> <span class="n">GeneralApi</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.notifications.notifications_api</span> <span class="kn">import</span> <span class="n">NotificationsApi</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.player.player_api</span> <span class="kn">import</span> <span class="n">PlayerApi</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.streams.streams_api</span> <span class="kn">import</span> <span class="n">StreamsApi</span>
 
 
 <div class="viewcode-block" id="BitmovinApi"><a class="viewcode-back" href="../../__modules/bitmovin_api_sdk.html#bitmovin_api_sdk.bitmovin_api.BitmovinApi">[docs]</a><span class="k">class</span> <span class="nc">BitmovinApi</span><span class="p">(</span><span class="n">BaseApi</span><span class="p">):</span>
@@ -114,13 +114,6 @@
             <span class="n">logger</span><span class="o">=</span><span class="n">logger</span>
         <span class="p">)</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">streams</span> <span class="o">=</span> <span class="n">StreamsApi</span><span class="p">(</span>
-            <span class="n">api_key</span><span class="o">=</span><span class="n">api_key</span><span class="p">,</span>
-            <span class="n">tenant_org_id</span><span class="o">=</span><span class="n">tenant_org_id</span><span class="p">,</span>
-            <span class="n">base_url</span><span class="o">=</span><span class="n">base_url</span><span class="p">,</span>
-            <span class="n">logger</span><span class="o">=</span><span class="n">logger</span>
-        <span class="p">)</span>
-
         <span class="bp">self</span><span class="o">.</span><span class="n">encoding</span> <span class="o">=</span> <span class="n">EncodingApi</span><span class="p">(</span>
             <span class="n">api_key</span><span class="o">=</span><span class="n">api_key</span><span class="p">,</span>
             <span class="n">tenant_org_id</span><span class="o">=</span><span class="n">tenant_org_id</span><span class="p">,</span>
@@ -143,6 +136,13 @@
         <span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">player</span> <span class="o">=</span> <span class="n">PlayerApi</span><span class="p">(</span>
+            <span class="n">api_key</span><span class="o">=</span><span class="n">api_key</span><span class="p">,</span>
+            <span class="n">tenant_org_id</span><span class="o">=</span><span class="n">tenant_org_id</span><span class="p">,</span>
+            <span class="n">base_url</span><span class="o">=</span><span class="n">base_url</span><span class="p">,</span>
+            <span class="n">logger</span><span class="o">=</span><span class="n">logger</span>
+        <span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">streams</span> <span class="o">=</span> <span class="n">StreamsApi</span><span class="p">(</span>
             <span class="n">api_key</span><span class="o">=</span><span class="n">api_key</span><span class="p">,</span>
             <span class="n">tenant_org_id</span><span class="o">=</span><span class="n">tenant_org_id</span><span class="p">,</span>
             <span class="n">base_url</span><span class="o">=</span><span class="n">base_url</span><span class="p">,</span>

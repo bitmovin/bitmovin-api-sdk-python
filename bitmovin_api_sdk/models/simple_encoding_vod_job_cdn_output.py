@@ -12,9 +12,10 @@ import six
 class SimpleEncodingVodJobCdnOutput(SimpleEncodingVodJobOutput):
     @poscheck_model
     def __init__(self,
+                 artifacts=None,
                  max_resolution=None):
-        # type: (SimpleEncodingLiveMaxResolution) -> None
-        super(SimpleEncodingVodJobCdnOutput, self).__init__()
+        # type: (list[SimpleEncodingVodJobOutputArtifact], SimpleEncodingLiveMaxResolution) -> None
+        super(SimpleEncodingVodJobCdnOutput, self).__init__(artifacts=artifacts)
 
         self._max_resolution = None
         self.discriminator = None

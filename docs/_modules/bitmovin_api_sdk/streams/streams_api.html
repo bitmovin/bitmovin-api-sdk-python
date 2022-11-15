@@ -79,12 +79,7 @@
 
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.common</span> <span class="kn">import</span> <span class="n">BaseApi</span><span class="p">,</span> <span class="n">BitmovinApiLoggerBase</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.common.poscheck</span> <span class="kn">import</span> <span class="n">poscheck_except</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.bitmovin_stream_response</span> <span class="kn">import</span> <span class="n">BitmovinStreamResponse</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.create_bitmovin_stream_request</span> <span class="kn">import</span> <span class="n">CreateBitmovinStreamRequest</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.response_envelope</span> <span class="kn">import</span> <span class="n">ResponseEnvelope</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.response_error</span> <span class="kn">import</span> <span class="n">ResponseError</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.update_bitmovin_stream_request</span> <span class="kn">import</span> <span class="n">UpdateBitmovinStreamRequest</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.streams.bitmovin_stream_response_list_query_params</span> <span class="kn">import</span> <span class="n">BitmovinStreamResponseListQueryParams</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.streams.video.video_api</span> <span class="kn">import</span> <span class="n">VideoApi</span>
 
 
 <div class="viewcode-block" id="StreamsApi"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.streams.html#bitmovin_api_sdk.streams.streams_api.StreamsApi">[docs]</a><span class="k">class</span> <span class="nc">StreamsApi</span><span class="p">(</span><span class="n">BaseApi</span><span class="p">):</span>
@@ -99,77 +94,12 @@
             <span class="n">logger</span><span class="o">=</span><span class="n">logger</span>
         <span class="p">)</span>
 
-<div class="viewcode-block" id="StreamsApi.create"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.streams.html#bitmovin_api_sdk.streams.streams_api.StreamsApi.create">[docs]</a>    <span class="k">def</span> <span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">create_bitmovin_stream_request</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-        <span class="c1"># type: (CreateBitmovinStreamRequest, dict) -&gt; BitmovinStreamResponse</span>
-        <span class="sd">&quot;&quot;&quot;Create new Stream</span>
-
-<span class="sd">        :param create_bitmovin_stream_request: Create a new Stream.</span>
-<span class="sd">        :type create_bitmovin_stream_request: CreateBitmovinStreamRequest, required</span>
-<span class="sd">        :return: Created Stream</span>
-<span class="sd">        :rtype: BitmovinStreamResponse</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">post</span><span class="p">(</span>
-            <span class="s1">&#39;/streams&#39;</span><span class="p">,</span>
-            <span class="n">create_bitmovin_stream_request</span><span class="p">,</span>
-            <span class="nb">type</span><span class="o">=</span><span class="n">BitmovinStreamResponse</span><span class="p">,</span>
-            <span class="o">**</span><span class="n">kwargs</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">video</span> <span class="o">=</span> <span class="n">VideoApi</span><span class="p">(</span>
+            <span class="n">api_key</span><span class="o">=</span><span class="n">api_key</span><span class="p">,</span>
+            <span class="n">tenant_org_id</span><span class="o">=</span><span class="n">tenant_org_id</span><span class="p">,</span>
+            <span class="n">base_url</span><span class="o">=</span><span class="n">base_url</span><span class="p">,</span>
+            <span class="n">logger</span><span class="o">=</span><span class="n">logger</span>
         <span class="p">)</span></div>
-
-<div class="viewcode-block" id="StreamsApi.get"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.streams.html#bitmovin_api_sdk.streams.streams_api.StreamsApi.get">[docs]</a>    <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">stream_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-        <span class="c1"># type: (string_types, dict) -&gt; BitmovinStreamResponse</span>
-        <span class="sd">&quot;&quot;&quot;Get Stream by id</span>
-
-<span class="sd">        :param stream_id: Id of the Stream.</span>
-<span class="sd">        :type stream_id: string_types, required</span>
-<span class="sd">        :return: Stream</span>
-<span class="sd">        :rtype: BitmovinStreamResponse</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
-            <span class="s1">&#39;/streams/</span><span class="si">{stream_id}</span><span class="s1">&#39;</span><span class="p">,</span>
-            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;stream_id&#39;</span><span class="p">:</span> <span class="n">stream_id</span><span class="p">},</span>
-            <span class="nb">type</span><span class="o">=</span><span class="n">BitmovinStreamResponse</span><span class="p">,</span>
-            <span class="o">**</span><span class="n">kwargs</span>
-        <span class="p">)</span></div>
-
-<div class="viewcode-block" id="StreamsApi.list"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.streams.html#bitmovin_api_sdk.streams.streams_api.StreamsApi.list">[docs]</a>    <span class="k">def</span> <span class="nf">list</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">query_params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-        <span class="c1"># type: (BitmovinStreamResponseListQueryParams, dict) -&gt; BitmovinStreamResponse</span>
-        <span class="sd">&quot;&quot;&quot;Get paginated list of Streams</span>
-
-<span class="sd">        :param query_params: Query parameters</span>
-<span class="sd">        :type query_params: BitmovinStreamResponseListQueryParams</span>
-<span class="sd">        :return: List of all streams</span>
-<span class="sd">        :rtype: BitmovinStreamResponse</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
-            <span class="s1">&#39;/streams&#39;</span><span class="p">,</span>
-            <span class="n">query_params</span><span class="o">=</span><span class="n">query_params</span><span class="p">,</span>
-            <span class="n">pagination_response</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-            <span class="nb">type</span><span class="o">=</span><span class="n">BitmovinStreamResponse</span><span class="p">,</span>
-            <span class="o">**</span><span class="n">kwargs</span>
-        <span class="p">)</span></div>
-
-<div class="viewcode-block" id="StreamsApi.patch_bitmovin_streams_streams_by_stream_id"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.streams.html#bitmovin_api_sdk.streams.streams_api.StreamsApi.patch_bitmovin_streams_streams_by_stream_id">[docs]</a>    <span class="k">def</span> <span class="nf">patch_bitmovin_streams_streams_by_stream_id</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">stream_id</span><span class="p">,</span> <span class="n">update_bitmovin_stream_request</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-        <span class="c1"># type: (string_types, UpdateBitmovinStreamRequest, dict) -&gt; BitmovinStreamResponse</span>
-        <span class="sd">&quot;&quot;&quot;Update Stream by id</span>
-
-<span class="sd">        :param stream_id: Id of the Stream.</span>
-<span class="sd">        :type stream_id: string_types, required</span>
-<span class="sd">        :param update_bitmovin_stream_request: Stream fields to update.</span>
-<span class="sd">        :type update_bitmovin_stream_request: UpdateBitmovinStreamRequest, required</span>
-<span class="sd">        :return:</span>
-<span class="sd">        :rtype: BitmovinStreamResponse</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">patch</span><span class="p">(</span>
-            <span class="s1">&#39;/streams/</span><span class="si">{stream_id}</span><span class="s1">&#39;</span><span class="p">,</span>
-            <span class="n">update_bitmovin_stream_request</span><span class="p">,</span>
-            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;stream_id&#39;</span><span class="p">:</span> <span class="n">stream_id</span><span class="p">},</span>
-            <span class="nb">type</span><span class="o">=</span><span class="n">BitmovinStreamResponse</span><span class="p">,</span>
-            <span class="o">**</span><span class="n">kwargs</span>
-        <span class="p">)</span></div></div>
 </pre></div>
 
            </div>

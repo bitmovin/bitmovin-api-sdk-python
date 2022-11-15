@@ -87,11 +87,12 @@
 <div class="viewcode-block" id="SimpleEncodingVodJobUrlOutput"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.simple_encoding_vod_job_url_output.SimpleEncodingVodJobUrlOutput">[docs]</a><span class="k">class</span> <span class="nc">SimpleEncodingVodJobUrlOutput</span><span class="p">(</span><span class="n">SimpleEncodingVodJobOutput</span><span class="p">):</span>
     <span class="nd">@poscheck_model</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                 <span class="n">artifacts</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">url</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">credentials</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">make_public</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (string_types, SimpleEncodingVodJobCredentials, bool) -&gt; None</span>
-        <span class="nb">super</span><span class="p">(</span><span class="n">SimpleEncodingVodJobUrlOutput</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="c1"># type: (list[SimpleEncodingVodJobOutputArtifact], string_types, SimpleEncodingVodJobCredentials, bool) -&gt; None</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">SimpleEncodingVodJobUrlOutput</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">artifacts</span><span class="o">=</span><span class="n">artifacts</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_url</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_credentials</span> <span class="o">=</span> <span class="kc">None</span>

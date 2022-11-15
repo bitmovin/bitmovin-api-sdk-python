@@ -87,9 +87,10 @@
 <div class="viewcode-block" id="SimpleEncodingVodJobCdnOutput"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.simple_encoding_vod_job_cdn_output.SimpleEncodingVodJobCdnOutput">[docs]</a><span class="k">class</span> <span class="nc">SimpleEncodingVodJobCdnOutput</span><span class="p">(</span><span class="n">SimpleEncodingVodJobOutput</span><span class="p">):</span>
     <span class="nd">@poscheck_model</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                 <span class="n">artifacts</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">max_resolution</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (SimpleEncodingLiveMaxResolution) -&gt; None</span>
-        <span class="nb">super</span><span class="p">(</span><span class="n">SimpleEncodingVodJobCdnOutput</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="c1"># type: (list[SimpleEncodingVodJobOutputArtifact], SimpleEncodingLiveMaxResolution) -&gt; None</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">SimpleEncodingVodJobCdnOutput</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">artifacts</span><span class="o">=</span><span class="n">artifacts</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_max_resolution</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>

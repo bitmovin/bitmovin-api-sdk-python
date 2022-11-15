@@ -109,8 +109,6 @@ from bitmovin_api_sdk.analytics.outputs.gcs_service_account.gcs_service_account_
 from bitmovin_api_sdk.analytics.outputs.gcs_service_account.gcs_service_account_api import AnalyticsGcsServiceAccountOutputListQueryParams
 from bitmovin_api_sdk.analytics.outputs.gcs_service_account.customdata.customdata_api import CustomdataApi
 
-from bitmovin_api_sdk.streams.streams_api import StreamsApi
-from bitmovin_api_sdk.streams.streams_api import BitmovinStreamResponseListQueryParams
 from bitmovin_api_sdk.encoding.encoding_api import EncodingApi
 
 from bitmovin_api_sdk.encoding.inputs.inputs_api import InputsApi
@@ -991,6 +989,10 @@ from bitmovin_api_sdk.player.custom_builds.web.download.download_api import Down
 
 from bitmovin_api_sdk.encoding.encodings.live.scte35_cue.scte35_cue_api import Scte35CueApi
 
+from bitmovin_api_sdk.streams.streams_api import StreamsApi
+
+from bitmovin_api_sdk.streams.video.video_api import VideoApi
+from bitmovin_api_sdk.streams.video.video_api import StreamsVideoResponseListQueryParams
 
 from bitmovin_api_sdk.models.aac_audio_configuration import AacAudioConfiguration
 from bitmovin_api_sdk.models.aac_channel_layout import AacChannelLayout
@@ -1153,11 +1155,6 @@ from bitmovin_api_sdk.models.billable_encoding_minutes_details import BillableEn
 from bitmovin_api_sdk.models.bitmovin_resource import BitmovinResource
 from bitmovin_api_sdk.models.bitmovin_response import BitmovinResponse
 from bitmovin_api_sdk.models.bitmovin_response_list import BitmovinResponseList
-from bitmovin_api_sdk.models.bitmovin_stream_encoding_status import BitmovinStreamEncodingStatus
-from bitmovin_api_sdk.models.bitmovin_stream_encoding_task import BitmovinStreamEncodingTask
-from bitmovin_api_sdk.models.bitmovin_stream_quality import BitmovinStreamQuality
-from bitmovin_api_sdk.models.bitmovin_stream_response import BitmovinStreamResponse
-from bitmovin_api_sdk.models.bitmovin_stream_status import BitmovinStreamStatus
 from bitmovin_api_sdk.models.bitrate_selection_mode import BitrateSelectionMode
 from bitmovin_api_sdk.models.broadcast_ts_audio_input_stream_configuration import BroadcastTsAudioInputStreamConfiguration
 from bitmovin_api_sdk.models.broadcast_ts_input_stream_configuration import BroadcastTsInputStreamConfiguration
@@ -1209,7 +1206,6 @@ from bitmovin_api_sdk.models.content_protection import ContentProtection
 from bitmovin_api_sdk.models.convert_scc_caption import ConvertSccCaption
 from bitmovin_api_sdk.models.convert_scc_caption_web_vtt_settings import ConvertSccCaptionWebVttSettings
 from bitmovin_api_sdk.models.convert_scc_position_mode import ConvertSccPositionMode
-from bitmovin_api_sdk.models.create_bitmovin_stream_request import CreateBitmovinStreamRequest
 from bitmovin_api_sdk.models.crop_filter import CropFilter
 from bitmovin_api_sdk.models.custom_attribute import CustomAttribute
 from bitmovin_api_sdk.models.custom_data import CustomData
@@ -1633,6 +1629,7 @@ from bitmovin_api_sdk.models.simple_encoding_vod_job_input import SimpleEncoding
 from bitmovin_api_sdk.models.simple_encoding_vod_job_input_source_type import SimpleEncodingVodJobInputSourceType
 from bitmovin_api_sdk.models.simple_encoding_vod_job_input_type import SimpleEncodingVodJobInputType
 from bitmovin_api_sdk.models.simple_encoding_vod_job_output import SimpleEncodingVodJobOutput
+from bitmovin_api_sdk.models.simple_encoding_vod_job_output_artifact import SimpleEncodingVodJobOutputArtifact
 from bitmovin_api_sdk.models.simple_encoding_vod_job_output_type import SimpleEncodingVodJobOutputType
 from bitmovin_api_sdk.models.simple_encoding_vod_job_request import SimpleEncodingVodJobRequest
 from bitmovin_api_sdk.models.simple_encoding_vod_job_response import SimpleEncodingVodJobResponse
@@ -1690,6 +1687,13 @@ from bitmovin_api_sdk.models.stream_mode import StreamMode
 from bitmovin_api_sdk.models.stream_per_title_fixed_resolution_and_bitrate_settings import StreamPerTitleFixedResolutionAndBitrateSettings
 from bitmovin_api_sdk.models.stream_per_title_settings import StreamPerTitleSettings
 from bitmovin_api_sdk.models.stream_selection_mode import StreamSelectionMode
+from bitmovin_api_sdk.models.streams_video_create_request import StreamsVideoCreateRequest
+from bitmovin_api_sdk.models.streams_video_encoding_status import StreamsVideoEncodingStatus
+from bitmovin_api_sdk.models.streams_video_encoding_task import StreamsVideoEncodingTask
+from bitmovin_api_sdk.models.streams_video_quality import StreamsVideoQuality
+from bitmovin_api_sdk.models.streams_video_response import StreamsVideoResponse
+from bitmovin_api_sdk.models.streams_video_status import StreamsVideoStatus
+from bitmovin_api_sdk.models.streams_video_update_request import StreamsVideoUpdateRequest
 from bitmovin_api_sdk.models.subtask import Subtask
 from bitmovin_api_sdk.models.subtitle_adaptation_set import SubtitleAdaptationSet
 from bitmovin_api_sdk.models.subtitle_configuration import SubtitleConfiguration
@@ -1722,7 +1726,6 @@ from bitmovin_api_sdk.models.tu_inter_depth import TuInterDepth
 from bitmovin_api_sdk.models.tu_intra_depth import TuIntraDepth
 from bitmovin_api_sdk.models.tweaks import Tweaks
 from bitmovin_api_sdk.models.unsharp_filter import UnsharpFilter
-from bitmovin_api_sdk.models.update_bitmovin_stream_request import UpdateBitmovinStreamRequest
 from bitmovin_api_sdk.models.update_organization_request import UpdateOrganizationRequest
 from bitmovin_api_sdk.models.utc_timing import UtcTiming
 from bitmovin_api_sdk.models.variant_stream_dropping_mode import VariantStreamDroppingMode
@@ -1769,4 +1772,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.138.0"
+__version__ = "1.139.0"

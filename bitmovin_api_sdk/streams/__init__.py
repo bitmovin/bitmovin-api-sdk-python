@@ -1,2 +1,2 @@
 from bitmovin_api_sdk.streams.streams_api import StreamsApi
-from bitmovin_api_sdk.streams.bitmovin_stream_response_list_query_params import BitmovinStreamResponseListQueryParams
+from bitmovin_api_sdk.streams.video.video_api import VideoApi
