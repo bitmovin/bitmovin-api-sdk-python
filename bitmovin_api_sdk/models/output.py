@@ -73,6 +73,7 @@ class Output(BitmovinResource):
         # type: () -> list[AclEntry]
         """Gets the acl of this Output.
 
+        Deprecation notice: This property does not have any effect and will not be returned by GET endpoints
 
         :return: The acl of this Output.
         :rtype: list[AclEntry]
@@ -84,6 +85,7 @@ class Output(BitmovinResource):
         # type: (list) -> None
         """Sets the acl of this Output.
 
+        Deprecation notice: This property does not have any effect and will not be returned by GET endpoints
 
         :param acl: The acl of this Output.
         :type: list[AclEntry]

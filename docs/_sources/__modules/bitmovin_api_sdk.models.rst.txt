@@ -5548,6 +5548,14 @@ bitmovin\_api\_sdk.models.stream\_selection\_mode module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.streams\_live\_update\_request module
+---------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.streams_live_update_request
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.streams\_video\_create\_request module
 ----------------------------------------------------------------
 

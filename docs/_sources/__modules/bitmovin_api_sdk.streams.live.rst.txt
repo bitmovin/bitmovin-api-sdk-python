@@ -1,0 +1,21 @@
+bitmovin\_api\_sdk.streams.live package
+=======================================
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.streams.live.live\_api module
+------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.streams.live.live_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.streams.live
+   :members:
+   :undoc-members:
+   :show-inheritance:

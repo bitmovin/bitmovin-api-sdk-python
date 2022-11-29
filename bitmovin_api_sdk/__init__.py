@@ -993,6 +993,8 @@ from bitmovin_api_sdk.streams.streams_api import StreamsApi
 
 from bitmovin_api_sdk.streams.video.video_api import VideoApi
 from bitmovin_api_sdk.streams.video.video_api import StreamsVideoResponseListQueryParams
+from bitmovin_api_sdk.streams.live.live_api import LiveApi
+
 
 from bitmovin_api_sdk.models.aac_audio_configuration import AacAudioConfiguration
 from bitmovin_api_sdk.models.aac_channel_layout import AacChannelLayout
@@ -1687,6 +1689,7 @@ from bitmovin_api_sdk.models.stream_mode import StreamMode
 from bitmovin_api_sdk.models.stream_per_title_fixed_resolution_and_bitrate_settings import StreamPerTitleFixedResolutionAndBitrateSettings
 from bitmovin_api_sdk.models.stream_per_title_settings import StreamPerTitleSettings
 from bitmovin_api_sdk.models.stream_selection_mode import StreamSelectionMode
+from bitmovin_api_sdk.models.streams_live_update_request import StreamsLiveUpdateRequest
 from bitmovin_api_sdk.models.streams_video_create_request import StreamsVideoCreateRequest
 from bitmovin_api_sdk.models.streams_video_encoding_status import StreamsVideoEncodingStatus
 from bitmovin_api_sdk.models.streams_video_encoding_task import StreamsVideoEncodingTask
@@ -1772,4 +1775,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.139.0"
+__version__ = "1.140.0"
