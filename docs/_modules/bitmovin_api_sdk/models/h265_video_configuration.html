@@ -795,7 +795,7 @@
         <span class="c1"># type: () -&gt; float</span>
         <span class="sd">&quot;&quot;&quot;Gets the crf of this H265VideoConfiguration.</span>
 
-<span class="sd">        Sets the constant rate factor for quality-based variable bitrate. Either bitrate or crf is required.</span>
+<span class="sd">        Constant rate factor for quality-based variable bitrate. Either bitrate or crf is required.</span>
 
 <span class="sd">        :return: The crf of this H265VideoConfiguration.</span>
 <span class="sd">        :rtype: float</span>
@@ -807,7 +807,7 @@
         <span class="c1"># type: (float) -&gt; None</span>
         <span class="sd">&quot;&quot;&quot;Sets the crf of this H265VideoConfiguration.</span>
 
-<span class="sd">        Sets the constant rate factor for quality-based variable bitrate. Either bitrate or crf is required.</span>
+<span class="sd">        Constant rate factor for quality-based variable bitrate. Either bitrate or crf is required.</span>
 
 <span class="sd">        :param crf: The crf of this H265VideoConfiguration.</span>
 <span class="sd">        :type: float</span>
@@ -855,7 +855,7 @@
         <span class="c1"># type: () -&gt; int</span>
         <span class="sd">&quot;&quot;&quot;Gets the bframes of this H265VideoConfiguration.</span>
 
-<span class="sd">        Sets the amount of b frames</span>
+<span class="sd">        Amount of b frames</span>
 
 <span class="sd">        :return: The bframes of this H265VideoConfiguration.</span>
 <span class="sd">        :rtype: int</span>
@@ -867,7 +867,7 @@
         <span class="c1"># type: (int) -&gt; None</span>
         <span class="sd">&quot;&quot;&quot;Sets the bframes of this H265VideoConfiguration.</span>
 
-<span class="sd">        Sets the amount of b frames</span>
+<span class="sd">        Amount of b frames</span>
 
 <span class="sd">        :param bframes: The bframes of this H265VideoConfiguration.</span>
 <span class="sd">        :type: int</span>
@@ -888,7 +888,7 @@
         <span class="c1"># type: () -&gt; int</span>
         <span class="sd">&quot;&quot;&quot;Gets the ref_frames of this H265VideoConfiguration.</span>
 
-<span class="sd">        Sets the amount of reference frames</span>
+<span class="sd">        Amount of reference frames</span>
 
 <span class="sd">        :return: The ref_frames of this H265VideoConfiguration.</span>
 <span class="sd">        :rtype: int</span>
@@ -900,7 +900,7 @@
         <span class="c1"># type: (int) -&gt; None</span>
         <span class="sd">&quot;&quot;&quot;Sets the ref_frames of this H265VideoConfiguration.</span>
 
-<span class="sd">        Sets the amount of reference frames</span>
+<span class="sd">        Amount of reference frames</span>
 
 <span class="sd">        :param ref_frames: The ref_frames of this H265VideoConfiguration.</span>
 <span class="sd">        :type: int</span>
@@ -921,7 +921,7 @@
         <span class="c1"># type: () -&gt; int</span>
         <span class="sd">&quot;&quot;&quot;Gets the qp of this H265VideoConfiguration.</span>
 
-<span class="sd">        Sets the quantization factor</span>
+<span class="sd">        Quantization factor</span>
 
 <span class="sd">        :return: The qp of this H265VideoConfiguration.</span>
 <span class="sd">        :rtype: int</span>
@@ -933,7 +933,7 @@
         <span class="c1"># type: (int) -&gt; None</span>
         <span class="sd">&quot;&quot;&quot;Sets the qp of this H265VideoConfiguration.</span>
 
-<span class="sd">        Sets the quantization factor</span>
+<span class="sd">        Quantization factor</span>
 
 <span class="sd">        :param qp: The qp of this H265VideoConfiguration.</span>
 <span class="sd">        :type: int</span>
@@ -2300,7 +2300,7 @@
         <span class="c1"># type: () -&gt; int</span>
         <span class="sd">&quot;&quot;&quot;Gets the qp_min of this H265VideoConfiguration.</span>
 
-<span class="sd">        Sets the minimum of quantization factor. Valid value range: 0 - 69</span>
+<span class="sd">        Minimum quantization factor. Valid value range: 0 - 69</span>
 
 <span class="sd">        :return: The qp_min of this H265VideoConfiguration.</span>
 <span class="sd">        :rtype: int</span>
@@ -2312,13 +2312,17 @@
         <span class="c1"># type: (int) -&gt; None</span>
         <span class="sd">&quot;&quot;&quot;Sets the qp_min of this H265VideoConfiguration.</span>
 
-<span class="sd">        Sets the minimum of quantization factor. Valid value range: 0 - 69</span>
+<span class="sd">        Minimum quantization factor. Valid value range: 0 - 69</span>
 
 <span class="sd">        :param qp_min: The qp_min of this H265VideoConfiguration.</span>
 <span class="sd">        :type: int</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
         <span class="k">if</span> <span class="n">qp_min</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">qp_min</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">qp_min</span> <span class="o">&gt;</span> <span class="mi">69</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid value for `qp_min`, must be a value less than or equal to `69`&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">qp_min</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">qp_min</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid value for `qp_min`, must be a value greater than or equal to `0`&quot;</span><span class="p">)</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">qp_min</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `qp_min`, type has to be `int`&quot;</span><span class="p">)</span>
 
@@ -2329,7 +2333,7 @@
         <span class="c1"># type: () -&gt; int</span>
         <span class="sd">&quot;&quot;&quot;Gets the qp_max of this H265VideoConfiguration.</span>
 
-<span class="sd">        Sets the maximum of quantization factor. Valid value range: 0 - 69</span>
+<span class="sd">        Maximum quantization factor. Valid value range: 0 - 69</span>
 
 <span class="sd">        :return: The qp_max of this H265VideoConfiguration.</span>
 <span class="sd">        :rtype: int</span>
@@ -2341,13 +2345,17 @@
         <span class="c1"># type: (int) -&gt; None</span>
         <span class="sd">&quot;&quot;&quot;Sets the qp_max of this H265VideoConfiguration.</span>
 
-<span class="sd">        Sets the maximum of quantization factor. Valid value range: 0 - 69</span>
+<span class="sd">        Maximum quantization factor. Valid value range: 0 - 69</span>
 
 <span class="sd">        :param qp_max: The qp_max of this H265VideoConfiguration.</span>
 <span class="sd">        :type: int</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
         <span class="k">if</span> <span class="n">qp_max</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">qp_max</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">qp_max</span> <span class="o">&gt;</span> <span class="mi">69</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid value for `qp_max`, must be a value less than or equal to `69`&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">qp_max</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">qp_max</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid value for `qp_max`, must be a value greater than or equal to `0`&quot;</span><span class="p">)</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">qp_max</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `qp_max`, type has to be `int`&quot;</span><span class="p">)</span>
 
@@ -3318,7 +3326,7 @@
         <span class="c1"># type: () -&gt; float</span>
         <span class="sd">&quot;&quot;&quot;Gets the quantizer_curve_compression_factor of this H265VideoConfiguration.</span>
 
-<span class="sd">        Sets the quantizer curve compression factor. It weights the frame quantizer based on the complexity of residual (measured by lookahead). Default 0.6</span>
+<span class="sd">        Quantizer curve compression factor. It weights the frame quantizer based on the complexity of residual (measured by lookahead). Default 0.6</span>
 
 <span class="sd">        :return: The quantizer_curve_compression_factor of this H265VideoConfiguration.</span>
 <span class="sd">        :rtype: float</span>
@@ -3330,7 +3338,7 @@
         <span class="c1"># type: (float) -&gt; None</span>
         <span class="sd">&quot;&quot;&quot;Sets the quantizer_curve_compression_factor of this H265VideoConfiguration.</span>
 
-<span class="sd">        Sets the quantizer curve compression factor. It weights the frame quantizer based on the complexity of residual (measured by lookahead). Default 0.6</span>
+<span class="sd">        Quantizer curve compression factor. It weights the frame quantizer based on the complexity of residual (measured by lookahead). Default 0.6</span>
 
 <span class="sd">        :param quantizer_curve_compression_factor: The quantizer_curve_compression_factor of this H265VideoConfiguration.</span>
 <span class="sd">        :type: float</span>

@@ -231,7 +231,7 @@ class StartLiveEncodingRequest(object):
         # type: () -> ManifestGenerator
         """Gets the manifest_generator of this StartLiveEncodingRequest.
 
-        Sets the version of the manifest generation engine
+        Version of the manifest generation engine to be used
 
         :return: The manifest_generator of this StartLiveEncodingRequest.
         :rtype: ManifestGenerator
@@ -243,7 +243,7 @@ class StartLiveEncodingRequest(object):
         # type: (ManifestGenerator) -> None
         """Sets the manifest_generator of this StartLiveEncodingRequest.
 
-        Sets the version of the manifest generation engine
+        Version of the manifest generation engine to be used
 
         :param manifest_generator: The manifest_generator of this StartLiveEncodingRequest.
         :type: ManifestGenerator

@@ -408,7 +408,7 @@ class H264VideoConfiguration(VideoConfiguration):
         # type: () -> float
         """Gets the crf of this H264VideoConfiguration.
 
-        Sets the constant rate factor for quality-based variable bitrate. Either bitrate or crf is required.
+        Constant rate factor for quality-based variable bitrate. Either bitrate or crf is required.
 
         :return: The crf of this H264VideoConfiguration.
         :rtype: float
@@ -420,7 +420,7 @@ class H264VideoConfiguration(VideoConfiguration):
         # type: (float) -> None
         """Sets the crf of this H264VideoConfiguration.
 
-        Sets the constant rate factor for quality-based variable bitrate. Either bitrate or crf is required.
+        Constant rate factor for quality-based variable bitrate. Either bitrate or crf is required.
 
         :param crf: The crf of this H264VideoConfiguration.
         :type: float
@@ -470,7 +470,7 @@ class H264VideoConfiguration(VideoConfiguration):
         # type: () -> int
         """Gets the bframes of this H264VideoConfiguration.
 
-        Sets the amount of b frames.
+        Amount of b frames
 
         :return: The bframes of this H264VideoConfiguration.
         :rtype: int
@@ -482,7 +482,7 @@ class H264VideoConfiguration(VideoConfiguration):
         # type: (int) -> None
         """Sets the bframes of this H264VideoConfiguration.
 
-        Sets the amount of b frames.
+        Amount of b frames
 
         :param bframes: The bframes of this H264VideoConfiguration.
         :type: int
@@ -503,7 +503,7 @@ class H264VideoConfiguration(VideoConfiguration):
         # type: () -> int
         """Gets the ref_frames of this H264VideoConfiguration.
 
-        Sets the amount of reference frames.
+        Amount of reference frames.
 
         :return: The ref_frames of this H264VideoConfiguration.
         :rtype: int
@@ -515,7 +515,7 @@ class H264VideoConfiguration(VideoConfiguration):
         # type: (int) -> None
         """Sets the ref_frames of this H264VideoConfiguration.
 
-        Sets the amount of reference frames.
+        Amount of reference frames.
 
         :param ref_frames: The ref_frames of this H264VideoConfiguration.
         :type: int
@@ -536,7 +536,7 @@ class H264VideoConfiguration(VideoConfiguration):
         # type: () -> int
         """Gets the qp_min of this H264VideoConfiguration.
 
-        Sets the minimum of quantization factor.
+        Minimum quantization factor
 
         :return: The qp_min of this H264VideoConfiguration.
         :rtype: int
@@ -548,7 +548,7 @@ class H264VideoConfiguration(VideoConfiguration):
         # type: (int) -> None
         """Sets the qp_min of this H264VideoConfiguration.
 
-        Sets the minimum of quantization factor.
+        Minimum quantization factor
 
         :param qp_min: The qp_min of this H264VideoConfiguration.
         :type: int
@@ -569,7 +569,7 @@ class H264VideoConfiguration(VideoConfiguration):
         # type: () -> int
         """Gets the qp_max of this H264VideoConfiguration.
 
-        Sets the maximum of quantization factor.
+        Maximum quantization factor
 
         :return: The qp_max of this H264VideoConfiguration.
         :rtype: int
@@ -581,7 +581,7 @@ class H264VideoConfiguration(VideoConfiguration):
         # type: (int) -> None
         """Sets the qp_max of this H264VideoConfiguration.
 
-        Sets the maximum of quantization factor.
+        Maximum quantization factor
 
         :param qp_max: The qp_max of this H264VideoConfiguration.
         :type: int
@@ -629,7 +629,7 @@ class H264VideoConfiguration(VideoConfiguration):
         # type: () -> int
         """Gets the mv_search_range_max of this H264VideoConfiguration.
 
-        Sets the maximum Motion-Vector-Search-Range
+        Maximum motion vector search range
 
         :return: The mv_search_range_max of this H264VideoConfiguration.
         :rtype: int
@@ -641,7 +641,7 @@ class H264VideoConfiguration(VideoConfiguration):
         # type: (int) -> None
         """Sets the mv_search_range_max of this H264VideoConfiguration.
 
-        Sets the maximum Motion-Vector-Search-Range
+        Maximum motion vector search range
 
         :param mv_search_range_max: The mv_search_range_max of this H264VideoConfiguration.
         :type: int

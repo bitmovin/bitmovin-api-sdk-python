@@ -720,7 +720,7 @@ class H265VideoConfiguration(VideoConfiguration):
         # type: () -> float
         """Gets the crf of this H265VideoConfiguration.
 
-        Sets the constant rate factor for quality-based variable bitrate. Either bitrate or crf is required.
+        Constant rate factor for quality-based variable bitrate. Either bitrate or crf is required.
 
         :return: The crf of this H265VideoConfiguration.
         :rtype: float
@@ -732,7 +732,7 @@ class H265VideoConfiguration(VideoConfiguration):
         # type: (float) -> None
         """Sets the crf of this H265VideoConfiguration.
 
-        Sets the constant rate factor for quality-based variable bitrate. Either bitrate or crf is required.
+        Constant rate factor for quality-based variable bitrate. Either bitrate or crf is required.
 
         :param crf: The crf of this H265VideoConfiguration.
         :type: float
@@ -780,7 +780,7 @@ class H265VideoConfiguration(VideoConfiguration):
         # type: () -> int
         """Gets the bframes of this H265VideoConfiguration.
 
-        Sets the amount of b frames
+        Amount of b frames
 
         :return: The bframes of this H265VideoConfiguration.
         :rtype: int
@@ -792,7 +792,7 @@ class H265VideoConfiguration(VideoConfiguration):
         # type: (int) -> None
         """Sets the bframes of this H265VideoConfiguration.
 
-        Sets the amount of b frames
+        Amount of b frames
 
         :param bframes: The bframes of this H265VideoConfiguration.
         :type: int
@@ -813,7 +813,7 @@ class H265VideoConfiguration(VideoConfiguration):
         # type: () -> int
         """Gets the ref_frames of this H265VideoConfiguration.
 
-        Sets the amount of reference frames
+        Amount of reference frames
 
         :return: The ref_frames of this H265VideoConfiguration.
         :rtype: int
@@ -825,7 +825,7 @@ class H265VideoConfiguration(VideoConfiguration):
         # type: (int) -> None
         """Sets the ref_frames of this H265VideoConfiguration.
 
-        Sets the amount of reference frames
+        Amount of reference frames
 
         :param ref_frames: The ref_frames of this H265VideoConfiguration.
         :type: int
@@ -846,7 +846,7 @@ class H265VideoConfiguration(VideoConfiguration):
         # type: () -> int
         """Gets the qp of this H265VideoConfiguration.
 
-        Sets the quantization factor
+        Quantization factor
 
         :return: The qp of this H265VideoConfiguration.
         :rtype: int
@@ -858,7 +858,7 @@ class H265VideoConfiguration(VideoConfiguration):
         # type: (int) -> None
         """Sets the qp of this H265VideoConfiguration.
 
-        Sets the quantization factor
+        Quantization factor
 
         :param qp: The qp of this H265VideoConfiguration.
         :type: int
@@ -2225,7 +2225,7 @@ class H265VideoConfiguration(VideoConfiguration):
         # type: () -> int
         """Gets the qp_min of this H265VideoConfiguration.
 
-        Sets the minimum of quantization factor. Valid value range: 0 - 69
+        Minimum quantization factor. Valid value range: 0 - 69
 
         :return: The qp_min of this H265VideoConfiguration.
         :rtype: int
@@ -2237,13 +2237,17 @@ class H265VideoConfiguration(VideoConfiguration):
         # type: (int) -> None
         """Sets the qp_min of this H265VideoConfiguration.
 
-        Sets the minimum of quantization factor. Valid value range: 0 - 69
+        Minimum quantization factor. Valid value range: 0 - 69
 
         :param qp_min: The qp_min of this H265VideoConfiguration.
         :type: int
         """
 
         if qp_min is not None:
+            if qp_min is not None and qp_min > 69:
+                raise ValueError("Invalid value for `qp_min`, must be a value less than or equal to `69`")
+            if qp_min is not None and qp_min < 0:
+                raise ValueError("Invalid value for `qp_min`, must be a value greater than or equal to `0`")
             if not isinstance(qp_min, int):
                 raise TypeError("Invalid type for `qp_min`, type has to be `int`")
 
@@ -2254,7 +2258,7 @@ class H265VideoConfiguration(VideoConfiguration):
         # type: () -> int
         """Gets the qp_max of this H265VideoConfiguration.
 
-        Sets the maximum of quantization factor. Valid value range: 0 - 69
+        Maximum quantization factor. Valid value range: 0 - 69
 
         :return: The qp_max of this H265VideoConfiguration.
         :rtype: int
@@ -2266,13 +2270,17 @@ class H265VideoConfiguration(VideoConfiguration):
         # type: (int) -> None
         """Sets the qp_max of this H265VideoConfiguration.
 
-        Sets the maximum of quantization factor. Valid value range: 0 - 69
+        Maximum quantization factor. Valid value range: 0 - 69
 
         :param qp_max: The qp_max of this H265VideoConfiguration.
         :type: int
         """
 
         if qp_max is not None:
+            if qp_max is not None and qp_max > 69:
+                raise ValueError("Invalid value for `qp_max`, must be a value less than or equal to `69`")
+            if qp_max is not None and qp_max < 0:
+                raise ValueError("Invalid value for `qp_max`, must be a value greater than or equal to `0`")
             if not isinstance(qp_max, int):
                 raise TypeError("Invalid type for `qp_max`, type has to be `int`")
 
@@ -3243,7 +3251,7 @@ class H265VideoConfiguration(VideoConfiguration):
         # type: () -> float
         """Gets the quantizer_curve_compression_factor of this H265VideoConfiguration.
 
-        Sets the quantizer curve compression factor. It weights the frame quantizer based on the complexity of residual (measured by lookahead). Default 0.6
+        Quantizer curve compression factor. It weights the frame quantizer based on the complexity of residual (measured by lookahead). Default 0.6
 
         :return: The quantizer_curve_compression_factor of this H265VideoConfiguration.
         :rtype: float
@@ -3255,7 +3263,7 @@ class H265VideoConfiguration(VideoConfiguration):
         # type: (float) -> None
         """Sets the quantizer_curve_compression_factor of this H265VideoConfiguration.
 
-        Sets the quantizer curve compression factor. It weights the frame quantizer based on the complexity of residual (measured by lookahead). Default 0.6
+        Quantizer curve compression factor. It weights the frame quantizer based on the complexity of residual (measured by lookahead). Default 0.6
 
         :param quantizer_curve_compression_factor: The quantizer_curve_compression_factor of this H265VideoConfiguration.
         :type: float

@@ -267,7 +267,7 @@ class BroadcastTsTransportConfiguration(object):
         # type: () -> float
         """Gets the initial_presentation_time_stamp of this BroadcastTsTransportConfiguration.
 
-        Sets the presentation time stamp value for the first video frame. The timestamp is specified in the timescale of 90000
+        Presentation time stamp value for the first video frame. The timestamp is specified in the timescale of 90000
 
         :return: The initial_presentation_time_stamp of this BroadcastTsTransportConfiguration.
         :rtype: float
@@ -279,7 +279,7 @@ class BroadcastTsTransportConfiguration(object):
         # type: (float) -> None
         """Sets the initial_presentation_time_stamp of this BroadcastTsTransportConfiguration.
 
-        Sets the presentation time stamp value for the first video frame. The timestamp is specified in the timescale of 90000
+        Presentation time stamp value for the first video frame. The timestamp is specified in the timescale of 90000
 
         :param initial_presentation_time_stamp: The initial_presentation_time_stamp of this BroadcastTsTransportConfiguration.
         :type: float
@@ -300,7 +300,7 @@ class BroadcastTsTransportConfiguration(object):
         # type: () -> float
         """Gets the initial_program_clock_reference of this BroadcastTsTransportConfiguration.
 
-        Sets the Program Clock Reference value at the beginning of the first packet for the transport stream. The PCR is specified in the timescale of 90000
+        Program Clock Reference value at the beginning of the first packet for the transport stream. The PCR is specified in the timescale of 90000
 
         :return: The initial_program_clock_reference of this BroadcastTsTransportConfiguration.
         :rtype: float
@@ -312,7 +312,7 @@ class BroadcastTsTransportConfiguration(object):
         # type: (float) -> None
         """Sets the initial_program_clock_reference of this BroadcastTsTransportConfiguration.
 
-        Sets the Program Clock Reference value at the beginning of the first packet for the transport stream. The PCR is specified in the timescale of 90000
+        Program Clock Reference value at the beginning of the first packet for the transport stream. The PCR is specified in the timescale of 90000
 
         :param initial_program_clock_reference: The initial_program_clock_reference of this BroadcastTsTransportConfiguration.
         :type: float

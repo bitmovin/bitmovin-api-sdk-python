@@ -40,7 +40,7 @@ class StartManifestRequest(object):
         # type: () -> ManifestGenerator
         """Gets the manifest_generator of this StartManifestRequest.
 
-        Sets the version of the manifest generation engine. The `V2` option is currently only supported for manifests including resources from a single encoding and is only valid in combination with encoder versions >=  `2.108.0`.
+        Version of the manifest generation engine to be used. The `V2` option is currently only supported for manifests including resources from a single encoding and is only valid in combination with encoder versions >=  `2.108.0`.
 
         :return: The manifest_generator of this StartManifestRequest.
         :rtype: ManifestGenerator
@@ -52,7 +52,7 @@ class StartManifestRequest(object):
         # type: (ManifestGenerator) -> None
         """Sets the manifest_generator of this StartManifestRequest.
 
-        Sets the version of the manifest generation engine. The `V2` option is currently only supported for manifests including resources from a single encoding and is only valid in combination with encoder versions >=  `2.108.0`.
+        Version of the manifest generation engine to be used. The `V2` option is currently only supported for manifests including resources from a single encoding and is only valid in combination with encoder versions >=  `2.108.0`.
 
         :param manifest_generator: The manifest_generator of this StartManifestRequest.
         :type: ManifestGenerator

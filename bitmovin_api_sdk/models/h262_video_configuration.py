@@ -181,7 +181,7 @@ class H262VideoConfiguration(VideoConfiguration):
         # type: () -> int
         """Gets the bframes of this H262VideoConfiguration.
 
-        Sets the amount of b frames.
+        Amount of b frames.
 
         :return: The bframes of this H262VideoConfiguration.
         :rtype: int
@@ -193,7 +193,7 @@ class H262VideoConfiguration(VideoConfiguration):
         # type: (int) -> None
         """Sets the bframes of this H262VideoConfiguration.
 
-        Sets the amount of b frames.
+        Amount of b frames.
 
         :param bframes: The bframes of this H262VideoConfiguration.
         :type: int

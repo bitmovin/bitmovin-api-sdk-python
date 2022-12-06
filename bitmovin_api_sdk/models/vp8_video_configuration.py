@@ -182,7 +182,7 @@ class Vp8VideoConfiguration(VideoConfiguration):
         # type: () -> int
         """Gets the crf of this Vp8VideoConfiguration.
 
-        Sets the constant rate factor for quality-based variable bitrate. Either bitrate or crf is required.
+        Constant rate factor for quality-based variable bitrate. Either bitrate or crf is required.
 
         :return: The crf of this Vp8VideoConfiguration.
         :rtype: int
@@ -194,7 +194,7 @@ class Vp8VideoConfiguration(VideoConfiguration):
         # type: (int) -> None
         """Sets the crf of this Vp8VideoConfiguration.
 
-        Sets the constant rate factor for quality-based variable bitrate. Either bitrate or crf is required.
+        Constant rate factor for quality-based variable bitrate. Either bitrate or crf is required.
 
         :param crf: The crf of this Vp8VideoConfiguration.
         :type: int
@@ -277,7 +277,7 @@ class Vp8VideoConfiguration(VideoConfiguration):
         # type: () -> int
         """Gets the qp_min of this Vp8VideoConfiguration.
 
-        Sets the minimum of quantization factor.
+        Minimum quantization factor.
 
         :return: The qp_min of this Vp8VideoConfiguration.
         :rtype: int
@@ -289,7 +289,7 @@ class Vp8VideoConfiguration(VideoConfiguration):
         # type: (int) -> None
         """Sets the qp_min of this Vp8VideoConfiguration.
 
-        Sets the minimum of quantization factor.
+        Minimum quantization factor.
 
         :param qp_min: The qp_min of this Vp8VideoConfiguration.
         :type: int
@@ -310,7 +310,7 @@ class Vp8VideoConfiguration(VideoConfiguration):
         # type: () -> int
         """Gets the qp_max of this Vp8VideoConfiguration.
 
-        Sets the maximum of quantization factor.
+        Maximum quantization factor.
 
         :return: The qp_max of this Vp8VideoConfiguration.
         :rtype: int
@@ -322,7 +322,7 @@ class Vp8VideoConfiguration(VideoConfiguration):
         # type: (int) -> None
         """Sets the qp_max of this Vp8VideoConfiguration.
 
-        Sets the maximum of quantization factor.
+        Maximum quantization factor.
 
         :param qp_max: The qp_max of this Vp8VideoConfiguration.
         :type: int

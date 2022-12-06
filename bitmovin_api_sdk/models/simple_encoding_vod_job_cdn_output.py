@@ -53,7 +53,7 @@ class SimpleEncodingVodJobCdnOutput(SimpleEncodingVodJobOutput):
         # type: () -> SimpleEncodingLiveMaxResolution
         """Gets the max_resolution of this SimpleEncodingVodJobCdnOutput.
 
-        This sets the maximum output resolution that will be generated.
+        The maximum output resolution to be generated
 
         :return: The max_resolution of this SimpleEncodingVodJobCdnOutput.
         :rtype: SimpleEncodingLiveMaxResolution
@@ -65,7 +65,7 @@ class SimpleEncodingVodJobCdnOutput(SimpleEncodingVodJobOutput):
         # type: (SimpleEncodingLiveMaxResolution) -> None
         """Sets the max_resolution of this SimpleEncodingVodJobCdnOutput.
 
-        This sets the maximum output resolution that will be generated.
+        The maximum output resolution to be generated
 
         :param max_resolution: The max_resolution of this SimpleEncodingVodJobCdnOutput.
         :type: SimpleEncodingLiveMaxResolution

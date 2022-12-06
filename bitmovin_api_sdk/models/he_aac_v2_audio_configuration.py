@@ -96,7 +96,7 @@ class HeAacV2AudioConfiguration(AudioConfiguration):
         # type: () -> HeAacV2Signaling
         """Gets the signaling of this HeAacV2AudioConfiguration.
 
-        Sets the Spectral Band Replication (SBR) and Parameteric Stereo (PS) signaling style.
+        Spectral Band Replication (SBR) and Parameteric Stereo (PS) signaling style.
 
         :return: The signaling of this HeAacV2AudioConfiguration.
         :rtype: HeAacV2Signaling
@@ -108,7 +108,7 @@ class HeAacV2AudioConfiguration(AudioConfiguration):
         # type: (HeAacV2Signaling) -> None
         """Sets the signaling of this HeAacV2AudioConfiguration.
 
-        Sets the Spectral Band Replication (SBR) and Parameteric Stereo (PS) signaling style.
+        Spectral Band Replication (SBR) and Parameteric Stereo (PS) signaling style.
 
         :param signaling: The signaling of this HeAacV2AudioConfiguration.
         :type: HeAacV2Signaling

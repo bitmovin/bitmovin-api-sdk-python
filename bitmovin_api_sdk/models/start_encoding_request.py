@@ -140,7 +140,7 @@ class StartEncodingRequest(object):
         # type: () -> Scheduling
         """Gets the scheduling of this StartEncodingRequest.
 
-        Set scheduling parameters of the encoding.
+        Scheduling parameters of the encoding.
 
         :return: The scheduling of this StartEncodingRequest.
         :rtype: Scheduling
@@ -152,7 +152,7 @@ class StartEncodingRequest(object):
         # type: (Scheduling) -> None
         """Sets the scheduling of this StartEncodingRequest.
 
-        Set scheduling parameters of the encoding.
+        Scheduling parameters of the encoding.
 
         :param scheduling: The scheduling of this StartEncodingRequest.
         :type: Scheduling
@@ -169,7 +169,7 @@ class StartEncodingRequest(object):
         # type: () -> Tweaks
         """Gets the tweaks of this StartEncodingRequest.
 
-        Set special tweaks for your encoding job.
+        Special tweaks for your encoding job.
 
         :return: The tweaks of this StartEncodingRequest.
         :rtype: Tweaks
@@ -181,7 +181,7 @@ class StartEncodingRequest(object):
         # type: (Tweaks) -> None
         """Sets the tweaks of this StartEncodingRequest.
 
-        Set special tweaks for your encoding job.
+        Special tweaks for your encoding job.
 
         :param tweaks: The tweaks of this StartEncodingRequest.
         :type: Tweaks
@@ -401,7 +401,7 @@ class StartEncodingRequest(object):
         # type: () -> ManifestGenerator
         """Gets the manifest_generator of this StartEncodingRequest.
 
-        Sets the version of the manifest generation engine
+        Version of the manifest generation engine to be used
 
         :return: The manifest_generator of this StartEncodingRequest.
         :rtype: ManifestGenerator
@@ -413,7 +413,7 @@ class StartEncodingRequest(object):
         # type: (ManifestGenerator) -> None
         """Sets the manifest_generator of this StartEncodingRequest.
 
-        Sets the version of the manifest generation engine
+        Version of the manifest generation engine to be used
 
         :param manifest_generator: The manifest_generator of this StartEncodingRequest.
         :type: ManifestGenerator

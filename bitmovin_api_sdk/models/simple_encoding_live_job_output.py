@@ -45,7 +45,7 @@ class SimpleEncodingLiveJobOutput(object):
         # type: () -> SimpleEncodingLiveMaxResolution
         """Gets the max_resolution of this SimpleEncodingLiveJobOutput.
 
-        This sets the maximum output resolution that will be generated.
+        The maximum output resolution to be generated
 
         :return: The max_resolution of this SimpleEncodingLiveJobOutput.
         :rtype: SimpleEncodingLiveMaxResolution
@@ -57,7 +57,7 @@ class SimpleEncodingLiveJobOutput(object):
         # type: (SimpleEncodingLiveMaxResolution) -> None
         """Sets the max_resolution of this SimpleEncodingLiveJobOutput.
 
-        This sets the maximum output resolution that will be generated.
+        The maximum output resolution to be generated
 
         :param max_resolution: The max_resolution of this SimpleEncodingLiveJobOutput.
         :type: SimpleEncodingLiveMaxResolution
