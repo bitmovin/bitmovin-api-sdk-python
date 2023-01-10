@@ -15,7 +15,6 @@
         <script src="../../../_static/underscore.js"></script>
         <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../../_static/doctools.js"></script>
-        <script src="../../../_static/sphinx_highlight.js"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" /> 
@@ -215,7 +214,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">audio</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; string_types</span>
-        <span class="sd">&quot;&quot;&quot;Gets the audio of this StreamInfo.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the audio of this StreamInfo.</span>
 
 <span class="sd">        It MUST match the value of the GROUP-ID attribute of an Audio EXT-X-MEDIA tag elsewhere in the Master Playlist. Either this or `audioGroups` must be set.</span>
 
@@ -227,7 +226,7 @@
     <span class="nd">@audio</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">audio</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">audio</span><span class="p">):</span>
         <span class="c1"># type: (string_types) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the audio of this StreamInfo.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the audio of this StreamInfo.</span>
 
 <span class="sd">        It MUST match the value of the GROUP-ID attribute of an Audio EXT-X-MEDIA tag elsewhere in the Master Playlist. Either this or `audioGroups` must be set.</span>
 
@@ -244,7 +243,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">audio_groups</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; AudioGroupConfiguration</span>
-        <span class="sd">&quot;&quot;&quot;Gets the audio_groups of this StreamInfo.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the audio_groups of this StreamInfo.</span>
 
 <span class="sd">        HLS Audio Group Configuration. You will want to use this configuration property in case you specify conditions on audio streams. The first matching audio group will be used for the specific variant stream. Either this or `audio` must be set.</span>
 
@@ -256,7 +255,7 @@
     <span class="nd">@audio_groups</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">audio_groups</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">audio_groups</span><span class="p">):</span>
         <span class="c1"># type: (AudioGroupConfiguration) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the audio_groups of this StreamInfo.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the audio_groups of this StreamInfo.</span>
 
 <span class="sd">        HLS Audio Group Configuration. You will want to use this configuration property in case you specify conditions on audio streams. The first matching audio group will be used for the specific variant stream. Either this or `audio` must be set.</span>
 
@@ -273,7 +272,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">video</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; string_types</span>
-        <span class="sd">&quot;&quot;&quot;Gets the video of this StreamInfo.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the video of this StreamInfo.</span>
 
 <span class="sd">        It MUST match the value of the GROUP-ID attribute of a Video EXT-X-MEDIA tag elsewhere in the Master Playlist</span>
 
@@ -285,7 +284,7 @@
     <span class="nd">@video</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">video</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">video</span><span class="p">):</span>
         <span class="c1"># type: (string_types) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the video of this StreamInfo.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the video of this StreamInfo.</span>
 
 <span class="sd">        It MUST match the value of the GROUP-ID attribute of a Video EXT-X-MEDIA tag elsewhere in the Master Playlist</span>
 
@@ -302,7 +301,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">subtitles</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; string_types</span>
-        <span class="sd">&quot;&quot;&quot;Gets the subtitles of this StreamInfo.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the subtitles of this StreamInfo.</span>
 
 <span class="sd">        It MUST match the value of the GROUP-ID attribute of a Subtitles EXT-X-MEDIA tag elsewhere in the Master Playlist</span>
 
@@ -314,7 +313,7 @@
     <span class="nd">@subtitles</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">subtitles</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">subtitles</span><span class="p">):</span>
         <span class="c1"># type: (string_types) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the subtitles of this StreamInfo.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the subtitles of this StreamInfo.</span>
 
 <span class="sd">        It MUST match the value of the GROUP-ID attribute of a Subtitles EXT-X-MEDIA tag elsewhere in the Master Playlist</span>
 
@@ -331,7 +330,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">closed_captions</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; string_types</span>
-        <span class="sd">&quot;&quot;&quot;Gets the closed_captions of this StreamInfo.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the closed_captions of this StreamInfo.</span>
 
 <span class="sd">        If the value is not &#39;NONE&#39;, it MUST match the value of the GROUP-ID attribute of a Closed Captions EXT-X-MEDIA tag elsewhere in the Playlist (required)</span>
 
@@ -343,7 +342,7 @@
     <span class="nd">@closed_captions</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">closed_captions</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">closed_captions</span><span class="p">):</span>
         <span class="c1"># type: (string_types) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the closed_captions of this StreamInfo.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the closed_captions of this StreamInfo.</span>
 
 <span class="sd">        If the value is not &#39;NONE&#39;, it MUST match the value of the GROUP-ID attribute of a Closed Captions EXT-X-MEDIA tag elsewhere in the Playlist (required)</span>
 
@@ -360,7 +359,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">encoding_id</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; string_types</span>
-        <span class="sd">&quot;&quot;&quot;Gets the encoding_id of this StreamInfo.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the encoding_id of this StreamInfo.</span>
 
 <span class="sd">        Id of the encoding. (required)</span>
 
@@ -372,7 +371,7 @@
     <span class="nd">@encoding_id</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">encoding_id</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">encoding_id</span><span class="p">):</span>
         <span class="c1"># type: (string_types) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the encoding_id of this StreamInfo.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the encoding_id of this StreamInfo.</span>
 
 <span class="sd">        Id of the encoding. (required)</span>
 
@@ -389,7 +388,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">stream_id</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; string_types</span>
-        <span class="sd">&quot;&quot;&quot;Gets the stream_id of this StreamInfo.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the stream_id of this StreamInfo.</span>
 
 <span class="sd">        Id of the stream. (required)</span>
 
@@ -401,7 +400,7 @@
     <span class="nd">@stream_id</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">stream_id</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">stream_id</span><span class="p">):</span>
         <span class="c1"># type: (string_types) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the stream_id of this StreamInfo.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the stream_id of this StreamInfo.</span>
 
 <span class="sd">        Id of the stream. (required)</span>
 
@@ -418,7 +417,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">muxing_id</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; string_types</span>
-        <span class="sd">&quot;&quot;&quot;Gets the muxing_id of this StreamInfo.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the muxing_id of this StreamInfo.</span>
 
 <span class="sd">        Id of the muxing. (required)</span>
 
@@ -430,7 +429,7 @@
     <span class="nd">@muxing_id</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">muxing_id</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">muxing_id</span><span class="p">):</span>
         <span class="c1"># type: (string_types) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the muxing_id of this StreamInfo.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the muxing_id of this StreamInfo.</span>
 
 <span class="sd">        Id of the muxing. (required)</span>
 
@@ -447,7 +446,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">drm_id</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; string_types</span>
-        <span class="sd">&quot;&quot;&quot;Gets the drm_id of this StreamInfo.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the drm_id of this StreamInfo.</span>
 
 <span class="sd">        Id of the DRM.</span>
 
@@ -459,7 +458,7 @@
     <span class="nd">@drm_id</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">drm_id</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">drm_id</span><span class="p">):</span>
         <span class="c1"># type: (string_types) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the drm_id of this StreamInfo.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the drm_id of this StreamInfo.</span>
 
 <span class="sd">        Id of the DRM.</span>
 
@@ -476,7 +475,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">segment_path</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; string_types</span>
-        <span class="sd">&quot;&quot;&quot;Gets the segment_path of this StreamInfo.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the segment_path of this StreamInfo.</span>
 
 <span class="sd">        Path to segments. (required)</span>
 
@@ -488,7 +487,7 @@
     <span class="nd">@segment_path</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">segment_path</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">segment_path</span><span class="p">):</span>
         <span class="c1"># type: (string_types) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the segment_path of this StreamInfo.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the segment_path of this StreamInfo.</span>
 
 <span class="sd">        Path to segments. (required)</span>
 
@@ -505,7 +504,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">uri</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; string_types</span>
-        <span class="sd">&quot;&quot;&quot;Gets the uri of this StreamInfo.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the uri of this StreamInfo.</span>
 
 <span class="sd">        The URI of the playlist file. (required)</span>
 
@@ -517,7 +516,7 @@
     <span class="nd">@uri</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">uri</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">uri</span><span class="p">):</span>
         <span class="c1"># type: (string_types) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the uri of this StreamInfo.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the uri of this StreamInfo.</span>
 
 <span class="sd">        The URI of the playlist file. (required)</span>
 
@@ -534,7 +533,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">start_segment_number</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
-        <span class="sd">&quot;&quot;&quot;Gets the start_segment_number of this StreamInfo.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the start_segment_number of this StreamInfo.</span>
 
 <span class="sd">        Number of the first segment. Default is 0.</span>
 
@@ -546,7 +545,7 @@
     <span class="nd">@start_segment_number</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">start_segment_number</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">start_segment_number</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the start_segment_number of this StreamInfo.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the start_segment_number of this StreamInfo.</span>
 
 <span class="sd">        Number of the first segment. Default is 0.</span>
 
@@ -563,7 +562,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">end_segment_number</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
-        <span class="sd">&quot;&quot;&quot;Gets the end_segment_number of this StreamInfo.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the end_segment_number of this StreamInfo.</span>
 
 <span class="sd">        Number of the last segment. Default is the last one that was encoded.</span>
 
@@ -575,7 +574,7 @@
     <span class="nd">@end_segment_number</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">end_segment_number</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">end_segment_number</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the end_segment_number of this StreamInfo.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the end_segment_number of this StreamInfo.</span>
 
 <span class="sd">        Number of the last segment. Default is the last one that was encoded.</span>
 
@@ -592,7 +591,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">force_frame_rate_attribute</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; bool</span>
-        <span class="sd">&quot;&quot;&quot;Gets the force_frame_rate_attribute of this StreamInfo.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the force_frame_rate_attribute of this StreamInfo.</span>
 
 <span class="sd">        Force the addition of the frame rate attribute to all stream infos.</span>
 
@@ -604,7 +603,7 @@
     <span class="nd">@force_frame_rate_attribute</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">force_frame_rate_attribute</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">force_frame_rate_attribute</span><span class="p">):</span>
         <span class="c1"># type: (bool) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the force_frame_rate_attribute of this StreamInfo.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the force_frame_rate_attribute of this StreamInfo.</span>
 
 <span class="sd">        Force the addition of the frame rate attribute to all stream infos.</span>
 
@@ -621,7 +620,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">force_video_range_attribute</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; bool</span>
-        <span class="sd">&quot;&quot;&quot;Gets the force_video_range_attribute of this StreamInfo.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the force_video_range_attribute of this StreamInfo.</span>
 
 <span class="sd">        Force the addition of the video-range attribute to all stream infos.</span>
 
@@ -633,7 +632,7 @@
     <span class="nd">@force_video_range_attribute</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">force_video_range_attribute</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">force_video_range_attribute</span><span class="p">):</span>
         <span class="c1"># type: (bool) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the force_video_range_attribute of this StreamInfo.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the force_video_range_attribute of this StreamInfo.</span>
 
 <span class="sd">        Force the addition of the video-range attribute to all stream infos.</span>
 
@@ -648,7 +647,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_force_video_range_attribute</span> <span class="o">=</span> <span class="n">force_video_range_attribute</span>
 
 <div class="viewcode-block" id="StreamInfo.to_dict"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.stream_info.StreamInfo.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>
         <span class="n">result</span> <span class="o">=</span> <span class="p">{}</span>
 
         <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="nb">super</span><span class="p">(</span><span class="n">StreamInfo</span><span class="p">,</span> <span class="bp">self</span><span class="p">),</span> <span class="s2">&quot;to_dict&quot;</span><span class="p">):</span>
@@ -673,22 +672,22 @@
         <span class="k">return</span> <span class="n">result</span></div>
 
 <div class="viewcode-block" id="StreamInfo.to_str"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.stream_info.StreamInfo.to_str">[docs]</a>    <span class="k">def</span> <span class="nf">to_str</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Returns the string representation of the model&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the string representation of the model&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">pprint</span><span class="o">.</span><span class="n">pformat</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">to_dict</span><span class="p">())</span></div>
 
     <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;For `print` and `pprint`&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;For `print` and `pprint`&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">to_str</span><span class="p">()</span>
 
     <span class="k">def</span> <span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Returns true if both objects are equal&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns true if both objects are equal&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">StreamInfo</span><span class="p">):</span>
             <span class="k">return</span> <span class="kc">False</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="vm">__dict__</span>
 
     <span class="k">def</span> <span class="fm">__ne__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Returns true if both objects are not equal&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns true if both objects are not equal&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="ow">not</span> <span class="bp">self</span> <span class="o">==</span> <span class="n">other</span></div>
 </pre></div>
 

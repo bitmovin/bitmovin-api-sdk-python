@@ -15,7 +15,6 @@
         <script src="../../../_static/underscore.js"></script>
         <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../../_static/doctools.js"></script>
-        <script src="../../../_static/sphinx_highlight.js"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" /> 
@@ -142,7 +141,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">integrated_loudness</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; float</span>
-        <span class="sd">&quot;&quot;&quot;Gets the integrated_loudness of this EbuR128SinglePassFilter.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the integrated_loudness of this EbuR128SinglePassFilter.</span>
 
 <span class="sd">        Set the targeted integrated loudness value. Range is from &#39;-70.0&#39; to &#39;-5.0&#39;. Default value is &#39;-24.0&#39;. Value is measured in LUFS (Loudness Units, referenced to Full Scale)</span>
 
@@ -154,7 +153,7 @@
     <span class="nd">@integrated_loudness</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">integrated_loudness</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">integrated_loudness</span><span class="p">):</span>
         <span class="c1"># type: (float) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the integrated_loudness of this EbuR128SinglePassFilter.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the integrated_loudness of this EbuR128SinglePassFilter.</span>
 
 <span class="sd">        Set the targeted integrated loudness value. Range is from &#39;-70.0&#39; to &#39;-5.0&#39;. Default value is &#39;-24.0&#39;. Value is measured in LUFS (Loudness Units, referenced to Full Scale)</span>
 
@@ -171,7 +170,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">loudness_range</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; float</span>
-        <span class="sd">&quot;&quot;&quot;Gets the loudness_range of this EbuR128SinglePassFilter.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the loudness_range of this EbuR128SinglePassFilter.</span>
 
 <span class="sd">        Set the targeted loudness range target. Range is from &#39;1.0&#39; to &#39;20.0&#39;. Default value is &#39;7.0&#39;. Loudness range measures the variation of loudness on a macroscopic time-scale in units of LU (Loudness Units). For programmes shorter than 1 minute, the use of the measure Loudness Range is not recommended due to too few data points (Loudness Range is based on the Short-term-Loudness values (3-seconds-window)).</span>
 
@@ -183,7 +182,7 @@
     <span class="nd">@loudness_range</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">loudness_range</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">loudness_range</span><span class="p">):</span>
         <span class="c1"># type: (float) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the loudness_range of this EbuR128SinglePassFilter.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the loudness_range of this EbuR128SinglePassFilter.</span>
 
 <span class="sd">        Set the targeted loudness range target. Range is from &#39;1.0&#39; to &#39;20.0&#39;. Default value is &#39;7.0&#39;. Loudness range measures the variation of loudness on a macroscopic time-scale in units of LU (Loudness Units). For programmes shorter than 1 minute, the use of the measure Loudness Range is not recommended due to too few data points (Loudness Range is based on the Short-term-Loudness values (3-seconds-window)).</span>
 
@@ -200,7 +199,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">maximum_true_peak_level</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; float</span>
-        <span class="sd">&quot;&quot;&quot;Gets the maximum_true_peak_level of this EbuR128SinglePassFilter.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the maximum_true_peak_level of this EbuR128SinglePassFilter.</span>
 
 <span class="sd">        Set maximum true peak. Range is from &#39;-9.0&#39; to &#39;0.0&#39;. Default value is &#39;-2.0&#39;. Values are measured in dBTP (db True Peak)</span>
 
@@ -212,7 +211,7 @@
     <span class="nd">@maximum_true_peak_level</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">maximum_true_peak_level</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">maximum_true_peak_level</span><span class="p">):</span>
         <span class="c1"># type: (float) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the maximum_true_peak_level of this EbuR128SinglePassFilter.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the maximum_true_peak_level of this EbuR128SinglePassFilter.</span>
 
 <span class="sd">        Set maximum true peak. Range is from &#39;-9.0&#39; to &#39;0.0&#39;. Default value is &#39;-2.0&#39;. Values are measured in dBTP (db True Peak)</span>
 
@@ -227,7 +226,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_maximum_true_peak_level</span> <span class="o">=</span> <span class="n">maximum_true_peak_level</span>
 
 <div class="viewcode-block" id="EbuR128SinglePassFilter.to_dict"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.ebu_r128_single_pass_filter.EbuR128SinglePassFilter.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>
         <span class="n">result</span> <span class="o">=</span> <span class="p">{}</span>
 
         <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="nb">super</span><span class="p">(</span><span class="n">EbuR128SinglePassFilter</span><span class="p">,</span> <span class="bp">self</span><span class="p">),</span> <span class="s2">&quot;to_dict&quot;</span><span class="p">):</span>
@@ -252,22 +251,22 @@
         <span class="k">return</span> <span class="n">result</span></div>
 
 <div class="viewcode-block" id="EbuR128SinglePassFilter.to_str"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.ebu_r128_single_pass_filter.EbuR128SinglePassFilter.to_str">[docs]</a>    <span class="k">def</span> <span class="nf">to_str</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Returns the string representation of the model&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the string representation of the model&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">pprint</span><span class="o">.</span><span class="n">pformat</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">to_dict</span><span class="p">())</span></div>
 
     <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;For `print` and `pprint`&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;For `print` and `pprint`&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">to_str</span><span class="p">()</span>
 
     <span class="k">def</span> <span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Returns true if both objects are equal&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns true if both objects are equal&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">EbuR128SinglePassFilter</span><span class="p">):</span>
             <span class="k">return</span> <span class="kc">False</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="vm">__dict__</span>
 
     <span class="k">def</span> <span class="fm">__ne__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Returns true if both objects are not equal&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns true if both objects are not equal&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="ow">not</span> <span class="bp">self</span> <span class="o">==</span> <span class="n">other</span></div>
 </pre></div>
 

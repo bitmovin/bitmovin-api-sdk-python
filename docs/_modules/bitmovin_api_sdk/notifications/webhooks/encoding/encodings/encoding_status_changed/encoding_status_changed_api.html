@@ -15,7 +15,6 @@
         <script src="../../../../../../../_static/underscore.js"></script>
         <script src="../../../../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../../../../../../_static/doctools.js"></script>
-        <script src="../../../../../../../_static/sphinx_highlight.js"></script>
     <script src="../../../../../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../../../../search.html" /> 
@@ -100,7 +99,7 @@
 
 <div class="viewcode-block" id="EncodingStatusChangedApi.create"><a class="viewcode-back" href="../../../../../../../__modules/bitmovin_api_sdk.notifications.webhooks.encoding.encodings.encoding_status_changed.html#bitmovin_api_sdk.notifications.webhooks.encoding.encodings.encoding_status_changed.encoding_status_changed_api.EncodingStatusChangedApi.create">[docs]</a>    <span class="k">def</span> <span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">webhook_notification_with_stream_conditions_request</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (WebhookNotificationWithStreamConditionsRequest, dict) -&gt; WebhookNotificationWithStreamConditions</span>
-        <span class="sd">&quot;&quot;&quot;Add Encoding Changed Webhook Notification (All Encodings)</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Add Encoding Changed Webhook Notification (All Encodings)</span>
 
 <span class="sd">        :param webhook_notification_with_stream_conditions_request: The webhook notifications object. For conditions, following attributes are possible: &amp;#39;type&amp;#39;: &amp;#39;Input file download&amp;#39;, &amp;#39;Input file analysis&amp;#39;, &amp;#39;Per-Title analysis&amp;#39;, &amp;#39;Encoding&amp;#39;, &amp;#39;Progressive Muxing&amp;#39; &amp;#39;progress&amp;#39;: number in range of 0-100 &amp;#39;status&amp;#39;: &amp;#39;RUNNING&amp;#39;, &amp;#39;FINISHED&amp;#39;, &amp;#39;ERROR&amp;#39; Examples: To only get notified about the encoding process, create a Condition object and set attribute&amp;#x3D;&amp;#39;type&amp;#39;, value&amp;#x3D;&amp;#39;Encoding&amp;#39;, operator&amp;#x3D;EQUAL To only get notified if a workflow step is finished, create a Condition object and set attribute&amp;#x3D;&amp;#39;status&amp;#39;, value&amp;#x3D;&amp;#39;FINISHED&amp;#39;, operator&amp;#x3D;EQUAL To only get notified if a workflow step is over 50%,  create a Condition object and set attribute&amp;#x3D;&amp;#39;progress&amp;#39;, value&amp;#x3D;&amp;#39;50&amp;#39;, operator&amp;#x3D;GREATER_THAN</span>
 <span class="sd">        :type webhook_notification_with_stream_conditions_request: WebhookNotificationWithStreamConditionsRequest, required</span>
@@ -117,7 +116,7 @@
 
 <div class="viewcode-block" id="EncodingStatusChangedApi.create_by_encoding_id"><a class="viewcode-back" href="../../../../../../../__modules/bitmovin_api_sdk.notifications.webhooks.encoding.encodings.encoding_status_changed.html#bitmovin_api_sdk.notifications.webhooks.encoding.encodings.encoding_status_changed.encoding_status_changed_api.EncodingStatusChangedApi.create_by_encoding_id">[docs]</a>    <span class="k">def</span> <span class="nf">create_by_encoding_id</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">encoding_id</span><span class="p">,</span> <span class="n">webhook_notification_with_stream_conditions_request</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, WebhookNotificationWithStreamConditionsRequest, dict) -&gt; WebhookNotificationWithStreamConditions</span>
-        <span class="sd">&quot;&quot;&quot;Add Encoding Changed Webhook Notification (Specific Encoding)</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Add Encoding Changed Webhook Notification (Specific Encoding)</span>
 
 <span class="sd">        :param encoding_id: Id of the encoding resource</span>
 <span class="sd">        :type encoding_id: string_types, required</span>
@@ -137,7 +136,7 @@
 
 <div class="viewcode-block" id="EncodingStatusChangedApi.delete_by_webhook_id"><a class="viewcode-back" href="../../../../../../../__modules/bitmovin_api_sdk.notifications.webhooks.encoding.encodings.encoding_status_changed.html#bitmovin_api_sdk.notifications.webhooks.encoding.encodings.encoding_status_changed.encoding_status_changed_api.EncodingStatusChangedApi.delete_by_webhook_id">[docs]</a>    <span class="k">def</span> <span class="nf">delete_by_webhook_id</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">notification_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, dict) -&gt; BitmovinResponse</span>
-        <span class="sd">&quot;&quot;&quot;Delete Encoding Status Changed Webhook</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Delete Encoding Status Changed Webhook</span>
 
 <span class="sd">        :param notification_id: Id of the webhook</span>
 <span class="sd">        :type notification_id: string_types, required</span>
@@ -154,7 +153,7 @@
 
 <div class="viewcode-block" id="EncodingStatusChangedApi.update"><a class="viewcode-back" href="../../../../../../../__modules/bitmovin_api_sdk.notifications.webhooks.encoding.encodings.encoding_status_changed.html#bitmovin_api_sdk.notifications.webhooks.encoding.encodings.encoding_status_changed.encoding_status_changed_api.EncodingStatusChangedApi.update">[docs]</a>    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">notification_id</span><span class="p">,</span> <span class="n">webhook_notification_with_stream_conditions_request</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, WebhookNotificationWithStreamConditionsRequest, dict) -&gt; WebhookNotificationWithStreamConditions</span>
-        <span class="sd">&quot;&quot;&quot;Replace Encoding Status Changed Webhook Notification</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Replace Encoding Status Changed Webhook Notification</span>
 
 <span class="sd">        :param notification_id: Id of the webhook notification</span>
 <span class="sd">        :type notification_id: string_types, required</span>

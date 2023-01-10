@@ -15,7 +15,6 @@
         <script src="../../../_static/underscore.js"></script>
         <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../../_static/doctools.js"></script>
-        <script src="../../../_static/sphinx_highlight.js"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" /> 
@@ -156,7 +155,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">content_id</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; string_types</span>
-        <span class="sd">&quot;&quot;&quot;Gets the content_id of this SpekeDrm.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the content_id of this SpekeDrm.</span>
 
 <span class="sd">        Unique Identifier of the content, will be generated if not set</span>
 
@@ -168,7 +167,7 @@
     <span class="nd">@content_id</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">content_id</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">content_id</span><span class="p">):</span>
         <span class="c1"># type: (string_types) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the content_id of this SpekeDrm.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the content_id of this SpekeDrm.</span>
 
 <span class="sd">        Unique Identifier of the content, will be generated if not set</span>
 
@@ -185,7 +184,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">kid</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; string_types</span>
-        <span class="sd">&quot;&quot;&quot;Gets the kid of this SpekeDrm.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the kid of this SpekeDrm.</span>
 
 <span class="sd">        Optional key identifier, will be generated if not set. For SPEKE DRM Configurations with the same contentId and kid the key provider will provide the same keys. </span>
 
@@ -197,7 +196,7 @@
     <span class="nd">@kid</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">kid</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">kid</span><span class="p">):</span>
         <span class="c1"># type: (string_types) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the kid of this SpekeDrm.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the kid of this SpekeDrm.</span>
 
 <span class="sd">        Optional key identifier, will be generated if not set. For SPEKE DRM Configurations with the same contentId and kid the key provider will provide the same keys. </span>
 
@@ -214,7 +213,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">iv</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; string_types</span>
-        <span class="sd">&quot;&quot;&quot;Gets the iv of this SpekeDrm.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the iv of this SpekeDrm.</span>
 
 <span class="sd">        16 byte initialization vector represented by a 32-character text string. It is mandatory if systemIds contains AES128 or FairPlay. </span>
 
@@ -226,7 +225,7 @@
     <span class="nd">@iv</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">iv</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">iv</span><span class="p">):</span>
         <span class="c1"># type: (string_types) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the iv of this SpekeDrm.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the iv of this SpekeDrm.</span>
 
 <span class="sd">        16 byte initialization vector represented by a 32-character text string. It is mandatory if systemIds contains AES128 or FairPlay. </span>
 
@@ -243,7 +242,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">provider</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; SpekeDrmProvider</span>
-        <span class="sd">&quot;&quot;&quot;Gets the provider of this SpekeDrm.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the provider of this SpekeDrm.</span>
 
 <span class="sd">        Key provider configuration for SPEKE (required)</span>
 
@@ -255,7 +254,7 @@
     <span class="nd">@provider</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">provider</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">provider</span><span class="p">):</span>
         <span class="c1"># type: (SpekeDrmProvider) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the provider of this SpekeDrm.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the provider of this SpekeDrm.</span>
 
 <span class="sd">        Key provider configuration for SPEKE (required)</span>
 
@@ -272,7 +271,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">system_ids</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; list[string_types]</span>
-        <span class="sd">&quot;&quot;&quot;Gets the system_ids of this SpekeDrm.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the system_ids of this SpekeDrm.</span>
 
 <span class="sd">        DRM system identifier of the content protection scheme. At minimum one is expected. Not all systemIds are currently supported, support depends on the muxing type.  Relates to SPEKE implementation. See https://dashif.org/identifiers/content_protection/ (required)</span>
 
@@ -284,7 +283,7 @@
     <span class="nd">@system_ids</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">system_ids</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">system_ids</span><span class="p">):</span>
         <span class="c1"># type: (list) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the system_ids of this SpekeDrm.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the system_ids of this SpekeDrm.</span>
 
 <span class="sd">        DRM system identifier of the content protection scheme. At minimum one is expected. Not all systemIds are currently supported, support depends on the muxing type.  Relates to SPEKE implementation. See https://dashif.org/identifiers/content_protection/ (required)</span>
 
@@ -299,7 +298,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_system_ids</span> <span class="o">=</span> <span class="n">system_ids</span>
 
 <div class="viewcode-block" id="SpekeDrm.to_dict"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.speke_drm.SpekeDrm.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>
         <span class="n">result</span> <span class="o">=</span> <span class="p">{}</span>
 
         <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="nb">super</span><span class="p">(</span><span class="n">SpekeDrm</span><span class="p">,</span> <span class="bp">self</span><span class="p">),</span> <span class="s2">&quot;to_dict&quot;</span><span class="p">):</span>
@@ -324,22 +323,22 @@
         <span class="k">return</span> <span class="n">result</span></div>
 
 <div class="viewcode-block" id="SpekeDrm.to_str"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.speke_drm.SpekeDrm.to_str">[docs]</a>    <span class="k">def</span> <span class="nf">to_str</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Returns the string representation of the model&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the string representation of the model&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">pprint</span><span class="o">.</span><span class="n">pformat</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">to_dict</span><span class="p">())</span></div>
 
     <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;For `print` and `pprint`&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;For `print` and `pprint`&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">to_str</span><span class="p">()</span>
 
     <span class="k">def</span> <span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Returns true if both objects are equal&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns true if both objects are equal&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">SpekeDrm</span><span class="p">):</span>
             <span class="k">return</span> <span class="kc">False</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="vm">__dict__</span>
 
     <span class="k">def</span> <span class="fm">__ne__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Returns true if both objects are not equal&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns true if both objects are not equal&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="ow">not</span> <span class="bp">self</span> <span class="o">==</span> <span class="n">other</span></div>
 </pre></div>
 

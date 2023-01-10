@@ -11,34 +11,19 @@ import six
 class LiveEncodingStatsEventDetails(object):
     @poscheck_model
     def __init__(self,
-                 event_name=None,
-                 av_drift_in_seconds=None,
-                 idle_duration_in_seconds=None,
-                 error_message=None):
-        # type: (LiveEncodingEventName, int, int, string_types) -> None
+                 event_type=None):
+        # type: (LiveEncodingEventName) -> None
 
-        self._event_name = None
-        self._av_drift_in_seconds = None
-        self._idle_duration_in_seconds = None
-        self._error_message = None
+        self._event_type = None
         self.discriminator = None
 
-        if event_name is not None:
-            self.event_name = event_name
-        if av_drift_in_seconds is not None:
-            self.av_drift_in_seconds = av_drift_in_seconds
-        if idle_duration_in_seconds is not None:
-            self.idle_duration_in_seconds = idle_duration_in_seconds
-        if error_message is not None:
-            self.error_message = error_message
+        if event_type is not None:
+            self.event_type = event_type
 
     @property
     def openapi_types(self):
         types = {
-            'event_name': 'LiveEncodingEventName',
-            'av_drift_in_seconds': 'int',
-            'idle_duration_in_seconds': 'int',
-            'error_message': 'string_types'
+            'event_type': 'LiveEncodingEventName'
         }
 
         return types
@@ -46,126 +31,36 @@ class LiveEncodingStatsEventDetails(object):
     @property
     def attribute_map(self):
         attributes = {
-            'event_name': 'eventName',
-            'av_drift_in_seconds': 'avDriftInSeconds',
-            'idle_duration_in_seconds': 'idleDurationInSeconds',
-            'error_message': 'errorMessage'
+            'event_type': 'eventType'
         }
         return attributes
 
     @property
-    def event_name(self):
+    def event_type(self):
         # type: () -> LiveEncodingEventName
-        """Gets the event_name of this LiveEncodingStatsEventDetails.
+        """Gets the event_type of this LiveEncodingStatsEventDetails.
 
 
-        :return: The event_name of this LiveEncodingStatsEventDetails.
+        :return: The event_type of this LiveEncodingStatsEventDetails.
         :rtype: LiveEncodingEventName
         """
-        return self._event_name
+        return self._event_type
 
-    @event_name.setter
-    def event_name(self, event_name):
+    @event_type.setter
+    def event_type(self, event_type):
         # type: (LiveEncodingEventName) -> None
-        """Sets the event_name of this LiveEncodingStatsEventDetails.
+        """Sets the event_type of this LiveEncodingStatsEventDetails.
 
 
-        :param event_name: The event_name of this LiveEncodingStatsEventDetails.
+        :param event_type: The event_type of this LiveEncodingStatsEventDetails.
         :type: LiveEncodingEventName
         """
 
-        if event_name is not None:
-            if not isinstance(event_name, LiveEncodingEventName):
-                raise TypeError("Invalid type for `event_name`, type has to be `LiveEncodingEventName`")
+        if event_type is not None:
+            if not isinstance(event_type, LiveEncodingEventName):
+                raise TypeError("Invalid type for `event_type`, type has to be `LiveEncodingEventName`")
 
-        self._event_name = event_name
-
-    @property
-    def av_drift_in_seconds(self):
-        # type: () -> int
-        """Gets the av_drift_in_seconds of this LiveEncodingStatsEventDetails.
-
-        The Audio/Video Drift in seconds. The drift was corrected by the RESYNCING event (occurs at event: RESYNCING)
-
-        :return: The av_drift_in_seconds of this LiveEncodingStatsEventDetails.
-        :rtype: int
-        """
-        return self._av_drift_in_seconds
-
-    @av_drift_in_seconds.setter
-    def av_drift_in_seconds(self, av_drift_in_seconds):
-        # type: (int) -> None
-        """Sets the av_drift_in_seconds of this LiveEncodingStatsEventDetails.
-
-        The Audio/Video Drift in seconds. The drift was corrected by the RESYNCING event (occurs at event: RESYNCING)
-
-        :param av_drift_in_seconds: The av_drift_in_seconds of this LiveEncodingStatsEventDetails.
-        :type: int
-        """
-
-        if av_drift_in_seconds is not None:
-            if not isinstance(av_drift_in_seconds, int):
-                raise TypeError("Invalid type for `av_drift_in_seconds`, type has to be `int`")
-
-        self._av_drift_in_seconds = av_drift_in_seconds
-
-    @property
-    def idle_duration_in_seconds(self):
-        # type: () -> int
-        """Gets the idle_duration_in_seconds of this LiveEncodingStatsEventDetails.
-
-        The time the stream was in idle state in seconds (occurs at event: IDLE)
-
-        :return: The idle_duration_in_seconds of this LiveEncodingStatsEventDetails.
-        :rtype: int
-        """
-        return self._idle_duration_in_seconds
-
-    @idle_duration_in_seconds.setter
-    def idle_duration_in_seconds(self, idle_duration_in_seconds):
-        # type: (int) -> None
-        """Sets the idle_duration_in_seconds of this LiveEncodingStatsEventDetails.
-
-        The time the stream was in idle state in seconds (occurs at event: IDLE)
-
-        :param idle_duration_in_seconds: The idle_duration_in_seconds of this LiveEncodingStatsEventDetails.
-        :type: int
-        """
-
-        if idle_duration_in_seconds is not None:
-            if not isinstance(idle_duration_in_seconds, int):
-                raise TypeError("Invalid type for `idle_duration_in_seconds`, type has to be `int`")
-
-        self._idle_duration_in_seconds = idle_duration_in_seconds
-
-    @property
-    def error_message(self):
-        # type: () -> string_types
-        """Gets the error_message of this LiveEncodingStatsEventDetails.
-
-        An optional error message, when the event is in error state (occurs at event: ERROR)
-
-        :return: The error_message of this LiveEncodingStatsEventDetails.
-        :rtype: string_types
-        """
-        return self._error_message
-
-    @error_message.setter
-    def error_message(self, error_message):
-        # type: (string_types) -> None
-        """Sets the error_message of this LiveEncodingStatsEventDetails.
-
-        An optional error message, when the event is in error state (occurs at event: ERROR)
-
-        :param error_message: The error_message of this LiveEncodingStatsEventDetails.
-        :type: string_types
-        """
-
-        if error_message is not None:
-            if not isinstance(error_message, string_types):
-                raise TypeError("Invalid type for `error_message`, type has to be `string_types`")
-
-        self._error_message = error_message
+        self._event_type = event_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -15,7 +15,6 @@
         <script src="../../../_static/underscore.js"></script>
         <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../../_static/doctools.js"></script>
-        <script src="../../../_static/sphinx_highlight.js"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" /> 
@@ -139,7 +138,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">dialnorm</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
-        <span class="sd">&quot;&quot;&quot;Gets the dialnorm of this DolbyDigitalPlusLoudnessControl.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the dialnorm of this DolbyDigitalPlusLoudnessControl.</span>
 
 <span class="sd">        Dialogue Normalization value to be set on the bitstream metadata. Required if the mode is `PASSTHROUGH`, or if the mode is `CORRECTION` and regulationType is `MANUAL`. For all other combinations dialnorm must not be set.</span>
 
@@ -151,7 +150,7 @@
     <span class="nd">@dialnorm</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">dialnorm</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dialnorm</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the dialnorm of this DolbyDigitalPlusLoudnessControl.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the dialnorm of this DolbyDigitalPlusLoudnessControl.</span>
 
 <span class="sd">        Dialogue Normalization value to be set on the bitstream metadata. Required if the mode is `PASSTHROUGH`, or if the mode is `CORRECTION` and regulationType is `MANUAL`. For all other combinations dialnorm must not be set.</span>
 
@@ -172,7 +171,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">dialogue_intelligence</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; DolbyDigitalPlusDialogueIntelligence</span>
-        <span class="sd">&quot;&quot;&quot;Gets the dialogue_intelligence of this DolbyDigitalPlusLoudnessControl.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the dialogue_intelligence of this DolbyDigitalPlusLoudnessControl.</span>
 
 <span class="sd">        This may only be set if the mode is `PASSTHROUGH`, or if the mode is `CORRECTION` and regulationType is `MANUAL`. For all other regulationType values dialogueIntelligence must not be set.</span>
 
@@ -184,7 +183,7 @@
     <span class="nd">@dialogue_intelligence</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">dialogue_intelligence</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dialogue_intelligence</span><span class="p">):</span>
         <span class="c1"># type: (DolbyDigitalPlusDialogueIntelligence) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the dialogue_intelligence of this DolbyDigitalPlusLoudnessControl.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the dialogue_intelligence of this DolbyDigitalPlusLoudnessControl.</span>
 
 <span class="sd">        This may only be set if the mode is `PASSTHROUGH`, or if the mode is `CORRECTION` and regulationType is `MANUAL`. For all other regulationType values dialogueIntelligence must not be set.</span>
 
@@ -201,7 +200,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">mode</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; DolbyDigitalPlusLoudnessControlMode</span>
-        <span class="sd">&quot;&quot;&quot;Gets the mode of this DolbyDigitalPlusLoudnessControl.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the mode of this DolbyDigitalPlusLoudnessControl.</span>
 
 
 <span class="sd">        :return: The mode of this DolbyDigitalPlusLoudnessControl.</span>
@@ -212,7 +211,7 @@
     <span class="nd">@mode</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">mode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mode</span><span class="p">):</span>
         <span class="c1"># type: (DolbyDigitalPlusLoudnessControlMode) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the mode of this DolbyDigitalPlusLoudnessControl.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the mode of this DolbyDigitalPlusLoudnessControl.</span>
 
 
 <span class="sd">        :param mode: The mode of this DolbyDigitalPlusLoudnessControl.</span>
@@ -228,7 +227,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">peak_limit</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; float</span>
-        <span class="sd">&quot;&quot;&quot;Gets the peak_limit of this DolbyDigitalPlusLoudnessControl.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the peak_limit of this DolbyDigitalPlusLoudnessControl.</span>
 
 <span class="sd">        The peak value in dB to use for loudness correction. This may only be set if the mode is `PASSTHROUGH`, or if the mode is `CORRECTION` and regulationType is `MANUAL`. For all other regulationType values peakLimit must not be set.</span>
 
@@ -240,7 +239,7 @@
     <span class="nd">@peak_limit</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">peak_limit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">peak_limit</span><span class="p">):</span>
         <span class="c1"># type: (float) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the peak_limit of this DolbyDigitalPlusLoudnessControl.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the peak_limit of this DolbyDigitalPlusLoudnessControl.</span>
 
 <span class="sd">        The peak value in dB to use for loudness correction. This may only be set if the mode is `PASSTHROUGH`, or if the mode is `CORRECTION` and regulationType is `MANUAL`. For all other regulationType values peakLimit must not be set.</span>
 
@@ -261,7 +260,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">regulation_type</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; DolbyDigitalPlusLoudnessControlRegulationType</span>
-        <span class="sd">&quot;&quot;&quot;Gets the regulation_type of this DolbyDigitalPlusLoudnessControl.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the regulation_type of this DolbyDigitalPlusLoudnessControl.</span>
 
 <span class="sd">        This is only allowed if the mode is CORRECTION. &lt;table&gt; &lt;tr&gt;&lt;th colspan=4 align=\&quot;left\&quot;&gt; Predefined values for each regulation type: &lt;/th&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt; Regulation Type &lt;/td&gt;&lt;td&gt; EBU R128 &lt;/td&gt;&lt;td&gt; ATSC A/85 Fixed &lt;/td&gt;&lt;td&gt; ATSC A/85 Agile&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt; Limit Mode &lt;/td&gt;&lt;td&gt; `True Peak` &lt;/td&gt;&lt;td&gt; `True Peak` &lt;/td&gt;&lt;td&gt; `True Peak` &lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt; Correction Mode &lt;/td&gt;&lt;td&gt; `PCM Normalization` &lt;/td&gt;&lt;td&gt; `PCM Normalization` &lt;/td&gt;&lt;td&gt; `Metadata Update` &lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt; Peak Limit &lt;/td&gt;&lt;td&gt; `–3 dBTP` &lt;/td&gt;&lt;td&gt; `–2 dBTP` &lt;/td&gt;&lt;td&gt; `N/A` &lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt; Dialogue Intelligence &lt;/td&gt;&lt;td&gt; `Off` &lt;/td&gt;&lt;td&gt; `On` &lt;/td&gt;&lt;td&gt; `On` &lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt; Meter Mode &lt;/td&gt;&lt;td&gt; `ITU-R BS.1770-3` &lt;/td&gt;&lt;td&gt; `ITU-R BS.1770-3` &lt;/td&gt;&lt;td&gt; `ITU-R BS.1770-3` &lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt; Speech Threshold &lt;/td&gt;&lt;td&gt; `20` &lt;/td&gt;&lt;td&gt; `20` &lt;/td&gt;&lt;td&gt; `20` &lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt; Dialogue Normalization &lt;/td&gt;&lt;td&gt; `-23 dB` &lt;/td&gt;&lt;td&gt; `-24 dB` &lt;/td&gt;&lt;td&gt; `Set to measured loudness` &lt;/td&gt;&lt;/tr&gt; &lt;/table&gt; </span>
 
@@ -273,7 +272,7 @@
     <span class="nd">@regulation_type</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">regulation_type</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">regulation_type</span><span class="p">):</span>
         <span class="c1"># type: (DolbyDigitalPlusLoudnessControlRegulationType) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the regulation_type of this DolbyDigitalPlusLoudnessControl.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the regulation_type of this DolbyDigitalPlusLoudnessControl.</span>
 
 <span class="sd">        This is only allowed if the mode is CORRECTION. &lt;table&gt; &lt;tr&gt;&lt;th colspan=4 align=\&quot;left\&quot;&gt; Predefined values for each regulation type: &lt;/th&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt; Regulation Type &lt;/td&gt;&lt;td&gt; EBU R128 &lt;/td&gt;&lt;td&gt; ATSC A/85 Fixed &lt;/td&gt;&lt;td&gt; ATSC A/85 Agile&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt; Limit Mode &lt;/td&gt;&lt;td&gt; `True Peak` &lt;/td&gt;&lt;td&gt; `True Peak` &lt;/td&gt;&lt;td&gt; `True Peak` &lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt; Correction Mode &lt;/td&gt;&lt;td&gt; `PCM Normalization` &lt;/td&gt;&lt;td&gt; `PCM Normalization` &lt;/td&gt;&lt;td&gt; `Metadata Update` &lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt; Peak Limit &lt;/td&gt;&lt;td&gt; `–3 dBTP` &lt;/td&gt;&lt;td&gt; `–2 dBTP` &lt;/td&gt;&lt;td&gt; `N/A` &lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt; Dialogue Intelligence &lt;/td&gt;&lt;td&gt; `Off` &lt;/td&gt;&lt;td&gt; `On` &lt;/td&gt;&lt;td&gt; `On` &lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt; Meter Mode &lt;/td&gt;&lt;td&gt; `ITU-R BS.1770-3` &lt;/td&gt;&lt;td&gt; `ITU-R BS.1770-3` &lt;/td&gt;&lt;td&gt; `ITU-R BS.1770-3` &lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt; Speech Threshold &lt;/td&gt;&lt;td&gt; `20` &lt;/td&gt;&lt;td&gt; `20` &lt;/td&gt;&lt;td&gt; `20` &lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt; Dialogue Normalization &lt;/td&gt;&lt;td&gt; `-23 dB` &lt;/td&gt;&lt;td&gt; `-24 dB` &lt;/td&gt;&lt;td&gt; `Set to measured loudness` &lt;/td&gt;&lt;/tr&gt; &lt;/table&gt; </span>
 
@@ -288,7 +287,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_regulation_type</span> <span class="o">=</span> <span class="n">regulation_type</span>
 
 <div class="viewcode-block" id="DolbyDigitalPlusLoudnessControl.to_dict"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.dolby_digital_plus_loudness_control.DolbyDigitalPlusLoudnessControl.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>
         <span class="n">result</span> <span class="o">=</span> <span class="p">{}</span>
 
         <span class="k">for</span> <span class="n">attr</span><span class="p">,</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">six</span><span class="o">.</span><span class="n">iteritems</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">openapi_types</span><span class="p">):</span>
@@ -311,22 +310,22 @@
         <span class="k">return</span> <span class="n">result</span></div>
 
 <div class="viewcode-block" id="DolbyDigitalPlusLoudnessControl.to_str"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.dolby_digital_plus_loudness_control.DolbyDigitalPlusLoudnessControl.to_str">[docs]</a>    <span class="k">def</span> <span class="nf">to_str</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Returns the string representation of the model&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the string representation of the model&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">pprint</span><span class="o">.</span><span class="n">pformat</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">to_dict</span><span class="p">())</span></div>
 
     <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;For `print` and `pprint`&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;For `print` and `pprint`&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">to_str</span><span class="p">()</span>
 
     <span class="k">def</span> <span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Returns true if both objects are equal&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns true if both objects are equal&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">DolbyDigitalPlusLoudnessControl</span><span class="p">):</span>
             <span class="k">return</span> <span class="kc">False</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="vm">__dict__</span>
 
     <span class="k">def</span> <span class="fm">__ne__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Returns true if both objects are not equal&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns true if both objects are not equal&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="ow">not</span> <span class="bp">self</span> <span class="o">==</span> <span class="n">other</span></div>
 </pre></div>
 

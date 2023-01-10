@@ -15,7 +15,6 @@
         <script src="../../../_static/underscore.js"></script>
         <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../../_static/doctools.js"></script>
-        <script src="../../../_static/sphinx_highlight.js"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" /> 
@@ -138,7 +137,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">url</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; string_types</span>
-        <span class="sd">&quot;&quot;&quot;Gets the url of this SimpleEncodingVodJobUrlOutput.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the url of this SimpleEncodingVodJobUrlOutput.</span>
 
 <span class="sd">        Define a URL pointing to a folder which will be used to upload the encoded assets.  The output folder structure used looks the following way: &lt;br&gt;&lt;br&gt; `http://host/my-folder`     &lt;ul&gt;       &lt;li&gt;         `/video`         &lt;ul&gt;           &lt;li&gt;`/h264/{width}x{height}_{bitrate}/` (multiple subfolders containing different output renditions)&lt;/li&gt;         &lt;/ul&gt;       &lt;/li&gt;       &lt;li&gt;`/audio`         &lt;ul&gt;           &lt;li&gt;`/aac/{language}/` - if language is unique (subfolder containing audio output files)&lt;/li&gt;           &lt;li&gt;`/aac/{language}_{index}/` - if language is not unique (subfolder containing audio output files)&lt;/li&gt;         &lt;/ul&gt;       &lt;/li&gt;       &lt;li&gt;`/subtitles` (subfolder containing subtitles files)&lt;/li&gt;       &lt;li&gt;`/captions` (subfolder containing subtitles files)&lt;/li&gt;       &lt;li&gt;`/sprites` (subfolder containing generated sprites)&lt;/li&gt;       &lt;li&gt;`/thumbnails` (subfolder containing generated thumbnails)&lt;/li&gt;       &lt;li&gt;`/index.m3u8` (HLS manifest file) &lt;/li&gt;       &lt;li&gt;`/stream.mpd` (DASH manifest file) &lt;/li&gt;     &lt;/ul&gt;    Currently the following protocols/storages systems are supported: S3, GCS, Azure Blob Storage, Akamai NetStorage. Note that most protocols will require `credentials` to access the asset. Check in the descriptions below which properties can or need to be provided within the `credentials` key. See below how to construct the URLs for the individual protocols/storage systems. ___ **Recommendation** To ensure uniqueness of output paths accross multiple encodings, make use of the following placeholders in the output&#39;s URL: {uuid} - will be replaced with a random UUID {asset} - will be replaced with the asset file name (only for the input type VIDEO or DEFAULT)  Examples:  * using the `{uuid}` placeholder: The output URL `s3://&lt;my-bucket&gt;/{uuid}/path/` will be transformed to e.g. `s3://&lt;my-bucket&gt;/d59295f3-1548-4bd9-843d-6ac6896dbdb6/path/`.  * using the `{asset}` placeholder: Given an input `s3://my-bucket/path/filename.mp4` of type VIDEO or DEFAULT, the output URL  `s3://&lt;my-bucket&gt;/{asset}/path/` will be transformed to `s3://&lt;my-bucket&gt;/filename/path/`  Notes:   - Placeholders can be combined or used multiple times in the same URL.   - Placeholders are ignored when used in conjunction with `DirectFileUploadInput`s because in this case the asset file name cannot be set. ___  **S3**: * `s3://&lt;my-bucket&gt;/path/`  Authentication can be done via accesskey/secretkey or role-based authentication. Generic S3 is currently NOT supported.  **GCS**: * `gcs://&lt;my-bucket&gt;/path/`  Authentication can be done via accesskey/secretkey or a service account  **Azure Blob Storage (ABS)**: * `https://&lt;account&gt;.blob.core.windows.net/&lt;container&gt;/path/`  It is required to provide the Azure key credentials for authentication.  **Akamai NetStorage**: * `https://&lt;host&gt;-nsu.akamaihd.net/&lt;CP-code&gt;/path/`  It is required to provide username/password credentials for authentication. (required)</span>
 
@@ -150,7 +149,7 @@
     <span class="nd">@url</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">url</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url</span><span class="p">):</span>
         <span class="c1"># type: (string_types) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the url of this SimpleEncodingVodJobUrlOutput.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the url of this SimpleEncodingVodJobUrlOutput.</span>
 
 <span class="sd">        Define a URL pointing to a folder which will be used to upload the encoded assets.  The output folder structure used looks the following way: &lt;br&gt;&lt;br&gt; `http://host/my-folder`     &lt;ul&gt;       &lt;li&gt;         `/video`         &lt;ul&gt;           &lt;li&gt;`/h264/{width}x{height}_{bitrate}/` (multiple subfolders containing different output renditions)&lt;/li&gt;         &lt;/ul&gt;       &lt;/li&gt;       &lt;li&gt;`/audio`         &lt;ul&gt;           &lt;li&gt;`/aac/{language}/` - if language is unique (subfolder containing audio output files)&lt;/li&gt;           &lt;li&gt;`/aac/{language}_{index}/` - if language is not unique (subfolder containing audio output files)&lt;/li&gt;         &lt;/ul&gt;       &lt;/li&gt;       &lt;li&gt;`/subtitles` (subfolder containing subtitles files)&lt;/li&gt;       &lt;li&gt;`/captions` (subfolder containing subtitles files)&lt;/li&gt;       &lt;li&gt;`/sprites` (subfolder containing generated sprites)&lt;/li&gt;       &lt;li&gt;`/thumbnails` (subfolder containing generated thumbnails)&lt;/li&gt;       &lt;li&gt;`/index.m3u8` (HLS manifest file) &lt;/li&gt;       &lt;li&gt;`/stream.mpd` (DASH manifest file) &lt;/li&gt;     &lt;/ul&gt;    Currently the following protocols/storages systems are supported: S3, GCS, Azure Blob Storage, Akamai NetStorage. Note that most protocols will require `credentials` to access the asset. Check in the descriptions below which properties can or need to be provided within the `credentials` key. See below how to construct the URLs for the individual protocols/storage systems. ___ **Recommendation** To ensure uniqueness of output paths accross multiple encodings, make use of the following placeholders in the output&#39;s URL: {uuid} - will be replaced with a random UUID {asset} - will be replaced with the asset file name (only for the input type VIDEO or DEFAULT)  Examples:  * using the `{uuid}` placeholder: The output URL `s3://&lt;my-bucket&gt;/{uuid}/path/` will be transformed to e.g. `s3://&lt;my-bucket&gt;/d59295f3-1548-4bd9-843d-6ac6896dbdb6/path/`.  * using the `{asset}` placeholder: Given an input `s3://my-bucket/path/filename.mp4` of type VIDEO or DEFAULT, the output URL  `s3://&lt;my-bucket&gt;/{asset}/path/` will be transformed to `s3://&lt;my-bucket&gt;/filename/path/`  Notes:   - Placeholders can be combined or used multiple times in the same URL.   - Placeholders are ignored when used in conjunction with `DirectFileUploadInput`s because in this case the asset file name cannot be set. ___  **S3**: * `s3://&lt;my-bucket&gt;/path/`  Authentication can be done via accesskey/secretkey or role-based authentication. Generic S3 is currently NOT supported.  **GCS**: * `gcs://&lt;my-bucket&gt;/path/`  Authentication can be done via accesskey/secretkey or a service account  **Azure Blob Storage (ABS)**: * `https://&lt;account&gt;.blob.core.windows.net/&lt;container&gt;/path/`  It is required to provide the Azure key credentials for authentication.  **Akamai NetStorage**: * `https://&lt;host&gt;-nsu.akamaihd.net/&lt;CP-code&gt;/path/`  It is required to provide username/password credentials for authentication. (required)</span>
 
@@ -167,7 +166,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">credentials</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; SimpleEncodingVodJobCredentials</span>
-        <span class="sd">&quot;&quot;&quot;Gets the credentials of this SimpleEncodingVodJobUrlOutput.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the credentials of this SimpleEncodingVodJobUrlOutput.</span>
 
 <span class="sd">        Credentials to be used for authentication and accessing the folder </span>
 
@@ -179,7 +178,7 @@
     <span class="nd">@credentials</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">credentials</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">credentials</span><span class="p">):</span>
         <span class="c1"># type: (SimpleEncodingVodJobCredentials) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the credentials of this SimpleEncodingVodJobUrlOutput.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the credentials of this SimpleEncodingVodJobUrlOutput.</span>
 
 <span class="sd">        Credentials to be used for authentication and accessing the folder </span>
 
@@ -196,7 +195,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">make_public</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; bool</span>
-        <span class="sd">&quot;&quot;&quot;Gets the make_public of this SimpleEncodingVodJobUrlOutput.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the make_public of this SimpleEncodingVodJobUrlOutput.</span>
 
 <span class="sd">        Indicates if the output should be publically available so that playback immediately works over the internet. Note that not every storage provider supports public output, in this case the flag will be ignored (e.g., Akamai NetStorage).  It might forbidden by some storage configuration to make files public, for example an S3 buckets can be configured to disallow public access. In this case set it to false. </span>
 
@@ -208,7 +207,7 @@
     <span class="nd">@make_public</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">make_public</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">make_public</span><span class="p">):</span>
         <span class="c1"># type: (bool) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the make_public of this SimpleEncodingVodJobUrlOutput.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the make_public of this SimpleEncodingVodJobUrlOutput.</span>
 
 <span class="sd">        Indicates if the output should be publically available so that playback immediately works over the internet. Note that not every storage provider supports public output, in this case the flag will be ignored (e.g., Akamai NetStorage).  It might forbidden by some storage configuration to make files public, for example an S3 buckets can be configured to disallow public access. In this case set it to false. </span>
 
@@ -223,7 +222,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_make_public</span> <span class="o">=</span> <span class="n">make_public</span>
 
 <div class="viewcode-block" id="SimpleEncodingVodJobUrlOutput.to_dict"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.simple_encoding_vod_job_url_output.SimpleEncodingVodJobUrlOutput.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>
         <span class="n">result</span> <span class="o">=</span> <span class="p">{}</span>
 
         <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="nb">super</span><span class="p">(</span><span class="n">SimpleEncodingVodJobUrlOutput</span><span class="p">,</span> <span class="bp">self</span><span class="p">),</span> <span class="s2">&quot;to_dict&quot;</span><span class="p">):</span>
@@ -248,22 +247,22 @@
         <span class="k">return</span> <span class="n">result</span></div>
 
 <div class="viewcode-block" id="SimpleEncodingVodJobUrlOutput.to_str"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.simple_encoding_vod_job_url_output.SimpleEncodingVodJobUrlOutput.to_str">[docs]</a>    <span class="k">def</span> <span class="nf">to_str</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Returns the string representation of the model&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the string representation of the model&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">pprint</span><span class="o">.</span><span class="n">pformat</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">to_dict</span><span class="p">())</span></div>
 
     <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;For `print` and `pprint`&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;For `print` and `pprint`&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">to_str</span><span class="p">()</span>
 
     <span class="k">def</span> <span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Returns true if both objects are equal&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns true if both objects are equal&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">SimpleEncodingVodJobUrlOutput</span><span class="p">):</span>
             <span class="k">return</span> <span class="kc">False</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="vm">__dict__</span>
 
     <span class="k">def</span> <span class="fm">__ne__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Returns true if both objects are not equal&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns true if both objects are not equal&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="ow">not</span> <span class="bp">self</span> <span class="o">==</span> <span class="n">other</span></div>
 </pre></div>
 

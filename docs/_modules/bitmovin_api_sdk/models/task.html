@@ -15,7 +15,6 @@
         <script src="../../../_static/underscore.js"></script>
         <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../../_static/doctools.js"></script>
-        <script src="../../../_static/sphinx_highlight.js"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" /> 
@@ -188,7 +187,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">status</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; Status</span>
-        <span class="sd">&quot;&quot;&quot;Gets the status of this Task.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the status of this Task.</span>
 
 <span class="sd">        Current status (required)</span>
 
@@ -200,7 +199,7 @@
     <span class="nd">@status</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">status</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">status</span><span class="p">):</span>
         <span class="c1"># type: (Status) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the status of this Task.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the status of this Task.</span>
 
 <span class="sd">        Current status (required)</span>
 
@@ -217,7 +216,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">eta</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; float</span>
-        <span class="sd">&quot;&quot;&quot;Gets the eta of this Task.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the eta of this Task.</span>
 
 <span class="sd">        Estimated ETA in seconds</span>
 
@@ -229,7 +228,7 @@
     <span class="nd">@eta</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">eta</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">eta</span><span class="p">):</span>
         <span class="c1"># type: (float) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the eta of this Task.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the eta of this Task.</span>
 
 <span class="sd">        Estimated ETA in seconds</span>
 
@@ -246,7 +245,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">progress</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
-        <span class="sd">&quot;&quot;&quot;Gets the progress of this Task.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the progress of this Task.</span>
 
 <span class="sd">        Progress in percent</span>
 
@@ -258,7 +257,7 @@
     <span class="nd">@progress</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">progress</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">progress</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the progress of this Task.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the progress of this Task.</span>
 
 <span class="sd">        Progress in percent</span>
 
@@ -275,7 +274,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">subtasks</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; list[Subtask]</span>
-        <span class="sd">&quot;&quot;&quot;Gets the subtasks of this Task.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the subtasks of this Task.</span>
 
 <span class="sd">        List of subtasks</span>
 
@@ -287,7 +286,7 @@
     <span class="nd">@subtasks</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">subtasks</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">subtasks</span><span class="p">):</span>
         <span class="c1"># type: (list) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the subtasks of this Task.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the subtasks of this Task.</span>
 
 <span class="sd">        List of subtasks</span>
 
@@ -304,7 +303,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">messages</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; list[Message]</span>
-        <span class="sd">&quot;&quot;&quot;Gets the messages of this Task.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the messages of this Task.</span>
 
 <span class="sd">        Task specific messages</span>
 
@@ -316,7 +315,7 @@
     <span class="nd">@messages</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">messages</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">messages</span><span class="p">):</span>
         <span class="c1"># type: (list) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the messages of this Task.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the messages of this Task.</span>
 
 <span class="sd">        Task specific messages</span>
 
@@ -333,7 +332,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">created_at</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; datetime</span>
-        <span class="sd">&quot;&quot;&quot;Gets the created_at of this Task.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the created_at of this Task.</span>
 
 <span class="sd">        Timestamp when the task was created, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ</span>
 
@@ -345,7 +344,7 @@
     <span class="nd">@created_at</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">created_at</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">created_at</span><span class="p">):</span>
         <span class="c1"># type: (datetime) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the created_at of this Task.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the created_at of this Task.</span>
 
 <span class="sd">        Timestamp when the task was created, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ</span>
 
@@ -362,7 +361,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">queued_at</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; datetime</span>
-        <span class="sd">&quot;&quot;&quot;Gets the queued_at of this Task.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the queued_at of this Task.</span>
 
 <span class="sd">        Timestamp when the task status changed to \&quot;QUEUED\&quot;, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ</span>
 
@@ -374,7 +373,7 @@
     <span class="nd">@queued_at</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">queued_at</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">queued_at</span><span class="p">):</span>
         <span class="c1"># type: (datetime) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the queued_at of this Task.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the queued_at of this Task.</span>
 
 <span class="sd">        Timestamp when the task status changed to \&quot;QUEUED\&quot;, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ</span>
 
@@ -391,7 +390,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">running_at</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; datetime</span>
-        <span class="sd">&quot;&quot;&quot;Gets the running_at of this Task.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the running_at of this Task.</span>
 
 <span class="sd">        Timestamp when the task status changed to \&quot;RUNNING\&quot;, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ</span>
 
@@ -403,7 +402,7 @@
     <span class="nd">@running_at</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">running_at</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">running_at</span><span class="p">):</span>
         <span class="c1"># type: (datetime) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the running_at of this Task.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the running_at of this Task.</span>
 
 <span class="sd">        Timestamp when the task status changed to \&quot;RUNNING\&quot;, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ</span>
 
@@ -420,7 +419,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">finished_at</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; datetime</span>
-        <span class="sd">&quot;&quot;&quot;Gets the finished_at of this Task.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the finished_at of this Task.</span>
 
 <span class="sd">        Timestamp when the subtask status changed to a final state like &#39;FINISHED&#39;, &#39;ERROR&#39;, &#39;CANCELED&#39;, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ  Note that this timestamp might be inaccurate for tasks which ran prior to the [1.50.0 REST API release](https://bitmovin.com/docs/encoding/changelogs/rest). </span>
 
@@ -432,7 +431,7 @@
     <span class="nd">@finished_at</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">finished_at</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">finished_at</span><span class="p">):</span>
         <span class="c1"># type: (datetime) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the finished_at of this Task.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the finished_at of this Task.</span>
 
 <span class="sd">        Timestamp when the subtask status changed to a final state like &#39;FINISHED&#39;, &#39;ERROR&#39;, &#39;CANCELED&#39;, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ  Note that this timestamp might be inaccurate for tasks which ran prior to the [1.50.0 REST API release](https://bitmovin.com/docs/encoding/changelogs/rest). </span>
 
@@ -449,7 +448,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">error_at</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; datetime</span>
-        <span class="sd">&quot;&quot;&quot;Gets the error_at of this Task.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the error_at of this Task.</span>
 
 <span class="sd">        Timestamp when the subtask status changed to &#39;ERROR&#39;, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ  Note that this timestamp is deprecated and is equivalent to finishedAt in case of an &#39;ERROR&#39;. </span>
 
@@ -461,7 +460,7 @@
     <span class="nd">@error_at</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">error_at</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">error_at</span><span class="p">):</span>
         <span class="c1"># type: (datetime) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the error_at of this Task.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the error_at of this Task.</span>
 
 <span class="sd">        Timestamp when the subtask status changed to &#39;ERROR&#39;, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ  Note that this timestamp is deprecated and is equivalent to finishedAt in case of an &#39;ERROR&#39;. </span>
 
@@ -478,7 +477,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">error</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; ErrorDetails</span>
-        <span class="sd">&quot;&quot;&quot;Gets the error of this Task.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the error of this Task.</span>
 
 <span class="sd">        Additional optional error details</span>
 
@@ -490,7 +489,7 @@
     <span class="nd">@error</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">error</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">error</span><span class="p">):</span>
         <span class="c1"># type: (ErrorDetails) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the error of this Task.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the error of this Task.</span>
 
 <span class="sd">        Additional optional error details</span>
 
@@ -505,7 +504,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_error</span> <span class="o">=</span> <span class="n">error</span>
 
 <div class="viewcode-block" id="Task.to_dict"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.task.Task.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>
         <span class="n">result</span> <span class="o">=</span> <span class="p">{}</span>
 
         <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="nb">super</span><span class="p">(</span><span class="n">Task</span><span class="p">,</span> <span class="bp">self</span><span class="p">),</span> <span class="s2">&quot;to_dict&quot;</span><span class="p">):</span>
@@ -530,22 +529,22 @@
         <span class="k">return</span> <span class="n">result</span></div>
 
 <div class="viewcode-block" id="Task.to_str"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.task.Task.to_str">[docs]</a>    <span class="k">def</span> <span class="nf">to_str</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Returns the string representation of the model&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the string representation of the model&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">pprint</span><span class="o">.</span><span class="n">pformat</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">to_dict</span><span class="p">())</span></div>
 
     <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;For `print` and `pprint`&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;For `print` and `pprint`&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">to_str</span><span class="p">()</span>
 
     <span class="k">def</span> <span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Returns true if both objects are equal&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns true if both objects are equal&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">Task</span><span class="p">):</span>
             <span class="k">return</span> <span class="kc">False</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="vm">__dict__</span>
 
     <span class="k">def</span> <span class="fm">__ne__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Returns true if both objects are not equal&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns true if both objects are not equal&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="ow">not</span> <span class="bp">self</span> <span class="o">==</span> <span class="n">other</span></div>
 </pre></div>
 

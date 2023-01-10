@@ -15,7 +15,6 @@
         <script src="../../../_static/underscore.js"></script>
         <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../../_static/doctools.js"></script>
-        <script src="../../../_static/sphinx_highlight.js"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" /> 
@@ -209,7 +208,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">input_streams</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; list[StreamInput]</span>
-        <span class="sd">&quot;&quot;&quot;Gets the input_streams of this Stream.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the input_streams of this Stream.</span>
 
 <span class="sd">        Determines the input source(s) for the stream. All video streams of an encoding need to have identical input configurations (required)</span>
 
@@ -221,7 +220,7 @@
     <span class="nd">@input_streams</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">input_streams</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_streams</span><span class="p">):</span>
         <span class="c1"># type: (list) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the input_streams of this Stream.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the input_streams of this Stream.</span>
 
 <span class="sd">        Determines the input source(s) for the stream. All video streams of an encoding need to have identical input configurations (required)</span>
 
@@ -238,7 +237,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">outputs</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; list[EncodingOutput]</span>
-        <span class="sd">&quot;&quot;&quot;Gets the outputs of this Stream.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the outputs of this Stream.</span>
 
 
 <span class="sd">        :return: The outputs of this Stream.</span>
@@ -249,7 +248,7 @@
     <span class="nd">@outputs</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">outputs</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">outputs</span><span class="p">):</span>
         <span class="c1"># type: (list) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the outputs of this Stream.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the outputs of this Stream.</span>
 
 
 <span class="sd">        :param outputs: The outputs of this Stream.</span>
@@ -265,7 +264,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">create_quality_meta_data</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; bool</span>
-        <span class="sd">&quot;&quot;&quot;Gets the create_quality_meta_data of this Stream.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the create_quality_meta_data of this Stream.</span>
 
 <span class="sd">        Set true to create quality metadata for this stream</span>
 
@@ -277,7 +276,7 @@
     <span class="nd">@create_quality_meta_data</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">create_quality_meta_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">create_quality_meta_data</span><span class="p">):</span>
         <span class="c1"># type: (bool) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the create_quality_meta_data of this Stream.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the create_quality_meta_data of this Stream.</span>
 
 <span class="sd">        Set true to create quality metadata for this stream</span>
 
@@ -294,7 +293,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">codec_config_id</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; string_types</span>
-        <span class="sd">&quot;&quot;&quot;Gets the codec_config_id of this Stream.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the codec_config_id of this Stream.</span>
 
 <span class="sd">        Id of the codec configuration (required)</span>
 
@@ -306,7 +305,7 @@
     <span class="nd">@codec_config_id</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">codec_config_id</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">codec_config_id</span><span class="p">):</span>
         <span class="c1"># type: (string_types) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the codec_config_id of this Stream.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the codec_config_id of this Stream.</span>
 
 <span class="sd">        Id of the codec configuration (required)</span>
 
@@ -323,7 +322,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">segments_encoded</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
-        <span class="sd">&quot;&quot;&quot;Gets the segments_encoded of this Stream.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the segments_encoded of this Stream.</span>
 
 <span class="sd">        Number of encoded segments. Available after encoding finishes.</span>
 
@@ -335,7 +334,7 @@
     <span class="nd">@segments_encoded</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">segments_encoded</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">segments_encoded</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the segments_encoded of this Stream.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the segments_encoded of this Stream.</span>
 
 <span class="sd">        Number of encoded segments. Available after encoding finishes.</span>
 
@@ -352,7 +351,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">conditions</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; AbstractCondition</span>
-        <span class="sd">&quot;&quot;&quot;Gets the conditions of this Stream.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the conditions of this Stream.</span>
 
 <span class="sd">        Defines a condition that is evaluated against the input of the Stream. If the condition is not fulfilled, the Stream will be ignored during the encoding process. The &#39;streamConditionMode&#39; of a Muxing allows to control how ignored Streams affect the Muxing. When retrieving the resource after the analysis step of the encoding has finished, &#39;ignoredBy&#39; will indicate if and why it has been ignored. See [Stream Conditions](https://bitmovin.com/docs/encoding/articles/stream-conditions) for more information</span>
 
@@ -364,7 +363,7 @@
     <span class="nd">@conditions</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">conditions</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">conditions</span><span class="p">):</span>
         <span class="c1"># type: (AbstractCondition) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the conditions of this Stream.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the conditions of this Stream.</span>
 
 <span class="sd">        Defines a condition that is evaluated against the input of the Stream. If the condition is not fulfilled, the Stream will be ignored during the encoding process. The &#39;streamConditionMode&#39; of a Muxing allows to control how ignored Streams affect the Muxing. When retrieving the resource after the analysis step of the encoding has finished, &#39;ignoredBy&#39; will indicate if and why it has been ignored. See [Stream Conditions](https://bitmovin.com/docs/encoding/articles/stream-conditions) for more information</span>
 
@@ -381,7 +380,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">ignored_by</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; list[Ignoring]</span>
-        <span class="sd">&quot;&quot;&quot;Gets the ignored_by of this Stream.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the ignored_by of this Stream.</span>
 
 <span class="sd">        This read-only property is set during the analysis step of the encoding. If it contains items, the Stream has been ignored during the encoding process due to its &#39;conditions&#39;</span>
 
@@ -393,7 +392,7 @@
     <span class="nd">@ignored_by</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">ignored_by</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ignored_by</span><span class="p">):</span>
         <span class="c1"># type: (list) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the ignored_by of this Stream.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the ignored_by of this Stream.</span>
 
 <span class="sd">        This read-only property is set during the analysis step of the encoding. If it contains items, the Stream has been ignored during the encoding process due to its &#39;conditions&#39;</span>
 
@@ -410,7 +409,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">mode</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; StreamMode</span>
-        <span class="sd">&quot;&quot;&quot;Gets the mode of this Stream.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the mode of this Stream.</span>
 
 <span class="sd">        Mode of the stream</span>
 
@@ -422,7 +421,7 @@
     <span class="nd">@mode</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">mode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mode</span><span class="p">):</span>
         <span class="c1"># type: (StreamMode) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the mode of this Stream.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the mode of this Stream.</span>
 
 <span class="sd">        Mode of the stream</span>
 
@@ -439,7 +438,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">selected_encoding_mode</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; EncodingMode</span>
-        <span class="sd">&quot;&quot;&quot;Gets the selected_encoding_mode of this Stream.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the selected_encoding_mode of this Stream.</span>
 
 <span class="sd">        The encoding mode of the stream which was applied by the assigned codec configuration</span>
 
@@ -451,7 +450,7 @@
     <span class="nd">@selected_encoding_mode</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">selected_encoding_mode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">selected_encoding_mode</span><span class="p">):</span>
         <span class="c1"># type: (EncodingMode) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the selected_encoding_mode of this Stream.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the selected_encoding_mode of this Stream.</span>
 
 <span class="sd">        The encoding mode of the stream which was applied by the assigned codec configuration</span>
 
@@ -468,7 +467,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">per_title_settings</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; StreamPerTitleSettings</span>
-        <span class="sd">&quot;&quot;&quot;Gets the per_title_settings of this Stream.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the per_title_settings of this Stream.</span>
 
 <span class="sd">        Settings to configure Per-Title on stream level</span>
 
@@ -480,7 +479,7 @@
     <span class="nd">@per_title_settings</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">per_title_settings</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">per_title_settings</span><span class="p">):</span>
         <span class="c1"># type: (StreamPerTitleSettings) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the per_title_settings of this Stream.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the per_title_settings of this Stream.</span>
 
 <span class="sd">        Settings to configure Per-Title on stream level</span>
 
@@ -497,7 +496,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">metadata</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; StreamMetadata</span>
-        <span class="sd">&quot;&quot;&quot;Gets the metadata of this Stream.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the metadata of this Stream.</span>
 
 
 <span class="sd">        :return: The metadata of this Stream.</span>
@@ -508,7 +507,7 @@
     <span class="nd">@metadata</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">metadata</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">metadata</span><span class="p">):</span>
         <span class="c1"># type: (StreamMetadata) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the metadata of this Stream.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the metadata of this Stream.</span>
 
 
 <span class="sd">        :param metadata: The metadata of this Stream.</span>
@@ -524,7 +523,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">decoding_error_mode</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; DecodingErrorMode</span>
-        <span class="sd">&quot;&quot;&quot;Gets the decoding_error_mode of this Stream.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the decoding_error_mode of this Stream.</span>
 
 <span class="sd">        Determines how to react to errors during decoding</span>
 
@@ -536,7 +535,7 @@
     <span class="nd">@decoding_error_mode</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">decoding_error_mode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">decoding_error_mode</span><span class="p">):</span>
         <span class="c1"># type: (DecodingErrorMode) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the decoding_error_mode of this Stream.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the decoding_error_mode of this Stream.</span>
 
 <span class="sd">        Determines how to react to errors during decoding</span>
 
@@ -553,7 +552,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">applied_settings</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; AppliedStreamSettings</span>
-        <span class="sd">&quot;&quot;&quot;Gets the applied_settings of this Stream.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the applied_settings of this Stream.</span>
 
 <span class="sd">        Contains stream properties which may not have been defined in the configuration</span>
 
@@ -565,7 +564,7 @@
     <span class="nd">@applied_settings</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">applied_settings</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">applied_settings</span><span class="p">):</span>
         <span class="c1"># type: (AppliedStreamSettings) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the applied_settings of this Stream.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the applied_settings of this Stream.</span>
 
 <span class="sd">        Contains stream properties which may not have been defined in the configuration</span>
 
@@ -580,7 +579,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_applied_settings</span> <span class="o">=</span> <span class="n">applied_settings</span>
 
 <div class="viewcode-block" id="Stream.to_dict"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.stream.Stream.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>
         <span class="n">result</span> <span class="o">=</span> <span class="p">{}</span>
 
         <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="nb">super</span><span class="p">(</span><span class="n">Stream</span><span class="p">,</span> <span class="bp">self</span><span class="p">),</span> <span class="s2">&quot;to_dict&quot;</span><span class="p">):</span>
@@ -605,22 +604,22 @@
         <span class="k">return</span> <span class="n">result</span></div>
 
 <div class="viewcode-block" id="Stream.to_str"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.stream.Stream.to_str">[docs]</a>    <span class="k">def</span> <span class="nf">to_str</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Returns the string representation of the model&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the string representation of the model&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">pprint</span><span class="o">.</span><span class="n">pformat</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">to_dict</span><span class="p">())</span></div>
 
     <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;For `print` and `pprint`&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;For `print` and `pprint`&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">to_str</span><span class="p">()</span>
 
     <span class="k">def</span> <span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Returns true if both objects are equal&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns true if both objects are equal&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">Stream</span><span class="p">):</span>
             <span class="k">return</span> <span class="kc">False</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="vm">__dict__</span>
 
     <span class="k">def</span> <span class="fm">__ne__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Returns true if both objects are not equal&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns true if both objects are not equal&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="ow">not</span> <span class="bp">self</span> <span class="o">==</span> <span class="n">other</span></div>
 </pre></div>
 

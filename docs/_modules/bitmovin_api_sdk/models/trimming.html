@@ -15,7 +15,6 @@
         <script src="../../../_static/underscore.js"></script>
         <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../../_static/doctools.js"></script>
-        <script src="../../../_static/sphinx_highlight.js"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" /> 
@@ -136,7 +135,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">offset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; float</span>
-        <span class="sd">&quot;&quot;&quot;Gets the offset of this Trimming.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the offset of this Trimming.</span>
 
 <span class="sd">        Defines the offset in seconds from which the encoding should start, beginning at 0.</span>
 
@@ -148,7 +147,7 @@
     <span class="nd">@offset</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">offset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">offset</span><span class="p">):</span>
         <span class="c1"># type: (float) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the offset of this Trimming.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the offset of this Trimming.</span>
 
 <span class="sd">        Defines the offset in seconds from which the encoding should start, beginning at 0.</span>
 
@@ -167,7 +166,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">duration</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; float</span>
-        <span class="sd">&quot;&quot;&quot;Gets the duration of this Trimming.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the duration of this Trimming.</span>
 
 <span class="sd">        Defines how many seconds from the input will be encoded. If not set, the input will be encoded until its end.</span>
 
@@ -179,7 +178,7 @@
     <span class="nd">@duration</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">duration</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">duration</span><span class="p">):</span>
         <span class="c1"># type: (float) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the duration of this Trimming.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the duration of this Trimming.</span>
 
 <span class="sd">        Defines how many seconds from the input will be encoded. If not set, the input will be encoded until its end.</span>
 
@@ -198,7 +197,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">ignore_duration_if_input_too_short</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; bool</span>
-        <span class="sd">&quot;&quot;&quot;Gets the ignore_duration_if_input_too_short of this Trimming.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the ignore_duration_if_input_too_short of this Trimming.</span>
 
 <span class="sd">        When true, \&quot;duration\&quot; will be interpreted as a maximum and not cause an error if the input is too short</span>
 
@@ -210,7 +209,7 @@
     <span class="nd">@ignore_duration_if_input_too_short</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">ignore_duration_if_input_too_short</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ignore_duration_if_input_too_short</span><span class="p">):</span>
         <span class="c1"># type: (bool) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the ignore_duration_if_input_too_short of this Trimming.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the ignore_duration_if_input_too_short of this Trimming.</span>
 
 <span class="sd">        When true, \&quot;duration\&quot; will be interpreted as a maximum and not cause an error if the input is too short</span>
 
@@ -227,7 +226,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">start_pic_timing</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; string_types</span>
-        <span class="sd">&quot;&quot;&quot;Gets the start_pic_timing of this Trimming.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the start_pic_timing of this Trimming.</span>
 
 <span class="sd">        Defines the H264 picture timing of the first frame from which the encoding should start. Any defined offset or duration in seconds will be ignored.</span>
 
@@ -239,7 +238,7 @@
     <span class="nd">@start_pic_timing</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">start_pic_timing</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">start_pic_timing</span><span class="p">):</span>
         <span class="c1"># type: (string_types) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the start_pic_timing of this Trimming.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the start_pic_timing of this Trimming.</span>
 
 <span class="sd">        Defines the H264 picture timing of the first frame from which the encoding should start. Any defined offset or duration in seconds will be ignored.</span>
 
@@ -256,7 +255,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">end_pic_timing</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; string_types</span>
-        <span class="sd">&quot;&quot;&quot;Gets the end_pic_timing of this Trimming.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the end_pic_timing of this Trimming.</span>
 
 <span class="sd">        Defines the H264 picture timing of the last frame, that will be included in the encoding. Any defined offset or duration in seconds will be ignored.</span>
 
@@ -268,7 +267,7 @@
     <span class="nd">@end_pic_timing</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">end_pic_timing</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">end_pic_timing</span><span class="p">):</span>
         <span class="c1"># type: (string_types) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the end_pic_timing of this Trimming.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the end_pic_timing of this Trimming.</span>
 
 <span class="sd">        Defines the H264 picture timing of the last frame, that will be included in the encoding. Any defined offset or duration in seconds will be ignored.</span>
 
@@ -283,7 +282,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_end_pic_timing</span> <span class="o">=</span> <span class="n">end_pic_timing</span>
 
 <div class="viewcode-block" id="Trimming.to_dict"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.trimming.Trimming.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>
         <span class="n">result</span> <span class="o">=</span> <span class="p">{}</span>
 
         <span class="k">for</span> <span class="n">attr</span><span class="p">,</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">six</span><span class="o">.</span><span class="n">iteritems</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">openapi_types</span><span class="p">):</span>
@@ -306,22 +305,22 @@
         <span class="k">return</span> <span class="n">result</span></div>
 
 <div class="viewcode-block" id="Trimming.to_str"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.trimming.Trimming.to_str">[docs]</a>    <span class="k">def</span> <span class="nf">to_str</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Returns the string representation of the model&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the string representation of the model&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">pprint</span><span class="o">.</span><span class="n">pformat</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">to_dict</span><span class="p">())</span></div>
 
     <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;For `print` and `pprint`&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;For `print` and `pprint`&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">to_str</span><span class="p">()</span>
 
     <span class="k">def</span> <span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Returns true if both objects are equal&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns true if both objects are equal&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">Trimming</span><span class="p">):</span>
             <span class="k">return</span> <span class="kc">False</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="vm">__dict__</span>
 
     <span class="k">def</span> <span class="fm">__ne__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Returns true if both objects are not equal&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns true if both objects are not equal&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="ow">not</span> <span class="bp">self</span> <span class="o">==</span> <span class="n">other</span></div>
 </pre></div>
 

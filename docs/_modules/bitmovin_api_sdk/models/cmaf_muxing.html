@@ -15,7 +15,6 @@
         <script src="../../../_static/underscore.js"></script>
         <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../../_static/doctools.js"></script>
-        <script src="../../../_static/sphinx_highlight.js"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" /> 
@@ -174,7 +173,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">segment_length</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; float</span>
-        <span class="sd">&quot;&quot;&quot;Gets the segment_length of this CmafMuxing.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the segment_length of this CmafMuxing.</span>
 
 <span class="sd">        Length of the fragments in seconds (required)</span>
 
@@ -186,7 +185,7 @@
     <span class="nd">@segment_length</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">segment_length</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">segment_length</span><span class="p">):</span>
         <span class="c1"># type: (float) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the segment_length of this CmafMuxing.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the segment_length of this CmafMuxing.</span>
 
 <span class="sd">        Length of the fragments in seconds (required)</span>
 
@@ -203,7 +202,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">segment_naming</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; string_types</span>
-        <span class="sd">&quot;&quot;&quot;Gets the segment_naming of this CmafMuxing.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the segment_naming of this CmafMuxing.</span>
 
 <span class="sd">        Segment naming policy</span>
 
@@ -215,7 +214,7 @@
     <span class="nd">@segment_naming</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">segment_naming</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">segment_naming</span><span class="p">):</span>
         <span class="c1"># type: (string_types) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the segment_naming of this CmafMuxing.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the segment_naming of this CmafMuxing.</span>
 
 <span class="sd">        Segment naming policy</span>
 
@@ -232,7 +231,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">segment_naming_template</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; string_types</span>
-        <span class="sd">&quot;&quot;&quot;Gets the segment_naming_template of this CmafMuxing.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the segment_naming_template of this CmafMuxing.</span>
 
 <span class="sd">        Segment naming policy containing a placeholder of the format &#39;{rand_chars:x}&#39;, which will be replaced by a random alphanumeric string of length x (default 32) on each (re)start of the encoding. The resulting string will be copied to the segmentNaming property. Intended to avoid re-use of segment names after restarting a live encoding. If segmentNamingTemplate is set, segmentNaming must not be set.</span>
 
@@ -244,7 +243,7 @@
     <span class="nd">@segment_naming_template</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">segment_naming_template</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">segment_naming_template</span><span class="p">):</span>
         <span class="c1"># type: (string_types) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the segment_naming_template of this CmafMuxing.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the segment_naming_template of this CmafMuxing.</span>
 
 <span class="sd">        Segment naming policy containing a placeholder of the format &#39;{rand_chars:x}&#39;, which will be replaced by a random alphanumeric string of length x (default 32) on each (re)start of the encoding. The resulting string will be copied to the segmentNaming property. Intended to avoid re-use of segment names after restarting a live encoding. If segmentNamingTemplate is set, segmentNaming must not be set.</span>
 
@@ -261,7 +260,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">init_segment_name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; string_types</span>
-        <span class="sd">&quot;&quot;&quot;Gets the init_segment_name of this CmafMuxing.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the init_segment_name of this CmafMuxing.</span>
 
 <span class="sd">        Init segment name</span>
 
@@ -273,7 +272,7 @@
     <span class="nd">@init_segment_name</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">init_segment_name</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">init_segment_name</span><span class="p">):</span>
         <span class="c1"># type: (string_types) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the init_segment_name of this CmafMuxing.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the init_segment_name of this CmafMuxing.</span>
 
 <span class="sd">        Init segment name</span>
 
@@ -290,7 +289,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">init_segment_name_template</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; string_types</span>
-        <span class="sd">&quot;&quot;&quot;Gets the init_segment_name_template of this CmafMuxing.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the init_segment_name_template of this CmafMuxing.</span>
 
 <span class="sd">        Segment naming policy containing a placeholder of the format &#39;{rand_chars:x}&#39;, which will be replaced by a random alphanumeric string of length x (default 32) on each (re)start of the encoding. The resulting string will be copied to the initSegmentName property. Intended to avoid re-use of segment names after restarting a live encoding. If initSegmentNameTemplate is set, initSegmentName must not be set.</span>
 
@@ -302,7 +301,7 @@
     <span class="nd">@init_segment_name_template</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">init_segment_name_template</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">init_segment_name_template</span><span class="p">):</span>
         <span class="c1"># type: (string_types) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the init_segment_name_template of this CmafMuxing.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the init_segment_name_template of this CmafMuxing.</span>
 
 <span class="sd">        Segment naming policy containing a placeholder of the format &#39;{rand_chars:x}&#39;, which will be replaced by a random alphanumeric string of length x (default 32) on each (re)start of the encoding. The resulting string will be copied to the initSegmentName property. Intended to avoid re-use of segment names after restarting a live encoding. If initSegmentNameTemplate is set, initSegmentName must not be set.</span>
 
@@ -319,7 +318,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">segments_muxed</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
-        <span class="sd">&quot;&quot;&quot;Gets the segments_muxed of this CmafMuxing.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the segments_muxed of this CmafMuxing.</span>
 
 <span class="sd">        Number of segments which have been encoded</span>
 
@@ -331,7 +330,7 @@
     <span class="nd">@segments_muxed</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">segments_muxed</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">segments_muxed</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the segments_muxed of this CmafMuxing.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the segments_muxed of this CmafMuxing.</span>
 
 <span class="sd">        Number of segments which have been encoded</span>
 
@@ -348,7 +347,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">frames_per_cmaf_chunk</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
-        <span class="sd">&quot;&quot;&quot;Gets the frames_per_cmaf_chunk of this CmafMuxing.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the frames_per_cmaf_chunk of this CmafMuxing.</span>
 
 <span class="sd">        Number of media frames per CMAF chunk. Defaults to: Length of a segment in frames. Minimum: 1. Maximum: Length of a segment in frames.</span>
 
@@ -360,7 +359,7 @@
     <span class="nd">@frames_per_cmaf_chunk</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">frames_per_cmaf_chunk</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">frames_per_cmaf_chunk</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the frames_per_cmaf_chunk of this CmafMuxing.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the frames_per_cmaf_chunk of this CmafMuxing.</span>
 
 <span class="sd">        Number of media frames per CMAF chunk. Defaults to: Length of a segment in frames. Minimum: 1. Maximum: Length of a segment in frames.</span>
 
@@ -375,7 +374,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_frames_per_cmaf_chunk</span> <span class="o">=</span> <span class="n">frames_per_cmaf_chunk</span>
 
 <div class="viewcode-block" id="CmafMuxing.to_dict"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.cmaf_muxing.CmafMuxing.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>
         <span class="n">result</span> <span class="o">=</span> <span class="p">{}</span>
 
         <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="nb">super</span><span class="p">(</span><span class="n">CmafMuxing</span><span class="p">,</span> <span class="bp">self</span><span class="p">),</span> <span class="s2">&quot;to_dict&quot;</span><span class="p">):</span>
@@ -400,22 +399,22 @@
         <span class="k">return</span> <span class="n">result</span></div>
 
 <div class="viewcode-block" id="CmafMuxing.to_str"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.cmaf_muxing.CmafMuxing.to_str">[docs]</a>    <span class="k">def</span> <span class="nf">to_str</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Returns the string representation of the model&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the string representation of the model&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">pprint</span><span class="o">.</span><span class="n">pformat</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">to_dict</span><span class="p">())</span></div>
 
     <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;For `print` and `pprint`&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;For `print` and `pprint`&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">to_str</span><span class="p">()</span>
 
     <span class="k">def</span> <span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Returns true if both objects are equal&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns true if both objects are equal&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">CmafMuxing</span><span class="p">):</span>
             <span class="k">return</span> <span class="kc">False</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="vm">__dict__</span>
 
     <span class="k">def</span> <span class="fm">__ne__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Returns true if both objects are not equal&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns true if both objects are not equal&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="ow">not</span> <span class="bp">self</span> <span class="o">==</span> <span class="n">other</span></div>
 </pre></div>
 

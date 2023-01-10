@@ -15,7 +15,6 @@
         <script src="../../../_static/underscore.js"></script>
         <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../../_static/doctools.js"></script>
-        <script src="../../../_static/sphinx_highlight.js"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" /> 
@@ -136,7 +135,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">insert_access_unit_delimiter_in_avc</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; bool</span>
-        <span class="sd">&quot;&quot;&quot;Gets the insert_access_unit_delimiter_in_avc of this BroadcastTsVideoInputStreamConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the insert_access_unit_delimiter_in_avc of this BroadcastTsVideoInputStreamConfiguration.</span>
 
 <span class="sd">        If true, add access unit delimiters (AUD) to AVC stream if AUD is missing from input elementary stream.</span>
 
@@ -148,7 +147,7 @@
     <span class="nd">@insert_access_unit_delimiter_in_avc</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">insert_access_unit_delimiter_in_avc</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">insert_access_unit_delimiter_in_avc</span><span class="p">):</span>
         <span class="c1"># type: (bool) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the insert_access_unit_delimiter_in_avc of this BroadcastTsVideoInputStreamConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the insert_access_unit_delimiter_in_avc of this BroadcastTsVideoInputStreamConfiguration.</span>
 
 <span class="sd">        If true, add access unit delimiters (AUD) to AVC stream if AUD is missing from input elementary stream.</span>
 
@@ -165,7 +164,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">max_decode_delay</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
-        <span class="sd">&quot;&quot;&quot;Gets the max_decode_delay of this BroadcastTsVideoInputStreamConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the max_decode_delay of this BroadcastTsVideoInputStreamConfiguration.</span>
 
 <span class="sd">        Maximum Decoder Delay in 90 KHz cycles. When non-zero, the difference between the PCR and the DTS for each picture as it is inserted into the output transport stream is limited to this number of 90 KHz cycles. Values below 1000 are treated as 0 and ignored. Valid Range [0, 1000-900000]</span>
 
@@ -177,7 +176,7 @@
     <span class="nd">@max_decode_delay</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">max_decode_delay</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">max_decode_delay</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the max_decode_delay of this BroadcastTsVideoInputStreamConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the max_decode_delay of this BroadcastTsVideoInputStreamConfiguration.</span>
 
 <span class="sd">        Maximum Decoder Delay in 90 KHz cycles. When non-zero, the difference between the PCR and the DTS for each picture as it is inserted into the output transport stream is limited to this number of 90 KHz cycles. Values below 1000 are treated as 0 and ignored. Valid Range [0, 1000-900000]</span>
 
@@ -196,7 +195,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_max_decode_delay</span> <span class="o">=</span> <span class="n">max_decode_delay</span>
 
 <div class="viewcode-block" id="BroadcastTsVideoInputStreamConfiguration.to_dict"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.broadcast_ts_video_input_stream_configuration.BroadcastTsVideoInputStreamConfiguration.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>
         <span class="n">result</span> <span class="o">=</span> <span class="p">{}</span>
 
         <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="nb">super</span><span class="p">(</span><span class="n">BroadcastTsVideoInputStreamConfiguration</span><span class="p">,</span> <span class="bp">self</span><span class="p">),</span> <span class="s2">&quot;to_dict&quot;</span><span class="p">):</span>
@@ -221,22 +220,22 @@
         <span class="k">return</span> <span class="n">result</span></div>
 
 <div class="viewcode-block" id="BroadcastTsVideoInputStreamConfiguration.to_str"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.broadcast_ts_video_input_stream_configuration.BroadcastTsVideoInputStreamConfiguration.to_str">[docs]</a>    <span class="k">def</span> <span class="nf">to_str</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Returns the string representation of the model&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the string representation of the model&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">pprint</span><span class="o">.</span><span class="n">pformat</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">to_dict</span><span class="p">())</span></div>
 
     <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;For `print` and `pprint`&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;For `print` and `pprint`&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">to_str</span><span class="p">()</span>
 
     <span class="k">def</span> <span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Returns true if both objects are equal&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns true if both objects are equal&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">BroadcastTsVideoInputStreamConfiguration</span><span class="p">):</span>
             <span class="k">return</span> <span class="kc">False</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="vm">__dict__</span>
 
     <span class="k">def</span> <span class="fm">__ne__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Returns true if both objects are not equal&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns true if both objects are not equal&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="ow">not</span> <span class="bp">self</span> <span class="o">==</span> <span class="n">other</span></div>
 </pre></div>
 

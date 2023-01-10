@@ -15,7 +15,6 @@
         <script src="../../../_static/underscore.js"></script>
         <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../../_static/doctools.js"></script>
-        <script src="../../../_static/sphinx_highlight.js"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" /> 
@@ -185,7 +184,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">key</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; string_types</span>
-        <span class="sd">&quot;&quot;&quot;Gets the key of this CencDrm.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the key of this CencDrm.</span>
 
 <span class="sd">        16 byte encryption key, 32 hexadecimal characters (required)</span>
 
@@ -197,7 +196,7 @@
     <span class="nd">@key</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">key</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
         <span class="c1"># type: (string_types) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the key of this CencDrm.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the key of this CencDrm.</span>
 
 <span class="sd">        16 byte encryption key, 32 hexadecimal characters (required)</span>
 
@@ -214,7 +213,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">kid</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; string_types</span>
-        <span class="sd">&quot;&quot;&quot;Gets the kid of this CencDrm.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the kid of this CencDrm.</span>
 
 <span class="sd">        16 byte encryption key id. Required for any other DRM but FairPlay</span>
 
@@ -226,7 +225,7 @@
     <span class="nd">@kid</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">kid</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">kid</span><span class="p">):</span>
         <span class="c1"># type: (string_types) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the kid of this CencDrm.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the kid of this CencDrm.</span>
 
 <span class="sd">        16 byte encryption key id. Required for any other DRM but FairPlay</span>
 
@@ -243,7 +242,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">encryption_mode</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; EncryptionMode</span>
-        <span class="sd">&quot;&quot;&quot;Gets the encryption_mode of this CencDrm.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the encryption_mode of this CencDrm.</span>
 
 <span class="sd">        The encryption method to use. Default is `CTR` (required)</span>
 
@@ -255,7 +254,7 @@
     <span class="nd">@encryption_mode</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">encryption_mode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">encryption_mode</span><span class="p">):</span>
         <span class="c1"># type: (EncryptionMode) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the encryption_mode of this CencDrm.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the encryption_mode of this CencDrm.</span>
 
 <span class="sd">        The encryption method to use. Default is `CTR` (required)</span>
 
@@ -272,7 +271,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">iv_size</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; IvSize</span>
-        <span class="sd">&quot;&quot;&quot;Gets the iv_size of this CencDrm.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the iv_size of this CencDrm.</span>
 
 <span class="sd">        Size of the initialization vector</span>
 
@@ -284,7 +283,7 @@
     <span class="nd">@iv_size</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">iv_size</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">iv_size</span><span class="p">):</span>
         <span class="c1"># type: (IvSize) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the iv_size of this CencDrm.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the iv_size of this CencDrm.</span>
 
 <span class="sd">        Size of the initialization vector</span>
 
@@ -301,7 +300,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">enable_piff_compatibility</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; bool</span>
-        <span class="sd">&quot;&quot;&quot;Gets the enable_piff_compatibility of this CencDrm.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the enable_piff_compatibility of this CencDrm.</span>
 
 <span class="sd">        Enables compatibility with the Protected Interoperable File Format (PIFF) specification</span>
 
@@ -313,7 +312,7 @@
     <span class="nd">@enable_piff_compatibility</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">enable_piff_compatibility</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">enable_piff_compatibility</span><span class="p">):</span>
         <span class="c1"># type: (bool) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the enable_piff_compatibility of this CencDrm.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the enable_piff_compatibility of this CencDrm.</span>
 
 <span class="sd">        Enables compatibility with the Protected Interoperable File Format (PIFF) specification</span>
 
@@ -330,7 +329,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">widevine</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; CencWidevine</span>
-        <span class="sd">&quot;&quot;&quot;Gets the widevine of this CencDrm.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the widevine of this CencDrm.</span>
 
 <span class="sd">        Configuration for Widevine DRM</span>
 
@@ -342,7 +341,7 @@
     <span class="nd">@widevine</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">widevine</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">widevine</span><span class="p">):</span>
         <span class="c1"># type: (CencWidevine) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the widevine of this CencDrm.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the widevine of this CencDrm.</span>
 
 <span class="sd">        Configuration for Widevine DRM</span>
 
@@ -359,7 +358,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">play_ready</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; CencPlayReady</span>
-        <span class="sd">&quot;&quot;&quot;Gets the play_ready of this CencDrm.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the play_ready of this CencDrm.</span>
 
 <span class="sd">        Configuration for PlayReady DRM</span>
 
@@ -371,7 +370,7 @@
     <span class="nd">@play_ready</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">play_ready</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">play_ready</span><span class="p">):</span>
         <span class="c1"># type: (CencPlayReady) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the play_ready of this CencDrm.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the play_ready of this CencDrm.</span>
 
 <span class="sd">        Configuration for PlayReady DRM</span>
 
@@ -388,7 +387,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">marlin</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; CencMarlin</span>
-        <span class="sd">&quot;&quot;&quot;Gets the marlin of this CencDrm.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the marlin of this CencDrm.</span>
 
 <span class="sd">        Configuration for Marlin DRM</span>
 
@@ -400,7 +399,7 @@
     <span class="nd">@marlin</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">marlin</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">marlin</span><span class="p">):</span>
         <span class="c1"># type: (CencMarlin) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the marlin of this CencDrm.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the marlin of this CencDrm.</span>
 
 <span class="sd">        Configuration for Marlin DRM</span>
 
@@ -417,7 +416,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">fair_play</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; CencFairPlay</span>
-        <span class="sd">&quot;&quot;&quot;Gets the fair_play of this CencDrm.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the fair_play of this CencDrm.</span>
 
 <span class="sd">        Configuration for FairPlay DRM</span>
 
@@ -429,7 +428,7 @@
     <span class="nd">@fair_play</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">fair_play</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fair_play</span><span class="p">):</span>
         <span class="c1"># type: (CencFairPlay) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the fair_play of this CencDrm.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the fair_play of this CencDrm.</span>
 
 <span class="sd">        Configuration for FairPlay DRM</span>
 
@@ -444,7 +443,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_fair_play</span> <span class="o">=</span> <span class="n">fair_play</span>
 
 <div class="viewcode-block" id="CencDrm.to_dict"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.cenc_drm.CencDrm.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>
         <span class="n">result</span> <span class="o">=</span> <span class="p">{}</span>
 
         <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="nb">super</span><span class="p">(</span><span class="n">CencDrm</span><span class="p">,</span> <span class="bp">self</span><span class="p">),</span> <span class="s2">&quot;to_dict&quot;</span><span class="p">):</span>
@@ -469,22 +468,22 @@
         <span class="k">return</span> <span class="n">result</span></div>
 
 <div class="viewcode-block" id="CencDrm.to_str"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.cenc_drm.CencDrm.to_str">[docs]</a>    <span class="k">def</span> <span class="nf">to_str</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Returns the string representation of the model&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the string representation of the model&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">pprint</span><span class="o">.</span><span class="n">pformat</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">to_dict</span><span class="p">())</span></div>
 
     <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;For `print` and `pprint`&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;For `print` and `pprint`&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">to_str</span><span class="p">()</span>
 
     <span class="k">def</span> <span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Returns true if both objects are equal&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns true if both objects are equal&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">CencDrm</span><span class="p">):</span>
             <span class="k">return</span> <span class="kc">False</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="vm">__dict__</span>
 
     <span class="k">def</span> <span class="fm">__ne__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Returns true if both objects are not equal&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns true if both objects are not equal&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="ow">not</span> <span class="bp">self</span> <span class="o">==</span> <span class="n">other</span></div>
 </pre></div>
 

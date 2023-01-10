@@ -15,7 +15,6 @@
         <script src="../../../_static/underscore.js"></script>
         <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../../_static/doctools.js"></script>
-        <script src="../../../_static/sphinx_highlight.js"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" /> 
@@ -150,7 +149,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">min_bitrate</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
-        <span class="sd">&quot;&quot;&quot;Gets the min_bitrate of this PerTitleConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the min_bitrate of this PerTitleConfiguration.</span>
 
 <span class="sd">        The minimum bitrate that will be used by the Per-Title algorithm.</span>
 
@@ -162,7 +161,7 @@
     <span class="nd">@min_bitrate</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">min_bitrate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">min_bitrate</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the min_bitrate of this PerTitleConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the min_bitrate of this PerTitleConfiguration.</span>
 
 <span class="sd">        The minimum bitrate that will be used by the Per-Title algorithm.</span>
 
@@ -179,7 +178,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">max_bitrate</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
-        <span class="sd">&quot;&quot;&quot;Gets the max_bitrate of this PerTitleConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the max_bitrate of this PerTitleConfiguration.</span>
 
 <span class="sd">        The maximum bitrate that will be used by the Per-Title algorithm. It will not generate any rendition with a higher bitrate.</span>
 
@@ -191,7 +190,7 @@
     <span class="nd">@max_bitrate</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">max_bitrate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">max_bitrate</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the max_bitrate of this PerTitleConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the max_bitrate of this PerTitleConfiguration.</span>
 
 <span class="sd">        The maximum bitrate that will be used by the Per-Title algorithm. It will not generate any rendition with a higher bitrate.</span>
 
@@ -208,7 +207,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">min_bitrate_step_size</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; float</span>
-        <span class="sd">&quot;&quot;&quot;Gets the min_bitrate_step_size of this PerTitleConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the min_bitrate_step_size of this PerTitleConfiguration.</span>
 
 <span class="sd">        The minimum ratio between the bitrates of generated renditions, e.g. if the first bitrate is 240,000, a minimum ratio of 1.5 will require the next higher bitrate to be at least 360,000</span>
 
@@ -220,7 +219,7 @@
     <span class="nd">@min_bitrate_step_size</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">min_bitrate_step_size</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">min_bitrate_step_size</span><span class="p">):</span>
         <span class="c1"># type: (float) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the min_bitrate_step_size of this PerTitleConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the min_bitrate_step_size of this PerTitleConfiguration.</span>
 
 <span class="sd">        The minimum ratio between the bitrates of generated renditions, e.g. if the first bitrate is 240,000, a minimum ratio of 1.5 will require the next higher bitrate to be at least 360,000</span>
 
@@ -237,7 +236,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">max_bitrate_step_size</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; float</span>
-        <span class="sd">&quot;&quot;&quot;Gets the max_bitrate_step_size of this PerTitleConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the max_bitrate_step_size of this PerTitleConfiguration.</span>
 
 <span class="sd">        The maximum ratio between the bitrates of neighbouring renditions, e.g., if the first bitrate is 240,000, a maximum ratio of 1.5 will require the next higher bitrate to be at most 360,000</span>
 
@@ -249,7 +248,7 @@
     <span class="nd">@max_bitrate_step_size</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">max_bitrate_step_size</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">max_bitrate_step_size</span><span class="p">):</span>
         <span class="c1"># type: (float) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the max_bitrate_step_size of this PerTitleConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the max_bitrate_step_size of this PerTitleConfiguration.</span>
 
 <span class="sd">        The maximum ratio between the bitrates of neighbouring renditions, e.g., if the first bitrate is 240,000, a maximum ratio of 1.5 will require the next higher bitrate to be at most 360,000</span>
 
@@ -266,7 +265,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">auto_representations</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; AutoRepresentation</span>
-        <span class="sd">&quot;&quot;&quot;Gets the auto_representations of this PerTitleConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the auto_representations of this PerTitleConfiguration.</span>
 
 
 <span class="sd">        :return: The auto_representations of this PerTitleConfiguration.</span>
@@ -277,7 +276,7 @@
     <span class="nd">@auto_representations</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">auto_representations</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">auto_representations</span><span class="p">):</span>
         <span class="c1"># type: (AutoRepresentation) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the auto_representations of this PerTitleConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the auto_representations of this PerTitleConfiguration.</span>
 
 
 <span class="sd">        :param auto_representations: The auto_representations of this PerTitleConfiguration.</span>
@@ -293,7 +292,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">complexity_factor</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; float</span>
-        <span class="sd">&quot;&quot;&quot;Gets the complexity_factor of this PerTitleConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the complexity_factor of this PerTitleConfiguration.</span>
 
 <span class="sd">        Will modify the assumed complexity for the Per-Title algorithm (&gt; 0.0). Values higher than 1 will increase complexity and thus select smaller resolutions for given bitrates. This will also result in a higher bitrate for the top rendition. Values lower than 1 will decrease assumed complexity and thus select higher resolutions for given bitrates and also decrease the bitrate of the top rendition</span>
 
@@ -305,7 +304,7 @@
     <span class="nd">@complexity_factor</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">complexity_factor</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">complexity_factor</span><span class="p">):</span>
         <span class="c1"># type: (float) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the complexity_factor of this PerTitleConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the complexity_factor of this PerTitleConfiguration.</span>
 
 <span class="sd">        Will modify the assumed complexity for the Per-Title algorithm (&gt; 0.0). Values higher than 1 will increase complexity and thus select smaller resolutions for given bitrates. This will also result in a higher bitrate for the top rendition. Values lower than 1 will decrease assumed complexity and thus select higher resolutions for given bitrates and also decrease the bitrate of the top rendition</span>
 
@@ -324,7 +323,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">fixed_resolution_and_bitrate_configuration</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; PerTitleFixedResolutionAndBitrateConfiguration</span>
-        <span class="sd">&quot;&quot;&quot;Gets the fixed_resolution_and_bitrate_configuration of this PerTitleConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the fixed_resolution_and_bitrate_configuration of this PerTitleConfiguration.</span>
 
 <span class="sd">        Additional configuration for fixed resolution and bitrate templates</span>
 
@@ -336,7 +335,7 @@
     <span class="nd">@fixed_resolution_and_bitrate_configuration</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">fixed_resolution_and_bitrate_configuration</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fixed_resolution_and_bitrate_configuration</span><span class="p">):</span>
         <span class="c1"># type: (PerTitleFixedResolutionAndBitrateConfiguration) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the fixed_resolution_and_bitrate_configuration of this PerTitleConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the fixed_resolution_and_bitrate_configuration of this PerTitleConfiguration.</span>
 
 <span class="sd">        Additional configuration for fixed resolution and bitrate templates</span>
 
@@ -351,7 +350,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_fixed_resolution_and_bitrate_configuration</span> <span class="o">=</span> <span class="n">fixed_resolution_and_bitrate_configuration</span>
 
 <div class="viewcode-block" id="PerTitleConfiguration.to_dict"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.per_title_configuration.PerTitleConfiguration.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>
         <span class="n">result</span> <span class="o">=</span> <span class="p">{}</span>
 
         <span class="k">for</span> <span class="n">attr</span><span class="p">,</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">six</span><span class="o">.</span><span class="n">iteritems</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">openapi_types</span><span class="p">):</span>
@@ -374,22 +373,22 @@
         <span class="k">return</span> <span class="n">result</span></div>
 
 <div class="viewcode-block" id="PerTitleConfiguration.to_str"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.per_title_configuration.PerTitleConfiguration.to_str">[docs]</a>    <span class="k">def</span> <span class="nf">to_str</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Returns the string representation of the model&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the string representation of the model&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">pprint</span><span class="o">.</span><span class="n">pformat</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">to_dict</span><span class="p">())</span></div>
 
     <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;For `print` and `pprint`&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;For `print` and `pprint`&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">to_str</span><span class="p">()</span>
 
     <span class="k">def</span> <span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Returns true if both objects are equal&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns true if both objects are equal&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">PerTitleConfiguration</span><span class="p">):</span>
             <span class="k">return</span> <span class="kc">False</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="vm">__dict__</span>
 
     <span class="k">def</span> <span class="fm">__ne__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Returns true if both objects are not equal&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns true if both objects are not equal&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="ow">not</span> <span class="bp">self</span> <span class="o">==</span> <span class="n">other</span></div>
 </pre></div>
 

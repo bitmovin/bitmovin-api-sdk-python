@@ -15,7 +15,6 @@
         <script src="../../../_static/underscore.js"></script>
         <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../../_static/doctools.js"></script>
-        <script src="../../../_static/sphinx_highlight.js"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" /> 
@@ -161,7 +160,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">profile</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; DashProfile</span>
-        <span class="sd">&quot;&quot;&quot;Gets the profile of this DashManifest.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the profile of this DashManifest.</span>
 
 
 <span class="sd">        :return: The profile of this DashManifest.</span>
@@ -172,7 +171,7 @@
     <span class="nd">@profile</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">profile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">profile</span><span class="p">):</span>
         <span class="c1"># type: (DashProfile) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the profile of this DashManifest.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the profile of this DashManifest.</span>
 
 
 <span class="sd">        :param profile: The profile of this DashManifest.</span>
@@ -188,7 +187,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">manifest_name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; string_types</span>
-        <span class="sd">&quot;&quot;&quot;Gets the manifest_name of this DashManifest.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the manifest_name of this DashManifest.</span>
 
 <span class="sd">        The filename of your manifest</span>
 
@@ -200,7 +199,7 @@
     <span class="nd">@manifest_name</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">manifest_name</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">manifest_name</span><span class="p">):</span>
         <span class="c1"># type: (string_types) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the manifest_name of this DashManifest.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the manifest_name of this DashManifest.</span>
 
 <span class="sd">        The filename of your manifest</span>
 
@@ -217,7 +216,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">namespaces</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; list[XmlNamespace]</span>
-        <span class="sd">&quot;&quot;&quot;Gets the namespaces of this DashManifest.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the namespaces of this DashManifest.</span>
 
 <span class="sd">        List of additional XML namespaces to add to the DASH Manifest</span>
 
@@ -229,7 +228,7 @@
     <span class="nd">@namespaces</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">namespaces</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">namespaces</span><span class="p">):</span>
         <span class="c1"># type: (list) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the namespaces of this DashManifest.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the namespaces of this DashManifest.</span>
 
 <span class="sd">        List of additional XML namespaces to add to the DASH Manifest</span>
 
@@ -246,7 +245,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">utc_timings</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; list[UtcTiming]</span>
-        <span class="sd">&quot;&quot;&quot;Gets the utc_timings of this DashManifest.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the utc_timings of this DashManifest.</span>
 
 <span class="sd">        List of UTC Timings to use for live streaming</span>
 
@@ -258,7 +257,7 @@
     <span class="nd">@utc_timings</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">utc_timings</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">utc_timings</span><span class="p">):</span>
         <span class="c1"># type: (list) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the utc_timings of this DashManifest.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the utc_timings of this DashManifest.</span>
 
 <span class="sd">        List of UTC Timings to use for live streaming</span>
 
@@ -275,7 +274,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">dash_edition_compatibility</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; DashEditionCompatibility</span>
-        <span class="sd">&quot;&quot;&quot;Gets the dash_edition_compatibility of this DashManifest.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the dash_edition_compatibility of this DashManifest.</span>
 
 <span class="sd">        The manifest compatibility with the standard DASH Edition.</span>
 
@@ -287,7 +286,7 @@
     <span class="nd">@dash_edition_compatibility</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">dash_edition_compatibility</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dash_edition_compatibility</span><span class="p">):</span>
         <span class="c1"># type: (DashEditionCompatibility) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the dash_edition_compatibility of this DashManifest.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the dash_edition_compatibility of this DashManifest.</span>
 
 <span class="sd">        The manifest compatibility with the standard DASH Edition.</span>
 
@@ -302,7 +301,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_dash_edition_compatibility</span> <span class="o">=</span> <span class="n">dash_edition_compatibility</span>
 
 <div class="viewcode-block" id="DashManifest.to_dict"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.dash_manifest.DashManifest.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>
         <span class="n">result</span> <span class="o">=</span> <span class="p">{}</span>
 
         <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="nb">super</span><span class="p">(</span><span class="n">DashManifest</span><span class="p">,</span> <span class="bp">self</span><span class="p">),</span> <span class="s2">&quot;to_dict&quot;</span><span class="p">):</span>
@@ -327,22 +326,22 @@
         <span class="k">return</span> <span class="n">result</span></div>
 
 <div class="viewcode-block" id="DashManifest.to_str"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.dash_manifest.DashManifest.to_str">[docs]</a>    <span class="k">def</span> <span class="nf">to_str</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Returns the string representation of the model&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the string representation of the model&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">pprint</span><span class="o">.</span><span class="n">pformat</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">to_dict</span><span class="p">())</span></div>
 
     <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;For `print` and `pprint`&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;For `print` and `pprint`&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">to_str</span><span class="p">()</span>
 
     <span class="k">def</span> <span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Returns true if both objects are equal&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns true if both objects are equal&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">DashManifest</span><span class="p">):</span>
             <span class="k">return</span> <span class="kc">False</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="vm">__dict__</span>
 
     <span class="k">def</span> <span class="fm">__ne__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Returns true if both objects are not equal&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns true if both objects are not equal&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="ow">not</span> <span class="bp">self</span> <span class="o">==</span> <span class="n">other</span></div>
 </pre></div>
 

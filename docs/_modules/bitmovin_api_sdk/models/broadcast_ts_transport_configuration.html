@@ -15,7 +15,6 @@
         <script src="../../../_static/underscore.js"></script>
         <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../../_static/doctools.js"></script>
-        <script src="../../../_static/sphinx_highlight.js"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" /> 
@@ -154,7 +153,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">muxrate</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; float</span>
-        <span class="sd">&quot;&quot;&quot;Gets the muxrate of this BroadcastTsTransportConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the muxrate of this BroadcastTsTransportConfiguration.</span>
 
 <span class="sd">        Output rate in bps. The value zero implies to use minimal rate. The minimal rate leaves approximately 15kbps of null packets in the stream.</span>
 
@@ -166,7 +165,7 @@
     <span class="nd">@muxrate</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">muxrate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">muxrate</span><span class="p">):</span>
         <span class="c1"># type: (float) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the muxrate of this BroadcastTsTransportConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the muxrate of this BroadcastTsTransportConfiguration.</span>
 
 <span class="sd">        Output rate in bps. The value zero implies to use minimal rate. The minimal rate leaves approximately 15kbps of null packets in the stream.</span>
 
@@ -187,7 +186,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">stop_on_error</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; bool</span>
-        <span class="sd">&quot;&quot;&quot;Gets the stop_on_error of this BroadcastTsTransportConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the stop_on_error of this BroadcastTsTransportConfiguration.</span>
 
 <span class="sd">        Stop mux on errors. If true, implies halt multiplexing when any error is encountered. If false, errors are ignored and multiplexing continues. Note that the recovery from an error will usually result in an illegal transport stream and artifacts on a decoder.</span>
 
@@ -199,7 +198,7 @@
     <span class="nd">@stop_on_error</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">stop_on_error</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">stop_on_error</span><span class="p">):</span>
         <span class="c1"># type: (bool) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the stop_on_error of this BroadcastTsTransportConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the stop_on_error of this BroadcastTsTransportConfiguration.</span>
 
 <span class="sd">        Stop mux on errors. If true, implies halt multiplexing when any error is encountered. If false, errors are ignored and multiplexing continues. Note that the recovery from an error will usually result in an illegal transport stream and artifacts on a decoder.</span>
 
@@ -216,7 +215,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">prevent_empty_adaption_fields_in_video</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; bool</span>
-        <span class="sd">&quot;&quot;&quot;Gets the prevent_empty_adaption_fields_in_video of this BroadcastTsTransportConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the prevent_empty_adaption_fields_in_video of this BroadcastTsTransportConfiguration.</span>
 
 <span class="sd">        If true, prevents adaptation fields with length field equal to zero in video, i.e., zero-length AF. Please note that this condition can only occur when pesAlign for the input stream is set to true.</span>
 
@@ -228,7 +227,7 @@
     <span class="nd">@prevent_empty_adaption_fields_in_video</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">prevent_empty_adaption_fields_in_video</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">prevent_empty_adaption_fields_in_video</span><span class="p">):</span>
         <span class="c1"># type: (bool) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the prevent_empty_adaption_fields_in_video of this BroadcastTsTransportConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the prevent_empty_adaption_fields_in_video of this BroadcastTsTransportConfiguration.</span>
 
 <span class="sd">        If true, prevents adaptation fields with length field equal to zero in video, i.e., zero-length AF. Please note that this condition can only occur when pesAlign for the input stream is set to true.</span>
 
@@ -245,7 +244,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">pat_repetition_rate_per_sec</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; float</span>
-        <span class="sd">&quot;&quot;&quot;Gets the pat_repetition_rate_per_sec of this BroadcastTsTransportConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the pat_repetition_rate_per_sec of this BroadcastTsTransportConfiguration.</span>
 
 <span class="sd">        Program Association Table (PAT) repetition rate per second. Number of PATs per second.</span>
 
@@ -257,7 +256,7 @@
     <span class="nd">@pat_repetition_rate_per_sec</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">pat_repetition_rate_per_sec</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pat_repetition_rate_per_sec</span><span class="p">):</span>
         <span class="c1"># type: (float) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the pat_repetition_rate_per_sec of this BroadcastTsTransportConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the pat_repetition_rate_per_sec of this BroadcastTsTransportConfiguration.</span>
 
 <span class="sd">        Program Association Table (PAT) repetition rate per second. Number of PATs per second.</span>
 
@@ -278,7 +277,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">pmt_repetition_rate_per_sec</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; float</span>
-        <span class="sd">&quot;&quot;&quot;Gets the pmt_repetition_rate_per_sec of this BroadcastTsTransportConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the pmt_repetition_rate_per_sec of this BroadcastTsTransportConfiguration.</span>
 
 <span class="sd">        Program Map Table (PMT) repetition rate per second. Number of PMTs for each program per second.</span>
 
@@ -290,7 +289,7 @@
     <span class="nd">@pmt_repetition_rate_per_sec</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">pmt_repetition_rate_per_sec</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pmt_repetition_rate_per_sec</span><span class="p">):</span>
         <span class="c1"># type: (float) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the pmt_repetition_rate_per_sec of this BroadcastTsTransportConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the pmt_repetition_rate_per_sec of this BroadcastTsTransportConfiguration.</span>
 
 <span class="sd">        Program Map Table (PMT) repetition rate per second. Number of PMTs for each program per second.</span>
 
@@ -311,7 +310,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">variable_mux_rate</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; bool</span>
-        <span class="sd">&quot;&quot;&quot;Gets the variable_mux_rate of this BroadcastTsTransportConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the variable_mux_rate of this BroadcastTsTransportConfiguration.</span>
 
 <span class="sd">        When false, the output stream is created at a constant bit rate. When true, the output rate is allowed to vary from a maximum rate set by the muxrate parameter down to the minimum required to carry the stream.</span>
 
@@ -323,7 +322,7 @@
     <span class="nd">@variable_mux_rate</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">variable_mux_rate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">variable_mux_rate</span><span class="p">):</span>
         <span class="c1"># type: (bool) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the variable_mux_rate of this BroadcastTsTransportConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the variable_mux_rate of this BroadcastTsTransportConfiguration.</span>
 
 <span class="sd">        When false, the output stream is created at a constant bit rate. When true, the output rate is allowed to vary from a maximum rate set by the muxrate parameter down to the minimum required to carry the stream.</span>
 
@@ -340,7 +339,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">initial_presentation_time_stamp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; float</span>
-        <span class="sd">&quot;&quot;&quot;Gets the initial_presentation_time_stamp of this BroadcastTsTransportConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the initial_presentation_time_stamp of this BroadcastTsTransportConfiguration.</span>
 
 <span class="sd">        Presentation time stamp value for the first video frame. The timestamp is specified in the timescale of 90000</span>
 
@@ -352,7 +351,7 @@
     <span class="nd">@initial_presentation_time_stamp</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">initial_presentation_time_stamp</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">initial_presentation_time_stamp</span><span class="p">):</span>
         <span class="c1"># type: (float) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the initial_presentation_time_stamp of this BroadcastTsTransportConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the initial_presentation_time_stamp of this BroadcastTsTransportConfiguration.</span>
 
 <span class="sd">        Presentation time stamp value for the first video frame. The timestamp is specified in the timescale of 90000</span>
 
@@ -373,7 +372,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">initial_program_clock_reference</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; float</span>
-        <span class="sd">&quot;&quot;&quot;Gets the initial_program_clock_reference of this BroadcastTsTransportConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the initial_program_clock_reference of this BroadcastTsTransportConfiguration.</span>
 
 <span class="sd">        Program Clock Reference value at the beginning of the first packet for the transport stream. The PCR is specified in the timescale of 90000</span>
 
@@ -385,7 +384,7 @@
     <span class="nd">@initial_program_clock_reference</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">initial_program_clock_reference</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">initial_program_clock_reference</span><span class="p">):</span>
         <span class="c1"># type: (float) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the initial_program_clock_reference of this BroadcastTsTransportConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the initial_program_clock_reference of this BroadcastTsTransportConfiguration.</span>
 
 <span class="sd">        Program Clock Reference value at the beginning of the first packet for the transport stream. The PCR is specified in the timescale of 90000</span>
 
@@ -404,7 +403,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_initial_program_clock_reference</span> <span class="o">=</span> <span class="n">initial_program_clock_reference</span>
 
 <div class="viewcode-block" id="BroadcastTsTransportConfiguration.to_dict"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.broadcast_ts_transport_configuration.BroadcastTsTransportConfiguration.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>
         <span class="n">result</span> <span class="o">=</span> <span class="p">{}</span>
 
         <span class="k">for</span> <span class="n">attr</span><span class="p">,</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">six</span><span class="o">.</span><span class="n">iteritems</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">openapi_types</span><span class="p">):</span>
@@ -427,22 +426,22 @@
         <span class="k">return</span> <span class="n">result</span></div>
 
 <div class="viewcode-block" id="BroadcastTsTransportConfiguration.to_str"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.broadcast_ts_transport_configuration.BroadcastTsTransportConfiguration.to_str">[docs]</a>    <span class="k">def</span> <span class="nf">to_str</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Returns the string representation of the model&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the string representation of the model&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">pprint</span><span class="o">.</span><span class="n">pformat</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">to_dict</span><span class="p">())</span></div>
 
     <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;For `print` and `pprint`&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;For `print` and `pprint`&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">to_str</span><span class="p">()</span>
 
     <span class="k">def</span> <span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Returns true if both objects are equal&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns true if both objects are equal&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">BroadcastTsTransportConfiguration</span><span class="p">):</span>
             <span class="k">return</span> <span class="kc">False</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="vm">__dict__</span>
 
     <span class="k">def</span> <span class="fm">__ne__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Returns true if both objects are not equal&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns true if both objects are not equal&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="ow">not</span> <span class="bp">self</span> <span class="o">==</span> <span class="n">other</span></div>
 </pre></div>
 

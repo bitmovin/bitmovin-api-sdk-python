@@ -15,7 +15,6 @@
         <script src="../../../_static/underscore.js"></script>
         <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../../_static/doctools.js"></script>
-        <script src="../../../_static/sphinx_highlight.js"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" /> 
@@ -196,7 +195,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">preset_configuration</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; H262PresetConfiguration</span>
-        <span class="sd">&quot;&quot;&quot;Gets the preset_configuration of this H262VideoConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the preset_configuration of this H262VideoConfiguration.</span>
 
 <span class="sd">        Use a set of well defined configurations preset to support certain use cases. Can be overwritten with more specific values.</span>
 
@@ -208,7 +207,7 @@
     <span class="nd">@preset_configuration</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">preset_configuration</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">preset_configuration</span><span class="p">):</span>
         <span class="c1"># type: (H262PresetConfiguration) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the preset_configuration of this H262VideoConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the preset_configuration of this H262VideoConfiguration.</span>
 
 <span class="sd">        Use a set of well defined configurations preset to support certain use cases. Can be overwritten with more specific values.</span>
 
@@ -225,7 +224,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">profile</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; ProfileH262</span>
-        <span class="sd">&quot;&quot;&quot;Gets the profile of this H262VideoConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the profile of this H262VideoConfiguration.</span>
 
 <span class="sd">        When setting a profile, all other settings must not exceed the limits which are defined in the profile. Otherwise, a higher profile may be automatically chosen. (required)</span>
 
@@ -237,7 +236,7 @@
     <span class="nd">@profile</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">profile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">profile</span><span class="p">):</span>
         <span class="c1"># type: (ProfileH262) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the profile of this H262VideoConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the profile of this H262VideoConfiguration.</span>
 
 <span class="sd">        When setting a profile, all other settings must not exceed the limits which are defined in the profile. Otherwise, a higher profile may be automatically chosen. (required)</span>
 
@@ -254,7 +253,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">bframes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
-        <span class="sd">&quot;&quot;&quot;Gets the bframes of this H262VideoConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the bframes of this H262VideoConfiguration.</span>
 
 <span class="sd">        Amount of b frames.</span>
 
@@ -266,7 +265,7 @@
     <span class="nd">@bframes</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">bframes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bframes</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the bframes of this H262VideoConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the bframes of this H262VideoConfiguration.</span>
 
 <span class="sd">        Amount of b frames.</span>
 
@@ -287,7 +286,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">max_bitrate</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
-        <span class="sd">&quot;&quot;&quot;Gets the max_bitrate of this H262VideoConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the max_bitrate of this H262VideoConfiguration.</span>
 
 <span class="sd">        Maximum Bitrate</span>
 
@@ -299,7 +298,7 @@
     <span class="nd">@max_bitrate</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">max_bitrate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">max_bitrate</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the max_bitrate of this H262VideoConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the max_bitrate of this H262VideoConfiguration.</span>
 
 <span class="sd">        Maximum Bitrate</span>
 
@@ -316,7 +315,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">min_bitrate</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
-        <span class="sd">&quot;&quot;&quot;Gets the min_bitrate of this H262VideoConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the min_bitrate of this H262VideoConfiguration.</span>
 
 <span class="sd">        Minimum Bitrate</span>
 
@@ -328,7 +327,7 @@
     <span class="nd">@min_bitrate</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">min_bitrate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">min_bitrate</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the min_bitrate of this H262VideoConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the min_bitrate of this H262VideoConfiguration.</span>
 
 <span class="sd">        Minimum Bitrate</span>
 
@@ -345,7 +344,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">bufsize</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
-        <span class="sd">&quot;&quot;&quot;Gets the bufsize of this H262VideoConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the bufsize of this H262VideoConfiguration.</span>
 
 <span class="sd">        Playback device buffer size</span>
 
@@ -357,7 +356,7 @@
     <span class="nd">@bufsize</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">bufsize</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bufsize</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the bufsize of this H262VideoConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the bufsize of this H262VideoConfiguration.</span>
 
 <span class="sd">        Playback device buffer size</span>
 
@@ -374,7 +373,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">gop_size</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
-        <span class="sd">&quot;&quot;&quot;Gets the gop_size of this H262VideoConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the gop_size of this H262VideoConfiguration.</span>
 
 <span class="sd">        Minimum GOP length, the minimum distance between I-frames</span>
 
@@ -386,7 +385,7 @@
     <span class="nd">@gop_size</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">gop_size</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">gop_size</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the gop_size of this H262VideoConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the gop_size of this H262VideoConfiguration.</span>
 
 <span class="sd">        Minimum GOP length, the minimum distance between I-frames</span>
 
@@ -403,7 +402,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">level</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; LevelH262</span>
-        <span class="sd">&quot;&quot;&quot;Gets the level of this H262VideoConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the level of this H262VideoConfiguration.</span>
 
 <span class="sd">        Specified set of constraints that indicate a degree of required decoder performance for a profile</span>
 
@@ -415,7 +414,7 @@
     <span class="nd">@level</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">level</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">level</span><span class="p">):</span>
         <span class="c1"># type: (LevelH262) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the level of this H262VideoConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the level of this H262VideoConfiguration.</span>
 
 <span class="sd">        Specified set of constraints that indicate a degree of required decoder performance for a profile</span>
 
@@ -432,7 +431,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">interlace_mode</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; H262InterlaceMode</span>
-        <span class="sd">&quot;&quot;&quot;Gets the interlace_mode of this H262VideoConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the interlace_mode of this H262VideoConfiguration.</span>
 
 <span class="sd">        Using TOP_FIELD_FIRST or BOTTOM_FIELD_FIRST will output interlaced video</span>
 
@@ -444,7 +443,7 @@
     <span class="nd">@interlace_mode</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">interlace_mode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">interlace_mode</span><span class="p">):</span>
         <span class="c1"># type: (H262InterlaceMode) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the interlace_mode of this H262VideoConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the interlace_mode of this H262VideoConfiguration.</span>
 
 <span class="sd">        Using TOP_FIELD_FIRST or BOTTOM_FIELD_FIRST will output interlaced video</span>
 
@@ -459,7 +458,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_interlace_mode</span> <span class="o">=</span> <span class="n">interlace_mode</span>
 
 <div class="viewcode-block" id="H262VideoConfiguration.to_dict"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.h262_video_configuration.H262VideoConfiguration.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>
         <span class="n">result</span> <span class="o">=</span> <span class="p">{}</span>
 
         <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="nb">super</span><span class="p">(</span><span class="n">H262VideoConfiguration</span><span class="p">,</span> <span class="bp">self</span><span class="p">),</span> <span class="s2">&quot;to_dict&quot;</span><span class="p">):</span>
@@ -484,22 +483,22 @@
         <span class="k">return</span> <span class="n">result</span></div>
 
 <div class="viewcode-block" id="H262VideoConfiguration.to_str"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.h262_video_configuration.H262VideoConfiguration.to_str">[docs]</a>    <span class="k">def</span> <span class="nf">to_str</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Returns the string representation of the model&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the string representation of the model&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">pprint</span><span class="o">.</span><span class="n">pformat</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">to_dict</span><span class="p">())</span></div>
 
     <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;For `print` and `pprint`&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;For `print` and `pprint`&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">to_str</span><span class="p">()</span>
 
     <span class="k">def</span> <span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Returns true if both objects are equal&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns true if both objects are equal&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">H262VideoConfiguration</span><span class="p">):</span>
             <span class="k">return</span> <span class="kc">False</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="vm">__dict__</span>
 
     <span class="k">def</span> <span class="fm">__ne__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Returns true if both objects are not equal&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns true if both objects are not equal&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="ow">not</span> <span class="bp">self</span> <span class="o">==</span> <span class="n">other</span></div>
 </pre></div>
 

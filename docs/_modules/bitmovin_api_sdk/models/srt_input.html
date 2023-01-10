@@ -15,7 +15,6 @@
         <script src="../../../_static/underscore.js"></script>
         <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../../_static/doctools.js"></script>
-        <script src="../../../_static/sphinx_highlight.js"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" /> 
@@ -174,7 +173,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">mode</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; SrtMode</span>
-        <span class="sd">&quot;&quot;&quot;Gets the mode of this SrtInput.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the mode of this SrtInput.</span>
 
 <span class="sd">        The SRT mode to use (required)</span>
 
@@ -186,7 +185,7 @@
     <span class="nd">@mode</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">mode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mode</span><span class="p">):</span>
         <span class="c1"># type: (SrtMode) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the mode of this SrtInput.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the mode of this SrtInput.</span>
 
 <span class="sd">        The SRT mode to use (required)</span>
 
@@ -203,7 +202,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">host</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; string_types</span>
-        <span class="sd">&quot;&quot;&quot;Gets the host of this SrtInput.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the host of this SrtInput.</span>
 
 <span class="sd">        The name or IP of the host providing the SRT stream (only used in CALLER mode)</span>
 
@@ -215,7 +214,7 @@
     <span class="nd">@host</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">host</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">host</span><span class="p">):</span>
         <span class="c1"># type: (string_types) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the host of this SrtInput.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the host of this SrtInput.</span>
 
 <span class="sd">        The name or IP of the host providing the SRT stream (only used in CALLER mode)</span>
 
@@ -232,7 +231,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">port</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
-        <span class="sd">&quot;&quot;&quot;Gets the port of this SrtInput.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the port of this SrtInput.</span>
 
 <span class="sd">        The port to connect to or listen on. Has to be one of [2088, 2089, 2090, 2091] when using LISTENER mode. (required)</span>
 
@@ -244,7 +243,7 @@
     <span class="nd">@port</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">port</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">port</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the port of this SrtInput.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the port of this SrtInput.</span>
 
 <span class="sd">        The port to connect to or listen on. Has to be one of [2088, 2089, 2090, 2091] when using LISTENER mode. (required)</span>
 
@@ -261,7 +260,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">path</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; string_types</span>
-        <span class="sd">&quot;&quot;&quot;Gets the path of this SrtInput.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the path of this SrtInput.</span>
 
 <span class="sd">        The path parameter of the SRT stream</span>
 
@@ -273,7 +272,7 @@
     <span class="nd">@path</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">path</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">):</span>
         <span class="c1"># type: (string_types) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the path of this SrtInput.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the path of this SrtInput.</span>
 
 <span class="sd">        The path parameter of the SRT stream</span>
 
@@ -290,7 +289,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">latency</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
-        <span class="sd">&quot;&quot;&quot;Gets the latency of this SrtInput.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the latency of this SrtInput.</span>
 
 <span class="sd">        The maximum accepted transmission latency in milliseconds (when both parties set different values, the maximum of the two is used for both)</span>
 
@@ -302,7 +301,7 @@
     <span class="nd">@latency</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">latency</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">latency</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the latency of this SrtInput.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the latency of this SrtInput.</span>
 
 <span class="sd">        The maximum accepted transmission latency in milliseconds (when both parties set different values, the maximum of the two is used for both)</span>
 
@@ -319,7 +318,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">passphrase</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; string_types</span>
-        <span class="sd">&quot;&quot;&quot;Gets the passphrase of this SrtInput.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the passphrase of this SrtInput.</span>
 
 <span class="sd">        The passphrase used to secure the SRT stream. For AES-128 encryption, you must enter a 16-character passphrase; for AES-256, you must enter a 32-character passphrase</span>
 
@@ -331,7 +330,7 @@
     <span class="nd">@passphrase</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">passphrase</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">passphrase</span><span class="p">):</span>
         <span class="c1"># type: (string_types) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the passphrase of this SrtInput.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the passphrase of this SrtInput.</span>
 
 <span class="sd">        The passphrase used to secure the SRT stream. For AES-128 encryption, you must enter a 16-character passphrase; for AES-256, you must enter a 32-character passphrase</span>
 
@@ -348,7 +347,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">key_length</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
-        <span class="sd">&quot;&quot;&quot;Gets the key_length of this SrtInput.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the key_length of this SrtInput.</span>
 
 <span class="sd">        The type of AES encryption determines the length of the key (passphrase). AES-128 uses a 16-character (128-bit) passphrase, and AES-256 uses a 32-character (256-bit) passphrase.</span>
 
@@ -360,7 +359,7 @@
     <span class="nd">@key_length</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">key_length</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key_length</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the key_length of this SrtInput.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the key_length of this SrtInput.</span>
 
 <span class="sd">        The type of AES encryption determines the length of the key (passphrase). AES-128 uses a 16-character (128-bit) passphrase, and AES-256 uses a 32-character (256-bit) passphrase.</span>
 
@@ -377,7 +376,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">backup_srt_inputs</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; BackupSrtInputs</span>
-        <span class="sd">&quot;&quot;&quot;Gets the backup_srt_inputs of this SrtInput.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the backup_srt_inputs of this SrtInput.</span>
 
 
 <span class="sd">        :return: The backup_srt_inputs of this SrtInput.</span>
@@ -388,7 +387,7 @@
     <span class="nd">@backup_srt_inputs</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">backup_srt_inputs</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">backup_srt_inputs</span><span class="p">):</span>
         <span class="c1"># type: (BackupSrtInputs) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the backup_srt_inputs of this SrtInput.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the backup_srt_inputs of this SrtInput.</span>
 
 
 <span class="sd">        :param backup_srt_inputs: The backup_srt_inputs of this SrtInput.</span>
@@ -402,7 +401,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_backup_srt_inputs</span> <span class="o">=</span> <span class="n">backup_srt_inputs</span>
 
 <div class="viewcode-block" id="SrtInput.to_dict"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.srt_input.SrtInput.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>
         <span class="n">result</span> <span class="o">=</span> <span class="p">{}</span>
 
         <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="nb">super</span><span class="p">(</span><span class="n">SrtInput</span><span class="p">,</span> <span class="bp">self</span><span class="p">),</span> <span class="s2">&quot;to_dict&quot;</span><span class="p">):</span>
@@ -427,22 +426,22 @@
         <span class="k">return</span> <span class="n">result</span></div>
 
 <div class="viewcode-block" id="SrtInput.to_str"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.srt_input.SrtInput.to_str">[docs]</a>    <span class="k">def</span> <span class="nf">to_str</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Returns the string representation of the model&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the string representation of the model&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">pprint</span><span class="o">.</span><span class="n">pformat</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">to_dict</span><span class="p">())</span></div>
 
     <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;For `print` and `pprint`&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;For `print` and `pprint`&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">to_str</span><span class="p">()</span>
 
     <span class="k">def</span> <span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Returns true if both objects are equal&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns true if both objects are equal&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">SrtInput</span><span class="p">):</span>
             <span class="k">return</span> <span class="kc">False</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="vm">__dict__</span>
 
     <span class="k">def</span> <span class="fm">__ne__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Returns true if both objects are not equal&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns true if both objects are not equal&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="ow">not</span> <span class="bp">self</span> <span class="o">==</span> <span class="n">other</span></div>
 </pre></div>
 

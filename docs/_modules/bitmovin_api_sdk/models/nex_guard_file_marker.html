@@ -15,7 +15,6 @@
         <script src="../../../_static/underscore.js"></script>
         <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../../_static/doctools.js"></script>
-        <script src="../../../_static/sphinx_highlight.js"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" /> 
@@ -156,7 +155,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">license</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; string_types</span>
-        <span class="sd">&quot;&quot;&quot;Gets the license of this NexGuardFileMarker.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the license of this NexGuardFileMarker.</span>
 
 <span class="sd">        Use the base64 license string that Nagra provides you. (required)</span>
 
@@ -168,7 +167,7 @@
     <span class="nd">@license</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">license</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">license_</span><span class="p">):</span>
         <span class="c1"># type: (string_types) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the license of this NexGuardFileMarker.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the license of this NexGuardFileMarker.</span>
 
 <span class="sd">        Use the base64 license string that Nagra provides you. (required)</span>
 
@@ -185,7 +184,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">watermark_type</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; NexGuardWatermarkingType</span>
-        <span class="sd">&quot;&quot;&quot;Gets the watermark_type of this NexGuardFileMarker.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the watermark_type of this NexGuardFileMarker.</span>
 
 <span class="sd">        The type of watermarking to be used. Usually, OTT is the one recommended in production.</span>
 
@@ -197,7 +196,7 @@
     <span class="nd">@watermark_type</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">watermark_type</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">watermark_type</span><span class="p">):</span>
         <span class="c1"># type: (NexGuardWatermarkingType) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the watermark_type of this NexGuardFileMarker.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the watermark_type of this NexGuardFileMarker.</span>
 
 <span class="sd">        The type of watermarking to be used. Usually, OTT is the one recommended in production.</span>
 
@@ -214,7 +213,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">payload</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
-        <span class="sd">&quot;&quot;&quot;Gets the payload of this NexGuardFileMarker.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the payload of this NexGuardFileMarker.</span>
 
 <span class="sd">        Specify the payload ID that you want to be associated with this output. Valid values vary depending on your Nagra NexGuard forensic watermarking workflow. For PreRelease Content (NGPR), specify an integer from 1 through 4,194,303. You must generate a unique ID for each asset you watermark, and keep a record of th ID. Neither Nagra nor Bitmovin keep track of this for you.</span>
 
@@ -226,7 +225,7 @@
     <span class="nd">@payload</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">payload</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">payload</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the payload of this NexGuardFileMarker.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the payload of this NexGuardFileMarker.</span>
 
 <span class="sd">        Specify the payload ID that you want to be associated with this output. Valid values vary depending on your Nagra NexGuard forensic watermarking workflow. For PreRelease Content (NGPR), specify an integer from 1 through 4,194,303. You must generate a unique ID for each asset you watermark, and keep a record of th ID. Neither Nagra nor Bitmovin keep track of this for you.</span>
 
@@ -243,7 +242,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">preset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; string_types</span>
-        <span class="sd">&quot;&quot;&quot;Gets the preset of this NexGuardFileMarker.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the preset of this NexGuardFileMarker.</span>
 
 <span class="sd">        Enter one of the watermarking preset strings that Nagra provides you.</span>
 
@@ -255,7 +254,7 @@
     <span class="nd">@preset</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">preset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">preset</span><span class="p">):</span>
         <span class="c1"># type: (string_types) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the preset of this NexGuardFileMarker.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the preset of this NexGuardFileMarker.</span>
 
 <span class="sd">        Enter one of the watermarking preset strings that Nagra provides you.</span>
 
@@ -272,7 +271,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">strength</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; NexGuardWatermarkingStrength</span>
-        <span class="sd">&quot;&quot;&quot;Gets the strength of this NexGuardFileMarker.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the strength of this NexGuardFileMarker.</span>
 
 <span class="sd">        Optional. Ignore this setting unless Nagra support directs you to specify a value. When you don&#39;t specify a value here, the Nagra NexGuard library uses its default value.</span>
 
@@ -284,7 +283,7 @@
     <span class="nd">@strength</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">strength</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">strength</span><span class="p">):</span>
         <span class="c1"># type: (NexGuardWatermarkingStrength) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the strength of this NexGuardFileMarker.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the strength of this NexGuardFileMarker.</span>
 
 <span class="sd">        Optional. Ignore this setting unless Nagra support directs you to specify a value. When you don&#39;t specify a value here, the Nagra NexGuard library uses its default value.</span>
 
@@ -299,7 +298,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_strength</span> <span class="o">=</span> <span class="n">strength</span>
 
 <div class="viewcode-block" id="NexGuardFileMarker.to_dict"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.nex_guard_file_marker.NexGuardFileMarker.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>
         <span class="n">result</span> <span class="o">=</span> <span class="p">{}</span>
 
         <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="nb">super</span><span class="p">(</span><span class="n">NexGuardFileMarker</span><span class="p">,</span> <span class="bp">self</span><span class="p">),</span> <span class="s2">&quot;to_dict&quot;</span><span class="p">):</span>
@@ -324,22 +323,22 @@
         <span class="k">return</span> <span class="n">result</span></div>
 
 <div class="viewcode-block" id="NexGuardFileMarker.to_str"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.nex_guard_file_marker.NexGuardFileMarker.to_str">[docs]</a>    <span class="k">def</span> <span class="nf">to_str</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Returns the string representation of the model&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the string representation of the model&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">pprint</span><span class="o">.</span><span class="n">pformat</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">to_dict</span><span class="p">())</span></div>
 
     <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;For `print` and `pprint`&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;For `print` and `pprint`&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">to_str</span><span class="p">()</span>
 
     <span class="k">def</span> <span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Returns true if both objects are equal&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns true if both objects are equal&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">NexGuardFileMarker</span><span class="p">):</span>
             <span class="k">return</span> <span class="kc">False</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="vm">__dict__</span>
 
     <span class="k">def</span> <span class="fm">__ne__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Returns true if both objects are not equal&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns true if both objects are not equal&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="ow">not</span> <span class="bp">self</span> <span class="o">==</span> <span class="n">other</span></div>
 </pre></div>
 

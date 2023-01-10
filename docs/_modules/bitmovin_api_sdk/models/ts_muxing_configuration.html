@@ -15,7 +15,6 @@
         <script src="../../../_static/underscore.js"></script>
         <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../../_static/doctools.js"></script>
-        <script src="../../../_static/sphinx_highlight.js"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" /> 
@@ -138,7 +137,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">program_number</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
-        <span class="sd">&quot;&quot;&quot;Gets the program_number of this TsMuxingConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the program_number of this TsMuxingConfiguration.</span>
 
 <span class="sd">        An integer value. Value for program_number field in the MPEG Transport Stream Program Map Table (PMT). The value zero is reserved for the NIT PID entry in the PAT.</span>
 
@@ -150,7 +149,7 @@
     <span class="nd">@program_number</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">program_number</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">program_number</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the program_number of this TsMuxingConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the program_number of this TsMuxingConfiguration.</span>
 
 <span class="sd">        An integer value. Value for program_number field in the MPEG Transport Stream Program Map Table (PMT). The value zero is reserved for the NIT PID entry in the PAT.</span>
 
@@ -171,7 +170,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">pmt</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; TsProgramMapTableConfiguration</span>
-        <span class="sd">&quot;&quot;&quot;Gets the pmt of this TsMuxingConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the pmt of this TsMuxingConfiguration.</span>
 
 
 <span class="sd">        :return: The pmt of this TsMuxingConfiguration.</span>
@@ -182,7 +181,7 @@
     <span class="nd">@pmt</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">pmt</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pmt</span><span class="p">):</span>
         <span class="c1"># type: (TsProgramMapTableConfiguration) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the pmt of this TsMuxingConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the pmt of this TsMuxingConfiguration.</span>
 
 
 <span class="sd">        :param pmt: The pmt of this TsMuxingConfiguration.</span>
@@ -198,7 +197,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">pcr</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; TsProgramClockReferenceConfiguration</span>
-        <span class="sd">&quot;&quot;&quot;Gets the pcr of this TsMuxingConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the pcr of this TsMuxingConfiguration.</span>
 
 
 <span class="sd">        :return: The pcr of this TsMuxingConfiguration.</span>
@@ -209,7 +208,7 @@
     <span class="nd">@pcr</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">pcr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pcr</span><span class="p">):</span>
         <span class="c1"># type: (TsProgramClockReferenceConfiguration) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the pcr of this TsMuxingConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the pcr of this TsMuxingConfiguration.</span>
 
 
 <span class="sd">        :param pcr: The pcr of this TsMuxingConfiguration.</span>
@@ -225,7 +224,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">video_streams</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; list[TsVideoStreamConfiguration]</span>
-        <span class="sd">&quot;&quot;&quot;Gets the video_streams of this TsMuxingConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the video_streams of this TsMuxingConfiguration.</span>
 
 
 <span class="sd">        :return: The video_streams of this TsMuxingConfiguration.</span>
@@ -236,7 +235,7 @@
     <span class="nd">@video_streams</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">video_streams</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">video_streams</span><span class="p">):</span>
         <span class="c1"># type: (list) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the video_streams of this TsMuxingConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the video_streams of this TsMuxingConfiguration.</span>
 
 
 <span class="sd">        :param video_streams: The video_streams of this TsMuxingConfiguration.</span>
@@ -252,7 +251,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">audio_streams</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; list[TsAudioStreamConfiguration]</span>
-        <span class="sd">&quot;&quot;&quot;Gets the audio_streams of this TsMuxingConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the audio_streams of this TsMuxingConfiguration.</span>
 
 
 <span class="sd">        :return: The audio_streams of this TsMuxingConfiguration.</span>
@@ -263,7 +262,7 @@
     <span class="nd">@audio_streams</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">audio_streams</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">audio_streams</span><span class="p">):</span>
         <span class="c1"># type: (list) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the audio_streams of this TsMuxingConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the audio_streams of this TsMuxingConfiguration.</span>
 
 
 <span class="sd">        :param audio_streams: The audio_streams of this TsMuxingConfiguration.</span>
@@ -277,7 +276,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_audio_streams</span> <span class="o">=</span> <span class="n">audio_streams</span>
 
 <div class="viewcode-block" id="TsMuxingConfiguration.to_dict"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.ts_muxing_configuration.TsMuxingConfiguration.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>
         <span class="n">result</span> <span class="o">=</span> <span class="p">{}</span>
 
         <span class="k">for</span> <span class="n">attr</span><span class="p">,</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">six</span><span class="o">.</span><span class="n">iteritems</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">openapi_types</span><span class="p">):</span>
@@ -300,22 +299,22 @@
         <span class="k">return</span> <span class="n">result</span></div>
 
 <div class="viewcode-block" id="TsMuxingConfiguration.to_str"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.ts_muxing_configuration.TsMuxingConfiguration.to_str">[docs]</a>    <span class="k">def</span> <span class="nf">to_str</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Returns the string representation of the model&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the string representation of the model&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">pprint</span><span class="o">.</span><span class="n">pformat</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">to_dict</span><span class="p">())</span></div>
 
     <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;For `print` and `pprint`&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;For `print` and `pprint`&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">to_str</span><span class="p">()</span>
 
     <span class="k">def</span> <span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Returns true if both objects are equal&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns true if both objects are equal&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">TsMuxingConfiguration</span><span class="p">):</span>
             <span class="k">return</span> <span class="kc">False</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="vm">__dict__</span>
 
     <span class="k">def</span> <span class="fm">__ne__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Returns true if both objects are not equal&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns true if both objects are not equal&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="ow">not</span> <span class="bp">self</span> <span class="o">==</span> <span class="n">other</span></div>
 </pre></div>
 
