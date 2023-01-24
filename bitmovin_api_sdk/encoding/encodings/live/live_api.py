@@ -77,7 +77,7 @@ class LiveApi(BaseApi):
         # type: (string_types, dict) -> BitmovinResponse
         """Re-Start Live Encoding
 
-        :param encoding_id: Id of the encoding
+        :param encoding_id: Id of the encoding.  **Important:** Only live encodings with the status &#x60;RUNNING&#x60;, &#x60;FINISHED&#x60;, &#x60;CANCELED&#x60; or &#x60;ERROR&#x60; can be restarted. 
         :type encoding_id: string_types, required
         :return: Id of the encoding
         :rtype: BitmovinResponse
