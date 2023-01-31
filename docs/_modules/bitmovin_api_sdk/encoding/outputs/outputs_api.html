@@ -78,6 +78,8 @@
 
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.common</span> <span class="kn">import</span> <span class="n">BaseApi</span><span class="p">,</span> <span class="n">BitmovinApiLoggerBase</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.common.poscheck</span> <span class="kn">import</span> <span class="n">poscheck_except</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.check_output_permissions_request</span> <span class="kn">import</span> <span class="n">CheckOutputPermissionsRequest</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.check_output_permissions_response</span> <span class="kn">import</span> <span class="n">CheckOutputPermissionsResponse</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.output</span> <span class="kn">import</span> <span class="n">Output</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.output_type</span> <span class="kn">import</span> <span class="n">OutputType</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.response_envelope</span> <span class="kn">import</span> <span class="n">ResponseEnvelope</span>
@@ -208,6 +210,26 @@
             <span class="n">base_url</span><span class="o">=</span><span class="n">base_url</span><span class="p">,</span>
             <span class="n">logger</span><span class="o">=</span><span class="n">logger</span>
         <span class="p">)</span>
+
+<div class="viewcode-block" id="OutputsApi.check_permissions"><a class="viewcode-back" href="../../../../__modules/bitmovin_api_sdk.encoding.outputs.html#bitmovin_api_sdk.encoding.outputs.outputs_api.OutputsApi.check_permissions">[docs]</a>    <span class="k">def</span> <span class="nf">check_permissions</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">output_id</span><span class="p">,</span> <span class="n">check_output_permissions_request</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="c1"># type: (string_types, CheckOutputPermissionsRequest, dict) -&gt; CheckOutputPermissionsResponse</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Check output permissions (S3 only)</span>
+
+<span class="sd">        :param output_id: Id of the output to be checked. Currently limited to S3 outputs. The access credentials that have been provided for this Output still need to be valid, otherwise the request will fail. If they are not valid any more, create a new Output with new credentials (resources are immutable).</span>
+<span class="sd">        :type output_id: string_types, required</span>
+<span class="sd">        :param check_output_permissions_request: Additional parameters for the permissions check</span>
+<span class="sd">        :type check_output_permissions_request: CheckOutputPermissionsRequest</span>
+<span class="sd">        :return: Permissions check result</span>
+<span class="sd">        :rtype: CheckOutputPermissionsResponse</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">post</span><span class="p">(</span>
+            <span class="s1">&#39;/encoding/outputs/</span><span class="si">{output_id}</span><span class="s1">/check-permissions&#39;</span><span class="p">,</span>
+            <span class="n">check_output_permissions_request</span><span class="p">,</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;output_id&#39;</span><span class="p">:</span> <span class="n">output_id</span><span class="p">},</span>
+            <span class="nb">type</span><span class="o">=</span><span class="n">CheckOutputPermissionsResponse</span><span class="p">,</span>
+            <span class="o">**</span><span class="n">kwargs</span>
+        <span class="p">)</span></div>
 
 <div class="viewcode-block" id="OutputsApi.get"><a class="viewcode-back" href="../../../../__modules/bitmovin_api_sdk.encoding.outputs.html#bitmovin_api_sdk.encoding.outputs.outputs_api.OutputsApi.get">[docs]</a>    <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">output_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, dict) -&gt; Output</span>

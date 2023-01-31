@@ -192,7 +192,7 @@
         <span class="c1"># type: () -&gt; string_types</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the segment_naming of this PackedAudioMuxing.</span>
 
-<span class="sd">        Segment naming policy. The required filename extension depends on the codec (e.g. &#39;.aac&#39; for AAC).</span>
+<span class="sd">        Segment naming policy. The required filename extension depends on the codec (e.g. &#39;.aac&#39; for AAC). Either this or *segmentNamingTemplate* must be set.</span>
 
 <span class="sd">        :return: The segment_naming of this PackedAudioMuxing.</span>
 <span class="sd">        :rtype: string_types</span>
@@ -204,7 +204,7 @@
         <span class="c1"># type: (string_types) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the segment_naming of this PackedAudioMuxing.</span>
 
-<span class="sd">        Segment naming policy. The required filename extension depends on the codec (e.g. &#39;.aac&#39; for AAC).</span>
+<span class="sd">        Segment naming policy. The required filename extension depends on the codec (e.g. &#39;.aac&#39; for AAC). Either this or *segmentNamingTemplate* must be set.</span>
 
 <span class="sd">        :param segment_naming: The segment_naming of this PackedAudioMuxing.</span>
 <span class="sd">        :type: string_types</span>
@@ -221,7 +221,7 @@
         <span class="c1"># type: () -&gt; string_types</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the segment_naming_template of this PackedAudioMuxing.</span>
 
-<span class="sd">        Segment naming policy containing a placeholder of the format &#39;{rand_chars:x}&#39;, which will be replaced by a random alphanumeric string of length x (default 32) on each (re)start of the encoding. The resulting string will be copied to the segmentNaming property. Intended to avoid re-use of segment names after restarting a live encoding. If segmentNamingTemplate is set, segmentNaming must not be set. The required filename extension depends on the codec (e.g. &#39;.aac&#39; for AAC).</span>
+<span class="sd">        Segment naming policy containing a placeholder of the format &#39;{rand_chars:x}&#39;, which will be replaced by a random alphanumeric string of length x (default 32) on each (re)start of the encoding. The resulting string will be copied to the segmentNaming property. Intended to avoid re-use of segment names after restarting a live encoding. Either this or *segmentNaming* must be set. The required filename extension depends on the codec (e.g. &#39;.aac&#39; for AAC).</span>
 
 <span class="sd">        :return: The segment_naming_template of this PackedAudioMuxing.</span>
 <span class="sd">        :rtype: string_types</span>
@@ -233,7 +233,7 @@
         <span class="c1"># type: (string_types) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the segment_naming_template of this PackedAudioMuxing.</span>
 
-<span class="sd">        Segment naming policy containing a placeholder of the format &#39;{rand_chars:x}&#39;, which will be replaced by a random alphanumeric string of length x (default 32) on each (re)start of the encoding. The resulting string will be copied to the segmentNaming property. Intended to avoid re-use of segment names after restarting a live encoding. If segmentNamingTemplate is set, segmentNaming must not be set. The required filename extension depends on the codec (e.g. &#39;.aac&#39; for AAC).</span>
+<span class="sd">        Segment naming policy containing a placeholder of the format &#39;{rand_chars:x}&#39;, which will be replaced by a random alphanumeric string of length x (default 32) on each (re)start of the encoding. The resulting string will be copied to the segmentNaming property. Intended to avoid re-use of segment names after restarting a live encoding. Either this or *segmentNaming* must be set. The required filename extension depends on the codec (e.g. &#39;.aac&#39; for AAC).</span>
 
 <span class="sd">        :param segment_naming_template: The segment_naming_template of this PackedAudioMuxing.</span>
 <span class="sd">        :type: string_types</span>

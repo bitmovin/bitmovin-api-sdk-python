@@ -65,7 +65,7 @@ class Mp3Muxing(Muxing):
         # type: () -> string_types
         """Gets the filename of this Mp3Muxing.
 
-        Name of the new file (required)
+        Name of the output file (required)
 
         :return: The filename of this Mp3Muxing.
         :rtype: string_types
@@ -77,7 +77,7 @@ class Mp3Muxing(Muxing):
         # type: (string_types) -> None
         """Sets the filename of this Mp3Muxing.
 
-        Name of the new file (required)
+        Name of the output file (required)
 
         :param filename: The filename of this Mp3Muxing.
         :type: string_types

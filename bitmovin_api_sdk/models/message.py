@@ -229,7 +229,7 @@ class Message(BitmovinResponse):
         # type: () -> datetime
         """Gets the date of this Message.
 
-        Timestamp when the message occured
+        Timestamp when the message occurred
 
         :return: The date of this Message.
         :rtype: datetime
@@ -241,7 +241,7 @@ class Message(BitmovinResponse):
         # type: (datetime) -> None
         """Sets the date of this Message.
 
-        Timestamp when the message occured
+        Timestamp when the message occurred
 
         :param date_: The date of this Message.
         :type: datetime

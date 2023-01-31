@@ -78,7 +78,7 @@ class ProgressiveWebmMuxing(Muxing):
         # type: () -> string_types
         """Gets the filename of this ProgressiveWebmMuxing.
 
-        Name of the new Video
+        Name of the output file
 
         :return: The filename of this ProgressiveWebmMuxing.
         :rtype: string_types
@@ -90,7 +90,7 @@ class ProgressiveWebmMuxing(Muxing):
         # type: (string_types) -> None
         """Sets the filename of this ProgressiveWebmMuxing.
 
-        Name of the new Video
+        Name of the output file
 
         :param filename: The filename of this ProgressiveWebmMuxing.
         :type: string_types

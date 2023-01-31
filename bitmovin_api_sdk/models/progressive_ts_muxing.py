@@ -106,7 +106,7 @@ class ProgressiveTsMuxing(Muxing):
         # type: () -> string_types
         """Gets the filename of this ProgressiveTsMuxing.
 
-        Name of the new Video
+        Name of the output file
 
         :return: The filename of this ProgressiveTsMuxing.
         :rtype: string_types
@@ -118,7 +118,7 @@ class ProgressiveTsMuxing(Muxing):
         # type: (string_types) -> None
         """Sets the filename of this ProgressiveTsMuxing.
 
-        Name of the new Video
+        Name of the output file
 
         :param filename: The filename of this ProgressiveTsMuxing.
         :type: string_types

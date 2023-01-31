@@ -65,7 +65,7 @@ class ProgressiveMovMuxing(Muxing):
         # type: () -> string_types
         """Gets the filename of this ProgressiveMovMuxing.
 
-        The output file name
+        Name of the output file
 
         :return: The filename of this ProgressiveMovMuxing.
         :rtype: string_types
@@ -77,7 +77,7 @@ class ProgressiveMovMuxing(Muxing):
         # type: (string_types) -> None
         """Sets the filename of this ProgressiveMovMuxing.
 
-        The output file name
+        Name of the output file
 
         :param filename: The filename of this ProgressiveMovMuxing.
         :type: string_types

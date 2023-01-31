@@ -107,7 +107,7 @@ class BroadcastTsMuxing(Muxing):
         # type: () -> string_types
         """Gets the filename of this BroadcastTsMuxing.
 
-        Name of the new Video
+        Name of the output file
 
         :return: The filename of this BroadcastTsMuxing.
         :rtype: string_types
@@ -119,7 +119,7 @@ class BroadcastTsMuxing(Muxing):
         # type: (string_types) -> None
         """Sets the filename of this BroadcastTsMuxing.
 
-        Name of the new Video
+        Name of the output file
 
         :param filename: The filename of this BroadcastTsMuxing.
         :type: string_types

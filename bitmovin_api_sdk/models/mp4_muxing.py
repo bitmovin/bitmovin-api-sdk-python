@@ -92,7 +92,7 @@ class Mp4Muxing(Muxing):
         # type: () -> string_types
         """Gets the filename of this Mp4Muxing.
 
-        Name of the new Video
+        Name of the output file
 
         :return: The filename of this Mp4Muxing.
         :rtype: string_types
@@ -104,7 +104,7 @@ class Mp4Muxing(Muxing):
         # type: (string_types) -> None
         """Sets the filename of this Mp4Muxing.
 
-        Name of the new Video
+        Name of the output file
 
         :param filename: The filename of this Mp4Muxing.
         :type: string_types

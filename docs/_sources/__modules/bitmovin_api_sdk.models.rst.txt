@@ -1508,6 +1508,22 @@ bitmovin\_api\_sdk.models.channels\_attribute\_for\_audio module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.check\_output\_permissions\_request module
+--------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.check_output_permissions_request
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.check\_output\_permissions\_response module
+---------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.check_output_permissions_response
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.chroma\_location module
 -------------------------------------------------
 

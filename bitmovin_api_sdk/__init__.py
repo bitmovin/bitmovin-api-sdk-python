@@ -1184,6 +1184,8 @@ from bitmovin_api_sdk.models.cenc_play_ready import CencPlayReady
 from bitmovin_api_sdk.models.cenc_widevine import CencWidevine
 from bitmovin_api_sdk.models.channel_layout import ChannelLayout
 from bitmovin_api_sdk.models.channels_attribute_for_audio import ChannelsAttributeForAudio
+from bitmovin_api_sdk.models.check_output_permissions_request import CheckOutputPermissionsRequest
+from bitmovin_api_sdk.models.check_output_permissions_response import CheckOutputPermissionsResponse
 from bitmovin_api_sdk.models.chroma_location import ChromaLocation
 from bitmovin_api_sdk.models.chunked_text_muxing import ChunkedTextMuxing
 from bitmovin_api_sdk.models.clear_key_drm import ClearKeyDrm
@@ -1775,4 +1777,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.146.0"
+__version__ = "1.147.0"

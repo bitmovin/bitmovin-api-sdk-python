@@ -118,7 +118,7 @@ class PackedAudioMuxing(Muxing):
         # type: () -> string_types
         """Gets the segment_naming of this PackedAudioMuxing.
 
-        Segment naming policy. The required filename extension depends on the codec (e.g. '.aac' for AAC).
+        Segment naming policy. The required filename extension depends on the codec (e.g. '.aac' for AAC). Either this or *segmentNamingTemplate* must be set.
 
         :return: The segment_naming of this PackedAudioMuxing.
         :rtype: string_types
@@ -130,7 +130,7 @@ class PackedAudioMuxing(Muxing):
         # type: (string_types) -> None
         """Sets the segment_naming of this PackedAudioMuxing.
 
-        Segment naming policy. The required filename extension depends on the codec (e.g. '.aac' for AAC).
+        Segment naming policy. The required filename extension depends on the codec (e.g. '.aac' for AAC). Either this or *segmentNamingTemplate* must be set.
 
         :param segment_naming: The segment_naming of this PackedAudioMuxing.
         :type: string_types
@@ -147,7 +147,7 @@ class PackedAudioMuxing(Muxing):
         # type: () -> string_types
         """Gets the segment_naming_template of this PackedAudioMuxing.
 
-        Segment naming policy containing a placeholder of the format '{rand_chars:x}', which will be replaced by a random alphanumeric string of length x (default 32) on each (re)start of the encoding. The resulting string will be copied to the segmentNaming property. Intended to avoid re-use of segment names after restarting a live encoding. If segmentNamingTemplate is set, segmentNaming must not be set. The required filename extension depends on the codec (e.g. '.aac' for AAC).
+        Segment naming policy containing a placeholder of the format '{rand_chars:x}', which will be replaced by a random alphanumeric string of length x (default 32) on each (re)start of the encoding. The resulting string will be copied to the segmentNaming property. Intended to avoid re-use of segment names after restarting a live encoding. Either this or *segmentNaming* must be set. The required filename extension depends on the codec (e.g. '.aac' for AAC).
 
         :return: The segment_naming_template of this PackedAudioMuxing.
         :rtype: string_types
@@ -159,7 +159,7 @@ class PackedAudioMuxing(Muxing):
         # type: (string_types) -> None
         """Sets the segment_naming_template of this PackedAudioMuxing.
 
-        Segment naming policy containing a placeholder of the format '{rand_chars:x}', which will be replaced by a random alphanumeric string of length x (default 32) on each (re)start of the encoding. The resulting string will be copied to the segmentNaming property. Intended to avoid re-use of segment names after restarting a live encoding. If segmentNamingTemplate is set, segmentNaming must not be set. The required filename extension depends on the codec (e.g. '.aac' for AAC).
+        Segment naming policy containing a placeholder of the format '{rand_chars:x}', which will be replaced by a random alphanumeric string of length x (default 32) on each (re)start of the encoding. The resulting string will be copied to the segmentNaming property. Intended to avoid re-use of segment names after restarting a live encoding. Either this or *segmentNaming* must be set. The required filename extension depends on the codec (e.g. '.aac' for AAC).
 
         :param segment_naming_template: The segment_naming_template of this PackedAudioMuxing.
         :type: string_types

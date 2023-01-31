@@ -4,6 +4,8 @@ from __future__ import absolute_import
 
 from bitmovin_api_sdk.common import BaseApi, BitmovinApiLoggerBase
 from bitmovin_api_sdk.common.poscheck import poscheck_except
+from bitmovin_api_sdk.models.check_output_permissions_request import CheckOutputPermissionsRequest
+from bitmovin_api_sdk.models.check_output_permissions_response import CheckOutputPermissionsResponse
 from bitmovin_api_sdk.models.output import Output
 from bitmovin_api_sdk.models.output_type import OutputType
 from bitmovin_api_sdk.models.response_envelope import ResponseEnvelope
@@ -133,6 +135,26 @@ class OutputsApi(BaseApi):
             tenant_org_id=tenant_org_id,
             base_url=base_url,
             logger=logger
+        )
+
+    def check_permissions(self, output_id, check_output_permissions_request=None, **kwargs):
+        # type: (string_types, CheckOutputPermissionsRequest, dict) -> CheckOutputPermissionsResponse
+        """Check output permissions (S3 only)
+
+        :param output_id: Id of the output to be checked. Currently limited to S3 outputs. The access credentials that have been provided for this Output still need to be valid, otherwise the request will fail. If they are not valid any more, create a new Output with new credentials (resources are immutable).
+        :type output_id: string_types, required
+        :param check_output_permissions_request: Additional parameters for the permissions check
+        :type check_output_permissions_request: CheckOutputPermissionsRequest
+        :return: Permissions check result
+        :rtype: CheckOutputPermissionsResponse
+        """
+
+        return self.api_client.post(
+            '/encoding/outputs/{output_id}/check-permissions',
+            check_output_permissions_request,
+            path_params={'output_id': output_id},
+            type=CheckOutputPermissionsResponse,
+            **kwargs
         )
 
     def get(self, output_id, **kwargs):

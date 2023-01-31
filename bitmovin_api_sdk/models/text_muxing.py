@@ -71,7 +71,7 @@ class TextMuxing(Muxing):
         # type: () -> string_types
         """Gets the filename of this TextMuxing.
 
-        The output file name (required)
+        Name of the output file (required)
 
         :return: The filename of this TextMuxing.
         :rtype: string_types
@@ -83,7 +83,7 @@ class TextMuxing(Muxing):
         # type: (string_types) -> None
         """Sets the filename of this TextMuxing.
 
-        The output file name (required)
+        Name of the output file (required)
 
         :param filename: The filename of this TextMuxing.
         :type: string_types

@@ -65,7 +65,7 @@ class MxfMuxing(Muxing):
         # type: () -> string_types
         """Gets the filename of this MxfMuxing.
 
-        Name of the new file (required)
+        Name of the output file (required)
 
         :return: The filename of this MxfMuxing.
         :rtype: string_types
@@ -77,7 +77,7 @@ class MxfMuxing(Muxing):
         # type: (string_types) -> None
         """Sets the filename of this MxfMuxing.
 
-        Name of the new file (required)
+        Name of the output file (required)
 
         :param filename: The filename of this MxfMuxing.
         :type: string_types

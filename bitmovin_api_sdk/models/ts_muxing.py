@@ -96,7 +96,7 @@ class TsMuxing(Muxing):
         # type: () -> float
         """Gets the segment_length of this TsMuxing.
 
-        Length of the fragments in seconds (required)
+        Length of the fragments in seconds
 
         :return: The segment_length of this TsMuxing.
         :rtype: float
@@ -108,7 +108,7 @@ class TsMuxing(Muxing):
         # type: (float) -> None
         """Sets the segment_length of this TsMuxing.
 
-        Length of the fragments in seconds (required)
+        Length of the fragments in seconds
 
         :param segment_length: The segment_length of this TsMuxing.
         :type: float

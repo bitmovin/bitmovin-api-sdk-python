@@ -118,7 +118,7 @@ class ChunkedTextMuxing(Muxing):
         # type: () -> string_types
         """Gets the segment_naming of this ChunkedTextMuxing.
 
-        Segment naming template
+        Segment naming policy
 
         :return: The segment_naming of this ChunkedTextMuxing.
         :rtype: string_types
@@ -130,7 +130,7 @@ class ChunkedTextMuxing(Muxing):
         # type: (string_types) -> None
         """Sets the segment_naming of this ChunkedTextMuxing.
 
-        Segment naming template
+        Segment naming policy
 
         :param segment_naming: The segment_naming of this ChunkedTextMuxing.
         :type: string_types
