@@ -23,7 +23,7 @@ class LiveApi(BaseApi):
 
     def patch_streams_live(self, stream_id, streams_live_update_request, **kwargs):
         # type: (string_types, StreamsLiveUpdateRequest, dict) -> StreamsLiveUpdateRequest
-        """Update stream by id
+        """Update live stream by id
 
         :param stream_id: Id of the stream.
         :type stream_id: string_types, required

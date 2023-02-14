@@ -25,11 +25,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search"  style="background: blue" >
-            <a href="../../../../index.html" class="icon icon-home"> Bitmovin Python API SDK
+
+          
+          
+          <a href="../../../../index.html" class="icon icon-home">
+            Bitmovin Python API SDK
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -60,7 +64,7 @@
         <div class="rst-content style-external-links">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../../../index.html" class="icon icon-home"></a></li>
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../../../index.html">Module code</a></li>
       <li class="breadcrumb-item active">bitmovin_api_sdk.streams.video.video_api</li>
       <li class="wy-breadcrumbs-aside">
@@ -100,7 +104,7 @@
 
 <div class="viewcode-block" id="VideoApi.create"><a class="viewcode-back" href="../../../../__modules/bitmovin_api_sdk.streams.video.html#bitmovin_api_sdk.streams.video.video_api.VideoApi.create">[docs]</a>    <span class="k">def</span> <span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">streams_video_create_request</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (StreamsVideoCreateRequest, dict) -&gt; StreamsVideoResponse</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Create new Stream</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Create new Streams video</span>
 
 <span class="sd">        :param streams_video_create_request: Create a new stream.</span>
 <span class="sd">        :type streams_video_create_request: StreamsVideoCreateRequest, required</span>
@@ -117,7 +121,7 @@
 
 <div class="viewcode-block" id="VideoApi.get"><a class="viewcode-back" href="../../../../__modules/bitmovin_api_sdk.streams.video.html#bitmovin_api_sdk.streams.video.video_api.VideoApi.get">[docs]</a>    <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">stream_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, dict) -&gt; StreamsVideoResponse</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get stream by id</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get Streams video by id</span>
 
 <span class="sd">        :param stream_id: Id of the stream.</span>
 <span class="sd">        :type stream_id: string_types, required</span>
@@ -134,7 +138,7 @@
 
 <div class="viewcode-block" id="VideoApi.list"><a class="viewcode-back" href="../../../../__modules/bitmovin_api_sdk.streams.video.html#bitmovin_api_sdk.streams.video.video_api.VideoApi.list">[docs]</a>    <span class="k">def</span> <span class="nf">list</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">query_params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (StreamsVideoResponseListQueryParams, dict) -&gt; StreamsVideoResponse</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get paginated list of streams</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get paginated list of Streams videos</span>
 
 <span class="sd">        :param query_params: Query parameters</span>
 <span class="sd">        :type query_params: StreamsVideoResponseListQueryParams</span>
@@ -152,7 +156,7 @@
 
 <div class="viewcode-block" id="VideoApi.patch_streams_video"><a class="viewcode-back" href="../../../../__modules/bitmovin_api_sdk.streams.video.html#bitmovin_api_sdk.streams.video.video_api.VideoApi.patch_streams_video">[docs]</a>    <span class="k">def</span> <span class="nf">patch_streams_video</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">stream_id</span><span class="p">,</span> <span class="n">streams_video_update_request</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, StreamsVideoUpdateRequest, dict) -&gt; StreamsVideoResponse</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Update stream by id</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Update Streams video by id</span>
 
 <span class="sd">        :param stream_id: Id of the stream.</span>
 <span class="sd">        :type stream_id: string_types, required</span>

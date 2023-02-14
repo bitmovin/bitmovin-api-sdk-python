@@ -26,7 +26,7 @@ class VideoApi(BaseApi):
 
     def create(self, streams_video_create_request, **kwargs):
         # type: (StreamsVideoCreateRequest, dict) -> StreamsVideoResponse
-        """Create new Stream
+        """Create new Streams video
 
         :param streams_video_create_request: Create a new stream.
         :type streams_video_create_request: StreamsVideoCreateRequest, required
@@ -43,7 +43,7 @@ class VideoApi(BaseApi):
 
     def get(self, stream_id, **kwargs):
         # type: (string_types, dict) -> StreamsVideoResponse
-        """Get stream by id
+        """Get Streams video by id
 
         :param stream_id: Id of the stream.
         :type stream_id: string_types, required
@@ -60,7 +60,7 @@ class VideoApi(BaseApi):
 
     def list(self, query_params=None, **kwargs):
         # type: (StreamsVideoResponseListQueryParams, dict) -> StreamsVideoResponse
-        """Get paginated list of streams
+        """Get paginated list of Streams videos
 
         :param query_params: Query parameters
         :type query_params: StreamsVideoResponseListQueryParams
@@ -78,7 +78,7 @@ class VideoApi(BaseApi):
 
     def patch_streams_video(self, stream_id, streams_video_update_request, **kwargs):
         # type: (string_types, StreamsVideoUpdateRequest, dict) -> StreamsVideoResponse
-        """Update stream by id
+        """Update Streams video by id
 
         :param stream_id: Id of the stream.
         :type stream_id: string_types, required
