@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>bitmovin_api_sdk.encoding.manifests.hls.media.audio package &mdash; Bitmovin Python API SDK {{packageVersion}} documentation</title>
@@ -129,16 +129,16 @@
 <span class="sig-name descname"><span class="pre">create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">manifest_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">string_types</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">audio_media_info</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.audio_media_info.AudioMediaInfo" title="bitmovin_api_sdk.models.audio_media_info.AudioMediaInfo"><span class="pre">AudioMediaInfo</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.audio_media_info.AudioMediaInfo" title="bitmovin_api_sdk.models.audio_media_info.AudioMediaInfo"><span class="pre">AudioMediaInfo</span></a></span></span><a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/manifests/hls/media/audio/audio_api.html#AudioApi.create"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.manifests.hls.media.audio.audio_api.AudioApi.create" title="Permalink to this definition"></a></dt>
 <dd><p>Add Audio Media</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>manifest_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the hls manifest.</p></li>
 <li><p><strong>audio_media_info</strong> (<a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.audio_media_info.AudioMediaInfo" title="bitmovin_api_sdk.models.audio_media_info.AudioMediaInfo"><em>AudioMediaInfo</em></a><em>, </em><em>required</em>) – The Audio Media to be added</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Audio media details</p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.audio_media_info.AudioMediaInfo" title="bitmovin_api_sdk.models.audio_media_info.AudioMediaInfo">AudioMediaInfo</a></p>
 </dd>
 </dl>
@@ -149,16 +149,16 @@
 <span class="sig-name descname"><span class="pre">delete</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">manifest_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">string_types</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">media_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">string_types</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.bitmovin_response.BitmovinResponse" title="bitmovin_api_sdk.models.bitmovin_response.BitmovinResponse"><span class="pre">BitmovinResponse</span></a></span></span><a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/manifests/hls/media/audio/audio_api.html#AudioApi.delete"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.manifests.hls.media.audio.audio_api.AudioApi.delete" title="Permalink to this definition"></a></dt>
 <dd><p>Delete Audio Media</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>manifest_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the hls manifest.</p></li>
 <li><p><strong>media_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the audio media.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Id of the audio media</p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.bitmovin_response.BitmovinResponse" title="bitmovin_api_sdk.models.bitmovin_response.BitmovinResponse">BitmovinResponse</a></p>
 </dd>
 </dl>
@@ -169,16 +169,16 @@
 <span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">manifest_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">string_types</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">media_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">string_types</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.audio_media_info.AudioMediaInfo" title="bitmovin_api_sdk.models.audio_media_info.AudioMediaInfo"><span class="pre">AudioMediaInfo</span></a></span></span><a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/manifests/hls/media/audio/audio_api.html#AudioApi.get"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.manifests.hls.media.audio.audio_api.AudioApi.get" title="Permalink to this definition"></a></dt>
 <dd><p>Audio Media Details</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>manifest_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the hls manifest.</p></li>
 <li><p><strong>media_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the audio media.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Audio media details</p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.audio_media_info.AudioMediaInfo" title="bitmovin_api_sdk.models.audio_media_info.AudioMediaInfo">AudioMediaInfo</a></p>
 </dd>
 </dl>
@@ -189,16 +189,16 @@
 <span class="sig-name descname"><span class="pre">list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">manifest_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">string_types</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">query_params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#bitmovin_api_sdk.encoding.manifests.hls.media.audio.audio_media_info_list_query_params.AudioMediaInfoListQueryParams" title="bitmovin_api_sdk.encoding.manifests.hls.media.audio.audio_media_info_list_query_params.AudioMediaInfoListQueryParams"><span class="pre">AudioMediaInfoListQueryParams</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.audio_media_info.AudioMediaInfo" title="bitmovin_api_sdk.models.audio_media_info.AudioMediaInfo"><span class="pre">AudioMediaInfo</span></a></span></span><a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/manifests/hls/media/audio/audio_api.html#AudioApi.list"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.manifests.hls.media.audio.audio_api.AudioApi.list" title="Permalink to this definition"></a></dt>
 <dd><p>List all Audio Media</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>manifest_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the hls manifest.</p></li>
 <li><p><strong>query_params</strong> (<a class="reference internal" href="#bitmovin_api_sdk.encoding.manifests.hls.media.audio.audio_media_info_list_query_params.AudioMediaInfoListQueryParams" title="bitmovin_api_sdk.encoding.manifests.hls.media.audio.audio_media_info_list_query_params.AudioMediaInfoListQueryParams"><em>AudioMediaInfoListQueryParams</em></a>) – Query parameters</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Audio media</p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.audio_media_info.AudioMediaInfo" title="bitmovin_api_sdk.models.audio_media_info.AudioMediaInfo">AudioMediaInfo</a></p>
 </dd>
 </dl>
