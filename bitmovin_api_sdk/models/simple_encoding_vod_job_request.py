@@ -87,6 +87,7 @@ class SimpleEncodingVodJobRequest(object):
         # type: () -> list[SimpleEncodingVodJobInput]
         """Gets the inputs of this SimpleEncodingVodJobRequest.
 
+        Please take a look at the [documentation](https://bitmovin.com/docs/encoding/articles/simple-encoding-api#inputs-outputs) (required)
 
         :return: The inputs of this SimpleEncodingVodJobRequest.
         :rtype: list[SimpleEncodingVodJobInput]
@@ -98,6 +99,7 @@ class SimpleEncodingVodJobRequest(object):
         # type: (list) -> None
         """Sets the inputs of this SimpleEncodingVodJobRequest.
 
+        Please take a look at the [documentation](https://bitmovin.com/docs/encoding/articles/simple-encoding-api#inputs-outputs) (required)
 
         :param inputs: The inputs of this SimpleEncodingVodJobRequest.
         :type: list[SimpleEncodingVodJobInput]

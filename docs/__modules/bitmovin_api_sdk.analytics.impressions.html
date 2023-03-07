@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>bitmovin_api_sdk.analytics.impressions package &mdash; Bitmovin Python API SDK {{packageVersion}} documentation</title>
@@ -142,16 +142,16 @@
 <span class="sig-name descname"><span class="pre">create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">impression_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">string_types</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">analytics_license_key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.analytics_license_key.AnalyticsLicenseKey" title="bitmovin_api_sdk.models.analytics_license_key.AnalyticsLicenseKey"><span class="pre">AnalyticsLicenseKey</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails" title="bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails"><span class="pre">AnalyticsImpressionDetails</span></a></span></span><a class="reference internal" href="../_modules/bitmovin_api_sdk/analytics/impressions/impressions_api.html#ImpressionsApi.create"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bitmovin_api_sdk.analytics.impressions.impressions_api.ImpressionsApi.create" title="Permalink to this definition"></a></dt>
 <dd><p>Impression Details</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>impression_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Impression id</p></li>
 <li><p><strong>analytics_license_key</strong> (<a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.analytics_license_key.AnalyticsLicenseKey" title="bitmovin_api_sdk.models.analytics_license_key.AnalyticsLicenseKey"><em>AnalyticsLicenseKey</em></a><em>, </em><em>required</em>) – Analytics license</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>Service specific result</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails" title="bitmovin_api_sdk.models.analytics_impression_details.AnalyticsImpressionDetails">AnalyticsImpressionDetails</a></p>
 </dd>
 </dl>
@@ -162,13 +162,13 @@
 <span class="sig-name descname"><span class="pre">get_impressions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">analytics_impressions_query</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.analytics_impressions_query.AnalyticsImpressionsQuery" title="bitmovin_api_sdk.models.analytics_impressions_query.AnalyticsImpressionsQuery"><span class="pre">AnalyticsImpressionsQuery</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.analytics_impressions_response.AnalyticsImpressionsResponse" title="bitmovin_api_sdk.models.analytics_impressions_response.AnalyticsImpressionsResponse"><span class="pre">AnalyticsImpressionsResponse</span></a></span></span><a class="reference internal" href="../_modules/bitmovin_api_sdk/analytics/impressions/impressions_api.html#ImpressionsApi.get_impressions"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bitmovin_api_sdk.analytics.impressions.impressions_api.ImpressionsApi.get_impressions" title="Permalink to this definition"></a></dt>
 <dd><p>List impressions</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>analytics_impressions_query</strong> (<a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.analytics_impressions_query.AnalyticsImpressionsQuery" title="bitmovin_api_sdk.models.analytics_impressions_query.AnalyticsImpressionsQuery"><em>AnalyticsImpressionsQuery</em></a><em>, </em><em>required</em>) – Analytics impressions query object</p>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>List of Impressions</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.analytics_impressions_response.AnalyticsImpressionsResponse" title="bitmovin_api_sdk.models.analytics_impressions_response.AnalyticsImpressionsResponse">AnalyticsImpressionsResponse</a></p>
 </dd>
 </dl>

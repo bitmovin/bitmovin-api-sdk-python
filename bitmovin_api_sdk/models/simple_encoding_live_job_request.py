@@ -95,6 +95,7 @@ class SimpleEncodingLiveJobRequest(object):
         # type: () -> SimpleEncodingLiveJobInput
         """Gets the input of this SimpleEncodingLiveJobRequest.
 
+        Please take a look at the [documentation](https://bitmovin.com/docs/encoding/articles/simple-encoding-api-live#inputs) (required)
 
         :return: The input of this SimpleEncodingLiveJobRequest.
         :rtype: SimpleEncodingLiveJobInput
@@ -106,6 +107,7 @@ class SimpleEncodingLiveJobRequest(object):
         # type: (SimpleEncodingLiveJobInput) -> None
         """Sets the input of this SimpleEncodingLiveJobRequest.
 
+        Please take a look at the [documentation](https://bitmovin.com/docs/encoding/articles/simple-encoding-api-live#inputs) (required)
 
         :param input_: The input of this SimpleEncodingLiveJobRequest.
         :type: SimpleEncodingLiveJobInput

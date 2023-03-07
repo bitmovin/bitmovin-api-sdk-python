@@ -88,6 +88,7 @@ class DashManifest(Manifest):
         # type: () -> DashProfile
         """Gets the profile of this DashManifest.
 
+        Determines if segmented or progressive representations can appear in the manifest
 
         :return: The profile of this DashManifest.
         :rtype: DashProfile
@@ -99,6 +100,7 @@ class DashManifest(Manifest):
         # type: (DashProfile) -> None
         """Sets the profile of this DashManifest.
 
+        Determines if segmented or progressive representations can appear in the manifest
 
         :param profile: The profile of this DashManifest.
         :type: DashProfile
