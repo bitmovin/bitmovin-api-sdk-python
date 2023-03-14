@@ -109,6 +109,7 @@ class EncodingOutput(object):
         # type: () -> list[AclEntry]
         """Gets the acl of this EncodingOutput.
 
+        Determines accessibility of files written to this output. Only applies to output types that support ACLs. Defaults to PUBLIC_READ if the list is empty. The destination (e.g. cloud storage bucket) needs to allow the configured ACL
 
         :return: The acl of this EncodingOutput.
         :rtype: list[AclEntry]
@@ -120,6 +121,7 @@ class EncodingOutput(object):
         # type: (list) -> None
         """Sets the acl of this EncodingOutput.
 
+        Determines accessibility of files written to this output. Only applies to output types that support ACLs. Defaults to PUBLIC_READ if the list is empty. The destination (e.g. cloud storage bucket) needs to allow the configured ACL
 
         :param acl: The acl of this EncodingOutput.
         :type: list[AclEntry]

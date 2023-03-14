@@ -46,6 +46,7 @@ class AclEntry(object):
         # type: () -> string_types
         """Gets the scope of this AclEntry.
 
+        Deprecation notice: The value of this property is not being used. It can be chosen arbitrarily or not set at all
 
         :return: The scope of this AclEntry.
         :rtype: string_types
@@ -57,6 +58,7 @@ class AclEntry(object):
         # type: (string_types) -> None
         """Sets the scope of this AclEntry.
 
+        Deprecation notice: The value of this property is not being used. It can be chosen arbitrarily or not set at all
 
         :param scope: The scope of this AclEntry.
         :type: string_types

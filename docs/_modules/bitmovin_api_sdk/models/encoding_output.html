@@ -187,6 +187,7 @@
         <span class="c1"># type: () -&gt; list[AclEntry]</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the acl of this EncodingOutput.</span>
 
+<span class="sd">        Determines accessibility of files written to this output. Only applies to output types that support ACLs. Defaults to PUBLIC_READ if the list is empty. The destination (e.g. cloud storage bucket) needs to allow the configured ACL</span>
 
 <span class="sd">        :return: The acl of this EncodingOutput.</span>
 <span class="sd">        :rtype: list[AclEntry]</span>
@@ -198,6 +199,7 @@
         <span class="c1"># type: (list) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the acl of this EncodingOutput.</span>
 
+<span class="sd">        Determines accessibility of files written to this output. Only applies to output types that support ACLs. Defaults to PUBLIC_READ if the list is empty. The destination (e.g. cloud storage bucket) needs to allow the configured ACL</span>
 
 <span class="sd">        :param acl: The acl of this EncodingOutput.</span>
 <span class="sd">        :type: list[AclEntry]</span>
