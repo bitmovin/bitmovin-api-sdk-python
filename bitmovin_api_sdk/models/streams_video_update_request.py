@@ -13,12 +13,14 @@ class StreamsVideoUpdateRequest(object):
     def __init__(self,
                  status=None,
                  title=None,
-                 description=None):
-        # type: (StreamsVideoStatus, string_types, string_types) -> None
+                 description=None,
+                 config_id=None):
+        # type: (StreamsVideoStatus, string_types, string_types, string_types) -> None
 
         self._status = None
         self._title = None
         self._description = None
+        self._config_id = None
         self.discriminator = None
 
         if status is not None:
@@ -27,13 +29,16 @@ class StreamsVideoUpdateRequest(object):
             self.title = title
         if description is not None:
             self.description = description
+        if config_id is not None:
+            self.config_id = config_id
 
     @property
     def openapi_types(self):
         types = {
             'status': 'StreamsVideoStatus',
             'title': 'string_types',
-            'description': 'string_types'
+            'description': 'string_types',
+            'config_id': 'string_types'
         }
 
         return types
@@ -43,7 +48,8 @@ class StreamsVideoUpdateRequest(object):
         attributes = {
             'status': 'status',
             'title': 'title',
-            'description': 'description'
+            'description': 'description',
+            'config_id': 'configId'
         }
         return attributes
 
@@ -133,6 +139,35 @@ class StreamsVideoUpdateRequest(object):
                 raise TypeError("Invalid type for `description`, type has to be `string_types`")
 
         self._description = description
+
+    @property
+    def config_id(self):
+        # type: () -> string_types
+        """Gets the config_id of this StreamsVideoUpdateRequest.
+
+        Id of the stream config to use
+
+        :return: The config_id of this StreamsVideoUpdateRequest.
+        :rtype: string_types
+        """
+        return self._config_id
+
+    @config_id.setter
+    def config_id(self, config_id):
+        # type: (string_types) -> None
+        """Sets the config_id of this StreamsVideoUpdateRequest.
+
+        Id of the stream config to use
+
+        :param config_id: The config_id of this StreamsVideoUpdateRequest.
+        :type: string_types
+        """
+
+        if config_id is not None:
+            if not isinstance(config_id, string_types):
+                raise TypeError("Invalid type for `config_id`, type has to be `string_types`")
+
+        self._config_id = config_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

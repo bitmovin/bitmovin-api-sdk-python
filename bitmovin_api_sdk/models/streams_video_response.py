@@ -4,6 +4,7 @@ from enum import Enum
 from datetime import datetime
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
+from bitmovin_api_sdk.models.streams_config_response import StreamsConfigResponse
 from bitmovin_api_sdk.models.streams_video_status import StreamsVideoStatus
 import pprint
 import six
@@ -18,8 +19,9 @@ class StreamsVideoResponse(object):
                  description=None,
                  created_at=None,
                  status=None,
+                 config=None,
                  encoding_tasks=None):
-        # type: (string_types, string_types, string_types, string_types, datetime, StreamsVideoStatus, list[StreamsVideoEncodingTask]) -> None
+        # type: (string_types, string_types, string_types, string_types, datetime, StreamsVideoStatus, StreamsConfigResponse, list[StreamsVideoEncodingTask]) -> None
 
         self._id = None
         self._asset_url = None
@@ -27,6 +29,7 @@ class StreamsVideoResponse(object):
         self._description = None
         self._created_at = None
         self._status = None
+        self._config = None
         self._encoding_tasks = list()
         self.discriminator = None
 
@@ -42,6 +45,8 @@ class StreamsVideoResponse(object):
             self.created_at = created_at
         if status is not None:
             self.status = status
+        if config is not None:
+            self.config = config
         if encoding_tasks is not None:
             self.encoding_tasks = encoding_tasks
 
@@ -54,6 +59,7 @@ class StreamsVideoResponse(object):
             'description': 'string_types',
             'created_at': 'datetime',
             'status': 'StreamsVideoStatus',
+            'config': 'StreamsConfigResponse',
             'encoding_tasks': 'list[StreamsVideoEncodingTask]'
         }
 
@@ -68,6 +74,7 @@ class StreamsVideoResponse(object):
             'description': 'description',
             'created_at': 'createdAt',
             'status': 'status',
+            'config': 'config',
             'encoding_tasks': 'encodingTasks'
         }
         return attributes
@@ -245,6 +252,33 @@ class StreamsVideoResponse(object):
                 raise TypeError("Invalid type for `status`, type has to be `StreamsVideoStatus`")
 
         self._status = status
+
+    @property
+    def config(self):
+        # type: () -> StreamsConfigResponse
+        """Gets the config of this StreamsVideoResponse.
+
+
+        :return: The config of this StreamsVideoResponse.
+        :rtype: StreamsConfigResponse
+        """
+        return self._config
+
+    @config.setter
+    def config(self, config):
+        # type: (StreamsConfigResponse) -> None
+        """Sets the config of this StreamsVideoResponse.
+
+
+        :param config: The config of this StreamsVideoResponse.
+        :type: StreamsConfigResponse
+        """
+
+        if config is not None:
+            if not isinstance(config, StreamsConfigResponse):
+                raise TypeError("Invalid type for `config`, type has to be `StreamsConfigResponse`")
+
+        self._config = config
 
     @property
     def encoding_tasks(self):
