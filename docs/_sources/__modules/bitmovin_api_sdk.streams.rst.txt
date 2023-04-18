@@ -7,7 +7,6 @@ Subpackages
 .. toctree::
    :maxdepth: 4
 
-   bitmovin_api_sdk.streams.configs
    bitmovin_api_sdk.streams.live
    bitmovin_api_sdk.streams.video
 

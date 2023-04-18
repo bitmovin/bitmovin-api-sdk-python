@@ -1,6 +1,15 @@
 bitmovin\_api\_sdk.streams.live package
 =======================================
 
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   bitmovin_api_sdk.streams.live.start
+   bitmovin_api_sdk.streams.live.stop
+
 Submodules
 ----------
 
@@ -8,6 +17,14 @@ bitmovin\_api\_sdk.streams.live.live\_api module
 ------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.streams.live.live_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.streams.live.streams\_live\_response\_list\_query\_params module
+-----------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.streams.live.streams_live_response_list_query_params
    :members:
    :undoc-members:
    :show-inheritance:

@@ -5572,10 +5572,26 @@ bitmovin\_api\_sdk.models.streams\_config\_response module
    :undoc-members:
    :show-inheritance:
 
-bitmovin\_api\_sdk.models.streams\_config\_update\_request module
------------------------------------------------------------------
+bitmovin\_api\_sdk.models.streams\_live\_create\_request module
+---------------------------------------------------------------
 
-.. automodule:: bitmovin_api_sdk.models.streams_config_update_request
+.. automodule:: bitmovin_api_sdk.models.streams_live_create_request
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.streams\_live\_life\_cycle module
+-----------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.streams_live_life_cycle
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.streams\_live\_response module
+--------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.streams_live_response
    :members:
    :undoc-members:
    :show-inheritance:
