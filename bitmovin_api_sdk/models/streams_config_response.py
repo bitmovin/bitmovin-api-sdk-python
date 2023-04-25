@@ -12,12 +12,16 @@ class StreamsConfigResponse(object):
     def __init__(self,
                  id_=None,
                  org_id=None,
-                 player_style=None):
-        # type: (string_types, string_types, object) -> None
+                 player_style=None,
+                 watermark_url=None,
+                 watermark_target_link=None):
+        # type: (string_types, string_types, object, string_types, string_types) -> None
 
         self._id = None
         self._org_id = None
         self._player_style = None
+        self._watermark_url = None
+        self._watermark_target_link = None
         self.discriminator = None
 
         if id_ is not None:
@@ -26,13 +30,19 @@ class StreamsConfigResponse(object):
             self.org_id = org_id
         if player_style is not None:
             self.player_style = player_style
+        if watermark_url is not None:
+            self.watermark_url = watermark_url
+        if watermark_target_link is not None:
+            self.watermark_target_link = watermark_target_link
 
     @property
     def openapi_types(self):
         types = {
             'id': 'string_types',
             'org_id': 'string_types',
-            'player_style': 'object'
+            'player_style': 'object',
+            'watermark_url': 'string_types',
+            'watermark_target_link': 'string_types'
         }
 
         return types
@@ -42,7 +52,9 @@ class StreamsConfigResponse(object):
         attributes = {
             'id': 'id',
             'org_id': 'orgId',
-            'player_style': 'playerStyle'
+            'player_style': 'playerStyle',
+            'watermark_url': 'watermarkUrl',
+            'watermark_target_link': 'watermarkTargetLink'
         }
         return attributes
 
@@ -132,6 +144,64 @@ class StreamsConfigResponse(object):
                 raise TypeError("Invalid type for `player_style`, type has to be `object`")
 
         self._player_style = player_style
+
+    @property
+    def watermark_url(self):
+        # type: () -> string_types
+        """Gets the watermark_url of this StreamsConfigResponse.
+
+        URL of the watermark image
+
+        :return: The watermark_url of this StreamsConfigResponse.
+        :rtype: string_types
+        """
+        return self._watermark_url
+
+    @watermark_url.setter
+    def watermark_url(self, watermark_url):
+        # type: (string_types) -> None
+        """Sets the watermark_url of this StreamsConfigResponse.
+
+        URL of the watermark image
+
+        :param watermark_url: The watermark_url of this StreamsConfigResponse.
+        :type: string_types
+        """
+
+        if watermark_url is not None:
+            if not isinstance(watermark_url, string_types):
+                raise TypeError("Invalid type for `watermark_url`, type has to be `string_types`")
+
+        self._watermark_url = watermark_url
+
+    @property
+    def watermark_target_link(self):
+        # type: () -> string_types
+        """Gets the watermark_target_link of this StreamsConfigResponse.
+
+        Target link of the watermark image
+
+        :return: The watermark_target_link of this StreamsConfigResponse.
+        :rtype: string_types
+        """
+        return self._watermark_target_link
+
+    @watermark_target_link.setter
+    def watermark_target_link(self, watermark_target_link):
+        # type: (string_types) -> None
+        """Sets the watermark_target_link of this StreamsConfigResponse.
+
+        Target link of the watermark image
+
+        :param watermark_target_link: The watermark_target_link of this StreamsConfigResponse.
+        :type: string_types
+        """
+
+        if watermark_target_link is not None:
+            if not isinstance(watermark_target_link, string_types):
+                raise TypeError("Invalid type for `watermark_target_link`, type has to be `string_types`")
+
+        self._watermark_target_link = watermark_target_link
 
     def to_dict(self):
         """Returns the model properties as a dict"""
