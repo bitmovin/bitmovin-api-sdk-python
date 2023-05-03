@@ -4,6 +4,7 @@ from enum import Enum
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
 from bitmovin_api_sdk.models.adaptive_quant_mode import AdaptiveQuantMode
+from bitmovin_api_sdk.models.auto_level_setup import AutoLevelSetup
 from bitmovin_api_sdk.models.b_adapt import BAdapt
 from bitmovin_api_sdk.models.cea608708_subtitle_configuration import Cea608708SubtitleConfiguration
 from bitmovin_api_sdk.models.color_config import ColorConfig
@@ -147,8 +148,9 @@ class H265VideoConfiguration(VideoConfiguration):
                  sao_non_deblock=None,
                  limit_sao=None,
                  lowpass_dct=None,
-                 cea608708_subtitle_config=None):
-        # type: (string_types, string_types, string_types, datetime, datetime, dict, int, int, int, float, PixelFormat, ColorConfig, int, int, DisplayAspectRatio, EncodingMode, PresetConfiguration, H265DynamicRangeFormat, float, ProfileH265, int, int, int, int, int, int, int, int, bool, float, float, LevelH265, int, BAdapt, MaxCtuSize, TuIntraDepth, TuInterDepth, MotionSearch, int, int, bool, bool, bool, string_types, int, int, bool, int, AdaptiveQuantMode, bool, VideoFormat, float, float, bool, bool, MinCodingUnitSize, int, LimitReferences, bool, bool, bool, int, bool, bool, bool, bool, bool, int, RateDistortionLevelForQuantization, int, int, bool, int, bool, bool, bool, bool, TransformSkipMode, bool, LimitTransformUnitDepthRecursionMode, int, int, RateDistortionPenaltyMode, MaxTransformUnitSize, int, bool, bool, bool, bool, bool, float, int, int, int, ForceFlushMode, float, bool, QuantizationGroupSize, bool, int, int, float, float, float, int, bool, float, float, bool, bool, bool, Cea608708SubtitleConfiguration) -> None
+                 cea608708_subtitle_config=None,
+                 auto_level_setup=None):
+        # type: (string_types, string_types, string_types, datetime, datetime, dict, int, int, int, float, PixelFormat, ColorConfig, int, int, DisplayAspectRatio, EncodingMode, PresetConfiguration, H265DynamicRangeFormat, float, ProfileH265, int, int, int, int, int, int, int, int, bool, float, float, LevelH265, int, BAdapt, MaxCtuSize, TuIntraDepth, TuInterDepth, MotionSearch, int, int, bool, bool, bool, string_types, int, int, bool, int, AdaptiveQuantMode, bool, VideoFormat, float, float, bool, bool, MinCodingUnitSize, int, LimitReferences, bool, bool, bool, int, bool, bool, bool, bool, bool, int, RateDistortionLevelForQuantization, int, int, bool, int, bool, bool, bool, bool, TransformSkipMode, bool, LimitTransformUnitDepthRecursionMode, int, int, RateDistortionPenaltyMode, MaxTransformUnitSize, int, bool, bool, bool, bool, bool, float, int, int, int, ForceFlushMode, float, bool, QuantizationGroupSize, bool, int, int, float, float, float, int, bool, float, float, bool, bool, bool, Cea608708SubtitleConfiguration, AutoLevelSetup) -> None
         super(H265VideoConfiguration, self).__init__(id_=id_, name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, width=width, height=height, bitrate=bitrate, rate=rate, pixel_format=pixel_format, color_config=color_config, sample_aspect_ratio_numerator=sample_aspect_ratio_numerator, sample_aspect_ratio_denominator=sample_aspect_ratio_denominator, display_aspect_ratio=display_aspect_ratio, encoding_mode=encoding_mode)
 
         self._preset_configuration = None
@@ -247,6 +249,7 @@ class H265VideoConfiguration(VideoConfiguration):
         self._limit_sao = None
         self._lowpass_dct = None
         self._cea608708_subtitle_config = None
+        self._auto_level_setup = None
         self.discriminator = None
 
         if preset_configuration is not None:
@@ -441,6 +444,8 @@ class H265VideoConfiguration(VideoConfiguration):
             self.lowpass_dct = lowpass_dct
         if cea608708_subtitle_config is not None:
             self.cea608708_subtitle_config = cea608708_subtitle_config
+        if auto_level_setup is not None:
+            self.auto_level_setup = auto_level_setup
 
     @property
     def openapi_types(self):
@@ -545,7 +550,8 @@ class H265VideoConfiguration(VideoConfiguration):
             'sao_non_deblock': 'bool',
             'limit_sao': 'bool',
             'lowpass_dct': 'bool',
-            'cea608708_subtitle_config': 'Cea608708SubtitleConfiguration'
+            'cea608708_subtitle_config': 'Cea608708SubtitleConfiguration',
+            'auto_level_setup': 'AutoLevelSetup'
         })
 
         return types
@@ -653,7 +659,8 @@ class H265VideoConfiguration(VideoConfiguration):
             'sao_non_deblock': 'saoNonDeblock',
             'limit_sao': 'limitSao',
             'lowpass_dct': 'lowpassDct',
-            'cea608708_subtitle_config': 'cea608708SubtitleConfig'
+            'cea608708_subtitle_config': 'cea608708SubtitleConfig',
+            'auto_level_setup': 'autoLevelSetup'
         })
         return attributes
 
@@ -3510,6 +3517,35 @@ class H265VideoConfiguration(VideoConfiguration):
                 raise TypeError("Invalid type for `cea608708_subtitle_config`, type has to be `Cea608708SubtitleConfiguration`")
 
         self._cea608708_subtitle_config = cea608708_subtitle_config
+
+    @property
+    def auto_level_setup(self):
+        # type: () -> AutoLevelSetup
+        """Gets the auto_level_setup of this H265VideoConfiguration.
+
+        Enable/disable automatic calculation of level, maxBitrate, and bufsize based on the least level that satisfies maximum property values for picture resolution, frame rate, and bit rate. Explicitly setting level, maxBitrate, or bufsize properties will automatically disable the calculation.
+
+        :return: The auto_level_setup of this H265VideoConfiguration.
+        :rtype: AutoLevelSetup
+        """
+        return self._auto_level_setup
+
+    @auto_level_setup.setter
+    def auto_level_setup(self, auto_level_setup):
+        # type: (AutoLevelSetup) -> None
+        """Sets the auto_level_setup of this H265VideoConfiguration.
+
+        Enable/disable automatic calculation of level, maxBitrate, and bufsize based on the least level that satisfies maximum property values for picture resolution, frame rate, and bit rate. Explicitly setting level, maxBitrate, or bufsize properties will automatically disable the calculation.
+
+        :param auto_level_setup: The auto_level_setup of this H265VideoConfiguration.
+        :type: AutoLevelSetup
+        """
+
+        if auto_level_setup is not None:
+            if not isinstance(auto_level_setup, AutoLevelSetup):
+                raise TypeError("Invalid type for `auto_level_setup`, type has to be `AutoLevelSetup`")
+
+        self._auto_level_setup = auto_level_setup
 
     def to_dict(self):
         """Returns the model properties as a dict"""

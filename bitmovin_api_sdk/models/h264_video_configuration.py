@@ -4,6 +4,7 @@ from enum import Enum
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
 from bitmovin_api_sdk.models.adaptive_quant_mode import AdaptiveQuantMode
+from bitmovin_api_sdk.models.auto_level_setup import AutoLevelSetup
 from bitmovin_api_sdk.models.b_adapt import BAdapt
 from bitmovin_api_sdk.models.cea608708_subtitle_configuration import Cea608708SubtitleConfiguration
 from bitmovin_api_sdk.models.color_config import ColorConfig
@@ -90,8 +91,9 @@ class H264VideoConfiguration(VideoConfiguration):
                  macroblock_tree_ratecontrol=None,
                  quantizer_curve_compression=None,
                  psy_rate_distortion_optimization=None,
-                 psy_trellis=None):
-        # type: (string_types, string_types, string_types, datetime, datetime, dict, int, int, int, float, PixelFormat, ColorConfig, int, int, DisplayAspectRatio, EncodingMode, PresetConfiguration, H264DynamicRangeFormat, float, ProfileH264, int, int, int, int, MvPredictionMode, int, bool, int, int, int, int, int, bool, float, float, LevelH264, BAdapt, H264MotionEstimationMethod, int, H264SubMe, H264Trellis, list[H264Partition], int, H264InterlaceMode, int, H264NalHrd, H264BPyramid, Cea608708SubtitleConfiguration, int, int, AdaptiveQuantMode, float, bool, bool, bool, bool, WeightedPredictionPFrames, bool, float, float, float) -> None
+                 psy_trellis=None,
+                 auto_level_setup=None):
+        # type: (string_types, string_types, string_types, datetime, datetime, dict, int, int, int, float, PixelFormat, ColorConfig, int, int, DisplayAspectRatio, EncodingMode, PresetConfiguration, H264DynamicRangeFormat, float, ProfileH264, int, int, int, int, MvPredictionMode, int, bool, int, int, int, int, int, bool, float, float, LevelH264, BAdapt, H264MotionEstimationMethod, int, H264SubMe, H264Trellis, list[H264Partition], int, H264InterlaceMode, int, H264NalHrd, H264BPyramid, Cea608708SubtitleConfiguration, int, int, AdaptiveQuantMode, float, bool, bool, bool, bool, WeightedPredictionPFrames, bool, float, float, float, AutoLevelSetup) -> None
         super(H264VideoConfiguration, self).__init__(id_=id_, name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, width=width, height=height, bitrate=bitrate, rate=rate, pixel_format=pixel_format, color_config=color_config, sample_aspect_ratio_numerator=sample_aspect_ratio_numerator, sample_aspect_ratio_denominator=sample_aspect_ratio_denominator, display_aspect_ratio=display_aspect_ratio, encoding_mode=encoding_mode)
 
         self._preset_configuration = None
@@ -139,6 +141,7 @@ class H264VideoConfiguration(VideoConfiguration):
         self._quantizer_curve_compression = None
         self._psy_rate_distortion_optimization = None
         self._psy_trellis = None
+        self._auto_level_setup = None
         self.discriminator = None
 
         if preset_configuration is not None:
@@ -231,6 +234,8 @@ class H264VideoConfiguration(VideoConfiguration):
             self.psy_rate_distortion_optimization = psy_rate_distortion_optimization
         if psy_trellis is not None:
             self.psy_trellis = psy_trellis
+        if auto_level_setup is not None:
+            self.auto_level_setup = auto_level_setup
 
     @property
     def openapi_types(self):
@@ -284,7 +289,8 @@ class H264VideoConfiguration(VideoConfiguration):
             'macroblock_tree_ratecontrol': 'bool',
             'quantizer_curve_compression': 'float',
             'psy_rate_distortion_optimization': 'float',
-            'psy_trellis': 'float'
+            'psy_trellis': 'float',
+            'auto_level_setup': 'AutoLevelSetup'
         })
 
         return types
@@ -341,7 +347,8 @@ class H264VideoConfiguration(VideoConfiguration):
             'macroblock_tree_ratecontrol': 'macroblockTreeRatecontrol',
             'quantizer_curve_compression': 'quantizerCurveCompression',
             'psy_rate_distortion_optimization': 'psyRateDistortionOptimization',
-            'psy_trellis': 'psyTrellis'
+            'psy_trellis': 'psyTrellis',
+            'auto_level_setup': 'autoLevelSetup'
         })
         return attributes
 
@@ -1679,6 +1686,35 @@ class H264VideoConfiguration(VideoConfiguration):
                 raise TypeError("Invalid type for `psy_trellis`, type has to be `float`")
 
         self._psy_trellis = psy_trellis
+
+    @property
+    def auto_level_setup(self):
+        # type: () -> AutoLevelSetup
+        """Gets the auto_level_setup of this H264VideoConfiguration.
+
+        Enable/disable automatic calculation of level, maxBitrate, and bufsize based on the least level that satisfies maximum property values for picture resolution, frame rate, and bit rate. Explicitly setting level, maxBitrate, or bufsize properties will automatically disable the calculation.
+
+        :return: The auto_level_setup of this H264VideoConfiguration.
+        :rtype: AutoLevelSetup
+        """
+        return self._auto_level_setup
+
+    @auto_level_setup.setter
+    def auto_level_setup(self, auto_level_setup):
+        # type: (AutoLevelSetup) -> None
+        """Sets the auto_level_setup of this H264VideoConfiguration.
+
+        Enable/disable automatic calculation of level, maxBitrate, and bufsize based on the least level that satisfies maximum property values for picture resolution, frame rate, and bit rate. Explicitly setting level, maxBitrate, or bufsize properties will automatically disable the calculation.
+
+        :param auto_level_setup: The auto_level_setup of this H264VideoConfiguration.
+        :type: AutoLevelSetup
+        """
+
+        if auto_level_setup is not None:
+            if not isinstance(auto_level_setup, AutoLevelSetup):
+                raise TypeError("Invalid type for `auto_level_setup`, type has to be `AutoLevelSetup`")
+
+        self._auto_level_setup = auto_level_setup
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -20,8 +20,9 @@ class StreamsVideoResponse(object):
                  created_at=None,
                  status=None,
                  config=None,
-                 encoding_tasks=None):
-        # type: (string_types, string_types, string_types, string_types, datetime, StreamsVideoStatus, StreamsConfigResponse, list[StreamsVideoEncodingTask]) -> None
+                 encoding_tasks=None,
+                 poster_url=None):
+        # type: (string_types, string_types, string_types, string_types, datetime, StreamsVideoStatus, StreamsConfigResponse, list[StreamsVideoEncodingTask], string_types) -> None
 
         self._id = None
         self._asset_url = None
@@ -31,6 +32,7 @@ class StreamsVideoResponse(object):
         self._status = None
         self._config = None
         self._encoding_tasks = list()
+        self._poster_url = None
         self.discriminator = None
 
         if id_ is not None:
@@ -49,6 +51,8 @@ class StreamsVideoResponse(object):
             self.config = config
         if encoding_tasks is not None:
             self.encoding_tasks = encoding_tasks
+        if poster_url is not None:
+            self.poster_url = poster_url
 
     @property
     def openapi_types(self):
@@ -60,7 +64,8 @@ class StreamsVideoResponse(object):
             'created_at': 'datetime',
             'status': 'StreamsVideoStatus',
             'config': 'StreamsConfigResponse',
-            'encoding_tasks': 'list[StreamsVideoEncodingTask]'
+            'encoding_tasks': 'list[StreamsVideoEncodingTask]',
+            'poster_url': 'string_types'
         }
 
         return types
@@ -75,7 +80,8 @@ class StreamsVideoResponse(object):
             'created_at': 'createdAt',
             'status': 'status',
             'config': 'config',
-            'encoding_tasks': 'encodingTasks'
+            'encoding_tasks': 'encodingTasks',
+            'poster_url': 'posterUrl'
         }
         return attributes
 
@@ -308,6 +314,35 @@ class StreamsVideoResponse(object):
                 raise TypeError("Invalid type for `encoding_tasks`, type has to be `list[StreamsVideoEncodingTask]`")
 
         self._encoding_tasks = encoding_tasks
+
+    @property
+    def poster_url(self):
+        # type: () -> string_types
+        """Gets the poster_url of this StreamsVideoResponse.
+
+        Poster URL
+
+        :return: The poster_url of this StreamsVideoResponse.
+        :rtype: string_types
+        """
+        return self._poster_url
+
+    @poster_url.setter
+    def poster_url(self, poster_url):
+        # type: (string_types) -> None
+        """Sets the poster_url of this StreamsVideoResponse.
+
+        Poster URL
+
+        :param poster_url: The poster_url of this StreamsVideoResponse.
+        :type: string_types
+        """
+
+        if poster_url is not None:
+            if not isinstance(poster_url, string_types):
+                raise TypeError("Invalid type for `poster_url`, type has to be `string_types`")
+
+        self._poster_url = poster_url
 
     def to_dict(self):
         """Returns the model properties as a dict"""

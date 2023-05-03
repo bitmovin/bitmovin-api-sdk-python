@@ -3,6 +3,7 @@
 from enum import Enum
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
+from bitmovin_api_sdk.models.auto_level_setup import AutoLevelSetup
 from bitmovin_api_sdk.models.av1_preset_configuration import Av1PresetConfiguration
 from bitmovin_api_sdk.models.color_config import ColorConfig
 from bitmovin_api_sdk.models.display_aspect_ratio import DisplayAspectRatio
@@ -32,15 +33,19 @@ class Av1VideoConfiguration(VideoConfiguration):
                  sample_aspect_ratio_denominator=None,
                  display_aspect_ratio=None,
                  encoding_mode=None,
-                 preset_configuration=None):
-        # type: (string_types, string_types, string_types, datetime, datetime, dict, int, int, int, float, PixelFormat, ColorConfig, int, int, DisplayAspectRatio, EncodingMode, Av1PresetConfiguration) -> None
+                 preset_configuration=None,
+                 auto_level_setup=None):
+        # type: (string_types, string_types, string_types, datetime, datetime, dict, int, int, int, float, PixelFormat, ColorConfig, int, int, DisplayAspectRatio, EncodingMode, Av1PresetConfiguration, AutoLevelSetup) -> None
         super(Av1VideoConfiguration, self).__init__(id_=id_, name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, width=width, height=height, bitrate=bitrate, rate=rate, pixel_format=pixel_format, color_config=color_config, sample_aspect_ratio_numerator=sample_aspect_ratio_numerator, sample_aspect_ratio_denominator=sample_aspect_ratio_denominator, display_aspect_ratio=display_aspect_ratio, encoding_mode=encoding_mode)
 
         self._preset_configuration = None
+        self._auto_level_setup = None
         self.discriminator = None
 
         if preset_configuration is not None:
             self.preset_configuration = preset_configuration
+        if auto_level_setup is not None:
+            self.auto_level_setup = auto_level_setup
 
     @property
     def openapi_types(self):
@@ -50,7 +55,8 @@ class Av1VideoConfiguration(VideoConfiguration):
             types = getattr(super(Av1VideoConfiguration, self), 'openapi_types')
 
         types.update({
-            'preset_configuration': 'Av1PresetConfiguration'
+            'preset_configuration': 'Av1PresetConfiguration',
+            'auto_level_setup': 'AutoLevelSetup'
         })
 
         return types
@@ -63,7 +69,8 @@ class Av1VideoConfiguration(VideoConfiguration):
             attributes = getattr(super(Av1VideoConfiguration, self), 'attribute_map')
 
         attributes.update({
-            'preset_configuration': 'presetConfiguration'
+            'preset_configuration': 'presetConfiguration',
+            'auto_level_setup': 'autoLevelSetup'
         })
         return attributes
 
@@ -95,6 +102,35 @@ class Av1VideoConfiguration(VideoConfiguration):
                 raise TypeError("Invalid type for `preset_configuration`, type has to be `Av1PresetConfiguration`")
 
         self._preset_configuration = preset_configuration
+
+    @property
+    def auto_level_setup(self):
+        # type: () -> AutoLevelSetup
+        """Gets the auto_level_setup of this Av1VideoConfiguration.
+
+        Enable/disable automatic calculation of level, maxBitrate, and bufsize based on the least level that satisfies maximum property values for picture resolution, frame rate, and bit rate.
+
+        :return: The auto_level_setup of this Av1VideoConfiguration.
+        :rtype: AutoLevelSetup
+        """
+        return self._auto_level_setup
+
+    @auto_level_setup.setter
+    def auto_level_setup(self, auto_level_setup):
+        # type: (AutoLevelSetup) -> None
+        """Sets the auto_level_setup of this Av1VideoConfiguration.
+
+        Enable/disable automatic calculation of level, maxBitrate, and bufsize based on the least level that satisfies maximum property values for picture resolution, frame rate, and bit rate.
+
+        :param auto_level_setup: The auto_level_setup of this Av1VideoConfiguration.
+        :type: AutoLevelSetup
+        """
+
+        if auto_level_setup is not None:
+            if not isinstance(auto_level_setup, AutoLevelSetup):
+                raise TypeError("Invalid type for `auto_level_setup`, type has to be `AutoLevelSetup`")
+
+        self._auto_level_setup = auto_level_setup
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -12,12 +12,14 @@ class StreamsLiveUpdateRequest(object):
     def __init__(self,
                  title=None,
                  description=None,
-                 config_id=None):
-        # type: (string_types, string_types, string_types) -> None
+                 config_id=None,
+                 poster_url=None):
+        # type: (string_types, string_types, string_types, string_types) -> None
 
         self._title = None
         self._description = None
         self._config_id = None
+        self._poster_url = None
         self.discriminator = None
 
         if title is not None:
@@ -26,13 +28,16 @@ class StreamsLiveUpdateRequest(object):
             self.description = description
         if config_id is not None:
             self.config_id = config_id
+        if poster_url is not None:
+            self.poster_url = poster_url
 
     @property
     def openapi_types(self):
         types = {
             'title': 'string_types',
             'description': 'string_types',
-            'config_id': 'string_types'
+            'config_id': 'string_types',
+            'poster_url': 'string_types'
         }
 
         return types
@@ -42,7 +47,8 @@ class StreamsLiveUpdateRequest(object):
         attributes = {
             'title': 'title',
             'description': 'description',
-            'config_id': 'configId'
+            'config_id': 'configId',
+            'poster_url': 'posterUrl'
         }
         return attributes
 
@@ -132,6 +138,35 @@ class StreamsLiveUpdateRequest(object):
                 raise TypeError("Invalid type for `config_id`, type has to be `string_types`")
 
         self._config_id = config_id
+
+    @property
+    def poster_url(self):
+        # type: () -> string_types
+        """Gets the poster_url of this StreamsLiveUpdateRequest.
+
+        URL to hosted poster image
+
+        :return: The poster_url of this StreamsLiveUpdateRequest.
+        :rtype: string_types
+        """
+        return self._poster_url
+
+    @poster_url.setter
+    def poster_url(self, poster_url):
+        # type: (string_types) -> None
+        """Sets the poster_url of this StreamsLiveUpdateRequest.
+
+        URL to hosted poster image
+
+        :param poster_url: The poster_url of this StreamsLiveUpdateRequest.
+        :type: string_types
+        """
+
+        if poster_url is not None:
+            if not isinstance(poster_url, string_types):
+                raise TypeError("Invalid type for `poster_url`, type has to be `string_types`")
+
+        self._poster_url = poster_url
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -97,8 +97,9 @@
                  <span class="n">description</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">created_at</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">life_cycle</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                 <span class="n">config</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (string_types, string_types, string_types, string_types, datetime, StreamsLiveLifeCycle, StreamsConfigResponse) -&gt; None</span>
+                 <span class="n">config</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">poster_url</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="c1"># type: (string_types, string_types, string_types, string_types, datetime, StreamsLiveLifeCycle, StreamsConfigResponse, string_types) -&gt; None</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_id</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_stream_key</span> <span class="o">=</span> <span class="kc">None</span>
@@ -107,6 +108,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_created_at</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_life_cycle</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_config</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_poster_url</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>
 
         <span class="k">if</span> <span class="n">id_</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -123,6 +125,8 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">life_cycle</span> <span class="o">=</span> <span class="n">life_cycle</span>
         <span class="k">if</span> <span class="n">config</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">config</span> <span class="o">=</span> <span class="n">config</span>
+        <span class="k">if</span> <span class="n">poster_url</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">poster_url</span> <span class="o">=</span> <span class="n">poster_url</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -133,7 +137,8 @@
             <span class="s1">&#39;description&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
             <span class="s1">&#39;created_at&#39;</span><span class="p">:</span> <span class="s1">&#39;datetime&#39;</span><span class="p">,</span>
             <span class="s1">&#39;life_cycle&#39;</span><span class="p">:</span> <span class="s1">&#39;StreamsLiveLifeCycle&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;config&#39;</span><span class="p">:</span> <span class="s1">&#39;StreamsConfigResponse&#39;</span>
+            <span class="s1">&#39;config&#39;</span><span class="p">:</span> <span class="s1">&#39;StreamsConfigResponse&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;poster_url&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span>
         <span class="p">}</span>
 
         <span class="k">return</span> <span class="n">types</span>
@@ -147,7 +152,8 @@
             <span class="s1">&#39;description&#39;</span><span class="p">:</span> <span class="s1">&#39;description&#39;</span><span class="p">,</span>
             <span class="s1">&#39;created_at&#39;</span><span class="p">:</span> <span class="s1">&#39;createdAt&#39;</span><span class="p">,</span>
             <span class="s1">&#39;life_cycle&#39;</span><span class="p">:</span> <span class="s1">&#39;lifeCycle&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;config&#39;</span><span class="p">:</span> <span class="s1">&#39;config&#39;</span>
+            <span class="s1">&#39;config&#39;</span><span class="p">:</span> <span class="s1">&#39;config&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;poster_url&#39;</span><span class="p">:</span> <span class="s1">&#39;posterUrl&#39;</span>
         <span class="p">}</span>
         <span class="k">return</span> <span class="n">attributes</span>
 
@@ -351,6 +357,35 @@
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `config`, type has to be `StreamsConfigResponse`&quot;</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_config</span> <span class="o">=</span> <span class="n">config</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">poster_url</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; string_types</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the poster_url of this StreamsLiveResponse.</span>
+
+<span class="sd">        Poster URL</span>
+
+<span class="sd">        :return: The poster_url of this StreamsLiveResponse.</span>
+<span class="sd">        :rtype: string_types</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_poster_url</span>
+
+    <span class="nd">@poster_url</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">poster_url</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">poster_url</span><span class="p">):</span>
+        <span class="c1"># type: (string_types) -&gt; None</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the poster_url of this StreamsLiveResponse.</span>
+
+<span class="sd">        Poster URL</span>
+
+<span class="sd">        :param poster_url: The poster_url of this StreamsLiveResponse.</span>
+<span class="sd">        :type: string_types</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">poster_url</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">poster_url</span><span class="p">,</span> <span class="n">string_types</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `poster_url`, type has to be `string_types`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_poster_url</span> <span class="o">=</span> <span class="n">poster_url</span>
 
 <div class="viewcode-block" id="StreamsLiveResponse.to_dict"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.streams_live_response.StreamsLiveResponse.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>

@@ -94,7 +94,7 @@ class LiveApi(BaseApi):
 
     def patch_streams_live(self, stream_id, streams_live_update_request, **kwargs):
         # type: (string_types, StreamsLiveUpdateRequest, dict) -> StreamsLiveUpdateRequest
-        """Update live stream by id
+        """Partially update live stream by id
 
         :param stream_id: Id of the stream.
         :type stream_id: string_types, required
@@ -105,6 +105,26 @@ class LiveApi(BaseApi):
         """
 
         return self.api_client.patch(
+            '/streams/live/{stream_id}',
+            streams_live_update_request,
+            path_params={'stream_id': stream_id},
+            type=StreamsLiveUpdateRequest,
+            **kwargs
+        )
+
+    def update(self, stream_id, streams_live_update_request, **kwargs):
+        # type: (string_types, StreamsLiveUpdateRequest, dict) -> StreamsLiveUpdateRequest
+        """Update live stream by id
+
+        :param stream_id: Id of the stream.
+        :type stream_id: string_types, required
+        :param streams_live_update_request: The updated stream config object.
+        :type streams_live_update_request: StreamsLiveUpdateRequest, required
+        :return:
+        :rtype: StreamsLiveUpdateRequest
+        """
+
+        return self.api_client.put(
             '/streams/live/{stream_id}',
             streams_live_update_request,
             path_params={'stream_id': stream_id},

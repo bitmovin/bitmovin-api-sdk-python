@@ -140,6 +140,7 @@ from bitmovin_api_sdk.models.audio_video_sync_mode import AudioVideoSyncMode
 from bitmovin_api_sdk.models.audio_volume_filter import AudioVolumeFilter
 from bitmovin_api_sdk.models.audio_volume_format import AudioVolumeFormat
 from bitmovin_api_sdk.models.audio_volume_unit import AudioVolumeUnit
+from bitmovin_api_sdk.models.auto_level_setup import AutoLevelSetup
 from bitmovin_api_sdk.models.auto_representation import AutoRepresentation
 from bitmovin_api_sdk.models.auto_restart_configuration import AutoRestartConfiguration
 from bitmovin_api_sdk.models.av1_per_title_configuration import Av1PerTitleConfiguration

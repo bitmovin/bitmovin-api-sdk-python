@@ -1100,6 +1100,14 @@ bitmovin\_api\_sdk.models.audio\_volume\_unit module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.auto\_level\_setup module
+---------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.auto_level_setup
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.auto\_representation module
 -----------------------------------------------------
 

@@ -172,7 +172,7 @@
 
 <div class="viewcode-block" id="LiveApi.patch_streams_live"><a class="viewcode-back" href="../../../../__modules/bitmovin_api_sdk.streams.live.html#bitmovin_api_sdk.streams.live.live_api.LiveApi.patch_streams_live">[docs]</a>    <span class="k">def</span> <span class="nf">patch_streams_live</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">stream_id</span><span class="p">,</span> <span class="n">streams_live_update_request</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, StreamsLiveUpdateRequest, dict) -&gt; StreamsLiveUpdateRequest</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Update live stream by id</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Partially update live stream by id</span>
 
 <span class="sd">        :param stream_id: Id of the stream.</span>
 <span class="sd">        :type stream_id: string_types, required</span>
@@ -183,6 +183,26 @@
 <span class="sd">        &quot;&quot;&quot;</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">patch</span><span class="p">(</span>
+            <span class="s1">&#39;/streams/live/</span><span class="si">{stream_id}</span><span class="s1">&#39;</span><span class="p">,</span>
+            <span class="n">streams_live_update_request</span><span class="p">,</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;stream_id&#39;</span><span class="p">:</span> <span class="n">stream_id</span><span class="p">},</span>
+            <span class="nb">type</span><span class="o">=</span><span class="n">StreamsLiveUpdateRequest</span><span class="p">,</span>
+            <span class="o">**</span><span class="n">kwargs</span>
+        <span class="p">)</span></div>
+
+<div class="viewcode-block" id="LiveApi.update"><a class="viewcode-back" href="../../../../__modules/bitmovin_api_sdk.streams.live.html#bitmovin_api_sdk.streams.live.live_api.LiveApi.update">[docs]</a>    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">stream_id</span><span class="p">,</span> <span class="n">streams_live_update_request</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="c1"># type: (string_types, StreamsLiveUpdateRequest, dict) -&gt; StreamsLiveUpdateRequest</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Update live stream by id</span>
+
+<span class="sd">        :param stream_id: Id of the stream.</span>
+<span class="sd">        :type stream_id: string_types, required</span>
+<span class="sd">        :param streams_live_update_request: The updated stream config object.</span>
+<span class="sd">        :type streams_live_update_request: StreamsLiveUpdateRequest, required</span>
+<span class="sd">        :return:</span>
+<span class="sd">        :rtype: StreamsLiveUpdateRequest</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">put</span><span class="p">(</span>
             <span class="s1">&#39;/streams/live/</span><span class="si">{stream_id}</span><span class="s1">&#39;</span><span class="p">,</span>
             <span class="n">streams_live_update_request</span><span class="p">,</span>
             <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;stream_id&#39;</span><span class="p">:</span> <span class="n">stream_id</span><span class="p">},</span>

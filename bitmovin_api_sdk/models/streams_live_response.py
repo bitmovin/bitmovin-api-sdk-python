@@ -19,8 +19,9 @@ class StreamsLiveResponse(object):
                  description=None,
                  created_at=None,
                  life_cycle=None,
-                 config=None):
-        # type: (string_types, string_types, string_types, string_types, datetime, StreamsLiveLifeCycle, StreamsConfigResponse) -> None
+                 config=None,
+                 poster_url=None):
+        # type: (string_types, string_types, string_types, string_types, datetime, StreamsLiveLifeCycle, StreamsConfigResponse, string_types) -> None
 
         self._id = None
         self._stream_key = None
@@ -29,6 +30,7 @@ class StreamsLiveResponse(object):
         self._created_at = None
         self._life_cycle = None
         self._config = None
+        self._poster_url = None
         self.discriminator = None
 
         if id_ is not None:
@@ -45,6 +47,8 @@ class StreamsLiveResponse(object):
             self.life_cycle = life_cycle
         if config is not None:
             self.config = config
+        if poster_url is not None:
+            self.poster_url = poster_url
 
     @property
     def openapi_types(self):
@@ -55,7 +59,8 @@ class StreamsLiveResponse(object):
             'description': 'string_types',
             'created_at': 'datetime',
             'life_cycle': 'StreamsLiveLifeCycle',
-            'config': 'StreamsConfigResponse'
+            'config': 'StreamsConfigResponse',
+            'poster_url': 'string_types'
         }
 
         return types
@@ -69,7 +74,8 @@ class StreamsLiveResponse(object):
             'description': 'description',
             'created_at': 'createdAt',
             'life_cycle': 'lifeCycle',
-            'config': 'config'
+            'config': 'config',
+            'poster_url': 'posterUrl'
         }
         return attributes
 
@@ -273,6 +279,35 @@ class StreamsLiveResponse(object):
                 raise TypeError("Invalid type for `config`, type has to be `StreamsConfigResponse`")
 
         self._config = config
+
+    @property
+    def poster_url(self):
+        # type: () -> string_types
+        """Gets the poster_url of this StreamsLiveResponse.
+
+        Poster URL
+
+        :return: The poster_url of this StreamsLiveResponse.
+        :rtype: string_types
+        """
+        return self._poster_url
+
+    @poster_url.setter
+    def poster_url(self, poster_url):
+        # type: (string_types) -> None
+        """Sets the poster_url of this StreamsLiveResponse.
+
+        Poster URL
+
+        :param poster_url: The poster_url of this StreamsLiveResponse.
+        :type: string_types
+        """
+
+        if poster_url is not None:
+            if not isinstance(poster_url, string_types):
+                raise TypeError("Invalid type for `poster_url`, type has to be `string_types`")
+
+        self._poster_url = poster_url
 
     def to_dict(self):
         """Returns the model properties as a dict"""

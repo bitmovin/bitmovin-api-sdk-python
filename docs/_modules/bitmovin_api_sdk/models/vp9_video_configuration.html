@@ -81,6 +81,7 @@
 <span class="kn">from</span> <span class="nn">enum</span> <span class="kn">import</span> <span class="n">Enum</span>
 <span class="kn">from</span> <span class="nn">six</span> <span class="kn">import</span> <span class="n">string_types</span><span class="p">,</span> <span class="n">iteritems</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.common.poscheck</span> <span class="kn">import</span> <span class="n">poscheck_model</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.auto_level_setup</span> <span class="kn">import</span> <span class="n">AutoLevelSetup</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.color_config</span> <span class="kn">import</span> <span class="n">ColorConfig</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.display_aspect_ratio</span> <span class="kn">import</span> <span class="n">DisplayAspectRatio</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.encoding_mode</span> <span class="kn">import</span> <span class="n">EncodingMode</span>
@@ -146,8 +147,9 @@
                  <span class="n">aq_mode</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">arnr_max_frames</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">arnr_strength</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                 <span class="n">arnr_type</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (string_types, string_types, string_types, datetime, datetime, dict, int, int, int, float, PixelFormat, ColorConfig, int, int, DisplayAspectRatio, EncodingMode, PresetConfiguration, Vp9DynamicRangeFormat, int, int, bool, int, int, bool, int, int, int, int, int, int, int, int, bool, int, bool, int, bool, int, int, int, float, float, Vp9Quality, bool, int, Vp9AqMode, int, int, Vp9ArnrType) -&gt; None</span>
+                 <span class="n">arnr_type</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">auto_level_setup</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="c1"># type: (string_types, string_types, string_types, datetime, datetime, dict, int, int, int, float, PixelFormat, ColorConfig, int, int, DisplayAspectRatio, EncodingMode, PresetConfiguration, Vp9DynamicRangeFormat, int, int, bool, int, int, bool, int, int, int, int, int, int, int, int, bool, int, bool, int, bool, int, int, int, float, float, Vp9Quality, bool, int, Vp9AqMode, int, int, Vp9ArnrType, AutoLevelSetup) -&gt; None</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">Vp9VideoConfiguration</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">id_</span><span class="o">=</span><span class="n">id_</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="n">description</span><span class="p">,</span> <span class="n">created_at</span><span class="o">=</span><span class="n">created_at</span><span class="p">,</span> <span class="n">modified_at</span><span class="o">=</span><span class="n">modified_at</span><span class="p">,</span> <span class="n">custom_data</span><span class="o">=</span><span class="n">custom_data</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="n">height</span><span class="p">,</span> <span class="n">bitrate</span><span class="o">=</span><span class="n">bitrate</span><span class="p">,</span> <span class="n">rate</span><span class="o">=</span><span class="n">rate</span><span class="p">,</span> <span class="n">pixel_format</span><span class="o">=</span><span class="n">pixel_format</span><span class="p">,</span> <span class="n">color_config</span><span class="o">=</span><span class="n">color_config</span><span class="p">,</span> <span class="n">sample_aspect_ratio_numerator</span><span class="o">=</span><span class="n">sample_aspect_ratio_numerator</span><span class="p">,</span> <span class="n">sample_aspect_ratio_denominator</span><span class="o">=</span><span class="n">sample_aspect_ratio_denominator</span><span class="p">,</span> <span class="n">display_aspect_ratio</span><span class="o">=</span><span class="n">display_aspect_ratio</span><span class="p">,</span> <span class="n">encoding_mode</span><span class="o">=</span><span class="n">encoding_mode</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_preset_configuration</span> <span class="o">=</span> <span class="kc">None</span>
@@ -183,6 +185,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_arnr_max_frames</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_arnr_strength</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_arnr_type</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_auto_level_setup</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>
 
         <span class="k">if</span> <span class="n">preset_configuration</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -251,6 +254,8 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">arnr_strength</span> <span class="o">=</span> <span class="n">arnr_strength</span>
         <span class="k">if</span> <span class="n">arnr_type</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">arnr_type</span> <span class="o">=</span> <span class="n">arnr_type</span>
+        <span class="k">if</span> <span class="n">auto_level_setup</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">auto_level_setup</span> <span class="o">=</span> <span class="n">auto_level_setup</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -292,7 +297,8 @@
             <span class="s1">&#39;aq_mode&#39;</span><span class="p">:</span> <span class="s1">&#39;Vp9AqMode&#39;</span><span class="p">,</span>
             <span class="s1">&#39;arnr_max_frames&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
             <span class="s1">&#39;arnr_strength&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;arnr_type&#39;</span><span class="p">:</span> <span class="s1">&#39;Vp9ArnrType&#39;</span>
+            <span class="s1">&#39;arnr_type&#39;</span><span class="p">:</span> <span class="s1">&#39;Vp9ArnrType&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;auto_level_setup&#39;</span><span class="p">:</span> <span class="s1">&#39;AutoLevelSetup&#39;</span>
         <span class="p">})</span>
 
         <span class="k">return</span> <span class="n">types</span>
@@ -337,7 +343,8 @@
             <span class="s1">&#39;aq_mode&#39;</span><span class="p">:</span> <span class="s1">&#39;aqMode&#39;</span><span class="p">,</span>
             <span class="s1">&#39;arnr_max_frames&#39;</span><span class="p">:</span> <span class="s1">&#39;arnrMaxFrames&#39;</span><span class="p">,</span>
             <span class="s1">&#39;arnr_strength&#39;</span><span class="p">:</span> <span class="s1">&#39;arnrStrength&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;arnr_type&#39;</span><span class="p">:</span> <span class="s1">&#39;arnrType&#39;</span>
+            <span class="s1">&#39;arnr_type&#39;</span><span class="p">:</span> <span class="s1">&#39;arnrType&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;auto_level_setup&#39;</span><span class="p">:</span> <span class="s1">&#39;autoLevelSetup&#39;</span>
         <span class="p">})</span>
         <span class="k">return</span> <span class="n">attributes</span>
 
@@ -1353,6 +1360,35 @@
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `arnr_type`, type has to be `Vp9ArnrType`&quot;</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_arnr_type</span> <span class="o">=</span> <span class="n">arnr_type</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">auto_level_setup</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; AutoLevelSetup</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the auto_level_setup of this Vp9VideoConfiguration.</span>
+
+<span class="sd">        Enable/disable automatic calculation of level, maxBitrate, and bufsize based on the least level that satisfies maximum property values for picture resolution, frame rate, and bit rate. Explicitly setting targetLevel, rateOvershootPct, or clientBufferSize properties will automatically disable the calculation.</span>
+
+<span class="sd">        :return: The auto_level_setup of this Vp9VideoConfiguration.</span>
+<span class="sd">        :rtype: AutoLevelSetup</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_auto_level_setup</span>
+
+    <span class="nd">@auto_level_setup</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">auto_level_setup</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">auto_level_setup</span><span class="p">):</span>
+        <span class="c1"># type: (AutoLevelSetup) -&gt; None</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the auto_level_setup of this Vp9VideoConfiguration.</span>
+
+<span class="sd">        Enable/disable automatic calculation of level, maxBitrate, and bufsize based on the least level that satisfies maximum property values for picture resolution, frame rate, and bit rate. Explicitly setting targetLevel, rateOvershootPct, or clientBufferSize properties will automatically disable the calculation.</span>
+
+<span class="sd">        :param auto_level_setup: The auto_level_setup of this Vp9VideoConfiguration.</span>
+<span class="sd">        :type: AutoLevelSetup</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">auto_level_setup</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">auto_level_setup</span><span class="p">,</span> <span class="n">AutoLevelSetup</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `auto_level_setup`, type has to be `AutoLevelSetup`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_auto_level_setup</span> <span class="o">=</span> <span class="n">auto_level_setup</span>
 
 <div class="viewcode-block" id="Vp9VideoConfiguration.to_dict"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.vp9_video_configuration.Vp9VideoConfiguration.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>

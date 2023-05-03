@@ -3,6 +3,7 @@
 from enum import Enum
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
+from bitmovin_api_sdk.models.auto_level_setup import AutoLevelSetup
 from bitmovin_api_sdk.models.color_config import ColorConfig
 from bitmovin_api_sdk.models.display_aspect_ratio import DisplayAspectRatio
 from bitmovin_api_sdk.models.encoding_mode import EncodingMode
@@ -68,8 +69,9 @@ class Vp9VideoConfiguration(VideoConfiguration):
                  aq_mode=None,
                  arnr_max_frames=None,
                  arnr_strength=None,
-                 arnr_type=None):
-        # type: (string_types, string_types, string_types, datetime, datetime, dict, int, int, int, float, PixelFormat, ColorConfig, int, int, DisplayAspectRatio, EncodingMode, PresetConfiguration, Vp9DynamicRangeFormat, int, int, bool, int, int, bool, int, int, int, int, int, int, int, int, bool, int, bool, int, bool, int, int, int, float, float, Vp9Quality, bool, int, Vp9AqMode, int, int, Vp9ArnrType) -> None
+                 arnr_type=None,
+                 auto_level_setup=None):
+        # type: (string_types, string_types, string_types, datetime, datetime, dict, int, int, int, float, PixelFormat, ColorConfig, int, int, DisplayAspectRatio, EncodingMode, PresetConfiguration, Vp9DynamicRangeFormat, int, int, bool, int, int, bool, int, int, int, int, int, int, int, int, bool, int, bool, int, bool, int, int, int, float, float, Vp9Quality, bool, int, Vp9AqMode, int, int, Vp9ArnrType, AutoLevelSetup) -> None
         super(Vp9VideoConfiguration, self).__init__(id_=id_, name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, width=width, height=height, bitrate=bitrate, rate=rate, pixel_format=pixel_format, color_config=color_config, sample_aspect_ratio_numerator=sample_aspect_ratio_numerator, sample_aspect_ratio_denominator=sample_aspect_ratio_denominator, display_aspect_ratio=display_aspect_ratio, encoding_mode=encoding_mode)
 
         self._preset_configuration = None
@@ -105,6 +107,7 @@ class Vp9VideoConfiguration(VideoConfiguration):
         self._arnr_max_frames = None
         self._arnr_strength = None
         self._arnr_type = None
+        self._auto_level_setup = None
         self.discriminator = None
 
         if preset_configuration is not None:
@@ -173,6 +176,8 @@ class Vp9VideoConfiguration(VideoConfiguration):
             self.arnr_strength = arnr_strength
         if arnr_type is not None:
             self.arnr_type = arnr_type
+        if auto_level_setup is not None:
+            self.auto_level_setup = auto_level_setup
 
     @property
     def openapi_types(self):
@@ -214,7 +219,8 @@ class Vp9VideoConfiguration(VideoConfiguration):
             'aq_mode': 'Vp9AqMode',
             'arnr_max_frames': 'int',
             'arnr_strength': 'int',
-            'arnr_type': 'Vp9ArnrType'
+            'arnr_type': 'Vp9ArnrType',
+            'auto_level_setup': 'AutoLevelSetup'
         })
 
         return types
@@ -259,7 +265,8 @@ class Vp9VideoConfiguration(VideoConfiguration):
             'aq_mode': 'aqMode',
             'arnr_max_frames': 'arnrMaxFrames',
             'arnr_strength': 'arnrStrength',
-            'arnr_type': 'arnrType'
+            'arnr_type': 'arnrType',
+            'auto_level_setup': 'autoLevelSetup'
         })
         return attributes
 
@@ -1275,6 +1282,35 @@ class Vp9VideoConfiguration(VideoConfiguration):
                 raise TypeError("Invalid type for `arnr_type`, type has to be `Vp9ArnrType`")
 
         self._arnr_type = arnr_type
+
+    @property
+    def auto_level_setup(self):
+        # type: () -> AutoLevelSetup
+        """Gets the auto_level_setup of this Vp9VideoConfiguration.
+
+        Enable/disable automatic calculation of level, maxBitrate, and bufsize based on the least level that satisfies maximum property values for picture resolution, frame rate, and bit rate. Explicitly setting targetLevel, rateOvershootPct, or clientBufferSize properties will automatically disable the calculation.
+
+        :return: The auto_level_setup of this Vp9VideoConfiguration.
+        :rtype: AutoLevelSetup
+        """
+        return self._auto_level_setup
+
+    @auto_level_setup.setter
+    def auto_level_setup(self, auto_level_setup):
+        # type: (AutoLevelSetup) -> None
+        """Sets the auto_level_setup of this Vp9VideoConfiguration.
+
+        Enable/disable automatic calculation of level, maxBitrate, and bufsize based on the least level that satisfies maximum property values for picture resolution, frame rate, and bit rate. Explicitly setting targetLevel, rateOvershootPct, or clientBufferSize properties will automatically disable the calculation.
+
+        :param auto_level_setup: The auto_level_setup of this Vp9VideoConfiguration.
+        :type: AutoLevelSetup
+        """
+
+        if auto_level_setup is not None:
+            if not isinstance(auto_level_setup, AutoLevelSetup):
+                raise TypeError("Invalid type for `auto_level_setup`, type has to be `AutoLevelSetup`")
+
+        self._auto_level_setup = auto_level_setup
 
     def to_dict(self):
         """Returns the model properties as a dict"""
