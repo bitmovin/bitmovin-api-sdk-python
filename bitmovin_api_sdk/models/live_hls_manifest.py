@@ -3,6 +3,7 @@
 from enum import Enum
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
+from bitmovin_api_sdk.models.program_date_time_settings import ProgramDateTimeSettings
 import pprint
 import six
 
@@ -13,13 +14,15 @@ class LiveHlsManifest(object):
                  manifest_id=None,
                  timeshift=None,
                  live_edge_offset=None,
-                 insert_program_date_time=None):
-        # type: (string_types, float, float, bool) -> None
+                 insert_program_date_time=None,
+                 program_date_time_settings=None):
+        # type: (string_types, float, float, bool, ProgramDateTimeSettings) -> None
 
         self._manifest_id = None
         self._timeshift = None
         self._live_edge_offset = None
         self._insert_program_date_time = None
+        self._program_date_time_settings = None
         self.discriminator = None
 
         if manifest_id is not None:
@@ -30,6 +33,8 @@ class LiveHlsManifest(object):
             self.live_edge_offset = live_edge_offset
         if insert_program_date_time is not None:
             self.insert_program_date_time = insert_program_date_time
+        if program_date_time_settings is not None:
+            self.program_date_time_settings = program_date_time_settings
 
     @property
     def openapi_types(self):
@@ -37,7 +42,8 @@ class LiveHlsManifest(object):
             'manifest_id': 'string_types',
             'timeshift': 'float',
             'live_edge_offset': 'float',
-            'insert_program_date_time': 'bool'
+            'insert_program_date_time': 'bool',
+            'program_date_time_settings': 'ProgramDateTimeSettings'
         }
 
         return types
@@ -48,7 +54,8 @@ class LiveHlsManifest(object):
             'manifest_id': 'manifestId',
             'timeshift': 'timeshift',
             'live_edge_offset': 'liveEdgeOffset',
-            'insert_program_date_time': 'insertProgramDateTime'
+            'insert_program_date_time': 'insertProgramDateTime',
+            'program_date_time_settings': 'programDateTimeSettings'
         }
         return attributes
 
@@ -167,6 +174,35 @@ class LiveHlsManifest(object):
                 raise TypeError("Invalid type for `insert_program_date_time`, type has to be `bool`")
 
         self._insert_program_date_time = insert_program_date_time
+
+    @property
+    def program_date_time_settings(self):
+        # type: () -> ProgramDateTimeSettings
+        """Gets the program_date_time_settings of this LiveHlsManifest.
+
+        Configuration for the EXT-X-PROGRAM-DATETIME tag
+
+        :return: The program_date_time_settings of this LiveHlsManifest.
+        :rtype: ProgramDateTimeSettings
+        """
+        return self._program_date_time_settings
+
+    @program_date_time_settings.setter
+    def program_date_time_settings(self, program_date_time_settings):
+        # type: (ProgramDateTimeSettings) -> None
+        """Sets the program_date_time_settings of this LiveHlsManifest.
+
+        Configuration for the EXT-X-PROGRAM-DATETIME tag
+
+        :param program_date_time_settings: The program_date_time_settings of this LiveHlsManifest.
+        :type: ProgramDateTimeSettings
+        """
+
+        if program_date_time_settings is not None:
+            if not isinstance(program_date_time_settings, ProgramDateTimeSettings):
+                raise TypeError("Invalid type for `program_date_time_settings`, type has to be `ProgramDateTimeSettings`")
+
+        self._program_date_time_settings = program_date_time_settings
 
     def to_dict(self):
         """Returns the model properties as a dict"""

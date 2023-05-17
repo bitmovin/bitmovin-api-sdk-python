@@ -4,6 +4,7 @@ from enum import Enum
 from datetime import datetime
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
+from bitmovin_api_sdk.models.streams_ad_config_response import StreamsAdConfigResponse
 from bitmovin_api_sdk.models.streams_config_response import StreamsConfigResponse
 from bitmovin_api_sdk.models.streams_live_life_cycle import StreamsLiveLifeCycle
 import pprint
@@ -20,8 +21,9 @@ class StreamsLiveResponse(object):
                  created_at=None,
                  life_cycle=None,
                  config=None,
-                 poster_url=None):
-        # type: (string_types, string_types, string_types, string_types, datetime, StreamsLiveLifeCycle, StreamsConfigResponse, string_types) -> None
+                 poster_url=None,
+                 ad_config=None):
+        # type: (string_types, string_types, string_types, string_types, datetime, StreamsLiveLifeCycle, StreamsConfigResponse, string_types, StreamsAdConfigResponse) -> None
 
         self._id = None
         self._stream_key = None
@@ -31,6 +33,7 @@ class StreamsLiveResponse(object):
         self._life_cycle = None
         self._config = None
         self._poster_url = None
+        self._ad_config = None
         self.discriminator = None
 
         if id_ is not None:
@@ -49,6 +52,8 @@ class StreamsLiveResponse(object):
             self.config = config
         if poster_url is not None:
             self.poster_url = poster_url
+        if ad_config is not None:
+            self.ad_config = ad_config
 
     @property
     def openapi_types(self):
@@ -60,7 +65,8 @@ class StreamsLiveResponse(object):
             'created_at': 'datetime',
             'life_cycle': 'StreamsLiveLifeCycle',
             'config': 'StreamsConfigResponse',
-            'poster_url': 'string_types'
+            'poster_url': 'string_types',
+            'ad_config': 'StreamsAdConfigResponse'
         }
 
         return types
@@ -75,7 +81,8 @@ class StreamsLiveResponse(object):
             'created_at': 'createdAt',
             'life_cycle': 'lifeCycle',
             'config': 'config',
-            'poster_url': 'posterUrl'
+            'poster_url': 'posterUrl',
+            'ad_config': 'adConfig'
         }
         return attributes
 
@@ -308,6 +315,33 @@ class StreamsLiveResponse(object):
                 raise TypeError("Invalid type for `poster_url`, type has to be `string_types`")
 
         self._poster_url = poster_url
+
+    @property
+    def ad_config(self):
+        # type: () -> StreamsAdConfigResponse
+        """Gets the ad_config of this StreamsLiveResponse.
+
+
+        :return: The ad_config of this StreamsLiveResponse.
+        :rtype: StreamsAdConfigResponse
+        """
+        return self._ad_config
+
+    @ad_config.setter
+    def ad_config(self, ad_config):
+        # type: (StreamsAdConfigResponse) -> None
+        """Sets the ad_config of this StreamsLiveResponse.
+
+
+        :param ad_config: The ad_config of this StreamsLiveResponse.
+        :type: StreamsAdConfigResponse
+        """
+
+        if ad_config is not None:
+            if not isinstance(ad_config, StreamsAdConfigResponse):
+                raise TypeError("Invalid type for `ad_config`, type has to be `StreamsAdConfigResponse`")
+
+        self._ad_config = ad_config
 
     def to_dict(self):
         """Returns the model properties as a dict"""

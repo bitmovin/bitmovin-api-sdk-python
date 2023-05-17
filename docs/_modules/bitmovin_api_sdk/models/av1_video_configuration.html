@@ -186,7 +186,7 @@
         <span class="c1"># type: () -&gt; AutoLevelSetup</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the auto_level_setup of this Av1VideoConfiguration.</span>
 
-<span class="sd">        Enable/disable automatic calculation of level, maxBitrate, and bufsize based on the least level that satisfies maximum property values for picture resolution, frame rate, and bit rate.</span>
+<span class="sd">        Enable/disable automatic calculation of level, maxBitrate, and bufsize based on the least level that satisfies maximum property values for picture resolution, frame rate, and bit rate. In the case the target level is set explicitly, the maximum bitrate and buffer size are calculated based on the defined level. Explicitly setting maxBitrate, or bufsize properties will disable the automatic calculation.</span>
 
 <span class="sd">        :return: The auto_level_setup of this Av1VideoConfiguration.</span>
 <span class="sd">        :rtype: AutoLevelSetup</span>
@@ -198,7 +198,7 @@
         <span class="c1"># type: (AutoLevelSetup) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the auto_level_setup of this Av1VideoConfiguration.</span>
 
-<span class="sd">        Enable/disable automatic calculation of level, maxBitrate, and bufsize based on the least level that satisfies maximum property values for picture resolution, frame rate, and bit rate.</span>
+<span class="sd">        Enable/disable automatic calculation of level, maxBitrate, and bufsize based on the least level that satisfies maximum property values for picture resolution, frame rate, and bit rate. In the case the target level is set explicitly, the maximum bitrate and buffer size are calculated based on the defined level. Explicitly setting maxBitrate, or bufsize properties will disable the automatic calculation.</span>
 
 <span class="sd">        :param auto_level_setup: The auto_level_setup of this Av1VideoConfiguration.</span>
 <span class="sd">        :type: AutoLevelSetup</span>

@@ -15,14 +15,16 @@ class StreamsVideoUpdateRequest(object):
                  title=None,
                  description=None,
                  config_id=None,
-                 poster_url=None):
-        # type: (StreamsVideoStatus, string_types, string_types, string_types, string_types) -> None
+                 poster_url=None,
+                 ad_config_id=None):
+        # type: (StreamsVideoStatus, string_types, string_types, string_types, string_types, string_types) -> None
 
         self._status = None
         self._title = None
         self._description = None
         self._config_id = None
         self._poster_url = None
+        self._ad_config_id = None
         self.discriminator = None
 
         if status is not None:
@@ -35,6 +37,8 @@ class StreamsVideoUpdateRequest(object):
             self.config_id = config_id
         if poster_url is not None:
             self.poster_url = poster_url
+        if ad_config_id is not None:
+            self.ad_config_id = ad_config_id
 
     @property
     def openapi_types(self):
@@ -43,7 +47,8 @@ class StreamsVideoUpdateRequest(object):
             'title': 'string_types',
             'description': 'string_types',
             'config_id': 'string_types',
-            'poster_url': 'string_types'
+            'poster_url': 'string_types',
+            'ad_config_id': 'string_types'
         }
 
         return types
@@ -55,7 +60,8 @@ class StreamsVideoUpdateRequest(object):
             'title': 'title',
             'description': 'description',
             'config_id': 'configId',
-            'poster_url': 'posterUrl'
+            'poster_url': 'posterUrl',
+            'ad_config_id': 'adConfigId'
         }
         return attributes
 
@@ -203,6 +209,35 @@ class StreamsVideoUpdateRequest(object):
                 raise TypeError("Invalid type for `poster_url`, type has to be `string_types`")
 
         self._poster_url = poster_url
+
+    @property
+    def ad_config_id(self):
+        # type: () -> string_types
+        """Gets the ad_config_id of this StreamsVideoUpdateRequest.
+
+        Id of the advertisement config to use
+
+        :return: The ad_config_id of this StreamsVideoUpdateRequest.
+        :rtype: string_types
+        """
+        return self._ad_config_id
+
+    @ad_config_id.setter
+    def ad_config_id(self, ad_config_id):
+        # type: (string_types) -> None
+        """Sets the ad_config_id of this StreamsVideoUpdateRequest.
+
+        Id of the advertisement config to use
+
+        :param ad_config_id: The ad_config_id of this StreamsVideoUpdateRequest.
+        :type: string_types
+        """
+
+        if ad_config_id is not None:
+            if not isinstance(ad_config_id, string_types):
+                raise TypeError("Invalid type for `ad_config_id`, type has to be `string_types`")
+
+        self._ad_config_id = ad_config_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

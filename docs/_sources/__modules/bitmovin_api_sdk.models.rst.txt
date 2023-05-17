@@ -4452,6 +4452,22 @@ bitmovin\_api\_sdk.models.profile\_h265 module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.program\_date\_time\_settings module
+--------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.program_date_time_settings
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.program\_date\_time\_source module
+------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.program_date_time_source
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.progressive\_mov\_muxing module
 ---------------------------------------------------------
 
@@ -5568,6 +5584,22 @@ bitmovin\_api\_sdk.models.stream\_selection\_mode module
 --------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.models.stream_selection_mode
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.streams\_ad\_config\_ad module
+--------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.streams_ad_config_ad
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.streams\_ad\_config\_response module
+--------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.streams_ad_config_response
    :members:
    :undoc-members:
    :show-inheritance:

@@ -1288,7 +1288,7 @@ class Vp9VideoConfiguration(VideoConfiguration):
         # type: () -> AutoLevelSetup
         """Gets the auto_level_setup of this Vp9VideoConfiguration.
 
-        Enable/disable automatic calculation of level, maxBitrate, and bufsize based on the least level that satisfies maximum property values for picture resolution, frame rate, and bit rate. Explicitly setting targetLevel, rateOvershootPct, or clientBufferSize properties will automatically disable the calculation.
+        Enable/disable automatic calculation of level, maxBitrate, and bufsize based on the least level that satisfies maximum property values for picture resolution, frame rate, and bit rate. In the case the target level is set explicitly, the maximum bitrate and buffer size are calculated based on the defined level. Explicitly setting rateOvershootPct, or clientBufferSize properties will disable the automatic calculation.
 
         :return: The auto_level_setup of this Vp9VideoConfiguration.
         :rtype: AutoLevelSetup
@@ -1300,7 +1300,7 @@ class Vp9VideoConfiguration(VideoConfiguration):
         # type: (AutoLevelSetup) -> None
         """Sets the auto_level_setup of this Vp9VideoConfiguration.
 
-        Enable/disable automatic calculation of level, maxBitrate, and bufsize based on the least level that satisfies maximum property values for picture resolution, frame rate, and bit rate. Explicitly setting targetLevel, rateOvershootPct, or clientBufferSize properties will automatically disable the calculation.
+        Enable/disable automatic calculation of level, maxBitrate, and bufsize based on the least level that satisfies maximum property values for picture resolution, frame rate, and bit rate. In the case the target level is set explicitly, the maximum bitrate and buffer size are calculated based on the defined level. Explicitly setting rateOvershootPct, or clientBufferSize properties will disable the automatic calculation.
 
         :param auto_level_setup: The auto_level_setup of this Vp9VideoConfiguration.
         :type: AutoLevelSetup

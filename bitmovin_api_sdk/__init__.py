@@ -1557,6 +1557,8 @@ from bitmovin_api_sdk.models.prime_time_drm import PrimeTimeDrm
 from bitmovin_api_sdk.models.profile_h262 import ProfileH262
 from bitmovin_api_sdk.models.profile_h264 import ProfileH264
 from bitmovin_api_sdk.models.profile_h265 import ProfileH265
+from bitmovin_api_sdk.models.program_date_time_settings import ProgramDateTimeSettings
+from bitmovin_api_sdk.models.program_date_time_source import ProgramDateTimeSource
 from bitmovin_api_sdk.models.progressive_mov_muxing import ProgressiveMovMuxing
 from bitmovin_api_sdk.models.progressive_mov_muxing_information import ProgressiveMovMuxingInformation
 from bitmovin_api_sdk.models.progressive_muxing_information import ProgressiveMuxingInformation
@@ -1696,6 +1698,8 @@ from bitmovin_api_sdk.models.stream_mode import StreamMode
 from bitmovin_api_sdk.models.stream_per_title_fixed_resolution_and_bitrate_settings import StreamPerTitleFixedResolutionAndBitrateSettings
 from bitmovin_api_sdk.models.stream_per_title_settings import StreamPerTitleSettings
 from bitmovin_api_sdk.models.stream_selection_mode import StreamSelectionMode
+from bitmovin_api_sdk.models.streams_ad_config_ad import StreamsAdConfigAd
+from bitmovin_api_sdk.models.streams_ad_config_response import StreamsAdConfigResponse
 from bitmovin_api_sdk.models.streams_config_response import StreamsConfigResponse
 from bitmovin_api_sdk.models.streams_live_create_request import StreamsLiveCreateRequest
 from bitmovin_api_sdk.models.streams_live_life_cycle import StreamsLiveLifeCycle
@@ -1786,4 +1790,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.160.0"
+__version__ = "1.161.0"

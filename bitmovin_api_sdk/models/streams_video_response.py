@@ -4,6 +4,7 @@ from enum import Enum
 from datetime import datetime
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
+from bitmovin_api_sdk.models.streams_ad_config_response import StreamsAdConfigResponse
 from bitmovin_api_sdk.models.streams_config_response import StreamsConfigResponse
 from bitmovin_api_sdk.models.streams_video_status import StreamsVideoStatus
 import pprint
@@ -21,8 +22,9 @@ class StreamsVideoResponse(object):
                  status=None,
                  config=None,
                  encoding_tasks=None,
-                 poster_url=None):
-        # type: (string_types, string_types, string_types, string_types, datetime, StreamsVideoStatus, StreamsConfigResponse, list[StreamsVideoEncodingTask], string_types) -> None
+                 poster_url=None,
+                 ad_config=None):
+        # type: (string_types, string_types, string_types, string_types, datetime, StreamsVideoStatus, StreamsConfigResponse, list[StreamsVideoEncodingTask], string_types, StreamsAdConfigResponse) -> None
 
         self._id = None
         self._asset_url = None
@@ -33,6 +35,7 @@ class StreamsVideoResponse(object):
         self._config = None
         self._encoding_tasks = list()
         self._poster_url = None
+        self._ad_config = None
         self.discriminator = None
 
         if id_ is not None:
@@ -53,6 +56,8 @@ class StreamsVideoResponse(object):
             self.encoding_tasks = encoding_tasks
         if poster_url is not None:
             self.poster_url = poster_url
+        if ad_config is not None:
+            self.ad_config = ad_config
 
     @property
     def openapi_types(self):
@@ -65,7 +70,8 @@ class StreamsVideoResponse(object):
             'status': 'StreamsVideoStatus',
             'config': 'StreamsConfigResponse',
             'encoding_tasks': 'list[StreamsVideoEncodingTask]',
-            'poster_url': 'string_types'
+            'poster_url': 'string_types',
+            'ad_config': 'StreamsAdConfigResponse'
         }
 
         return types
@@ -81,7 +87,8 @@ class StreamsVideoResponse(object):
             'status': 'status',
             'config': 'config',
             'encoding_tasks': 'encodingTasks',
-            'poster_url': 'posterUrl'
+            'poster_url': 'posterUrl',
+            'ad_config': 'adConfig'
         }
         return attributes
 
@@ -343,6 +350,33 @@ class StreamsVideoResponse(object):
                 raise TypeError("Invalid type for `poster_url`, type has to be `string_types`")
 
         self._poster_url = poster_url
+
+    @property
+    def ad_config(self):
+        # type: () -> StreamsAdConfigResponse
+        """Gets the ad_config of this StreamsVideoResponse.
+
+
+        :return: The ad_config of this StreamsVideoResponse.
+        :rtype: StreamsAdConfigResponse
+        """
+        return self._ad_config
+
+    @ad_config.setter
+    def ad_config(self, ad_config):
+        # type: (StreamsAdConfigResponse) -> None
+        """Sets the ad_config of this StreamsVideoResponse.
+
+
+        :param ad_config: The ad_config of this StreamsVideoResponse.
+        :type: StreamsAdConfigResponse
+        """
+
+        if ad_config is not None:
+            if not isinstance(ad_config, StreamsAdConfigResponse):
+                raise TypeError("Invalid type for `ad_config`, type has to be `StreamsAdConfigResponse`")
+
+        self._ad_config = ad_config
 
     def to_dict(self):
         """Returns the model properties as a dict"""
