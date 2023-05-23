@@ -11,6 +11,7 @@ Subpackages
    bitmovin_api_sdk.encoding.encodings
    bitmovin_api_sdk.encoding.error_definitions
    bitmovin_api_sdk.encoding.filters
+   bitmovin_api_sdk.encoding.history
    bitmovin_api_sdk.encoding.infrastructure
    bitmovin_api_sdk.encoding.inputs
    bitmovin_api_sdk.encoding.manifests

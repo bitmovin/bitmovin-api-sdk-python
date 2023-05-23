@@ -3236,6 +3236,30 @@ bitmovin\_api\_sdk.models.he\_aac\_v2\_signaling module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.history\_encoding module
+--------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.history_encoding
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.history\_muxing module
+------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.history_muxing
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.history\_stream module
+------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.history_stream
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.hls\_manifest module
 ----------------------------------------------
 

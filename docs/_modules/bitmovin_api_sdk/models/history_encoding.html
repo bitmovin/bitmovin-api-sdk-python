@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>bitmovin_api_sdk.models.history_encoding &mdash; Bitmovin Python API SDK {{packageVersion}} documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: blue" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            Bitmovin Python API SDK
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../__modules/modules.html">python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../__modules/bitmovin_api_sdk.encoding.html">bitmovin_api_sdk.encoding package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../__modules/bitmovin_api_sdk.analytics.html">bitmovin_api_sdk.analytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../__modules/bitmovin_api_sdk.player.html">bitmovin_api_sdk.player package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../__modules/bitmovin_api_sdk.account.html">bitmovin_api_sdk.account package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../__modules/bitmovin_api_sdk.notifications.html">bitmovin_api_sdk.notifications package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../__modules/bitmovin_api_sdk.general.html">bitmovin_api_sdk.general package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../__modules/bitmovin_api_sdk.common.html">bitmovin_api_sdk.common package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../__modules/bitmovin_api_sdk.models.html">bitmovin_api_sdk.models package</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: blue" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Bitmovin Python API SDK</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">bitmovin_api_sdk.models.history_encoding</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for bitmovin_api_sdk.models.history_encoding</h1><div class="highlight"><pre>
+<span></span><span class="c1"># coding: utf-8</span>
+
+<span class="kn">from</span> <span class="nn">enum</span> <span class="kn">import</span> <span class="n">Enum</span>
+<span class="kn">from</span> <span class="nn">six</span> <span class="kn">import</span> <span class="n">string_types</span><span class="p">,</span> <span class="n">iteritems</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.common.poscheck</span> <span class="kn">import</span> <span class="n">poscheck_model</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.encoding</span> <span class="kn">import</span> <span class="n">Encoding</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.live_encoding</span> <span class="kn">import</span> <span class="n">LiveEncoding</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.start_encoding_request</span> <span class="kn">import</span> <span class="n">StartEncodingRequest</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.start_live_encoding_request</span> <span class="kn">import</span> <span class="n">StartLiveEncodingRequest</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.task</span> <span class="kn">import</span> <span class="n">Task</span>
+<span class="kn">import</span> <span class="nn">pprint</span>
+<span class="kn">import</span> <span class="nn">six</span>
+
+
+<div class="viewcode-block" id="HistoryEncoding"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.history_encoding.HistoryEncoding">[docs]</a><span class="k">class</span> <span class="nc">HistoryEncoding</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="nd">@poscheck_model</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                 <span class="n">encoding</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">live</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">vod_start_reqeust</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">live_start_reqeust</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">status</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">input_streams</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">streams</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">muxings</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">key_frames</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">sidecar_files</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">transfer_retries</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">convert_scc_captions</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="c1"># type: (Encoding, LiveEncoding, StartEncodingRequest, StartLiveEncodingRequest, Task, list[StreamInput], list[HistoryStream], list[HistoryMuxing], list[Keyframe], list[SidecarFile], list[TransferRetry], list[ConvertSccCaption]) -&gt; None</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_encoding</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_live</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_vod_start_reqeust</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_live_start_reqeust</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_status</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_input_streams</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_streams</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_muxings</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_key_frames</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_sidecar_files</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_transfer_retries</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_convert_scc_captions</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="k">if</span> <span class="n">encoding</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">encoding</span> <span class="o">=</span> <span class="n">encoding</span>
+        <span class="k">if</span> <span class="n">live</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">live</span> <span class="o">=</span> <span class="n">live</span>
+        <span class="k">if</span> <span class="n">vod_start_reqeust</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">vod_start_reqeust</span> <span class="o">=</span> <span class="n">vod_start_reqeust</span>
+        <span class="k">if</span> <span class="n">live_start_reqeust</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">live_start_reqeust</span> <span class="o">=</span> <span class="n">live_start_reqeust</span>
+        <span class="k">if</span> <span class="n">status</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">status</span> <span class="o">=</span> <span class="n">status</span>
+        <span class="k">if</span> <span class="n">input_streams</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">input_streams</span> <span class="o">=</span> <span class="n">input_streams</span>
+        <span class="k">if</span> <span class="n">streams</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">streams</span> <span class="o">=</span> <span class="n">streams</span>
+        <span class="k">if</span> <span class="n">muxings</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">muxings</span> <span class="o">=</span> <span class="n">muxings</span>
+        <span class="k">if</span> <span class="n">key_frames</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">key_frames</span> <span class="o">=</span> <span class="n">key_frames</span>
+        <span class="k">if</span> <span class="n">sidecar_files</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">sidecar_files</span> <span class="o">=</span> <span class="n">sidecar_files</span>
+        <span class="k">if</span> <span class="n">transfer_retries</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">transfer_retries</span> <span class="o">=</span> <span class="n">transfer_retries</span>
+        <span class="k">if</span> <span class="n">convert_scc_captions</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">convert_scc_captions</span> <span class="o">=</span> <span class="n">convert_scc_captions</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">types</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;encoding&#39;</span><span class="p">:</span> <span class="s1">&#39;Encoding&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;live&#39;</span><span class="p">:</span> <span class="s1">&#39;LiveEncoding&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;vod_start_reqeust&#39;</span><span class="p">:</span> <span class="s1">&#39;StartEncodingRequest&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;live_start_reqeust&#39;</span><span class="p">:</span> <span class="s1">&#39;StartLiveEncodingRequest&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;status&#39;</span><span class="p">:</span> <span class="s1">&#39;Task&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;input_streams&#39;</span><span class="p">:</span> <span class="s1">&#39;list[StreamInput]&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;streams&#39;</span><span class="p">:</span> <span class="s1">&#39;list[HistoryStream]&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;muxings&#39;</span><span class="p">:</span> <span class="s1">&#39;list[HistoryMuxing]&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;key_frames&#39;</span><span class="p">:</span> <span class="s1">&#39;list[Keyframe]&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;sidecar_files&#39;</span><span class="p">:</span> <span class="s1">&#39;list[SidecarFile]&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;transfer_retries&#39;</span><span class="p">:</span> <span class="s1">&#39;list[TransferRetry]&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;convert_scc_captions&#39;</span><span class="p">:</span> <span class="s1">&#39;list[ConvertSccCaption]&#39;</span>
+        <span class="p">}</span>
+
+        <span class="k">return</span> <span class="n">types</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">attribute_map</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">attributes</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;encoding&#39;</span><span class="p">:</span> <span class="s1">&#39;encoding&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;live&#39;</span><span class="p">:</span> <span class="s1">&#39;live&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;vod_start_reqeust&#39;</span><span class="p">:</span> <span class="s1">&#39;vodStartReqeust&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;live_start_reqeust&#39;</span><span class="p">:</span> <span class="s1">&#39;liveStartReqeust&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;status&#39;</span><span class="p">:</span> <span class="s1">&#39;status&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;input_streams&#39;</span><span class="p">:</span> <span class="s1">&#39;inputStreams&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;streams&#39;</span><span class="p">:</span> <span class="s1">&#39;streams&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;muxings&#39;</span><span class="p">:</span> <span class="s1">&#39;muxings&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;key_frames&#39;</span><span class="p">:</span> <span class="s1">&#39;keyFrames&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;sidecar_files&#39;</span><span class="p">:</span> <span class="s1">&#39;sidecarFiles&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;transfer_retries&#39;</span><span class="p">:</span> <span class="s1">&#39;transferRetries&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;convert_scc_captions&#39;</span><span class="p">:</span> <span class="s1">&#39;convertSccCaptions&#39;</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">attributes</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">encoding</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; Encoding</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the encoding of this HistoryEncoding.</span>
+
+<span class="sd">        Encoding</span>
+
+<span class="sd">        :return: The encoding of this HistoryEncoding.</span>
+<span class="sd">        :rtype: Encoding</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_encoding</span>
+
+    <span class="nd">@encoding</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">encoding</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">encoding</span><span class="p">):</span>
+        <span class="c1"># type: (Encoding) -&gt; None</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the encoding of this HistoryEncoding.</span>
+
+<span class="sd">        Encoding</span>
+
+<span class="sd">        :param encoding: The encoding of this HistoryEncoding.</span>
+<span class="sd">        :type: Encoding</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">encoding</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">encoding</span><span class="p">,</span> <span class="n">Encoding</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `encoding`, type has to be `Encoding`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_encoding</span> <span class="o">=</span> <span class="n">encoding</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">live</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; LiveEncoding</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the live of this HistoryEncoding.</span>
+
+<span class="sd">        Live Details</span>
+
+<span class="sd">        :return: The live of this HistoryEncoding.</span>
+<span class="sd">        :rtype: LiveEncoding</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_live</span>
+
+    <span class="nd">@live</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">live</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">live</span><span class="p">):</span>
+        <span class="c1"># type: (LiveEncoding) -&gt; None</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the live of this HistoryEncoding.</span>
+
+<span class="sd">        Live Details</span>
+
+<span class="sd">        :param live: The live of this HistoryEncoding.</span>
+<span class="sd">        :type: LiveEncoding</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">live</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">live</span><span class="p">,</span> <span class="n">LiveEncoding</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `live`, type has to be `LiveEncoding`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_live</span> <span class="o">=</span> <span class="n">live</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">vod_start_reqeust</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; StartEncodingRequest</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the vod_start_reqeust of this HistoryEncoding.</span>
+
+<span class="sd">        VOD Encoding Start Request</span>
+
+<span class="sd">        :return: The vod_start_reqeust of this HistoryEncoding.</span>
+<span class="sd">        :rtype: StartEncodingRequest</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_vod_start_reqeust</span>
+
+    <span class="nd">@vod_start_reqeust</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">vod_start_reqeust</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vod_start_reqeust</span><span class="p">):</span>
+        <span class="c1"># type: (StartEncodingRequest) -&gt; None</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the vod_start_reqeust of this HistoryEncoding.</span>
+
+<span class="sd">        VOD Encoding Start Request</span>
+
+<span class="sd">        :param vod_start_reqeust: The vod_start_reqeust of this HistoryEncoding.</span>
+<span class="sd">        :type: StartEncodingRequest</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">vod_start_reqeust</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">vod_start_reqeust</span><span class="p">,</span> <span class="n">StartEncodingRequest</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `vod_start_reqeust`, type has to be `StartEncodingRequest`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_vod_start_reqeust</span> <span class="o">=</span> <span class="n">vod_start_reqeust</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">live_start_reqeust</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; StartLiveEncodingRequest</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the live_start_reqeust of this HistoryEncoding.</span>
+
+<span class="sd">        Live Encoding Start Request</span>
+
+<span class="sd">        :return: The live_start_reqeust of this HistoryEncoding.</span>
+<span class="sd">        :rtype: StartLiveEncodingRequest</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_live_start_reqeust</span>
+
+    <span class="nd">@live_start_reqeust</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">live_start_reqeust</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">live_start_reqeust</span><span class="p">):</span>
+        <span class="c1"># type: (StartLiveEncodingRequest) -&gt; None</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the live_start_reqeust of this HistoryEncoding.</span>
+
+<span class="sd">        Live Encoding Start Request</span>
+
+<span class="sd">        :param live_start_reqeust: The live_start_reqeust of this HistoryEncoding.</span>
+<span class="sd">        :type: StartLiveEncodingRequest</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">live_start_reqeust</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">live_start_reqeust</span><span class="p">,</span> <span class="n">StartLiveEncodingRequest</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `live_start_reqeust`, type has to be `StartLiveEncodingRequest`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_live_start_reqeust</span> <span class="o">=</span> <span class="n">live_start_reqeust</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">status</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; Task</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the status of this HistoryEncoding.</span>
+
+<span class="sd">        Encoding Status</span>
+
+<span class="sd">        :return: The status of this HistoryEncoding.</span>
+<span class="sd">        :rtype: Task</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_status</span>
+
+    <span class="nd">@status</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">status</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">status</span><span class="p">):</span>
+        <span class="c1"># type: (Task) -&gt; None</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the status of this HistoryEncoding.</span>
+
+<span class="sd">        Encoding Status</span>
+
+<span class="sd">        :param status: The status of this HistoryEncoding.</span>
+<span class="sd">        :type: Task</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">status</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">status</span><span class="p">,</span> <span class="n">Task</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `status`, type has to be `Task`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_status</span> <span class="o">=</span> <span class="n">status</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">input_streams</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; list[StreamInput]</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the input_streams of this HistoryEncoding.</span>
+
+
+<span class="sd">        :return: The input_streams of this HistoryEncoding.</span>
+<span class="sd">        :rtype: list[StreamInput]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_input_streams</span>
+
+    <span class="nd">@input_streams</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">input_streams</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_streams</span><span class="p">):</span>
+        <span class="c1"># type: (list) -&gt; None</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the input_streams of this HistoryEncoding.</span>
+
+
+<span class="sd">        :param input_streams: The input_streams of this HistoryEncoding.</span>
+<span class="sd">        :type: list[StreamInput]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">input_streams</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">input_streams</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `input_streams`, type has to be `list[StreamInput]`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_input_streams</span> <span class="o">=</span> <span class="n">input_streams</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">streams</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; list[HistoryStream]</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the streams of this HistoryEncoding.</span>
+
+
+<span class="sd">        :return: The streams of this HistoryEncoding.</span>
+<span class="sd">        :rtype: list[HistoryStream]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_streams</span>
+
+    <span class="nd">@streams</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">streams</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">streams</span><span class="p">):</span>
+        <span class="c1"># type: (list) -&gt; None</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the streams of this HistoryEncoding.</span>
+
+
+<span class="sd">        :param streams: The streams of this HistoryEncoding.</span>
+<span class="sd">        :type: list[HistoryStream]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">streams</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">streams</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `streams`, type has to be `list[HistoryStream]`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_streams</span> <span class="o">=</span> <span class="n">streams</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">muxings</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; list[HistoryMuxing]</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the muxings of this HistoryEncoding.</span>
+
+
+<span class="sd">        :return: The muxings of this HistoryEncoding.</span>
+<span class="sd">        :rtype: list[HistoryMuxing]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_muxings</span>
+
+    <span class="nd">@muxings</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">muxings</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">muxings</span><span class="p">):</span>
+        <span class="c1"># type: (list) -&gt; None</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the muxings of this HistoryEncoding.</span>
+
+
+<span class="sd">        :param muxings: The muxings of this HistoryEncoding.</span>
+<span class="sd">        :type: list[HistoryMuxing]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">muxings</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">muxings</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `muxings`, type has to be `list[HistoryMuxing]`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_muxings</span> <span class="o">=</span> <span class="n">muxings</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">key_frames</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; list[Keyframe]</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the key_frames of this HistoryEncoding.</span>
+
+
+<span class="sd">        :return: The key_frames of this HistoryEncoding.</span>
+<span class="sd">        :rtype: list[Keyframe]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_key_frames</span>
+
+    <span class="nd">@key_frames</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">key_frames</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key_frames</span><span class="p">):</span>
+        <span class="c1"># type: (list) -&gt; None</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the key_frames of this HistoryEncoding.</span>
+
+
+<span class="sd">        :param key_frames: The key_frames of this HistoryEncoding.</span>
+<span class="sd">        :type: list[Keyframe]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">key_frames</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">key_frames</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `key_frames`, type has to be `list[Keyframe]`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_key_frames</span> <span class="o">=</span> <span class="n">key_frames</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">sidecar_files</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; list[SidecarFile]</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the sidecar_files of this HistoryEncoding.</span>
+
+
+<span class="sd">        :return: The sidecar_files of this HistoryEncoding.</span>
+<span class="sd">        :rtype: list[SidecarFile]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sidecar_files</span>
+
+    <span class="nd">@sidecar_files</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">sidecar_files</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sidecar_files</span><span class="p">):</span>
+        <span class="c1"># type: (list) -&gt; None</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the sidecar_files of this HistoryEncoding.</span>
+
+
+<span class="sd">        :param sidecar_files: The sidecar_files of this HistoryEncoding.</span>
+<span class="sd">        :type: list[SidecarFile]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">sidecar_files</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">sidecar_files</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `sidecar_files`, type has to be `list[SidecarFile]`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_sidecar_files</span> <span class="o">=</span> <span class="n">sidecar_files</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">transfer_retries</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; list[TransferRetry]</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the transfer_retries of this HistoryEncoding.</span>
+
+
+<span class="sd">        :return: The transfer_retries of this HistoryEncoding.</span>
+<span class="sd">        :rtype: list[TransferRetry]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_transfer_retries</span>
+
+    <span class="nd">@transfer_retries</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">transfer_retries</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">transfer_retries</span><span class="p">):</span>
+        <span class="c1"># type: (list) -&gt; None</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the transfer_retries of this HistoryEncoding.</span>
+
+
+<span class="sd">        :param transfer_retries: The transfer_retries of this HistoryEncoding.</span>
+<span class="sd">        :type: list[TransferRetry]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">transfer_retries</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">transfer_retries</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `transfer_retries`, type has to be `list[TransferRetry]`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_transfer_retries</span> <span class="o">=</span> <span class="n">transfer_retries</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">convert_scc_captions</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; list[ConvertSccCaption]</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the convert_scc_captions of this HistoryEncoding.</span>
+
+
+<span class="sd">        :return: The convert_scc_captions of this HistoryEncoding.</span>
+<span class="sd">        :rtype: list[ConvertSccCaption]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_convert_scc_captions</span>
+
+    <span class="nd">@convert_scc_captions</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">convert_scc_captions</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">convert_scc_captions</span><span class="p">):</span>
+        <span class="c1"># type: (list) -&gt; None</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the convert_scc_captions of this HistoryEncoding.</span>
+
+
+<span class="sd">        :param convert_scc_captions: The convert_scc_captions of this HistoryEncoding.</span>
+<span class="sd">        :type: list[ConvertSccCaption]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">convert_scc_captions</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">convert_scc_captions</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `convert_scc_captions`, type has to be `list[ConvertSccCaption]`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_convert_scc_captions</span> <span class="o">=</span> <span class="n">convert_scc_captions</span>
+
+<div class="viewcode-block" id="HistoryEncoding.to_dict"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.history_encoding.HistoryEncoding.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="p">{}</span>
+
+        <span class="k">for</span> <span class="n">attr</span><span class="p">,</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">six</span><span class="o">.</span><span class="n">iteritems</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">openapi_types</span><span class="p">):</span>
+            <span class="n">value</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">attr</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="k">continue</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+                <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="k">continue</span>
+                <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="p">[</span><span class="n">y</span><span class="o">.</span><span class="n">value</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">Enum</span><span class="p">)</span> <span class="k">else</span> <span class="n">y</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span> <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="s2">&quot;to_dict&quot;</span><span class="p">)</span> <span class="k">else</span> <span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">value</span><span class="p">]]</span>
+            <span class="k">elif</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="s2">&quot;to_dict&quot;</span><span class="p">):</span>
+                <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="n">value</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span>
+            <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">Enum</span><span class="p">):</span>
+                <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="n">value</span><span class="o">.</span><span class="n">value</span>
+            <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+                <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="p">(</span><span class="n">v</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span> <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="s2">&quot;to_dict&quot;</span><span class="p">)</span> <span class="k">else</span> <span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span> <span class="ow">in</span> <span class="n">value</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="n">value</span>
+
+        <span class="k">return</span> <span class="n">result</span></div>
+
+<div class="viewcode-block" id="HistoryEncoding.to_str"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.history_encoding.HistoryEncoding.to_str">[docs]</a>    <span class="k">def</span> <span class="nf">to_str</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the string representation of the model&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">pprint</span><span class="o">.</span><span class="n">pformat</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">to_dict</span><span class="p">())</span></div>
+
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;For `print` and `pprint`&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">to_str</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns true if both objects are equal&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">HistoryEncoding</span><span class="p">):</span>
+            <span class="k">return</span> <span class="kc">False</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="vm">__dict__</span>
+
+    <span class="k">def</span> <span class="fm">__ne__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns true if both objects are not equal&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="ow">not</span> <span class="bp">self</span> <span class="o">==</span> <span class="n">other</span></div>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020, Bitmovin Inc.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

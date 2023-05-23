@@ -1,0 +1,29 @@
+bitmovin\_api\_sdk.encoding.history package
+===========================================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   bitmovin_api_sdk.encoding.history.encodings
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.encoding.history.history\_api module
+-------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.history.history_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.encoding.history
+   :members:
+   :undoc-members:
+   :show-inheritance:

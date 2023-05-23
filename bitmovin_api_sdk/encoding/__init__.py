@@ -9,4 +9,5 @@ from bitmovin_api_sdk.encoding.infrastructure.infrastructure_api import Infrastr
 from bitmovin_api_sdk.encoding.statistics.statistics_api import StatisticsApi
 from bitmovin_api_sdk.encoding.watch_folders.watch_folders_api import WatchFoldersApi
 from bitmovin_api_sdk.encoding.simple.simple_api import SimpleApi
+from bitmovin_api_sdk.encoding.history.history_api import HistoryApi
 from bitmovin_api_sdk.encoding.error_definitions.error_definitions_api import ErrorDefinitionsApi

@@ -903,6 +903,10 @@ from bitmovin_api_sdk.encoding.simple.jobs.vod.vod_api import VodApi
 from bitmovin_api_sdk.encoding.simple.jobs.vod.vod_api import SimpleEncodingVodJobResponseListQueryParams
 from bitmovin_api_sdk.encoding.simple.jobs.live.live_api import LiveApi
 
+from bitmovin_api_sdk.encoding.history.history_api import HistoryApi
+
+from bitmovin_api_sdk.encoding.history.encodings.encodings_api import EncodingsApi
+from bitmovin_api_sdk.encoding.history.encodings.encodings_api import EncodingListQueryParams
 from bitmovin_api_sdk.general.general_api import GeneralApi
 
 from bitmovin_api_sdk.general.error_definitions.error_definitions_api import ErrorDefinitionsApi
@@ -1404,6 +1408,9 @@ from bitmovin_api_sdk.models.he_aac_v1_audio_configuration import HeAacV1AudioCo
 from bitmovin_api_sdk.models.he_aac_v1_signaling import HeAacV1Signaling
 from bitmovin_api_sdk.models.he_aac_v2_audio_configuration import HeAacV2AudioConfiguration
 from bitmovin_api_sdk.models.he_aac_v2_signaling import HeAacV2Signaling
+from bitmovin_api_sdk.models.history_encoding import HistoryEncoding
+from bitmovin_api_sdk.models.history_muxing import HistoryMuxing
+from bitmovin_api_sdk.models.history_stream import HistoryStream
 from bitmovin_api_sdk.models.hls_manifest import HlsManifest
 from bitmovin_api_sdk.models.hls_manifest_default import HlsManifestDefault
 from bitmovin_api_sdk.models.hls_manifest_default_version import HlsManifestDefaultVersion
@@ -1790,4 +1797,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.161.0"
+__version__ = "1.162.0"

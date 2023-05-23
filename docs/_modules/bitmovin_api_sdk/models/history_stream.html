@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>bitmovin_api_sdk.models.history_stream &mdash; Bitmovin Python API SDK {{packageVersion}} documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: blue" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            Bitmovin Python API SDK
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../__modules/modules.html">python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../__modules/bitmovin_api_sdk.encoding.html">bitmovin_api_sdk.encoding package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../__modules/bitmovin_api_sdk.analytics.html">bitmovin_api_sdk.analytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../__modules/bitmovin_api_sdk.player.html">bitmovin_api_sdk.player package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../__modules/bitmovin_api_sdk.account.html">bitmovin_api_sdk.account package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../__modules/bitmovin_api_sdk.notifications.html">bitmovin_api_sdk.notifications package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../__modules/bitmovin_api_sdk.general.html">bitmovin_api_sdk.general package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../__modules/bitmovin_api_sdk.common.html">bitmovin_api_sdk.common package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../__modules/bitmovin_api_sdk.models.html">bitmovin_api_sdk.models package</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: blue" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Bitmovin Python API SDK</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">bitmovin_api_sdk.models.history_stream</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for bitmovin_api_sdk.models.history_stream</h1><div class="highlight"><pre>
+<span></span><span class="c1"># coding: utf-8</span>
+
+<span class="kn">from</span> <span class="nn">enum</span> <span class="kn">import</span> <span class="n">Enum</span>
+<span class="kn">from</span> <span class="nn">six</span> <span class="kn">import</span> <span class="n">string_types</span><span class="p">,</span> <span class="n">iteritems</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.common.poscheck</span> <span class="kn">import</span> <span class="n">poscheck_model</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.nex_guard_file_marker</span> <span class="kn">import</span> <span class="n">NexGuardFileMarker</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.stream</span> <span class="kn">import</span> <span class="n">Stream</span>
+<span class="kn">import</span> <span class="nn">pprint</span>
+<span class="kn">import</span> <span class="nn">six</span>
+
+
+<div class="viewcode-block" id="HistoryStream"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.history_stream.HistoryStream">[docs]</a><span class="k">class</span> <span class="nc">HistoryStream</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="nd">@poscheck_model</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                 <span class="n">stream</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">filters</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">burn_in_subtitle_dvb_subs</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">burn_in_subtitle_srt_subs</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">nex_guard_file_marker</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">scc_captions</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">bifs</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">dolby_vision_metadata</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">thumbnails</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">sprites</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">psnr_metrics</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="c1"># type: (Stream, list[StreamFilter], list[BurnInSubtitleDvbSub], list[BurnInSubtitleSrt], NexGuardFileMarker, list[SccCaption], list[Bif], list[DolbyVisionMetadata], list[Thumbnail], list[Sprite], list[PsnrQualityMetric]) -&gt; None</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_stream</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_filters</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_burn_in_subtitle_dvb_subs</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_burn_in_subtitle_srt_subs</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_nex_guard_file_marker</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_scc_captions</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_bifs</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_dolby_vision_metadata</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_thumbnails</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_sprites</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_psnr_metrics</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="k">if</span> <span class="n">stream</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">stream</span> <span class="o">=</span> <span class="n">stream</span>
+        <span class="k">if</span> <span class="n">filters</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">filters</span> <span class="o">=</span> <span class="n">filters</span>
+        <span class="k">if</span> <span class="n">burn_in_subtitle_dvb_subs</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">burn_in_subtitle_dvb_subs</span> <span class="o">=</span> <span class="n">burn_in_subtitle_dvb_subs</span>
+        <span class="k">if</span> <span class="n">burn_in_subtitle_srt_subs</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">burn_in_subtitle_srt_subs</span> <span class="o">=</span> <span class="n">burn_in_subtitle_srt_subs</span>
+        <span class="k">if</span> <span class="n">nex_guard_file_marker</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">nex_guard_file_marker</span> <span class="o">=</span> <span class="n">nex_guard_file_marker</span>
+        <span class="k">if</span> <span class="n">scc_captions</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">scc_captions</span> <span class="o">=</span> <span class="n">scc_captions</span>
+        <span class="k">if</span> <span class="n">bifs</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">bifs</span> <span class="o">=</span> <span class="n">bifs</span>
+        <span class="k">if</span> <span class="n">dolby_vision_metadata</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">dolby_vision_metadata</span> <span class="o">=</span> <span class="n">dolby_vision_metadata</span>
+        <span class="k">if</span> <span class="n">thumbnails</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">thumbnails</span> <span class="o">=</span> <span class="n">thumbnails</span>
+        <span class="k">if</span> <span class="n">sprites</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">sprites</span> <span class="o">=</span> <span class="n">sprites</span>
+        <span class="k">if</span> <span class="n">psnr_metrics</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">psnr_metrics</span> <span class="o">=</span> <span class="n">psnr_metrics</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">types</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;stream&#39;</span><span class="p">:</span> <span class="s1">&#39;Stream&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;filters&#39;</span><span class="p">:</span> <span class="s1">&#39;list[StreamFilter]&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;burn_in_subtitle_dvb_subs&#39;</span><span class="p">:</span> <span class="s1">&#39;list[BurnInSubtitleDvbSub]&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;burn_in_subtitle_srt_subs&#39;</span><span class="p">:</span> <span class="s1">&#39;list[BurnInSubtitleSrt]&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;nex_guard_file_marker&#39;</span><span class="p">:</span> <span class="s1">&#39;NexGuardFileMarker&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;scc_captions&#39;</span><span class="p">:</span> <span class="s1">&#39;list[SccCaption]&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;bifs&#39;</span><span class="p">:</span> <span class="s1">&#39;list[Bif]&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;dolby_vision_metadata&#39;</span><span class="p">:</span> <span class="s1">&#39;list[DolbyVisionMetadata]&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;thumbnails&#39;</span><span class="p">:</span> <span class="s1">&#39;list[Thumbnail]&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;sprites&#39;</span><span class="p">:</span> <span class="s1">&#39;list[Sprite]&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;psnr_metrics&#39;</span><span class="p">:</span> <span class="s1">&#39;list[PsnrQualityMetric]&#39;</span>
+        <span class="p">}</span>
+
+        <span class="k">return</span> <span class="n">types</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">attribute_map</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">attributes</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;stream&#39;</span><span class="p">:</span> <span class="s1">&#39;stream&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;filters&#39;</span><span class="p">:</span> <span class="s1">&#39;filters&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;burn_in_subtitle_dvb_subs&#39;</span><span class="p">:</span> <span class="s1">&#39;burnInSubtitleDvbSubs&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;burn_in_subtitle_srt_subs&#39;</span><span class="p">:</span> <span class="s1">&#39;burnInSubtitleSrtSubs&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;nex_guard_file_marker&#39;</span><span class="p">:</span> <span class="s1">&#39;nexGuardFileMarker&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;scc_captions&#39;</span><span class="p">:</span> <span class="s1">&#39;sccCaptions&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;bifs&#39;</span><span class="p">:</span> <span class="s1">&#39;bifs&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;dolby_vision_metadata&#39;</span><span class="p">:</span> <span class="s1">&#39;dolbyVisionMetadata&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;thumbnails&#39;</span><span class="p">:</span> <span class="s1">&#39;thumbnails&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;sprites&#39;</span><span class="p">:</span> <span class="s1">&#39;sprites&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;psnr_metrics&#39;</span><span class="p">:</span> <span class="s1">&#39;psnrMetrics&#39;</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">attributes</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">stream</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; Stream</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the stream of this HistoryStream.</span>
+
+<span class="sd">        Stream</span>
+
+<span class="sd">        :return: The stream of this HistoryStream.</span>
+<span class="sd">        :rtype: Stream</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_stream</span>
+
+    <span class="nd">@stream</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">stream</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">stream</span><span class="p">):</span>
+        <span class="c1"># type: (Stream) -&gt; None</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the stream of this HistoryStream.</span>
+
+<span class="sd">        Stream</span>
+
+<span class="sd">        :param stream: The stream of this HistoryStream.</span>
+<span class="sd">        :type: Stream</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">stream</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">stream</span><span class="p">,</span> <span class="n">Stream</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `stream`, type has to be `Stream`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_stream</span> <span class="o">=</span> <span class="n">stream</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">filters</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; list[StreamFilter]</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the filters of this HistoryStream.</span>
+
+<span class="sd">        List of stream filter configurations</span>
+
+<span class="sd">        :return: The filters of this HistoryStream.</span>
+<span class="sd">        :rtype: list[StreamFilter]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_filters</span>
+
+    <span class="nd">@filters</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">filters</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filters</span><span class="p">):</span>
+        <span class="c1"># type: (list) -&gt; None</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the filters of this HistoryStream.</span>
+
+<span class="sd">        List of stream filter configurations</span>
+
+<span class="sd">        :param filters: The filters of this HistoryStream.</span>
+<span class="sd">        :type: list[StreamFilter]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">filters</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">filters</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `filters`, type has to be `list[StreamFilter]`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_filters</span> <span class="o">=</span> <span class="n">filters</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">burn_in_subtitle_dvb_subs</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; list[BurnInSubtitleDvbSub]</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the burn_in_subtitle_dvb_subs of this HistoryStream.</span>
+
+<span class="sd">        List of Burn-In DVB-SUB subtitles</span>
+
+<span class="sd">        :return: The burn_in_subtitle_dvb_subs of this HistoryStream.</span>
+<span class="sd">        :rtype: list[BurnInSubtitleDvbSub]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_burn_in_subtitle_dvb_subs</span>
+
+    <span class="nd">@burn_in_subtitle_dvb_subs</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">burn_in_subtitle_dvb_subs</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">burn_in_subtitle_dvb_subs</span><span class="p">):</span>
+        <span class="c1"># type: (list) -&gt; None</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the burn_in_subtitle_dvb_subs of this HistoryStream.</span>
+
+<span class="sd">        List of Burn-In DVB-SUB subtitles</span>
+
+<span class="sd">        :param burn_in_subtitle_dvb_subs: The burn_in_subtitle_dvb_subs of this HistoryStream.</span>
+<span class="sd">        :type: list[BurnInSubtitleDvbSub]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">burn_in_subtitle_dvb_subs</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">burn_in_subtitle_dvb_subs</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `burn_in_subtitle_dvb_subs`, type has to be `list[BurnInSubtitleDvbSub]`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_burn_in_subtitle_dvb_subs</span> <span class="o">=</span> <span class="n">burn_in_subtitle_dvb_subs</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">burn_in_subtitle_srt_subs</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; list[BurnInSubtitleSrt]</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the burn_in_subtitle_srt_subs of this HistoryStream.</span>
+
+<span class="sd">        List of burn-in SRT configurations</span>
+
+<span class="sd">        :return: The burn_in_subtitle_srt_subs of this HistoryStream.</span>
+<span class="sd">        :rtype: list[BurnInSubtitleSrt]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_burn_in_subtitle_srt_subs</span>
+
+    <span class="nd">@burn_in_subtitle_srt_subs</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">burn_in_subtitle_srt_subs</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">burn_in_subtitle_srt_subs</span><span class="p">):</span>
+        <span class="c1"># type: (list) -&gt; None</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the burn_in_subtitle_srt_subs of this HistoryStream.</span>
+
+<span class="sd">        List of burn-in SRT configurations</span>
+
+<span class="sd">        :param burn_in_subtitle_srt_subs: The burn_in_subtitle_srt_subs of this HistoryStream.</span>
+<span class="sd">        :type: list[BurnInSubtitleSrt]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">burn_in_subtitle_srt_subs</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">burn_in_subtitle_srt_subs</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `burn_in_subtitle_srt_subs`, type has to be `list[BurnInSubtitleSrt]`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_burn_in_subtitle_srt_subs</span> <span class="o">=</span> <span class="n">burn_in_subtitle_srt_subs</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">nex_guard_file_marker</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; NexGuardFileMarker</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the nex_guard_file_marker of this HistoryStream.</span>
+
+<span class="sd">        Nexguard file marker watermarking configuration</span>
+
+<span class="sd">        :return: The nex_guard_file_marker of this HistoryStream.</span>
+<span class="sd">        :rtype: NexGuardFileMarker</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_nex_guard_file_marker</span>
+
+    <span class="nd">@nex_guard_file_marker</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">nex_guard_file_marker</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nex_guard_file_marker</span><span class="p">):</span>
+        <span class="c1"># type: (NexGuardFileMarker) -&gt; None</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the nex_guard_file_marker of this HistoryStream.</span>
+
+<span class="sd">        Nexguard file marker watermarking configuration</span>
+
+<span class="sd">        :param nex_guard_file_marker: The nex_guard_file_marker of this HistoryStream.</span>
+<span class="sd">        :type: NexGuardFileMarker</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">nex_guard_file_marker</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">nex_guard_file_marker</span><span class="p">,</span> <span class="n">NexGuardFileMarker</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `nex_guard_file_marker`, type has to be `NexGuardFileMarker`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_nex_guard_file_marker</span> <span class="o">=</span> <span class="n">nex_guard_file_marker</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">scc_captions</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; list[SccCaption]</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the scc_captions of this HistoryStream.</span>
+
+<span class="sd">        List of caption configurations</span>
+
+<span class="sd">        :return: The scc_captions of this HistoryStream.</span>
+<span class="sd">        :rtype: list[SccCaption]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_scc_captions</span>
+
+    <span class="nd">@scc_captions</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">scc_captions</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">scc_captions</span><span class="p">):</span>
+        <span class="c1"># type: (list) -&gt; None</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the scc_captions of this HistoryStream.</span>
+
+<span class="sd">        List of caption configurations</span>
+
+<span class="sd">        :param scc_captions: The scc_captions of this HistoryStream.</span>
+<span class="sd">        :type: list[SccCaption]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">scc_captions</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">scc_captions</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `scc_captions`, type has to be `list[SccCaption]`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_scc_captions</span> <span class="o">=</span> <span class="n">scc_captions</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">bifs</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; list[Bif]</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the bifs of this HistoryStream.</span>
+
+<span class="sd">        List of bif configurations</span>
+
+<span class="sd">        :return: The bifs of this HistoryStream.</span>
+<span class="sd">        :rtype: list[Bif]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_bifs</span>
+
+    <span class="nd">@bifs</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">bifs</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bifs</span><span class="p">):</span>
+        <span class="c1"># type: (list) -&gt; None</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the bifs of this HistoryStream.</span>
+
+<span class="sd">        List of bif configurations</span>
+
+<span class="sd">        :param bifs: The bifs of this HistoryStream.</span>
+<span class="sd">        :type: list[Bif]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">bifs</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">bifs</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `bifs`, type has to be `list[Bif]`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_bifs</span> <span class="o">=</span> <span class="n">bifs</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">dolby_vision_metadata</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; list[DolbyVisionMetadata]</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the dolby_vision_metadata of this HistoryStream.</span>
+
+<span class="sd">        List of Dolby Vision Metadata configurations</span>
+
+<span class="sd">        :return: The dolby_vision_metadata of this HistoryStream.</span>
+<span class="sd">        :rtype: list[DolbyVisionMetadata]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_dolby_vision_metadata</span>
+
+    <span class="nd">@dolby_vision_metadata</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">dolby_vision_metadata</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dolby_vision_metadata</span><span class="p">):</span>
+        <span class="c1"># type: (list) -&gt; None</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the dolby_vision_metadata of this HistoryStream.</span>
+
+<span class="sd">        List of Dolby Vision Metadata configurations</span>
+
+<span class="sd">        :param dolby_vision_metadata: The dolby_vision_metadata of this HistoryStream.</span>
+<span class="sd">        :type: list[DolbyVisionMetadata]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">dolby_vision_metadata</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">dolby_vision_metadata</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `dolby_vision_metadata`, type has to be `list[DolbyVisionMetadata]`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_dolby_vision_metadata</span> <span class="o">=</span> <span class="n">dolby_vision_metadata</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">thumbnails</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; list[Thumbnail]</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the thumbnails of this HistoryStream.</span>
+
+<span class="sd">        List of Thumbnail configurations</span>
+
+<span class="sd">        :return: The thumbnails of this HistoryStream.</span>
+<span class="sd">        :rtype: list[Thumbnail]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_thumbnails</span>
+
+    <span class="nd">@thumbnails</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">thumbnails</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">thumbnails</span><span class="p">):</span>
+        <span class="c1"># type: (list) -&gt; None</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the thumbnails of this HistoryStream.</span>
+
+<span class="sd">        List of Thumbnail configurations</span>
+
+<span class="sd">        :param thumbnails: The thumbnails of this HistoryStream.</span>
+<span class="sd">        :type: list[Thumbnail]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">thumbnails</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">thumbnails</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `thumbnails`, type has to be `list[Thumbnail]`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_thumbnails</span> <span class="o">=</span> <span class="n">thumbnails</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">sprites</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; list[Sprite]</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the sprites of this HistoryStream.</span>
+
+<span class="sd">        List of Sprite configurations</span>
+
+<span class="sd">        :return: The sprites of this HistoryStream.</span>
+<span class="sd">        :rtype: list[Sprite]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sprites</span>
+
+    <span class="nd">@sprites</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">sprites</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sprites</span><span class="p">):</span>
+        <span class="c1"># type: (list) -&gt; None</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the sprites of this HistoryStream.</span>
+
+<span class="sd">        List of Sprite configurations</span>
+
+<span class="sd">        :param sprites: The sprites of this HistoryStream.</span>
+<span class="sd">        :type: list[Sprite]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">sprites</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">sprites</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `sprites`, type has to be `list[Sprite]`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_sprites</span> <span class="o">=</span> <span class="n">sprites</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">psnr_metrics</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; list[PsnrQualityMetric]</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the psnr_metrics of this HistoryStream.</span>
+
+<span class="sd">        List of PSNR quality metrics</span>
+
+<span class="sd">        :return: The psnr_metrics of this HistoryStream.</span>
+<span class="sd">        :rtype: list[PsnrQualityMetric]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_psnr_metrics</span>
+
+    <span class="nd">@psnr_metrics</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">psnr_metrics</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">psnr_metrics</span><span class="p">):</span>
+        <span class="c1"># type: (list) -&gt; None</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the psnr_metrics of this HistoryStream.</span>
+
+<span class="sd">        List of PSNR quality metrics</span>
+
+<span class="sd">        :param psnr_metrics: The psnr_metrics of this HistoryStream.</span>
+<span class="sd">        :type: list[PsnrQualityMetric]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">psnr_metrics</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">psnr_metrics</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `psnr_metrics`, type has to be `list[PsnrQualityMetric]`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_psnr_metrics</span> <span class="o">=</span> <span class="n">psnr_metrics</span>
+
+<div class="viewcode-block" id="HistoryStream.to_dict"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.history_stream.HistoryStream.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="p">{}</span>
+
+        <span class="k">for</span> <span class="n">attr</span><span class="p">,</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">six</span><span class="o">.</span><span class="n">iteritems</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">openapi_types</span><span class="p">):</span>
+            <span class="n">value</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">attr</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="k">continue</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+                <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="k">continue</span>
+                <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="p">[</span><span class="n">y</span><span class="o">.</span><span class="n">value</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">Enum</span><span class="p">)</span> <span class="k">else</span> <span class="n">y</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span> <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="s2">&quot;to_dict&quot;</span><span class="p">)</span> <span class="k">else</span> <span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">value</span><span class="p">]]</span>
+            <span class="k">elif</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="s2">&quot;to_dict&quot;</span><span class="p">):</span>
+                <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="n">value</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span>
+            <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">Enum</span><span class="p">):</span>
+                <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="n">value</span><span class="o">.</span><span class="n">value</span>
+            <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+                <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="p">(</span><span class="n">v</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span> <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="s2">&quot;to_dict&quot;</span><span class="p">)</span> <span class="k">else</span> <span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span> <span class="ow">in</span> <span class="n">value</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="n">value</span>
+
+        <span class="k">return</span> <span class="n">result</span></div>
+
+<div class="viewcode-block" id="HistoryStream.to_str"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.history_stream.HistoryStream.to_str">[docs]</a>    <span class="k">def</span> <span class="nf">to_str</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the string representation of the model&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">pprint</span><span class="o">.</span><span class="n">pformat</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">to_dict</span><span class="p">())</span></div>
+
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;For `print` and `pprint`&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">to_str</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns true if both objects are equal&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">HistoryStream</span><span class="p">):</span>
+            <span class="k">return</span> <span class="kc">False</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="vm">__dict__</span>
+
+    <span class="k">def</span> <span class="fm">__ne__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns true if both objects are not equal&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="ow">not</span> <span class="bp">self</span> <span class="o">==</span> <span class="n">other</span></div>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020, Bitmovin Inc.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
