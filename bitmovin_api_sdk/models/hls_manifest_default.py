@@ -106,7 +106,7 @@ class HlsManifestDefault(HlsManifest):
         # type: () -> HlsManifestDefaultVersion
         """Gets the version of this HlsManifestDefault.
 
-        The version of the default manifest generator
+        Specifies the algorithm that determines which output of the given encoding is included into the manifest. Note that this is not related to the \"manifestGenerator\" version of the \"Start\" request.
 
         :return: The version of this HlsManifestDefault.
         :rtype: HlsManifestDefaultVersion
@@ -118,7 +118,7 @@ class HlsManifestDefault(HlsManifest):
         # type: (HlsManifestDefaultVersion) -> None
         """Sets the version of this HlsManifestDefault.
 
-        The version of the default manifest generator
+        Specifies the algorithm that determines which output of the given encoding is included into the manifest. Note that this is not related to the \"manifestGenerator\" version of the \"Start\" request.
 
         :param version: The version of this HlsManifestDefault.
         :type: HlsManifestDefaultVersion

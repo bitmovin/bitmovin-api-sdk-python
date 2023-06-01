@@ -3,12 +3,13 @@ from bitmovin_api_sdk.models import EncodingMode
 
 
 class EncodingListQueryParams(object):
-    def __init__(self, offset=None, limit=None, sort=None, type_=None, status=None, cloud_region=None, selected_cloud_region=None, encoder_version=None, selected_encoder_version=None, selected_encoding_mode=None, name=None, search=None, created_at_newer_than=None, created_at_older_than=None, started_at_newer_than=None, started_at_older_than=None, finished_at_newer_than=None, finished_at_older_than=None):
-        # type: (int, int, string_types, string_types, string_types, CloudRegion, CloudRegion, string_types, string_types, EncodingMode, string_types, string_types, datetime, datetime, datetime, datetime, datetime, datetime) -> None
+    def __init__(self, offset=None, limit=None, include_total_count=None, sort=None, type_=None, status=None, cloud_region=None, selected_cloud_region=None, encoder_version=None, selected_encoder_version=None, selected_encoding_mode=None, name=None, search=None, created_at_newer_than=None, created_at_older_than=None, started_at_newer_than=None, started_at_older_than=None, finished_at_newer_than=None, finished_at_older_than=None):
+        # type: (int, int, bool, string_types, string_types, string_types, CloudRegion, CloudRegion, string_types, string_types, EncodingMode, string_types, string_types, datetime, datetime, datetime, datetime, datetime, datetime) -> None
         super(EncodingListQueryParams, self).__init__()
 
         self.offset = offset
         self.limit = limit
+        self.include_total_count = include_total_count
         self.sort = sort
         self.type = type_
         self.status = status
@@ -31,6 +32,7 @@ class EncodingListQueryParams(object):
         types = {
             'offset': 'int',
             'limit': 'int',
+            'include_total_count': 'bool',
             'sort': 'string_types',
             'type': 'string_types',
             'status': 'string_types',
@@ -56,6 +58,7 @@ class EncodingListQueryParams(object):
         attributes = {
             'offset': 'offset',
             'limit': 'limit',
+            'include_total_count': 'includeTotalCount',
             'sort': 'sort',
             'type': 'type',
             'status': 'status',

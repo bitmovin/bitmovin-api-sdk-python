@@ -5,6 +5,7 @@ from datetime import datetime
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
 from bitmovin_api_sdk.models.encoding_template import EncodingTemplate
+from bitmovin_api_sdk.models.simple_encoding_vod_job_options import SimpleEncodingVodJobOptions
 from bitmovin_api_sdk.models.simple_encoding_vod_job_status import SimpleEncodingVodJobStatus
 import pprint
 import six
@@ -19,11 +20,12 @@ class SimpleEncodingVodJobResponse(object):
                  encoding_id=None,
                  inputs=None,
                  outputs=None,
+                 options=None,
                  errors=None,
                  created_at=None,
                  modified_at=None,
                  name=None):
-        # type: (string_types, SimpleEncodingVodJobStatus, EncodingTemplate, string_types, list[SimpleEncodingVodJobInput], list[SimpleEncodingVodJobOutput], list[SimpleEncodingVodJobErrors], datetime, datetime, string_types) -> None
+        # type: (string_types, SimpleEncodingVodJobStatus, EncodingTemplate, string_types, list[SimpleEncodingVodJobInput], list[SimpleEncodingVodJobOutput], SimpleEncodingVodJobOptions, list[SimpleEncodingVodJobErrors], datetime, datetime, string_types) -> None
 
         self._id = None
         self._status = None
@@ -31,6 +33,7 @@ class SimpleEncodingVodJobResponse(object):
         self._encoding_id = None
         self._inputs = list()
         self._outputs = list()
+        self._options = None
         self._errors = list()
         self._created_at = None
         self._modified_at = None
@@ -49,6 +52,8 @@ class SimpleEncodingVodJobResponse(object):
             self.inputs = inputs
         if outputs is not None:
             self.outputs = outputs
+        if options is not None:
+            self.options = options
         if errors is not None:
             self.errors = errors
         if created_at is not None:
@@ -67,6 +72,7 @@ class SimpleEncodingVodJobResponse(object):
             'encoding_id': 'string_types',
             'inputs': 'list[SimpleEncodingVodJobInput]',
             'outputs': 'list[SimpleEncodingVodJobOutput]',
+            'options': 'SimpleEncodingVodJobOptions',
             'errors': 'list[SimpleEncodingVodJobErrors]',
             'created_at': 'datetime',
             'modified_at': 'datetime',
@@ -84,6 +90,7 @@ class SimpleEncodingVodJobResponse(object):
             'encoding_id': 'encodingId',
             'inputs': 'inputs',
             'outputs': 'outputs',
+            'options': 'options',
             'errors': 'errors',
             'created_at': 'createdAt',
             'modified_at': 'modifiedAt',
@@ -260,6 +267,35 @@ class SimpleEncodingVodJobResponse(object):
                 raise TypeError("Invalid type for `outputs`, type has to be `list[SimpleEncodingVodJobOutput]`")
 
         self._outputs = outputs
+
+    @property
+    def options(self):
+        # type: () -> SimpleEncodingVodJobOptions
+        """Gets the options of this SimpleEncodingVodJobResponse.
+
+        Options to customize the Simple Encoding Job
+
+        :return: The options of this SimpleEncodingVodJobResponse.
+        :rtype: SimpleEncodingVodJobOptions
+        """
+        return self._options
+
+    @options.setter
+    def options(self, options):
+        # type: (SimpleEncodingVodJobOptions) -> None
+        """Sets the options of this SimpleEncodingVodJobResponse.
+
+        Options to customize the Simple Encoding Job
+
+        :param options: The options of this SimpleEncodingVodJobResponse.
+        :type: SimpleEncodingVodJobOptions
+        """
+
+        if options is not None:
+            if not isinstance(options, SimpleEncodingVodJobOptions):
+                raise TypeError("Invalid type for `options`, type has to be `SimpleEncodingVodJobOptions`")
+
+        self._options = options
 
     @property
     def errors(self):

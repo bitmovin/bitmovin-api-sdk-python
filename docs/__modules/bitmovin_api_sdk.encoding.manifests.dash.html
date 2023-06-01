@@ -170,13 +170,13 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="bitmovin_api_sdk.encoding.manifests.dash.dash_api.DashApi.create">
 <span class="sig-name descname"><span class="pre">create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dash_manifest</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.dash_manifest.DashManifest" title="bitmovin_api_sdk.models.dash_manifest.DashManifest"><span class="pre">DashManifest</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.dash_manifest.DashManifest" title="bitmovin_api_sdk.models.dash_manifest.DashManifest"><span class="pre">DashManifest</span></a></span></span><a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/manifests/dash/dash_api.html#DashApi.create"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.manifests.dash.dash_api.DashApi.create" title="Permalink to this definition"></a></dt>
-<dd><p>Create DASH Manifest</p>
+<dd><p>Create Custom DASH Manifest</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>dash_manifest</strong> (<a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.dash_manifest.DashManifest" title="bitmovin_api_sdk.models.dash_manifest.DashManifest"><em>DashManifest</em></a><em>, </em><em>required</em>) – The DASH manifest to be created</p>
+<dd class="field-odd"><p><strong>dash_manifest</strong> (<a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.dash_manifest.DashManifest" title="bitmovin_api_sdk.models.dash_manifest.DashManifest"><em>DashManifest</em></a><em>, </em><em>required</em>) – A Custom DASH Manifest gives you full control over its contents. Add Periods, Adaptation Sets, Representations, Content Protections or Custom XML Elements via the respective endpoints. If you need a simpler solution, create a Default Manifest instead. See TODO: link</p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Id of the dash manifest</p>
+<dd class="field-even"><p>Id of the DASH Manifest</p>
 </dd>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.dash_manifest.DashManifest" title="bitmovin_api_sdk.models.dash_manifest.DashManifest">DashManifest</a></p>
@@ -190,10 +190,10 @@
 <dd><p>Delete DASH Manifest</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>manifest_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – UUID of the DASH manifest to be deleted</p>
+<dd class="field-odd"><p><strong>manifest_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – UUID of the DASH Manifest to be deleted</p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Id of the dash manifest</p>
+<dd class="field-even"><p>Id of the DASH Manifest</p>
 </dd>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.bitmovin_response.BitmovinResponse" title="bitmovin_api_sdk.models.bitmovin_response.BitmovinResponse">BitmovinResponse</a></p>
@@ -207,13 +207,30 @@
 <dd><p>DASH Manifest Details</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>manifest_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – UUID of the dash manifest</p>
+<dd class="field-odd"><p><strong>manifest_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – UUID of the DASH Manifest</p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Dash Manifest details</p>
+<dd class="field-even"><p>DASH Manifest details</p>
 </dd>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.dash_manifest.DashManifest" title="bitmovin_api_sdk.models.dash_manifest.DashManifest">DashManifest</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bitmovin_api_sdk.encoding.manifests.dash.dash_api.DashApi.get_start_request">
+<span class="sig-name descname"><span class="pre">get_start_request</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">manifest_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">string_types</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.start_manifest_request.StartManifestRequest" title="bitmovin_api_sdk.models.start_manifest_request.StartManifestRequest"><span class="pre">StartManifestRequest</span></a></span></span><a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/manifests/dash/dash_api.html#DashApi.get_start_request"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.manifests.dash.dash_api.DashApi.get_start_request" title="Permalink to this definition"></a></dt>
+<dd><p>Manifest Start Details</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>manifest_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the manifest</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Service specific result</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.start_manifest_request.StartManifestRequest" title="bitmovin_api_sdk.models.start_manifest_request.StartManifestRequest">StartManifestRequest</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -227,7 +244,7 @@
 <dd class="field-odd"><p><strong>query_params</strong> (<a class="reference internal" href="#bitmovin_api_sdk.encoding.manifests.dash.dash_manifest_list_query_params.DashManifestListQueryParams" title="bitmovin_api_sdk.encoding.manifests.dash.dash_manifest_list_query_params.DashManifestListQueryParams"><em>DashManifestListQueryParams</em></a>) – Query parameters</p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>List of dash manifests</p>
+<dd class="field-even"><p>List of DASH manifests</p>
 </dd>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.dash_manifest.DashManifest" title="bitmovin_api_sdk.models.dash_manifest.DashManifest">DashManifest</a></p>
@@ -242,7 +259,7 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>manifest_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the DASH manifest.</p></li>
+<li><p><strong>manifest_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the DASH Manifest.</p></li>
 <li><p><strong>start_manifest_request</strong> (<a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.start_manifest_request.StartManifestRequest" title="bitmovin_api_sdk.models.start_manifest_request.StartManifestRequest"><em>StartManifestRequest</em></a>) – Manifest Startup Options</p></li>
 </ul>
 </dd>
@@ -261,7 +278,7 @@
 <dd><p>DASH Manifest Creation Status</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>manifest_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the DASH manifest.</p>
+<dd class="field-odd"><p><strong>manifest_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the DASH Manifest.</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>Status of manifest creation</p>
@@ -278,10 +295,10 @@
 <dd><p>Stop DASH Manifest Creation</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>manifest_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the DASH manifest.</p>
+<dd class="field-odd"><p><strong>manifest_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the DASH Manifest.</p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Id of the DASH manifest</p>
+<dd class="field-even"><p>Id of the DASH Manifest</p>
 </dd>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.bitmovin_response.BitmovinResponse" title="bitmovin_api_sdk.models.bitmovin_response.BitmovinResponse">BitmovinResponse</a></p>

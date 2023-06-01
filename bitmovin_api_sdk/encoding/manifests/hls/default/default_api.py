@@ -23,11 +23,11 @@ class DefaultApi(BaseApi):
 
     def create(self, hls_manifest_default, **kwargs):
         # type: (HlsManifestDefault, dict) -> HlsManifestDefault
-        """Create HLS Manifest Default
+        """Create Default HLS Manifest
 
-        :param hls_manifest_default: The HLS Manifest to be created
+        :param hls_manifest_default: A Default Manifest is the easiest way to create a manifest file. Its contents will be configured automatically, depending on what output your encoding creates (muxings, thumbnails, sprites, subtitles, DRM information). If you need more control, create a Custom Manifest instead. See TODO: link
         :type hls_manifest_default: HlsManifestDefault, required
-        :return: Hls manifest
+        :return: HLS manifest
         :rtype: HlsManifestDefault
         """
 

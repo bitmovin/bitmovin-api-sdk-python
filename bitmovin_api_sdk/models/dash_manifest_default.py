@@ -82,7 +82,7 @@ class DashManifestDefault(DashManifest):
         # type: () -> string_types
         """Gets the encoding_id of this DashManifestDefault.
 
-        The id of the encoding to create a default manifest from. Required: encodingId or periods
+        The id of the encoding to create a default manifest from. Either \"encodingId\" or \"periods\" is required.
 
         :return: The encoding_id of this DashManifestDefault.
         :rtype: string_types
@@ -94,7 +94,7 @@ class DashManifestDefault(DashManifest):
         # type: (string_types) -> None
         """Sets the encoding_id of this DashManifestDefault.
 
-        The id of the encoding to create a default manifest from. Required: encodingId or periods
+        The id of the encoding to create a default manifest from. Either \"encodingId\" or \"periods\" is required.
 
         :param encoding_id: The encoding_id of this DashManifestDefault.
         :type: string_types
@@ -111,7 +111,7 @@ class DashManifestDefault(DashManifest):
         # type: () -> DashManifestDefaultVersion
         """Gets the version of this DashManifestDefault.
 
-        The version of the default manifest generator
+        Specifies the algorithm that determines which output of the given encoding is included into the manifest. Note that this is not related to the \"manifestGenerator\" version of the \"Start\" request.
 
         :return: The version of this DashManifestDefault.
         :rtype: DashManifestDefaultVersion
@@ -123,7 +123,7 @@ class DashManifestDefault(DashManifest):
         # type: (DashManifestDefaultVersion) -> None
         """Sets the version of this DashManifestDefault.
 
-        The version of the default manifest generator
+        Specifies the algorithm that determines which output of the given encoding is included into the manifest. Note that this is not related to the \"manifestGenerator\" version of the \"Start\" request.
 
         :param version: The version of this DashManifestDefault.
         :type: DashManifestDefaultVersion
@@ -140,7 +140,7 @@ class DashManifestDefault(DashManifest):
         # type: () -> list[DefaultDashManifestPeriod]
         """Gets the periods of this DashManifestDefault.
 
-        Adds a period for every item. Required: encodingId or periods
+        Adds a period for every item. Either \"periods\" or \"encodingId\" is required.
 
         :return: The periods of this DashManifestDefault.
         :rtype: list[DefaultDashManifestPeriod]
@@ -152,7 +152,7 @@ class DashManifestDefault(DashManifest):
         # type: (list) -> None
         """Sets the periods of this DashManifestDefault.
 
-        Adds a period for every item. Required: encodingId or periods
+        Adds a period for every item. Either \"periods\" or \"encodingId\" is required.
 
         :param periods: The periods of this DashManifestDefault.
         :type: list[DefaultDashManifestPeriod]

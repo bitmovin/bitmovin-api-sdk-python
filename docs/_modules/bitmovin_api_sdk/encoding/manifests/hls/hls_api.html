@@ -137,11 +137,11 @@
 
 <div class="viewcode-block" id="HlsApi.create"><a class="viewcode-back" href="../../../../../__modules/bitmovin_api_sdk.encoding.manifests.hls.html#bitmovin_api_sdk.encoding.manifests.hls.hls_api.HlsApi.create">[docs]</a>    <span class="k">def</span> <span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">hls_manifest</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (HlsManifest, dict) -&gt; HlsManifest</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Create HLS Manifest</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Create Custom HLS Manifest</span>
 
-<span class="sd">        :param hls_manifest: The HLS Manifest to be created</span>
+<span class="sd">        :param hls_manifest: A Custom HLS Manifest gives you full control over its contents. Add Variant Streams and Media elements via the respective endpoints. If you need a simpler solution, create a Default Manifest instead. See TODO: link</span>
 <span class="sd">        :type hls_manifest: HlsManifest, required</span>
-<span class="sd">        :return: Hls manifest</span>
+<span class="sd">        :return: HLS manifest</span>
 <span class="sd">        :rtype: HlsManifest</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
@@ -156,9 +156,9 @@
         <span class="c1"># type: (string_types, dict) -&gt; BitmovinResponse</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Delete HLS Manifest</span>
 
-<span class="sd">        :param manifest_id: Id of the hls manifest.</span>
+<span class="sd">        :param manifest_id: Id of the HLS Manifest.</span>
 <span class="sd">        :type manifest_id: string_types, required</span>
-<span class="sd">        :return: Id of the input</span>
+<span class="sd">        :return: Id of the HLS manifest</span>
 <span class="sd">        :rtype: BitmovinResponse</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
@@ -173,9 +173,9 @@
         <span class="c1"># type: (string_types, dict) -&gt; HlsManifest</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;HLS Manifest Details</span>
 
-<span class="sd">        :param manifest_id: Id of the hls manifest.</span>
+<span class="sd">        :param manifest_id: Id of the HLS Manifest.</span>
 <span class="sd">        :type manifest_id: string_types, required</span>
-<span class="sd">        :return: HLS manifest details</span>
+<span class="sd">        :return: HLS Manifest details</span>
 <span class="sd">        :rtype: HlsManifest</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
@@ -183,6 +183,23 @@
             <span class="s1">&#39;/encoding/manifests/hls/</span><span class="si">{manifest_id}</span><span class="s1">&#39;</span><span class="p">,</span>
             <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;manifest_id&#39;</span><span class="p">:</span> <span class="n">manifest_id</span><span class="p">},</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">HlsManifest</span><span class="p">,</span>
+            <span class="o">**</span><span class="n">kwargs</span>
+        <span class="p">)</span></div>
+
+<div class="viewcode-block" id="HlsApi.get_start_request"><a class="viewcode-back" href="../../../../../__modules/bitmovin_api_sdk.encoding.manifests.hls.html#bitmovin_api_sdk.encoding.manifests.hls.hls_api.HlsApi.get_start_request">[docs]</a>    <span class="k">def</span> <span class="nf">get_start_request</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">manifest_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="c1"># type: (string_types, dict) -&gt; StartManifestRequest</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Manifest Start Details</span>
+
+<span class="sd">        :param manifest_id: ID of the manifest</span>
+<span class="sd">        :type manifest_id: string_types, required</span>
+<span class="sd">        :return: Service specific result</span>
+<span class="sd">        :rtype: StartManifestRequest</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+            <span class="s1">&#39;/encoding/manifests/hls/</span><span class="si">{manifest_id}</span><span class="s1">/start&#39;</span><span class="p">,</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;manifest_id&#39;</span><span class="p">:</span> <span class="n">manifest_id</span><span class="p">},</span>
+            <span class="nb">type</span><span class="o">=</span><span class="n">StartManifestRequest</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>
         <span class="p">)</span></div>
 
@@ -208,11 +225,11 @@
         <span class="c1"># type: (string_types, StartManifestRequest, dict) -&gt; BitmovinResponse</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Start HLS Manifest Creation</span>
 
-<span class="sd">        :param manifest_id: Id of the HLS manifest.</span>
+<span class="sd">        :param manifest_id: Id of the HLS Manifest.</span>
 <span class="sd">        :type manifest_id: string_types, required</span>
 <span class="sd">        :param start_manifest_request: Manifest Startup Options</span>
 <span class="sd">        :type start_manifest_request: StartManifestRequest</span>
-<span class="sd">        :return: Id of the manifest</span>
+<span class="sd">        :return: Id of the HLS manifest</span>
 <span class="sd">        :rtype: BitmovinResponse</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
@@ -228,7 +245,7 @@
         <span class="c1"># type: (string_types, dict) -&gt; Task</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;HLS Manifest Creation Status</span>
 
-<span class="sd">        :param manifest_id: Id of the HLS manifest.</span>
+<span class="sd">        :param manifest_id: Id of the HLS Manifest.</span>
 <span class="sd">        :type manifest_id: string_types, required</span>
 <span class="sd">        :return: Status of manifest creation</span>
 <span class="sd">        :rtype: Task</span>
@@ -245,9 +262,9 @@
         <span class="c1"># type: (string_types, dict) -&gt; BitmovinResponse</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Stop HLS Manifest Creation</span>
 
-<span class="sd">        :param manifest_id: Id of the HLS manifest.</span>
+<span class="sd">        :param manifest_id: Id of the HLS Manifest.</span>
 <span class="sd">        :type manifest_id: string_types, required</span>
-<span class="sd">        :return: Id of the HLS manifest</span>
+<span class="sd">        :return: Id of the HLS Manifest</span>
 <span class="sd">        :rtype: BitmovinResponse</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 

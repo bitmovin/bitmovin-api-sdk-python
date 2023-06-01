@@ -944,7 +944,7 @@ class H265VideoConfiguration(VideoConfiguration):
         # type: () -> int
         """Gets the bufsize of this H265VideoConfiguration.
 
-        Specify the size of the VBV buffer (kbits)
+        Size of the VBV buffer (kbits)
 
         :return: The bufsize of this H265VideoConfiguration.
         :rtype: int
@@ -956,7 +956,7 @@ class H265VideoConfiguration(VideoConfiguration):
         # type: (int) -> None
         """Sets the bufsize of this H265VideoConfiguration.
 
-        Specify the size of the VBV buffer (kbits)
+        Size of the VBV buffer (kbits)
 
         :param bufsize: The bufsize of this H265VideoConfiguration.
         :type: int
@@ -2203,7 +2203,7 @@ class H265VideoConfiguration(VideoConfiguration):
         # type: () -> RateDistortionLevelForQuantization
         """Gets the rate_distortion_level_for_quantization of this H265VideoConfiguration.
 
-        Specify the amount of rate-distortion analysis to use within quantization.
+        Specifies the amount of rate-distortion analysis to use within quantization.
 
         :return: The rate_distortion_level_for_quantization of this H265VideoConfiguration.
         :rtype: RateDistortionLevelForQuantization
@@ -2215,7 +2215,7 @@ class H265VideoConfiguration(VideoConfiguration):
         # type: (RateDistortionLevelForQuantization) -> None
         """Sets the rate_distortion_level_for_quantization of this H265VideoConfiguration.
 
-        Specify the amount of rate-distortion analysis to use within quantization.
+        Specifies the amount of rate-distortion analysis to use within quantization.
 
         :param rate_distortion_level_for_quantization: The rate_distortion_level_for_quantization of this H265VideoConfiguration.
         :type: RateDistortionLevelForQuantization

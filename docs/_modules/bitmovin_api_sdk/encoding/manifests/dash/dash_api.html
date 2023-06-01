@@ -129,11 +129,11 @@
 
 <div class="viewcode-block" id="DashApi.create"><a class="viewcode-back" href="../../../../../__modules/bitmovin_api_sdk.encoding.manifests.dash.html#bitmovin_api_sdk.encoding.manifests.dash.dash_api.DashApi.create">[docs]</a>    <span class="k">def</span> <span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dash_manifest</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (DashManifest, dict) -&gt; DashManifest</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Create DASH Manifest</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Create Custom DASH Manifest</span>
 
-<span class="sd">        :param dash_manifest: The DASH manifest to be created</span>
+<span class="sd">        :param dash_manifest: A Custom DASH Manifest gives you full control over its contents. Add Periods, Adaptation Sets, Representations, Content Protections or Custom XML Elements via the respective endpoints. If you need a simpler solution, create a Default Manifest instead. See TODO: link</span>
 <span class="sd">        :type dash_manifest: DashManifest, required</span>
-<span class="sd">        :return: Id of the dash manifest</span>
+<span class="sd">        :return: Id of the DASH Manifest</span>
 <span class="sd">        :rtype: DashManifest</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
@@ -148,9 +148,9 @@
         <span class="c1"># type: (string_types, dict) -&gt; BitmovinResponse</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Delete DASH Manifest</span>
 
-<span class="sd">        :param manifest_id: UUID of the DASH manifest to be deleted</span>
+<span class="sd">        :param manifest_id: UUID of the DASH Manifest to be deleted</span>
 <span class="sd">        :type manifest_id: string_types, required</span>
-<span class="sd">        :return: Id of the dash manifest</span>
+<span class="sd">        :return: Id of the DASH Manifest</span>
 <span class="sd">        :rtype: BitmovinResponse</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
@@ -165,9 +165,9 @@
         <span class="c1"># type: (string_types, dict) -&gt; DashManifest</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;DASH Manifest Details</span>
 
-<span class="sd">        :param manifest_id: UUID of the dash manifest</span>
+<span class="sd">        :param manifest_id: UUID of the DASH Manifest</span>
 <span class="sd">        :type manifest_id: string_types, required</span>
-<span class="sd">        :return: Dash Manifest details</span>
+<span class="sd">        :return: DASH Manifest details</span>
 <span class="sd">        :rtype: DashManifest</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
@@ -178,13 +178,30 @@
             <span class="o">**</span><span class="n">kwargs</span>
         <span class="p">)</span></div>
 
+<div class="viewcode-block" id="DashApi.get_start_request"><a class="viewcode-back" href="../../../../../__modules/bitmovin_api_sdk.encoding.manifests.dash.html#bitmovin_api_sdk.encoding.manifests.dash.dash_api.DashApi.get_start_request">[docs]</a>    <span class="k">def</span> <span class="nf">get_start_request</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">manifest_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="c1"># type: (string_types, dict) -&gt; StartManifestRequest</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Manifest Start Details</span>
+
+<span class="sd">        :param manifest_id: Id of the manifest</span>
+<span class="sd">        :type manifest_id: string_types, required</span>
+<span class="sd">        :return: Service specific result</span>
+<span class="sd">        :rtype: StartManifestRequest</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+            <span class="s1">&#39;/encoding/manifests/dash/</span><span class="si">{manifest_id}</span><span class="s1">/start&#39;</span><span class="p">,</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;manifest_id&#39;</span><span class="p">:</span> <span class="n">manifest_id</span><span class="p">},</span>
+            <span class="nb">type</span><span class="o">=</span><span class="n">StartManifestRequest</span><span class="p">,</span>
+            <span class="o">**</span><span class="n">kwargs</span>
+        <span class="p">)</span></div>
+
 <div class="viewcode-block" id="DashApi.list"><a class="viewcode-back" href="../../../../../__modules/bitmovin_api_sdk.encoding.manifests.dash.html#bitmovin_api_sdk.encoding.manifests.dash.dash_api.DashApi.list">[docs]</a>    <span class="k">def</span> <span class="nf">list</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">query_params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (DashManifestListQueryParams, dict) -&gt; DashManifest</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;List DASH Manifests</span>
 
 <span class="sd">        :param query_params: Query parameters</span>
 <span class="sd">        :type query_params: DashManifestListQueryParams</span>
-<span class="sd">        :return: List of dash manifests</span>
+<span class="sd">        :return: List of DASH manifests</span>
 <span class="sd">        :rtype: DashManifest</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
@@ -200,7 +217,7 @@
         <span class="c1"># type: (string_types, StartManifestRequest, dict) -&gt; BitmovinResponse</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Start DASH Manifest Creation</span>
 
-<span class="sd">        :param manifest_id: Id of the DASH manifest.</span>
+<span class="sd">        :param manifest_id: Id of the DASH Manifest.</span>
 <span class="sd">        :type manifest_id: string_types, required</span>
 <span class="sd">        :param start_manifest_request: Manifest Startup Options</span>
 <span class="sd">        :type start_manifest_request: StartManifestRequest</span>
@@ -220,7 +237,7 @@
         <span class="c1"># type: (string_types, dict) -&gt; Task</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;DASH Manifest Creation Status</span>
 
-<span class="sd">        :param manifest_id: Id of the DASH manifest.</span>
+<span class="sd">        :param manifest_id: Id of the DASH Manifest.</span>
 <span class="sd">        :type manifest_id: string_types, required</span>
 <span class="sd">        :return: Status of manifest creation</span>
 <span class="sd">        :rtype: Task</span>
@@ -237,9 +254,9 @@
         <span class="c1"># type: (string_types, dict) -&gt; BitmovinResponse</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Stop DASH Manifest Creation</span>
 
-<span class="sd">        :param manifest_id: Id of the DASH manifest.</span>
+<span class="sd">        :param manifest_id: Id of the DASH Manifest.</span>
 <span class="sd">        :type manifest_id: string_types, required</span>
-<span class="sd">        :return: Id of the DASH manifest</span>
+<span class="sd">        :return: Id of the DASH Manifest</span>
 <span class="sd">        :rtype: BitmovinResponse</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 

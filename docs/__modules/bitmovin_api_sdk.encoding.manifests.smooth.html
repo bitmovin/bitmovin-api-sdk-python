@@ -171,7 +171,7 @@
 <dd><p>Create Smooth Streaming Manifest</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>smooth_streaming_manifest</strong> (<a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.smooth_streaming_manifest.SmoothStreamingManifest" title="bitmovin_api_sdk.models.smooth_streaming_manifest.SmoothStreamingManifest"><em>SmoothStreamingManifest</em></a><em>, </em><em>required</em>) – The Smooth Streaming Manifest to be created</p>
+<dd class="field-odd"><p><strong>smooth_streaming_manifest</strong> (<a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.smooth_streaming_manifest.SmoothStreamingManifest" title="bitmovin_api_sdk.models.smooth_streaming_manifest.SmoothStreamingManifest"><em>SmoothStreamingManifest</em></a><em>, </em><em>required</em>) – A Custom Smooth Streaming Manifest gives you full control over its contents. Add Representations and Content Protections via the respective endpoints. If you need a simpler solution, create a Default Manifest instead. See TODO: link</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>Smooth Streaming manifest</p>
@@ -188,7 +188,7 @@
 <dd><p>Delete Smooth Streaming Manifest</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>manifest_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the Smooth Streaming manifest.</p>
+<dd class="field-odd"><p><strong>manifest_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the Smooth Streaming Manifest.</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>Id of the manifest</p>
@@ -205,13 +205,30 @@
 <dd><p>Smooth Streaming Manifest Details</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>manifest_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the Smooth Streaming manifest.</p>
+<dd class="field-odd"><p><strong>manifest_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the Smooth Streaming Manifest.</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>Manifest details</p>
 </dd>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.smooth_streaming_manifest.SmoothStreamingManifest" title="bitmovin_api_sdk.models.smooth_streaming_manifest.SmoothStreamingManifest">SmoothStreamingManifest</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bitmovin_api_sdk.encoding.manifests.smooth.smooth_api.SmoothApi.get_start_request">
+<span class="sig-name descname"><span class="pre">get_start_request</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">manifest_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">string_types</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.start_manifest_request.StartManifestRequest" title="bitmovin_api_sdk.models.start_manifest_request.StartManifestRequest"><span class="pre">StartManifestRequest</span></a></span></span><a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/manifests/smooth/smooth_api.html#SmoothApi.get_start_request"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.manifests.smooth.smooth_api.SmoothApi.get_start_request" title="Permalink to this definition"></a></dt>
+<dd><p>Manifest Start Details</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>manifest_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the manifest</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Service specific result</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.start_manifest_request.StartManifestRequest" title="bitmovin_api_sdk.models.start_manifest_request.StartManifestRequest">StartManifestRequest</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -240,7 +257,7 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>manifest_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the Smooth Streaming manifest.</p></li>
+<li><p><strong>manifest_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the Smooth Streaming Manifest.</p></li>
 <li><p><strong>start_manifest_request</strong> (<a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.start_manifest_request.StartManifestRequest" title="bitmovin_api_sdk.models.start_manifest_request.StartManifestRequest"><em>StartManifestRequest</em></a>) – Manifest Startup Options</p></li>
 </ul>
 </dd>
@@ -259,7 +276,7 @@
 <dd><p>Smooth Streaming Manifest Creation Status</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>manifest_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the Smooth Streaming manifest.</p>
+<dd class="field-odd"><p><strong>manifest_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the Smooth Streaming Manifest.</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>Status of manifest creation</p>
@@ -276,10 +293,10 @@
 <dd><p>Stop Smooth Streaming Manifest Creation</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>manifest_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the Smooth Streaming manifest.</p>
+<dd class="field-odd"><p><strong>manifest_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the Smooth Streaming Manifest.</p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Id of the Smooth Streaming manifest</p>
+<dd class="field-even"><p>Id of the Smooth Streaming Manifest</p>
 </dd>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.bitmovin_response.BitmovinResponse" title="bitmovin_api_sdk.models.bitmovin_response.BitmovinResponse">BitmovinResponse</a></p>

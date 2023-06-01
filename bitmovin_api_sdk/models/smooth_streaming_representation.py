@@ -232,7 +232,7 @@ class SmoothStreamingRepresentation(BitmovinResource):
         # type: () -> int
         """Gets the priority of this SmoothStreamingRepresentation.
 
-        Specify the priority of this representation. Representations with higher priority will be listed first in the manifest.
+        Specifies the priority of this representation. In the manifest, representations will appear ordered by descending priority values.
 
         :return: The priority of this SmoothStreamingRepresentation.
         :rtype: int
@@ -244,7 +244,7 @@ class SmoothStreamingRepresentation(BitmovinResource):
         # type: (int) -> None
         """Sets the priority of this SmoothStreamingRepresentation.
 
-        Specify the priority of this representation. Representations with higher priority will be listed first in the manifest.
+        Specifies the priority of this representation. In the manifest, representations will appear ordered by descending priority values.
 
         :param priority: The priority of this SmoothStreamingRepresentation.
         :type: int

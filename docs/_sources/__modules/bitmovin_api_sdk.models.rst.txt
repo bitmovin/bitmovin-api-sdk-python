@@ -5140,6 +5140,14 @@ bitmovin\_api\_sdk.models.simple\_encoding\_vod\_job\_input\_type module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.simple\_encoding\_vod\_job\_options module
+--------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.simple_encoding_vod_job_options
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.simple\_encoding\_vod\_job\_output module
 -------------------------------------------------------------------
 

@@ -45,7 +45,7 @@ class Scheduling(object):
         # type: () -> int
         """Gets the priority of this Scheduling.
 
-        Specify the priority of this encoding (0 - 100). Higher numbers mean higher priority. Default is 50.
+        Specifies the priority of this encoding (0 - 100). Higher numbers mean higher priority. Default is 50.
 
         :return: The priority of this Scheduling.
         :rtype: int
@@ -57,7 +57,7 @@ class Scheduling(object):
         # type: (int) -> None
         """Sets the priority of this Scheduling.
 
-        Specify the priority of this encoding (0 - 100). Higher numbers mean higher priority. Default is 50.
+        Specifies the priority of this encoding (0 - 100). Higher numbers mean higher priority. Default is 50.
 
         :param priority: The priority of this Scheduling.
         :type: int

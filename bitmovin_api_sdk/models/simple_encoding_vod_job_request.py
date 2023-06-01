@@ -4,6 +4,7 @@ from enum import Enum
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
 from bitmovin_api_sdk.models.encoding_template import EncodingTemplate
+from bitmovin_api_sdk.models.simple_encoding_vod_job_options import SimpleEncodingVodJobOptions
 import pprint
 import six
 
@@ -14,12 +15,14 @@ class SimpleEncodingVodJobRequest(object):
                  encoding_template=None,
                  inputs=None,
                  outputs=None,
+                 options=None,
                  name=None):
-        # type: (EncodingTemplate, list[SimpleEncodingVodJobInput], list[SimpleEncodingVodJobOutput], string_types) -> None
+        # type: (EncodingTemplate, list[SimpleEncodingVodJobInput], list[SimpleEncodingVodJobOutput], SimpleEncodingVodJobOptions, string_types) -> None
 
         self._encoding_template = None
         self._inputs = list()
         self._outputs = list()
+        self._options = None
         self._name = None
         self.discriminator = None
 
@@ -29,6 +32,8 @@ class SimpleEncodingVodJobRequest(object):
             self.inputs = inputs
         if outputs is not None:
             self.outputs = outputs
+        if options is not None:
+            self.options = options
         if name is not None:
             self.name = name
 
@@ -38,6 +43,7 @@ class SimpleEncodingVodJobRequest(object):
             'encoding_template': 'EncodingTemplate',
             'inputs': 'list[SimpleEncodingVodJobInput]',
             'outputs': 'list[SimpleEncodingVodJobOutput]',
+            'options': 'SimpleEncodingVodJobOptions',
             'name': 'string_types'
         }
 
@@ -49,6 +55,7 @@ class SimpleEncodingVodJobRequest(object):
             'encoding_template': 'encodingTemplate',
             'inputs': 'inputs',
             'outputs': 'outputs',
+            'options': 'options',
             'name': 'name'
         }
         return attributes
@@ -139,6 +146,35 @@ class SimpleEncodingVodJobRequest(object):
                 raise TypeError("Invalid type for `outputs`, type has to be `list[SimpleEncodingVodJobOutput]`")
 
         self._outputs = outputs
+
+    @property
+    def options(self):
+        # type: () -> SimpleEncodingVodJobOptions
+        """Gets the options of this SimpleEncodingVodJobRequest.
+
+        Options to customize the Simple Encoding Job
+
+        :return: The options of this SimpleEncodingVodJobRequest.
+        :rtype: SimpleEncodingVodJobOptions
+        """
+        return self._options
+
+    @options.setter
+    def options(self, options):
+        # type: (SimpleEncodingVodJobOptions) -> None
+        """Sets the options of this SimpleEncodingVodJobRequest.
+
+        Options to customize the Simple Encoding Job
+
+        :param options: The options of this SimpleEncodingVodJobRequest.
+        :type: SimpleEncodingVodJobOptions
+        """
+
+        if options is not None:
+            if not isinstance(options, SimpleEncodingVodJobOptions):
+                raise TypeError("Invalid type for `options`, type has to be `SimpleEncodingVodJobOptions`")
+
+        self._options = options
 
     @property
     def name(self):

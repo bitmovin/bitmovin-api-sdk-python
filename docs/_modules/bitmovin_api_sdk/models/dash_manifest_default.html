@@ -160,7 +160,7 @@
         <span class="c1"># type: () -&gt; string_types</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the encoding_id of this DashManifestDefault.</span>
 
-<span class="sd">        The id of the encoding to create a default manifest from. Required: encodingId or periods</span>
+<span class="sd">        The id of the encoding to create a default manifest from. Either \&quot;encodingId\&quot; or \&quot;periods\&quot; is required.</span>
 
 <span class="sd">        :return: The encoding_id of this DashManifestDefault.</span>
 <span class="sd">        :rtype: string_types</span>
@@ -172,7 +172,7 @@
         <span class="c1"># type: (string_types) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the encoding_id of this DashManifestDefault.</span>
 
-<span class="sd">        The id of the encoding to create a default manifest from. Required: encodingId or periods</span>
+<span class="sd">        The id of the encoding to create a default manifest from. Either \&quot;encodingId\&quot; or \&quot;periods\&quot; is required.</span>
 
 <span class="sd">        :param encoding_id: The encoding_id of this DashManifestDefault.</span>
 <span class="sd">        :type: string_types</span>
@@ -189,7 +189,7 @@
         <span class="c1"># type: () -&gt; DashManifestDefaultVersion</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the version of this DashManifestDefault.</span>
 
-<span class="sd">        The version of the default manifest generator</span>
+<span class="sd">        Specifies the algorithm that determines which output of the given encoding is included into the manifest. Note that this is not related to the \&quot;manifestGenerator\&quot; version of the \&quot;Start\&quot; request.</span>
 
 <span class="sd">        :return: The version of this DashManifestDefault.</span>
 <span class="sd">        :rtype: DashManifestDefaultVersion</span>
@@ -201,7 +201,7 @@
         <span class="c1"># type: (DashManifestDefaultVersion) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the version of this DashManifestDefault.</span>
 
-<span class="sd">        The version of the default manifest generator</span>
+<span class="sd">        Specifies the algorithm that determines which output of the given encoding is included into the manifest. Note that this is not related to the \&quot;manifestGenerator\&quot; version of the \&quot;Start\&quot; request.</span>
 
 <span class="sd">        :param version: The version of this DashManifestDefault.</span>
 <span class="sd">        :type: DashManifestDefaultVersion</span>
@@ -218,7 +218,7 @@
         <span class="c1"># type: () -&gt; list[DefaultDashManifestPeriod]</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the periods of this DashManifestDefault.</span>
 
-<span class="sd">        Adds a period for every item. Required: encodingId or periods</span>
+<span class="sd">        Adds a period for every item. Either \&quot;periods\&quot; or \&quot;encodingId\&quot; is required.</span>
 
 <span class="sd">        :return: The periods of this DashManifestDefault.</span>
 <span class="sd">        :rtype: list[DefaultDashManifestPeriod]</span>
@@ -230,7 +230,7 @@
         <span class="c1"># type: (list) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the periods of this DashManifestDefault.</span>
 
-<span class="sd">        Adds a period for every item. Required: encodingId or periods</span>
+<span class="sd">        Adds a period for every item. Either \&quot;periods\&quot; or \&quot;encodingId\&quot; is required.</span>
 
 <span class="sd">        :param periods: The periods of this DashManifestDefault.</span>
 <span class="sd">        :type: list[DefaultDashManifestPeriod]</span>

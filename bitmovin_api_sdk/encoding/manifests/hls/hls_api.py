@@ -59,11 +59,11 @@ class HlsApi(BaseApi):
 
     def create(self, hls_manifest, **kwargs):
         # type: (HlsManifest, dict) -> HlsManifest
-        """Create HLS Manifest
+        """Create Custom HLS Manifest
 
-        :param hls_manifest: The HLS Manifest to be created
+        :param hls_manifest: A Custom HLS Manifest gives you full control over its contents. Add Variant Streams and Media elements via the respective endpoints. If you need a simpler solution, create a Default Manifest instead. See TODO: link
         :type hls_manifest: HlsManifest, required
-        :return: Hls manifest
+        :return: HLS manifest
         :rtype: HlsManifest
         """
 
@@ -78,9 +78,9 @@ class HlsApi(BaseApi):
         # type: (string_types, dict) -> BitmovinResponse
         """Delete HLS Manifest
 
-        :param manifest_id: Id of the hls manifest.
+        :param manifest_id: Id of the HLS Manifest.
         :type manifest_id: string_types, required
-        :return: Id of the input
+        :return: Id of the HLS manifest
         :rtype: BitmovinResponse
         """
 
@@ -95,9 +95,9 @@ class HlsApi(BaseApi):
         # type: (string_types, dict) -> HlsManifest
         """HLS Manifest Details
 
-        :param manifest_id: Id of the hls manifest.
+        :param manifest_id: Id of the HLS Manifest.
         :type manifest_id: string_types, required
-        :return: HLS manifest details
+        :return: HLS Manifest details
         :rtype: HlsManifest
         """
 
@@ -105,6 +105,23 @@ class HlsApi(BaseApi):
             '/encoding/manifests/hls/{manifest_id}',
             path_params={'manifest_id': manifest_id},
             type=HlsManifest,
+            **kwargs
+        )
+
+    def get_start_request(self, manifest_id, **kwargs):
+        # type: (string_types, dict) -> StartManifestRequest
+        """Manifest Start Details
+
+        :param manifest_id: ID of the manifest
+        :type manifest_id: string_types, required
+        :return: Service specific result
+        :rtype: StartManifestRequest
+        """
+
+        return self.api_client.get(
+            '/encoding/manifests/hls/{manifest_id}/start',
+            path_params={'manifest_id': manifest_id},
+            type=StartManifestRequest,
             **kwargs
         )
 
@@ -130,11 +147,11 @@ class HlsApi(BaseApi):
         # type: (string_types, StartManifestRequest, dict) -> BitmovinResponse
         """Start HLS Manifest Creation
 
-        :param manifest_id: Id of the HLS manifest.
+        :param manifest_id: Id of the HLS Manifest.
         :type manifest_id: string_types, required
         :param start_manifest_request: Manifest Startup Options
         :type start_manifest_request: StartManifestRequest
-        :return: Id of the manifest
+        :return: Id of the HLS manifest
         :rtype: BitmovinResponse
         """
 
@@ -150,7 +167,7 @@ class HlsApi(BaseApi):
         # type: (string_types, dict) -> Task
         """HLS Manifest Creation Status
 
-        :param manifest_id: Id of the HLS manifest.
+        :param manifest_id: Id of the HLS Manifest.
         :type manifest_id: string_types, required
         :return: Status of manifest creation
         :rtype: Task
@@ -167,9 +184,9 @@ class HlsApi(BaseApi):
         # type: (string_types, dict) -> BitmovinResponse
         """Stop HLS Manifest Creation
 
-        :param manifest_id: Id of the HLS manifest.
+        :param manifest_id: Id of the HLS Manifest.
         :type manifest_id: string_types, required
-        :return: Id of the HLS manifest
+        :return: Id of the HLS Manifest
         :rtype: BitmovinResponse
         """
 

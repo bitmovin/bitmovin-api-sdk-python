@@ -23,11 +23,11 @@ class DefaultApi(BaseApi):
 
     def create(self, smooth_manifest_default, **kwargs):
         # type: (SmoothManifestDefault, dict) -> SmoothManifestDefault
-        """Create Smooth Streaming Manifest Default
+        """Create Default Smooth Streaming Manifest
 
-        :param smooth_manifest_default: The Smooth Streaming Default Manifest to be created
+        :param smooth_manifest_default: A Default Manifest is the easiest way to create a manifest file. Its contents will be configured automatically, depending on what output your encoding creates (muxings, thumbnails, sprites, subtitles, DRM information). If you need more control, create a Custom Manifest instead. See TODO: link
         :type smooth_manifest_default: SmoothManifestDefault, required
-        :return: Smooth Streaming manifest
+        :return: Smooth Streaming Manifest
         :rtype: SmoothManifestDefault
         """
 
