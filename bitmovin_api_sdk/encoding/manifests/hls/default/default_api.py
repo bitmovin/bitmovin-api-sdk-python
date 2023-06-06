@@ -25,7 +25,7 @@ class DefaultApi(BaseApi):
         # type: (HlsManifestDefault, dict) -> HlsManifestDefault
         """Create Default HLS Manifest
 
-        :param hls_manifest_default: A Default Manifest is the easiest way to create a manifest file. Its contents will be configured automatically, depending on what output your encoding creates (muxings, thumbnails, sprites, subtitles, DRM information). If you need more control, create a Custom Manifest instead. See TODO: link
+        :param hls_manifest_default: A Default Manifest is the easiest way to create a manifest file. Its contents will be configured automatically, depending on what output your encoding creates (muxings, thumbnails, sprites, subtitles, DRM information). If you need more control, create a Custom Manifest resource instead. See [documentation](https://developer.bitmovin.com/encoding/docs/default-vs-custom-manifest) page for a comparison
         :type hls_manifest_default: HlsManifestDefault, required
         :return: HLS manifest
         :rtype: HlsManifestDefault
