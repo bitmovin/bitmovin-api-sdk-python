@@ -115,7 +115,7 @@ class StartLiveEncodingRequest(object):
         # type: () -> list[LiveHlsManifest]
         """Gets the hls_manifests of this StartLiveEncodingRequest.
 
-        List of Hls manifests to use for this live encoding
+        HLS manifests to be generated during the encoding. See [documentation](https://developer.bitmovin.com/encoding/docs/how-to-create-manifests-for-your-encodings#just-in-time-jit)
 
         :return: The hls_manifests of this StartLiveEncodingRequest.
         :rtype: list[LiveHlsManifest]
@@ -127,7 +127,7 @@ class StartLiveEncodingRequest(object):
         # type: (list) -> None
         """Sets the hls_manifests of this StartLiveEncodingRequest.
 
-        List of Hls manifests to use for this live encoding
+        HLS manifests to be generated during the encoding. See [documentation](https://developer.bitmovin.com/encoding/docs/how-to-create-manifests-for-your-encodings#just-in-time-jit)
 
         :param hls_manifests: The hls_manifests of this StartLiveEncodingRequest.
         :type: list[LiveHlsManifest]
@@ -144,7 +144,7 @@ class StartLiveEncodingRequest(object):
         # type: () -> list[LiveDashManifest]
         """Gets the dash_manifests of this StartLiveEncodingRequest.
 
-        List of Dash manifests to use for this live encoding
+        DASH manifests to be generated during the encoding. See [documentation](https://developer.bitmovin.com/encoding/docs/how-to-create-manifests-for-your-encodings#just-in-time-jit)
 
         :return: The dash_manifests of this StartLiveEncodingRequest.
         :rtype: list[LiveDashManifest]
@@ -156,7 +156,7 @@ class StartLiveEncodingRequest(object):
         # type: (list) -> None
         """Sets the dash_manifests of this StartLiveEncodingRequest.
 
-        List of Dash manifests to use for this live encoding
+        DASH manifests to be generated during the encoding. See [documentation](https://developer.bitmovin.com/encoding/docs/how-to-create-manifests-for-your-encodings#just-in-time-jit)
 
         :param dash_manifests: The dash_manifests of this StartLiveEncodingRequest.
         :type: list[LiveDashManifest]

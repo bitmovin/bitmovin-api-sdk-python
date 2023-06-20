@@ -5636,10 +5636,26 @@ bitmovin\_api\_sdk.models.streams\_ad\_config\_response module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.streams\_config\_player\_style module
+---------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.streams_config_player_style
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.streams\_config\_response module
 ----------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.models.streams_config_response
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.streams\_content\_protection\_response module
+-----------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.streams_content_protection_response
    :members:
    :undoc-members:
    :show-inheritance:

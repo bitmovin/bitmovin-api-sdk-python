@@ -237,7 +237,7 @@ class EncodingsApi(BaseApi):
 
     def start(self, encoding_id, start_encoding_request=None, **kwargs):
         # type: (string_types, StartEncodingRequest, dict) -> BitmovinResponse
-        """Start Encoding
+        """Start VoD Encoding
 
         :param encoding_id: Id of the encoding
         :type encoding_id: string_types, required

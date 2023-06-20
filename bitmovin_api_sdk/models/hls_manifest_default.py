@@ -77,7 +77,7 @@ class HlsManifestDefault(HlsManifest):
         # type: () -> string_types
         """Gets the encoding_id of this HlsManifestDefault.
 
-        The id of the encoding to create a default manifest from. (required)
+        The id of the encoding to create a default manifest for (required)
 
         :return: The encoding_id of this HlsManifestDefault.
         :rtype: string_types
@@ -89,7 +89,7 @@ class HlsManifestDefault(HlsManifest):
         # type: (string_types) -> None
         """Sets the encoding_id of this HlsManifestDefault.
 
-        The id of the encoding to create a default manifest from. (required)
+        The id of the encoding to create a default manifest for (required)
 
         :param encoding_id: The encoding_id of this HlsManifestDefault.
         :type: string_types
@@ -106,7 +106,7 @@ class HlsManifestDefault(HlsManifest):
         # type: () -> HlsManifestDefaultVersion
         """Gets the version of this HlsManifestDefault.
 
-        Specifies the algorithm that determines which output of the given encoding is included into the manifest. Note that this is not related to the \"manifestGenerator\" version of the \"Start\" request.
+        Currently not in use
 
         :return: The version of this HlsManifestDefault.
         :rtype: HlsManifestDefaultVersion
@@ -118,7 +118,7 @@ class HlsManifestDefault(HlsManifest):
         # type: (HlsManifestDefaultVersion) -> None
         """Sets the version of this HlsManifestDefault.
 
-        Specifies the algorithm that determines which output of the given encoding is included into the manifest. Note that this is not related to the \"manifestGenerator\" version of the \"Start\" request.
+        Currently not in use
 
         :param version: The version of this HlsManifestDefault.
         :type: HlsManifestDefaultVersion

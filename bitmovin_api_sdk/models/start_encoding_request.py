@@ -256,7 +256,7 @@ class StartEncodingRequest(object):
         # type: () -> list[ManifestResource]
         """Gets the preview_dash_manifests of this StartEncodingRequest.
 
-        List of preview DASH manifests to be created
+        DASH manifests to be generated for previewing while the encoding is still running. See [documentation](https://developer.bitmovin.com/encoding/docs/how-to-create-manifests-for-your-encodings#just-in-time-jit)
 
         :return: The preview_dash_manifests of this StartEncodingRequest.
         :rtype: list[ManifestResource]
@@ -268,7 +268,7 @@ class StartEncodingRequest(object):
         # type: (list) -> None
         """Sets the preview_dash_manifests of this StartEncodingRequest.
 
-        List of preview DASH manifests to be created
+        DASH manifests to be generated for previewing while the encoding is still running. See [documentation](https://developer.bitmovin.com/encoding/docs/how-to-create-manifests-for-your-encodings#just-in-time-jit)
 
         :param preview_dash_manifests: The preview_dash_manifests of this StartEncodingRequest.
         :type: list[ManifestResource]
@@ -285,7 +285,7 @@ class StartEncodingRequest(object):
         # type: () -> list[ManifestResource]
         """Gets the preview_hls_manifests of this StartEncodingRequest.
 
-        List of preview HLS manifests to be created
+        HLS manifests to be generated for previewing while the encoding is still running. See [documentation](https://developer.bitmovin.com/encoding/docs/how-to-create-manifests-for-your-encodings#just-in-time-jit)
 
         :return: The preview_hls_manifests of this StartEncodingRequest.
         :rtype: list[ManifestResource]
@@ -297,7 +297,7 @@ class StartEncodingRequest(object):
         # type: (list) -> None
         """Sets the preview_hls_manifests of this StartEncodingRequest.
 
-        List of preview HLS manifests to be created
+        HLS manifests to be generated for previewing while the encoding is still running. See [documentation](https://developer.bitmovin.com/encoding/docs/how-to-create-manifests-for-your-encodings#just-in-time-jit)
 
         :param preview_hls_manifests: The preview_hls_manifests of this StartEncodingRequest.
         :type: list[ManifestResource]
@@ -314,7 +314,7 @@ class StartEncodingRequest(object):
         # type: () -> list[ManifestResource]
         """Gets the vod_dash_manifests of this StartEncodingRequest.
 
-        List of VoD DASH manifests to be created after encoding finished successfully
+        DASH manifests to be generated right after encoding (just-in-time). See [documentation](https://developer.bitmovin.com/encoding/docs/how-to-create-manifests-for-your-encodings#just-in-time-jit)
 
         :return: The vod_dash_manifests of this StartEncodingRequest.
         :rtype: list[ManifestResource]
@@ -326,7 +326,7 @@ class StartEncodingRequest(object):
         # type: (list) -> None
         """Sets the vod_dash_manifests of this StartEncodingRequest.
 
-        List of VoD DASH manifests to be created after encoding finished successfully
+        DASH manifests to be generated right after encoding (just-in-time). See [documentation](https://developer.bitmovin.com/encoding/docs/how-to-create-manifests-for-your-encodings#just-in-time-jit)
 
         :param vod_dash_manifests: The vod_dash_manifests of this StartEncodingRequest.
         :type: list[ManifestResource]
@@ -343,7 +343,7 @@ class StartEncodingRequest(object):
         # type: () -> list[ManifestResource]
         """Gets the vod_hls_manifests of this StartEncodingRequest.
 
-        List of VoD HLS manifests to be created after encoding finished successfully
+        HLS manifests to be generated right after encoding (just-in-time). See [documentation](https://developer.bitmovin.com/encoding/docs/how-to-create-manifests-for-your-encodings#just-in-time-jit)
 
         :return: The vod_hls_manifests of this StartEncodingRequest.
         :rtype: list[ManifestResource]
@@ -355,7 +355,7 @@ class StartEncodingRequest(object):
         # type: (list) -> None
         """Sets the vod_hls_manifests of this StartEncodingRequest.
 
-        List of VoD HLS manifests to be created after encoding finished successfully
+        HLS manifests to be generated right after encoding (just-in-time). See [documentation](https://developer.bitmovin.com/encoding/docs/how-to-create-manifests-for-your-encodings#just-in-time-jit)
 
         :param vod_hls_manifests: The vod_hls_manifests of this StartEncodingRequest.
         :type: list[ManifestResource]
@@ -372,7 +372,7 @@ class StartEncodingRequest(object):
         # type: () -> list[ManifestResource]
         """Gets the vod_smooth_manifests of this StartEncodingRequest.
 
-        List of VoD SMOOTH manifests to be created after encoding finished successfully
+        Smooth Streaming manifests to be generated right after encoding (just-in-time). See [documentation](https://developer.bitmovin.com/encoding/docs/how-to-create-manifests-for-your-encodings#just-in-time-jit)
 
         :return: The vod_smooth_manifests of this StartEncodingRequest.
         :rtype: list[ManifestResource]
@@ -384,7 +384,7 @@ class StartEncodingRequest(object):
         # type: (list) -> None
         """Sets the vod_smooth_manifests of this StartEncodingRequest.
 
-        List of VoD SMOOTH manifests to be created after encoding finished successfully
+        Smooth Streaming manifests to be generated right after encoding (just-in-time). See [documentation](https://developer.bitmovin.com/encoding/docs/how-to-create-manifests-for-your-encodings#just-in-time-jit)
 
         :param vod_smooth_manifests: The vod_smooth_manifests of this StartEncodingRequest.
         :type: list[ManifestResource]

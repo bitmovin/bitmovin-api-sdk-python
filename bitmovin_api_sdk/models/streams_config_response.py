@@ -3,6 +3,7 @@
 from enum import Enum
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
+from bitmovin_api_sdk.models.streams_config_player_style import StreamsConfigPlayerStyle
 import pprint
 import six
 
@@ -15,7 +16,7 @@ class StreamsConfigResponse(object):
                  player_style=None,
                  watermark_url=None,
                  watermark_target_link=None):
-        # type: (string_types, string_types, object, string_types, string_types) -> None
+        # type: (string_types, string_types, StreamsConfigPlayerStyle, string_types, string_types) -> None
 
         self._id = None
         self._org_id = None
@@ -40,7 +41,7 @@ class StreamsConfigResponse(object):
         types = {
             'id': 'string_types',
             'org_id': 'string_types',
-            'player_style': 'object',
+            'player_style': 'StreamsConfigPlayerStyle',
             'watermark_url': 'string_types',
             'watermark_target_link': 'string_types'
         }
@@ -118,30 +119,28 @@ class StreamsConfigResponse(object):
 
     @property
     def player_style(self):
-        # type: () -> object
+        # type: () -> StreamsConfigPlayerStyle
         """Gets the player_style of this StreamsConfigResponse.
 
-        Player style config
 
         :return: The player_style of this StreamsConfigResponse.
-        :rtype: object
+        :rtype: StreamsConfigPlayerStyle
         """
         return self._player_style
 
     @player_style.setter
     def player_style(self, player_style):
-        # type: (object) -> None
+        # type: (StreamsConfigPlayerStyle) -> None
         """Sets the player_style of this StreamsConfigResponse.
 
-        Player style config
 
         :param player_style: The player_style of this StreamsConfigResponse.
-        :type: object
+        :type: StreamsConfigPlayerStyle
         """
 
         if player_style is not None:
-            if not isinstance(player_style, object):
-                raise TypeError("Invalid type for `player_style`, type has to be `object`")
+            if not isinstance(player_style, StreamsConfigPlayerStyle):
+                raise TypeError("Invalid type for `player_style`, type has to be `StreamsConfigPlayerStyle`")
 
         self._player_style = player_style
 

@@ -81,6 +81,7 @@
 <span class="kn">from</span> <span class="nn">enum</span> <span class="kn">import</span> <span class="n">Enum</span>
 <span class="kn">from</span> <span class="nn">six</span> <span class="kn">import</span> <span class="n">string_types</span><span class="p">,</span> <span class="n">iteritems</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.common.poscheck</span> <span class="kn">import</span> <span class="n">poscheck_model</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.streams_config_player_style</span> <span class="kn">import</span> <span class="n">StreamsConfigPlayerStyle</span>
 <span class="kn">import</span> <span class="nn">pprint</span>
 <span class="kn">import</span> <span class="nn">six</span>
 
@@ -93,7 +94,7 @@
                  <span class="n">player_style</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">watermark_url</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">watermark_target_link</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (string_types, string_types, object, string_types, string_types) -&gt; None</span>
+        <span class="c1"># type: (string_types, string_types, StreamsConfigPlayerStyle, string_types, string_types) -&gt; None</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_id</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_org_id</span> <span class="o">=</span> <span class="kc">None</span>
@@ -118,7 +119,7 @@
         <span class="n">types</span> <span class="o">=</span> <span class="p">{</span>
             <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
             <span class="s1">&#39;org_id&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;player_style&#39;</span><span class="p">:</span> <span class="s1">&#39;object&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;player_style&#39;</span><span class="p">:</span> <span class="s1">&#39;StreamsConfigPlayerStyle&#39;</span><span class="p">,</span>
             <span class="s1">&#39;watermark_url&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
             <span class="s1">&#39;watermark_target_link&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span>
         <span class="p">}</span>
@@ -196,30 +197,28 @@
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">player_style</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="c1"># type: () -&gt; object</span>
+        <span class="c1"># type: () -&gt; StreamsConfigPlayerStyle</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the player_style of this StreamsConfigResponse.</span>
 
-<span class="sd">        Player style config</span>
 
 <span class="sd">        :return: The player_style of this StreamsConfigResponse.</span>
-<span class="sd">        :rtype: object</span>
+<span class="sd">        :rtype: StreamsConfigPlayerStyle</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_player_style</span>
 
     <span class="nd">@player_style</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">player_style</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">player_style</span><span class="p">):</span>
-        <span class="c1"># type: (object) -&gt; None</span>
+        <span class="c1"># type: (StreamsConfigPlayerStyle) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the player_style of this StreamsConfigResponse.</span>
 
-<span class="sd">        Player style config</span>
 
 <span class="sd">        :param player_style: The player_style of this StreamsConfigResponse.</span>
-<span class="sd">        :type: object</span>
+<span class="sd">        :type: StreamsConfigPlayerStyle</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
         <span class="k">if</span> <span class="n">player_style</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">player_style</span><span class="p">,</span> <span class="nb">object</span><span class="p">):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `player_style`, type has to be `object`&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">player_style</span><span class="p">,</span> <span class="n">StreamsConfigPlayerStyle</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `player_style`, type has to be `StreamsConfigPlayerStyle`&quot;</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_player_style</span> <span class="o">=</span> <span class="n">player_style</span>
 

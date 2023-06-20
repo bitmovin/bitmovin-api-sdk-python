@@ -215,7 +215,7 @@
 
 <div class="viewcode-block" id="DashApi.start"><a class="viewcode-back" href="../../../../../__modules/bitmovin_api_sdk.encoding.manifests.dash.html#bitmovin_api_sdk.encoding.manifests.dash.dash_api.DashApi.start">[docs]</a>    <span class="k">def</span> <span class="nf">start</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">manifest_id</span><span class="p">,</span> <span class="n">start_manifest_request</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, StartManifestRequest, dict) -&gt; BitmovinResponse</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Start DASH Manifest Creation</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Start DASH manifest generation</span>
 
 <span class="sd">        :param manifest_id: Id of the DASH Manifest.</span>
 <span class="sd">        :type manifest_id: string_types, required</span>
@@ -235,11 +235,11 @@
 
 <div class="viewcode-block" id="DashApi.status"><a class="viewcode-back" href="../../../../../__modules/bitmovin_api_sdk.encoding.manifests.dash.html#bitmovin_api_sdk.encoding.manifests.dash.dash_api.DashApi.status">[docs]</a>    <span class="k">def</span> <span class="nf">status</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">manifest_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, dict) -&gt; Task</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;DASH Manifest Creation Status</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;DASH manifest generation status</span>
 
 <span class="sd">        :param manifest_id: Id of the DASH Manifest.</span>
 <span class="sd">        :type manifest_id: string_types, required</span>
-<span class="sd">        :return: Status of manifest creation</span>
+<span class="sd">        :return: Status of manifest generation</span>
 <span class="sd">        :rtype: Task</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
@@ -252,7 +252,7 @@
 
 <div class="viewcode-block" id="DashApi.stop"><a class="viewcode-back" href="../../../../../__modules/bitmovin_api_sdk.encoding.manifests.dash.html#bitmovin_api_sdk.encoding.manifests.dash.dash_api.DashApi.stop">[docs]</a>    <span class="k">def</span> <span class="nf">stop</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">manifest_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, dict) -&gt; BitmovinResponse</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Stop DASH Manifest Creation</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Stop DASH manifest generation</span>
 
 <span class="sd">        :param manifest_id: Id of the DASH Manifest.</span>
 <span class="sd">        :type manifest_id: string_types, required</span>

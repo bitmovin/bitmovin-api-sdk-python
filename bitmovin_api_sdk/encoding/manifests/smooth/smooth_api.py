@@ -145,7 +145,7 @@ class SmoothApi(BaseApi):
 
     def start(self, manifest_id, start_manifest_request=None, **kwargs):
         # type: (string_types, StartManifestRequest, dict) -> BitmovinResponse
-        """Start Smooth Streaming Manifest Creation
+        """Start Smooth Streaming manifest generation
 
         :param manifest_id: Id of the Smooth Streaming Manifest.
         :type manifest_id: string_types, required
@@ -165,11 +165,11 @@ class SmoothApi(BaseApi):
 
     def status(self, manifest_id, **kwargs):
         # type: (string_types, dict) -> Task
-        """Smooth Streaming Manifest Creation Status
+        """Smooth Streaming manifest generation status
 
         :param manifest_id: Id of the Smooth Streaming Manifest.
         :type manifest_id: string_types, required
-        :return: Status of manifest creation
+        :return: Status of manifest generation
         :rtype: Task
         """
 
@@ -182,7 +182,7 @@ class SmoothApi(BaseApi):
 
     def stop(self, manifest_id, **kwargs):
         # type: (string_types, dict) -> BitmovinResponse
-        """Stop Smooth Streaming Manifest Creation
+        """Stop Smooth Streaming manifest generation
 
         :param manifest_id: Id of the Smooth Streaming Manifest.
         :type manifest_id: string_types, required

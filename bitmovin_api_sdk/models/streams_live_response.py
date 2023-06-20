@@ -6,6 +6,7 @@ from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
 from bitmovin_api_sdk.models.streams_ad_config_response import StreamsAdConfigResponse
 from bitmovin_api_sdk.models.streams_config_response import StreamsConfigResponse
+from bitmovin_api_sdk.models.streams_content_protection_response import StreamsContentProtectionResponse
 from bitmovin_api_sdk.models.streams_live_life_cycle import StreamsLiveLifeCycle
 import pprint
 import six
@@ -22,8 +23,9 @@ class StreamsLiveResponse(object):
                  life_cycle=None,
                  config=None,
                  poster_url=None,
-                 ad_config=None):
-        # type: (string_types, string_types, string_types, string_types, datetime, StreamsLiveLifeCycle, StreamsConfigResponse, string_types, StreamsAdConfigResponse) -> None
+                 ad_config=None,
+                 content_protection=None):
+        # type: (string_types, string_types, string_types, string_types, datetime, StreamsLiveLifeCycle, StreamsConfigResponse, string_types, StreamsAdConfigResponse, StreamsContentProtectionResponse) -> None
 
         self._id = None
         self._stream_key = None
@@ -34,6 +36,7 @@ class StreamsLiveResponse(object):
         self._config = None
         self._poster_url = None
         self._ad_config = None
+        self._content_protection = None
         self.discriminator = None
 
         if id_ is not None:
@@ -54,6 +57,8 @@ class StreamsLiveResponse(object):
             self.poster_url = poster_url
         if ad_config is not None:
             self.ad_config = ad_config
+        if content_protection is not None:
+            self.content_protection = content_protection
 
     @property
     def openapi_types(self):
@@ -66,7 +71,8 @@ class StreamsLiveResponse(object):
             'life_cycle': 'StreamsLiveLifeCycle',
             'config': 'StreamsConfigResponse',
             'poster_url': 'string_types',
-            'ad_config': 'StreamsAdConfigResponse'
+            'ad_config': 'StreamsAdConfigResponse',
+            'content_protection': 'StreamsContentProtectionResponse'
         }
 
         return types
@@ -82,7 +88,8 @@ class StreamsLiveResponse(object):
             'life_cycle': 'lifeCycle',
             'config': 'config',
             'poster_url': 'posterUrl',
-            'ad_config': 'adConfig'
+            'ad_config': 'adConfig',
+            'content_protection': 'contentProtection'
         }
         return attributes
 
@@ -342,6 +349,33 @@ class StreamsLiveResponse(object):
                 raise TypeError("Invalid type for `ad_config`, type has to be `StreamsAdConfigResponse`")
 
         self._ad_config = ad_config
+
+    @property
+    def content_protection(self):
+        # type: () -> StreamsContentProtectionResponse
+        """Gets the content_protection of this StreamsLiveResponse.
+
+
+        :return: The content_protection of this StreamsLiveResponse.
+        :rtype: StreamsContentProtectionResponse
+        """
+        return self._content_protection
+
+    @content_protection.setter
+    def content_protection(self, content_protection):
+        # type: (StreamsContentProtectionResponse) -> None
+        """Sets the content_protection of this StreamsLiveResponse.
+
+
+        :param content_protection: The content_protection of this StreamsLiveResponse.
+        :type: StreamsContentProtectionResponse
+        """
+
+        if content_protection is not None:
+            if not isinstance(content_protection, StreamsContentProtectionResponse):
+                raise TypeError("Invalid type for `content_protection`, type has to be `StreamsContentProtectionResponse`")
+
+        self._content_protection = content_protection
 
     def to_dict(self):
         """Returns the model properties as a dict"""
