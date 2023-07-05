@@ -9,6 +9,7 @@ from bitmovin_api_sdk.models.cloud_region import CloudRegion
 from bitmovin_api_sdk.models.encoding_mode import EncodingMode
 from bitmovin_api_sdk.models.encoding_type import EncodingType
 from bitmovin_api_sdk.models.infrastructure_settings import InfrastructureSettings
+from bitmovin_api_sdk.models.live_options_type import LiveOptionsType
 from bitmovin_api_sdk.models.status import Status
 import pprint
 import six
@@ -39,8 +40,9 @@ class Encoding(BitmovinResource):
                  selected_encoding_mode=None,
                  selected_cloud_region=None,
                  status=None,
-                 labels=None):
-        # type: (string_types, string_types, string_types, datetime, datetime, dict, EncodingType, datetime, datetime, datetime, datetime, datetime, int, CloudRegion, list[CloudRegion], string_types, InfrastructureSettings, string_types, string_types, EncodingMode, CloudRegion, Status, list[string_types]) -> None
+                 labels=None,
+                 live_options_type=None):
+        # type: (string_types, string_types, string_types, datetime, datetime, dict, EncodingType, datetime, datetime, datetime, datetime, datetime, int, CloudRegion, list[CloudRegion], string_types, InfrastructureSettings, string_types, string_types, EncodingMode, CloudRegion, Status, list[string_types], LiveOptionsType) -> None
         super(Encoding, self).__init__(id_=id_, name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data)
 
         self._type = None
@@ -60,6 +62,7 @@ class Encoding(BitmovinResource):
         self._selected_cloud_region = None
         self._status = None
         self._labels = list()
+        self._live_options_type = None
         self.discriminator = None
 
         if type_ is not None:
@@ -96,6 +99,8 @@ class Encoding(BitmovinResource):
             self.status = status
         if labels is not None:
             self.labels = labels
+        if live_options_type is not None:
+            self.live_options_type = live_options_type
 
     @property
     def openapi_types(self):
@@ -121,7 +126,8 @@ class Encoding(BitmovinResource):
             'selected_encoding_mode': 'EncodingMode',
             'selected_cloud_region': 'CloudRegion',
             'status': 'Status',
-            'labels': 'list[string_types]'
+            'labels': 'list[string_types]',
+            'live_options_type': 'LiveOptionsType'
         })
 
         return types
@@ -150,7 +156,8 @@ class Encoding(BitmovinResource):
             'selected_encoding_mode': 'selectedEncodingMode',
             'selected_cloud_region': 'selectedCloudRegion',
             'status': 'status',
-            'labels': 'labels'
+            'labels': 'labels',
+            'live_options_type': 'liveOptionsType'
         })
         return attributes
 
@@ -532,7 +539,7 @@ class Encoding(BitmovinResource):
         # type: () -> EncodingMode
         """Gets the selected_encoding_mode of this Encoding.
 
-        After the encoding has been started, this will contain the encoding mode that was actually used. Especially useful when starting an encoding with encoding mode STANDARD.
+        After the encoding has been started, this will contain the encoding mode that was actually used. Especially useful when `encodingMode` was not set explicitly or set to STANDARD (which translates to one of the other possible values on encoding start).
 
         :return: The selected_encoding_mode of this Encoding.
         :rtype: EncodingMode
@@ -544,7 +551,7 @@ class Encoding(BitmovinResource):
         # type: (EncodingMode) -> None
         """Sets the selected_encoding_mode of this Encoding.
 
-        After the encoding has been started, this will contain the encoding mode that was actually used. Especially useful when starting an encoding with encoding mode STANDARD.
+        After the encoding has been started, this will contain the encoding mode that was actually used. Especially useful when `encodingMode` was not set explicitly or set to STANDARD (which translates to one of the other possible values on encoding start).
 
         :param selected_encoding_mode: The selected_encoding_mode of this Encoding.
         :type: EncodingMode
@@ -642,6 +649,35 @@ class Encoding(BitmovinResource):
                 raise TypeError("Invalid type for `labels`, type has to be `list[string_types]`")
 
         self._labels = labels
+
+    @property
+    def live_options_type(self):
+        # type: () -> LiveOptionsType
+        """Gets the live_options_type of this Encoding.
+
+        The chosen live option type of the live encoding
+
+        :return: The live_options_type of this Encoding.
+        :rtype: LiveOptionsType
+        """
+        return self._live_options_type
+
+    @live_options_type.setter
+    def live_options_type(self, live_options_type):
+        # type: (LiveOptionsType) -> None
+        """Sets the live_options_type of this Encoding.
+
+        The chosen live option type of the live encoding
+
+        :param live_options_type: The live_options_type of this Encoding.
+        :type: LiveOptionsType
+        """
+
+        if live_options_type is not None:
+            if not isinstance(live_options_type, LiveOptionsType):
+                raise TypeError("Invalid type for `live_options_type`, type has to be `LiveOptionsType`")
+
+        self._live_options_type = live_options_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

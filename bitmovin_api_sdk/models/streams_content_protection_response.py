@@ -12,12 +12,14 @@ class StreamsContentProtectionResponse(object):
     def __init__(self,
                  id_=None,
                  allowed_domains=None,
-                 allow_no_referer=None):
-        # type: (string_types, list[string_types], bool) -> None
+                 allow_no_referer=None,
+                 allow_share=None):
+        # type: (string_types, list[string_types], bool, bool) -> None
 
         self._id = None
         self._allowed_domains = list()
         self._allow_no_referer = None
+        self._allow_share = None
         self.discriminator = None
 
         if id_ is not None:
@@ -26,13 +28,16 @@ class StreamsContentProtectionResponse(object):
             self.allowed_domains = allowed_domains
         if allow_no_referer is not None:
             self.allow_no_referer = allow_no_referer
+        if allow_share is not None:
+            self.allow_share = allow_share
 
     @property
     def openapi_types(self):
         types = {
             'id': 'string_types',
             'allowed_domains': 'list[string_types]',
-            'allow_no_referer': 'bool'
+            'allow_no_referer': 'bool',
+            'allow_share': 'bool'
         }
 
         return types
@@ -42,7 +47,8 @@ class StreamsContentProtectionResponse(object):
         attributes = {
             'id': 'id',
             'allowed_domains': 'allowedDomains',
-            'allow_no_referer': 'allowNoReferer'
+            'allow_no_referer': 'allowNoReferer',
+            'allow_share': 'allowShare'
         }
         return attributes
 
@@ -132,6 +138,35 @@ class StreamsContentProtectionResponse(object):
                 raise TypeError("Invalid type for `allow_no_referer`, type has to be `bool`")
 
         self._allow_no_referer = allow_no_referer
+
+    @property
+    def allow_share(self):
+        # type: () -> bool
+        """Gets the allow_share of this StreamsContentProtectionResponse.
+
+        Controls if Stream is accessible via sharing URL or not
+
+        :return: The allow_share of this StreamsContentProtectionResponse.
+        :rtype: bool
+        """
+        return self._allow_share
+
+    @allow_share.setter
+    def allow_share(self, allow_share):
+        # type: (bool) -> None
+        """Sets the allow_share of this StreamsContentProtectionResponse.
+
+        Controls if Stream is accessible via sharing URL or not
+
+        :param allow_share: The allow_share of this StreamsContentProtectionResponse.
+        :type: bool
+        """
+
+        if allow_share is not None:
+            if not isinstance(allow_share, bool):
+                raise TypeError("Invalid type for `allow_share`, type has to be `bool`")
+
+        self._allow_share = allow_share
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -92,15 +92,17 @@
                  <span class="n">url</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">username</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">password</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">api_key</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">role_arn</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">external_id</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">external_id_mode</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">gateway_region</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (string_types, string_types, string_types, string_types, string_types, ExternalIdMode, string_types) -&gt; None</span>
+        <span class="c1"># type: (string_types, string_types, string_types, string_types, string_types, string_types, ExternalIdMode, string_types) -&gt; None</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_url</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_username</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_password</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_api_key</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_role_arn</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_external_id</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_external_id_mode</span> <span class="o">=</span> <span class="kc">None</span>
@@ -113,6 +115,8 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">username</span> <span class="o">=</span> <span class="n">username</span>
         <span class="k">if</span> <span class="n">password</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">password</span> <span class="o">=</span> <span class="n">password</span>
+        <span class="k">if</span> <span class="n">api_key</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">api_key</span> <span class="o">=</span> <span class="n">api_key</span>
         <span class="k">if</span> <span class="n">role_arn</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">role_arn</span> <span class="o">=</span> <span class="n">role_arn</span>
         <span class="k">if</span> <span class="n">external_id</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -128,6 +132,7 @@
             <span class="s1">&#39;url&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
             <span class="s1">&#39;username&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
             <span class="s1">&#39;password&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;api_key&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
             <span class="s1">&#39;role_arn&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
             <span class="s1">&#39;external_id&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
             <span class="s1">&#39;external_id_mode&#39;</span><span class="p">:</span> <span class="s1">&#39;ExternalIdMode&#39;</span><span class="p">,</span>
@@ -142,6 +147,7 @@
             <span class="s1">&#39;url&#39;</span><span class="p">:</span> <span class="s1">&#39;url&#39;</span><span class="p">,</span>
             <span class="s1">&#39;username&#39;</span><span class="p">:</span> <span class="s1">&#39;username&#39;</span><span class="p">,</span>
             <span class="s1">&#39;password&#39;</span><span class="p">:</span> <span class="s1">&#39;password&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;api_key&#39;</span><span class="p">:</span> <span class="s1">&#39;apiKey&#39;</span><span class="p">,</span>
             <span class="s1">&#39;role_arn&#39;</span><span class="p">:</span> <span class="s1">&#39;roleArn&#39;</span><span class="p">,</span>
             <span class="s1">&#39;external_id&#39;</span><span class="p">:</span> <span class="s1">&#39;externalId&#39;</span><span class="p">,</span>
             <span class="s1">&#39;external_id_mode&#39;</span><span class="p">:</span> <span class="s1">&#39;externalIdMode&#39;</span><span class="p">,</span>
@@ -235,6 +241,35 @@
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `password`, type has to be `string_types`&quot;</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_password</span> <span class="o">=</span> <span class="n">password</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">api_key</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; string_types</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the api_key of this SpekeDrmProvider.</span>
+
+<span class="sd">        Your API key for authentication via X-API-Key HTTP Header</span>
+
+<span class="sd">        :return: The api_key of this SpekeDrmProvider.</span>
+<span class="sd">        :rtype: string_types</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_api_key</span>
+
+    <span class="nd">@api_key</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">api_key</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">api_key</span><span class="p">):</span>
+        <span class="c1"># type: (string_types) -&gt; None</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the api_key of this SpekeDrmProvider.</span>
+
+<span class="sd">        Your API key for authentication via X-API-Key HTTP Header</span>
+
+<span class="sd">        :param api_key: The api_key of this SpekeDrmProvider.</span>
+<span class="sd">        :type: string_types</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">api_key</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">api_key</span><span class="p">,</span> <span class="n">string_types</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `api_key`, type has to be `string_types`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_api_key</span> <span class="o">=</span> <span class="n">api_key</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">role_arn</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>

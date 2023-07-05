@@ -27,7 +27,7 @@ class VodApi(BaseApi):
         # type: (SimpleEncodingVodJobRequest, dict) -> SimpleEncodingVodJobResponse
         """Create a Simple Encoding VOD Job
 
-        :param simple_encoding_vod_job_request: The Simple Encoding VOD Job to be created.  Check out our [Simple Encoding API Documentation](https://bitmovin.com/docs/encoding/articles/simple-encoding-api) for additional information about the Simple Encoding API. 
+        :param simple_encoding_vod_job_request: The Simple Encoding VOD Job to be created.
         :type simple_encoding_vod_job_request: SimpleEncodingVodJobRequest, required
         :return: Created Simple Encoding VOD Job
         :rtype: SimpleEncodingVodJobResponse

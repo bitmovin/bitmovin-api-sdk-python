@@ -14,14 +14,16 @@ class StreamsLiveUpdateRequest(object):
                  description=None,
                  config_id=None,
                  poster_url=None,
-                 ad_config_id=None):
-        # type: (string_types, string_types, string_types, string_types, string_types) -> None
+                 ad_config_id=None,
+                 content_protection_id=None):
+        # type: (string_types, string_types, string_types, string_types, string_types, string_types) -> None
 
         self._title = None
         self._description = None
         self._config_id = None
         self._poster_url = None
         self._ad_config_id = None
+        self._content_protection_id = None
         self.discriminator = None
 
         if title is not None:
@@ -34,6 +36,8 @@ class StreamsLiveUpdateRequest(object):
             self.poster_url = poster_url
         if ad_config_id is not None:
             self.ad_config_id = ad_config_id
+        if content_protection_id is not None:
+            self.content_protection_id = content_protection_id
 
     @property
     def openapi_types(self):
@@ -42,7 +46,8 @@ class StreamsLiveUpdateRequest(object):
             'description': 'string_types',
             'config_id': 'string_types',
             'poster_url': 'string_types',
-            'ad_config_id': 'string_types'
+            'ad_config_id': 'string_types',
+            'content_protection_id': 'string_types'
         }
 
         return types
@@ -54,7 +59,8 @@ class StreamsLiveUpdateRequest(object):
             'description': 'description',
             'config_id': 'configId',
             'poster_url': 'posterUrl',
-            'ad_config_id': 'adConfigId'
+            'ad_config_id': 'adConfigId',
+            'content_protection_id': 'contentProtectionId'
         }
         return attributes
 
@@ -202,6 +208,35 @@ class StreamsLiveUpdateRequest(object):
                 raise TypeError("Invalid type for `ad_config_id`, type has to be `string_types`")
 
         self._ad_config_id = ad_config_id
+
+    @property
+    def content_protection_id(self):
+        # type: () -> string_types
+        """Gets the content_protection_id of this StreamsLiveUpdateRequest.
+
+        Id of the content protection config to use
+
+        :return: The content_protection_id of this StreamsLiveUpdateRequest.
+        :rtype: string_types
+        """
+        return self._content_protection_id
+
+    @content_protection_id.setter
+    def content_protection_id(self, content_protection_id):
+        # type: (string_types) -> None
+        """Sets the content_protection_id of this StreamsLiveUpdateRequest.
+
+        Id of the content protection config to use
+
+        :param content_protection_id: The content_protection_id of this StreamsLiveUpdateRequest.
+        :type: string_types
+        """
+
+        if content_protection_id is not None:
+            if not isinstance(content_protection_id, string_types):
+                raise TypeError("Invalid type for `content_protection_id`, type has to be `string_types`")
+
+        self._content_protection_id = content_protection_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

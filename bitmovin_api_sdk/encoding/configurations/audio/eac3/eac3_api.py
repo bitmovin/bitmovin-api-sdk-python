@@ -33,7 +33,7 @@ class Eac3Api(BaseApi):
 
     def create(self, eac3_audio_configuration, **kwargs):
         # type: (Eac3AudioConfiguration, dict) -> Eac3AudioConfiguration
-        """Create E-AC3 Codec Configuration.  Deprecation notice: use Dolby Digital Plus instead. For more information check out our tutorial here: https://bitmovin.com/docs/encoding/tutorials/how-to-create-dolby-digital-plus-encodings 
+        """Create E-AC3 Codec Configuration
 
         :param eac3_audio_configuration: The E-AC3 Codec Configuration to be created
         :type eac3_audio_configuration: Eac3AudioConfiguration, required
@@ -50,7 +50,7 @@ class Eac3Api(BaseApi):
 
     def delete(self, configuration_id, **kwargs):
         # type: (string_types, dict) -> BitmovinResponse
-        """Delete E-AC3 Codec Configuration.  Deprecation notice: use Dolby Digital Plus instead. For more information check out our tutorial here: https://bitmovin.com/docs/encoding/tutorials/how-to-create-dolby-digital-plus-encodings 
+        """Delete E-AC3 Codec Configuration
 
         :param configuration_id: Id of the codec configuration
         :type configuration_id: string_types, required
@@ -67,7 +67,7 @@ class Eac3Api(BaseApi):
 
     def get(self, configuration_id, **kwargs):
         # type: (string_types, dict) -> Eac3AudioConfiguration
-        """E-AC3 Codec Configuration Details.  Deprecation notice: use Dolby Digital Plus instead. For more information check out our tutorial here: https://bitmovin.com/docs/encoding/tutorials/how-to-create-dolby-digital-plus-encodings 
+        """E-AC3 Codec Configuration Details
 
         :param configuration_id: Id of the codec configuration
         :type configuration_id: string_types, required
@@ -84,7 +84,7 @@ class Eac3Api(BaseApi):
 
     def list(self, query_params=None, **kwargs):
         # type: (Eac3AudioConfigurationListQueryParams, dict) -> Eac3AudioConfiguration
-        """List E-AC3 Configurations.  Deprecation notice: use Dolby Digital Plus instead. For more information check out our tutorial here: https://bitmovin.com/docs/encoding/tutorials/how-to-create-dolby-digital-plus-encodings 
+        """List E-AC3 Configurations
 
         :param query_params: Query parameters
         :type query_params: Eac3AudioConfigurationListQueryParams

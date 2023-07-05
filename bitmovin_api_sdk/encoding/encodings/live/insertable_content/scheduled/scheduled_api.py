@@ -24,7 +24,7 @@ class ScheduledApi(BaseApi):
 
     def list(self, encoding_id, query_params=None, **kwargs):
         # type: (string_types, ScheduledInsertableContentListQueryParams, dict) -> ScheduledInsertableContent
-        """List All Scheduled Insertable Content For A Live Encoding
+        """List Scheduled Insertable Content
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required

@@ -48,7 +48,7 @@ class InsertableContentApi(BaseApi):
 
     def create(self, encoding_id, insertable_content, **kwargs):
         # type: (string_types, InsertableContent, dict) -> InsertableContent
-        """Make Insertable Content Available For A Live Encoding
+        """Create Insertable Content
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -68,7 +68,7 @@ class InsertableContentApi(BaseApi):
 
     def list(self, encoding_id, query_params=None, **kwargs):
         # type: (string_types, InsertableContentListQueryParams, dict) -> InsertableContent
-        """List All Insertable Content Available For A Live Encoding
+        """List Insertable Content
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required

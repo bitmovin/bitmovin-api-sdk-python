@@ -227,7 +227,7 @@ class StartEncodingRequest(object):
         # type: () -> EncodingMode
         """Gets the encoding_mode of this StartEncodingRequest.
 
-        The pass mode of the encoding
+        The pass mode of the encoding. Must only be set when `encodingMode` is not set on any codec configuration used by this encoding.
 
         :return: The encoding_mode of this StartEncodingRequest.
         :rtype: EncodingMode
@@ -239,7 +239,7 @@ class StartEncodingRequest(object):
         # type: (EncodingMode) -> None
         """Sets the encoding_mode of this StartEncodingRequest.
 
-        The pass mode of the encoding
+        The pass mode of the encoding. Must only be set when `encodingMode` is not set on any codec configuration used by this encoding.
 
         :param encoding_mode: The encoding_mode of this StartEncodingRequest.
         :type: EncodingMode

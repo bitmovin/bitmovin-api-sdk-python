@@ -61,7 +61,7 @@ class SmoothApi(BaseApi):
         # type: (SmoothStreamingManifest, dict) -> SmoothStreamingManifest
         """Create Smooth Streaming Manifest
 
-        :param smooth_streaming_manifest: A Custom Smooth Streaming Manifest gives you full control over its contents. Add Representations and Content Protections via the respective endpoints. If you need a simpler solution, create a Default Manifest resource instead. See [documentation](https://developer.bitmovin.com/encoding/docs/default-vs-custom-manifest) page for a comparison
+        :param smooth_streaming_manifest: The Custom Smooth Streaming Manifest to be created.
         :type smooth_streaming_manifest: SmoothStreamingManifest, required
         :return: Smooth Streaming manifest
         :rtype: SmoothStreamingManifest

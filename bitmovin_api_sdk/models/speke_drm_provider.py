@@ -14,15 +14,17 @@ class SpekeDrmProvider(object):
                  url=None,
                  username=None,
                  password=None,
+                 api_key=None,
                  role_arn=None,
                  external_id=None,
                  external_id_mode=None,
                  gateway_region=None):
-        # type: (string_types, string_types, string_types, string_types, string_types, ExternalIdMode, string_types) -> None
+        # type: (string_types, string_types, string_types, string_types, string_types, string_types, ExternalIdMode, string_types) -> None
 
         self._url = None
         self._username = None
         self._password = None
+        self._api_key = None
         self._role_arn = None
         self._external_id = None
         self._external_id_mode = None
@@ -35,6 +37,8 @@ class SpekeDrmProvider(object):
             self.username = username
         if password is not None:
             self.password = password
+        if api_key is not None:
+            self.api_key = api_key
         if role_arn is not None:
             self.role_arn = role_arn
         if external_id is not None:
@@ -50,6 +54,7 @@ class SpekeDrmProvider(object):
             'url': 'string_types',
             'username': 'string_types',
             'password': 'string_types',
+            'api_key': 'string_types',
             'role_arn': 'string_types',
             'external_id': 'string_types',
             'external_id_mode': 'ExternalIdMode',
@@ -64,6 +69,7 @@ class SpekeDrmProvider(object):
             'url': 'url',
             'username': 'username',
             'password': 'password',
+            'api_key': 'apiKey',
             'role_arn': 'roleArn',
             'external_id': 'externalId',
             'external_id_mode': 'externalIdMode',
@@ -157,6 +163,35 @@ class SpekeDrmProvider(object):
                 raise TypeError("Invalid type for `password`, type has to be `string_types`")
 
         self._password = password
+
+    @property
+    def api_key(self):
+        # type: () -> string_types
+        """Gets the api_key of this SpekeDrmProvider.
+
+        Your API key for authentication via X-API-Key HTTP Header
+
+        :return: The api_key of this SpekeDrmProvider.
+        :rtype: string_types
+        """
+        return self._api_key
+
+    @api_key.setter
+    def api_key(self, api_key):
+        # type: (string_types) -> None
+        """Sets the api_key of this SpekeDrmProvider.
+
+        Your API key for authentication via X-API-Key HTTP Header
+
+        :param api_key: The api_key of this SpekeDrmProvider.
+        :type: string_types
+        """
+
+        if api_key is not None:
+            if not isinstance(api_key, string_types):
+                raise TypeError("Invalid type for `api_key`, type has to be `string_types`")
+
+        self._api_key = api_key
 
     @property
     def role_arn(self):

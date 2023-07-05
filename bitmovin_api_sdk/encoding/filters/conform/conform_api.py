@@ -33,7 +33,7 @@ class ConformApi(BaseApi):
 
     def create(self, conform_filter, **kwargs):
         # type: (ConformFilter, dict) -> ConformFilter
-        """Create Conform Filter. Keeps all the frames of the input. The playback time of the output will be slower or faster.
+        """Create Conform Filter
 
         :param conform_filter: The Conform Filter to be created
         :type conform_filter: ConformFilter, required

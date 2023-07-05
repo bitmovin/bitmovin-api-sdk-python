@@ -53,7 +53,7 @@ class DashApi(BaseApi):
         # type: (DashManifest, dict) -> DashManifest
         """Create Custom DASH Manifest
 
-        :param dash_manifest: A Custom DASH Manifest gives you full control over its contents. Add Periods, Adaptation Sets, Representations, Content Protections or Custom XML Elements via the respective endpoints. If you need a simpler solution, create a Default Manifest resource instead. See [documentation](https://developer.bitmovin.com/encoding/docs/default-vs-custom-manifest) page for a comparison
+        :param dash_manifest: The Custom DASH Manifest to be created.
         :type dash_manifest: DashManifest, required
         :return: Id of the DASH Manifest
         :rtype: DashManifest

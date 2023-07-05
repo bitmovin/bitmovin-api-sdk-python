@@ -90,12 +90,14 @@
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
                  <span class="n">id_</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">allowed_domains</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                 <span class="n">allow_no_referer</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (string_types, list[string_types], bool) -&gt; None</span>
+                 <span class="n">allow_no_referer</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">allow_share</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="c1"># type: (string_types, list[string_types], bool, bool) -&gt; None</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_id</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_allowed_domains</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_allow_no_referer</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_allow_share</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>
 
         <span class="k">if</span> <span class="n">id_</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -104,13 +106,16 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">allowed_domains</span> <span class="o">=</span> <span class="n">allowed_domains</span>
         <span class="k">if</span> <span class="n">allow_no_referer</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">allow_no_referer</span> <span class="o">=</span> <span class="n">allow_no_referer</span>
+        <span class="k">if</span> <span class="n">allow_share</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">allow_share</span> <span class="o">=</span> <span class="n">allow_share</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">types</span> <span class="o">=</span> <span class="p">{</span>
             <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
             <span class="s1">&#39;allowed_domains&#39;</span><span class="p">:</span> <span class="s1">&#39;list[string_types]&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;allow_no_referer&#39;</span><span class="p">:</span> <span class="s1">&#39;bool&#39;</span>
+            <span class="s1">&#39;allow_no_referer&#39;</span><span class="p">:</span> <span class="s1">&#39;bool&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;allow_share&#39;</span><span class="p">:</span> <span class="s1">&#39;bool&#39;</span>
         <span class="p">}</span>
 
         <span class="k">return</span> <span class="n">types</span>
@@ -120,7 +125,8 @@
         <span class="n">attributes</span> <span class="o">=</span> <span class="p">{</span>
             <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="s1">&#39;id&#39;</span><span class="p">,</span>
             <span class="s1">&#39;allowed_domains&#39;</span><span class="p">:</span> <span class="s1">&#39;allowedDomains&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;allow_no_referer&#39;</span><span class="p">:</span> <span class="s1">&#39;allowNoReferer&#39;</span>
+            <span class="s1">&#39;allow_no_referer&#39;</span><span class="p">:</span> <span class="s1">&#39;allowNoReferer&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;allow_share&#39;</span><span class="p">:</span> <span class="s1">&#39;allowShare&#39;</span>
         <span class="p">}</span>
         <span class="k">return</span> <span class="n">attributes</span>
 
@@ -210,6 +216,35 @@
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `allow_no_referer`, type has to be `bool`&quot;</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_allow_no_referer</span> <span class="o">=</span> <span class="n">allow_no_referer</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">allow_share</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; bool</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the allow_share of this StreamsContentProtectionResponse.</span>
+
+<span class="sd">        Controls if Stream is accessible via sharing URL or not</span>
+
+<span class="sd">        :return: The allow_share of this StreamsContentProtectionResponse.</span>
+<span class="sd">        :rtype: bool</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_allow_share</span>
+
+    <span class="nd">@allow_share</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">allow_share</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">allow_share</span><span class="p">):</span>
+        <span class="c1"># type: (bool) -&gt; None</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the allow_share of this StreamsContentProtectionResponse.</span>
+
+<span class="sd">        Controls if Stream is accessible via sharing URL or not</span>
+
+<span class="sd">        :param allow_share: The allow_share of this StreamsContentProtectionResponse.</span>
+<span class="sd">        :type: bool</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">allow_share</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">allow_share</span><span class="p">,</span> <span class="nb">bool</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `allow_share`, type has to be `bool`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_allow_share</span> <span class="o">=</span> <span class="n">allow_share</span>
 
 <div class="viewcode-block" id="StreamsContentProtectionResponse.to_dict"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.streams_content_protection_response.StreamsContentProtectionResponse.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>

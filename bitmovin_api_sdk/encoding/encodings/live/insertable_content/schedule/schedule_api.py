@@ -24,7 +24,7 @@ class ScheduleApi(BaseApi):
 
     def create(self, encoding_id, content_id, scheduled_insertable_content, **kwargs):
         # type: (string_types, string_types, ScheduledInsertableContent, dict) -> ScheduledInsertableContent
-        """Schedule Insertable Content For a Live Encoding
+        """Schedule Insertable Content
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required

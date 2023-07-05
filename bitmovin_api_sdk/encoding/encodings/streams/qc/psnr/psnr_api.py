@@ -25,7 +25,7 @@ class PsnrApi(BaseApi):
 
     def create(self, encoding_id, stream_id, **kwargs):
         # type: (string_types, string_types, dict) -> BitmovinResponse
-        """Activate PSNR quality metrics for the selected stream
+        """PSNR quality metrics
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required

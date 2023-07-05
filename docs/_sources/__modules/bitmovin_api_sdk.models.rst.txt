@@ -3740,6 +3740,14 @@ bitmovin\_api\_sdk.models.live\_media\_ingest\_output module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.live\_options\_type module
+----------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.live_options_type
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.local\_input module
 ---------------------------------------------
 

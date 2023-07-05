@@ -444,7 +444,7 @@
         <span class="c1"># type: () -&gt; EncodingMode</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the selected_encoding_mode of this Stream.</span>
 
-<span class="sd">        The encoding mode of the stream which was applied by the assigned codec configuration</span>
+<span class="sd">        The encoding mode that was used for this stream. This is derived from `encodingMode`, which can be specified in the codec configuration or in the encoding start request. Note that all streams of an encoding need to use the same encoding mode. This will therefore always match `selectedEncodingMode` of the related Encoding resource. Especially useful when `encodingMode` was not set explicitly or set to STANDARD (which translates to one of the other possible values on encoding start).</span>
 
 <span class="sd">        :return: The selected_encoding_mode of this Stream.</span>
 <span class="sd">        :rtype: EncodingMode</span>
@@ -456,7 +456,7 @@
         <span class="c1"># type: (EncodingMode) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the selected_encoding_mode of this Stream.</span>
 
-<span class="sd">        The encoding mode of the stream which was applied by the assigned codec configuration</span>
+<span class="sd">        The encoding mode that was used for this stream. This is derived from `encodingMode`, which can be specified in the codec configuration or in the encoding start request. Note that all streams of an encoding need to use the same encoding mode. This will therefore always match `selectedEncodingMode` of the related Encoding resource. Especially useful when `encodingMode` was not set explicitly or set to STANDARD (which translates to one of the other possible values on encoding start).</span>
 
 <span class="sd">        :param selected_encoding_mode: The selected_encoding_mode of this Stream.</span>
 <span class="sd">        :type: EncodingMode</span>

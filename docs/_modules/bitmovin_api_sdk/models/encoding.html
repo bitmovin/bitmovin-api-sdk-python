@@ -87,6 +87,7 @@
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.encoding_mode</span> <span class="kn">import</span> <span class="n">EncodingMode</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.encoding_type</span> <span class="kn">import</span> <span class="n">EncodingType</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.infrastructure_settings</span> <span class="kn">import</span> <span class="n">InfrastructureSettings</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.live_options_type</span> <span class="kn">import</span> <span class="n">LiveOptionsType</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.status</span> <span class="kn">import</span> <span class="n">Status</span>
 <span class="kn">import</span> <span class="nn">pprint</span>
 <span class="kn">import</span> <span class="nn">six</span>
@@ -117,8 +118,9 @@
                  <span class="n">selected_encoding_mode</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">selected_cloud_region</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">status</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                 <span class="n">labels</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (string_types, string_types, string_types, datetime, datetime, dict, EncodingType, datetime, datetime, datetime, datetime, datetime, int, CloudRegion, list[CloudRegion], string_types, InfrastructureSettings, string_types, string_types, EncodingMode, CloudRegion, Status, list[string_types]) -&gt; None</span>
+                 <span class="n">labels</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">live_options_type</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="c1"># type: (string_types, string_types, string_types, datetime, datetime, dict, EncodingType, datetime, datetime, datetime, datetime, datetime, int, CloudRegion, list[CloudRegion], string_types, InfrastructureSettings, string_types, string_types, EncodingMode, CloudRegion, Status, list[string_types], LiveOptionsType) -&gt; None</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">Encoding</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">id_</span><span class="o">=</span><span class="n">id_</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="n">description</span><span class="p">,</span> <span class="n">created_at</span><span class="o">=</span><span class="n">created_at</span><span class="p">,</span> <span class="n">modified_at</span><span class="o">=</span><span class="n">modified_at</span><span class="p">,</span> <span class="n">custom_data</span><span class="o">=</span><span class="n">custom_data</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_type</span> <span class="o">=</span> <span class="kc">None</span>
@@ -138,6 +140,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_selected_cloud_region</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_status</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_labels</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_live_options_type</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>
 
         <span class="k">if</span> <span class="n">type_</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -174,6 +177,8 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">status</span> <span class="o">=</span> <span class="n">status</span>
         <span class="k">if</span> <span class="n">labels</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">labels</span> <span class="o">=</span> <span class="n">labels</span>
+        <span class="k">if</span> <span class="n">live_options_type</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">live_options_type</span> <span class="o">=</span> <span class="n">live_options_type</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -199,7 +204,8 @@
             <span class="s1">&#39;selected_encoding_mode&#39;</span><span class="p">:</span> <span class="s1">&#39;EncodingMode&#39;</span><span class="p">,</span>
             <span class="s1">&#39;selected_cloud_region&#39;</span><span class="p">:</span> <span class="s1">&#39;CloudRegion&#39;</span><span class="p">,</span>
             <span class="s1">&#39;status&#39;</span><span class="p">:</span> <span class="s1">&#39;Status&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;labels&#39;</span><span class="p">:</span> <span class="s1">&#39;list[string_types]&#39;</span>
+            <span class="s1">&#39;labels&#39;</span><span class="p">:</span> <span class="s1">&#39;list[string_types]&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;live_options_type&#39;</span><span class="p">:</span> <span class="s1">&#39;LiveOptionsType&#39;</span>
         <span class="p">})</span>
 
         <span class="k">return</span> <span class="n">types</span>
@@ -228,7 +234,8 @@
             <span class="s1">&#39;selected_encoding_mode&#39;</span><span class="p">:</span> <span class="s1">&#39;selectedEncodingMode&#39;</span><span class="p">,</span>
             <span class="s1">&#39;selected_cloud_region&#39;</span><span class="p">:</span> <span class="s1">&#39;selectedCloudRegion&#39;</span><span class="p">,</span>
             <span class="s1">&#39;status&#39;</span><span class="p">:</span> <span class="s1">&#39;status&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;labels&#39;</span><span class="p">:</span> <span class="s1">&#39;labels&#39;</span>
+            <span class="s1">&#39;labels&#39;</span><span class="p">:</span> <span class="s1">&#39;labels&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;live_options_type&#39;</span><span class="p">:</span> <span class="s1">&#39;liveOptionsType&#39;</span>
         <span class="p">})</span>
         <span class="k">return</span> <span class="n">attributes</span>
 
@@ -610,7 +617,7 @@
         <span class="c1"># type: () -&gt; EncodingMode</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the selected_encoding_mode of this Encoding.</span>
 
-<span class="sd">        After the encoding has been started, this will contain the encoding mode that was actually used. Especially useful when starting an encoding with encoding mode STANDARD.</span>
+<span class="sd">        After the encoding has been started, this will contain the encoding mode that was actually used. Especially useful when `encodingMode` was not set explicitly or set to STANDARD (which translates to one of the other possible values on encoding start).</span>
 
 <span class="sd">        :return: The selected_encoding_mode of this Encoding.</span>
 <span class="sd">        :rtype: EncodingMode</span>
@@ -622,7 +629,7 @@
         <span class="c1"># type: (EncodingMode) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the selected_encoding_mode of this Encoding.</span>
 
-<span class="sd">        After the encoding has been started, this will contain the encoding mode that was actually used. Especially useful when starting an encoding with encoding mode STANDARD.</span>
+<span class="sd">        After the encoding has been started, this will contain the encoding mode that was actually used. Especially useful when `encodingMode` was not set explicitly or set to STANDARD (which translates to one of the other possible values on encoding start).</span>
 
 <span class="sd">        :param selected_encoding_mode: The selected_encoding_mode of this Encoding.</span>
 <span class="sd">        :type: EncodingMode</span>
@@ -720,6 +727,35 @@
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `labels`, type has to be `list[string_types]`&quot;</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_labels</span> <span class="o">=</span> <span class="n">labels</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">live_options_type</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; LiveOptionsType</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the live_options_type of this Encoding.</span>
+
+<span class="sd">        The chosen live option type of the live encoding</span>
+
+<span class="sd">        :return: The live_options_type of this Encoding.</span>
+<span class="sd">        :rtype: LiveOptionsType</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_live_options_type</span>
+
+    <span class="nd">@live_options_type</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">live_options_type</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">live_options_type</span><span class="p">):</span>
+        <span class="c1"># type: (LiveOptionsType) -&gt; None</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the live_options_type of this Encoding.</span>
+
+<span class="sd">        The chosen live option type of the live encoding</span>
+
+<span class="sd">        :param live_options_type: The live_options_type of this Encoding.</span>
+<span class="sd">        :type: LiveOptionsType</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">live_options_type</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">live_options_type</span><span class="p">,</span> <span class="n">LiveOptionsType</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `live_options_type`, type has to be `LiveOptionsType`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_live_options_type</span> <span class="o">=</span> <span class="n">live_options_type</span>
 
 <div class="viewcode-block" id="Encoding.to_dict"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.encoding.Encoding.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>

@@ -470,6 +470,7 @@ from bitmovin_api_sdk.models.live_encoding_stats_event_details import LiveEncodi
 from bitmovin_api_sdk.models.live_encoding_status import LiveEncodingStatus
 from bitmovin_api_sdk.models.live_hls_manifest import LiveHlsManifest
 from bitmovin_api_sdk.models.live_media_ingest_output import LiveMediaIngestOutput
+from bitmovin_api_sdk.models.live_options_type import LiveOptionsType
 from bitmovin_api_sdk.models.local_input import LocalInput
 from bitmovin_api_sdk.models.local_output import LocalOutput
 from bitmovin_api_sdk.models.manifest import Manifest

@@ -36,7 +36,7 @@ class ErrorApi(BaseApi):
         # type: (Webhook, dict) -> Webhook
         """Add &#39;Encoding Error&#39; Webhook
 
-        :param webhook: The &#39;Encoding Error&#39; Webhook to be added. A maximum number of 5 webhooks is allowed
+        :param webhook: The &#39;Encoding Error&#39; Webhook to be added.
         :type webhook: Webhook, required
         :return: Webhook Details
         :rtype: Webhook

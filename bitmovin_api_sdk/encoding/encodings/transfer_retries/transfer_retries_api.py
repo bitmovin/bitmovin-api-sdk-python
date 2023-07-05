@@ -24,7 +24,7 @@ class TransferRetriesApi(BaseApi):
 
     def create(self, encoding_id, **kwargs):
         # type: (string_types, dict) -> TransferRetry
-        """Starts transfer retry. A transfer retry is only possible within 72 hours.
+        """Transfer retry
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required

@@ -61,7 +61,7 @@ class HlsApi(BaseApi):
         # type: (HlsManifest, dict) -> HlsManifest
         """Create Custom HLS Manifest
 
-        :param hls_manifest: A Custom HLS Manifest gives you full control over its contents. Add Variant Streams and Media elements via the respective endpoints. If you need a simpler solution, create a Default Manifest resource instead. See [documentation](https://developer.bitmovin.com/encoding/docs/default-vs-custom-manifest) page for a comparison
+        :param hls_manifest: The Custom HLS Manifest to be created.
         :type hls_manifest: HlsManifest, required
         :return: HLS manifest
         :rtype: HlsManifest

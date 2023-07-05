@@ -26,7 +26,7 @@ class LiveApi(BaseApi):
         # type: (SimpleEncodingLiveJobRequest, dict) -> SimpleEncodingLiveJobResponse
         """Create a Simple Encoding Live Job
 
-        :param simple_encoding_live_job_request: The Simple Encoding Live Job to be created.  Check out our [Simple Encoding API Live Documentation](https://bitmovin.com/docs/encoding/articles/simple-encoding-api-live) for additional information about the Simple Encoding API Live. 
+        :param simple_encoding_live_job_request: The Simple Encoding Live Job to be created.
         :type simple_encoding_live_job_request: SimpleEncodingLiveJobRequest, required
         :return: Created Simple Encoding Live Job
         :rtype: SimpleEncodingLiveJobResponse

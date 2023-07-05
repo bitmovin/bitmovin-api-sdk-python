@@ -173,7 +173,7 @@ class StartLiveEncodingRequest(object):
         # type: () -> EncodingMode
         """Gets the live_encoding_mode of this StartLiveEncodingRequest.
 
-        The pass mode of the encoding
+        The pass mode of the encoding. Must only be set when `encodingMode` is not set on any codec configuration used by this encoding.
 
         :return: The live_encoding_mode of this StartLiveEncodingRequest.
         :rtype: EncodingMode
@@ -185,7 +185,7 @@ class StartLiveEncodingRequest(object):
         # type: (EncodingMode) -> None
         """Sets the live_encoding_mode of this StartLiveEncodingRequest.
 
-        The pass mode of the encoding
+        The pass mode of the encoding. Must only be set when `encodingMode` is not set on any codec configuration used by this encoding.
 
         :param live_encoding_mode: The live_encoding_mode of this StartLiveEncodingRequest.
         :type: EncodingMode

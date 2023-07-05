@@ -374,7 +374,7 @@ class VideoConfiguration(CodecConfiguration):
         # type: () -> EncodingMode
         """Gets the encoding_mode of this VideoConfiguration.
 
-        The mode of the encoding
+        The mode of the encoding. When this is set, `encodingMode` (`liveEncodingMode`) must not be set in the (live) encoding start request.
 
         :return: The encoding_mode of this VideoConfiguration.
         :rtype: EncodingMode
@@ -386,7 +386,7 @@ class VideoConfiguration(CodecConfiguration):
         # type: (EncodingMode) -> None
         """Sets the encoding_mode of this VideoConfiguration.
 
-        The mode of the encoding
+        The mode of the encoding. When this is set, `encodingMode` (`liveEncodingMode`) must not be set in the (live) encoding start request.
 
         :param encoding_mode: The encoding_mode of this VideoConfiguration.
         :type: EncodingMode

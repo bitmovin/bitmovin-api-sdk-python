@@ -251,7 +251,7 @@
         <span class="c1"># type: () -&gt; EncodingMode</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the live_encoding_mode of this StartLiveEncodingRequest.</span>
 
-<span class="sd">        The pass mode of the encoding</span>
+<span class="sd">        The pass mode of the encoding. Must only be set when `encodingMode` is not set on any codec configuration used by this encoding.</span>
 
 <span class="sd">        :return: The live_encoding_mode of this StartLiveEncodingRequest.</span>
 <span class="sd">        :rtype: EncodingMode</span>
@@ -263,7 +263,7 @@
         <span class="c1"># type: (EncodingMode) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the live_encoding_mode of this StartLiveEncodingRequest.</span>
 
-<span class="sd">        The pass mode of the encoding</span>
+<span class="sd">        The pass mode of the encoding. Must only be set when `encodingMode` is not set on any codec configuration used by this encoding.</span>
 
 <span class="sd">        :param live_encoding_mode: The live_encoding_mode of this StartLiveEncodingRequest.</span>
 <span class="sd">        :type: EncodingMode</span>
