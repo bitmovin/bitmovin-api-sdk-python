@@ -103,8 +103,9 @@
                  <span class="n">infrastructure_id</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">disk_size</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">target_pool_size</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">gpu_enabled</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">status</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (string_types, string_types, string_types, datetime, datetime, dict, string_types, CloudRegion, string_types, PrewarmedEncoderDiskSize, int, PrewarmedEncoderPoolStatus) -&gt; None</span>
+        <span class="c1"># type: (string_types, string_types, string_types, datetime, datetime, dict, string_types, CloudRegion, string_types, PrewarmedEncoderDiskSize, int, bool, PrewarmedEncoderPoolStatus) -&gt; None</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">PrewarmedEncoderPool</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">id_</span><span class="o">=</span><span class="n">id_</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="n">description</span><span class="p">,</span> <span class="n">created_at</span><span class="o">=</span><span class="n">created_at</span><span class="p">,</span> <span class="n">modified_at</span><span class="o">=</span><span class="n">modified_at</span><span class="p">,</span> <span class="n">custom_data</span><span class="o">=</span><span class="n">custom_data</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_encoder_version</span> <span class="o">=</span> <span class="kc">None</span>
@@ -112,6 +113,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_infrastructure_id</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_disk_size</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_target_pool_size</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_gpu_enabled</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_status</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>
 
@@ -125,6 +127,8 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">disk_size</span> <span class="o">=</span> <span class="n">disk_size</span>
         <span class="k">if</span> <span class="n">target_pool_size</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">target_pool_size</span> <span class="o">=</span> <span class="n">target_pool_size</span>
+        <span class="k">if</span> <span class="n">gpu_enabled</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">gpu_enabled</span> <span class="o">=</span> <span class="n">gpu_enabled</span>
         <span class="k">if</span> <span class="n">status</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">status</span> <span class="o">=</span> <span class="n">status</span>
 
@@ -141,6 +145,7 @@
             <span class="s1">&#39;infrastructure_id&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
             <span class="s1">&#39;disk_size&#39;</span><span class="p">:</span> <span class="s1">&#39;PrewarmedEncoderDiskSize&#39;</span><span class="p">,</span>
             <span class="s1">&#39;target_pool_size&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;gpu_enabled&#39;</span><span class="p">:</span> <span class="s1">&#39;bool&#39;</span><span class="p">,</span>
             <span class="s1">&#39;status&#39;</span><span class="p">:</span> <span class="s1">&#39;PrewarmedEncoderPoolStatus&#39;</span>
         <span class="p">})</span>
 
@@ -159,6 +164,7 @@
             <span class="s1">&#39;infrastructure_id&#39;</span><span class="p">:</span> <span class="s1">&#39;infrastructureId&#39;</span><span class="p">,</span>
             <span class="s1">&#39;disk_size&#39;</span><span class="p">:</span> <span class="s1">&#39;diskSize&#39;</span><span class="p">,</span>
             <span class="s1">&#39;target_pool_size&#39;</span><span class="p">:</span> <span class="s1">&#39;targetPoolSize&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;gpu_enabled&#39;</span><span class="p">:</span> <span class="s1">&#39;gpuEnabled&#39;</span><span class="p">,</span>
             <span class="s1">&#39;status&#39;</span><span class="p">:</span> <span class="s1">&#39;status&#39;</span>
         <span class="p">})</span>
         <span class="k">return</span> <span class="n">attributes</span>
@@ -309,6 +315,35 @@
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `target_pool_size`, type has to be `int`&quot;</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_target_pool_size</span> <span class="o">=</span> <span class="n">target_pool_size</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">gpu_enabled</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; bool</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the gpu_enabled of this PrewarmedEncoderPool.</span>
+
+<span class="sd">        Create pool with GPU instances for hardware encoding presets (e.g., VOD_HARDWARE_SHORTFORM).</span>
+
+<span class="sd">        :return: The gpu_enabled of this PrewarmedEncoderPool.</span>
+<span class="sd">        :rtype: bool</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_gpu_enabled</span>
+
+    <span class="nd">@gpu_enabled</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">gpu_enabled</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">gpu_enabled</span><span class="p">):</span>
+        <span class="c1"># type: (bool) -&gt; None</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the gpu_enabled of this PrewarmedEncoderPool.</span>
+
+<span class="sd">        Create pool with GPU instances for hardware encoding presets (e.g., VOD_HARDWARE_SHORTFORM).</span>
+
+<span class="sd">        :param gpu_enabled: The gpu_enabled of this PrewarmedEncoderPool.</span>
+<span class="sd">        :type: bool</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">gpu_enabled</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">gpu_enabled</span><span class="p">,</span> <span class="nb">bool</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `gpu_enabled`, type has to be `bool`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_gpu_enabled</span> <span class="o">=</span> <span class="n">gpu_enabled</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">status</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>

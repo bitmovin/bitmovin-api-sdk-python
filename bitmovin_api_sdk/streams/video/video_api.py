@@ -78,7 +78,7 @@ class VideoApi(BaseApi):
 
     def patch_streams_video(self, stream_id, streams_video_update_request, **kwargs):
         # type: (string_types, StreamsVideoUpdateRequest, dict) -> StreamsVideoResponse
-        """Partially update stream config by id
+        """Partially update video stream by id
 
         :param stream_id: Id of the stream.
         :type stream_id: string_types, required

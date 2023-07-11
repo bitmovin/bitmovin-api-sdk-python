@@ -118,7 +118,7 @@ class LiveApi(BaseApi):
 
         :param stream_id: Id of the stream.
         :type stream_id: string_types, required
-        :param streams_live_update_request: The updated stream config object.
+        :param streams_live_update_request: The updated Streams live object.
         :type streams_live_update_request: StreamsLiveUpdateRequest, required
         :return:
         :rtype: StreamsLiveResponse

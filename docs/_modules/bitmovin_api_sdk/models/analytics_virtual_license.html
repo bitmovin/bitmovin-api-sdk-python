@@ -79,6 +79,7 @@
 <span></span><span class="c1"># coding: utf-8</span>
 
 <span class="kn">from</span> <span class="nn">enum</span> <span class="kn">import</span> <span class="n">Enum</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
 <span class="kn">from</span> <span class="nn">six</span> <span class="kn">import</span> <span class="n">string_types</span><span class="p">,</span> <span class="n">iteritems</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.common.poscheck</span> <span class="kn">import</span> <span class="n">poscheck_model</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.analytics_license_custom_data_field_labels</span> <span class="kn">import</span> <span class="n">AnalyticsLicenseCustomDataFieldLabels</span>
@@ -95,8 +96,9 @@
                  <span class="n">retention_time</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">licenses</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">custom_data_fields_count</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                 <span class="n">custom_data_field_labels</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (string_types, string_types, string_types, string_types, list[AnalyticsVirtualLicenseLicensesListItem], int, AnalyticsLicenseCustomDataFieldLabels) -&gt; None</span>
+                 <span class="n">custom_data_field_labels</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">plan_expired_at</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="c1"># type: (string_types, string_types, string_types, string_types, list[AnalyticsVirtualLicenseLicensesListItem], int, AnalyticsLicenseCustomDataFieldLabels, datetime) -&gt; None</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_id</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_name</span> <span class="o">=</span> <span class="kc">None</span>
@@ -105,6 +107,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_licenses</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_custom_data_fields_count</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_custom_data_field_labels</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_plan_expired_at</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>
 
         <span class="k">if</span> <span class="n">id_</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -121,6 +124,8 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">custom_data_fields_count</span> <span class="o">=</span> <span class="n">custom_data_fields_count</span>
         <span class="k">if</span> <span class="n">custom_data_field_labels</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">custom_data_field_labels</span> <span class="o">=</span> <span class="n">custom_data_field_labels</span>
+        <span class="k">if</span> <span class="n">plan_expired_at</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">plan_expired_at</span> <span class="o">=</span> <span class="n">plan_expired_at</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -131,7 +136,8 @@
             <span class="s1">&#39;retention_time&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
             <span class="s1">&#39;licenses&#39;</span><span class="p">:</span> <span class="s1">&#39;list[AnalyticsVirtualLicenseLicensesListItem]&#39;</span><span class="p">,</span>
             <span class="s1">&#39;custom_data_fields_count&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;custom_data_field_labels&#39;</span><span class="p">:</span> <span class="s1">&#39;AnalyticsLicenseCustomDataFieldLabels&#39;</span>
+            <span class="s1">&#39;custom_data_field_labels&#39;</span><span class="p">:</span> <span class="s1">&#39;AnalyticsLicenseCustomDataFieldLabels&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;plan_expired_at&#39;</span><span class="p">:</span> <span class="s1">&#39;datetime&#39;</span>
         <span class="p">}</span>
 
         <span class="k">return</span> <span class="n">types</span>
@@ -145,7 +151,8 @@
             <span class="s1">&#39;retention_time&#39;</span><span class="p">:</span> <span class="s1">&#39;retentionTime&#39;</span><span class="p">,</span>
             <span class="s1">&#39;licenses&#39;</span><span class="p">:</span> <span class="s1">&#39;licenses&#39;</span><span class="p">,</span>
             <span class="s1">&#39;custom_data_fields_count&#39;</span><span class="p">:</span> <span class="s1">&#39;customDataFieldsCount&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;custom_data_field_labels&#39;</span><span class="p">:</span> <span class="s1">&#39;customDataFieldLabels&#39;</span>
+            <span class="s1">&#39;custom_data_field_labels&#39;</span><span class="p">:</span> <span class="s1">&#39;customDataFieldLabels&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;plan_expired_at&#39;</span><span class="p">:</span> <span class="s1">&#39;planExpiredAt&#39;</span>
         <span class="p">}</span>
         <span class="k">return</span> <span class="n">attributes</span>
 
@@ -351,6 +358,35 @@
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `custom_data_field_labels`, type has to be `AnalyticsLicenseCustomDataFieldLabels`&quot;</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_custom_data_field_labels</span> <span class="o">=</span> <span class="n">custom_data_field_labels</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">plan_expired_at</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; datetime</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the plan_expired_at of this AnalyticsVirtualLicense.</span>
+
+<span class="sd">        The expiration date of the license if applicable, returned as ISO 8601 date-time format</span>
+
+<span class="sd">        :return: The plan_expired_at of this AnalyticsVirtualLicense.</span>
+<span class="sd">        :rtype: datetime</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_plan_expired_at</span>
+
+    <span class="nd">@plan_expired_at</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">plan_expired_at</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">plan_expired_at</span><span class="p">):</span>
+        <span class="c1"># type: (datetime) -&gt; None</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the plan_expired_at of this AnalyticsVirtualLicense.</span>
+
+<span class="sd">        The expiration date of the license if applicable, returned as ISO 8601 date-time format</span>
+
+<span class="sd">        :param plan_expired_at: The plan_expired_at of this AnalyticsVirtualLicense.</span>
+<span class="sd">        :type: datetime</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">plan_expired_at</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">plan_expired_at</span><span class="p">,</span> <span class="n">datetime</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `plan_expired_at`, type has to be `datetime`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_plan_expired_at</span> <span class="o">=</span> <span class="n">plan_expired_at</span>
 
 <div class="viewcode-block" id="AnalyticsVirtualLicense.to_dict"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.analytics_virtual_license.AnalyticsVirtualLicense.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>

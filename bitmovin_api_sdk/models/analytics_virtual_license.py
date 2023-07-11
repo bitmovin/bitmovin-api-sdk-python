@@ -1,6 +1,7 @@
 # coding: utf-8
 
 from enum import Enum
+from datetime import datetime
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
 from bitmovin_api_sdk.models.analytics_license_custom_data_field_labels import AnalyticsLicenseCustomDataFieldLabels
@@ -17,8 +18,9 @@ class AnalyticsVirtualLicense(object):
                  retention_time=None,
                  licenses=None,
                  custom_data_fields_count=None,
-                 custom_data_field_labels=None):
-        # type: (string_types, string_types, string_types, string_types, list[AnalyticsVirtualLicenseLicensesListItem], int, AnalyticsLicenseCustomDataFieldLabels) -> None
+                 custom_data_field_labels=None,
+                 plan_expired_at=None):
+        # type: (string_types, string_types, string_types, string_types, list[AnalyticsVirtualLicenseLicensesListItem], int, AnalyticsLicenseCustomDataFieldLabels, datetime) -> None
 
         self._id = None
         self._name = None
@@ -27,6 +29,7 @@ class AnalyticsVirtualLicense(object):
         self._licenses = list()
         self._custom_data_fields_count = None
         self._custom_data_field_labels = None
+        self._plan_expired_at = None
         self.discriminator = None
 
         if id_ is not None:
@@ -43,6 +46,8 @@ class AnalyticsVirtualLicense(object):
             self.custom_data_fields_count = custom_data_fields_count
         if custom_data_field_labels is not None:
             self.custom_data_field_labels = custom_data_field_labels
+        if plan_expired_at is not None:
+            self.plan_expired_at = plan_expired_at
 
     @property
     def openapi_types(self):
@@ -53,7 +58,8 @@ class AnalyticsVirtualLicense(object):
             'retention_time': 'string_types',
             'licenses': 'list[AnalyticsVirtualLicenseLicensesListItem]',
             'custom_data_fields_count': 'int',
-            'custom_data_field_labels': 'AnalyticsLicenseCustomDataFieldLabels'
+            'custom_data_field_labels': 'AnalyticsLicenseCustomDataFieldLabels',
+            'plan_expired_at': 'datetime'
         }
 
         return types
@@ -67,7 +73,8 @@ class AnalyticsVirtualLicense(object):
             'retention_time': 'retentionTime',
             'licenses': 'licenses',
             'custom_data_fields_count': 'customDataFieldsCount',
-            'custom_data_field_labels': 'customDataFieldLabels'
+            'custom_data_field_labels': 'customDataFieldLabels',
+            'plan_expired_at': 'planExpiredAt'
         }
         return attributes
 
@@ -273,6 +280,35 @@ class AnalyticsVirtualLicense(object):
                 raise TypeError("Invalid type for `custom_data_field_labels`, type has to be `AnalyticsLicenseCustomDataFieldLabels`")
 
         self._custom_data_field_labels = custom_data_field_labels
+
+    @property
+    def plan_expired_at(self):
+        # type: () -> datetime
+        """Gets the plan_expired_at of this AnalyticsVirtualLicense.
+
+        The expiration date of the license if applicable, returned as ISO 8601 date-time format
+
+        :return: The plan_expired_at of this AnalyticsVirtualLicense.
+        :rtype: datetime
+        """
+        return self._plan_expired_at
+
+    @plan_expired_at.setter
+    def plan_expired_at(self, plan_expired_at):
+        # type: (datetime) -> None
+        """Sets the plan_expired_at of this AnalyticsVirtualLicense.
+
+        The expiration date of the license if applicable, returned as ISO 8601 date-time format
+
+        :param plan_expired_at: The plan_expired_at of this AnalyticsVirtualLicense.
+        :type: datetime
+        """
+
+        if plan_expired_at is not None:
+            if not isinstance(plan_expired_at, datetime):
+                raise TypeError("Invalid type for `plan_expired_at`, type has to be `datetime`")
+
+        self._plan_expired_at = plan_expired_at
 
     def to_dict(self):
         """Returns the model properties as a dict"""

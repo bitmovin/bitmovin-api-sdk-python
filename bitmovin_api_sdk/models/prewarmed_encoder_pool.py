@@ -25,8 +25,9 @@ class PrewarmedEncoderPool(BitmovinResource):
                  infrastructure_id=None,
                  disk_size=None,
                  target_pool_size=None,
+                 gpu_enabled=None,
                  status=None):
-        # type: (string_types, string_types, string_types, datetime, datetime, dict, string_types, CloudRegion, string_types, PrewarmedEncoderDiskSize, int, PrewarmedEncoderPoolStatus) -> None
+        # type: (string_types, string_types, string_types, datetime, datetime, dict, string_types, CloudRegion, string_types, PrewarmedEncoderDiskSize, int, bool, PrewarmedEncoderPoolStatus) -> None
         super(PrewarmedEncoderPool, self).__init__(id_=id_, name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data)
 
         self._encoder_version = None
@@ -34,6 +35,7 @@ class PrewarmedEncoderPool(BitmovinResource):
         self._infrastructure_id = None
         self._disk_size = None
         self._target_pool_size = None
+        self._gpu_enabled = None
         self._status = None
         self.discriminator = None
 
@@ -47,6 +49,8 @@ class PrewarmedEncoderPool(BitmovinResource):
             self.disk_size = disk_size
         if target_pool_size is not None:
             self.target_pool_size = target_pool_size
+        if gpu_enabled is not None:
+            self.gpu_enabled = gpu_enabled
         if status is not None:
             self.status = status
 
@@ -63,6 +67,7 @@ class PrewarmedEncoderPool(BitmovinResource):
             'infrastructure_id': 'string_types',
             'disk_size': 'PrewarmedEncoderDiskSize',
             'target_pool_size': 'int',
+            'gpu_enabled': 'bool',
             'status': 'PrewarmedEncoderPoolStatus'
         })
 
@@ -81,6 +86,7 @@ class PrewarmedEncoderPool(BitmovinResource):
             'infrastructure_id': 'infrastructureId',
             'disk_size': 'diskSize',
             'target_pool_size': 'targetPoolSize',
+            'gpu_enabled': 'gpuEnabled',
             'status': 'status'
         })
         return attributes
@@ -231,6 +237,35 @@ class PrewarmedEncoderPool(BitmovinResource):
                 raise TypeError("Invalid type for `target_pool_size`, type has to be `int`")
 
         self._target_pool_size = target_pool_size
+
+    @property
+    def gpu_enabled(self):
+        # type: () -> bool
+        """Gets the gpu_enabled of this PrewarmedEncoderPool.
+
+        Create pool with GPU instances for hardware encoding presets (e.g., VOD_HARDWARE_SHORTFORM).
+
+        :return: The gpu_enabled of this PrewarmedEncoderPool.
+        :rtype: bool
+        """
+        return self._gpu_enabled
+
+    @gpu_enabled.setter
+    def gpu_enabled(self, gpu_enabled):
+        # type: (bool) -> None
+        """Sets the gpu_enabled of this PrewarmedEncoderPool.
+
+        Create pool with GPU instances for hardware encoding presets (e.g., VOD_HARDWARE_SHORTFORM).
+
+        :param gpu_enabled: The gpu_enabled of this PrewarmedEncoderPool.
+        :type: bool
+        """
+
+        if gpu_enabled is not None:
+            if not isinstance(gpu_enabled, bool):
+                raise TypeError("Invalid type for `gpu_enabled`, type has to be `bool`")
+
+        self._gpu_enabled = gpu_enabled
 
     @property
     def status(self):

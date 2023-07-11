@@ -5,9 +5,9 @@ from datetime import datetime
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
 from bitmovin_api_sdk.models.streams_ad_config_response import StreamsAdConfigResponse
-from bitmovin_api_sdk.models.streams_config_response import StreamsConfigResponse
 from bitmovin_api_sdk.models.streams_content_protection_response import StreamsContentProtectionResponse
 from bitmovin_api_sdk.models.streams_live_life_cycle import StreamsLiveLifeCycle
+from bitmovin_api_sdk.models.streams_style_config_response import StreamsStyleConfigResponse
 import pprint
 import six
 
@@ -21,11 +21,11 @@ class StreamsLiveResponse(object):
                  description=None,
                  created_at=None,
                  life_cycle=None,
-                 config=None,
+                 style_config=None,
                  poster_url=None,
                  ad_config=None,
                  content_protection=None):
-        # type: (string_types, string_types, string_types, string_types, datetime, StreamsLiveLifeCycle, StreamsConfigResponse, string_types, StreamsAdConfigResponse, StreamsContentProtectionResponse) -> None
+        # type: (string_types, string_types, string_types, string_types, datetime, StreamsLiveLifeCycle, StreamsStyleConfigResponse, string_types, StreamsAdConfigResponse, StreamsContentProtectionResponse) -> None
 
         self._id = None
         self._stream_key = None
@@ -33,7 +33,7 @@ class StreamsLiveResponse(object):
         self._description = None
         self._created_at = None
         self._life_cycle = None
-        self._config = None
+        self._style_config = None
         self._poster_url = None
         self._ad_config = None
         self._content_protection = None
@@ -51,8 +51,8 @@ class StreamsLiveResponse(object):
             self.created_at = created_at
         if life_cycle is not None:
             self.life_cycle = life_cycle
-        if config is not None:
-            self.config = config
+        if style_config is not None:
+            self.style_config = style_config
         if poster_url is not None:
             self.poster_url = poster_url
         if ad_config is not None:
@@ -69,7 +69,7 @@ class StreamsLiveResponse(object):
             'description': 'string_types',
             'created_at': 'datetime',
             'life_cycle': 'StreamsLiveLifeCycle',
-            'config': 'StreamsConfigResponse',
+            'style_config': 'StreamsStyleConfigResponse',
             'poster_url': 'string_types',
             'ad_config': 'StreamsAdConfigResponse',
             'content_protection': 'StreamsContentProtectionResponse'
@@ -86,7 +86,7 @@ class StreamsLiveResponse(object):
             'description': 'description',
             'created_at': 'createdAt',
             'life_cycle': 'lifeCycle',
-            'config': 'config',
+            'style_config': 'styleConfig',
             'poster_url': 'posterUrl',
             'ad_config': 'adConfig',
             'content_protection': 'contentProtection'
@@ -268,31 +268,31 @@ class StreamsLiveResponse(object):
         self._life_cycle = life_cycle
 
     @property
-    def config(self):
-        # type: () -> StreamsConfigResponse
-        """Gets the config of this StreamsLiveResponse.
+    def style_config(self):
+        # type: () -> StreamsStyleConfigResponse
+        """Gets the style_config of this StreamsLiveResponse.
 
 
-        :return: The config of this StreamsLiveResponse.
-        :rtype: StreamsConfigResponse
+        :return: The style_config of this StreamsLiveResponse.
+        :rtype: StreamsStyleConfigResponse
         """
-        return self._config
+        return self._style_config
 
-    @config.setter
-    def config(self, config):
-        # type: (StreamsConfigResponse) -> None
-        """Sets the config of this StreamsLiveResponse.
+    @style_config.setter
+    def style_config(self, style_config):
+        # type: (StreamsStyleConfigResponse) -> None
+        """Sets the style_config of this StreamsLiveResponse.
 
 
-        :param config: The config of this StreamsLiveResponse.
-        :type: StreamsConfigResponse
+        :param style_config: The style_config of this StreamsLiveResponse.
+        :type: StreamsStyleConfigResponse
         """
 
-        if config is not None:
-            if not isinstance(config, StreamsConfigResponse):
-                raise TypeError("Invalid type for `config`, type has to be `StreamsConfigResponse`")
+        if style_config is not None:
+            if not isinstance(style_config, StreamsStyleConfigResponse):
+                raise TypeError("Invalid type for `style_config`, type has to be `StreamsStyleConfigResponse`")
 
-        self._config = config
+        self._style_config = style_config
 
     @property
     def poster_url(self):

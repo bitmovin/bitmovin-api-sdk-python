@@ -5,8 +5,8 @@ from datetime import datetime
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
 from bitmovin_api_sdk.models.streams_ad_config_response import StreamsAdConfigResponse
-from bitmovin_api_sdk.models.streams_config_response import StreamsConfigResponse
 from bitmovin_api_sdk.models.streams_content_protection_response import StreamsContentProtectionResponse
+from bitmovin_api_sdk.models.streams_style_config_response import StreamsStyleConfigResponse
 from bitmovin_api_sdk.models.streams_video_status import StreamsVideoStatus
 import pprint
 import six
@@ -21,12 +21,12 @@ class StreamsVideoResponse(object):
                  description=None,
                  created_at=None,
                  status=None,
-                 config=None,
+                 style_config=None,
                  encoding_tasks=None,
                  poster_url=None,
                  ad_config=None,
                  content_protection=None):
-        # type: (string_types, string_types, string_types, string_types, datetime, StreamsVideoStatus, StreamsConfigResponse, list[StreamsVideoEncodingTask], string_types, StreamsAdConfigResponse, StreamsContentProtectionResponse) -> None
+        # type: (string_types, string_types, string_types, string_types, datetime, StreamsVideoStatus, StreamsStyleConfigResponse, list[StreamsVideoEncodingTask], string_types, StreamsAdConfigResponse, StreamsContentProtectionResponse) -> None
 
         self._id = None
         self._asset_url = None
@@ -34,7 +34,7 @@ class StreamsVideoResponse(object):
         self._description = None
         self._created_at = None
         self._status = None
-        self._config = None
+        self._style_config = None
         self._encoding_tasks = list()
         self._poster_url = None
         self._ad_config = None
@@ -53,8 +53,8 @@ class StreamsVideoResponse(object):
             self.created_at = created_at
         if status is not None:
             self.status = status
-        if config is not None:
-            self.config = config
+        if style_config is not None:
+            self.style_config = style_config
         if encoding_tasks is not None:
             self.encoding_tasks = encoding_tasks
         if poster_url is not None:
@@ -73,7 +73,7 @@ class StreamsVideoResponse(object):
             'description': 'string_types',
             'created_at': 'datetime',
             'status': 'StreamsVideoStatus',
-            'config': 'StreamsConfigResponse',
+            'style_config': 'StreamsStyleConfigResponse',
             'encoding_tasks': 'list[StreamsVideoEncodingTask]',
             'poster_url': 'string_types',
             'ad_config': 'StreamsAdConfigResponse',
@@ -91,7 +91,7 @@ class StreamsVideoResponse(object):
             'description': 'description',
             'created_at': 'createdAt',
             'status': 'status',
-            'config': 'config',
+            'style_config': 'styleConfig',
             'encoding_tasks': 'encodingTasks',
             'poster_url': 'posterUrl',
             'ad_config': 'adConfig',
@@ -274,31 +274,31 @@ class StreamsVideoResponse(object):
         self._status = status
 
     @property
-    def config(self):
-        # type: () -> StreamsConfigResponse
-        """Gets the config of this StreamsVideoResponse.
+    def style_config(self):
+        # type: () -> StreamsStyleConfigResponse
+        """Gets the style_config of this StreamsVideoResponse.
 
 
-        :return: The config of this StreamsVideoResponse.
-        :rtype: StreamsConfigResponse
+        :return: The style_config of this StreamsVideoResponse.
+        :rtype: StreamsStyleConfigResponse
         """
-        return self._config
+        return self._style_config
 
-    @config.setter
-    def config(self, config):
-        # type: (StreamsConfigResponse) -> None
-        """Sets the config of this StreamsVideoResponse.
+    @style_config.setter
+    def style_config(self, style_config):
+        # type: (StreamsStyleConfigResponse) -> None
+        """Sets the style_config of this StreamsVideoResponse.
 
 
-        :param config: The config of this StreamsVideoResponse.
-        :type: StreamsConfigResponse
+        :param style_config: The style_config of this StreamsVideoResponse.
+        :type: StreamsStyleConfigResponse
         """
 
-        if config is not None:
-            if not isinstance(config, StreamsConfigResponse):
-                raise TypeError("Invalid type for `config`, type has to be `StreamsConfigResponse`")
+        if style_config is not None:
+            if not isinstance(style_config, StreamsStyleConfigResponse):
+                raise TypeError("Invalid type for `style_config`, type has to be `StreamsStyleConfigResponse`")
 
-        self._config = config
+        self._style_config = style_config
 
     @property
     def encoding_tasks(self):

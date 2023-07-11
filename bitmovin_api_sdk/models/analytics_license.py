@@ -31,8 +31,9 @@ class AnalyticsLicense(object):
                  custom_data_fields_count=None,
                  order_index=None,
                  rate_limit=None,
-                 features=None):
-        # type: (string_types, datetime, dict, string_types, string_types, string_types, string_types, bool, int, int, string_types, string_types, list[AnalyticsLicenseDomain], bool, AnalyticsLicenseCustomDataFieldLabels, int, int, string_types, AnalyticsLicenseFeatures) -> None
+                 features=None,
+                 plan_expired_at=None):
+        # type: (string_types, datetime, dict, string_types, string_types, string_types, string_types, bool, int, int, string_types, string_types, list[AnalyticsLicenseDomain], bool, AnalyticsLicenseCustomDataFieldLabels, int, int, string_types, AnalyticsLicenseFeatures, datetime) -> None
 
         self._id = None
         self._created_at = None
@@ -53,6 +54,7 @@ class AnalyticsLicense(object):
         self._order_index = None
         self._rate_limit = None
         self._features = None
+        self._plan_expired_at = None
         self.discriminator = None
 
         if id_ is not None:
@@ -93,6 +95,8 @@ class AnalyticsLicense(object):
             self.rate_limit = rate_limit
         if features is not None:
             self.features = features
+        if plan_expired_at is not None:
+            self.plan_expired_at = plan_expired_at
 
     @property
     def openapi_types(self):
@@ -115,7 +119,8 @@ class AnalyticsLicense(object):
             'custom_data_fields_count': 'int',
             'order_index': 'int',
             'rate_limit': 'string_types',
-            'features': 'AnalyticsLicenseFeatures'
+            'features': 'AnalyticsLicenseFeatures',
+            'plan_expired_at': 'datetime'
         }
 
         return types
@@ -141,7 +146,8 @@ class AnalyticsLicense(object):
             'custom_data_fields_count': 'customDataFieldsCount',
             'order_index': 'orderIndex',
             'rate_limit': 'rateLimit',
-            'features': 'features'
+            'features': 'features',
+            'plan_expired_at': 'planExpiredAt'
         }
         return attributes
 
@@ -179,7 +185,7 @@ class AnalyticsLicense(object):
         # type: () -> datetime
         """Gets the created_at of this AnalyticsLicense.
 
-        Creation date of the Analytics License in UTC format
+        Creation date of the Analytics License, returned as ISO 8601 date-time format
 
         :return: The created_at of this AnalyticsLicense.
         :rtype: datetime
@@ -191,7 +197,7 @@ class AnalyticsLicense(object):
         # type: (datetime) -> None
         """Sets the created_at of this AnalyticsLicense.
 
-        Creation date of the Analytics License in UTC format
+        Creation date of the Analytics License, returned as ISO 8601 date-time format
 
         :param created_at: The created_at of this AnalyticsLicense.
         :type: datetime
@@ -693,6 +699,35 @@ class AnalyticsLicense(object):
                 raise TypeError("Invalid type for `features`, type has to be `AnalyticsLicenseFeatures`")
 
         self._features = features
+
+    @property
+    def plan_expired_at(self):
+        # type: () -> datetime
+        """Gets the plan_expired_at of this AnalyticsLicense.
+
+        The expiration date of the license if applicable, returned as ISO 8601 date-time format
+
+        :return: The plan_expired_at of this AnalyticsLicense.
+        :rtype: datetime
+        """
+        return self._plan_expired_at
+
+    @plan_expired_at.setter
+    def plan_expired_at(self, plan_expired_at):
+        # type: (datetime) -> None
+        """Sets the plan_expired_at of this AnalyticsLicense.
+
+        The expiration date of the license if applicable, returned as ISO 8601 date-time format
+
+        :param plan_expired_at: The plan_expired_at of this AnalyticsLicense.
+        :type: datetime
+        """
+
+        if plan_expired_at is not None:
+            if not isinstance(plan_expired_at, datetime):
+                raise TypeError("Invalid type for `plan_expired_at`, type has to be `datetime`")
+
+        self._plan_expired_at = plan_expired_at
 
     def to_dict(self):
         """Returns the model properties as a dict"""

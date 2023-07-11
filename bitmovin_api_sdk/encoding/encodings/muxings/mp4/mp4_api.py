@@ -53,7 +53,7 @@ class Mp4Api(BaseApi):
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
-        :param mp4_muxing: The MP4 muxing to be created
+        :param mp4_muxing: The progressive MP4 muxing to be created
         :type mp4_muxing: Mp4Muxing, required
         :return: MP4 muxing
         :rtype: Mp4Muxing

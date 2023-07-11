@@ -14,7 +14,7 @@ class StreamsVideoUpdateRequest(object):
                  status=None,
                  title=None,
                  description=None,
-                 config_id=None,
+                 style_config_id=None,
                  poster_url=None,
                  ad_config_id=None,
                  content_protection_id=None):
@@ -23,7 +23,7 @@ class StreamsVideoUpdateRequest(object):
         self._status = None
         self._title = None
         self._description = None
-        self._config_id = None
+        self._style_config_id = None
         self._poster_url = None
         self._ad_config_id = None
         self._content_protection_id = None
@@ -35,8 +35,8 @@ class StreamsVideoUpdateRequest(object):
             self.title = title
         if description is not None:
             self.description = description
-        if config_id is not None:
-            self.config_id = config_id
+        if style_config_id is not None:
+            self.style_config_id = style_config_id
         if poster_url is not None:
             self.poster_url = poster_url
         if ad_config_id is not None:
@@ -50,7 +50,7 @@ class StreamsVideoUpdateRequest(object):
             'status': 'StreamsVideoStatus',
             'title': 'string_types',
             'description': 'string_types',
-            'config_id': 'string_types',
+            'style_config_id': 'string_types',
             'poster_url': 'string_types',
             'ad_config_id': 'string_types',
             'content_protection_id': 'string_types'
@@ -64,7 +64,7 @@ class StreamsVideoUpdateRequest(object):
             'status': 'status',
             'title': 'title',
             'description': 'description',
-            'config_id': 'configId',
+            'style_config_id': 'styleConfigId',
             'poster_url': 'posterUrl',
             'ad_config_id': 'adConfigId',
             'content_protection_id': 'contentProtectionId'
@@ -159,33 +159,33 @@ class StreamsVideoUpdateRequest(object):
         self._description = description
 
     @property
-    def config_id(self):
+    def style_config_id(self):
         # type: () -> string_types
-        """Gets the config_id of this StreamsVideoUpdateRequest.
+        """Gets the style_config_id of this StreamsVideoUpdateRequest.
 
-        Id of the stream config to use
+        Id of the style config to use
 
-        :return: The config_id of this StreamsVideoUpdateRequest.
+        :return: The style_config_id of this StreamsVideoUpdateRequest.
         :rtype: string_types
         """
-        return self._config_id
+        return self._style_config_id
 
-    @config_id.setter
-    def config_id(self, config_id):
+    @style_config_id.setter
+    def style_config_id(self, style_config_id):
         # type: (string_types) -> None
-        """Sets the config_id of this StreamsVideoUpdateRequest.
+        """Sets the style_config_id of this StreamsVideoUpdateRequest.
 
-        Id of the stream config to use
+        Id of the style config to use
 
-        :param config_id: The config_id of this StreamsVideoUpdateRequest.
+        :param style_config_id: The style_config_id of this StreamsVideoUpdateRequest.
         :type: string_types
         """
 
-        if config_id is not None:
-            if not isinstance(config_id, string_types):
-                raise TypeError("Invalid type for `config_id`, type has to be `string_types`")
+        if style_config_id is not None:
+            if not isinstance(style_config_id, string_types):
+                raise TypeError("Invalid type for `style_config_id`, type has to be `string_types`")
 
-        self._config_id = config_id
+        self._style_config_id = style_config_id
 
     @property
     def poster_url(self):
