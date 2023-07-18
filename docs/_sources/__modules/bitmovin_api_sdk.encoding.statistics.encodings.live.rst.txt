@@ -8,6 +8,7 @@ Subpackages
    :maxdepth: 4
 
    bitmovin_api_sdk.encoding.statistics.encodings.live.daily
+   bitmovin_api_sdk.encoding.statistics.encodings.live.options
 
 Submodules
 ----------

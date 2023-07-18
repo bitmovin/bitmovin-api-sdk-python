@@ -1,0 +1,21 @@
+bitmovin\_api\_sdk.encoding.encodings.live.hd package
+=====================================================
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.encoding.encodings.live.hd.hd\_api module
+------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.encodings.live.hd.hd_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.encoding.encodings.live.hd
+   :members:
+   :undoc-members:
+   :show-inheritance:

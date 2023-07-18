@@ -8,6 +8,7 @@ from bitmovin_api_sdk.models.encoding_statistics_live import EncodingStatisticsL
 from bitmovin_api_sdk.models.response_envelope import ResponseEnvelope
 from bitmovin_api_sdk.models.response_error import ResponseError
 from bitmovin_api_sdk.encoding.statistics.encodings.live.daily.daily_api import DailyApi
+from bitmovin_api_sdk.encoding.statistics.encodings.live.options.options_api import OptionsApi
 from bitmovin_api_sdk.encoding.statistics.encodings.live.encoding_statistics_live_list_query_params import EncodingStatisticsLiveListQueryParams
 from bitmovin_api_sdk.encoding.statistics.encodings.live.encoding_statistics_live_list_by_date_range_query_params import EncodingStatisticsLiveListByDateRangeQueryParams
 
@@ -25,6 +26,13 @@ class LiveApi(BaseApi):
         )
 
         self.daily = DailyApi(
+            api_key=api_key,
+            tenant_org_id=tenant_org_id,
+            base_url=base_url,
+            logger=logger
+        )
+
+        self.options = OptionsApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,

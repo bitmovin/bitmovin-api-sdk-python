@@ -133,6 +133,7 @@ class AnalyticsAdsImpressionSample(object):
                  region=None,
                  screen_height=None,
                  screen_width=None,
+                 screen_orientation=None,
                  size=None,
                  skip_percentage=None,
                  skip_position=None,
@@ -152,7 +153,7 @@ class AnalyticsAdsImpressionSample(object):
                  video_title=None,
                  video_window_height=None,
                  video_window_width=None):
-        # type: (string_types, string_types, int, int, string_types, string_types, string_types, bool, string_types, string_types, string_types, int, int, int, string_types, int, int, int, int, bool, int, string_types, string_types, string_types, string_types, string_types, string_types, int, string_types, string_types, string_types, string_types, string_types, int, bool, string_types, bool, string_types, string_types, string_types, string_types, int, int, int, int, int, int, int, int, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, int, string_types, string_types, int, int, int, string_types, string_types, string_types, string_types, string_types, int, string_types, string_types, string_types, int, int, string_types, string_types, string_types, int, int, string_types, int, string_types, string_types, string_types, int, string_types, string_types, int, int, int, string_types, int, int, string_types, int, int, int, int, string_types, string_types, int, int, int, string_types, string_types, string_types, int, string_types, string_types, string_types, int, int) -> None
+        # type: (string_types, string_types, int, int, string_types, string_types, string_types, bool, string_types, string_types, string_types, int, int, int, string_types, int, int, int, int, bool, int, string_types, string_types, string_types, string_types, string_types, string_types, int, string_types, string_types, string_types, string_types, string_types, int, bool, string_types, bool, string_types, string_types, string_types, string_types, int, int, int, int, int, int, int, int, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, int, string_types, string_types, int, int, int, string_types, string_types, string_types, string_types, string_types, int, string_types, string_types, string_types, int, int, string_types, string_types, string_types, int, int, string_types, int, string_types, string_types, string_types, int, string_types, string_types, int, int, int, string_types, int, int, string_types, string_types, int, int, int, int, string_types, string_types, int, int, int, string_types, string_types, string_types, int, string_types, string_types, string_types, int, int) -> None
 
         self._ad_clickthrough_url = None
         self._ad_description = None
@@ -277,6 +278,7 @@ class AnalyticsAdsImpressionSample(object):
         self._region = None
         self._screen_height = None
         self._screen_width = None
+        self._screen_orientation = None
         self._size = None
         self._skip_percentage = None
         self._skip_position = None
@@ -544,6 +546,8 @@ class AnalyticsAdsImpressionSample(object):
             self.screen_height = screen_height
         if screen_width is not None:
             self.screen_width = screen_width
+        if screen_orientation is not None:
+            self.screen_orientation = screen_orientation
         if size is not None:
             self.size = size
         if skip_percentage is not None:
@@ -709,6 +713,7 @@ class AnalyticsAdsImpressionSample(object):
             'region': 'string_types',
             'screen_height': 'int',
             'screen_width': 'int',
+            'screen_orientation': 'string_types',
             'size': 'string_types',
             'skip_percentage': 'int',
             'skip_position': 'int',
@@ -858,6 +863,7 @@ class AnalyticsAdsImpressionSample(object):
             'region': 'region',
             'screen_height': 'screen_height',
             'screen_width': 'screen_width',
+            'screen_orientation': 'screen_orientation',
             'size': 'size',
             'skip_percentage': 'skip_percentage',
             'skip_position': 'skip_position',
@@ -4446,6 +4452,35 @@ class AnalyticsAdsImpressionSample(object):
                 raise TypeError("Invalid type for `screen_width`, type has to be `int`")
 
         self._screen_width = screen_width
+
+    @property
+    def screen_orientation(self):
+        # type: () -> string_types
+        """Gets the screen_orientation of this AnalyticsAdsImpressionSample.
+
+        Screen orientation (PORTRAIT, LANDSCAPE OR UNKNOWN)
+
+        :return: The screen_orientation of this AnalyticsAdsImpressionSample.
+        :rtype: string_types
+        """
+        return self._screen_orientation
+
+    @screen_orientation.setter
+    def screen_orientation(self, screen_orientation):
+        # type: (string_types) -> None
+        """Sets the screen_orientation of this AnalyticsAdsImpressionSample.
+
+        Screen orientation (PORTRAIT, LANDSCAPE OR UNKNOWN)
+
+        :param screen_orientation: The screen_orientation of this AnalyticsAdsImpressionSample.
+        :type: string_types
+        """
+
+        if screen_orientation is not None:
+            if not isinstance(screen_orientation, string_types):
+                raise TypeError("Invalid type for `screen_orientation`, type has to be `string_types`")
+
+        self._screen_orientation = screen_orientation
 
     @property
     def size(self):

@@ -95,6 +95,7 @@ class AnalyticsImpressionSample(object):
                  region=None,
                  screen_height=None,
                  screen_width=None,
+                 screen_orientation=None,
                  seeked=None,
                  segment_download_count=None,
                  segment_download_size=None,
@@ -123,7 +124,7 @@ class AnalyticsImpressionSample(object):
                  video_window_width=None,
                  videostart_failed=None,
                  videostart_failed_reason=None):
-        # type: (int, string_types, int, string_types, string_types, bool, string_types, string_types, string_types, int, string_types, string_types, string_types, int, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, int, string_types, int, int, int, string_types, string_types, string_types, string_types, bool, bool, bool, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, int, int, string_types, int, string_types, int, string_types, string_types, int, string_types, string_types, string_types, string_types, int, int, int, int, int, int, int, string_types, int, string_types, string_types, bool, string_types, list[string_types], int, string_types, int, string_types, int, string_types, string_types, int, int, int, int, int, int, int, bool, AnalyticsVideoStartFailedReason) -> None
+        # type: (int, string_types, int, string_types, string_types, bool, string_types, string_types, string_types, int, string_types, string_types, string_types, int, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, int, string_types, int, int, int, string_types, string_types, string_types, string_types, bool, bool, bool, string_types, string_types, string_types, string_types, string_types, string_types, string_types, string_types, int, int, string_types, int, string_types, int, string_types, string_types, int, string_types, string_types, string_types, string_types, int, int, string_types, int, int, int, int, int, string_types, int, string_types, string_types, bool, string_types, list[string_types], int, string_types, int, string_types, int, string_types, string_types, int, int, int, int, int, int, int, bool, AnalyticsVideoStartFailedReason) -> None
 
         self._ad = None
         self._analytics_version = None
@@ -209,6 +210,7 @@ class AnalyticsImpressionSample(object):
         self._region = None
         self._screen_height = None
         self._screen_width = None
+        self._screen_orientation = None
         self._seeked = None
         self._segment_download_count = None
         self._segment_download_size = None
@@ -407,6 +409,8 @@ class AnalyticsImpressionSample(object):
             self.screen_height = screen_height
         if screen_width is not None:
             self.screen_width = screen_width
+        if screen_orientation is not None:
+            self.screen_orientation = screen_orientation
         if seeked is not None:
             self.seeked = seeked
         if segment_download_count is not None:
@@ -551,6 +555,7 @@ class AnalyticsImpressionSample(object):
             'region': 'string_types',
             'screen_height': 'int',
             'screen_width': 'int',
+            'screen_orientation': 'string_types',
             'seeked': 'int',
             'segment_download_count': 'int',
             'segment_download_size': 'int',
@@ -670,6 +675,7 @@ class AnalyticsImpressionSample(object):
             'region': 'region',
             'screen_height': 'screen_height',
             'screen_width': 'screen_width',
+            'screen_orientation': 'screen_orientation',
             'seeked': 'seeked',
             'segment_download_count': 'segment_download_count',
             'segment_download_size': 'segment_download_size',
@@ -3136,6 +3142,35 @@ class AnalyticsImpressionSample(object):
                 raise TypeError("Invalid type for `screen_width`, type has to be `int`")
 
         self._screen_width = screen_width
+
+    @property
+    def screen_orientation(self):
+        # type: () -> string_types
+        """Gets the screen_orientation of this AnalyticsImpressionSample.
+
+        Screen orientation (PORTRAIT, LANDSCAPE OR UNKNOWN)
+
+        :return: The screen_orientation of this AnalyticsImpressionSample.
+        :rtype: string_types
+        """
+        return self._screen_orientation
+
+    @screen_orientation.setter
+    def screen_orientation(self, screen_orientation):
+        # type: (string_types) -> None
+        """Sets the screen_orientation of this AnalyticsImpressionSample.
+
+        Screen orientation (PORTRAIT, LANDSCAPE OR UNKNOWN)
+
+        :param screen_orientation: The screen_orientation of this AnalyticsImpressionSample.
+        :type: string_types
+        """
+
+        if screen_orientation is not None:
+            if not isinstance(screen_orientation, string_types):
+                raise TypeError("Invalid type for `screen_orientation`, type has to be `string_types`")
+
+        self._screen_orientation = screen_orientation
 
     @property
     def seeked(self):

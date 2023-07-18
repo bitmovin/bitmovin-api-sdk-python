@@ -741,6 +741,8 @@ from bitmovin_api_sdk.encoding.encodings.streams.qc.psnr.psnr_api import PsnrApi
 from bitmovin_api_sdk.encoding.encodings.streams.qc.psnr.psnr_api import PsnrQualityMetricListQueryParams
 from bitmovin_api_sdk.encoding.encodings.keyframes.keyframes_api import KeyframesApi
 from bitmovin_api_sdk.encoding.encodings.keyframes.keyframes_api import KeyframeListQueryParams
+from bitmovin_api_sdk.encoding.encodings.live.hd.hd_api import HdApi
+
 from bitmovin_api_sdk.encoding.manifests.manifests_api import ManifestsApi
 from bitmovin_api_sdk.encoding.manifests.manifests_api import ManifestListQueryParams
 from bitmovin_api_sdk.encoding.manifests.type.type_api import TypeApi
@@ -881,6 +883,8 @@ from bitmovin_api_sdk.encoding.statistics.encodings.vod.daily.daily_api import D
 
 from bitmovin_api_sdk.encoding.statistics.encodings.live.daily.daily_api import DailyApi
 
+from bitmovin_api_sdk.encoding.statistics.encodings.live.options.options_api import OptionsApi
+from bitmovin_api_sdk.encoding.statistics.encodings.live.options.options_api import LiveOptionsStatisticsListByDateRangeQueryParams
 from bitmovin_api_sdk.encoding.statistics.encodings.live_statistics.live_statistics_api import LiveStatisticsApi
 
 from bitmovin_api_sdk.encoding.statistics.encodings.live_statistics.events.events_api import EventsApi
@@ -1465,12 +1469,17 @@ from bitmovin_api_sdk.models.live_dash_manifest import LiveDashManifest
 from bitmovin_api_sdk.models.live_encoding import LiveEncoding
 from bitmovin_api_sdk.models.live_encoding_codec import LiveEncodingCodec
 from bitmovin_api_sdk.models.live_encoding_event_name import LiveEncodingEventName
+from bitmovin_api_sdk.models.live_encoding_options_statistics import LiveEncodingOptionsStatistics
 from bitmovin_api_sdk.models.live_encoding_stats import LiveEncodingStats
 from bitmovin_api_sdk.models.live_encoding_stats_event import LiveEncodingStatsEvent
 from bitmovin_api_sdk.models.live_encoding_stats_event_details import LiveEncodingStatsEventDetails
 from bitmovin_api_sdk.models.live_encoding_status import LiveEncodingStatus
 from bitmovin_api_sdk.models.live_hls_manifest import LiveHlsManifest
 from bitmovin_api_sdk.models.live_media_ingest_output import LiveMediaIngestOutput
+from bitmovin_api_sdk.models.live_options_breakdown_entry import LiveOptionsBreakdownEntry
+from bitmovin_api_sdk.models.live_options_entry import LiveOptionsEntry
+from bitmovin_api_sdk.models.live_options_statistics import LiveOptionsStatistics
+from bitmovin_api_sdk.models.live_options_summary import LiveOptionsSummary
 from bitmovin_api_sdk.models.live_options_type import LiveOptionsType
 from bitmovin_api_sdk.models.local_input import LocalInput
 from bitmovin_api_sdk.models.local_output import LocalOutput
@@ -1682,6 +1691,7 @@ from bitmovin_api_sdk.models.srt_statistic_window import SrtStatisticWindow
 from bitmovin_api_sdk.models.srt_statistics import SrtStatistics
 from bitmovin_api_sdk.models.standard_media_info import StandardMediaInfo
 from bitmovin_api_sdk.models.start_encoding_request import StartEncodingRequest
+from bitmovin_api_sdk.models.start_live_channel_encoding_request import StartLiveChannelEncodingRequest
 from bitmovin_api_sdk.models.start_live_encoding_request import StartLiveEncodingRequest
 from bitmovin_api_sdk.models.start_manifest_request import StartManifestRequest
 from bitmovin_api_sdk.models.static_ip import StaticIp
@@ -1801,4 +1811,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.167.0"
+__version__ = "1.168.0"

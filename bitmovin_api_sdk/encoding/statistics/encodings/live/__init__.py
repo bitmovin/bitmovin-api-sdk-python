@@ -1,4 +1,5 @@
 from bitmovin_api_sdk.encoding.statistics.encodings.live.live_api import LiveApi
 from bitmovin_api_sdk.encoding.statistics.encodings.live.daily.daily_api import DailyApi
+from bitmovin_api_sdk.encoding.statistics.encodings.live.options.options_api import OptionsApi
 from bitmovin_api_sdk.encoding.statistics.encodings.live.encoding_statistics_live_list_query_params import EncodingStatisticsLiveListQueryParams
 from bitmovin_api_sdk.encoding.statistics.encodings.live.encoding_statistics_live_list_by_date_range_query_params import EncodingStatisticsLiveListByDateRangeQueryParams

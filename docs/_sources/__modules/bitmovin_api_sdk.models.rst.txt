@@ -3692,6 +3692,14 @@ bitmovin\_api\_sdk.models.live\_encoding\_event\_name module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.live\_encoding\_options\_statistics module
+--------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.live_encoding_options_statistics
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.live\_encoding\_stats module
 ------------------------------------------------------
 
@@ -3736,6 +3744,38 @@ bitmovin\_api\_sdk.models.live\_media\_ingest\_output module
 ------------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.models.live_media_ingest_output
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.live\_options\_breakdown\_entry module
+----------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.live_options_breakdown_entry
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.live\_options\_entry module
+-----------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.live_options_entry
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.live\_options\_statistics module
+----------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.live_options_statistics
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.live\_options\_summary module
+-------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.live_options_summary
    :members:
    :undoc-members:
    :show-inheritance:
@@ -5424,6 +5464,14 @@ bitmovin\_api\_sdk.models.start\_encoding\_request module
 ---------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.models.start_encoding_request
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.start\_live\_channel\_encoding\_request module
+------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.start_live_channel_encoding_request
    :members:
    :undoc-members:
    :show-inheritance:
