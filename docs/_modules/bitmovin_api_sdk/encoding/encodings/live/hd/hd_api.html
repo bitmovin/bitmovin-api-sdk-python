@@ -82,9 +82,11 @@
 
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.common</span> <span class="kn">import</span> <span class="n">BaseApi</span><span class="p">,</span> <span class="n">BitmovinApiLoggerBase</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.common.poscheck</span> <span class="kn">import</span> <span class="n">poscheck_except</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.bitmovin_response</span> <span class="kn">import</span> <span class="n">BitmovinResponse</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.response_envelope</span> <span class="kn">import</span> <span class="n">ResponseEnvelope</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.response_error</span> <span class="kn">import</span> <span class="n">ResponseError</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.start_live_channel_encoding_request</span> <span class="kn">import</span> <span class="n">StartLiveChannelEncodingRequest</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.start_live_encoding_request</span> <span class="kn">import</span> <span class="n">StartLiveEncodingRequest</span>
 
 
 <div class="viewcode-block" id="HdApi"><a class="viewcode-back" href="../../../../../../__modules/bitmovin_api_sdk.encoding.encodings.live.hd.html#bitmovin_api_sdk.encoding.encodings.live.hd.hd_api.HdApi">[docs]</a><span class="k">class</span> <span class="nc">HdApi</span><span class="p">(</span><span class="n">BaseApi</span><span class="p">):</span>
@@ -113,6 +115,26 @@
             <span class="s1">&#39;/encoding/encodings/</span><span class="si">{encoding_id}</span><span class="s1">/live/hd/start&#39;</span><span class="p">,</span>
             <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;encoding_id&#39;</span><span class="p">:</span> <span class="n">encoding_id</span><span class="p">},</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">StartLiveChannelEncodingRequest</span><span class="p">,</span>
+            <span class="o">**</span><span class="n">kwargs</span>
+        <span class="p">)</span></div>
+
+<div class="viewcode-block" id="HdApi.start"><a class="viewcode-back" href="../../../../../../__modules/bitmovin_api_sdk.encoding.encodings.live.hd.html#bitmovin_api_sdk.encoding.encodings.live.hd.hd_api.HdApi.start">[docs]</a>    <span class="k">def</span> <span class="nf">start</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">encoding_id</span><span class="p">,</span> <span class="n">start_live_channel_encoding_request</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="c1"># type: (string_types, StartLiveChannelEncodingRequest, dict) -&gt; BitmovinResponse</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Start Live Encoding</span>
+
+<span class="sd">        :param encoding_id: Id of the encoding</span>
+<span class="sd">        :type encoding_id: string_types, required</span>
+<span class="sd">        :param start_live_channel_encoding_request: Live Encoding startup options</span>
+<span class="sd">        :type start_live_channel_encoding_request: StartLiveChannelEncodingRequest, required</span>
+<span class="sd">        :return: Id of the encoding</span>
+<span class="sd">        :rtype: BitmovinResponse</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">post</span><span class="p">(</span>
+            <span class="s1">&#39;/encoding/encodings/</span><span class="si">{encoding_id}</span><span class="s1">/live/hd/start&#39;</span><span class="p">,</span>
+            <span class="n">start_live_channel_encoding_request</span><span class="p">,</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;encoding_id&#39;</span><span class="p">:</span> <span class="n">encoding_id</span><span class="p">},</span>
+            <span class="nb">type</span><span class="o">=</span><span class="n">BitmovinResponse</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>
         <span class="p">)</span></div></div>
 </pre></div>
