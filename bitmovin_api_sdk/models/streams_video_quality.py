@@ -9,3 +9,4 @@ class StreamsVideoQuality(Enum):
     NONE = "NONE"
     PREVIEW = "PREVIEW"
     DEFAULT = "DEFAULT"
+    TRIMMED = "TRIMMED"

@@ -42,7 +42,7 @@ class HdApi(BaseApi):
 
     def start(self, encoding_id, start_live_channel_encoding_request, **kwargs):
         # type: (string_types, StartLiveChannelEncodingRequest, dict) -> BitmovinResponse
-        """Start Live Encoding
+        """Start HD Options Live Encoding
 
         :param encoding_id: Id of the encoding
         :type encoding_id: string_types, required

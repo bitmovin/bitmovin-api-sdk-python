@@ -1,0 +1,29 @@
+bitmovin\_api\_sdk.streams.search package
+=========================================
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.streams.search.search\_api module
+----------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.streams.search.search_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.streams.search.streams\_search\_response\_list\_query\_params module
+---------------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.streams.search.streams_search_response_list_query_params
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.streams.search
+   :members:
+   :undoc-members:
+   :show-inheritance:

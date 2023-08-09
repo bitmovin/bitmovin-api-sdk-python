@@ -999,6 +999,8 @@ from bitmovin_api_sdk.encoding.encodings.live.scte35_cue.scte35_cue_api import S
 
 from bitmovin_api_sdk.streams.streams_api import StreamsApi
 
+from bitmovin_api_sdk.streams.search.search_api import SearchApi
+from bitmovin_api_sdk.streams.search.search_api import StreamsSearchResponseListQueryParams
 from bitmovin_api_sdk.streams.video.video_api import VideoApi
 from bitmovin_api_sdk.streams.video.video_api import StreamsVideoResponseListQueryParams
 from bitmovin_api_sdk.streams.live.live_api import LiveApi
@@ -1724,8 +1726,10 @@ from bitmovin_api_sdk.models.streams_live_create_request import StreamsLiveCreat
 from bitmovin_api_sdk.models.streams_live_life_cycle import StreamsLiveLifeCycle
 from bitmovin_api_sdk.models.streams_live_response import StreamsLiveResponse
 from bitmovin_api_sdk.models.streams_live_update_request import StreamsLiveUpdateRequest
+from bitmovin_api_sdk.models.streams_search_response import StreamsSearchResponse
 from bitmovin_api_sdk.models.streams_style_config_player_style import StreamsStyleConfigPlayerStyle
 from bitmovin_api_sdk.models.streams_style_config_response import StreamsStyleConfigResponse
+from bitmovin_api_sdk.models.streams_type import StreamsType
 from bitmovin_api_sdk.models.streams_video_create_request import StreamsVideoCreateRequest
 from bitmovin_api_sdk.models.streams_video_encoding_status import StreamsVideoEncodingStatus
 from bitmovin_api_sdk.models.streams_video_encoding_task import StreamsVideoEncodingTask
@@ -1811,4 +1815,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.169.0"
+__version__ = "1.170.0"
