@@ -5756,6 +5756,14 @@ bitmovin\_api\_sdk.models.streams\_style\_config\_response module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.streams\_trimming\_status module
+----------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.streams_trimming_status
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.streams\_type module
 ----------------------------------------------
 

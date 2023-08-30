@@ -1729,6 +1729,7 @@ from bitmovin_api_sdk.models.streams_live_update_request import StreamsLiveUpdat
 from bitmovin_api_sdk.models.streams_search_response import StreamsSearchResponse
 from bitmovin_api_sdk.models.streams_style_config_player_style import StreamsStyleConfigPlayerStyle
 from bitmovin_api_sdk.models.streams_style_config_response import StreamsStyleConfigResponse
+from bitmovin_api_sdk.models.streams_trimming_status import StreamsTrimmingStatus
 from bitmovin_api_sdk.models.streams_type import StreamsType
 from bitmovin_api_sdk.models.streams_video_create_request import StreamsVideoCreateRequest
 from bitmovin_api_sdk.models.streams_video_encoding_status import StreamsVideoEncodingStatus
@@ -1815,4 +1816,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.170.0"
+__version__ = "1.171.0"

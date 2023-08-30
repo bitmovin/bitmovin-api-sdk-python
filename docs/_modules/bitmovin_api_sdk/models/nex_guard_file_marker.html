@@ -190,7 +190,7 @@
         <span class="c1"># type: () -&gt; NexGuardWatermarkingType</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the watermark_type of this NexGuardFileMarker.</span>
 
-<span class="sd">        The type of watermarking to be used. Usually, OTT is the one recommended in production.</span>
+<span class="sd">        The type of watermarking to be used: * `OTT` - A/B watermarking (for video streams only) * `DUPLICATED` - Stream duplication to match A/B video streams in CDN delivery (for audio streams only) </span>
 
 <span class="sd">        :return: The watermark_type of this NexGuardFileMarker.</span>
 <span class="sd">        :rtype: NexGuardWatermarkingType</span>
@@ -202,7 +202,7 @@
         <span class="c1"># type: (NexGuardWatermarkingType) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the watermark_type of this NexGuardFileMarker.</span>
 
-<span class="sd">        The type of watermarking to be used. Usually, OTT is the one recommended in production.</span>
+<span class="sd">        The type of watermarking to be used: * `OTT` - A/B watermarking (for video streams only) * `DUPLICATED` - Stream duplication to match A/B video streams in CDN delivery (for audio streams only) </span>
 
 <span class="sd">        :param watermark_type: The watermark_type of this NexGuardFileMarker.</span>
 <span class="sd">        :type: NexGuardWatermarkingType</span>

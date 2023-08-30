@@ -112,7 +112,7 @@ class NexGuardFileMarker(BitmovinResource):
         # type: () -> NexGuardWatermarkingType
         """Gets the watermark_type of this NexGuardFileMarker.
 
-        The type of watermarking to be used. Usually, OTT is the one recommended in production.
+        The type of watermarking to be used: * `OTT` - A/B watermarking (for video streams only) * `DUPLICATED` - Stream duplication to match A/B video streams in CDN delivery (for audio streams only) 
 
         :return: The watermark_type of this NexGuardFileMarker.
         :rtype: NexGuardWatermarkingType
@@ -124,7 +124,7 @@ class NexGuardFileMarker(BitmovinResource):
         # type: (NexGuardWatermarkingType) -> None
         """Sets the watermark_type of this NexGuardFileMarker.
 
-        The type of watermarking to be used. Usually, OTT is the one recommended in production.
+        The type of watermarking to be used: * `OTT` - A/B watermarking (for video streams only) * `DUPLICATED` - Stream duplication to match A/B video streams in CDN delivery (for audio streams only) 
 
         :param watermark_type: The watermark_type of this NexGuardFileMarker.
         :type: NexGuardWatermarkingType

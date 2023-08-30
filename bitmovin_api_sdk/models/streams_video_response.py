@@ -7,6 +7,7 @@ from bitmovin_api_sdk.common.poscheck import poscheck_model
 from bitmovin_api_sdk.models.streams_ad_config_response import StreamsAdConfigResponse
 from bitmovin_api_sdk.models.streams_content_protection_response import StreamsContentProtectionResponse
 from bitmovin_api_sdk.models.streams_style_config_response import StreamsStyleConfigResponse
+from bitmovin_api_sdk.models.streams_trimming_status import StreamsTrimmingStatus
 from bitmovin_api_sdk.models.streams_video_status import StreamsVideoStatus
 import pprint
 import six
@@ -25,8 +26,9 @@ class StreamsVideoResponse(object):
                  encoding_tasks=None,
                  poster_url=None,
                  ad_config=None,
-                 content_protection=None):
-        # type: (string_types, string_types, string_types, string_types, datetime, StreamsVideoStatus, StreamsStyleConfigResponse, list[StreamsVideoEncodingTask], string_types, StreamsAdConfigResponse, StreamsContentProtectionResponse) -> None
+                 content_protection=None,
+                 trimming=None):
+        # type: (string_types, string_types, string_types, string_types, datetime, StreamsVideoStatus, StreamsStyleConfigResponse, list[StreamsVideoEncodingTask], string_types, StreamsAdConfigResponse, StreamsContentProtectionResponse, StreamsTrimmingStatus) -> None
 
         self._id = None
         self._asset_url = None
@@ -39,6 +41,7 @@ class StreamsVideoResponse(object):
         self._poster_url = None
         self._ad_config = None
         self._content_protection = None
+        self._trimming = None
         self.discriminator = None
 
         if id_ is not None:
@@ -63,6 +66,8 @@ class StreamsVideoResponse(object):
             self.ad_config = ad_config
         if content_protection is not None:
             self.content_protection = content_protection
+        if trimming is not None:
+            self.trimming = trimming
 
     @property
     def openapi_types(self):
@@ -77,7 +82,8 @@ class StreamsVideoResponse(object):
             'encoding_tasks': 'list[StreamsVideoEncodingTask]',
             'poster_url': 'string_types',
             'ad_config': 'StreamsAdConfigResponse',
-            'content_protection': 'StreamsContentProtectionResponse'
+            'content_protection': 'StreamsContentProtectionResponse',
+            'trimming': 'StreamsTrimmingStatus'
         }
 
         return types
@@ -95,7 +101,8 @@ class StreamsVideoResponse(object):
             'encoding_tasks': 'encodingTasks',
             'poster_url': 'posterUrl',
             'ad_config': 'adConfig',
-            'content_protection': 'contentProtection'
+            'content_protection': 'contentProtection',
+            'trimming': 'trimming'
         }
         return attributes
 
@@ -411,6 +418,35 @@ class StreamsVideoResponse(object):
                 raise TypeError("Invalid type for `content_protection`, type has to be `StreamsContentProtectionResponse`")
 
         self._content_protection = content_protection
+
+    @property
+    def trimming(self):
+        # type: () -> StreamsTrimmingStatus
+        """Gets the trimming of this StreamsVideoResponse.
+
+        Stream trimming information
+
+        :return: The trimming of this StreamsVideoResponse.
+        :rtype: StreamsTrimmingStatus
+        """
+        return self._trimming
+
+    @trimming.setter
+    def trimming(self, trimming):
+        # type: (StreamsTrimmingStatus) -> None
+        """Sets the trimming of this StreamsVideoResponse.
+
+        Stream trimming information
+
+        :param trimming: The trimming of this StreamsVideoResponse.
+        :type: StreamsTrimmingStatus
+        """
+
+        if trimming is not None:
+            if not isinstance(trimming, StreamsTrimmingStatus):
+                raise TypeError("Invalid type for `trimming`, type has to be `StreamsTrimmingStatus`")
+
+        self._trimming = trimming
 
     def to_dict(self):
         """Returns the model properties as a dict"""

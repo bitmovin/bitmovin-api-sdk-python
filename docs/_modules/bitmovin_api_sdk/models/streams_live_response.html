@@ -86,6 +86,7 @@
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.streams_content_protection_response</span> <span class="kn">import</span> <span class="n">StreamsContentProtectionResponse</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.streams_live_life_cycle</span> <span class="kn">import</span> <span class="n">StreamsLiveLifeCycle</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.streams_style_config_response</span> <span class="kn">import</span> <span class="n">StreamsStyleConfigResponse</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.streams_trimming_status</span> <span class="kn">import</span> <span class="n">StreamsTrimmingStatus</span>
 <span class="kn">import</span> <span class="nn">pprint</span>
 <span class="kn">import</span> <span class="nn">six</span>
 
@@ -102,8 +103,9 @@
                  <span class="n">style_config</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">poster_url</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">ad_config</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                 <span class="n">content_protection</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (string_types, string_types, string_types, string_types, datetime, StreamsLiveLifeCycle, StreamsStyleConfigResponse, string_types, StreamsAdConfigResponse, StreamsContentProtectionResponse) -&gt; None</span>
+                 <span class="n">content_protection</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">trimming</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="c1"># type: (string_types, string_types, string_types, string_types, datetime, StreamsLiveLifeCycle, StreamsStyleConfigResponse, string_types, StreamsAdConfigResponse, StreamsContentProtectionResponse, StreamsTrimmingStatus) -&gt; None</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_id</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_stream_key</span> <span class="o">=</span> <span class="kc">None</span>
@@ -115,6 +117,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_poster_url</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_ad_config</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_content_protection</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_trimming</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>
 
         <span class="k">if</span> <span class="n">id_</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -137,6 +140,8 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">ad_config</span> <span class="o">=</span> <span class="n">ad_config</span>
         <span class="k">if</span> <span class="n">content_protection</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">content_protection</span> <span class="o">=</span> <span class="n">content_protection</span>
+        <span class="k">if</span> <span class="n">trimming</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">trimming</span> <span class="o">=</span> <span class="n">trimming</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -150,7 +155,8 @@
             <span class="s1">&#39;style_config&#39;</span><span class="p">:</span> <span class="s1">&#39;StreamsStyleConfigResponse&#39;</span><span class="p">,</span>
             <span class="s1">&#39;poster_url&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
             <span class="s1">&#39;ad_config&#39;</span><span class="p">:</span> <span class="s1">&#39;StreamsAdConfigResponse&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;content_protection&#39;</span><span class="p">:</span> <span class="s1">&#39;StreamsContentProtectionResponse&#39;</span>
+            <span class="s1">&#39;content_protection&#39;</span><span class="p">:</span> <span class="s1">&#39;StreamsContentProtectionResponse&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;trimming&#39;</span><span class="p">:</span> <span class="s1">&#39;StreamsTrimmingStatus&#39;</span>
         <span class="p">}</span>
 
         <span class="k">return</span> <span class="n">types</span>
@@ -167,7 +173,8 @@
             <span class="s1">&#39;style_config&#39;</span><span class="p">:</span> <span class="s1">&#39;styleConfig&#39;</span><span class="p">,</span>
             <span class="s1">&#39;poster_url&#39;</span><span class="p">:</span> <span class="s1">&#39;posterUrl&#39;</span><span class="p">,</span>
             <span class="s1">&#39;ad_config&#39;</span><span class="p">:</span> <span class="s1">&#39;adConfig&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;content_protection&#39;</span><span class="p">:</span> <span class="s1">&#39;contentProtection&#39;</span>
+            <span class="s1">&#39;content_protection&#39;</span><span class="p">:</span> <span class="s1">&#39;contentProtection&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;trimming&#39;</span><span class="p">:</span> <span class="s1">&#39;trimming&#39;</span>
         <span class="p">}</span>
         <span class="k">return</span> <span class="n">attributes</span>
 
@@ -454,6 +461,35 @@
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `content_protection`, type has to be `StreamsContentProtectionResponse`&quot;</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_content_protection</span> <span class="o">=</span> <span class="n">content_protection</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">trimming</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; StreamsTrimmingStatus</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the trimming of this StreamsLiveResponse.</span>
+
+<span class="sd">        Stream trimming information</span>
+
+<span class="sd">        :return: The trimming of this StreamsLiveResponse.</span>
+<span class="sd">        :rtype: StreamsTrimmingStatus</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_trimming</span>
+
+    <span class="nd">@trimming</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">trimming</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">trimming</span><span class="p">):</span>
+        <span class="c1"># type: (StreamsTrimmingStatus) -&gt; None</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the trimming of this StreamsLiveResponse.</span>
+
+<span class="sd">        Stream trimming information</span>
+
+<span class="sd">        :param trimming: The trimming of this StreamsLiveResponse.</span>
+<span class="sd">        :type: StreamsTrimmingStatus</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">trimming</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">trimming</span><span class="p">,</span> <span class="n">StreamsTrimmingStatus</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `trimming`, type has to be `StreamsTrimmingStatus`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_trimming</span> <span class="o">=</span> <span class="n">trimming</span>
 
 <div class="viewcode-block" id="StreamsLiveResponse.to_dict"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.streams_live_response.StreamsLiveResponse.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>

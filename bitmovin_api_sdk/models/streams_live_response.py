@@ -8,6 +8,7 @@ from bitmovin_api_sdk.models.streams_ad_config_response import StreamsAdConfigRe
 from bitmovin_api_sdk.models.streams_content_protection_response import StreamsContentProtectionResponse
 from bitmovin_api_sdk.models.streams_live_life_cycle import StreamsLiveLifeCycle
 from bitmovin_api_sdk.models.streams_style_config_response import StreamsStyleConfigResponse
+from bitmovin_api_sdk.models.streams_trimming_status import StreamsTrimmingStatus
 import pprint
 import six
 
@@ -24,8 +25,9 @@ class StreamsLiveResponse(object):
                  style_config=None,
                  poster_url=None,
                  ad_config=None,
-                 content_protection=None):
-        # type: (string_types, string_types, string_types, string_types, datetime, StreamsLiveLifeCycle, StreamsStyleConfigResponse, string_types, StreamsAdConfigResponse, StreamsContentProtectionResponse) -> None
+                 content_protection=None,
+                 trimming=None):
+        # type: (string_types, string_types, string_types, string_types, datetime, StreamsLiveLifeCycle, StreamsStyleConfigResponse, string_types, StreamsAdConfigResponse, StreamsContentProtectionResponse, StreamsTrimmingStatus) -> None
 
         self._id = None
         self._stream_key = None
@@ -37,6 +39,7 @@ class StreamsLiveResponse(object):
         self._poster_url = None
         self._ad_config = None
         self._content_protection = None
+        self._trimming = None
         self.discriminator = None
 
         if id_ is not None:
@@ -59,6 +62,8 @@ class StreamsLiveResponse(object):
             self.ad_config = ad_config
         if content_protection is not None:
             self.content_protection = content_protection
+        if trimming is not None:
+            self.trimming = trimming
 
     @property
     def openapi_types(self):
@@ -72,7 +77,8 @@ class StreamsLiveResponse(object):
             'style_config': 'StreamsStyleConfigResponse',
             'poster_url': 'string_types',
             'ad_config': 'StreamsAdConfigResponse',
-            'content_protection': 'StreamsContentProtectionResponse'
+            'content_protection': 'StreamsContentProtectionResponse',
+            'trimming': 'StreamsTrimmingStatus'
         }
 
         return types
@@ -89,7 +95,8 @@ class StreamsLiveResponse(object):
             'style_config': 'styleConfig',
             'poster_url': 'posterUrl',
             'ad_config': 'adConfig',
-            'content_protection': 'contentProtection'
+            'content_protection': 'contentProtection',
+            'trimming': 'trimming'
         }
         return attributes
 
@@ -376,6 +383,35 @@ class StreamsLiveResponse(object):
                 raise TypeError("Invalid type for `content_protection`, type has to be `StreamsContentProtectionResponse`")
 
         self._content_protection = content_protection
+
+    @property
+    def trimming(self):
+        # type: () -> StreamsTrimmingStatus
+        """Gets the trimming of this StreamsLiveResponse.
+
+        Stream trimming information
+
+        :return: The trimming of this StreamsLiveResponse.
+        :rtype: StreamsTrimmingStatus
+        """
+        return self._trimming
+
+    @trimming.setter
+    def trimming(self, trimming):
+        # type: (StreamsTrimmingStatus) -> None
+        """Sets the trimming of this StreamsLiveResponse.
+
+        Stream trimming information
+
+        :param trimming: The trimming of this StreamsLiveResponse.
+        :type: StreamsTrimmingStatus
+        """
+
+        if trimming is not None:
+            if not isinstance(trimming, StreamsTrimmingStatus):
+                raise TypeError("Invalid type for `trimming`, type has to be `StreamsTrimmingStatus`")
+
+        self._trimming = trimming
 
     def to_dict(self):
         """Returns the model properties as a dict"""
