@@ -1490,6 +1490,7 @@ from bitmovin_api_sdk.models.manifest_generator import ManifestGenerator
 from bitmovin_api_sdk.models.manifest_resource import ManifestResource
 from bitmovin_api_sdk.models.manifest_type import ManifestType
 from bitmovin_api_sdk.models.manifest_type_response import ManifestTypeResponse
+from bitmovin_api_sdk.models.marketplace import Marketplace
 from bitmovin_api_sdk.models.marlin_drm import MarlinDrm
 from bitmovin_api_sdk.models.max_ctu_size import MaxCtuSize
 from bitmovin_api_sdk.models.max_transform_unit_size import MaxTransformUnitSize
@@ -1816,4 +1817,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.171.0"
+__version__ = "1.172.0"

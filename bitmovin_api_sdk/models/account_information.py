@@ -4,6 +4,7 @@ from enum import Enum
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
 from bitmovin_api_sdk.models.bitmovin_resource import BitmovinResource
+from bitmovin_api_sdk.models.marketplace import Marketplace
 import pprint
 import six
 
@@ -23,8 +24,9 @@ class AccountInformation(BitmovinResource):
                  last_name=None,
                  phone=None,
                  company=None,
-                 verified=None):
-        # type: (string_types, string_types, string_types, datetime, datetime, dict, string_types, list[AccountApiKey], string_types, string_types, string_types, string_types, bool) -> None
+                 verified=None,
+                 marketplace=None):
+        # type: (string_types, string_types, string_types, datetime, datetime, dict, string_types, list[AccountApiKey], string_types, string_types, string_types, string_types, bool, Marketplace) -> None
         super(AccountInformation, self).__init__(id_=id_, name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data)
 
         self._email = None
@@ -34,6 +36,7 @@ class AccountInformation(BitmovinResource):
         self._phone = None
         self._company = None
         self._verified = None
+        self._marketplace = None
         self.discriminator = None
 
         if email is not None:
@@ -50,6 +53,8 @@ class AccountInformation(BitmovinResource):
             self.company = company
         if verified is not None:
             self.verified = verified
+        if marketplace is not None:
+            self.marketplace = marketplace
 
     @property
     def openapi_types(self):
@@ -65,7 +70,8 @@ class AccountInformation(BitmovinResource):
             'last_name': 'string_types',
             'phone': 'string_types',
             'company': 'string_types',
-            'verified': 'bool'
+            'verified': 'bool',
+            'marketplace': 'Marketplace'
         })
 
         return types
@@ -84,7 +90,8 @@ class AccountInformation(BitmovinResource):
             'last_name': 'lastName',
             'phone': 'phone',
             'company': 'company',
-            'verified': 'verified'
+            'verified': 'verified',
+            'marketplace': 'marketplace'
         })
         return attributes
 
@@ -288,6 +295,33 @@ class AccountInformation(BitmovinResource):
                 raise TypeError("Invalid type for `verified`, type has to be `bool`")
 
         self._verified = verified
+
+    @property
+    def marketplace(self):
+        # type: () -> Marketplace
+        """Gets the marketplace of this AccountInformation.
+
+
+        :return: The marketplace of this AccountInformation.
+        :rtype: Marketplace
+        """
+        return self._marketplace
+
+    @marketplace.setter
+    def marketplace(self, marketplace):
+        # type: (Marketplace) -> None
+        """Sets the marketplace of this AccountInformation.
+
+
+        :param marketplace: The marketplace of this AccountInformation.
+        :type: Marketplace
+        """
+
+        if marketplace is not None:
+            if not isinstance(marketplace, Marketplace):
+                raise TypeError("Invalid type for `marketplace`, type has to be `Marketplace`")
+
+        self._marketplace = marketplace
 
     def to_dict(self):
         """Returns the model properties as a dict"""

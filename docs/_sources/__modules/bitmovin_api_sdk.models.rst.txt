@@ -3844,6 +3844,14 @@ bitmovin\_api\_sdk.models.manifest\_type\_response module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.marketplace module
+--------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.marketplace
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.marlin\_drm module
 --------------------------------------------
 
