@@ -135,6 +135,20 @@
             <span class="o">**</span><span class="n">kwargs</span>
         <span class="p">)</span></div>
 
+<div class="viewcode-block" id="LiveApi.delete"><a class="viewcode-back" href="../../../../__modules/bitmovin_api_sdk.streams.live.html#bitmovin_api_sdk.streams.live.live_api.LiveApi.delete">[docs]</a>    <span class="k">def</span> <span class="nf">delete</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">stream_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="c1"># type: (string_types, dict) -&gt; None</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Delete Stream</span>
+
+<span class="sd">        :param stream_id: Id of the stream.</span>
+<span class="sd">        :type stream_id: string_types, required</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span>
+            <span class="s1">&#39;/streams/live/</span><span class="si">{stream_id}</span><span class="s1">&#39;</span><span class="p">,</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;stream_id&#39;</span><span class="p">:</span> <span class="n">stream_id</span><span class="p">},</span>
+            <span class="o">**</span><span class="n">kwargs</span>
+        <span class="p">)</span></div>
+
 <div class="viewcode-block" id="LiveApi.get"><a class="viewcode-back" href="../../../../__modules/bitmovin_api_sdk.streams.live.html#bitmovin_api_sdk.streams.live.live_api.LiveApi.get">[docs]</a>    <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">stream_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, dict) -&gt; StreamsLiveResponse</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Get live stream by id</span>

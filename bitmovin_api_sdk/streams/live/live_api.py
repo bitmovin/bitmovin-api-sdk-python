@@ -57,6 +57,20 @@ class LiveApi(BaseApi):
             **kwargs
         )
 
+    def delete(self, stream_id, **kwargs):
+        # type: (string_types, dict) -> None
+        """Delete Stream
+
+        :param stream_id: Id of the stream.
+        :type stream_id: string_types, required
+        """
+
+        self.api_client.delete(
+            '/streams/live/{stream_id}',
+            path_params={'stream_id': stream_id},
+            **kwargs
+        )
+
     def get(self, stream_id, **kwargs):
         # type: (string_types, dict) -> StreamsLiveResponse
         """Get live stream by id
