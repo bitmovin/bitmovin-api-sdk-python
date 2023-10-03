@@ -23,18 +23,18 @@ class EncodingStatisticsVod(EncodingStatistics):
                  billable_transmuxing_minutes=None,
                  billable_feature_minutes=None,
                  time_enqueued=None,
-                 real_time_factor=None):
+                 realtime_factor=None):
         # type: (date, int, int, int, list[BillableEncodingMinutes], list[EgressInformation], list[StatisticsPerStream], list[StatisticsPerMuxing], list[BillableEncodingFeatureMinutes], float, float, int, float) -> None
         super(EncodingStatisticsVod, self).__init__(date_=date_, bytes_encoded=bytes_encoded, time_encoded=time_encoded, bytes_egress=bytes_egress, billable_encoding_minutes=billable_encoding_minutes, billable_egress_bytes=billable_egress_bytes, streams=streams, muxings=muxings, features=features, billable_transmuxing_minutes=billable_transmuxing_minutes, billable_feature_minutes=billable_feature_minutes)
 
         self._time_enqueued = None
-        self._real_time_factor = None
+        self._realtime_factor = None
         self.discriminator = None
 
         if time_enqueued is not None:
             self.time_enqueued = time_enqueued
-        if real_time_factor is not None:
-            self.real_time_factor = real_time_factor
+        if realtime_factor is not None:
+            self.realtime_factor = realtime_factor
 
     @property
     def openapi_types(self):
@@ -45,7 +45,7 @@ class EncodingStatisticsVod(EncodingStatistics):
 
         types.update({
             'time_enqueued': 'int',
-            'real_time_factor': 'float'
+            'realtime_factor': 'float'
         })
 
         return types
@@ -59,7 +59,7 @@ class EncodingStatisticsVod(EncodingStatistics):
 
         attributes.update({
             'time_enqueued': 'timeEnqueued',
-            'real_time_factor': 'realTimeFactor'
+            'realtime_factor': 'realtimeFactor'
         })
         return attributes
 
@@ -93,33 +93,33 @@ class EncodingStatisticsVod(EncodingStatistics):
         self._time_enqueued = time_enqueued
 
     @property
-    def real_time_factor(self):
+    def realtime_factor(self):
         # type: () -> float
-        """Gets the real_time_factor of this EncodingStatisticsVod.
+        """Gets the realtime_factor of this EncodingStatisticsVod.
 
         The realtime factor. (required)
 
-        :return: The real_time_factor of this EncodingStatisticsVod.
+        :return: The realtime_factor of this EncodingStatisticsVod.
         :rtype: float
         """
-        return self._real_time_factor
+        return self._realtime_factor
 
-    @real_time_factor.setter
-    def real_time_factor(self, real_time_factor):
+    @realtime_factor.setter
+    def realtime_factor(self, realtime_factor):
         # type: (float) -> None
-        """Sets the real_time_factor of this EncodingStatisticsVod.
+        """Sets the realtime_factor of this EncodingStatisticsVod.
 
         The realtime factor. (required)
 
-        :param real_time_factor: The real_time_factor of this EncodingStatisticsVod.
+        :param realtime_factor: The realtime_factor of this EncodingStatisticsVod.
         :type: float
         """
 
-        if real_time_factor is not None:
-            if not isinstance(real_time_factor, (float, int)):
-                raise TypeError("Invalid type for `real_time_factor`, type has to be `float`")
+        if realtime_factor is not None:
+            if not isinstance(realtime_factor, (float, int)):
+                raise TypeError("Invalid type for `realtime_factor`, type has to be `float`")
 
-        self._real_time_factor = real_time_factor
+        self._realtime_factor = realtime_factor
 
     def to_dict(self):
         """Returns the model properties as a dict"""

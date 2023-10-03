@@ -39,10 +39,11 @@ class Encoding(BitmovinResource):
                  selected_encoder_version=None,
                  selected_encoding_mode=None,
                  selected_cloud_region=None,
+                 selected_fallback_cloud_regions=None,
                  status=None,
                  labels=None,
                  live_options_type=None):
-        # type: (string_types, string_types, string_types, datetime, datetime, dict, EncodingType, datetime, datetime, datetime, datetime, datetime, int, CloudRegion, list[CloudRegion], string_types, InfrastructureSettings, string_types, string_types, EncodingMode, CloudRegion, Status, list[string_types], LiveOptionsType) -> None
+        # type: (string_types, string_types, string_types, datetime, datetime, dict, EncodingType, datetime, datetime, datetime, datetime, datetime, int, CloudRegion, list[CloudRegion], string_types, InfrastructureSettings, string_types, string_types, EncodingMode, CloudRegion, list[CloudRegion], Status, list[string_types], LiveOptionsType) -> None
         super(Encoding, self).__init__(id_=id_, name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data)
 
         self._type = None
@@ -60,6 +61,7 @@ class Encoding(BitmovinResource):
         self._selected_encoder_version = None
         self._selected_encoding_mode = None
         self._selected_cloud_region = None
+        self._selected_fallback_cloud_regions = list()
         self._status = None
         self._labels = list()
         self._live_options_type = None
@@ -95,6 +97,8 @@ class Encoding(BitmovinResource):
             self.selected_encoding_mode = selected_encoding_mode
         if selected_cloud_region is not None:
             self.selected_cloud_region = selected_cloud_region
+        if selected_fallback_cloud_regions is not None:
+            self.selected_fallback_cloud_regions = selected_fallback_cloud_regions
         if status is not None:
             self.status = status
         if labels is not None:
@@ -125,6 +129,7 @@ class Encoding(BitmovinResource):
             'selected_encoder_version': 'string_types',
             'selected_encoding_mode': 'EncodingMode',
             'selected_cloud_region': 'CloudRegion',
+            'selected_fallback_cloud_regions': 'list[CloudRegion]',
             'status': 'Status',
             'labels': 'list[string_types]',
             'live_options_type': 'LiveOptionsType'
@@ -155,6 +160,7 @@ class Encoding(BitmovinResource):
             'selected_encoder_version': 'selectedEncoderVersion',
             'selected_encoding_mode': 'selectedEncodingMode',
             'selected_cloud_region': 'selectedCloudRegion',
+            'selected_fallback_cloud_regions': 'selectedFallbackCloudRegions',
             'status': 'status',
             'labels': 'labels',
             'live_options_type': 'liveOptionsType'
@@ -591,6 +597,35 @@ class Encoding(BitmovinResource):
                 raise TypeError("Invalid type for `selected_cloud_region`, type has to be `CloudRegion`")
 
         self._selected_cloud_region = selected_cloud_region
+
+    @property
+    def selected_fallback_cloud_regions(self):
+        # type: () -> list[CloudRegion]
+        """Gets the selected_fallback_cloud_regions of this Encoding.
+
+        After the encoding has been started, this will contain the fallback cloud regions that were actually used. This will differ from fallbackCloudRegions if any of the fallbackCloudRegions were set to an unspecific region (e.g. 'AUTO')
+
+        :return: The selected_fallback_cloud_regions of this Encoding.
+        :rtype: list[CloudRegion]
+        """
+        return self._selected_fallback_cloud_regions
+
+    @selected_fallback_cloud_regions.setter
+    def selected_fallback_cloud_regions(self, selected_fallback_cloud_regions):
+        # type: (list) -> None
+        """Sets the selected_fallback_cloud_regions of this Encoding.
+
+        After the encoding has been started, this will contain the fallback cloud regions that were actually used. This will differ from fallbackCloudRegions if any of the fallbackCloudRegions were set to an unspecific region (e.g. 'AUTO')
+
+        :param selected_fallback_cloud_regions: The selected_fallback_cloud_regions of this Encoding.
+        :type: list[CloudRegion]
+        """
+
+        if selected_fallback_cloud_regions is not None:
+            if not isinstance(selected_fallback_cloud_regions, list):
+                raise TypeError("Invalid type for `selected_fallback_cloud_regions`, type has to be `list[CloudRegion]`")
+
+        self._selected_fallback_cloud_regions = selected_fallback_cloud_regions
 
     @property
     def status(self):

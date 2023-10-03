@@ -3,6 +3,7 @@
 from enum import Enum
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
+from bitmovin_api_sdk.models.streams_encoding_profile import StreamsEncodingProfile
 import pprint
 import six
 
@@ -14,14 +15,16 @@ class StreamsVideoCreateRequest(object):
                  title=None,
                  description=None,
                  style_config_id=None,
-                 ad_config_id=None):
-        # type: (string_types, string_types, string_types, string_types, string_types) -> None
+                 ad_config_id=None,
+                 encoding_profile=None):
+        # type: (string_types, string_types, string_types, string_types, string_types, StreamsEncodingProfile) -> None
 
         self._asset_url = None
         self._title = None
         self._description = None
         self._style_config_id = None
         self._ad_config_id = None
+        self._encoding_profile = None
         self.discriminator = None
 
         if asset_url is not None:
@@ -34,6 +37,8 @@ class StreamsVideoCreateRequest(object):
             self.style_config_id = style_config_id
         if ad_config_id is not None:
             self.ad_config_id = ad_config_id
+        if encoding_profile is not None:
+            self.encoding_profile = encoding_profile
 
     @property
     def openapi_types(self):
@@ -42,7 +47,8 @@ class StreamsVideoCreateRequest(object):
             'title': 'string_types',
             'description': 'string_types',
             'style_config_id': 'string_types',
-            'ad_config_id': 'string_types'
+            'ad_config_id': 'string_types',
+            'encoding_profile': 'StreamsEncodingProfile'
         }
 
         return types
@@ -54,7 +60,8 @@ class StreamsVideoCreateRequest(object):
             'title': 'title',
             'description': 'description',
             'style_config_id': 'styleConfigId',
-            'ad_config_id': 'adConfigId'
+            'ad_config_id': 'adConfigId',
+            'encoding_profile': 'encodingProfile'
         }
         return attributes
 
@@ -202,6 +209,35 @@ class StreamsVideoCreateRequest(object):
                 raise TypeError("Invalid type for `ad_config_id`, type has to be `string_types`")
 
         self._ad_config_id = ad_config_id
+
+    @property
+    def encoding_profile(self):
+        # type: () -> StreamsEncodingProfile
+        """Gets the encoding_profile of this StreamsVideoCreateRequest.
+
+        Profile to be used in encoding
+
+        :return: The encoding_profile of this StreamsVideoCreateRequest.
+        :rtype: StreamsEncodingProfile
+        """
+        return self._encoding_profile
+
+    @encoding_profile.setter
+    def encoding_profile(self, encoding_profile):
+        # type: (StreamsEncodingProfile) -> None
+        """Sets the encoding_profile of this StreamsVideoCreateRequest.
+
+        Profile to be used in encoding
+
+        :param encoding_profile: The encoding_profile of this StreamsVideoCreateRequest.
+        :type: StreamsEncodingProfile
+        """
+
+        if encoding_profile is not None:
+            if not isinstance(encoding_profile, StreamsEncodingProfile):
+                raise TypeError("Invalid type for `encoding_profile`, type has to be `StreamsEncodingProfile`")
+
+        self._encoding_profile = encoding_profile
 
     def to_dict(self):
         """Returns the model properties as a dict"""

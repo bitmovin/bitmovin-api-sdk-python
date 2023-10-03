@@ -101,18 +101,18 @@
                  <span class="n">billable_transmuxing_minutes</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">billable_feature_minutes</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">time_enqueued</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                 <span class="n">real_time_factor</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+                 <span class="n">realtime_factor</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="c1"># type: (date, int, int, int, list[BillableEncodingMinutes], list[EgressInformation], list[StatisticsPerStream], list[StatisticsPerMuxing], list[BillableEncodingFeatureMinutes], float, float, int, float) -&gt; None</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">EncodingStatisticsVod</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">date_</span><span class="o">=</span><span class="n">date_</span><span class="p">,</span> <span class="n">bytes_encoded</span><span class="o">=</span><span class="n">bytes_encoded</span><span class="p">,</span> <span class="n">time_encoded</span><span class="o">=</span><span class="n">time_encoded</span><span class="p">,</span> <span class="n">bytes_egress</span><span class="o">=</span><span class="n">bytes_egress</span><span class="p">,</span> <span class="n">billable_encoding_minutes</span><span class="o">=</span><span class="n">billable_encoding_minutes</span><span class="p">,</span> <span class="n">billable_egress_bytes</span><span class="o">=</span><span class="n">billable_egress_bytes</span><span class="p">,</span> <span class="n">streams</span><span class="o">=</span><span class="n">streams</span><span class="p">,</span> <span class="n">muxings</span><span class="o">=</span><span class="n">muxings</span><span class="p">,</span> <span class="n">features</span><span class="o">=</span><span class="n">features</span><span class="p">,</span> <span class="n">billable_transmuxing_minutes</span><span class="o">=</span><span class="n">billable_transmuxing_minutes</span><span class="p">,</span> <span class="n">billable_feature_minutes</span><span class="o">=</span><span class="n">billable_feature_minutes</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_time_enqueued</span> <span class="o">=</span> <span class="kc">None</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_real_time_factor</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_realtime_factor</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>
 
         <span class="k">if</span> <span class="n">time_enqueued</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">time_enqueued</span> <span class="o">=</span> <span class="n">time_enqueued</span>
-        <span class="k">if</span> <span class="n">real_time_factor</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">real_time_factor</span> <span class="o">=</span> <span class="n">real_time_factor</span>
+        <span class="k">if</span> <span class="n">realtime_factor</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">realtime_factor</span> <span class="o">=</span> <span class="n">realtime_factor</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -123,7 +123,7 @@
 
         <span class="n">types</span><span class="o">.</span><span class="n">update</span><span class="p">({</span>
             <span class="s1">&#39;time_enqueued&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;real_time_factor&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span>
+            <span class="s1">&#39;realtime_factor&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span>
         <span class="p">})</span>
 
         <span class="k">return</span> <span class="n">types</span>
@@ -137,7 +137,7 @@
 
         <span class="n">attributes</span><span class="o">.</span><span class="n">update</span><span class="p">({</span>
             <span class="s1">&#39;time_enqueued&#39;</span><span class="p">:</span> <span class="s1">&#39;timeEnqueued&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;real_time_factor&#39;</span><span class="p">:</span> <span class="s1">&#39;realTimeFactor&#39;</span>
+            <span class="s1">&#39;realtime_factor&#39;</span><span class="p">:</span> <span class="s1">&#39;realtimeFactor&#39;</span>
         <span class="p">})</span>
         <span class="k">return</span> <span class="n">attributes</span>
 
@@ -171,33 +171,33 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_time_enqueued</span> <span class="o">=</span> <span class="n">time_enqueued</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">real_time_factor</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">realtime_factor</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; float</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the real_time_factor of this EncodingStatisticsVod.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the realtime_factor of this EncodingStatisticsVod.</span>
 
 <span class="sd">        The realtime factor. (required)</span>
 
-<span class="sd">        :return: The real_time_factor of this EncodingStatisticsVod.</span>
+<span class="sd">        :return: The realtime_factor of this EncodingStatisticsVod.</span>
 <span class="sd">        :rtype: float</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_real_time_factor</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_realtime_factor</span>
 
-    <span class="nd">@real_time_factor</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">real_time_factor</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">real_time_factor</span><span class="p">):</span>
+    <span class="nd">@realtime_factor</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">realtime_factor</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">realtime_factor</span><span class="p">):</span>
         <span class="c1"># type: (float) -&gt; None</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the real_time_factor of this EncodingStatisticsVod.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the realtime_factor of this EncodingStatisticsVod.</span>
 
 <span class="sd">        The realtime factor. (required)</span>
 
-<span class="sd">        :param real_time_factor: The real_time_factor of this EncodingStatisticsVod.</span>
+<span class="sd">        :param realtime_factor: The realtime_factor of this EncodingStatisticsVod.</span>
 <span class="sd">        :type: float</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
-        <span class="k">if</span> <span class="n">real_time_factor</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">real_time_factor</span><span class="p">,</span> <span class="p">(</span><span class="nb">float</span><span class="p">,</span> <span class="nb">int</span><span class="p">)):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `real_time_factor`, type has to be `float`&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">realtime_factor</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">realtime_factor</span><span class="p">,</span> <span class="p">(</span><span class="nb">float</span><span class="p">,</span> <span class="nb">int</span><span class="p">)):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `realtime_factor`, type has to be `float`&quot;</span><span class="p">)</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">_real_time_factor</span> <span class="o">=</span> <span class="n">real_time_factor</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_realtime_factor</span> <span class="o">=</span> <span class="n">realtime_factor</span>
 
 <div class="viewcode-block" id="EncodingStatisticsVod.to_dict"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.encoding_statistics_vod.EncodingStatisticsVod.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>

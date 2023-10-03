@@ -5708,6 +5708,14 @@ bitmovin\_api\_sdk.models.streams\_content\_protection\_response module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.streams\_encoding\_profile module
+-----------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.streams_encoding_profile
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.streams\_live\_create\_request module
 ---------------------------------------------------------------
 
