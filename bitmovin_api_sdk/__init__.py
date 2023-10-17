@@ -1631,6 +1631,7 @@ from bitmovin_api_sdk.models.sidecar_error_mode import SidecarErrorMode
 from bitmovin_api_sdk.models.sidecar_file import SidecarFile
 from bitmovin_api_sdk.models.sidecar_file_type import SidecarFileType
 from bitmovin_api_sdk.models.signature_type import SignatureType
+from bitmovin_api_sdk.models.signup_source import SignupSource
 from bitmovin_api_sdk.models.simple_encoding_live_cloud_region import SimpleEncodingLiveCloudRegion
 from bitmovin_api_sdk.models.simple_encoding_live_job_access_key_credentials import SimpleEncodingLiveJobAccessKeyCredentials
 from bitmovin_api_sdk.models.simple_encoding_live_job_azure_credentials import SimpleEncodingLiveJobAzureCredentials
@@ -1818,4 +1819,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.175.0"
+__version__ = "1.176.0"

@@ -125,23 +125,3 @@ class LiveApi(BaseApi):
             type=StreamsLiveResponse,
             **kwargs
         )
-
-    def update(self, stream_id, streams_live_update_request, **kwargs):
-        # type: (string_types, StreamsLiveUpdateRequest, dict) -> StreamsLiveResponse
-        """Update live stream by id
-
-        :param stream_id: Id of the stream.
-        :type stream_id: string_types, required
-        :param streams_live_update_request: The updated Streams live object.
-        :type streams_live_update_request: StreamsLiveUpdateRequest, required
-        :return:
-        :rtype: StreamsLiveResponse
-        """
-
-        return self.api_client.put(
-            '/streams/live/{stream_id}',
-            streams_live_update_request,
-            path_params={'stream_id': stream_id},
-            type=StreamsLiveResponse,
-            **kwargs
-        )

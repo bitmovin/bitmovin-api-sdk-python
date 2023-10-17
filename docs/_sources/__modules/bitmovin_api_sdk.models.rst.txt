@@ -4972,6 +4972,14 @@ bitmovin\_api\_sdk.models.signature\_type module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.signup\_source module
+-----------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.signup_source
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.simple\_encoding\_live\_cloud\_region module
 ----------------------------------------------------------------------
 

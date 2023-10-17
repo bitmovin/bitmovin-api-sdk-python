@@ -12,42 +12,27 @@ class StreamsLiveUpdateRequest(object):
     def __init__(self,
                  title=None,
                  description=None,
-                 style_config_id=None,
-                 poster_url=None,
-                 ad_config_id=None,
-                 content_protection_id=None):
-        # type: (string_types, string_types, string_types, string_types, string_types, string_types) -> None
+                 poster_url=None):
+        # type: (string_types, string_types, string_types) -> None
 
         self._title = None
         self._description = None
-        self._style_config_id = None
         self._poster_url = None
-        self._ad_config_id = None
-        self._content_protection_id = None
         self.discriminator = None
 
         if title is not None:
             self.title = title
         if description is not None:
             self.description = description
-        if style_config_id is not None:
-            self.style_config_id = style_config_id
         if poster_url is not None:
             self.poster_url = poster_url
-        if ad_config_id is not None:
-            self.ad_config_id = ad_config_id
-        if content_protection_id is not None:
-            self.content_protection_id = content_protection_id
 
     @property
     def openapi_types(self):
         types = {
             'title': 'string_types',
             'description': 'string_types',
-            'style_config_id': 'string_types',
-            'poster_url': 'string_types',
-            'ad_config_id': 'string_types',
-            'content_protection_id': 'string_types'
+            'poster_url': 'string_types'
         }
 
         return types
@@ -57,10 +42,7 @@ class StreamsLiveUpdateRequest(object):
         attributes = {
             'title': 'title',
             'description': 'description',
-            'style_config_id': 'styleConfigId',
-            'poster_url': 'posterUrl',
-            'ad_config_id': 'adConfigId',
-            'content_protection_id': 'contentProtectionId'
+            'poster_url': 'posterUrl'
         }
         return attributes
 
@@ -123,35 +105,6 @@ class StreamsLiveUpdateRequest(object):
         self._description = description
 
     @property
-    def style_config_id(self):
-        # type: () -> string_types
-        """Gets the style_config_id of this StreamsLiveUpdateRequest.
-
-        Id of the style config to use
-
-        :return: The style_config_id of this StreamsLiveUpdateRequest.
-        :rtype: string_types
-        """
-        return self._style_config_id
-
-    @style_config_id.setter
-    def style_config_id(self, style_config_id):
-        # type: (string_types) -> None
-        """Sets the style_config_id of this StreamsLiveUpdateRequest.
-
-        Id of the style config to use
-
-        :param style_config_id: The style_config_id of this StreamsLiveUpdateRequest.
-        :type: string_types
-        """
-
-        if style_config_id is not None:
-            if not isinstance(style_config_id, string_types):
-                raise TypeError("Invalid type for `style_config_id`, type has to be `string_types`")
-
-        self._style_config_id = style_config_id
-
-    @property
     def poster_url(self):
         # type: () -> string_types
         """Gets the poster_url of this StreamsLiveUpdateRequest.
@@ -179,64 +132,6 @@ class StreamsLiveUpdateRequest(object):
                 raise TypeError("Invalid type for `poster_url`, type has to be `string_types`")
 
         self._poster_url = poster_url
-
-    @property
-    def ad_config_id(self):
-        # type: () -> string_types
-        """Gets the ad_config_id of this StreamsLiveUpdateRequest.
-
-        Id of the advertisement config to use
-
-        :return: The ad_config_id of this StreamsLiveUpdateRequest.
-        :rtype: string_types
-        """
-        return self._ad_config_id
-
-    @ad_config_id.setter
-    def ad_config_id(self, ad_config_id):
-        # type: (string_types) -> None
-        """Sets the ad_config_id of this StreamsLiveUpdateRequest.
-
-        Id of the advertisement config to use
-
-        :param ad_config_id: The ad_config_id of this StreamsLiveUpdateRequest.
-        :type: string_types
-        """
-
-        if ad_config_id is not None:
-            if not isinstance(ad_config_id, string_types):
-                raise TypeError("Invalid type for `ad_config_id`, type has to be `string_types`")
-
-        self._ad_config_id = ad_config_id
-
-    @property
-    def content_protection_id(self):
-        # type: () -> string_types
-        """Gets the content_protection_id of this StreamsLiveUpdateRequest.
-
-        Id of the content protection config to use
-
-        :return: The content_protection_id of this StreamsLiveUpdateRequest.
-        :rtype: string_types
-        """
-        return self._content_protection_id
-
-    @content_protection_id.setter
-    def content_protection_id(self, content_protection_id):
-        # type: (string_types) -> None
-        """Sets the content_protection_id of this StreamsLiveUpdateRequest.
-
-        Id of the content protection config to use
-
-        :param content_protection_id: The content_protection_id of this StreamsLiveUpdateRequest.
-        :type: string_types
-        """
-
-        if content_protection_id is not None:
-            if not isinstance(content_protection_id, string_types):
-                raise TypeError("Invalid type for `content_protection_id`, type has to be `string_types`")
-
-        self._content_protection_id = content_protection_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

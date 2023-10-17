@@ -5,6 +5,7 @@ from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
 from bitmovin_api_sdk.models.bitmovin_resource import BitmovinResource
 from bitmovin_api_sdk.models.organization_type import OrganizationType
+from bitmovin_api_sdk.models.signup_source import SignupSource
 import pprint
 import six
 
@@ -21,14 +22,16 @@ class Organization(BitmovinResource):
                  type_=None,
                  parent_id=None,
                  label_color=None,
-                 limits_per_resource=None):
-        # type: (string_types, string_types, string_types, datetime, datetime, dict, OrganizationType, string_types, string_types, list[ResourceLimitContainer]) -> None
+                 limits_per_resource=None,
+                 signup_source=None):
+        # type: (string_types, string_types, string_types, datetime, datetime, dict, OrganizationType, string_types, string_types, list[ResourceLimitContainer], SignupSource) -> None
         super(Organization, self).__init__(id_=id_, name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data)
 
         self._type = None
         self._parent_id = None
         self._label_color = None
         self._limits_per_resource = list()
+        self._signup_source = None
         self.discriminator = None
 
         if type_ is not None:
@@ -39,6 +42,8 @@ class Organization(BitmovinResource):
             self.label_color = label_color
         if limits_per_resource is not None:
             self.limits_per_resource = limits_per_resource
+        if signup_source is not None:
+            self.signup_source = signup_source
 
     @property
     def openapi_types(self):
@@ -51,7 +56,8 @@ class Organization(BitmovinResource):
             'type': 'OrganizationType',
             'parent_id': 'string_types',
             'label_color': 'string_types',
-            'limits_per_resource': 'list[ResourceLimitContainer]'
+            'limits_per_resource': 'list[ResourceLimitContainer]',
+            'signup_source': 'SignupSource'
         })
 
         return types
@@ -67,7 +73,8 @@ class Organization(BitmovinResource):
             'type': 'type',
             'parent_id': 'parentId',
             'label_color': 'labelColor',
-            'limits_per_resource': 'limitsPerResource'
+            'limits_per_resource': 'limitsPerResource',
+            'signup_source': 'signupSource'
         })
         return attributes
 
@@ -184,6 +191,35 @@ class Organization(BitmovinResource):
                 raise TypeError("Invalid type for `limits_per_resource`, type has to be `list[ResourceLimitContainer]`")
 
         self._limits_per_resource = limits_per_resource
+
+    @property
+    def signup_source(self):
+        # type: () -> SignupSource
+        """Gets the signup_source of this Organization.
+
+        which platform initiated organisation creation
+
+        :return: The signup_source of this Organization.
+        :rtype: SignupSource
+        """
+        return self._signup_source
+
+    @signup_source.setter
+    def signup_source(self, signup_source):
+        # type: (SignupSource) -> None
+        """Sets the signup_source of this Organization.
+
+        which platform initiated organisation creation
+
+        :param signup_source: The signup_source of this Organization.
+        :type: SignupSource
+        """
+
+        if signup_source is not None:
+            if not isinstance(signup_source, SignupSource):
+                raise TypeError("Invalid type for `signup_source`, type has to be `SignupSource`")
+
+        self._signup_source = signup_source
 
     def to_dict(self):
         """Returns the model properties as a dict"""

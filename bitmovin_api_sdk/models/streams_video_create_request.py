@@ -14,16 +14,12 @@ class StreamsVideoCreateRequest(object):
                  asset_url=None,
                  title=None,
                  description=None,
-                 style_config_id=None,
-                 ad_config_id=None,
                  encoding_profile=None):
-        # type: (string_types, string_types, string_types, string_types, string_types, StreamsEncodingProfile) -> None
+        # type: (string_types, string_types, string_types, StreamsEncodingProfile) -> None
 
         self._asset_url = None
         self._title = None
         self._description = None
-        self._style_config_id = None
-        self._ad_config_id = None
         self._encoding_profile = None
         self.discriminator = None
 
@@ -33,10 +29,6 @@ class StreamsVideoCreateRequest(object):
             self.title = title
         if description is not None:
             self.description = description
-        if style_config_id is not None:
-            self.style_config_id = style_config_id
-        if ad_config_id is not None:
-            self.ad_config_id = ad_config_id
         if encoding_profile is not None:
             self.encoding_profile = encoding_profile
 
@@ -46,8 +38,6 @@ class StreamsVideoCreateRequest(object):
             'asset_url': 'string_types',
             'title': 'string_types',
             'description': 'string_types',
-            'style_config_id': 'string_types',
-            'ad_config_id': 'string_types',
             'encoding_profile': 'StreamsEncodingProfile'
         }
 
@@ -59,8 +49,6 @@ class StreamsVideoCreateRequest(object):
             'asset_url': 'assetUrl',
             'title': 'title',
             'description': 'description',
-            'style_config_id': 'styleConfigId',
-            'ad_config_id': 'adConfigId',
             'encoding_profile': 'encodingProfile'
         }
         return attributes
@@ -151,64 +139,6 @@ class StreamsVideoCreateRequest(object):
                 raise TypeError("Invalid type for `description`, type has to be `string_types`")
 
         self._description = description
-
-    @property
-    def style_config_id(self):
-        # type: () -> string_types
-        """Gets the style_config_id of this StreamsVideoCreateRequest.
-
-        Id of the style config to use
-
-        :return: The style_config_id of this StreamsVideoCreateRequest.
-        :rtype: string_types
-        """
-        return self._style_config_id
-
-    @style_config_id.setter
-    def style_config_id(self, style_config_id):
-        # type: (string_types) -> None
-        """Sets the style_config_id of this StreamsVideoCreateRequest.
-
-        Id of the style config to use
-
-        :param style_config_id: The style_config_id of this StreamsVideoCreateRequest.
-        :type: string_types
-        """
-
-        if style_config_id is not None:
-            if not isinstance(style_config_id, string_types):
-                raise TypeError("Invalid type for `style_config_id`, type has to be `string_types`")
-
-        self._style_config_id = style_config_id
-
-    @property
-    def ad_config_id(self):
-        # type: () -> string_types
-        """Gets the ad_config_id of this StreamsVideoCreateRequest.
-
-        Id of the advertisement config to use
-
-        :return: The ad_config_id of this StreamsVideoCreateRequest.
-        :rtype: string_types
-        """
-        return self._ad_config_id
-
-    @ad_config_id.setter
-    def ad_config_id(self, ad_config_id):
-        # type: (string_types) -> None
-        """Sets the ad_config_id of this StreamsVideoCreateRequest.
-
-        Id of the advertisement config to use
-
-        :param ad_config_id: The ad_config_id of this StreamsVideoCreateRequest.
-        :type: string_types
-        """
-
-        if ad_config_id is not None:
-            if not isinstance(ad_config_id, string_types):
-                raise TypeError("Invalid type for `ad_config_id`, type has to be `string_types`")
-
-        self._ad_config_id = ad_config_id
 
     @property
     def encoding_profile(self):

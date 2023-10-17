@@ -92,16 +92,12 @@
                  <span class="n">asset_url</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">title</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">description</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                 <span class="n">style_config_id</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                 <span class="n">ad_config_id</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">encoding_profile</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (string_types, string_types, string_types, string_types, string_types, StreamsEncodingProfile) -&gt; None</span>
+        <span class="c1"># type: (string_types, string_types, string_types, StreamsEncodingProfile) -&gt; None</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_asset_url</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_title</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_description</span> <span class="o">=</span> <span class="kc">None</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_style_config_id</span> <span class="o">=</span> <span class="kc">None</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_ad_config_id</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_encoding_profile</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>
 
@@ -111,10 +107,6 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">title</span> <span class="o">=</span> <span class="n">title</span>
         <span class="k">if</span> <span class="n">description</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">description</span> <span class="o">=</span> <span class="n">description</span>
-        <span class="k">if</span> <span class="n">style_config_id</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">style_config_id</span> <span class="o">=</span> <span class="n">style_config_id</span>
-        <span class="k">if</span> <span class="n">ad_config_id</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">ad_config_id</span> <span class="o">=</span> <span class="n">ad_config_id</span>
         <span class="k">if</span> <span class="n">encoding_profile</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">encoding_profile</span> <span class="o">=</span> <span class="n">encoding_profile</span>
 
@@ -124,8 +116,6 @@
             <span class="s1">&#39;asset_url&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
             <span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
             <span class="s1">&#39;description&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;style_config_id&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;ad_config_id&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
             <span class="s1">&#39;encoding_profile&#39;</span><span class="p">:</span> <span class="s1">&#39;StreamsEncodingProfile&#39;</span>
         <span class="p">}</span>
 
@@ -137,8 +127,6 @@
             <span class="s1">&#39;asset_url&#39;</span><span class="p">:</span> <span class="s1">&#39;assetUrl&#39;</span><span class="p">,</span>
             <span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="s1">&#39;title&#39;</span><span class="p">,</span>
             <span class="s1">&#39;description&#39;</span><span class="p">:</span> <span class="s1">&#39;description&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;style_config_id&#39;</span><span class="p">:</span> <span class="s1">&#39;styleConfigId&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;ad_config_id&#39;</span><span class="p">:</span> <span class="s1">&#39;adConfigId&#39;</span><span class="p">,</span>
             <span class="s1">&#39;encoding_profile&#39;</span><span class="p">:</span> <span class="s1">&#39;encodingProfile&#39;</span>
         <span class="p">}</span>
         <span class="k">return</span> <span class="n">attributes</span>
@@ -229,64 +217,6 @@
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `description`, type has to be `string_types`&quot;</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_description</span> <span class="o">=</span> <span class="n">description</span>
-
-    <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">style_config_id</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="c1"># type: () -&gt; string_types</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the style_config_id of this StreamsVideoCreateRequest.</span>
-
-<span class="sd">        Id of the style config to use</span>
-
-<span class="sd">        :return: The style_config_id of this StreamsVideoCreateRequest.</span>
-<span class="sd">        :rtype: string_types</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_style_config_id</span>
-
-    <span class="nd">@style_config_id</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">style_config_id</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">style_config_id</span><span class="p">):</span>
-        <span class="c1"># type: (string_types) -&gt; None</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the style_config_id of this StreamsVideoCreateRequest.</span>
-
-<span class="sd">        Id of the style config to use</span>
-
-<span class="sd">        :param style_config_id: The style_config_id of this StreamsVideoCreateRequest.</span>
-<span class="sd">        :type: string_types</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-
-        <span class="k">if</span> <span class="n">style_config_id</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">style_config_id</span><span class="p">,</span> <span class="n">string_types</span><span class="p">):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `style_config_id`, type has to be `string_types`&quot;</span><span class="p">)</span>
-
-        <span class="bp">self</span><span class="o">.</span><span class="n">_style_config_id</span> <span class="o">=</span> <span class="n">style_config_id</span>
-
-    <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">ad_config_id</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="c1"># type: () -&gt; string_types</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the ad_config_id of this StreamsVideoCreateRequest.</span>
-
-<span class="sd">        Id of the advertisement config to use</span>
-
-<span class="sd">        :return: The ad_config_id of this StreamsVideoCreateRequest.</span>
-<span class="sd">        :rtype: string_types</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_ad_config_id</span>
-
-    <span class="nd">@ad_config_id</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">ad_config_id</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ad_config_id</span><span class="p">):</span>
-        <span class="c1"># type: (string_types) -&gt; None</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the ad_config_id of this StreamsVideoCreateRequest.</span>
-
-<span class="sd">        Id of the advertisement config to use</span>
-
-<span class="sd">        :param ad_config_id: The ad_config_id of this StreamsVideoCreateRequest.</span>
-<span class="sd">        :type: string_types</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-
-        <span class="k">if</span> <span class="n">ad_config_id</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">ad_config_id</span><span class="p">,</span> <span class="n">string_types</span><span class="p">):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `ad_config_id`, type has to be `string_types`&quot;</span><span class="p">)</span>
-
-        <span class="bp">self</span><span class="o">.</span><span class="n">_ad_config_id</span> <span class="o">=</span> <span class="n">ad_config_id</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">encoding_profile</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
