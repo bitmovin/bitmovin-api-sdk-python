@@ -93,7 +93,7 @@ class LiveHlsManifest(object):
         # type: () -> float
         """Gets the timeshift of this LiveHlsManifest.
 
-        Timeshift in seconds
+        Timeshift in seconds. We recommend to use a timeshift value not greater than 3 hours (10800.0 seconds). Longer values could negatively impact the manifest update frequency. 
 
         :return: The timeshift of this LiveHlsManifest.
         :rtype: float
@@ -105,7 +105,7 @@ class LiveHlsManifest(object):
         # type: (float) -> None
         """Sets the timeshift of this LiveHlsManifest.
 
-        Timeshift in seconds
+        Timeshift in seconds. We recommend to use a timeshift value not greater than 3 hours (10800.0 seconds). Longer values could negatively impact the manifest update frequency. 
 
         :param timeshift: The timeshift of this LiveHlsManifest.
         :type: float

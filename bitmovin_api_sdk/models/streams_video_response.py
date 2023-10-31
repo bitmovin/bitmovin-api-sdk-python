@@ -27,8 +27,9 @@ class StreamsVideoResponse(object):
                  poster_url=None,
                  ad_config=None,
                  content_protection=None,
-                 trimming=None):
-        # type: (string_types, string_types, string_types, string_types, datetime, StreamsVideoStatus, StreamsStyleConfigResponse, list[StreamsVideoEncodingTask], string_types, StreamsAdConfigResponse, StreamsContentProtectionResponse, StreamsTrimmingStatus) -> None
+                 trimming=None,
+                 download_url=None):
+        # type: (string_types, string_types, string_types, string_types, datetime, StreamsVideoStatus, StreamsStyleConfigResponse, list[StreamsVideoEncodingTask], string_types, StreamsAdConfigResponse, StreamsContentProtectionResponse, StreamsTrimmingStatus, string_types) -> None
 
         self._id = None
         self._asset_url = None
@@ -42,6 +43,7 @@ class StreamsVideoResponse(object):
         self._ad_config = None
         self._content_protection = None
         self._trimming = None
+        self._download_url = None
         self.discriminator = None
 
         if id_ is not None:
@@ -68,6 +70,8 @@ class StreamsVideoResponse(object):
             self.content_protection = content_protection
         if trimming is not None:
             self.trimming = trimming
+        if download_url is not None:
+            self.download_url = download_url
 
     @property
     def openapi_types(self):
@@ -83,7 +87,8 @@ class StreamsVideoResponse(object):
             'poster_url': 'string_types',
             'ad_config': 'StreamsAdConfigResponse',
             'content_protection': 'StreamsContentProtectionResponse',
-            'trimming': 'StreamsTrimmingStatus'
+            'trimming': 'StreamsTrimmingStatus',
+            'download_url': 'string_types'
         }
 
         return types
@@ -102,7 +107,8 @@ class StreamsVideoResponse(object):
             'poster_url': 'posterUrl',
             'ad_config': 'adConfig',
             'content_protection': 'contentProtection',
-            'trimming': 'trimming'
+            'trimming': 'trimming',
+            'download_url': 'downloadUrl'
         }
         return attributes
 
@@ -447,6 +453,35 @@ class StreamsVideoResponse(object):
                 raise TypeError("Invalid type for `trimming`, type has to be `StreamsTrimmingStatus`")
 
         self._trimming = trimming
+
+    @property
+    def download_url(self):
+        # type: () -> string_types
+        """Gets the download_url of this StreamsVideoResponse.
+
+        Single-file download URL of the unaltered video in the best available quality
+
+        :return: The download_url of this StreamsVideoResponse.
+        :rtype: string_types
+        """
+        return self._download_url
+
+    @download_url.setter
+    def download_url(self, download_url):
+        # type: (string_types) -> None
+        """Sets the download_url of this StreamsVideoResponse.
+
+        Single-file download URL of the unaltered video in the best available quality
+
+        :param download_url: The download_url of this StreamsVideoResponse.
+        :type: string_types
+        """
+
+        if download_url is not None:
+            if not isinstance(download_url, string_types):
+                raise TypeError("Invalid type for `download_url`, type has to be `string_types`")
+
+        self._download_url = download_url
 
     def to_dict(self):
         """Returns the model properties as a dict"""

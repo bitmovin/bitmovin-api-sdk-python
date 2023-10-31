@@ -171,7 +171,7 @@
         <span class="c1"># type: () -&gt; float</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the timeshift of this LiveHlsManifest.</span>
 
-<span class="sd">        Timeshift in seconds</span>
+<span class="sd">        Timeshift in seconds. We recommend to use a timeshift value not greater than 3 hours (10800.0 seconds). Longer values could negatively impact the manifest update frequency. </span>
 
 <span class="sd">        :return: The timeshift of this LiveHlsManifest.</span>
 <span class="sd">        :rtype: float</span>
@@ -183,7 +183,7 @@
         <span class="c1"># type: (float) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the timeshift of this LiveHlsManifest.</span>
 
-<span class="sd">        Timeshift in seconds</span>
+<span class="sd">        Timeshift in seconds. We recommend to use a timeshift value not greater than 3 hours (10800.0 seconds). Longer values could negatively impact the manifest update frequency. </span>
 
 <span class="sd">        :param timeshift: The timeshift of this LiveHlsManifest.</span>
 <span class="sd">        :type: float</span>
