@@ -25,8 +25,9 @@ class AccountInformation(BitmovinResource):
                  phone=None,
                  company=None,
                  verified=None,
-                 marketplace=None):
-        # type: (string_types, string_types, string_types, datetime, datetime, dict, string_types, list[AccountApiKey], string_types, string_types, string_types, string_types, bool, Marketplace) -> None
+                 marketplace=None,
+                 mfa_enabled=None):
+        # type: (string_types, string_types, string_types, datetime, datetime, dict, string_types, list[AccountApiKey], string_types, string_types, string_types, string_types, bool, Marketplace, bool) -> None
         super(AccountInformation, self).__init__(id_=id_, name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data)
 
         self._email = None
@@ -37,6 +38,7 @@ class AccountInformation(BitmovinResource):
         self._company = None
         self._verified = None
         self._marketplace = None
+        self._mfa_enabled = None
         self.discriminator = None
 
         if email is not None:
@@ -55,6 +57,8 @@ class AccountInformation(BitmovinResource):
             self.verified = verified
         if marketplace is not None:
             self.marketplace = marketplace
+        if mfa_enabled is not None:
+            self.mfa_enabled = mfa_enabled
 
     @property
     def openapi_types(self):
@@ -71,7 +75,8 @@ class AccountInformation(BitmovinResource):
             'phone': 'string_types',
             'company': 'string_types',
             'verified': 'bool',
-            'marketplace': 'Marketplace'
+            'marketplace': 'Marketplace',
+            'mfa_enabled': 'bool'
         })
 
         return types
@@ -91,7 +96,8 @@ class AccountInformation(BitmovinResource):
             'phone': 'phone',
             'company': 'company',
             'verified': 'verified',
-            'marketplace': 'marketplace'
+            'marketplace': 'marketplace',
+            'mfa_enabled': 'mfaEnabled'
         })
         return attributes
 
@@ -322,6 +328,33 @@ class AccountInformation(BitmovinResource):
                 raise TypeError("Invalid type for `marketplace`, type has to be `Marketplace`")
 
         self._marketplace = marketplace
+
+    @property
+    def mfa_enabled(self):
+        # type: () -> bool
+        """Gets the mfa_enabled of this AccountInformation.
+
+
+        :return: The mfa_enabled of this AccountInformation.
+        :rtype: bool
+        """
+        return self._mfa_enabled
+
+    @mfa_enabled.setter
+    def mfa_enabled(self, mfa_enabled):
+        # type: (bool) -> None
+        """Sets the mfa_enabled of this AccountInformation.
+
+
+        :param mfa_enabled: The mfa_enabled of this AccountInformation.
+        :type: bool
+        """
+
+        if mfa_enabled is not None:
+            if not isinstance(mfa_enabled, bool):
+                raise TypeError("Invalid type for `mfa_enabled`, type has to be `bool`")
+
+        self._mfa_enabled = mfa_enabled
 
     def to_dict(self):
         """Returns the model properties as a dict"""

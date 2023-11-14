@@ -9,6 +9,7 @@ Subpackages
 
    bitmovin_api_sdk.account.organizations.groups
    bitmovin_api_sdk.account.organizations.sub_organizations
+   bitmovin_api_sdk.account.organizations.tenants
 
 Submodules
 ----------

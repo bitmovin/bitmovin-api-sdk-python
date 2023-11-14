@@ -15,6 +15,8 @@ from bitmovin_api_sdk.account.organizations.organizations_api import Organizatio
 
 from bitmovin_api_sdk.account.organizations.sub_organizations.sub_organizations_api import SubOrganizationsApi
 from bitmovin_api_sdk.account.organizations.sub_organizations.sub_organizations_api import OrganizationListQueryParams
+from bitmovin_api_sdk.account.organizations.tenants.tenants_api import TenantsApi
+
 from bitmovin_api_sdk.account.organizations.groups.groups_api import GroupsApi
 
 from bitmovin_api_sdk.account.organizations.groups.tenants.tenants_api import TenantsApi
@@ -1009,6 +1011,8 @@ from bitmovin_api_sdk.streams.live.stop.stop_api import StopApi
 
 from bitmovin_api_sdk.streams.live.start.start_api import StartApi
 
+from bitmovin_api_sdk.streams.signing_keys.signing_keys_api import SigningKeysApi
+
 
 from bitmovin_api_sdk.models.aac_audio_configuration import AacAudioConfiguration
 from bitmovin_api_sdk.models.aac_channel_layout import AacChannelLayout
@@ -1729,7 +1733,10 @@ from bitmovin_api_sdk.models.streams_live_create_request import StreamsLiveCreat
 from bitmovin_api_sdk.models.streams_live_life_cycle import StreamsLiveLifeCycle
 from bitmovin_api_sdk.models.streams_live_response import StreamsLiveResponse
 from bitmovin_api_sdk.models.streams_live_update_request import StreamsLiveUpdateRequest
+from bitmovin_api_sdk.models.streams_public_signing_key import StreamsPublicSigningKey
+from bitmovin_api_sdk.models.streams_public_signing_key_response import StreamsPublicSigningKeyResponse
 from bitmovin_api_sdk.models.streams_search_response import StreamsSearchResponse
+from bitmovin_api_sdk.models.streams_signing_key_response import StreamsSigningKeyResponse
 from bitmovin_api_sdk.models.streams_style_config_player_style import StreamsStyleConfigPlayerStyle
 from bitmovin_api_sdk.models.streams_style_config_response import StreamsStyleConfigResponse
 from bitmovin_api_sdk.models.streams_trimming_status import StreamsTrimmingStatus
@@ -1748,6 +1755,8 @@ from bitmovin_api_sdk.models.subtitle_stream import SubtitleStream
 from bitmovin_api_sdk.models.subtitles_media_info import SubtitlesMediaInfo
 from bitmovin_api_sdk.models.task import Task
 from bitmovin_api_sdk.models.tenant import Tenant
+from bitmovin_api_sdk.models.tenant_group_detail import TenantGroupDetail
+from bitmovin_api_sdk.models.tenant_with_groups import TenantWithGroups
 from bitmovin_api_sdk.models.text_filter import TextFilter
 from bitmovin_api_sdk.models.text_filter_font import TextFilterFont
 from bitmovin_api_sdk.models.text_muxing import TextMuxing
@@ -1819,4 +1828,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.177.0"
+__version__ = "1.178.1"

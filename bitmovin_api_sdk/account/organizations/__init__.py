@@ -1,3 +1,4 @@
 from bitmovin_api_sdk.account.organizations.organizations_api import OrganizationsApi
 from bitmovin_api_sdk.account.organizations.sub_organizations.sub_organizations_api import SubOrganizationsApi
+from bitmovin_api_sdk.account.organizations.tenants.tenants_api import TenantsApi
 from bitmovin_api_sdk.account.organizations.groups.groups_api import GroupsApi

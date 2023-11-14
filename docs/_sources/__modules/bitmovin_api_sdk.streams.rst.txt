@@ -9,6 +9,7 @@ Subpackages
 
    bitmovin_api_sdk.streams.live
    bitmovin_api_sdk.streams.search
+   bitmovin_api_sdk.streams.signing_keys
    bitmovin_api_sdk.streams.video
 
 Submodules

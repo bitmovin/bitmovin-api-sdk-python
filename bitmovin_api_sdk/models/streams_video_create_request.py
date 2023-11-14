@@ -14,13 +14,15 @@ class StreamsVideoCreateRequest(object):
                  asset_url=None,
                  title=None,
                  description=None,
-                 encoding_profile=None):
-        # type: (string_types, string_types, string_types, StreamsEncodingProfile) -> None
+                 encoding_profile=None,
+                 signed=None):
+        # type: (string_types, string_types, string_types, StreamsEncodingProfile, bool) -> None
 
         self._asset_url = None
         self._title = None
         self._description = None
         self._encoding_profile = None
+        self._signed = None
         self.discriminator = None
 
         if asset_url is not None:
@@ -31,6 +33,8 @@ class StreamsVideoCreateRequest(object):
             self.description = description
         if encoding_profile is not None:
             self.encoding_profile = encoding_profile
+        if signed is not None:
+            self.signed = signed
 
     @property
     def openapi_types(self):
@@ -38,7 +42,8 @@ class StreamsVideoCreateRequest(object):
             'asset_url': 'string_types',
             'title': 'string_types',
             'description': 'string_types',
-            'encoding_profile': 'StreamsEncodingProfile'
+            'encoding_profile': 'StreamsEncodingProfile',
+            'signed': 'bool'
         }
 
         return types
@@ -49,7 +54,8 @@ class StreamsVideoCreateRequest(object):
             'asset_url': 'assetUrl',
             'title': 'title',
             'description': 'description',
-            'encoding_profile': 'encodingProfile'
+            'encoding_profile': 'encodingProfile',
+            'signed': 'signed'
         }
         return attributes
 
@@ -168,6 +174,35 @@ class StreamsVideoCreateRequest(object):
                 raise TypeError("Invalid type for `encoding_profile`, type has to be `StreamsEncodingProfile`")
 
         self._encoding_profile = encoding_profile
+
+    @property
+    def signed(self):
+        # type: () -> bool
+        """Gets the signed of this StreamsVideoCreateRequest.
+
+        If set to true the Stream is only accessible via a token
+
+        :return: The signed of this StreamsVideoCreateRequest.
+        :rtype: bool
+        """
+        return self._signed
+
+    @signed.setter
+    def signed(self, signed):
+        # type: (bool) -> None
+        """Sets the signed of this StreamsVideoCreateRequest.
+
+        If set to true the Stream is only accessible via a token
+
+        :param signed: The signed of this StreamsVideoCreateRequest.
+        :type: bool
+        """
+
+        if signed is not None:
+            if not isinstance(signed, bool):
+                raise TypeError("Invalid type for `signed`, type has to be `bool`")
+
+        self._signed = signed
 
     def to_dict(self):
         """Returns the model properties as a dict"""

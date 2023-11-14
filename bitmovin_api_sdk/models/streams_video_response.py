@@ -28,8 +28,9 @@ class StreamsVideoResponse(object):
                  ad_config=None,
                  content_protection=None,
                  trimming=None,
-                 download_url=None):
-        # type: (string_types, string_types, string_types, string_types, datetime, StreamsVideoStatus, StreamsStyleConfigResponse, list[StreamsVideoEncodingTask], string_types, StreamsAdConfigResponse, StreamsContentProtectionResponse, StreamsTrimmingStatus, string_types) -> None
+                 download_url=None,
+                 signed=None):
+        # type: (string_types, string_types, string_types, string_types, datetime, StreamsVideoStatus, StreamsStyleConfigResponse, list[StreamsVideoEncodingTask], string_types, StreamsAdConfigResponse, StreamsContentProtectionResponse, StreamsTrimmingStatus, string_types, bool) -> None
 
         self._id = None
         self._asset_url = None
@@ -44,6 +45,7 @@ class StreamsVideoResponse(object):
         self._content_protection = None
         self._trimming = None
         self._download_url = None
+        self._signed = None
         self.discriminator = None
 
         if id_ is not None:
@@ -72,6 +74,8 @@ class StreamsVideoResponse(object):
             self.trimming = trimming
         if download_url is not None:
             self.download_url = download_url
+        if signed is not None:
+            self.signed = signed
 
     @property
     def openapi_types(self):
@@ -88,7 +92,8 @@ class StreamsVideoResponse(object):
             'ad_config': 'StreamsAdConfigResponse',
             'content_protection': 'StreamsContentProtectionResponse',
             'trimming': 'StreamsTrimmingStatus',
-            'download_url': 'string_types'
+            'download_url': 'string_types',
+            'signed': 'bool'
         }
 
         return types
@@ -108,7 +113,8 @@ class StreamsVideoResponse(object):
             'ad_config': 'adConfig',
             'content_protection': 'contentProtection',
             'trimming': 'trimming',
-            'download_url': 'downloadUrl'
+            'download_url': 'downloadUrl',
+            'signed': 'signed'
         }
         return attributes
 
@@ -482,6 +488,35 @@ class StreamsVideoResponse(object):
                 raise TypeError("Invalid type for `download_url`, type has to be `string_types`")
 
         self._download_url = download_url
+
+    @property
+    def signed(self):
+        # type: () -> bool
+        """Gets the signed of this StreamsVideoResponse.
+
+        True if the stream is signature protected
+
+        :return: The signed of this StreamsVideoResponse.
+        :rtype: bool
+        """
+        return self._signed
+
+    @signed.setter
+    def signed(self, signed):
+        # type: (bool) -> None
+        """Sets the signed of this StreamsVideoResponse.
+
+        True if the stream is signature protected
+
+        :param signed: The signed of this StreamsVideoResponse.
+        :type: bool
+        """
+
+        if signed is not None:
+            if not isinstance(signed, bool):
+                raise TypeError("Invalid type for `signed`, type has to be `bool`")
+
+        self._signed = signed
 
     def to_dict(self):
         """Returns the model properties as a dict"""

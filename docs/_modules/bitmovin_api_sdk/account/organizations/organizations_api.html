@@ -87,6 +87,7 @@
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.response_error</span> <span class="kn">import</span> <span class="n">ResponseError</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.update_organization_request</span> <span class="kn">import</span> <span class="n">UpdateOrganizationRequest</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.account.organizations.sub_organizations.sub_organizations_api</span> <span class="kn">import</span> <span class="n">SubOrganizationsApi</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.account.organizations.tenants.tenants_api</span> <span class="kn">import</span> <span class="n">TenantsApi</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.account.organizations.groups.groups_api</span> <span class="kn">import</span> <span class="n">GroupsApi</span>
 
 
@@ -103,6 +104,13 @@
         <span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">sub_organizations</span> <span class="o">=</span> <span class="n">SubOrganizationsApi</span><span class="p">(</span>
+            <span class="n">api_key</span><span class="o">=</span><span class="n">api_key</span><span class="p">,</span>
+            <span class="n">tenant_org_id</span><span class="o">=</span><span class="n">tenant_org_id</span><span class="p">,</span>
+            <span class="n">base_url</span><span class="o">=</span><span class="n">base_url</span><span class="p">,</span>
+            <span class="n">logger</span><span class="o">=</span><span class="n">logger</span>
+        <span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">tenants</span> <span class="o">=</span> <span class="n">TenantsApi</span><span class="p">(</span>
             <span class="n">api_key</span><span class="o">=</span><span class="n">api_key</span><span class="p">,</span>
             <span class="n">tenant_org_id</span><span class="o">=</span><span class="n">tenant_org_id</span><span class="p">,</span>
             <span class="n">base_url</span><span class="o">=</span><span class="n">base_url</span><span class="p">,</span>

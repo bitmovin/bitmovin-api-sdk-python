@@ -5756,10 +5756,34 @@ bitmovin\_api\_sdk.models.streams\_live\_update\_request module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.streams\_public\_signing\_key module
+--------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.streams_public_signing_key
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.streams\_public\_signing\_key\_response module
+------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.streams_public_signing_key_response
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.streams\_search\_response module
 ----------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.models.streams_search_response
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.streams\_signing\_key\_response module
+----------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.streams_signing_key_response
    :members:
    :undoc-members:
    :show-inheritance:
@@ -5904,6 +5928,22 @@ bitmovin\_api\_sdk.models.tenant module
 ---------------------------------------
 
 .. automodule:: bitmovin_api_sdk.models.tenant
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.tenant\_group\_detail module
+------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.tenant_group_detail
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.tenant\_with\_groups module
+-----------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.tenant_with_groups
    :members:
    :undoc-members:
    :show-inheritance:

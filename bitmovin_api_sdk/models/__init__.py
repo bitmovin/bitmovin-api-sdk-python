@@ -722,7 +722,10 @@ from bitmovin_api_sdk.models.streams_live_create_request import StreamsLiveCreat
 from bitmovin_api_sdk.models.streams_live_life_cycle import StreamsLiveLifeCycle
 from bitmovin_api_sdk.models.streams_live_response import StreamsLiveResponse
 from bitmovin_api_sdk.models.streams_live_update_request import StreamsLiveUpdateRequest
+from bitmovin_api_sdk.models.streams_public_signing_key import StreamsPublicSigningKey
+from bitmovin_api_sdk.models.streams_public_signing_key_response import StreamsPublicSigningKeyResponse
 from bitmovin_api_sdk.models.streams_search_response import StreamsSearchResponse
+from bitmovin_api_sdk.models.streams_signing_key_response import StreamsSigningKeyResponse
 from bitmovin_api_sdk.models.streams_style_config_player_style import StreamsStyleConfigPlayerStyle
 from bitmovin_api_sdk.models.streams_style_config_response import StreamsStyleConfigResponse
 from bitmovin_api_sdk.models.streams_trimming_status import StreamsTrimmingStatus
@@ -741,6 +744,8 @@ from bitmovin_api_sdk.models.subtitle_stream import SubtitleStream
 from bitmovin_api_sdk.models.subtitles_media_info import SubtitlesMediaInfo
 from bitmovin_api_sdk.models.task import Task
 from bitmovin_api_sdk.models.tenant import Tenant
+from bitmovin_api_sdk.models.tenant_group_detail import TenantGroupDetail
+from bitmovin_api_sdk.models.tenant_with_groups import TenantWithGroups
 from bitmovin_api_sdk.models.text_filter import TextFilter
 from bitmovin_api_sdk.models.text_filter_font import TextFilterFont
 from bitmovin_api_sdk.models.text_muxing import TextMuxing

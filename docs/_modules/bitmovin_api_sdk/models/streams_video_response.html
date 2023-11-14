@@ -106,8 +106,9 @@
                  <span class="n">ad_config</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">content_protection</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">trimming</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                 <span class="n">download_url</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (string_types, string_types, string_types, string_types, datetime, StreamsVideoStatus, StreamsStyleConfigResponse, list[StreamsVideoEncodingTask], string_types, StreamsAdConfigResponse, StreamsContentProtectionResponse, StreamsTrimmingStatus, string_types) -&gt; None</span>
+                 <span class="n">download_url</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">signed</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="c1"># type: (string_types, string_types, string_types, string_types, datetime, StreamsVideoStatus, StreamsStyleConfigResponse, list[StreamsVideoEncodingTask], string_types, StreamsAdConfigResponse, StreamsContentProtectionResponse, StreamsTrimmingStatus, string_types, bool) -&gt; None</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_id</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_asset_url</span> <span class="o">=</span> <span class="kc">None</span>
@@ -122,6 +123,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_content_protection</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_trimming</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_download_url</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_signed</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>
 
         <span class="k">if</span> <span class="n">id_</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -150,6 +152,8 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">trimming</span> <span class="o">=</span> <span class="n">trimming</span>
         <span class="k">if</span> <span class="n">download_url</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">download_url</span> <span class="o">=</span> <span class="n">download_url</span>
+        <span class="k">if</span> <span class="n">signed</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">signed</span> <span class="o">=</span> <span class="n">signed</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -166,7 +170,8 @@
             <span class="s1">&#39;ad_config&#39;</span><span class="p">:</span> <span class="s1">&#39;StreamsAdConfigResponse&#39;</span><span class="p">,</span>
             <span class="s1">&#39;content_protection&#39;</span><span class="p">:</span> <span class="s1">&#39;StreamsContentProtectionResponse&#39;</span><span class="p">,</span>
             <span class="s1">&#39;trimming&#39;</span><span class="p">:</span> <span class="s1">&#39;StreamsTrimmingStatus&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;download_url&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span>
+            <span class="s1">&#39;download_url&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;signed&#39;</span><span class="p">:</span> <span class="s1">&#39;bool&#39;</span>
         <span class="p">}</span>
 
         <span class="k">return</span> <span class="n">types</span>
@@ -186,7 +191,8 @@
             <span class="s1">&#39;ad_config&#39;</span><span class="p">:</span> <span class="s1">&#39;adConfig&#39;</span><span class="p">,</span>
             <span class="s1">&#39;content_protection&#39;</span><span class="p">:</span> <span class="s1">&#39;contentProtection&#39;</span><span class="p">,</span>
             <span class="s1">&#39;trimming&#39;</span><span class="p">:</span> <span class="s1">&#39;trimming&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;download_url&#39;</span><span class="p">:</span> <span class="s1">&#39;downloadUrl&#39;</span>
+            <span class="s1">&#39;download_url&#39;</span><span class="p">:</span> <span class="s1">&#39;downloadUrl&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;signed&#39;</span><span class="p">:</span> <span class="s1">&#39;signed&#39;</span>
         <span class="p">}</span>
         <span class="k">return</span> <span class="n">attributes</span>
 
@@ -560,6 +566,35 @@
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `download_url`, type has to be `string_types`&quot;</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_download_url</span> <span class="o">=</span> <span class="n">download_url</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">signed</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; bool</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the signed of this StreamsVideoResponse.</span>
+
+<span class="sd">        True if the stream is signature protected</span>
+
+<span class="sd">        :return: The signed of this StreamsVideoResponse.</span>
+<span class="sd">        :rtype: bool</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_signed</span>
+
+    <span class="nd">@signed</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">signed</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">signed</span><span class="p">):</span>
+        <span class="c1"># type: (bool) -&gt; None</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the signed of this StreamsVideoResponse.</span>
+
+<span class="sd">        True if the stream is signature protected</span>
+
+<span class="sd">        :param signed: The signed of this StreamsVideoResponse.</span>
+<span class="sd">        :type: bool</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">signed</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">signed</span><span class="p">,</span> <span class="nb">bool</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `signed`, type has to be `bool`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_signed</span> <span class="o">=</span> <span class="n">signed</span>
 
 <div class="viewcode-block" id="StreamsVideoResponse.to_dict"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.streams_video_response.StreamsVideoResponse.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>

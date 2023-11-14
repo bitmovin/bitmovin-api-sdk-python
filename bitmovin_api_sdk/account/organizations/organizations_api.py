@@ -9,6 +9,7 @@ from bitmovin_api_sdk.models.response_envelope import ResponseEnvelope
 from bitmovin_api_sdk.models.response_error import ResponseError
 from bitmovin_api_sdk.models.update_organization_request import UpdateOrganizationRequest
 from bitmovin_api_sdk.account.organizations.sub_organizations.sub_organizations_api import SubOrganizationsApi
+from bitmovin_api_sdk.account.organizations.tenants.tenants_api import TenantsApi
 from bitmovin_api_sdk.account.organizations.groups.groups_api import GroupsApi
 
 
@@ -25,6 +26,13 @@ class OrganizationsApi(BaseApi):
         )
 
         self.sub_organizations = SubOrganizationsApi(
+            api_key=api_key,
+            tenant_org_id=tenant_org_id,
+            base_url=base_url,
+            logger=logger
+        )
+
+        self.tenants = TenantsApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,
