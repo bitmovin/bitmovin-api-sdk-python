@@ -3,7 +3,6 @@
 from enum import Enum
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
-from bitmovin_api_sdk.models.invitation_status import InvitationStatus
 import pprint
 import six
 
@@ -13,13 +12,11 @@ class TenantWithGroups(object):
     def __init__(self,
                  id_=None,
                  email=None,
-                 invitation_status=None,
                  groups=None):
-        # type: (string_types, string_types, InvitationStatus, list[TenantGroupDetail]) -> None
+        # type: (string_types, string_types, list[TenantGroupDetail]) -> None
 
         self._id = None
         self._email = None
-        self._invitation_status = None
         self._groups = list()
         self.discriminator = None
 
@@ -27,8 +24,6 @@ class TenantWithGroups(object):
             self.id = id_
         if email is not None:
             self.email = email
-        if invitation_status is not None:
-            self.invitation_status = invitation_status
         if groups is not None:
             self.groups = groups
 
@@ -37,7 +32,6 @@ class TenantWithGroups(object):
         types = {
             'id': 'string_types',
             'email': 'string_types',
-            'invitation_status': 'InvitationStatus',
             'groups': 'list[TenantGroupDetail]'
         }
 
@@ -48,7 +42,6 @@ class TenantWithGroups(object):
         attributes = {
             'id': 'id',
             'email': 'email',
-            'invitation_status': 'invitationStatus',
             'groups': 'groups'
         }
         return attributes
@@ -58,7 +51,7 @@ class TenantWithGroups(object):
         # type: () -> string_types
         """Gets the id of this TenantWithGroups.
 
-        Id of Tenant
+        Id of Tenant (required)
 
         :return: The id of this TenantWithGroups.
         :rtype: string_types
@@ -70,7 +63,7 @@ class TenantWithGroups(object):
         # type: (string_types) -> None
         """Sets the id of this TenantWithGroups.
 
-        Id of Tenant
+        Id of Tenant (required)
 
         :param id_: The id of this TenantWithGroups.
         :type: string_types
@@ -87,7 +80,7 @@ class TenantWithGroups(object):
         # type: () -> string_types
         """Gets the email of this TenantWithGroups.
 
-        Email of Tenant
+        Email of Tenant (required)
 
         :return: The email of this TenantWithGroups.
         :rtype: string_types
@@ -99,7 +92,7 @@ class TenantWithGroups(object):
         # type: (string_types) -> None
         """Sets the email of this TenantWithGroups.
 
-        Email of Tenant
+        Email of Tenant (required)
 
         :param email: The email of this TenantWithGroups.
         :type: string_types
@@ -112,38 +105,11 @@ class TenantWithGroups(object):
         self._email = email
 
     @property
-    def invitation_status(self):
-        # type: () -> InvitationStatus
-        """Gets the invitation_status of this TenantWithGroups.
-
-
-        :return: The invitation_status of this TenantWithGroups.
-        :rtype: InvitationStatus
-        """
-        return self._invitation_status
-
-    @invitation_status.setter
-    def invitation_status(self, invitation_status):
-        # type: (InvitationStatus) -> None
-        """Sets the invitation_status of this TenantWithGroups.
-
-
-        :param invitation_status: The invitation_status of this TenantWithGroups.
-        :type: InvitationStatus
-        """
-
-        if invitation_status is not None:
-            if not isinstance(invitation_status, InvitationStatus):
-                raise TypeError("Invalid type for `invitation_status`, type has to be `InvitationStatus`")
-
-        self._invitation_status = invitation_status
-
-    @property
     def groups(self):
         # type: () -> list[TenantGroupDetail]
         """Gets the groups of this TenantWithGroups.
 
-        List of all groups of Tenant
+        List of all groups of Tenant (required)
 
         :return: The groups of this TenantWithGroups.
         :rtype: list[TenantGroupDetail]
@@ -155,7 +121,7 @@ class TenantWithGroups(object):
         # type: (list) -> None
         """Sets the groups of this TenantWithGroups.
 
-        List of all groups of Tenant
+        List of all groups of Tenant (required)
 
         :param groups: The groups of this TenantWithGroups.
         :type: list[TenantGroupDetail]

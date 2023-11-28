@@ -9,3 +9,4 @@ class ProfileH264(Enum):
     BASELINE = "BASELINE"
     MAIN = "MAIN"
     HIGH = "HIGH"
+    HIGH422 = "HIGH422"
