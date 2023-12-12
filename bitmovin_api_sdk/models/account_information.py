@@ -26,8 +26,9 @@ class AccountInformation(BitmovinResource):
                  company=None,
                  verified=None,
                  marketplace=None,
-                 mfa_enabled=None):
-        # type: (string_types, string_types, string_types, datetime, datetime, dict, string_types, list[AccountApiKey], string_types, string_types, string_types, string_types, bool, Marketplace, bool) -> None
+                 mfa_enabled=None,
+                 intercom_id_verification=None):
+        # type: (string_types, string_types, string_types, datetime, datetime, dict, string_types, list[AccountApiKey], string_types, string_types, string_types, string_types, bool, Marketplace, bool, string_types) -> None
         super(AccountInformation, self).__init__(id_=id_, name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data)
 
         self._email = None
@@ -39,6 +40,7 @@ class AccountInformation(BitmovinResource):
         self._verified = None
         self._marketplace = None
         self._mfa_enabled = None
+        self._intercom_id_verification = None
         self.discriminator = None
 
         if email is not None:
@@ -59,6 +61,8 @@ class AccountInformation(BitmovinResource):
             self.marketplace = marketplace
         if mfa_enabled is not None:
             self.mfa_enabled = mfa_enabled
+        if intercom_id_verification is not None:
+            self.intercom_id_verification = intercom_id_verification
 
     @property
     def openapi_types(self):
@@ -76,7 +80,8 @@ class AccountInformation(BitmovinResource):
             'company': 'string_types',
             'verified': 'bool',
             'marketplace': 'Marketplace',
-            'mfa_enabled': 'bool'
+            'mfa_enabled': 'bool',
+            'intercom_id_verification': 'string_types'
         })
 
         return types
@@ -97,7 +102,8 @@ class AccountInformation(BitmovinResource):
             'company': 'company',
             'verified': 'verified',
             'marketplace': 'marketplace',
-            'mfa_enabled': 'mfaEnabled'
+            'mfa_enabled': 'mfaEnabled',
+            'intercom_id_verification': 'intercomIdVerification'
         })
         return attributes
 
@@ -355,6 +361,33 @@ class AccountInformation(BitmovinResource):
                 raise TypeError("Invalid type for `mfa_enabled`, type has to be `bool`")
 
         self._mfa_enabled = mfa_enabled
+
+    @property
+    def intercom_id_verification(self):
+        # type: () -> string_types
+        """Gets the intercom_id_verification of this AccountInformation.
+
+
+        :return: The intercom_id_verification of this AccountInformation.
+        :rtype: string_types
+        """
+        return self._intercom_id_verification
+
+    @intercom_id_verification.setter
+    def intercom_id_verification(self, intercom_id_verification):
+        # type: (string_types) -> None
+        """Sets the intercom_id_verification of this AccountInformation.
+
+
+        :param intercom_id_verification: The intercom_id_verification of this AccountInformation.
+        :type: string_types
+        """
+
+        if intercom_id_verification is not None:
+            if not isinstance(intercom_id_verification, string_types):
+                raise TypeError("Invalid type for `intercom_id_verification`, type has to be `string_types`")
+
+        self._intercom_id_verification = intercom_id_verification
 
     def to_dict(self):
         """Returns the model properties as a dict"""
