@@ -4,6 +4,7 @@ from enum import Enum
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
 from bitmovin_api_sdk.models.input import Input
+from bitmovin_api_sdk.models.s3_access_style import S3AccessStyle
 from bitmovin_api_sdk.models.s3_signature_version import S3SignatureVersion
 import pprint
 import six
@@ -22,19 +23,23 @@ class GenericS3Input(Input):
                  host=None,
                  port=None,
                  ssl=None,
+                 signing_region=None,
                  signature_version=None,
                  access_key=None,
-                 secret_key=None):
-        # type: (string_types, string_types, string_types, datetime, datetime, dict, string_types, string_types, int, bool, S3SignatureVersion, string_types, string_types) -> None
+                 secret_key=None,
+                 access_style=None):
+        # type: (string_types, string_types, string_types, datetime, datetime, dict, string_types, string_types, int, bool, string_types, S3SignatureVersion, string_types, string_types, S3AccessStyle) -> None
         super(GenericS3Input, self).__init__(id_=id_, name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data)
 
         self._bucket_name = None
         self._host = None
         self._port = None
         self._ssl = None
+        self._signing_region = None
         self._signature_version = None
         self._access_key = None
         self._secret_key = None
+        self._access_style = None
         self.discriminator = None
 
         if bucket_name is not None:
@@ -45,12 +50,16 @@ class GenericS3Input(Input):
             self.port = port
         if ssl is not None:
             self.ssl = ssl
+        if signing_region is not None:
+            self.signing_region = signing_region
         if signature_version is not None:
             self.signature_version = signature_version
         if access_key is not None:
             self.access_key = access_key
         if secret_key is not None:
             self.secret_key = secret_key
+        if access_style is not None:
+            self.access_style = access_style
 
     @property
     def openapi_types(self):
@@ -64,9 +73,11 @@ class GenericS3Input(Input):
             'host': 'string_types',
             'port': 'int',
             'ssl': 'bool',
+            'signing_region': 'string_types',
             'signature_version': 'S3SignatureVersion',
             'access_key': 'string_types',
-            'secret_key': 'string_types'
+            'secret_key': 'string_types',
+            'access_style': 'S3AccessStyle'
         })
 
         return types
@@ -83,9 +94,11 @@ class GenericS3Input(Input):
             'host': 'host',
             'port': 'port',
             'ssl': 'ssl',
+            'signing_region': 'signingRegion',
             'signature_version': 'signatureVersion',
             'access_key': 'accessKey',
-            'secret_key': 'secretKey'
+            'secret_key': 'secretKey',
+            'access_style': 'accessStyle'
         })
         return attributes
 
@@ -206,6 +219,35 @@ class GenericS3Input(Input):
         self._ssl = ssl
 
     @property
+    def signing_region(self):
+        # type: () -> string_types
+        """Gets the signing_region of this GenericS3Input.
+
+        The signing region to use
+
+        :return: The signing_region of this GenericS3Input.
+        :rtype: string_types
+        """
+        return self._signing_region
+
+    @signing_region.setter
+    def signing_region(self, signing_region):
+        # type: (string_types) -> None
+        """Sets the signing_region of this GenericS3Input.
+
+        The signing region to use
+
+        :param signing_region: The signing_region of this GenericS3Input.
+        :type: string_types
+        """
+
+        if signing_region is not None:
+            if not isinstance(signing_region, string_types):
+                raise TypeError("Invalid type for `signing_region`, type has to be `string_types`")
+
+        self._signing_region = signing_region
+
+    @property
     def signature_version(self):
         # type: () -> S3SignatureVersion
         """Gets the signature_version of this GenericS3Input.
@@ -291,6 +333,35 @@ class GenericS3Input(Input):
                 raise TypeError("Invalid type for `secret_key`, type has to be `string_types`")
 
         self._secret_key = secret_key
+
+    @property
+    def access_style(self):
+        # type: () -> S3AccessStyle
+        """Gets the access_style of this GenericS3Input.
+
+        Specifies the URL access style to use
+
+        :return: The access_style of this GenericS3Input.
+        :rtype: S3AccessStyle
+        """
+        return self._access_style
+
+    @access_style.setter
+    def access_style(self, access_style):
+        # type: (S3AccessStyle) -> None
+        """Sets the access_style of this GenericS3Input.
+
+        Specifies the URL access style to use
+
+        :param access_style: The access_style of this GenericS3Input.
+        :type: S3AccessStyle
+        """
+
+        if access_style is not None:
+            if not isinstance(access_style, S3AccessStyle):
+                raise TypeError("Invalid type for `access_style`, type has to be `S3AccessStyle`")
+
+        self._access_style = access_style
 
     def to_dict(self):
         """Returns the model properties as a dict"""

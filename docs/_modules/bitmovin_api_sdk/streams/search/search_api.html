@@ -86,8 +86,10 @@
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.common.poscheck</span> <span class="kn">import</span> <span class="n">poscheck_except</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.response_envelope</span> <span class="kn">import</span> <span class="n">ResponseEnvelope</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.response_error</span> <span class="kn">import</span> <span class="n">ResponseError</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.streams_search_response</span> <span class="kn">import</span> <span class="n">StreamsSearchResponse</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.streams.search.streams_search_response_list_query_params</span> <span class="kn">import</span> <span class="n">StreamsSearchResponseListQueryParams</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.streams_response</span> <span class="kn">import</span> <span class="n">StreamsResponse</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.streams_type</span> <span class="kn">import</span> <span class="n">StreamsType</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.streams_video_status</span> <span class="kn">import</span> <span class="n">StreamsVideoStatus</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.streams.search.streams_response_list_query_params</span> <span class="kn">import</span> <span class="n">StreamsResponseListQueryParams</span>
 
 
 <div class="viewcode-block" id="SearchApi"><a class="viewcode-back" href="../../../../__modules/bitmovin_api_sdk.streams.search.html#bitmovin_api_sdk.streams.search.search_api.SearchApi">[docs]</a><span class="k">class</span> <span class="nc">SearchApi</span><span class="p">(</span><span class="n">BaseApi</span><span class="p">):</span>
@@ -103,20 +105,20 @@
         <span class="p">)</span>
 
 <div class="viewcode-block" id="SearchApi.list"><a class="viewcode-back" href="../../../../__modules/bitmovin_api_sdk.streams.search.html#bitmovin_api_sdk.streams.search.search_api.SearchApi.list">[docs]</a>    <span class="k">def</span> <span class="nf">list</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">query_params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-        <span class="c1"># type: (StreamsSearchResponseListQueryParams, dict) -&gt; StreamsSearchResponse</span>
+        <span class="c1"># type: (StreamsResponseListQueryParams, dict) -&gt; StreamsResponse</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Get paginated search results of VOD and Live streams</span>
 
 <span class="sd">        :param query_params: Query parameters</span>
-<span class="sd">        :type query_params: StreamsSearchResponseListQueryParams</span>
+<span class="sd">        :type query_params: StreamsResponseListQueryParams</span>
 <span class="sd">        :return: List of all search results</span>
-<span class="sd">        :rtype: StreamsSearchResponse</span>
+<span class="sd">        :rtype: StreamsResponse</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
             <span class="s1">&#39;/streams/search&#39;</span><span class="p">,</span>
             <span class="n">query_params</span><span class="o">=</span><span class="n">query_params</span><span class="p">,</span>
             <span class="n">pagination_response</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-            <span class="nb">type</span><span class="o">=</span><span class="n">StreamsSearchResponse</span><span class="p">,</span>
+            <span class="nb">type</span><span class="o">=</span><span class="n">StreamsResponse</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>
         <span class="p">)</span></div></div>
 </pre></div>

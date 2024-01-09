@@ -3268,6 +3268,22 @@ bitmovin\_api\_sdk.models.hls\_manifest module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.hls\_manifest\_ad\_marker\_settings module
+--------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.hls_manifest_ad_marker_settings
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.hls\_manifest\_ad\_marker\_type module
+----------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.hls_manifest_ad_marker_type
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.hls\_manifest\_default module
 -------------------------------------------------------
 
@@ -4812,6 +4828,14 @@ bitmovin\_api\_sdk.models.rtmp\_input module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.s3\_access\_style module
+--------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.s3_access_style
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.s3\_input module
 ------------------------------------------
 
@@ -5772,10 +5796,10 @@ bitmovin\_api\_sdk.models.streams\_public\_signing\_key\_response module
    :undoc-members:
    :show-inheritance:
 
-bitmovin\_api\_sdk.models.streams\_search\_response module
-----------------------------------------------------------
+bitmovin\_api\_sdk.models.streams\_response module
+--------------------------------------------------
 
-.. automodule:: bitmovin_api_sdk.models.streams_search_response
+.. automodule:: bitmovin_api_sdk.models.streams_response
    :members:
    :undoc-members:
    :show-inheritance:

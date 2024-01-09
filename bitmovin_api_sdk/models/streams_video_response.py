@@ -1,26 +1,28 @@
 # coding: utf-8
 
 from enum import Enum
-from datetime import datetime
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
 from bitmovin_api_sdk.models.streams_ad_config_response import StreamsAdConfigResponse
 from bitmovin_api_sdk.models.streams_content_protection_response import StreamsContentProtectionResponse
+from bitmovin_api_sdk.models.streams_response import StreamsResponse
 from bitmovin_api_sdk.models.streams_style_config_response import StreamsStyleConfigResponse
 from bitmovin_api_sdk.models.streams_trimming_status import StreamsTrimmingStatus
+from bitmovin_api_sdk.models.streams_type import StreamsType
 from bitmovin_api_sdk.models.streams_video_status import StreamsVideoStatus
 import pprint
 import six
 
 
-class StreamsVideoResponse(object):
+class StreamsVideoResponse(StreamsResponse):
     @poscheck_model
     def __init__(self,
                  id_=None,
-                 asset_url=None,
                  title=None,
                  description=None,
                  created_at=None,
+                 type_=None,
+                 asset_url=None,
                  status=None,
                  style_config=None,
                  encoding_tasks=None,
@@ -30,13 +32,10 @@ class StreamsVideoResponse(object):
                  trimming=None,
                  download_url=None,
                  signed=None):
-        # type: (string_types, string_types, string_types, string_types, datetime, StreamsVideoStatus, StreamsStyleConfigResponse, list[StreamsVideoEncodingTask], string_types, StreamsAdConfigResponse, StreamsContentProtectionResponse, StreamsTrimmingStatus, string_types, bool) -> None
+        # type: (string_types, string_types, string_types, datetime, StreamsType, string_types, StreamsVideoStatus, StreamsStyleConfigResponse, list[StreamsVideoEncodingTask], string_types, StreamsAdConfigResponse, StreamsContentProtectionResponse, StreamsTrimmingStatus, string_types, bool) -> None
+        super(StreamsVideoResponse, self).__init__(id_=id_, title=title, description=description, created_at=created_at, type_=type_)
 
-        self._id = None
         self._asset_url = None
-        self._title = None
-        self._description = None
-        self._created_at = None
         self._status = None
         self._style_config = None
         self._encoding_tasks = list()
@@ -48,16 +47,8 @@ class StreamsVideoResponse(object):
         self._signed = None
         self.discriminator = None
 
-        if id_ is not None:
-            self.id = id_
         if asset_url is not None:
             self.asset_url = asset_url
-        if title is not None:
-            self.title = title
-        if description is not None:
-            self.description = description
-        if created_at is not None:
-            self.created_at = created_at
         if status is not None:
             self.status = status
         if style_config is not None:
@@ -79,12 +70,13 @@ class StreamsVideoResponse(object):
 
     @property
     def openapi_types(self):
-        types = {
-            'id': 'string_types',
+        types = {}
+
+        if hasattr(super(StreamsVideoResponse, self), 'openapi_types'):
+            types = getattr(super(StreamsVideoResponse, self), 'openapi_types')
+
+        types.update({
             'asset_url': 'string_types',
-            'title': 'string_types',
-            'description': 'string_types',
-            'created_at': 'datetime',
             'status': 'StreamsVideoStatus',
             'style_config': 'StreamsStyleConfigResponse',
             'encoding_tasks': 'list[StreamsVideoEncodingTask]',
@@ -94,18 +86,19 @@ class StreamsVideoResponse(object):
             'trimming': 'StreamsTrimmingStatus',
             'download_url': 'string_types',
             'signed': 'bool'
-        }
+        })
 
         return types
 
     @property
     def attribute_map(self):
-        attributes = {
-            'id': 'id',
+        attributes = {}
+
+        if hasattr(super(StreamsVideoResponse, self), 'attribute_map'):
+            attributes = getattr(super(StreamsVideoResponse, self), 'attribute_map')
+
+        attributes.update({
             'asset_url': 'assetUrl',
-            'title': 'title',
-            'description': 'description',
-            'created_at': 'createdAt',
             'status': 'status',
             'style_config': 'styleConfig',
             'encoding_tasks': 'encodingTasks',
@@ -115,37 +108,8 @@ class StreamsVideoResponse(object):
             'trimming': 'trimming',
             'download_url': 'downloadUrl',
             'signed': 'signed'
-        }
+        })
         return attributes
-
-    @property
-    def id(self):
-        # type: () -> string_types
-        """Gets the id of this StreamsVideoResponse.
-
-        The identifier of the stream
-
-        :return: The id of this StreamsVideoResponse.
-        :rtype: string_types
-        """
-        return self._id
-
-    @id.setter
-    def id(self, id_):
-        # type: (string_types) -> None
-        """Sets the id of this StreamsVideoResponse.
-
-        The identifier of the stream
-
-        :param id_: The id of this StreamsVideoResponse.
-        :type: string_types
-        """
-
-        if id_ is not None:
-            if not isinstance(id_, string_types):
-                raise TypeError("Invalid type for `id`, type has to be `string_types`")
-
-        self._id = id_
 
     @property
     def asset_url(self):
@@ -175,93 +139,6 @@ class StreamsVideoResponse(object):
                 raise TypeError("Invalid type for `asset_url`, type has to be `string_types`")
 
         self._asset_url = asset_url
-
-    @property
-    def title(self):
-        # type: () -> string_types
-        """Gets the title of this StreamsVideoResponse.
-
-        The title of the stream
-
-        :return: The title of this StreamsVideoResponse.
-        :rtype: string_types
-        """
-        return self._title
-
-    @title.setter
-    def title(self, title):
-        # type: (string_types) -> None
-        """Sets the title of this StreamsVideoResponse.
-
-        The title of the stream
-
-        :param title: The title of this StreamsVideoResponse.
-        :type: string_types
-        """
-
-        if title is not None:
-            if not isinstance(title, string_types):
-                raise TypeError("Invalid type for `title`, type has to be `string_types`")
-
-        self._title = title
-
-    @property
-    def description(self):
-        # type: () -> string_types
-        """Gets the description of this StreamsVideoResponse.
-
-        The description of the stream
-
-        :return: The description of this StreamsVideoResponse.
-        :rtype: string_types
-        """
-        return self._description
-
-    @description.setter
-    def description(self, description):
-        # type: (string_types) -> None
-        """Sets the description of this StreamsVideoResponse.
-
-        The description of the stream
-
-        :param description: The description of this StreamsVideoResponse.
-        :type: string_types
-        """
-
-        if description is not None:
-            if not isinstance(description, string_types):
-                raise TypeError("Invalid type for `description`, type has to be `string_types`")
-
-        self._description = description
-
-    @property
-    def created_at(self):
-        # type: () -> datetime
-        """Gets the created_at of this StreamsVideoResponse.
-
-        Creation timestamp, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ
-
-        :return: The created_at of this StreamsVideoResponse.
-        :rtype: datetime
-        """
-        return self._created_at
-
-    @created_at.setter
-    def created_at(self, created_at):
-        # type: (datetime) -> None
-        """Sets the created_at of this StreamsVideoResponse.
-
-        Creation timestamp, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ
-
-        :param created_at: The created_at of this StreamsVideoResponse.
-        :type: datetime
-        """
-
-        if created_at is not None:
-            if not isinstance(created_at, datetime):
-                raise TypeError("Invalid type for `created_at`, type has to be `datetime`")
-
-        self._created_at = created_at
 
     @property
     def status(self):
@@ -522,6 +399,8 @@ class StreamsVideoResponse(object):
         """Returns the model properties as a dict"""
         result = {}
 
+        if hasattr(super(StreamsVideoResponse, self), "to_dict"):
+            result = super(StreamsVideoResponse, self).to_dict()
         for attr, _ in six.iteritems(self.openapi_types):
             value = getattr(self, attr)
             if value is None:

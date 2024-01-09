@@ -1,39 +1,38 @@
 # coding: utf-8
 
 from enum import Enum
-from datetime import datetime
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
 from bitmovin_api_sdk.models.streams_ad_config_response import StreamsAdConfigResponse
 from bitmovin_api_sdk.models.streams_content_protection_response import StreamsContentProtectionResponse
 from bitmovin_api_sdk.models.streams_live_life_cycle import StreamsLiveLifeCycle
+from bitmovin_api_sdk.models.streams_response import StreamsResponse
 from bitmovin_api_sdk.models.streams_style_config_response import StreamsStyleConfigResponse
 from bitmovin_api_sdk.models.streams_trimming_status import StreamsTrimmingStatus
+from bitmovin_api_sdk.models.streams_type import StreamsType
 import pprint
 import six
 
 
-class StreamsLiveResponse(object):
+class StreamsLiveResponse(StreamsResponse):
     @poscheck_model
     def __init__(self,
                  id_=None,
-                 stream_key=None,
                  title=None,
                  description=None,
                  created_at=None,
+                 type_=None,
+                 stream_key=None,
                  life_cycle=None,
                  style_config=None,
                  poster_url=None,
                  ad_config=None,
                  content_protection=None,
                  trimming=None):
-        # type: (string_types, string_types, string_types, string_types, datetime, StreamsLiveLifeCycle, StreamsStyleConfigResponse, string_types, StreamsAdConfigResponse, StreamsContentProtectionResponse, StreamsTrimmingStatus) -> None
+        # type: (string_types, string_types, string_types, datetime, StreamsType, string_types, StreamsLiveLifeCycle, StreamsStyleConfigResponse, string_types, StreamsAdConfigResponse, StreamsContentProtectionResponse, StreamsTrimmingStatus) -> None
+        super(StreamsLiveResponse, self).__init__(id_=id_, title=title, description=description, created_at=created_at, type_=type_)
 
-        self._id = None
         self._stream_key = None
-        self._title = None
-        self._description = None
-        self._created_at = None
         self._life_cycle = None
         self._style_config = None
         self._poster_url = None
@@ -42,16 +41,8 @@ class StreamsLiveResponse(object):
         self._trimming = None
         self.discriminator = None
 
-        if id_ is not None:
-            self.id = id_
         if stream_key is not None:
             self.stream_key = stream_key
-        if title is not None:
-            self.title = title
-        if description is not None:
-            self.description = description
-        if created_at is not None:
-            self.created_at = created_at
         if life_cycle is not None:
             self.life_cycle = life_cycle
         if style_config is not None:
@@ -67,67 +58,40 @@ class StreamsLiveResponse(object):
 
     @property
     def openapi_types(self):
-        types = {
-            'id': 'string_types',
+        types = {}
+
+        if hasattr(super(StreamsLiveResponse, self), 'openapi_types'):
+            types = getattr(super(StreamsLiveResponse, self), 'openapi_types')
+
+        types.update({
             'stream_key': 'string_types',
-            'title': 'string_types',
-            'description': 'string_types',
-            'created_at': 'datetime',
             'life_cycle': 'StreamsLiveLifeCycle',
             'style_config': 'StreamsStyleConfigResponse',
             'poster_url': 'string_types',
             'ad_config': 'StreamsAdConfigResponse',
             'content_protection': 'StreamsContentProtectionResponse',
             'trimming': 'StreamsTrimmingStatus'
-        }
+        })
 
         return types
 
     @property
     def attribute_map(self):
-        attributes = {
-            'id': 'id',
+        attributes = {}
+
+        if hasattr(super(StreamsLiveResponse, self), 'attribute_map'):
+            attributes = getattr(super(StreamsLiveResponse, self), 'attribute_map')
+
+        attributes.update({
             'stream_key': 'streamKey',
-            'title': 'title',
-            'description': 'description',
-            'created_at': 'createdAt',
             'life_cycle': 'lifeCycle',
             'style_config': 'styleConfig',
             'poster_url': 'posterUrl',
             'ad_config': 'adConfig',
             'content_protection': 'contentProtection',
             'trimming': 'trimming'
-        }
+        })
         return attributes
-
-    @property
-    def id(self):
-        # type: () -> string_types
-        """Gets the id of this StreamsLiveResponse.
-
-        The identifier of the stream
-
-        :return: The id of this StreamsLiveResponse.
-        :rtype: string_types
-        """
-        return self._id
-
-    @id.setter
-    def id(self, id_):
-        # type: (string_types) -> None
-        """Sets the id of this StreamsLiveResponse.
-
-        The identifier of the stream
-
-        :param id_: The id of this StreamsLiveResponse.
-        :type: string_types
-        """
-
-        if id_ is not None:
-            if not isinstance(id_, string_types):
-                raise TypeError("Invalid type for `id`, type has to be `string_types`")
-
-        self._id = id_
 
     @property
     def stream_key(self):
@@ -157,93 +121,6 @@ class StreamsLiveResponse(object):
                 raise TypeError("Invalid type for `stream_key`, type has to be `string_types`")
 
         self._stream_key = stream_key
-
-    @property
-    def title(self):
-        # type: () -> string_types
-        """Gets the title of this StreamsLiveResponse.
-
-        The title of the stream
-
-        :return: The title of this StreamsLiveResponse.
-        :rtype: string_types
-        """
-        return self._title
-
-    @title.setter
-    def title(self, title):
-        # type: (string_types) -> None
-        """Sets the title of this StreamsLiveResponse.
-
-        The title of the stream
-
-        :param title: The title of this StreamsLiveResponse.
-        :type: string_types
-        """
-
-        if title is not None:
-            if not isinstance(title, string_types):
-                raise TypeError("Invalid type for `title`, type has to be `string_types`")
-
-        self._title = title
-
-    @property
-    def description(self):
-        # type: () -> string_types
-        """Gets the description of this StreamsLiveResponse.
-
-        The description of the stream
-
-        :return: The description of this StreamsLiveResponse.
-        :rtype: string_types
-        """
-        return self._description
-
-    @description.setter
-    def description(self, description):
-        # type: (string_types) -> None
-        """Sets the description of this StreamsLiveResponse.
-
-        The description of the stream
-
-        :param description: The description of this StreamsLiveResponse.
-        :type: string_types
-        """
-
-        if description is not None:
-            if not isinstance(description, string_types):
-                raise TypeError("Invalid type for `description`, type has to be `string_types`")
-
-        self._description = description
-
-    @property
-    def created_at(self):
-        # type: () -> datetime
-        """Gets the created_at of this StreamsLiveResponse.
-
-        Creation timestamp, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ
-
-        :return: The created_at of this StreamsLiveResponse.
-        :rtype: datetime
-        """
-        return self._created_at
-
-    @created_at.setter
-    def created_at(self, created_at):
-        # type: (datetime) -> None
-        """Sets the created_at of this StreamsLiveResponse.
-
-        Creation timestamp, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ
-
-        :param created_at: The created_at of this StreamsLiveResponse.
-        :type: datetime
-        """
-
-        if created_at is not None:
-            if not isinstance(created_at, datetime):
-                raise TypeError("Invalid type for `created_at`, type has to be `datetime`")
-
-        self._created_at = created_at
 
     @property
     def life_cycle(self):
@@ -417,6 +294,8 @@ class StreamsLiveResponse(object):
         """Returns the model properties as a dict"""
         result = {}
 
+        if hasattr(super(StreamsLiveResponse, self), "to_dict"):
+            result = super(StreamsLiveResponse, self).to_dict()
         for attr, _ in six.iteritems(self.openapi_types):
             value = getattr(self, attr)
             if value is None:

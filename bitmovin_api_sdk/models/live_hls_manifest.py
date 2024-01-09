@@ -3,6 +3,7 @@
 from enum import Enum
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
+from bitmovin_api_sdk.models.hls_manifest_ad_marker_settings import HlsManifestAdMarkerSettings
 from bitmovin_api_sdk.models.program_date_time_settings import ProgramDateTimeSettings
 import pprint
 import six
@@ -15,14 +16,16 @@ class LiveHlsManifest(object):
                  timeshift=None,
                  live_edge_offset=None,
                  insert_program_date_time=None,
-                 program_date_time_settings=None):
-        # type: (string_types, float, float, bool, ProgramDateTimeSettings) -> None
+                 program_date_time_settings=None,
+                 ad_marker_settings=None):
+        # type: (string_types, float, float, bool, ProgramDateTimeSettings, HlsManifestAdMarkerSettings) -> None
 
         self._manifest_id = None
         self._timeshift = None
         self._live_edge_offset = None
         self._insert_program_date_time = None
         self._program_date_time_settings = None
+        self._ad_marker_settings = None
         self.discriminator = None
 
         if manifest_id is not None:
@@ -35,6 +38,8 @@ class LiveHlsManifest(object):
             self.insert_program_date_time = insert_program_date_time
         if program_date_time_settings is not None:
             self.program_date_time_settings = program_date_time_settings
+        if ad_marker_settings is not None:
+            self.ad_marker_settings = ad_marker_settings
 
     @property
     def openapi_types(self):
@@ -43,7 +48,8 @@ class LiveHlsManifest(object):
             'timeshift': 'float',
             'live_edge_offset': 'float',
             'insert_program_date_time': 'bool',
-            'program_date_time_settings': 'ProgramDateTimeSettings'
+            'program_date_time_settings': 'ProgramDateTimeSettings',
+            'ad_marker_settings': 'HlsManifestAdMarkerSettings'
         }
 
         return types
@@ -55,7 +61,8 @@ class LiveHlsManifest(object):
             'timeshift': 'timeshift',
             'live_edge_offset': 'liveEdgeOffset',
             'insert_program_date_time': 'insertProgramDateTime',
-            'program_date_time_settings': 'programDateTimeSettings'
+            'program_date_time_settings': 'programDateTimeSettings',
+            'ad_marker_settings': 'adMarkerSettings'
         }
         return attributes
 
@@ -203,6 +210,35 @@ class LiveHlsManifest(object):
                 raise TypeError("Invalid type for `program_date_time_settings`, type has to be `ProgramDateTimeSettings`")
 
         self._program_date_time_settings = program_date_time_settings
+
+    @property
+    def ad_marker_settings(self):
+        # type: () -> HlsManifestAdMarkerSettings
+        """Gets the ad_marker_settings of this LiveHlsManifest.
+
+        Configuration for tags related to ad markers (e.g. Scte35)
+
+        :return: The ad_marker_settings of this LiveHlsManifest.
+        :rtype: HlsManifestAdMarkerSettings
+        """
+        return self._ad_marker_settings
+
+    @ad_marker_settings.setter
+    def ad_marker_settings(self, ad_marker_settings):
+        # type: (HlsManifestAdMarkerSettings) -> None
+        """Sets the ad_marker_settings of this LiveHlsManifest.
+
+        Configuration for tags related to ad markers (e.g. Scte35)
+
+        :param ad_marker_settings: The ad_marker_settings of this LiveHlsManifest.
+        :type: HlsManifestAdMarkerSettings
+        """
+
+        if ad_marker_settings is not None:
+            if not isinstance(ad_marker_settings, HlsManifestAdMarkerSettings):
+                raise TypeError("Invalid type for `ad_marker_settings`, type has to be `HlsManifestAdMarkerSettings`")
+
+        self._ad_marker_settings = ad_marker_settings
 
     def to_dict(self):
         """Returns the model properties as a dict"""

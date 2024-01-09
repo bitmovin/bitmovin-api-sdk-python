@@ -6,8 +6,10 @@ from bitmovin_api_sdk.common import BaseApi, BitmovinApiLoggerBase
 from bitmovin_api_sdk.common.poscheck import poscheck_except
 from bitmovin_api_sdk.models.response_envelope import ResponseEnvelope
 from bitmovin_api_sdk.models.response_error import ResponseError
-from bitmovin_api_sdk.models.streams_search_response import StreamsSearchResponse
-from bitmovin_api_sdk.streams.search.streams_search_response_list_query_params import StreamsSearchResponseListQueryParams
+from bitmovin_api_sdk.models.streams_response import StreamsResponse
+from bitmovin_api_sdk.models.streams_type import StreamsType
+from bitmovin_api_sdk.models.streams_video_status import StreamsVideoStatus
+from bitmovin_api_sdk.streams.search.streams_response_list_query_params import StreamsResponseListQueryParams
 
 
 class SearchApi(BaseApi):
@@ -23,19 +25,19 @@ class SearchApi(BaseApi):
         )
 
     def list(self, query_params=None, **kwargs):
-        # type: (StreamsSearchResponseListQueryParams, dict) -> StreamsSearchResponse
+        # type: (StreamsResponseListQueryParams, dict) -> StreamsResponse
         """Get paginated search results of VOD and Live streams
 
         :param query_params: Query parameters
-        :type query_params: StreamsSearchResponseListQueryParams
+        :type query_params: StreamsResponseListQueryParams
         :return: List of all search results
-        :rtype: StreamsSearchResponse
+        :rtype: StreamsResponse
         """
 
         return self.api_client.get(
             '/streams/search',
             query_params=query_params,
             pagination_response=True,
-            type=StreamsSearchResponse,
+            type=StreamsResponse,
             **kwargs
         )

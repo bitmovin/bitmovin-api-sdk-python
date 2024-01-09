@@ -4,6 +4,7 @@ from enum import Enum
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
 from bitmovin_api_sdk.models.output import Output
+from bitmovin_api_sdk.models.s3_access_style import S3AccessStyle
 from bitmovin_api_sdk.models.s3_signature_version import S3SignatureVersion
 import pprint
 import six
@@ -25,8 +26,10 @@ class GenericS3Output(Output):
                  host=None,
                  port=None,
                  ssl=None,
-                 signature_version=None):
-        # type: (string_types, string_types, string_types, datetime, datetime, dict, list[AclEntry], string_types, string_types, string_types, string_types, int, bool, S3SignatureVersion) -> None
+                 signing_region=None,
+                 signature_version=None,
+                 access_style=None):
+        # type: (string_types, string_types, string_types, datetime, datetime, dict, list[AclEntry], string_types, string_types, string_types, string_types, int, bool, string_types, S3SignatureVersion, S3AccessStyle) -> None
         super(GenericS3Output, self).__init__(id_=id_, name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, acl=acl)
 
         self._access_key = None
@@ -35,7 +38,9 @@ class GenericS3Output(Output):
         self._host = None
         self._port = None
         self._ssl = None
+        self._signing_region = None
         self._signature_version = None
+        self._access_style = None
         self.discriminator = None
 
         if access_key is not None:
@@ -50,8 +55,12 @@ class GenericS3Output(Output):
             self.port = port
         if ssl is not None:
             self.ssl = ssl
+        if signing_region is not None:
+            self.signing_region = signing_region
         if signature_version is not None:
             self.signature_version = signature_version
+        if access_style is not None:
+            self.access_style = access_style
 
     @property
     def openapi_types(self):
@@ -67,7 +76,9 @@ class GenericS3Output(Output):
             'host': 'string_types',
             'port': 'int',
             'ssl': 'bool',
-            'signature_version': 'S3SignatureVersion'
+            'signing_region': 'string_types',
+            'signature_version': 'S3SignatureVersion',
+            'access_style': 'S3AccessStyle'
         })
 
         return types
@@ -86,7 +97,9 @@ class GenericS3Output(Output):
             'host': 'host',
             'port': 'port',
             'ssl': 'ssl',
-            'signature_version': 'signatureVersion'
+            'signing_region': 'signingRegion',
+            'signature_version': 'signatureVersion',
+            'access_style': 'accessStyle'
         })
         return attributes
 
@@ -265,6 +278,35 @@ class GenericS3Output(Output):
         self._ssl = ssl
 
     @property
+    def signing_region(self):
+        # type: () -> string_types
+        """Gets the signing_region of this GenericS3Output.
+
+        The signing region to use
+
+        :return: The signing_region of this GenericS3Output.
+        :rtype: string_types
+        """
+        return self._signing_region
+
+    @signing_region.setter
+    def signing_region(self, signing_region):
+        # type: (string_types) -> None
+        """Sets the signing_region of this GenericS3Output.
+
+        The signing region to use
+
+        :param signing_region: The signing_region of this GenericS3Output.
+        :type: string_types
+        """
+
+        if signing_region is not None:
+            if not isinstance(signing_region, string_types):
+                raise TypeError("Invalid type for `signing_region`, type has to be `string_types`")
+
+        self._signing_region = signing_region
+
+    @property
     def signature_version(self):
         # type: () -> S3SignatureVersion
         """Gets the signature_version of this GenericS3Output.
@@ -292,6 +334,35 @@ class GenericS3Output(Output):
                 raise TypeError("Invalid type for `signature_version`, type has to be `S3SignatureVersion`")
 
         self._signature_version = signature_version
+
+    @property
+    def access_style(self):
+        # type: () -> S3AccessStyle
+        """Gets the access_style of this GenericS3Output.
+
+        Specifies the URL access style to use
+
+        :return: The access_style of this GenericS3Output.
+        :rtype: S3AccessStyle
+        """
+        return self._access_style
+
+    @access_style.setter
+    def access_style(self, access_style):
+        # type: (S3AccessStyle) -> None
+        """Sets the access_style of this GenericS3Output.
+
+        Specifies the URL access style to use
+
+        :param access_style: The access_style of this GenericS3Output.
+        :type: S3AccessStyle
+        """
+
+        if access_style is not None:
+            if not isinstance(access_style, S3AccessStyle):
+                raise TypeError("Invalid type for `access_style`, type has to be `S3AccessStyle`")
+
+        self._access_style = access_style
 
     def to_dict(self):
         """Returns the model properties as a dict"""

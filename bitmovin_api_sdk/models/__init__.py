@@ -411,6 +411,8 @@ from bitmovin_api_sdk.models.history_encoding import HistoryEncoding
 from bitmovin_api_sdk.models.history_muxing import HistoryMuxing
 from bitmovin_api_sdk.models.history_stream import HistoryStream
 from bitmovin_api_sdk.models.hls_manifest import HlsManifest
+from bitmovin_api_sdk.models.hls_manifest_ad_marker_settings import HlsManifestAdMarkerSettings
+from bitmovin_api_sdk.models.hls_manifest_ad_marker_type import HlsManifestAdMarkerType
 from bitmovin_api_sdk.models.hls_manifest_default import HlsManifestDefault
 from bitmovin_api_sdk.models.hls_manifest_default_version import HlsManifestDefaultVersion
 from bitmovin_api_sdk.models.hls_target_duration_rounding_mode import HlsTargetDurationRoundingMode
@@ -604,6 +606,7 @@ from bitmovin_api_sdk.models.reupload_settings import ReuploadSettings
 from bitmovin_api_sdk.models.rotate_filter import RotateFilter
 from bitmovin_api_sdk.models.rtmp_ingest_point import RtmpIngestPoint
 from bitmovin_api_sdk.models.rtmp_input import RtmpInput
+from bitmovin_api_sdk.models.s3_access_style import S3AccessStyle
 from bitmovin_api_sdk.models.s3_input import S3Input
 from bitmovin_api_sdk.models.s3_output import S3Output
 from bitmovin_api_sdk.models.s3_role_based_input import S3RoleBasedInput
@@ -724,7 +727,7 @@ from bitmovin_api_sdk.models.streams_live_response import StreamsLiveResponse
 from bitmovin_api_sdk.models.streams_live_update_request import StreamsLiveUpdateRequest
 from bitmovin_api_sdk.models.streams_public_signing_key import StreamsPublicSigningKey
 from bitmovin_api_sdk.models.streams_public_signing_key_response import StreamsPublicSigningKeyResponse
-from bitmovin_api_sdk.models.streams_search_response import StreamsSearchResponse
+from bitmovin_api_sdk.models.streams_response import StreamsResponse
 from bitmovin_api_sdk.models.streams_signing_key_response import StreamsSigningKeyResponse
 from bitmovin_api_sdk.models.streams_style_config_player_style import StreamsStyleConfigPlayerStyle
 from bitmovin_api_sdk.models.streams_style_config_response import StreamsStyleConfigResponse

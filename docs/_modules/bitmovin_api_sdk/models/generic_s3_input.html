@@ -84,6 +84,7 @@
 <span class="kn">from</span> <span class="nn">six</span> <span class="kn">import</span> <span class="n">string_types</span><span class="p">,</span> <span class="n">iteritems</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.common.poscheck</span> <span class="kn">import</span> <span class="n">poscheck_model</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.input</span> <span class="kn">import</span> <span class="n">Input</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.s3_access_style</span> <span class="kn">import</span> <span class="n">S3AccessStyle</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.s3_signature_version</span> <span class="kn">import</span> <span class="n">S3SignatureVersion</span>
 <span class="kn">import</span> <span class="nn">pprint</span>
 <span class="kn">import</span> <span class="nn">six</span>
@@ -102,19 +103,23 @@
                  <span class="n">host</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">port</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">ssl</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">signing_region</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">signature_version</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">access_key</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                 <span class="n">secret_key</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (string_types, string_types, string_types, datetime, datetime, dict, string_types, string_types, int, bool, S3SignatureVersion, string_types, string_types) -&gt; None</span>
+                 <span class="n">secret_key</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">access_style</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="c1"># type: (string_types, string_types, string_types, datetime, datetime, dict, string_types, string_types, int, bool, string_types, S3SignatureVersion, string_types, string_types, S3AccessStyle) -&gt; None</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">GenericS3Input</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">id_</span><span class="o">=</span><span class="n">id_</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="n">description</span><span class="p">,</span> <span class="n">created_at</span><span class="o">=</span><span class="n">created_at</span><span class="p">,</span> <span class="n">modified_at</span><span class="o">=</span><span class="n">modified_at</span><span class="p">,</span> <span class="n">custom_data</span><span class="o">=</span><span class="n">custom_data</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_bucket_name</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_host</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_port</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_ssl</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_signing_region</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_signature_version</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_access_key</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_secret_key</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_access_style</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>
 
         <span class="k">if</span> <span class="n">bucket_name</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -125,12 +130,16 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">port</span> <span class="o">=</span> <span class="n">port</span>
         <span class="k">if</span> <span class="n">ssl</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">ssl</span> <span class="o">=</span> <span class="n">ssl</span>
+        <span class="k">if</span> <span class="n">signing_region</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">signing_region</span> <span class="o">=</span> <span class="n">signing_region</span>
         <span class="k">if</span> <span class="n">signature_version</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">signature_version</span> <span class="o">=</span> <span class="n">signature_version</span>
         <span class="k">if</span> <span class="n">access_key</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">access_key</span> <span class="o">=</span> <span class="n">access_key</span>
         <span class="k">if</span> <span class="n">secret_key</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">secret_key</span> <span class="o">=</span> <span class="n">secret_key</span>
+        <span class="k">if</span> <span class="n">access_style</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">access_style</span> <span class="o">=</span> <span class="n">access_style</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -144,9 +153,11 @@
             <span class="s1">&#39;host&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
             <span class="s1">&#39;port&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
             <span class="s1">&#39;ssl&#39;</span><span class="p">:</span> <span class="s1">&#39;bool&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;signing_region&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
             <span class="s1">&#39;signature_version&#39;</span><span class="p">:</span> <span class="s1">&#39;S3SignatureVersion&#39;</span><span class="p">,</span>
             <span class="s1">&#39;access_key&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;secret_key&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span>
+            <span class="s1">&#39;secret_key&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;access_style&#39;</span><span class="p">:</span> <span class="s1">&#39;S3AccessStyle&#39;</span>
         <span class="p">})</span>
 
         <span class="k">return</span> <span class="n">types</span>
@@ -163,9 +174,11 @@
             <span class="s1">&#39;host&#39;</span><span class="p">:</span> <span class="s1">&#39;host&#39;</span><span class="p">,</span>
             <span class="s1">&#39;port&#39;</span><span class="p">:</span> <span class="s1">&#39;port&#39;</span><span class="p">,</span>
             <span class="s1">&#39;ssl&#39;</span><span class="p">:</span> <span class="s1">&#39;ssl&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;signing_region&#39;</span><span class="p">:</span> <span class="s1">&#39;signingRegion&#39;</span><span class="p">,</span>
             <span class="s1">&#39;signature_version&#39;</span><span class="p">:</span> <span class="s1">&#39;signatureVersion&#39;</span><span class="p">,</span>
             <span class="s1">&#39;access_key&#39;</span><span class="p">:</span> <span class="s1">&#39;accessKey&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;secret_key&#39;</span><span class="p">:</span> <span class="s1">&#39;secretKey&#39;</span>
+            <span class="s1">&#39;secret_key&#39;</span><span class="p">:</span> <span class="s1">&#39;secretKey&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;access_style&#39;</span><span class="p">:</span> <span class="s1">&#39;accessStyle&#39;</span>
         <span class="p">})</span>
         <span class="k">return</span> <span class="n">attributes</span>
 
@@ -286,6 +299,35 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_ssl</span> <span class="o">=</span> <span class="n">ssl</span>
 
     <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">signing_region</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; string_types</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the signing_region of this GenericS3Input.</span>
+
+<span class="sd">        The signing region to use</span>
+
+<span class="sd">        :return: The signing_region of this GenericS3Input.</span>
+<span class="sd">        :rtype: string_types</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_signing_region</span>
+
+    <span class="nd">@signing_region</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">signing_region</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">signing_region</span><span class="p">):</span>
+        <span class="c1"># type: (string_types) -&gt; None</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the signing_region of this GenericS3Input.</span>
+
+<span class="sd">        The signing region to use</span>
+
+<span class="sd">        :param signing_region: The signing_region of this GenericS3Input.</span>
+<span class="sd">        :type: string_types</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">signing_region</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">signing_region</span><span class="p">,</span> <span class="n">string_types</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `signing_region`, type has to be `string_types`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_signing_region</span> <span class="o">=</span> <span class="n">signing_region</span>
+
+    <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">signature_version</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; S3SignatureVersion</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the signature_version of this GenericS3Input.</span>
@@ -371,6 +413,35 @@
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `secret_key`, type has to be `string_types`&quot;</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_secret_key</span> <span class="o">=</span> <span class="n">secret_key</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">access_style</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; S3AccessStyle</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the access_style of this GenericS3Input.</span>
+
+<span class="sd">        Specifies the URL access style to use</span>
+
+<span class="sd">        :return: The access_style of this GenericS3Input.</span>
+<span class="sd">        :rtype: S3AccessStyle</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_access_style</span>
+
+    <span class="nd">@access_style</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">access_style</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">access_style</span><span class="p">):</span>
+        <span class="c1"># type: (S3AccessStyle) -&gt; None</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the access_style of this GenericS3Input.</span>
+
+<span class="sd">        Specifies the URL access style to use</span>
+
+<span class="sd">        :param access_style: The access_style of this GenericS3Input.</span>
+<span class="sd">        :type: S3AccessStyle</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">access_style</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">access_style</span><span class="p">,</span> <span class="n">S3AccessStyle</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `access_style`, type has to be `S3AccessStyle`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_access_style</span> <span class="o">=</span> <span class="n">access_style</span>
 
 <div class="viewcode-block" id="GenericS3Input.to_dict"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.generic_s3_input.GenericS3Input.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>
