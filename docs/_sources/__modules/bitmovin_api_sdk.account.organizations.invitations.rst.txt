@@ -1,0 +1,21 @@
+bitmovin\_api\_sdk.account.organizations.invitations package
+============================================================
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.account.organizations.invitations.invitations\_api module
+----------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.account.organizations.invitations.invitations_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.account.organizations.invitations
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -17,6 +17,8 @@ from bitmovin_api_sdk.account.organizations.sub_organizations.sub_organizations_
 from bitmovin_api_sdk.account.organizations.sub_organizations.sub_organizations_api import OrganizationListQueryParams
 from bitmovin_api_sdk.account.organizations.tenants.tenants_api import TenantsApi
 
+from bitmovin_api_sdk.account.organizations.invitations.invitations_api import InvitationsApi
+
 from bitmovin_api_sdk.account.organizations.groups.groups_api import GroupsApi
 
 from bitmovin_api_sdk.account.organizations.groups.tenants.tenants_api import TenantsApi
@@ -1535,6 +1537,7 @@ from bitmovin_api_sdk.models.opus_audio_configuration import OpusAudioConfigurat
 from bitmovin_api_sdk.models.opus_channel_layout import OpusChannelLayout
 from bitmovin_api_sdk.models.or_conjunction import OrConjunction
 from bitmovin_api_sdk.models.organization import Organization
+from bitmovin_api_sdk.models.organization_pending_invitation import OrganizationPendingInvitation
 from bitmovin_api_sdk.models.organization_type import OrganizationType
 from bitmovin_api_sdk.models.ott_loudness_mode import OttLoudnessMode
 from bitmovin_api_sdk.models.output import Output
@@ -1831,4 +1834,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.181.0"
+__version__ = "1.182.0"

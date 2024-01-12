@@ -524,6 +524,7 @@ from bitmovin_api_sdk.models.opus_audio_configuration import OpusAudioConfigurat
 from bitmovin_api_sdk.models.opus_channel_layout import OpusChannelLayout
 from bitmovin_api_sdk.models.or_conjunction import OrConjunction
 from bitmovin_api_sdk.models.organization import Organization
+from bitmovin_api_sdk.models.organization_pending_invitation import OrganizationPendingInvitation
 from bitmovin_api_sdk.models.organization_type import OrganizationType
 from bitmovin_api_sdk.models.ott_loudness_mode import OttLoudnessMode
 from bitmovin_api_sdk.models.output import Output

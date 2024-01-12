@@ -8,6 +8,7 @@ Subpackages
    :maxdepth: 4
 
    bitmovin_api_sdk.account.organizations.groups
+   bitmovin_api_sdk.account.organizations.invitations
    bitmovin_api_sdk.account.organizations.sub_organizations
    bitmovin_api_sdk.account.organizations.tenants
 

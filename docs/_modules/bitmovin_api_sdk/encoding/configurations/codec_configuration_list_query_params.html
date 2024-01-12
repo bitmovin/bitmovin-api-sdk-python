@@ -79,20 +79,22 @@
              
   <h1>Source code for bitmovin_api_sdk.encoding.configurations.codec_configuration_list_query_params</h1><div class="highlight"><pre>
 <div class="viewcode-block" id="CodecConfigurationListQueryParams"><a class="viewcode-back" href="../../../../__modules/bitmovin_api_sdk.encoding.configurations.html#bitmovin_api_sdk.encoding.configurations.codec_configuration_list_query_params.CodecConfigurationListQueryParams">[docs]</a><span></span><span class="k">class</span> <span class="nc">CodecConfigurationListQueryParams</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">offset</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (int, int, string_types) -&gt; None</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">offset</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">sort</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="c1"># type: (int, int, string_types, string_types) -&gt; None</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">CodecConfigurationListQueryParams</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">offset</span> <span class="o">=</span> <span class="n">offset</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">limit</span> <span class="o">=</span> <span class="n">limit</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sort</span> <span class="o">=</span> <span class="n">sort</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">types</span> <span class="o">=</span> <span class="p">{</span>
             <span class="s1">&#39;offset&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
             <span class="s1">&#39;limit&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span>
+            <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;sort&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span>
         <span class="p">}</span>
 
         <span class="k">return</span> <span class="n">types</span>
@@ -102,7 +104,8 @@
         <span class="n">attributes</span> <span class="o">=</span> <span class="p">{</span>
             <span class="s1">&#39;offset&#39;</span><span class="p">:</span> <span class="s1">&#39;offset&#39;</span><span class="p">,</span>
             <span class="s1">&#39;limit&#39;</span><span class="p">:</span> <span class="s1">&#39;limit&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;name&#39;</span>
+            <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;name&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;sort&#39;</span><span class="p">:</span> <span class="s1">&#39;sort&#39;</span>
         <span class="p">}</span>
 
         <span class="k">return</span> <span class="n">attributes</span></div>

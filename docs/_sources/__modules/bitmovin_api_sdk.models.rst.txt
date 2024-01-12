@@ -4172,6 +4172,14 @@ bitmovin\_api\_sdk.models.organization module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.organization\_pending\_invitation module
+------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.organization_pending_invitation
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.organization\_type module
 ---------------------------------------------------
 
