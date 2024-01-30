@@ -1,0 +1,29 @@
+bitmovin\_api\_sdk.encoding.live package
+========================================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   bitmovin_api_sdk.encoding.live.stream_keys
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.encoding.live.live\_api module
+-------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.live.live_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.encoding.live
+   :members:
+   :undoc-members:
+   :show-inheritance:

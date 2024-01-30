@@ -9,6 +9,7 @@ from bitmovin_api_sdk.encoding.outputs.outputs_api import OutputsApi
 from bitmovin_api_sdk.encoding.configurations.configurations_api import ConfigurationsApi
 from bitmovin_api_sdk.encoding.filters.filters_api import FiltersApi
 from bitmovin_api_sdk.encoding.encodings.encodings_api import EncodingsApi
+from bitmovin_api_sdk.encoding.live.live_api import LiveApi
 from bitmovin_api_sdk.encoding.manifests.manifests_api import ManifestsApi
 from bitmovin_api_sdk.encoding.infrastructure.infrastructure_api import InfrastructureApi
 from bitmovin_api_sdk.encoding.statistics.statistics_api import StatisticsApi
@@ -59,6 +60,13 @@ class EncodingApi(BaseApi):
         )
 
         self.encodings = EncodingsApi(
+            api_key=api_key,
+            tenant_org_id=tenant_org_id,
+            base_url=base_url,
+            logger=logger
+        )
+
+        self.live = LiveApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,

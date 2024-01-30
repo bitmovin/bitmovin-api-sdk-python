@@ -5556,6 +5556,14 @@ bitmovin\_api\_sdk.models.static\_ip\_status module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.static\_rtmp\_ingest\_point module
+------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.static_rtmp_ingest_point
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.statistics module
 -------------------------------------------
 
@@ -5680,6 +5688,46 @@ bitmovin\_api\_sdk.models.stream\_input module
 ----------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.models.stream_input
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.stream\_key module
+--------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.stream_key
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.stream\_key\_configuration module
+-----------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.stream_key_configuration
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.stream\_key\_configuration\_type module
+-----------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.stream_key_configuration_type
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.stream\_key\_status module
+----------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.stream_key_status
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.stream\_key\_type module
+--------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.stream_key_type
    :members:
    :undoc-members:
    :show-inheritance:

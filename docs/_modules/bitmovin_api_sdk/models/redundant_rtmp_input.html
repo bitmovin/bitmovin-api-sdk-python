@@ -98,18 +98,22 @@
                  <span class="n">modified_at</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">custom_data</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">delay_threshold</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                 <span class="n">ingest_points</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (string_types, string_types, string_types, datetime, datetime, dict, int, list[RtmpIngestPoint]) -&gt; None</span>
+                 <span class="n">ingest_points</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">static_ingest_points</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="c1"># type: (string_types, string_types, string_types, datetime, datetime, dict, int, list[RtmpIngestPoint], list[StaticRtmpIngestPoint]) -&gt; None</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">RedundantRtmpInput</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">id_</span><span class="o">=</span><span class="n">id_</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="n">description</span><span class="p">,</span> <span class="n">created_at</span><span class="o">=</span><span class="n">created_at</span><span class="p">,</span> <span class="n">modified_at</span><span class="o">=</span><span class="n">modified_at</span><span class="p">,</span> <span class="n">custom_data</span><span class="o">=</span><span class="n">custom_data</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_delay_threshold</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_ingest_points</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_static_ingest_points</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>
 
         <span class="k">if</span> <span class="n">delay_threshold</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">delay_threshold</span> <span class="o">=</span> <span class="n">delay_threshold</span>
         <span class="k">if</span> <span class="n">ingest_points</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">ingest_points</span> <span class="o">=</span> <span class="n">ingest_points</span>
+        <span class="k">if</span> <span class="n">static_ingest_points</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">static_ingest_points</span> <span class="o">=</span> <span class="n">static_ingest_points</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -120,7 +124,8 @@
 
         <span class="n">types</span><span class="o">.</span><span class="n">update</span><span class="p">({</span>
             <span class="s1">&#39;delay_threshold&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;ingest_points&#39;</span><span class="p">:</span> <span class="s1">&#39;list[RtmpIngestPoint]&#39;</span>
+            <span class="s1">&#39;ingest_points&#39;</span><span class="p">:</span> <span class="s1">&#39;list[RtmpIngestPoint]&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;static_ingest_points&#39;</span><span class="p">:</span> <span class="s1">&#39;list[StaticRtmpIngestPoint]&#39;</span>
         <span class="p">})</span>
 
         <span class="k">return</span> <span class="n">types</span>
@@ -134,7 +139,8 @@
 
         <span class="n">attributes</span><span class="o">.</span><span class="n">update</span><span class="p">({</span>
             <span class="s1">&#39;delay_threshold&#39;</span><span class="p">:</span> <span class="s1">&#39;delayThreshold&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;ingest_points&#39;</span><span class="p">:</span> <span class="s1">&#39;ingestPoints&#39;</span>
+            <span class="s1">&#39;ingest_points&#39;</span><span class="p">:</span> <span class="s1">&#39;ingestPoints&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;static_ingest_points&#39;</span><span class="p">:</span> <span class="s1">&#39;staticIngestPoints&#39;</span>
         <span class="p">})</span>
         <span class="k">return</span> <span class="n">attributes</span>
 
@@ -172,6 +178,7 @@
         <span class="c1"># type: () -&gt; list[RtmpIngestPoint]</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the ingest_points of this RedundantRtmpInput.</span>
 
+<span class="sd">        Configuration for ingest points that use a dynamic IP based endpoint to stream to e.g.: rtmp://41.167.11.21/live Either ingestPoints **or** staticIngestPoints can be set </span>
 
 <span class="sd">        :return: The ingest_points of this RedundantRtmpInput.</span>
 <span class="sd">        :rtype: list[RtmpIngestPoint]</span>
@@ -183,6 +190,7 @@
         <span class="c1"># type: (list) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the ingest_points of this RedundantRtmpInput.</span>
 
+<span class="sd">        Configuration for ingest points that use a dynamic IP based endpoint to stream to e.g.: rtmp://41.167.11.21/live Either ingestPoints **or** staticIngestPoints can be set </span>
 
 <span class="sd">        :param ingest_points: The ingest_points of this RedundantRtmpInput.</span>
 <span class="sd">        :type: list[RtmpIngestPoint]</span>
@@ -193,6 +201,35 @@
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `ingest_points`, type has to be `list[RtmpIngestPoint]`&quot;</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_ingest_points</span> <span class="o">=</span> <span class="n">ingest_points</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">static_ingest_points</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; list[StaticRtmpIngestPoint]</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the static_ingest_points of this RedundantRtmpInput.</span>
+
+<span class="sd">        Configuration for static ingest points. These ingest points use a consistent endpoint to stream to e.g.: rtmps://live-ingest.bitmovin.com/live Either ingestPoints **or** staticIngestPoints can be set </span>
+
+<span class="sd">        :return: The static_ingest_points of this RedundantRtmpInput.</span>
+<span class="sd">        :rtype: list[StaticRtmpIngestPoint]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_static_ingest_points</span>
+
+    <span class="nd">@static_ingest_points</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">static_ingest_points</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">static_ingest_points</span><span class="p">):</span>
+        <span class="c1"># type: (list) -&gt; None</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the static_ingest_points of this RedundantRtmpInput.</span>
+
+<span class="sd">        Configuration for static ingest points. These ingest points use a consistent endpoint to stream to e.g.: rtmps://live-ingest.bitmovin.com/live Either ingestPoints **or** staticIngestPoints can be set </span>
+
+<span class="sd">        :param static_ingest_points: The static_ingest_points of this RedundantRtmpInput.</span>
+<span class="sd">        :type: list[StaticRtmpIngestPoint]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">static_ingest_points</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">static_ingest_points</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `static_ingest_points`, type has to be `list[StaticRtmpIngestPoint]`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_static_ingest_points</span> <span class="o">=</span> <span class="n">static_ingest_points</span>
 
 <div class="viewcode-block" id="RedundantRtmpInput.to_dict"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.redundant_rtmp_input.RedundantRtmpInput.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>

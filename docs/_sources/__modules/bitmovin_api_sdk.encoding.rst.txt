@@ -14,6 +14,7 @@ Subpackages
    bitmovin_api_sdk.encoding.history
    bitmovin_api_sdk.encoding.infrastructure
    bitmovin_api_sdk.encoding.inputs
+   bitmovin_api_sdk.encoding.live
    bitmovin_api_sdk.encoding.manifests
    bitmovin_api_sdk.encoding.outputs
    bitmovin_api_sdk.encoding.simple

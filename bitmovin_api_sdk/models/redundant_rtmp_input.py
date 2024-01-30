@@ -18,18 +18,22 @@ class RedundantRtmpInput(Input):
                  modified_at=None,
                  custom_data=None,
                  delay_threshold=None,
-                 ingest_points=None):
-        # type: (string_types, string_types, string_types, datetime, datetime, dict, int, list[RtmpIngestPoint]) -> None
+                 ingest_points=None,
+                 static_ingest_points=None):
+        # type: (string_types, string_types, string_types, datetime, datetime, dict, int, list[RtmpIngestPoint], list[StaticRtmpIngestPoint]) -> None
         super(RedundantRtmpInput, self).__init__(id_=id_, name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data)
 
         self._delay_threshold = None
         self._ingest_points = list()
+        self._static_ingest_points = list()
         self.discriminator = None
 
         if delay_threshold is not None:
             self.delay_threshold = delay_threshold
         if ingest_points is not None:
             self.ingest_points = ingest_points
+        if static_ingest_points is not None:
+            self.static_ingest_points = static_ingest_points
 
     @property
     def openapi_types(self):
@@ -40,7 +44,8 @@ class RedundantRtmpInput(Input):
 
         types.update({
             'delay_threshold': 'int',
-            'ingest_points': 'list[RtmpIngestPoint]'
+            'ingest_points': 'list[RtmpIngestPoint]',
+            'static_ingest_points': 'list[StaticRtmpIngestPoint]'
         })
 
         return types
@@ -54,7 +59,8 @@ class RedundantRtmpInput(Input):
 
         attributes.update({
             'delay_threshold': 'delayThreshold',
-            'ingest_points': 'ingestPoints'
+            'ingest_points': 'ingestPoints',
+            'static_ingest_points': 'staticIngestPoints'
         })
         return attributes
 
@@ -92,6 +98,7 @@ class RedundantRtmpInput(Input):
         # type: () -> list[RtmpIngestPoint]
         """Gets the ingest_points of this RedundantRtmpInput.
 
+        Configuration for ingest points that use a dynamic IP based endpoint to stream to e.g.: rtmp://41.167.11.21/live Either ingestPoints **or** staticIngestPoints can be set 
 
         :return: The ingest_points of this RedundantRtmpInput.
         :rtype: list[RtmpIngestPoint]
@@ -103,6 +110,7 @@ class RedundantRtmpInput(Input):
         # type: (list) -> None
         """Sets the ingest_points of this RedundantRtmpInput.
 
+        Configuration for ingest points that use a dynamic IP based endpoint to stream to e.g.: rtmp://41.167.11.21/live Either ingestPoints **or** staticIngestPoints can be set 
 
         :param ingest_points: The ingest_points of this RedundantRtmpInput.
         :type: list[RtmpIngestPoint]
@@ -113,6 +121,35 @@ class RedundantRtmpInput(Input):
                 raise TypeError("Invalid type for `ingest_points`, type has to be `list[RtmpIngestPoint]`")
 
         self._ingest_points = ingest_points
+
+    @property
+    def static_ingest_points(self):
+        # type: () -> list[StaticRtmpIngestPoint]
+        """Gets the static_ingest_points of this RedundantRtmpInput.
+
+        Configuration for static ingest points. These ingest points use a consistent endpoint to stream to e.g.: rtmps://live-ingest.bitmovin.com/live Either ingestPoints **or** staticIngestPoints can be set 
+
+        :return: The static_ingest_points of this RedundantRtmpInput.
+        :rtype: list[StaticRtmpIngestPoint]
+        """
+        return self._static_ingest_points
+
+    @static_ingest_points.setter
+    def static_ingest_points(self, static_ingest_points):
+        # type: (list) -> None
+        """Sets the static_ingest_points of this RedundantRtmpInput.
+
+        Configuration for static ingest points. These ingest points use a consistent endpoint to stream to e.g.: rtmps://live-ingest.bitmovin.com/live Either ingestPoints **or** staticIngestPoints can be set 
+
+        :param static_ingest_points: The static_ingest_points of this RedundantRtmpInput.
+        :type: list[StaticRtmpIngestPoint]
+        """
+
+        if static_ingest_points is not None:
+            if not isinstance(static_ingest_points, list):
+                raise TypeError("Invalid type for `static_ingest_points`, type has to be `list[StaticRtmpIngestPoint]`")
+
+        self._static_ingest_points = static_ingest_points
 
     def to_dict(self):
         """Returns the model properties as a dict"""

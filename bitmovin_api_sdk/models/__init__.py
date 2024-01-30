@@ -697,6 +697,7 @@ from bitmovin_api_sdk.models.start_live_encoding_request import StartLiveEncodin
 from bitmovin_api_sdk.models.start_manifest_request import StartManifestRequest
 from bitmovin_api_sdk.models.static_ip import StaticIp
 from bitmovin_api_sdk.models.static_ip_status import StaticIpStatus
+from bitmovin_api_sdk.models.static_rtmp_ingest_point import StaticRtmpIngestPoint
 from bitmovin_api_sdk.models.statistics import Statistics
 from bitmovin_api_sdk.models.statistics_per_label import StatisticsPerLabel
 from bitmovin_api_sdk.models.statistics_per_muxing import StatisticsPerMuxing
@@ -713,6 +714,11 @@ from bitmovin_api_sdk.models.stream_info import StreamInfo
 from bitmovin_api_sdk.models.stream_infos import StreamInfos
 from bitmovin_api_sdk.models.stream_infos_details import StreamInfosDetails
 from bitmovin_api_sdk.models.stream_input import StreamInput
+from bitmovin_api_sdk.models.stream_key import StreamKey
+from bitmovin_api_sdk.models.stream_key_configuration import StreamKeyConfiguration
+from bitmovin_api_sdk.models.stream_key_configuration_type import StreamKeyConfigurationType
+from bitmovin_api_sdk.models.stream_key_status import StreamKeyStatus
+from bitmovin_api_sdk.models.stream_key_type import StreamKeyType
 from bitmovin_api_sdk.models.stream_metadata import StreamMetadata
 from bitmovin_api_sdk.models.stream_mode import StreamMode
 from bitmovin_api_sdk.models.stream_per_title_fixed_resolution_and_bitrate_settings import StreamPerTitleFixedResolutionAndBitrateSettings
