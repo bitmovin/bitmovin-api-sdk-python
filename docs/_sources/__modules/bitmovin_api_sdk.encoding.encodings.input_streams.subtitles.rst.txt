@@ -8,7 +8,6 @@ Subpackages
    :maxdepth: 4
 
    bitmovin_api_sdk.encoding.encodings.input_streams.subtitles.dvb_subtitle
-   bitmovin_api_sdk.encoding.encodings.input_streams.subtitles.dvb_teletext
 
 Submodules
 ----------

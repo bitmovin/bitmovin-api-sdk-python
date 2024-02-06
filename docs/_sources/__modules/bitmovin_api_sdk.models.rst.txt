@@ -2604,14 +2604,6 @@ bitmovin\_api\_sdk.models.dvb\_subtitle\_input\_stream module
    :undoc-members:
    :show-inheritance:
 
-bitmovin\_api\_sdk.models.dvb\_teletext\_input\_stream module
--------------------------------------------------------------
-
-.. automodule:: bitmovin_api_sdk.models.dvb_teletext_input_stream
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
 bitmovin\_api\_sdk.models.eac3\_audio\_configuration module
 -----------------------------------------------------------
 

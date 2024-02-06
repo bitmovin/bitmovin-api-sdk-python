@@ -461,8 +461,6 @@ from bitmovin_api_sdk.encoding.encodings.input_streams.subtitles.subtitles_api i
 
 from bitmovin_api_sdk.encoding.encodings.input_streams.subtitles.dvb_subtitle.dvb_subtitle_api import DvbSubtitleApi
 from bitmovin_api_sdk.encoding.encodings.input_streams.subtitles.dvb_subtitle.dvb_subtitle_api import DvbSubtitleInputStreamListQueryParams
-from bitmovin_api_sdk.encoding.encodings.input_streams.subtitles.dvb_teletext.dvb_teletext_api import DvbTeletextApi
-from bitmovin_api_sdk.encoding.encodings.input_streams.subtitles.dvb_teletext.dvb_teletext_api import DvbTeletextInputStreamListQueryParams
 from bitmovin_api_sdk.encoding.encodings.input_streams.captions.captions_api import CaptionsApi
 
 from bitmovin_api_sdk.encoding.encodings.input_streams.captions.cea608.cea608_api import Cea608Api
@@ -1345,7 +1343,6 @@ from bitmovin_api_sdk.models.dts_x_audio_configuration import DtsXAudioConfigura
 from bitmovin_api_sdk.models.dts_x_channel_layout import DtsXChannelLayout
 from bitmovin_api_sdk.models.dvb_subtitle_configuration import DvbSubtitleConfiguration
 from bitmovin_api_sdk.models.dvb_subtitle_input_stream import DvbSubtitleInputStream
-from bitmovin_api_sdk.models.dvb_teletext_input_stream import DvbTeletextInputStream
 from bitmovin_api_sdk.models.eac3_audio_configuration import Eac3AudioConfiguration
 from bitmovin_api_sdk.models.ebu_r128_single_pass_filter import EbuR128SinglePassFilter
 from bitmovin_api_sdk.models.egress_category import EgressCategory
@@ -1844,4 +1841,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.184.1"
+__version__ = "1.185.0"
