@@ -25,6 +25,7 @@ class AnalyticsLicense(object):
                  max_impressions=None,
                  time_zone=None,
                  retention_time=None,
+                 compressed_retention_time=None,
                  domains=None,
                  include_in_insights=None,
                  custom_data_field_labels=None,
@@ -33,7 +34,7 @@ class AnalyticsLicense(object):
                  rate_limit=None,
                  features=None,
                  plan_expired_at=None):
-        # type: (string_types, datetime, dict, string_types, string_types, string_types, string_types, bool, int, int, string_types, string_types, list[AnalyticsLicenseDomain], bool, AnalyticsLicenseCustomDataFieldLabels, int, int, string_types, AnalyticsLicenseFeatures, datetime) -> None
+        # type: (string_types, datetime, dict, string_types, string_types, string_types, string_types, bool, int, int, string_types, string_types, string_types, list[AnalyticsLicenseDomain], bool, AnalyticsLicenseCustomDataFieldLabels, int, int, string_types, AnalyticsLicenseFeatures, datetime) -> None
 
         self._id = None
         self._created_at = None
@@ -47,6 +48,7 @@ class AnalyticsLicense(object):
         self._max_impressions = None
         self._time_zone = None
         self._retention_time = None
+        self._compressed_retention_time = None
         self._domains = list()
         self._include_in_insights = None
         self._custom_data_field_labels = None
@@ -81,6 +83,8 @@ class AnalyticsLicense(object):
             self.time_zone = time_zone
         if retention_time is not None:
             self.retention_time = retention_time
+        if compressed_retention_time is not None:
+            self.compressed_retention_time = compressed_retention_time
         if domains is not None:
             self.domains = domains
         if include_in_insights is not None:
@@ -113,6 +117,7 @@ class AnalyticsLicense(object):
             'max_impressions': 'int',
             'time_zone': 'string_types',
             'retention_time': 'string_types',
+            'compressed_retention_time': 'string_types',
             'domains': 'list[AnalyticsLicenseDomain]',
             'include_in_insights': 'bool',
             'custom_data_field_labels': 'AnalyticsLicenseCustomDataFieldLabels',
@@ -140,6 +145,7 @@ class AnalyticsLicense(object):
             'max_impressions': 'maxImpressions',
             'time_zone': 'timeZone',
             'retention_time': 'retentionTime',
+            'compressed_retention_time': 'compressedRetentionTime',
             'domains': 'domains',
             'include_in_insights': 'includeInInsights',
             'custom_data_field_labels': 'customDataFieldLabels',
@@ -498,6 +504,35 @@ class AnalyticsLicense(object):
                 raise TypeError("Invalid type for `retention_time`, type has to be `string_types`")
 
         self._retention_time = retention_time
+
+    @property
+    def compressed_retention_time(self):
+        # type: () -> string_types
+        """Gets the compressed_retention_time of this AnalyticsLicense.
+
+        Retention time for compressed data, returned as ISO 8601 duration format: P(n)Y(n)M(n)DT(n)H(n)M(n)S
+
+        :return: The compressed_retention_time of this AnalyticsLicense.
+        :rtype: string_types
+        """
+        return self._compressed_retention_time
+
+    @compressed_retention_time.setter
+    def compressed_retention_time(self, compressed_retention_time):
+        # type: (string_types) -> None
+        """Sets the compressed_retention_time of this AnalyticsLicense.
+
+        Retention time for compressed data, returned as ISO 8601 duration format: P(n)Y(n)M(n)DT(n)H(n)M(n)S
+
+        :param compressed_retention_time: The compressed_retention_time of this AnalyticsLicense.
+        :type: string_types
+        """
+
+        if compressed_retention_time is not None:
+            if not isinstance(compressed_retention_time, string_types):
+                raise TypeError("Invalid type for `compressed_retention_time`, type has to be `string_types`")
+
+        self._compressed_retention_time = compressed_retention_time
 
     @property
     def domains(self):

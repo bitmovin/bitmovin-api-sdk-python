@@ -96,16 +96,18 @@
                  <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">timezone</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">retention_time</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">compressed_retention_time</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">licenses</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">custom_data_fields_count</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">custom_data_field_labels</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">plan_expired_at</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (string_types, string_types, string_types, string_types, list[AnalyticsVirtualLicenseLicensesListItem], int, AnalyticsLicenseCustomDataFieldLabels, datetime) -&gt; None</span>
+        <span class="c1"># type: (string_types, string_types, string_types, string_types, string_types, list[AnalyticsVirtualLicenseLicensesListItem], int, AnalyticsLicenseCustomDataFieldLabels, datetime) -&gt; None</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_id</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_name</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_timezone</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_retention_time</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_compressed_retention_time</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_licenses</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_custom_data_fields_count</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_custom_data_field_labels</span> <span class="o">=</span> <span class="kc">None</span>
@@ -120,6 +122,8 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">timezone</span> <span class="o">=</span> <span class="n">timezone</span>
         <span class="k">if</span> <span class="n">retention_time</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">retention_time</span> <span class="o">=</span> <span class="n">retention_time</span>
+        <span class="k">if</span> <span class="n">compressed_retention_time</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">compressed_retention_time</span> <span class="o">=</span> <span class="n">compressed_retention_time</span>
         <span class="k">if</span> <span class="n">licenses</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">licenses</span> <span class="o">=</span> <span class="n">licenses</span>
         <span class="k">if</span> <span class="n">custom_data_fields_count</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -136,6 +140,7 @@
             <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
             <span class="s1">&#39;timezone&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
             <span class="s1">&#39;retention_time&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;compressed_retention_time&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
             <span class="s1">&#39;licenses&#39;</span><span class="p">:</span> <span class="s1">&#39;list[AnalyticsVirtualLicenseLicensesListItem]&#39;</span><span class="p">,</span>
             <span class="s1">&#39;custom_data_fields_count&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
             <span class="s1">&#39;custom_data_field_labels&#39;</span><span class="p">:</span> <span class="s1">&#39;AnalyticsLicenseCustomDataFieldLabels&#39;</span><span class="p">,</span>
@@ -151,6 +156,7 @@
             <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;name&#39;</span><span class="p">,</span>
             <span class="s1">&#39;timezone&#39;</span><span class="p">:</span> <span class="s1">&#39;timezone&#39;</span><span class="p">,</span>
             <span class="s1">&#39;retention_time&#39;</span><span class="p">:</span> <span class="s1">&#39;retentionTime&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;compressed_retention_time&#39;</span><span class="p">:</span> <span class="s1">&#39;compressedRetentionTime&#39;</span><span class="p">,</span>
             <span class="s1">&#39;licenses&#39;</span><span class="p">:</span> <span class="s1">&#39;licenses&#39;</span><span class="p">,</span>
             <span class="s1">&#39;custom_data_fields_count&#39;</span><span class="p">:</span> <span class="s1">&#39;customDataFieldsCount&#39;</span><span class="p">,</span>
             <span class="s1">&#39;custom_data_field_labels&#39;</span><span class="p">:</span> <span class="s1">&#39;customDataFieldLabels&#39;</span><span class="p">,</span>
@@ -273,6 +279,35 @@
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `retention_time`, type has to be `string_types`&quot;</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_retention_time</span> <span class="o">=</span> <span class="n">retention_time</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">compressed_retention_time</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; string_types</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the compressed_retention_time of this AnalyticsVirtualLicense.</span>
+
+<span class="sd">        Retention time for compressed data, returned as ISO 8601 duration format: P(n)Y(n)M(n)DT(n)H(n)M(n)S</span>
+
+<span class="sd">        :return: The compressed_retention_time of this AnalyticsVirtualLicense.</span>
+<span class="sd">        :rtype: string_types</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_compressed_retention_time</span>
+
+    <span class="nd">@compressed_retention_time</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">compressed_retention_time</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">compressed_retention_time</span><span class="p">):</span>
+        <span class="c1"># type: (string_types) -&gt; None</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the compressed_retention_time of this AnalyticsVirtualLicense.</span>
+
+<span class="sd">        Retention time for compressed data, returned as ISO 8601 duration format: P(n)Y(n)M(n)DT(n)H(n)M(n)S</span>
+
+<span class="sd">        :param compressed_retention_time: The compressed_retention_time of this AnalyticsVirtualLicense.</span>
+<span class="sd">        :type: string_types</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">compressed_retention_time</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">compressed_retention_time</span><span class="p">,</span> <span class="n">string_types</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `compressed_retention_time`, type has to be `string_types`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_compressed_retention_time</span> <span class="o">=</span> <span class="n">compressed_retention_time</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">licenses</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>

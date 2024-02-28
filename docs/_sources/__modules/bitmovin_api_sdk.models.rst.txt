@@ -1668,6 +1668,14 @@ bitmovin\_api\_sdk.models.condition module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.condition\_attribute module
+-----------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.condition_attribute
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.condition\_operator module
 ----------------------------------------------------
 

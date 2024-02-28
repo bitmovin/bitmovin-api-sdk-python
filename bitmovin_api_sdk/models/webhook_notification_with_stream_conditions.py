@@ -4,7 +4,9 @@ from enum import Enum
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
 from bitmovin_api_sdk.models.abstract_condition import AbstractCondition
+from bitmovin_api_sdk.models.webhook_http_method import WebhookHttpMethod
 from bitmovin_api_sdk.models.webhook_notification import WebhookNotification
+from bitmovin_api_sdk.models.webhook_signature import WebhookSignature
 import pprint
 import six
 
@@ -23,9 +25,12 @@ class WebhookNotificationWithStreamConditions(WebhookNotification):
                  muted=None,
                  custom_data=None,
                  url=None,
+                 method=None,
+                 insecure_ssl=None,
+                 signature=None,
                  conditions=None):
-        # type: (string_types, bool, string_types, datetime, string_types, string_types, string_types, string_types, bool, dict, string_types, AbstractCondition) -> None
-        super(WebhookNotificationWithStreamConditions, self).__init__(id_=id_, resolve=resolve, resource_id=resource_id, triggered_at=triggered_at, type_=type_, event_type=event_type, category=category, resource_type=resource_type, muted=muted, custom_data=custom_data, url=url)
+        # type: (string_types, bool, string_types, datetime, string_types, string_types, string_types, string_types, bool, dict, string_types, WebhookHttpMethod, bool, WebhookSignature, AbstractCondition) -> None
+        super(WebhookNotificationWithStreamConditions, self).__init__(id_=id_, resolve=resolve, resource_id=resource_id, triggered_at=triggered_at, type_=type_, event_type=event_type, category=category, resource_type=resource_type, muted=muted, custom_data=custom_data, url=url, method=method, insecure_ssl=insecure_ssl, signature=signature)
 
         self._conditions = None
         self.discriminator = None

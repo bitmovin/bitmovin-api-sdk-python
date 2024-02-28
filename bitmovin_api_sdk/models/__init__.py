@@ -211,6 +211,7 @@ from bitmovin_api_sdk.models.color_transfer import ColorTransfer
 from bitmovin_api_sdk.models.concatenation_input_configuration import ConcatenationInputConfiguration
 from bitmovin_api_sdk.models.concatenation_input_stream import ConcatenationInputStream
 from bitmovin_api_sdk.models.condition import Condition
+from bitmovin_api_sdk.models.condition_attribute import ConditionAttribute
 from bitmovin_api_sdk.models.condition_operator import ConditionOperator
 from bitmovin_api_sdk.models.condition_type import ConditionType
 from bitmovin_api_sdk.models.conform_filter import ConformFilter

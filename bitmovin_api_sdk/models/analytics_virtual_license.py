@@ -16,16 +16,18 @@ class AnalyticsVirtualLicense(object):
                  name=None,
                  timezone=None,
                  retention_time=None,
+                 compressed_retention_time=None,
                  licenses=None,
                  custom_data_fields_count=None,
                  custom_data_field_labels=None,
                  plan_expired_at=None):
-        # type: (string_types, string_types, string_types, string_types, list[AnalyticsVirtualLicenseLicensesListItem], int, AnalyticsLicenseCustomDataFieldLabels, datetime) -> None
+        # type: (string_types, string_types, string_types, string_types, string_types, list[AnalyticsVirtualLicenseLicensesListItem], int, AnalyticsLicenseCustomDataFieldLabels, datetime) -> None
 
         self._id = None
         self._name = None
         self._timezone = None
         self._retention_time = None
+        self._compressed_retention_time = None
         self._licenses = list()
         self._custom_data_fields_count = None
         self._custom_data_field_labels = None
@@ -40,6 +42,8 @@ class AnalyticsVirtualLicense(object):
             self.timezone = timezone
         if retention_time is not None:
             self.retention_time = retention_time
+        if compressed_retention_time is not None:
+            self.compressed_retention_time = compressed_retention_time
         if licenses is not None:
             self.licenses = licenses
         if custom_data_fields_count is not None:
@@ -56,6 +60,7 @@ class AnalyticsVirtualLicense(object):
             'name': 'string_types',
             'timezone': 'string_types',
             'retention_time': 'string_types',
+            'compressed_retention_time': 'string_types',
             'licenses': 'list[AnalyticsVirtualLicenseLicensesListItem]',
             'custom_data_fields_count': 'int',
             'custom_data_field_labels': 'AnalyticsLicenseCustomDataFieldLabels',
@@ -71,6 +76,7 @@ class AnalyticsVirtualLicense(object):
             'name': 'name',
             'timezone': 'timezone',
             'retention_time': 'retentionTime',
+            'compressed_retention_time': 'compressedRetentionTime',
             'licenses': 'licenses',
             'custom_data_fields_count': 'customDataFieldsCount',
             'custom_data_field_labels': 'customDataFieldLabels',
@@ -193,6 +199,35 @@ class AnalyticsVirtualLicense(object):
                 raise TypeError("Invalid type for `retention_time`, type has to be `string_types`")
 
         self._retention_time = retention_time
+
+    @property
+    def compressed_retention_time(self):
+        # type: () -> string_types
+        """Gets the compressed_retention_time of this AnalyticsVirtualLicense.
+
+        Retention time for compressed data, returned as ISO 8601 duration format: P(n)Y(n)M(n)DT(n)H(n)M(n)S
+
+        :return: The compressed_retention_time of this AnalyticsVirtualLicense.
+        :rtype: string_types
+        """
+        return self._compressed_retention_time
+
+    @compressed_retention_time.setter
+    def compressed_retention_time(self, compressed_retention_time):
+        # type: (string_types) -> None
+        """Sets the compressed_retention_time of this AnalyticsVirtualLicense.
+
+        Retention time for compressed data, returned as ISO 8601 duration format: P(n)Y(n)M(n)DT(n)H(n)M(n)S
+
+        :param compressed_retention_time: The compressed_retention_time of this AnalyticsVirtualLicense.
+        :type: string_types
+        """
+
+        if compressed_retention_time is not None:
+            if not isinstance(compressed_retention_time, string_types):
+                raise TypeError("Invalid type for `compressed_retention_time`, type has to be `string_types`")
+
+        self._compressed_retention_time = compressed_retention_time
 
     @property
     def licenses(self):

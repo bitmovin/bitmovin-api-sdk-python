@@ -1,0 +1,24 @@
+# coding: utf-8
+
+from enum import Enum
+from six import string_types, iteritems
+from bitmovin_api_sdk.common.poscheck import poscheck_model
+
+
+class ConditionAttribute(Enum):
+    HEIGHT = "HEIGHT"
+    WIDTH = "WIDTH"
+    BITRATE = "BITRATE"
+    FPS = "FPS"
+    ASPECTRATIO = "ASPECTRATIO"
+    INPUTSTREAM = "INPUTSTREAM"
+    LANGUAGE = "LANGUAGE"
+    CHANNELFORMAT = "CHANNELFORMAT"
+    CHANNELLAYOUT = "CHANNELLAYOUT"
+    STREAMCOUNT = "STREAMCOUNT"
+    AUDIOSTREAMCOUNT = "AUDIOSTREAMCOUNT"
+    VIDEOSTREAMCOUNT = "VIDEOSTREAMCOUNT"
+    DURATION = "DURATION"
+    ROTATION = "ROTATION"
+    CONNECTION_STATUS = "CONNECTION_STATUS"
+    CONNECTION_STATUS_JUST_CHANGED = "CONNECTION_STATUS_JUST_CHANGED"
