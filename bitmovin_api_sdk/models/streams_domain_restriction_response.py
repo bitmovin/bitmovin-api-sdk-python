@@ -7,7 +7,7 @@ import pprint
 import six
 
 
-class StreamsContentProtectionResponse(object):
+class StreamsDomainRestrictionResponse(object):
     @poscheck_model
     def __init__(self,
                  id_=None,
@@ -55,11 +55,11 @@ class StreamsContentProtectionResponse(object):
     @property
     def id(self):
         # type: () -> string_types
-        """Gets the id of this StreamsContentProtectionResponse.
+        """Gets the id of this StreamsDomainRestrictionResponse.
 
-        The identifier of the streams content protection entity
+        The identifier of the streams domain restriction entity
 
-        :return: The id of this StreamsContentProtectionResponse.
+        :return: The id of this StreamsDomainRestrictionResponse.
         :rtype: string_types
         """
         return self._id
@@ -67,11 +67,11 @@ class StreamsContentProtectionResponse(object):
     @id.setter
     def id(self, id_):
         # type: (string_types) -> None
-        """Sets the id of this StreamsContentProtectionResponse.
+        """Sets the id of this StreamsDomainRestrictionResponse.
 
-        The identifier of the streams content protection entity
+        The identifier of the streams domain restriction entity
 
-        :param id_: The id of this StreamsContentProtectionResponse.
+        :param id_: The id of this StreamsDomainRestrictionResponse.
         :type: string_types
         """
 
@@ -84,11 +84,11 @@ class StreamsContentProtectionResponse(object):
     @property
     def allowed_domains(self):
         # type: () -> list[string_types]
-        """Gets the allowed_domains of this StreamsContentProtectionResponse.
+        """Gets the allowed_domains of this StreamsDomainRestrictionResponse.
 
         The list of allowed domains
 
-        :return: The allowed_domains of this StreamsContentProtectionResponse.
+        :return: The allowed_domains of this StreamsDomainRestrictionResponse.
         :rtype: list[string_types]
         """
         return self._allowed_domains
@@ -96,11 +96,11 @@ class StreamsContentProtectionResponse(object):
     @allowed_domains.setter
     def allowed_domains(self, allowed_domains):
         # type: (list) -> None
-        """Sets the allowed_domains of this StreamsContentProtectionResponse.
+        """Sets the allowed_domains of this StreamsDomainRestrictionResponse.
 
         The list of allowed domains
 
-        :param allowed_domains: The allowed_domains of this StreamsContentProtectionResponse.
+        :param allowed_domains: The allowed_domains of this StreamsDomainRestrictionResponse.
         :type: list[string_types]
         """
 
@@ -113,11 +113,11 @@ class StreamsContentProtectionResponse(object):
     @property
     def allow_no_referer(self):
         # type: () -> bool
-        """Gets the allow_no_referer of this StreamsContentProtectionResponse.
+        """Gets the allow_no_referer of this StreamsDomainRestrictionResponse.
 
-        Controls if requests to content protected streams without referer header should be allowed or denied
+        Controls if requests to domain restricted streams without referer header should be allowed or denied
 
-        :return: The allow_no_referer of this StreamsContentProtectionResponse.
+        :return: The allow_no_referer of this StreamsDomainRestrictionResponse.
         :rtype: bool
         """
         return self._allow_no_referer
@@ -125,11 +125,11 @@ class StreamsContentProtectionResponse(object):
     @allow_no_referer.setter
     def allow_no_referer(self, allow_no_referer):
         # type: (bool) -> None
-        """Sets the allow_no_referer of this StreamsContentProtectionResponse.
+        """Sets the allow_no_referer of this StreamsDomainRestrictionResponse.
 
-        Controls if requests to content protected streams without referer header should be allowed or denied
+        Controls if requests to domain restricted streams without referer header should be allowed or denied
 
-        :param allow_no_referer: The allow_no_referer of this StreamsContentProtectionResponse.
+        :param allow_no_referer: The allow_no_referer of this StreamsDomainRestrictionResponse.
         :type: bool
         """
 
@@ -142,11 +142,11 @@ class StreamsContentProtectionResponse(object):
     @property
     def allow_share(self):
         # type: () -> bool
-        """Gets the allow_share of this StreamsContentProtectionResponse.
+        """Gets the allow_share of this StreamsDomainRestrictionResponse.
 
         Controls if Stream is accessible via sharing URL or not
 
-        :return: The allow_share of this StreamsContentProtectionResponse.
+        :return: The allow_share of this StreamsDomainRestrictionResponse.
         :rtype: bool
         """
         return self._allow_share
@@ -154,11 +154,11 @@ class StreamsContentProtectionResponse(object):
     @allow_share.setter
     def allow_share(self, allow_share):
         # type: (bool) -> None
-        """Sets the allow_share of this StreamsContentProtectionResponse.
+        """Sets the allow_share of this StreamsDomainRestrictionResponse.
 
         Controls if Stream is accessible via sharing URL or not
 
-        :param allow_share: The allow_share of this StreamsContentProtectionResponse.
+        :param allow_share: The allow_share of this StreamsDomainRestrictionResponse.
         :type: bool
         """
 
@@ -201,7 +201,7 @@ class StreamsContentProtectionResponse(object):
 
     def __eq__(self, other):
         """Returns true if both objects are equal"""
-        if not isinstance(other, StreamsContentProtectionResponse):
+        if not isinstance(other, StreamsDomainRestrictionResponse):
             return False
 
         return self.__dict__ == other.__dict__

@@ -1741,7 +1741,7 @@ from bitmovin_api_sdk.models.stream_per_title_settings import StreamPerTitleSett
 from bitmovin_api_sdk.models.stream_selection_mode import StreamSelectionMode
 from bitmovin_api_sdk.models.streams_ad_config_ad import StreamsAdConfigAd
 from bitmovin_api_sdk.models.streams_ad_config_response import StreamsAdConfigResponse
-from bitmovin_api_sdk.models.streams_content_protection_response import StreamsContentProtectionResponse
+from bitmovin_api_sdk.models.streams_domain_restriction_response import StreamsDomainRestrictionResponse
 from bitmovin_api_sdk.models.streams_encoding_profile import StreamsEncodingProfile
 from bitmovin_api_sdk.models.streams_live_create_request import StreamsLiveCreateRequest
 from bitmovin_api_sdk.models.streams_live_life_cycle import StreamsLiveLifeCycle
@@ -1842,4 +1842,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.186.0"
+__version__ = "1.187.1"

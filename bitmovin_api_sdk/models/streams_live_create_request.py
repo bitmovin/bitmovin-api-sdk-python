@@ -11,23 +11,28 @@ class StreamsLiveCreateRequest(object):
     @poscheck_model
     def __init__(self,
                  title=None,
-                 description=None):
-        # type: (string_types, string_types) -> None
+                 description=None,
+                 domain_restriction_id=None):
+        # type: (string_types, string_types, string_types) -> None
 
         self._title = None
         self._description = None
+        self._domain_restriction_id = None
         self.discriminator = None
 
         if title is not None:
             self.title = title
         if description is not None:
             self.description = description
+        if domain_restriction_id is not None:
+            self.domain_restriction_id = domain_restriction_id
 
     @property
     def openapi_types(self):
         types = {
             'title': 'string_types',
-            'description': 'string_types'
+            'description': 'string_types',
+            'domain_restriction_id': 'string_types'
         }
 
         return types
@@ -36,7 +41,8 @@ class StreamsLiveCreateRequest(object):
     def attribute_map(self):
         attributes = {
             'title': 'title',
-            'description': 'description'
+            'description': 'description',
+            'domain_restriction_id': 'domainRestrictionId'
         }
         return attributes
 
@@ -101,6 +107,35 @@ class StreamsLiveCreateRequest(object):
                 raise TypeError("Invalid type for `description`, type has to be `string_types`")
 
         self._description = description
+
+    @property
+    def domain_restriction_id(self):
+        # type: () -> string_types
+        """Gets the domain_restriction_id of this StreamsLiveCreateRequest.
+
+        Id of the domain restriction config to use
+
+        :return: The domain_restriction_id of this StreamsLiveCreateRequest.
+        :rtype: string_types
+        """
+        return self._domain_restriction_id
+
+    @domain_restriction_id.setter
+    def domain_restriction_id(self, domain_restriction_id):
+        # type: (string_types) -> None
+        """Sets the domain_restriction_id of this StreamsLiveCreateRequest.
+
+        Id of the domain restriction config to use
+
+        :param domain_restriction_id: The domain_restriction_id of this StreamsLiveCreateRequest.
+        :type: string_types
+        """
+
+        if domain_restriction_id is not None:
+            if not isinstance(domain_restriction_id, string_types):
+                raise TypeError("Invalid type for `domain_restriction_id`, type has to be `string_types`")
+
+        self._domain_restriction_id = domain_restriction_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

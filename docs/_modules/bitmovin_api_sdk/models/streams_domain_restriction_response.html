@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>bitmovin_api_sdk.models.streams_live_update_request &mdash; Bitmovin Python API SDK {{packageVersion}} documentation</title>
+  <title>bitmovin_api_sdk.models.streams_domain_restriction_response &mdash; Bitmovin Python API SDK {{packageVersion}} documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
       <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css" />
 
@@ -68,7 +68,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../../index.html">Module code</a></li>
-      <li class="breadcrumb-item active">bitmovin_api_sdk.models.streams_live_update_request</li>
+      <li class="breadcrumb-item active">bitmovin_api_sdk.models.streams_domain_restriction_response</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul>
@@ -77,7 +77,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <h1>Source code for bitmovin_api_sdk.models.streams_live_update_request</h1><div class="highlight"><pre>
+  <h1>Source code for bitmovin_api_sdk.models.streams_domain_restriction_response</h1><div class="highlight"><pre>
 <span></span><span class="c1"># coding: utf-8</span>
 
 <span class="kn">from</span> <span class="nn">enum</span> <span class="kn">import</span> <span class="n">Enum</span>
@@ -87,37 +87,37 @@
 <span class="kn">import</span> <span class="nn">six</span>
 
 
-<div class="viewcode-block" id="StreamsLiveUpdateRequest"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.streams_live_update_request.StreamsLiveUpdateRequest">[docs]</a><span class="k">class</span> <span class="nc">StreamsLiveUpdateRequest</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="viewcode-block" id="StreamsDomainRestrictionResponse"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.streams_domain_restriction_response.StreamsDomainRestrictionResponse">[docs]</a><span class="k">class</span> <span class="nc">StreamsDomainRestrictionResponse</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="nd">@poscheck_model</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
-                 <span class="n">title</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                 <span class="n">description</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                 <span class="n">poster_url</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                 <span class="n">domain_restriction_id</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (string_types, string_types, string_types, string_types) -&gt; None</span>
+                 <span class="n">id_</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">allowed_domains</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">allow_no_referer</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">allow_share</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="c1"># type: (string_types, list[string_types], bool, bool) -&gt; None</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">_title</span> <span class="o">=</span> <span class="kc">None</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_description</span> <span class="o">=</span> <span class="kc">None</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_poster_url</span> <span class="o">=</span> <span class="kc">None</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_domain_restriction_id</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_id</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_allowed_domains</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_allow_no_referer</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_allow_share</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>
 
-        <span class="k">if</span> <span class="n">title</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">title</span> <span class="o">=</span> <span class="n">title</span>
-        <span class="k">if</span> <span class="n">description</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">description</span> <span class="o">=</span> <span class="n">description</span>
-        <span class="k">if</span> <span class="n">poster_url</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">poster_url</span> <span class="o">=</span> <span class="n">poster_url</span>
-        <span class="k">if</span> <span class="n">domain_restriction_id</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">domain_restriction_id</span> <span class="o">=</span> <span class="n">domain_restriction_id</span>
+        <span class="k">if</span> <span class="n">id_</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">id</span> <span class="o">=</span> <span class="n">id_</span>
+        <span class="k">if</span> <span class="n">allowed_domains</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">allowed_domains</span> <span class="o">=</span> <span class="n">allowed_domains</span>
+        <span class="k">if</span> <span class="n">allow_no_referer</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">allow_no_referer</span> <span class="o">=</span> <span class="n">allow_no_referer</span>
+        <span class="k">if</span> <span class="n">allow_share</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">allow_share</span> <span class="o">=</span> <span class="n">allow_share</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">types</span> <span class="o">=</span> <span class="p">{</span>
-            <span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;description&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;poster_url&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;domain_restriction_id&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span>
+            <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;allowed_domains&#39;</span><span class="p">:</span> <span class="s1">&#39;list[string_types]&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;allow_no_referer&#39;</span><span class="p">:</span> <span class="s1">&#39;bool&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;allow_share&#39;</span><span class="p">:</span> <span class="s1">&#39;bool&#39;</span>
         <span class="p">}</span>
 
         <span class="k">return</span> <span class="n">types</span>
@@ -125,130 +125,130 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">attribute_map</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">attributes</span> <span class="o">=</span> <span class="p">{</span>
-            <span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="s1">&#39;title&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;description&#39;</span><span class="p">:</span> <span class="s1">&#39;description&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;poster_url&#39;</span><span class="p">:</span> <span class="s1">&#39;posterUrl&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;domain_restriction_id&#39;</span><span class="p">:</span> <span class="s1">&#39;domainRestrictionId&#39;</span>
+            <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="s1">&#39;id&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;allowed_domains&#39;</span><span class="p">:</span> <span class="s1">&#39;allowedDomains&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;allow_no_referer&#39;</span><span class="p">:</span> <span class="s1">&#39;allowNoReferer&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;allow_share&#39;</span><span class="p">:</span> <span class="s1">&#39;allowShare&#39;</span>
         <span class="p">}</span>
         <span class="k">return</span> <span class="n">attributes</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">title</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">id</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; string_types</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the title of this StreamsLiveUpdateRequest.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the id of this StreamsDomainRestrictionResponse.</span>
 
-<span class="sd">        The new title of the stream</span>
+<span class="sd">        The identifier of the streams domain restriction entity</span>
 
-<span class="sd">        :return: The title of this StreamsLiveUpdateRequest.</span>
+<span class="sd">        :return: The id of this StreamsDomainRestrictionResponse.</span>
 <span class="sd">        :rtype: string_types</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_title</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_id</span>
 
-    <span class="nd">@title</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">title</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">title</span><span class="p">):</span>
+    <span class="nd">@id</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">id</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">id_</span><span class="p">):</span>
         <span class="c1"># type: (string_types) -&gt; None</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the title of this StreamsLiveUpdateRequest.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the id of this StreamsDomainRestrictionResponse.</span>
 
-<span class="sd">        The new title of the stream</span>
+<span class="sd">        The identifier of the streams domain restriction entity</span>
 
-<span class="sd">        :param title: The title of this StreamsLiveUpdateRequest.</span>
+<span class="sd">        :param id_: The id of this StreamsDomainRestrictionResponse.</span>
 <span class="sd">        :type: string_types</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
-        <span class="k">if</span> <span class="n">title</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">title</span><span class="p">,</span> <span class="n">string_types</span><span class="p">):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `title`, type has to be `string_types`&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">id_</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">id_</span><span class="p">,</span> <span class="n">string_types</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `id`, type has to be `string_types`&quot;</span><span class="p">)</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">_title</span> <span class="o">=</span> <span class="n">title</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_id</span> <span class="o">=</span> <span class="n">id_</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">description</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="c1"># type: () -&gt; string_types</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the description of this StreamsLiveUpdateRequest.</span>
+    <span class="k">def</span> <span class="nf">allowed_domains</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; list[string_types]</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the allowed_domains of this StreamsDomainRestrictionResponse.</span>
 
-<span class="sd">        The new description of the stream</span>
+<span class="sd">        The list of allowed domains</span>
 
-<span class="sd">        :return: The description of this StreamsLiveUpdateRequest.</span>
-<span class="sd">        :rtype: string_types</span>
+<span class="sd">        :return: The allowed_domains of this StreamsDomainRestrictionResponse.</span>
+<span class="sd">        :rtype: list[string_types]</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_description</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_allowed_domains</span>
 
-    <span class="nd">@description</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">description</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">description</span><span class="p">):</span>
-        <span class="c1"># type: (string_types) -&gt; None</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the description of this StreamsLiveUpdateRequest.</span>
+    <span class="nd">@allowed_domains</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">allowed_domains</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">allowed_domains</span><span class="p">):</span>
+        <span class="c1"># type: (list) -&gt; None</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the allowed_domains of this StreamsDomainRestrictionResponse.</span>
 
-<span class="sd">        The new description of the stream</span>
+<span class="sd">        The list of allowed domains</span>
 
-<span class="sd">        :param description: The description of this StreamsLiveUpdateRequest.</span>
-<span class="sd">        :type: string_types</span>
+<span class="sd">        :param allowed_domains: The allowed_domains of this StreamsDomainRestrictionResponse.</span>
+<span class="sd">        :type: list[string_types]</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
-        <span class="k">if</span> <span class="n">description</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">description</span><span class="p">,</span> <span class="n">string_types</span><span class="p">):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `description`, type has to be `string_types`&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">allowed_domains</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">allowed_domains</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `allowed_domains`, type has to be `list[string_types]`&quot;</span><span class="p">)</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">_description</span> <span class="o">=</span> <span class="n">description</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_allowed_domains</span> <span class="o">=</span> <span class="n">allowed_domains</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">poster_url</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="c1"># type: () -&gt; string_types</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the poster_url of this StreamsLiveUpdateRequest.</span>
+    <span class="k">def</span> <span class="nf">allow_no_referer</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; bool</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the allow_no_referer of this StreamsDomainRestrictionResponse.</span>
 
-<span class="sd">        URL to hosted poster image</span>
+<span class="sd">        Controls if requests to domain restricted streams without referer header should be allowed or denied</span>
 
-<span class="sd">        :return: The poster_url of this StreamsLiveUpdateRequest.</span>
-<span class="sd">        :rtype: string_types</span>
+<span class="sd">        :return: The allow_no_referer of this StreamsDomainRestrictionResponse.</span>
+<span class="sd">        :rtype: bool</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_poster_url</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_allow_no_referer</span>
 
-    <span class="nd">@poster_url</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">poster_url</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">poster_url</span><span class="p">):</span>
-        <span class="c1"># type: (string_types) -&gt; None</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the poster_url of this StreamsLiveUpdateRequest.</span>
+    <span class="nd">@allow_no_referer</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">allow_no_referer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">allow_no_referer</span><span class="p">):</span>
+        <span class="c1"># type: (bool) -&gt; None</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the allow_no_referer of this StreamsDomainRestrictionResponse.</span>
 
-<span class="sd">        URL to hosted poster image</span>
+<span class="sd">        Controls if requests to domain restricted streams without referer header should be allowed or denied</span>
 
-<span class="sd">        :param poster_url: The poster_url of this StreamsLiveUpdateRequest.</span>
-<span class="sd">        :type: string_types</span>
+<span class="sd">        :param allow_no_referer: The allow_no_referer of this StreamsDomainRestrictionResponse.</span>
+<span class="sd">        :type: bool</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
-        <span class="k">if</span> <span class="n">poster_url</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">poster_url</span><span class="p">,</span> <span class="n">string_types</span><span class="p">):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `poster_url`, type has to be `string_types`&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">allow_no_referer</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">allow_no_referer</span><span class="p">,</span> <span class="nb">bool</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `allow_no_referer`, type has to be `bool`&quot;</span><span class="p">)</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">_poster_url</span> <span class="o">=</span> <span class="n">poster_url</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_allow_no_referer</span> <span class="o">=</span> <span class="n">allow_no_referer</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">domain_restriction_id</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="c1"># type: () -&gt; string_types</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the domain_restriction_id of this StreamsLiveUpdateRequest.</span>
+    <span class="k">def</span> <span class="nf">allow_share</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; bool</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the allow_share of this StreamsDomainRestrictionResponse.</span>
 
-<span class="sd">        Id of the domain restriction config to use</span>
+<span class="sd">        Controls if Stream is accessible via sharing URL or not</span>
 
-<span class="sd">        :return: The domain_restriction_id of this StreamsLiveUpdateRequest.</span>
-<span class="sd">        :rtype: string_types</span>
+<span class="sd">        :return: The allow_share of this StreamsDomainRestrictionResponse.</span>
+<span class="sd">        :rtype: bool</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_domain_restriction_id</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_allow_share</span>
 
-    <span class="nd">@domain_restriction_id</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">domain_restriction_id</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">domain_restriction_id</span><span class="p">):</span>
-        <span class="c1"># type: (string_types) -&gt; None</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the domain_restriction_id of this StreamsLiveUpdateRequest.</span>
+    <span class="nd">@allow_share</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">allow_share</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">allow_share</span><span class="p">):</span>
+        <span class="c1"># type: (bool) -&gt; None</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the allow_share of this StreamsDomainRestrictionResponse.</span>
 
-<span class="sd">        Id of the domain restriction config to use</span>
+<span class="sd">        Controls if Stream is accessible via sharing URL or not</span>
 
-<span class="sd">        :param domain_restriction_id: The domain_restriction_id of this StreamsLiveUpdateRequest.</span>
-<span class="sd">        :type: string_types</span>
+<span class="sd">        :param allow_share: The allow_share of this StreamsDomainRestrictionResponse.</span>
+<span class="sd">        :type: bool</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
-        <span class="k">if</span> <span class="n">domain_restriction_id</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">domain_restriction_id</span><span class="p">,</span> <span class="n">string_types</span><span class="p">):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `domain_restriction_id`, type has to be `string_types`&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">allow_share</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">allow_share</span><span class="p">,</span> <span class="nb">bool</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `allow_share`, type has to be `bool`&quot;</span><span class="p">)</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">_domain_restriction_id</span> <span class="o">=</span> <span class="n">domain_restriction_id</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_allow_share</span> <span class="o">=</span> <span class="n">allow_share</span>
 
-<div class="viewcode-block" id="StreamsLiveUpdateRequest.to_dict"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.streams_live_update_request.StreamsLiveUpdateRequest.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="StreamsDomainRestrictionResponse.to_dict"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.streams_domain_restriction_response.StreamsDomainRestrictionResponse.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>
         <span class="n">result</span> <span class="o">=</span> <span class="p">{}</span>
 
@@ -271,7 +271,7 @@
 
         <span class="k">return</span> <span class="n">result</span></div>
 
-<div class="viewcode-block" id="StreamsLiveUpdateRequest.to_str"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.streams_live_update_request.StreamsLiveUpdateRequest.to_str">[docs]</a>    <span class="k">def</span> <span class="nf">to_str</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="StreamsDomainRestrictionResponse.to_str"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.streams_domain_restriction_response.StreamsDomainRestrictionResponse.to_str">[docs]</a>    <span class="k">def</span> <span class="nf">to_str</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the string representation of the model&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">pprint</span><span class="o">.</span><span class="n">pformat</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">to_dict</span><span class="p">())</span></div>
 
@@ -281,7 +281,7 @@
 
     <span class="k">def</span> <span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns true if both objects are equal&quot;&quot;&quot;</span>
-        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">StreamsLiveUpdateRequest</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">StreamsDomainRestrictionResponse</span><span class="p">):</span>
             <span class="k">return</span> <span class="kc">False</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="vm">__dict__</span>

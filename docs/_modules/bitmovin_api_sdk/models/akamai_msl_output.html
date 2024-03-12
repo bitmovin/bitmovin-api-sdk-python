@@ -216,7 +216,7 @@
         <span class="c1"># type: () -&gt; AkamaiMslStreamFormat</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the stream_format of this AkamaiMslOutput.</span>
 
-<span class="sd">        The stream format. Only DASH is supported at the moment. (required)</span>
+<span class="sd">        - DASH: configure the Encoding with fMP4 or CMAF muxings and a DASH manifest. - HLS: configure the Encoding with TS muxings and an HLS manifest. - CMAF: configure the Encoding with fMP4 or CMAF muxings with both DASH and HLS manifests. (required)</span>
 
 <span class="sd">        :return: The stream_format of this AkamaiMslOutput.</span>
 <span class="sd">        :rtype: AkamaiMslStreamFormat</span>
@@ -228,7 +228,7 @@
         <span class="c1"># type: (AkamaiMslStreamFormat) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the stream_format of this AkamaiMslOutput.</span>
 
-<span class="sd">        The stream format. Only DASH is supported at the moment. (required)</span>
+<span class="sd">        - DASH: configure the Encoding with fMP4 or CMAF muxings and a DASH manifest. - HLS: configure the Encoding with TS muxings and an HLS manifest. - CMAF: configure the Encoding with fMP4 or CMAF muxings with both DASH and HLS manifests. (required)</span>
 
 <span class="sd">        :param stream_format: The stream_format of this AkamaiMslOutput.</span>
 <span class="sd">        :type: AkamaiMslStreamFormat</span>

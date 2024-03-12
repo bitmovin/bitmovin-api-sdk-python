@@ -4,7 +4,7 @@ from enum import Enum
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
 from bitmovin_api_sdk.models.streams_ad_config_response import StreamsAdConfigResponse
-from bitmovin_api_sdk.models.streams_content_protection_response import StreamsContentProtectionResponse
+from bitmovin_api_sdk.models.streams_domain_restriction_response import StreamsDomainRestrictionResponse
 from bitmovin_api_sdk.models.streams_response import StreamsResponse
 from bitmovin_api_sdk.models.streams_style_config_response import StreamsStyleConfigResponse
 from bitmovin_api_sdk.models.streams_trimming_status import StreamsTrimmingStatus
@@ -28,11 +28,11 @@ class StreamsVideoResponse(StreamsResponse):
                  encoding_tasks=None,
                  poster_url=None,
                  ad_config=None,
-                 content_protection=None,
+                 domain_restriction=None,
                  trimming=None,
                  download_url=None,
                  signed=None):
-        # type: (string_types, string_types, string_types, datetime, StreamsType, string_types, StreamsVideoStatus, StreamsStyleConfigResponse, list[StreamsVideoEncodingTask], string_types, StreamsAdConfigResponse, StreamsContentProtectionResponse, StreamsTrimmingStatus, string_types, bool) -> None
+        # type: (string_types, string_types, string_types, datetime, StreamsType, string_types, StreamsVideoStatus, StreamsStyleConfigResponse, list[StreamsVideoEncodingTask], string_types, StreamsAdConfigResponse, StreamsDomainRestrictionResponse, StreamsTrimmingStatus, string_types, bool) -> None
         super(StreamsVideoResponse, self).__init__(id_=id_, title=title, description=description, created_at=created_at, type_=type_)
 
         self._asset_url = None
@@ -41,7 +41,7 @@ class StreamsVideoResponse(StreamsResponse):
         self._encoding_tasks = list()
         self._poster_url = None
         self._ad_config = None
-        self._content_protection = None
+        self._domain_restriction = None
         self._trimming = None
         self._download_url = None
         self._signed = None
@@ -59,8 +59,8 @@ class StreamsVideoResponse(StreamsResponse):
             self.poster_url = poster_url
         if ad_config is not None:
             self.ad_config = ad_config
-        if content_protection is not None:
-            self.content_protection = content_protection
+        if domain_restriction is not None:
+            self.domain_restriction = domain_restriction
         if trimming is not None:
             self.trimming = trimming
         if download_url is not None:
@@ -82,7 +82,7 @@ class StreamsVideoResponse(StreamsResponse):
             'encoding_tasks': 'list[StreamsVideoEncodingTask]',
             'poster_url': 'string_types',
             'ad_config': 'StreamsAdConfigResponse',
-            'content_protection': 'StreamsContentProtectionResponse',
+            'domain_restriction': 'StreamsDomainRestrictionResponse',
             'trimming': 'StreamsTrimmingStatus',
             'download_url': 'string_types',
             'signed': 'bool'
@@ -104,7 +104,7 @@ class StreamsVideoResponse(StreamsResponse):
             'encoding_tasks': 'encodingTasks',
             'poster_url': 'posterUrl',
             'ad_config': 'adConfig',
-            'content_protection': 'contentProtection',
+            'domain_restriction': 'domainRestriction',
             'trimming': 'trimming',
             'download_url': 'downloadUrl',
             'signed': 'signed'
@@ -282,31 +282,31 @@ class StreamsVideoResponse(StreamsResponse):
         self._ad_config = ad_config
 
     @property
-    def content_protection(self):
-        # type: () -> StreamsContentProtectionResponse
-        """Gets the content_protection of this StreamsVideoResponse.
+    def domain_restriction(self):
+        # type: () -> StreamsDomainRestrictionResponse
+        """Gets the domain_restriction of this StreamsVideoResponse.
 
 
-        :return: The content_protection of this StreamsVideoResponse.
-        :rtype: StreamsContentProtectionResponse
+        :return: The domain_restriction of this StreamsVideoResponse.
+        :rtype: StreamsDomainRestrictionResponse
         """
-        return self._content_protection
+        return self._domain_restriction
 
-    @content_protection.setter
-    def content_protection(self, content_protection):
-        # type: (StreamsContentProtectionResponse) -> None
-        """Sets the content_protection of this StreamsVideoResponse.
+    @domain_restriction.setter
+    def domain_restriction(self, domain_restriction):
+        # type: (StreamsDomainRestrictionResponse) -> None
+        """Sets the domain_restriction of this StreamsVideoResponse.
 
 
-        :param content_protection: The content_protection of this StreamsVideoResponse.
-        :type: StreamsContentProtectionResponse
+        :param domain_restriction: The domain_restriction of this StreamsVideoResponse.
+        :type: StreamsDomainRestrictionResponse
         """
 
-        if content_protection is not None:
-            if not isinstance(content_protection, StreamsContentProtectionResponse):
-                raise TypeError("Invalid type for `content_protection`, type has to be `StreamsContentProtectionResponse`")
+        if domain_restriction is not None:
+            if not isinstance(domain_restriction, StreamsDomainRestrictionResponse):
+                raise TypeError("Invalid type for `domain_restriction`, type has to be `StreamsDomainRestrictionResponse`")
 
-        self._content_protection = content_protection
+        self._domain_restriction = domain_restriction
 
     @property
     def trimming(self):

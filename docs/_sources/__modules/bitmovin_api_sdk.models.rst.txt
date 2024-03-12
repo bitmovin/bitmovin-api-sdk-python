@@ -5788,10 +5788,10 @@ bitmovin\_api\_sdk.models.streams\_ad\_config\_response module
    :undoc-members:
    :show-inheritance:
 
-bitmovin\_api\_sdk.models.streams\_content\_protection\_response module
+bitmovin\_api\_sdk.models.streams\_domain\_restriction\_response module
 -----------------------------------------------------------------------
 
-.. automodule:: bitmovin_api_sdk.models.streams_content_protection_response
+.. automodule:: bitmovin_api_sdk.models.streams_domain_restriction_response
    :members:
    :undoc-members:
    :show-inheritance:

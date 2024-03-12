@@ -14,13 +14,15 @@ class StreamsVideoCreateRequest(object):
                  asset_url=None,
                  title=None,
                  description=None,
+                 domain_restriction_id=None,
                  encoding_profile=None,
                  signed=None):
-        # type: (string_types, string_types, string_types, StreamsEncodingProfile, bool) -> None
+        # type: (string_types, string_types, string_types, string_types, StreamsEncodingProfile, bool) -> None
 
         self._asset_url = None
         self._title = None
         self._description = None
+        self._domain_restriction_id = None
         self._encoding_profile = None
         self._signed = None
         self.discriminator = None
@@ -31,6 +33,8 @@ class StreamsVideoCreateRequest(object):
             self.title = title
         if description is not None:
             self.description = description
+        if domain_restriction_id is not None:
+            self.domain_restriction_id = domain_restriction_id
         if encoding_profile is not None:
             self.encoding_profile = encoding_profile
         if signed is not None:
@@ -42,6 +46,7 @@ class StreamsVideoCreateRequest(object):
             'asset_url': 'string_types',
             'title': 'string_types',
             'description': 'string_types',
+            'domain_restriction_id': 'string_types',
             'encoding_profile': 'StreamsEncodingProfile',
             'signed': 'bool'
         }
@@ -54,6 +59,7 @@ class StreamsVideoCreateRequest(object):
             'asset_url': 'assetUrl',
             'title': 'title',
             'description': 'description',
+            'domain_restriction_id': 'domainRestrictionId',
             'encoding_profile': 'encodingProfile',
             'signed': 'signed'
         }
@@ -145,6 +151,35 @@ class StreamsVideoCreateRequest(object):
                 raise TypeError("Invalid type for `description`, type has to be `string_types`")
 
         self._description = description
+
+    @property
+    def domain_restriction_id(self):
+        # type: () -> string_types
+        """Gets the domain_restriction_id of this StreamsVideoCreateRequest.
+
+        Id of the domain restriction config to use
+
+        :return: The domain_restriction_id of this StreamsVideoCreateRequest.
+        :rtype: string_types
+        """
+        return self._domain_restriction_id
+
+    @domain_restriction_id.setter
+    def domain_restriction_id(self, domain_restriction_id):
+        # type: (string_types) -> None
+        """Sets the domain_restriction_id of this StreamsVideoCreateRequest.
+
+        Id of the domain restriction config to use
+
+        :param domain_restriction_id: The domain_restriction_id of this StreamsVideoCreateRequest.
+        :type: string_types
+        """
+
+        if domain_restriction_id is not None:
+            if not isinstance(domain_restriction_id, string_types):
+                raise TypeError("Invalid type for `domain_restriction_id`, type has to be `string_types`")
+
+        self._domain_restriction_id = domain_restriction_id
 
     @property
     def encoding_profile(self):

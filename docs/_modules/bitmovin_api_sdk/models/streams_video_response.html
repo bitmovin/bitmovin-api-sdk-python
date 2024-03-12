@@ -84,7 +84,7 @@
 <span class="kn">from</span> <span class="nn">six</span> <span class="kn">import</span> <span class="n">string_types</span><span class="p">,</span> <span class="n">iteritems</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.common.poscheck</span> <span class="kn">import</span> <span class="n">poscheck_model</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.streams_ad_config_response</span> <span class="kn">import</span> <span class="n">StreamsAdConfigResponse</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.streams_content_protection_response</span> <span class="kn">import</span> <span class="n">StreamsContentProtectionResponse</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.streams_domain_restriction_response</span> <span class="kn">import</span> <span class="n">StreamsDomainRestrictionResponse</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.streams_response</span> <span class="kn">import</span> <span class="n">StreamsResponse</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.streams_style_config_response</span> <span class="kn">import</span> <span class="n">StreamsStyleConfigResponse</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.streams_trimming_status</span> <span class="kn">import</span> <span class="n">StreamsTrimmingStatus</span>
@@ -108,11 +108,11 @@
                  <span class="n">encoding_tasks</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">poster_url</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">ad_config</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                 <span class="n">content_protection</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">domain_restriction</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">trimming</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">download_url</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">signed</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (string_types, string_types, string_types, datetime, StreamsType, string_types, StreamsVideoStatus, StreamsStyleConfigResponse, list[StreamsVideoEncodingTask], string_types, StreamsAdConfigResponse, StreamsContentProtectionResponse, StreamsTrimmingStatus, string_types, bool) -&gt; None</span>
+        <span class="c1"># type: (string_types, string_types, string_types, datetime, StreamsType, string_types, StreamsVideoStatus, StreamsStyleConfigResponse, list[StreamsVideoEncodingTask], string_types, StreamsAdConfigResponse, StreamsDomainRestrictionResponse, StreamsTrimmingStatus, string_types, bool) -&gt; None</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">StreamsVideoResponse</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">id_</span><span class="o">=</span><span class="n">id_</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="n">title</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="n">description</span><span class="p">,</span> <span class="n">created_at</span><span class="o">=</span><span class="n">created_at</span><span class="p">,</span> <span class="n">type_</span><span class="o">=</span><span class="n">type_</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_asset_url</span> <span class="o">=</span> <span class="kc">None</span>
@@ -121,7 +121,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_encoding_tasks</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_poster_url</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_ad_config</span> <span class="o">=</span> <span class="kc">None</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_content_protection</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_domain_restriction</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_trimming</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_download_url</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_signed</span> <span class="o">=</span> <span class="kc">None</span>
@@ -139,8 +139,8 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">poster_url</span> <span class="o">=</span> <span class="n">poster_url</span>
         <span class="k">if</span> <span class="n">ad_config</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">ad_config</span> <span class="o">=</span> <span class="n">ad_config</span>
-        <span class="k">if</span> <span class="n">content_protection</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">content_protection</span> <span class="o">=</span> <span class="n">content_protection</span>
+        <span class="k">if</span> <span class="n">domain_restriction</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">domain_restriction</span> <span class="o">=</span> <span class="n">domain_restriction</span>
         <span class="k">if</span> <span class="n">trimming</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">trimming</span> <span class="o">=</span> <span class="n">trimming</span>
         <span class="k">if</span> <span class="n">download_url</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -162,7 +162,7 @@
             <span class="s1">&#39;encoding_tasks&#39;</span><span class="p">:</span> <span class="s1">&#39;list[StreamsVideoEncodingTask]&#39;</span><span class="p">,</span>
             <span class="s1">&#39;poster_url&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
             <span class="s1">&#39;ad_config&#39;</span><span class="p">:</span> <span class="s1">&#39;StreamsAdConfigResponse&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;content_protection&#39;</span><span class="p">:</span> <span class="s1">&#39;StreamsContentProtectionResponse&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;domain_restriction&#39;</span><span class="p">:</span> <span class="s1">&#39;StreamsDomainRestrictionResponse&#39;</span><span class="p">,</span>
             <span class="s1">&#39;trimming&#39;</span><span class="p">:</span> <span class="s1">&#39;StreamsTrimmingStatus&#39;</span><span class="p">,</span>
             <span class="s1">&#39;download_url&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
             <span class="s1">&#39;signed&#39;</span><span class="p">:</span> <span class="s1">&#39;bool&#39;</span>
@@ -184,7 +184,7 @@
             <span class="s1">&#39;encoding_tasks&#39;</span><span class="p">:</span> <span class="s1">&#39;encodingTasks&#39;</span><span class="p">,</span>
             <span class="s1">&#39;poster_url&#39;</span><span class="p">:</span> <span class="s1">&#39;posterUrl&#39;</span><span class="p">,</span>
             <span class="s1">&#39;ad_config&#39;</span><span class="p">:</span> <span class="s1">&#39;adConfig&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;content_protection&#39;</span><span class="p">:</span> <span class="s1">&#39;contentProtection&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;domain_restriction&#39;</span><span class="p">:</span> <span class="s1">&#39;domainRestriction&#39;</span><span class="p">,</span>
             <span class="s1">&#39;trimming&#39;</span><span class="p">:</span> <span class="s1">&#39;trimming&#39;</span><span class="p">,</span>
             <span class="s1">&#39;download_url&#39;</span><span class="p">:</span> <span class="s1">&#39;downloadUrl&#39;</span><span class="p">,</span>
             <span class="s1">&#39;signed&#39;</span><span class="p">:</span> <span class="s1">&#39;signed&#39;</span>
@@ -362,31 +362,31 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_ad_config</span> <span class="o">=</span> <span class="n">ad_config</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">content_protection</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="c1"># type: () -&gt; StreamsContentProtectionResponse</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the content_protection of this StreamsVideoResponse.</span>
+    <span class="k">def</span> <span class="nf">domain_restriction</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; StreamsDomainRestrictionResponse</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the domain_restriction of this StreamsVideoResponse.</span>
 
 
-<span class="sd">        :return: The content_protection of this StreamsVideoResponse.</span>
-<span class="sd">        :rtype: StreamsContentProtectionResponse</span>
+<span class="sd">        :return: The domain_restriction of this StreamsVideoResponse.</span>
+<span class="sd">        :rtype: StreamsDomainRestrictionResponse</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_content_protection</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_domain_restriction</span>
 
-    <span class="nd">@content_protection</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">content_protection</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">content_protection</span><span class="p">):</span>
-        <span class="c1"># type: (StreamsContentProtectionResponse) -&gt; None</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the content_protection of this StreamsVideoResponse.</span>
+    <span class="nd">@domain_restriction</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">domain_restriction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">domain_restriction</span><span class="p">):</span>
+        <span class="c1"># type: (StreamsDomainRestrictionResponse) -&gt; None</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the domain_restriction of this StreamsVideoResponse.</span>
 
 
-<span class="sd">        :param content_protection: The content_protection of this StreamsVideoResponse.</span>
-<span class="sd">        :type: StreamsContentProtectionResponse</span>
+<span class="sd">        :param domain_restriction: The domain_restriction of this StreamsVideoResponse.</span>
+<span class="sd">        :type: StreamsDomainRestrictionResponse</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
-        <span class="k">if</span> <span class="n">content_protection</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">content_protection</span><span class="p">,</span> <span class="n">StreamsContentProtectionResponse</span><span class="p">):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `content_protection`, type has to be `StreamsContentProtectionResponse`&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">domain_restriction</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">domain_restriction</span><span class="p">,</span> <span class="n">StreamsDomainRestrictionResponse</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `domain_restriction`, type has to be `StreamsDomainRestrictionResponse`&quot;</span><span class="p">)</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">_content_protection</span> <span class="o">=</span> <span class="n">content_protection</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_domain_restriction</span> <span class="o">=</span> <span class="n">domain_restriction</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">trimming</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
