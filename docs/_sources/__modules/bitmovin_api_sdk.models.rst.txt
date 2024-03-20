@@ -580,14 +580,6 @@ bitmovin\_api\_sdk.models.analytics\_http\_request\_type module
    :undoc-members:
    :show-inheritance:
 
-bitmovin\_api\_sdk.models.analytics\_impression\_details module
----------------------------------------------------------------
-
-.. automodule:: bitmovin_api_sdk.models.analytics_impression_details
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
 bitmovin\_api\_sdk.models.analytics\_impression\_list\_item module
 ------------------------------------------------------------------
 
@@ -5788,10 +5780,26 @@ bitmovin\_api\_sdk.models.streams\_ad\_config\_response module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.streams\_domain\_restriction\_create\_request module
+------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.streams_domain_restriction_create_request
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.streams\_domain\_restriction\_response module
 -----------------------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.models.streams_domain_restriction_response
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.streams\_domain\_restriction\_update\_request module
+------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.streams_domain_restriction_update_request
    :members:
    :undoc-members:
    :show-inheritance:

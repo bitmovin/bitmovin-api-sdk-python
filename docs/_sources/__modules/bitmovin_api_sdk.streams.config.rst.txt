@@ -1,0 +1,29 @@
+bitmovin\_api\_sdk.streams.config package
+=========================================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   bitmovin_api_sdk.streams.config.domain_restriction
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.streams.config.config\_api module
+----------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.streams.config.config_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.streams.config
+   :members:
+   :undoc-members:
+   :show-inheritance:

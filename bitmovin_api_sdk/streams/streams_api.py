@@ -6,6 +6,7 @@ from bitmovin_api_sdk.common import BaseApi, BitmovinApiLoggerBase
 from bitmovin_api_sdk.common.poscheck import poscheck_except
 from bitmovin_api_sdk.streams.video.video_api import VideoApi
 from bitmovin_api_sdk.streams.live.live_api import LiveApi
+from bitmovin_api_sdk.streams.config.config_api import ConfigApi
 from bitmovin_api_sdk.streams.search.search_api import SearchApi
 from bitmovin_api_sdk.streams.signing_keys.signing_keys_api import SigningKeysApi
 
@@ -30,6 +31,13 @@ class StreamsApi(BaseApi):
         )
 
         self.live = LiveApi(
+            api_key=api_key,
+            tenant_org_id=tenant_org_id,
+            base_url=base_url,
+            logger=logger
+        )
+
+        self.config = ConfigApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,

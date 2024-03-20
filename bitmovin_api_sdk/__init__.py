@@ -1013,6 +1013,10 @@ from bitmovin_api_sdk.streams.live.stop.stop_api import StopApi
 
 from bitmovin_api_sdk.streams.live.start.start_api import StartApi
 
+from bitmovin_api_sdk.streams.config.config_api import ConfigApi
+
+from bitmovin_api_sdk.streams.config.domain_restriction.domain_restriction_api import DomainRestrictionApi
+from bitmovin_api_sdk.streams.config.domain_restriction.domain_restriction_api import StreamsDomainRestrictionResponseListQueryParams
 from bitmovin_api_sdk.streams.search.search_api import SearchApi
 from bitmovin_api_sdk.streams.search.search_api import StreamsResponseListQueryParams
 from bitmovin_api_sdk.streams.signing_keys.signing_keys_api import SigningKeysApi
@@ -1090,7 +1094,6 @@ from bitmovin_api_sdk.models.analytics_greater_than_filter import AnalyticsGreat
 from bitmovin_api_sdk.models.analytics_greater_than_or_equal_filter import AnalyticsGreaterThanOrEqualFilter
 from bitmovin_api_sdk.models.analytics_http_request import AnalyticsHttpRequest
 from bitmovin_api_sdk.models.analytics_http_request_type import AnalyticsHttpRequestType
-from bitmovin_api_sdk.models.analytics_impression_details import AnalyticsImpressionDetails
 from bitmovin_api_sdk.models.analytics_impression_list_item import AnalyticsImpressionListItem
 from bitmovin_api_sdk.models.analytics_impression_sample import AnalyticsImpressionSample
 from bitmovin_api_sdk.models.analytics_impressions_query import AnalyticsImpressionsQuery
@@ -1741,7 +1744,9 @@ from bitmovin_api_sdk.models.stream_per_title_settings import StreamPerTitleSett
 from bitmovin_api_sdk.models.stream_selection_mode import StreamSelectionMode
 from bitmovin_api_sdk.models.streams_ad_config_ad import StreamsAdConfigAd
 from bitmovin_api_sdk.models.streams_ad_config_response import StreamsAdConfigResponse
+from bitmovin_api_sdk.models.streams_domain_restriction_create_request import StreamsDomainRestrictionCreateRequest
 from bitmovin_api_sdk.models.streams_domain_restriction_response import StreamsDomainRestrictionResponse
+from bitmovin_api_sdk.models.streams_domain_restriction_update_request import StreamsDomainRestrictionUpdateRequest
 from bitmovin_api_sdk.models.streams_encoding_profile import StreamsEncodingProfile
 from bitmovin_api_sdk.models.streams_live_create_request import StreamsLiveCreateRequest
 from bitmovin_api_sdk.models.streams_live_life_cycle import StreamsLiveLifeCycle
@@ -1842,4 +1847,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.187.1"
+__version__ = "1.188.0"
