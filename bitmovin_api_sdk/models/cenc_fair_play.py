@@ -74,7 +74,7 @@ class CencFairPlay(object):
         # type: () -> string_types
         """Gets the uri of this CencFairPlay.
 
-        URL of the licensing server
+        URL of the licensing server. Typically starts with a skd://. Please check with your DRM provider on their required format.
 
         :return: The uri of this CencFairPlay.
         :rtype: string_types
@@ -86,7 +86,7 @@ class CencFairPlay(object):
         # type: (string_types) -> None
         """Sets the uri of this CencFairPlay.
 
-        URL of the licensing server
+        URL of the licensing server. Typically starts with a skd://. Please check with your DRM provider on their required format.
 
         :param uri: The uri of this CencFairPlay.
         :type: string_types

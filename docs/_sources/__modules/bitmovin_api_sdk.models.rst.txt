@@ -588,14 +588,6 @@ bitmovin\_api\_sdk.models.analytics\_impression\_list\_item module
    :undoc-members:
    :show-inheritance:
 
-bitmovin\_api\_sdk.models.analytics\_impression\_sample module
---------------------------------------------------------------
-
-.. automodule:: bitmovin_api_sdk.models.analytics_impression_sample
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
 bitmovin\_api\_sdk.models.analytics\_impressions\_query module
 --------------------------------------------------------------
 
@@ -864,14 +856,6 @@ bitmovin\_api\_sdk.models.analytics\_variance\_query\_request module
 --------------------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.models.analytics_variance_query_request
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-bitmovin\_api\_sdk.models.analytics\_video\_start\_failed\_reason module
-------------------------------------------------------------------------
-
-.. automodule:: bitmovin_api_sdk.models.analytics_video_start_failed_reason
    :members:
    :undoc-members:
    :show-inheritance:

@@ -76,6 +76,21 @@ class FinishedApi(BaseApi):
             **kwargs
         )
 
+    def list(self, **kwargs):
+        # type: (dict) -> Webhook
+        """Get &#39;Manifest Finished&#39; Webhooks (All Manifests)
+
+        :return: List of notifications
+        :rtype: Webhook
+        """
+
+        return self.api_client.get(
+            '/notifications/webhooks/encoding/manifest/finished',
+            pagination_response=True,
+            type=Webhook,
+            **kwargs
+        )
+
     def update(self, notification_id, webhook, **kwargs):
         # type: (string_types, Webhook, dict) -> Webhook
         """Replace Manifest Finished Webhook Notification
