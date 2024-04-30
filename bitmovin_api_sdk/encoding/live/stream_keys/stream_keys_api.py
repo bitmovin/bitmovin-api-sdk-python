@@ -8,6 +8,7 @@ from bitmovin_api_sdk.models.bitmovin_response import BitmovinResponse
 from bitmovin_api_sdk.models.response_envelope import ResponseEnvelope
 from bitmovin_api_sdk.models.response_error import ResponseError
 from bitmovin_api_sdk.models.stream_key import StreamKey
+from bitmovin_api_sdk.encoding.live.stream_keys.actions.actions_api import ActionsApi
 from bitmovin_api_sdk.encoding.live.stream_keys.stream_key_list_query_params import StreamKeyListQueryParams
 
 
@@ -17,6 +18,13 @@ class StreamKeysApi(BaseApi):
         # type: (str, str, str, BitmovinApiLoggerBase) -> None
 
         super(StreamKeysApi, self).__init__(
+            api_key=api_key,
+            tenant_org_id=tenant_org_id,
+            base_url=base_url,
+            logger=logger
+        )
+
+        self.actions = ActionsApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,

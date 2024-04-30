@@ -5708,6 +5708,14 @@ bitmovin\_api\_sdk.models.stream\_key\_type module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.stream\_keys\_unassign\_action module
+---------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.stream_keys_unassign_action
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.stream\_metadata module
 -------------------------------------------------
 

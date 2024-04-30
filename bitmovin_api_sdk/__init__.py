@@ -749,6 +749,8 @@ from bitmovin_api_sdk.encoding.live.live_api import LiveApi
 
 from bitmovin_api_sdk.encoding.live.stream_keys.stream_keys_api import StreamKeysApi
 from bitmovin_api_sdk.encoding.live.stream_keys.stream_keys_api import StreamKeyListQueryParams
+from bitmovin_api_sdk.encoding.live.stream_keys.actions.actions_api import ActionsApi
+
 from bitmovin_api_sdk.encoding.manifests.manifests_api import ManifestsApi
 from bitmovin_api_sdk.encoding.manifests.manifests_api import ManifestListQueryParams
 from bitmovin_api_sdk.encoding.manifests.type.type_api import TypeApi
@@ -1735,6 +1737,7 @@ from bitmovin_api_sdk.models.stream_key_configuration import StreamKeyConfigurat
 from bitmovin_api_sdk.models.stream_key_configuration_type import StreamKeyConfigurationType
 from bitmovin_api_sdk.models.stream_key_status import StreamKeyStatus
 from bitmovin_api_sdk.models.stream_key_type import StreamKeyType
+from bitmovin_api_sdk.models.stream_keys_unassign_action import StreamKeysUnassignAction
 from bitmovin_api_sdk.models.stream_metadata import StreamMetadata
 from bitmovin_api_sdk.models.stream_mode import StreamMode
 from bitmovin_api_sdk.models.stream_per_title_fixed_resolution_and_bitrate_settings import StreamPerTitleFixedResolutionAndBitrateSettings
@@ -1845,4 +1848,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.190.0"
+__version__ = "1.191.0"

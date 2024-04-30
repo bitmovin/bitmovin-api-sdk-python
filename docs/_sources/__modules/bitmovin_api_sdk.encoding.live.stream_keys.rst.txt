@@ -1,6 +1,14 @@
 bitmovin\_api\_sdk.encoding.live.stream\_keys package
 =====================================================
 
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   bitmovin_api_sdk.encoding.live.stream_keys.actions
+
 Submodules
 ----------
 
