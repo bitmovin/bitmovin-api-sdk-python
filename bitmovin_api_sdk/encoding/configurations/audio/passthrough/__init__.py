@@ -1,0 +1,2 @@
+from bitmovin_api_sdk.encoding.configurations.audio.passthrough.passthrough_api import PassthroughApi
+from bitmovin_api_sdk.encoding.configurations.audio.passthrough.passthrough_audio_configuration_list_query_params import PassthroughAudioConfigurationListQueryParams

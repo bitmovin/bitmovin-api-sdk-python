@@ -533,6 +533,7 @@ from bitmovin_api_sdk.models.packed_audio_muxing_information import PackedAudioM
 from bitmovin_api_sdk.models.padding_duration_unit import PaddingDurationUnit
 from bitmovin_api_sdk.models.padding_sequence import PaddingSequence
 from bitmovin_api_sdk.models.pagination_response import PaginationResponse
+from bitmovin_api_sdk.models.passthrough_audio_configuration import PassthroughAudioConfiguration
 from bitmovin_api_sdk.models.passthrough_mode import PassthroughMode
 from bitmovin_api_sdk.models.pcm_audio_configuration import PcmAudioConfiguration
 from bitmovin_api_sdk.models.pcm_channel_layout import PcmChannelLayout

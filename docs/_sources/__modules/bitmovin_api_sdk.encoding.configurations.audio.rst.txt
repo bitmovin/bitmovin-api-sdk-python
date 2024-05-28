@@ -21,6 +21,7 @@ Subpackages
    bitmovin_api_sdk.encoding.configurations.audio.mp2
    bitmovin_api_sdk.encoding.configurations.audio.mp3
    bitmovin_api_sdk.encoding.configurations.audio.opus
+   bitmovin_api_sdk.encoding.configurations.audio.passthrough
    bitmovin_api_sdk.encoding.configurations.audio.pcm
    bitmovin_api_sdk.encoding.configurations.audio.vorbis
 

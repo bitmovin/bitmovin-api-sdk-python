@@ -4236,6 +4236,14 @@ bitmovin\_api\_sdk.models.pagination\_response module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.passthrough\_audio\_configuration module
+------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.passthrough_audio_configuration
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.passthrough\_mode module
 --------------------------------------------------
 

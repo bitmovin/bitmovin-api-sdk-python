@@ -305,6 +305,8 @@ from bitmovin_api_sdk.encoding.configurations.audio.he_aac_v2.he_aac_v2_api impo
 from bitmovin_api_sdk.encoding.configurations.audio.he_aac_v2.he_aac_v2_api import HeAacV2AudioConfigurationListQueryParams
 from bitmovin_api_sdk.encoding.configurations.audio.he_aac_v2.customdata.customdata_api import CustomdataApi
 
+from bitmovin_api_sdk.encoding.configurations.audio.passthrough.passthrough_api import PassthroughApi
+from bitmovin_api_sdk.encoding.configurations.audio.passthrough.passthrough_api import PassthroughAudioConfigurationListQueryParams
 from bitmovin_api_sdk.encoding.configurations.audio.vorbis.vorbis_api import VorbisApi
 from bitmovin_api_sdk.encoding.configurations.audio.vorbis.vorbis_api import VorbisAudioConfigurationListQueryParams
 from bitmovin_api_sdk.encoding.configurations.audio.vorbis.customdata.customdata_api import CustomdataApi
@@ -1554,6 +1556,7 @@ from bitmovin_api_sdk.models.packed_audio_muxing_information import PackedAudioM
 from bitmovin_api_sdk.models.padding_duration_unit import PaddingDurationUnit
 from bitmovin_api_sdk.models.padding_sequence import PaddingSequence
 from bitmovin_api_sdk.models.pagination_response import PaginationResponse
+from bitmovin_api_sdk.models.passthrough_audio_configuration import PassthroughAudioConfiguration
 from bitmovin_api_sdk.models.passthrough_mode import PassthroughMode
 from bitmovin_api_sdk.models.pcm_audio_configuration import PcmAudioConfiguration
 from bitmovin_api_sdk.models.pcm_channel_layout import PcmChannelLayout
@@ -1848,4 +1851,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.192.0"
+__version__ = "1.193.0"

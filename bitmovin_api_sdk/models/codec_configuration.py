@@ -11,6 +11,7 @@ class CodecConfiguration(BitmovinResource):
 
     discriminator_value_class_map = {
         'AAC': 'AacAudioConfiguration',
+        'AUDIO_PASSTHROUGH': 'PassthroughAudioConfiguration',
         'DTS_PASSTHROUGH': 'DtsPassthroughAudioConfiguration',
         'DTS': 'DtsAudioConfiguration',
         'DTSX': 'DtsXAudioConfiguration',
