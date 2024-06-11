@@ -152,6 +152,10 @@ from bitmovin_api_sdk.models.azure_account_region_settings import AzureAccountRe
 from bitmovin_api_sdk.models.azure_cloud_region import AzureCloudRegion
 from bitmovin_api_sdk.models.azure_input import AzureInput
 from bitmovin_api_sdk.models.azure_output import AzureOutput
+from bitmovin_api_sdk.models.azure_speech_services_credentials import AzureSpeechServicesCredentials
+from bitmovin_api_sdk.models.azure_speech_to_captions_filter import AzureSpeechToCaptionsFilter
+from bitmovin_api_sdk.models.azure_speech_to_captions_profanity import AzureSpeechToCaptionsProfanity
+from bitmovin_api_sdk.models.azure_speech_to_captions_settings import AzureSpeechToCaptionsSettings
 from bitmovin_api_sdk.models.b_adapt import BAdapt
 from bitmovin_api_sdk.models.backup_srt_inputs import BackupSrtInputs
 from bitmovin_api_sdk.models.basic_media_info import BasicMediaInfo
@@ -592,6 +596,7 @@ from bitmovin_api_sdk.models.raw_id3_tag import RawId3Tag
 from bitmovin_api_sdk.models.redundant_rtmp_input import RedundantRtmpInput
 from bitmovin_api_sdk.models.reprioritize_encoding_request import ReprioritizeEncodingRequest
 from bitmovin_api_sdk.models.reschedule_encoding_request import RescheduleEncodingRequest
+from bitmovin_api_sdk.models.reset_live_manifest_time_shift import ResetLiveManifestTimeShift
 from bitmovin_api_sdk.models.resource_limit import ResourceLimit
 from bitmovin_api_sdk.models.resource_limit_container import ResourceLimitContainer
 from bitmovin_api_sdk.models.resource_type import ResourceType

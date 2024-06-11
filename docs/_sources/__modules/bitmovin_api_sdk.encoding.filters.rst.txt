@@ -9,6 +9,7 @@ Subpackages
 
    bitmovin_api_sdk.encoding.filters.audio_mix
    bitmovin_api_sdk.encoding.filters.audio_volume
+   bitmovin_api_sdk.encoding.filters.azure_speech_to_captions
    bitmovin_api_sdk.encoding.filters.conform
    bitmovin_api_sdk.encoding.filters.crop
    bitmovin_api_sdk.encoding.filters.deinterlace

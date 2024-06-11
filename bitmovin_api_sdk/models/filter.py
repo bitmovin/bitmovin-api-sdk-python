@@ -24,7 +24,8 @@ class Filter(BitmovinResource):
         'SCALE': 'ScaleFilter',
         'INTERLACE': 'InterlaceFilter',
         'AUDIO_VOLUME': 'AudioVolumeFilter',
-        'EBU_R128_SINGLE_PASS': 'EbuR128SinglePassFilter'
+        'EBU_R128_SINGLE_PASS': 'EbuR128SinglePassFilter',
+        'AZURE_SPEECH_TO_CAPTIONS': 'AzureSpeechToCaptionsFilter'
     }
 
     def to_dict(self):

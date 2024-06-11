@@ -1,0 +1,21 @@
+bitmovin\_api\_sdk.encoding.encodings.live.reset\_live\_manifest\_timeshift package
+===================================================================================
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.encoding.encodings.live.reset\_live\_manifest\_timeshift.reset\_live\_manifest\_timeshift\_api module
+------------------------------------------------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.encodings.live.reset_live_manifest_timeshift.reset_live_manifest_timeshift_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.encoding.encodings.live.reset_live_manifest_timeshift
+   :members:
+   :undoc-members:
+   :show-inheritance:

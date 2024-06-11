@@ -1196,6 +1196,38 @@ bitmovin\_api\_sdk.models.azure\_output module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.azure\_speech\_services\_credentials module
+---------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.azure_speech_services_credentials
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.azure\_speech\_to\_captions\_filter module
+--------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.azure_speech_to_captions_filter
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.azure\_speech\_to\_captions\_profanity module
+-----------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.azure_speech_to_captions_profanity
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.azure\_speech\_to\_captions\_settings module
+----------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.azure_speech_to_captions_settings
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.b\_adapt module
 -----------------------------------------
 
@@ -4712,6 +4744,14 @@ bitmovin\_api\_sdk.models.reschedule\_encoding\_request module
 --------------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.models.reschedule_encoding_request
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.reset\_live\_manifest\_time\_shift module
+-------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.reset_live_manifest_time_shift
    :members:
    :undoc-members:
    :show-inheritance:

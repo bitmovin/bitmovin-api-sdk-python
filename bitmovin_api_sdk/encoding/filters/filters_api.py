@@ -11,6 +11,7 @@ from bitmovin_api_sdk.encoding.filters.type.type_api import TypeApi
 from bitmovin_api_sdk.encoding.filters.conform.conform_api import ConformApi
 from bitmovin_api_sdk.encoding.filters.watermark.watermark_api import WatermarkApi
 from bitmovin_api_sdk.encoding.filters.audio_volume.audio_volume_api import AudioVolumeApi
+from bitmovin_api_sdk.encoding.filters.azure_speech_to_captions.azure_speech_to_captions_api import AzureSpeechToCaptionsApi
 from bitmovin_api_sdk.encoding.filters.enhanced_watermark.enhanced_watermark_api import EnhancedWatermarkApi
 from bitmovin_api_sdk.encoding.filters.crop.crop_api import CropApi
 from bitmovin_api_sdk.encoding.filters.rotate.rotate_api import RotateApi
@@ -60,6 +61,13 @@ class FiltersApi(BaseApi):
         )
 
         self.audio_volume = AudioVolumeApi(
+            api_key=api_key,
+            tenant_org_id=tenant_org_id,
+            base_url=base_url,
+            logger=logger
+        )
+
+        self.azure_speech_to_captions = AzureSpeechToCaptionsApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,

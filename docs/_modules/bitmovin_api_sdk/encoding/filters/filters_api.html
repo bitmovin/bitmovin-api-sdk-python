@@ -91,6 +91,7 @@
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.encoding.filters.conform.conform_api</span> <span class="kn">import</span> <span class="n">ConformApi</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.encoding.filters.watermark.watermark_api</span> <span class="kn">import</span> <span class="n">WatermarkApi</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.encoding.filters.audio_volume.audio_volume_api</span> <span class="kn">import</span> <span class="n">AudioVolumeApi</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.encoding.filters.azure_speech_to_captions.azure_speech_to_captions_api</span> <span class="kn">import</span> <span class="n">AzureSpeechToCaptionsApi</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.encoding.filters.enhanced_watermark.enhanced_watermark_api</span> <span class="kn">import</span> <span class="n">EnhancedWatermarkApi</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.encoding.filters.crop.crop_api</span> <span class="kn">import</span> <span class="n">CropApi</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.encoding.filters.rotate.rotate_api</span> <span class="kn">import</span> <span class="n">RotateApi</span>
@@ -140,6 +141,13 @@
         <span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">audio_volume</span> <span class="o">=</span> <span class="n">AudioVolumeApi</span><span class="p">(</span>
+            <span class="n">api_key</span><span class="o">=</span><span class="n">api_key</span><span class="p">,</span>
+            <span class="n">tenant_org_id</span><span class="o">=</span><span class="n">tenant_org_id</span><span class="p">,</span>
+            <span class="n">base_url</span><span class="o">=</span><span class="n">base_url</span><span class="p">,</span>
+            <span class="n">logger</span><span class="o">=</span><span class="n">logger</span>
+        <span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">azure_speech_to_captions</span> <span class="o">=</span> <span class="n">AzureSpeechToCaptionsApi</span><span class="p">(</span>
             <span class="n">api_key</span><span class="o">=</span><span class="n">api_key</span><span class="p">,</span>
             <span class="n">tenant_org_id</span><span class="o">=</span><span class="n">tenant_org_id</span><span class="p">,</span>
             <span class="n">base_url</span><span class="o">=</span><span class="n">base_url</span><span class="p">,</span>

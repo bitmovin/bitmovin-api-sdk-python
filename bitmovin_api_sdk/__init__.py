@@ -373,6 +373,10 @@ from bitmovin_api_sdk.encoding.filters.audio_volume.audio_volume_api import Audi
 from bitmovin_api_sdk.encoding.filters.audio_volume.audio_volume_api import AudioVolumeFilterListQueryParams
 from bitmovin_api_sdk.encoding.filters.audio_volume.customdata.customdata_api import CustomdataApi
 
+from bitmovin_api_sdk.encoding.filters.azure_speech_to_captions.azure_speech_to_captions_api import AzureSpeechToCaptionsApi
+from bitmovin_api_sdk.encoding.filters.azure_speech_to_captions.azure_speech_to_captions_api import AzureSpeechToCaptionsFilterListQueryParams
+from bitmovin_api_sdk.encoding.filters.azure_speech_to_captions.customdata.customdata_api import CustomdataApi
+
 from bitmovin_api_sdk.encoding.filters.enhanced_watermark.enhanced_watermark_api import EnhancedWatermarkApi
 from bitmovin_api_sdk.encoding.filters.enhanced_watermark.enhanced_watermark_api import EnhancedWatermarkFilterListQueryParams
 from bitmovin_api_sdk.encoding.filters.enhanced_watermark.customdata.customdata_api import CustomdataApi
@@ -473,6 +477,8 @@ from bitmovin_api_sdk.encoding.encodings.input_streams.dolby_atmos.dolby_atmos_a
 from bitmovin_api_sdk.encoding.encodings.input_streams.dolby_atmos.dolby_atmos_api import DolbyAtmosIngestInputStreamListQueryParams
 from bitmovin_api_sdk.encoding.encodings.input_streams.dolby_vision.dolby_vision_api import DolbyVisionApi
 from bitmovin_api_sdk.encoding.encodings.input_streams.dolby_vision.dolby_vision_api import DolbyVisionInputStreamListQueryParams
+from bitmovin_api_sdk.encoding.encodings.live.reset_live_manifest_timeshift.reset_live_manifest_timeshift_api import ResetLiveManifestTimeshiftApi
+
 from bitmovin_api_sdk.encoding.encodings.muxings.muxings_api import MuxingsApi
 from bitmovin_api_sdk.encoding.encodings.muxings.muxings_api import MuxingListQueryParams
 from bitmovin_api_sdk.encoding.encodings.muxings.type.type_api import TypeApi
@@ -1175,6 +1181,10 @@ from bitmovin_api_sdk.models.azure_account_region_settings import AzureAccountRe
 from bitmovin_api_sdk.models.azure_cloud_region import AzureCloudRegion
 from bitmovin_api_sdk.models.azure_input import AzureInput
 from bitmovin_api_sdk.models.azure_output import AzureOutput
+from bitmovin_api_sdk.models.azure_speech_services_credentials import AzureSpeechServicesCredentials
+from bitmovin_api_sdk.models.azure_speech_to_captions_filter import AzureSpeechToCaptionsFilter
+from bitmovin_api_sdk.models.azure_speech_to_captions_profanity import AzureSpeechToCaptionsProfanity
+from bitmovin_api_sdk.models.azure_speech_to_captions_settings import AzureSpeechToCaptionsSettings
 from bitmovin_api_sdk.models.b_adapt import BAdapt
 from bitmovin_api_sdk.models.backup_srt_inputs import BackupSrtInputs
 from bitmovin_api_sdk.models.basic_media_info import BasicMediaInfo
@@ -1615,6 +1625,7 @@ from bitmovin_api_sdk.models.raw_id3_tag import RawId3Tag
 from bitmovin_api_sdk.models.redundant_rtmp_input import RedundantRtmpInput
 from bitmovin_api_sdk.models.reprioritize_encoding_request import ReprioritizeEncodingRequest
 from bitmovin_api_sdk.models.reschedule_encoding_request import RescheduleEncodingRequest
+from bitmovin_api_sdk.models.reset_live_manifest_time_shift import ResetLiveManifestTimeShift
 from bitmovin_api_sdk.models.resource_limit import ResourceLimit
 from bitmovin_api_sdk.models.resource_limit_container import ResourceLimitContainer
 from bitmovin_api_sdk.models.resource_type import ResourceType
@@ -1851,4 +1862,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.194.0"
+__version__ = "1.195.0"
