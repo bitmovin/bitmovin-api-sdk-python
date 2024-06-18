@@ -234,7 +234,7 @@ class DashSegmentedRepresentation(DashMuxingRepresentation):
         # type: () -> string_types
         """Gets the start_keyframe_id of this DashSegmentedRepresentation.
 
-        Id of the Keyframe to start with
+        Id of the keyframe to start with. It takes precedence over startSegmentNumber
 
         :return: The start_keyframe_id of this DashSegmentedRepresentation.
         :rtype: string_types
@@ -246,7 +246,7 @@ class DashSegmentedRepresentation(DashMuxingRepresentation):
         # type: (string_types) -> None
         """Sets the start_keyframe_id of this DashSegmentedRepresentation.
 
-        Id of the Keyframe to start with
+        Id of the keyframe to start with. It takes precedence over startSegmentNumber
 
         :param start_keyframe_id: The start_keyframe_id of this DashSegmentedRepresentation.
         :type: string_types
@@ -263,7 +263,7 @@ class DashSegmentedRepresentation(DashMuxingRepresentation):
         # type: () -> string_types
         """Gets the end_keyframe_id of this DashSegmentedRepresentation.
 
-        Id of the Keyframe to end with
+        Id of the keyframe to end with. It takes precedence over endSegmentNumber. The segment containing the end keyframe is not included in the representation.
 
         :return: The end_keyframe_id of this DashSegmentedRepresentation.
         :rtype: string_types
@@ -275,7 +275,7 @@ class DashSegmentedRepresentation(DashMuxingRepresentation):
         # type: (string_types) -> None
         """Sets the end_keyframe_id of this DashSegmentedRepresentation.
 
-        Id of the Keyframe to end with
+        Id of the keyframe to end with. It takes precedence over endSegmentNumber. The segment containing the end keyframe is not included in the representation.
 
         :param end_keyframe_id: The end_keyframe_id of this DashSegmentedRepresentation.
         :type: string_types

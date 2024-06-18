@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>bitmovin_api_sdk.encoding.encodings.streams.filters package &mdash; Bitmovin Python API SDK {{packageVersion}} documentation</title>
@@ -132,17 +132,17 @@
 <span class="sig-name descname"><span class="pre">create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">encoding_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">string_types</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stream_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">string_types</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stream_filter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.stream_filter_list.StreamFilterList" title="bitmovin_api_sdk.models.stream_filter_list.StreamFilterList"><span class="pre">StreamFilterList</span></a></span></span><a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/encodings/streams/filters/filters_api.html#FiltersApi.create"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.encodings.streams.filters.filters_api.FiltersApi.create" title="Permalink to this definition"></a></dt>
 <dd><p>Add Filters to Stream</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>encoding_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the encoding.</p></li>
 <li><p><strong>stream_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the stream.</p></li>
 <li><p><strong>stream_filter</strong> (<em>list</em><em>[</em><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.stream_filter.StreamFilter" title="bitmovin_api_sdk.models.stream_filter.StreamFilter"><em>StreamFilter</em></a><em>]</em><em>, </em><em>required</em>) – The Filters to be added</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>List of created stream filters</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.stream_filter_list.StreamFilterList" title="bitmovin_api_sdk.models.stream_filter_list.StreamFilterList">StreamFilterList</a></p>
 </dd>
 </dl>
@@ -153,17 +153,17 @@
 <span class="sig-name descname"><span class="pre">delete</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">encoding_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">string_types</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stream_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">string_types</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filter_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">string_types</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.bitmovin_response.BitmovinResponse" title="bitmovin_api_sdk.models.bitmovin_response.BitmovinResponse"><span class="pre">BitmovinResponse</span></a></span></span><a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/encodings/streams/filters/filters_api.html#FiltersApi.delete"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.encodings.streams.filters.filters_api.FiltersApi.delete" title="Permalink to this definition"></a></dt>
 <dd><p>Delete Specific Filter from Stream</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>encoding_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the encoding.</p></li>
 <li><p><strong>stream_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the stream.</p></li>
 <li><p><strong>filter_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the filter</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>Id of the filter</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.bitmovin_response.BitmovinResponse" title="bitmovin_api_sdk.models.bitmovin_response.BitmovinResponse">BitmovinResponse</a></p>
 </dd>
 </dl>
@@ -174,16 +174,16 @@
 <span class="sig-name descname"><span class="pre">delete_all</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">encoding_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">string_types</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stream_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">string_types</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.bitmovin_response_list.BitmovinResponseList" title="bitmovin_api_sdk.models.bitmovin_response_list.BitmovinResponseList"><span class="pre">BitmovinResponseList</span></a></span></span><a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/encodings/streams/filters/filters_api.html#FiltersApi.delete_all"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.encodings.streams.filters.filters_api.FiltersApi.delete_all" title="Permalink to this definition"></a></dt>
 <dd><p>Delete All Filters from Stream</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>encoding_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the encoding.</p></li>
 <li><p><strong>stream_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the stream.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>List of ids of deleted stream filters</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.bitmovin_response_list.BitmovinResponseList" title="bitmovin_api_sdk.models.bitmovin_response_list.BitmovinResponseList">BitmovinResponseList</a></p>
 </dd>
 </dl>
@@ -194,17 +194,17 @@
 <span class="sig-name descname"><span class="pre">list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">encoding_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">string_types</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stream_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">string_types</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">query_params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#bitmovin_api_sdk.encoding.encodings.streams.filters.stream_filter_list_list_query_params.StreamFilterListListQueryParams" title="bitmovin_api_sdk.encoding.encodings.streams.filters.stream_filter_list_list_query_params.StreamFilterListListQueryParams"><span class="pre">StreamFilterListListQueryParams</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.stream_filter_list.StreamFilterList" title="bitmovin_api_sdk.models.stream_filter_list.StreamFilterList"><span class="pre">StreamFilterList</span></a></span></span><a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/encodings/streams/filters/filters_api.html#FiltersApi.list"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.encodings.streams.filters.filters_api.FiltersApi.list" title="Permalink to this definition"></a></dt>
 <dd><p>List the filters of a stream</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>encoding_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the encoding.</p></li>
 <li><p><strong>stream_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the stream.</p></li>
 <li><p><strong>query_params</strong> (<a class="reference internal" href="#bitmovin_api_sdk.encoding.encodings.streams.filters.stream_filter_list_list_query_params.StreamFilterListListQueryParams" title="bitmovin_api_sdk.encoding.encodings.streams.filters.stream_filter_list_list_query_params.StreamFilterListListQueryParams"><em>StreamFilterListListQueryParams</em></a>) – Query parameters</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>List of stream filters</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.stream_filter_list.StreamFilterList" title="bitmovin_api_sdk.models.stream_filter_list.StreamFilterList">StreamFilterList</a></p>
 </dd>
 </dl>
