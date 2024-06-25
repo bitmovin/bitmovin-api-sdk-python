@@ -86,6 +86,7 @@
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.common.poscheck</span> <span class="kn">import</span> <span class="n">poscheck_except</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.notifications.webhooks.encoding.encodings.finished.finished_api</span> <span class="kn">import</span> <span class="n">FinishedApi</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.notifications.webhooks.encoding.encodings.error.error_api</span> <span class="kn">import</span> <span class="n">ErrorApi</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.notifications.webhooks.encoding.encodings.live_encoding_heartbeat.live_encoding_heartbeat_api</span> <span class="kn">import</span> <span class="n">LiveEncodingHeartbeatApi</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.notifications.webhooks.encoding.encodings.transfer_error.transfer_error_api</span> <span class="kn">import</span> <span class="n">TransferErrorApi</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.notifications.webhooks.encoding.encodings.live_input_stream_changed.live_input_stream_changed_api</span> <span class="kn">import</span> <span class="n">LiveInputStreamChangedApi</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.notifications.webhooks.encoding.encodings.encoding_status_changed.encoding_status_changed_api</span> <span class="kn">import</span> <span class="n">EncodingStatusChangedApi</span>
@@ -111,6 +112,13 @@
         <span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">error</span> <span class="o">=</span> <span class="n">ErrorApi</span><span class="p">(</span>
+            <span class="n">api_key</span><span class="o">=</span><span class="n">api_key</span><span class="p">,</span>
+            <span class="n">tenant_org_id</span><span class="o">=</span><span class="n">tenant_org_id</span><span class="p">,</span>
+            <span class="n">base_url</span><span class="o">=</span><span class="n">base_url</span><span class="p">,</span>
+            <span class="n">logger</span><span class="o">=</span><span class="n">logger</span>
+        <span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">live_encoding_heartbeat</span> <span class="o">=</span> <span class="n">LiveEncodingHeartbeatApi</span><span class="p">(</span>
             <span class="n">api_key</span><span class="o">=</span><span class="n">api_key</span><span class="p">,</span>
             <span class="n">tenant_org_id</span><span class="o">=</span><span class="n">tenant_org_id</span><span class="p">,</span>
             <span class="n">base_url</span><span class="o">=</span><span class="n">base_url</span><span class="p">,</span>

@@ -563,6 +563,12 @@ from bitmovin_api_sdk.encoding.encodings.muxings.broadcast_ts.customdata.customd
 
 from bitmovin_api_sdk.encoding.encodings.muxings.broadcast_ts.information.information_api import InformationApi
 
+from bitmovin_api_sdk.encoding.encodings.muxings.progressive_wav.progressive_wav_api import ProgressiveWavApi
+from bitmovin_api_sdk.encoding.encodings.muxings.progressive_wav.progressive_wav_api import ProgressiveWavMuxingListQueryParams
+from bitmovin_api_sdk.encoding.encodings.muxings.progressive_wav.customdata.customdata_api import CustomdataApi
+
+from bitmovin_api_sdk.encoding.encodings.muxings.progressive_wav.information.information_api import InformationApi
+
 from bitmovin_api_sdk.encoding.encodings.muxings.progressive_webm.progressive_webm_api import ProgressiveWebmApi
 from bitmovin_api_sdk.encoding.encodings.muxings.progressive_webm.progressive_webm_api import ProgressiveWebmMuxingListQueryParams
 from bitmovin_api_sdk.encoding.encodings.muxings.progressive_webm.customdata.customdata_api import CustomdataApi
@@ -957,6 +963,8 @@ from bitmovin_api_sdk.notifications.webhooks.encoding.encodings.error.error_api 
 from bitmovin_api_sdk.notifications.webhooks.encoding.encodings.error.error_api import WebhookListQueryParams, WebhookListByEncodingIdQueryParams
 from bitmovin_api_sdk.notifications.webhooks.encoding.encodings.error.customdata.customdata_api import CustomdataApi
 
+from bitmovin_api_sdk.notifications.webhooks.encoding.encodings.live_encoding_heartbeat.live_encoding_heartbeat_api import LiveEncodingHeartbeatApi
+from bitmovin_api_sdk.notifications.webhooks.encoding.encodings.live_encoding_heartbeat.live_encoding_heartbeat_api import LiveEncodingHeartbeatWebhookListQueryParams
 from bitmovin_api_sdk.notifications.webhooks.encoding.encodings.transfer_error.transfer_error_api import TransferErrorApi
 from bitmovin_api_sdk.notifications.webhooks.encoding.encodings.transfer_error.transfer_error_api import WebhookListQueryParams, WebhookListByEncodingIdQueryParams
 from bitmovin_api_sdk.notifications.webhooks.encoding.encodings.transfer_error.customdata.customdata_api import CustomdataApi
@@ -1496,6 +1504,7 @@ from bitmovin_api_sdk.models.live_dash_manifest import LiveDashManifest
 from bitmovin_api_sdk.models.live_encoding import LiveEncoding
 from bitmovin_api_sdk.models.live_encoding_codec import LiveEncodingCodec
 from bitmovin_api_sdk.models.live_encoding_event_name import LiveEncodingEventName
+from bitmovin_api_sdk.models.live_encoding_heartbeat_webhook import LiveEncodingHeartbeatWebhook
 from bitmovin_api_sdk.models.live_encoding_options_statistics import LiveEncodingOptionsStatistics
 from bitmovin_api_sdk.models.live_encoding_stats import LiveEncodingStats
 from bitmovin_api_sdk.models.live_encoding_stats_event import LiveEncodingStatsEvent
@@ -1612,6 +1621,8 @@ from bitmovin_api_sdk.models.progressive_muxing_information import ProgressiveMu
 from bitmovin_api_sdk.models.progressive_ts_muxing import ProgressiveTsMuxing
 from bitmovin_api_sdk.models.progressive_ts_muxing_information import ProgressiveTsMuxingInformation
 from bitmovin_api_sdk.models.progressive_ts_muxing_information_byte_ranges import ProgressiveTsMuxingInformationByteRanges
+from bitmovin_api_sdk.models.progressive_wav_muxing import ProgressiveWavMuxing
+from bitmovin_api_sdk.models.progressive_wav_muxing_information import ProgressiveWavMuxingInformation
 from bitmovin_api_sdk.models.progressive_webm_muxing import ProgressiveWebmMuxing
 from bitmovin_api_sdk.models.progressive_webm_muxing_information import ProgressiveWebmMuxingInformation
 from bitmovin_api_sdk.models.progressive_webm_muxing_manifest_type import ProgressiveWebmMuxingManifestType
@@ -1862,4 +1873,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.196.1"
+__version__ = "1.197.0"

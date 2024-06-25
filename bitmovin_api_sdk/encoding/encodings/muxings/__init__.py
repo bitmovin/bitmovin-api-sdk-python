@@ -13,6 +13,7 @@ from bitmovin_api_sdk.encoding.encodings.muxings.mp4.mp4_api import Mp4Api
 from bitmovin_api_sdk.encoding.encodings.muxings.mxf.mxf_api import MxfApi
 from bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.progressive_ts_api import ProgressiveTsApi
 from bitmovin_api_sdk.encoding.encodings.muxings.broadcast_ts.broadcast_ts_api import BroadcastTsApi
+from bitmovin_api_sdk.encoding.encodings.muxings.progressive_wav.progressive_wav_api import ProgressiveWavApi
 from bitmovin_api_sdk.encoding.encodings.muxings.progressive_webm.progressive_webm_api import ProgressiveWebmApi
 from bitmovin_api_sdk.encoding.encodings.muxings.progressive_mov.progressive_mov_api import ProgressiveMovApi
 from bitmovin_api_sdk.encoding.encodings.muxings.muxing_list_query_params import MuxingListQueryParams

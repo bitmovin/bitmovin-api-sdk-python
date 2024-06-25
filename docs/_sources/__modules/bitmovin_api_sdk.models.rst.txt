@@ -3716,6 +3716,14 @@ bitmovin\_api\_sdk.models.live\_encoding\_event\_name module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.live\_encoding\_heartbeat\_webhook module
+-------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.live_encoding_heartbeat_webhook
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.live\_encoding\_options\_statistics module
 --------------------------------------------------------------------
 
@@ -4632,6 +4640,22 @@ bitmovin\_api\_sdk.models.progressive\_ts\_muxing\_information\_byte\_ranges mod
 -----------------------------------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.models.progressive_ts_muxing_information_byte_ranges
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.progressive\_wav\_muxing module
+---------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.progressive_wav_muxing
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.progressive\_wav\_muxing\_information module
+----------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.progressive_wav_muxing_information
    :members:
    :undoc-members:
    :show-inheritance:
