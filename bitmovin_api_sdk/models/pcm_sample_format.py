@@ -8,3 +8,4 @@ from bitmovin_api_sdk.common.poscheck import poscheck_model
 class PcmSampleFormat(Enum):
     S16LE = "S16LE"
     S24LE = "S24LE"
+    S32LE = "S32LE"

@@ -698,7 +698,7 @@ class H264VideoConfiguration(VideoConfiguration):
         # type: () -> int
         """Gets the max_bitrate of this H264VideoConfiguration.
 
-        Maximum Bitrate
+        Maximum Bitrate (bps)
 
         :return: The max_bitrate of this H264VideoConfiguration.
         :rtype: int
@@ -710,7 +710,7 @@ class H264VideoConfiguration(VideoConfiguration):
         # type: (int) -> None
         """Sets the max_bitrate of this H264VideoConfiguration.
 
-        Maximum Bitrate
+        Maximum Bitrate (bps)
 
         :param max_bitrate: The max_bitrate of this H264VideoConfiguration.
         :type: int
@@ -727,7 +727,7 @@ class H264VideoConfiguration(VideoConfiguration):
         # type: () -> int
         """Gets the min_bitrate of this H264VideoConfiguration.
 
-        Minimum Bitrate
+        Minimum Bitrate (bps)
 
         :return: The min_bitrate of this H264VideoConfiguration.
         :rtype: int
@@ -739,7 +739,7 @@ class H264VideoConfiguration(VideoConfiguration):
         # type: (int) -> None
         """Sets the min_bitrate of this H264VideoConfiguration.
 
-        Minimum Bitrate
+        Minimum Bitrate (bps)
 
         :param min_bitrate: The min_bitrate of this H264VideoConfiguration.
         :type: int
@@ -756,7 +756,7 @@ class H264VideoConfiguration(VideoConfiguration):
         # type: () -> int
         """Gets the bufsize of this H264VideoConfiguration.
 
-        Playback device buffer size
+        Playback device buffer size (bits)
 
         :return: The bufsize of this H264VideoConfiguration.
         :rtype: int
@@ -768,7 +768,7 @@ class H264VideoConfiguration(VideoConfiguration):
         # type: (int) -> None
         """Sets the bufsize of this H264VideoConfiguration.
 
-        Playback device buffer size
+        Playback device buffer size (bits)
 
         :param bufsize: The bufsize of this H264VideoConfiguration.
         :type: int

@@ -886,7 +886,7 @@ class H265VideoConfiguration(VideoConfiguration):
         # type: () -> int
         """Gets the max_bitrate of this H265VideoConfiguration.
 
-        Maximum Bitrate
+        Maximum Bitrate (bps)
 
         :return: The max_bitrate of this H265VideoConfiguration.
         :rtype: int
@@ -898,7 +898,7 @@ class H265VideoConfiguration(VideoConfiguration):
         # type: (int) -> None
         """Sets the max_bitrate of this H265VideoConfiguration.
 
-        Maximum Bitrate
+        Maximum Bitrate (bps)
 
         :param max_bitrate: The max_bitrate of this H265VideoConfiguration.
         :type: int
@@ -915,7 +915,7 @@ class H265VideoConfiguration(VideoConfiguration):
         # type: () -> int
         """Gets the min_bitrate of this H265VideoConfiguration.
 
-        Minimum Bitrate
+        Minimum Bitrate (bps)
 
         :return: The min_bitrate of this H265VideoConfiguration.
         :rtype: int
@@ -927,7 +927,7 @@ class H265VideoConfiguration(VideoConfiguration):
         # type: (int) -> None
         """Sets the min_bitrate of this H265VideoConfiguration.
 
-        Minimum Bitrate
+        Minimum Bitrate (bps)
 
         :param min_bitrate: The min_bitrate of this H265VideoConfiguration.
         :type: int
@@ -944,7 +944,7 @@ class H265VideoConfiguration(VideoConfiguration):
         # type: () -> int
         """Gets the bufsize of this H265VideoConfiguration.
 
-        Size of the VBV buffer (kbits)
+        Size of the VBV buffer (bits)
 
         :return: The bufsize of this H265VideoConfiguration.
         :rtype: int
@@ -956,7 +956,7 @@ class H265VideoConfiguration(VideoConfiguration):
         # type: (int) -> None
         """Sets the bufsize of this H265VideoConfiguration.
 
-        Size of the VBV buffer (kbits)
+        Size of the VBV buffer (bits)
 
         :param bufsize: The bufsize of this H265VideoConfiguration.
         :type: int
