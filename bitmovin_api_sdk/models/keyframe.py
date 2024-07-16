@@ -17,19 +17,15 @@ class Keyframe(BitmovinResource):
                  created_at=None,
                  modified_at=None,
                  custom_data=None,
-                 time=None,
-                 segment_cut=None):
-        # type: (string_types, string_types, string_types, datetime, datetime, dict, float, bool) -> None
+                 time=None):
+        # type: (string_types, string_types, string_types, datetime, datetime, dict, float) -> None
         super(Keyframe, self).__init__(id_=id_, name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data)
 
         self._time = None
-        self._segment_cut = None
         self.discriminator = None
 
         if time is not None:
             self.time = time
-        if segment_cut is not None:
-            self.segment_cut = segment_cut
 
     @property
     def openapi_types(self):
@@ -39,8 +35,7 @@ class Keyframe(BitmovinResource):
             types = getattr(super(Keyframe, self), 'openapi_types')
 
         types.update({
-            'time': 'float',
-            'segment_cut': 'bool'
+            'time': 'float'
         })
 
         return types
@@ -53,8 +48,7 @@ class Keyframe(BitmovinResource):
             attributes = getattr(super(Keyframe, self), 'attribute_map')
 
         attributes.update({
-            'time': 'time',
-            'segment_cut': 'segmentCut'
+            'time': 'time'
         })
         return attributes
 
@@ -86,35 +80,6 @@ class Keyframe(BitmovinResource):
                 raise TypeError("Invalid type for `time`, type has to be `float`")
 
         self._time = time
-
-    @property
-    def segment_cut(self):
-        # type: () -> bool
-        """Gets the segment_cut of this Keyframe.
-
-        Instructs the encoder to cut the segment at this position
-
-        :return: The segment_cut of this Keyframe.
-        :rtype: bool
-        """
-        return self._segment_cut
-
-    @segment_cut.setter
-    def segment_cut(self, segment_cut):
-        # type: (bool) -> None
-        """Sets the segment_cut of this Keyframe.
-
-        Instructs the encoder to cut the segment at this position
-
-        :param segment_cut: The segment_cut of this Keyframe.
-        :type: bool
-        """
-
-        if segment_cut is not None:
-            if not isinstance(segment_cut, bool):
-                raise TypeError("Invalid type for `segment_cut`, type has to be `bool`")
-
-        self._segment_cut = segment_cut
 
     def to_dict(self):
         """Returns the model properties as a dict"""

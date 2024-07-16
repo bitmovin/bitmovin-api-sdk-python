@@ -13,18 +13,22 @@ class ResetLiveManifestTimeShift(BitmovinResponse):
     def __init__(self,
                  id_=None,
                  residual_period_in_seconds=None,
-                 manifest_ids=None):
-        # type: (string_types, float, list[string_types]) -> None
+                 manifest_ids=None,
+                 shift_progressive_muxing_start_position=None):
+        # type: (string_types, float, list[string_types], bool) -> None
         super(ResetLiveManifestTimeShift, self).__init__(id_=id_)
 
         self._residual_period_in_seconds = None
         self._manifest_ids = list()
+        self._shift_progressive_muxing_start_position = None
         self.discriminator = None
 
         if residual_period_in_seconds is not None:
             self.residual_period_in_seconds = residual_period_in_seconds
         if manifest_ids is not None:
             self.manifest_ids = manifest_ids
+        if shift_progressive_muxing_start_position is not None:
+            self.shift_progressive_muxing_start_position = shift_progressive_muxing_start_position
 
     @property
     def openapi_types(self):
@@ -35,7 +39,8 @@ class ResetLiveManifestTimeShift(BitmovinResponse):
 
         types.update({
             'residual_period_in_seconds': 'float',
-            'manifest_ids': 'list[string_types]'
+            'manifest_ids': 'list[string_types]',
+            'shift_progressive_muxing_start_position': 'bool'
         })
 
         return types
@@ -49,7 +54,8 @@ class ResetLiveManifestTimeShift(BitmovinResponse):
 
         attributes.update({
             'residual_period_in_seconds': 'residualPeriodInSeconds',
-            'manifest_ids': 'manifestIds'
+            'manifest_ids': 'manifestIds',
+            'shift_progressive_muxing_start_position': 'shiftProgressiveMuxingStartPosition'
         })
         return attributes
 
@@ -110,6 +116,35 @@ class ResetLiveManifestTimeShift(BitmovinResponse):
                 raise TypeError("Invalid type for `manifest_ids`, type has to be `list[string_types]`")
 
         self._manifest_ids = manifest_ids
+
+    @property
+    def shift_progressive_muxing_start_position(self):
+        # type: () -> bool
+        """Gets the shift_progressive_muxing_start_position of this ResetLiveManifestTimeShift.
+
+        If set to true, the Progressive muxing start position will be shifted to the start of the first remaining segment after the removal.  NOTE: This only works for Progressive MP4 muxings.
+
+        :return: The shift_progressive_muxing_start_position of this ResetLiveManifestTimeShift.
+        :rtype: bool
+        """
+        return self._shift_progressive_muxing_start_position
+
+    @shift_progressive_muxing_start_position.setter
+    def shift_progressive_muxing_start_position(self, shift_progressive_muxing_start_position):
+        # type: (bool) -> None
+        """Sets the shift_progressive_muxing_start_position of this ResetLiveManifestTimeShift.
+
+        If set to true, the Progressive muxing start position will be shifted to the start of the first remaining segment after the removal.  NOTE: This only works for Progressive MP4 muxings.
+
+        :param shift_progressive_muxing_start_position: The shift_progressive_muxing_start_position of this ResetLiveManifestTimeShift.
+        :type: bool
+        """
+
+        if shift_progressive_muxing_start_position is not None:
+            if not isinstance(shift_progressive_muxing_start_position, bool):
+                raise TypeError("Invalid type for `shift_progressive_muxing_start_position`, type has to be `bool`")
+
+        self._shift_progressive_muxing_start_position = shift_progressive_muxing_start_position
 
     def to_dict(self):
         """Returns the model properties as a dict"""
