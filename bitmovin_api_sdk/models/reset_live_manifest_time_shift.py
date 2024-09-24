@@ -13,18 +13,22 @@ class ResetLiveManifestTimeShift(BitmovinResponse):
     def __init__(self,
                  id_=None,
                  residual_period_in_seconds=None,
+                 offset_in_seconds=None,
                  manifest_ids=None,
                  shift_progressive_muxing_start_position=None):
-        # type: (string_types, float, list[string_types], bool) -> None
+        # type: (string_types, float, float, list[string_types], bool) -> None
         super(ResetLiveManifestTimeShift, self).__init__(id_=id_)
 
         self._residual_period_in_seconds = None
+        self._offset_in_seconds = None
         self._manifest_ids = list()
         self._shift_progressive_muxing_start_position = None
         self.discriminator = None
 
         if residual_period_in_seconds is not None:
             self.residual_period_in_seconds = residual_period_in_seconds
+        if offset_in_seconds is not None:
+            self.offset_in_seconds = offset_in_seconds
         if manifest_ids is not None:
             self.manifest_ids = manifest_ids
         if shift_progressive_muxing_start_position is not None:
@@ -39,6 +43,7 @@ class ResetLiveManifestTimeShift(BitmovinResponse):
 
         types.update({
             'residual_period_in_seconds': 'float',
+            'offset_in_seconds': 'float',
             'manifest_ids': 'list[string_types]',
             'shift_progressive_muxing_start_position': 'bool'
         })
@@ -54,6 +59,7 @@ class ResetLiveManifestTimeShift(BitmovinResponse):
 
         attributes.update({
             'residual_period_in_seconds': 'residualPeriodInSeconds',
+            'offset_in_seconds': 'offsetInSeconds',
             'manifest_ids': 'manifestIds',
             'shift_progressive_muxing_start_position': 'shiftProgressiveMuxingStartPosition'
         })
@@ -87,6 +93,35 @@ class ResetLiveManifestTimeShift(BitmovinResponse):
                 raise TypeError("Invalid type for `residual_period_in_seconds`, type has to be `float`")
 
         self._residual_period_in_seconds = residual_period_in_seconds
+
+    @property
+    def offset_in_seconds(self):
+        # type: () -> float
+        """Gets the offset_in_seconds of this ResetLiveManifestTimeShift.
+
+        Offset in seconds from the start of the live event, defining the point from which all segments within that duration will be removed from the given manifests. E.g.: The segment length is 2 seconds and a timeshift of 120 seconds (2 minutes) is configured.  The manifest contains 60 segments with the last segment number being 80 (`segment_80.ts`).  This means the manifest contains `segment_20.ts` to `segment_80.ts` (timeshift of 2 minutes equals 60 segments in manifest) If you set `offsetInSeconds` to `120`, all segments below segment number 60 (`segment_60.ts`) will be removed. (`targetSegmentNumber = offsetInSeconds / segmentLength`) The manifests will then contain `segment_60.ts` to `segment_80.ts` *Note:* Only `offsetInSeconds` or `residualPeriodInSeconds` can be set. 
+
+        :return: The offset_in_seconds of this ResetLiveManifestTimeShift.
+        :rtype: float
+        """
+        return self._offset_in_seconds
+
+    @offset_in_seconds.setter
+    def offset_in_seconds(self, offset_in_seconds):
+        # type: (float) -> None
+        """Sets the offset_in_seconds of this ResetLiveManifestTimeShift.
+
+        Offset in seconds from the start of the live event, defining the point from which all segments within that duration will be removed from the given manifests. E.g.: The segment length is 2 seconds and a timeshift of 120 seconds (2 minutes) is configured.  The manifest contains 60 segments with the last segment number being 80 (`segment_80.ts`).  This means the manifest contains `segment_20.ts` to `segment_80.ts` (timeshift of 2 minutes equals 60 segments in manifest) If you set `offsetInSeconds` to `120`, all segments below segment number 60 (`segment_60.ts`) will be removed. (`targetSegmentNumber = offsetInSeconds / segmentLength`) The manifests will then contain `segment_60.ts` to `segment_80.ts` *Note:* Only `offsetInSeconds` or `residualPeriodInSeconds` can be set. 
+
+        :param offset_in_seconds: The offset_in_seconds of this ResetLiveManifestTimeShift.
+        :type: float
+        """
+
+        if offset_in_seconds is not None:
+            if not isinstance(offset_in_seconds, (float, int)):
+                raise TypeError("Invalid type for `offset_in_seconds`, type has to be `float`")
+
+        self._offset_in_seconds = offset_in_seconds
 
     @property
     def manifest_ids(self):

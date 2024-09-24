@@ -93,18 +93,22 @@
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
                  <span class="n">id_</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">residual_period_in_seconds</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">offset_in_seconds</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">manifest_ids</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">shift_progressive_muxing_start_position</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (string_types, float, list[string_types], bool) -&gt; None</span>
+        <span class="c1"># type: (string_types, float, float, list[string_types], bool) -&gt; None</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">ResetLiveManifestTimeShift</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">id_</span><span class="o">=</span><span class="n">id_</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_residual_period_in_seconds</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_offset_in_seconds</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_manifest_ids</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_shift_progressive_muxing_start_position</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>
 
         <span class="k">if</span> <span class="n">residual_period_in_seconds</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">residual_period_in_seconds</span> <span class="o">=</span> <span class="n">residual_period_in_seconds</span>
+        <span class="k">if</span> <span class="n">offset_in_seconds</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">offset_in_seconds</span> <span class="o">=</span> <span class="n">offset_in_seconds</span>
         <span class="k">if</span> <span class="n">manifest_ids</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">manifest_ids</span> <span class="o">=</span> <span class="n">manifest_ids</span>
         <span class="k">if</span> <span class="n">shift_progressive_muxing_start_position</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -119,6 +123,7 @@
 
         <span class="n">types</span><span class="o">.</span><span class="n">update</span><span class="p">({</span>
             <span class="s1">&#39;residual_period_in_seconds&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;offset_in_seconds&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span><span class="p">,</span>
             <span class="s1">&#39;manifest_ids&#39;</span><span class="p">:</span> <span class="s1">&#39;list[string_types]&#39;</span><span class="p">,</span>
             <span class="s1">&#39;shift_progressive_muxing_start_position&#39;</span><span class="p">:</span> <span class="s1">&#39;bool&#39;</span>
         <span class="p">})</span>
@@ -134,6 +139,7 @@
 
         <span class="n">attributes</span><span class="o">.</span><span class="n">update</span><span class="p">({</span>
             <span class="s1">&#39;residual_period_in_seconds&#39;</span><span class="p">:</span> <span class="s1">&#39;residualPeriodInSeconds&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;offset_in_seconds&#39;</span><span class="p">:</span> <span class="s1">&#39;offsetInSeconds&#39;</span><span class="p">,</span>
             <span class="s1">&#39;manifest_ids&#39;</span><span class="p">:</span> <span class="s1">&#39;manifestIds&#39;</span><span class="p">,</span>
             <span class="s1">&#39;shift_progressive_muxing_start_position&#39;</span><span class="p">:</span> <span class="s1">&#39;shiftProgressiveMuxingStartPosition&#39;</span>
         <span class="p">})</span>
@@ -167,6 +173,35 @@
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `residual_period_in_seconds`, type has to be `float`&quot;</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_residual_period_in_seconds</span> <span class="o">=</span> <span class="n">residual_period_in_seconds</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">offset_in_seconds</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; float</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the offset_in_seconds of this ResetLiveManifestTimeShift.</span>
+
+<span class="sd">        Offset in seconds from the start of the live event, defining the point from which all segments within that duration will be removed from the given manifests. E.g.: The segment length is 2 seconds and a timeshift of 120 seconds (2 minutes) is configured.  The manifest contains 60 segments with the last segment number being 80 (`segment_80.ts`).  This means the manifest contains `segment_20.ts` to `segment_80.ts` (timeshift of 2 minutes equals 60 segments in manifest) If you set `offsetInSeconds` to `120`, all segments below segment number 60 (`segment_60.ts`) will be removed. (`targetSegmentNumber = offsetInSeconds / segmentLength`) The manifests will then contain `segment_60.ts` to `segment_80.ts` *Note:* Only `offsetInSeconds` or `residualPeriodInSeconds` can be set. </span>
+
+<span class="sd">        :return: The offset_in_seconds of this ResetLiveManifestTimeShift.</span>
+<span class="sd">        :rtype: float</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_offset_in_seconds</span>
+
+    <span class="nd">@offset_in_seconds</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">offset_in_seconds</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">offset_in_seconds</span><span class="p">):</span>
+        <span class="c1"># type: (float) -&gt; None</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the offset_in_seconds of this ResetLiveManifestTimeShift.</span>
+
+<span class="sd">        Offset in seconds from the start of the live event, defining the point from which all segments within that duration will be removed from the given manifests. E.g.: The segment length is 2 seconds and a timeshift of 120 seconds (2 minutes) is configured.  The manifest contains 60 segments with the last segment number being 80 (`segment_80.ts`).  This means the manifest contains `segment_20.ts` to `segment_80.ts` (timeshift of 2 minutes equals 60 segments in manifest) If you set `offsetInSeconds` to `120`, all segments below segment number 60 (`segment_60.ts`) will be removed. (`targetSegmentNumber = offsetInSeconds / segmentLength`) The manifests will then contain `segment_60.ts` to `segment_80.ts` *Note:* Only `offsetInSeconds` or `residualPeriodInSeconds` can be set. </span>
+
+<span class="sd">        :param offset_in_seconds: The offset_in_seconds of this ResetLiveManifestTimeShift.</span>
+<span class="sd">        :type: float</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">offset_in_seconds</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">offset_in_seconds</span><span class="p">,</span> <span class="p">(</span><span class="nb">float</span><span class="p">,</span> <span class="nb">int</span><span class="p">)):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `offset_in_seconds`, type has to be `float`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_offset_in_seconds</span> <span class="o">=</span> <span class="n">offset_in_seconds</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">manifest_ids</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
