@@ -18,8 +18,10 @@ class PerTitleConfiguration(object):
                  max_bitrate_step_size=None,
                  auto_representations=None,
                  complexity_factor=None,
-                 fixed_resolution_and_bitrate_configuration=None):
-        # type: (int, int, float, float, AutoRepresentation, float, PerTitleFixedResolutionAndBitrateConfiguration) -> None
+                 fixed_resolution_and_bitrate_configuration=None,
+                 target_quality_crf=None,
+                 resolution_scale_factor=None):
+        # type: (int, int, float, float, AutoRepresentation, float, PerTitleFixedResolutionAndBitrateConfiguration, float, float) -> None
 
         self._min_bitrate = None
         self._max_bitrate = None
@@ -28,6 +30,8 @@ class PerTitleConfiguration(object):
         self._auto_representations = None
         self._complexity_factor = None
         self._fixed_resolution_and_bitrate_configuration = None
+        self._target_quality_crf = None
+        self._resolution_scale_factor = None
         self.discriminator = None
 
         if min_bitrate is not None:
@@ -44,6 +48,10 @@ class PerTitleConfiguration(object):
             self.complexity_factor = complexity_factor
         if fixed_resolution_and_bitrate_configuration is not None:
             self.fixed_resolution_and_bitrate_configuration = fixed_resolution_and_bitrate_configuration
+        if target_quality_crf is not None:
+            self.target_quality_crf = target_quality_crf
+        if resolution_scale_factor is not None:
+            self.resolution_scale_factor = resolution_scale_factor
 
     @property
     def openapi_types(self):
@@ -54,7 +62,9 @@ class PerTitleConfiguration(object):
             'max_bitrate_step_size': 'float',
             'auto_representations': 'AutoRepresentation',
             'complexity_factor': 'float',
-            'fixed_resolution_and_bitrate_configuration': 'PerTitleFixedResolutionAndBitrateConfiguration'
+            'fixed_resolution_and_bitrate_configuration': 'PerTitleFixedResolutionAndBitrateConfiguration',
+            'target_quality_crf': 'float',
+            'resolution_scale_factor': 'float'
         }
 
         return types
@@ -68,7 +78,9 @@ class PerTitleConfiguration(object):
             'max_bitrate_step_size': 'maxBitrateStepSize',
             'auto_representations': 'autoRepresentations',
             'complexity_factor': 'complexityFactor',
-            'fixed_resolution_and_bitrate_configuration': 'fixedResolutionAndBitrateConfiguration'
+            'fixed_resolution_and_bitrate_configuration': 'fixedResolutionAndBitrateConfiguration',
+            'target_quality_crf': 'targetQualityCrf',
+            'resolution_scale_factor': 'resolutionScaleFactor'
         }
         return attributes
 
@@ -274,6 +286,64 @@ class PerTitleConfiguration(object):
                 raise TypeError("Invalid type for `fixed_resolution_and_bitrate_configuration`, type has to be `PerTitleFixedResolutionAndBitrateConfiguration`")
 
         self._fixed_resolution_and_bitrate_configuration = fixed_resolution_and_bitrate_configuration
+
+    @property
+    def target_quality_crf(self):
+        # type: () -> float
+        """Gets the target_quality_crf of this PerTitleConfiguration.
+
+        Desired target quality of the highest representation expressed as CRF value
+
+        :return: The target_quality_crf of this PerTitleConfiguration.
+        :rtype: float
+        """
+        return self._target_quality_crf
+
+    @target_quality_crf.setter
+    def target_quality_crf(self, target_quality_crf):
+        # type: (float) -> None
+        """Sets the target_quality_crf of this PerTitleConfiguration.
+
+        Desired target quality of the highest representation expressed as CRF value
+
+        :param target_quality_crf: The target_quality_crf of this PerTitleConfiguration.
+        :type: float
+        """
+
+        if target_quality_crf is not None:
+            if not isinstance(target_quality_crf, (float, int)):
+                raise TypeError("Invalid type for `target_quality_crf`, type has to be `float`")
+
+        self._target_quality_crf = target_quality_crf
+
+    @property
+    def resolution_scale_factor(self):
+        # type: () -> float
+        """Gets the resolution_scale_factor of this PerTitleConfiguration.
+
+        This factor influences the resolution selection of the per-title algorithm. The default value is 0.0. negative values will lead to results where the algorithm will choose lower resolutions for given bitrates. A positive value will result in higher resolutions to be selected. The range of the factor is -5.0 to +5.0. Please note that changing this factor might also lead to slightly different bitrate selection by the algorithm.
+
+        :return: The resolution_scale_factor of this PerTitleConfiguration.
+        :rtype: float
+        """
+        return self._resolution_scale_factor
+
+    @resolution_scale_factor.setter
+    def resolution_scale_factor(self, resolution_scale_factor):
+        # type: (float) -> None
+        """Sets the resolution_scale_factor of this PerTitleConfiguration.
+
+        This factor influences the resolution selection of the per-title algorithm. The default value is 0.0. negative values will lead to results where the algorithm will choose lower resolutions for given bitrates. A positive value will result in higher resolutions to be selected. The range of the factor is -5.0 to +5.0. Please note that changing this factor might also lead to slightly different bitrate selection by the algorithm.
+
+        :param resolution_scale_factor: The resolution_scale_factor of this PerTitleConfiguration.
+        :type: float
+        """
+
+        if resolution_scale_factor is not None:
+            if not isinstance(resolution_scale_factor, (float, int)):
+                raise TypeError("Invalid type for `resolution_scale_factor`, type has to be `float`")
+
+        self._resolution_scale_factor = resolution_scale_factor
 
     def to_dict(self):
         """Returns the model properties as a dict"""

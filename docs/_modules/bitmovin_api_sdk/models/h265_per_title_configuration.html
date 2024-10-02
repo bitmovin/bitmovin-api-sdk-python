@@ -101,20 +101,18 @@
                  <span class="n">complexity_factor</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">fixed_resolution_and_bitrate_configuration</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">target_quality_crf</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">resolution_scale_factor</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">codec_min_bitrate_factor</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">codec_max_bitrate_factor</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">codec_bufsize_factor</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (int, int, float, float, AutoRepresentation, float, PerTitleFixedResolutionAndBitrateConfiguration, float, float, float, float) -&gt; None</span>
-        <span class="nb">super</span><span class="p">(</span><span class="n">H265PerTitleConfiguration</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">min_bitrate</span><span class="o">=</span><span class="n">min_bitrate</span><span class="p">,</span> <span class="n">max_bitrate</span><span class="o">=</span><span class="n">max_bitrate</span><span class="p">,</span> <span class="n">min_bitrate_step_size</span><span class="o">=</span><span class="n">min_bitrate_step_size</span><span class="p">,</span> <span class="n">max_bitrate_step_size</span><span class="o">=</span><span class="n">max_bitrate_step_size</span><span class="p">,</span> <span class="n">auto_representations</span><span class="o">=</span><span class="n">auto_representations</span><span class="p">,</span> <span class="n">complexity_factor</span><span class="o">=</span><span class="n">complexity_factor</span><span class="p">,</span> <span class="n">fixed_resolution_and_bitrate_configuration</span><span class="o">=</span><span class="n">fixed_resolution_and_bitrate_configuration</span><span class="p">)</span>
+        <span class="c1"># type: (int, int, float, float, AutoRepresentation, float, PerTitleFixedResolutionAndBitrateConfiguration, float, float, float, float, float) -&gt; None</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">H265PerTitleConfiguration</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">min_bitrate</span><span class="o">=</span><span class="n">min_bitrate</span><span class="p">,</span> <span class="n">max_bitrate</span><span class="o">=</span><span class="n">max_bitrate</span><span class="p">,</span> <span class="n">min_bitrate_step_size</span><span class="o">=</span><span class="n">min_bitrate_step_size</span><span class="p">,</span> <span class="n">max_bitrate_step_size</span><span class="o">=</span><span class="n">max_bitrate_step_size</span><span class="p">,</span> <span class="n">auto_representations</span><span class="o">=</span><span class="n">auto_representations</span><span class="p">,</span> <span class="n">complexity_factor</span><span class="o">=</span><span class="n">complexity_factor</span><span class="p">,</span> <span class="n">fixed_resolution_and_bitrate_configuration</span><span class="o">=</span><span class="n">fixed_resolution_and_bitrate_configuration</span><span class="p">,</span> <span class="n">target_quality_crf</span><span class="o">=</span><span class="n">target_quality_crf</span><span class="p">,</span> <span class="n">resolution_scale_factor</span><span class="o">=</span><span class="n">resolution_scale_factor</span><span class="p">)</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">_target_quality_crf</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_codec_min_bitrate_factor</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_codec_max_bitrate_factor</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_codec_bufsize_factor</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>
 
-        <span class="k">if</span> <span class="n">target_quality_crf</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">target_quality_crf</span> <span class="o">=</span> <span class="n">target_quality_crf</span>
         <span class="k">if</span> <span class="n">codec_min_bitrate_factor</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">codec_min_bitrate_factor</span> <span class="o">=</span> <span class="n">codec_min_bitrate_factor</span>
         <span class="k">if</span> <span class="n">codec_max_bitrate_factor</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -130,7 +128,6 @@
             <span class="n">types</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="nb">super</span><span class="p">(</span><span class="n">H265PerTitleConfiguration</span><span class="p">,</span> <span class="bp">self</span><span class="p">),</span> <span class="s1">&#39;openapi_types&#39;</span><span class="p">)</span>
 
         <span class="n">types</span><span class="o">.</span><span class="n">update</span><span class="p">({</span>
-            <span class="s1">&#39;target_quality_crf&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span><span class="p">,</span>
             <span class="s1">&#39;codec_min_bitrate_factor&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span><span class="p">,</span>
             <span class="s1">&#39;codec_max_bitrate_factor&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span><span class="p">,</span>
             <span class="s1">&#39;codec_bufsize_factor&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span>
@@ -146,41 +143,11 @@
             <span class="n">attributes</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="nb">super</span><span class="p">(</span><span class="n">H265PerTitleConfiguration</span><span class="p">,</span> <span class="bp">self</span><span class="p">),</span> <span class="s1">&#39;attribute_map&#39;</span><span class="p">)</span>
 
         <span class="n">attributes</span><span class="o">.</span><span class="n">update</span><span class="p">({</span>
-            <span class="s1">&#39;target_quality_crf&#39;</span><span class="p">:</span> <span class="s1">&#39;targetQualityCrf&#39;</span><span class="p">,</span>
             <span class="s1">&#39;codec_min_bitrate_factor&#39;</span><span class="p">:</span> <span class="s1">&#39;codecMinBitrateFactor&#39;</span><span class="p">,</span>
             <span class="s1">&#39;codec_max_bitrate_factor&#39;</span><span class="p">:</span> <span class="s1">&#39;codecMaxBitrateFactor&#39;</span><span class="p">,</span>
             <span class="s1">&#39;codec_bufsize_factor&#39;</span><span class="p">:</span> <span class="s1">&#39;codecBufsizeFactor&#39;</span>
         <span class="p">})</span>
         <span class="k">return</span> <span class="n">attributes</span>
-
-    <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">target_quality_crf</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="c1"># type: () -&gt; float</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the target_quality_crf of this H265PerTitleConfiguration.</span>
-
-<span class="sd">        Desired target quality of the highest representation expressed as CRF value</span>
-
-<span class="sd">        :return: The target_quality_crf of this H265PerTitleConfiguration.</span>
-<span class="sd">        :rtype: float</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_target_quality_crf</span>
-
-    <span class="nd">@target_quality_crf</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">target_quality_crf</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">target_quality_crf</span><span class="p">):</span>
-        <span class="c1"># type: (float) -&gt; None</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the target_quality_crf of this H265PerTitleConfiguration.</span>
-
-<span class="sd">        Desired target quality of the highest representation expressed as CRF value</span>
-
-<span class="sd">        :param target_quality_crf: The target_quality_crf of this H265PerTitleConfiguration.</span>
-<span class="sd">        :type: float</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-
-        <span class="k">if</span> <span class="n">target_quality_crf</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">target_quality_crf</span><span class="p">,</span> <span class="p">(</span><span class="nb">float</span><span class="p">,</span> <span class="nb">int</span><span class="p">)):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `target_quality_crf`, type has to be `float`&quot;</span><span class="p">)</span>
-
-        <span class="bp">self</span><span class="o">.</span><span class="n">_target_quality_crf</span> <span class="o">=</span> <span class="n">target_quality_crf</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">codec_min_bitrate_factor</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>

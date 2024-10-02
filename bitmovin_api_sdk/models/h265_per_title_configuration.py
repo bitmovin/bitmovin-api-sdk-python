@@ -21,20 +21,18 @@ class H265PerTitleConfiguration(PerTitleConfiguration):
                  complexity_factor=None,
                  fixed_resolution_and_bitrate_configuration=None,
                  target_quality_crf=None,
+                 resolution_scale_factor=None,
                  codec_min_bitrate_factor=None,
                  codec_max_bitrate_factor=None,
                  codec_bufsize_factor=None):
-        # type: (int, int, float, float, AutoRepresentation, float, PerTitleFixedResolutionAndBitrateConfiguration, float, float, float, float) -> None
-        super(H265PerTitleConfiguration, self).__init__(min_bitrate=min_bitrate, max_bitrate=max_bitrate, min_bitrate_step_size=min_bitrate_step_size, max_bitrate_step_size=max_bitrate_step_size, auto_representations=auto_representations, complexity_factor=complexity_factor, fixed_resolution_and_bitrate_configuration=fixed_resolution_and_bitrate_configuration)
+        # type: (int, int, float, float, AutoRepresentation, float, PerTitleFixedResolutionAndBitrateConfiguration, float, float, float, float, float) -> None
+        super(H265PerTitleConfiguration, self).__init__(min_bitrate=min_bitrate, max_bitrate=max_bitrate, min_bitrate_step_size=min_bitrate_step_size, max_bitrate_step_size=max_bitrate_step_size, auto_representations=auto_representations, complexity_factor=complexity_factor, fixed_resolution_and_bitrate_configuration=fixed_resolution_and_bitrate_configuration, target_quality_crf=target_quality_crf, resolution_scale_factor=resolution_scale_factor)
 
-        self._target_quality_crf = None
         self._codec_min_bitrate_factor = None
         self._codec_max_bitrate_factor = None
         self._codec_bufsize_factor = None
         self.discriminator = None
 
-        if target_quality_crf is not None:
-            self.target_quality_crf = target_quality_crf
         if codec_min_bitrate_factor is not None:
             self.codec_min_bitrate_factor = codec_min_bitrate_factor
         if codec_max_bitrate_factor is not None:
@@ -50,7 +48,6 @@ class H265PerTitleConfiguration(PerTitleConfiguration):
             types = getattr(super(H265PerTitleConfiguration, self), 'openapi_types')
 
         types.update({
-            'target_quality_crf': 'float',
             'codec_min_bitrate_factor': 'float',
             'codec_max_bitrate_factor': 'float',
             'codec_bufsize_factor': 'float'
@@ -66,41 +63,11 @@ class H265PerTitleConfiguration(PerTitleConfiguration):
             attributes = getattr(super(H265PerTitleConfiguration, self), 'attribute_map')
 
         attributes.update({
-            'target_quality_crf': 'targetQualityCrf',
             'codec_min_bitrate_factor': 'codecMinBitrateFactor',
             'codec_max_bitrate_factor': 'codecMaxBitrateFactor',
             'codec_bufsize_factor': 'codecBufsizeFactor'
         })
         return attributes
-
-    @property
-    def target_quality_crf(self):
-        # type: () -> float
-        """Gets the target_quality_crf of this H265PerTitleConfiguration.
-
-        Desired target quality of the highest representation expressed as CRF value
-
-        :return: The target_quality_crf of this H265PerTitleConfiguration.
-        :rtype: float
-        """
-        return self._target_quality_crf
-
-    @target_quality_crf.setter
-    def target_quality_crf(self, target_quality_crf):
-        # type: (float) -> None
-        """Sets the target_quality_crf of this H265PerTitleConfiguration.
-
-        Desired target quality of the highest representation expressed as CRF value
-
-        :param target_quality_crf: The target_quality_crf of this H265PerTitleConfiguration.
-        :type: float
-        """
-
-        if target_quality_crf is not None:
-            if not isinstance(target_quality_crf, (float, int)):
-                raise TypeError("Invalid type for `target_quality_crf`, type has to be `float`")
-
-        self._target_quality_crf = target_quality_crf
 
     @property
     def codec_min_bitrate_factor(self):

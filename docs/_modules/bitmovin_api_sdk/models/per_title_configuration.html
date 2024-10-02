@@ -98,8 +98,10 @@
                  <span class="n">max_bitrate_step_size</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">auto_representations</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">complexity_factor</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                 <span class="n">fixed_resolution_and_bitrate_configuration</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (int, int, float, float, AutoRepresentation, float, PerTitleFixedResolutionAndBitrateConfiguration) -&gt; None</span>
+                 <span class="n">fixed_resolution_and_bitrate_configuration</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">target_quality_crf</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">resolution_scale_factor</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="c1"># type: (int, int, float, float, AutoRepresentation, float, PerTitleFixedResolutionAndBitrateConfiguration, float, float) -&gt; None</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_min_bitrate</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_max_bitrate</span> <span class="o">=</span> <span class="kc">None</span>
@@ -108,6 +110,8 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_auto_representations</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_complexity_factor</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_fixed_resolution_and_bitrate_configuration</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_target_quality_crf</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_resolution_scale_factor</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>
 
         <span class="k">if</span> <span class="n">min_bitrate</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -124,6 +128,10 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">complexity_factor</span> <span class="o">=</span> <span class="n">complexity_factor</span>
         <span class="k">if</span> <span class="n">fixed_resolution_and_bitrate_configuration</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">fixed_resolution_and_bitrate_configuration</span> <span class="o">=</span> <span class="n">fixed_resolution_and_bitrate_configuration</span>
+        <span class="k">if</span> <span class="n">target_quality_crf</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">target_quality_crf</span> <span class="o">=</span> <span class="n">target_quality_crf</span>
+        <span class="k">if</span> <span class="n">resolution_scale_factor</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">resolution_scale_factor</span> <span class="o">=</span> <span class="n">resolution_scale_factor</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -134,7 +142,9 @@
             <span class="s1">&#39;max_bitrate_step_size&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span><span class="p">,</span>
             <span class="s1">&#39;auto_representations&#39;</span><span class="p">:</span> <span class="s1">&#39;AutoRepresentation&#39;</span><span class="p">,</span>
             <span class="s1">&#39;complexity_factor&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;fixed_resolution_and_bitrate_configuration&#39;</span><span class="p">:</span> <span class="s1">&#39;PerTitleFixedResolutionAndBitrateConfiguration&#39;</span>
+            <span class="s1">&#39;fixed_resolution_and_bitrate_configuration&#39;</span><span class="p">:</span> <span class="s1">&#39;PerTitleFixedResolutionAndBitrateConfiguration&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;target_quality_crf&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;resolution_scale_factor&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span>
         <span class="p">}</span>
 
         <span class="k">return</span> <span class="n">types</span>
@@ -148,7 +158,9 @@
             <span class="s1">&#39;max_bitrate_step_size&#39;</span><span class="p">:</span> <span class="s1">&#39;maxBitrateStepSize&#39;</span><span class="p">,</span>
             <span class="s1">&#39;auto_representations&#39;</span><span class="p">:</span> <span class="s1">&#39;autoRepresentations&#39;</span><span class="p">,</span>
             <span class="s1">&#39;complexity_factor&#39;</span><span class="p">:</span> <span class="s1">&#39;complexityFactor&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;fixed_resolution_and_bitrate_configuration&#39;</span><span class="p">:</span> <span class="s1">&#39;fixedResolutionAndBitrateConfiguration&#39;</span>
+            <span class="s1">&#39;fixed_resolution_and_bitrate_configuration&#39;</span><span class="p">:</span> <span class="s1">&#39;fixedResolutionAndBitrateConfiguration&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;target_quality_crf&#39;</span><span class="p">:</span> <span class="s1">&#39;targetQualityCrf&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;resolution_scale_factor&#39;</span><span class="p">:</span> <span class="s1">&#39;resolutionScaleFactor&#39;</span>
         <span class="p">}</span>
         <span class="k">return</span> <span class="n">attributes</span>
 
@@ -354,6 +366,64 @@
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `fixed_resolution_and_bitrate_configuration`, type has to be `PerTitleFixedResolutionAndBitrateConfiguration`&quot;</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_fixed_resolution_and_bitrate_configuration</span> <span class="o">=</span> <span class="n">fixed_resolution_and_bitrate_configuration</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">target_quality_crf</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; float</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the target_quality_crf of this PerTitleConfiguration.</span>
+
+<span class="sd">        Desired target quality of the highest representation expressed as CRF value</span>
+
+<span class="sd">        :return: The target_quality_crf of this PerTitleConfiguration.</span>
+<span class="sd">        :rtype: float</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_target_quality_crf</span>
+
+    <span class="nd">@target_quality_crf</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">target_quality_crf</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">target_quality_crf</span><span class="p">):</span>
+        <span class="c1"># type: (float) -&gt; None</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the target_quality_crf of this PerTitleConfiguration.</span>
+
+<span class="sd">        Desired target quality of the highest representation expressed as CRF value</span>
+
+<span class="sd">        :param target_quality_crf: The target_quality_crf of this PerTitleConfiguration.</span>
+<span class="sd">        :type: float</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">target_quality_crf</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">target_quality_crf</span><span class="p">,</span> <span class="p">(</span><span class="nb">float</span><span class="p">,</span> <span class="nb">int</span><span class="p">)):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `target_quality_crf`, type has to be `float`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_target_quality_crf</span> <span class="o">=</span> <span class="n">target_quality_crf</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">resolution_scale_factor</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; float</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the resolution_scale_factor of this PerTitleConfiguration.</span>
+
+<span class="sd">        This factor influences the resolution selection of the per-title algorithm. The default value is 0.0. negative values will lead to results where the algorithm will choose lower resolutions for given bitrates. A positive value will result in higher resolutions to be selected. The range of the factor is -5.0 to +5.0. Please note that changing this factor might also lead to slightly different bitrate selection by the algorithm.</span>
+
+<span class="sd">        :return: The resolution_scale_factor of this PerTitleConfiguration.</span>
+<span class="sd">        :rtype: float</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_resolution_scale_factor</span>
+
+    <span class="nd">@resolution_scale_factor</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">resolution_scale_factor</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">resolution_scale_factor</span><span class="p">):</span>
+        <span class="c1"># type: (float) -&gt; None</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the resolution_scale_factor of this PerTitleConfiguration.</span>
+
+<span class="sd">        This factor influences the resolution selection of the per-title algorithm. The default value is 0.0. negative values will lead to results where the algorithm will choose lower resolutions for given bitrates. A positive value will result in higher resolutions to be selected. The range of the factor is -5.0 to +5.0. Please note that changing this factor might also lead to slightly different bitrate selection by the algorithm.</span>
+
+<span class="sd">        :param resolution_scale_factor: The resolution_scale_factor of this PerTitleConfiguration.</span>
+<span class="sd">        :type: float</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">resolution_scale_factor</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">resolution_scale_factor</span><span class="p">,</span> <span class="p">(</span><span class="nb">float</span><span class="p">,</span> <span class="nb">int</span><span class="p">)):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `resolution_scale_factor`, type has to be `float`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_resolution_scale_factor</span> <span class="o">=</span> <span class="n">resolution_scale_factor</span>
 
 <div class="viewcode-block" id="PerTitleConfiguration.to_dict"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.per_title_configuration.PerTitleConfiguration.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>
