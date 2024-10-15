@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>bitmovin_api_sdk.encoding.manifests.smooth.representations.mp4 package &mdash; Bitmovin Python API SDK {{packageVersion}} documentation</title>
@@ -66,6 +66,7 @@
 <li class="toctree-l3"><a class="reference internal" href="bitmovin_api_sdk.encoding.outputs.html">bitmovin_api_sdk.encoding.outputs package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bitmovin_api_sdk.encoding.simple.html">bitmovin_api_sdk.encoding.simple package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bitmovin_api_sdk.encoding.statistics.html">bitmovin_api_sdk.encoding.statistics package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bitmovin_api_sdk.encoding.templates.html">bitmovin_api_sdk.encoding.templates package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bitmovin_api_sdk.encoding.watch_folders.html">bitmovin_api_sdk.encoding.watch_folders package</a></li>
 </ul>
 </li>
@@ -132,16 +133,16 @@
 <span class="sig-name descname"><span class="pre">create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">manifest_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">string_types</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">smooth_streaming_representation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.smooth_streaming_representation.SmoothStreamingRepresentation" title="bitmovin_api_sdk.models.smooth_streaming_representation.SmoothStreamingRepresentation"><span class="pre">SmoothStreamingRepresentation</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.smooth_streaming_representation.SmoothStreamingRepresentation" title="bitmovin_api_sdk.models.smooth_streaming_representation.SmoothStreamingRepresentation"><span class="pre">SmoothStreamingRepresentation</span></a></span></span><a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/manifests/smooth/representations/mp4/mp4_api.html#Mp4Api.create"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.manifests.smooth.representations.mp4.mp4_api.Mp4Api.create" title="Permalink to this definition"></a></dt>
 <dd><p>Add MP4 Representation to Smooth Streaming Manifest</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>manifest_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the Smooth Streaming manifest.</p></li>
 <li><p><strong>smooth_streaming_representation</strong> (<a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.smooth_streaming_representation.SmoothStreamingRepresentation" title="bitmovin_api_sdk.models.smooth_streaming_representation.SmoothStreamingRepresentation"><em>SmoothStreamingRepresentation</em></a><em>, </em><em>required</em>) – The MP4 Representation to be added</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>Smooth Streaming manifest</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.smooth_streaming_representation.SmoothStreamingRepresentation" title="bitmovin_api_sdk.models.smooth_streaming_representation.SmoothStreamingRepresentation">SmoothStreamingRepresentation</a></p>
 </dd>
 </dl>
@@ -152,16 +153,16 @@
 <span class="sig-name descname"><span class="pre">delete</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">manifest_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">string_types</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">representation_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">string_types</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.bitmovin_response.BitmovinResponse" title="bitmovin_api_sdk.models.bitmovin_response.BitmovinResponse"><span class="pre">BitmovinResponse</span></a></span></span><a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/manifests/smooth/representations/mp4/mp4_api.html#Mp4Api.delete"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.manifests.smooth.representations.mp4.mp4_api.Mp4Api.delete" title="Permalink to this definition"></a></dt>
 <dd><p>Delete Smooth Streaming MP4 Representation</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>manifest_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the Smooth Streaming manifest.</p></li>
 <li><p><strong>representation_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the MP4 representation.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>Id of the representation</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.bitmovin_response.BitmovinResponse" title="bitmovin_api_sdk.models.bitmovin_response.BitmovinResponse">BitmovinResponse</a></p>
 </dd>
 </dl>
@@ -172,16 +173,16 @@
 <span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">manifest_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">string_types</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">representation_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">string_types</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.smooth_streaming_representation.SmoothStreamingRepresentation" title="bitmovin_api_sdk.models.smooth_streaming_representation.SmoothStreamingRepresentation"><span class="pre">SmoothStreamingRepresentation</span></a></span></span><a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/manifests/smooth/representations/mp4/mp4_api.html#Mp4Api.get"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.manifests.smooth.representations.mp4.mp4_api.Mp4Api.get" title="Permalink to this definition"></a></dt>
 <dd><p>Smooth Streaming MP4 Representation Details</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>manifest_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the Smooth Streaming manifest.</p></li>
 <li><p><strong>representation_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the MP4 representation.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>MP4 representation details</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.smooth_streaming_representation.SmoothStreamingRepresentation" title="bitmovin_api_sdk.models.smooth_streaming_representation.SmoothStreamingRepresentation">SmoothStreamingRepresentation</a></p>
 </dd>
 </dl>
@@ -192,16 +193,16 @@
 <span class="sig-name descname"><span class="pre">list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">manifest_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">string_types</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">query_params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#bitmovin_api_sdk.encoding.manifests.smooth.representations.mp4.smooth_streaming_representation_list_query_params.SmoothStreamingRepresentationListQueryParams" title="bitmovin_api_sdk.encoding.manifests.smooth.representations.mp4.smooth_streaming_representation_list_query_params.SmoothStreamingRepresentationListQueryParams"><span class="pre">SmoothStreamingRepresentationListQueryParams</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.smooth_streaming_representation.SmoothStreamingRepresentation" title="bitmovin_api_sdk.models.smooth_streaming_representation.SmoothStreamingRepresentation"><span class="pre">SmoothStreamingRepresentation</span></a></span></span><a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/manifests/smooth/representations/mp4/mp4_api.html#Mp4Api.list"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.manifests.smooth.representations.mp4.mp4_api.Mp4Api.list" title="Permalink to this definition"></a></dt>
 <dd><p>List MP4 Representation</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>manifest_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the Smooth Streaming manifest.</p></li>
 <li><p><strong>query_params</strong> (<a class="reference internal" href="#bitmovin_api_sdk.encoding.manifests.smooth.representations.mp4.smooth_streaming_representation_list_query_params.SmoothStreamingRepresentationListQueryParams" title="bitmovin_api_sdk.encoding.manifests.smooth.representations.mp4.smooth_streaming_representation_list_query_params.SmoothStreamingRepresentationListQueryParams"><em>SmoothStreamingRepresentationListQueryParams</em></a>) – Query parameters</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>MP4 Representation results</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.smooth_streaming_representation.SmoothStreamingRepresentation" title="bitmovin_api_sdk.models.smooth_streaming_representation.SmoothStreamingRepresentation">SmoothStreamingRepresentation</a></p>
 </dd>
 </dl>

@@ -2812,6 +2812,22 @@ bitmovin\_api\_sdk.models.encoding\_template module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.encoding\_template\_request module
+------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.encoding_template_request
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.encoding\_template\_start\_response module
+--------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.encoding_template_start_response
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.encoding\_type module
 -----------------------------------------------
 
@@ -5520,6 +5536,14 @@ bitmovin\_api\_sdk.models.srt\_statistics module
 ------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.models.srt_statistics
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.srt\_to\_cea608708\_caption module
+------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.srt_to_cea608708_caption
    :members:
    :undoc-members:
    :show-inheritance:

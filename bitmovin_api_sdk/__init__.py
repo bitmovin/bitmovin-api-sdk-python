@@ -721,6 +721,10 @@ from bitmovin_api_sdk.encoding.encodings.streams.captions.cea.scc.scc_api import
 from bitmovin_api_sdk.encoding.encodings.streams.captions.cea.scc.scc_api import SccCaptionListQueryParams
 from bitmovin_api_sdk.encoding.encodings.streams.captions.cea.scc.customdata.customdata_api import CustomdataApi
 
+from bitmovin_api_sdk.encoding.encodings.streams.captions.cea.srt.srt_api import SrtApi
+from bitmovin_api_sdk.encoding.encodings.streams.captions.cea.srt.srt_api import SrtToCea608708CaptionListQueryParams
+from bitmovin_api_sdk.encoding.encodings.streams.captions.cea.srt.customdata.customdata_api import CustomdataApi
+
 from bitmovin_api_sdk.encoding.encodings.output_paths.output_paths_api import OutputPathsApi
 
 from bitmovin_api_sdk.encoding.encodings.captions.captions_api import CaptionsApi
@@ -1034,6 +1038,8 @@ from bitmovin_api_sdk.streams.config.domain_restriction.domain_restriction_api i
 from bitmovin_api_sdk.streams.search.search_api import SearchApi
 from bitmovin_api_sdk.streams.search.search_api import StreamsResponseListQueryParams
 from bitmovin_api_sdk.streams.signing_keys.signing_keys_api import SigningKeysApi
+
+from bitmovin_api_sdk.encoding.templates.templates_api import TemplatesApi
 
 
 from bitmovin_api_sdk.models.aac_audio_configuration import AacAudioConfiguration
@@ -1387,6 +1393,8 @@ from bitmovin_api_sdk.models.encoding_stats import EncodingStats
 from bitmovin_api_sdk.models.encoding_stream_input import EncodingStreamInput
 from bitmovin_api_sdk.models.encoding_stream_input_details import EncodingStreamInputDetails
 from bitmovin_api_sdk.models.encoding_template import EncodingTemplate
+from bitmovin_api_sdk.models.encoding_template_request import EncodingTemplateRequest
+from bitmovin_api_sdk.models.encoding_template_start_response import EncodingTemplateStartResponse
 from bitmovin_api_sdk.models.encoding_type import EncodingType
 from bitmovin_api_sdk.models.encryption_mode import EncryptionMode
 from bitmovin_api_sdk.models.enhanced_deinterlace_auto_enable import EnhancedDeinterlaceAutoEnable
@@ -1726,6 +1734,7 @@ from bitmovin_api_sdk.models.srt_statistic_recv import SrtStatisticRecv
 from bitmovin_api_sdk.models.srt_statistic_send import SrtStatisticSend
 from bitmovin_api_sdk.models.srt_statistic_window import SrtStatisticWindow
 from bitmovin_api_sdk.models.srt_statistics import SrtStatistics
+from bitmovin_api_sdk.models.srt_to_cea608708_caption import SrtToCea608708Caption
 from bitmovin_api_sdk.models.standard_media_info import StandardMediaInfo
 from bitmovin_api_sdk.models.start_encoding_request import StartEncodingRequest
 from bitmovin_api_sdk.models.start_live_channel_encoding_request import StartLiveChannelEncodingRequest
@@ -1866,4 +1875,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.207.0"
+__version__ = "1.208.0"

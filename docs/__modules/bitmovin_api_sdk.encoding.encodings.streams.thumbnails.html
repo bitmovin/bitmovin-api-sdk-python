@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>bitmovin_api_sdk.encoding.encodings.streams.thumbnails package &mdash; Bitmovin Python API SDK {{packageVersion}} documentation</title>
@@ -66,6 +66,7 @@
 <li class="toctree-l3"><a class="reference internal" href="bitmovin_api_sdk.encoding.outputs.html">bitmovin_api_sdk.encoding.outputs package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bitmovin_api_sdk.encoding.simple.html">bitmovin_api_sdk.encoding.simple package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bitmovin_api_sdk.encoding.statistics.html">bitmovin_api_sdk.encoding.statistics package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bitmovin_api_sdk.encoding.templates.html">bitmovin_api_sdk.encoding.templates package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bitmovin_api_sdk.encoding.watch_folders.html">bitmovin_api_sdk.encoding.watch_folders package</a></li>
 </ul>
 </li>
@@ -163,17 +164,17 @@
 <span class="sig-name descname"><span class="pre">create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">encoding_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">string_types</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stream_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">string_types</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thumbnail</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.thumbnail.Thumbnail" title="bitmovin_api_sdk.models.thumbnail.Thumbnail"><span class="pre">Thumbnail</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.thumbnail.Thumbnail" title="bitmovin_api_sdk.models.thumbnail.Thumbnail"><span class="pre">Thumbnail</span></a></span></span><a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/encodings/streams/thumbnails/thumbnails_api.html#ThumbnailsApi.create"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.encodings.streams.thumbnails.thumbnails_api.ThumbnailsApi.create" title="Permalink to this definition"></a></dt>
 <dd><p>Add Thumbnail</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>encoding_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the encoding.</p></li>
 <li><p><strong>stream_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the stream.</p></li>
 <li><p><strong>thumbnail</strong> (<a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.thumbnail.Thumbnail" title="bitmovin_api_sdk.models.thumbnail.Thumbnail"><em>Thumbnail</em></a><em>, </em><em>required</em>) – The Thumbnail to be added</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>Thumbnail details</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.thumbnail.Thumbnail" title="bitmovin_api_sdk.models.thumbnail.Thumbnail">Thumbnail</a></p>
 </dd>
 </dl>
@@ -184,17 +185,17 @@
 <span class="sig-name descname"><span class="pre">delete</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">encoding_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">string_types</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stream_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">string_types</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thumbnail_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">string_types</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.bitmovin_response.BitmovinResponse" title="bitmovin_api_sdk.models.bitmovin_response.BitmovinResponse"><span class="pre">BitmovinResponse</span></a></span></span><a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/encodings/streams/thumbnails/thumbnails_api.html#ThumbnailsApi.delete"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.encodings.streams.thumbnails.thumbnails_api.ThumbnailsApi.delete" title="Permalink to this definition"></a></dt>
 <dd><p>Delete Thumbnail</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>encoding_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the encoding.</p></li>
 <li><p><strong>stream_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the stream.</p></li>
 <li><p><strong>thumbnail_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the thumbnail.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>Id of the thumbnail</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.bitmovin_response.BitmovinResponse" title="bitmovin_api_sdk.models.bitmovin_response.BitmovinResponse">BitmovinResponse</a></p>
 </dd>
 </dl>
@@ -205,17 +206,17 @@
 <span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">encoding_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">string_types</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stream_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">string_types</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thumbnail_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">string_types</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.thumbnail.Thumbnail" title="bitmovin_api_sdk.models.thumbnail.Thumbnail"><span class="pre">Thumbnail</span></a></span></span><a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/encodings/streams/thumbnails/thumbnails_api.html#ThumbnailsApi.get"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.encodings.streams.thumbnails.thumbnails_api.ThumbnailsApi.get" title="Permalink to this definition"></a></dt>
 <dd><p>Thumbnail Details</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>encoding_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the encoding.</p></li>
 <li><p><strong>stream_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the stream.</p></li>
 <li><p><strong>thumbnail_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the thumbnail.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>Thumbnail details</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.thumbnail.Thumbnail" title="bitmovin_api_sdk.models.thumbnail.Thumbnail">Thumbnail</a></p>
 </dd>
 </dl>
@@ -226,17 +227,17 @@
 <span class="sig-name descname"><span class="pre">list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">encoding_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">string_types</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stream_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">string_types</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">query_params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#bitmovin_api_sdk.encoding.encodings.streams.thumbnails.thumbnail_list_query_params.ThumbnailListQueryParams" title="bitmovin_api_sdk.encoding.encodings.streams.thumbnails.thumbnail_list_query_params.ThumbnailListQueryParams"><span class="pre">ThumbnailListQueryParams</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.thumbnail.Thumbnail" title="bitmovin_api_sdk.models.thumbnail.Thumbnail"><span class="pre">Thumbnail</span></a></span></span><a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/encodings/streams/thumbnails/thumbnails_api.html#ThumbnailsApi.list"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.encodings.streams.thumbnails.thumbnails_api.ThumbnailsApi.list" title="Permalink to this definition"></a></dt>
 <dd><p>List Thumbnails</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>encoding_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the encoding.</p></li>
 <li><p><strong>stream_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the stream.</p></li>
 <li><p><strong>query_params</strong> (<a class="reference internal" href="#bitmovin_api_sdk.encoding.encodings.streams.thumbnails.thumbnail_list_query_params.ThumbnailListQueryParams" title="bitmovin_api_sdk.encoding.encodings.streams.thumbnails.thumbnail_list_query_params.ThumbnailListQueryParams"><em>ThumbnailListQueryParams</em></a>) – Query parameters</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>List of thumbnails</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.thumbnail.Thumbnail" title="bitmovin_api_sdk.models.thumbnail.Thumbnail">Thumbnail</a></p>
 </dd>
 </dl>

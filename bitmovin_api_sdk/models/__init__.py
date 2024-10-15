@@ -354,6 +354,8 @@ from bitmovin_api_sdk.models.encoding_stats import EncodingStats
 from bitmovin_api_sdk.models.encoding_stream_input import EncodingStreamInput
 from bitmovin_api_sdk.models.encoding_stream_input_details import EncodingStreamInputDetails
 from bitmovin_api_sdk.models.encoding_template import EncodingTemplate
+from bitmovin_api_sdk.models.encoding_template_request import EncodingTemplateRequest
+from bitmovin_api_sdk.models.encoding_template_start_response import EncodingTemplateStartResponse
 from bitmovin_api_sdk.models.encoding_type import EncodingType
 from bitmovin_api_sdk.models.encryption_mode import EncryptionMode
 from bitmovin_api_sdk.models.enhanced_deinterlace_auto_enable import EnhancedDeinterlaceAutoEnable
@@ -693,6 +695,7 @@ from bitmovin_api_sdk.models.srt_statistic_recv import SrtStatisticRecv
 from bitmovin_api_sdk.models.srt_statistic_send import SrtStatisticSend
 from bitmovin_api_sdk.models.srt_statistic_window import SrtStatisticWindow
 from bitmovin_api_sdk.models.srt_statistics import SrtStatistics
+from bitmovin_api_sdk.models.srt_to_cea608708_caption import SrtToCea608708Caption
 from bitmovin_api_sdk.models.standard_media_info import StandardMediaInfo
 from bitmovin_api_sdk.models.start_encoding_request import StartEncodingRequest
 from bitmovin_api_sdk.models.start_live_channel_encoding_request import StartLiveChannelEncodingRequest

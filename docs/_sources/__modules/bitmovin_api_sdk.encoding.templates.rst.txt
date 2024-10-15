@@ -1,0 +1,21 @@
+bitmovin\_api\_sdk.encoding.templates package
+=============================================
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.encoding.templates.templates\_api module
+-----------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.templates.templates_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.encoding.templates
+   :members:
+   :undoc-members:
+   :show-inheritance:

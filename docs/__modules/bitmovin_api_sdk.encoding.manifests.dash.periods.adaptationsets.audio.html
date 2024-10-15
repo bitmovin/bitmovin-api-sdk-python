@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.audio package &mdash; Bitmovin Python API SDK {{packageVersion}} documentation</title>
@@ -66,6 +66,7 @@
 <li class="toctree-l3"><a class="reference internal" href="bitmovin_api_sdk.encoding.outputs.html">bitmovin_api_sdk.encoding.outputs package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bitmovin_api_sdk.encoding.simple.html">bitmovin_api_sdk.encoding.simple package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bitmovin_api_sdk.encoding.statistics.html">bitmovin_api_sdk.encoding.statistics package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bitmovin_api_sdk.encoding.templates.html">bitmovin_api_sdk.encoding.templates package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bitmovin_api_sdk.encoding.watch_folders.html">bitmovin_api_sdk.encoding.watch_folders package</a></li>
 </ul>
 </li>
@@ -152,17 +153,17 @@
 <span class="sig-name descname"><span class="pre">create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">manifest_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">string_types</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">period_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">string_types</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">audio_adaptation_set</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.audio_adaptation_set.AudioAdaptationSet" title="bitmovin_api_sdk.models.audio_adaptation_set.AudioAdaptationSet"><span class="pre">AudioAdaptationSet</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.audio_adaptation_set.AudioAdaptationSet" title="bitmovin_api_sdk.models.audio_adaptation_set.AudioAdaptationSet"><span class="pre">AudioAdaptationSet</span></a></span></span><a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/manifests/dash/periods/adaptationsets/audio/audio_api.html#AudioApi.create"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.audio.audio_api.AudioApi.create" title="Permalink to this definition"></a></dt>
 <dd><p>Add Audio AdaptationSet</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>manifest_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the manifest</p></li>
 <li><p><strong>period_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the period</p></li>
 <li><p><strong>audio_adaptation_set</strong> (<a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.audio_adaptation_set.AudioAdaptationSet" title="bitmovin_api_sdk.models.audio_adaptation_set.AudioAdaptationSet"><em>AudioAdaptationSet</em></a><em>, </em><em>required</em>) – The audio adaptation set to be added to the period</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>AudioAdaptationSet</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.audio_adaptation_set.AudioAdaptationSet" title="bitmovin_api_sdk.models.audio_adaptation_set.AudioAdaptationSet">AudioAdaptationSet</a></p>
 </dd>
 </dl>
@@ -173,17 +174,17 @@
 <span class="sig-name descname"><span class="pre">delete</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">manifest_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">string_types</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">period_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">string_types</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">adaptationset_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">string_types</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.bitmovin_response.BitmovinResponse" title="bitmovin_api_sdk.models.bitmovin_response.BitmovinResponse"><span class="pre">BitmovinResponse</span></a></span></span><a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/manifests/dash/periods/adaptationsets/audio/audio_api.html#AudioApi.delete"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.audio.audio_api.AudioApi.delete" title="Permalink to this definition"></a></dt>
 <dd><p>Delete Audio AdaptationSet</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>manifest_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the manifest</p></li>
 <li><p><strong>period_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the period</p></li>
 <li><p><strong>adaptationset_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the audio adaptation set to be deleted</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>Id of the Audio AdaptationSet</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.bitmovin_response.BitmovinResponse" title="bitmovin_api_sdk.models.bitmovin_response.BitmovinResponse">BitmovinResponse</a></p>
 </dd>
 </dl>
@@ -194,17 +195,17 @@
 <span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">manifest_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">string_types</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">period_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">string_types</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">adaptationset_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">string_types</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.audio_adaptation_set.AudioAdaptationSet" title="bitmovin_api_sdk.models.audio_adaptation_set.AudioAdaptationSet"><span class="pre">AudioAdaptationSet</span></a></span></span><a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/manifests/dash/periods/adaptationsets/audio/audio_api.html#AudioApi.get"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.audio.audio_api.AudioApi.get" title="Permalink to this definition"></a></dt>
 <dd><p>Audio AdaptationSet Details</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>manifest_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the manifest</p></li>
 <li><p><strong>period_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the period</p></li>
 <li><p><strong>adaptationset_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the audio adaptation set</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>Audio AdaptationSet details</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.audio_adaptation_set.AudioAdaptationSet" title="bitmovin_api_sdk.models.audio_adaptation_set.AudioAdaptationSet">AudioAdaptationSet</a></p>
 </dd>
 </dl>
@@ -215,17 +216,17 @@
 <span class="sig-name descname"><span class="pre">list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">manifest_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">string_types</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">period_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">string_types</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">query_params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.audio.audio_adaptation_set_list_query_params.AudioAdaptationSetListQueryParams" title="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.audio.audio_adaptation_set_list_query_params.AudioAdaptationSetListQueryParams"><span class="pre">AudioAdaptationSetListQueryParams</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.audio_adaptation_set.AudioAdaptationSet" title="bitmovin_api_sdk.models.audio_adaptation_set.AudioAdaptationSet"><span class="pre">AudioAdaptationSet</span></a></span></span><a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/manifests/dash/periods/adaptationsets/audio/audio_api.html#AudioApi.list"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.audio.audio_api.AudioApi.list" title="Permalink to this definition"></a></dt>
 <dd><p>List all Audio AdaptationSets</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>manifest_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the manifest</p></li>
 <li><p><strong>period_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the period</p></li>
 <li><p><strong>query_params</strong> (<a class="reference internal" href="#bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.audio.audio_adaptation_set_list_query_params.AudioAdaptationSetListQueryParams" title="bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.audio.audio_adaptation_set_list_query_params.AudioAdaptationSetListQueryParams"><em>AudioAdaptationSetListQueryParams</em></a>) – Query parameters</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>List of Audio AdaptationSets</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.audio_adaptation_set.AudioAdaptationSet" title="bitmovin_api_sdk.models.audio_adaptation_set.AudioAdaptationSet">AudioAdaptationSet</a></p>
 </dd>
 </dl>
