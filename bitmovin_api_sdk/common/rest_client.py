@@ -10,7 +10,7 @@ class RestClient(object):
     HTTP_HEADERS = {
         'Content-Type': 'application/json',
         'X-Api-Client': 'bitmovin-api-sdk-python',
-        'X-Api-Client-Version': '1.208.0'
+        'X-Api-Client-Version': '1.209.0'
     }
 
     DELETE = 'DELETE'
@@ -79,7 +79,7 @@ class RestClient(object):
 
         if object_ is None:
             return None
-        serialized = json.dumps(object_, sort_keys=True, default=self._default_to_dict)
+        serialized = json.dumps(object_, sort_keys=False, default=self._default_to_dict)
         self.logger.log('Serialized request object: {}'.format(serialized))
         return serialized
 

@@ -90,7 +90,7 @@
     <span class="n">HTTP_HEADERS</span> <span class="o">=</span> <span class="p">{</span>
         <span class="s1">&#39;Content-Type&#39;</span><span class="p">:</span> <span class="s1">&#39;application/json&#39;</span><span class="p">,</span>
         <span class="s1">&#39;X-Api-Client&#39;</span><span class="p">:</span> <span class="s1">&#39;bitmovin-api-sdk-python&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;X-Api-Client-Version&#39;</span><span class="p">:</span> <span class="s1">&#39;1.208.0&#39;</span>
+        <span class="s1">&#39;X-Api-Client-Version&#39;</span><span class="p">:</span> <span class="s1">&#39;1.209.0&#39;</span>
     <span class="p">}</span>
 
     <span class="n">DELETE</span> <span class="o">=</span> <span class="s1">&#39;DELETE&#39;</span>
@@ -159,7 +159,7 @@
 
         <span class="k">if</span> <span class="n">object_</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">return</span> <span class="kc">None</span>
-        <span class="n">serialized</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">object_</span><span class="p">,</span> <span class="n">sort_keys</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_default_to_dict</span><span class="p">)</span>
+        <span class="n">serialized</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">object_</span><span class="p">,</span> <span class="n">sort_keys</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_default_to_dict</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s1">&#39;Serialized request object: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">serialized</span><span class="p">))</span>
         <span class="k">return</span> <span class="n">serialized</span>
 
