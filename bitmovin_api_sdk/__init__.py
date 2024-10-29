@@ -33,8 +33,6 @@ from bitmovin_api_sdk.analytics.exports.exports_api import ExportsApi
 from bitmovin_api_sdk.analytics.exports.exports_api import AnalyticsExportTaskListQueryParams
 from bitmovin_api_sdk.analytics.impressions.impressions_api import ImpressionsApi
 
-from bitmovin_api_sdk.analytics.impressions.ads.ads_api import AdsApi
-
 from bitmovin_api_sdk.analytics.impressions.errors.errors_api import ErrorsApi
 
 from bitmovin_api_sdk.analytics.insights.insights_api import InsightsApi
@@ -1089,8 +1087,6 @@ from bitmovin_api_sdk.models.akamai_msl_version import AkamaiMslVersion
 from bitmovin_api_sdk.models.akamai_net_storage_input import AkamaiNetStorageInput
 from bitmovin_api_sdk.models.akamai_net_storage_output import AkamaiNetStorageOutput
 from bitmovin_api_sdk.models.analytics_abstract_filter import AnalyticsAbstractFilter
-from bitmovin_api_sdk.models.analytics_ads_impression_sample import AnalyticsAdsImpressionSample
-from bitmovin_api_sdk.models.analytics_ads_impressions_response import AnalyticsAdsImpressionsResponse
 from bitmovin_api_sdk.models.analytics_attribute import AnalyticsAttribute
 from bitmovin_api_sdk.models.analytics_avg_concurrent_viewers_response import AnalyticsAvgConcurrentViewersResponse
 from bitmovin_api_sdk.models.analytics_avg_dropped_frames_response import AnalyticsAvgDroppedFramesResponse
@@ -1875,4 +1871,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.209.0"
+__version__ = "1.210.0"

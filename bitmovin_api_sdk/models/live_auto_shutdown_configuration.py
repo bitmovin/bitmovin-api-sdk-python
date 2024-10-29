@@ -11,23 +11,28 @@ class LiveAutoShutdownConfiguration(object):
     @poscheck_model
     def __init__(self,
                  bytes_read_timeout_seconds=None,
-                 stream_timeout_minutes=None):
-        # type: (int, int) -> None
+                 stream_timeout_minutes=None,
+                 waiting_for_first_connect_timeout_minutes=None):
+        # type: (int, int, int) -> None
 
         self._bytes_read_timeout_seconds = None
         self._stream_timeout_minutes = None
+        self._waiting_for_first_connect_timeout_minutes = None
         self.discriminator = None
 
         if bytes_read_timeout_seconds is not None:
             self.bytes_read_timeout_seconds = bytes_read_timeout_seconds
         if stream_timeout_minutes is not None:
             self.stream_timeout_minutes = stream_timeout_minutes
+        if waiting_for_first_connect_timeout_minutes is not None:
+            self.waiting_for_first_connect_timeout_minutes = waiting_for_first_connect_timeout_minutes
 
     @property
     def openapi_types(self):
         types = {
             'bytes_read_timeout_seconds': 'int',
-            'stream_timeout_minutes': 'int'
+            'stream_timeout_minutes': 'int',
+            'waiting_for_first_connect_timeout_minutes': 'int'
         }
 
         return types
@@ -36,7 +41,8 @@ class LiveAutoShutdownConfiguration(object):
     def attribute_map(self):
         attributes = {
             'bytes_read_timeout_seconds': 'bytesReadTimeoutSeconds',
-            'stream_timeout_minutes': 'streamTimeoutMinutes'
+            'stream_timeout_minutes': 'streamTimeoutMinutes',
+            'waiting_for_first_connect_timeout_minutes': 'waitingForFirstConnectTimeoutMinutes'
         }
         return attributes
 
@@ -101,6 +107,37 @@ class LiveAutoShutdownConfiguration(object):
                 raise TypeError("Invalid type for `stream_timeout_minutes`, type has to be `int`")
 
         self._stream_timeout_minutes = stream_timeout_minutes
+
+    @property
+    def waiting_for_first_connect_timeout_minutes(self):
+        # type: () -> int
+        """Gets the waiting_for_first_connect_timeout_minutes of this LiveAutoShutdownConfiguration.
+
+        Automatically shutdown the live stream if input is never connected for a predefined number of minutes.
+
+        :return: The waiting_for_first_connect_timeout_minutes of this LiveAutoShutdownConfiguration.
+        :rtype: int
+        """
+        return self._waiting_for_first_connect_timeout_minutes
+
+    @waiting_for_first_connect_timeout_minutes.setter
+    def waiting_for_first_connect_timeout_minutes(self, waiting_for_first_connect_timeout_minutes):
+        # type: (int) -> None
+        """Sets the waiting_for_first_connect_timeout_minutes of this LiveAutoShutdownConfiguration.
+
+        Automatically shutdown the live stream if input is never connected for a predefined number of minutes.
+
+        :param waiting_for_first_connect_timeout_minutes: The waiting_for_first_connect_timeout_minutes of this LiveAutoShutdownConfiguration.
+        :type: int
+        """
+
+        if waiting_for_first_connect_timeout_minutes is not None:
+            if waiting_for_first_connect_timeout_minutes is not None and waiting_for_first_connect_timeout_minutes < 5:
+                raise ValueError("Invalid value for `waiting_for_first_connect_timeout_minutes`, must be a value greater than or equal to `5`")
+            if not isinstance(waiting_for_first_connect_timeout_minutes, int):
+                raise TypeError("Invalid type for `waiting_for_first_connect_timeout_minutes`, type has to be `int`")
+
+        self._waiting_for_first_connect_timeout_minutes = waiting_for_first_connect_timeout_minutes
 
     def to_dict(self):
         """Returns the model properties as a dict"""

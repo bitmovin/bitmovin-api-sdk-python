@@ -380,22 +380,6 @@ bitmovin\_api\_sdk.models.analytics\_abstract\_filter module
    :undoc-members:
    :show-inheritance:
 
-bitmovin\_api\_sdk.models.analytics\_ads\_impression\_sample module
--------------------------------------------------------------------
-
-.. automodule:: bitmovin_api_sdk.models.analytics_ads_impression_sample
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-bitmovin\_api\_sdk.models.analytics\_ads\_impressions\_response module
-----------------------------------------------------------------------
-
-.. automodule:: bitmovin_api_sdk.models.analytics_ads_impressions_response
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
 bitmovin\_api\_sdk.models.analytics\_attribute module
 -----------------------------------------------------
 

@@ -91,23 +91,28 @@
     <span class="nd">@poscheck_model</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
                  <span class="n">bytes_read_timeout_seconds</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                 <span class="n">stream_timeout_minutes</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (int, int) -&gt; None</span>
+                 <span class="n">stream_timeout_minutes</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">waiting_for_first_connect_timeout_minutes</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="c1"># type: (int, int, int) -&gt; None</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_bytes_read_timeout_seconds</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_stream_timeout_minutes</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_waiting_for_first_connect_timeout_minutes</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>
 
         <span class="k">if</span> <span class="n">bytes_read_timeout_seconds</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">bytes_read_timeout_seconds</span> <span class="o">=</span> <span class="n">bytes_read_timeout_seconds</span>
         <span class="k">if</span> <span class="n">stream_timeout_minutes</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">stream_timeout_minutes</span> <span class="o">=</span> <span class="n">stream_timeout_minutes</span>
+        <span class="k">if</span> <span class="n">waiting_for_first_connect_timeout_minutes</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">waiting_for_first_connect_timeout_minutes</span> <span class="o">=</span> <span class="n">waiting_for_first_connect_timeout_minutes</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">types</span> <span class="o">=</span> <span class="p">{</span>
             <span class="s1">&#39;bytes_read_timeout_seconds&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;stream_timeout_minutes&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span>
+            <span class="s1">&#39;stream_timeout_minutes&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;waiting_for_first_connect_timeout_minutes&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span>
         <span class="p">}</span>
 
         <span class="k">return</span> <span class="n">types</span>
@@ -116,7 +121,8 @@
     <span class="k">def</span> <span class="nf">attribute_map</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">attributes</span> <span class="o">=</span> <span class="p">{</span>
             <span class="s1">&#39;bytes_read_timeout_seconds&#39;</span><span class="p">:</span> <span class="s1">&#39;bytesReadTimeoutSeconds&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;stream_timeout_minutes&#39;</span><span class="p">:</span> <span class="s1">&#39;streamTimeoutMinutes&#39;</span>
+            <span class="s1">&#39;stream_timeout_minutes&#39;</span><span class="p">:</span> <span class="s1">&#39;streamTimeoutMinutes&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;waiting_for_first_connect_timeout_minutes&#39;</span><span class="p">:</span> <span class="s1">&#39;waitingForFirstConnectTimeoutMinutes&#39;</span>
         <span class="p">}</span>
         <span class="k">return</span> <span class="n">attributes</span>
 
@@ -181,6 +187,37 @@
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `stream_timeout_minutes`, type has to be `int`&quot;</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_stream_timeout_minutes</span> <span class="o">=</span> <span class="n">stream_timeout_minutes</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">waiting_for_first_connect_timeout_minutes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; int</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the waiting_for_first_connect_timeout_minutes of this LiveAutoShutdownConfiguration.</span>
+
+<span class="sd">        Automatically shutdown the live stream if input is never connected for a predefined number of minutes.</span>
+
+<span class="sd">        :return: The waiting_for_first_connect_timeout_minutes of this LiveAutoShutdownConfiguration.</span>
+<span class="sd">        :rtype: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_waiting_for_first_connect_timeout_minutes</span>
+
+    <span class="nd">@waiting_for_first_connect_timeout_minutes</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">waiting_for_first_connect_timeout_minutes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">waiting_for_first_connect_timeout_minutes</span><span class="p">):</span>
+        <span class="c1"># type: (int) -&gt; None</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the waiting_for_first_connect_timeout_minutes of this LiveAutoShutdownConfiguration.</span>
+
+<span class="sd">        Automatically shutdown the live stream if input is never connected for a predefined number of minutes.</span>
+
+<span class="sd">        :param waiting_for_first_connect_timeout_minutes: The waiting_for_first_connect_timeout_minutes of this LiveAutoShutdownConfiguration.</span>
+<span class="sd">        :type: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">waiting_for_first_connect_timeout_minutes</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">waiting_for_first_connect_timeout_minutes</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">waiting_for_first_connect_timeout_minutes</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid value for `waiting_for_first_connect_timeout_minutes`, must be a value greater than or equal to `5`&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">waiting_for_first_connect_timeout_minutes</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `waiting_for_first_connect_timeout_minutes`, type has to be `int`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_waiting_for_first_connect_timeout_minutes</span> <span class="o">=</span> <span class="n">waiting_for_first_connect_timeout_minutes</span>
 
 <div class="viewcode-block" id="LiveAutoShutdownConfiguration.to_dict"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.live_auto_shutdown_configuration.LiveAutoShutdownConfiguration.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>

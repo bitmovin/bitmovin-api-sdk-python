@@ -8,7 +8,6 @@ from bitmovin_api_sdk.models.analytics_impressions_query import AnalyticsImpress
 from bitmovin_api_sdk.models.analytics_impressions_response import AnalyticsImpressionsResponse
 from bitmovin_api_sdk.models.response_envelope import ResponseEnvelope
 from bitmovin_api_sdk.models.response_error import ResponseError
-from bitmovin_api_sdk.analytics.impressions.ads.ads_api import AdsApi
 from bitmovin_api_sdk.analytics.impressions.errors.errors_api import ErrorsApi
 
 
@@ -18,13 +17,6 @@ class ImpressionsApi(BaseApi):
         # type: (str, str, str, BitmovinApiLoggerBase) -> None
 
         super(ImpressionsApi, self).__init__(
-            api_key=api_key,
-            tenant_org_id=tenant_org_id,
-            base_url=base_url,
-            logger=logger
-        )
-
-        self.ads = AdsApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,
