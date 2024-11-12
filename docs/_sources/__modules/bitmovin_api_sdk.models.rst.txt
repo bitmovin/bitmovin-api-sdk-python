@@ -332,6 +332,30 @@ bitmovin\_api\_sdk.models.aes\_encryption\_method module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.akamai\_account module
+------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.akamai_account
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.akamai\_account\_region\_settings module
+------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.akamai_account_region_settings
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.akamai\_cloud\_region module
+------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.akamai_cloud_region
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.akamai\_msl\_output module
 ----------------------------------------------------
 
@@ -2796,6 +2820,14 @@ bitmovin\_api\_sdk.models.encoding\_template module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.encoding\_template\_details module
+------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.encoding_template_details
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.encoding\_template\_request module
 ------------------------------------------------------------
 
@@ -2804,10 +2836,26 @@ bitmovin\_api\_sdk.models.encoding\_template\_request module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.encoding\_template\_response module
+-------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.encoding_template_response
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.encoding\_template\_start\_response module
 --------------------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.models.encoding_template_start_response
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.encoding\_template\_type module
+---------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.encoding_template_type
    :members:
    :undoc-members:
    :show-inheritance:

@@ -53,7 +53,7 @@ class AzureApi(BaseApi):
 
         :param infrastructure_id: Id of the Azure account
         :type infrastructure_id: string_types, required
-        :return: Id of the Azure account
+        :return: Azure account
         :rtype: AzureAccount
         """
 

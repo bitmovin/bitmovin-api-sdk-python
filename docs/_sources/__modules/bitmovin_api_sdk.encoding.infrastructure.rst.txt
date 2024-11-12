@@ -7,6 +7,7 @@ Subpackages
 .. toctree::
    :maxdepth: 4
 
+   bitmovin_api_sdk.encoding.infrastructure.akamai
    bitmovin_api_sdk.encoding.infrastructure.aws
    bitmovin_api_sdk.encoding.infrastructure.azure
    bitmovin_api_sdk.encoding.infrastructure.gce

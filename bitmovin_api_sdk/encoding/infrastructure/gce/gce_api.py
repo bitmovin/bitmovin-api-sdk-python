@@ -53,7 +53,7 @@ class GceApi(BaseApi):
 
         :param infrastructure_id: Id of the GCE account
         :type infrastructure_id: string_types, required
-        :return: Id of the GCE account
+        :return: GCE account
         :rtype: GceAccount
         """
 

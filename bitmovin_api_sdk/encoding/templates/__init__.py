@@ -1,1 +1,2 @@
 from bitmovin_api_sdk.encoding.templates.templates_api import TemplatesApi
+from bitmovin_api_sdk.encoding.templates.encoding_template_response_list_query_params import EncodingTemplateResponseListQueryParams

@@ -885,6 +885,10 @@ from bitmovin_api_sdk.encoding.infrastructure.gce.gce_api import GceApi
 from bitmovin_api_sdk.encoding.infrastructure.gce.gce_api import GceAccountListQueryParams
 from bitmovin_api_sdk.encoding.infrastructure.gce.regions.regions_api import RegionsApi
 from bitmovin_api_sdk.encoding.infrastructure.gce.regions.regions_api import GceAccountRegionSettingsListQueryParams
+from bitmovin_api_sdk.encoding.infrastructure.akamai.akamai_api import AkamaiApi
+from bitmovin_api_sdk.encoding.infrastructure.akamai.akamai_api import AkamaiAccountListQueryParams
+from bitmovin_api_sdk.encoding.infrastructure.akamai.regions.regions_api import RegionsApi
+from bitmovin_api_sdk.encoding.infrastructure.akamai.regions.regions_api import AkamaiAccountRegionSettingsListQueryParams
 from bitmovin_api_sdk.encoding.infrastructure.prewarmed_encoder_pools.prewarmed_encoder_pools_api import PrewarmedEncoderPoolsApi
 from bitmovin_api_sdk.encoding.infrastructure.prewarmed_encoder_pools.prewarmed_encoder_pools_api import PrewarmedEncoderPoolListQueryParams
 from bitmovin_api_sdk.encoding.infrastructure.prewarmed_encoder_pools.schedules.schedules_api import SchedulesApi
@@ -1038,7 +1042,7 @@ from bitmovin_api_sdk.streams.search.search_api import StreamsResponseListQueryP
 from bitmovin_api_sdk.streams.signing_keys.signing_keys_api import SigningKeysApi
 
 from bitmovin_api_sdk.encoding.templates.templates_api import TemplatesApi
-
+from bitmovin_api_sdk.encoding.templates.templates_api import EncodingTemplateResponseListQueryParams
 
 from bitmovin_api_sdk.models.aac_audio_configuration import AacAudioConfiguration
 from bitmovin_api_sdk.models.aac_channel_layout import AacChannelLayout
@@ -1081,6 +1085,9 @@ from bitmovin_api_sdk.models.adaptation_set_type_response import AdaptationSetTy
 from bitmovin_api_sdk.models.adaptive_quant_mode import AdaptiveQuantMode
 from bitmovin_api_sdk.models.aes_encryption_drm import AesEncryptionDrm
 from bitmovin_api_sdk.models.aes_encryption_method import AesEncryptionMethod
+from bitmovin_api_sdk.models.akamai_account import AkamaiAccount
+from bitmovin_api_sdk.models.akamai_account_region_settings import AkamaiAccountRegionSettings
+from bitmovin_api_sdk.models.akamai_cloud_region import AkamaiCloudRegion
 from bitmovin_api_sdk.models.akamai_msl_output import AkamaiMslOutput
 from bitmovin_api_sdk.models.akamai_msl_stream_format import AkamaiMslStreamFormat
 from bitmovin_api_sdk.models.akamai_msl_version import AkamaiMslVersion
@@ -1389,8 +1396,11 @@ from bitmovin_api_sdk.models.encoding_stats import EncodingStats
 from bitmovin_api_sdk.models.encoding_stream_input import EncodingStreamInput
 from bitmovin_api_sdk.models.encoding_stream_input_details import EncodingStreamInputDetails
 from bitmovin_api_sdk.models.encoding_template import EncodingTemplate
+from bitmovin_api_sdk.models.encoding_template_details import EncodingTemplateDetails
 from bitmovin_api_sdk.models.encoding_template_request import EncodingTemplateRequest
+from bitmovin_api_sdk.models.encoding_template_response import EncodingTemplateResponse
 from bitmovin_api_sdk.models.encoding_template_start_response import EncodingTemplateStartResponse
+from bitmovin_api_sdk.models.encoding_template_type import EncodingTemplateType
 from bitmovin_api_sdk.models.encoding_type import EncodingType
 from bitmovin_api_sdk.models.encryption_mode import EncryptionMode
 from bitmovin_api_sdk.models.enhanced_deinterlace_auto_enable import EnhancedDeinterlaceAutoEnable
@@ -1871,4 +1881,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.210.0"
+__version__ = "1.211.0"

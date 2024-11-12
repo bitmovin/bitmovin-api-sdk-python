@@ -53,7 +53,7 @@ class AwsApi(BaseApi):
 
         :param infrastructure_id: Id of the AWS account
         :type infrastructure_id: string_types, required
-        :return: Id of the AWS account
+        :return: AWS account
         :rtype: AwsAccount
         """
 
