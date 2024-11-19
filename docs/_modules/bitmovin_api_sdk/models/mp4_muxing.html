@@ -87,7 +87,6 @@
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.fragmented_mp4_muxing_manifest_type</span> <span class="kn">import</span> <span class="n">FragmentedMp4MuxingManifestType</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.muxing</span> <span class="kn">import</span> <span class="n">Muxing</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.stream_conditions_mode</span> <span class="kn">import</span> <span class="n">StreamConditionsMode</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.time_code</span> <span class="kn">import</span> <span class="n">TimeCode</span>
 <span class="kn">import</span> <span class="nn">pprint</span>
 <span class="kn">import</span> <span class="nn">six</span>
 
@@ -110,15 +109,13 @@
                  <span class="n">stream_conditions_mode</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">filename</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">fragment_duration</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                 <span class="n">time_code</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">fragmented_mp4_muxing_manifest_type</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">dolby_vision_configuration</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (string_types, string_types, string_types, datetime, datetime, dict, list[MuxingStream], list[EncodingOutput], int, int, int, list[Ignoring], StreamConditionsMode, string_types, int, TimeCode, FragmentedMp4MuxingManifestType, DolbyVisionMuxingConfiguration) -&gt; None</span>
+        <span class="c1"># type: (string_types, string_types, string_types, datetime, datetime, dict, list[MuxingStream], list[EncodingOutput], int, int, int, list[Ignoring], StreamConditionsMode, string_types, int, FragmentedMp4MuxingManifestType, DolbyVisionMuxingConfiguration) -&gt; None</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">Mp4Muxing</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">id_</span><span class="o">=</span><span class="n">id_</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="n">description</span><span class="p">,</span> <span class="n">created_at</span><span class="o">=</span><span class="n">created_at</span><span class="p">,</span> <span class="n">modified_at</span><span class="o">=</span><span class="n">modified_at</span><span class="p">,</span> <span class="n">custom_data</span><span class="o">=</span><span class="n">custom_data</span><span class="p">,</span> <span class="n">streams</span><span class="o">=</span><span class="n">streams</span><span class="p">,</span> <span class="n">outputs</span><span class="o">=</span><span class="n">outputs</span><span class="p">,</span> <span class="n">avg_bitrate</span><span class="o">=</span><span class="n">avg_bitrate</span><span class="p">,</span> <span class="n">min_bitrate</span><span class="o">=</span><span class="n">min_bitrate</span><span class="p">,</span> <span class="n">max_bitrate</span><span class="o">=</span><span class="n">max_bitrate</span><span class="p">,</span> <span class="n">ignored_by</span><span class="o">=</span><span class="n">ignored_by</span><span class="p">,</span> <span class="n">stream_conditions_mode</span><span class="o">=</span><span class="n">stream_conditions_mode</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_filename</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_fragment_duration</span> <span class="o">=</span> <span class="kc">None</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_time_code</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_fragmented_mp4_muxing_manifest_type</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_dolby_vision_configuration</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>
@@ -127,8 +124,6 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">filename</span> <span class="o">=</span> <span class="n">filename</span>
         <span class="k">if</span> <span class="n">fragment_duration</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">fragment_duration</span> <span class="o">=</span> <span class="n">fragment_duration</span>
-        <span class="k">if</span> <span class="n">time_code</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">time_code</span> <span class="o">=</span> <span class="n">time_code</span>
         <span class="k">if</span> <span class="n">fragmented_mp4_muxing_manifest_type</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">fragmented_mp4_muxing_manifest_type</span> <span class="o">=</span> <span class="n">fragmented_mp4_muxing_manifest_type</span>
         <span class="k">if</span> <span class="n">dolby_vision_configuration</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -144,7 +139,6 @@
         <span class="n">types</span><span class="o">.</span><span class="n">update</span><span class="p">({</span>
             <span class="s1">&#39;filename&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
             <span class="s1">&#39;fragment_duration&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;time_code&#39;</span><span class="p">:</span> <span class="s1">&#39;TimeCode&#39;</span><span class="p">,</span>
             <span class="s1">&#39;fragmented_mp4_muxing_manifest_type&#39;</span><span class="p">:</span> <span class="s1">&#39;FragmentedMp4MuxingManifestType&#39;</span><span class="p">,</span>
             <span class="s1">&#39;dolby_vision_configuration&#39;</span><span class="p">:</span> <span class="s1">&#39;DolbyVisionMuxingConfiguration&#39;</span>
         <span class="p">})</span>
@@ -161,7 +155,6 @@
         <span class="n">attributes</span><span class="o">.</span><span class="n">update</span><span class="p">({</span>
             <span class="s1">&#39;filename&#39;</span><span class="p">:</span> <span class="s1">&#39;filename&#39;</span><span class="p">,</span>
             <span class="s1">&#39;fragment_duration&#39;</span><span class="p">:</span> <span class="s1">&#39;fragmentDuration&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;time_code&#39;</span><span class="p">:</span> <span class="s1">&#39;timeCode&#39;</span><span class="p">,</span>
             <span class="s1">&#39;fragmented_mp4_muxing_manifest_type&#39;</span><span class="p">:</span> <span class="s1">&#39;fragmentedMP4MuxingManifestType&#39;</span><span class="p">,</span>
             <span class="s1">&#39;dolby_vision_configuration&#39;</span><span class="p">:</span> <span class="s1">&#39;dolbyVisionConfiguration&#39;</span>
         <span class="p">})</span>
@@ -224,33 +217,6 @@
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `fragment_duration`, type has to be `int`&quot;</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_fragment_duration</span> <span class="o">=</span> <span class="n">fragment_duration</span>
-
-    <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">time_code</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="c1"># type: () -&gt; TimeCode</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the time_code of this Mp4Muxing.</span>
-
-
-<span class="sd">        :return: The time_code of this Mp4Muxing.</span>
-<span class="sd">        :rtype: TimeCode</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_time_code</span>
-
-    <span class="nd">@time_code</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">time_code</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">time_code</span><span class="p">):</span>
-        <span class="c1"># type: (TimeCode) -&gt; None</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the time_code of this Mp4Muxing.</span>
-
-
-<span class="sd">        :param time_code: The time_code of this Mp4Muxing.</span>
-<span class="sd">        :type: TimeCode</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-
-        <span class="k">if</span> <span class="n">time_code</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">time_code</span><span class="p">,</span> <span class="n">TimeCode</span><span class="p">):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `time_code`, type has to be `TimeCode`&quot;</span><span class="p">)</span>
-
-        <span class="bp">self</span><span class="o">.</span><span class="n">_time_code</span> <span class="o">=</span> <span class="n">time_code</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">fragmented_mp4_muxing_manifest_type</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>

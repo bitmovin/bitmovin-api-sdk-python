@@ -1,0 +1,21 @@
+bitmovin\_api\_sdk.encoding.live.standby\_pools.actions package
+===============================================================
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.encoding.live.standby\_pools.actions.actions\_api module
+---------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.live.standby_pools.actions.actions_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.encoding.live.standby_pools.actions
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -767,6 +767,14 @@ from bitmovin_api_sdk.encoding.live.stream_keys.stream_keys_api import StreamKey
 from bitmovin_api_sdk.encoding.live.stream_keys.stream_keys_api import StreamKeyListQueryParams
 from bitmovin_api_sdk.encoding.live.stream_keys.actions.actions_api import ActionsApi
 
+from bitmovin_api_sdk.encoding.live.standby_pools.standby_pools_api import StandbyPoolsApi
+
+from bitmovin_api_sdk.encoding.live.standby_pools.actions.actions_api import ActionsApi
+
+from bitmovin_api_sdk.encoding.live.standby_pools.encodings.encodings_api import EncodingsApi
+from bitmovin_api_sdk.encoding.live.standby_pools.encodings.encodings_api import LiveStandbyPoolEncodingListQueryParams
+from bitmovin_api_sdk.encoding.live.standby_pools.logs.logs_api import LogsApi
+from bitmovin_api_sdk.encoding.live.standby_pools.logs.logs_api import LiveStandbyPoolEventLogListQueryParams
 from bitmovin_api_sdk.encoding.manifests.manifests_api import ManifestsApi
 from bitmovin_api_sdk.encoding.manifests.manifests_api import ManifestListQueryParams
 from bitmovin_api_sdk.encoding.manifests.type.type_api import TypeApi
@@ -1524,6 +1532,18 @@ from bitmovin_api_sdk.models.live_options_entry import LiveOptionsEntry
 from bitmovin_api_sdk.models.live_options_statistics import LiveOptionsStatistics
 from bitmovin_api_sdk.models.live_options_summary import LiveOptionsSummary
 from bitmovin_api_sdk.models.live_options_type import LiveOptionsType
+from bitmovin_api_sdk.models.live_standby_pool_details import LiveStandbyPoolDetails
+from bitmovin_api_sdk.models.live_standby_pool_encoding import LiveStandbyPoolEncoding
+from bitmovin_api_sdk.models.live_standby_pool_encoding_ingest_point import LiveStandbyPoolEncodingIngestPoint
+from bitmovin_api_sdk.models.live_standby_pool_encoding_manifest import LiveStandbyPoolEncodingManifest
+from bitmovin_api_sdk.models.live_standby_pool_encoding_manifest_type import LiveStandbyPoolEncodingManifestType
+from bitmovin_api_sdk.models.live_standby_pool_encoding_status import LiveStandbyPoolEncodingStatus
+from bitmovin_api_sdk.models.live_standby_pool_event_log import LiveStandbyPoolEventLog
+from bitmovin_api_sdk.models.live_standby_pool_event_log_type import LiveStandbyPoolEventLogType
+from bitmovin_api_sdk.models.live_standby_pool_request import LiveStandbyPoolRequest
+from bitmovin_api_sdk.models.live_standby_pool_response import LiveStandbyPoolResponse
+from bitmovin_api_sdk.models.live_standby_pool_status import LiveStandbyPoolStatus
+from bitmovin_api_sdk.models.live_standby_pool_update import LiveStandbyPoolUpdate
 from bitmovin_api_sdk.models.local_input import LocalInput
 from bitmovin_api_sdk.models.local_output import LocalOutput
 from bitmovin_api_sdk.models.manifest import Manifest
@@ -1817,7 +1837,6 @@ from bitmovin_api_sdk.models.thumbnail import Thumbnail
 from bitmovin_api_sdk.models.thumbnail_aspect_mode import ThumbnailAspectMode
 from bitmovin_api_sdk.models.thumbnail_unit import ThumbnailUnit
 from bitmovin_api_sdk.models.time_based_trimming_input_stream import TimeBasedTrimmingInputStream
-from bitmovin_api_sdk.models.time_code import TimeCode
 from bitmovin_api_sdk.models.time_span import TimeSpan
 from bitmovin_api_sdk.models.timecode_track_trimming_input_stream import TimecodeTrackTrimmingInputStream
 from bitmovin_api_sdk.models.transfer_retry import TransferRetry
@@ -1881,4 +1900,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.211.0"
+__version__ = "1.212.0"

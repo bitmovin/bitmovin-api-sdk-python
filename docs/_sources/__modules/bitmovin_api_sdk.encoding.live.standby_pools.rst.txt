@@ -1,0 +1,31 @@
+bitmovin\_api\_sdk.encoding.live.standby\_pools package
+=======================================================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   bitmovin_api_sdk.encoding.live.standby_pools.actions
+   bitmovin_api_sdk.encoding.live.standby_pools.encodings
+   bitmovin_api_sdk.encoding.live.standby_pools.logs
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.encoding.live.standby\_pools.standby\_pools\_api module
+--------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.live.standby_pools.standby_pools_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.encoding.live.standby_pools
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -3844,6 +3844,102 @@ bitmovin\_api\_sdk.models.live\_options\_type module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.live\_standby\_pool\_details module
+-------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.live_standby_pool_details
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.live\_standby\_pool\_encoding module
+--------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.live_standby_pool_encoding
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.live\_standby\_pool\_encoding\_ingest\_point module
+-----------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.live_standby_pool_encoding_ingest_point
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.live\_standby\_pool\_encoding\_manifest module
+------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.live_standby_pool_encoding_manifest
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.live\_standby\_pool\_encoding\_manifest\_type module
+------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.live_standby_pool_encoding_manifest_type
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.live\_standby\_pool\_encoding\_status module
+----------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.live_standby_pool_encoding_status
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.live\_standby\_pool\_event\_log module
+----------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.live_standby_pool_event_log
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.live\_standby\_pool\_event\_log\_type module
+----------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.live_standby_pool_event_log_type
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.live\_standby\_pool\_request module
+-------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.live_standby_pool_request
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.live\_standby\_pool\_response module
+--------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.live_standby_pool_response
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.live\_standby\_pool\_status module
+------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.live_standby_pool_status
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.live\_standby\_pool\_update module
+------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.live_standby_pool_update
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.local\_input module
 ---------------------------------------------
 
@@ -6184,14 +6280,6 @@ bitmovin\_api\_sdk.models.time\_based\_trimming\_input\_stream module
 ---------------------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.models.time_based_trimming_input_stream
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-bitmovin\_api\_sdk.models.time\_code module
--------------------------------------------
-
-.. automodule:: bitmovin_api_sdk.models.time_code
    :members:
    :undoc-members:
    :show-inheritance:

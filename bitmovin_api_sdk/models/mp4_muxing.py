@@ -7,7 +7,6 @@ from bitmovin_api_sdk.models.dolby_vision_muxing_configuration import DolbyVisio
 from bitmovin_api_sdk.models.fragmented_mp4_muxing_manifest_type import FragmentedMp4MuxingManifestType
 from bitmovin_api_sdk.models.muxing import Muxing
 from bitmovin_api_sdk.models.stream_conditions_mode import StreamConditionsMode
-from bitmovin_api_sdk.models.time_code import TimeCode
 import pprint
 import six
 
@@ -30,15 +29,13 @@ class Mp4Muxing(Muxing):
                  stream_conditions_mode=None,
                  filename=None,
                  fragment_duration=None,
-                 time_code=None,
                  fragmented_mp4_muxing_manifest_type=None,
                  dolby_vision_configuration=None):
-        # type: (string_types, string_types, string_types, datetime, datetime, dict, list[MuxingStream], list[EncodingOutput], int, int, int, list[Ignoring], StreamConditionsMode, string_types, int, TimeCode, FragmentedMp4MuxingManifestType, DolbyVisionMuxingConfiguration) -> None
+        # type: (string_types, string_types, string_types, datetime, datetime, dict, list[MuxingStream], list[EncodingOutput], int, int, int, list[Ignoring], StreamConditionsMode, string_types, int, FragmentedMp4MuxingManifestType, DolbyVisionMuxingConfiguration) -> None
         super(Mp4Muxing, self).__init__(id_=id_, name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, streams=streams, outputs=outputs, avg_bitrate=avg_bitrate, min_bitrate=min_bitrate, max_bitrate=max_bitrate, ignored_by=ignored_by, stream_conditions_mode=stream_conditions_mode)
 
         self._filename = None
         self._fragment_duration = None
-        self._time_code = None
         self._fragmented_mp4_muxing_manifest_type = None
         self._dolby_vision_configuration = None
         self.discriminator = None
@@ -47,8 +44,6 @@ class Mp4Muxing(Muxing):
             self.filename = filename
         if fragment_duration is not None:
             self.fragment_duration = fragment_duration
-        if time_code is not None:
-            self.time_code = time_code
         if fragmented_mp4_muxing_manifest_type is not None:
             self.fragmented_mp4_muxing_manifest_type = fragmented_mp4_muxing_manifest_type
         if dolby_vision_configuration is not None:
@@ -64,7 +59,6 @@ class Mp4Muxing(Muxing):
         types.update({
             'filename': 'string_types',
             'fragment_duration': 'int',
-            'time_code': 'TimeCode',
             'fragmented_mp4_muxing_manifest_type': 'FragmentedMp4MuxingManifestType',
             'dolby_vision_configuration': 'DolbyVisionMuxingConfiguration'
         })
@@ -81,7 +75,6 @@ class Mp4Muxing(Muxing):
         attributes.update({
             'filename': 'filename',
             'fragment_duration': 'fragmentDuration',
-            'time_code': 'timeCode',
             'fragmented_mp4_muxing_manifest_type': 'fragmentedMP4MuxingManifestType',
             'dolby_vision_configuration': 'dolbyVisionConfiguration'
         })
@@ -144,33 +137,6 @@ class Mp4Muxing(Muxing):
                 raise TypeError("Invalid type for `fragment_duration`, type has to be `int`")
 
         self._fragment_duration = fragment_duration
-
-    @property
-    def time_code(self):
-        # type: () -> TimeCode
-        """Gets the time_code of this Mp4Muxing.
-
-
-        :return: The time_code of this Mp4Muxing.
-        :rtype: TimeCode
-        """
-        return self._time_code
-
-    @time_code.setter
-    def time_code(self, time_code):
-        # type: (TimeCode) -> None
-        """Sets the time_code of this Mp4Muxing.
-
-
-        :param time_code: The time_code of this Mp4Muxing.
-        :type: TimeCode
-        """
-
-        if time_code is not None:
-            if not isinstance(time_code, TimeCode):
-                raise TypeError("Invalid type for `time_code`, type has to be `TimeCode`")
-
-        self._time_code = time_code
 
     @property
     def fragmented_mp4_muxing_manifest_type(self):

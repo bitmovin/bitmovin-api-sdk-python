@@ -1,2 +1,3 @@
 from bitmovin_api_sdk.encoding.live.live_api import LiveApi
 from bitmovin_api_sdk.encoding.live.stream_keys.stream_keys_api import StreamKeysApi
+from bitmovin_api_sdk.encoding.live.standby_pools.standby_pools_api import StandbyPoolsApi
