@@ -83,6 +83,7 @@
 <span class="kn">from</span> <span class="nn">enum</span> <span class="kn">import</span> <span class="n">Enum</span>
 <span class="kn">from</span> <span class="nn">six</span> <span class="kn">import</span> <span class="n">string_types</span><span class="p">,</span> <span class="n">iteritems</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.common.poscheck</span> <span class="kn">import</span> <span class="n">poscheck_model</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.cdn_provider</span> <span class="kn">import</span> <span class="n">CdnProvider</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.output</span> <span class="kn">import</span> <span class="n">Output</span>
 <span class="kn">import</span> <span class="nn">pprint</span>
 <span class="kn">import</span> <span class="nn">six</span>
@@ -98,15 +99,19 @@
                  <span class="n">modified_at</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">custom_data</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">acl</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                 <span class="n">domain_name</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (string_types, string_types, string_types, datetime, datetime, dict, list[AclEntry], string_types) -&gt; None</span>
+                 <span class="n">domain_name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">cdn_provider</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="c1"># type: (string_types, string_types, string_types, datetime, datetime, dict, list[AclEntry], string_types, CdnProvider) -&gt; None</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">CdnOutput</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">id_</span><span class="o">=</span><span class="n">id_</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="n">description</span><span class="p">,</span> <span class="n">created_at</span><span class="o">=</span><span class="n">created_at</span><span class="p">,</span> <span class="n">modified_at</span><span class="o">=</span><span class="n">modified_at</span><span class="p">,</span> <span class="n">custom_data</span><span class="o">=</span><span class="n">custom_data</span><span class="p">,</span> <span class="n">acl</span><span class="o">=</span><span class="n">acl</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_domain_name</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_cdn_provider</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>
 
         <span class="k">if</span> <span class="n">domain_name</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">domain_name</span> <span class="o">=</span> <span class="n">domain_name</span>
+        <span class="k">if</span> <span class="n">cdn_provider</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">cdn_provider</span> <span class="o">=</span> <span class="n">cdn_provider</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -116,7 +121,8 @@
             <span class="n">types</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="nb">super</span><span class="p">(</span><span class="n">CdnOutput</span><span class="p">,</span> <span class="bp">self</span><span class="p">),</span> <span class="s1">&#39;openapi_types&#39;</span><span class="p">)</span>
 
         <span class="n">types</span><span class="o">.</span><span class="n">update</span><span class="p">({</span>
-            <span class="s1">&#39;domain_name&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span>
+            <span class="s1">&#39;domain_name&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;cdn_provider&#39;</span><span class="p">:</span> <span class="s1">&#39;CdnProvider&#39;</span>
         <span class="p">})</span>
 
         <span class="k">return</span> <span class="n">types</span>
@@ -129,7 +135,8 @@
             <span class="n">attributes</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="nb">super</span><span class="p">(</span><span class="n">CdnOutput</span><span class="p">,</span> <span class="bp">self</span><span class="p">),</span> <span class="s1">&#39;attribute_map&#39;</span><span class="p">)</span>
 
         <span class="n">attributes</span><span class="o">.</span><span class="n">update</span><span class="p">({</span>
-            <span class="s1">&#39;domain_name&#39;</span><span class="p">:</span> <span class="s1">&#39;domainName&#39;</span>
+            <span class="s1">&#39;domain_name&#39;</span><span class="p">:</span> <span class="s1">&#39;domainName&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;cdn_provider&#39;</span><span class="p">:</span> <span class="s1">&#39;cdnProvider&#39;</span>
         <span class="p">})</span>
         <span class="k">return</span> <span class="n">attributes</span>
 
@@ -161,6 +168,35 @@
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `domain_name`, type has to be `string_types`&quot;</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_domain_name</span> <span class="o">=</span> <span class="n">domain_name</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">cdn_provider</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; CdnProvider</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the cdn_provider of this CdnOutput.</span>
+
+<span class="sd">        CDN Provider of the Output</span>
+
+<span class="sd">        :return: The cdn_provider of this CdnOutput.</span>
+<span class="sd">        :rtype: CdnProvider</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cdn_provider</span>
+
+    <span class="nd">@cdn_provider</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">cdn_provider</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cdn_provider</span><span class="p">):</span>
+        <span class="c1"># type: (CdnProvider) -&gt; None</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the cdn_provider of this CdnOutput.</span>
+
+<span class="sd">        CDN Provider of the Output</span>
+
+<span class="sd">        :param cdn_provider: The cdn_provider of this CdnOutput.</span>
+<span class="sd">        :type: CdnProvider</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">cdn_provider</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">cdn_provider</span><span class="p">,</span> <span class="n">CdnProvider</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `cdn_provider`, type has to be `CdnProvider`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_cdn_provider</span> <span class="o">=</span> <span class="n">cdn_provider</span>
 
 <div class="viewcode-block" id="CdnOutput.to_dict"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.cdn_output.CdnOutput.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>

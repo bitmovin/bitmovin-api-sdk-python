@@ -3,6 +3,7 @@
 from enum import Enum
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
+from bitmovin_api_sdk.models.cdn_provider import CdnProvider
 from bitmovin_api_sdk.models.output import Output
 import pprint
 import six
@@ -18,15 +19,19 @@ class CdnOutput(Output):
                  modified_at=None,
                  custom_data=None,
                  acl=None,
-                 domain_name=None):
-        # type: (string_types, string_types, string_types, datetime, datetime, dict, list[AclEntry], string_types) -> None
+                 domain_name=None,
+                 cdn_provider=None):
+        # type: (string_types, string_types, string_types, datetime, datetime, dict, list[AclEntry], string_types, CdnProvider) -> None
         super(CdnOutput, self).__init__(id_=id_, name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, acl=acl)
 
         self._domain_name = None
+        self._cdn_provider = None
         self.discriminator = None
 
         if domain_name is not None:
             self.domain_name = domain_name
+        if cdn_provider is not None:
+            self.cdn_provider = cdn_provider
 
     @property
     def openapi_types(self):
@@ -36,7 +41,8 @@ class CdnOutput(Output):
             types = getattr(super(CdnOutput, self), 'openapi_types')
 
         types.update({
-            'domain_name': 'string_types'
+            'domain_name': 'string_types',
+            'cdn_provider': 'CdnProvider'
         })
 
         return types
@@ -49,7 +55,8 @@ class CdnOutput(Output):
             attributes = getattr(super(CdnOutput, self), 'attribute_map')
 
         attributes.update({
-            'domain_name': 'domainName'
+            'domain_name': 'domainName',
+            'cdn_provider': 'cdnProvider'
         })
         return attributes
 
@@ -81,6 +88,35 @@ class CdnOutput(Output):
                 raise TypeError("Invalid type for `domain_name`, type has to be `string_types`")
 
         self._domain_name = domain_name
+
+    @property
+    def cdn_provider(self):
+        # type: () -> CdnProvider
+        """Gets the cdn_provider of this CdnOutput.
+
+        CDN Provider of the Output
+
+        :return: The cdn_provider of this CdnOutput.
+        :rtype: CdnProvider
+        """
+        return self._cdn_provider
+
+    @cdn_provider.setter
+    def cdn_provider(self, cdn_provider):
+        # type: (CdnProvider) -> None
+        """Sets the cdn_provider of this CdnOutput.
+
+        CDN Provider of the Output
+
+        :param cdn_provider: The cdn_provider of this CdnOutput.
+        :type: CdnProvider
+        """
+
+        if cdn_provider is not None:
+            if not isinstance(cdn_provider, CdnProvider):
+                raise TypeError("Invalid type for `cdn_provider`, type has to be `CdnProvider`")
+
+        self._cdn_provider = cdn_provider
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -249,7 +249,7 @@ class PrewarmedEncoderPool(BitmovinResource):
         # type: () -> bool
         """Gets the dynamic_pool of this PrewarmedEncoderPool.
 
-        Activate dynamic pool behaviour. Pool will increase/decrease based on usage. Minimum pool size is set by targetPoolSize.
+        Activate dynamic pool behaviour. Pool will increase/decrease based on usage up until a size of 10 instances. Minimum pool size is set by targetPoolSize
 
         :return: The dynamic_pool of this PrewarmedEncoderPool.
         :rtype: bool
@@ -261,7 +261,7 @@ class PrewarmedEncoderPool(BitmovinResource):
         # type: (bool) -> None
         """Sets the dynamic_pool of this PrewarmedEncoderPool.
 
-        Activate dynamic pool behaviour. Pool will increase/decrease based on usage. Minimum pool size is set by targetPoolSize.
+        Activate dynamic pool behaviour. Pool will increase/decrease based on usage up until a size of 10 instances. Minimum pool size is set by targetPoolSize
 
         :param dynamic_pool: The dynamic_pool of this PrewarmedEncoderPool.
         :type: bool
