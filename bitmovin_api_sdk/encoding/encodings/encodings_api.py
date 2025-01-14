@@ -24,6 +24,7 @@ from bitmovin_api_sdk.encoding.encodings.output_paths.output_paths_api import Ou
 from bitmovin_api_sdk.encoding.encodings.captions.captions_api import CaptionsApi
 from bitmovin_api_sdk.encoding.encodings.sidecars.sidecars_api import SidecarsApi
 from bitmovin_api_sdk.encoding.encodings.keyframes.keyframes_api import KeyframesApi
+from bitmovin_api_sdk.encoding.encodings.scte35_triggers.scte35_triggers_api import Scte35TriggersApi
 from bitmovin_api_sdk.encoding.encodings.encoding_list_query_params import EncodingListQueryParams
 
 
@@ -103,6 +104,13 @@ class EncodingsApi(BaseApi):
         )
 
         self.keyframes = KeyframesApi(
+            api_key=api_key,
+            tenant_org_id=tenant_org_id,
+            base_url=base_url,
+            logger=logger
+        )
+
+        self.scte35_triggers = Scte35TriggersApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,

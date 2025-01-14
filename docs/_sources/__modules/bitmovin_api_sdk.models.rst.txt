@@ -5116,6 +5116,14 @@ bitmovin\_api\_sdk.models.scte35\_cue module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.scte35\_trigger module
+------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.scte35_trigger
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.segmented\_raw\_muxing module
 -------------------------------------------------------
 

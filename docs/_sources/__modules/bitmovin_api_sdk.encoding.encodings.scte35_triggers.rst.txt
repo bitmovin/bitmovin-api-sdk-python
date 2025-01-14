@@ -1,0 +1,29 @@
+bitmovin\_api\_sdk.encoding.encodings.scte35\_triggers package
+==============================================================
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.encoding.encodings.scte35\_triggers.scte35\_trigger\_list\_query\_params module
+--------------------------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.encodings.scte35_triggers.scte35_trigger_list_query_params
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.encoding.encodings.scte35\_triggers.scte35\_triggers\_api module
+-----------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.encodings.scte35_triggers.scte35_triggers_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.encoding.encodings.scte35_triggers
+   :members:
+   :undoc-members:
+   :show-inheritance:

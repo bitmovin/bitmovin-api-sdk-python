@@ -759,6 +759,8 @@ from bitmovin_api_sdk.encoding.encodings.streams.qc.psnr.psnr_api import PsnrApi
 from bitmovin_api_sdk.encoding.encodings.streams.qc.psnr.psnr_api import PsnrQualityMetricListQueryParams
 from bitmovin_api_sdk.encoding.encodings.keyframes.keyframes_api import KeyframesApi
 from bitmovin_api_sdk.encoding.encodings.keyframes.keyframes_api import KeyframeListQueryParams
+from bitmovin_api_sdk.encoding.encodings.scte35_triggers.scte35_triggers_api import Scte35TriggersApi
+from bitmovin_api_sdk.encoding.encodings.scte35_triggers.scte35_triggers_api import Scte35TriggerListQueryParams
 from bitmovin_api_sdk.encoding.encodings.live.hd.hd_api import HdApi
 
 from bitmovin_api_sdk.encoding.live.live_api import LiveApi
@@ -1691,6 +1693,7 @@ from bitmovin_api_sdk.models.scheduled_insertable_content import ScheduledInsert
 from bitmovin_api_sdk.models.scheduled_insertable_content_status import ScheduledInsertableContentStatus
 from bitmovin_api_sdk.models.scheduling import Scheduling
 from bitmovin_api_sdk.models.scte35_cue import Scte35Cue
+from bitmovin_api_sdk.models.scte35_trigger import Scte35Trigger
 from bitmovin_api_sdk.models.segmented_raw_muxing import SegmentedRawMuxing
 from bitmovin_api_sdk.models.segments_media_info import SegmentsMediaInfo
 from bitmovin_api_sdk.models.sftp_input import SftpInput
@@ -1901,4 +1904,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.215.0"
+__version__ = "1.216.0"
