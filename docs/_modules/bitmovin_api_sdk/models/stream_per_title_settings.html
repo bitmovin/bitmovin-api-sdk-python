@@ -91,19 +91,29 @@
 <div class="viewcode-block" id="StreamPerTitleSettings"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.stream_per_title_settings.StreamPerTitleSettings">[docs]</a><span class="k">class</span> <span class="nc">StreamPerTitleSettings</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="nd">@poscheck_model</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
-                 <span class="n">fixed_resolution_and_bitrate_settings</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (StreamPerTitleFixedResolutionAndBitrateSettings) -&gt; None</span>
+                 <span class="n">fixed_resolution_and_bitrate_settings</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">codec_max_bitrate_factor</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">codec_bufsize_factor</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="c1"># type: (StreamPerTitleFixedResolutionAndBitrateSettings, float, float) -&gt; None</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_fixed_resolution_and_bitrate_settings</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_codec_max_bitrate_factor</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_codec_bufsize_factor</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>
 
         <span class="k">if</span> <span class="n">fixed_resolution_and_bitrate_settings</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">fixed_resolution_and_bitrate_settings</span> <span class="o">=</span> <span class="n">fixed_resolution_and_bitrate_settings</span>
+        <span class="k">if</span> <span class="n">codec_max_bitrate_factor</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">codec_max_bitrate_factor</span> <span class="o">=</span> <span class="n">codec_max_bitrate_factor</span>
+        <span class="k">if</span> <span class="n">codec_bufsize_factor</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">codec_bufsize_factor</span> <span class="o">=</span> <span class="n">codec_bufsize_factor</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">types</span> <span class="o">=</span> <span class="p">{</span>
-            <span class="s1">&#39;fixed_resolution_and_bitrate_settings&#39;</span><span class="p">:</span> <span class="s1">&#39;StreamPerTitleFixedResolutionAndBitrateSettings&#39;</span>
+            <span class="s1">&#39;fixed_resolution_and_bitrate_settings&#39;</span><span class="p">:</span> <span class="s1">&#39;StreamPerTitleFixedResolutionAndBitrateSettings&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;codec_max_bitrate_factor&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;codec_bufsize_factor&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span>
         <span class="p">}</span>
 
         <span class="k">return</span> <span class="n">types</span>
@@ -111,7 +121,9 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">attribute_map</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">attributes</span> <span class="o">=</span> <span class="p">{</span>
-            <span class="s1">&#39;fixed_resolution_and_bitrate_settings&#39;</span><span class="p">:</span> <span class="s1">&#39;fixedResolutionAndBitrateSettings&#39;</span>
+            <span class="s1">&#39;fixed_resolution_and_bitrate_settings&#39;</span><span class="p">:</span> <span class="s1">&#39;fixedResolutionAndBitrateSettings&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;codec_max_bitrate_factor&#39;</span><span class="p">:</span> <span class="s1">&#39;codecMaxBitrateFactor&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;codec_bufsize_factor&#39;</span><span class="p">:</span> <span class="s1">&#39;codecBufsizeFactor&#39;</span>
         <span class="p">}</span>
         <span class="k">return</span> <span class="n">attributes</span>
 
@@ -143,6 +155,64 @@
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `fixed_resolution_and_bitrate_settings`, type has to be `StreamPerTitleFixedResolutionAndBitrateSettings`&quot;</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_fixed_resolution_and_bitrate_settings</span> <span class="o">=</span> <span class="n">fixed_resolution_and_bitrate_settings</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">codec_max_bitrate_factor</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; float</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the codec_max_bitrate_factor of this StreamPerTitleSettings.</span>
+
+<span class="sd">        This factor is used to calculate the maxBitrate of the codec configuration for the generated representation as a multiple of the targetBitrate(generated by Per-Title algorithm). This value will take precedence over the &#39;codecMaxBitrateFactor&#39; from the pertitleStartConfiguration. This value will only have an impact on streams with h264 or h265 video configurations.</span>
+
+<span class="sd">        :return: The codec_max_bitrate_factor of this StreamPerTitleSettings.</span>
+<span class="sd">        :rtype: float</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_codec_max_bitrate_factor</span>
+
+    <span class="nd">@codec_max_bitrate_factor</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">codec_max_bitrate_factor</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">codec_max_bitrate_factor</span><span class="p">):</span>
+        <span class="c1"># type: (float) -&gt; None</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the codec_max_bitrate_factor of this StreamPerTitleSettings.</span>
+
+<span class="sd">        This factor is used to calculate the maxBitrate of the codec configuration for the generated representation as a multiple of the targetBitrate(generated by Per-Title algorithm). This value will take precedence over the &#39;codecMaxBitrateFactor&#39; from the pertitleStartConfiguration. This value will only have an impact on streams with h264 or h265 video configurations.</span>
+
+<span class="sd">        :param codec_max_bitrate_factor: The codec_max_bitrate_factor of this StreamPerTitleSettings.</span>
+<span class="sd">        :type: float</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">codec_max_bitrate_factor</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">codec_max_bitrate_factor</span><span class="p">,</span> <span class="p">(</span><span class="nb">float</span><span class="p">,</span> <span class="nb">int</span><span class="p">)):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `codec_max_bitrate_factor`, type has to be `float`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_codec_max_bitrate_factor</span> <span class="o">=</span> <span class="n">codec_max_bitrate_factor</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">codec_bufsize_factor</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; float</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the codec_bufsize_factor of this StreamPerTitleSettings.</span>
+
+<span class="sd">        This factor is used to calculate the bufsize of the codec configuration for the generated representations as a multiple of the targetBitrate(generated by Per-Title algorithm). This value will take precedence over the &#39;codecBufsizeFactor&#39; from the pertitleStartConfiguration.. This value will only have an impact on streams with h264 or h265 video configurations.</span>
+
+<span class="sd">        :return: The codec_bufsize_factor of this StreamPerTitleSettings.</span>
+<span class="sd">        :rtype: float</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_codec_bufsize_factor</span>
+
+    <span class="nd">@codec_bufsize_factor</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">codec_bufsize_factor</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">codec_bufsize_factor</span><span class="p">):</span>
+        <span class="c1"># type: (float) -&gt; None</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the codec_bufsize_factor of this StreamPerTitleSettings.</span>
+
+<span class="sd">        This factor is used to calculate the bufsize of the codec configuration for the generated representations as a multiple of the targetBitrate(generated by Per-Title algorithm). This value will take precedence over the &#39;codecBufsizeFactor&#39; from the pertitleStartConfiguration.. This value will only have an impact on streams with h264 or h265 video configurations.</span>
+
+<span class="sd">        :param codec_bufsize_factor: The codec_bufsize_factor of this StreamPerTitleSettings.</span>
+<span class="sd">        :type: float</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">codec_bufsize_factor</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">codec_bufsize_factor</span><span class="p">,</span> <span class="p">(</span><span class="nb">float</span><span class="p">,</span> <span class="nb">int</span><span class="p">)):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `codec_bufsize_factor`, type has to be `float`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_codec_bufsize_factor</span> <span class="o">=</span> <span class="n">codec_bufsize_factor</span>
 
 <div class="viewcode-block" id="StreamPerTitleSettings.to_dict"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.stream_per_title_settings.StreamPerTitleSettings.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>

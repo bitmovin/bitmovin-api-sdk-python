@@ -74,7 +74,7 @@ class H264PerTitleConfiguration(PerTitleConfiguration):
         # type: () -> float
         """Gets the codec_min_bitrate_factor of this H264PerTitleConfiguration.
 
-        This factor is used to calculate the minBitrate of the codec configuration for the generated representations as a multiple of the targetBitrate
+        This factor doesn't have any impact!
 
         :return: The codec_min_bitrate_factor of this H264PerTitleConfiguration.
         :rtype: float
@@ -86,7 +86,7 @@ class H264PerTitleConfiguration(PerTitleConfiguration):
         # type: (float) -> None
         """Sets the codec_min_bitrate_factor of this H264PerTitleConfiguration.
 
-        This factor is used to calculate the minBitrate of the codec configuration for the generated representations as a multiple of the targetBitrate
+        This factor doesn't have any impact!
 
         :param codec_min_bitrate_factor: The codec_min_bitrate_factor of this H264PerTitleConfiguration.
         :type: float
