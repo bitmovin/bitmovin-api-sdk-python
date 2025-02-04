@@ -4,6 +4,7 @@ from enum import Enum
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
 from bitmovin_api_sdk.models.dash_edition_compatibility import DashEditionCompatibility
+from bitmovin_api_sdk.models.dash_iso8601_timestamp_format import DashISO8601TimestampFormat
 from bitmovin_api_sdk.models.dash_profile import DashProfile
 from bitmovin_api_sdk.models.manifest import Manifest
 from bitmovin_api_sdk.models.manifest_type import ManifestType
@@ -28,8 +29,9 @@ class DashManifest(Manifest):
                  manifest_name=None,
                  namespaces=None,
                  utc_timings=None,
-                 dash_edition_compatibility=None):
-        # type: (string_types, string_types, string_types, datetime, datetime, dict, ManifestType, list[EncodingOutput], Status, DashProfile, string_types, list[XmlNamespace], list[UtcTiming], DashEditionCompatibility) -> None
+                 dash_edition_compatibility=None,
+                 iso8601_timestamp_format=None):
+        # type: (string_types, string_types, string_types, datetime, datetime, dict, ManifestType, list[EncodingOutput], Status, DashProfile, string_types, list[XmlNamespace], list[UtcTiming], DashEditionCompatibility, DashISO8601TimestampFormat) -> None
         super(DashManifest, self).__init__(id_=id_, name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, type_=type_, outputs=outputs, status=status)
 
         self._profile = None
@@ -37,6 +39,7 @@ class DashManifest(Manifest):
         self._namespaces = list()
         self._utc_timings = list()
         self._dash_edition_compatibility = None
+        self._iso8601_timestamp_format = None
         self.discriminator = None
 
         if profile is not None:
@@ -49,6 +52,8 @@ class DashManifest(Manifest):
             self.utc_timings = utc_timings
         if dash_edition_compatibility is not None:
             self.dash_edition_compatibility = dash_edition_compatibility
+        if iso8601_timestamp_format is not None:
+            self.iso8601_timestamp_format = iso8601_timestamp_format
 
     @property
     def openapi_types(self):
@@ -62,7 +67,8 @@ class DashManifest(Manifest):
             'manifest_name': 'string_types',
             'namespaces': 'list[XmlNamespace]',
             'utc_timings': 'list[UtcTiming]',
-            'dash_edition_compatibility': 'DashEditionCompatibility'
+            'dash_edition_compatibility': 'DashEditionCompatibility',
+            'iso8601_timestamp_format': 'DashISO8601TimestampFormat'
         })
 
         return types
@@ -79,7 +85,8 @@ class DashManifest(Manifest):
             'manifest_name': 'manifestName',
             'namespaces': 'namespaces',
             'utc_timings': 'utcTimings',
-            'dash_edition_compatibility': 'dashEditionCompatibility'
+            'dash_edition_compatibility': 'dashEditionCompatibility',
+            'iso8601_timestamp_format': 'iso8601TimestampFormat'
         })
         return attributes
 
@@ -227,6 +234,35 @@ class DashManifest(Manifest):
                 raise TypeError("Invalid type for `dash_edition_compatibility`, type has to be `DashEditionCompatibility`")
 
         self._dash_edition_compatibility = dash_edition_compatibility
+
+    @property
+    def iso8601_timestamp_format(self):
+        # type: () -> DashISO8601TimestampFormat
+        """Gets the iso8601_timestamp_format of this DashManifest.
+
+        Determines how timestamps should appear in the manifest
+
+        :return: The iso8601_timestamp_format of this DashManifest.
+        :rtype: DashISO8601TimestampFormat
+        """
+        return self._iso8601_timestamp_format
+
+    @iso8601_timestamp_format.setter
+    def iso8601_timestamp_format(self, iso8601_timestamp_format):
+        # type: (DashISO8601TimestampFormat) -> None
+        """Sets the iso8601_timestamp_format of this DashManifest.
+
+        Determines how timestamps should appear in the manifest
+
+        :param iso8601_timestamp_format: The iso8601_timestamp_format of this DashManifest.
+        :type: DashISO8601TimestampFormat
+        """
+
+        if iso8601_timestamp_format is not None:
+            if not isinstance(iso8601_timestamp_format, DashISO8601TimestampFormat):
+                raise TypeError("Invalid type for `iso8601_timestamp_format`, type has to be `DashISO8601TimestampFormat`")
+
+        self._iso8601_timestamp_format = iso8601_timestamp_format
 
     def to_dict(self):
         """Returns the model properties as a dict"""

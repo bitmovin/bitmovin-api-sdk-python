@@ -1892,6 +1892,14 @@ bitmovin\_api\_sdk.models.dash\_imsc\_representation module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.dash\_iso8601\_timestamp\_format module
+-----------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.dash_iso8601_timestamp_format
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.dash\_manifest module
 -----------------------------------------------
 
@@ -4704,6 +4712,22 @@ bitmovin\_api\_sdk.models.profile\_h265 module
 ----------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.models.profile_h265
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.program\_date\_time\_placement module
+---------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.program_date_time_placement
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.program\_date\_time\_placement\_mode module
+---------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.program_date_time_placement_mode
    :members:
    :undoc-members:
    :show-inheritance:

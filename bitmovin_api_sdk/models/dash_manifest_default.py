@@ -4,6 +4,7 @@ from enum import Enum
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
 from bitmovin_api_sdk.models.dash_edition_compatibility import DashEditionCompatibility
+from bitmovin_api_sdk.models.dash_iso8601_timestamp_format import DashISO8601TimestampFormat
 from bitmovin_api_sdk.models.dash_manifest import DashManifest
 from bitmovin_api_sdk.models.dash_manifest_default_version import DashManifestDefaultVersion
 from bitmovin_api_sdk.models.dash_profile import DashProfile
@@ -30,11 +31,12 @@ class DashManifestDefault(DashManifest):
                  namespaces=None,
                  utc_timings=None,
                  dash_edition_compatibility=None,
+                 iso8601_timestamp_format=None,
                  encoding_id=None,
                  version=None,
                  periods=None):
-        # type: (string_types, string_types, string_types, datetime, datetime, dict, ManifestType, list[EncodingOutput], Status, DashProfile, string_types, list[XmlNamespace], list[UtcTiming], DashEditionCompatibility, string_types, DashManifestDefaultVersion, list[DefaultDashManifestPeriod]) -> None
-        super(DashManifestDefault, self).__init__(id_=id_, name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, type_=type_, outputs=outputs, status=status, profile=profile, manifest_name=manifest_name, namespaces=namespaces, utc_timings=utc_timings, dash_edition_compatibility=dash_edition_compatibility)
+        # type: (string_types, string_types, string_types, datetime, datetime, dict, ManifestType, list[EncodingOutput], Status, DashProfile, string_types, list[XmlNamespace], list[UtcTiming], DashEditionCompatibility, DashISO8601TimestampFormat, string_types, DashManifestDefaultVersion, list[DefaultDashManifestPeriod]) -> None
+        super(DashManifestDefault, self).__init__(id_=id_, name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, type_=type_, outputs=outputs, status=status, profile=profile, manifest_name=manifest_name, namespaces=namespaces, utc_timings=utc_timings, dash_edition_compatibility=dash_edition_compatibility, iso8601_timestamp_format=iso8601_timestamp_format)
 
         self._encoding_id = None
         self._version = None

@@ -238,6 +238,7 @@ from bitmovin_api_sdk.models.dash_cmaf_representation import DashCmafRepresentat
 from bitmovin_api_sdk.models.dash_edition_compatibility import DashEditionCompatibility
 from bitmovin_api_sdk.models.dash_fmp4_drm_representation import DashFmp4DrmRepresentation
 from bitmovin_api_sdk.models.dash_fmp4_representation import DashFmp4Representation
+from bitmovin_api_sdk.models.dash_iso8601_timestamp_format import DashISO8601TimestampFormat
 from bitmovin_api_sdk.models.dash_imsc_representation import DashImscRepresentation
 from bitmovin_api_sdk.models.dash_manifest import DashManifest
 from bitmovin_api_sdk.models.dash_manifest_default import DashManifestDefault
@@ -592,6 +593,8 @@ from bitmovin_api_sdk.models.prime_time_drm import PrimeTimeDrm
 from bitmovin_api_sdk.models.profile_h262 import ProfileH262
 from bitmovin_api_sdk.models.profile_h264 import ProfileH264
 from bitmovin_api_sdk.models.profile_h265 import ProfileH265
+from bitmovin_api_sdk.models.program_date_time_placement import ProgramDateTimePlacement
+from bitmovin_api_sdk.models.program_date_time_placement_mode import ProgramDateTimePlacementMode
 from bitmovin_api_sdk.models.program_date_time_settings import ProgramDateTimeSettings
 from bitmovin_api_sdk.models.program_date_time_source import ProgramDateTimeSource
 from bitmovin_api_sdk.models.progressive_mov_muxing import ProgressiveMovMuxing

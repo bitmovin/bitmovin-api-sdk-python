@@ -3,6 +3,7 @@
 from enum import Enum
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
+from bitmovin_api_sdk.models.program_date_time_placement import ProgramDateTimePlacement
 from bitmovin_api_sdk.models.program_date_time_source import ProgramDateTimeSource
 import pprint
 import six
@@ -11,19 +12,24 @@ import six
 class ProgramDateTimeSettings(object):
     @poscheck_model
     def __init__(self,
-                 program_date_time_source=None):
-        # type: (ProgramDateTimeSource) -> None
+                 program_date_time_source=None,
+                 program_date_time_placement=None):
+        # type: (ProgramDateTimeSource, ProgramDateTimePlacement) -> None
 
         self._program_date_time_source = None
+        self._program_date_time_placement = None
         self.discriminator = None
 
         if program_date_time_source is not None:
             self.program_date_time_source = program_date_time_source
+        if program_date_time_placement is not None:
+            self.program_date_time_placement = program_date_time_placement
 
     @property
     def openapi_types(self):
         types = {
-            'program_date_time_source': 'ProgramDateTimeSource'
+            'program_date_time_source': 'ProgramDateTimeSource',
+            'program_date_time_placement': 'ProgramDateTimePlacement'
         }
 
         return types
@@ -31,7 +37,8 @@ class ProgramDateTimeSettings(object):
     @property
     def attribute_map(self):
         attributes = {
-            'program_date_time_source': 'programDateTimeSource'
+            'program_date_time_source': 'programDateTimeSource',
+            'program_date_time_placement': 'programDateTimePlacement'
         }
         return attributes
 
@@ -61,6 +68,33 @@ class ProgramDateTimeSettings(object):
                 raise TypeError("Invalid type for `program_date_time_source`, type has to be `ProgramDateTimeSource`")
 
         self._program_date_time_source = program_date_time_source
+
+    @property
+    def program_date_time_placement(self):
+        # type: () -> ProgramDateTimePlacement
+        """Gets the program_date_time_placement of this ProgramDateTimeSettings.
+
+
+        :return: The program_date_time_placement of this ProgramDateTimeSettings.
+        :rtype: ProgramDateTimePlacement
+        """
+        return self._program_date_time_placement
+
+    @program_date_time_placement.setter
+    def program_date_time_placement(self, program_date_time_placement):
+        # type: (ProgramDateTimePlacement) -> None
+        """Sets the program_date_time_placement of this ProgramDateTimeSettings.
+
+
+        :param program_date_time_placement: The program_date_time_placement of this ProgramDateTimeSettings.
+        :type: ProgramDateTimePlacement
+        """
+
+        if program_date_time_placement is not None:
+            if not isinstance(program_date_time_placement, ProgramDateTimePlacement):
+                raise TypeError("Invalid type for `program_date_time_placement`, type has to be `ProgramDateTimePlacement`")
+
+        self._program_date_time_placement = program_date_time_placement
 
     def to_dict(self):
         """Returns the model properties as a dict"""
