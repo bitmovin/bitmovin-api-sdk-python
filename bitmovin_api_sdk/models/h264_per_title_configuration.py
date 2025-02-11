@@ -20,17 +20,18 @@ class H264PerTitleConfiguration(PerTitleConfiguration):
                  auto_representations=None,
                  complexity_factor=None,
                  fixed_resolution_and_bitrate_configuration=None,
-                 target_quality_crf=None,
                  resolution_scale_factor=None,
                  codec_min_bitrate_factor=None,
                  codec_max_bitrate_factor=None,
-                 codec_bufsize_factor=None):
+                 codec_bufsize_factor=None,
+                 target_quality_crf=None):
         # type: (int, int, float, float, AutoRepresentation, float, PerTitleFixedResolutionAndBitrateConfiguration, float, float, float, float, float) -> None
-        super(H264PerTitleConfiguration, self).__init__(min_bitrate=min_bitrate, max_bitrate=max_bitrate, min_bitrate_step_size=min_bitrate_step_size, max_bitrate_step_size=max_bitrate_step_size, auto_representations=auto_representations, complexity_factor=complexity_factor, fixed_resolution_and_bitrate_configuration=fixed_resolution_and_bitrate_configuration, target_quality_crf=target_quality_crf, resolution_scale_factor=resolution_scale_factor)
+        super(H264PerTitleConfiguration, self).__init__(min_bitrate=min_bitrate, max_bitrate=max_bitrate, min_bitrate_step_size=min_bitrate_step_size, max_bitrate_step_size=max_bitrate_step_size, auto_representations=auto_representations, complexity_factor=complexity_factor, fixed_resolution_and_bitrate_configuration=fixed_resolution_and_bitrate_configuration, resolution_scale_factor=resolution_scale_factor)
 
         self._codec_min_bitrate_factor = None
         self._codec_max_bitrate_factor = None
         self._codec_bufsize_factor = None
+        self._target_quality_crf = None
         self.discriminator = None
 
         if codec_min_bitrate_factor is not None:
@@ -39,6 +40,8 @@ class H264PerTitleConfiguration(PerTitleConfiguration):
             self.codec_max_bitrate_factor = codec_max_bitrate_factor
         if codec_bufsize_factor is not None:
             self.codec_bufsize_factor = codec_bufsize_factor
+        if target_quality_crf is not None:
+            self.target_quality_crf = target_quality_crf
 
     @property
     def openapi_types(self):
@@ -50,7 +53,8 @@ class H264PerTitleConfiguration(PerTitleConfiguration):
         types.update({
             'codec_min_bitrate_factor': 'float',
             'codec_max_bitrate_factor': 'float',
-            'codec_bufsize_factor': 'float'
+            'codec_bufsize_factor': 'float',
+            'target_quality_crf': 'float'
         })
 
         return types
@@ -65,7 +69,8 @@ class H264PerTitleConfiguration(PerTitleConfiguration):
         attributes.update({
             'codec_min_bitrate_factor': 'codecMinBitrateFactor',
             'codec_max_bitrate_factor': 'codecMaxBitrateFactor',
-            'codec_bufsize_factor': 'codecBufsizeFactor'
+            'codec_bufsize_factor': 'codecBufsizeFactor',
+            'target_quality_crf': 'targetQualityCrf'
         })
         return attributes
 
@@ -155,6 +160,35 @@ class H264PerTitleConfiguration(PerTitleConfiguration):
                 raise TypeError("Invalid type for `codec_bufsize_factor`, type has to be `float`")
 
         self._codec_bufsize_factor = codec_bufsize_factor
+
+    @property
+    def target_quality_crf(self):
+        # type: () -> float
+        """Gets the target_quality_crf of this H264PerTitleConfiguration.
+
+        Desired target quality of the highest representation expressed as CRF value
+
+        :return: The target_quality_crf of this H264PerTitleConfiguration.
+        :rtype: float
+        """
+        return self._target_quality_crf
+
+    @target_quality_crf.setter
+    def target_quality_crf(self, target_quality_crf):
+        # type: (float) -> None
+        """Sets the target_quality_crf of this H264PerTitleConfiguration.
+
+        Desired target quality of the highest representation expressed as CRF value
+
+        :param target_quality_crf: The target_quality_crf of this H264PerTitleConfiguration.
+        :type: float
+        """
+
+        if target_quality_crf is not None:
+            if not isinstance(target_quality_crf, (float, int)):
+                raise TypeError("Invalid type for `target_quality_crf`, type has to be `float`")
+
+        self._target_quality_crf = target_quality_crf
 
     def to_dict(self):
         """Returns the model properties as a dict"""
