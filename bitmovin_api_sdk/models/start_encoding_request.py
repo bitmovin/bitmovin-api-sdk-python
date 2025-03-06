@@ -3,6 +3,7 @@
 from enum import Enum
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
+from bitmovin_api_sdk.models.ai_content_analysis import AiContentAnalysis
 from bitmovin_api_sdk.models.encoding_mode import EncodingMode
 from bitmovin_api_sdk.models.manifest_generator import ManifestGenerator
 from bitmovin_api_sdk.models.per_title import PerTitle
@@ -27,8 +28,9 @@ class StartEncodingRequest(object):
                  vod_hls_manifests=None,
                  vod_smooth_manifests=None,
                  manifest_generator=None,
-                 per_title=None):
-        # type: (Trimming, Scheduling, Tweaks, bool, EncodingMode, list[ManifestResource], list[ManifestResource], list[ManifestResource], list[ManifestResource], list[ManifestResource], ManifestGenerator, PerTitle) -> None
+                 per_title=None,
+                 ai_content_analysis=None):
+        # type: (Trimming, Scheduling, Tweaks, bool, EncodingMode, list[ManifestResource], list[ManifestResource], list[ManifestResource], list[ManifestResource], list[ManifestResource], ManifestGenerator, PerTitle, AiContentAnalysis) -> None
 
         self._trimming = None
         self._scheduling = None
@@ -42,6 +44,7 @@ class StartEncodingRequest(object):
         self._vod_smooth_manifests = list()
         self._manifest_generator = None
         self._per_title = None
+        self._ai_content_analysis = None
         self.discriminator = None
 
         if trimming is not None:
@@ -68,6 +71,8 @@ class StartEncodingRequest(object):
             self.manifest_generator = manifest_generator
         if per_title is not None:
             self.per_title = per_title
+        if ai_content_analysis is not None:
+            self.ai_content_analysis = ai_content_analysis
 
     @property
     def openapi_types(self):
@@ -83,7 +88,8 @@ class StartEncodingRequest(object):
             'vod_hls_manifests': 'list[ManifestResource]',
             'vod_smooth_manifests': 'list[ManifestResource]',
             'manifest_generator': 'ManifestGenerator',
-            'per_title': 'PerTitle'
+            'per_title': 'PerTitle',
+            'ai_content_analysis': 'AiContentAnalysis'
         }
 
         return types
@@ -102,7 +108,8 @@ class StartEncodingRequest(object):
             'vod_hls_manifests': 'vodHlsManifests',
             'vod_smooth_manifests': 'vodSmoothManifests',
             'manifest_generator': 'manifestGenerator',
-            'per_title': 'perTitle'
+            'per_title': 'perTitle',
+            'ai_content_analysis': 'aiContentAnalysis'
         }
         return attributes
 
@@ -453,6 +460,35 @@ class StartEncodingRequest(object):
                 raise TypeError("Invalid type for `per_title`, type has to be `PerTitle`")
 
         self._per_title = per_title
+
+    @property
+    def ai_content_analysis(self):
+        # type: () -> AiContentAnalysis
+        """Gets the ai_content_analysis of this StartEncodingRequest.
+
+        AI content analysis settings
+
+        :return: The ai_content_analysis of this StartEncodingRequest.
+        :rtype: AiContentAnalysis
+        """
+        return self._ai_content_analysis
+
+    @ai_content_analysis.setter
+    def ai_content_analysis(self, ai_content_analysis):
+        # type: (AiContentAnalysis) -> None
+        """Sets the ai_content_analysis of this StartEncodingRequest.
+
+        AI content analysis settings
+
+        :param ai_content_analysis: The ai_content_analysis of this StartEncodingRequest.
+        :type: AiContentAnalysis
+        """
+
+        if ai_content_analysis is not None:
+            if not isinstance(ai_content_analysis, AiContentAnalysis):
+                raise TypeError("Invalid type for `ai_content_analysis`, type has to be `AiContentAnalysis`")
+
+        self._ai_content_analysis = ai_content_analysis
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -1095,6 +1095,12 @@ from bitmovin_api_sdk.models.adaptation_set_type_response import AdaptationSetTy
 from bitmovin_api_sdk.models.adaptive_quant_mode import AdaptiveQuantMode
 from bitmovin_api_sdk.models.aes_encryption_drm import AesEncryptionDrm
 from bitmovin_api_sdk.models.aes_encryption_method import AesEncryptionMethod
+from bitmovin_api_sdk.models.ai_content_analysis import AiContentAnalysis
+from bitmovin_api_sdk.models.ai_content_analysis_asset_description import AiContentAnalysisAssetDescription
+from bitmovin_api_sdk.models.ai_content_analysis_automatic_ad_placement import AiContentAnalysisAutomaticAdPlacement
+from bitmovin_api_sdk.models.ai_content_analysis_features import AiContentAnalysisFeatures
+from bitmovin_api_sdk.models.ai_service import AiService
+from bitmovin_api_sdk.models.ai_service_provider import AiServiceProvider
 from bitmovin_api_sdk.models.akamai_account import AkamaiAccount
 from bitmovin_api_sdk.models.akamai_account_region_settings import AkamaiAccountRegionSettings
 from bitmovin_api_sdk.models.akamai_cloud_region import AkamaiCloudRegion
@@ -1192,6 +1198,7 @@ from bitmovin_api_sdk.models.audio_volume_unit import AudioVolumeUnit
 from bitmovin_api_sdk.models.auto_level_setup import AutoLevelSetup
 from bitmovin_api_sdk.models.auto_representation import AutoRepresentation
 from bitmovin_api_sdk.models.auto_restart_configuration import AutoRestartConfiguration
+from bitmovin_api_sdk.models.automatic_ad_placement_position import AutomaticAdPlacementPosition
 from bitmovin_api_sdk.models.av1_per_title_configuration import Av1PerTitleConfiguration
 from bitmovin_api_sdk.models.av1_preset_configuration import Av1PresetConfiguration
 from bitmovin_api_sdk.models.av1_video_configuration import Av1VideoConfiguration
@@ -1907,4 +1914,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.221.0"
+__version__ = "1.222.0"

@@ -332,6 +332,54 @@ bitmovin\_api\_sdk.models.aes\_encryption\_method module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.ai\_content\_analysis module
+------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.ai_content_analysis
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.ai\_content\_analysis\_asset\_description module
+--------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.ai_content_analysis_asset_description
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.ai\_content\_analysis\_automatic\_ad\_placement module
+--------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.ai_content_analysis_automatic_ad_placement
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.ai\_content\_analysis\_features module
+----------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.ai_content_analysis_features
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.ai\_service module
+--------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.ai_service
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.ai\_service\_provider module
+------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.ai_service_provider
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.akamai\_account module
 ------------------------------------------------
 
@@ -1104,6 +1152,14 @@ bitmovin\_api\_sdk.models.auto\_restart\_configuration module
 -------------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.models.auto_restart_configuration
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.automatic\_ad\_placement\_position module
+-------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.automatic_ad_placement_position
    :members:
    :undoc-members:
    :show-inheritance:

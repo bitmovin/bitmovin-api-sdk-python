@@ -83,6 +83,7 @@
 <span class="kn">from</span> <span class="nn">enum</span> <span class="kn">import</span> <span class="n">Enum</span>
 <span class="kn">from</span> <span class="nn">six</span> <span class="kn">import</span> <span class="n">string_types</span><span class="p">,</span> <span class="n">iteritems</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.common.poscheck</span> <span class="kn">import</span> <span class="n">poscheck_model</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.ai_content_analysis</span> <span class="kn">import</span> <span class="n">AiContentAnalysis</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.encoding_mode</span> <span class="kn">import</span> <span class="n">EncodingMode</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.manifest_generator</span> <span class="kn">import</span> <span class="n">ManifestGenerator</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.per_title</span> <span class="kn">import</span> <span class="n">PerTitle</span>
@@ -107,8 +108,9 @@
                  <span class="n">vod_hls_manifests</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">vod_smooth_manifests</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">manifest_generator</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                 <span class="n">per_title</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (Trimming, Scheduling, Tweaks, bool, EncodingMode, list[ManifestResource], list[ManifestResource], list[ManifestResource], list[ManifestResource], list[ManifestResource], ManifestGenerator, PerTitle) -&gt; None</span>
+                 <span class="n">per_title</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">ai_content_analysis</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="c1"># type: (Trimming, Scheduling, Tweaks, bool, EncodingMode, list[ManifestResource], list[ManifestResource], list[ManifestResource], list[ManifestResource], list[ManifestResource], ManifestGenerator, PerTitle, AiContentAnalysis) -&gt; None</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_trimming</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_scheduling</span> <span class="o">=</span> <span class="kc">None</span>
@@ -122,6 +124,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_vod_smooth_manifests</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_manifest_generator</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_per_title</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_ai_content_analysis</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>
 
         <span class="k">if</span> <span class="n">trimming</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -148,6 +151,8 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">manifest_generator</span> <span class="o">=</span> <span class="n">manifest_generator</span>
         <span class="k">if</span> <span class="n">per_title</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">per_title</span> <span class="o">=</span> <span class="n">per_title</span>
+        <span class="k">if</span> <span class="n">ai_content_analysis</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">ai_content_analysis</span> <span class="o">=</span> <span class="n">ai_content_analysis</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -163,7 +168,8 @@
             <span class="s1">&#39;vod_hls_manifests&#39;</span><span class="p">:</span> <span class="s1">&#39;list[ManifestResource]&#39;</span><span class="p">,</span>
             <span class="s1">&#39;vod_smooth_manifests&#39;</span><span class="p">:</span> <span class="s1">&#39;list[ManifestResource]&#39;</span><span class="p">,</span>
             <span class="s1">&#39;manifest_generator&#39;</span><span class="p">:</span> <span class="s1">&#39;ManifestGenerator&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;per_title&#39;</span><span class="p">:</span> <span class="s1">&#39;PerTitle&#39;</span>
+            <span class="s1">&#39;per_title&#39;</span><span class="p">:</span> <span class="s1">&#39;PerTitle&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;ai_content_analysis&#39;</span><span class="p">:</span> <span class="s1">&#39;AiContentAnalysis&#39;</span>
         <span class="p">}</span>
 
         <span class="k">return</span> <span class="n">types</span>
@@ -182,7 +188,8 @@
             <span class="s1">&#39;vod_hls_manifests&#39;</span><span class="p">:</span> <span class="s1">&#39;vodHlsManifests&#39;</span><span class="p">,</span>
             <span class="s1">&#39;vod_smooth_manifests&#39;</span><span class="p">:</span> <span class="s1">&#39;vodSmoothManifests&#39;</span><span class="p">,</span>
             <span class="s1">&#39;manifest_generator&#39;</span><span class="p">:</span> <span class="s1">&#39;manifestGenerator&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;per_title&#39;</span><span class="p">:</span> <span class="s1">&#39;perTitle&#39;</span>
+            <span class="s1">&#39;per_title&#39;</span><span class="p">:</span> <span class="s1">&#39;perTitle&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;ai_content_analysis&#39;</span><span class="p">:</span> <span class="s1">&#39;aiContentAnalysis&#39;</span>
         <span class="p">}</span>
         <span class="k">return</span> <span class="n">attributes</span>
 
@@ -533,6 +540,35 @@
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `per_title`, type has to be `PerTitle`&quot;</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_per_title</span> <span class="o">=</span> <span class="n">per_title</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">ai_content_analysis</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; AiContentAnalysis</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the ai_content_analysis of this StartEncodingRequest.</span>
+
+<span class="sd">        AI content analysis settings</span>
+
+<span class="sd">        :return: The ai_content_analysis of this StartEncodingRequest.</span>
+<span class="sd">        :rtype: AiContentAnalysis</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_ai_content_analysis</span>
+
+    <span class="nd">@ai_content_analysis</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">ai_content_analysis</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ai_content_analysis</span><span class="p">):</span>
+        <span class="c1"># type: (AiContentAnalysis) -&gt; None</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the ai_content_analysis of this StartEncodingRequest.</span>
+
+<span class="sd">        AI content analysis settings</span>
+
+<span class="sd">        :param ai_content_analysis: The ai_content_analysis of this StartEncodingRequest.</span>
+<span class="sd">        :type: AiContentAnalysis</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">ai_content_analysis</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">ai_content_analysis</span><span class="p">,</span> <span class="n">AiContentAnalysis</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `ai_content_analysis`, type has to be `AiContentAnalysis`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_ai_content_analysis</span> <span class="o">=</span> <span class="n">ai_content_analysis</span>
 
 <div class="viewcode-block" id="StartEncodingRequest.to_dict"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.start_encoding_request.StartEncodingRequest.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>
