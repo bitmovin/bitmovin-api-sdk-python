@@ -4,7 +4,9 @@
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
 from bitmovin_api_sdk.models.auto_restart_configuration import AutoRestartConfiguration
+from bitmovin_api_sdk.models.cache_control_settings import CacheControlSettings
 from bitmovin_api_sdk.models.encoding_mode import EncodingMode
+from bitmovin_api_sdk.models.esam_settings import EsamSettings
 from bitmovin_api_sdk.models.live_auto_shutdown_configuration import LiveAutoShutdownConfiguration
 from bitmovin_api_sdk.models.manifest_generator import ManifestGenerator
 from bitmovin_api_sdk.models.reupload_settings import ReuploadSettings

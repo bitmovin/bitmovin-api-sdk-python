@@ -4,7 +4,9 @@ from enum import Enum
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
 from bitmovin_api_sdk.models.auto_restart_configuration import AutoRestartConfiguration
+from bitmovin_api_sdk.models.cache_control_settings import CacheControlSettings
 from bitmovin_api_sdk.models.encoding_mode import EncodingMode
+from bitmovin_api_sdk.models.esam_settings import EsamSettings
 from bitmovin_api_sdk.models.live_auto_shutdown_configuration import LiveAutoShutdownConfiguration
 from bitmovin_api_sdk.models.manifest_generator import ManifestGenerator
 from bitmovin_api_sdk.models.reupload_settings import ReuploadSettings
@@ -22,8 +24,10 @@ class StartLiveEncodingRequest(object):
                  reupload_settings=None,
                  manifest_generator=None,
                  auto_restart_configuration=None,
-                 auto_shutdown_configuration=None):
-        # type: (string_types, list[LiveHlsManifest], list[LiveDashManifest], EncodingMode, ReuploadSettings, ManifestGenerator, AutoRestartConfiguration, LiveAutoShutdownConfiguration) -> None
+                 auto_shutdown_configuration=None,
+                 esam_settings=None,
+                 cache_control_settings=None):
+        # type: (string_types, list[LiveHlsManifest], list[LiveDashManifest], EncodingMode, ReuploadSettings, ManifestGenerator, AutoRestartConfiguration, LiveAutoShutdownConfiguration, EsamSettings, CacheControlSettings) -> None
 
         self._stream_key = None
         self._hls_manifests = list()
@@ -33,6 +37,8 @@ class StartLiveEncodingRequest(object):
         self._manifest_generator = None
         self._auto_restart_configuration = None
         self._auto_shutdown_configuration = None
+        self._esam_settings = None
+        self._cache_control_settings = None
         self.discriminator = None
 
         if stream_key is not None:
@@ -51,6 +57,10 @@ class StartLiveEncodingRequest(object):
             self.auto_restart_configuration = auto_restart_configuration
         if auto_shutdown_configuration is not None:
             self.auto_shutdown_configuration = auto_shutdown_configuration
+        if esam_settings is not None:
+            self.esam_settings = esam_settings
+        if cache_control_settings is not None:
+            self.cache_control_settings = cache_control_settings
 
     @property
     def openapi_types(self):
@@ -62,7 +72,9 @@ class StartLiveEncodingRequest(object):
             'reupload_settings': 'ReuploadSettings',
             'manifest_generator': 'ManifestGenerator',
             'auto_restart_configuration': 'AutoRestartConfiguration',
-            'auto_shutdown_configuration': 'LiveAutoShutdownConfiguration'
+            'auto_shutdown_configuration': 'LiveAutoShutdownConfiguration',
+            'esam_settings': 'EsamSettings',
+            'cache_control_settings': 'CacheControlSettings'
         }
 
         return types
@@ -77,7 +89,9 @@ class StartLiveEncodingRequest(object):
             'reupload_settings': 'reuploadSettings',
             'manifest_generator': 'manifestGenerator',
             'auto_restart_configuration': 'autoRestartConfiguration',
-            'auto_shutdown_configuration': 'autoShutdownConfiguration'
+            'auto_shutdown_configuration': 'autoShutdownConfiguration',
+            'esam_settings': 'esamSettings',
+            'cache_control_settings': 'cacheControlSettings'
         }
         return attributes
 
@@ -312,6 +326,64 @@ class StartLiveEncodingRequest(object):
                 raise TypeError("Invalid type for `auto_shutdown_configuration`, type has to be `LiveAutoShutdownConfiguration`")
 
         self._auto_shutdown_configuration = auto_shutdown_configuration
+
+    @property
+    def esam_settings(self):
+        # type: () -> EsamSettings
+        """Gets the esam_settings of this StartLiveEncodingRequest.
+
+        Configuration for Event Signaling and Management (ESAM) system,  allowing the encoder to communicate with an ESAM server for signal processing and dynamic ad insertion update.' 
+
+        :return: The esam_settings of this StartLiveEncodingRequest.
+        :rtype: EsamSettings
+        """
+        return self._esam_settings
+
+    @esam_settings.setter
+    def esam_settings(self, esam_settings):
+        # type: (EsamSettings) -> None
+        """Sets the esam_settings of this StartLiveEncodingRequest.
+
+        Configuration for Event Signaling and Management (ESAM) system,  allowing the encoder to communicate with an ESAM server for signal processing and dynamic ad insertion update.' 
+
+        :param esam_settings: The esam_settings of this StartLiveEncodingRequest.
+        :type: EsamSettings
+        """
+
+        if esam_settings is not None:
+            if not isinstance(esam_settings, EsamSettings):
+                raise TypeError("Invalid type for `esam_settings`, type has to be `EsamSettings`")
+
+        self._esam_settings = esam_settings
+
+    @property
+    def cache_control_settings(self):
+        # type: () -> CacheControlSettings
+        """Gets the cache_control_settings of this StartLiveEncodingRequest.
+
+        Configuration of cache control policies for media segments, HLS, and DASH manifests.  You can set caching for the HLS multivariant playlist, HLS media playlist, DASH timeline manifest,  DASH template manifest, initialization segment, and media segment. 
+
+        :return: The cache_control_settings of this StartLiveEncodingRequest.
+        :rtype: CacheControlSettings
+        """
+        return self._cache_control_settings
+
+    @cache_control_settings.setter
+    def cache_control_settings(self, cache_control_settings):
+        # type: (CacheControlSettings) -> None
+        """Sets the cache_control_settings of this StartLiveEncodingRequest.
+
+        Configuration of cache control policies for media segments, HLS, and DASH manifests.  You can set caching for the HLS multivariant playlist, HLS media playlist, DASH timeline manifest,  DASH template manifest, initialization segment, and media segment. 
+
+        :param cache_control_settings: The cache_control_settings of this StartLiveEncodingRequest.
+        :type: CacheControlSettings
+        """
+
+        if cache_control_settings is not None:
+            if not isinstance(cache_control_settings, CacheControlSettings):
+                raise TypeError("Invalid type for `cache_control_settings`, type has to be `CacheControlSettings`")
+
+        self._cache_control_settings = cache_control_settings
 
     def to_dict(self):
         """Returns the model properties as a dict"""

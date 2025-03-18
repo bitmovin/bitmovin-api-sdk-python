@@ -5,6 +5,7 @@ from __future__ import absolute_import
 from bitmovin_api_sdk.common import BaseApi, BitmovinApiLoggerBase
 from bitmovin_api_sdk.common.poscheck import poscheck_except
 from bitmovin_api_sdk.models.player_license import PlayerLicense
+from bitmovin_api_sdk.models.player_license_update_request import PlayerLicenseUpdateRequest
 from bitmovin_api_sdk.models.response_envelope import ResponseEnvelope
 from bitmovin_api_sdk.models.response_error import ResponseError
 from bitmovin_api_sdk.player.licenses.analytics.analytics_api import AnalyticsApi
@@ -94,6 +95,26 @@ class LicensesApi(BaseApi):
             '/player/licenses',
             query_params=query_params,
             pagination_response=True,
+            type=PlayerLicense,
+            **kwargs
+        )
+
+    def update(self, license_id, player_license_update_request, **kwargs):
+        # type: (string_types, PlayerLicenseUpdateRequest, dict) -> PlayerLicense
+        """Update License
+
+        :param license_id: License id
+        :type license_id: string_types, required
+        :param player_license_update_request: Player License details to be updated
+        :type player_license_update_request: PlayerLicenseUpdateRequest, required
+        :return: Updated Player License
+        :rtype: PlayerLicense
+        """
+
+        return self.api_client.put(
+            '/player/licenses/{license_id}',
+            player_license_update_request,
+            path_params={'license_id': license_id},
             type=PlayerLicense,
             **kwargs
         )

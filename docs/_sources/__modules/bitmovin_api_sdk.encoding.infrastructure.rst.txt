@@ -11,6 +11,7 @@ Subpackages
    bitmovin_api_sdk.encoding.infrastructure.aws
    bitmovin_api_sdk.encoding.infrastructure.azure
    bitmovin_api_sdk.encoding.infrastructure.gce
+   bitmovin_api_sdk.encoding.infrastructure.oci
    bitmovin_api_sdk.encoding.infrastructure.prewarmed_encoder_pools
    bitmovin_api_sdk.encoding.infrastructure.static_ips
 

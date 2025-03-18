@@ -899,6 +899,10 @@ from bitmovin_api_sdk.encoding.infrastructure.akamai.akamai_api import AkamaiApi
 from bitmovin_api_sdk.encoding.infrastructure.akamai.akamai_api import AkamaiAccountListQueryParams
 from bitmovin_api_sdk.encoding.infrastructure.akamai.regions.regions_api import RegionsApi
 from bitmovin_api_sdk.encoding.infrastructure.akamai.regions.regions_api import AkamaiAccountRegionSettingsListQueryParams
+from bitmovin_api_sdk.encoding.infrastructure.oci.oci_api import OciApi
+from bitmovin_api_sdk.encoding.infrastructure.oci.oci_api import OciAccountListQueryParams
+from bitmovin_api_sdk.encoding.infrastructure.oci.regions.regions_api import RegionsApi
+from bitmovin_api_sdk.encoding.infrastructure.oci.regions.regions_api import OciAccountRegionSettingsListQueryParams
 from bitmovin_api_sdk.encoding.infrastructure.prewarmed_encoder_pools.prewarmed_encoder_pools_api import PrewarmedEncoderPoolsApi
 from bitmovin_api_sdk.encoding.infrastructure.prewarmed_encoder_pools.prewarmed_encoder_pools_api import PrewarmedEncoderPoolListQueryParams
 from bitmovin_api_sdk.encoding.infrastructure.prewarmed_encoder_pools.schedules.schedules_api import SchedulesApi
@@ -1237,6 +1241,11 @@ from bitmovin_api_sdk.models.broadcast_ts_transport_configuration import Broadca
 from bitmovin_api_sdk.models.broadcast_ts_video_input_stream_configuration import BroadcastTsVideoInputStreamConfiguration
 from bitmovin_api_sdk.models.burn_in_subtitle_dvb_sub import BurnInSubtitleDvbSub
 from bitmovin_api_sdk.models.burn_in_subtitle_srt import BurnInSubtitleSrt
+from bitmovin_api_sdk.models.cache_control import CacheControl
+from bitmovin_api_sdk.models.cache_control_settings import CacheControlSettings
+from bitmovin_api_sdk.models.cache_control_settings_dash import CacheControlSettingsDash
+from bitmovin_api_sdk.models.cache_control_settings_hls import CacheControlSettingsHls
+from bitmovin_api_sdk.models.cache_control_settings_segments import CacheControlSettingsSegments
 from bitmovin_api_sdk.models.caption_character_encoding import CaptionCharacterEncoding
 from bitmovin_api_sdk.models.cdn_output import CdnOutput
 from bitmovin_api_sdk.models.cdn_provider import CdnProvider
@@ -1429,6 +1438,7 @@ from bitmovin_api_sdk.models.enhanced_deinterlace_parity import EnhancedDeinterl
 from bitmovin_api_sdk.models.enhanced_watermark_filter import EnhancedWatermarkFilter
 from bitmovin_api_sdk.models.error_details import ErrorDetails
 from bitmovin_api_sdk.models.error_retry_hint import ErrorRetryHint
+from bitmovin_api_sdk.models.esam_settings import EsamSettings
 from bitmovin_api_sdk.models.external_id_mode import ExternalIdMode
 from bitmovin_api_sdk.models.fair_play_drm import FairPlayDrm
 from bitmovin_api_sdk.models.file_input_stream import FileInputStream
@@ -1597,6 +1607,9 @@ from bitmovin_api_sdk.models.nex_guard_watermarking_type import NexGuardWatermar
 from bitmovin_api_sdk.models.notification import Notification
 from bitmovin_api_sdk.models.notification_state_entry import NotificationStateEntry
 from bitmovin_api_sdk.models.notification_states import NotificationStates
+from bitmovin_api_sdk.models.oci_account import OciAccount
+from bitmovin_api_sdk.models.oci_account_region_settings import OciAccountRegionSettings
+from bitmovin_api_sdk.models.oci_cloud_region import OciCloudRegion
 from bitmovin_api_sdk.models.opus_audio_configuration import OpusAudioConfiguration
 from bitmovin_api_sdk.models.opus_channel_layout import OpusChannelLayout
 from bitmovin_api_sdk.models.or_conjunction import OrConjunction
@@ -1635,9 +1648,11 @@ from bitmovin_api_sdk.models.play_ready_encryption_method import PlayReadyEncryp
 from bitmovin_api_sdk.models.player_channel import PlayerChannel
 from bitmovin_api_sdk.models.player_license import PlayerLicense
 from bitmovin_api_sdk.models.player_license_analytics import PlayerLicenseAnalytics
+from bitmovin_api_sdk.models.player_license_update_request import PlayerLicenseUpdateRequest
 from bitmovin_api_sdk.models.player_third_party_licensing import PlayerThirdPartyLicensing
 from bitmovin_api_sdk.models.player_third_party_licensing_error_action import PlayerThirdPartyLicensingErrorAction
 from bitmovin_api_sdk.models.player_version import PlayerVersion
+from bitmovin_api_sdk.models.pois_endpoint_credentials import PoisEndpointCredentials
 from bitmovin_api_sdk.models.policy import Policy
 from bitmovin_api_sdk.models.position_mode import PositionMode
 from bitmovin_api_sdk.models.position_unit import PositionUnit
@@ -1914,4 +1929,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.223.0"
+__version__ = "1.224.0"

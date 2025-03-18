@@ -4,4 +4,5 @@ from bitmovin_api_sdk.encoding.infrastructure.static_ips.static_ips_api import S
 from bitmovin_api_sdk.encoding.infrastructure.azure.azure_api import AzureApi
 from bitmovin_api_sdk.encoding.infrastructure.gce.gce_api import GceApi
 from bitmovin_api_sdk.encoding.infrastructure.akamai.akamai_api import AkamaiApi
+from bitmovin_api_sdk.encoding.infrastructure.oci.oci_api import OciApi
 from bitmovin_api_sdk.encoding.infrastructure.prewarmed_encoder_pools.prewarmed_encoder_pools_api import PrewarmedEncoderPoolsApi

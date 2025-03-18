@@ -1,0 +1,29 @@
+bitmovin\_api\_sdk.encoding.infrastructure.oci.regions package
+==============================================================
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.encoding.infrastructure.oci.regions.oci\_account\_region\_settings\_list\_query\_params module
+-----------------------------------------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.infrastructure.oci.regions.oci_account_region_settings_list_query_params
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.encoding.infrastructure.oci.regions.regions\_api module
+--------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.infrastructure.oci.regions.regions_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.encoding.infrastructure.oci.regions
+   :members:
+   :undoc-members:
+   :show-inheritance:

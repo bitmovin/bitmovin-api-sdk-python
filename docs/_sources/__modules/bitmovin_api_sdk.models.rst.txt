@@ -1468,6 +1468,46 @@ bitmovin\_api\_sdk.models.burn\_in\_subtitle\_srt module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.cache\_control module
+-----------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.cache_control
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.cache\_control\_settings module
+---------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.cache_control_settings
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.cache\_control\_settings\_dash module
+---------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.cache_control_settings_dash
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.cache\_control\_settings\_hls module
+--------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.cache_control_settings_hls
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.cache\_control\_settings\_segments module
+-------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.cache_control_settings_segments
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.caption\_character\_encoding module
 -------------------------------------------------------------
 
@@ -3004,6 +3044,14 @@ bitmovin\_api\_sdk.models.error\_retry\_hint module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.esam\_settings module
+-----------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.esam_settings
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.external\_id\_mode module
 ---------------------------------------------------
 
@@ -4348,6 +4396,30 @@ bitmovin\_api\_sdk.models.notification\_states module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.oci\_account module
+---------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.oci_account
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.oci\_account\_region\_settings module
+---------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.oci_account_region_settings
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.oci\_cloud\_region module
+---------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.oci_cloud_region
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.opus\_audio\_configuration module
 -----------------------------------------------------------
 
@@ -4644,6 +4716,14 @@ bitmovin\_api\_sdk.models.player\_license\_analytics module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.player\_license\_update\_request module
+-----------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.player_license_update_request
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.player\_third\_party\_licensing module
 ----------------------------------------------------------------
 
@@ -4664,6 +4744,14 @@ bitmovin\_api\_sdk.models.player\_version module
 ------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.models.player_version
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.pois\_endpoint\_credentials module
+------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.pois_endpoint_credentials
    :members:
    :undoc-members:
    :show-inheritance:
