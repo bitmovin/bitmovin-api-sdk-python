@@ -980,6 +980,14 @@ bitmovin\_api\_sdk.models.aspera\_input module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.atmosphere module
+-------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.atmosphere
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.audio\_adaptation\_set module
 -------------------------------------------------------
 
@@ -1636,6 +1644,14 @@ bitmovin\_api\_sdk.models.channels\_attribute\_for\_audio module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.character module
+------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.character
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.check\_output\_permissions\_request module
 --------------------------------------------------------------------
 
@@ -1816,6 +1832,14 @@ bitmovin\_api\_sdk.models.conform\_filter module
 ------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.models.conform_filter
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.content module
+----------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.content
    :members:
    :undoc-members:
    :show-inheritance:
@@ -2924,14 +2948,6 @@ bitmovin\_api\_sdk.models.encoding\_stream\_input\_details module
    :undoc-members:
    :show-inheritance:
 
-bitmovin\_api\_sdk.models.encoding\_template module
----------------------------------------------------
-
-.. automodule:: bitmovin_api_sdk.models.encoding_template
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
 bitmovin\_api\_sdk.models.encoding\_template\_details module
 ------------------------------------------------------------
 
@@ -3488,6 +3504,14 @@ bitmovin\_api\_sdk.models.i\_frame\_playlist module
 ---------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.models.i_frame_playlist
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.iab\_taxonomy module
+----------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.iab_taxonomy
    :members:
    :undoc-members:
    :show-inheritance:
@@ -4072,6 +4096,14 @@ bitmovin\_api\_sdk.models.local\_output module
 ----------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.models.local_output
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.location module
+-----------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.location
    :members:
    :undoc-members:
    :show-inheritance:
@@ -5036,6 +5068,14 @@ bitmovin\_api\_sdk.models.rate\_distortion\_penalty\_mode module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.rating module
+---------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.rating
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.raw\_id3\_tag module
 ----------------------------------------------
 
@@ -5252,6 +5292,30 @@ bitmovin\_api\_sdk.models.scc\_caption module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.scene module
+--------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.scene
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.scene\_analysis\_details\_response module
+-------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.scene_analysis_details_response
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.scene\_object module
+----------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.scene_object
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.scheduled\_insertable\_content module
 ---------------------------------------------------------------
 
@@ -5308,6 +5372,14 @@ bitmovin\_api\_sdk.models.segments\_media\_info module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.setting module
+----------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.setting
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.sftp\_input module
 --------------------------------------------
 
@@ -5360,318 +5432,6 @@ bitmovin\_api\_sdk.models.signup\_source module
 -----------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.models.signup_source
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-bitmovin\_api\_sdk.models.simple\_encoding\_live\_cloud\_region module
-----------------------------------------------------------------------
-
-.. automodule:: bitmovin_api_sdk.models.simple_encoding_live_cloud_region
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-bitmovin\_api\_sdk.models.simple\_encoding\_live\_job\_access\_key\_credentials module
---------------------------------------------------------------------------------------
-
-.. automodule:: bitmovin_api_sdk.models.simple_encoding_live_job_access_key_credentials
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-bitmovin\_api\_sdk.models.simple\_encoding\_live\_job\_azure\_credentials module
---------------------------------------------------------------------------------
-
-.. automodule:: bitmovin_api_sdk.models.simple_encoding_live_job_azure_credentials
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-bitmovin\_api\_sdk.models.simple\_encoding\_live\_job\_cdn\_output module
--------------------------------------------------------------------------
-
-.. automodule:: bitmovin_api_sdk.models.simple_encoding_live_job_cdn_output
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-bitmovin\_api\_sdk.models.simple\_encoding\_live\_job\_credentials module
--------------------------------------------------------------------------
-
-.. automodule:: bitmovin_api_sdk.models.simple_encoding_live_job_credentials
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-bitmovin\_api\_sdk.models.simple\_encoding\_live\_job\_gcs\_service\_account\_credentials module
-------------------------------------------------------------------------------------------------
-
-.. automodule:: bitmovin_api_sdk.models.simple_encoding_live_job_gcs_service_account_credentials
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-bitmovin\_api\_sdk.models.simple\_encoding\_live\_job\_input module
--------------------------------------------------------------------
-
-.. automodule:: bitmovin_api_sdk.models.simple_encoding_live_job_input
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-bitmovin\_api\_sdk.models.simple\_encoding\_live\_job\_input\_type module
--------------------------------------------------------------------------
-
-.. automodule:: bitmovin_api_sdk.models.simple_encoding_live_job_input_type
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-bitmovin\_api\_sdk.models.simple\_encoding\_live\_job\_output module
---------------------------------------------------------------------
-
-.. automodule:: bitmovin_api_sdk.models.simple_encoding_live_job_output
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-bitmovin\_api\_sdk.models.simple\_encoding\_live\_job\_output\_type module
---------------------------------------------------------------------------
-
-.. automodule:: bitmovin_api_sdk.models.simple_encoding_live_job_output_type
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-bitmovin\_api\_sdk.models.simple\_encoding\_live\_job\_request module
----------------------------------------------------------------------
-
-.. automodule:: bitmovin_api_sdk.models.simple_encoding_live_job_request
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-bitmovin\_api\_sdk.models.simple\_encoding\_live\_job\_response module
-----------------------------------------------------------------------
-
-.. automodule:: bitmovin_api_sdk.models.simple_encoding_live_job_response
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-bitmovin\_api\_sdk.models.simple\_encoding\_live\_job\_s3\_role\_based\_credentials module
-------------------------------------------------------------------------------------------
-
-.. automodule:: bitmovin_api_sdk.models.simple_encoding_live_job_s3_role_based_credentials
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-bitmovin\_api\_sdk.models.simple\_encoding\_live\_job\_status module
---------------------------------------------------------------------
-
-.. automodule:: bitmovin_api_sdk.models.simple_encoding_live_job_status
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-bitmovin\_api\_sdk.models.simple\_encoding\_live\_job\_url\_output module
--------------------------------------------------------------------------
-
-.. automodule:: bitmovin_api_sdk.models.simple_encoding_live_job_url_output
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-bitmovin\_api\_sdk.models.simple\_encoding\_live\_job\_username\_password\_credentials module
----------------------------------------------------------------------------------------------
-
-.. automodule:: bitmovin_api_sdk.models.simple_encoding_live_job_username_password_credentials
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-bitmovin\_api\_sdk.models.simple\_encoding\_live\_max\_resolution module
-------------------------------------------------------------------------
-
-.. automodule:: bitmovin_api_sdk.models.simple_encoding_live_max_resolution
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-bitmovin\_api\_sdk.models.simple\_encoding\_live\_profile module
-----------------------------------------------------------------
-
-.. automodule:: bitmovin_api_sdk.models.simple_encoding_live_profile
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-bitmovin\_api\_sdk.models.simple\_encoding\_vod\_job\_access\_key\_credentials module
--------------------------------------------------------------------------------------
-
-.. automodule:: bitmovin_api_sdk.models.simple_encoding_vod_job_access_key_credentials
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-bitmovin\_api\_sdk.models.simple\_encoding\_vod\_job\_azure\_credentials module
--------------------------------------------------------------------------------
-
-.. automodule:: bitmovin_api_sdk.models.simple_encoding_vod_job_azure_credentials
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-bitmovin\_api\_sdk.models.simple\_encoding\_vod\_job\_cdn\_output module
-------------------------------------------------------------------------
-
-.. automodule:: bitmovin_api_sdk.models.simple_encoding_vod_job_cdn_output
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-bitmovin\_api\_sdk.models.simple\_encoding\_vod\_job\_credentials module
-------------------------------------------------------------------------
-
-.. automodule:: bitmovin_api_sdk.models.simple_encoding_vod_job_credentials
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-bitmovin\_api\_sdk.models.simple\_encoding\_vod\_job\_direct\_file\_upload\_input module
-----------------------------------------------------------------------------------------
-
-.. automodule:: bitmovin_api_sdk.models.simple_encoding_vod_job_direct_file_upload_input
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-bitmovin\_api\_sdk.models.simple\_encoding\_vod\_job\_errors module
--------------------------------------------------------------------
-
-.. automodule:: bitmovin_api_sdk.models.simple_encoding_vod_job_errors
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-bitmovin\_api\_sdk.models.simple\_encoding\_vod\_job\_gcs\_service\_account\_credentials module
------------------------------------------------------------------------------------------------
-
-.. automodule:: bitmovin_api_sdk.models.simple_encoding_vod_job_gcs_service_account_credentials
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-bitmovin\_api\_sdk.models.simple\_encoding\_vod\_job\_input module
-------------------------------------------------------------------
-
-.. automodule:: bitmovin_api_sdk.models.simple_encoding_vod_job_input
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-bitmovin\_api\_sdk.models.simple\_encoding\_vod\_job\_input\_source\_type module
---------------------------------------------------------------------------------
-
-.. automodule:: bitmovin_api_sdk.models.simple_encoding_vod_job_input_source_type
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-bitmovin\_api\_sdk.models.simple\_encoding\_vod\_job\_input\_type module
-------------------------------------------------------------------------
-
-.. automodule:: bitmovin_api_sdk.models.simple_encoding_vod_job_input_type
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-bitmovin\_api\_sdk.models.simple\_encoding\_vod\_job\_options module
---------------------------------------------------------------------
-
-.. automodule:: bitmovin_api_sdk.models.simple_encoding_vod_job_options
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-bitmovin\_api\_sdk.models.simple\_encoding\_vod\_job\_output module
--------------------------------------------------------------------
-
-.. automodule:: bitmovin_api_sdk.models.simple_encoding_vod_job_output
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-bitmovin\_api\_sdk.models.simple\_encoding\_vod\_job\_output\_artifact module
------------------------------------------------------------------------------
-
-.. automodule:: bitmovin_api_sdk.models.simple_encoding_vod_job_output_artifact
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-bitmovin\_api\_sdk.models.simple\_encoding\_vod\_job\_output\_type module
--------------------------------------------------------------------------
-
-.. automodule:: bitmovin_api_sdk.models.simple_encoding_vod_job_output_type
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-bitmovin\_api\_sdk.models.simple\_encoding\_vod\_job\_request module
---------------------------------------------------------------------
-
-.. automodule:: bitmovin_api_sdk.models.simple_encoding_vod_job_request
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-bitmovin\_api\_sdk.models.simple\_encoding\_vod\_job\_response module
----------------------------------------------------------------------
-
-.. automodule:: bitmovin_api_sdk.models.simple_encoding_vod_job_response
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-bitmovin\_api\_sdk.models.simple\_encoding\_vod\_job\_s3\_role\_based\_credentials module
------------------------------------------------------------------------------------------
-
-.. automodule:: bitmovin_api_sdk.models.simple_encoding_vod_job_s3_role_based_credentials
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-bitmovin\_api\_sdk.models.simple\_encoding\_vod\_job\_status module
--------------------------------------------------------------------
-
-.. automodule:: bitmovin_api_sdk.models.simple_encoding_vod_job_status
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-bitmovin\_api\_sdk.models.simple\_encoding\_vod\_job\_url\_input module
------------------------------------------------------------------------
-
-.. automodule:: bitmovin_api_sdk.models.simple_encoding_vod_job_url_input
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-bitmovin\_api\_sdk.models.simple\_encoding\_vod\_job\_url\_output module
-------------------------------------------------------------------------
-
-.. automodule:: bitmovin_api_sdk.models.simple_encoding_vod_job_url_output
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-bitmovin\_api\_sdk.models.simple\_encoding\_vod\_job\_username\_password\_credentials module
---------------------------------------------------------------------------------------------
-
-.. automodule:: bitmovin_api_sdk.models.simple_encoding_vod_job_username_password_credentials
    :members:
    :undoc-members:
    :show-inheritance:

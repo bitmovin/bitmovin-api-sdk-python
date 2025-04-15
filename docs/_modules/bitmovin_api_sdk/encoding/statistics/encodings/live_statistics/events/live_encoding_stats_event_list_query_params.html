@@ -79,18 +79,20 @@
              
   <h1>Source code for bitmovin_api_sdk.encoding.statistics.encodings.live_statistics.events.live_encoding_stats_event_list_query_params</h1><div class="highlight"><pre>
 <div class="viewcode-block" id="LiveEncodingStatsEventListQueryParams"><a class="viewcode-back" href="../../../../../../../__modules/bitmovin_api_sdk.encoding.statistics.encodings.live_statistics.events.html#bitmovin_api_sdk.encoding.statistics.encodings.live_statistics.events.live_encoding_stats_event_list_query_params.LiveEncodingStatsEventListQueryParams">[docs]</a><span></span><span class="k">class</span> <span class="nc">LiveEncodingStatsEventListQueryParams</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">offset</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (int, int) -&gt; None</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">offset</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">sort_by_time</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="c1"># type: (int, int, bool) -&gt; None</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">LiveEncodingStatsEventListQueryParams</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">offset</span> <span class="o">=</span> <span class="n">offset</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">limit</span> <span class="o">=</span> <span class="n">limit</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sort_by_time</span> <span class="o">=</span> <span class="n">sort_by_time</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">types</span> <span class="o">=</span> <span class="p">{</span>
             <span class="s1">&#39;offset&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;limit&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span>
+            <span class="s1">&#39;limit&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;sort_by_time&#39;</span><span class="p">:</span> <span class="s1">&#39;bool&#39;</span>
         <span class="p">}</span>
 
         <span class="k">return</span> <span class="n">types</span>
@@ -99,7 +101,8 @@
     <span class="k">def</span> <span class="nf">attribute_map</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">attributes</span> <span class="o">=</span> <span class="p">{</span>
             <span class="s1">&#39;offset&#39;</span><span class="p">:</span> <span class="s1">&#39;offset&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;limit&#39;</span><span class="p">:</span> <span class="s1">&#39;limit&#39;</span>
+            <span class="s1">&#39;limit&#39;</span><span class="p">:</span> <span class="s1">&#39;limit&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;sort_by_time&#39;</span><span class="p">:</span> <span class="s1">&#39;sortByTime&#39;</span>
         <span class="p">}</span>
 
         <span class="k">return</span> <span class="n">attributes</span></div>

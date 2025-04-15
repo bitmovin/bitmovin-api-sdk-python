@@ -16,7 +16,6 @@ Subpackages
    bitmovin_api_sdk.encoding.live
    bitmovin_api_sdk.encoding.manifests
    bitmovin_api_sdk.encoding.outputs
-   bitmovin_api_sdk.encoding.simple
    bitmovin_api_sdk.encoding.statistics
    bitmovin_api_sdk.encoding.templates
    bitmovin_api_sdk.encoding.watch_folders

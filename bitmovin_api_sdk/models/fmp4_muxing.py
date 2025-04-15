@@ -32,9 +32,10 @@ class Fmp4Muxing(Muxing):
                  init_segment_name=None,
                  init_segment_name_template=None,
                  write_duration_per_sample=None,
+                 signal_scte35_as_emsg=None,
                  segments_muxed=None,
                  pts_align_mode=None):
-        # type: (string_types, string_types, string_types, datetime, datetime, dict, list[MuxingStream], list[EncodingOutput], int, int, int, list[Ignoring], StreamConditionsMode, float, string_types, string_types, string_types, string_types, bool, int, PTSAlignMode) -> None
+        # type: (string_types, string_types, string_types, datetime, datetime, dict, list[MuxingStream], list[EncodingOutput], int, int, int, list[Ignoring], StreamConditionsMode, float, string_types, string_types, string_types, string_types, bool, bool, int, PTSAlignMode) -> None
         super(Fmp4Muxing, self).__init__(id_=id_, name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, streams=streams, outputs=outputs, avg_bitrate=avg_bitrate, min_bitrate=min_bitrate, max_bitrate=max_bitrate, ignored_by=ignored_by, stream_conditions_mode=stream_conditions_mode)
 
         self._segment_length = None
@@ -43,6 +44,7 @@ class Fmp4Muxing(Muxing):
         self._init_segment_name = None
         self._init_segment_name_template = None
         self._write_duration_per_sample = None
+        self._signal_scte35_as_emsg = None
         self._segments_muxed = None
         self._pts_align_mode = None
         self.discriminator = None
@@ -59,6 +61,8 @@ class Fmp4Muxing(Muxing):
             self.init_segment_name_template = init_segment_name_template
         if write_duration_per_sample is not None:
             self.write_duration_per_sample = write_duration_per_sample
+        if signal_scte35_as_emsg is not None:
+            self.signal_scte35_as_emsg = signal_scte35_as_emsg
         if segments_muxed is not None:
             self.segments_muxed = segments_muxed
         if pts_align_mode is not None:
@@ -78,6 +82,7 @@ class Fmp4Muxing(Muxing):
             'init_segment_name': 'string_types',
             'init_segment_name_template': 'string_types',
             'write_duration_per_sample': 'bool',
+            'signal_scte35_as_emsg': 'bool',
             'segments_muxed': 'int',
             'pts_align_mode': 'PTSAlignMode'
         })
@@ -98,6 +103,7 @@ class Fmp4Muxing(Muxing):
             'init_segment_name': 'initSegmentName',
             'init_segment_name_template': 'initSegmentNameTemplate',
             'write_duration_per_sample': 'writeDurationPerSample',
+            'signal_scte35_as_emsg': 'signalScte35AsEmsg',
             'segments_muxed': 'segmentsMuxed',
             'pts_align_mode': 'ptsAlignMode'
         })
@@ -276,6 +282,35 @@ class Fmp4Muxing(Muxing):
                 raise TypeError("Invalid type for `write_duration_per_sample`, type has to be `bool`")
 
         self._write_duration_per_sample = write_duration_per_sample
+
+    @property
+    def signal_scte35_as_emsg(self):
+        # type: () -> bool
+        """Gets the signal_scte35_as_emsg of this Fmp4Muxing.
+
+        Insert scte35 triggers as emsg boxes into the fMP4 segments.
+
+        :return: The signal_scte35_as_emsg of this Fmp4Muxing.
+        :rtype: bool
+        """
+        return self._signal_scte35_as_emsg
+
+    @signal_scte35_as_emsg.setter
+    def signal_scte35_as_emsg(self, signal_scte35_as_emsg):
+        # type: (bool) -> None
+        """Sets the signal_scte35_as_emsg of this Fmp4Muxing.
+
+        Insert scte35 triggers as emsg boxes into the fMP4 segments.
+
+        :param signal_scte35_as_emsg: The signal_scte35_as_emsg of this Fmp4Muxing.
+        :type: bool
+        """
+
+        if signal_scte35_as_emsg is not None:
+            if not isinstance(signal_scte35_as_emsg, bool):
+                raise TypeError("Invalid type for `signal_scte35_as_emsg`, type has to be `bool`")
+
+        self._signal_scte35_as_emsg = signal_scte35_as_emsg
 
     @property
     def segments_muxed(self):

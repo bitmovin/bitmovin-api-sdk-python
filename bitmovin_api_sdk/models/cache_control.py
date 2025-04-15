@@ -39,7 +39,7 @@ class CacheControl(object):
         # type: () -> string_types
         """Gets the cache_control of this CacheControl.
 
-        Cache control for storing data on CDN. Example \"public, max-age=0, no-cache\".
+        Cache control for storing data on CDN. Example \"public, max-age=0, no-cache\". Cache control is supported on S3, GCS and Azure output storage providers.
 
         :return: The cache_control of this CacheControl.
         :rtype: string_types
@@ -51,7 +51,7 @@ class CacheControl(object):
         # type: (string_types) -> None
         """Sets the cache_control of this CacheControl.
 
-        Cache control for storing data on CDN. Example \"public, max-age=0, no-cache\".
+        Cache control for storing data on CDN. Example \"public, max-age=0, no-cache\". Cache control is supported on S3, GCS and Azure output storage providers.
 
         :param cache_control: The cache_control of this CacheControl.
         :type: string_types

@@ -1,0 +1,29 @@
+bitmovin\_api\_sdk.ai\_scene\_analysis package
+==============================================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   bitmovin_api_sdk.ai_scene_analysis.analyses
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.ai\_scene\_analysis.ai\_scene\_analysis\_api module
+----------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.ai_scene_analysis.ai_scene_analysis_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.ai_scene_analysis
+   :members:
+   :undoc-members:
+   :show-inheritance:

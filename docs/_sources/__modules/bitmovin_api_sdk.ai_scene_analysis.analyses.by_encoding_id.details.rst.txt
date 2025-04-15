@@ -1,0 +1,21 @@
+bitmovin\_api\_sdk.ai\_scene\_analysis.analyses.by\_encoding\_id.details package
+================================================================================
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.ai\_scene\_analysis.analyses.by\_encoding\_id.details.details\_api module
+--------------------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.ai_scene_analysis.analyses.by_encoding_id.details.details_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.ai_scene_analysis.analyses.by_encoding_id.details
+   :members:
+   :undoc-members:
+   :show-inheritance:
