@@ -6,6 +6,7 @@ from bitmovin_api_sdk.common import BaseApi, BitmovinApiLoggerBase
 from bitmovin_api_sdk.common.poscheck import poscheck_except
 from bitmovin_api_sdk.encoding.encodings.streams.burn_in_subtitles.dvbsub.dvbsub_api import DvbsubApi
 from bitmovin_api_sdk.encoding.encodings.streams.burn_in_subtitles.srt.srt_api import SrtApi
+from bitmovin_api_sdk.encoding.encodings.streams.burn_in_subtitles.assa.assa_api import AssaApi
 
 
 class BurnInSubtitlesApi(BaseApi):
@@ -28,6 +29,13 @@ class BurnInSubtitlesApi(BaseApi):
         )
 
         self.srt = SrtApi(
+            api_key=api_key,
+            tenant_org_id=tenant_org_id,
+            base_url=base_url,
+            logger=logger
+        )
+
+        self.assa = AssaApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,

@@ -713,6 +713,8 @@ from bitmovin_api_sdk.encoding.encodings.streams.burn_in_subtitles.dvbsub.dvbsub
 from bitmovin_api_sdk.encoding.encodings.streams.burn_in_subtitles.dvbsub.dvbsub_api import BurnInSubtitleDvbSubListQueryParams
 from bitmovin_api_sdk.encoding.encodings.streams.burn_in_subtitles.srt.srt_api import SrtApi
 from bitmovin_api_sdk.encoding.encodings.streams.burn_in_subtitles.srt.srt_api import BurnInSubtitleSrtListQueryParams
+from bitmovin_api_sdk.encoding.encodings.streams.burn_in_subtitles.assa.assa_api import AssaApi
+from bitmovin_api_sdk.encoding.encodings.streams.burn_in_subtitles.assa.assa_api import BurnInSubtitleAssaListQueryParams
 from bitmovin_api_sdk.encoding.encodings.streams.watermarking.watermarking_api import WatermarkingApi
 
 from bitmovin_api_sdk.encoding.encodings.streams.watermarking.nexguard_file_marker.nexguard_file_marker_api import NexguardFileMarkerApi
@@ -1240,6 +1242,7 @@ from bitmovin_api_sdk.models.broadcast_ts_program_configuration import Broadcast
 from bitmovin_api_sdk.models.broadcast_ts_subtitle_input_stream_configuration import BroadcastTsSubtitleInputStreamConfiguration
 from bitmovin_api_sdk.models.broadcast_ts_transport_configuration import BroadcastTsTransportConfiguration
 from bitmovin_api_sdk.models.broadcast_ts_video_input_stream_configuration import BroadcastTsVideoInputStreamConfiguration
+from bitmovin_api_sdk.models.burn_in_subtitle_assa import BurnInSubtitleAssa
 from bitmovin_api_sdk.models.burn_in_subtitle_dvb_sub import BurnInSubtitleDvbSub
 from bitmovin_api_sdk.models.burn_in_subtitle_srt import BurnInSubtitleSrt
 from bitmovin_api_sdk.models.cache_control import CacheControl
@@ -1899,4 +1902,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.226.0"
+__version__ = "1.227.0"

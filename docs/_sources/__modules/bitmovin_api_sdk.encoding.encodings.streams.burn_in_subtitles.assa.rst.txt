@@ -1,0 +1,29 @@
+bitmovin\_api\_sdk.encoding.encodings.streams.burn\_in\_subtitles.assa package
+==============================================================================
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.encoding.encodings.streams.burn\_in\_subtitles.assa.assa\_api module
+---------------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.encodings.streams.burn_in_subtitles.assa.assa_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.encoding.encodings.streams.burn\_in\_subtitles.assa.burn\_in\_subtitle\_assa\_list\_query\_params module
+---------------------------------------------------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.encodings.streams.burn_in_subtitles.assa.burn_in_subtitle_assa_list_query_params
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.encoding.encodings.streams.burn_in_subtitles.assa
+   :members:
+   :undoc-members:
+   :show-inheritance:

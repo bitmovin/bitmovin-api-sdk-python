@@ -1460,6 +1460,14 @@ bitmovin\_api\_sdk.models.broadcast\_ts\_video\_input\_stream\_configuration mod
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.burn\_in\_subtitle\_assa module
+---------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.burn_in_subtitle_assa
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.burn\_in\_subtitle\_dvb\_sub module
 -------------------------------------------------------------
 
