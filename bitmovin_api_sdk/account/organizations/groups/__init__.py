@@ -2,3 +2,4 @@ from bitmovin_api_sdk.account.organizations.groups.groups_api import GroupsApi
 from bitmovin_api_sdk.account.organizations.groups.tenants.tenants_api import TenantsApi
 from bitmovin_api_sdk.account.organizations.groups.invitations.invitations_api import InvitationsApi
 from bitmovin_api_sdk.account.organizations.groups.permissions.permissions_api import PermissionsApi
+from bitmovin_api_sdk.account.organizations.groups.group_list_query_params import GroupListQueryParams

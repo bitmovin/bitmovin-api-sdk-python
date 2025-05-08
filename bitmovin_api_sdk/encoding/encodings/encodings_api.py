@@ -19,6 +19,7 @@ from bitmovin_api_sdk.encoding.encodings.customdata.customdata_api import Custom
 from bitmovin_api_sdk.encoding.encodings.streams.streams_api import StreamsApi
 from bitmovin_api_sdk.encoding.encodings.input_streams.input_streams_api import InputStreamsApi
 from bitmovin_api_sdk.encoding.encodings.muxings.muxings_api import MuxingsApi
+from bitmovin_api_sdk.encoding.encodings.template.template_api import TemplateApi
 from bitmovin_api_sdk.encoding.encodings.transfer_retries.transfer_retries_api import TransferRetriesApi
 from bitmovin_api_sdk.encoding.encodings.output_paths.output_paths_api import OutputPathsApi
 from bitmovin_api_sdk.encoding.encodings.captions.captions_api import CaptionsApi
@@ -69,6 +70,13 @@ class EncodingsApi(BaseApi):
         )
 
         self.muxings = MuxingsApi(
+            api_key=api_key,
+            tenant_org_id=tenant_org_id,
+            base_url=base_url,
+            logger=logger
+        )
+
+        self.template = TemplateApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,

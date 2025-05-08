@@ -12,6 +12,7 @@ from bitmovin_api_sdk.models.response_error import ResponseError
 from bitmovin_api_sdk.account.organizations.groups.tenants.tenants_api import TenantsApi
 from bitmovin_api_sdk.account.organizations.groups.invitations.invitations_api import InvitationsApi
 from bitmovin_api_sdk.account.organizations.groups.permissions.permissions_api import PermissionsApi
+from bitmovin_api_sdk.account.organizations.groups.group_list_query_params import GroupListQueryParams
 
 
 class GroupsApi(BaseApi):
@@ -105,12 +106,14 @@ class GroupsApi(BaseApi):
             **kwargs
         )
 
-    def list(self, organization_id, **kwargs):
-        # type: (string_types, dict) -> Group
+    def list(self, organization_id, query_params=None, **kwargs):
+        # type: (string_types, GroupListQueryParams, dict) -> Group
         """List Groups
 
         :param organization_id: Id of the organization
         :type organization_id: string_types, required
+        :param query_params: Query parameters
+        :type query_params: GroupListQueryParams
         :return: Service specific result
         :rtype: Group
         """
@@ -118,6 +121,7 @@ class GroupsApi(BaseApi):
         return self.api_client.get(
             '/account/organizations/{organization_id}/groups',
             path_params={'organization_id': organization_id},
+            query_params=query_params,
             pagination_response=True,
             type=Group,
             **kwargs

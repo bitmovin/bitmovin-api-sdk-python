@@ -332,34 +332,34 @@ bitmovin\_api\_sdk.models.aes\_encryption\_method module
    :undoc-members:
    :show-inheritance:
 
-bitmovin\_api\_sdk.models.ai\_content\_analysis module
-------------------------------------------------------
+bitmovin\_api\_sdk.models.ai\_scene\_analysis module
+----------------------------------------------------
 
-.. automodule:: bitmovin_api_sdk.models.ai_content_analysis
+.. automodule:: bitmovin_api_sdk.models.ai_scene_analysis
    :members:
    :undoc-members:
    :show-inheritance:
 
-bitmovin\_api\_sdk.models.ai\_content\_analysis\_asset\_description module
---------------------------------------------------------------------------
+bitmovin\_api\_sdk.models.ai\_scene\_analysis\_asset\_description module
+------------------------------------------------------------------------
 
-.. automodule:: bitmovin_api_sdk.models.ai_content_analysis_asset_description
+.. automodule:: bitmovin_api_sdk.models.ai_scene_analysis_asset_description
    :members:
    :undoc-members:
    :show-inheritance:
 
-bitmovin\_api\_sdk.models.ai\_content\_analysis\_automatic\_ad\_placement module
---------------------------------------------------------------------------------
+bitmovin\_api\_sdk.models.ai\_scene\_analysis\_automatic\_ad\_placement module
+------------------------------------------------------------------------------
 
-.. automodule:: bitmovin_api_sdk.models.ai_content_analysis_automatic_ad_placement
+.. automodule:: bitmovin_api_sdk.models.ai_scene_analysis_automatic_ad_placement
    :members:
    :undoc-members:
    :show-inheritance:
 
-bitmovin\_api\_sdk.models.ai\_content\_analysis\_features module
-----------------------------------------------------------------
+bitmovin\_api\_sdk.models.ai\_scene\_analysis\_features module
+--------------------------------------------------------------
 
-.. automodule:: bitmovin_api_sdk.models.ai_content_analysis_features
+.. automodule:: bitmovin_api_sdk.models.ai_scene_analysis_features
    :members:
    :undoc-members:
    :show-inheritance:
@@ -2992,6 +2992,14 @@ bitmovin\_api\_sdk.models.encoding\_template\_type module
 ---------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.models.encoding_template_type
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.encoding\_template\_url\_response module
+------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.encoding_template_url_response
    :members:
    :undoc-members:
    :show-inheritance:

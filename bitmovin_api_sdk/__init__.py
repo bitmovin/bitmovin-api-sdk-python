@@ -20,7 +20,7 @@ from bitmovin_api_sdk.account.organizations.tenants.tenants_api import TenantsAp
 from bitmovin_api_sdk.account.organizations.invitations.invitations_api import InvitationsApi
 
 from bitmovin_api_sdk.account.organizations.groups.groups_api import GroupsApi
-
+from bitmovin_api_sdk.account.organizations.groups.groups_api import GroupListQueryParams
 from bitmovin_api_sdk.account.organizations.groups.tenants.tenants_api import TenantsApi
 from bitmovin_api_sdk.account.organizations.groups.tenants.tenants_api import TenantListQueryParams
 from bitmovin_api_sdk.account.organizations.groups.invitations.invitations_api import InvitationsApi
@@ -703,6 +703,8 @@ from bitmovin_api_sdk.encoding.encodings.muxings.mp4.drm.speke.speke_api import 
 from bitmovin_api_sdk.encoding.encodings.muxings.mp4.drm.speke.speke_api import SpekeDrmListQueryParams
 from bitmovin_api_sdk.encoding.encodings.muxings.mp4.drm.speke.customdata.customdata_api import CustomdataApi
 
+from bitmovin_api_sdk.encoding.encodings.template.template_api import TemplateApi
+
 from bitmovin_api_sdk.encoding.encodings.transfer_retries.transfer_retries_api import TransferRetriesApi
 from bitmovin_api_sdk.encoding.encodings.transfer_retries.transfer_retries_api import TransferRetryListQueryParams
 from bitmovin_api_sdk.encoding.encodings.streams.filters.filters_api import FiltersApi
@@ -1101,10 +1103,10 @@ from bitmovin_api_sdk.models.adaptation_set_type_response import AdaptationSetTy
 from bitmovin_api_sdk.models.adaptive_quant_mode import AdaptiveQuantMode
 from bitmovin_api_sdk.models.aes_encryption_drm import AesEncryptionDrm
 from bitmovin_api_sdk.models.aes_encryption_method import AesEncryptionMethod
-from bitmovin_api_sdk.models.ai_content_analysis import AiContentAnalysis
-from bitmovin_api_sdk.models.ai_content_analysis_asset_description import AiContentAnalysisAssetDescription
-from bitmovin_api_sdk.models.ai_content_analysis_automatic_ad_placement import AiContentAnalysisAutomaticAdPlacement
-from bitmovin_api_sdk.models.ai_content_analysis_features import AiContentAnalysisFeatures
+from bitmovin_api_sdk.models.ai_scene_analysis import AiSceneAnalysis
+from bitmovin_api_sdk.models.ai_scene_analysis_asset_description import AiSceneAnalysisAssetDescription
+from bitmovin_api_sdk.models.ai_scene_analysis_automatic_ad_placement import AiSceneAnalysisAutomaticAdPlacement
+from bitmovin_api_sdk.models.ai_scene_analysis_features import AiSceneAnalysisFeatures
 from bitmovin_api_sdk.models.ai_service import AiService
 from bitmovin_api_sdk.models.ai_service_provider import AiServiceProvider
 from bitmovin_api_sdk.models.akamai_account import AkamaiAccount
@@ -1434,6 +1436,7 @@ from bitmovin_api_sdk.models.encoding_template_request import EncodingTemplateRe
 from bitmovin_api_sdk.models.encoding_template_response import EncodingTemplateResponse
 from bitmovin_api_sdk.models.encoding_template_start_response import EncodingTemplateStartResponse
 from bitmovin_api_sdk.models.encoding_template_type import EncodingTemplateType
+from bitmovin_api_sdk.models.encoding_template_url_response import EncodingTemplateUrlResponse
 from bitmovin_api_sdk.models.encoding_type import EncodingType
 from bitmovin_api_sdk.models.encryption_mode import EncryptionMode
 from bitmovin_api_sdk.models.enhanced_deinterlace_auto_enable import EnhancedDeinterlaceAutoEnable
@@ -1902,4 +1905,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.227.0"
+__version__ = "1.228.0"

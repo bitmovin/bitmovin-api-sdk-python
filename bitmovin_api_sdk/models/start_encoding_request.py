@@ -3,7 +3,7 @@
 from enum import Enum
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
-from bitmovin_api_sdk.models.ai_content_analysis import AiContentAnalysis
+from bitmovin_api_sdk.models.ai_scene_analysis import AiSceneAnalysis
 from bitmovin_api_sdk.models.encoding_mode import EncodingMode
 from bitmovin_api_sdk.models.manifest_generator import ManifestGenerator
 from bitmovin_api_sdk.models.per_title import PerTitle
@@ -29,8 +29,8 @@ class StartEncodingRequest(object):
                  vod_smooth_manifests=None,
                  manifest_generator=None,
                  per_title=None,
-                 ai_content_analysis=None):
-        # type: (Trimming, Scheduling, Tweaks, bool, EncodingMode, list[ManifestResource], list[ManifestResource], list[ManifestResource], list[ManifestResource], list[ManifestResource], ManifestGenerator, PerTitle, AiContentAnalysis) -> None
+                 ai_scene_analysis=None):
+        # type: (Trimming, Scheduling, Tweaks, bool, EncodingMode, list[ManifestResource], list[ManifestResource], list[ManifestResource], list[ManifestResource], list[ManifestResource], ManifestGenerator, PerTitle, AiSceneAnalysis) -> None
 
         self._trimming = None
         self._scheduling = None
@@ -44,7 +44,7 @@ class StartEncodingRequest(object):
         self._vod_smooth_manifests = list()
         self._manifest_generator = None
         self._per_title = None
-        self._ai_content_analysis = None
+        self._ai_scene_analysis = None
         self.discriminator = None
 
         if trimming is not None:
@@ -71,8 +71,8 @@ class StartEncodingRequest(object):
             self.manifest_generator = manifest_generator
         if per_title is not None:
             self.per_title = per_title
-        if ai_content_analysis is not None:
-            self.ai_content_analysis = ai_content_analysis
+        if ai_scene_analysis is not None:
+            self.ai_scene_analysis = ai_scene_analysis
 
     @property
     def openapi_types(self):
@@ -89,7 +89,7 @@ class StartEncodingRequest(object):
             'vod_smooth_manifests': 'list[ManifestResource]',
             'manifest_generator': 'ManifestGenerator',
             'per_title': 'PerTitle',
-            'ai_content_analysis': 'AiContentAnalysis'
+            'ai_scene_analysis': 'AiSceneAnalysis'
         }
 
         return types
@@ -109,7 +109,7 @@ class StartEncodingRequest(object):
             'vod_smooth_manifests': 'vodSmoothManifests',
             'manifest_generator': 'manifestGenerator',
             'per_title': 'perTitle',
-            'ai_content_analysis': 'aiContentAnalysis'
+            'ai_scene_analysis': 'aiSceneAnalysis'
         }
         return attributes
 
@@ -462,33 +462,33 @@ class StartEncodingRequest(object):
         self._per_title = per_title
 
     @property
-    def ai_content_analysis(self):
-        # type: () -> AiContentAnalysis
-        """Gets the ai_content_analysis of this StartEncodingRequest.
+    def ai_scene_analysis(self):
+        # type: () -> AiSceneAnalysis
+        """Gets the ai_scene_analysis of this StartEncodingRequest.
 
-        AI content analysis settings
+        AI scene analysis settings
 
-        :return: The ai_content_analysis of this StartEncodingRequest.
-        :rtype: AiContentAnalysis
+        :return: The ai_scene_analysis of this StartEncodingRequest.
+        :rtype: AiSceneAnalysis
         """
-        return self._ai_content_analysis
+        return self._ai_scene_analysis
 
-    @ai_content_analysis.setter
-    def ai_content_analysis(self, ai_content_analysis):
-        # type: (AiContentAnalysis) -> None
-        """Sets the ai_content_analysis of this StartEncodingRequest.
+    @ai_scene_analysis.setter
+    def ai_scene_analysis(self, ai_scene_analysis):
+        # type: (AiSceneAnalysis) -> None
+        """Sets the ai_scene_analysis of this StartEncodingRequest.
 
-        AI content analysis settings
+        AI scene analysis settings
 
-        :param ai_content_analysis: The ai_content_analysis of this StartEncodingRequest.
-        :type: AiContentAnalysis
+        :param ai_scene_analysis: The ai_scene_analysis of this StartEncodingRequest.
+        :type: AiSceneAnalysis
         """
 
-        if ai_content_analysis is not None:
-            if not isinstance(ai_content_analysis, AiContentAnalysis):
-                raise TypeError("Invalid type for `ai_content_analysis`, type has to be `AiContentAnalysis`")
+        if ai_scene_analysis is not None:
+            if not isinstance(ai_scene_analysis, AiSceneAnalysis):
+                raise TypeError("Invalid type for `ai_scene_analysis`, type has to be `AiSceneAnalysis`")
 
-        self._ai_content_analysis = ai_content_analysis
+        self._ai_scene_analysis = ai_scene_analysis
 
     def to_dict(self):
         """Returns the model properties as a dict"""
