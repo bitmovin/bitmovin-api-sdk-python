@@ -83,6 +83,7 @@
 <span class="kn">from</span> <span class="nn">enum</span> <span class="kn">import</span> <span class="n">Enum</span>
 <span class="kn">from</span> <span class="nn">six</span> <span class="kn">import</span> <span class="n">string_types</span><span class="p">,</span> <span class="n">iteritems</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.common.poscheck</span> <span class="kn">import</span> <span class="n">poscheck_model</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.metadata</span> <span class="kn">import</span> <span class="n">Metadata</span>
 <span class="kn">import</span> <span class="nn">pprint</span>
 <span class="kn">import</span> <span class="nn">six</span>
 
@@ -95,8 +96,9 @@
                  <span class="n">keywords</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">ratings</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">sensitive_topics</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                 <span class="n">iab_sensitive_topic_taxonomies</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (list[Scene], string_types, list[string_types], list[Rating], list[string_types], list[string_types]) -&gt; None</span>
+                 <span class="n">iab_sensitive_topic_taxonomies</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">metadata</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="c1"># type: (list[Scene], string_types, list[string_types], list[Rating], list[string_types], list[string_types], Metadata) -&gt; None</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_scenes</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_description</span> <span class="o">=</span> <span class="kc">None</span>
@@ -104,6 +106,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_ratings</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_sensitive_topics</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_iab_sensitive_topic_taxonomies</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_metadata</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>
 
         <span class="k">if</span> <span class="n">scenes</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -118,6 +121,8 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">sensitive_topics</span> <span class="o">=</span> <span class="n">sensitive_topics</span>
         <span class="k">if</span> <span class="n">iab_sensitive_topic_taxonomies</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">iab_sensitive_topic_taxonomies</span> <span class="o">=</span> <span class="n">iab_sensitive_topic_taxonomies</span>
+        <span class="k">if</span> <span class="n">metadata</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">metadata</span> <span class="o">=</span> <span class="n">metadata</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -127,7 +132,8 @@
             <span class="s1">&#39;keywords&#39;</span><span class="p">:</span> <span class="s1">&#39;list[string_types]&#39;</span><span class="p">,</span>
             <span class="s1">&#39;ratings&#39;</span><span class="p">:</span> <span class="s1">&#39;list[Rating]&#39;</span><span class="p">,</span>
             <span class="s1">&#39;sensitive_topics&#39;</span><span class="p">:</span> <span class="s1">&#39;list[string_types]&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;iab_sensitive_topic_taxonomies&#39;</span><span class="p">:</span> <span class="s1">&#39;list[string_types]&#39;</span>
+            <span class="s1">&#39;iab_sensitive_topic_taxonomies&#39;</span><span class="p">:</span> <span class="s1">&#39;list[string_types]&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;metadata&#39;</span><span class="p">:</span> <span class="s1">&#39;Metadata&#39;</span>
         <span class="p">}</span>
 
         <span class="k">return</span> <span class="n">types</span>
@@ -140,7 +146,8 @@
             <span class="s1">&#39;keywords&#39;</span><span class="p">:</span> <span class="s1">&#39;keywords&#39;</span><span class="p">,</span>
             <span class="s1">&#39;ratings&#39;</span><span class="p">:</span> <span class="s1">&#39;ratings&#39;</span><span class="p">,</span>
             <span class="s1">&#39;sensitive_topics&#39;</span><span class="p">:</span> <span class="s1">&#39;sensitiveTopics&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;iab_sensitive_topic_taxonomies&#39;</span><span class="p">:</span> <span class="s1">&#39;iabSensitiveTopicTaxonomies&#39;</span>
+            <span class="s1">&#39;iab_sensitive_topic_taxonomies&#39;</span><span class="p">:</span> <span class="s1">&#39;iabSensitiveTopicTaxonomies&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;metadata&#39;</span><span class="p">:</span> <span class="s1">&#39;metadata&#39;</span>
         <span class="p">}</span>
         <span class="k">return</span> <span class="n">attributes</span>
 
@@ -305,6 +312,33 @@
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `iab_sensitive_topic_taxonomies`, type has to be `list[string_types]`&quot;</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_iab_sensitive_topic_taxonomies</span> <span class="o">=</span> <span class="n">iab_sensitive_topic_taxonomies</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">metadata</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; Metadata</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the metadata of this SceneAnalysisDetailsResponse.</span>
+
+
+<span class="sd">        :return: The metadata of this SceneAnalysisDetailsResponse.</span>
+<span class="sd">        :rtype: Metadata</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_metadata</span>
+
+    <span class="nd">@metadata</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">metadata</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">metadata</span><span class="p">):</span>
+        <span class="c1"># type: (Metadata) -&gt; None</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the metadata of this SceneAnalysisDetailsResponse.</span>
+
+
+<span class="sd">        :param metadata: The metadata of this SceneAnalysisDetailsResponse.</span>
+<span class="sd">        :type: Metadata</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">metadata</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">metadata</span><span class="p">,</span> <span class="n">Metadata</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `metadata`, type has to be `Metadata`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_metadata</span> <span class="o">=</span> <span class="n">metadata</span>
 
 <div class="viewcode-block" id="SceneAnalysisDetailsResponse.to_dict"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.scene_analysis_details_response.SceneAnalysisDetailsResponse.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>

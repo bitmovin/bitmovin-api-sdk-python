@@ -4252,6 +4252,14 @@ bitmovin\_api\_sdk.models.message\_type module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.metadata module
+-----------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.metadata
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.min\_coding\_unit\_size module
 --------------------------------------------------------
 

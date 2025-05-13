@@ -92,6 +92,7 @@
 <div class="viewcode-block" id="Scene"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.scene.Scene">[docs]</a><span class="k">class</span> <span class="nc">Scene</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="nd">@poscheck_model</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                 <span class="n">title</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">start_in_seconds</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">end_in_seconds</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">id_</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
@@ -100,8 +101,9 @@
                  <span class="n">sensitive_topics</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">keywords</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">iab</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (float, float, string_types, Content, string_types, list[string_types], list[string_types], IABTaxonomy) -&gt; None</span>
+        <span class="c1"># type: (string_types, float, float, string_types, Content, string_types, list[string_types], list[string_types], IABTaxonomy) -&gt; None</span>
 
+        <span class="bp">self</span><span class="o">.</span><span class="n">_title</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_start_in_seconds</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_end_in_seconds</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_id</span> <span class="o">=</span> <span class="kc">None</span>
@@ -112,6 +114,8 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_iab</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>
 
+        <span class="k">if</span> <span class="n">title</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">title</span> <span class="o">=</span> <span class="n">title</span>
         <span class="k">if</span> <span class="n">start_in_seconds</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">start_in_seconds</span> <span class="o">=</span> <span class="n">start_in_seconds</span>
         <span class="k">if</span> <span class="n">end_in_seconds</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -132,6 +136,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">types</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
             <span class="s1">&#39;start_in_seconds&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span><span class="p">,</span>
             <span class="s1">&#39;end_in_seconds&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span><span class="p">,</span>
             <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
@@ -147,6 +152,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">attribute_map</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">attributes</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="s1">&#39;title&#39;</span><span class="p">,</span>
             <span class="s1">&#39;start_in_seconds&#39;</span><span class="p">:</span> <span class="s1">&#39;startInSeconds&#39;</span><span class="p">,</span>
             <span class="s1">&#39;end_in_seconds&#39;</span><span class="p">:</span> <span class="s1">&#39;endInSeconds&#39;</span><span class="p">,</span>
             <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="s1">&#39;id&#39;</span><span class="p">,</span>
@@ -157,6 +163,33 @@
             <span class="s1">&#39;iab&#39;</span><span class="p">:</span> <span class="s1">&#39;iab&#39;</span>
         <span class="p">}</span>
         <span class="k">return</span> <span class="n">attributes</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">title</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; string_types</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the title of this Scene.</span>
+
+
+<span class="sd">        :return: The title of this Scene.</span>
+<span class="sd">        :rtype: string_types</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_title</span>
+
+    <span class="nd">@title</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">title</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">title</span><span class="p">):</span>
+        <span class="c1"># type: (string_types) -&gt; None</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the title of this Scene.</span>
+
+
+<span class="sd">        :param title: The title of this Scene.</span>
+<span class="sd">        :type: string_types</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">title</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">title</span><span class="p">,</span> <span class="n">string_types</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `title`, type has to be `string_types`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_title</span> <span class="o">=</span> <span class="n">title</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">start_in_seconds</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>

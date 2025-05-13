@@ -12,6 +12,7 @@ import six
 class Scene(object):
     @poscheck_model
     def __init__(self,
+                 title=None,
                  start_in_seconds=None,
                  end_in_seconds=None,
                  id_=None,
@@ -20,8 +21,9 @@ class Scene(object):
                  sensitive_topics=None,
                  keywords=None,
                  iab=None):
-        # type: (float, float, string_types, Content, string_types, list[string_types], list[string_types], IABTaxonomy) -> None
+        # type: (string_types, float, float, string_types, Content, string_types, list[string_types], list[string_types], IABTaxonomy) -> None
 
+        self._title = None
         self._start_in_seconds = None
         self._end_in_seconds = None
         self._id = None
@@ -32,6 +34,8 @@ class Scene(object):
         self._iab = None
         self.discriminator = None
 
+        if title is not None:
+            self.title = title
         if start_in_seconds is not None:
             self.start_in_seconds = start_in_seconds
         if end_in_seconds is not None:
@@ -52,6 +56,7 @@ class Scene(object):
     @property
     def openapi_types(self):
         types = {
+            'title': 'string_types',
             'start_in_seconds': 'float',
             'end_in_seconds': 'float',
             'id': 'string_types',
@@ -67,6 +72,7 @@ class Scene(object):
     @property
     def attribute_map(self):
         attributes = {
+            'title': 'title',
             'start_in_seconds': 'startInSeconds',
             'end_in_seconds': 'endInSeconds',
             'id': 'id',
@@ -77,6 +83,33 @@ class Scene(object):
             'iab': 'iab'
         }
         return attributes
+
+    @property
+    def title(self):
+        # type: () -> string_types
+        """Gets the title of this Scene.
+
+
+        :return: The title of this Scene.
+        :rtype: string_types
+        """
+        return self._title
+
+    @title.setter
+    def title(self, title):
+        # type: (string_types) -> None
+        """Sets the title of this Scene.
+
+
+        :param title: The title of this Scene.
+        :type: string_types
+        """
+
+        if title is not None:
+            if not isinstance(title, string_types):
+                raise TypeError("Invalid type for `title`, type has to be `string_types`")
+
+        self._title = title
 
     @property
     def start_in_seconds(self):

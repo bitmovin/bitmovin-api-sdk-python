@@ -534,6 +534,7 @@ from bitmovin_api_sdk.models.media_stream import MediaStream
 from bitmovin_api_sdk.models.media_type import MediaType
 from bitmovin_api_sdk.models.message import Message
 from bitmovin_api_sdk.models.message_type import MessageType
+from bitmovin_api_sdk.models.metadata import Metadata
 from bitmovin_api_sdk.models.min_coding_unit_size import MinCodingUnitSize
 from bitmovin_api_sdk.models.mjpeg_video_configuration import MjpegVideoConfiguration
 from bitmovin_api_sdk.models.motion_search import MotionSearch

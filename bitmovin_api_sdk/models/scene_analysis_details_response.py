@@ -3,6 +3,7 @@
 from enum import Enum
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
+from bitmovin_api_sdk.models.metadata import Metadata
 import pprint
 import six
 
@@ -15,8 +16,9 @@ class SceneAnalysisDetailsResponse(object):
                  keywords=None,
                  ratings=None,
                  sensitive_topics=None,
-                 iab_sensitive_topic_taxonomies=None):
-        # type: (list[Scene], string_types, list[string_types], list[Rating], list[string_types], list[string_types]) -> None
+                 iab_sensitive_topic_taxonomies=None,
+                 metadata=None):
+        # type: (list[Scene], string_types, list[string_types], list[Rating], list[string_types], list[string_types], Metadata) -> None
 
         self._scenes = list()
         self._description = None
@@ -24,6 +26,7 @@ class SceneAnalysisDetailsResponse(object):
         self._ratings = list()
         self._sensitive_topics = list()
         self._iab_sensitive_topic_taxonomies = list()
+        self._metadata = None
         self.discriminator = None
 
         if scenes is not None:
@@ -38,6 +41,8 @@ class SceneAnalysisDetailsResponse(object):
             self.sensitive_topics = sensitive_topics
         if iab_sensitive_topic_taxonomies is not None:
             self.iab_sensitive_topic_taxonomies = iab_sensitive_topic_taxonomies
+        if metadata is not None:
+            self.metadata = metadata
 
     @property
     def openapi_types(self):
@@ -47,7 +52,8 @@ class SceneAnalysisDetailsResponse(object):
             'keywords': 'list[string_types]',
             'ratings': 'list[Rating]',
             'sensitive_topics': 'list[string_types]',
-            'iab_sensitive_topic_taxonomies': 'list[string_types]'
+            'iab_sensitive_topic_taxonomies': 'list[string_types]',
+            'metadata': 'Metadata'
         }
 
         return types
@@ -60,7 +66,8 @@ class SceneAnalysisDetailsResponse(object):
             'keywords': 'keywords',
             'ratings': 'ratings',
             'sensitive_topics': 'sensitiveTopics',
-            'iab_sensitive_topic_taxonomies': 'iabSensitiveTopicTaxonomies'
+            'iab_sensitive_topic_taxonomies': 'iabSensitiveTopicTaxonomies',
+            'metadata': 'metadata'
         }
         return attributes
 
@@ -225,6 +232,33 @@ class SceneAnalysisDetailsResponse(object):
                 raise TypeError("Invalid type for `iab_sensitive_topic_taxonomies`, type has to be `list[string_types]`")
 
         self._iab_sensitive_topic_taxonomies = iab_sensitive_topic_taxonomies
+
+    @property
+    def metadata(self):
+        # type: () -> Metadata
+        """Gets the metadata of this SceneAnalysisDetailsResponse.
+
+
+        :return: The metadata of this SceneAnalysisDetailsResponse.
+        :rtype: Metadata
+        """
+        return self._metadata
+
+    @metadata.setter
+    def metadata(self, metadata):
+        # type: (Metadata) -> None
+        """Sets the metadata of this SceneAnalysisDetailsResponse.
+
+
+        :param metadata: The metadata of this SceneAnalysisDetailsResponse.
+        :type: Metadata
+        """
+
+        if metadata is not None:
+            if not isinstance(metadata, Metadata):
+                raise TypeError("Invalid type for `metadata`, type has to be `Metadata`")
+
+        self._metadata = metadata
 
     def to_dict(self):
         """Returns the model properties as a dict"""
