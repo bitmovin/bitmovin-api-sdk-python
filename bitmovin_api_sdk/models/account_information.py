@@ -27,8 +27,9 @@ class AccountInformation(BitmovinResource):
                  verified=None,
                  marketplace=None,
                  mfa_enabled=None,
-                 intercom_id_verification=None):
-        # type: (string_types, string_types, string_types, datetime, datetime, dict, string_types, list[AccountApiKey], string_types, string_types, string_types, string_types, bool, Marketplace, bool, string_types) -> None
+                 intercom_id_verification=None,
+                 saml_domain=None):
+        # type: (string_types, string_types, string_types, datetime, datetime, dict, string_types, list[AccountApiKey], string_types, string_types, string_types, string_types, bool, Marketplace, bool, string_types, string_types) -> None
         super(AccountInformation, self).__init__(id_=id_, name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data)
 
         self._email = None
@@ -41,6 +42,7 @@ class AccountInformation(BitmovinResource):
         self._marketplace = None
         self._mfa_enabled = None
         self._intercom_id_verification = None
+        self._saml_domain = None
         self.discriminator = None
 
         if email is not None:
@@ -63,6 +65,8 @@ class AccountInformation(BitmovinResource):
             self.mfa_enabled = mfa_enabled
         if intercom_id_verification is not None:
             self.intercom_id_verification = intercom_id_verification
+        if saml_domain is not None:
+            self.saml_domain = saml_domain
 
     @property
     def openapi_types(self):
@@ -81,7 +85,8 @@ class AccountInformation(BitmovinResource):
             'verified': 'bool',
             'marketplace': 'Marketplace',
             'mfa_enabled': 'bool',
-            'intercom_id_verification': 'string_types'
+            'intercom_id_verification': 'string_types',
+            'saml_domain': 'string_types'
         })
 
         return types
@@ -103,7 +108,8 @@ class AccountInformation(BitmovinResource):
             'verified': 'verified',
             'marketplace': 'marketplace',
             'mfa_enabled': 'mfaEnabled',
-            'intercom_id_verification': 'intercomIdVerification'
+            'intercom_id_verification': 'intercomIdVerification',
+            'saml_domain': 'samlDomain'
         })
         return attributes
 
@@ -388,6 +394,35 @@ class AccountInformation(BitmovinResource):
                 raise TypeError("Invalid type for `intercom_id_verification`, type has to be `string_types`")
 
         self._intercom_id_verification = intercom_id_verification
+
+    @property
+    def saml_domain(self):
+        # type: () -> string_types
+        """Gets the saml_domain of this AccountInformation.
+
+        The Saml Domain of this Account
+
+        :return: The saml_domain of this AccountInformation.
+        :rtype: string_types
+        """
+        return self._saml_domain
+
+    @saml_domain.setter
+    def saml_domain(self, saml_domain):
+        # type: (string_types) -> None
+        """Sets the saml_domain of this AccountInformation.
+
+        The Saml Domain of this Account
+
+        :param saml_domain: The saml_domain of this AccountInformation.
+        :type: string_types
+        """
+
+        if saml_domain is not None:
+            if not isinstance(saml_domain, string_types):
+                raise TypeError("Invalid type for `saml_domain`, type has to be `string_types`")
+
+        self._saml_domain = saml_domain
 
     def to_dict(self):
         """Returns the model properties as a dict"""

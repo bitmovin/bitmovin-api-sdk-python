@@ -98,7 +98,7 @@ class TemplatesApi(BaseApi):
 
     def start(self, encoding_template_request, **kwargs):
         # type: (object, dict) -> EncodingTemplateStartResponse
-        """BETA: Start an Encoding defined with an Encoding Template
+        """Start an Encoding defined with an Encoding Template
 
         :param encoding_template_request: The Encoding Template to start an Encoding from
         :type encoding_template_request: EncodingTemplateRequest, required
