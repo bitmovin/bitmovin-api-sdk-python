@@ -24,8 +24,9 @@ class Organization(BitmovinResource):
                  label_color=None,
                  limits_per_resource=None,
                  signup_source=None,
-                 mfa_required=None):
-        # type: (string_types, string_types, string_types, datetime, datetime, dict, OrganizationType, string_types, string_types, list[ResourceLimitContainer], SignupSource, bool) -> None
+                 mfa_required=None,
+                 owner_user_id=None):
+        # type: (string_types, string_types, string_types, datetime, datetime, dict, OrganizationType, string_types, string_types, list[ResourceLimitContainer], SignupSource, bool, string_types) -> None
         super(Organization, self).__init__(id_=id_, name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data)
 
         self._type = None
@@ -34,6 +35,7 @@ class Organization(BitmovinResource):
         self._limits_per_resource = list()
         self._signup_source = None
         self._mfa_required = None
+        self._owner_user_id = None
         self.discriminator = None
 
         if type_ is not None:
@@ -48,6 +50,8 @@ class Organization(BitmovinResource):
             self.signup_source = signup_source
         if mfa_required is not None:
             self.mfa_required = mfa_required
+        if owner_user_id is not None:
+            self.owner_user_id = owner_user_id
 
     @property
     def openapi_types(self):
@@ -62,7 +66,8 @@ class Organization(BitmovinResource):
             'label_color': 'string_types',
             'limits_per_resource': 'list[ResourceLimitContainer]',
             'signup_source': 'SignupSource',
-            'mfa_required': 'bool'
+            'mfa_required': 'bool',
+            'owner_user_id': 'string_types'
         })
 
         return types
@@ -80,7 +85,8 @@ class Organization(BitmovinResource):
             'label_color': 'labelColor',
             'limits_per_resource': 'limitsPerResource',
             'signup_source': 'signupSource',
-            'mfa_required': 'mfaRequired'
+            'mfa_required': 'mfaRequired',
+            'owner_user_id': 'ownerUserId'
         })
         return attributes
 
@@ -255,6 +261,35 @@ class Organization(BitmovinResource):
                 raise TypeError("Invalid type for `mfa_required`, type has to be `bool`")
 
         self._mfa_required = mfa_required
+
+    @property
+    def owner_user_id(self):
+        # type: () -> string_types
+        """Gets the owner_user_id of this Organization.
+
+        ID of the user who owns the organization
+
+        :return: The owner_user_id of this Organization.
+        :rtype: string_types
+        """
+        return self._owner_user_id
+
+    @owner_user_id.setter
+    def owner_user_id(self, owner_user_id):
+        # type: (string_types) -> None
+        """Sets the owner_user_id of this Organization.
+
+        ID of the user who owns the organization
+
+        :param owner_user_id: The owner_user_id of this Organization.
+        :type: string_types
+        """
+
+        if owner_user_id is not None:
+            if not isinstance(owner_user_id, string_types):
+                raise TypeError("Invalid type for `owner_user_id`, type has to be `string_types`")
+
+        self._owner_user_id = owner_user_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""
