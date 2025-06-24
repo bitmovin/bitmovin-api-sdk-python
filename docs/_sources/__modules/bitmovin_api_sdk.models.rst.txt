@@ -3444,6 +3444,14 @@ bitmovin\_api\_sdk.models.he\_aac\_v2\_signaling module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.hls\_input module
+-------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.hls_input
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.hls\_manifest module
 ----------------------------------------------
 

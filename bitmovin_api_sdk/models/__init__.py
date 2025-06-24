@@ -433,6 +433,7 @@ from bitmovin_api_sdk.models.he_aac_v1_audio_configuration import HeAacV1AudioCo
 from bitmovin_api_sdk.models.he_aac_v1_signaling import HeAacV1Signaling
 from bitmovin_api_sdk.models.he_aac_v2_audio_configuration import HeAacV2AudioConfiguration
 from bitmovin_api_sdk.models.he_aac_v2_signaling import HeAacV2Signaling
+from bitmovin_api_sdk.models.hls_input import HlsInput
 from bitmovin_api_sdk.models.hls_manifest import HlsManifest
 from bitmovin_api_sdk.models.hls_manifest_ad_marker_settings import HlsManifestAdMarkerSettings
 from bitmovin_api_sdk.models.hls_manifest_ad_marker_type import HlsManifestAdMarkerType

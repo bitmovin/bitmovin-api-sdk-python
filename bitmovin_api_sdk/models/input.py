@@ -19,6 +19,7 @@ class Input(BitmovinResource):
         'GCS': 'GcsInput',
         'HTTP': 'HttpInput',
         'HTTPS': 'HttpsInput',
+        'HLS': 'HlsInput',
         'LOCAL': 'LocalInput',
         'RTMP': 'RtmpInput',
         'S3': 'S3Input',

@@ -11,6 +11,7 @@ class InputType(Enum):
     AZURE = "AZURE"
     REDUNDANT_RTMP = "REDUNDANT_RTMP"
     FTP = "FTP"
+    HLS = "HLS"
     GENERIC_S3 = "GENERIC_S3"
     GCS = "GCS"
     HTTP = "HTTP"
