@@ -51,7 +51,7 @@ class AutomaticAdPlacementPosition(object):
         # type: () -> float
         """Gets the position of this AutomaticAdPlacementPosition.
 
-        Position of the ad placement in seconds.
+        Position of the ad placement in seconds. (required)
 
         :return: The position of this AutomaticAdPlacementPosition.
         :rtype: float
@@ -63,7 +63,7 @@ class AutomaticAdPlacementPosition(object):
         # type: (float) -> None
         """Sets the position of this AutomaticAdPlacementPosition.
 
-        Position of the ad placement in seconds.
+        Position of the ad placement in seconds. (required)
 
         :param position: The position of this AutomaticAdPlacementPosition.
         :type: float
@@ -80,7 +80,7 @@ class AutomaticAdPlacementPosition(object):
         # type: () -> float
         """Gets the max_deviation of this AutomaticAdPlacementPosition.
 
-        Maximum deviation in seconds to the ad placement position.
+        Maximum deviation in seconds to the ad placement position. (required)
 
         :return: The max_deviation of this AutomaticAdPlacementPosition.
         :rtype: float
@@ -92,7 +92,7 @@ class AutomaticAdPlacementPosition(object):
         # type: (float) -> None
         """Sets the max_deviation of this AutomaticAdPlacementPosition.
 
-        Maximum deviation in seconds to the ad placement position.
+        Maximum deviation in seconds to the ad placement position. (required)
 
         :param max_deviation: The max_deviation of this AutomaticAdPlacementPosition.
         :type: float

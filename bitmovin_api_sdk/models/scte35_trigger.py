@@ -12,17 +12,13 @@ class Scte35Trigger(BitmovinResponse):
     @poscheck_model
     def __init__(self,
                  id_=None,
-                 time=None,
                  base64_encoded_metadata=None):
-        # type: (string_types, float, string_types) -> None
+        # type: (string_types, string_types) -> None
         super(Scte35Trigger, self).__init__(id_=id_)
 
-        self._time = None
         self._base64_encoded_metadata = None
         self.discriminator = None
 
-        if time is not None:
-            self.time = time
         if base64_encoded_metadata is not None:
             self.base64_encoded_metadata = base64_encoded_metadata
 
@@ -34,7 +30,6 @@ class Scte35Trigger(BitmovinResponse):
             types = getattr(super(Scte35Trigger, self), 'openapi_types')
 
         types.update({
-            'time': 'float',
             'base64_encoded_metadata': 'string_types'
         })
 
@@ -48,39 +43,9 @@ class Scte35Trigger(BitmovinResponse):
             attributes = getattr(super(Scte35Trigger, self), 'attribute_map')
 
         attributes.update({
-            'time': 'time',
             'base64_encoded_metadata': 'base64EncodedMetadata'
         })
         return attributes
-
-    @property
-    def time(self):
-        # type: () -> float
-        """Gets the time of this Scte35Trigger.
-
-        Time in seconds where the SCTE 35 trigger should be inserted (required)
-
-        :return: The time of this Scte35Trigger.
-        :rtype: float
-        """
-        return self._time
-
-    @time.setter
-    def time(self, time):
-        # type: (float) -> None
-        """Sets the time of this Scte35Trigger.
-
-        Time in seconds where the SCTE 35 trigger should be inserted (required)
-
-        :param time: The time of this Scte35Trigger.
-        :type: float
-        """
-
-        if time is not None:
-            if not isinstance(time, (float, int)):
-                raise TypeError("Invalid type for `time`, type has to be `float`")
-
-        self._time = time
 
     @property
     def base64_encoded_metadata(self):

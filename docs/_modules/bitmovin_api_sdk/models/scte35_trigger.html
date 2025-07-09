@@ -92,17 +92,13 @@
     <span class="nd">@poscheck_model</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
                  <span class="n">id_</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                 <span class="n">time</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">base64_encoded_metadata</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (string_types, float, string_types) -&gt; None</span>
+        <span class="c1"># type: (string_types, string_types) -&gt; None</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">Scte35Trigger</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">id_</span><span class="o">=</span><span class="n">id_</span><span class="p">)</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">_time</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_base64_encoded_metadata</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>
 
-        <span class="k">if</span> <span class="n">time</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">time</span> <span class="o">=</span> <span class="n">time</span>
         <span class="k">if</span> <span class="n">base64_encoded_metadata</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">base64_encoded_metadata</span> <span class="o">=</span> <span class="n">base64_encoded_metadata</span>
 
@@ -114,7 +110,6 @@
             <span class="n">types</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="nb">super</span><span class="p">(</span><span class="n">Scte35Trigger</span><span class="p">,</span> <span class="bp">self</span><span class="p">),</span> <span class="s1">&#39;openapi_types&#39;</span><span class="p">)</span>
 
         <span class="n">types</span><span class="o">.</span><span class="n">update</span><span class="p">({</span>
-            <span class="s1">&#39;time&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span><span class="p">,</span>
             <span class="s1">&#39;base64_encoded_metadata&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span>
         <span class="p">})</span>
 
@@ -128,39 +123,9 @@
             <span class="n">attributes</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="nb">super</span><span class="p">(</span><span class="n">Scte35Trigger</span><span class="p">,</span> <span class="bp">self</span><span class="p">),</span> <span class="s1">&#39;attribute_map&#39;</span><span class="p">)</span>
 
         <span class="n">attributes</span><span class="o">.</span><span class="n">update</span><span class="p">({</span>
-            <span class="s1">&#39;time&#39;</span><span class="p">:</span> <span class="s1">&#39;time&#39;</span><span class="p">,</span>
             <span class="s1">&#39;base64_encoded_metadata&#39;</span><span class="p">:</span> <span class="s1">&#39;base64EncodedMetadata&#39;</span>
         <span class="p">})</span>
         <span class="k">return</span> <span class="n">attributes</span>
-
-    <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">time</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="c1"># type: () -&gt; float</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the time of this Scte35Trigger.</span>
-
-<span class="sd">        Time in seconds where the SCTE 35 trigger should be inserted (required)</span>
-
-<span class="sd">        :return: The time of this Scte35Trigger.</span>
-<span class="sd">        :rtype: float</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_time</span>
-
-    <span class="nd">@time</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">time</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">time</span><span class="p">):</span>
-        <span class="c1"># type: (float) -&gt; None</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the time of this Scte35Trigger.</span>
-
-<span class="sd">        Time in seconds where the SCTE 35 trigger should be inserted (required)</span>
-
-<span class="sd">        :param time: The time of this Scte35Trigger.</span>
-<span class="sd">        :type: float</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-
-        <span class="k">if</span> <span class="n">time</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="p">(</span><span class="nb">float</span><span class="p">,</span> <span class="nb">int</span><span class="p">)):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `time`, type has to be `float`&quot;</span><span class="p">)</span>
-
-        <span class="bp">self</span><span class="o">.</span><span class="n">_time</span> <span class="o">=</span> <span class="n">time</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">base64_encoded_metadata</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
