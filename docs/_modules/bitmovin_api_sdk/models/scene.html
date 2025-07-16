@@ -98,10 +98,11 @@
                  <span class="n">id_</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">content</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">summary</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">verbose_summary</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">sensitive_topics</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">keywords</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">iab</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (string_types, float, float, string_types, Content, string_types, list[string_types], list[string_types], IABTaxonomy) -&gt; None</span>
+        <span class="c1"># type: (string_types, float, float, string_types, Content, string_types, string_types, list[string_types], list[string_types], IABTaxonomy) -&gt; None</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_title</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_start_in_seconds</span> <span class="o">=</span> <span class="kc">None</span>
@@ -109,6 +110,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_id</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_content</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_summary</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_verbose_summary</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_sensitive_topics</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_keywords</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_iab</span> <span class="o">=</span> <span class="kc">None</span>
@@ -126,6 +128,8 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">content</span> <span class="o">=</span> <span class="n">content</span>
         <span class="k">if</span> <span class="n">summary</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">summary</span> <span class="o">=</span> <span class="n">summary</span>
+        <span class="k">if</span> <span class="n">verbose_summary</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">verbose_summary</span> <span class="o">=</span> <span class="n">verbose_summary</span>
         <span class="k">if</span> <span class="n">sensitive_topics</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">sensitive_topics</span> <span class="o">=</span> <span class="n">sensitive_topics</span>
         <span class="k">if</span> <span class="n">keywords</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -142,6 +146,7 @@
             <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
             <span class="s1">&#39;content&#39;</span><span class="p">:</span> <span class="s1">&#39;Content&#39;</span><span class="p">,</span>
             <span class="s1">&#39;summary&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;verbose_summary&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
             <span class="s1">&#39;sensitive_topics&#39;</span><span class="p">:</span> <span class="s1">&#39;list[string_types]&#39;</span><span class="p">,</span>
             <span class="s1">&#39;keywords&#39;</span><span class="p">:</span> <span class="s1">&#39;list[string_types]&#39;</span><span class="p">,</span>
             <span class="s1">&#39;iab&#39;</span><span class="p">:</span> <span class="s1">&#39;IABTaxonomy&#39;</span>
@@ -158,6 +163,7 @@
             <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="s1">&#39;id&#39;</span><span class="p">,</span>
             <span class="s1">&#39;content&#39;</span><span class="p">:</span> <span class="s1">&#39;content&#39;</span><span class="p">,</span>
             <span class="s1">&#39;summary&#39;</span><span class="p">:</span> <span class="s1">&#39;summary&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;verbose_summary&#39;</span><span class="p">:</span> <span class="s1">&#39;verboseSummary&#39;</span><span class="p">,</span>
             <span class="s1">&#39;sensitive_topics&#39;</span><span class="p">:</span> <span class="s1">&#39;sensitiveTopics&#39;</span><span class="p">,</span>
             <span class="s1">&#39;keywords&#39;</span><span class="p">:</span> <span class="s1">&#39;keywords&#39;</span><span class="p">,</span>
             <span class="s1">&#39;iab&#39;</span><span class="p">:</span> <span class="s1">&#39;iab&#39;</span>
@@ -325,6 +331,33 @@
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `summary`, type has to be `string_types`&quot;</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_summary</span> <span class="o">=</span> <span class="n">summary</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">verbose_summary</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; string_types</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the verbose_summary of this Scene.</span>
+
+
+<span class="sd">        :return: The verbose_summary of this Scene.</span>
+<span class="sd">        :rtype: string_types</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_verbose_summary</span>
+
+    <span class="nd">@verbose_summary</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">verbose_summary</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">verbose_summary</span><span class="p">):</span>
+        <span class="c1"># type: (string_types) -&gt; None</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the verbose_summary of this Scene.</span>
+
+
+<span class="sd">        :param verbose_summary: The verbose_summary of this Scene.</span>
+<span class="sd">        :type: string_types</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">verbose_summary</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">verbose_summary</span><span class="p">,</span> <span class="n">string_types</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `verbose_summary`, type has to be `string_types`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_verbose_summary</span> <span class="o">=</span> <span class="n">verbose_summary</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">sensitive_topics</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>

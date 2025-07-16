@@ -84,6 +84,7 @@
 <span class="kn">from</span> <span class="nn">six</span> <span class="kn">import</span> <span class="n">string_types</span><span class="p">,</span> <span class="n">iteritems</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.common.poscheck</span> <span class="kn">import</span> <span class="n">poscheck_model</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.availability_start_time_mode</span> <span class="kn">import</span> <span class="n">AvailabilityStartTimeMode</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.dash_manifest_ad_marker_settings</span> <span class="kn">import</span> <span class="n">DashManifestAdMarkerSettings</span>
 <span class="kn">import</span> <span class="nn">pprint</span>
 <span class="kn">import</span> <span class="nn">six</span>
 
@@ -96,8 +97,9 @@
                  <span class="n">live_edge_offset</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">suggested_presentation_delay</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">minimum_update_period</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                 <span class="n">availability_start_time_mode</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (string_types, float, float, float, float, AvailabilityStartTimeMode) -&gt; None</span>
+                 <span class="n">availability_start_time_mode</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">ad_marker_settings</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="c1"># type: (string_types, float, float, float, float, AvailabilityStartTimeMode, DashManifestAdMarkerSettings) -&gt; None</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_manifest_id</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_timeshift</span> <span class="o">=</span> <span class="kc">None</span>
@@ -105,6 +107,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_suggested_presentation_delay</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_minimum_update_period</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_availability_start_time_mode</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_ad_marker_settings</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>
 
         <span class="k">if</span> <span class="n">manifest_id</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -119,6 +122,8 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">minimum_update_period</span> <span class="o">=</span> <span class="n">minimum_update_period</span>
         <span class="k">if</span> <span class="n">availability_start_time_mode</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">availability_start_time_mode</span> <span class="o">=</span> <span class="n">availability_start_time_mode</span>
+        <span class="k">if</span> <span class="n">ad_marker_settings</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">ad_marker_settings</span> <span class="o">=</span> <span class="n">ad_marker_settings</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -128,7 +133,8 @@
             <span class="s1">&#39;live_edge_offset&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span><span class="p">,</span>
             <span class="s1">&#39;suggested_presentation_delay&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span><span class="p">,</span>
             <span class="s1">&#39;minimum_update_period&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;availability_start_time_mode&#39;</span><span class="p">:</span> <span class="s1">&#39;AvailabilityStartTimeMode&#39;</span>
+            <span class="s1">&#39;availability_start_time_mode&#39;</span><span class="p">:</span> <span class="s1">&#39;AvailabilityStartTimeMode&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;ad_marker_settings&#39;</span><span class="p">:</span> <span class="s1">&#39;DashManifestAdMarkerSettings&#39;</span>
         <span class="p">}</span>
 
         <span class="k">return</span> <span class="n">types</span>
@@ -141,7 +147,8 @@
             <span class="s1">&#39;live_edge_offset&#39;</span><span class="p">:</span> <span class="s1">&#39;liveEdgeOffset&#39;</span><span class="p">,</span>
             <span class="s1">&#39;suggested_presentation_delay&#39;</span><span class="p">:</span> <span class="s1">&#39;suggestedPresentationDelay&#39;</span><span class="p">,</span>
             <span class="s1">&#39;minimum_update_period&#39;</span><span class="p">:</span> <span class="s1">&#39;minimumUpdatePeriod&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;availability_start_time_mode&#39;</span><span class="p">:</span> <span class="s1">&#39;availabilityStartTimeMode&#39;</span>
+            <span class="s1">&#39;availability_start_time_mode&#39;</span><span class="p">:</span> <span class="s1">&#39;availabilityStartTimeMode&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;ad_marker_settings&#39;</span><span class="p">:</span> <span class="s1">&#39;adMarkerSettings&#39;</span>
         <span class="p">}</span>
         <span class="k">return</span> <span class="n">attributes</span>
 
@@ -318,6 +325,33 @@
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `availability_start_time_mode`, type has to be `AvailabilityStartTimeMode`&quot;</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_availability_start_time_mode</span> <span class="o">=</span> <span class="n">availability_start_time_mode</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">ad_marker_settings</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; DashManifestAdMarkerSettings</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the ad_marker_settings of this LiveDashManifest.</span>
+
+
+<span class="sd">        :return: The ad_marker_settings of this LiveDashManifest.</span>
+<span class="sd">        :rtype: DashManifestAdMarkerSettings</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_ad_marker_settings</span>
+
+    <span class="nd">@ad_marker_settings</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">ad_marker_settings</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ad_marker_settings</span><span class="p">):</span>
+        <span class="c1"># type: (DashManifestAdMarkerSettings) -&gt; None</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the ad_marker_settings of this LiveDashManifest.</span>
+
+
+<span class="sd">        :param ad_marker_settings: The ad_marker_settings of this LiveDashManifest.</span>
+<span class="sd">        :type: DashManifestAdMarkerSettings</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">ad_marker_settings</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">ad_marker_settings</span><span class="p">,</span> <span class="n">DashManifestAdMarkerSettings</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `ad_marker_settings`, type has to be `DashManifestAdMarkerSettings`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_ad_marker_settings</span> <span class="o">=</span> <span class="n">ad_marker_settings</span>
 
 <div class="viewcode-block" id="LiveDashManifest.to_dict"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.live_dash_manifest.LiveDashManifest.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>

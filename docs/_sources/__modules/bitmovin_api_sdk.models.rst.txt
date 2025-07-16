@@ -2036,6 +2036,14 @@ bitmovin\_api\_sdk.models.dash\_manifest module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.dash\_manifest\_ad\_marker\_settings module
+---------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.dash_manifest_ad_marker_settings
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.dash\_manifest\_default module
 --------------------------------------------------------
 
@@ -2136,6 +2144,22 @@ bitmovin\_api\_sdk.models.dash\_representation\_type\_response module
 ---------------------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.models.dash_representation_type_response
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.dash\_scte35\_event\_stream\_signalling module
+------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.dash_scte35_event_stream_signalling
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.dash\_scte35\_period\_option module
+-------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.dash_scte35_period_option
    :members:
    :undoc-members:
    :show-inheritance:

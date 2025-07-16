@@ -4,6 +4,7 @@ from enum import Enum
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
 from bitmovin_api_sdk.models.availability_start_time_mode import AvailabilityStartTimeMode
+from bitmovin_api_sdk.models.dash_manifest_ad_marker_settings import DashManifestAdMarkerSettings
 import pprint
 import six
 
@@ -16,8 +17,9 @@ class LiveDashManifest(object):
                  live_edge_offset=None,
                  suggested_presentation_delay=None,
                  minimum_update_period=None,
-                 availability_start_time_mode=None):
-        # type: (string_types, float, float, float, float, AvailabilityStartTimeMode) -> None
+                 availability_start_time_mode=None,
+                 ad_marker_settings=None):
+        # type: (string_types, float, float, float, float, AvailabilityStartTimeMode, DashManifestAdMarkerSettings) -> None
 
         self._manifest_id = None
         self._timeshift = None
@@ -25,6 +27,7 @@ class LiveDashManifest(object):
         self._suggested_presentation_delay = None
         self._minimum_update_period = None
         self._availability_start_time_mode = None
+        self._ad_marker_settings = None
         self.discriminator = None
 
         if manifest_id is not None:
@@ -39,6 +42,8 @@ class LiveDashManifest(object):
             self.minimum_update_period = minimum_update_period
         if availability_start_time_mode is not None:
             self.availability_start_time_mode = availability_start_time_mode
+        if ad_marker_settings is not None:
+            self.ad_marker_settings = ad_marker_settings
 
     @property
     def openapi_types(self):
@@ -48,7 +53,8 @@ class LiveDashManifest(object):
             'live_edge_offset': 'float',
             'suggested_presentation_delay': 'float',
             'minimum_update_period': 'float',
-            'availability_start_time_mode': 'AvailabilityStartTimeMode'
+            'availability_start_time_mode': 'AvailabilityStartTimeMode',
+            'ad_marker_settings': 'DashManifestAdMarkerSettings'
         }
 
         return types
@@ -61,7 +67,8 @@ class LiveDashManifest(object):
             'live_edge_offset': 'liveEdgeOffset',
             'suggested_presentation_delay': 'suggestedPresentationDelay',
             'minimum_update_period': 'minimumUpdatePeriod',
-            'availability_start_time_mode': 'availabilityStartTimeMode'
+            'availability_start_time_mode': 'availabilityStartTimeMode',
+            'ad_marker_settings': 'adMarkerSettings'
         }
         return attributes
 
@@ -238,6 +245,33 @@ class LiveDashManifest(object):
                 raise TypeError("Invalid type for `availability_start_time_mode`, type has to be `AvailabilityStartTimeMode`")
 
         self._availability_start_time_mode = availability_start_time_mode
+
+    @property
+    def ad_marker_settings(self):
+        # type: () -> DashManifestAdMarkerSettings
+        """Gets the ad_marker_settings of this LiveDashManifest.
+
+
+        :return: The ad_marker_settings of this LiveDashManifest.
+        :rtype: DashManifestAdMarkerSettings
+        """
+        return self._ad_marker_settings
+
+    @ad_marker_settings.setter
+    def ad_marker_settings(self, ad_marker_settings):
+        # type: (DashManifestAdMarkerSettings) -> None
+        """Sets the ad_marker_settings of this LiveDashManifest.
+
+
+        :param ad_marker_settings: The ad_marker_settings of this LiveDashManifest.
+        :type: DashManifestAdMarkerSettings
+        """
+
+        if ad_marker_settings is not None:
+            if not isinstance(ad_marker_settings, DashManifestAdMarkerSettings):
+                raise TypeError("Invalid type for `ad_marker_settings`, type has to be `DashManifestAdMarkerSettings`")
+
+        self._ad_marker_settings = ad_marker_settings
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -10,6 +10,7 @@ from bitmovin_api_sdk.encoding.inputs.gcs.gcs_api import GcsApi
 from bitmovin_api_sdk.encoding.inputs.gcs_service_account.gcs_service_account_api import GcsServiceAccountApi
 from bitmovin_api_sdk.encoding.inputs.azure.azure_api import AzureApi
 from bitmovin_api_sdk.encoding.inputs.ftp.ftp_api import FtpApi
+from bitmovin_api_sdk.encoding.inputs.hls.hls_api import HlsApi
 from bitmovin_api_sdk.encoding.inputs.sftp.sftp_api import SftpApi
 from bitmovin_api_sdk.encoding.inputs.http.http_api import HttpApi
 from bitmovin_api_sdk.encoding.inputs.https.https_api import HttpsApi

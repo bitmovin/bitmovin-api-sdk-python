@@ -161,6 +161,8 @@ from bitmovin_api_sdk.encoding.inputs.ftp.ftp_api import FtpApi
 from bitmovin_api_sdk.encoding.inputs.ftp.ftp_api import FtpInputListQueryParams
 from bitmovin_api_sdk.encoding.inputs.ftp.customdata.customdata_api import CustomdataApi
 
+from bitmovin_api_sdk.encoding.inputs.hls.hls_api import HlsApi
+from bitmovin_api_sdk.encoding.inputs.hls.hls_api import HlsInputListQueryParams
 from bitmovin_api_sdk.encoding.inputs.sftp.sftp_api import SftpApi
 from bitmovin_api_sdk.encoding.inputs.sftp.sftp_api import SftpInputListQueryParams
 from bitmovin_api_sdk.encoding.inputs.sftp.customdata.customdata_api import CustomdataApi
@@ -1316,6 +1318,7 @@ from bitmovin_api_sdk.models.dash_fmp4_representation import DashFmp4Representat
 from bitmovin_api_sdk.models.dash_iso8601_timestamp_format import DashISO8601TimestampFormat
 from bitmovin_api_sdk.models.dash_imsc_representation import DashImscRepresentation
 from bitmovin_api_sdk.models.dash_manifest import DashManifest
+from bitmovin_api_sdk.models.dash_manifest_ad_marker_settings import DashManifestAdMarkerSettings
 from bitmovin_api_sdk.models.dash_manifest_default import DashManifestDefault
 from bitmovin_api_sdk.models.dash_manifest_default_version import DashManifestDefaultVersion
 from bitmovin_api_sdk.models.dash_mp4_drm_representation import DashMp4DrmRepresentation
@@ -1329,6 +1332,8 @@ from bitmovin_api_sdk.models.dash_representation_type import DashRepresentationT
 from bitmovin_api_sdk.models.dash_representation_type_discriminator import DashRepresentationTypeDiscriminator
 from bitmovin_api_sdk.models.dash_representation_type_mode import DashRepresentationTypeMode
 from bitmovin_api_sdk.models.dash_representation_type_response import DashRepresentationTypeResponse
+from bitmovin_api_sdk.models.dash_scte35_event_stream_signalling import DashScte35EventStreamSignalling
+from bitmovin_api_sdk.models.dash_scte35_period_option import DashScte35PeriodOption
 from bitmovin_api_sdk.models.dash_segmented_representation import DashSegmentedRepresentation
 from bitmovin_api_sdk.models.dash_vtt_representation import DashVttRepresentation
 from bitmovin_api_sdk.models.dash_webm_representation import DashWebmRepresentation
@@ -1907,4 +1912,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.234.4"
+__version__ = "1.235.0"

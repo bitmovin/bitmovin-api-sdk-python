@@ -99,13 +99,17 @@
                  <span class="n">custom_data</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">access_key</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">secret_key</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                 <span class="n">account_number</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (string_types, string_types, string_types, datetime, datetime, dict, string_types, string_types, string_types) -&gt; None</span>
+                 <span class="n">account_number</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">role_name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">external_id</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="c1"># type: (string_types, string_types, string_types, datetime, datetime, dict, string_types, string_types, string_types, string_types, string_types) -&gt; None</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">AwsAccount</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">id_</span><span class="o">=</span><span class="n">id_</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="n">description</span><span class="p">,</span> <span class="n">created_at</span><span class="o">=</span><span class="n">created_at</span><span class="p">,</span> <span class="n">modified_at</span><span class="o">=</span><span class="n">modified_at</span><span class="p">,</span> <span class="n">custom_data</span><span class="o">=</span><span class="n">custom_data</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_access_key</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_secret_key</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_account_number</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_role_name</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_external_id</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>
 
         <span class="k">if</span> <span class="n">access_key</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -114,6 +118,10 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">secret_key</span> <span class="o">=</span> <span class="n">secret_key</span>
         <span class="k">if</span> <span class="n">account_number</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">account_number</span> <span class="o">=</span> <span class="n">account_number</span>
+        <span class="k">if</span> <span class="n">role_name</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">role_name</span> <span class="o">=</span> <span class="n">role_name</span>
+        <span class="k">if</span> <span class="n">external_id</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">external_id</span> <span class="o">=</span> <span class="n">external_id</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -125,7 +133,9 @@
         <span class="n">types</span><span class="o">.</span><span class="n">update</span><span class="p">({</span>
             <span class="s1">&#39;access_key&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
             <span class="s1">&#39;secret_key&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;account_number&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span>
+            <span class="s1">&#39;account_number&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;role_name&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;external_id&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span>
         <span class="p">})</span>
 
         <span class="k">return</span> <span class="n">types</span>
@@ -140,7 +150,9 @@
         <span class="n">attributes</span><span class="o">.</span><span class="n">update</span><span class="p">({</span>
             <span class="s1">&#39;access_key&#39;</span><span class="p">:</span> <span class="s1">&#39;accessKey&#39;</span><span class="p">,</span>
             <span class="s1">&#39;secret_key&#39;</span><span class="p">:</span> <span class="s1">&#39;secretKey&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;account_number&#39;</span><span class="p">:</span> <span class="s1">&#39;accountNumber&#39;</span>
+            <span class="s1">&#39;account_number&#39;</span><span class="p">:</span> <span class="s1">&#39;accountNumber&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;role_name&#39;</span><span class="p">:</span> <span class="s1">&#39;roleName&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;external_id&#39;</span><span class="p">:</span> <span class="s1">&#39;externalId&#39;</span>
         <span class="p">})</span>
         <span class="k">return</span> <span class="n">attributes</span>
 
@@ -149,7 +161,7 @@
         <span class="c1"># type: () -&gt; string_types</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the access_key of this AwsAccount.</span>
 
-<span class="sd">        Amazon access key (required)</span>
+<span class="sd">        Deprecated: Amazon access key for legacy support. Use roleName instead</span>
 
 <span class="sd">        :return: The access_key of this AwsAccount.</span>
 <span class="sd">        :rtype: string_types</span>
@@ -161,7 +173,7 @@
         <span class="c1"># type: (string_types) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the access_key of this AwsAccount.</span>
 
-<span class="sd">        Amazon access key (required)</span>
+<span class="sd">        Deprecated: Amazon access key for legacy support. Use roleName instead</span>
 
 <span class="sd">        :param access_key: The access_key of this AwsAccount.</span>
 <span class="sd">        :type: string_types</span>
@@ -178,7 +190,7 @@
         <span class="c1"># type: () -&gt; string_types</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the secret_key of this AwsAccount.</span>
 
-<span class="sd">        Amazon secret key (required)</span>
+<span class="sd">        Deprecated: Amazon secret key for legacy support. Use roleName instead</span>
 
 <span class="sd">        :return: The secret_key of this AwsAccount.</span>
 <span class="sd">        :rtype: string_types</span>
@@ -190,7 +202,7 @@
         <span class="c1"># type: (string_types) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the secret_key of this AwsAccount.</span>
 
-<span class="sd">        Amazon secret key (required)</span>
+<span class="sd">        Deprecated: Amazon secret key for legacy support. Use roleName instead</span>
 
 <span class="sd">        :param secret_key: The secret_key of this AwsAccount.</span>
 <span class="sd">        :type: string_types</span>
@@ -230,6 +242,64 @@
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `account_number`, type has to be `string_types`&quot;</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_account_number</span> <span class="o">=</span> <span class="n">account_number</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">role_name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; string_types</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the role_name of this AwsAccount.</span>
+
+<span class="sd">        Role name including path for the AWS IAM role that will be used by Bitmovin to access the AWS account depicted by accountNumber. The role ARN is constructed based on accountNumber and roleName: arn:aws:iam::{accountNumber}:role/{roleName}</span>
+
+<span class="sd">        :return: The role_name of this AwsAccount.</span>
+<span class="sd">        :rtype: string_types</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_role_name</span>
+
+    <span class="nd">@role_name</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">role_name</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">role_name</span><span class="p">):</span>
+        <span class="c1"># type: (string_types) -&gt; None</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the role_name of this AwsAccount.</span>
+
+<span class="sd">        Role name including path for the AWS IAM role that will be used by Bitmovin to access the AWS account depicted by accountNumber. The role ARN is constructed based on accountNumber and roleName: arn:aws:iam::{accountNumber}:role/{roleName}</span>
+
+<span class="sd">        :param role_name: The role_name of this AwsAccount.</span>
+<span class="sd">        :type: string_types</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">role_name</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">role_name</span><span class="p">,</span> <span class="n">string_types</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `role_name`, type has to be `string_types`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_role_name</span> <span class="o">=</span> <span class="n">role_name</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">external_id</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; string_types</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the external_id of this AwsAccount.</span>
+
+<span class="sd">        External ID that needs to be set in the trust policy of the AWS IAM role (depicted by roleName) that allows Bitmovin access to the AWS account depicted by accountNumber</span>
+
+<span class="sd">        :return: The external_id of this AwsAccount.</span>
+<span class="sd">        :rtype: string_types</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_external_id</span>
+
+    <span class="nd">@external_id</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">external_id</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">external_id</span><span class="p">):</span>
+        <span class="c1"># type: (string_types) -&gt; None</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the external_id of this AwsAccount.</span>
+
+<span class="sd">        External ID that needs to be set in the trust policy of the AWS IAM role (depicted by roleName) that allows Bitmovin access to the AWS account depicted by accountNumber</span>
+
+<span class="sd">        :param external_id: The external_id of this AwsAccount.</span>
+<span class="sd">        :type: string_types</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">external_id</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">external_id</span><span class="p">,</span> <span class="n">string_types</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `external_id`, type has to be `string_types`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_external_id</span> <span class="o">=</span> <span class="n">external_id</span>
 
 <div class="viewcode-block" id="AwsAccount.to_dict"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.aws_account.AwsAccount.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>

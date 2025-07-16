@@ -19,13 +19,17 @@ class AwsAccount(BitmovinResource):
                  custom_data=None,
                  access_key=None,
                  secret_key=None,
-                 account_number=None):
-        # type: (string_types, string_types, string_types, datetime, datetime, dict, string_types, string_types, string_types) -> None
+                 account_number=None,
+                 role_name=None,
+                 external_id=None):
+        # type: (string_types, string_types, string_types, datetime, datetime, dict, string_types, string_types, string_types, string_types, string_types) -> None
         super(AwsAccount, self).__init__(id_=id_, name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data)
 
         self._access_key = None
         self._secret_key = None
         self._account_number = None
+        self._role_name = None
+        self._external_id = None
         self.discriminator = None
 
         if access_key is not None:
@@ -34,6 +38,10 @@ class AwsAccount(BitmovinResource):
             self.secret_key = secret_key
         if account_number is not None:
             self.account_number = account_number
+        if role_name is not None:
+            self.role_name = role_name
+        if external_id is not None:
+            self.external_id = external_id
 
     @property
     def openapi_types(self):
@@ -45,7 +53,9 @@ class AwsAccount(BitmovinResource):
         types.update({
             'access_key': 'string_types',
             'secret_key': 'string_types',
-            'account_number': 'string_types'
+            'account_number': 'string_types',
+            'role_name': 'string_types',
+            'external_id': 'string_types'
         })
 
         return types
@@ -60,7 +70,9 @@ class AwsAccount(BitmovinResource):
         attributes.update({
             'access_key': 'accessKey',
             'secret_key': 'secretKey',
-            'account_number': 'accountNumber'
+            'account_number': 'accountNumber',
+            'role_name': 'roleName',
+            'external_id': 'externalId'
         })
         return attributes
 
@@ -69,7 +81,7 @@ class AwsAccount(BitmovinResource):
         # type: () -> string_types
         """Gets the access_key of this AwsAccount.
 
-        Amazon access key (required)
+        Deprecated: Amazon access key for legacy support. Use roleName instead
 
         :return: The access_key of this AwsAccount.
         :rtype: string_types
@@ -81,7 +93,7 @@ class AwsAccount(BitmovinResource):
         # type: (string_types) -> None
         """Sets the access_key of this AwsAccount.
 
-        Amazon access key (required)
+        Deprecated: Amazon access key for legacy support. Use roleName instead
 
         :param access_key: The access_key of this AwsAccount.
         :type: string_types
@@ -98,7 +110,7 @@ class AwsAccount(BitmovinResource):
         # type: () -> string_types
         """Gets the secret_key of this AwsAccount.
 
-        Amazon secret key (required)
+        Deprecated: Amazon secret key for legacy support. Use roleName instead
 
         :return: The secret_key of this AwsAccount.
         :rtype: string_types
@@ -110,7 +122,7 @@ class AwsAccount(BitmovinResource):
         # type: (string_types) -> None
         """Sets the secret_key of this AwsAccount.
 
-        Amazon secret key (required)
+        Deprecated: Amazon secret key for legacy support. Use roleName instead
 
         :param secret_key: The secret_key of this AwsAccount.
         :type: string_types
@@ -150,6 +162,64 @@ class AwsAccount(BitmovinResource):
                 raise TypeError("Invalid type for `account_number`, type has to be `string_types`")
 
         self._account_number = account_number
+
+    @property
+    def role_name(self):
+        # type: () -> string_types
+        """Gets the role_name of this AwsAccount.
+
+        Role name including path for the AWS IAM role that will be used by Bitmovin to access the AWS account depicted by accountNumber. The role ARN is constructed based on accountNumber and roleName: arn:aws:iam::{accountNumber}:role/{roleName}
+
+        :return: The role_name of this AwsAccount.
+        :rtype: string_types
+        """
+        return self._role_name
+
+    @role_name.setter
+    def role_name(self, role_name):
+        # type: (string_types) -> None
+        """Sets the role_name of this AwsAccount.
+
+        Role name including path for the AWS IAM role that will be used by Bitmovin to access the AWS account depicted by accountNumber. The role ARN is constructed based on accountNumber and roleName: arn:aws:iam::{accountNumber}:role/{roleName}
+
+        :param role_name: The role_name of this AwsAccount.
+        :type: string_types
+        """
+
+        if role_name is not None:
+            if not isinstance(role_name, string_types):
+                raise TypeError("Invalid type for `role_name`, type has to be `string_types`")
+
+        self._role_name = role_name
+
+    @property
+    def external_id(self):
+        # type: () -> string_types
+        """Gets the external_id of this AwsAccount.
+
+        External ID that needs to be set in the trust policy of the AWS IAM role (depicted by roleName) that allows Bitmovin access to the AWS account depicted by accountNumber
+
+        :return: The external_id of this AwsAccount.
+        :rtype: string_types
+        """
+        return self._external_id
+
+    @external_id.setter
+    def external_id(self, external_id):
+        # type: (string_types) -> None
+        """Sets the external_id of this AwsAccount.
+
+        External ID that needs to be set in the trust policy of the AWS IAM role (depicted by roleName) that allows Bitmovin access to the AWS account depicted by accountNumber
+
+        :param external_id: The external_id of this AwsAccount.
+        :type: string_types
+        """
+
+        if external_id is not None:
+            if not isinstance(external_id, string_types):
+                raise TypeError("Invalid type for `external_id`, type has to be `string_types`")
+
+        self._external_id = external_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

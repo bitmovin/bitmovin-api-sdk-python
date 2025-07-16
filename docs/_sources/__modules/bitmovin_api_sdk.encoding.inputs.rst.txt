@@ -15,6 +15,7 @@ Subpackages
    bitmovin_api_sdk.encoding.inputs.gcs
    bitmovin_api_sdk.encoding.inputs.gcs_service_account
    bitmovin_api_sdk.encoding.inputs.generic_s3
+   bitmovin_api_sdk.encoding.inputs.hls
    bitmovin_api_sdk.encoding.inputs.http
    bitmovin_api_sdk.encoding.inputs.https
    bitmovin_api_sdk.encoding.inputs.local

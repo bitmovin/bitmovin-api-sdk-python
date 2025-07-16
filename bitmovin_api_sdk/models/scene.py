@@ -18,10 +18,11 @@ class Scene(object):
                  id_=None,
                  content=None,
                  summary=None,
+                 verbose_summary=None,
                  sensitive_topics=None,
                  keywords=None,
                  iab=None):
-        # type: (string_types, float, float, string_types, Content, string_types, list[string_types], list[string_types], IABTaxonomy) -> None
+        # type: (string_types, float, float, string_types, Content, string_types, string_types, list[string_types], list[string_types], IABTaxonomy) -> None
 
         self._title = None
         self._start_in_seconds = None
@@ -29,6 +30,7 @@ class Scene(object):
         self._id = None
         self._content = None
         self._summary = None
+        self._verbose_summary = None
         self._sensitive_topics = list()
         self._keywords = list()
         self._iab = None
@@ -46,6 +48,8 @@ class Scene(object):
             self.content = content
         if summary is not None:
             self.summary = summary
+        if verbose_summary is not None:
+            self.verbose_summary = verbose_summary
         if sensitive_topics is not None:
             self.sensitive_topics = sensitive_topics
         if keywords is not None:
@@ -62,6 +66,7 @@ class Scene(object):
             'id': 'string_types',
             'content': 'Content',
             'summary': 'string_types',
+            'verbose_summary': 'string_types',
             'sensitive_topics': 'list[string_types]',
             'keywords': 'list[string_types]',
             'iab': 'IABTaxonomy'
@@ -78,6 +83,7 @@ class Scene(object):
             'id': 'id',
             'content': 'content',
             'summary': 'summary',
+            'verbose_summary': 'verboseSummary',
             'sensitive_topics': 'sensitiveTopics',
             'keywords': 'keywords',
             'iab': 'iab'
@@ -245,6 +251,33 @@ class Scene(object):
                 raise TypeError("Invalid type for `summary`, type has to be `string_types`")
 
         self._summary = summary
+
+    @property
+    def verbose_summary(self):
+        # type: () -> string_types
+        """Gets the verbose_summary of this Scene.
+
+
+        :return: The verbose_summary of this Scene.
+        :rtype: string_types
+        """
+        return self._verbose_summary
+
+    @verbose_summary.setter
+    def verbose_summary(self, verbose_summary):
+        # type: (string_types) -> None
+        """Sets the verbose_summary of this Scene.
+
+
+        :param verbose_summary: The verbose_summary of this Scene.
+        :type: string_types
+        """
+
+        if verbose_summary is not None:
+            if not isinstance(verbose_summary, string_types):
+                raise TypeError("Invalid type for `verbose_summary`, type has to be `string_types`")
+
+        self._verbose_summary = verbose_summary
 
     @property
     def sensitive_topics(self):
