@@ -10,19 +10,24 @@ import six
 class HlsManifestAdMarkerSettings(object):
     @poscheck_model
     def __init__(self,
-                 enabled_marker_types=None):
-        # type: (list[HlsManifestAdMarkerType]) -> None
+                 enabled_marker_types=None,
+                 disable_preannouncing=None):
+        # type: (list[HlsManifestAdMarkerType], bool) -> None
 
         self._enabled_marker_types = list()
+        self._disable_preannouncing = None
         self.discriminator = None
 
         if enabled_marker_types is not None:
             self.enabled_marker_types = enabled_marker_types
+        if disable_preannouncing is not None:
+            self.disable_preannouncing = disable_preannouncing
 
     @property
     def openapi_types(self):
         types = {
-            'enabled_marker_types': 'list[HlsManifestAdMarkerType]'
+            'enabled_marker_types': 'list[HlsManifestAdMarkerType]',
+            'disable_preannouncing': 'bool'
         }
 
         return types
@@ -30,7 +35,8 @@ class HlsManifestAdMarkerSettings(object):
     @property
     def attribute_map(self):
         attributes = {
-            'enabled_marker_types': 'enabledMarkerTypes'
+            'enabled_marker_types': 'enabledMarkerTypes',
+            'disable_preannouncing': 'disablePreannouncing'
         }
         return attributes
 
@@ -62,6 +68,35 @@ class HlsManifestAdMarkerSettings(object):
                 raise TypeError("Invalid type for `enabled_marker_types`, type has to be `list[HlsManifestAdMarkerType]`")
 
         self._enabled_marker_types = enabled_marker_types
+
+    @property
+    def disable_preannouncing(self):
+        # type: () -> bool
+        """Gets the disable_preannouncing of this HlsManifestAdMarkerSettings.
+
+        Certain tags, such as EXT_X_DATERANGE, may be preannounced in the HLS manifest. This means they are inserted as early as possible, before the actual ad break begins or ends. Preannouncing helps clients anticipate upcoming splice points, but may cause compatibility issues with some downstream consumers (e.g., AWS MediaTailor SSAI). When this setting is enabled, preannouncing of tags is disabled, and tags are inserted at the segment corresponding to the event's splice time. 
+
+        :return: The disable_preannouncing of this HlsManifestAdMarkerSettings.
+        :rtype: bool
+        """
+        return self._disable_preannouncing
+
+    @disable_preannouncing.setter
+    def disable_preannouncing(self, disable_preannouncing):
+        # type: (bool) -> None
+        """Sets the disable_preannouncing of this HlsManifestAdMarkerSettings.
+
+        Certain tags, such as EXT_X_DATERANGE, may be preannounced in the HLS manifest. This means they are inserted as early as possible, before the actual ad break begins or ends. Preannouncing helps clients anticipate upcoming splice points, but may cause compatibility issues with some downstream consumers (e.g., AWS MediaTailor SSAI). When this setting is enabled, preannouncing of tags is disabled, and tags are inserted at the segment corresponding to the event's splice time. 
+
+        :param disable_preannouncing: The disable_preannouncing of this HlsManifestAdMarkerSettings.
+        :type: bool
+        """
+
+        if disable_preannouncing is not None:
+            if not isinstance(disable_preannouncing, bool):
+                raise TypeError("Invalid type for `disable_preannouncing`, type has to be `bool`")
+
+        self._disable_preannouncing = disable_preannouncing
 
     def to_dict(self):
         """Returns the model properties as a dict"""

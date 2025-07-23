@@ -90,19 +90,24 @@
 <div class="viewcode-block" id="HlsManifestAdMarkerSettings"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.hls_manifest_ad_marker_settings.HlsManifestAdMarkerSettings">[docs]</a><span class="k">class</span> <span class="nc">HlsManifestAdMarkerSettings</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="nd">@poscheck_model</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
-                 <span class="n">enabled_marker_types</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (list[HlsManifestAdMarkerType]) -&gt; None</span>
+                 <span class="n">enabled_marker_types</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">disable_preannouncing</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="c1"># type: (list[HlsManifestAdMarkerType], bool) -&gt; None</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_enabled_marker_types</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_disable_preannouncing</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>
 
         <span class="k">if</span> <span class="n">enabled_marker_types</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">enabled_marker_types</span> <span class="o">=</span> <span class="n">enabled_marker_types</span>
+        <span class="k">if</span> <span class="n">disable_preannouncing</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">disable_preannouncing</span> <span class="o">=</span> <span class="n">disable_preannouncing</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">types</span> <span class="o">=</span> <span class="p">{</span>
-            <span class="s1">&#39;enabled_marker_types&#39;</span><span class="p">:</span> <span class="s1">&#39;list[HlsManifestAdMarkerType]&#39;</span>
+            <span class="s1">&#39;enabled_marker_types&#39;</span><span class="p">:</span> <span class="s1">&#39;list[HlsManifestAdMarkerType]&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;disable_preannouncing&#39;</span><span class="p">:</span> <span class="s1">&#39;bool&#39;</span>
         <span class="p">}</span>
 
         <span class="k">return</span> <span class="n">types</span>
@@ -110,7 +115,8 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">attribute_map</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">attributes</span> <span class="o">=</span> <span class="p">{</span>
-            <span class="s1">&#39;enabled_marker_types&#39;</span><span class="p">:</span> <span class="s1">&#39;enabledMarkerTypes&#39;</span>
+            <span class="s1">&#39;enabled_marker_types&#39;</span><span class="p">:</span> <span class="s1">&#39;enabledMarkerTypes&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;disable_preannouncing&#39;</span><span class="p">:</span> <span class="s1">&#39;disablePreannouncing&#39;</span>
         <span class="p">}</span>
         <span class="k">return</span> <span class="n">attributes</span>
 
@@ -142,6 +148,35 @@
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `enabled_marker_types`, type has to be `list[HlsManifestAdMarkerType]`&quot;</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_enabled_marker_types</span> <span class="o">=</span> <span class="n">enabled_marker_types</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">disable_preannouncing</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; bool</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the disable_preannouncing of this HlsManifestAdMarkerSettings.</span>
+
+<span class="sd">        Certain tags, such as EXT_X_DATERANGE, may be preannounced in the HLS manifest. This means they are inserted as early as possible, before the actual ad break begins or ends. Preannouncing helps clients anticipate upcoming splice points, but may cause compatibility issues with some downstream consumers (e.g., AWS MediaTailor SSAI). When this setting is enabled, preannouncing of tags is disabled, and tags are inserted at the segment corresponding to the event&#39;s splice time. </span>
+
+<span class="sd">        :return: The disable_preannouncing of this HlsManifestAdMarkerSettings.</span>
+<span class="sd">        :rtype: bool</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_disable_preannouncing</span>
+
+    <span class="nd">@disable_preannouncing</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">disable_preannouncing</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">disable_preannouncing</span><span class="p">):</span>
+        <span class="c1"># type: (bool) -&gt; None</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the disable_preannouncing of this HlsManifestAdMarkerSettings.</span>
+
+<span class="sd">        Certain tags, such as EXT_X_DATERANGE, may be preannounced in the HLS manifest. This means they are inserted as early as possible, before the actual ad break begins or ends. Preannouncing helps clients anticipate upcoming splice points, but may cause compatibility issues with some downstream consumers (e.g., AWS MediaTailor SSAI). When this setting is enabled, preannouncing of tags is disabled, and tags are inserted at the segment corresponding to the event&#39;s splice time. </span>
+
+<span class="sd">        :param disable_preannouncing: The disable_preannouncing of this HlsManifestAdMarkerSettings.</span>
+<span class="sd">        :type: bool</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">disable_preannouncing</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">disable_preannouncing</span><span class="p">,</span> <span class="nb">bool</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `disable_preannouncing`, type has to be `bool`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_disable_preannouncing</span> <span class="o">=</span> <span class="n">disable_preannouncing</span>
 
 <div class="viewcode-block" id="HlsManifestAdMarkerSettings.to_dict"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.hls_manifest_ad_marker_settings.HlsManifestAdMarkerSettings.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>

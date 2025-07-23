@@ -161,7 +161,7 @@
         <span class="c1"># type: () -&gt; string_types</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the access_key of this AwsAccount.</span>
 
-<span class="sd">        Deprecated: Amazon access key for legacy support. Use roleName instead</span>
+<span class="sd">        Deprecated: Amazon access key for legacy support. Use `roleName` instead</span>
 
 <span class="sd">        :return: The access_key of this AwsAccount.</span>
 <span class="sd">        :rtype: string_types</span>
@@ -173,7 +173,7 @@
         <span class="c1"># type: (string_types) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the access_key of this AwsAccount.</span>
 
-<span class="sd">        Deprecated: Amazon access key for legacy support. Use roleName instead</span>
+<span class="sd">        Deprecated: Amazon access key for legacy support. Use `roleName` instead</span>
 
 <span class="sd">        :param access_key: The access_key of this AwsAccount.</span>
 <span class="sd">        :type: string_types</span>
@@ -190,7 +190,7 @@
         <span class="c1"># type: () -&gt; string_types</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the secret_key of this AwsAccount.</span>
 
-<span class="sd">        Deprecated: Amazon secret key for legacy support. Use roleName instead</span>
+<span class="sd">        Deprecated: Amazon secret key for legacy support. Use `roleName` instead</span>
 
 <span class="sd">        :return: The secret_key of this AwsAccount.</span>
 <span class="sd">        :rtype: string_types</span>
@@ -202,7 +202,7 @@
         <span class="c1"># type: (string_types) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the secret_key of this AwsAccount.</span>
 
-<span class="sd">        Deprecated: Amazon secret key for legacy support. Use roleName instead</span>
+<span class="sd">        Deprecated: Amazon secret key for legacy support. Use `roleName` instead</span>
 
 <span class="sd">        :param secret_key: The secret_key of this AwsAccount.</span>
 <span class="sd">        :type: string_types</span>
@@ -248,7 +248,7 @@
         <span class="c1"># type: () -&gt; string_types</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the role_name of this AwsAccount.</span>
 
-<span class="sd">        Role name including path for the AWS IAM role that will be used by Bitmovin to access the AWS account depicted by accountNumber. The role ARN is constructed based on accountNumber and roleName: arn:aws:iam::{accountNumber}:role/{roleName}</span>
+<span class="sd">        Role name including path for the AWS IAM role that will be used by Bitmovin to access the AWS account depicted by `accountNumber`. The role ARN is constructed based on `accountNumber` and `roleName`: `arn:aws:iam::{accountNumber}:role/{roleName}`.  For details on how to create the AWS IAM role in your account, please refer to the [AWS cloud connect setup guide](https://developer.bitmovin.com/encoding/docs/using-bitmovin-cloud-connect-with-aws). </span>
 
 <span class="sd">        :return: The role_name of this AwsAccount.</span>
 <span class="sd">        :rtype: string_types</span>
@@ -260,7 +260,7 @@
         <span class="c1"># type: (string_types) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the role_name of this AwsAccount.</span>
 
-<span class="sd">        Role name including path for the AWS IAM role that will be used by Bitmovin to access the AWS account depicted by accountNumber. The role ARN is constructed based on accountNumber and roleName: arn:aws:iam::{accountNumber}:role/{roleName}</span>
+<span class="sd">        Role name including path for the AWS IAM role that will be used by Bitmovin to access the AWS account depicted by `accountNumber`. The role ARN is constructed based on `accountNumber` and `roleName`: `arn:aws:iam::{accountNumber}:role/{roleName}`.  For details on how to create the AWS IAM role in your account, please refer to the [AWS cloud connect setup guide](https://developer.bitmovin.com/encoding/docs/using-bitmovin-cloud-connect-with-aws). </span>
 
 <span class="sd">        :param role_name: The role_name of this AwsAccount.</span>
 <span class="sd">        :type: string_types</span>
@@ -277,7 +277,7 @@
         <span class="c1"># type: () -&gt; string_types</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the external_id of this AwsAccount.</span>
 
-<span class="sd">        External ID that needs to be set in the trust policy of the AWS IAM role (depicted by roleName) that allows Bitmovin access to the AWS account depicted by accountNumber</span>
+<span class="sd">        External ID that needs to be set in the trust policy of the AWS IAM role (depicted by `roleName`) that allows Bitmovin access to the AWS account depicted by `accountNumber`</span>
 
 <span class="sd">        :return: The external_id of this AwsAccount.</span>
 <span class="sd">        :rtype: string_types</span>
@@ -289,7 +289,7 @@
         <span class="c1"># type: (string_types) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the external_id of this AwsAccount.</span>
 
-<span class="sd">        External ID that needs to be set in the trust policy of the AWS IAM role (depicted by roleName) that allows Bitmovin access to the AWS account depicted by accountNumber</span>
+<span class="sd">        External ID that needs to be set in the trust policy of the AWS IAM role (depicted by `roleName`) that allows Bitmovin access to the AWS account depicted by `accountNumber`</span>
 
 <span class="sd">        :param external_id: The external_id of this AwsAccount.</span>
 <span class="sd">        :type: string_types</span>

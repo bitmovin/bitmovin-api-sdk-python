@@ -27,6 +27,7 @@ class Fmp4Muxing(Muxing):
                  ignored_by=None,
                  stream_conditions_mode=None,
                  segment_length=None,
+                 minimum_segment_length=None,
                  segment_naming=None,
                  segment_naming_template=None,
                  init_segment_name=None,
@@ -35,10 +36,11 @@ class Fmp4Muxing(Muxing):
                  signal_scte35_as_emsg=None,
                  segments_muxed=None,
                  pts_align_mode=None):
-        # type: (string_types, string_types, string_types, datetime, datetime, dict, list[MuxingStream], list[EncodingOutput], int, int, int, list[Ignoring], StreamConditionsMode, float, string_types, string_types, string_types, string_types, bool, bool, int, PTSAlignMode) -> None
+        # type: (string_types, string_types, string_types, datetime, datetime, dict, list[MuxingStream], list[EncodingOutput], int, int, int, list[Ignoring], StreamConditionsMode, float, float, string_types, string_types, string_types, string_types, bool, bool, int, PTSAlignMode) -> None
         super(Fmp4Muxing, self).__init__(id_=id_, name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, streams=streams, outputs=outputs, avg_bitrate=avg_bitrate, min_bitrate=min_bitrate, max_bitrate=max_bitrate, ignored_by=ignored_by, stream_conditions_mode=stream_conditions_mode)
 
         self._segment_length = None
+        self._minimum_segment_length = None
         self._segment_naming = None
         self._segment_naming_template = None
         self._init_segment_name = None
@@ -51,6 +53,8 @@ class Fmp4Muxing(Muxing):
 
         if segment_length is not None:
             self.segment_length = segment_length
+        if minimum_segment_length is not None:
+            self.minimum_segment_length = minimum_segment_length
         if segment_naming is not None:
             self.segment_naming = segment_naming
         if segment_naming_template is not None:
@@ -77,6 +81,7 @@ class Fmp4Muxing(Muxing):
 
         types.update({
             'segment_length': 'float',
+            'minimum_segment_length': 'float',
             'segment_naming': 'string_types',
             'segment_naming_template': 'string_types',
             'init_segment_name': 'string_types',
@@ -98,6 +103,7 @@ class Fmp4Muxing(Muxing):
 
         attributes.update({
             'segment_length': 'segmentLength',
+            'minimum_segment_length': 'minimumSegmentLength',
             'segment_naming': 'segmentNaming',
             'segment_naming_template': 'segmentNamingTemplate',
             'init_segment_name': 'initSegmentName',
@@ -137,6 +143,35 @@ class Fmp4Muxing(Muxing):
                 raise TypeError("Invalid type for `segment_length`, type has to be `float`")
 
         self._segment_length = segment_length
+
+    @property
+    def minimum_segment_length(self):
+        # type: () -> float
+        """Gets the minimum_segment_length of this Fmp4Muxing.
+
+        Prevents creation of very short final segments (in seconds). If the last segment is shorter than minimumSegmentLength, it will be merged with the previous one, creating a segment of a size up to segmentLength + minimumSegmentLength.
+
+        :return: The minimum_segment_length of this Fmp4Muxing.
+        :rtype: float
+        """
+        return self._minimum_segment_length
+
+    @minimum_segment_length.setter
+    def minimum_segment_length(self, minimum_segment_length):
+        # type: (float) -> None
+        """Sets the minimum_segment_length of this Fmp4Muxing.
+
+        Prevents creation of very short final segments (in seconds). If the last segment is shorter than minimumSegmentLength, it will be merged with the previous one, creating a segment of a size up to segmentLength + minimumSegmentLength.
+
+        :param minimum_segment_length: The minimum_segment_length of this Fmp4Muxing.
+        :type: float
+        """
+
+        if minimum_segment_length is not None:
+            if not isinstance(minimum_segment_length, (float, int)):
+                raise TypeError("Invalid type for `minimum_segment_length`, type has to be `float`")
+
+        self._minimum_segment_length = minimum_segment_length
 
     @property
     def segment_naming(self):
