@@ -1,2 +1,3 @@
 from bitmovin_api_sdk.ai_scene_analysis.analyses.by_encoding_id.by_encoding_id_api import ByEncodingIdApi
 from bitmovin_api_sdk.ai_scene_analysis.analyses.by_encoding_id.details.details_api import DetailsApi
+from bitmovin_api_sdk.ai_scene_analysis.analyses.by_encoding_id.languages.languages_api import LanguagesApi

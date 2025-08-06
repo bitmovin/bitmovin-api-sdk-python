@@ -7,6 +7,7 @@ from bitmovin_api_sdk.common.poscheck import poscheck_except
 from bitmovin_api_sdk.models.response_envelope import ResponseEnvelope
 from bitmovin_api_sdk.models.response_error import ResponseError
 from bitmovin_api_sdk.models.scene_analysis_details_response import SceneAnalysisDetailsResponse
+from bitmovin_api_sdk.ai_scene_analysis.analyses.by_encoding_id.details.language.language_api import LanguageApi
 
 
 class DetailsApi(BaseApi):
@@ -15,6 +16,13 @@ class DetailsApi(BaseApi):
         # type: (str, str, str, BitmovinApiLoggerBase) -> None
 
         super(DetailsApi, self).__init__(
+            api_key=api_key,
+            tenant_org_id=tenant_org_id,
+            base_url=base_url,
+            logger=logger
+        )
+
+        self.language = LanguageApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,

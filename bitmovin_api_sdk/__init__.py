@@ -35,6 +35,10 @@ from bitmovin_api_sdk.ai_scene_analysis.analyses.by_encoding_id.by_encoding_id_a
 
 from bitmovin_api_sdk.ai_scene_analysis.analyses.by_encoding_id.details.details_api import DetailsApi
 
+from bitmovin_api_sdk.ai_scene_analysis.analyses.by_encoding_id.details.language.language_api import LanguageApi
+
+from bitmovin_api_sdk.ai_scene_analysis.analyses.by_encoding_id.languages.languages_api import LanguagesApi
+
 from bitmovin_api_sdk.analytics.analytics_api import AnalyticsApi
 
 from bitmovin_api_sdk.analytics.exports.exports_api import ExportsApi
@@ -1109,6 +1113,7 @@ from bitmovin_api_sdk.models.ai_scene_analysis import AiSceneAnalysis
 from bitmovin_api_sdk.models.ai_scene_analysis_asset_description import AiSceneAnalysisAssetDescription
 from bitmovin_api_sdk.models.ai_scene_analysis_automatic_ad_placement import AiSceneAnalysisAutomaticAdPlacement
 from bitmovin_api_sdk.models.ai_scene_analysis_features import AiSceneAnalysisFeatures
+from bitmovin_api_sdk.models.ai_scene_analysis_output_language_codes import AiSceneAnalysisOutputLanguageCodes
 from bitmovin_api_sdk.models.ai_service import AiService
 from bitmovin_api_sdk.models.ai_service_provider import AiServiceProvider
 from bitmovin_api_sdk.models.akamai_account import AkamaiAccount
@@ -1734,6 +1739,7 @@ from bitmovin_api_sdk.models.scaling_algorithm import ScalingAlgorithm
 from bitmovin_api_sdk.models.scc_caption import SccCaption
 from bitmovin_api_sdk.models.scene import Scene
 from bitmovin_api_sdk.models.scene_analysis_details_response import SceneAnalysisDetailsResponse
+from bitmovin_api_sdk.models.scene_analysis_languages_response import SceneAnalysisLanguagesResponse
 from bitmovin_api_sdk.models.scene_object import SceneObject
 from bitmovin_api_sdk.models.scheduled_insertable_content import ScheduledInsertableContent
 from bitmovin_api_sdk.models.scheduled_insertable_content_status import ScheduledInsertableContentStatus
@@ -1912,4 +1918,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.237.0"
+__version__ = "1.238.0"

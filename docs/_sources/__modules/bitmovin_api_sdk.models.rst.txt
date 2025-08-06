@@ -364,6 +364,14 @@ bitmovin\_api\_sdk.models.ai\_scene\_analysis\_features module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.ai\_scene\_analysis\_output\_language\_codes module
+-----------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.ai_scene_analysis_output_language_codes
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.ai\_service module
 --------------------------------------------
 
@@ -5360,6 +5368,14 @@ bitmovin\_api\_sdk.models.scene\_analysis\_details\_response module
 -------------------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.models.scene_analysis_details_response
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.scene\_analysis\_languages\_response module
+---------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.scene_analysis_languages_response
    :members:
    :undoc-members:
    :show-inheritance:

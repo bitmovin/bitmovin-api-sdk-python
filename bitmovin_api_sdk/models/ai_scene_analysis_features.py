@@ -5,6 +5,7 @@ from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
 from bitmovin_api_sdk.models.ai_scene_analysis_asset_description import AiSceneAnalysisAssetDescription
 from bitmovin_api_sdk.models.ai_scene_analysis_automatic_ad_placement import AiSceneAnalysisAutomaticAdPlacement
+from bitmovin_api_sdk.models.ai_scene_analysis_output_language_codes import AiSceneAnalysisOutputLanguageCodes
 import pprint
 import six
 
@@ -13,23 +14,28 @@ class AiSceneAnalysisFeatures(object):
     @poscheck_model
     def __init__(self,
                  asset_description=None,
-                 automatic_ad_placement=None):
-        # type: (AiSceneAnalysisAssetDescription, AiSceneAnalysisAutomaticAdPlacement) -> None
+                 automatic_ad_placement=None,
+                 output_language_codes=None):
+        # type: (AiSceneAnalysisAssetDescription, AiSceneAnalysisAutomaticAdPlacement, AiSceneAnalysisOutputLanguageCodes) -> None
 
         self._asset_description = None
         self._automatic_ad_placement = None
+        self._output_language_codes = None
         self.discriminator = None
 
         if asset_description is not None:
             self.asset_description = asset_description
         if automatic_ad_placement is not None:
             self.automatic_ad_placement = automatic_ad_placement
+        if output_language_codes is not None:
+            self.output_language_codes = output_language_codes
 
     @property
     def openapi_types(self):
         types = {
             'asset_description': 'AiSceneAnalysisAssetDescription',
-            'automatic_ad_placement': 'AiSceneAnalysisAutomaticAdPlacement'
+            'automatic_ad_placement': 'AiSceneAnalysisAutomaticAdPlacement',
+            'output_language_codes': 'AiSceneAnalysisOutputLanguageCodes'
         }
 
         return types
@@ -38,7 +44,8 @@ class AiSceneAnalysisFeatures(object):
     def attribute_map(self):
         attributes = {
             'asset_description': 'assetDescription',
-            'automatic_ad_placement': 'automaticAdPlacement'
+            'automatic_ad_placement': 'automaticAdPlacement',
+            'output_language_codes': 'outputLanguageCodes'
         }
         return attributes
 
@@ -99,6 +106,35 @@ class AiSceneAnalysisFeatures(object):
                 raise TypeError("Invalid type for `automatic_ad_placement`, type has to be `AiSceneAnalysisAutomaticAdPlacement`")
 
         self._automatic_ad_placement = automatic_ad_placement
+
+    @property
+    def output_language_codes(self):
+        # type: () -> AiSceneAnalysisOutputLanguageCodes
+        """Gets the output_language_codes of this AiSceneAnalysisFeatures.
+
+        AI scene analysis will create translated asset description files for the language codes. 
+
+        :return: The output_language_codes of this AiSceneAnalysisFeatures.
+        :rtype: AiSceneAnalysisOutputLanguageCodes
+        """
+        return self._output_language_codes
+
+    @output_language_codes.setter
+    def output_language_codes(self, output_language_codes):
+        # type: (AiSceneAnalysisOutputLanguageCodes) -> None
+        """Sets the output_language_codes of this AiSceneAnalysisFeatures.
+
+        AI scene analysis will create translated asset description files for the language codes. 
+
+        :param output_language_codes: The output_language_codes of this AiSceneAnalysisFeatures.
+        :type: AiSceneAnalysisOutputLanguageCodes
+        """
+
+        if output_language_codes is not None:
+            if not isinstance(output_language_codes, AiSceneAnalysisOutputLanguageCodes):
+                raise TypeError("Invalid type for `output_language_codes`, type has to be `AiSceneAnalysisOutputLanguageCodes`")
+
+        self._output_language_codes = output_language_codes
 
     def to_dict(self):
         """Returns the model properties as a dict"""
