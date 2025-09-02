@@ -39,6 +39,8 @@ from bitmovin_api_sdk.ai_scene_analysis.analyses.by_encoding_id.details.language
 
 from bitmovin_api_sdk.ai_scene_analysis.analyses.by_encoding_id.languages.languages_api import LanguagesApi
 
+from bitmovin_api_sdk.ai_scene_analysis.analyses.by_encoding_id.ad_placements.ad_placements_api import AdPlacementsApi
+
 from bitmovin_api_sdk.analytics.analytics_api import AnalyticsApi
 
 from bitmovin_api_sdk.analytics.exports.exports_api import ExportsApi
@@ -1102,6 +1104,7 @@ from bitmovin_api_sdk.models.ad_analytics_query_request import AdAnalyticsQueryR
 from bitmovin_api_sdk.models.ad_analytics_stddev_query_request import AdAnalyticsStddevQueryRequest
 from bitmovin_api_sdk.models.ad_analytics_sum_query_request import AdAnalyticsSumQueryRequest
 from bitmovin_api_sdk.models.ad_analytics_variance_query_request import AdAnalyticsVarianceQueryRequest
+from bitmovin_api_sdk.models.ad_position import AdPosition
 from bitmovin_api_sdk.models.adaptation_set import AdaptationSet
 from bitmovin_api_sdk.models.adaptation_set_role import AdaptationSetRole
 from bitmovin_api_sdk.models.adaptation_set_type import AdaptationSetType
@@ -1738,9 +1741,11 @@ from bitmovin_api_sdk.models.scale_filter import ScaleFilter
 from bitmovin_api_sdk.models.scaling_algorithm import ScalingAlgorithm
 from bitmovin_api_sdk.models.scc_caption import SccCaption
 from bitmovin_api_sdk.models.scene import Scene
+from bitmovin_api_sdk.models.scene_analysis_ad_placement_metadata_response import SceneAnalysisAdPlacementMetadataResponse
 from bitmovin_api_sdk.models.scene_analysis_details_response import SceneAnalysisDetailsResponse
 from bitmovin_api_sdk.models.scene_analysis_languages_response import SceneAnalysisLanguagesResponse
 from bitmovin_api_sdk.models.scene_object import SceneObject
+from bitmovin_api_sdk.models.scene_type import SceneType
 from bitmovin_api_sdk.models.scheduled_insertable_content import ScheduledInsertableContent
 from bitmovin_api_sdk.models.scheduled_insertable_content_status import ScheduledInsertableContentStatus
 from bitmovin_api_sdk.models.scheduling import Scheduling
@@ -1918,4 +1923,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.240.0"
+__version__ = "1.241.0"

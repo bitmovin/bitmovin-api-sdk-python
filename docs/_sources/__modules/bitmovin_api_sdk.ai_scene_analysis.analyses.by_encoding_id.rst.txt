@@ -7,6 +7,7 @@ Subpackages
 .. toctree::
    :maxdepth: 4
 
+   bitmovin_api_sdk.ai_scene_analysis.analyses.by_encoding_id.ad_placements
    bitmovin_api_sdk.ai_scene_analysis.analyses.by_encoding_id.details
    bitmovin_api_sdk.ai_scene_analysis.analyses.by_encoding_id.languages
 

@@ -276,6 +276,14 @@ bitmovin\_api\_sdk.models.ad\_analytics\_variance\_query\_request module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.ad\_position module
+---------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.ad_position
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.adaptation\_set module
 ------------------------------------------------
 
@@ -5364,6 +5372,14 @@ bitmovin\_api\_sdk.models.scene module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.scene\_analysis\_ad\_placement\_metadata\_response module
+-----------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.scene_analysis_ad_placement_metadata_response
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.scene\_analysis\_details\_response module
 -------------------------------------------------------------------
 
@@ -5384,6 +5400,14 @@ bitmovin\_api\_sdk.models.scene\_object module
 ----------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.models.scene_object
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.scene\_type module
+--------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.scene_type
    :members:
    :undoc-members:
    :show-inheritance:

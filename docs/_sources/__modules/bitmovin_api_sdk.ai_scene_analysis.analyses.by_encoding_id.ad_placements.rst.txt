@@ -1,0 +1,21 @@
+bitmovin\_api\_sdk.ai\_scene\_analysis.analyses.by\_encoding\_id.ad\_placements package
+=======================================================================================
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.ai\_scene\_analysis.analyses.by\_encoding\_id.ad\_placements.ad\_placements\_api module
+----------------------------------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.ai_scene_analysis.analyses.by_encoding_id.ad_placements.ad_placements_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.ai_scene_analysis.analyses.by_encoding_id.ad_placements
+   :members:
+   :undoc-members:
+   :show-inheritance:

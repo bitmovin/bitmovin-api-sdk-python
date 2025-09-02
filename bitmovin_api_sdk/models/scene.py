@@ -5,6 +5,7 @@ from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
 from bitmovin_api_sdk.models.content import Content
 from bitmovin_api_sdk.models.iab_taxonomy import IABTaxonomy
+from bitmovin_api_sdk.models.scene_type import SceneType
 import pprint
 import six
 
@@ -21,8 +22,10 @@ class Scene(object):
                  verbose_summary=None,
                  sensitive_topics=None,
                  keywords=None,
-                 iab=None):
-        # type: (string_types, float, float, string_types, Content, string_types, string_types, list[string_types], list[string_types], IABTaxonomy) -> None
+                 iab=None,
+                 type_=None,
+                 type_confidence=None):
+        # type: (string_types, float, float, string_types, Content, string_types, string_types, list[string_types], list[string_types], IABTaxonomy, SceneType, float) -> None
 
         self._title = None
         self._start_in_seconds = None
@@ -34,6 +37,8 @@ class Scene(object):
         self._sensitive_topics = list()
         self._keywords = list()
         self._iab = None
+        self._type = None
+        self._type_confidence = None
         self.discriminator = None
 
         if title is not None:
@@ -56,6 +61,10 @@ class Scene(object):
             self.keywords = keywords
         if iab is not None:
             self.iab = iab
+        if type_ is not None:
+            self.type = type_
+        if type_confidence is not None:
+            self.type_confidence = type_confidence
 
     @property
     def openapi_types(self):
@@ -69,7 +78,9 @@ class Scene(object):
             'verbose_summary': 'string_types',
             'sensitive_topics': 'list[string_types]',
             'keywords': 'list[string_types]',
-            'iab': 'IABTaxonomy'
+            'iab': 'IABTaxonomy',
+            'type': 'SceneType',
+            'type_confidence': 'float'
         }
 
         return types
@@ -86,7 +97,9 @@ class Scene(object):
             'verbose_summary': 'verboseSummary',
             'sensitive_topics': 'sensitiveTopics',
             'keywords': 'keywords',
-            'iab': 'iab'
+            'iab': 'iab',
+            'type': 'type',
+            'type_confidence': 'typeConfidence'
         }
         return attributes
 
@@ -359,6 +372,68 @@ class Scene(object):
                 raise TypeError("Invalid type for `iab`, type has to be `IABTaxonomy`")
 
         self._iab = iab
+
+    @property
+    def type(self):
+        # type: () -> SceneType
+        """Gets the type of this Scene.
+
+        The detected type of scene based on content analysis
+
+        :return: The type of this Scene.
+        :rtype: SceneType
+        """
+        return self._type
+
+    @type.setter
+    def type(self, type_):
+        # type: (SceneType) -> None
+        """Sets the type of this Scene.
+
+        The detected type of scene based on content analysis
+
+        :param type_: The type of this Scene.
+        :type: SceneType
+        """
+
+        if type_ is not None:
+            if not isinstance(type_, SceneType):
+                raise TypeError("Invalid type for `type`, type has to be `SceneType`")
+
+        self._type = type_
+
+    @property
+    def type_confidence(self):
+        # type: () -> float
+        """Gets the type_confidence of this Scene.
+
+        Confidence score for the detected scene type (0.0 to 1.0)
+
+        :return: The type_confidence of this Scene.
+        :rtype: float
+        """
+        return self._type_confidence
+
+    @type_confidence.setter
+    def type_confidence(self, type_confidence):
+        # type: (float) -> None
+        """Sets the type_confidence of this Scene.
+
+        Confidence score for the detected scene type (0.0 to 1.0)
+
+        :param type_confidence: The type_confidence of this Scene.
+        :type: float
+        """
+
+        if type_confidence is not None:
+            if type_confidence is not None and type_confidence > 1:
+                raise ValueError("Invalid value for `type_confidence`, must be a value less than or equal to `1`")
+            if type_confidence is not None and type_confidence < 0:
+                raise ValueError("Invalid value for `type_confidence`, must be a value greater than or equal to `0`")
+            if not isinstance(type_confidence, (float, int)):
+                raise TypeError("Invalid type for `type_confidence`, type has to be `float`")
+
+        self._type_confidence = type_confidence
 
     def to_dict(self):
         """Returns the model properties as a dict"""

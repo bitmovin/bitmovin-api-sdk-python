@@ -1,0 +1,1 @@
+from bitmovin_api_sdk.ai_scene_analysis.analyses.by_encoding_id.ad_placements.ad_placements_api import AdPlacementsApi
