@@ -131,7 +131,7 @@ class TsMuxing(Muxing):
         # type: () -> float
         """Gets the minimum_segment_length of this TsMuxing.
 
-        Prevents creation of very short final segments (in seconds). If the last segment is shorter than minimumSegmentLength, it will be merged with the previous one, creating a segment of a size up to segmentLength + minimumSegmentLength.
+        Prevents creation of very short segments (in seconds). If the last segment is shorter than minimumSegmentLength or there is a custom keyframe too close to a segment boundary, short segments will be omitted by removing segment boundaries, resulting in a segment of a size up to segmentLength + minimumSegmentLength.
 
         :return: The minimum_segment_length of this TsMuxing.
         :rtype: float
@@ -143,7 +143,7 @@ class TsMuxing(Muxing):
         # type: (float) -> None
         """Sets the minimum_segment_length of this TsMuxing.
 
-        Prevents creation of very short final segments (in seconds). If the last segment is shorter than minimumSegmentLength, it will be merged with the previous one, creating a segment of a size up to segmentLength + minimumSegmentLength.
+        Prevents creation of very short segments (in seconds). If the last segment is shorter than minimumSegmentLength or there is a custom keyframe too close to a segment boundary, short segments will be omitted by removing segment boundaries, resulting in a segment of a size up to segmentLength + minimumSegmentLength.
 
         :param minimum_segment_length: The minimum_segment_length of this TsMuxing.
         :type: float

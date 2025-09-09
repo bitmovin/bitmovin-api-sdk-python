@@ -276,6 +276,14 @@ bitmovin\_api\_sdk.models.ad\_analytics\_variance\_query\_request module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.ad\_markers\_source module
+----------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.ad_markers_source
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.ad\_position module
 ---------------------------------------------
 

@@ -1104,6 +1104,7 @@ from bitmovin_api_sdk.models.ad_analytics_query_request import AdAnalyticsQueryR
 from bitmovin_api_sdk.models.ad_analytics_stddev_query_request import AdAnalyticsStddevQueryRequest
 from bitmovin_api_sdk.models.ad_analytics_sum_query_request import AdAnalyticsSumQueryRequest
 from bitmovin_api_sdk.models.ad_analytics_variance_query_request import AdAnalyticsVarianceQueryRequest
+from bitmovin_api_sdk.models.ad_markers_source import AdMarkersSource
 from bitmovin_api_sdk.models.ad_position import AdPosition
 from bitmovin_api_sdk.models.adaptation_set import AdaptationSet
 from bitmovin_api_sdk.models.adaptation_set_role import AdaptationSetRole
@@ -1923,4 +1924,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.241.0"
+__version__ = "1.242.0"

@@ -3,6 +3,7 @@
 from enum import Enum
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
+from bitmovin_api_sdk.models.ad_markers_source import AdMarkersSource
 from bitmovin_api_sdk.models.input import Input
 import pprint
 import six
@@ -17,15 +18,19 @@ class HlsInput(Input):
                  created_at=None,
                  modified_at=None,
                  custom_data=None,
-                 url=None):
-        # type: (string_types, string_types, string_types, datetime, datetime, dict, string_types) -> None
+                 url=None,
+                 ad_markers_source=None):
+        # type: (string_types, string_types, string_types, datetime, datetime, dict, string_types, AdMarkersSource) -> None
         super(HlsInput, self).__init__(id_=id_, name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data)
 
         self._url = None
+        self._ad_markers_source = None
         self.discriminator = None
 
         if url is not None:
             self.url = url
+        if ad_markers_source is not None:
+            self.ad_markers_source = ad_markers_source
 
     @property
     def openapi_types(self):
@@ -35,7 +40,8 @@ class HlsInput(Input):
             types = getattr(super(HlsInput, self), 'openapi_types')
 
         types.update({
-            'url': 'string_types'
+            'url': 'string_types',
+            'ad_markers_source': 'AdMarkersSource'
         })
 
         return types
@@ -48,7 +54,8 @@ class HlsInput(Input):
             attributes = getattr(super(HlsInput, self), 'attribute_map')
 
         attributes.update({
-            'url': 'url'
+            'url': 'url',
+            'ad_markers_source': 'adMarkersSource'
         })
         return attributes
 
@@ -80,6 +87,35 @@ class HlsInput(Input):
                 raise TypeError("Invalid type for `url`, type has to be `string_types`")
 
         self._url = url
+
+    @property
+    def ad_markers_source(self):
+        # type: () -> AdMarkersSource
+        """Gets the ad_markers_source of this HlsInput.
+
+        Specifies the source for ad markers messages: - MANIFEST: Ad marker messages are read from tags in the HLS manifest - SEGMENTS: Ad marker messages are read from the content segments from the data stream 
+
+        :return: The ad_markers_source of this HlsInput.
+        :rtype: AdMarkersSource
+        """
+        return self._ad_markers_source
+
+    @ad_markers_source.setter
+    def ad_markers_source(self, ad_markers_source):
+        # type: (AdMarkersSource) -> None
+        """Sets the ad_markers_source of this HlsInput.
+
+        Specifies the source for ad markers messages: - MANIFEST: Ad marker messages are read from tags in the HLS manifest - SEGMENTS: Ad marker messages are read from the content segments from the data stream 
+
+        :param ad_markers_source: The ad_markers_source of this HlsInput.
+        :type: AdMarkersSource
+        """
+
+        if ad_markers_source is not None:
+            if not isinstance(ad_markers_source, AdMarkersSource):
+                raise TypeError("Invalid type for `ad_markers_source`, type has to be `AdMarkersSource`")
+
+        self._ad_markers_source = ad_markers_source
 
     def to_dict(self):
         """Returns the model properties as a dict"""

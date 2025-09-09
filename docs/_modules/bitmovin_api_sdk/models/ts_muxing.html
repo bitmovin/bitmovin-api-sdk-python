@@ -211,7 +211,7 @@
         <span class="c1"># type: () -&gt; float</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the minimum_segment_length of this TsMuxing.</span>
 
-<span class="sd">        Prevents creation of very short final segments (in seconds). If the last segment is shorter than minimumSegmentLength, it will be merged with the previous one, creating a segment of a size up to segmentLength + minimumSegmentLength.</span>
+<span class="sd">        Prevents creation of very short segments (in seconds). If the last segment is shorter than minimumSegmentLength or there is a custom keyframe too close to a segment boundary, short segments will be omitted by removing segment boundaries, resulting in a segment of a size up to segmentLength + minimumSegmentLength.</span>
 
 <span class="sd">        :return: The minimum_segment_length of this TsMuxing.</span>
 <span class="sd">        :rtype: float</span>
@@ -223,7 +223,7 @@
         <span class="c1"># type: (float) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the minimum_segment_length of this TsMuxing.</span>
 
-<span class="sd">        Prevents creation of very short final segments (in seconds). If the last segment is shorter than minimumSegmentLength, it will be merged with the previous one, creating a segment of a size up to segmentLength + minimumSegmentLength.</span>
+<span class="sd">        Prevents creation of very short segments (in seconds). If the last segment is shorter than minimumSegmentLength or there is a custom keyframe too close to a segment boundary, short segments will be omitted by removing segment boundaries, resulting in a segment of a size up to segmentLength + minimumSegmentLength.</span>
 
 <span class="sd">        :param minimum_segment_length: The minimum_segment_length of this TsMuxing.</span>
 <span class="sd">        :type: float</span>

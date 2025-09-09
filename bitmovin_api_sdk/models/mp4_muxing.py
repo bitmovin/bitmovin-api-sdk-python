@@ -29,13 +29,15 @@ class Mp4Muxing(Muxing):
                  stream_conditions_mode=None,
                  filename=None,
                  fragment_duration=None,
+                 minimum_fragment_duration=None,
                  fragmented_mp4_muxing_manifest_type=None,
                  dolby_vision_configuration=None):
-        # type: (string_types, string_types, string_types, datetime, datetime, dict, list[MuxingStream], list[EncodingOutput], int, int, int, list[Ignoring], StreamConditionsMode, string_types, int, FragmentedMp4MuxingManifestType, DolbyVisionMuxingConfiguration) -> None
+        # type: (string_types, string_types, string_types, datetime, datetime, dict, list[MuxingStream], list[EncodingOutput], int, int, int, list[Ignoring], StreamConditionsMode, string_types, int, float, FragmentedMp4MuxingManifestType, DolbyVisionMuxingConfiguration) -> None
         super(Mp4Muxing, self).__init__(id_=id_, name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, streams=streams, outputs=outputs, avg_bitrate=avg_bitrate, min_bitrate=min_bitrate, max_bitrate=max_bitrate, ignored_by=ignored_by, stream_conditions_mode=stream_conditions_mode)
 
         self._filename = None
         self._fragment_duration = None
+        self._minimum_fragment_duration = None
         self._fragmented_mp4_muxing_manifest_type = None
         self._dolby_vision_configuration = None
         self.discriminator = None
@@ -44,6 +46,8 @@ class Mp4Muxing(Muxing):
             self.filename = filename
         if fragment_duration is not None:
             self.fragment_duration = fragment_duration
+        if minimum_fragment_duration is not None:
+            self.minimum_fragment_duration = minimum_fragment_duration
         if fragmented_mp4_muxing_manifest_type is not None:
             self.fragmented_mp4_muxing_manifest_type = fragmented_mp4_muxing_manifest_type
         if dolby_vision_configuration is not None:
@@ -59,6 +63,7 @@ class Mp4Muxing(Muxing):
         types.update({
             'filename': 'string_types',
             'fragment_duration': 'int',
+            'minimum_fragment_duration': 'float',
             'fragmented_mp4_muxing_manifest_type': 'FragmentedMp4MuxingManifestType',
             'dolby_vision_configuration': 'DolbyVisionMuxingConfiguration'
         })
@@ -75,6 +80,7 @@ class Mp4Muxing(Muxing):
         attributes.update({
             'filename': 'filename',
             'fragment_duration': 'fragmentDuration',
+            'minimum_fragment_duration': 'minimumFragmentDuration',
             'fragmented_mp4_muxing_manifest_type': 'fragmentedMP4MuxingManifestType',
             'dolby_vision_configuration': 'dolbyVisionConfiguration'
         })
@@ -137,6 +143,35 @@ class Mp4Muxing(Muxing):
                 raise TypeError("Invalid type for `fragment_duration`, type has to be `int`")
 
         self._fragment_duration = fragment_duration
+
+    @property
+    def minimum_fragment_duration(self):
+        # type: () -> float
+        """Gets the minimum_fragment_duration of this Mp4Muxing.
+
+        Prevents creation of very short fragments (in seconds). If the last fragment is shorter than minimumFragmentDuration or there is a custom keyframe too close to a fragment boundary, short fragments will be omitted by removing fragment boundaries, resulting in a fragment of a size up to fragmentDuration + minimumFragmentDuration.
+
+        :return: The minimum_fragment_duration of this Mp4Muxing.
+        :rtype: float
+        """
+        return self._minimum_fragment_duration
+
+    @minimum_fragment_duration.setter
+    def minimum_fragment_duration(self, minimum_fragment_duration):
+        # type: (float) -> None
+        """Sets the minimum_fragment_duration of this Mp4Muxing.
+
+        Prevents creation of very short fragments (in seconds). If the last fragment is shorter than minimumFragmentDuration or there is a custom keyframe too close to a fragment boundary, short fragments will be omitted by removing fragment boundaries, resulting in a fragment of a size up to fragmentDuration + minimumFragmentDuration.
+
+        :param minimum_fragment_duration: The minimum_fragment_duration of this Mp4Muxing.
+        :type: float
+        """
+
+        if minimum_fragment_duration is not None:
+            if not isinstance(minimum_fragment_duration, (float, int)):
+                raise TypeError("Invalid type for `minimum_fragment_duration`, type has to be `float`")
+
+        self._minimum_fragment_duration = minimum_fragment_duration
 
     @property
     def fragmented_mp4_muxing_manifest_type(self):
