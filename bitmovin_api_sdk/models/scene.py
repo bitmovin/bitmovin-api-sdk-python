@@ -23,9 +23,8 @@ class Scene(object):
                  sensitive_topics=None,
                  keywords=None,
                  iab=None,
-                 type_=None,
-                 type_confidence=None):
-        # type: (string_types, float, float, string_types, Content, string_types, string_types, list[string_types], list[string_types], IABTaxonomy, SceneType, float) -> None
+                 type_=None):
+        # type: (string_types, float, float, string_types, Content, string_types, string_types, list[string_types], list[string_types], IABTaxonomy, SceneType) -> None
 
         self._title = None
         self._start_in_seconds = None
@@ -38,7 +37,6 @@ class Scene(object):
         self._keywords = list()
         self._iab = None
         self._type = None
-        self._type_confidence = None
         self.discriminator = None
 
         if title is not None:
@@ -63,8 +61,6 @@ class Scene(object):
             self.iab = iab
         if type_ is not None:
             self.type = type_
-        if type_confidence is not None:
-            self.type_confidence = type_confidence
 
     @property
     def openapi_types(self):
@@ -79,8 +75,7 @@ class Scene(object):
             'sensitive_topics': 'list[string_types]',
             'keywords': 'list[string_types]',
             'iab': 'IABTaxonomy',
-            'type': 'SceneType',
-            'type_confidence': 'float'
+            'type': 'SceneType'
         }
 
         return types
@@ -98,8 +93,7 @@ class Scene(object):
             'sensitive_topics': 'sensitiveTopics',
             'keywords': 'keywords',
             'iab': 'iab',
-            'type': 'type',
-            'type_confidence': 'typeConfidence'
+            'type': 'type'
         }
         return attributes
 
@@ -401,39 +395,6 @@ class Scene(object):
                 raise TypeError("Invalid type for `type`, type has to be `SceneType`")
 
         self._type = type_
-
-    @property
-    def type_confidence(self):
-        # type: () -> float
-        """Gets the type_confidence of this Scene.
-
-        Confidence score for the detected scene type (0.0 to 1.0)
-
-        :return: The type_confidence of this Scene.
-        :rtype: float
-        """
-        return self._type_confidence
-
-    @type_confidence.setter
-    def type_confidence(self, type_confidence):
-        # type: (float) -> None
-        """Sets the type_confidence of this Scene.
-
-        Confidence score for the detected scene type (0.0 to 1.0)
-
-        :param type_confidence: The type_confidence of this Scene.
-        :type: float
-        """
-
-        if type_confidence is not None:
-            if type_confidence is not None and type_confidence > 1:
-                raise ValueError("Invalid value for `type_confidence`, must be a value less than or equal to `1`")
-            if type_confidence is not None and type_confidence < 0:
-                raise ValueError("Invalid value for `type_confidence`, must be a value greater than or equal to `0`")
-            if not isinstance(type_confidence, (float, int)):
-                raise TypeError("Invalid type for `type_confidence`, type has to be `float`")
-
-        self._type_confidence = type_confidence
 
     def to_dict(self):
         """Returns the model properties as a dict"""
