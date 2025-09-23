@@ -27,6 +27,7 @@ class AnalyticsLicense(object):
                  retention_time=None,
                  compressed_retention_time=None,
                  domains=None,
+                 player_domains=None,
                  include_in_insights=None,
                  custom_data_field_labels=None,
                  custom_data_fields_count=None,
@@ -34,7 +35,7 @@ class AnalyticsLicense(object):
                  rate_limit=None,
                  features=None,
                  plan_expired_at=None):
-        # type: (string_types, datetime, dict, string_types, string_types, string_types, string_types, bool, int, int, string_types, string_types, string_types, list[AnalyticsLicenseDomain], bool, AnalyticsLicenseCustomDataFieldLabels, int, int, string_types, AnalyticsLicenseFeatures, datetime) -> None
+        # type: (string_types, datetime, dict, string_types, string_types, string_types, string_types, bool, int, int, string_types, string_types, string_types, list[AnalyticsLicenseDomain], list[string_types], bool, AnalyticsLicenseCustomDataFieldLabels, int, int, string_types, AnalyticsLicenseFeatures, datetime) -> None
 
         self._id = None
         self._created_at = None
@@ -50,6 +51,7 @@ class AnalyticsLicense(object):
         self._retention_time = None
         self._compressed_retention_time = None
         self._domains = list()
+        self._player_domains = list()
         self._include_in_insights = None
         self._custom_data_field_labels = None
         self._custom_data_fields_count = None
@@ -87,6 +89,8 @@ class AnalyticsLicense(object):
             self.compressed_retention_time = compressed_retention_time
         if domains is not None:
             self.domains = domains
+        if player_domains is not None:
+            self.player_domains = player_domains
         if include_in_insights is not None:
             self.include_in_insights = include_in_insights
         if custom_data_field_labels is not None:
@@ -119,6 +123,7 @@ class AnalyticsLicense(object):
             'retention_time': 'string_types',
             'compressed_retention_time': 'string_types',
             'domains': 'list[AnalyticsLicenseDomain]',
+            'player_domains': 'list[string_types]',
             'include_in_insights': 'bool',
             'custom_data_field_labels': 'AnalyticsLicenseCustomDataFieldLabels',
             'custom_data_fields_count': 'int',
@@ -147,6 +152,7 @@ class AnalyticsLicense(object):
             'retention_time': 'retentionTime',
             'compressed_retention_time': 'compressedRetentionTime',
             'domains': 'domains',
+            'player_domains': 'playerDomains',
             'include_in_insights': 'includeInInsights',
             'custom_data_field_labels': 'customDataFieldLabels',
             'custom_data_fields_count': 'customDataFieldsCount',
@@ -562,6 +568,35 @@ class AnalyticsLicense(object):
                 raise TypeError("Invalid type for `domains`, type has to be `list[AnalyticsLicenseDomain]`")
 
         self._domains = domains
+
+    @property
+    def player_domains(self):
+        # type: () -> list[string_types]
+        """Gets the player_domains of this AnalyticsLicense.
+
+        Allowlisted player domains
+
+        :return: The player_domains of this AnalyticsLicense.
+        :rtype: list[string_types]
+        """
+        return self._player_domains
+
+    @player_domains.setter
+    def player_domains(self, player_domains):
+        # type: (list) -> None
+        """Sets the player_domains of this AnalyticsLicense.
+
+        Allowlisted player domains
+
+        :param player_domains: The player_domains of this AnalyticsLicense.
+        :type: list[string_types]
+        """
+
+        if player_domains is not None:
+            if not isinstance(player_domains, list):
+                raise TypeError("Invalid type for `player_domains`, type has to be `list[string_types]`")
+
+        self._player_domains = player_domains
 
     @property
     def include_in_insights(self):
