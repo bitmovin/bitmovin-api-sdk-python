@@ -26,6 +26,7 @@ class AnalyticsLicense(object):
                  time_zone=None,
                  retention_time=None,
                  compressed_retention_time=None,
+                 compression_available_to=None,
                  domains=None,
                  player_domains=None,
                  include_in_insights=None,
@@ -35,7 +36,7 @@ class AnalyticsLicense(object):
                  rate_limit=None,
                  features=None,
                  plan_expired_at=None):
-        # type: (string_types, datetime, dict, string_types, string_types, string_types, string_types, bool, int, int, string_types, string_types, string_types, list[AnalyticsLicenseDomain], list[string_types], bool, AnalyticsLicenseCustomDataFieldLabels, int, int, string_types, AnalyticsLicenseFeatures, datetime) -> None
+        # type: (string_types, datetime, dict, string_types, string_types, string_types, string_types, bool, int, int, string_types, string_types, string_types, datetime, list[AnalyticsLicenseDomain], list[string_types], bool, AnalyticsLicenseCustomDataFieldLabels, int, int, string_types, AnalyticsLicenseFeatures, datetime) -> None
 
         self._id = None
         self._created_at = None
@@ -50,6 +51,7 @@ class AnalyticsLicense(object):
         self._time_zone = None
         self._retention_time = None
         self._compressed_retention_time = None
+        self._compression_available_to = None
         self._domains = list()
         self._player_domains = list()
         self._include_in_insights = None
@@ -87,6 +89,8 @@ class AnalyticsLicense(object):
             self.retention_time = retention_time
         if compressed_retention_time is not None:
             self.compressed_retention_time = compressed_retention_time
+        if compression_available_to is not None:
+            self.compression_available_to = compression_available_to
         if domains is not None:
             self.domains = domains
         if player_domains is not None:
@@ -122,6 +126,7 @@ class AnalyticsLicense(object):
             'time_zone': 'string_types',
             'retention_time': 'string_types',
             'compressed_retention_time': 'string_types',
+            'compression_available_to': 'datetime',
             'domains': 'list[AnalyticsLicenseDomain]',
             'player_domains': 'list[string_types]',
             'include_in_insights': 'bool',
@@ -151,6 +156,7 @@ class AnalyticsLicense(object):
             'time_zone': 'timeZone',
             'retention_time': 'retentionTime',
             'compressed_retention_time': 'compressedRetentionTime',
+            'compression_available_to': 'compressionAvailableTo',
             'domains': 'domains',
             'player_domains': 'playerDomains',
             'include_in_insights': 'includeInInsights',
@@ -539,6 +545,35 @@ class AnalyticsLicense(object):
                 raise TypeError("Invalid type for `compressed_retention_time`, type has to be `string_types`")
 
         self._compressed_retention_time = compressed_retention_time
+
+    @property
+    def compression_available_to(self):
+        # type: () -> datetime
+        """Gets the compression_available_to of this AnalyticsLicense.
+
+        The date and time up until which the compressed data is available. Returned as ISO 8601 date-time format
+
+        :return: The compression_available_to of this AnalyticsLicense.
+        :rtype: datetime
+        """
+        return self._compression_available_to
+
+    @compression_available_to.setter
+    def compression_available_to(self, compression_available_to):
+        # type: (datetime) -> None
+        """Sets the compression_available_to of this AnalyticsLicense.
+
+        The date and time up until which the compressed data is available. Returned as ISO 8601 date-time format
+
+        :param compression_available_to: The compression_available_to of this AnalyticsLicense.
+        :type: datetime
+        """
+
+        if compression_available_to is not None:
+            if not isinstance(compression_available_to, datetime):
+                raise TypeError("Invalid type for `compression_available_to`, type has to be `datetime`")
+
+        self._compression_available_to = compression_available_to
 
     @property
     def domains(self):

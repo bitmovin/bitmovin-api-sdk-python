@@ -18,6 +18,7 @@ class Subtask(BitmovinResponse):
                  progress=None,
                  name=None,
                  messages=None,
+                 metadata=None,
                  created_at=None,
                  updated_at=None,
                  started_at=None,
@@ -25,13 +26,14 @@ class Subtask(BitmovinResponse):
                  running_at=None,
                  finished_at=None,
                  error_at=None):
-        # type: (string_types, Status, int, string_types, list[Message], datetime, datetime, datetime, datetime, datetime, datetime, datetime) -> None
+        # type: (string_types, Status, int, string_types, list[Message], list[SubtaskMetadata], datetime, datetime, datetime, datetime, datetime, datetime, datetime) -> None
         super(Subtask, self).__init__(id_=id_)
 
         self._status = None
         self._progress = None
         self._name = None
         self._messages = list()
+        self._metadata = list()
         self._created_at = None
         self._updated_at = None
         self._started_at = None
@@ -49,6 +51,8 @@ class Subtask(BitmovinResponse):
             self.name = name
         if messages is not None:
             self.messages = messages
+        if metadata is not None:
+            self.metadata = metadata
         if created_at is not None:
             self.created_at = created_at
         if updated_at is not None:
@@ -76,6 +80,7 @@ class Subtask(BitmovinResponse):
             'progress': 'int',
             'name': 'string_types',
             'messages': 'list[Message]',
+            'metadata': 'list[SubtaskMetadata]',
             'created_at': 'datetime',
             'updated_at': 'datetime',
             'started_at': 'datetime',
@@ -99,6 +104,7 @@ class Subtask(BitmovinResponse):
             'progress': 'progress',
             'name': 'name',
             'messages': 'messages',
+            'metadata': 'metadata',
             'created_at': 'createdAt',
             'updated_at': 'updatedAt',
             'started_at': 'startedAt',
@@ -224,6 +230,35 @@ class Subtask(BitmovinResponse):
                 raise TypeError("Invalid type for `messages`, type has to be `list[Message]`")
 
         self._messages = messages
+
+    @property
+    def metadata(self):
+        # type: () -> list[SubtaskMetadata]
+        """Gets the metadata of this Subtask.
+
+        Task specific metadata
+
+        :return: The metadata of this Subtask.
+        :rtype: list[SubtaskMetadata]
+        """
+        return self._metadata
+
+    @metadata.setter
+    def metadata(self, metadata):
+        # type: (list) -> None
+        """Sets the metadata of this Subtask.
+
+        Task specific metadata
+
+        :param metadata: The metadata of this Subtask.
+        :type: list[SubtaskMetadata]
+        """
+
+        if metadata is not None:
+            if not isinstance(metadata, list):
+                raise TypeError("Invalid type for `metadata`, type has to be `list[SubtaskMetadata]`")
+
+        self._metadata = metadata
 
     @property
     def created_at(self):

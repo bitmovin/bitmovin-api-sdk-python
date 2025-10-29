@@ -4180,6 +4180,14 @@ bitmovin\_api\_sdk.models.location module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.main\_subject module
+----------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.main_subject
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.manifest module
 -----------------------------------------
 
@@ -5500,6 +5508,14 @@ bitmovin\_api\_sdk.models.sftp\_output module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.shot module
+-------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.shot
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.sidecar\_error\_mode module
 -----------------------------------------------------
 
@@ -6208,6 +6224,22 @@ bitmovin\_api\_sdk.models.subtask module
 ----------------------------------------
 
 .. automodule:: bitmovin_api_sdk.models.subtask
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.subtask\_metadata module
+--------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.subtask_metadata
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.subtask\_metadata\_data module
+--------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.subtask_metadata_data
    :members:
    :undoc-members:
    :show-inheritance:

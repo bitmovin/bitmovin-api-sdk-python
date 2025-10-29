@@ -23,8 +23,9 @@ class Scene(object):
                  sensitive_topics=None,
                  keywords=None,
                  iab=None,
-                 type_=None):
-        # type: (string_types, float, float, string_types, Content, string_types, string_types, list[string_types], list[string_types], IABTaxonomy, SceneType) -> None
+                 type_=None,
+                 shots=None):
+        # type: (string_types, float, float, string_types, Content, string_types, string_types, list[string_types], list[string_types], IABTaxonomy, SceneType, list[Shot]) -> None
 
         self._title = None
         self._start_in_seconds = None
@@ -37,6 +38,7 @@ class Scene(object):
         self._keywords = list()
         self._iab = None
         self._type = None
+        self._shots = list()
         self.discriminator = None
 
         if title is not None:
@@ -61,6 +63,8 @@ class Scene(object):
             self.iab = iab
         if type_ is not None:
             self.type = type_
+        if shots is not None:
+            self.shots = shots
 
     @property
     def openapi_types(self):
@@ -75,7 +79,8 @@ class Scene(object):
             'sensitive_topics': 'list[string_types]',
             'keywords': 'list[string_types]',
             'iab': 'IABTaxonomy',
-            'type': 'SceneType'
+            'type': 'SceneType',
+            'shots': 'list[Shot]'
         }
 
         return types
@@ -93,7 +98,8 @@ class Scene(object):
             'sensitive_topics': 'sensitiveTopics',
             'keywords': 'keywords',
             'iab': 'iab',
-            'type': 'type'
+            'type': 'type',
+            'shots': 'shots'
         }
         return attributes
 
@@ -395,6 +401,35 @@ class Scene(object):
                 raise TypeError("Invalid type for `type`, type has to be `SceneType`")
 
         self._type = type_
+
+    @property
+    def shots(self):
+        # type: () -> list[Shot]
+        """Gets the shots of this Scene.
+
+        A detailed breakdown of individual camera shots within this scene, providing granular analysis of visual content and subjects
+
+        :return: The shots of this Scene.
+        :rtype: list[Shot]
+        """
+        return self._shots
+
+    @shots.setter
+    def shots(self, shots):
+        # type: (list) -> None
+        """Sets the shots of this Scene.
+
+        A detailed breakdown of individual camera shots within this scene, providing granular analysis of visual content and subjects
+
+        :param shots: The shots of this Scene.
+        :type: list[Shot]
+        """
+
+        if shots is not None:
+            if not isinstance(shots, list):
+                raise TypeError("Invalid type for `shots`, type has to be `list[Shot]`")
+
+        self._shots = shots
 
     def to_dict(self):
         """Returns the model properties as a dict"""

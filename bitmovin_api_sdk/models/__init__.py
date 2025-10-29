@@ -525,6 +525,7 @@ from bitmovin_api_sdk.models.live_standby_pool_update import LiveStandbyPoolUpda
 from bitmovin_api_sdk.models.local_input import LocalInput
 from bitmovin_api_sdk.models.local_output import LocalOutput
 from bitmovin_api_sdk.models.location import Location
+from bitmovin_api_sdk.models.main_subject import MainSubject
 from bitmovin_api_sdk.models.manifest import Manifest
 from bitmovin_api_sdk.models.manifest_generator import ManifestGenerator
 from bitmovin_api_sdk.models.manifest_resource import ManifestResource
@@ -690,6 +691,7 @@ from bitmovin_api_sdk.models.segments_media_info import SegmentsMediaInfo
 from bitmovin_api_sdk.models.setting import Setting
 from bitmovin_api_sdk.models.sftp_input import SftpInput
 from bitmovin_api_sdk.models.sftp_output import SftpOutput
+from bitmovin_api_sdk.models.shot import Shot
 from bitmovin_api_sdk.models.sidecar_error_mode import SidecarErrorMode
 from bitmovin_api_sdk.models.sidecar_file import SidecarFile
 from bitmovin_api_sdk.models.sidecar_file_type import SidecarFileType
@@ -779,6 +781,8 @@ from bitmovin_api_sdk.models.streams_video_response import StreamsVideoResponse
 from bitmovin_api_sdk.models.streams_video_status import StreamsVideoStatus
 from bitmovin_api_sdk.models.streams_video_update_request import StreamsVideoUpdateRequest
 from bitmovin_api_sdk.models.subtask import Subtask
+from bitmovin_api_sdk.models.subtask_metadata import SubtaskMetadata
+from bitmovin_api_sdk.models.subtask_metadata_data import SubtaskMetadataData
 from bitmovin_api_sdk.models.subtitle_adaptation_set import SubtitleAdaptationSet
 from bitmovin_api_sdk.models.subtitle_configuration import SubtitleConfiguration
 from bitmovin_api_sdk.models.subtitle_stream import SubtitleStream
