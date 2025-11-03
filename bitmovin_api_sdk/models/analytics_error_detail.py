@@ -18,8 +18,9 @@ class AnalyticsErrorDetail(object):
                  code=None,
                  message=None,
                  error_data=None,
+                 severity=None,
                  http_requests=None):
-        # type: (int, datetime, datetime, int, string_types, AnalyticsErrorData, list[AnalyticsHttpRequest]) -> None
+        # type: (int, datetime, datetime, int, string_types, AnalyticsErrorData, string_types, list[AnalyticsHttpRequest]) -> None
 
         self._error_id = None
         self._time = None
@@ -27,6 +28,7 @@ class AnalyticsErrorDetail(object):
         self._code = None
         self._message = None
         self._error_data = None
+        self._severity = None
         self._http_requests = list()
         self.discriminator = None
 
@@ -42,6 +44,8 @@ class AnalyticsErrorDetail(object):
             self.message = message
         if error_data is not None:
             self.error_data = error_data
+        if severity is not None:
+            self.severity = severity
         if http_requests is not None:
             self.http_requests = http_requests
 
@@ -54,6 +58,7 @@ class AnalyticsErrorDetail(object):
             'code': 'int',
             'message': 'string_types',
             'error_data': 'AnalyticsErrorData',
+            'severity': 'string_types',
             'http_requests': 'list[AnalyticsHttpRequest]'
         }
 
@@ -68,6 +73,7 @@ class AnalyticsErrorDetail(object):
             'code': 'code',
             'message': 'message',
             'error_data': 'errorData',
+            'severity': 'severity',
             'http_requests': 'httpRequests'
         }
         return attributes
@@ -243,6 +249,35 @@ class AnalyticsErrorDetail(object):
                 raise TypeError("Invalid type for `error_data`, type has to be `AnalyticsErrorData`")
 
         self._error_data = error_data
+
+    @property
+    def severity(self):
+        # type: () -> string_types
+        """Gets the severity of this AnalyticsErrorDetail.
+
+        Severity of the error
+
+        :return: The severity of this AnalyticsErrorDetail.
+        :rtype: string_types
+        """
+        return self._severity
+
+    @severity.setter
+    def severity(self, severity):
+        # type: (string_types) -> None
+        """Sets the severity of this AnalyticsErrorDetail.
+
+        Severity of the error
+
+        :param severity: The severity of this AnalyticsErrorDetail.
+        :type: string_types
+        """
+
+        if severity is not None:
+            if not isinstance(severity, string_types):
+                raise TypeError("Invalid type for `severity`, type has to be `string_types`")
+
+        self._severity = severity
 
     @property
     def http_requests(self):
