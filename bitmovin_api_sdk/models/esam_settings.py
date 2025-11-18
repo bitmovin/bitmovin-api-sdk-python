@@ -64,7 +64,7 @@ class EsamSettings(object):
         # type: () -> string_types
         """Gets the pois_endpoint of this EsamSettings.
 
-        The URL of the Placement Opportunity Information System (POIS) signal processing endpoint.  The encoder transmits SignalProcessingEvents to this endpoint whenever SCTE-35 messages are detected. 
+        The URL of the Placement Opportunity Information System (POIS) signal processing endpoint. The encoder transmits SignalProcessingEvents to this endpoint whenever SCTE-35 messages are detected. 
 
         :return: The pois_endpoint of this EsamSettings.
         :rtype: string_types
@@ -76,7 +76,7 @@ class EsamSettings(object):
         # type: (string_types) -> None
         """Sets the pois_endpoint of this EsamSettings.
 
-        The URL of the Placement Opportunity Information System (POIS) signal processing endpoint.  The encoder transmits SignalProcessingEvents to this endpoint whenever SCTE-35 messages are detected. 
+        The URL of the Placement Opportunity Information System (POIS) signal processing endpoint. The encoder transmits SignalProcessingEvents to this endpoint whenever SCTE-35 messages are detected. 
 
         :param pois_endpoint: The pois_endpoint of this EsamSettings.
         :type: string_types
@@ -151,7 +151,7 @@ class EsamSettings(object):
         # type: () -> int
         """Gets the ad_avail_offset of this EsamSettings.
 
-        Defines an offset (in milliseconds) to be applied to the stream event timestamp.  This offset adjusts the `StreamTime` values (such as PTS) associated with ad opportunities  or content insertions. It is used to fine-tune timing for embedded SCTE-104/35 messages  to ensure precise frame alignment in the transport stream. 
+        Defines an offset (in milliseconds) to be applied to the stream event timestamp. This offset adjusts the `StreamTime` values (such as PTS) associated with ad opportunities or content insertions. It is used to fine-tune timing for embedded SCTE-104/35 messages to ensure precise frame alignment in the transport stream. 
 
         :return: The ad_avail_offset of this EsamSettings.
         :rtype: int
@@ -163,7 +163,7 @@ class EsamSettings(object):
         # type: (int) -> None
         """Sets the ad_avail_offset of this EsamSettings.
 
-        Defines an offset (in milliseconds) to be applied to the stream event timestamp.  This offset adjusts the `StreamTime` values (such as PTS) associated with ad opportunities  or content insertions. It is used to fine-tune timing for embedded SCTE-104/35 messages  to ensure precise frame alignment in the transport stream. 
+        Defines an offset (in milliseconds) to be applied to the stream event timestamp. This offset adjusts the `StreamTime` values (such as PTS) associated with ad opportunities or content insertions. It is used to fine-tune timing for embedded SCTE-104/35 messages to ensure precise frame alignment in the transport stream. 
 
         :param ad_avail_offset: The ad_avail_offset of this EsamSettings.
         :type: int
