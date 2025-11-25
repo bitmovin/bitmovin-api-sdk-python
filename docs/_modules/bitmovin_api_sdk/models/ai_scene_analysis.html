@@ -84,7 +84,6 @@
 <span class="kn">from</span> <span class="nn">six</span> <span class="kn">import</span> <span class="n">string_types</span><span class="p">,</span> <span class="n">iteritems</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.common.poscheck</span> <span class="kn">import</span> <span class="n">poscheck_model</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.ai_scene_analysis_features</span> <span class="kn">import</span> <span class="n">AiSceneAnalysisFeatures</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.ai_service</span> <span class="kn">import</span> <span class="n">AiService</span>
 <span class="kn">import</span> <span class="nn">pprint</span>
 <span class="kn">import</span> <span class="nn">six</span>
 
@@ -92,23 +91,18 @@
 <div class="viewcode-block" id="AiSceneAnalysis"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.ai_scene_analysis.AiSceneAnalysis">[docs]</a><span class="k">class</span> <span class="nc">AiSceneAnalysis</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="nd">@poscheck_model</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
-                 <span class="n">ai_service</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">features</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (AiService, AiSceneAnalysisFeatures) -&gt; None</span>
+        <span class="c1"># type: (AiSceneAnalysisFeatures) -&gt; None</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">_ai_service</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_features</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>
 
-        <span class="k">if</span> <span class="n">ai_service</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">ai_service</span> <span class="o">=</span> <span class="n">ai_service</span>
         <span class="k">if</span> <span class="n">features</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">features</span> <span class="o">=</span> <span class="n">features</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">types</span> <span class="o">=</span> <span class="p">{</span>
-            <span class="s1">&#39;ai_service&#39;</span><span class="p">:</span> <span class="s1">&#39;AiService&#39;</span><span class="p">,</span>
             <span class="s1">&#39;features&#39;</span><span class="p">:</span> <span class="s1">&#39;AiSceneAnalysisFeatures&#39;</span>
         <span class="p">}</span>
 
@@ -117,39 +111,9 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">attribute_map</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">attributes</span> <span class="o">=</span> <span class="p">{</span>
-            <span class="s1">&#39;ai_service&#39;</span><span class="p">:</span> <span class="s1">&#39;aiService&#39;</span><span class="p">,</span>
             <span class="s1">&#39;features&#39;</span><span class="p">:</span> <span class="s1">&#39;features&#39;</span>
         <span class="p">}</span>
         <span class="k">return</span> <span class="n">attributes</span>
-
-    <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">ai_service</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="c1"># type: () -&gt; AiService</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the ai_service of this AiSceneAnalysis.</span>
-
-<span class="sd">        AI service settings</span>
-
-<span class="sd">        :return: The ai_service of this AiSceneAnalysis.</span>
-<span class="sd">        :rtype: AiService</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_ai_service</span>
-
-    <span class="nd">@ai_service</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">ai_service</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ai_service</span><span class="p">):</span>
-        <span class="c1"># type: (AiService) -&gt; None</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the ai_service of this AiSceneAnalysis.</span>
-
-<span class="sd">        AI service settings</span>
-
-<span class="sd">        :param ai_service: The ai_service of this AiSceneAnalysis.</span>
-<span class="sd">        :type: AiService</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-
-        <span class="k">if</span> <span class="n">ai_service</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">ai_service</span><span class="p">,</span> <span class="n">AiService</span><span class="p">):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `ai_service`, type has to be `AiService`&quot;</span><span class="p">)</span>
-
-        <span class="bp">self</span><span class="o">.</span><span class="n">_ai_service</span> <span class="o">=</span> <span class="n">ai_service</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">features</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>bitmovin_api_sdk.encoding.outputs package &mdash; Bitmovin Python API SDK {{packageVersion}} documentation</title>
@@ -360,16 +360,16 @@
 <span class="sig-name descname"><span class="pre">check_permissions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">output_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">string_types</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">check_output_permissions_request</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.check_output_permissions_request.CheckOutputPermissionsRequest" title="bitmovin_api_sdk.models.check_output_permissions_request.CheckOutputPermissionsRequest"><span class="pre">CheckOutputPermissionsRequest</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.check_output_permissions_response.CheckOutputPermissionsResponse" title="bitmovin_api_sdk.models.check_output_permissions_response.CheckOutputPermissionsResponse"><span class="pre">CheckOutputPermissionsResponse</span></a></span></span><a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/outputs/outputs_api.html#OutputsApi.check_permissions"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.outputs.outputs_api.OutputsApi.check_permissions" title="Permalink to this definition"></a></dt>
 <dd><p>Check output permissions (S3 only)</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>output_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the output to be checked. Currently limited to S3 outputs. The access credentials that have been provided for this Output still need to be valid, otherwise the request will fail. If they are not valid any more, create a new Output with new credentials (resources are immutable).</p></li>
 <li><p><strong>check_output_permissions_request</strong> (<a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.check_output_permissions_request.CheckOutputPermissionsRequest" title="bitmovin_api_sdk.models.check_output_permissions_request.CheckOutputPermissionsRequest"><em>CheckOutputPermissionsRequest</em></a>) – Additional parameters for the permissions check</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>Permissions check result</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.check_output_permissions_response.CheckOutputPermissionsResponse" title="bitmovin_api_sdk.models.check_output_permissions_response.CheckOutputPermissionsResponse">CheckOutputPermissionsResponse</a></p>
 </dd>
 </dl>
@@ -380,13 +380,13 @@
 <span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">output_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">string_types</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.output.Output" title="bitmovin_api_sdk.models.output.Output"><span class="pre">Output</span></a></span></span><a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/outputs/outputs_api.html#OutputsApi.get"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.outputs.outputs_api.OutputsApi.get" title="Permalink to this definition"></a></dt>
 <dd><p>Get Output Details</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>output_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the wanted output</p>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>Output details</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.output.Output" title="bitmovin_api_sdk.models.output.Output">Output</a></p>
 </dd>
 </dl>
@@ -397,13 +397,13 @@
 <span class="sig-name descname"><span class="pre">list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query_params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#bitmovin_api_sdk.encoding.outputs.output_list_query_params.OutputListQueryParams" title="bitmovin_api_sdk.encoding.outputs.output_list_query_params.OutputListQueryParams"><span class="pre">OutputListQueryParams</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.output.Output" title="bitmovin_api_sdk.models.output.Output"><span class="pre">Output</span></a></span></span><a class="reference internal" href="../_modules/bitmovin_api_sdk/encoding/outputs/outputs_api.html#OutputsApi.list"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bitmovin_api_sdk.encoding.outputs.outputs_api.OutputsApi.list" title="Permalink to this definition"></a></dt>
 <dd><p>List all Outputs</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>query_params</strong> (<a class="reference internal" href="#bitmovin_api_sdk.encoding.outputs.output_list_query_params.OutputListQueryParams" title="bitmovin_api_sdk.encoding.outputs.output_list_query_params.OutputListQueryParams"><em>OutputListQueryParams</em></a>) – Query parameters</p>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>All outputs with type information. The specific properties for each type are also included. These are the same as in the list call for a specific type.</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.output.Output" title="bitmovin_api_sdk.models.output.Output">Output</a></p>
 </dd>
 </dl>

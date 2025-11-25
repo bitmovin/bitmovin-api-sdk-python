@@ -1118,8 +1118,6 @@ from bitmovin_api_sdk.models.ai_scene_analysis_asset_description import AiSceneA
 from bitmovin_api_sdk.models.ai_scene_analysis_automatic_ad_placement import AiSceneAnalysisAutomaticAdPlacement
 from bitmovin_api_sdk.models.ai_scene_analysis_features import AiSceneAnalysisFeatures
 from bitmovin_api_sdk.models.ai_scene_analysis_output_language_codes import AiSceneAnalysisOutputLanguageCodes
-from bitmovin_api_sdk.models.ai_service import AiService
-from bitmovin_api_sdk.models.ai_service_provider import AiServiceProvider
 from bitmovin_api_sdk.models.akamai_account import AkamaiAccount
 from bitmovin_api_sdk.models.akamai_account_region_settings import AkamaiAccountRegionSettings
 from bitmovin_api_sdk.models.akamai_cloud_region import AkamaiCloudRegion
@@ -1928,4 +1926,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.250.0"
+__version__ = "1.251.0"

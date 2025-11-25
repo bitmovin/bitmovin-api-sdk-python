@@ -388,22 +388,6 @@ bitmovin\_api\_sdk.models.ai\_scene\_analysis\_output\_language\_codes module
    :undoc-members:
    :show-inheritance:
 
-bitmovin\_api\_sdk.models.ai\_service module
---------------------------------------------
-
-.. automodule:: bitmovin_api_sdk.models.ai_service
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-bitmovin\_api\_sdk.models.ai\_service\_provider module
-------------------------------------------------------
-
-.. automodule:: bitmovin_api_sdk.models.ai_service_provider
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
 bitmovin\_api\_sdk.models.akamai\_account module
 ------------------------------------------------
 

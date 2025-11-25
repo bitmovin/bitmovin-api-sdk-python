@@ -4,7 +4,6 @@ from enum import Enum
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
 from bitmovin_api_sdk.models.ai_scene_analysis_features import AiSceneAnalysisFeatures
-from bitmovin_api_sdk.models.ai_service import AiService
 import pprint
 import six
 
@@ -12,23 +11,18 @@ import six
 class AiSceneAnalysis(object):
     @poscheck_model
     def __init__(self,
-                 ai_service=None,
                  features=None):
-        # type: (AiService, AiSceneAnalysisFeatures) -> None
+        # type: (AiSceneAnalysisFeatures) -> None
 
-        self._ai_service = None
         self._features = None
         self.discriminator = None
 
-        if ai_service is not None:
-            self.ai_service = ai_service
         if features is not None:
             self.features = features
 
     @property
     def openapi_types(self):
         types = {
-            'ai_service': 'AiService',
             'features': 'AiSceneAnalysisFeatures'
         }
 
@@ -37,39 +31,9 @@ class AiSceneAnalysis(object):
     @property
     def attribute_map(self):
         attributes = {
-            'ai_service': 'aiService',
             'features': 'features'
         }
         return attributes
-
-    @property
-    def ai_service(self):
-        # type: () -> AiService
-        """Gets the ai_service of this AiSceneAnalysis.
-
-        AI service settings
-
-        :return: The ai_service of this AiSceneAnalysis.
-        :rtype: AiService
-        """
-        return self._ai_service
-
-    @ai_service.setter
-    def ai_service(self, ai_service):
-        # type: (AiService) -> None
-        """Sets the ai_service of this AiSceneAnalysis.
-
-        AI service settings
-
-        :param ai_service: The ai_service of this AiSceneAnalysis.
-        :type: AiService
-        """
-
-        if ai_service is not None:
-            if not isinstance(ai_service, AiService):
-                raise TypeError("Invalid type for `ai_service`, type has to be `AiService`")
-
-        self._ai_service = ai_service
 
     @property
     def features(self):
