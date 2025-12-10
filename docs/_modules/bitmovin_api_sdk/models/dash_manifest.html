@@ -110,8 +110,9 @@
                  <span class="n">namespaces</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">utc_timings</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">dash_edition_compatibility</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                 <span class="n">iso8601_timestamp_format</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (string_types, string_types, string_types, datetime, datetime, dict, ManifestType, list[EncodingOutput], Status, DashProfile, string_types, list[XmlNamespace], list[UtcTiming], DashEditionCompatibility, DashISO8601TimestampFormat) -&gt; None</span>
+                 <span class="n">iso8601_timestamp_format</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">min_buffer_time</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="c1"># type: (string_types, string_types, string_types, datetime, datetime, dict, ManifestType, list[EncodingOutput], Status, DashProfile, string_types, list[XmlNamespace], list[UtcTiming], DashEditionCompatibility, DashISO8601TimestampFormat, float) -&gt; None</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">DashManifest</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">id_</span><span class="o">=</span><span class="n">id_</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="n">description</span><span class="p">,</span> <span class="n">created_at</span><span class="o">=</span><span class="n">created_at</span><span class="p">,</span> <span class="n">modified_at</span><span class="o">=</span><span class="n">modified_at</span><span class="p">,</span> <span class="n">custom_data</span><span class="o">=</span><span class="n">custom_data</span><span class="p">,</span> <span class="n">type_</span><span class="o">=</span><span class="n">type_</span><span class="p">,</span> <span class="n">outputs</span><span class="o">=</span><span class="n">outputs</span><span class="p">,</span> <span class="n">status</span><span class="o">=</span><span class="n">status</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_profile</span> <span class="o">=</span> <span class="kc">None</span>
@@ -120,6 +121,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_utc_timings</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_dash_edition_compatibility</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_iso8601_timestamp_format</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_min_buffer_time</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>
 
         <span class="k">if</span> <span class="n">profile</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -134,6 +136,8 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">dash_edition_compatibility</span> <span class="o">=</span> <span class="n">dash_edition_compatibility</span>
         <span class="k">if</span> <span class="n">iso8601_timestamp_format</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">iso8601_timestamp_format</span> <span class="o">=</span> <span class="n">iso8601_timestamp_format</span>
+        <span class="k">if</span> <span class="n">min_buffer_time</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">min_buffer_time</span> <span class="o">=</span> <span class="n">min_buffer_time</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -148,7 +152,8 @@
             <span class="s1">&#39;namespaces&#39;</span><span class="p">:</span> <span class="s1">&#39;list[XmlNamespace]&#39;</span><span class="p">,</span>
             <span class="s1">&#39;utc_timings&#39;</span><span class="p">:</span> <span class="s1">&#39;list[UtcTiming]&#39;</span><span class="p">,</span>
             <span class="s1">&#39;dash_edition_compatibility&#39;</span><span class="p">:</span> <span class="s1">&#39;DashEditionCompatibility&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;iso8601_timestamp_format&#39;</span><span class="p">:</span> <span class="s1">&#39;DashISO8601TimestampFormat&#39;</span>
+            <span class="s1">&#39;iso8601_timestamp_format&#39;</span><span class="p">:</span> <span class="s1">&#39;DashISO8601TimestampFormat&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;min_buffer_time&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span>
         <span class="p">})</span>
 
         <span class="k">return</span> <span class="n">types</span>
@@ -166,7 +171,8 @@
             <span class="s1">&#39;namespaces&#39;</span><span class="p">:</span> <span class="s1">&#39;namespaces&#39;</span><span class="p">,</span>
             <span class="s1">&#39;utc_timings&#39;</span><span class="p">:</span> <span class="s1">&#39;utcTimings&#39;</span><span class="p">,</span>
             <span class="s1">&#39;dash_edition_compatibility&#39;</span><span class="p">:</span> <span class="s1">&#39;dashEditionCompatibility&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;iso8601_timestamp_format&#39;</span><span class="p">:</span> <span class="s1">&#39;iso8601TimestampFormat&#39;</span>
+            <span class="s1">&#39;iso8601_timestamp_format&#39;</span><span class="p">:</span> <span class="s1">&#39;iso8601TimestampFormat&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;min_buffer_time&#39;</span><span class="p">:</span> <span class="s1">&#39;minBufferTime&#39;</span>
         <span class="p">})</span>
         <span class="k">return</span> <span class="n">attributes</span>
 
@@ -343,6 +349,35 @@
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `iso8601_timestamp_format`, type has to be `DashISO8601TimestampFormat`&quot;</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_iso8601_timestamp_format</span> <span class="o">=</span> <span class="n">iso8601_timestamp_format</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">min_buffer_time</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; float</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the min_buffer_time of this DashManifest.</span>
+
+<span class="sd">        The minimum buffer time in seconds that the client should maintain to ensure uninterrupted playback. Default is 2 seconds. Note: For VOD ON_DEMAND dash manifests, the default value may differ from 2.0 seconds if not explicitly set. </span>
+
+<span class="sd">        :return: The min_buffer_time of this DashManifest.</span>
+<span class="sd">        :rtype: float</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_min_buffer_time</span>
+
+    <span class="nd">@min_buffer_time</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">min_buffer_time</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">min_buffer_time</span><span class="p">):</span>
+        <span class="c1"># type: (float) -&gt; None</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the min_buffer_time of this DashManifest.</span>
+
+<span class="sd">        The minimum buffer time in seconds that the client should maintain to ensure uninterrupted playback. Default is 2 seconds. Note: For VOD ON_DEMAND dash manifests, the default value may differ from 2.0 seconds if not explicitly set. </span>
+
+<span class="sd">        :param min_buffer_time: The min_buffer_time of this DashManifest.</span>
+<span class="sd">        :type: float</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">min_buffer_time</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">min_buffer_time</span><span class="p">,</span> <span class="p">(</span><span class="nb">float</span><span class="p">,</span> <span class="nb">int</span><span class="p">)):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `min_buffer_time`, type has to be `float`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_min_buffer_time</span> <span class="o">=</span> <span class="n">min_buffer_time</span>
 
 <div class="viewcode-block" id="DashManifest.to_dict"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.dash_manifest.DashManifest.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>

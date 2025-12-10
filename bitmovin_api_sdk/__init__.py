@@ -781,6 +781,8 @@ from bitmovin_api_sdk.encoding.encodings.keyframes.keyframes_api import Keyframe
 from bitmovin_api_sdk.encoding.encodings.keyframes.keyframes_api import KeyframeListQueryParams
 from bitmovin_api_sdk.encoding.encodings.scte35_triggers.scte35_triggers_api import Scte35TriggersApi
 from bitmovin_api_sdk.encoding.encodings.scte35_triggers.scte35_triggers_api import Scte35TriggerListQueryParams
+from bitmovin_api_sdk.encoding.encodings.live.heartbeat.heartbeat_api import HeartbeatApi
+
 from bitmovin_api_sdk.encoding.encodings.live.hd.hd_api import HdApi
 
 from bitmovin_api_sdk.encoding.live.live_api import LiveApi
@@ -1562,6 +1564,13 @@ from bitmovin_api_sdk.models.live_dash_manifest import LiveDashManifest
 from bitmovin_api_sdk.models.live_encoding import LiveEncoding
 from bitmovin_api_sdk.models.live_encoding_codec import LiveEncodingCodec
 from bitmovin_api_sdk.models.live_encoding_event_name import LiveEncodingEventName
+from bitmovin_api_sdk.models.live_encoding_heartbeat import LiveEncodingHeartbeat
+from bitmovin_api_sdk.models.live_encoding_heartbeat_event import LiveEncodingHeartbeatEvent
+from bitmovin_api_sdk.models.live_encoding_heartbeat_event_details import LiveEncodingHeartbeatEventDetails
+from bitmovin_api_sdk.models.live_encoding_heartbeat_event_type import LiveEncodingHeartbeatEventType
+from bitmovin_api_sdk.models.live_encoding_heartbeat_ingest import LiveEncodingHeartbeatIngest
+from bitmovin_api_sdk.models.live_encoding_heartbeat_ingest_point import LiveEncodingHeartbeatIngestPoint
+from bitmovin_api_sdk.models.live_encoding_heartbeat_ingest_stream import LiveEncodingHeartbeatIngestStream
 from bitmovin_api_sdk.models.live_encoding_heartbeat_webhook import LiveEncodingHeartbeatWebhook
 from bitmovin_api_sdk.models.live_encoding_options_statistics import LiveEncodingOptionsStatistics
 from bitmovin_api_sdk.models.live_encoding_stats import LiveEncodingStats
@@ -1731,6 +1740,7 @@ from bitmovin_api_sdk.models.reupload_settings import ReuploadSettings
 from bitmovin_api_sdk.models.rotate_filter import RotateFilter
 from bitmovin_api_sdk.models.rtmp_ingest_point import RtmpIngestPoint
 from bitmovin_api_sdk.models.rtmp_input import RtmpInput
+from bitmovin_api_sdk.models.rtmp_user_ingest_info import RtmpUserIngestInfo
 from bitmovin_api_sdk.models.s3_access_style import S3AccessStyle
 from bitmovin_api_sdk.models.s3_input import S3Input
 from bitmovin_api_sdk.models.s3_output import S3Output
@@ -1926,4 +1936,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.251.0"
+__version__ = "1.252.0"

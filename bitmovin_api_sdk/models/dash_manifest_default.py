@@ -32,11 +32,12 @@ class DashManifestDefault(DashManifest):
                  utc_timings=None,
                  dash_edition_compatibility=None,
                  iso8601_timestamp_format=None,
+                 min_buffer_time=None,
                  encoding_id=None,
                  version=None,
                  periods=None):
-        # type: (string_types, string_types, string_types, datetime, datetime, dict, ManifestType, list[EncodingOutput], Status, DashProfile, string_types, list[XmlNamespace], list[UtcTiming], DashEditionCompatibility, DashISO8601TimestampFormat, string_types, DashManifestDefaultVersion, list[DefaultDashManifestPeriod]) -> None
-        super(DashManifestDefault, self).__init__(id_=id_, name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, type_=type_, outputs=outputs, status=status, profile=profile, manifest_name=manifest_name, namespaces=namespaces, utc_timings=utc_timings, dash_edition_compatibility=dash_edition_compatibility, iso8601_timestamp_format=iso8601_timestamp_format)
+        # type: (string_types, string_types, string_types, datetime, datetime, dict, ManifestType, list[EncodingOutput], Status, DashProfile, string_types, list[XmlNamespace], list[UtcTiming], DashEditionCompatibility, DashISO8601TimestampFormat, float, string_types, DashManifestDefaultVersion, list[DefaultDashManifestPeriod]) -> None
+        super(DashManifestDefault, self).__init__(id_=id_, name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, type_=type_, outputs=outputs, status=status, profile=profile, manifest_name=manifest_name, namespaces=namespaces, utc_timings=utc_timings, dash_edition_compatibility=dash_edition_compatibility, iso8601_timestamp_format=iso8601_timestamp_format, min_buffer_time=min_buffer_time)
 
         self._encoding_id = None
         self._version = None

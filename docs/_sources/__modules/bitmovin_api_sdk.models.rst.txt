@@ -3940,6 +3940,62 @@ bitmovin\_api\_sdk.models.live\_encoding\_event\_name module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.live\_encoding\_heartbeat module
+----------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.live_encoding_heartbeat
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.live\_encoding\_heartbeat\_event module
+-----------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.live_encoding_heartbeat_event
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.live\_encoding\_heartbeat\_event\_details module
+--------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.live_encoding_heartbeat_event_details
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.live\_encoding\_heartbeat\_event\_type module
+-----------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.live_encoding_heartbeat_event_type
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.live\_encoding\_heartbeat\_ingest module
+------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.live_encoding_heartbeat_ingest
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.live\_encoding\_heartbeat\_ingest\_point module
+-------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.live_encoding_heartbeat_ingest_point
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.live\_encoding\_heartbeat\_ingest\_stream module
+--------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.live_encoding_heartbeat_ingest_stream
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.live\_encoding\_heartbeat\_webhook module
 -------------------------------------------------------------------
 
@@ -5288,6 +5344,14 @@ bitmovin\_api\_sdk.models.rtmp\_input module
 --------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.models.rtmp_input
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.rtmp\_user\_ingest\_info module
+---------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.rtmp_user_ingest_info
    :members:
    :undoc-members:
    :show-inheritance:

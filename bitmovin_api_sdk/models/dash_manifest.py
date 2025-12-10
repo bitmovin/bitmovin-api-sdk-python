@@ -30,8 +30,9 @@ class DashManifest(Manifest):
                  namespaces=None,
                  utc_timings=None,
                  dash_edition_compatibility=None,
-                 iso8601_timestamp_format=None):
-        # type: (string_types, string_types, string_types, datetime, datetime, dict, ManifestType, list[EncodingOutput], Status, DashProfile, string_types, list[XmlNamespace], list[UtcTiming], DashEditionCompatibility, DashISO8601TimestampFormat) -> None
+                 iso8601_timestamp_format=None,
+                 min_buffer_time=None):
+        # type: (string_types, string_types, string_types, datetime, datetime, dict, ManifestType, list[EncodingOutput], Status, DashProfile, string_types, list[XmlNamespace], list[UtcTiming], DashEditionCompatibility, DashISO8601TimestampFormat, float) -> None
         super(DashManifest, self).__init__(id_=id_, name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, type_=type_, outputs=outputs, status=status)
 
         self._profile = None
@@ -40,6 +41,7 @@ class DashManifest(Manifest):
         self._utc_timings = list()
         self._dash_edition_compatibility = None
         self._iso8601_timestamp_format = None
+        self._min_buffer_time = None
         self.discriminator = None
 
         if profile is not None:
@@ -54,6 +56,8 @@ class DashManifest(Manifest):
             self.dash_edition_compatibility = dash_edition_compatibility
         if iso8601_timestamp_format is not None:
             self.iso8601_timestamp_format = iso8601_timestamp_format
+        if min_buffer_time is not None:
+            self.min_buffer_time = min_buffer_time
 
     @property
     def openapi_types(self):
@@ -68,7 +72,8 @@ class DashManifest(Manifest):
             'namespaces': 'list[XmlNamespace]',
             'utc_timings': 'list[UtcTiming]',
             'dash_edition_compatibility': 'DashEditionCompatibility',
-            'iso8601_timestamp_format': 'DashISO8601TimestampFormat'
+            'iso8601_timestamp_format': 'DashISO8601TimestampFormat',
+            'min_buffer_time': 'float'
         })
 
         return types
@@ -86,7 +91,8 @@ class DashManifest(Manifest):
             'namespaces': 'namespaces',
             'utc_timings': 'utcTimings',
             'dash_edition_compatibility': 'dashEditionCompatibility',
-            'iso8601_timestamp_format': 'iso8601TimestampFormat'
+            'iso8601_timestamp_format': 'iso8601TimestampFormat',
+            'min_buffer_time': 'minBufferTime'
         })
         return attributes
 
@@ -263,6 +269,35 @@ class DashManifest(Manifest):
                 raise TypeError("Invalid type for `iso8601_timestamp_format`, type has to be `DashISO8601TimestampFormat`")
 
         self._iso8601_timestamp_format = iso8601_timestamp_format
+
+    @property
+    def min_buffer_time(self):
+        # type: () -> float
+        """Gets the min_buffer_time of this DashManifest.
+
+        The minimum buffer time in seconds that the client should maintain to ensure uninterrupted playback. Default is 2 seconds. Note: For VOD ON_DEMAND dash manifests, the default value may differ from 2.0 seconds if not explicitly set. 
+
+        :return: The min_buffer_time of this DashManifest.
+        :rtype: float
+        """
+        return self._min_buffer_time
+
+    @min_buffer_time.setter
+    def min_buffer_time(self, min_buffer_time):
+        # type: (float) -> None
+        """Sets the min_buffer_time of this DashManifest.
+
+        The minimum buffer time in seconds that the client should maintain to ensure uninterrupted playback. Default is 2 seconds. Note: For VOD ON_DEMAND dash manifests, the default value may differ from 2.0 seconds if not explicitly set. 
+
+        :param min_buffer_time: The min_buffer_time of this DashManifest.
+        :type: float
+        """
+
+        if min_buffer_time is not None:
+            if not isinstance(min_buffer_time, (float, int)):
+                raise TypeError("Invalid type for `min_buffer_time`, type has to be `float`")
+
+        self._min_buffer_time = min_buffer_time
 
     def to_dict(self):
         """Returns the model properties as a dict"""

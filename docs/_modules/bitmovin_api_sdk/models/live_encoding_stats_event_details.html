@@ -93,32 +93,27 @@
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
                  <span class="n">event_type</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">message</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                 <span class="n">mid_roll_asset_names</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                 <span class="n">duration_in_seconds</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (LiveEncodingEventName, string_types, list[string_types], float) -&gt; None</span>
+                 <span class="n">additional_properties</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="c1"># type: (LiveEncodingEventName, string_types, string_types) -&gt; None</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_event_type</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_message</span> <span class="o">=</span> <span class="kc">None</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_mid_roll_asset_names</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_duration_in_seconds</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_additional_properties</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>
 
         <span class="k">if</span> <span class="n">event_type</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">event_type</span> <span class="o">=</span> <span class="n">event_type</span>
         <span class="k">if</span> <span class="n">message</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">message</span> <span class="o">=</span> <span class="n">message</span>
-        <span class="k">if</span> <span class="n">mid_roll_asset_names</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">mid_roll_asset_names</span> <span class="o">=</span> <span class="n">mid_roll_asset_names</span>
-        <span class="k">if</span> <span class="n">duration_in_seconds</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">duration_in_seconds</span> <span class="o">=</span> <span class="n">duration_in_seconds</span>
+        <span class="k">if</span> <span class="n">additional_properties</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">additional_properties</span> <span class="o">=</span> <span class="n">additional_properties</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">types</span> <span class="o">=</span> <span class="p">{</span>
             <span class="s1">&#39;event_type&#39;</span><span class="p">:</span> <span class="s1">&#39;LiveEncodingEventName&#39;</span><span class="p">,</span>
             <span class="s1">&#39;message&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;mid_roll_asset_names&#39;</span><span class="p">:</span> <span class="s1">&#39;list[string_types]&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;duration_in_seconds&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span>
+            <span class="s1">&#39;additional_properties&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span>
         <span class="p">}</span>
 
         <span class="k">return</span> <span class="n">types</span>
@@ -128,8 +123,7 @@
         <span class="n">attributes</span> <span class="o">=</span> <span class="p">{</span>
             <span class="s1">&#39;event_type&#39;</span><span class="p">:</span> <span class="s1">&#39;eventType&#39;</span><span class="p">,</span>
             <span class="s1">&#39;message&#39;</span><span class="p">:</span> <span class="s1">&#39;message&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;mid_roll_asset_names&#39;</span><span class="p">:</span> <span class="s1">&#39;midRollAssetNames&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;duration_in_seconds&#39;</span><span class="p">:</span> <span class="s1">&#39;durationInSeconds&#39;</span>
+            <span class="s1">&#39;additional_properties&#39;</span><span class="p">:</span> <span class="s1">&#39;additionalProperties&#39;</span>
         <span class="p">}</span>
         <span class="k">return</span> <span class="n">attributes</span>
 
@@ -190,62 +184,33 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_message</span> <span class="o">=</span> <span class="n">message</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">mid_roll_asset_names</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="c1"># type: () -&gt; list[string_types]</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the mid_roll_asset_names of this LiveEncodingStatsEventDetails.</span>
+    <span class="k">def</span> <span class="nf">additional_properties</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; string_types</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the additional_properties of this LiveEncodingStatsEventDetails.</span>
 
-<span class="sd">        Name of the mid roll asset name</span>
+<span class="sd">        Additional event details as key-value pairs</span>
 
-<span class="sd">        :return: The mid_roll_asset_names of this LiveEncodingStatsEventDetails.</span>
-<span class="sd">        :rtype: list[string_types]</span>
+<span class="sd">        :return: The additional_properties of this LiveEncodingStatsEventDetails.</span>
+<span class="sd">        :rtype: string_types</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mid_roll_asset_names</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_additional_properties</span>
 
-    <span class="nd">@mid_roll_asset_names</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">mid_roll_asset_names</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mid_roll_asset_names</span><span class="p">):</span>
-        <span class="c1"># type: (list) -&gt; None</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the mid_roll_asset_names of this LiveEncodingStatsEventDetails.</span>
+    <span class="nd">@additional_properties</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">additional_properties</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">additional_properties</span><span class="p">):</span>
+        <span class="c1"># type: (string_types) -&gt; None</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the additional_properties of this LiveEncodingStatsEventDetails.</span>
 
-<span class="sd">        Name of the mid roll asset name</span>
+<span class="sd">        Additional event details as key-value pairs</span>
 
-<span class="sd">        :param mid_roll_asset_names: The mid_roll_asset_names of this LiveEncodingStatsEventDetails.</span>
-<span class="sd">        :type: list[string_types]</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-
-        <span class="k">if</span> <span class="n">mid_roll_asset_names</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">mid_roll_asset_names</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `mid_roll_asset_names`, type has to be `list[string_types]`&quot;</span><span class="p">)</span>
-
-        <span class="bp">self</span><span class="o">.</span><span class="n">_mid_roll_asset_names</span> <span class="o">=</span> <span class="n">mid_roll_asset_names</span>
-
-    <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">duration_in_seconds</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="c1"># type: () -&gt; float</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the duration_in_seconds of this LiveEncodingStatsEventDetails.</span>
-
-<span class="sd">        Duration in seconds</span>
-
-<span class="sd">        :return: The duration_in_seconds of this LiveEncodingStatsEventDetails.</span>
-<span class="sd">        :rtype: float</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_duration_in_seconds</span>
-
-    <span class="nd">@duration_in_seconds</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">duration_in_seconds</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">duration_in_seconds</span><span class="p">):</span>
-        <span class="c1"># type: (float) -&gt; None</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the duration_in_seconds of this LiveEncodingStatsEventDetails.</span>
-
-<span class="sd">        Duration in seconds</span>
-
-<span class="sd">        :param duration_in_seconds: The duration_in_seconds of this LiveEncodingStatsEventDetails.</span>
-<span class="sd">        :type: float</span>
+<span class="sd">        :param additional_properties: The additional_properties of this LiveEncodingStatsEventDetails.</span>
+<span class="sd">        :type: string_types</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
-        <span class="k">if</span> <span class="n">duration_in_seconds</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">duration_in_seconds</span><span class="p">,</span> <span class="p">(</span><span class="nb">float</span><span class="p">,</span> <span class="nb">int</span><span class="p">)):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `duration_in_seconds`, type has to be `float`&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">additional_properties</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">additional_properties</span><span class="p">,</span> <span class="n">string_types</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `additional_properties`, type has to be `string_types`&quot;</span><span class="p">)</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">_duration_in_seconds</span> <span class="o">=</span> <span class="n">duration_in_seconds</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_additional_properties</span> <span class="o">=</span> <span class="n">additional_properties</span>
 
 <div class="viewcode-block" id="LiveEncodingStatsEventDetails.to_dict"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.live_encoding_stats_event_details.LiveEncodingStatsEventDetails.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>

@@ -13,32 +13,27 @@ class LiveEncodingStatsEventDetails(object):
     def __init__(self,
                  event_type=None,
                  message=None,
-                 mid_roll_asset_names=None,
-                 duration_in_seconds=None):
-        # type: (LiveEncodingEventName, string_types, list[string_types], float) -> None
+                 additional_properties=None):
+        # type: (LiveEncodingEventName, string_types, string_types) -> None
 
         self._event_type = None
         self._message = None
-        self._mid_roll_asset_names = list()
-        self._duration_in_seconds = None
+        self._additional_properties = None
         self.discriminator = None
 
         if event_type is not None:
             self.event_type = event_type
         if message is not None:
             self.message = message
-        if mid_roll_asset_names is not None:
-            self.mid_roll_asset_names = mid_roll_asset_names
-        if duration_in_seconds is not None:
-            self.duration_in_seconds = duration_in_seconds
+        if additional_properties is not None:
+            self.additional_properties = additional_properties
 
     @property
     def openapi_types(self):
         types = {
             'event_type': 'LiveEncodingEventName',
             'message': 'string_types',
-            'mid_roll_asset_names': 'list[string_types]',
-            'duration_in_seconds': 'float'
+            'additional_properties': 'string_types'
         }
 
         return types
@@ -48,8 +43,7 @@ class LiveEncodingStatsEventDetails(object):
         attributes = {
             'event_type': 'eventType',
             'message': 'message',
-            'mid_roll_asset_names': 'midRollAssetNames',
-            'duration_in_seconds': 'durationInSeconds'
+            'additional_properties': 'additionalProperties'
         }
         return attributes
 
@@ -110,62 +104,33 @@ class LiveEncodingStatsEventDetails(object):
         self._message = message
 
     @property
-    def mid_roll_asset_names(self):
-        # type: () -> list[string_types]
-        """Gets the mid_roll_asset_names of this LiveEncodingStatsEventDetails.
+    def additional_properties(self):
+        # type: () -> string_types
+        """Gets the additional_properties of this LiveEncodingStatsEventDetails.
 
-        Name of the mid roll asset name
+        Additional event details as key-value pairs
 
-        :return: The mid_roll_asset_names of this LiveEncodingStatsEventDetails.
-        :rtype: list[string_types]
+        :return: The additional_properties of this LiveEncodingStatsEventDetails.
+        :rtype: string_types
         """
-        return self._mid_roll_asset_names
+        return self._additional_properties
 
-    @mid_roll_asset_names.setter
-    def mid_roll_asset_names(self, mid_roll_asset_names):
-        # type: (list) -> None
-        """Sets the mid_roll_asset_names of this LiveEncodingStatsEventDetails.
+    @additional_properties.setter
+    def additional_properties(self, additional_properties):
+        # type: (string_types) -> None
+        """Sets the additional_properties of this LiveEncodingStatsEventDetails.
 
-        Name of the mid roll asset name
+        Additional event details as key-value pairs
 
-        :param mid_roll_asset_names: The mid_roll_asset_names of this LiveEncodingStatsEventDetails.
-        :type: list[string_types]
-        """
-
-        if mid_roll_asset_names is not None:
-            if not isinstance(mid_roll_asset_names, list):
-                raise TypeError("Invalid type for `mid_roll_asset_names`, type has to be `list[string_types]`")
-
-        self._mid_roll_asset_names = mid_roll_asset_names
-
-    @property
-    def duration_in_seconds(self):
-        # type: () -> float
-        """Gets the duration_in_seconds of this LiveEncodingStatsEventDetails.
-
-        Duration in seconds
-
-        :return: The duration_in_seconds of this LiveEncodingStatsEventDetails.
-        :rtype: float
-        """
-        return self._duration_in_seconds
-
-    @duration_in_seconds.setter
-    def duration_in_seconds(self, duration_in_seconds):
-        # type: (float) -> None
-        """Sets the duration_in_seconds of this LiveEncodingStatsEventDetails.
-
-        Duration in seconds
-
-        :param duration_in_seconds: The duration_in_seconds of this LiveEncodingStatsEventDetails.
-        :type: float
+        :param additional_properties: The additional_properties of this LiveEncodingStatsEventDetails.
+        :type: string_types
         """
 
-        if duration_in_seconds is not None:
-            if not isinstance(duration_in_seconds, (float, int)):
-                raise TypeError("Invalid type for `duration_in_seconds`, type has to be `float`")
+        if additional_properties is not None:
+            if not isinstance(additional_properties, string_types):
+                raise TypeError("Invalid type for `additional_properties`, type has to be `string_types`")
 
-        self._duration_in_seconds = duration_in_seconds
+        self._additional_properties = additional_properties
 
     def to_dict(self):
         """Returns the model properties as a dict"""

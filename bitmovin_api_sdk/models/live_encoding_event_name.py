@@ -12,3 +12,6 @@ class LiveEncodingEventName(Enum):
     RESYNCING = "RESYNCING"
     IDLE = "IDLE"
     ERROR = "ERROR"
+    WARNING = "WARNING"
+    PICTURE_TIMING = "PICTURE_TIMING"
+    INFO = "INFO"

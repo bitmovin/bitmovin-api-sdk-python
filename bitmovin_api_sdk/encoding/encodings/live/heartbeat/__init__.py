@@ -1,0 +1,1 @@
+from bitmovin_api_sdk.encoding.encodings.live.heartbeat.heartbeat_api import HeartbeatApi
