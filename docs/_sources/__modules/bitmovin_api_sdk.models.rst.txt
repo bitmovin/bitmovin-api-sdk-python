@@ -1708,6 +1708,14 @@ bitmovin\_api\_sdk.models.clear\_key\_drm module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.clock\_synchronization\_mode module
+-------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.clock_synchronization_mode
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.closed\_captions\_media\_info module
 --------------------------------------------------------------
 
@@ -3832,6 +3840,14 @@ bitmovin\_api\_sdk.models.iv\_size module
 -----------------------------------------
 
 .. automodule:: bitmovin_api_sdk.models.iv_size
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.kantar\_watermark module
+--------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.kantar_watermark
    :members:
    :undoc-members:
    :show-inheritance:

@@ -104,6 +104,7 @@
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.encoding.encodings.output_paths.output_paths_api</span> <span class="kn">import</span> <span class="n">OutputPathsApi</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.encoding.encodings.captions.captions_api</span> <span class="kn">import</span> <span class="n">CaptionsApi</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.encoding.encodings.sidecars.sidecars_api</span> <span class="kn">import</span> <span class="n">SidecarsApi</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.encoding.encodings.kantar_watermark.kantar_watermark_api</span> <span class="kn">import</span> <span class="n">KantarWatermarkApi</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.encoding.encodings.keyframes.keyframes_api</span> <span class="kn">import</span> <span class="n">KeyframesApi</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.encoding.encodings.scte35_triggers.scte35_triggers_api</span> <span class="kn">import</span> <span class="n">Scte35TriggersApi</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.encoding.encodings.encoding_list_query_params</span> <span class="kn">import</span> <span class="n">EncodingListQueryParams</span>
@@ -185,6 +186,13 @@
         <span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">sidecars</span> <span class="o">=</span> <span class="n">SidecarsApi</span><span class="p">(</span>
+            <span class="n">api_key</span><span class="o">=</span><span class="n">api_key</span><span class="p">,</span>
+            <span class="n">tenant_org_id</span><span class="o">=</span><span class="n">tenant_org_id</span><span class="p">,</span>
+            <span class="n">base_url</span><span class="o">=</span><span class="n">base_url</span><span class="p">,</span>
+            <span class="n">logger</span><span class="o">=</span><span class="n">logger</span>
+        <span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">kantar_watermark</span> <span class="o">=</span> <span class="n">KantarWatermarkApi</span><span class="p">(</span>
             <span class="n">api_key</span><span class="o">=</span><span class="n">api_key</span><span class="p">,</span>
             <span class="n">tenant_org_id</span><span class="o">=</span><span class="n">tenant_org_id</span><span class="p">,</span>
             <span class="n">base_url</span><span class="o">=</span><span class="n">base_url</span><span class="p">,</span>

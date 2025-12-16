@@ -90,20 +90,24 @@
 <div class="viewcode-block" id="IABTaxonomy"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.iab_taxonomy.IABTaxonomy">[docs]</a><span class="k">class</span> <span class="nc">IABTaxonomy</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="nd">@poscheck_model</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
-                 <span class="n">version</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">content_version</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">ad_product_version</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">content_taxonomies</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">ad_opportunity_taxonomies</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">sensitive_topic_taxonomies</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (string_types, list[string_types], list[string_types], list[string_types]) -&gt; None</span>
+        <span class="c1"># type: (string_types, string_types, list[string_types], list[string_types], list[string_types]) -&gt; None</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">_version</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_content_version</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_ad_product_version</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_content_taxonomies</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_ad_opportunity_taxonomies</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_sensitive_topic_taxonomies</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>
 
-        <span class="k">if</span> <span class="n">version</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">version</span> <span class="o">=</span> <span class="n">version</span>
+        <span class="k">if</span> <span class="n">content_version</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">content_version</span> <span class="o">=</span> <span class="n">content_version</span>
+        <span class="k">if</span> <span class="n">ad_product_version</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">ad_product_version</span> <span class="o">=</span> <span class="n">ad_product_version</span>
         <span class="k">if</span> <span class="n">content_taxonomies</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">content_taxonomies</span> <span class="o">=</span> <span class="n">content_taxonomies</span>
         <span class="k">if</span> <span class="n">ad_opportunity_taxonomies</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -114,7 +118,8 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">types</span> <span class="o">=</span> <span class="p">{</span>
-            <span class="s1">&#39;version&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;content_version&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;ad_product_version&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
             <span class="s1">&#39;content_taxonomies&#39;</span><span class="p">:</span> <span class="s1">&#39;list[string_types]&#39;</span><span class="p">,</span>
             <span class="s1">&#39;ad_opportunity_taxonomies&#39;</span><span class="p">:</span> <span class="s1">&#39;list[string_types]&#39;</span><span class="p">,</span>
             <span class="s1">&#39;sensitive_topic_taxonomies&#39;</span><span class="p">:</span> <span class="s1">&#39;list[string_types]&#39;</span>
@@ -125,7 +130,8 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">attribute_map</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">attributes</span> <span class="o">=</span> <span class="p">{</span>
-            <span class="s1">&#39;version&#39;</span><span class="p">:</span> <span class="s1">&#39;version&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;content_version&#39;</span><span class="p">:</span> <span class="s1">&#39;contentVersion&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;ad_product_version&#39;</span><span class="p">:</span> <span class="s1">&#39;adProductVersion&#39;</span><span class="p">,</span>
             <span class="s1">&#39;content_taxonomies&#39;</span><span class="p">:</span> <span class="s1">&#39;contentTaxonomies&#39;</span><span class="p">,</span>
             <span class="s1">&#39;ad_opportunity_taxonomies&#39;</span><span class="p">:</span> <span class="s1">&#39;adOpportunityTaxonomies&#39;</span><span class="p">,</span>
             <span class="s1">&#39;sensitive_topic_taxonomies&#39;</span><span class="p">:</span> <span class="s1">&#39;sensitiveTopicTaxonomies&#39;</span>
@@ -133,31 +139,58 @@
         <span class="k">return</span> <span class="n">attributes</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">version</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">content_version</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; string_types</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the version of this IABTaxonomy.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the content_version of this IABTaxonomy.</span>
 
 
-<span class="sd">        :return: The version of this IABTaxonomy.</span>
+<span class="sd">        :return: The content_version of this IABTaxonomy.</span>
 <span class="sd">        :rtype: string_types</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_version</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_content_version</span>
 
-    <span class="nd">@version</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">version</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">version</span><span class="p">):</span>
+    <span class="nd">@content_version</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">content_version</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">content_version</span><span class="p">):</span>
         <span class="c1"># type: (string_types) -&gt; None</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the version of this IABTaxonomy.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the content_version of this IABTaxonomy.</span>
 
 
-<span class="sd">        :param version: The version of this IABTaxonomy.</span>
+<span class="sd">        :param content_version: The content_version of this IABTaxonomy.</span>
 <span class="sd">        :type: string_types</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
-        <span class="k">if</span> <span class="n">version</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">version</span><span class="p">,</span> <span class="n">string_types</span><span class="p">):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `version`, type has to be `string_types`&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">content_version</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">content_version</span><span class="p">,</span> <span class="n">string_types</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `content_version`, type has to be `string_types`&quot;</span><span class="p">)</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">_version</span> <span class="o">=</span> <span class="n">version</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_content_version</span> <span class="o">=</span> <span class="n">content_version</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">ad_product_version</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; string_types</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the ad_product_version of this IABTaxonomy.</span>
+
+
+<span class="sd">        :return: The ad_product_version of this IABTaxonomy.</span>
+<span class="sd">        :rtype: string_types</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_ad_product_version</span>
+
+    <span class="nd">@ad_product_version</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">ad_product_version</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ad_product_version</span><span class="p">):</span>
+        <span class="c1"># type: (string_types) -&gt; None</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the ad_product_version of this IABTaxonomy.</span>
+
+
+<span class="sd">        :param ad_product_version: The ad_product_version of this IABTaxonomy.</span>
+<span class="sd">        :type: string_types</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">ad_product_version</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">ad_product_version</span><span class="p">,</span> <span class="n">string_types</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `ad_product_version`, type has to be `string_types`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_ad_product_version</span> <span class="o">=</span> <span class="n">ad_product_version</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">content_taxonomies</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>

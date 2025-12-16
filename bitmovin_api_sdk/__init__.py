@@ -777,6 +777,8 @@ from bitmovin_api_sdk.encoding.encodings.streams.qc.qc_api import QcApi
 
 from bitmovin_api_sdk.encoding.encodings.streams.qc.psnr.psnr_api import PsnrApi
 from bitmovin_api_sdk.encoding.encodings.streams.qc.psnr.psnr_api import PsnrQualityMetricListQueryParams
+from bitmovin_api_sdk.encoding.encodings.kantar_watermark.kantar_watermark_api import KantarWatermarkApi
+
 from bitmovin_api_sdk.encoding.encodings.keyframes.keyframes_api import KeyframesApi
 from bitmovin_api_sdk.encoding.encodings.keyframes.keyframes_api import KeyframeListQueryParams
 from bitmovin_api_sdk.encoding.encodings.scte35_triggers.scte35_triggers_api import Scte35TriggersApi
@@ -1285,6 +1287,7 @@ from bitmovin_api_sdk.models.check_output_permissions_response import CheckOutpu
 from bitmovin_api_sdk.models.chroma_location import ChromaLocation
 from bitmovin_api_sdk.models.chunked_text_muxing import ChunkedTextMuxing
 from bitmovin_api_sdk.models.clear_key_drm import ClearKeyDrm
+from bitmovin_api_sdk.models.clock_synchronization_mode import ClockSynchronizationMode
 from bitmovin_api_sdk.models.closed_captions_media_info import ClosedCaptionsMediaInfo
 from bitmovin_api_sdk.models.cloud_region import CloudRegion
 from bitmovin_api_sdk.models.cmaf_muxing import CmafMuxing
@@ -1551,6 +1554,7 @@ from bitmovin_api_sdk.models.interlace_mode import InterlaceMode
 from bitmovin_api_sdk.models.invitation import Invitation
 from bitmovin_api_sdk.models.invitation_status import InvitationStatus
 from bitmovin_api_sdk.models.iv_size import IvSize
+from bitmovin_api_sdk.models.kantar_watermark import KantarWatermark
 from bitmovin_api_sdk.models.keyframe import Keyframe
 from bitmovin_api_sdk.models.label import Label
 from bitmovin_api_sdk.models.level_h262 import LevelH262
@@ -1936,4 +1940,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.252.0"
+__version__ = "1.253.0"

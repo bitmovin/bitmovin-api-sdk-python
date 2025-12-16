@@ -1,0 +1,21 @@
+bitmovin\_api\_sdk.encoding.encodings.kantar\_watermark package
+===============================================================
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.encoding.encodings.kantar\_watermark.kantar\_watermark\_api module
+-------------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.encodings.kantar_watermark.kantar_watermark_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.encoding.encodings.kantar_watermark
+   :members:
+   :undoc-members:
+   :show-inheritance:

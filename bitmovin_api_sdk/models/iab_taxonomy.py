@@ -10,20 +10,24 @@ import six
 class IABTaxonomy(object):
     @poscheck_model
     def __init__(self,
-                 version=None,
+                 content_version=None,
+                 ad_product_version=None,
                  content_taxonomies=None,
                  ad_opportunity_taxonomies=None,
                  sensitive_topic_taxonomies=None):
-        # type: (string_types, list[string_types], list[string_types], list[string_types]) -> None
+        # type: (string_types, string_types, list[string_types], list[string_types], list[string_types]) -> None
 
-        self._version = None
+        self._content_version = None
+        self._ad_product_version = None
         self._content_taxonomies = list()
         self._ad_opportunity_taxonomies = list()
         self._sensitive_topic_taxonomies = list()
         self.discriminator = None
 
-        if version is not None:
-            self.version = version
+        if content_version is not None:
+            self.content_version = content_version
+        if ad_product_version is not None:
+            self.ad_product_version = ad_product_version
         if content_taxonomies is not None:
             self.content_taxonomies = content_taxonomies
         if ad_opportunity_taxonomies is not None:
@@ -34,7 +38,8 @@ class IABTaxonomy(object):
     @property
     def openapi_types(self):
         types = {
-            'version': 'string_types',
+            'content_version': 'string_types',
+            'ad_product_version': 'string_types',
             'content_taxonomies': 'list[string_types]',
             'ad_opportunity_taxonomies': 'list[string_types]',
             'sensitive_topic_taxonomies': 'list[string_types]'
@@ -45,7 +50,8 @@ class IABTaxonomy(object):
     @property
     def attribute_map(self):
         attributes = {
-            'version': 'version',
+            'content_version': 'contentVersion',
+            'ad_product_version': 'adProductVersion',
             'content_taxonomies': 'contentTaxonomies',
             'ad_opportunity_taxonomies': 'adOpportunityTaxonomies',
             'sensitive_topic_taxonomies': 'sensitiveTopicTaxonomies'
@@ -53,31 +59,58 @@ class IABTaxonomy(object):
         return attributes
 
     @property
-    def version(self):
+    def content_version(self):
         # type: () -> string_types
-        """Gets the version of this IABTaxonomy.
+        """Gets the content_version of this IABTaxonomy.
 
 
-        :return: The version of this IABTaxonomy.
+        :return: The content_version of this IABTaxonomy.
         :rtype: string_types
         """
-        return self._version
+        return self._content_version
 
-    @version.setter
-    def version(self, version):
+    @content_version.setter
+    def content_version(self, content_version):
         # type: (string_types) -> None
-        """Sets the version of this IABTaxonomy.
+        """Sets the content_version of this IABTaxonomy.
 
 
-        :param version: The version of this IABTaxonomy.
+        :param content_version: The content_version of this IABTaxonomy.
         :type: string_types
         """
 
-        if version is not None:
-            if not isinstance(version, string_types):
-                raise TypeError("Invalid type for `version`, type has to be `string_types`")
+        if content_version is not None:
+            if not isinstance(content_version, string_types):
+                raise TypeError("Invalid type for `content_version`, type has to be `string_types`")
 
-        self._version = version
+        self._content_version = content_version
+
+    @property
+    def ad_product_version(self):
+        # type: () -> string_types
+        """Gets the ad_product_version of this IABTaxonomy.
+
+
+        :return: The ad_product_version of this IABTaxonomy.
+        :rtype: string_types
+        """
+        return self._ad_product_version
+
+    @ad_product_version.setter
+    def ad_product_version(self, ad_product_version):
+        # type: (string_types) -> None
+        """Sets the ad_product_version of this IABTaxonomy.
+
+
+        :param ad_product_version: The ad_product_version of this IABTaxonomy.
+        :type: string_types
+        """
+
+        if ad_product_version is not None:
+            if not isinstance(ad_product_version, string_types):
+                raise TypeError("Invalid type for `ad_product_version`, type has to be `string_types`")
+
+        self._ad_product_version = ad_product_version
 
     @property
     def content_taxonomies(self):

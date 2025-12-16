@@ -10,6 +10,7 @@ Subpackages
    bitmovin_api_sdk.encoding.encodings.captions
    bitmovin_api_sdk.encoding.encodings.customdata
    bitmovin_api_sdk.encoding.encodings.input_streams
+   bitmovin_api_sdk.encoding.encodings.kantar_watermark
    bitmovin_api_sdk.encoding.encodings.keyframes
    bitmovin_api_sdk.encoding.encodings.live
    bitmovin_api_sdk.encoding.encodings.muxings

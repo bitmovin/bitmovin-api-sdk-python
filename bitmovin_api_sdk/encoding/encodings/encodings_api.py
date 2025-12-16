@@ -24,6 +24,7 @@ from bitmovin_api_sdk.encoding.encodings.transfer_retries.transfer_retries_api i
 from bitmovin_api_sdk.encoding.encodings.output_paths.output_paths_api import OutputPathsApi
 from bitmovin_api_sdk.encoding.encodings.captions.captions_api import CaptionsApi
 from bitmovin_api_sdk.encoding.encodings.sidecars.sidecars_api import SidecarsApi
+from bitmovin_api_sdk.encoding.encodings.kantar_watermark.kantar_watermark_api import KantarWatermarkApi
 from bitmovin_api_sdk.encoding.encodings.keyframes.keyframes_api import KeyframesApi
 from bitmovin_api_sdk.encoding.encodings.scte35_triggers.scte35_triggers_api import Scte35TriggersApi
 from bitmovin_api_sdk.encoding.encodings.encoding_list_query_params import EncodingListQueryParams
@@ -105,6 +106,13 @@ class EncodingsApi(BaseApi):
         )
 
         self.sidecars = SidecarsApi(
+            api_key=api_key,
+            tenant_org_id=tenant_org_id,
+            base_url=base_url,
+            logger=logger
+        )
+
+        self.kantar_watermark = KantarWatermarkApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,
