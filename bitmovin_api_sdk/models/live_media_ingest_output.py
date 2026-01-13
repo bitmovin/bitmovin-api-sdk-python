@@ -18,15 +18,19 @@ class LiveMediaIngestOutput(Output):
                  modified_at=None,
                  custom_data=None,
                  acl=None,
-                 publishing_point=None):
-        # type: (string_types, string_types, string_types, datetime, datetime, dict, list[AclEntry], string_types) -> None
+                 publishing_point=None,
+                 scte35_passthrough=None):
+        # type: (string_types, string_types, string_types, datetime, datetime, dict, list[AclEntry], string_types, bool) -> None
         super(LiveMediaIngestOutput, self).__init__(id_=id_, name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, acl=acl)
 
         self._publishing_point = None
+        self._scte35_passthrough = None
         self.discriminator = None
 
         if publishing_point is not None:
             self.publishing_point = publishing_point
+        if scte35_passthrough is not None:
+            self.scte35_passthrough = scte35_passthrough
 
     @property
     def openapi_types(self):
@@ -36,7 +40,8 @@ class LiveMediaIngestOutput(Output):
             types = getattr(super(LiveMediaIngestOutput, self), 'openapi_types')
 
         types.update({
-            'publishing_point': 'string_types'
+            'publishing_point': 'string_types',
+            'scte35_passthrough': 'bool'
         })
 
         return types
@@ -49,7 +54,8 @@ class LiveMediaIngestOutput(Output):
             attributes = getattr(super(LiveMediaIngestOutput, self), 'attribute_map')
 
         attributes.update({
-            'publishing_point': 'publishingPoint'
+            'publishing_point': 'publishingPoint',
+            'scte35_passthrough': 'scte35Passthrough'
         })
         return attributes
 
@@ -81,6 +87,35 @@ class LiveMediaIngestOutput(Output):
                 raise TypeError("Invalid type for `publishing_point`, type has to be `string_types`")
 
         self._publishing_point = publishing_point
+
+    @property
+    def scte35_passthrough(self):
+        # type: () -> bool
+        """Gets the scte35_passthrough of this LiveMediaIngestOutput.
+
+        Enable passthrough of SCTE-35 messages from input to output. Default is false.
+
+        :return: The scte35_passthrough of this LiveMediaIngestOutput.
+        :rtype: bool
+        """
+        return self._scte35_passthrough
+
+    @scte35_passthrough.setter
+    def scte35_passthrough(self, scte35_passthrough):
+        # type: (bool) -> None
+        """Sets the scte35_passthrough of this LiveMediaIngestOutput.
+
+        Enable passthrough of SCTE-35 messages from input to output. Default is false.
+
+        :param scte35_passthrough: The scte35_passthrough of this LiveMediaIngestOutput.
+        :type: bool
+        """
+
+        if scte35_passthrough is not None:
+            if not isinstance(scte35_passthrough, bool):
+                raise TypeError("Invalid type for `scte35_passthrough`, type has to be `bool`")
+
+        self._scte35_passthrough = scte35_passthrough
 
     def to_dict(self):
         """Returns the model properties as a dict"""

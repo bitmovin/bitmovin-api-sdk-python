@@ -1,0 +1,29 @@
+bitmovin\_api\_sdk.encoding.encodings.live.esam package
+=======================================================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   bitmovin_api_sdk.encoding.encodings.live.esam.media_points
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.encoding.encodings.live.esam.esam\_api module
+----------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.encodings.live.esam.esam_api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.encoding.encodings.live.esam
+   :members:
+   :undoc-members:
+   :show-inheritance:

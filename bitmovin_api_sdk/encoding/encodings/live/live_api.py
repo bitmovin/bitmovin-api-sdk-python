@@ -9,6 +9,7 @@ from bitmovin_api_sdk.models.live_encoding import LiveEncoding
 from bitmovin_api_sdk.models.response_envelope import ResponseEnvelope
 from bitmovin_api_sdk.models.response_error import ResponseError
 from bitmovin_api_sdk.models.start_live_encoding_request import StartLiveEncodingRequest
+from bitmovin_api_sdk.encoding.encodings.live.esam.esam_api import EsamApi
 from bitmovin_api_sdk.encoding.encodings.live.reset_live_manifest_timeshift.reset_live_manifest_timeshift_api import ResetLiveManifestTimeshiftApi
 from bitmovin_api_sdk.encoding.encodings.live.heartbeat.heartbeat_api import HeartbeatApi
 from bitmovin_api_sdk.encoding.encodings.live.hd.hd_api import HdApi
@@ -22,6 +23,13 @@ class LiveApi(BaseApi):
         # type: (str, str, str, BitmovinApiLoggerBase) -> None
 
         super(LiveApi, self).__init__(
+            api_key=api_key,
+            tenant_org_id=tenant_org_id,
+            base_url=base_url,
+            logger=logger
+        )
+
+        self.esam = EsamApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,

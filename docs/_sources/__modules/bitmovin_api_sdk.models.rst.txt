@@ -276,6 +276,14 @@ bitmovin\_api\_sdk.models.ad\_analytics\_variance\_query\_request module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.ad\_insertion\_settings module
+--------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.ad_insertion_settings
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.ad\_markers\_source module
 ----------------------------------------------------
 
@@ -3116,10 +3124,42 @@ bitmovin\_api\_sdk.models.error\_retry\_hint module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.esam\_condition module
+------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.esam_condition
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.esam\_direction module
+------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.esam_direction
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.esam\_media\_point module
+---------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.esam_media_point
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.esam\_settings module
 -----------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.models.esam_settings
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.esam\_signal module
+---------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.esam_signal
    :members:
    :undoc-members:
    :show-inheritance:

@@ -127,6 +127,14 @@ from bitmovin_api_sdk.analytics.outputs.gcs_service_account.customdata.customdat
 
 from bitmovin_api_sdk.encoding.encoding_api import EncodingApi
 
+from bitmovin_api_sdk.encoding.encodings.encodings_api import EncodingsApi
+from bitmovin_api_sdk.encoding.encodings.encodings_api import EncodingListQueryParams
+from bitmovin_api_sdk.encoding.encodings.live.live_api import LiveApi
+
+from bitmovin_api_sdk.encoding.encodings.live.esam.esam_api import EsamApi
+
+from bitmovin_api_sdk.encoding.encodings.live.esam.media_points.media_points_api import MediaPointsApi
+
 from bitmovin_api_sdk.encoding.inputs.inputs_api import InputsApi
 from bitmovin_api_sdk.encoding.inputs.inputs_api import InputListQueryParams
 from bitmovin_api_sdk.encoding.inputs.type.type_api import TypeApi
@@ -399,8 +407,6 @@ from bitmovin_api_sdk.encoding.filters.crop.crop_api import CropApi
 from bitmovin_api_sdk.encoding.filters.crop.crop_api import CropFilterListQueryParams
 from bitmovin_api_sdk.encoding.filters.crop.customdata.customdata_api import CustomdataApi
 
-from bitmovin_api_sdk.encoding.encodings.encodings_api import EncodingsApi
-from bitmovin_api_sdk.encoding.encodings.encodings_api import EncodingListQueryParams
 from bitmovin_api_sdk.encoding.filters.rotate.rotate_api import RotateApi
 from bitmovin_api_sdk.encoding.filters.rotate.rotate_api import RotateFilterListQueryParams
 from bitmovin_api_sdk.encoding.filters.rotate.customdata.customdata_api import CustomdataApi
@@ -440,8 +446,6 @@ from bitmovin_api_sdk.encoding.filters.unsharp.customdata.customdata_api import 
 from bitmovin_api_sdk.encoding.filters.scale.scale_api import ScaleApi
 from bitmovin_api_sdk.encoding.filters.scale.scale_api import ScaleFilterListQueryParams
 from bitmovin_api_sdk.encoding.filters.scale.customdata.customdata_api import CustomdataApi
-
-from bitmovin_api_sdk.encoding.encodings.live.live_api import LiveApi
 
 from bitmovin_api_sdk.encoding.encodings.customdata.customdata_api import CustomdataApi
 
@@ -1108,6 +1112,7 @@ from bitmovin_api_sdk.models.ad_analytics_query_request import AdAnalyticsQueryR
 from bitmovin_api_sdk.models.ad_analytics_stddev_query_request import AdAnalyticsStddevQueryRequest
 from bitmovin_api_sdk.models.ad_analytics_sum_query_request import AdAnalyticsSumQueryRequest
 from bitmovin_api_sdk.models.ad_analytics_variance_query_request import AdAnalyticsVarianceQueryRequest
+from bitmovin_api_sdk.models.ad_insertion_settings import AdInsertionSettings
 from bitmovin_api_sdk.models.ad_markers_source import AdMarkersSource
 from bitmovin_api_sdk.models.ad_position import AdPosition
 from bitmovin_api_sdk.models.adaptation_set import AdaptationSet
@@ -1463,7 +1468,11 @@ from bitmovin_api_sdk.models.enhanced_deinterlace_parity import EnhancedDeinterl
 from bitmovin_api_sdk.models.enhanced_watermark_filter import EnhancedWatermarkFilter
 from bitmovin_api_sdk.models.error_details import ErrorDetails
 from bitmovin_api_sdk.models.error_retry_hint import ErrorRetryHint
+from bitmovin_api_sdk.models.esam_condition import EsamCondition
+from bitmovin_api_sdk.models.esam_direction import EsamDirection
+from bitmovin_api_sdk.models.esam_media_point import EsamMediaPoint
 from bitmovin_api_sdk.models.esam_settings import EsamSettings
+from bitmovin_api_sdk.models.esam_signal import EsamSignal
 from bitmovin_api_sdk.models.external_id_mode import ExternalIdMode
 from bitmovin_api_sdk.models.fair_play_drm import FairPlayDrm
 from bitmovin_api_sdk.models.file_input_stream import FileInputStream
@@ -1940,4 +1949,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.253.0"
+__version__ = "1.254.0"

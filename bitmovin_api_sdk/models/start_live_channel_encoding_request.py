@@ -3,6 +3,7 @@
 
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
+from bitmovin_api_sdk.models.ad_insertion_settings import AdInsertionSettings
 from bitmovin_api_sdk.models.auto_restart_configuration import AutoRestartConfiguration
 from bitmovin_api_sdk.models.cache_control_settings import CacheControlSettings
 from bitmovin_api_sdk.models.encoding_mode import EncodingMode

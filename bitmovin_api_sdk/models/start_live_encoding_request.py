@@ -3,6 +3,7 @@
 from enum import Enum
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
+from bitmovin_api_sdk.models.ad_insertion_settings import AdInsertionSettings
 from bitmovin_api_sdk.models.auto_restart_configuration import AutoRestartConfiguration
 from bitmovin_api_sdk.models.cache_control_settings import CacheControlSettings
 from bitmovin_api_sdk.models.encoding_mode import EncodingMode
@@ -26,8 +27,9 @@ class StartLiveEncodingRequest(object):
                  auto_restart_configuration=None,
                  auto_shutdown_configuration=None,
                  esam_settings=None,
-                 cache_control_settings=None):
-        # type: (string_types, list[LiveHlsManifest], list[LiveDashManifest], EncodingMode, ReuploadSettings, ManifestGenerator, AutoRestartConfiguration, LiveAutoShutdownConfiguration, EsamSettings, CacheControlSettings) -> None
+                 cache_control_settings=None,
+                 ad_insertion_settings=None):
+        # type: (string_types, list[LiveHlsManifest], list[LiveDashManifest], EncodingMode, ReuploadSettings, ManifestGenerator, AutoRestartConfiguration, LiveAutoShutdownConfiguration, EsamSettings, CacheControlSettings, AdInsertionSettings) -> None
 
         self._stream_key = None
         self._hls_manifests = list()
@@ -39,6 +41,7 @@ class StartLiveEncodingRequest(object):
         self._auto_shutdown_configuration = None
         self._esam_settings = None
         self._cache_control_settings = None
+        self._ad_insertion_settings = None
         self.discriminator = None
 
         if stream_key is not None:
@@ -61,6 +64,8 @@ class StartLiveEncodingRequest(object):
             self.esam_settings = esam_settings
         if cache_control_settings is not None:
             self.cache_control_settings = cache_control_settings
+        if ad_insertion_settings is not None:
+            self.ad_insertion_settings = ad_insertion_settings
 
     @property
     def openapi_types(self):
@@ -74,7 +79,8 @@ class StartLiveEncodingRequest(object):
             'auto_restart_configuration': 'AutoRestartConfiguration',
             'auto_shutdown_configuration': 'LiveAutoShutdownConfiguration',
             'esam_settings': 'EsamSettings',
-            'cache_control_settings': 'CacheControlSettings'
+            'cache_control_settings': 'CacheControlSettings',
+            'ad_insertion_settings': 'AdInsertionSettings'
         }
 
         return types
@@ -91,7 +97,8 @@ class StartLiveEncodingRequest(object):
             'auto_restart_configuration': 'autoRestartConfiguration',
             'auto_shutdown_configuration': 'autoShutdownConfiguration',
             'esam_settings': 'esamSettings',
-            'cache_control_settings': 'cacheControlSettings'
+            'cache_control_settings': 'cacheControlSettings',
+            'ad_insertion_settings': 'adInsertionSettings'
         }
         return attributes
 
@@ -384,6 +391,35 @@ class StartLiveEncodingRequest(object):
                 raise TypeError("Invalid type for `cache_control_settings`, type has to be `CacheControlSettings`")
 
         self._cache_control_settings = cache_control_settings
+
+    @property
+    def ad_insertion_settings(self):
+        # type: () -> AdInsertionSettings
+        """Gets the ad_insertion_settings of this StartLiveEncodingRequest.
+
+        Configuration for ad insertion features like ESAM MediaPoint insertion
+
+        :return: The ad_insertion_settings of this StartLiveEncodingRequest.
+        :rtype: AdInsertionSettings
+        """
+        return self._ad_insertion_settings
+
+    @ad_insertion_settings.setter
+    def ad_insertion_settings(self, ad_insertion_settings):
+        # type: (AdInsertionSettings) -> None
+        """Sets the ad_insertion_settings of this StartLiveEncodingRequest.
+
+        Configuration for ad insertion features like ESAM MediaPoint insertion
+
+        :param ad_insertion_settings: The ad_insertion_settings of this StartLiveEncodingRequest.
+        :type: AdInsertionSettings
+        """
+
+        if ad_insertion_settings is not None:
+            if not isinstance(ad_insertion_settings, AdInsertionSettings):
+                raise TypeError("Invalid type for `ad_insertion_settings`, type has to be `AdInsertionSettings`")
+
+        self._ad_insertion_settings = ad_insertion_settings
 
     def to_dict(self):
         """Returns the model properties as a dict"""

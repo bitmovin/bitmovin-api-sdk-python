@@ -83,6 +83,7 @@
 <span class="kn">from</span> <span class="nn">enum</span> <span class="kn">import</span> <span class="n">Enum</span>
 <span class="kn">from</span> <span class="nn">six</span> <span class="kn">import</span> <span class="n">string_types</span><span class="p">,</span> <span class="n">iteritems</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.common.poscheck</span> <span class="kn">import</span> <span class="n">poscheck_model</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.ad_insertion_settings</span> <span class="kn">import</span> <span class="n">AdInsertionSettings</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.auto_restart_configuration</span> <span class="kn">import</span> <span class="n">AutoRestartConfiguration</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.cache_control_settings</span> <span class="kn">import</span> <span class="n">CacheControlSettings</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.encoding_mode</span> <span class="kn">import</span> <span class="n">EncodingMode</span>
@@ -106,8 +107,9 @@
                  <span class="n">auto_restart_configuration</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">auto_shutdown_configuration</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">esam_settings</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                 <span class="n">cache_control_settings</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (string_types, list[LiveHlsManifest], list[LiveDashManifest], EncodingMode, ReuploadSettings, ManifestGenerator, AutoRestartConfiguration, LiveAutoShutdownConfiguration, EsamSettings, CacheControlSettings) -&gt; None</span>
+                 <span class="n">cache_control_settings</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">ad_insertion_settings</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="c1"># type: (string_types, list[LiveHlsManifest], list[LiveDashManifest], EncodingMode, ReuploadSettings, ManifestGenerator, AutoRestartConfiguration, LiveAutoShutdownConfiguration, EsamSettings, CacheControlSettings, AdInsertionSettings) -&gt; None</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_stream_key</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_hls_manifests</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
@@ -119,6 +121,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_auto_shutdown_configuration</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_esam_settings</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_cache_control_settings</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_ad_insertion_settings</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>
 
         <span class="k">if</span> <span class="n">stream_key</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -141,6 +144,8 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">esam_settings</span> <span class="o">=</span> <span class="n">esam_settings</span>
         <span class="k">if</span> <span class="n">cache_control_settings</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">cache_control_settings</span> <span class="o">=</span> <span class="n">cache_control_settings</span>
+        <span class="k">if</span> <span class="n">ad_insertion_settings</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">ad_insertion_settings</span> <span class="o">=</span> <span class="n">ad_insertion_settings</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -154,7 +159,8 @@
             <span class="s1">&#39;auto_restart_configuration&#39;</span><span class="p">:</span> <span class="s1">&#39;AutoRestartConfiguration&#39;</span><span class="p">,</span>
             <span class="s1">&#39;auto_shutdown_configuration&#39;</span><span class="p">:</span> <span class="s1">&#39;LiveAutoShutdownConfiguration&#39;</span><span class="p">,</span>
             <span class="s1">&#39;esam_settings&#39;</span><span class="p">:</span> <span class="s1">&#39;EsamSettings&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;cache_control_settings&#39;</span><span class="p">:</span> <span class="s1">&#39;CacheControlSettings&#39;</span>
+            <span class="s1">&#39;cache_control_settings&#39;</span><span class="p">:</span> <span class="s1">&#39;CacheControlSettings&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;ad_insertion_settings&#39;</span><span class="p">:</span> <span class="s1">&#39;AdInsertionSettings&#39;</span>
         <span class="p">}</span>
 
         <span class="k">return</span> <span class="n">types</span>
@@ -171,7 +177,8 @@
             <span class="s1">&#39;auto_restart_configuration&#39;</span><span class="p">:</span> <span class="s1">&#39;autoRestartConfiguration&#39;</span><span class="p">,</span>
             <span class="s1">&#39;auto_shutdown_configuration&#39;</span><span class="p">:</span> <span class="s1">&#39;autoShutdownConfiguration&#39;</span><span class="p">,</span>
             <span class="s1">&#39;esam_settings&#39;</span><span class="p">:</span> <span class="s1">&#39;esamSettings&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;cache_control_settings&#39;</span><span class="p">:</span> <span class="s1">&#39;cacheControlSettings&#39;</span>
+            <span class="s1">&#39;cache_control_settings&#39;</span><span class="p">:</span> <span class="s1">&#39;cacheControlSettings&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;ad_insertion_settings&#39;</span><span class="p">:</span> <span class="s1">&#39;adInsertionSettings&#39;</span>
         <span class="p">}</span>
         <span class="k">return</span> <span class="n">attributes</span>
 
@@ -464,6 +471,35 @@
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `cache_control_settings`, type has to be `CacheControlSettings`&quot;</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_cache_control_settings</span> <span class="o">=</span> <span class="n">cache_control_settings</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">ad_insertion_settings</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; AdInsertionSettings</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the ad_insertion_settings of this StartLiveEncodingRequest.</span>
+
+<span class="sd">        Configuration for ad insertion features like ESAM MediaPoint insertion</span>
+
+<span class="sd">        :return: The ad_insertion_settings of this StartLiveEncodingRequest.</span>
+<span class="sd">        :rtype: AdInsertionSettings</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_ad_insertion_settings</span>
+
+    <span class="nd">@ad_insertion_settings</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">ad_insertion_settings</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ad_insertion_settings</span><span class="p">):</span>
+        <span class="c1"># type: (AdInsertionSettings) -&gt; None</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the ad_insertion_settings of this StartLiveEncodingRequest.</span>
+
+<span class="sd">        Configuration for ad insertion features like ESAM MediaPoint insertion</span>
+
+<span class="sd">        :param ad_insertion_settings: The ad_insertion_settings of this StartLiveEncodingRequest.</span>
+<span class="sd">        :type: AdInsertionSettings</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">ad_insertion_settings</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">ad_insertion_settings</span><span class="p">,</span> <span class="n">AdInsertionSettings</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `ad_insertion_settings`, type has to be `AdInsertionSettings`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_ad_insertion_settings</span> <span class="o">=</span> <span class="n">ad_insertion_settings</span>
 
 <div class="viewcode-block" id="StartLiveEncodingRequest.to_dict"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.start_live_encoding_request.StartLiveEncodingRequest.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>
