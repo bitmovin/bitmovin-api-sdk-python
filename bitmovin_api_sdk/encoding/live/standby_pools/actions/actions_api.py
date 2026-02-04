@@ -4,6 +4,7 @@ from __future__ import absolute_import
 
 from bitmovin_api_sdk.common import BaseApi, BitmovinApiLoggerBase
 from bitmovin_api_sdk.common.poscheck import poscheck_except
+from bitmovin_api_sdk.models.live_standby_pool_acquire_encoding import LiveStandbyPoolAcquireEncoding
 from bitmovin_api_sdk.models.live_standby_pool_encoding import LiveStandbyPoolEncoding
 from bitmovin_api_sdk.models.response_envelope import ResponseEnvelope
 from bitmovin_api_sdk.models.response_error import ResponseError
@@ -21,18 +22,21 @@ class ActionsApi(BaseApi):
             logger=logger
         )
 
-    def acquire_encoding(self, pool_id, **kwargs):
-        # type: (string_types, dict) -> LiveStandbyPoolEncoding
+    def acquire_encoding(self, pool_id, live_standby_pool_acquire_encoding=None, **kwargs):
+        # type: (string_types, LiveStandbyPoolAcquireEncoding, dict) -> LiveStandbyPoolEncoding
         """Acquire an encoding from a standby pool
 
         :param pool_id: Id of the standby pool
         :type pool_id: string_types, required
+        :param live_standby_pool_acquire_encoding: The optionally provided payload for acquiring an encoding
+        :type live_standby_pool_acquire_encoding: LiveStandbyPoolAcquireEncoding
         :return:
         :rtype: LiveStandbyPoolEncoding
         """
 
         return self.api_client.post(
             '/encoding/live/standby-pools/{pool_id}/actions/acquire-encoding',
+            live_standby_pool_acquire_encoding,
             path_params={'pool_id': pool_id},
             type=LiveStandbyPoolEncoding,
             **kwargs

@@ -4156,6 +4156,14 @@ bitmovin\_api\_sdk.models.live\_options\_type module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.live\_standby\_pool\_acquire\_encoding module
+-----------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.live_standby_pool_acquire_encoding
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.live\_standby\_pool\_details module
 -------------------------------------------------------------
 

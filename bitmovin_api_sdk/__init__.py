@@ -1597,6 +1597,7 @@ from bitmovin_api_sdk.models.live_options_entry import LiveOptionsEntry
 from bitmovin_api_sdk.models.live_options_statistics import LiveOptionsStatistics
 from bitmovin_api_sdk.models.live_options_summary import LiveOptionsSummary
 from bitmovin_api_sdk.models.live_options_type import LiveOptionsType
+from bitmovin_api_sdk.models.live_standby_pool_acquire_encoding import LiveStandbyPoolAcquireEncoding
 from bitmovin_api_sdk.models.live_standby_pool_details import LiveStandbyPoolDetails
 from bitmovin_api_sdk.models.live_standby_pool_encoding import LiveStandbyPoolEncoding
 from bitmovin_api_sdk.models.live_standby_pool_encoding_ingest_point import LiveStandbyPoolEncodingIngestPoint
@@ -1949,4 +1950,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.254.0"
+__version__ = "1.255.0"

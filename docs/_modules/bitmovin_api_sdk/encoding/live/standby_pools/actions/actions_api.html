@@ -84,6 +84,7 @@
 
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.common</span> <span class="kn">import</span> <span class="n">BaseApi</span><span class="p">,</span> <span class="n">BitmovinApiLoggerBase</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.common.poscheck</span> <span class="kn">import</span> <span class="n">poscheck_except</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.live_standby_pool_acquire_encoding</span> <span class="kn">import</span> <span class="n">LiveStandbyPoolAcquireEncoding</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.live_standby_pool_encoding</span> <span class="kn">import</span> <span class="n">LiveStandbyPoolEncoding</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.response_envelope</span> <span class="kn">import</span> <span class="n">ResponseEnvelope</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.response_error</span> <span class="kn">import</span> <span class="n">ResponseError</span>
@@ -101,18 +102,21 @@
             <span class="n">logger</span><span class="o">=</span><span class="n">logger</span>
         <span class="p">)</span>
 
-<div class="viewcode-block" id="ActionsApi.acquire_encoding"><a class="viewcode-back" href="../../../../../../__modules/bitmovin_api_sdk.encoding.live.standby_pools.actions.html#bitmovin_api_sdk.encoding.live.standby_pools.actions.actions_api.ActionsApi.acquire_encoding">[docs]</a>    <span class="k">def</span> <span class="nf">acquire_encoding</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pool_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-        <span class="c1"># type: (string_types, dict) -&gt; LiveStandbyPoolEncoding</span>
+<div class="viewcode-block" id="ActionsApi.acquire_encoding"><a class="viewcode-back" href="../../../../../../__modules/bitmovin_api_sdk.encoding.live.standby_pools.actions.html#bitmovin_api_sdk.encoding.live.standby_pools.actions.actions_api.ActionsApi.acquire_encoding">[docs]</a>    <span class="k">def</span> <span class="nf">acquire_encoding</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pool_id</span><span class="p">,</span> <span class="n">live_standby_pool_acquire_encoding</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="c1"># type: (string_types, LiveStandbyPoolAcquireEncoding, dict) -&gt; LiveStandbyPoolEncoding</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Acquire an encoding from a standby pool</span>
 
 <span class="sd">        :param pool_id: Id of the standby pool</span>
 <span class="sd">        :type pool_id: string_types, required</span>
+<span class="sd">        :param live_standby_pool_acquire_encoding: The optionally provided payload for acquiring an encoding</span>
+<span class="sd">        :type live_standby_pool_acquire_encoding: LiveStandbyPoolAcquireEncoding</span>
 <span class="sd">        :return:</span>
 <span class="sd">        :rtype: LiveStandbyPoolEncoding</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">post</span><span class="p">(</span>
             <span class="s1">&#39;/encoding/live/standby-pools/</span><span class="si">{pool_id}</span><span class="s1">/actions/acquire-encoding&#39;</span><span class="p">,</span>
+            <span class="n">live_standby_pool_acquire_encoding</span><span class="p">,</span>
             <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;pool_id&#39;</span><span class="p">:</span> <span class="n">pool_id</span><span class="p">},</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">LiveStandbyPoolEncoding</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>
