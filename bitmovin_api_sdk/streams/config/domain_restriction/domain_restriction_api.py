@@ -35,7 +35,7 @@ class DomainRestrictionApi(BaseApi):
         """
 
         return self.api_client.post(
-            '/streams/config/domain-restriction/',
+            '/streams/config/domain-restriction',
             streams_domain_restriction_create_request,
             type=StreamsDomainRestrictionResponse,
             **kwargs
@@ -83,7 +83,7 @@ class DomainRestrictionApi(BaseApi):
         """
 
         return self.api_client.get(
-            '/streams/config/domain-restriction/',
+            '/streams/config/domain-restriction',
             query_params=query_params,
             pagination_response=True,
             type=StreamsDomainRestrictionResponse,

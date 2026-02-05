@@ -83,6 +83,7 @@
 <span class="kn">from</span> <span class="nn">enum</span> <span class="kn">import</span> <span class="n">Enum</span>
 <span class="kn">from</span> <span class="nn">six</span> <span class="kn">import</span> <span class="n">string_types</span><span class="p">,</span> <span class="n">iteritems</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.common.poscheck</span> <span class="kn">import</span> <span class="n">poscheck_model</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.ad_opportunity</span> <span class="kn">import</span> <span class="n">AdOpportunity</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.content</span> <span class="kn">import</span> <span class="n">Content</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.iab_taxonomy</span> <span class="kn">import</span> <span class="n">IABTaxonomy</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.scene_type</span> <span class="kn">import</span> <span class="n">SceneType</span>
@@ -104,8 +105,9 @@
                  <span class="n">keywords</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">iab</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">type_</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                 <span class="n">shots</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (string_types, float, float, string_types, Content, string_types, string_types, list[string_types], list[string_types], IABTaxonomy, SceneType, list[Shot]) -&gt; None</span>
+                 <span class="n">shots</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">ad_opportunity_information</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="c1"># type: (string_types, float, float, string_types, Content, string_types, string_types, list[string_types], list[string_types], IABTaxonomy, SceneType, list[Shot], AdOpportunity) -&gt; None</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_title</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_start_in_seconds</span> <span class="o">=</span> <span class="kc">None</span>
@@ -119,6 +121,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_iab</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_type</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_shots</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_ad_opportunity_information</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>
 
         <span class="k">if</span> <span class="n">title</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -145,6 +148,8 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">type</span> <span class="o">=</span> <span class="n">type_</span>
         <span class="k">if</span> <span class="n">shots</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">shots</span> <span class="o">=</span> <span class="n">shots</span>
+        <span class="k">if</span> <span class="n">ad_opportunity_information</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">ad_opportunity_information</span> <span class="o">=</span> <span class="n">ad_opportunity_information</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -160,7 +165,8 @@
             <span class="s1">&#39;keywords&#39;</span><span class="p">:</span> <span class="s1">&#39;list[string_types]&#39;</span><span class="p">,</span>
             <span class="s1">&#39;iab&#39;</span><span class="p">:</span> <span class="s1">&#39;IABTaxonomy&#39;</span><span class="p">,</span>
             <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;SceneType&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;shots&#39;</span><span class="p">:</span> <span class="s1">&#39;list[Shot]&#39;</span>
+            <span class="s1">&#39;shots&#39;</span><span class="p">:</span> <span class="s1">&#39;list[Shot]&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;ad_opportunity_information&#39;</span><span class="p">:</span> <span class="s1">&#39;AdOpportunity&#39;</span>
         <span class="p">}</span>
 
         <span class="k">return</span> <span class="n">types</span>
@@ -179,7 +185,8 @@
             <span class="s1">&#39;keywords&#39;</span><span class="p">:</span> <span class="s1">&#39;keywords&#39;</span><span class="p">,</span>
             <span class="s1">&#39;iab&#39;</span><span class="p">:</span> <span class="s1">&#39;iab&#39;</span><span class="p">,</span>
             <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;type&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;shots&#39;</span><span class="p">:</span> <span class="s1">&#39;shots&#39;</span>
+            <span class="s1">&#39;shots&#39;</span><span class="p">:</span> <span class="s1">&#39;shots&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;ad_opportunity_information&#39;</span><span class="p">:</span> <span class="s1">&#39;adOpportunityInformation&#39;</span>
         <span class="p">}</span>
         <span class="k">return</span> <span class="n">attributes</span>
 
@@ -510,6 +517,33 @@
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `shots`, type has to be `list[Shot]`&quot;</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_shots</span> <span class="o">=</span> <span class="n">shots</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">ad_opportunity_information</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; AdOpportunity</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the ad_opportunity_information of this Scene.</span>
+
+
+<span class="sd">        :return: The ad_opportunity_information of this Scene.</span>
+<span class="sd">        :rtype: AdOpportunity</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_ad_opportunity_information</span>
+
+    <span class="nd">@ad_opportunity_information</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">ad_opportunity_information</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ad_opportunity_information</span><span class="p">):</span>
+        <span class="c1"># type: (AdOpportunity) -&gt; None</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the ad_opportunity_information of this Scene.</span>
+
+
+<span class="sd">        :param ad_opportunity_information: The ad_opportunity_information of this Scene.</span>
+<span class="sd">        :type: AdOpportunity</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">ad_opportunity_information</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">ad_opportunity_information</span><span class="p">,</span> <span class="n">AdOpportunity</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `ad_opportunity_information`, type has to be `AdOpportunity`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_ad_opportunity_information</span> <span class="o">=</span> <span class="n">ad_opportunity_information</span>
 
 <div class="viewcode-block" id="Scene.to_dict"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.scene.Scene.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>

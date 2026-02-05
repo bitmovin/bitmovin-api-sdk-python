@@ -3,6 +3,7 @@
 from enum import Enum
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
+from bitmovin_api_sdk.models.scene_dynamics import SceneDynamics
 import pprint
 import six
 
@@ -12,12 +13,14 @@ class Content(object):
     def __init__(self,
                  characters=None,
                  objects=None,
-                 settings=None):
-        # type: (list[Character], list[SceneObject], list[Setting]) -> None
+                 settings=None,
+                 dynamics=None):
+        # type: (list[Character], list[SceneObject], list[Setting], SceneDynamics) -> None
 
         self._characters = list()
         self._objects = list()
         self._settings = list()
+        self._dynamics = None
         self.discriminator = None
 
         if characters is not None:
@@ -26,13 +29,16 @@ class Content(object):
             self.objects = objects
         if settings is not None:
             self.settings = settings
+        if dynamics is not None:
+            self.dynamics = dynamics
 
     @property
     def openapi_types(self):
         types = {
             'characters': 'list[Character]',
             'objects': 'list[SceneObject]',
-            'settings': 'list[Setting]'
+            'settings': 'list[Setting]',
+            'dynamics': 'SceneDynamics'
         }
 
         return types
@@ -42,7 +48,8 @@ class Content(object):
         attributes = {
             'characters': 'characters',
             'objects': 'objects',
-            'settings': 'settings'
+            'settings': 'settings',
+            'dynamics': 'dynamics'
         }
         return attributes
 
@@ -126,6 +133,33 @@ class Content(object):
                 raise TypeError("Invalid type for `settings`, type has to be `list[Setting]`")
 
         self._settings = settings
+
+    @property
+    def dynamics(self):
+        # type: () -> SceneDynamics
+        """Gets the dynamics of this Content.
+
+
+        :return: The dynamics of this Content.
+        :rtype: SceneDynamics
+        """
+        return self._dynamics
+
+    @dynamics.setter
+    def dynamics(self, dynamics):
+        # type: (SceneDynamics) -> None
+        """Sets the dynamics of this Content.
+
+
+        :param dynamics: The dynamics of this Content.
+        :type: SceneDynamics
+        """
+
+        if dynamics is not None:
+            if not isinstance(dynamics, SceneDynamics):
+                raise TypeError("Invalid type for `dynamics`, type has to be `SceneDynamics`")
+
+        self._dynamics = dynamics
 
     def to_dict(self):
         """Returns the model properties as a dict"""

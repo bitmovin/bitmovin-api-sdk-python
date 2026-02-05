@@ -5,6 +5,7 @@ from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
 from bitmovin_api_sdk.models.audio_configuration import AudioConfiguration
 from bitmovin_api_sdk.models.dolby_atmos_loudness_control import DolbyAtmosLoudnessControl
+from bitmovin_api_sdk.models.dolby_atmos_preprocessing import DolbyAtmosPreprocessing
 import pprint
 import six
 
@@ -20,15 +21,19 @@ class DolbyAtmosAudioConfiguration(AudioConfiguration):
                  custom_data=None,
                  bitrate=None,
                  rate=None,
-                 loudness_control=None):
-        # type: (string_types, string_types, string_types, datetime, datetime, dict, int, float, DolbyAtmosLoudnessControl) -> None
+                 loudness_control=None,
+                 preprocessing=None):
+        # type: (string_types, string_types, string_types, datetime, datetime, dict, int, float, DolbyAtmosLoudnessControl, DolbyAtmosPreprocessing) -> None
         super(DolbyAtmosAudioConfiguration, self).__init__(id_=id_, name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, bitrate=bitrate, rate=rate)
 
         self._loudness_control = None
+        self._preprocessing = None
         self.discriminator = None
 
         if loudness_control is not None:
             self.loudness_control = loudness_control
+        if preprocessing is not None:
+            self.preprocessing = preprocessing
 
     @property
     def openapi_types(self):
@@ -38,7 +43,8 @@ class DolbyAtmosAudioConfiguration(AudioConfiguration):
             types = getattr(super(DolbyAtmosAudioConfiguration, self), 'openapi_types')
 
         types.update({
-            'loudness_control': 'DolbyAtmosLoudnessControl'
+            'loudness_control': 'DolbyAtmosLoudnessControl',
+            'preprocessing': 'DolbyAtmosPreprocessing'
         })
 
         return types
@@ -51,7 +57,8 @@ class DolbyAtmosAudioConfiguration(AudioConfiguration):
             attributes = getattr(super(DolbyAtmosAudioConfiguration, self), 'attribute_map')
 
         attributes.update({
-            'loudness_control': 'loudnessControl'
+            'loudness_control': 'loudnessControl',
+            'preprocessing': 'preprocessing'
         })
         return attributes
 
@@ -83,6 +90,33 @@ class DolbyAtmosAudioConfiguration(AudioConfiguration):
                 raise TypeError("Invalid type for `loudness_control`, type has to be `DolbyAtmosLoudnessControl`")
 
         self._loudness_control = loudness_control
+
+    @property
+    def preprocessing(self):
+        # type: () -> DolbyAtmosPreprocessing
+        """Gets the preprocessing of this DolbyAtmosAudioConfiguration.
+
+
+        :return: The preprocessing of this DolbyAtmosAudioConfiguration.
+        :rtype: DolbyAtmosPreprocessing
+        """
+        return self._preprocessing
+
+    @preprocessing.setter
+    def preprocessing(self, preprocessing):
+        # type: (DolbyAtmosPreprocessing) -> None
+        """Sets the preprocessing of this DolbyAtmosAudioConfiguration.
+
+
+        :param preprocessing: The preprocessing of this DolbyAtmosAudioConfiguration.
+        :type: DolbyAtmosPreprocessing
+        """
+
+        if preprocessing is not None:
+            if not isinstance(preprocessing, DolbyAtmosPreprocessing):
+                raise TypeError("Invalid type for `preprocessing`, type has to be `DolbyAtmosPreprocessing`")
+
+        self._preprocessing = preprocessing
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -1114,6 +1114,7 @@ from bitmovin_api_sdk.models.ad_analytics_sum_query_request import AdAnalyticsSu
 from bitmovin_api_sdk.models.ad_analytics_variance_query_request import AdAnalyticsVarianceQueryRequest
 from bitmovin_api_sdk.models.ad_insertion_settings import AdInsertionSettings
 from bitmovin_api_sdk.models.ad_markers_source import AdMarkersSource
+from bitmovin_api_sdk.models.ad_opportunity import AdOpportunity
 from bitmovin_api_sdk.models.ad_position import AdPosition
 from bitmovin_api_sdk.models.adaptation_set import AdaptationSet
 from bitmovin_api_sdk.models.adaptation_set_role import AdaptationSetRole
@@ -1369,10 +1370,13 @@ from bitmovin_api_sdk.models.direct_file_upload_input import DirectFileUploadInp
 from bitmovin_api_sdk.models.display_aspect_ratio import DisplayAspectRatio
 from bitmovin_api_sdk.models.dolby_atmos_audio_configuration import DolbyAtmosAudioConfiguration
 from bitmovin_api_sdk.models.dolby_atmos_dialogue_intelligence import DolbyAtmosDialogueIntelligence
+from bitmovin_api_sdk.models.dolby_atmos_dynamic_range_compression import DolbyAtmosDynamicRangeCompression
+from bitmovin_api_sdk.models.dolby_atmos_dynamic_range_compression_mode import DolbyAtmosDynamicRangeCompressionMode
 from bitmovin_api_sdk.models.dolby_atmos_ingest_input_stream import DolbyAtmosIngestInputStream
 from bitmovin_api_sdk.models.dolby_atmos_input_format import DolbyAtmosInputFormat
 from bitmovin_api_sdk.models.dolby_atmos_loudness_control import DolbyAtmosLoudnessControl
 from bitmovin_api_sdk.models.dolby_atmos_metering_mode import DolbyAtmosMeteringMode
+from bitmovin_api_sdk.models.dolby_atmos_preprocessing import DolbyAtmosPreprocessing
 from bitmovin_api_sdk.models.dolby_digital_audio_configuration import DolbyDigitalAudioConfiguration
 from bitmovin_api_sdk.models.dolby_digital_bitstream_info import DolbyDigitalBitstreamInfo
 from bitmovin_api_sdk.models.dolby_digital_center_mix_level import DolbyDigitalCenterMixLevel
@@ -1768,7 +1772,10 @@ from bitmovin_api_sdk.models.scene import Scene
 from bitmovin_api_sdk.models.scene_analysis_ad_placement_metadata_response import SceneAnalysisAdPlacementMetadataResponse
 from bitmovin_api_sdk.models.scene_analysis_details_response import SceneAnalysisDetailsResponse
 from bitmovin_api_sdk.models.scene_analysis_languages_response import SceneAnalysisLanguagesResponse
+from bitmovin_api_sdk.models.scene_dynamics import SceneDynamics
 from bitmovin_api_sdk.models.scene_object import SceneObject
+from bitmovin_api_sdk.models.scene_pacing import ScenePacing
+from bitmovin_api_sdk.models.scene_tension import SceneTension
 from bitmovin_api_sdk.models.scene_type import SceneType
 from bitmovin_api_sdk.models.scheduled_insertable_content import ScheduledInsertableContent
 from bitmovin_api_sdk.models.scheduled_insertable_content_status import ScheduledInsertableContentStatus
@@ -1950,4 +1957,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.255.0"
+__version__ = "1.255.1"

@@ -292,6 +292,14 @@ bitmovin\_api\_sdk.models.ad\_markers\_source module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.ad\_opportunity module
+------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.ad_opportunity
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.ad\_position module
 ---------------------------------------------
 
@@ -2332,6 +2340,22 @@ bitmovin\_api\_sdk.models.dolby\_atmos\_dialogue\_intelligence module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.dolby\_atmos\_dynamic\_range\_compression module
+--------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.dolby_atmos_dynamic_range_compression
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.dolby\_atmos\_dynamic\_range\_compression\_mode module
+--------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.dolby_atmos_dynamic_range_compression_mode
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.dolby\_atmos\_ingest\_input\_stream module
 --------------------------------------------------------------------
 
@@ -2360,6 +2384,14 @@ bitmovin\_api\_sdk.models.dolby\_atmos\_metering\_mode module
 -------------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.models.dolby_atmos_metering_mode
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.dolby\_atmos\_preprocessing module
+------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.dolby_atmos_preprocessing
    :members:
    :undoc-members:
    :show-inheritance:
@@ -5524,10 +5556,34 @@ bitmovin\_api\_sdk.models.scene\_analysis\_languages\_response module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.scene\_dynamics module
+------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.scene_dynamics
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.scene\_object module
 ----------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.models.scene_object
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.scene\_pacing module
+----------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.scene_pacing
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.scene\_tension module
+-----------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.scene_tension
    :members:
    :undoc-members:
    :show-inheritance:

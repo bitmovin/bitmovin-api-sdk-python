@@ -3,6 +3,7 @@
 from enum import Enum
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
+from bitmovin_api_sdk.models.ad_opportunity import AdOpportunity
 from bitmovin_api_sdk.models.content import Content
 from bitmovin_api_sdk.models.iab_taxonomy import IABTaxonomy
 from bitmovin_api_sdk.models.scene_type import SceneType
@@ -24,8 +25,9 @@ class Scene(object):
                  keywords=None,
                  iab=None,
                  type_=None,
-                 shots=None):
-        # type: (string_types, float, float, string_types, Content, string_types, string_types, list[string_types], list[string_types], IABTaxonomy, SceneType, list[Shot]) -> None
+                 shots=None,
+                 ad_opportunity_information=None):
+        # type: (string_types, float, float, string_types, Content, string_types, string_types, list[string_types], list[string_types], IABTaxonomy, SceneType, list[Shot], AdOpportunity) -> None
 
         self._title = None
         self._start_in_seconds = None
@@ -39,6 +41,7 @@ class Scene(object):
         self._iab = None
         self._type = None
         self._shots = list()
+        self._ad_opportunity_information = None
         self.discriminator = None
 
         if title is not None:
@@ -65,6 +68,8 @@ class Scene(object):
             self.type = type_
         if shots is not None:
             self.shots = shots
+        if ad_opportunity_information is not None:
+            self.ad_opportunity_information = ad_opportunity_information
 
     @property
     def openapi_types(self):
@@ -80,7 +85,8 @@ class Scene(object):
             'keywords': 'list[string_types]',
             'iab': 'IABTaxonomy',
             'type': 'SceneType',
-            'shots': 'list[Shot]'
+            'shots': 'list[Shot]',
+            'ad_opportunity_information': 'AdOpportunity'
         }
 
         return types
@@ -99,7 +105,8 @@ class Scene(object):
             'keywords': 'keywords',
             'iab': 'iab',
             'type': 'type',
-            'shots': 'shots'
+            'shots': 'shots',
+            'ad_opportunity_information': 'adOpportunityInformation'
         }
         return attributes
 
@@ -430,6 +437,33 @@ class Scene(object):
                 raise TypeError("Invalid type for `shots`, type has to be `list[Shot]`")
 
         self._shots = shots
+
+    @property
+    def ad_opportunity_information(self):
+        # type: () -> AdOpportunity
+        """Gets the ad_opportunity_information of this Scene.
+
+
+        :return: The ad_opportunity_information of this Scene.
+        :rtype: AdOpportunity
+        """
+        return self._ad_opportunity_information
+
+    @ad_opportunity_information.setter
+    def ad_opportunity_information(self, ad_opportunity_information):
+        # type: (AdOpportunity) -> None
+        """Sets the ad_opportunity_information of this Scene.
+
+
+        :param ad_opportunity_information: The ad_opportunity_information of this Scene.
+        :type: AdOpportunity
+        """
+
+        if ad_opportunity_information is not None:
+            if not isinstance(ad_opportunity_information, AdOpportunity):
+                raise TypeError("Invalid type for `ad_opportunity_information`, type has to be `AdOpportunity`")
+
+        self._ad_opportunity_information = ad_opportunity_information
 
     def to_dict(self):
         """Returns the model properties as a dict"""
