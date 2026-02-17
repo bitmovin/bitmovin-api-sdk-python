@@ -10,7 +10,7 @@ class RestClient(object):
     HTTP_HEADERS = {
         'Content-Type': 'application/json',
         'X-Api-Client': 'bitmovin-api-sdk-python',
-        'X-Api-Client-Version': '1.255.2'
+        'X-Api-Client-Version': '1.256.0'
     }
 
     DELETE = 'DELETE'
@@ -106,6 +106,6 @@ class RestClient(object):
         if hasattr(obj, '__dict__'):
             return obj.__dict__
         if isinstance(obj, datetime):
-            return obj.strftime('%Y-%m-%dT%H:%M:%SZ')
+            return obj.strftime('%Y-%m-%dT%H:%M:%S.%f')[:-3] + 'Z'
         if isinstance(obj, date):
             return obj.isoformat()

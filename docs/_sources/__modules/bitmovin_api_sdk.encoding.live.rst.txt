@@ -7,6 +7,8 @@ Subpackages
 .. toctree::
    :maxdepth: 4
 
+   bitmovin_api_sdk.encoding.live.dns_mappings
+   bitmovin_api_sdk.encoding.live.encodings
    bitmovin_api_sdk.encoding.live.standby_pools
    bitmovin_api_sdk.encoding.live.stream_keys
 

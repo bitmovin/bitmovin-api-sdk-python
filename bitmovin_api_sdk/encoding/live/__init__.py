@@ -1,3 +1,5 @@
 from bitmovin_api_sdk.encoding.live.live_api import LiveApi
+from bitmovin_api_sdk.encoding.live.encodings.encodings_api import EncodingsApi
+from bitmovin_api_sdk.encoding.live.dns_mappings.dns_mappings_api import DnsMappingsApi
 from bitmovin_api_sdk.encoding.live.stream_keys.stream_keys_api import StreamKeysApi
 from bitmovin_api_sdk.encoding.live.standby_pools.standby_pools_api import StandbyPoolsApi

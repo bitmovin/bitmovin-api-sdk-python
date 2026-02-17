@@ -2324,6 +2324,22 @@ bitmovin\_api\_sdk.models.display\_aspect\_ratio module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.dns\_mapping\_request module
+------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.dns_mapping_request
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.dns\_mapping\_response module
+-------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.dns_mapping_response
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.dolby\_atmos\_audio\_configuration module
 -------------------------------------------------------------------
 
@@ -6664,6 +6680,22 @@ bitmovin\_api\_sdk.models.unsharp\_filter module
 ------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.models.unsharp_filter
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.update\_encoding\_rtmp\_ingest\_point\_request module
+-------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.update_encoding_rtmp_ingest_point_request
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.update\_encoding\_rtmp\_ingest\_point\_response module
+--------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.update_encoding_rtmp_ingest_point_response
    :members:
    :undoc-members:
    :show-inheritance:

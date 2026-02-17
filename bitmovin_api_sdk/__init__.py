@@ -793,6 +793,14 @@ from bitmovin_api_sdk.encoding.encodings.live.hd.hd_api import HdApi
 
 from bitmovin_api_sdk.encoding.live.live_api import LiveApi
 
+from bitmovin_api_sdk.encoding.live.encodings.encodings_api import EncodingsApi
+
+from bitmovin_api_sdk.encoding.live.encodings.actions.actions_api import ActionsApi
+
+from bitmovin_api_sdk.encoding.live.dns_mappings.dns_mappings_api import DnsMappingsApi
+from bitmovin_api_sdk.encoding.live.dns_mappings.dns_mappings_api import DnsMappingResponseListQueryParams
+from bitmovin_api_sdk.encoding.live.encodings.dns_mappings.dns_mappings_api import DnsMappingsApi
+from bitmovin_api_sdk.encoding.live.encodings.dns_mappings.dns_mappings_api import DnsMappingResponseListQueryParams
 from bitmovin_api_sdk.encoding.live.stream_keys.stream_keys_api import StreamKeysApi
 from bitmovin_api_sdk.encoding.live.stream_keys.stream_keys_api import StreamKeyListQueryParams
 from bitmovin_api_sdk.encoding.live.stream_keys.actions.actions_api import ActionsApi
@@ -1368,6 +1376,8 @@ from bitmovin_api_sdk.models.deinterlace_mode import DeinterlaceMode
 from bitmovin_api_sdk.models.denoise_hqdn3d_filter import DenoiseHqdn3dFilter
 from bitmovin_api_sdk.models.direct_file_upload_input import DirectFileUploadInput
 from bitmovin_api_sdk.models.display_aspect_ratio import DisplayAspectRatio
+from bitmovin_api_sdk.models.dns_mapping_request import DnsMappingRequest
+from bitmovin_api_sdk.models.dns_mapping_response import DnsMappingResponse
 from bitmovin_api_sdk.models.dolby_atmos_audio_configuration import DolbyAtmosAudioConfiguration
 from bitmovin_api_sdk.models.dolby_atmos_dialogue_intelligence import DolbyAtmosDialogueIntelligence
 from bitmovin_api_sdk.models.dolby_atmos_dynamic_range_compression import DolbyAtmosDynamicRangeCompression
@@ -1911,6 +1921,8 @@ from bitmovin_api_sdk.models.tu_inter_depth import TuInterDepth
 from bitmovin_api_sdk.models.tu_intra_depth import TuIntraDepth
 from bitmovin_api_sdk.models.tweaks import Tweaks
 from bitmovin_api_sdk.models.unsharp_filter import UnsharpFilter
+from bitmovin_api_sdk.models.update_encoding_rtmp_ingest_point_request import UpdateEncodingRtmpIngestPointRequest
+from bitmovin_api_sdk.models.update_encoding_rtmp_ingest_point_response import UpdateEncodingRtmpIngestPointResponse
 from bitmovin_api_sdk.models.update_organization_request import UpdateOrganizationRequest
 from bitmovin_api_sdk.models.utc_timing import UtcTiming
 from bitmovin_api_sdk.models.variant_stream_dropping_mode import VariantStreamDroppingMode
@@ -1957,4 +1969,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.255.2"
+__version__ = "1.256.0"
