@@ -9,13 +9,13 @@ bitmovin\_api\_sdk.encoding.encodings.muxings.mp4.drm.marlin.customdata.customda
 
 .. automodule:: bitmovin_api_sdk.encoding.encodings.muxings.mp4.drm.marlin.customdata.customdata_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.encoding.encodings.muxings.mp4.drm.marlin.customdata
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

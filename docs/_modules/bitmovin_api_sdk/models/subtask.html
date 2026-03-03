@@ -1,22 +1,20 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="en">
+<html class="writer-html5" lang="en" data-content_root="../../../">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>bitmovin_api_sdk.models.subtask &mdash; Bitmovin Python API SDK {{packageVersion}} documentation</title>
-      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=9edc463e" />
 
   
-  <!--[if lt IE 9]>
-    <script src="../../../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-        <script src="../../../_static/jquery.js"></script>
-        <script src="../../../_static/underscore.js"></script>
-        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="../../../_static/doctools.js"></script>
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=4dbdf2c3"></script>
+      <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" /> 
@@ -80,19 +78,21 @@
   <h1>Source code for bitmovin_api_sdk.models.subtask</h1><div class="highlight"><pre>
 <span></span><span class="c1"># coding: utf-8</span>
 
-<span class="kn">from</span> <span class="nn">enum</span> <span class="kn">import</span> <span class="n">Enum</span>
-<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
-<span class="kn">from</span> <span class="nn">six</span> <span class="kn">import</span> <span class="n">string_types</span><span class="p">,</span> <span class="n">iteritems</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.common.poscheck</span> <span class="kn">import</span> <span class="n">poscheck_model</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.bitmovin_response</span> <span class="kn">import</span> <span class="n">BitmovinResponse</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.status</span> <span class="kn">import</span> <span class="n">Status</span>
-<span class="kn">import</span> <span class="nn">pprint</span>
-<span class="kn">import</span> <span class="nn">six</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">enum</span><span class="w"> </span><span class="kn">import</span> <span class="n">Enum</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="kn">import</span> <span class="n">datetime</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">six</span><span class="w"> </span><span class="kn">import</span> <span class="n">string_types</span><span class="p">,</span> <span class="n">iteritems</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.common.poscheck</span><span class="w"> </span><span class="kn">import</span> <span class="n">poscheck_model</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.bitmovin_response</span><span class="w"> </span><span class="kn">import</span> <span class="n">BitmovinResponse</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.status</span><span class="w"> </span><span class="kn">import</span> <span class="n">Status</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pprint</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">six</span>
 
 
-<div class="viewcode-block" id="Subtask"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.subtask.Subtask">[docs]</a><span class="k">class</span> <span class="nc">Subtask</span><span class="p">(</span><span class="n">BitmovinResponse</span><span class="p">):</span>
+<div class="viewcode-block" id="Subtask">
+<a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.subtask.Subtask">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">Subtask</span><span class="p">(</span><span class="n">BitmovinResponse</span><span class="p">):</span>
     <span class="nd">@poscheck_model</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
                  <span class="n">id_</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">status</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">progress</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
@@ -149,7 +149,7 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">error_at</span> <span class="o">=</span> <span class="n">error_at</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">types</span> <span class="o">=</span> <span class="p">{}</span>
 
         <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="nb">super</span><span class="p">(</span><span class="n">Subtask</span><span class="p">,</span> <span class="bp">self</span><span class="p">),</span> <span class="s1">&#39;openapi_types&#39;</span><span class="p">):</span>
@@ -173,7 +173,7 @@
         <span class="k">return</span> <span class="n">types</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">attribute_map</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">attribute_map</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">attributes</span> <span class="o">=</span> <span class="p">{}</span>
 
         <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="nb">super</span><span class="p">(</span><span class="n">Subtask</span><span class="p">,</span> <span class="bp">self</span><span class="p">),</span> <span class="s1">&#39;attribute_map&#39;</span><span class="p">):</span>
@@ -196,7 +196,7 @@
         <span class="k">return</span> <span class="n">attributes</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">status</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">status</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; Status</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the status of this Subtask.</span>
 
@@ -208,7 +208,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_status</span>
 
     <span class="nd">@status</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">status</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">status</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">status</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">status</span><span class="p">):</span>
         <span class="c1"># type: (Status) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the status of this Subtask.</span>
 
@@ -225,7 +225,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_status</span> <span class="o">=</span> <span class="n">status</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">progress</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">progress</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the progress of this Subtask.</span>
 
@@ -237,7 +237,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_progress</span>
 
     <span class="nd">@progress</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">progress</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">progress</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">progress</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">progress</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the progress of this Subtask.</span>
 
@@ -254,7 +254,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_progress</span> <span class="o">=</span> <span class="n">progress</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; string_types</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the name of this Subtask.</span>
 
@@ -266,7 +266,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_name</span>
 
     <span class="nd">@name</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">name</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">name</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
         <span class="c1"># type: (string_types) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the name of this Subtask.</span>
 
@@ -283,7 +283,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_name</span> <span class="o">=</span> <span class="n">name</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">messages</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">messages</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; list[Message]</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the messages of this Subtask.</span>
 
@@ -295,7 +295,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_messages</span>
 
     <span class="nd">@messages</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">messages</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">messages</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">messages</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">messages</span><span class="p">):</span>
         <span class="c1"># type: (list) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the messages of this Subtask.</span>
 
@@ -312,7 +312,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_messages</span> <span class="o">=</span> <span class="n">messages</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">metadata</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">metadata</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; list[SubtaskMetadata]</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the metadata of this Subtask.</span>
 
@@ -324,7 +324,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_metadata</span>
 
     <span class="nd">@metadata</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">metadata</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">metadata</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">metadata</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">metadata</span><span class="p">):</span>
         <span class="c1"># type: (list) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the metadata of this Subtask.</span>
 
@@ -341,7 +341,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_metadata</span> <span class="o">=</span> <span class="n">metadata</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">created_at</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">created_at</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; datetime</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the created_at of this Subtask.</span>
 
@@ -353,7 +353,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_created_at</span>
 
     <span class="nd">@created_at</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">created_at</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">created_at</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">created_at</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">created_at</span><span class="p">):</span>
         <span class="c1"># type: (datetime) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the created_at of this Subtask.</span>
 
@@ -370,7 +370,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_created_at</span> <span class="o">=</span> <span class="n">created_at</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">updated_at</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">updated_at</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; datetime</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the updated_at of this Subtask.</span>
 
@@ -382,7 +382,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_updated_at</span>
 
     <span class="nd">@updated_at</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">updated_at</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">updated_at</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">updated_at</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">updated_at</span><span class="p">):</span>
         <span class="c1"># type: (datetime) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the updated_at of this Subtask.</span>
 
@@ -399,7 +399,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_updated_at</span> <span class="o">=</span> <span class="n">updated_at</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">started_at</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">started_at</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; datetime</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the started_at of this Subtask.</span>
 
@@ -411,7 +411,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_started_at</span>
 
     <span class="nd">@started_at</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">started_at</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">started_at</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">started_at</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">started_at</span><span class="p">):</span>
         <span class="c1"># type: (datetime) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the started_at of this Subtask.</span>
 
@@ -428,7 +428,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_started_at</span> <span class="o">=</span> <span class="n">started_at</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">queued_at</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">queued_at</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; datetime</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the queued_at of this Subtask.</span>
 
@@ -440,7 +440,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_queued_at</span>
 
     <span class="nd">@queued_at</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">queued_at</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">queued_at</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">queued_at</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">queued_at</span><span class="p">):</span>
         <span class="c1"># type: (datetime) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the queued_at of this Subtask.</span>
 
@@ -457,7 +457,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_queued_at</span> <span class="o">=</span> <span class="n">queued_at</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">running_at</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">running_at</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; datetime</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the running_at of this Subtask.</span>
 
@@ -469,7 +469,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_running_at</span>
 
     <span class="nd">@running_at</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">running_at</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">running_at</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">running_at</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">running_at</span><span class="p">):</span>
         <span class="c1"># type: (datetime) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the running_at of this Subtask.</span>
 
@@ -486,7 +486,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_running_at</span> <span class="o">=</span> <span class="n">running_at</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">finished_at</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">finished_at</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; datetime</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the finished_at of this Subtask.</span>
 
@@ -498,7 +498,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_finished_at</span>
 
     <span class="nd">@finished_at</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">finished_at</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">finished_at</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">finished_at</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">finished_at</span><span class="p">):</span>
         <span class="c1"># type: (datetime) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the finished_at of this Subtask.</span>
 
@@ -515,7 +515,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_finished_at</span> <span class="o">=</span> <span class="n">finished_at</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">error_at</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">error_at</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; datetime</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the error_at of this Subtask.</span>
 
@@ -527,7 +527,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_error_at</span>
 
     <span class="nd">@error_at</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">error_at</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">error_at</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">error_at</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">error_at</span><span class="p">):</span>
         <span class="c1"># type: (datetime) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the error_at of this Subtask.</span>
 
@@ -543,7 +543,9 @@
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_error_at</span> <span class="o">=</span> <span class="n">error_at</span>
 
-<div class="viewcode-block" id="Subtask.to_dict"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.subtask.Subtask.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Subtask.to_dict">
+<a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.subtask.Subtask.to_dict">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>
         <span class="n">result</span> <span class="o">=</span> <span class="p">{}</span>
 
@@ -568,24 +570,29 @@
 
         <span class="k">return</span> <span class="n">result</span></div>
 
-<div class="viewcode-block" id="Subtask.to_str"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.subtask.Subtask.to_str">[docs]</a>    <span class="k">def</span> <span class="nf">to_str</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="Subtask.to_str">
+<a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.subtask.Subtask.to_str">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">to_str</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the string representation of the model&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">pprint</span><span class="o">.</span><span class="n">pformat</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">to_dict</span><span class="p">())</span></div>
 
-    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;For `print` and `pprint`&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">to_str</span><span class="p">()</span>
 
-    <span class="k">def</span> <span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns true if both objects are equal&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">Subtask</span><span class="p">):</span>
             <span class="k">return</span> <span class="kc">False</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="vm">__dict__</span>
 
-    <span class="k">def</span> <span class="fm">__ne__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__ne__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns true if both objects are not equal&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="ow">not</span> <span class="bp">self</span> <span class="o">==</span> <span class="n">other</span></div>
+
 </pre></div>
 
            </div>

@@ -8,6 +8,7 @@ Subpackages
    :maxdepth: 4
 
    bitmovin_api_sdk.account
+   bitmovin_api_sdk.agents
    bitmovin_api_sdk.ai_scene_analysis
    bitmovin_api_sdk.analytics
    bitmovin_api_sdk.common
@@ -26,13 +27,13 @@ bitmovin\_api\_sdk.bitmovin\_api module
 
 .. automodule:: bitmovin_api_sdk.bitmovin_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

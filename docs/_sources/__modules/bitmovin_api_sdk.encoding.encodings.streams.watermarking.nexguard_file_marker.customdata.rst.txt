@@ -9,13 +9,13 @@ bitmovin\_api\_sdk.encoding.encodings.streams.watermarking.nexguard\_file\_marke
 
 .. automodule:: bitmovin_api_sdk.encoding.encodings.streams.watermarking.nexguard_file_marker.customdata.customdata_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.encoding.encodings.streams.watermarking.nexguard_file_marker.customdata
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

@@ -17,21 +17,21 @@ bitmovin\_api\_sdk.encoding.infrastructure.prewarmed\_encoder\_pools.prewarmed\_
 
 .. automodule:: bitmovin_api_sdk.encoding.infrastructure.prewarmed_encoder_pools.prewarmed_encoder_pool_list_query_params
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 bitmovin\_api\_sdk.encoding.infrastructure.prewarmed\_encoder\_pools.prewarmed\_encoder\_pools\_api module
 ----------------------------------------------------------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.encoding.infrastructure.prewarmed_encoder_pools.prewarmed_encoder_pools_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.encoding.infrastructure.prewarmed_encoder_pools
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

@@ -9,13 +9,13 @@ bitmovin\_api\_sdk.encoding.configurations.audio.dolby\_atmos.customdata.customd
 
 .. automodule:: bitmovin_api_sdk.encoding.configurations.audio.dolby_atmos.customdata.customdata_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.encoding.configurations.audio.dolby_atmos.customdata
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

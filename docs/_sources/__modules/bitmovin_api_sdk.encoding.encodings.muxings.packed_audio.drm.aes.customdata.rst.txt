@@ -9,13 +9,13 @@ bitmovin\_api\_sdk.encoding.encodings.muxings.packed\_audio.drm.aes.customdata.c
 
 .. automodule:: bitmovin_api_sdk.encoding.encodings.muxings.packed_audio.drm.aes.customdata.customdata_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.encoding.encodings.muxings.packed_audio.drm.aes.customdata
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

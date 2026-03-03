@@ -124,7 +124,7 @@ class ApiClient(object):
             raise KeyError('type must be given in kwargs')
 
         if payload is not None:
-            if type(payload) == dict or type(payload) == list:
+            if isinstance(payload, (dict, list)):
                 return self.request('POST', relative_url=relative_url, payload=payload, **kwargs)
             else:
                 payload_dict = payload.to_dict()

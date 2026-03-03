@@ -17,21 +17,21 @@ bitmovin\_api\_sdk.encoding.configurations.subtitles.webvtt.web\_vtt\_configurat
 
 .. automodule:: bitmovin_api_sdk.encoding.configurations.subtitles.webvtt.web_vtt_configuration_list_query_params
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 bitmovin\_api\_sdk.encoding.configurations.subtitles.webvtt.webvtt\_api module
 ------------------------------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.encoding.configurations.subtitles.webvtt.webvtt_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.encoding.configurations.subtitles.webvtt
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

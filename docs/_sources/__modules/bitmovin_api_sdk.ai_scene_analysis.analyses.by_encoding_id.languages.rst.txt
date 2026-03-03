@@ -9,13 +9,13 @@ bitmovin\_api\_sdk.ai\_scene\_analysis.analyses.by\_encoding\_id.languages.langu
 
 .. automodule:: bitmovin_api_sdk.ai_scene_analysis.analyses.by_encoding_id.languages.languages_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.ai_scene_analysis.analyses.by_encoding_id.languages
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

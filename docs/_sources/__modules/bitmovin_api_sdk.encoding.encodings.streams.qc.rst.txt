@@ -17,13 +17,13 @@ bitmovin\_api\_sdk.encoding.encodings.streams.qc.qc\_api module
 
 .. automodule:: bitmovin_api_sdk.encoding.encodings.streams.qc.qc_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.encoding.encodings.streams.qc
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

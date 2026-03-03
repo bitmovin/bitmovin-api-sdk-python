@@ -25,13 +25,13 @@ bitmovin\_api\_sdk.analytics.queries.queries\_api module
 
 .. automodule:: bitmovin_api_sdk.analytics.queries.queries_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.analytics.queries
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

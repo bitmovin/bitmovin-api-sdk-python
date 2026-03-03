@@ -1,0 +1,29 @@
+bitmovin\_api\_sdk.agents.aisa package
+======================================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   bitmovin_api_sdk.agents.aisa.sessions
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.agents.aisa.aisa\_api module
+-----------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.agents.aisa.aisa_api
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.agents.aisa
+   :members:
+   :show-inheritance:
+   :undoc-members:

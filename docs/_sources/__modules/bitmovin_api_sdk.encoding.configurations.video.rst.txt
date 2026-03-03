@@ -23,13 +23,13 @@ bitmovin\_api\_sdk.encoding.configurations.video.video\_api module
 
 .. automodule:: bitmovin_api_sdk.encoding.configurations.video.video_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.encoding.configurations.video
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

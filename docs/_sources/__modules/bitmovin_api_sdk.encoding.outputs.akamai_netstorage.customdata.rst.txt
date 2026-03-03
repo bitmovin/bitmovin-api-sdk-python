@@ -9,13 +9,13 @@ bitmovin\_api\_sdk.encoding.outputs.akamai\_netstorage.customdata.customdata\_ap
 
 .. automodule:: bitmovin_api_sdk.encoding.outputs.akamai_netstorage.customdata.customdata_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.encoding.outputs.akamai_netstorage.customdata
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

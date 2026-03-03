@@ -1,22 +1,20 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="en">
+<html class="writer-html5" lang="en" data-content_root="../../../../">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>bitmovin_api_sdk.encoding.encodings.encodings_api &mdash; Bitmovin Python API SDK {{packageVersion}} documentation</title>
-      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css" />
-      <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=9edc463e" />
 
   
-  <!--[if lt IE 9]>
-    <script src="../../../../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
-        <script src="../../../../_static/jquery.js"></script>
-        <script src="../../../../_static/underscore.js"></script>
-        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="../../../../_static/doctools.js"></script>
+      <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../../_static/documentation_options.js?v=4dbdf2c3"></script>
+      <script src="../../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" /> 
@@ -80,39 +78,41 @@
   <h1>Source code for bitmovin_api_sdk.encoding.encodings.encodings_api</h1><div class="highlight"><pre>
 <span></span><span class="c1"># coding: utf-8</span>
 
-<span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">absolute_import</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">__future__</span><span class="w"> </span><span class="kn">import</span> <span class="n">absolute_import</span>
 
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.common</span> <span class="kn">import</span> <span class="n">BaseApi</span><span class="p">,</span> <span class="n">BitmovinApiLoggerBase</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.common.poscheck</span> <span class="kn">import</span> <span class="n">poscheck_except</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.bitmovin_response</span> <span class="kn">import</span> <span class="n">BitmovinResponse</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.cloud_region</span> <span class="kn">import</span> <span class="n">CloudRegion</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.encoding</span> <span class="kn">import</span> <span class="n">Encoding</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.encoding_mode</span> <span class="kn">import</span> <span class="n">EncodingMode</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.reprioritize_encoding_request</span> <span class="kn">import</span> <span class="n">ReprioritizeEncodingRequest</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.reschedule_encoding_request</span> <span class="kn">import</span> <span class="n">RescheduleEncodingRequest</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.response_envelope</span> <span class="kn">import</span> <span class="n">ResponseEnvelope</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.response_error</span> <span class="kn">import</span> <span class="n">ResponseError</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.start_encoding_request</span> <span class="kn">import</span> <span class="n">StartEncodingRequest</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.task</span> <span class="kn">import</span> <span class="n">Task</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.encoding.encodings.live.live_api</span> <span class="kn">import</span> <span class="n">LiveApi</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.encoding.encodings.customdata.customdata_api</span> <span class="kn">import</span> <span class="n">CustomdataApi</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.encoding.encodings.streams.streams_api</span> <span class="kn">import</span> <span class="n">StreamsApi</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.encoding.encodings.input_streams.input_streams_api</span> <span class="kn">import</span> <span class="n">InputStreamsApi</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.encoding.encodings.muxings.muxings_api</span> <span class="kn">import</span> <span class="n">MuxingsApi</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.encoding.encodings.template.template_api</span> <span class="kn">import</span> <span class="n">TemplateApi</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.encoding.encodings.transfer_retries.transfer_retries_api</span> <span class="kn">import</span> <span class="n">TransferRetriesApi</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.encoding.encodings.output_paths.output_paths_api</span> <span class="kn">import</span> <span class="n">OutputPathsApi</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.encoding.encodings.captions.captions_api</span> <span class="kn">import</span> <span class="n">CaptionsApi</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.encoding.encodings.sidecars.sidecars_api</span> <span class="kn">import</span> <span class="n">SidecarsApi</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.encoding.encodings.kantar_watermark.kantar_watermark_api</span> <span class="kn">import</span> <span class="n">KantarWatermarkApi</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.encoding.encodings.keyframes.keyframes_api</span> <span class="kn">import</span> <span class="n">KeyframesApi</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.encoding.encodings.scte35_triggers.scte35_triggers_api</span> <span class="kn">import</span> <span class="n">Scte35TriggersApi</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.encoding.encodings.encoding_list_query_params</span> <span class="kn">import</span> <span class="n">EncodingListQueryParams</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.common</span><span class="w"> </span><span class="kn">import</span> <span class="n">BaseApi</span><span class="p">,</span> <span class="n">BitmovinApiLoggerBase</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.common.poscheck</span><span class="w"> </span><span class="kn">import</span> <span class="n">poscheck_except</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.bitmovin_response</span><span class="w"> </span><span class="kn">import</span> <span class="n">BitmovinResponse</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.cloud_region</span><span class="w"> </span><span class="kn">import</span> <span class="n">CloudRegion</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.encoding</span><span class="w"> </span><span class="kn">import</span> <span class="n">Encoding</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.encoding_mode</span><span class="w"> </span><span class="kn">import</span> <span class="n">EncodingMode</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.reprioritize_encoding_request</span><span class="w"> </span><span class="kn">import</span> <span class="n">ReprioritizeEncodingRequest</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.reschedule_encoding_request</span><span class="w"> </span><span class="kn">import</span> <span class="n">RescheduleEncodingRequest</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.response_envelope</span><span class="w"> </span><span class="kn">import</span> <span class="n">ResponseEnvelope</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.response_error</span><span class="w"> </span><span class="kn">import</span> <span class="n">ResponseError</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.start_encoding_request</span><span class="w"> </span><span class="kn">import</span> <span class="n">StartEncodingRequest</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.task</span><span class="w"> </span><span class="kn">import</span> <span class="n">Task</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.encoding.encodings.live.live_api</span><span class="w"> </span><span class="kn">import</span> <span class="n">LiveApi</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.encoding.encodings.customdata.customdata_api</span><span class="w"> </span><span class="kn">import</span> <span class="n">CustomdataApi</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.encoding.encodings.streams.streams_api</span><span class="w"> </span><span class="kn">import</span> <span class="n">StreamsApi</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.encoding.encodings.input_streams.input_streams_api</span><span class="w"> </span><span class="kn">import</span> <span class="n">InputStreamsApi</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.encoding.encodings.muxings.muxings_api</span><span class="w"> </span><span class="kn">import</span> <span class="n">MuxingsApi</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.encoding.encodings.template.template_api</span><span class="w"> </span><span class="kn">import</span> <span class="n">TemplateApi</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.encoding.encodings.transfer_retries.transfer_retries_api</span><span class="w"> </span><span class="kn">import</span> <span class="n">TransferRetriesApi</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.encoding.encodings.output_paths.output_paths_api</span><span class="w"> </span><span class="kn">import</span> <span class="n">OutputPathsApi</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.encoding.encodings.captions.captions_api</span><span class="w"> </span><span class="kn">import</span> <span class="n">CaptionsApi</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.encoding.encodings.sidecars.sidecars_api</span><span class="w"> </span><span class="kn">import</span> <span class="n">SidecarsApi</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.encoding.encodings.kantar_watermark.kantar_watermark_api</span><span class="w"> </span><span class="kn">import</span> <span class="n">KantarWatermarkApi</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.encoding.encodings.keyframes.keyframes_api</span><span class="w"> </span><span class="kn">import</span> <span class="n">KeyframesApi</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.encoding.encodings.scte35_triggers.scte35_triggers_api</span><span class="w"> </span><span class="kn">import</span> <span class="n">Scte35TriggersApi</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.encoding.encodings.encoding_list_query_params</span><span class="w"> </span><span class="kn">import</span> <span class="n">EncodingListQueryParams</span>
 
 
-<div class="viewcode-block" id="EncodingsApi"><a class="viewcode-back" href="../../../../__modules/bitmovin_api_sdk.encoding.encodings.html#bitmovin_api_sdk.encoding.encodings.encodings_api.EncodingsApi">[docs]</a><span class="k">class</span> <span class="nc">EncodingsApi</span><span class="p">(</span><span class="n">BaseApi</span><span class="p">):</span>
+<div class="viewcode-block" id="EncodingsApi">
+<a class="viewcode-back" href="../../../../__modules/bitmovin_api_sdk.encoding.encodings.html#bitmovin_api_sdk.encoding.encodings.encodings_api.EncodingsApi">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">EncodingsApi</span><span class="p">(</span><span class="n">BaseApi</span><span class="p">):</span>
     <span class="nd">@poscheck_except</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">api_key</span><span class="p">,</span> <span class="n">tenant_org_id</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">base_url</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">logger</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">api_key</span><span class="p">,</span> <span class="n">tenant_org_id</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">base_url</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">logger</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="c1"># type: (str, str, str, BitmovinApiLoggerBase) -&gt; None</span>
 
         <span class="nb">super</span><span class="p">(</span><span class="n">EncodingsApi</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span>
@@ -213,7 +213,9 @@
             <span class="n">logger</span><span class="o">=</span><span class="n">logger</span>
         <span class="p">)</span>
 
-<div class="viewcode-block" id="EncodingsApi.create"><a class="viewcode-back" href="../../../../__modules/bitmovin_api_sdk.encoding.encodings.html#bitmovin_api_sdk.encoding.encodings.encodings_api.EncodingsApi.create">[docs]</a>    <span class="k">def</span> <span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">encoding</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<div class="viewcode-block" id="EncodingsApi.create">
+<a class="viewcode-back" href="../../../../__modules/bitmovin_api_sdk.encoding.encodings.html#bitmovin_api_sdk.encoding.encodings.encodings_api.EncodingsApi.create">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">encoding</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (Encoding, dict) -&gt; Encoding</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Create Encoding</span>
 
@@ -230,7 +232,10 @@
             <span class="o">**</span><span class="n">kwargs</span>
         <span class="p">)</span></div>
 
-<div class="viewcode-block" id="EncodingsApi.delete"><a class="viewcode-back" href="../../../../__modules/bitmovin_api_sdk.encoding.encodings.html#bitmovin_api_sdk.encoding.encodings.encodings_api.EncodingsApi.delete">[docs]</a>    <span class="k">def</span> <span class="nf">delete</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">encoding_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+<div class="viewcode-block" id="EncodingsApi.delete">
+<a class="viewcode-back" href="../../../../__modules/bitmovin_api_sdk.encoding.encodings.html#bitmovin_api_sdk.encoding.encodings.encodings_api.EncodingsApi.delete">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">delete</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">encoding_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, dict) -&gt; BitmovinResponse</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Delete Encoding</span>
 
@@ -247,7 +252,10 @@
             <span class="o">**</span><span class="n">kwargs</span>
         <span class="p">)</span></div>
 
-<div class="viewcode-block" id="EncodingsApi.get"><a class="viewcode-back" href="../../../../__modules/bitmovin_api_sdk.encoding.encodings.html#bitmovin_api_sdk.encoding.encodings.encodings_api.EncodingsApi.get">[docs]</a>    <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">encoding_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+<div class="viewcode-block" id="EncodingsApi.get">
+<a class="viewcode-back" href="../../../../__modules/bitmovin_api_sdk.encoding.encodings.html#bitmovin_api_sdk.encoding.encodings.encodings_api.EncodingsApi.get">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">encoding_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, dict) -&gt; Encoding</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Encoding Details</span>
 
@@ -264,7 +272,10 @@
             <span class="o">**</span><span class="n">kwargs</span>
         <span class="p">)</span></div>
 
-<div class="viewcode-block" id="EncodingsApi.get_start_request"><a class="viewcode-back" href="../../../../__modules/bitmovin_api_sdk.encoding.encodings.html#bitmovin_api_sdk.encoding.encodings.encodings_api.EncodingsApi.get_start_request">[docs]</a>    <span class="k">def</span> <span class="nf">get_start_request</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">encoding_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+<div class="viewcode-block" id="EncodingsApi.get_start_request">
+<a class="viewcode-back" href="../../../../__modules/bitmovin_api_sdk.encoding.encodings.html#bitmovin_api_sdk.encoding.encodings.encodings_api.EncodingsApi.get_start_request">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_start_request</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">encoding_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, dict) -&gt; StartEncodingRequest</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Encoding Start Details</span>
 
@@ -281,7 +292,10 @@
             <span class="o">**</span><span class="n">kwargs</span>
         <span class="p">)</span></div>
 
-<div class="viewcode-block" id="EncodingsApi.list"><a class="viewcode-back" href="../../../../__modules/bitmovin_api_sdk.encoding.encodings.html#bitmovin_api_sdk.encoding.encodings.encodings_api.EncodingsApi.list">[docs]</a>    <span class="k">def</span> <span class="nf">list</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">query_params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+<div class="viewcode-block" id="EncodingsApi.list">
+<a class="viewcode-back" href="../../../../__modules/bitmovin_api_sdk.encoding.encodings.html#bitmovin_api_sdk.encoding.encodings.encodings_api.EncodingsApi.list">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">list</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">query_params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (EncodingListQueryParams, dict) -&gt; Encoding</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;List all Encodings</span>
 
@@ -299,7 +313,10 @@
             <span class="o">**</span><span class="n">kwargs</span>
         <span class="p">)</span></div>
 
-<div class="viewcode-block" id="EncodingsApi.reprioritize"><a class="viewcode-back" href="../../../../__modules/bitmovin_api_sdk.encoding.encodings.html#bitmovin_api_sdk.encoding.encodings.encodings_api.EncodingsApi.reprioritize">[docs]</a>    <span class="k">def</span> <span class="nf">reprioritize</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">encoding_id</span><span class="p">,</span> <span class="n">reprioritize_encoding_request</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+<div class="viewcode-block" id="EncodingsApi.reprioritize">
+<a class="viewcode-back" href="../../../../__modules/bitmovin_api_sdk.encoding.encodings.html#bitmovin_api_sdk.encoding.encodings.encodings_api.EncodingsApi.reprioritize">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">reprioritize</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">encoding_id</span><span class="p">,</span> <span class="n">reprioritize_encoding_request</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, ReprioritizeEncodingRequest, dict) -&gt; BitmovinResponse</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Reprioritize Encoding</span>
 
@@ -319,7 +336,10 @@
             <span class="o">**</span><span class="n">kwargs</span>
         <span class="p">)</span></div>
 
-<div class="viewcode-block" id="EncodingsApi.reschedule"><a class="viewcode-back" href="../../../../__modules/bitmovin_api_sdk.encoding.encodings.html#bitmovin_api_sdk.encoding.encodings.encodings_api.EncodingsApi.reschedule">[docs]</a>    <span class="k">def</span> <span class="nf">reschedule</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">encoding_id</span><span class="p">,</span> <span class="n">reschedule_encoding_request</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+<div class="viewcode-block" id="EncodingsApi.reschedule">
+<a class="viewcode-back" href="../../../../__modules/bitmovin_api_sdk.encoding.encodings.html#bitmovin_api_sdk.encoding.encodings.encodings_api.EncodingsApi.reschedule">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">reschedule</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">encoding_id</span><span class="p">,</span> <span class="n">reschedule_encoding_request</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, RescheduleEncodingRequest, dict) -&gt; BitmovinResponse</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Reschedule Encoding</span>
 
@@ -339,7 +359,10 @@
             <span class="o">**</span><span class="n">kwargs</span>
         <span class="p">)</span></div>
 
-<div class="viewcode-block" id="EncodingsApi.start"><a class="viewcode-back" href="../../../../__modules/bitmovin_api_sdk.encoding.encodings.html#bitmovin_api_sdk.encoding.encodings.encodings_api.EncodingsApi.start">[docs]</a>    <span class="k">def</span> <span class="nf">start</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">encoding_id</span><span class="p">,</span> <span class="n">start_encoding_request</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+<div class="viewcode-block" id="EncodingsApi.start">
+<a class="viewcode-back" href="../../../../__modules/bitmovin_api_sdk.encoding.encodings.html#bitmovin_api_sdk.encoding.encodings.encodings_api.EncodingsApi.start">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">start</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">encoding_id</span><span class="p">,</span> <span class="n">start_encoding_request</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, StartEncodingRequest, dict) -&gt; BitmovinResponse</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Start VoD Encoding</span>
 
@@ -359,7 +382,10 @@
             <span class="o">**</span><span class="n">kwargs</span>
         <span class="p">)</span></div>
 
-<div class="viewcode-block" id="EncodingsApi.status"><a class="viewcode-back" href="../../../../__modules/bitmovin_api_sdk.encoding.encodings.html#bitmovin_api_sdk.encoding.encodings.encodings_api.EncodingsApi.status">[docs]</a>    <span class="k">def</span> <span class="nf">status</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">encoding_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+<div class="viewcode-block" id="EncodingsApi.status">
+<a class="viewcode-back" href="../../../../__modules/bitmovin_api_sdk.encoding.encodings.html#bitmovin_api_sdk.encoding.encodings.encodings_api.EncodingsApi.status">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">status</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">encoding_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, dict) -&gt; Task</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Encoding Status</span>
 
@@ -376,7 +402,10 @@
             <span class="o">**</span><span class="n">kwargs</span>
         <span class="p">)</span></div>
 
-<div class="viewcode-block" id="EncodingsApi.stop"><a class="viewcode-back" href="../../../../__modules/bitmovin_api_sdk.encoding.encodings.html#bitmovin_api_sdk.encoding.encodings.encodings_api.EncodingsApi.stop">[docs]</a>    <span class="k">def</span> <span class="nf">stop</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">encoding_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+<div class="viewcode-block" id="EncodingsApi.stop">
+<a class="viewcode-back" href="../../../../__modules/bitmovin_api_sdk.encoding.encodings.html#bitmovin_api_sdk.encoding.encodings.encodings_api.EncodingsApi.stop">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">stop</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">encoding_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, dict) -&gt; BitmovinResponse</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Stop Encoding</span>
 
@@ -391,7 +420,9 @@
             <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;encoding_id&#39;</span><span class="p">:</span> <span class="n">encoding_id</span><span class="p">},</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">BitmovinResponse</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>
-        <span class="p">)</span></div></div>
+        <span class="p">)</span></div>
+</div>
+
 </pre></div>
 
            </div>

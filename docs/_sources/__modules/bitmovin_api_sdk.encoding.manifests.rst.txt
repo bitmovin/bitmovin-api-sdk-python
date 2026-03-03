@@ -20,21 +20,21 @@ bitmovin\_api\_sdk.encoding.manifests.manifest\_list\_query\_params module
 
 .. automodule:: bitmovin_api_sdk.encoding.manifests.manifest_list_query_params
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 bitmovin\_api\_sdk.encoding.manifests.manifests\_api module
 -----------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.encoding.manifests.manifests_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.encoding.manifests
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

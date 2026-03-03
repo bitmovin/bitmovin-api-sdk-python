@@ -33,21 +33,21 @@ bitmovin\_api\_sdk.encoding.filters.filter\_list\_query\_params module
 
 .. automodule:: bitmovin_api_sdk.encoding.filters.filter_list_query_params
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 bitmovin\_api\_sdk.encoding.filters.filters\_api module
 -------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.encoding.filters.filters_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.encoding.filters
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

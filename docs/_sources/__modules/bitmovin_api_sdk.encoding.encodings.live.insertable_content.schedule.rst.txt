@@ -9,13 +9,13 @@ bitmovin\_api\_sdk.encoding.encodings.live.insertable\_content.schedule.schedule
 
 .. automodule:: bitmovin_api_sdk.encoding.encodings.live.insertable_content.schedule.schedule_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.encoding.encodings.live.insertable_content.schedule
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

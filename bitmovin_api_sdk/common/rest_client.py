@@ -10,7 +10,7 @@ class RestClient(object):
     HTTP_HEADERS = {
         'Content-Type': 'application/json',
         'X-Api-Client': 'bitmovin-api-sdk-python',
-        'X-Api-Client-Version': '1.256.0'
+        'X-Api-Client-Version': '1.257.0'
     }
 
     DELETE = 'DELETE'
@@ -54,7 +54,7 @@ class RestClient(object):
 
         url = self.urljoin(self.base_url, relative_url)
 
-        if payload is not None and type(payload) != list:
+        if payload is not None and not isinstance(payload, list):
             # Remove none set values
             payload = {k: v for k, v in payload.items() if v is not None}
 

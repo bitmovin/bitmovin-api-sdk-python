@@ -17,21 +17,21 @@ bitmovin\_api\_sdk.encoding.configurations.audio.he\_aac\_v1.he\_aac\_v1\_api mo
 
 .. automodule:: bitmovin_api_sdk.encoding.configurations.audio.he_aac_v1.he_aac_v1_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 bitmovin\_api\_sdk.encoding.configurations.audio.he\_aac\_v1.he\_aac\_v1\_audio\_configuration\_list\_query\_params module
 --------------------------------------------------------------------------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.encoding.configurations.audio.he_aac_v1.he_aac_v1_audio_configuration_list_query_params
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.encoding.configurations.audio.he_aac_v1
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

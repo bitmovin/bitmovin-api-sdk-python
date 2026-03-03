@@ -22,13 +22,13 @@ bitmovin\_api\_sdk.notifications.webhooks.encoding.encodings.encodings\_api modu
 
 .. automodule:: bitmovin_api_sdk.notifications.webhooks.encoding.encodings.encodings_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.notifications.webhooks.encoding.encodings
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

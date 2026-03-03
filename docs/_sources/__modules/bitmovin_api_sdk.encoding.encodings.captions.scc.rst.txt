@@ -17,21 +17,21 @@ bitmovin\_api\_sdk.encoding.encodings.captions.scc.convert\_scc\_caption\_list\_
 
 .. automodule:: bitmovin_api_sdk.encoding.encodings.captions.scc.convert_scc_caption_list_query_params
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 bitmovin\_api\_sdk.encoding.encodings.captions.scc.scc\_api module
 ------------------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.encoding.encodings.captions.scc.scc_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.encoding.encodings.captions.scc
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

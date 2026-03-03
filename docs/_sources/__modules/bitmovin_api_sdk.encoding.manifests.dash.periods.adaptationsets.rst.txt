@@ -23,21 +23,21 @@ bitmovin\_api\_sdk.encoding.manifests.dash.periods.adaptationsets.adaptation\_se
 
 .. automodule:: bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.adaptation_set_list_query_params
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 bitmovin\_api\_sdk.encoding.manifests.dash.periods.adaptationsets.adaptationsets\_api module
 --------------------------------------------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.adaptationsets_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

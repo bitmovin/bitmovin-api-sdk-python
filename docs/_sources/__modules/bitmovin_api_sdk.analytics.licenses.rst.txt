@@ -17,21 +17,21 @@ bitmovin\_api\_sdk.analytics.licenses.analytics\_license\_list\_query\_params mo
 
 .. automodule:: bitmovin_api_sdk.analytics.licenses.analytics_license_list_query_params
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 bitmovin\_api\_sdk.analytics.licenses.licenses\_api module
 ----------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.analytics.licenses.licenses_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.analytics.licenses
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

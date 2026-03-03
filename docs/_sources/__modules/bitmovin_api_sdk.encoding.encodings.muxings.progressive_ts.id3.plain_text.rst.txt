@@ -17,21 +17,21 @@ bitmovin\_api\_sdk.encoding.encodings.muxings.progressive\_ts.id3.plain\_text.pl
 
 .. automodule:: bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.id3.plain_text.plain_text_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 bitmovin\_api\_sdk.encoding.encodings.muxings.progressive\_ts.id3.plain\_text.plaintext\_id3\_tag\_list\_query\_params module
 -----------------------------------------------------------------------------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.id3.plain_text.plaintext_id3_tag_list_query_params
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.id3.plain_text
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

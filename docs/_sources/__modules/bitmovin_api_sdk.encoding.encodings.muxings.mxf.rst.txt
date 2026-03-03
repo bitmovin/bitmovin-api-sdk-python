@@ -17,21 +17,21 @@ bitmovin\_api\_sdk.encoding.encodings.muxings.mxf.mxf\_api module
 
 .. automodule:: bitmovin_api_sdk.encoding.encodings.muxings.mxf.mxf_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 bitmovin\_api\_sdk.encoding.encodings.muxings.mxf.mxf\_muxing\_list\_query\_params module
 -----------------------------------------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.encoding.encodings.muxings.mxf.mxf_muxing_list_query_params
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.encoding.encodings.muxings.mxf
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

@@ -9,13 +9,13 @@ bitmovin\_api\_sdk.encoding.configurations.audio.vorbis.customdata.customdata\_a
 
 .. automodule:: bitmovin_api_sdk.encoding.configurations.audio.vorbis.customdata.customdata_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.encoding.configurations.audio.vorbis.customdata
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

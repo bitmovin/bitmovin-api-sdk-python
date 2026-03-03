@@ -9,13 +9,13 @@ bitmovin\_api\_sdk.encoding.encodings.muxings.packed\_audio.information.informat
 
 .. automodule:: bitmovin_api_sdk.encoding.encodings.muxings.packed_audio.information.information_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.encoding.encodings.muxings.packed_audio.information
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

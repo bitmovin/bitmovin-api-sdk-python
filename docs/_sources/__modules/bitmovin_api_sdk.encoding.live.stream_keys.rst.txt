@@ -17,21 +17,21 @@ bitmovin\_api\_sdk.encoding.live.stream\_keys.stream\_key\_list\_query\_params m
 
 .. automodule:: bitmovin_api_sdk.encoding.live.stream_keys.stream_key_list_query_params
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 bitmovin\_api\_sdk.encoding.live.stream\_keys.stream\_keys\_api module
 ----------------------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.encoding.live.stream_keys.stream_keys_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.encoding.live.stream_keys
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

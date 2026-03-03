@@ -9,13 +9,13 @@ bitmovin\_api\_sdk.encoding.configurations.audio.dts\_passthrough.customdata.cus
 
 .. automodule:: bitmovin_api_sdk.encoding.configurations.audio.dts_passthrough.customdata.customdata_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.encoding.configurations.audio.dts_passthrough.customdata
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

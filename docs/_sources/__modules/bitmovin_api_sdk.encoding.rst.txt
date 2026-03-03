@@ -28,13 +28,13 @@ bitmovin\_api\_sdk.encoding.encoding\_api module
 
 .. automodule:: bitmovin_api_sdk.encoding.encoding_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.encoding
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

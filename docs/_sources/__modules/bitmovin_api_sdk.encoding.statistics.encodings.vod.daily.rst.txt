@@ -9,13 +9,13 @@ bitmovin\_api\_sdk.encoding.statistics.encodings.vod.daily.daily\_api module
 
 .. automodule:: bitmovin_api_sdk.encoding.statistics.encodings.vod.daily.daily_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.encoding.statistics.encodings.vod.daily
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

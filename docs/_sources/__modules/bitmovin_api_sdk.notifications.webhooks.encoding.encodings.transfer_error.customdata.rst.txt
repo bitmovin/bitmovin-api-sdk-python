@@ -9,13 +9,13 @@ bitmovin\_api\_sdk.notifications.webhooks.encoding.encodings.transfer\_error.cus
 
 .. automodule:: bitmovin_api_sdk.notifications.webhooks.encoding.encodings.transfer_error.customdata.customdata_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.notifications.webhooks.encoding.encodings.transfer_error.customdata
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

@@ -17,13 +17,13 @@ bitmovin\_api\_sdk.notifications.webhooks.webhooks\_api module
 
 .. automodule:: bitmovin_api_sdk.notifications.webhooks.webhooks_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.notifications.webhooks
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

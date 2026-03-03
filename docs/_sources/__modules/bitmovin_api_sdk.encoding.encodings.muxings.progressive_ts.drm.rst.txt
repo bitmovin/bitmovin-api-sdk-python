@@ -19,13 +19,13 @@ bitmovin\_api\_sdk.encoding.encodings.muxings.progressive\_ts.drm.drm\_api modul
 
 .. automodule:: bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.drm.drm_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.drm
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

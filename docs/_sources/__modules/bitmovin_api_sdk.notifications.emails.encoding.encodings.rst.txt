@@ -18,21 +18,21 @@ bitmovin\_api\_sdk.notifications.emails.encoding.encodings.email\_notification\_
 
 .. automodule:: bitmovin_api_sdk.notifications.emails.encoding.encodings.email_notification_with_stream_conditions_list_query_params
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 bitmovin\_api\_sdk.notifications.emails.encoding.encodings.encodings\_api module
 --------------------------------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.notifications.emails.encoding.encodings.encodings_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.notifications.emails.encoding.encodings
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

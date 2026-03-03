@@ -9,13 +9,13 @@ bitmovin\_api\_sdk.encoding.configurations.video.vp8.customdata.customdata\_api 
 
 .. automodule:: bitmovin_api_sdk.encoding.configurations.video.vp8.customdata.customdata_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.encoding.configurations.video.vp8.customdata
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

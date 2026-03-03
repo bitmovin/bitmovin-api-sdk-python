@@ -19,13 +19,13 @@ bitmovin\_api\_sdk.encoding.statistics.encodings.live\_statistics.live\_statisti
 
 .. automodule:: bitmovin_api_sdk.encoding.statistics.encodings.live_statistics.live_statistics_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.encoding.statistics.encodings.live_statistics
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

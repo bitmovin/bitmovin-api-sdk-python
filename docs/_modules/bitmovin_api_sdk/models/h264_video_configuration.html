@@ -1,22 +1,20 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="en">
+<html class="writer-html5" lang="en" data-content_root="../../../">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>bitmovin_api_sdk.models.h264_video_configuration &mdash; Bitmovin Python API SDK {{packageVersion}} documentation</title>
-      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=9edc463e" />
 
   
-  <!--[if lt IE 9]>
-    <script src="../../../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-        <script src="../../../_static/jquery.js"></script>
-        <script src="../../../_static/underscore.js"></script>
-        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="../../../_static/doctools.js"></script>
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=4dbdf2c3"></script>
+      <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" /> 
@@ -80,37 +78,39 @@
   <h1>Source code for bitmovin_api_sdk.models.h264_video_configuration</h1><div class="highlight"><pre>
 <span></span><span class="c1"># coding: utf-8</span>
 
-<span class="kn">from</span> <span class="nn">enum</span> <span class="kn">import</span> <span class="n">Enum</span>
-<span class="kn">from</span> <span class="nn">six</span> <span class="kn">import</span> <span class="n">string_types</span><span class="p">,</span> <span class="n">iteritems</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.common.poscheck</span> <span class="kn">import</span> <span class="n">poscheck_model</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.adaptive_quant_mode</span> <span class="kn">import</span> <span class="n">AdaptiveQuantMode</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.auto_level_setup</span> <span class="kn">import</span> <span class="n">AutoLevelSetup</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.b_adapt</span> <span class="kn">import</span> <span class="n">BAdapt</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.cea608708_subtitle_configuration</span> <span class="kn">import</span> <span class="n">Cea608708SubtitleConfiguration</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.color_config</span> <span class="kn">import</span> <span class="n">ColorConfig</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.display_aspect_ratio</span> <span class="kn">import</span> <span class="n">DisplayAspectRatio</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.encoding_mode</span> <span class="kn">import</span> <span class="n">EncodingMode</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.h264_b_pyramid</span> <span class="kn">import</span> <span class="n">H264BPyramid</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.h264_dynamic_range_format</span> <span class="kn">import</span> <span class="n">H264DynamicRangeFormat</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.h264_interlace_mode</span> <span class="kn">import</span> <span class="n">H264InterlaceMode</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.h264_motion_estimation_method</span> <span class="kn">import</span> <span class="n">H264MotionEstimationMethod</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.h264_nal_hrd</span> <span class="kn">import</span> <span class="n">H264NalHrd</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.h264_sub_me</span> <span class="kn">import</span> <span class="n">H264SubMe</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.h264_trellis</span> <span class="kn">import</span> <span class="n">H264Trellis</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.level_h264</span> <span class="kn">import</span> <span class="n">LevelH264</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.mv_prediction_mode</span> <span class="kn">import</span> <span class="n">MvPredictionMode</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.pixel_format</span> <span class="kn">import</span> <span class="n">PixelFormat</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.preset_configuration</span> <span class="kn">import</span> <span class="n">PresetConfiguration</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.profile_h264</span> <span class="kn">import</span> <span class="n">ProfileH264</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.video_configuration</span> <span class="kn">import</span> <span class="n">VideoConfiguration</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.weighted_prediction_p_frames</span> <span class="kn">import</span> <span class="n">WeightedPredictionPFrames</span>
-<span class="kn">import</span> <span class="nn">pprint</span>
-<span class="kn">import</span> <span class="nn">six</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">enum</span><span class="w"> </span><span class="kn">import</span> <span class="n">Enum</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">six</span><span class="w"> </span><span class="kn">import</span> <span class="n">string_types</span><span class="p">,</span> <span class="n">iteritems</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.common.poscheck</span><span class="w"> </span><span class="kn">import</span> <span class="n">poscheck_model</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.adaptive_quant_mode</span><span class="w"> </span><span class="kn">import</span> <span class="n">AdaptiveQuantMode</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.auto_level_setup</span><span class="w"> </span><span class="kn">import</span> <span class="n">AutoLevelSetup</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.b_adapt</span><span class="w"> </span><span class="kn">import</span> <span class="n">BAdapt</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.cea608708_subtitle_configuration</span><span class="w"> </span><span class="kn">import</span> <span class="n">Cea608708SubtitleConfiguration</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.color_config</span><span class="w"> </span><span class="kn">import</span> <span class="n">ColorConfig</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.display_aspect_ratio</span><span class="w"> </span><span class="kn">import</span> <span class="n">DisplayAspectRatio</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.encoding_mode</span><span class="w"> </span><span class="kn">import</span> <span class="n">EncodingMode</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.h264_b_pyramid</span><span class="w"> </span><span class="kn">import</span> <span class="n">H264BPyramid</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.h264_dynamic_range_format</span><span class="w"> </span><span class="kn">import</span> <span class="n">H264DynamicRangeFormat</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.h264_interlace_mode</span><span class="w"> </span><span class="kn">import</span> <span class="n">H264InterlaceMode</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.h264_motion_estimation_method</span><span class="w"> </span><span class="kn">import</span> <span class="n">H264MotionEstimationMethod</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.h264_nal_hrd</span><span class="w"> </span><span class="kn">import</span> <span class="n">H264NalHrd</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.h264_sub_me</span><span class="w"> </span><span class="kn">import</span> <span class="n">H264SubMe</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.h264_trellis</span><span class="w"> </span><span class="kn">import</span> <span class="n">H264Trellis</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.level_h264</span><span class="w"> </span><span class="kn">import</span> <span class="n">LevelH264</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.mv_prediction_mode</span><span class="w"> </span><span class="kn">import</span> <span class="n">MvPredictionMode</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.pixel_format</span><span class="w"> </span><span class="kn">import</span> <span class="n">PixelFormat</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.preset_configuration</span><span class="w"> </span><span class="kn">import</span> <span class="n">PresetConfiguration</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.profile_h264</span><span class="w"> </span><span class="kn">import</span> <span class="n">ProfileH264</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.video_configuration</span><span class="w"> </span><span class="kn">import</span> <span class="n">VideoConfiguration</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.weighted_prediction_p_frames</span><span class="w"> </span><span class="kn">import</span> <span class="n">WeightedPredictionPFrames</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pprint</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">six</span>
 
 
-<div class="viewcode-block" id="H264VideoConfiguration"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.h264_video_configuration.H264VideoConfiguration">[docs]</a><span class="k">class</span> <span class="nc">H264VideoConfiguration</span><span class="p">(</span><span class="n">VideoConfiguration</span><span class="p">):</span>
+<div class="viewcode-block" id="H264VideoConfiguration">
+<a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.h264_video_configuration.H264VideoConfiguration">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">H264VideoConfiguration</span><span class="p">(</span><span class="n">VideoConfiguration</span><span class="p">):</span>
     <span class="nd">@poscheck_model</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
                  <span class="n">id_</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">description</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
@@ -318,7 +318,7 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">auto_level_setup</span> <span class="o">=</span> <span class="n">auto_level_setup</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">types</span> <span class="o">=</span> <span class="p">{}</span>
 
         <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="nb">super</span><span class="p">(</span><span class="n">H264VideoConfiguration</span><span class="p">,</span> <span class="bp">self</span><span class="p">),</span> <span class="s1">&#39;openapi_types&#39;</span><span class="p">):</span>
@@ -376,7 +376,7 @@
         <span class="k">return</span> <span class="n">types</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">attribute_map</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">attribute_map</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">attributes</span> <span class="o">=</span> <span class="p">{}</span>
 
         <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="nb">super</span><span class="p">(</span><span class="n">H264VideoConfiguration</span><span class="p">,</span> <span class="bp">self</span><span class="p">),</span> <span class="s1">&#39;attribute_map&#39;</span><span class="p">):</span>
@@ -433,7 +433,7 @@
         <span class="k">return</span> <span class="n">attributes</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">preset_configuration</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">preset_configuration</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; PresetConfiguration</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the preset_configuration of this H264VideoConfiguration.</span>
 
@@ -445,7 +445,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_preset_configuration</span>
 
     <span class="nd">@preset_configuration</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">preset_configuration</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">preset_configuration</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">preset_configuration</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">preset_configuration</span><span class="p">):</span>
         <span class="c1"># type: (PresetConfiguration) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the preset_configuration of this H264VideoConfiguration.</span>
 
@@ -462,7 +462,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_preset_configuration</span> <span class="o">=</span> <span class="n">preset_configuration</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">dynamic_range_format</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">dynamic_range_format</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; H264DynamicRangeFormat</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the dynamic_range_format of this H264VideoConfiguration.</span>
 
@@ -474,7 +474,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_dynamic_range_format</span>
 
     <span class="nd">@dynamic_range_format</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">dynamic_range_format</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dynamic_range_format</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">dynamic_range_format</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dynamic_range_format</span><span class="p">):</span>
         <span class="c1"># type: (H264DynamicRangeFormat) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the dynamic_range_format of this H264VideoConfiguration.</span>
 
@@ -491,7 +491,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_dynamic_range_format</span> <span class="o">=</span> <span class="n">dynamic_range_format</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">crf</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">crf</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; float</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the crf of this H264VideoConfiguration.</span>
 
@@ -503,7 +503,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_crf</span>
 
     <span class="nd">@crf</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">crf</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">crf</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">crf</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">crf</span><span class="p">):</span>
         <span class="c1"># type: (float) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the crf of this H264VideoConfiguration.</span>
 
@@ -524,7 +524,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_crf</span> <span class="o">=</span> <span class="n">crf</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">profile</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">profile</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; ProfileH264</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the profile of this H264VideoConfiguration.</span>
 
@@ -536,7 +536,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_profile</span>
 
     <span class="nd">@profile</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">profile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">profile</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">profile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">profile</span><span class="p">):</span>
         <span class="c1"># type: (ProfileH264) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the profile of this H264VideoConfiguration.</span>
 
@@ -553,7 +553,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_profile</span> <span class="o">=</span> <span class="n">profile</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">bframes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">bframes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the bframes of this H264VideoConfiguration.</span>
 
@@ -565,7 +565,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_bframes</span>
 
     <span class="nd">@bframes</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">bframes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bframes</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">bframes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bframes</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the bframes of this H264VideoConfiguration.</span>
 
@@ -586,7 +586,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_bframes</span> <span class="o">=</span> <span class="n">bframes</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">ref_frames</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">ref_frames</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the ref_frames of this H264VideoConfiguration.</span>
 
@@ -598,7 +598,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_ref_frames</span>
 
     <span class="nd">@ref_frames</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">ref_frames</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ref_frames</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">ref_frames</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ref_frames</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the ref_frames of this H264VideoConfiguration.</span>
 
@@ -619,7 +619,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_ref_frames</span> <span class="o">=</span> <span class="n">ref_frames</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">qp_min</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">qp_min</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the qp_min of this H264VideoConfiguration.</span>
 
@@ -631,7 +631,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_qp_min</span>
 
     <span class="nd">@qp_min</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">qp_min</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">qp_min</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">qp_min</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">qp_min</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the qp_min of this H264VideoConfiguration.</span>
 
@@ -652,7 +652,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_qp_min</span> <span class="o">=</span> <span class="n">qp_min</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">qp_max</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">qp_max</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the qp_max of this H264VideoConfiguration.</span>
 
@@ -664,7 +664,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_qp_max</span>
 
     <span class="nd">@qp_max</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">qp_max</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">qp_max</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">qp_max</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">qp_max</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the qp_max of this H264VideoConfiguration.</span>
 
@@ -685,7 +685,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_qp_max</span> <span class="o">=</span> <span class="n">qp_max</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">mv_prediction_mode</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">mv_prediction_mode</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; MvPredictionMode</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the mv_prediction_mode of this H264VideoConfiguration.</span>
 
@@ -696,7 +696,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mv_prediction_mode</span>
 
     <span class="nd">@mv_prediction_mode</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">mv_prediction_mode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mv_prediction_mode</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">mv_prediction_mode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mv_prediction_mode</span><span class="p">):</span>
         <span class="c1"># type: (MvPredictionMode) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the mv_prediction_mode of this H264VideoConfiguration.</span>
 
@@ -712,7 +712,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_mv_prediction_mode</span> <span class="o">=</span> <span class="n">mv_prediction_mode</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">mv_search_range_max</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">mv_search_range_max</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the mv_search_range_max of this H264VideoConfiguration.</span>
 
@@ -724,7 +724,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mv_search_range_max</span>
 
     <span class="nd">@mv_search_range_max</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">mv_search_range_max</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mv_search_range_max</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">mv_search_range_max</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mv_search_range_max</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the mv_search_range_max of this H264VideoConfiguration.</span>
 
@@ -745,7 +745,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_mv_search_range_max</span> <span class="o">=</span> <span class="n">mv_search_range_max</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">cabac</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">cabac</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; bool</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the cabac of this H264VideoConfiguration.</span>
 
@@ -757,7 +757,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cabac</span>
 
     <span class="nd">@cabac</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">cabac</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cabac</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">cabac</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cabac</span><span class="p">):</span>
         <span class="c1"># type: (bool) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the cabac of this H264VideoConfiguration.</span>
 
@@ -774,7 +774,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_cabac</span> <span class="o">=</span> <span class="n">cabac</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">max_bitrate</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">max_bitrate</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the max_bitrate of this H264VideoConfiguration.</span>
 
@@ -786,7 +786,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_max_bitrate</span>
 
     <span class="nd">@max_bitrate</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">max_bitrate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">max_bitrate</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">max_bitrate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">max_bitrate</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the max_bitrate of this H264VideoConfiguration.</span>
 
@@ -803,7 +803,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_max_bitrate</span> <span class="o">=</span> <span class="n">max_bitrate</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">min_bitrate</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">min_bitrate</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the min_bitrate of this H264VideoConfiguration.</span>
 
@@ -815,7 +815,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_min_bitrate</span>
 
     <span class="nd">@min_bitrate</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">min_bitrate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">min_bitrate</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">min_bitrate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">min_bitrate</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the min_bitrate of this H264VideoConfiguration.</span>
 
@@ -832,7 +832,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_min_bitrate</span> <span class="o">=</span> <span class="n">min_bitrate</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">bufsize</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">bufsize</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the bufsize of this H264VideoConfiguration.</span>
 
@@ -844,7 +844,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_bufsize</span>
 
     <span class="nd">@bufsize</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">bufsize</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bufsize</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">bufsize</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bufsize</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the bufsize of this H264VideoConfiguration.</span>
 
@@ -861,7 +861,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_bufsize</span> <span class="o">=</span> <span class="n">bufsize</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">min_gop</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">min_gop</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the min_gop of this H264VideoConfiguration.</span>
 
@@ -873,7 +873,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_min_gop</span>
 
     <span class="nd">@min_gop</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">min_gop</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">min_gop</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">min_gop</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">min_gop</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the min_gop of this H264VideoConfiguration.</span>
 
@@ -890,7 +890,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_min_gop</span> <span class="o">=</span> <span class="n">min_gop</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">max_gop</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">max_gop</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the max_gop of this H264VideoConfiguration.</span>
 
@@ -902,7 +902,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_max_gop</span>
 
     <span class="nd">@max_gop</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">max_gop</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">max_gop</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">max_gop</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">max_gop</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the max_gop of this H264VideoConfiguration.</span>
 
@@ -919,7 +919,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_max_gop</span> <span class="o">=</span> <span class="n">max_gop</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">open_gop</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">open_gop</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; bool</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the open_gop of this H264VideoConfiguration.</span>
 
@@ -931,7 +931,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_open_gop</span>
 
     <span class="nd">@open_gop</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">open_gop</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">open_gop</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">open_gop</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">open_gop</span><span class="p">):</span>
         <span class="c1"># type: (bool) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the open_gop of this H264VideoConfiguration.</span>
 
@@ -948,7 +948,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_open_gop</span> <span class="o">=</span> <span class="n">open_gop</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">min_keyframe_interval</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">min_keyframe_interval</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; float</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the min_keyframe_interval of this H264VideoConfiguration.</span>
 
@@ -960,7 +960,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_min_keyframe_interval</span>
 
     <span class="nd">@min_keyframe_interval</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">min_keyframe_interval</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">min_keyframe_interval</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">min_keyframe_interval</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">min_keyframe_interval</span><span class="p">):</span>
         <span class="c1"># type: (float) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the min_keyframe_interval of this H264VideoConfiguration.</span>
 
@@ -977,7 +977,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_min_keyframe_interval</span> <span class="o">=</span> <span class="n">min_keyframe_interval</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">max_keyframe_interval</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">max_keyframe_interval</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; float</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the max_keyframe_interval of this H264VideoConfiguration.</span>
 
@@ -989,7 +989,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_max_keyframe_interval</span>
 
     <span class="nd">@max_keyframe_interval</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">max_keyframe_interval</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">max_keyframe_interval</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">max_keyframe_interval</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">max_keyframe_interval</span><span class="p">):</span>
         <span class="c1"># type: (float) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the max_keyframe_interval of this H264VideoConfiguration.</span>
 
@@ -1006,7 +1006,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_max_keyframe_interval</span> <span class="o">=</span> <span class="n">max_keyframe_interval</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">level</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">level</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; LevelH264</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the level of this H264VideoConfiguration.</span>
 
@@ -1018,7 +1018,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_level</span>
 
     <span class="nd">@level</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">level</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">level</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">level</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">level</span><span class="p">):</span>
         <span class="c1"># type: (LevelH264) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the level of this H264VideoConfiguration.</span>
 
@@ -1035,7 +1035,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_level</span> <span class="o">=</span> <span class="n">level</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">b_adaptive_strategy</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">b_adaptive_strategy</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; BAdapt</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the b_adaptive_strategy of this H264VideoConfiguration.</span>
 
@@ -1046,7 +1046,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_b_adaptive_strategy</span>
 
     <span class="nd">@b_adaptive_strategy</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">b_adaptive_strategy</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">b_adaptive_strategy</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">b_adaptive_strategy</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">b_adaptive_strategy</span><span class="p">):</span>
         <span class="c1"># type: (BAdapt) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the b_adaptive_strategy of this H264VideoConfiguration.</span>
 
@@ -1062,7 +1062,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_b_adaptive_strategy</span> <span class="o">=</span> <span class="n">b_adaptive_strategy</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">motion_estimation_method</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">motion_estimation_method</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; H264MotionEstimationMethod</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the motion_estimation_method of this H264VideoConfiguration.</span>
 
@@ -1073,7 +1073,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_motion_estimation_method</span>
 
     <span class="nd">@motion_estimation_method</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">motion_estimation_method</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">motion_estimation_method</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">motion_estimation_method</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">motion_estimation_method</span><span class="p">):</span>
         <span class="c1"># type: (H264MotionEstimationMethod) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the motion_estimation_method of this H264VideoConfiguration.</span>
 
@@ -1089,7 +1089,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_motion_estimation_method</span> <span class="o">=</span> <span class="n">motion_estimation_method</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">rc_lookahead</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">rc_lookahead</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the rc_lookahead of this H264VideoConfiguration.</span>
 
@@ -1101,7 +1101,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_rc_lookahead</span>
 
     <span class="nd">@rc_lookahead</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">rc_lookahead</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rc_lookahead</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">rc_lookahead</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rc_lookahead</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the rc_lookahead of this H264VideoConfiguration.</span>
 
@@ -1122,7 +1122,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_rc_lookahead</span> <span class="o">=</span> <span class="n">rc_lookahead</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">sub_me</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">sub_me</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; H264SubMe</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the sub_me of this H264VideoConfiguration.</span>
 
@@ -1134,7 +1134,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sub_me</span>
 
     <span class="nd">@sub_me</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">sub_me</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sub_me</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">sub_me</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sub_me</span><span class="p">):</span>
         <span class="c1"># type: (H264SubMe) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the sub_me of this H264VideoConfiguration.</span>
 
@@ -1151,7 +1151,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_sub_me</span> <span class="o">=</span> <span class="n">sub_me</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">trellis</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">trellis</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; H264Trellis</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the trellis of this H264VideoConfiguration.</span>
 
@@ -1163,7 +1163,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_trellis</span>
 
     <span class="nd">@trellis</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">trellis</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">trellis</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">trellis</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">trellis</span><span class="p">):</span>
         <span class="c1"># type: (H264Trellis) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the trellis of this H264VideoConfiguration.</span>
 
@@ -1180,7 +1180,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_trellis</span> <span class="o">=</span> <span class="n">trellis</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">partitions</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">partitions</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; list[H264Partition]</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the partitions of this H264VideoConfiguration.</span>
 
@@ -1192,7 +1192,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_partitions</span>
 
     <span class="nd">@partitions</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">partitions</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">partitions</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">partitions</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">partitions</span><span class="p">):</span>
         <span class="c1"># type: (list) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the partitions of this H264VideoConfiguration.</span>
 
@@ -1209,7 +1209,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_partitions</span> <span class="o">=</span> <span class="n">partitions</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">slices</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">slices</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the slices of this H264VideoConfiguration.</span>
 
@@ -1221,7 +1221,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_slices</span>
 
     <span class="nd">@slices</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">slices</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">slices</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">slices</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">slices</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the slices of this H264VideoConfiguration.</span>
 
@@ -1242,7 +1242,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_slices</span> <span class="o">=</span> <span class="n">slices</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">interlace_mode</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">interlace_mode</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; H264InterlaceMode</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the interlace_mode of this H264VideoConfiguration.</span>
 
@@ -1254,7 +1254,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_interlace_mode</span>
 
     <span class="nd">@interlace_mode</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">interlace_mode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">interlace_mode</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">interlace_mode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">interlace_mode</span><span class="p">):</span>
         <span class="c1"># type: (H264InterlaceMode) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the interlace_mode of this H264VideoConfiguration.</span>
 
@@ -1271,7 +1271,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_interlace_mode</span> <span class="o">=</span> <span class="n">interlace_mode</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">scene_cut_threshold</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">scene_cut_threshold</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the scene_cut_threshold of this H264VideoConfiguration.</span>
 
@@ -1283,7 +1283,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_scene_cut_threshold</span>
 
     <span class="nd">@scene_cut_threshold</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">scene_cut_threshold</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">scene_cut_threshold</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">scene_cut_threshold</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">scene_cut_threshold</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the scene_cut_threshold of this H264VideoConfiguration.</span>
 
@@ -1304,7 +1304,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_scene_cut_threshold</span> <span class="o">=</span> <span class="n">scene_cut_threshold</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">nal_hrd</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">nal_hrd</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; H264NalHrd</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the nal_hrd of this H264VideoConfiguration.</span>
 
@@ -1316,7 +1316,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_nal_hrd</span>
 
     <span class="nd">@nal_hrd</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">nal_hrd</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nal_hrd</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">nal_hrd</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nal_hrd</span><span class="p">):</span>
         <span class="c1"># type: (H264NalHrd) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the nal_hrd of this H264VideoConfiguration.</span>
 
@@ -1333,7 +1333,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_nal_hrd</span> <span class="o">=</span> <span class="n">nal_hrd</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">b_pyramid</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">b_pyramid</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; H264BPyramid</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the b_pyramid of this H264VideoConfiguration.</span>
 
@@ -1345,7 +1345,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_b_pyramid</span>
 
     <span class="nd">@b_pyramid</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">b_pyramid</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">b_pyramid</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">b_pyramid</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">b_pyramid</span><span class="p">):</span>
         <span class="c1"># type: (H264BPyramid) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the b_pyramid of this H264VideoConfiguration.</span>
 
@@ -1362,7 +1362,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_b_pyramid</span> <span class="o">=</span> <span class="n">b_pyramid</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">cea608708_subtitle_config</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">cea608708_subtitle_config</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; Cea608708SubtitleConfiguration</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the cea608708_subtitle_config of this H264VideoConfiguration.</span>
 
@@ -1374,7 +1374,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cea608708_subtitle_config</span>
 
     <span class="nd">@cea608708_subtitle_config</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">cea608708_subtitle_config</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cea608708_subtitle_config</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">cea608708_subtitle_config</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cea608708_subtitle_config</span><span class="p">):</span>
         <span class="c1"># type: (Cea608708SubtitleConfiguration) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the cea608708_subtitle_config of this H264VideoConfiguration.</span>
 
@@ -1391,7 +1391,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_cea608708_subtitle_config</span> <span class="o">=</span> <span class="n">cea608708_subtitle_config</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">deblock_alpha</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">deblock_alpha</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the deblock_alpha of this H264VideoConfiguration.</span>
 
@@ -1403,7 +1403,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deblock_alpha</span>
 
     <span class="nd">@deblock_alpha</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">deblock_alpha</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">deblock_alpha</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">deblock_alpha</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">deblock_alpha</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the deblock_alpha of this H264VideoConfiguration.</span>
 
@@ -1420,7 +1420,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_deblock_alpha</span> <span class="o">=</span> <span class="n">deblock_alpha</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">deblock_beta</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">deblock_beta</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the deblock_beta of this H264VideoConfiguration.</span>
 
@@ -1432,7 +1432,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deblock_beta</span>
 
     <span class="nd">@deblock_beta</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">deblock_beta</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">deblock_beta</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">deblock_beta</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">deblock_beta</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the deblock_beta of this H264VideoConfiguration.</span>
 
@@ -1449,7 +1449,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_deblock_beta</span> <span class="o">=</span> <span class="n">deblock_beta</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">adaptive_quantization_mode</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">adaptive_quantization_mode</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; AdaptiveQuantMode</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the adaptive_quantization_mode of this H264VideoConfiguration.</span>
 
@@ -1461,7 +1461,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_adaptive_quantization_mode</span>
 
     <span class="nd">@adaptive_quantization_mode</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">adaptive_quantization_mode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">adaptive_quantization_mode</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">adaptive_quantization_mode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">adaptive_quantization_mode</span><span class="p">):</span>
         <span class="c1"># type: (AdaptiveQuantMode) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the adaptive_quantization_mode of this H264VideoConfiguration.</span>
 
@@ -1478,7 +1478,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_adaptive_quantization_mode</span> <span class="o">=</span> <span class="n">adaptive_quantization_mode</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">adaptive_quantization_strength</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">adaptive_quantization_strength</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; float</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the adaptive_quantization_strength of this H264VideoConfiguration.</span>
 
@@ -1490,7 +1490,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_adaptive_quantization_strength</span>
 
     <span class="nd">@adaptive_quantization_strength</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">adaptive_quantization_strength</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">adaptive_quantization_strength</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">adaptive_quantization_strength</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">adaptive_quantization_strength</span><span class="p">):</span>
         <span class="c1"># type: (float) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the adaptive_quantization_strength of this H264VideoConfiguration.</span>
 
@@ -1507,7 +1507,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_adaptive_quantization_strength</span> <span class="o">=</span> <span class="n">adaptive_quantization_strength</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">mixed_references</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">mixed_references</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; bool</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the mixed_references of this H264VideoConfiguration.</span>
 
@@ -1519,7 +1519,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mixed_references</span>
 
     <span class="nd">@mixed_references</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">mixed_references</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mixed_references</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">mixed_references</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mixed_references</span><span class="p">):</span>
         <span class="c1"># type: (bool) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the mixed_references of this H264VideoConfiguration.</span>
 
@@ -1536,7 +1536,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_mixed_references</span> <span class="o">=</span> <span class="n">mixed_references</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">adaptive_spatial_transform</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">adaptive_spatial_transform</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; bool</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the adaptive_spatial_transform of this H264VideoConfiguration.</span>
 
@@ -1548,7 +1548,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_adaptive_spatial_transform</span>
 
     <span class="nd">@adaptive_spatial_transform</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">adaptive_spatial_transform</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">adaptive_spatial_transform</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">adaptive_spatial_transform</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">adaptive_spatial_transform</span><span class="p">):</span>
         <span class="c1"># type: (bool) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the adaptive_spatial_transform of this H264VideoConfiguration.</span>
 
@@ -1565,7 +1565,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_adaptive_spatial_transform</span> <span class="o">=</span> <span class="n">adaptive_spatial_transform</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">fast_skip_detection_p_frames</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">fast_skip_detection_p_frames</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; bool</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the fast_skip_detection_p_frames of this H264VideoConfiguration.</span>
 
@@ -1577,7 +1577,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_fast_skip_detection_p_frames</span>
 
     <span class="nd">@fast_skip_detection_p_frames</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">fast_skip_detection_p_frames</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fast_skip_detection_p_frames</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">fast_skip_detection_p_frames</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fast_skip_detection_p_frames</span><span class="p">):</span>
         <span class="c1"># type: (bool) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the fast_skip_detection_p_frames of this H264VideoConfiguration.</span>
 
@@ -1594,7 +1594,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_fast_skip_detection_p_frames</span> <span class="o">=</span> <span class="n">fast_skip_detection_p_frames</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">weighted_prediction_b_frames</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">weighted_prediction_b_frames</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; bool</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the weighted_prediction_b_frames of this H264VideoConfiguration.</span>
 
@@ -1606,7 +1606,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_weighted_prediction_b_frames</span>
 
     <span class="nd">@weighted_prediction_b_frames</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">weighted_prediction_b_frames</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">weighted_prediction_b_frames</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">weighted_prediction_b_frames</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">weighted_prediction_b_frames</span><span class="p">):</span>
         <span class="c1"># type: (bool) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the weighted_prediction_b_frames of this H264VideoConfiguration.</span>
 
@@ -1623,7 +1623,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_weighted_prediction_b_frames</span> <span class="o">=</span> <span class="n">weighted_prediction_b_frames</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">weighted_prediction_p_frames</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">weighted_prediction_p_frames</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; WeightedPredictionPFrames</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the weighted_prediction_p_frames of this H264VideoConfiguration.</span>
 
@@ -1635,7 +1635,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_weighted_prediction_p_frames</span>
 
     <span class="nd">@weighted_prediction_p_frames</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">weighted_prediction_p_frames</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">weighted_prediction_p_frames</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">weighted_prediction_p_frames</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">weighted_prediction_p_frames</span><span class="p">):</span>
         <span class="c1"># type: (WeightedPredictionPFrames) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the weighted_prediction_p_frames of this H264VideoConfiguration.</span>
 
@@ -1652,7 +1652,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_weighted_prediction_p_frames</span> <span class="o">=</span> <span class="n">weighted_prediction_p_frames</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">macroblock_tree_ratecontrol</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">macroblock_tree_ratecontrol</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; bool</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the macroblock_tree_ratecontrol of this H264VideoConfiguration.</span>
 
@@ -1664,7 +1664,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_macroblock_tree_ratecontrol</span>
 
     <span class="nd">@macroblock_tree_ratecontrol</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">macroblock_tree_ratecontrol</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">macroblock_tree_ratecontrol</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">macroblock_tree_ratecontrol</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">macroblock_tree_ratecontrol</span><span class="p">):</span>
         <span class="c1"># type: (bool) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the macroblock_tree_ratecontrol of this H264VideoConfiguration.</span>
 
@@ -1681,7 +1681,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_macroblock_tree_ratecontrol</span> <span class="o">=</span> <span class="n">macroblock_tree_ratecontrol</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">quantizer_curve_compression</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">quantizer_curve_compression</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; float</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the quantizer_curve_compression of this H264VideoConfiguration.</span>
 
@@ -1693,7 +1693,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_quantizer_curve_compression</span>
 
     <span class="nd">@quantizer_curve_compression</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">quantizer_curve_compression</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">quantizer_curve_compression</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">quantizer_curve_compression</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">quantizer_curve_compression</span><span class="p">):</span>
         <span class="c1"># type: (float) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the quantizer_curve_compression of this H264VideoConfiguration.</span>
 
@@ -1710,7 +1710,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_quantizer_curve_compression</span> <span class="o">=</span> <span class="n">quantizer_curve_compression</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">psy_rate_distortion_optimization</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">psy_rate_distortion_optimization</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; float</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the psy_rate_distortion_optimization of this H264VideoConfiguration.</span>
 
@@ -1722,7 +1722,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_psy_rate_distortion_optimization</span>
 
     <span class="nd">@psy_rate_distortion_optimization</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">psy_rate_distortion_optimization</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">psy_rate_distortion_optimization</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">psy_rate_distortion_optimization</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">psy_rate_distortion_optimization</span><span class="p">):</span>
         <span class="c1"># type: (float) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the psy_rate_distortion_optimization of this H264VideoConfiguration.</span>
 
@@ -1739,7 +1739,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_psy_rate_distortion_optimization</span> <span class="o">=</span> <span class="n">psy_rate_distortion_optimization</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">psy_trellis</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">psy_trellis</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; float</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the psy_trellis of this H264VideoConfiguration.</span>
 
@@ -1751,7 +1751,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_psy_trellis</span>
 
     <span class="nd">@psy_trellis</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">psy_trellis</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">psy_trellis</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">psy_trellis</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">psy_trellis</span><span class="p">):</span>
         <span class="c1"># type: (float) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the psy_trellis of this H264VideoConfiguration.</span>
 
@@ -1768,7 +1768,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_psy_trellis</span> <span class="o">=</span> <span class="n">psy_trellis</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">auto_level_setup</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">auto_level_setup</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; AutoLevelSetup</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the auto_level_setup of this H264VideoConfiguration.</span>
 
@@ -1780,7 +1780,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_auto_level_setup</span>
 
     <span class="nd">@auto_level_setup</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">auto_level_setup</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">auto_level_setup</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">auto_level_setup</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">auto_level_setup</span><span class="p">):</span>
         <span class="c1"># type: (AutoLevelSetup) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the auto_level_setup of this H264VideoConfiguration.</span>
 
@@ -1796,7 +1796,9 @@
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_auto_level_setup</span> <span class="o">=</span> <span class="n">auto_level_setup</span>
 
-<div class="viewcode-block" id="H264VideoConfiguration.to_dict"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.h264_video_configuration.H264VideoConfiguration.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="H264VideoConfiguration.to_dict">
+<a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.h264_video_configuration.H264VideoConfiguration.to_dict">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>
         <span class="n">result</span> <span class="o">=</span> <span class="p">{}</span>
 
@@ -1821,24 +1823,29 @@
 
         <span class="k">return</span> <span class="n">result</span></div>
 
-<div class="viewcode-block" id="H264VideoConfiguration.to_str"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.h264_video_configuration.H264VideoConfiguration.to_str">[docs]</a>    <span class="k">def</span> <span class="nf">to_str</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="H264VideoConfiguration.to_str">
+<a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.h264_video_configuration.H264VideoConfiguration.to_str">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">to_str</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the string representation of the model&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">pprint</span><span class="o">.</span><span class="n">pformat</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">to_dict</span><span class="p">())</span></div>
 
-    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;For `print` and `pprint`&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">to_str</span><span class="p">()</span>
 
-    <span class="k">def</span> <span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns true if both objects are equal&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">H264VideoConfiguration</span><span class="p">):</span>
             <span class="k">return</span> <span class="kc">False</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="vm">__dict__</span>
 
-    <span class="k">def</span> <span class="fm">__ne__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__ne__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns true if both objects are not equal&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="ow">not</span> <span class="bp">self</span> <span class="o">==</span> <span class="n">other</span></div>
+
 </pre></div>
 
            </div>

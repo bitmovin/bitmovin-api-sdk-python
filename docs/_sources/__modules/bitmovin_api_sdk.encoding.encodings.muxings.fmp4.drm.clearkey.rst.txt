@@ -17,21 +17,21 @@ bitmovin\_api\_sdk.encoding.encodings.muxings.fmp4.drm.clearkey.clear\_key\_drm\
 
 .. automodule:: bitmovin_api_sdk.encoding.encodings.muxings.fmp4.drm.clearkey.clear_key_drm_list_query_params
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 bitmovin\_api\_sdk.encoding.encodings.muxings.fmp4.drm.clearkey.clearkey\_api module
 ------------------------------------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.encoding.encodings.muxings.fmp4.drm.clearkey.clearkey_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.encoding.encodings.muxings.fmp4.drm.clearkey
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

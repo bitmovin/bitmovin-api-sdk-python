@@ -9,21 +9,21 @@ bitmovin\_api\_sdk.encoding.manifests.dash.periods.adaptationsets.image.image\_a
 
 .. automodule:: bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.image.image_adaptation_set_list_query_params
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 bitmovin\_api\_sdk.encoding.manifests.dash.periods.adaptationsets.image.image\_api module
 -----------------------------------------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.image.image_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.image
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

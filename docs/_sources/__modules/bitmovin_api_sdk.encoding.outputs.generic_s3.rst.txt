@@ -17,21 +17,21 @@ bitmovin\_api\_sdk.encoding.outputs.generic\_s3.generic\_s3\_api module
 
 .. automodule:: bitmovin_api_sdk.encoding.outputs.generic_s3.generic_s3_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 bitmovin\_api\_sdk.encoding.outputs.generic\_s3.generic\_s3\_output\_list\_query\_params module
 -----------------------------------------------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.encoding.outputs.generic_s3.generic_s3_output_list_query_params
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.encoding.outputs.generic_s3
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

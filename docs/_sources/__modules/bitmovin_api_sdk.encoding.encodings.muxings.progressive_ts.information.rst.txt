@@ -9,13 +9,13 @@ bitmovin\_api\_sdk.encoding.encodings.muxings.progressive\_ts.information.inform
 
 .. automodule:: bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.information.information_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.information
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

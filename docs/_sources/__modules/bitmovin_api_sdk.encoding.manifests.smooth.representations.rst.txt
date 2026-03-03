@@ -17,13 +17,13 @@ bitmovin\_api\_sdk.encoding.manifests.smooth.representations.representations\_ap
 
 .. automodule:: bitmovin_api_sdk.encoding.manifests.smooth.representations.representations_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.encoding.manifests.smooth.representations
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

@@ -9,13 +9,13 @@ bitmovin\_api\_sdk.notifications.emails.encoding.encodings.error.error\_api modu
 
 .. automodule:: bitmovin_api_sdk.notifications.emails.encoding.encodings.error.error_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.notifications.emails.encoding.encodings.error
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

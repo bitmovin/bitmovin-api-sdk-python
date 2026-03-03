@@ -9,13 +9,13 @@ bitmovin\_api\_sdk.analytics.metrics.max\_concurrentviewers.max\_concurrentviewe
 
 .. automodule:: bitmovin_api_sdk.analytics.metrics.max_concurrentviewers.max_concurrentviewers_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.analytics.metrics.max_concurrentviewers
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

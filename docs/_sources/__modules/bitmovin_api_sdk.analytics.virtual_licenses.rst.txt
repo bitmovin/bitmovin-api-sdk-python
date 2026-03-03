@@ -9,21 +9,21 @@ bitmovin\_api\_sdk.analytics.virtual\_licenses.analytics\_virtual\_license\_list
 
 .. automodule:: bitmovin_api_sdk.analytics.virtual_licenses.analytics_virtual_license_list_query_params
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 bitmovin\_api\_sdk.analytics.virtual\_licenses.virtual\_licenses\_api module
 ----------------------------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.analytics.virtual_licenses.virtual_licenses_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.analytics.virtual_licenses
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

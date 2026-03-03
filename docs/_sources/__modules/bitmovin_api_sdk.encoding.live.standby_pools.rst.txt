@@ -19,13 +19,13 @@ bitmovin\_api\_sdk.encoding.live.standby\_pools.standby\_pools\_api module
 
 .. automodule:: bitmovin_api_sdk.encoding.live.standby_pools.standby_pools_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.encoding.live.standby_pools
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

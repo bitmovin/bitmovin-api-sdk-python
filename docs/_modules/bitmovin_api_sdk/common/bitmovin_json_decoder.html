@@ -1,22 +1,20 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="en">
+<html class="writer-html5" lang="en" data-content_root="../../../">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>bitmovin_api_sdk.common.bitmovin_json_decoder &mdash; Bitmovin Python API SDK {{packageVersion}} documentation</title>
-      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=9edc463e" />
 
   
-  <!--[if lt IE 9]>
-    <script src="../../../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-        <script src="../../../_static/jquery.js"></script>
-        <script src="../../../_static/underscore.js"></script>
-        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="../../../_static/doctools.js"></script>
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=4dbdf2c3"></script>
+      <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" /> 
@@ -78,20 +76,24 @@
            <div itemprop="articleBody">
              
   <h1>Source code for bitmovin_api_sdk.common.bitmovin_json_decoder</h1><div class="highlight"><pre>
-<span></span><span class="kn">import</span> <span class="nn">re</span>
-<span class="kn">from</span> <span class="nn">enum</span> <span class="kn">import</span> <span class="n">EnumMeta</span>
-<span class="kn">from</span> <span class="nn">importlib</span> <span class="kn">import</span> <span class="n">import_module</span>
-<span class="kn">from</span> <span class="nn">dateutil.parser</span> <span class="kn">import</span> <span class="n">parse</span>
+<span></span><span class="kn">import</span><span class="w"> </span><span class="nn">re</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">enum</span><span class="w"> </span><span class="kn">import</span> <span class="n">EnumMeta</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">importlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">import_module</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">dateutil.parser</span><span class="w"> </span><span class="kn">import</span> <span class="n">parse</span>
 
 
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models</span> <span class="kn">import</span> <span class="n">PaginationResponse</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models</span><span class="w"> </span><span class="kn">import</span> <span class="n">PaginationResponse</span>
 
 
-<div class="viewcode-block" id="BitmovinJsonDecoder"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.common.html#bitmovin_api_sdk.common.bitmovin_json_decoder.BitmovinJsonDecoder">[docs]</a><span class="k">class</span> <span class="nc">BitmovinJsonDecoder</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="viewcode-block" id="BitmovinJsonDecoder">
+<a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.common.html#bitmovin_api_sdk.common.bitmovin_json_decoder.BitmovinJsonDecoder">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">BitmovinJsonDecoder</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="n">model_module</span> <span class="o">=</span> <span class="n">import_module</span><span class="p">(</span><span class="s1">&#39;bitmovin_api_sdk.models&#39;</span><span class="p">)</span>
 
-<div class="viewcode-block" id="BitmovinJsonDecoder.map_dict_to_pagination_response"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.common.html#bitmovin_api_sdk.common.bitmovin_json_decoder.BitmovinJsonDecoder.map_dict_to_pagination_response">[docs]</a>    <span class="nd">@staticmethod</span>
-    <span class="k">def</span> <span class="nf">map_dict_to_pagination_response</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">model</span><span class="p">):</span>
+<div class="viewcode-block" id="BitmovinJsonDecoder.map_dict_to_pagination_response">
+<a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.common.html#bitmovin_api_sdk.common.bitmovin_json_decoder.BitmovinJsonDecoder.map_dict_to_pagination_response">[docs]</a>
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">map_dict_to_pagination_response</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">model</span><span class="p">):</span>
         <span class="c1"># type: (object, type) -&gt; object</span>
 
         <span class="n">model_to_return</span> <span class="o">=</span> <span class="n">BitmovinJsonDecoder</span><span class="o">.</span><span class="n">map_dict_to_model</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">PaginationResponse</span><span class="p">)</span>
@@ -112,8 +114,11 @@
         <span class="n">model_to_return</span><span class="o">.</span><span class="n">items</span> <span class="o">=</span> <span class="n">pagination_items</span>
         <span class="k">return</span> <span class="n">model_to_return</span></div>
 
-<div class="viewcode-block" id="BitmovinJsonDecoder.map_dict_to_list"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.common.html#bitmovin_api_sdk.common.bitmovin_json_decoder.BitmovinJsonDecoder.map_dict_to_list">[docs]</a>    <span class="nd">@staticmethod</span>
-    <span class="k">def</span> <span class="nf">map_dict_to_list</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">model</span><span class="p">):</span>
+
+<div class="viewcode-block" id="BitmovinJsonDecoder.map_dict_to_list">
+<a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.common.html#bitmovin_api_sdk.common.bitmovin_json_decoder.BitmovinJsonDecoder.map_dict_to_list">[docs]</a>
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">map_dict_to_list</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">model</span><span class="p">):</span>
         <span class="c1"># type: (iter, type) -&gt; list</span>
 
         <span class="n">list_to_return</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
@@ -122,8 +127,11 @@
 
         <span class="k">return</span> <span class="n">list_to_return</span></div>
 
-<div class="viewcode-block" id="BitmovinJsonDecoder.map_dict_to_model"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.common.html#bitmovin_api_sdk.common.bitmovin_json_decoder.BitmovinJsonDecoder.map_dict_to_model">[docs]</a>    <span class="nd">@staticmethod</span>
-    <span class="k">def</span> <span class="nf">map_dict_to_model</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">model</span><span class="p">):</span>
+
+<div class="viewcode-block" id="BitmovinJsonDecoder.map_dict_to_model">
+<a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.common.html#bitmovin_api_sdk.common.bitmovin_json_decoder.BitmovinJsonDecoder.map_dict_to_model">[docs]</a>
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">map_dict_to_model</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">model</span><span class="p">):</span>
         <span class="c1"># type: (dict, type) -&gt; object</span>
 
         <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">EnumMeta</span><span class="p">):</span>
@@ -191,16 +199,21 @@
                         <span class="n">new_value</span> <span class="o">=</span> <span class="n">value</span>
                         <span class="n">model_instance</span><span class="o">.</span><span class="fm">__setattr__</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">new_value</span><span class="p">)</span>
 
-        <span class="k">return</span> <span class="n">model_instance</span></div></div>
+        <span class="k">return</span> <span class="n">model_instance</span></div>
+</div>
 
 
-<div class="viewcode-block" id="get_enum_value"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.common.html#bitmovin_api_sdk.common.bitmovin_json_decoder.get_enum_value">[docs]</a><span class="k">def</span> <span class="nf">get_enum_value</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">model_class</span><span class="p">):</span>
+
+<div class="viewcode-block" id="get_enum_value">
+<a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.common.html#bitmovin_api_sdk.common.bitmovin_json_decoder.get_enum_value">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">get_enum_value</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">model_class</span><span class="p">):</span>
     <span class="c1"># type: (object, EnumMeta) -&gt; str</span>
 
     <span class="c1"># Search for the attribute in the Enum</span>
     <span class="k">for</span> <span class="n">attr</span> <span class="ow">in</span> <span class="n">model_class</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">attr</span><span class="o">.</span><span class="n">value</span> <span class="o">==</span> <span class="n">value</span><span class="p">:</span>
             <span class="k">return</span> <span class="n">attr</span></div>
+
 </pre></div>
 
            </div>

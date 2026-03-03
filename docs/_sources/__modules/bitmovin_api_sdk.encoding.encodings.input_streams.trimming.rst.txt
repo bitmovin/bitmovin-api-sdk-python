@@ -19,13 +19,13 @@ bitmovin\_api\_sdk.encoding.encodings.input\_streams.trimming.trimming\_api modu
 
 .. automodule:: bitmovin_api_sdk.encoding.encodings.input_streams.trimming.trimming_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.encoding.encodings.input_streams.trimming
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

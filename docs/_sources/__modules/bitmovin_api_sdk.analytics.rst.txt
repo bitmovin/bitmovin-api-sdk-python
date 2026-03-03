@@ -25,13 +25,13 @@ bitmovin\_api\_sdk.analytics.analytics\_api module
 
 .. automodule:: bitmovin_api_sdk.analytics.analytics_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.analytics
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

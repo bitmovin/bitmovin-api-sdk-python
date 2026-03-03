@@ -1,22 +1,20 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="en">
+<html class="writer-html5" lang="en" data-content_root="../../../">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>bitmovin_api_sdk.models.muxing_information_video_track &mdash; Bitmovin Python API SDK {{packageVersion}} documentation</title>
-      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=9edc463e" />
 
   
-  <!--[if lt IE 9]>
-    <script src="../../../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-        <script src="../../../_static/jquery.js"></script>
-        <script src="../../../_static/underscore.js"></script>
-        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="../../../_static/doctools.js"></script>
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=4dbdf2c3"></script>
+      <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" /> 
@@ -80,16 +78,18 @@
   <h1>Source code for bitmovin_api_sdk.models.muxing_information_video_track</h1><div class="highlight"><pre>
 <span></span><span class="c1"># coding: utf-8</span>
 
-<span class="kn">from</span> <span class="nn">enum</span> <span class="kn">import</span> <span class="n">Enum</span>
-<span class="kn">from</span> <span class="nn">six</span> <span class="kn">import</span> <span class="n">string_types</span><span class="p">,</span> <span class="n">iteritems</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.common.poscheck</span> <span class="kn">import</span> <span class="n">poscheck_model</span>
-<span class="kn">import</span> <span class="nn">pprint</span>
-<span class="kn">import</span> <span class="nn">six</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">enum</span><span class="w"> </span><span class="kn">import</span> <span class="n">Enum</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">six</span><span class="w"> </span><span class="kn">import</span> <span class="n">string_types</span><span class="p">,</span> <span class="n">iteritems</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.common.poscheck</span><span class="w"> </span><span class="kn">import</span> <span class="n">poscheck_model</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pprint</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">six</span>
 
 
-<div class="viewcode-block" id="MuxingInformationVideoTrack"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.muxing_information_video_track.MuxingInformationVideoTrack">[docs]</a><span class="k">class</span> <span class="nc">MuxingInformationVideoTrack</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="viewcode-block" id="MuxingInformationVideoTrack">
+<a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.muxing_information_video_track.MuxingInformationVideoTrack">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">MuxingInformationVideoTrack</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="nd">@poscheck_model</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
                  <span class="n">index</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">codec</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">codec_iso</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
@@ -152,7 +152,7 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">aspect_ratio</span> <span class="o">=</span> <span class="n">aspect_ratio</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">types</span> <span class="o">=</span> <span class="p">{</span>
             <span class="s1">&#39;index&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
             <span class="s1">&#39;codec&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
@@ -173,7 +173,7 @@
         <span class="k">return</span> <span class="n">types</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">attribute_map</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">attribute_map</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">attributes</span> <span class="o">=</span> <span class="p">{</span>
             <span class="s1">&#39;index&#39;</span><span class="p">:</span> <span class="s1">&#39;index&#39;</span><span class="p">,</span>
             <span class="s1">&#39;codec&#39;</span><span class="p">:</span> <span class="s1">&#39;codec&#39;</span><span class="p">,</span>
@@ -193,7 +193,7 @@
         <span class="k">return</span> <span class="n">attributes</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">index</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">index</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the index of this MuxingInformationVideoTrack.</span>
 
@@ -205,7 +205,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_index</span>
 
     <span class="nd">@index</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">index</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">index</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the index of this MuxingInformationVideoTrack.</span>
 
@@ -222,7 +222,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_index</span> <span class="o">=</span> <span class="n">index</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">codec</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">codec</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; string_types</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the codec of this MuxingInformationVideoTrack.</span>
 
@@ -234,7 +234,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_codec</span>
 
     <span class="nd">@codec</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">codec</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">codec</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">codec</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">codec</span><span class="p">):</span>
         <span class="c1"># type: (string_types) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the codec of this MuxingInformationVideoTrack.</span>
 
@@ -251,7 +251,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_codec</span> <span class="o">=</span> <span class="n">codec</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">codec_iso</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">codec_iso</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; string_types</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the codec_iso of this MuxingInformationVideoTrack.</span>
 
@@ -263,7 +263,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_codec_iso</span>
 
     <span class="nd">@codec_iso</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">codec_iso</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">codec_iso</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">codec_iso</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">codec_iso</span><span class="p">):</span>
         <span class="c1"># type: (string_types) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the codec_iso of this MuxingInformationVideoTrack.</span>
 
@@ -280,7 +280,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_codec_iso</span> <span class="o">=</span> <span class="n">codec_iso</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">bit_rate</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">bit_rate</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the bit_rate of this MuxingInformationVideoTrack.</span>
 
@@ -292,7 +292,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_bit_rate</span>
 
     <span class="nd">@bit_rate</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">bit_rate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bit_rate</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">bit_rate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bit_rate</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the bit_rate of this MuxingInformationVideoTrack.</span>
 
@@ -309,7 +309,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_bit_rate</span> <span class="o">=</span> <span class="n">bit_rate</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">rate</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">rate</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the rate of this MuxingInformationVideoTrack.</span>
 
@@ -320,7 +320,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_rate</span>
 
     <span class="nd">@rate</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">rate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rate</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">rate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rate</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the rate of this MuxingInformationVideoTrack.</span>
 
@@ -336,7 +336,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_rate</span> <span class="o">=</span> <span class="n">rate</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">pixel_format</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">pixel_format</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; string_types</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the pixel_format of this MuxingInformationVideoTrack.</span>
 
@@ -348,7 +348,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_pixel_format</span>
 
     <span class="nd">@pixel_format</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">pixel_format</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pixel_format</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">pixel_format</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pixel_format</span><span class="p">):</span>
         <span class="c1"># type: (string_types) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the pixel_format of this MuxingInformationVideoTrack.</span>
 
@@ -365,7 +365,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_pixel_format</span> <span class="o">=</span> <span class="n">pixel_format</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">frame_mode</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">frame_mode</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; string_types</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the frame_mode of this MuxingInformationVideoTrack.</span>
 
@@ -377,7 +377,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_frame_mode</span>
 
     <span class="nd">@frame_mode</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">frame_mode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">frame_mode</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">frame_mode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">frame_mode</span><span class="p">):</span>
         <span class="c1"># type: (string_types) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the frame_mode of this MuxingInformationVideoTrack.</span>
 
@@ -394,7 +394,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_frame_mode</span> <span class="o">=</span> <span class="n">frame_mode</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">frame_width</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">frame_width</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the frame_width of this MuxingInformationVideoTrack.</span>
 
@@ -406,7 +406,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_frame_width</span>
 
     <span class="nd">@frame_width</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">frame_width</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">frame_width</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">frame_width</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">frame_width</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the frame_width of this MuxingInformationVideoTrack.</span>
 
@@ -423,7 +423,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_frame_width</span> <span class="o">=</span> <span class="n">frame_width</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">frame_height</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">frame_height</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the frame_height of this MuxingInformationVideoTrack.</span>
 
@@ -435,7 +435,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_frame_height</span>
 
     <span class="nd">@frame_height</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">frame_height</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">frame_height</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">frame_height</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">frame_height</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the frame_height of this MuxingInformationVideoTrack.</span>
 
@@ -452,7 +452,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_frame_height</span> <span class="o">=</span> <span class="n">frame_height</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">frame_rate</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">frame_rate</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; string_types</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the frame_rate of this MuxingInformationVideoTrack.</span>
 
@@ -464,7 +464,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_frame_rate</span>
 
     <span class="nd">@frame_rate</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">frame_rate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">frame_rate</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">frame_rate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">frame_rate</span><span class="p">):</span>
         <span class="c1"># type: (string_types) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the frame_rate of this MuxingInformationVideoTrack.</span>
 
@@ -481,7 +481,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_frame_rate</span> <span class="o">=</span> <span class="n">frame_rate</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">start_time</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">start_time</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; float</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the start_time of this MuxingInformationVideoTrack.</span>
 
@@ -493,7 +493,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_start_time</span>
 
     <span class="nd">@start_time</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">start_time</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">start_time</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">start_time</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">start_time</span><span class="p">):</span>
         <span class="c1"># type: (float) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the start_time of this MuxingInformationVideoTrack.</span>
 
@@ -510,7 +510,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_start_time</span> <span class="o">=</span> <span class="n">start_time</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">duration</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">duration</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; float</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the duration of this MuxingInformationVideoTrack.</span>
 
@@ -522,7 +522,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_duration</span>
 
     <span class="nd">@duration</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">duration</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">duration</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">duration</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">duration</span><span class="p">):</span>
         <span class="c1"># type: (float) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the duration of this MuxingInformationVideoTrack.</span>
 
@@ -539,7 +539,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_duration</span> <span class="o">=</span> <span class="n">duration</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">number_of_frames</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">number_of_frames</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the number_of_frames of this MuxingInformationVideoTrack.</span>
 
@@ -551,7 +551,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_number_of_frames</span>
 
     <span class="nd">@number_of_frames</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">number_of_frames</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">number_of_frames</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">number_of_frames</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">number_of_frames</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the number_of_frames of this MuxingInformationVideoTrack.</span>
 
@@ -568,7 +568,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_number_of_frames</span> <span class="o">=</span> <span class="n">number_of_frames</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">aspect_ratio</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">aspect_ratio</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; string_types</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the aspect_ratio of this MuxingInformationVideoTrack.</span>
 
@@ -580,7 +580,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_aspect_ratio</span>
 
     <span class="nd">@aspect_ratio</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">aspect_ratio</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">aspect_ratio</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">aspect_ratio</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">aspect_ratio</span><span class="p">):</span>
         <span class="c1"># type: (string_types) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the aspect_ratio of this MuxingInformationVideoTrack.</span>
 
@@ -596,7 +596,9 @@
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_aspect_ratio</span> <span class="o">=</span> <span class="n">aspect_ratio</span>
 
-<div class="viewcode-block" id="MuxingInformationVideoTrack.to_dict"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.muxing_information_video_track.MuxingInformationVideoTrack.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="MuxingInformationVideoTrack.to_dict">
+<a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.muxing_information_video_track.MuxingInformationVideoTrack.to_dict">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>
         <span class="n">result</span> <span class="o">=</span> <span class="p">{}</span>
 
@@ -619,24 +621,29 @@
 
         <span class="k">return</span> <span class="n">result</span></div>
 
-<div class="viewcode-block" id="MuxingInformationVideoTrack.to_str"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.muxing_information_video_track.MuxingInformationVideoTrack.to_str">[docs]</a>    <span class="k">def</span> <span class="nf">to_str</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="MuxingInformationVideoTrack.to_str">
+<a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.muxing_information_video_track.MuxingInformationVideoTrack.to_str">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">to_str</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the string representation of the model&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">pprint</span><span class="o">.</span><span class="n">pformat</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">to_dict</span><span class="p">())</span></div>
 
-    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;For `print` and `pprint`&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">to_str</span><span class="p">()</span>
 
-    <span class="k">def</span> <span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns true if both objects are equal&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">MuxingInformationVideoTrack</span><span class="p">):</span>
             <span class="k">return</span> <span class="kc">False</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="vm">__dict__</span>
 
-    <span class="k">def</span> <span class="fm">__ne__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__ne__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns true if both objects are not equal&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="ow">not</span> <span class="bp">self</span> <span class="o">==</span> <span class="n">other</span></div>
+
 </pre></div>
 
            </div>

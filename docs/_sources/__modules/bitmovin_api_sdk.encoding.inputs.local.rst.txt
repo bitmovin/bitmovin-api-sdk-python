@@ -17,21 +17,21 @@ bitmovin\_api\_sdk.encoding.inputs.local.local\_api module
 
 .. automodule:: bitmovin_api_sdk.encoding.inputs.local.local_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 bitmovin\_api\_sdk.encoding.inputs.local.local\_input\_list\_query\_params module
 ---------------------------------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.encoding.inputs.local.local_input_list_query_params
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.encoding.inputs.local
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

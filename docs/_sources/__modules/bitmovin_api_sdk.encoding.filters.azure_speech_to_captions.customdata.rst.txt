@@ -9,13 +9,13 @@ bitmovin\_api\_sdk.encoding.filters.azure\_speech\_to\_captions.customdata.custo
 
 .. automodule:: bitmovin_api_sdk.encoding.filters.azure_speech_to_captions.customdata.customdata_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.encoding.filters.azure_speech_to_captions.customdata
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

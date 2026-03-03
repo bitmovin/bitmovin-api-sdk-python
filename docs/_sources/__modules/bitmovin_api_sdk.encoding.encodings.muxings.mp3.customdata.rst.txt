@@ -9,13 +9,13 @@ bitmovin\_api\_sdk.encoding.encodings.muxings.mp3.customdata.customdata\_api mod
 
 .. automodule:: bitmovin_api_sdk.encoding.encodings.muxings.mp3.customdata.customdata_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.encoding.encodings.muxings.mp3.customdata
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

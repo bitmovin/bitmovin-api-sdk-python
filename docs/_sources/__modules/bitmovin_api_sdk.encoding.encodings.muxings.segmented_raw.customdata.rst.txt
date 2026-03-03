@@ -9,13 +9,13 @@ bitmovin\_api\_sdk.encoding.encodings.muxings.segmented\_raw.customdata.customda
 
 .. automodule:: bitmovin_api_sdk.encoding.encodings.muxings.segmented_raw.customdata.customdata_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.encoding.encodings.muxings.segmented_raw.customdata
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

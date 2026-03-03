@@ -19,21 +19,21 @@ bitmovin\_api\_sdk.encoding.encodings.live.insertable\_content.insertable\_conte
 
 .. automodule:: bitmovin_api_sdk.encoding.encodings.live.insertable_content.insertable_content_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 bitmovin\_api\_sdk.encoding.encodings.live.insertable\_content.insertable\_content\_list\_query\_params module
 --------------------------------------------------------------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.encoding.encodings.live.insertable_content.insertable_content_list_query_params
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.encoding.encodings.live.insertable_content
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

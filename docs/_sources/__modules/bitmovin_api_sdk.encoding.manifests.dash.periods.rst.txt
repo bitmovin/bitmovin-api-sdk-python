@@ -18,21 +18,21 @@ bitmovin\_api\_sdk.encoding.manifests.dash.periods.period\_list\_query\_params m
 
 .. automodule:: bitmovin_api_sdk.encoding.manifests.dash.periods.period_list_query_params
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 bitmovin\_api\_sdk.encoding.manifests.dash.periods.periods\_api module
 ----------------------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.encoding.manifests.dash.periods.periods_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.encoding.manifests.dash.periods
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

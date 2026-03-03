@@ -18,21 +18,21 @@ bitmovin\_api\_sdk.encoding.encodings.sidecars.sidecar\_file\_list\_query\_param
 
 .. automodule:: bitmovin_api_sdk.encoding.encodings.sidecars.sidecar_file_list_query_params
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 bitmovin\_api\_sdk.encoding.encodings.sidecars.sidecars\_api module
 -------------------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.encoding.encodings.sidecars.sidecars_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.encoding.encodings.sidecars
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

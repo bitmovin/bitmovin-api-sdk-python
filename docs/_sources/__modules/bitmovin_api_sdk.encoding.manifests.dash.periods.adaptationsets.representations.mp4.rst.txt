@@ -17,21 +17,21 @@ bitmovin\_api\_sdk.encoding.manifests.dash.periods.adaptationsets.representation
 
 .. automodule:: bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.mp4.dash_mp4_representation_list_query_params
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 bitmovin\_api\_sdk.encoding.manifests.dash.periods.adaptationsets.representations.mp4.mp4\_api module
 -----------------------------------------------------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.mp4.mp4_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.mp4
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

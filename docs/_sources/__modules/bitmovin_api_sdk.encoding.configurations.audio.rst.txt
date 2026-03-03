@@ -33,13 +33,13 @@ bitmovin\_api\_sdk.encoding.configurations.audio.audio\_api module
 
 .. automodule:: bitmovin_api_sdk.encoding.configurations.audio.audio_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.encoding.configurations.audio
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

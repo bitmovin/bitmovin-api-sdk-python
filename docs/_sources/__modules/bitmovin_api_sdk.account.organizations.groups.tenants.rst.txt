@@ -9,21 +9,21 @@ bitmovin\_api\_sdk.account.organizations.groups.tenants.tenant\_list\_query\_par
 
 .. automodule:: bitmovin_api_sdk.account.organizations.groups.tenants.tenant_list_query_params
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 bitmovin\_api\_sdk.account.organizations.groups.tenants.tenants\_api module
 ---------------------------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.account.organizations.groups.tenants.tenants_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.account.organizations.groups.tenants
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

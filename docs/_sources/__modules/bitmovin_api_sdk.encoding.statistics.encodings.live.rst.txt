@@ -18,29 +18,29 @@ bitmovin\_api\_sdk.encoding.statistics.encodings.live.encoding\_statistics\_live
 
 .. automodule:: bitmovin_api_sdk.encoding.statistics.encodings.live.encoding_statistics_live_list_by_date_range_query_params
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 bitmovin\_api\_sdk.encoding.statistics.encodings.live.encoding\_statistics\_live\_list\_query\_params module
 ------------------------------------------------------------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.encoding.statistics.encodings.live.encoding_statistics_live_list_query_params
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 bitmovin\_api\_sdk.encoding.statistics.encodings.live.live\_api module
 ----------------------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.encoding.statistics.encodings.live.live_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.encoding.statistics.encodings.live
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

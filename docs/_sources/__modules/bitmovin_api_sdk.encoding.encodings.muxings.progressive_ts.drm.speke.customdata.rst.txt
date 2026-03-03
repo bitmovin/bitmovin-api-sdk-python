@@ -9,13 +9,13 @@ bitmovin\_api\_sdk.encoding.encodings.muxings.progressive\_ts.drm.speke.customda
 
 .. automodule:: bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.drm.speke.customdata.customdata_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.drm.speke.customdata
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

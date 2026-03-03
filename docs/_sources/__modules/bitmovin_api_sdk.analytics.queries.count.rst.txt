@@ -9,13 +9,13 @@ bitmovin\_api\_sdk.analytics.queries.count.count\_api module
 
 .. automodule:: bitmovin_api_sdk.analytics.queries.count.count_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.analytics.queries.count
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

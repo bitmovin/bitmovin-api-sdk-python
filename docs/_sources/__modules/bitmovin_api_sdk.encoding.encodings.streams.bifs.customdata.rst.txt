@@ -9,13 +9,13 @@ bitmovin\_api\_sdk.encoding.encodings.streams.bifs.customdata.customdata\_api mo
 
 .. automodule:: bitmovin_api_sdk.encoding.encodings.streams.bifs.customdata.customdata_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.encoding.encodings.streams.bifs.customdata
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

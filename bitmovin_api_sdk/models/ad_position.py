@@ -10,19 +10,24 @@ import six
 class AdPosition(object):
     @poscheck_model
     def __init__(self,
-                 position=None):
-        # type: (float) -> None
+                 position=None,
+                 duration=None):
+        # type: (float, float) -> None
 
         self._position = None
+        self._duration = None
         self.discriminator = None
 
         if position is not None:
             self.position = position
+        if duration is not None:
+            self.duration = duration
 
     @property
     def openapi_types(self):
         types = {
-            'position': 'float'
+            'position': 'float',
+            'duration': 'float'
         }
 
         return types
@@ -30,7 +35,8 @@ class AdPosition(object):
     @property
     def attribute_map(self):
         attributes = {
-            'position': 'position'
+            'position': 'position',
+            'duration': 'duration'
         }
         return attributes
 
@@ -60,6 +66,33 @@ class AdPosition(object):
                 raise TypeError("Invalid type for `position`, type has to be `float`")
 
         self._position = position
+
+    @property
+    def duration(self):
+        # type: () -> float
+        """Gets the duration of this AdPosition.
+
+
+        :return: The duration of this AdPosition.
+        :rtype: float
+        """
+        return self._duration
+
+    @duration.setter
+    def duration(self, duration):
+        # type: (float) -> None
+        """Sets the duration of this AdPosition.
+
+
+        :param duration: The duration of this AdPosition.
+        :type: float
+        """
+
+        if duration is not None:
+            if not isinstance(duration, (float, int)):
+                raise TypeError("Invalid type for `duration`, type has to be `float`")
+
+        self._duration = duration
 
     def to_dict(self):
         """Returns the model properties as a dict"""

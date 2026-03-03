@@ -9,21 +9,21 @@ bitmovin\_api\_sdk.encoding.live.standby\_pools.logs.live\_standby\_pool\_event\
 
 .. automodule:: bitmovin_api_sdk.encoding.live.standby_pools.logs.live_standby_pool_event_log_list_query_params
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 bitmovin\_api\_sdk.encoding.live.standby\_pools.logs.logs\_api module
 ---------------------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.encoding.live.standby_pools.logs.logs_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.encoding.live.standby_pools.logs
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

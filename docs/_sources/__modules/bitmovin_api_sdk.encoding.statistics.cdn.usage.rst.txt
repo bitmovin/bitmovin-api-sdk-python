@@ -9,21 +9,21 @@ bitmovin\_api\_sdk.encoding.statistics.cdn.usage.cdn\_usage\_statistics\_get\_qu
 
 .. automodule:: bitmovin_api_sdk.encoding.statistics.cdn.usage.cdn_usage_statistics_get_query_params
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 bitmovin\_api\_sdk.encoding.statistics.cdn.usage.usage\_api module
 ------------------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.encoding.statistics.cdn.usage.usage_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.encoding.statistics.cdn.usage
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

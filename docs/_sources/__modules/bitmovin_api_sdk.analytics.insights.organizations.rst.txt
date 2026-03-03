@@ -17,13 +17,13 @@ bitmovin\_api\_sdk.analytics.insights.organizations.organizations\_api module
 
 .. automodule:: bitmovin_api_sdk.analytics.insights.organizations.organizations_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.analytics.insights.organizations
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

@@ -9,13 +9,13 @@ bitmovin\_api\_sdk.encoding.encodings.muxings.progressive\_wav.customdata.custom
 
 .. automodule:: bitmovin_api_sdk.encoding.encodings.muxings.progressive_wav.customdata.customdata_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.encoding.encodings.muxings.progressive_wav.customdata
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

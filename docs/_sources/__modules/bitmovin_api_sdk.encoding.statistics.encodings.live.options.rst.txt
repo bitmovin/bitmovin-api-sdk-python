@@ -9,21 +9,21 @@ bitmovin\_api\_sdk.encoding.statistics.encodings.live.options.live\_options\_sta
 
 .. automodule:: bitmovin_api_sdk.encoding.statistics.encodings.live.options.live_options_statistics_list_by_date_range_query_params
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 bitmovin\_api\_sdk.encoding.statistics.encodings.live.options.options\_api module
 ---------------------------------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.encoding.statistics.encodings.live.options.options_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.encoding.statistics.encodings.live.options
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

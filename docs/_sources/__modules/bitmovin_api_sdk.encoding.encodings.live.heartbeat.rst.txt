@@ -9,13 +9,13 @@ bitmovin\_api\_sdk.encoding.encodings.live.heartbeat.heartbeat\_api module
 
 .. automodule:: bitmovin_api_sdk.encoding.encodings.live.heartbeat.heartbeat_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.encoding.encodings.live.heartbeat
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

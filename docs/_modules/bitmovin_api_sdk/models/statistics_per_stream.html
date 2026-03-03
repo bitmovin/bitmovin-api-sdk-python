@@ -1,22 +1,20 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="en">
+<html class="writer-html5" lang="en" data-content_root="../../../">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>bitmovin_api_sdk.models.statistics_per_stream &mdash; Bitmovin Python API SDK {{packageVersion}} documentation</title>
-      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=9edc463e" />
 
   
-  <!--[if lt IE 9]>
-    <script src="../../../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-        <script src="../../../_static/jquery.js"></script>
-        <script src="../../../_static/underscore.js"></script>
-        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="../../../_static/doctools.js"></script>
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=4dbdf2c3"></script>
+      <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" /> 
@@ -80,25 +78,27 @@
   <h1>Source code for bitmovin_api_sdk.models.statistics_per_stream</h1><div class="highlight"><pre>
 <span></span><span class="c1"># coding: utf-8</span>
 
-<span class="kn">from</span> <span class="nn">enum</span> <span class="kn">import</span> <span class="n">Enum</span>
-<span class="kn">from</span> <span class="nn">six</span> <span class="kn">import</span> <span class="n">string_types</span><span class="p">,</span> <span class="n">iteritems</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.common.poscheck</span> <span class="kn">import</span> <span class="n">poscheck_model</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.codec_config_type</span> <span class="kn">import</span> <span class="n">CodecConfigType</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.dolby_vision_per_stream_mode</span> <span class="kn">import</span> <span class="n">DolbyVisionPerStreamMode</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.encoding_mode</span> <span class="kn">import</span> <span class="n">EncodingMode</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.input_factor</span> <span class="kn">import</span> <span class="n">InputFactor</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.nex_guard_ab_watermarking_feature</span> <span class="kn">import</span> <span class="n">NexGuardABWatermarkingFeature</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.pixel_format_bit_depth</span> <span class="kn">import</span> <span class="n">PixelFormatBitDepth</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.psnr_per_stream_mode</span> <span class="kn">import</span> <span class="n">PsnrPerStreamMode</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.statistics_per_title_stream</span> <span class="kn">import</span> <span class="n">StatisticsPerTitleStream</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.statistics_resolution</span> <span class="kn">import</span> <span class="n">StatisticsResolution</span>
-<span class="kn">import</span> <span class="nn">pprint</span>
-<span class="kn">import</span> <span class="nn">six</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">enum</span><span class="w"> </span><span class="kn">import</span> <span class="n">Enum</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">six</span><span class="w"> </span><span class="kn">import</span> <span class="n">string_types</span><span class="p">,</span> <span class="n">iteritems</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.common.poscheck</span><span class="w"> </span><span class="kn">import</span> <span class="n">poscheck_model</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.codec_config_type</span><span class="w"> </span><span class="kn">import</span> <span class="n">CodecConfigType</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.dolby_vision_per_stream_mode</span><span class="w"> </span><span class="kn">import</span> <span class="n">DolbyVisionPerStreamMode</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.encoding_mode</span><span class="w"> </span><span class="kn">import</span> <span class="n">EncodingMode</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.input_factor</span><span class="w"> </span><span class="kn">import</span> <span class="n">InputFactor</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.nex_guard_ab_watermarking_feature</span><span class="w"> </span><span class="kn">import</span> <span class="n">NexGuardABWatermarkingFeature</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.pixel_format_bit_depth</span><span class="w"> </span><span class="kn">import</span> <span class="n">PixelFormatBitDepth</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.psnr_per_stream_mode</span><span class="w"> </span><span class="kn">import</span> <span class="n">PsnrPerStreamMode</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.statistics_per_title_stream</span><span class="w"> </span><span class="kn">import</span> <span class="n">StatisticsPerTitleStream</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.statistics_resolution</span><span class="w"> </span><span class="kn">import</span> <span class="n">StatisticsResolution</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pprint</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">six</span>
 
 
-<div class="viewcode-block" id="StatisticsPerStream"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.statistics_per_stream.StatisticsPerStream">[docs]</a><span class="k">class</span> <span class="nc">StatisticsPerStream</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="viewcode-block" id="StatisticsPerStream">
+<a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.statistics_per_stream.StatisticsPerStream">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">StatisticsPerStream</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="nd">@poscheck_model</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
                  <span class="n">stream_id</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">codec_config_id</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">multiplicator</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
@@ -253,7 +253,7 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">input_factor</span> <span class="o">=</span> <span class="n">input_factor</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">types</span> <span class="o">=</span> <span class="p">{</span>
             <span class="s1">&#39;stream_id&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
             <span class="s1">&#39;codec_config_id&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
@@ -297,7 +297,7 @@
         <span class="k">return</span> <span class="n">types</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">attribute_map</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">attribute_map</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">attributes</span> <span class="o">=</span> <span class="p">{</span>
             <span class="s1">&#39;stream_id&#39;</span><span class="p">:</span> <span class="s1">&#39;streamId&#39;</span><span class="p">,</span>
             <span class="s1">&#39;codec_config_id&#39;</span><span class="p">:</span> <span class="s1">&#39;codecConfigId&#39;</span><span class="p">,</span>
@@ -340,7 +340,7 @@
         <span class="k">return</span> <span class="n">attributes</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">stream_id</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">stream_id</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; string_types</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the stream_id of this StatisticsPerStream.</span>
 
@@ -352,7 +352,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_stream_id</span>
 
     <span class="nd">@stream_id</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">stream_id</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">stream_id</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">stream_id</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">stream_id</span><span class="p">):</span>
         <span class="c1"># type: (string_types) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the stream_id of this StatisticsPerStream.</span>
 
@@ -369,7 +369,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_stream_id</span> <span class="o">=</span> <span class="n">stream_id</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">codec_config_id</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">codec_config_id</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; string_types</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the codec_config_id of this StatisticsPerStream.</span>
 
@@ -381,7 +381,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_codec_config_id</span>
 
     <span class="nd">@codec_config_id</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">codec_config_id</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">codec_config_id</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">codec_config_id</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">codec_config_id</span><span class="p">):</span>
         <span class="c1"># type: (string_types) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the codec_config_id of this StatisticsPerStream.</span>
 
@@ -398,7 +398,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_codec_config_id</span> <span class="o">=</span> <span class="n">codec_config_id</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">multiplicator</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">multiplicator</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; float</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the multiplicator of this StatisticsPerStream.</span>
 
@@ -410,7 +410,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_multiplicator</span>
 
     <span class="nd">@multiplicator</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">multiplicator</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">multiplicator</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">multiplicator</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">multiplicator</span><span class="p">):</span>
         <span class="c1"># type: (float) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the multiplicator of this StatisticsPerStream.</span>
 
@@ -427,7 +427,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_multiplicator</span> <span class="o">=</span> <span class="n">multiplicator</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">encoded_bytes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">encoded_bytes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the encoded_bytes of this StatisticsPerStream.</span>
 
@@ -439,7 +439,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_encoded_bytes</span>
 
     <span class="nd">@encoded_bytes</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">encoded_bytes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">encoded_bytes</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">encoded_bytes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">encoded_bytes</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the encoded_bytes of this StatisticsPerStream.</span>
 
@@ -456,7 +456,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_encoded_bytes</span> <span class="o">=</span> <span class="n">encoded_bytes</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">encoded_seconds</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">encoded_seconds</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; float</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the encoded_seconds of this StatisticsPerStream.</span>
 
@@ -468,7 +468,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_encoded_seconds</span>
 
     <span class="nd">@encoded_seconds</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">encoded_seconds</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">encoded_seconds</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">encoded_seconds</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">encoded_seconds</span><span class="p">):</span>
         <span class="c1"># type: (float) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the encoded_seconds of this StatisticsPerStream.</span>
 
@@ -485,7 +485,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_encoded_seconds</span> <span class="o">=</span> <span class="n">encoded_seconds</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">billable_minutes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">billable_minutes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; float</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the billable_minutes of this StatisticsPerStream.</span>
 
@@ -497,7 +497,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_billable_minutes</span>
 
     <span class="nd">@billable_minutes</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">billable_minutes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">billable_minutes</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">billable_minutes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">billable_minutes</span><span class="p">):</span>
         <span class="c1"># type: (float) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the billable_minutes of this StatisticsPerStream.</span>
 
@@ -514,7 +514,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_billable_minutes</span> <span class="o">=</span> <span class="n">billable_minutes</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">width</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">width</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the width of this StatisticsPerStream.</span>
 
@@ -526,7 +526,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_width</span>
 
     <span class="nd">@width</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">width</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">width</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">width</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">width</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the width of this StatisticsPerStream.</span>
 
@@ -543,7 +543,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_width</span> <span class="o">=</span> <span class="n">width</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">height</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">height</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the height of this StatisticsPerStream.</span>
 
@@ -555,7 +555,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_height</span>
 
     <span class="nd">@height</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">height</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">height</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">height</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">height</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the height of this StatisticsPerStream.</span>
 
@@ -572,7 +572,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_height</span> <span class="o">=</span> <span class="n">height</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">rate</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">rate</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; float</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the rate of this StatisticsPerStream.</span>
 
@@ -584,7 +584,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_rate</span>
 
     <span class="nd">@rate</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">rate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rate</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">rate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rate</span><span class="p">):</span>
         <span class="c1"># type: (float) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the rate of this StatisticsPerStream.</span>
 
@@ -601,7 +601,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_rate</span> <span class="o">=</span> <span class="n">rate</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">bitrate</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">bitrate</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the bitrate of this StatisticsPerStream.</span>
 
@@ -613,7 +613,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_bitrate</span>
 
     <span class="nd">@bitrate</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">bitrate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bitrate</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">bitrate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bitrate</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the bitrate of this StatisticsPerStream.</span>
 
@@ -630,7 +630,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_bitrate</span> <span class="o">=</span> <span class="n">bitrate</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">codec</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">codec</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; CodecConfigType</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the codec of this StatisticsPerStream.</span>
 
@@ -641,7 +641,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_codec</span>
 
     <span class="nd">@codec</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">codec</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">codec</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">codec</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">codec</span><span class="p">):</span>
         <span class="c1"># type: (CodecConfigType) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the codec of this StatisticsPerStream.</span>
 
@@ -657,7 +657,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_codec</span> <span class="o">=</span> <span class="n">codec</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">resolution</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">resolution</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; StatisticsResolution</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the resolution of this StatisticsPerStream.</span>
 
@@ -668,7 +668,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_resolution</span>
 
     <span class="nd">@resolution</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">resolution</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">resolution</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">resolution</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">resolution</span><span class="p">):</span>
         <span class="c1"># type: (StatisticsResolution) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the resolution of this StatisticsPerStream.</span>
 
@@ -684,7 +684,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_resolution</span> <span class="o">=</span> <span class="n">resolution</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">encoding_mode</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">encoding_mode</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; EncodingMode</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the encoding_mode of this StatisticsPerStream.</span>
 
@@ -695,7 +695,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_encoding_mode</span>
 
     <span class="nd">@encoding_mode</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">encoding_mode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">encoding_mode</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">encoding_mode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">encoding_mode</span><span class="p">):</span>
         <span class="c1"># type: (EncodingMode) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the encoding_mode of this StatisticsPerStream.</span>
 
@@ -711,7 +711,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_encoding_mode</span> <span class="o">=</span> <span class="n">encoding_mode</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">encoding_mode_multiplicator</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">encoding_mode_multiplicator</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; float</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the encoding_mode_multiplicator of this StatisticsPerStream.</span>
 
@@ -723,7 +723,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_encoding_mode_multiplicator</span>
 
     <span class="nd">@encoding_mode_multiplicator</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">encoding_mode_multiplicator</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">encoding_mode_multiplicator</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">encoding_mode_multiplicator</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">encoding_mode_multiplicator</span><span class="p">):</span>
         <span class="c1"># type: (float) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the encoding_mode_multiplicator of this StatisticsPerStream.</span>
 
@@ -740,7 +740,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_encoding_mode_multiplicator</span> <span class="o">=</span> <span class="n">encoding_mode_multiplicator</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">per_title_result_stream</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">per_title_result_stream</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; StatisticsPerTitleStream</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the per_title_result_stream of this StatisticsPerStream.</span>
 
@@ -751,7 +751,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_per_title_result_stream</span>
 
     <span class="nd">@per_title_result_stream</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">per_title_result_stream</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">per_title_result_stream</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">per_title_result_stream</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">per_title_result_stream</span><span class="p">):</span>
         <span class="c1"># type: (StatisticsPerTitleStream) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the per_title_result_stream of this StatisticsPerStream.</span>
 
@@ -767,7 +767,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_per_title_result_stream</span> <span class="o">=</span> <span class="n">per_title_result_stream</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">per_title_multiplicator</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">per_title_multiplicator</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; float</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the per_title_multiplicator of this StatisticsPerStream.</span>
 
@@ -779,7 +779,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_per_title_multiplicator</span>
 
     <span class="nd">@per_title_multiplicator</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">per_title_multiplicator</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">per_title_multiplicator</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">per_title_multiplicator</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">per_title_multiplicator</span><span class="p">):</span>
         <span class="c1"># type: (float) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the per_title_multiplicator of this StatisticsPerStream.</span>
 
@@ -796,7 +796,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_per_title_multiplicator</span> <span class="o">=</span> <span class="n">per_title_multiplicator</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">psnr_mode</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">psnr_mode</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; PsnrPerStreamMode</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the psnr_mode of this StatisticsPerStream.</span>
 
@@ -807,7 +807,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_psnr_mode</span>
 
     <span class="nd">@psnr_mode</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">psnr_mode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">psnr_mode</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">psnr_mode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">psnr_mode</span><span class="p">):</span>
         <span class="c1"># type: (PsnrPerStreamMode) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the psnr_mode of this StatisticsPerStream.</span>
 
@@ -823,7 +823,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_psnr_mode</span> <span class="o">=</span> <span class="n">psnr_mode</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">psnr_multiplicator</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">psnr_multiplicator</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; float</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the psnr_multiplicator of this StatisticsPerStream.</span>
 
@@ -835,7 +835,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_psnr_multiplicator</span>
 
     <span class="nd">@psnr_multiplicator</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">psnr_multiplicator</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">psnr_multiplicator</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">psnr_multiplicator</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">psnr_multiplicator</span><span class="p">):</span>
         <span class="c1"># type: (float) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the psnr_multiplicator of this StatisticsPerStream.</span>
 
@@ -852,7 +852,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_psnr_multiplicator</span> <span class="o">=</span> <span class="n">psnr_multiplicator</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">dolby_vision_mode</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">dolby_vision_mode</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; DolbyVisionPerStreamMode</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the dolby_vision_mode of this StatisticsPerStream.</span>
 
@@ -863,7 +863,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_dolby_vision_mode</span>
 
     <span class="nd">@dolby_vision_mode</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">dolby_vision_mode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dolby_vision_mode</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">dolby_vision_mode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dolby_vision_mode</span><span class="p">):</span>
         <span class="c1"># type: (DolbyVisionPerStreamMode) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the dolby_vision_mode of this StatisticsPerStream.</span>
 
@@ -879,7 +879,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_dolby_vision_mode</span> <span class="o">=</span> <span class="n">dolby_vision_mode</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">dolby_vision_multiplicator</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">dolby_vision_multiplicator</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; float</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the dolby_vision_multiplicator of this StatisticsPerStream.</span>
 
@@ -891,7 +891,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_dolby_vision_multiplicator</span>
 
     <span class="nd">@dolby_vision_multiplicator</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">dolby_vision_multiplicator</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dolby_vision_multiplicator</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">dolby_vision_multiplicator</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dolby_vision_multiplicator</span><span class="p">):</span>
         <span class="c1"># type: (float) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the dolby_vision_multiplicator of this StatisticsPerStream.</span>
 
@@ -908,7 +908,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_dolby_vision_multiplicator</span> <span class="o">=</span> <span class="n">dolby_vision_multiplicator</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">preset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">preset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; string_types</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the preset of this StatisticsPerStream.</span>
 
@@ -920,7 +920,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_preset</span>
 
     <span class="nd">@preset</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">preset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">preset</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">preset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">preset</span><span class="p">):</span>
         <span class="c1"># type: (string_types) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the preset of this StatisticsPerStream.</span>
 
@@ -937,7 +937,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_preset</span> <span class="o">=</span> <span class="n">preset</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">preset_multiplicator</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">preset_multiplicator</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; float</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the preset_multiplicator of this StatisticsPerStream.</span>
 
@@ -949,7 +949,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_preset_multiplicator</span>
 
     <span class="nd">@preset_multiplicator</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">preset_multiplicator</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">preset_multiplicator</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">preset_multiplicator</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">preset_multiplicator</span><span class="p">):</span>
         <span class="c1"># type: (float) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the preset_multiplicator of this StatisticsPerStream.</span>
 
@@ -966,7 +966,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_preset_multiplicator</span> <span class="o">=</span> <span class="n">preset_multiplicator</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">live</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">live</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; bool</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the live of this StatisticsPerStream.</span>
 
@@ -978,7 +978,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_live</span>
 
     <span class="nd">@live</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">live</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">live</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">live</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">live</span><span class="p">):</span>
         <span class="c1"># type: (bool) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the live of this StatisticsPerStream.</span>
 
@@ -995,7 +995,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_live</span> <span class="o">=</span> <span class="n">live</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">live_multiplicator</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">live_multiplicator</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; float</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the live_multiplicator of this StatisticsPerStream.</span>
 
@@ -1007,7 +1007,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_live_multiplicator</span>
 
     <span class="nd">@live_multiplicator</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">live_multiplicator</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">live_multiplicator</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">live_multiplicator</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">live_multiplicator</span><span class="p">):</span>
         <span class="c1"># type: (float) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the live_multiplicator of this StatisticsPerStream.</span>
 
@@ -1024,7 +1024,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_live_multiplicator</span> <span class="o">=</span> <span class="n">live_multiplicator</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">enhanced_deinterlace</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">enhanced_deinterlace</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; bool</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the enhanced_deinterlace of this StatisticsPerStream.</span>
 
@@ -1036,7 +1036,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_enhanced_deinterlace</span>
 
     <span class="nd">@enhanced_deinterlace</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">enhanced_deinterlace</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">enhanced_deinterlace</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">enhanced_deinterlace</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">enhanced_deinterlace</span><span class="p">):</span>
         <span class="c1"># type: (bool) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the enhanced_deinterlace of this StatisticsPerStream.</span>
 
@@ -1053,7 +1053,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_enhanced_deinterlace</span> <span class="o">=</span> <span class="n">enhanced_deinterlace</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">enhanced_deinterlace_multiplicator</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">enhanced_deinterlace_multiplicator</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; float</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the enhanced_deinterlace_multiplicator of this StatisticsPerStream.</span>
 
@@ -1065,7 +1065,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_enhanced_deinterlace_multiplicator</span>
 
     <span class="nd">@enhanced_deinterlace_multiplicator</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">enhanced_deinterlace_multiplicator</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">enhanced_deinterlace_multiplicator</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">enhanced_deinterlace_multiplicator</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">enhanced_deinterlace_multiplicator</span><span class="p">):</span>
         <span class="c1"># type: (float) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the enhanced_deinterlace_multiplicator of this StatisticsPerStream.</span>
 
@@ -1082,7 +1082,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_enhanced_deinterlace_multiplicator</span> <span class="o">=</span> <span class="n">enhanced_deinterlace_multiplicator</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">dolby_vision_to_hdr</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">dolby_vision_to_hdr</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; bool</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the dolby_vision_to_hdr of this StatisticsPerStream.</span>
 
@@ -1094,7 +1094,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_dolby_vision_to_hdr</span>
 
     <span class="nd">@dolby_vision_to_hdr</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">dolby_vision_to_hdr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dolby_vision_to_hdr</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">dolby_vision_to_hdr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dolby_vision_to_hdr</span><span class="p">):</span>
         <span class="c1"># type: (bool) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the dolby_vision_to_hdr of this StatisticsPerStream.</span>
 
@@ -1111,7 +1111,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_dolby_vision_to_hdr</span> <span class="o">=</span> <span class="n">dolby_vision_to_hdr</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">dolby_vision_to_hdr_multiplicator</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">dolby_vision_to_hdr_multiplicator</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; float</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the dolby_vision_to_hdr_multiplicator of this StatisticsPerStream.</span>
 
@@ -1123,7 +1123,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_dolby_vision_to_hdr_multiplicator</span>
 
     <span class="nd">@dolby_vision_to_hdr_multiplicator</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">dolby_vision_to_hdr_multiplicator</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dolby_vision_to_hdr_multiplicator</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">dolby_vision_to_hdr_multiplicator</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dolby_vision_to_hdr_multiplicator</span><span class="p">):</span>
         <span class="c1"># type: (float) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the dolby_vision_to_hdr_multiplicator of this StatisticsPerStream.</span>
 
@@ -1140,7 +1140,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_dolby_vision_to_hdr_multiplicator</span> <span class="o">=</span> <span class="n">dolby_vision_to_hdr_multiplicator</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">dolby_vision_to_sdr</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">dolby_vision_to_sdr</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; bool</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the dolby_vision_to_sdr of this StatisticsPerStream.</span>
 
@@ -1152,7 +1152,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_dolby_vision_to_sdr</span>
 
     <span class="nd">@dolby_vision_to_sdr</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">dolby_vision_to_sdr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dolby_vision_to_sdr</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">dolby_vision_to_sdr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dolby_vision_to_sdr</span><span class="p">):</span>
         <span class="c1"># type: (bool) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the dolby_vision_to_sdr of this StatisticsPerStream.</span>
 
@@ -1169,7 +1169,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_dolby_vision_to_sdr</span> <span class="o">=</span> <span class="n">dolby_vision_to_sdr</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">dolby_vision_to_sdr_multiplicator</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">dolby_vision_to_sdr_multiplicator</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; float</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the dolby_vision_to_sdr_multiplicator of this StatisticsPerStream.</span>
 
@@ -1181,7 +1181,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_dolby_vision_to_sdr_multiplicator</span>
 
     <span class="nd">@dolby_vision_to_sdr_multiplicator</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">dolby_vision_to_sdr_multiplicator</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dolby_vision_to_sdr_multiplicator</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">dolby_vision_to_sdr_multiplicator</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dolby_vision_to_sdr_multiplicator</span><span class="p">):</span>
         <span class="c1"># type: (float) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the dolby_vision_to_sdr_multiplicator of this StatisticsPerStream.</span>
 
@@ -1198,7 +1198,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_dolby_vision_to_sdr_multiplicator</span> <span class="o">=</span> <span class="n">dolby_vision_to_sdr_multiplicator</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">hdr_hlg_to_sdr</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">hdr_hlg_to_sdr</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; bool</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the hdr_hlg_to_sdr of this StatisticsPerStream.</span>
 
@@ -1210,7 +1210,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_hdr_hlg_to_sdr</span>
 
     <span class="nd">@hdr_hlg_to_sdr</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">hdr_hlg_to_sdr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">hdr_hlg_to_sdr</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">hdr_hlg_to_sdr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">hdr_hlg_to_sdr</span><span class="p">):</span>
         <span class="c1"># type: (bool) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the hdr_hlg_to_sdr of this StatisticsPerStream.</span>
 
@@ -1227,7 +1227,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_hdr_hlg_to_sdr</span> <span class="o">=</span> <span class="n">hdr_hlg_to_sdr</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">hdr_hlg_to_sdr_multiplicator</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">hdr_hlg_to_sdr_multiplicator</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; float</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the hdr_hlg_to_sdr_multiplicator of this StatisticsPerStream.</span>
 
@@ -1239,7 +1239,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_hdr_hlg_to_sdr_multiplicator</span>
 
     <span class="nd">@hdr_hlg_to_sdr_multiplicator</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">hdr_hlg_to_sdr_multiplicator</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">hdr_hlg_to_sdr_multiplicator</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">hdr_hlg_to_sdr_multiplicator</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">hdr_hlg_to_sdr_multiplicator</span><span class="p">):</span>
         <span class="c1"># type: (float) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the hdr_hlg_to_sdr_multiplicator of this StatisticsPerStream.</span>
 
@@ -1256,7 +1256,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_hdr_hlg_to_sdr_multiplicator</span> <span class="o">=</span> <span class="n">hdr_hlg_to_sdr_multiplicator</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">nex_guard_ab_watermarking_type</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">nex_guard_ab_watermarking_type</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; NexGuardABWatermarkingFeature</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the nex_guard_ab_watermarking_type of this StatisticsPerStream.</span>
 
@@ -1267,7 +1267,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_nex_guard_ab_watermarking_type</span>
 
     <span class="nd">@nex_guard_ab_watermarking_type</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">nex_guard_ab_watermarking_type</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nex_guard_ab_watermarking_type</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">nex_guard_ab_watermarking_type</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nex_guard_ab_watermarking_type</span><span class="p">):</span>
         <span class="c1"># type: (NexGuardABWatermarkingFeature) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the nex_guard_ab_watermarking_type of this StatisticsPerStream.</span>
 
@@ -1283,7 +1283,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_nex_guard_ab_watermarking_type</span> <span class="o">=</span> <span class="n">nex_guard_ab_watermarking_type</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">nex_guard_ab_watermarking_multiplicator</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">nex_guard_ab_watermarking_multiplicator</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; float</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the nex_guard_ab_watermarking_multiplicator of this StatisticsPerStream.</span>
 
@@ -1295,7 +1295,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_nex_guard_ab_watermarking_multiplicator</span>
 
     <span class="nd">@nex_guard_ab_watermarking_multiplicator</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">nex_guard_ab_watermarking_multiplicator</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nex_guard_ab_watermarking_multiplicator</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">nex_guard_ab_watermarking_multiplicator</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nex_guard_ab_watermarking_multiplicator</span><span class="p">):</span>
         <span class="c1"># type: (float) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the nex_guard_ab_watermarking_multiplicator of this StatisticsPerStream.</span>
 
@@ -1312,7 +1312,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_nex_guard_ab_watermarking_multiplicator</span> <span class="o">=</span> <span class="n">nex_guard_ab_watermarking_multiplicator</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">pixel_format_bit_depth</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">pixel_format_bit_depth</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; PixelFormatBitDepth</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the pixel_format_bit_depth of this StatisticsPerStream.</span>
 
@@ -1323,7 +1323,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_pixel_format_bit_depth</span>
 
     <span class="nd">@pixel_format_bit_depth</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">pixel_format_bit_depth</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pixel_format_bit_depth</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">pixel_format_bit_depth</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pixel_format_bit_depth</span><span class="p">):</span>
         <span class="c1"># type: (PixelFormatBitDepth) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the pixel_format_bit_depth of this StatisticsPerStream.</span>
 
@@ -1339,7 +1339,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_pixel_format_bit_depth</span> <span class="o">=</span> <span class="n">pixel_format_bit_depth</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">pixel_format_multiplicator</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">pixel_format_multiplicator</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; float</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the pixel_format_multiplicator of this StatisticsPerStream.</span>
 
@@ -1351,7 +1351,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_pixel_format_multiplicator</span>
 
     <span class="nd">@pixel_format_multiplicator</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">pixel_format_multiplicator</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pixel_format_multiplicator</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">pixel_format_multiplicator</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pixel_format_multiplicator</span><span class="p">):</span>
         <span class="c1"># type: (float) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the pixel_format_multiplicator of this StatisticsPerStream.</span>
 
@@ -1368,7 +1368,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_pixel_format_multiplicator</span> <span class="o">=</span> <span class="n">pixel_format_multiplicator</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">input_factor</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">input_factor</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; InputFactor</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the input_factor of this StatisticsPerStream.</span>
 
@@ -1379,7 +1379,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_input_factor</span>
 
     <span class="nd">@input_factor</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">input_factor</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_factor</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">input_factor</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_factor</span><span class="p">):</span>
         <span class="c1"># type: (InputFactor) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the input_factor of this StatisticsPerStream.</span>
 
@@ -1394,7 +1394,9 @@
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_input_factor</span> <span class="o">=</span> <span class="n">input_factor</span>
 
-<div class="viewcode-block" id="StatisticsPerStream.to_dict"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.statistics_per_stream.StatisticsPerStream.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="StatisticsPerStream.to_dict">
+<a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.statistics_per_stream.StatisticsPerStream.to_dict">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>
         <span class="n">result</span> <span class="o">=</span> <span class="p">{}</span>
 
@@ -1417,24 +1419,29 @@
 
         <span class="k">return</span> <span class="n">result</span></div>
 
-<div class="viewcode-block" id="StatisticsPerStream.to_str"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.statistics_per_stream.StatisticsPerStream.to_str">[docs]</a>    <span class="k">def</span> <span class="nf">to_str</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="StatisticsPerStream.to_str">
+<a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.statistics_per_stream.StatisticsPerStream.to_str">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">to_str</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the string representation of the model&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">pprint</span><span class="o">.</span><span class="n">pformat</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">to_dict</span><span class="p">())</span></div>
 
-    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;For `print` and `pprint`&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">to_str</span><span class="p">()</span>
 
-    <span class="k">def</span> <span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns true if both objects are equal&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">StatisticsPerStream</span><span class="p">):</span>
             <span class="k">return</span> <span class="kc">False</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="vm">__dict__</span>
 
-    <span class="k">def</span> <span class="fm">__ne__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__ne__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns true if both objects are not equal&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="ow">not</span> <span class="bp">self</span> <span class="o">==</span> <span class="n">other</span></div>
+
 </pre></div>
 
            </div>

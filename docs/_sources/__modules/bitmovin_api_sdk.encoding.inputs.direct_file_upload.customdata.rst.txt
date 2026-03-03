@@ -9,13 +9,13 @@ bitmovin\_api\_sdk.encoding.inputs.direct\_file\_upload.customdata.customdata\_a
 
 .. automodule:: bitmovin_api_sdk.encoding.inputs.direct_file_upload.customdata.customdata_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.encoding.inputs.direct_file_upload.customdata
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

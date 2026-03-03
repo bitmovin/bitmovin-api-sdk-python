@@ -9,13 +9,13 @@ bitmovin\_api\_sdk.encoding.encodings.live.esam.media\_points.media\_points\_api
 
 .. automodule:: bitmovin_api_sdk.encoding.encodings.live.esam.media_points.media_points_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.encoding.encodings.live.esam.media_points
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

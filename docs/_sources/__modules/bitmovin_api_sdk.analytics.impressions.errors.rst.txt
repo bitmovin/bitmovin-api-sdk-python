@@ -9,13 +9,13 @@ bitmovin\_api\_sdk.analytics.impressions.errors.errors\_api module
 
 .. automodule:: bitmovin_api_sdk.analytics.impressions.errors.errors_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.analytics.impressions.errors
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

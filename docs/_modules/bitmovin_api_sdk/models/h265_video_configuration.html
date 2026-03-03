@@ -1,22 +1,20 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="en">
+<html class="writer-html5" lang="en" data-content_root="../../../">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>bitmovin_api_sdk.models.h265_video_configuration &mdash; Bitmovin Python API SDK {{packageVersion}} documentation</title>
-      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=9edc463e" />
 
   
-  <!--[if lt IE 9]>
-    <script src="../../../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-        <script src="../../../_static/jquery.js"></script>
-        <script src="../../../_static/underscore.js"></script>
-        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="../../../_static/doctools.js"></script>
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=4dbdf2c3"></script>
+      <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" /> 
@@ -80,43 +78,45 @@
   <h1>Source code for bitmovin_api_sdk.models.h265_video_configuration</h1><div class="highlight"><pre>
 <span></span><span class="c1"># coding: utf-8</span>
 
-<span class="kn">from</span> <span class="nn">enum</span> <span class="kn">import</span> <span class="n">Enum</span>
-<span class="kn">from</span> <span class="nn">six</span> <span class="kn">import</span> <span class="n">string_types</span><span class="p">,</span> <span class="n">iteritems</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.common.poscheck</span> <span class="kn">import</span> <span class="n">poscheck_model</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.adaptive_quant_mode</span> <span class="kn">import</span> <span class="n">AdaptiveQuantMode</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.auto_level_setup</span> <span class="kn">import</span> <span class="n">AutoLevelSetup</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.b_adapt</span> <span class="kn">import</span> <span class="n">BAdapt</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.cea608708_subtitle_configuration</span> <span class="kn">import</span> <span class="n">Cea608708SubtitleConfiguration</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.color_config</span> <span class="kn">import</span> <span class="n">ColorConfig</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.display_aspect_ratio</span> <span class="kn">import</span> <span class="n">DisplayAspectRatio</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.encoding_mode</span> <span class="kn">import</span> <span class="n">EncodingMode</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.force_flush_mode</span> <span class="kn">import</span> <span class="n">ForceFlushMode</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.h265_dynamic_range_format</span> <span class="kn">import</span> <span class="n">H265DynamicRangeFormat</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.level_h265</span> <span class="kn">import</span> <span class="n">LevelH265</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.limit_references</span> <span class="kn">import</span> <span class="n">LimitReferences</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.limit_transform_unit_depth_recursion_mode</span> <span class="kn">import</span> <span class="n">LimitTransformUnitDepthRecursionMode</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.max_ctu_size</span> <span class="kn">import</span> <span class="n">MaxCtuSize</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.max_transform_unit_size</span> <span class="kn">import</span> <span class="n">MaxTransformUnitSize</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.min_coding_unit_size</span> <span class="kn">import</span> <span class="n">MinCodingUnitSize</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.motion_search</span> <span class="kn">import</span> <span class="n">MotionSearch</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.pixel_format</span> <span class="kn">import</span> <span class="n">PixelFormat</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.preset_configuration</span> <span class="kn">import</span> <span class="n">PresetConfiguration</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.profile_h265</span> <span class="kn">import</span> <span class="n">ProfileH265</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.quantization_group_size</span> <span class="kn">import</span> <span class="n">QuantizationGroupSize</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.rate_distortion_level_for_quantization</span> <span class="kn">import</span> <span class="n">RateDistortionLevelForQuantization</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.rate_distortion_penalty_mode</span> <span class="kn">import</span> <span class="n">RateDistortionPenaltyMode</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.transform_skip_mode</span> <span class="kn">import</span> <span class="n">TransformSkipMode</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.tu_inter_depth</span> <span class="kn">import</span> <span class="n">TuInterDepth</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.tu_intra_depth</span> <span class="kn">import</span> <span class="n">TuIntraDepth</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.video_configuration</span> <span class="kn">import</span> <span class="n">VideoConfiguration</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.video_format</span> <span class="kn">import</span> <span class="n">VideoFormat</span>
-<span class="kn">import</span> <span class="nn">pprint</span>
-<span class="kn">import</span> <span class="nn">six</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">enum</span><span class="w"> </span><span class="kn">import</span> <span class="n">Enum</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">six</span><span class="w"> </span><span class="kn">import</span> <span class="n">string_types</span><span class="p">,</span> <span class="n">iteritems</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.common.poscheck</span><span class="w"> </span><span class="kn">import</span> <span class="n">poscheck_model</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.adaptive_quant_mode</span><span class="w"> </span><span class="kn">import</span> <span class="n">AdaptiveQuantMode</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.auto_level_setup</span><span class="w"> </span><span class="kn">import</span> <span class="n">AutoLevelSetup</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.b_adapt</span><span class="w"> </span><span class="kn">import</span> <span class="n">BAdapt</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.cea608708_subtitle_configuration</span><span class="w"> </span><span class="kn">import</span> <span class="n">Cea608708SubtitleConfiguration</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.color_config</span><span class="w"> </span><span class="kn">import</span> <span class="n">ColorConfig</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.display_aspect_ratio</span><span class="w"> </span><span class="kn">import</span> <span class="n">DisplayAspectRatio</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.encoding_mode</span><span class="w"> </span><span class="kn">import</span> <span class="n">EncodingMode</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.force_flush_mode</span><span class="w"> </span><span class="kn">import</span> <span class="n">ForceFlushMode</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.h265_dynamic_range_format</span><span class="w"> </span><span class="kn">import</span> <span class="n">H265DynamicRangeFormat</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.level_h265</span><span class="w"> </span><span class="kn">import</span> <span class="n">LevelH265</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.limit_references</span><span class="w"> </span><span class="kn">import</span> <span class="n">LimitReferences</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.limit_transform_unit_depth_recursion_mode</span><span class="w"> </span><span class="kn">import</span> <span class="n">LimitTransformUnitDepthRecursionMode</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.max_ctu_size</span><span class="w"> </span><span class="kn">import</span> <span class="n">MaxCtuSize</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.max_transform_unit_size</span><span class="w"> </span><span class="kn">import</span> <span class="n">MaxTransformUnitSize</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.min_coding_unit_size</span><span class="w"> </span><span class="kn">import</span> <span class="n">MinCodingUnitSize</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.motion_search</span><span class="w"> </span><span class="kn">import</span> <span class="n">MotionSearch</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.pixel_format</span><span class="w"> </span><span class="kn">import</span> <span class="n">PixelFormat</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.preset_configuration</span><span class="w"> </span><span class="kn">import</span> <span class="n">PresetConfiguration</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.profile_h265</span><span class="w"> </span><span class="kn">import</span> <span class="n">ProfileH265</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.quantization_group_size</span><span class="w"> </span><span class="kn">import</span> <span class="n">QuantizationGroupSize</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.rate_distortion_level_for_quantization</span><span class="w"> </span><span class="kn">import</span> <span class="n">RateDistortionLevelForQuantization</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.rate_distortion_penalty_mode</span><span class="w"> </span><span class="kn">import</span> <span class="n">RateDistortionPenaltyMode</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.transform_skip_mode</span><span class="w"> </span><span class="kn">import</span> <span class="n">TransformSkipMode</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.tu_inter_depth</span><span class="w"> </span><span class="kn">import</span> <span class="n">TuInterDepth</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.tu_intra_depth</span><span class="w"> </span><span class="kn">import</span> <span class="n">TuIntraDepth</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.video_configuration</span><span class="w"> </span><span class="kn">import</span> <span class="n">VideoConfiguration</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.video_format</span><span class="w"> </span><span class="kn">import</span> <span class="n">VideoFormat</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pprint</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">six</span>
 
 
-<div class="viewcode-block" id="H265VideoConfiguration"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.h265_video_configuration.H265VideoConfiguration">[docs]</a><span class="k">class</span> <span class="nc">H265VideoConfiguration</span><span class="p">(</span><span class="n">VideoConfiguration</span><span class="p">):</span>
+<div class="viewcode-block" id="H265VideoConfiguration">
+<a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.h265_video_configuration.H265VideoConfiguration">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">H265VideoConfiguration</span><span class="p">(</span><span class="n">VideoConfiguration</span><span class="p">):</span>
     <span class="nd">@poscheck_model</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
                  <span class="n">id_</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">description</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
@@ -528,7 +528,7 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">auto_level_setup</span> <span class="o">=</span> <span class="n">auto_level_setup</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">types</span> <span class="o">=</span> <span class="p">{}</span>
 
         <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="nb">super</span><span class="p">(</span><span class="n">H265VideoConfiguration</span><span class="p">,</span> <span class="bp">self</span><span class="p">),</span> <span class="s1">&#39;openapi_types&#39;</span><span class="p">):</span>
@@ -637,7 +637,7 @@
         <span class="k">return</span> <span class="n">types</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">attribute_map</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">attribute_map</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">attributes</span> <span class="o">=</span> <span class="p">{}</span>
 
         <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="nb">super</span><span class="p">(</span><span class="n">H265VideoConfiguration</span><span class="p">,</span> <span class="bp">self</span><span class="p">),</span> <span class="s1">&#39;attribute_map&#39;</span><span class="p">):</span>
@@ -745,7 +745,7 @@
         <span class="k">return</span> <span class="n">attributes</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">preset_configuration</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">preset_configuration</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; PresetConfiguration</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the preset_configuration of this H265VideoConfiguration.</span>
 
@@ -757,7 +757,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_preset_configuration</span>
 
     <span class="nd">@preset_configuration</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">preset_configuration</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">preset_configuration</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">preset_configuration</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">preset_configuration</span><span class="p">):</span>
         <span class="c1"># type: (PresetConfiguration) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the preset_configuration of this H265VideoConfiguration.</span>
 
@@ -774,7 +774,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_preset_configuration</span> <span class="o">=</span> <span class="n">preset_configuration</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">dynamic_range_format</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">dynamic_range_format</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; H265DynamicRangeFormat</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the dynamic_range_format of this H265VideoConfiguration.</span>
 
@@ -786,7 +786,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_dynamic_range_format</span>
 
     <span class="nd">@dynamic_range_format</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">dynamic_range_format</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dynamic_range_format</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">dynamic_range_format</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dynamic_range_format</span><span class="p">):</span>
         <span class="c1"># type: (H265DynamicRangeFormat) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the dynamic_range_format of this H265VideoConfiguration.</span>
 
@@ -803,7 +803,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_dynamic_range_format</span> <span class="o">=</span> <span class="n">dynamic_range_format</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">crf</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">crf</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; float</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the crf of this H265VideoConfiguration.</span>
 
@@ -815,7 +815,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_crf</span>
 
     <span class="nd">@crf</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">crf</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">crf</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">crf</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">crf</span><span class="p">):</span>
         <span class="c1"># type: (float) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the crf of this H265VideoConfiguration.</span>
 
@@ -836,7 +836,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_crf</span> <span class="o">=</span> <span class="n">crf</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">profile</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">profile</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; ProfileH265</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the profile of this H265VideoConfiguration.</span>
 
@@ -847,7 +847,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_profile</span>
 
     <span class="nd">@profile</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">profile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">profile</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">profile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">profile</span><span class="p">):</span>
         <span class="c1"># type: (ProfileH265) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the profile of this H265VideoConfiguration.</span>
 
@@ -863,7 +863,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_profile</span> <span class="o">=</span> <span class="n">profile</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">bframes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">bframes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the bframes of this H265VideoConfiguration.</span>
 
@@ -875,7 +875,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_bframes</span>
 
     <span class="nd">@bframes</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">bframes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bframes</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">bframes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bframes</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the bframes of this H265VideoConfiguration.</span>
 
@@ -896,7 +896,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_bframes</span> <span class="o">=</span> <span class="n">bframes</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">ref_frames</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">ref_frames</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the ref_frames of this H265VideoConfiguration.</span>
 
@@ -908,7 +908,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_ref_frames</span>
 
     <span class="nd">@ref_frames</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">ref_frames</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ref_frames</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">ref_frames</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ref_frames</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the ref_frames of this H265VideoConfiguration.</span>
 
@@ -929,7 +929,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_ref_frames</span> <span class="o">=</span> <span class="n">ref_frames</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">qp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">qp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the qp of this H265VideoConfiguration.</span>
 
@@ -941,7 +941,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_qp</span>
 
     <span class="nd">@qp</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">qp</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">qp</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">qp</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">qp</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the qp of this H265VideoConfiguration.</span>
 
@@ -962,7 +962,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_qp</span> <span class="o">=</span> <span class="n">qp</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">max_bitrate</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">max_bitrate</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the max_bitrate of this H265VideoConfiguration.</span>
 
@@ -974,7 +974,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_max_bitrate</span>
 
     <span class="nd">@max_bitrate</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">max_bitrate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">max_bitrate</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">max_bitrate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">max_bitrate</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the max_bitrate of this H265VideoConfiguration.</span>
 
@@ -991,7 +991,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_max_bitrate</span> <span class="o">=</span> <span class="n">max_bitrate</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">min_bitrate</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">min_bitrate</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the min_bitrate of this H265VideoConfiguration.</span>
 
@@ -1003,7 +1003,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_min_bitrate</span>
 
     <span class="nd">@min_bitrate</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">min_bitrate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">min_bitrate</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">min_bitrate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">min_bitrate</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the min_bitrate of this H265VideoConfiguration.</span>
 
@@ -1020,7 +1020,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_min_bitrate</span> <span class="o">=</span> <span class="n">min_bitrate</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">bufsize</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">bufsize</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the bufsize of this H265VideoConfiguration.</span>
 
@@ -1032,7 +1032,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_bufsize</span>
 
     <span class="nd">@bufsize</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">bufsize</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bufsize</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">bufsize</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bufsize</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the bufsize of this H265VideoConfiguration.</span>
 
@@ -1049,7 +1049,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_bufsize</span> <span class="o">=</span> <span class="n">bufsize</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">min_gop</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">min_gop</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the min_gop of this H265VideoConfiguration.</span>
 
@@ -1061,7 +1061,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_min_gop</span>
 
     <span class="nd">@min_gop</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">min_gop</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">min_gop</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">min_gop</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">min_gop</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the min_gop of this H265VideoConfiguration.</span>
 
@@ -1078,7 +1078,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_min_gop</span> <span class="o">=</span> <span class="n">min_gop</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">max_gop</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">max_gop</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the max_gop of this H265VideoConfiguration.</span>
 
@@ -1090,7 +1090,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_max_gop</span>
 
     <span class="nd">@max_gop</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">max_gop</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">max_gop</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">max_gop</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">max_gop</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the max_gop of this H265VideoConfiguration.</span>
 
@@ -1107,7 +1107,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_max_gop</span> <span class="o">=</span> <span class="n">max_gop</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">open_gop</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">open_gop</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; bool</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the open_gop of this H265VideoConfiguration.</span>
 
@@ -1119,7 +1119,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_open_gop</span>
 
     <span class="nd">@open_gop</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">open_gop</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">open_gop</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">open_gop</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">open_gop</span><span class="p">):</span>
         <span class="c1"># type: (bool) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the open_gop of this H265VideoConfiguration.</span>
 
@@ -1136,7 +1136,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_open_gop</span> <span class="o">=</span> <span class="n">open_gop</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">min_keyframe_interval</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">min_keyframe_interval</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; float</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the min_keyframe_interval of this H265VideoConfiguration.</span>
 
@@ -1148,7 +1148,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_min_keyframe_interval</span>
 
     <span class="nd">@min_keyframe_interval</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">min_keyframe_interval</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">min_keyframe_interval</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">min_keyframe_interval</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">min_keyframe_interval</span><span class="p">):</span>
         <span class="c1"># type: (float) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the min_keyframe_interval of this H265VideoConfiguration.</span>
 
@@ -1165,7 +1165,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_min_keyframe_interval</span> <span class="o">=</span> <span class="n">min_keyframe_interval</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">max_keyframe_interval</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">max_keyframe_interval</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; float</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the max_keyframe_interval of this H265VideoConfiguration.</span>
 
@@ -1177,7 +1177,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_max_keyframe_interval</span>
 
     <span class="nd">@max_keyframe_interval</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">max_keyframe_interval</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">max_keyframe_interval</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">max_keyframe_interval</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">max_keyframe_interval</span><span class="p">):</span>
         <span class="c1"># type: (float) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the max_keyframe_interval of this H265VideoConfiguration.</span>
 
@@ -1194,7 +1194,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_max_keyframe_interval</span> <span class="o">=</span> <span class="n">max_keyframe_interval</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">level</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">level</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; LevelH265</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the level of this H265VideoConfiguration.</span>
 
@@ -1205,7 +1205,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_level</span>
 
     <span class="nd">@level</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">level</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">level</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">level</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">level</span><span class="p">):</span>
         <span class="c1"># type: (LevelH265) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the level of this H265VideoConfiguration.</span>
 
@@ -1221,7 +1221,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_level</span> <span class="o">=</span> <span class="n">level</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">rc_lookahead</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">rc_lookahead</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the rc_lookahead of this H265VideoConfiguration.</span>
 
@@ -1233,7 +1233,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_rc_lookahead</span>
 
     <span class="nd">@rc_lookahead</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">rc_lookahead</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rc_lookahead</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">rc_lookahead</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rc_lookahead</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the rc_lookahead of this H265VideoConfiguration.</span>
 
@@ -1254,7 +1254,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_rc_lookahead</span> <span class="o">=</span> <span class="n">rc_lookahead</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">b_adapt</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">b_adapt</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; BAdapt</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the b_adapt of this H265VideoConfiguration.</span>
 
@@ -1266,7 +1266,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_b_adapt</span>
 
     <span class="nd">@b_adapt</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">b_adapt</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">b_adapt</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">b_adapt</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">b_adapt</span><span class="p">):</span>
         <span class="c1"># type: (BAdapt) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the b_adapt of this H265VideoConfiguration.</span>
 
@@ -1283,7 +1283,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_b_adapt</span> <span class="o">=</span> <span class="n">b_adapt</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">max_ctu_size</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">max_ctu_size</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; MaxCtuSize</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the max_ctu_size of this H265VideoConfiguration.</span>
 
@@ -1294,7 +1294,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_max_ctu_size</span>
 
     <span class="nd">@max_ctu_size</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">max_ctu_size</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">max_ctu_size</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">max_ctu_size</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">max_ctu_size</span><span class="p">):</span>
         <span class="c1"># type: (MaxCtuSize) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the max_ctu_size of this H265VideoConfiguration.</span>
 
@@ -1310,7 +1310,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_max_ctu_size</span> <span class="o">=</span> <span class="n">max_ctu_size</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">tu_intra_depth</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">tu_intra_depth</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; TuIntraDepth</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the tu_intra_depth of this H265VideoConfiguration.</span>
 
@@ -1321,7 +1321,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_tu_intra_depth</span>
 
     <span class="nd">@tu_intra_depth</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">tu_intra_depth</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">tu_intra_depth</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">tu_intra_depth</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">tu_intra_depth</span><span class="p">):</span>
         <span class="c1"># type: (TuIntraDepth) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the tu_intra_depth of this H265VideoConfiguration.</span>
 
@@ -1337,7 +1337,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_tu_intra_depth</span> <span class="o">=</span> <span class="n">tu_intra_depth</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">tu_inter_depth</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">tu_inter_depth</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; TuInterDepth</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the tu_inter_depth of this H265VideoConfiguration.</span>
 
@@ -1348,7 +1348,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_tu_inter_depth</span>
 
     <span class="nd">@tu_inter_depth</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">tu_inter_depth</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">tu_inter_depth</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">tu_inter_depth</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">tu_inter_depth</span><span class="p">):</span>
         <span class="c1"># type: (TuInterDepth) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the tu_inter_depth of this H265VideoConfiguration.</span>
 
@@ -1364,7 +1364,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_tu_inter_depth</span> <span class="o">=</span> <span class="n">tu_inter_depth</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">motion_search</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">motion_search</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; MotionSearch</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the motion_search of this H265VideoConfiguration.</span>
 
@@ -1375,7 +1375,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_motion_search</span>
 
     <span class="nd">@motion_search</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">motion_search</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">motion_search</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">motion_search</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">motion_search</span><span class="p">):</span>
         <span class="c1"># type: (MotionSearch) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the motion_search of this H265VideoConfiguration.</span>
 
@@ -1391,7 +1391,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_motion_search</span> <span class="o">=</span> <span class="n">motion_search</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">sub_me</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">sub_me</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the sub_me of this H265VideoConfiguration.</span>
 
@@ -1403,7 +1403,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sub_me</span>
 
     <span class="nd">@sub_me</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">sub_me</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sub_me</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">sub_me</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sub_me</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the sub_me of this H265VideoConfiguration.</span>
 
@@ -1424,7 +1424,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_sub_me</span> <span class="o">=</span> <span class="n">sub_me</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">motion_search_range</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">motion_search_range</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the motion_search_range of this H265VideoConfiguration.</span>
 
@@ -1436,7 +1436,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_motion_search_range</span>
 
     <span class="nd">@motion_search_range</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">motion_search_range</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">motion_search_range</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">motion_search_range</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">motion_search_range</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the motion_search_range of this H265VideoConfiguration.</span>
 
@@ -1457,7 +1457,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_motion_search_range</span> <span class="o">=</span> <span class="n">motion_search_range</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">weight_prediction_on_p_slice</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">weight_prediction_on_p_slice</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; bool</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the weight_prediction_on_p_slice of this H265VideoConfiguration.</span>
 
@@ -1469,7 +1469,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_weight_prediction_on_p_slice</span>
 
     <span class="nd">@weight_prediction_on_p_slice</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">weight_prediction_on_p_slice</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">weight_prediction_on_p_slice</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">weight_prediction_on_p_slice</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">weight_prediction_on_p_slice</span><span class="p">):</span>
         <span class="c1"># type: (bool) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the weight_prediction_on_p_slice of this H265VideoConfiguration.</span>
 
@@ -1486,7 +1486,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_weight_prediction_on_p_slice</span> <span class="o">=</span> <span class="n">weight_prediction_on_p_slice</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">weight_prediction_on_b_slice</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">weight_prediction_on_b_slice</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; bool</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the weight_prediction_on_b_slice of this H265VideoConfiguration.</span>
 
@@ -1498,7 +1498,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_weight_prediction_on_b_slice</span>
 
     <span class="nd">@weight_prediction_on_b_slice</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">weight_prediction_on_b_slice</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">weight_prediction_on_b_slice</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">weight_prediction_on_b_slice</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">weight_prediction_on_b_slice</span><span class="p">):</span>
         <span class="c1"># type: (bool) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the weight_prediction_on_b_slice of this H265VideoConfiguration.</span>
 
@@ -1515,7 +1515,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_weight_prediction_on_b_slice</span> <span class="o">=</span> <span class="n">weight_prediction_on_b_slice</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">sao</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">sao</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; bool</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the sao of this H265VideoConfiguration.</span>
 
@@ -1527,7 +1527,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sao</span>
 
     <span class="nd">@sao</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">sao</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sao</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">sao</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sao</span><span class="p">):</span>
         <span class="c1"># type: (bool) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the sao of this H265VideoConfiguration.</span>
 
@@ -1544,7 +1544,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_sao</span> <span class="o">=</span> <span class="n">sao</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">master_display</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">master_display</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; string_types</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the master_display of this H265VideoConfiguration.</span>
 
@@ -1556,7 +1556,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_master_display</span>
 
     <span class="nd">@master_display</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">master_display</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">master_display</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">master_display</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">master_display</span><span class="p">):</span>
         <span class="c1"># type: (string_types) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the master_display of this H265VideoConfiguration.</span>
 
@@ -1573,7 +1573,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_master_display</span> <span class="o">=</span> <span class="n">master_display</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">max_content_light_level</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">max_content_light_level</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the max_content_light_level of this H265VideoConfiguration.</span>
 
@@ -1585,7 +1585,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_max_content_light_level</span>
 
     <span class="nd">@max_content_light_level</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">max_content_light_level</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">max_content_light_level</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">max_content_light_level</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">max_content_light_level</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the max_content_light_level of this H265VideoConfiguration.</span>
 
@@ -1602,7 +1602,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_max_content_light_level</span> <span class="o">=</span> <span class="n">max_content_light_level</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">max_picture_average_light_level</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">max_picture_average_light_level</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the max_picture_average_light_level of this H265VideoConfiguration.</span>
 
@@ -1614,7 +1614,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_max_picture_average_light_level</span>
 
     <span class="nd">@max_picture_average_light_level</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">max_picture_average_light_level</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">max_picture_average_light_level</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">max_picture_average_light_level</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">max_picture_average_light_level</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the max_picture_average_light_level of this H265VideoConfiguration.</span>
 
@@ -1631,7 +1631,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_max_picture_average_light_level</span> <span class="o">=</span> <span class="n">max_picture_average_light_level</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">hdr</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">hdr</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; bool</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the hdr of this H265VideoConfiguration.</span>
 
@@ -1643,7 +1643,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_hdr</span>
 
     <span class="nd">@hdr</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">hdr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">hdr</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">hdr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">hdr</span><span class="p">):</span>
         <span class="c1"># type: (bool) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the hdr of this H265VideoConfiguration.</span>
 
@@ -1660,7 +1660,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_hdr</span> <span class="o">=</span> <span class="n">hdr</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">scene_cut_threshold</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">scene_cut_threshold</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the scene_cut_threshold of this H265VideoConfiguration.</span>
 
@@ -1672,7 +1672,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_scene_cut_threshold</span>
 
     <span class="nd">@scene_cut_threshold</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">scene_cut_threshold</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">scene_cut_threshold</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">scene_cut_threshold</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">scene_cut_threshold</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the scene_cut_threshold of this H265VideoConfiguration.</span>
 
@@ -1691,7 +1691,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_scene_cut_threshold</span> <span class="o">=</span> <span class="n">scene_cut_threshold</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">adaptive_quantization_mode</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">adaptive_quantization_mode</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; AdaptiveQuantMode</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the adaptive_quantization_mode of this H265VideoConfiguration.</span>
 
@@ -1703,7 +1703,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_adaptive_quantization_mode</span>
 
     <span class="nd">@adaptive_quantization_mode</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">adaptive_quantization_mode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">adaptive_quantization_mode</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">adaptive_quantization_mode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">adaptive_quantization_mode</span><span class="p">):</span>
         <span class="c1"># type: (AdaptiveQuantMode) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the adaptive_quantization_mode of this H265VideoConfiguration.</span>
 
@@ -1720,7 +1720,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_adaptive_quantization_mode</span> <span class="o">=</span> <span class="n">adaptive_quantization_mode</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">enable_hlg_signaling</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">enable_hlg_signaling</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; bool</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the enable_hlg_signaling of this H265VideoConfiguration.</span>
 
@@ -1732,7 +1732,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_enable_hlg_signaling</span>
 
     <span class="nd">@enable_hlg_signaling</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">enable_hlg_signaling</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">enable_hlg_signaling</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">enable_hlg_signaling</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">enable_hlg_signaling</span><span class="p">):</span>
         <span class="c1"># type: (bool) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the enable_hlg_signaling of this H265VideoConfiguration.</span>
 
@@ -1749,7 +1749,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_enable_hlg_signaling</span> <span class="o">=</span> <span class="n">enable_hlg_signaling</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">video_format</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">video_format</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; VideoFormat</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the video_format of this H265VideoConfiguration.</span>
 
@@ -1761,7 +1761,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_video_format</span>
 
     <span class="nd">@video_format</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">video_format</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">video_format</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">video_format</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">video_format</span><span class="p">):</span>
         <span class="c1"># type: (VideoFormat) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the video_format of this H265VideoConfiguration.</span>
 
@@ -1778,7 +1778,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_video_format</span> <span class="o">=</span> <span class="n">video_format</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">psy_rate_distortion_optimization</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">psy_rate_distortion_optimization</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; float</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the psy_rate_distortion_optimization of this H265VideoConfiguration.</span>
 
@@ -1790,7 +1790,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_psy_rate_distortion_optimization</span>
 
     <span class="nd">@psy_rate_distortion_optimization</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">psy_rate_distortion_optimization</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">psy_rate_distortion_optimization</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">psy_rate_distortion_optimization</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">psy_rate_distortion_optimization</span><span class="p">):</span>
         <span class="c1"># type: (float) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the psy_rate_distortion_optimization of this H265VideoConfiguration.</span>
 
@@ -1811,7 +1811,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_psy_rate_distortion_optimization</span> <span class="o">=</span> <span class="n">psy_rate_distortion_optimization</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">psy_rate_distortion_optimized_quantization</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">psy_rate_distortion_optimized_quantization</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; float</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the psy_rate_distortion_optimized_quantization of this H265VideoConfiguration.</span>
 
@@ -1823,7 +1823,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_psy_rate_distortion_optimized_quantization</span>
 
     <span class="nd">@psy_rate_distortion_optimized_quantization</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">psy_rate_distortion_optimized_quantization</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">psy_rate_distortion_optimized_quantization</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">psy_rate_distortion_optimized_quantization</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">psy_rate_distortion_optimized_quantization</span><span class="p">):</span>
         <span class="c1"># type: (float) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the psy_rate_distortion_optimized_quantization of this H265VideoConfiguration.</span>
 
@@ -1844,7 +1844,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_psy_rate_distortion_optimized_quantization</span> <span class="o">=</span> <span class="n">psy_rate_distortion_optimized_quantization</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">enable_hrd_signaling</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">enable_hrd_signaling</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; bool</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the enable_hrd_signaling of this H265VideoConfiguration.</span>
 
@@ -1856,7 +1856,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_enable_hrd_signaling</span>
 
     <span class="nd">@enable_hrd_signaling</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">enable_hrd_signaling</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">enable_hrd_signaling</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">enable_hrd_signaling</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">enable_hrd_signaling</span><span class="p">):</span>
         <span class="c1"># type: (bool) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the enable_hrd_signaling of this H265VideoConfiguration.</span>
 
@@ -1873,7 +1873,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_enable_hrd_signaling</span> <span class="o">=</span> <span class="n">enable_hrd_signaling</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">cutree</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">cutree</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; bool</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the cutree of this H265VideoConfiguration.</span>
 
@@ -1885,7 +1885,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cutree</span>
 
     <span class="nd">@cutree</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">cutree</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cutree</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">cutree</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cutree</span><span class="p">):</span>
         <span class="c1"># type: (bool) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the cutree of this H265VideoConfiguration.</span>
 
@@ -1902,7 +1902,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_cutree</span> <span class="o">=</span> <span class="n">cutree</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">min_coding_unit_size</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">min_coding_unit_size</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; MinCodingUnitSize</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the min_coding_unit_size of this H265VideoConfiguration.</span>
 
@@ -1914,7 +1914,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_min_coding_unit_size</span>
 
     <span class="nd">@min_coding_unit_size</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">min_coding_unit_size</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">min_coding_unit_size</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">min_coding_unit_size</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">min_coding_unit_size</span><span class="p">):</span>
         <span class="c1"># type: (MinCodingUnitSize) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the min_coding_unit_size of this H265VideoConfiguration.</span>
 
@@ -1931,7 +1931,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_min_coding_unit_size</span> <span class="o">=</span> <span class="n">min_coding_unit_size</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">lookahead_slices</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">lookahead_slices</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the lookahead_slices of this H265VideoConfiguration.</span>
 
@@ -1943,7 +1943,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_lookahead_slices</span>
 
     <span class="nd">@lookahead_slices</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">lookahead_slices</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">lookahead_slices</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">lookahead_slices</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">lookahead_slices</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the lookahead_slices of this H265VideoConfiguration.</span>
 
@@ -1960,7 +1960,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_lookahead_slices</span> <span class="o">=</span> <span class="n">lookahead_slices</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">limit_references</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">limit_references</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; LimitReferences</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the limit_references of this H265VideoConfiguration.</span>
 
@@ -1972,7 +1972,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_limit_references</span>
 
     <span class="nd">@limit_references</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">limit_references</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">limit_references</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">limit_references</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">limit_references</span><span class="p">):</span>
         <span class="c1"># type: (LimitReferences) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the limit_references of this H265VideoConfiguration.</span>
 
@@ -1989,7 +1989,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_limit_references</span> <span class="o">=</span> <span class="n">limit_references</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">rectangular_motion_partitions_analysis</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">rectangular_motion_partitions_analysis</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; bool</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the rectangular_motion_partitions_analysis of this H265VideoConfiguration.</span>
 
@@ -2001,7 +2001,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_rectangular_motion_partitions_analysis</span>
 
     <span class="nd">@rectangular_motion_partitions_analysis</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">rectangular_motion_partitions_analysis</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rectangular_motion_partitions_analysis</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">rectangular_motion_partitions_analysis</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rectangular_motion_partitions_analysis</span><span class="p">):</span>
         <span class="c1"># type: (bool) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the rectangular_motion_partitions_analysis of this H265VideoConfiguration.</span>
 
@@ -2018,7 +2018,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_rectangular_motion_partitions_analysis</span> <span class="o">=</span> <span class="n">rectangular_motion_partitions_analysis</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">asymetric_motion_partitions_analysis</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">asymetric_motion_partitions_analysis</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; bool</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the asymetric_motion_partitions_analysis of this H265VideoConfiguration.</span>
 
@@ -2030,7 +2030,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_asymetric_motion_partitions_analysis</span>
 
     <span class="nd">@asymetric_motion_partitions_analysis</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">asymetric_motion_partitions_analysis</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">asymetric_motion_partitions_analysis</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">asymetric_motion_partitions_analysis</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">asymetric_motion_partitions_analysis</span><span class="p">):</span>
         <span class="c1"># type: (bool) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the asymetric_motion_partitions_analysis of this H265VideoConfiguration.</span>
 
@@ -2047,7 +2047,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_asymetric_motion_partitions_analysis</span> <span class="o">=</span> <span class="n">asymetric_motion_partitions_analysis</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">limit_modes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">limit_modes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; bool</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the limit_modes of this H265VideoConfiguration.</span>
 
@@ -2059,7 +2059,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_limit_modes</span>
 
     <span class="nd">@limit_modes</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">limit_modes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">limit_modes</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">limit_modes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">limit_modes</span><span class="p">):</span>
         <span class="c1"># type: (bool) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the limit_modes of this H265VideoConfiguration.</span>
 
@@ -2076,7 +2076,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_limit_modes</span> <span class="o">=</span> <span class="n">limit_modes</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">max_merge</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">max_merge</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the max_merge of this H265VideoConfiguration.</span>
 
@@ -2088,7 +2088,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_max_merge</span>
 
     <span class="nd">@max_merge</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">max_merge</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">max_merge</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">max_merge</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">max_merge</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the max_merge of this H265VideoConfiguration.</span>
 
@@ -2105,7 +2105,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_max_merge</span> <span class="o">=</span> <span class="n">max_merge</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">early_skip</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">early_skip</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; bool</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the early_skip of this H265VideoConfiguration.</span>
 
@@ -2117,7 +2117,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_early_skip</span>
 
     <span class="nd">@early_skip</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">early_skip</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">early_skip</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">early_skip</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">early_skip</span><span class="p">):</span>
         <span class="c1"># type: (bool) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the early_skip of this H265VideoConfiguration.</span>
 
@@ -2134,7 +2134,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_early_skip</span> <span class="o">=</span> <span class="n">early_skip</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">recursion_skip</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">recursion_skip</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; bool</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the recursion_skip of this H265VideoConfiguration.</span>
 
@@ -2146,7 +2146,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_recursion_skip</span>
 
     <span class="nd">@recursion_skip</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">recursion_skip</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">recursion_skip</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">recursion_skip</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">recursion_skip</span><span class="p">):</span>
         <span class="c1"># type: (bool) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the recursion_skip of this H265VideoConfiguration.</span>
 
@@ -2163,7 +2163,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_recursion_skip</span> <span class="o">=</span> <span class="n">recursion_skip</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">fast_search_for_angular_intra_predictions</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">fast_search_for_angular_intra_predictions</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; bool</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the fast_search_for_angular_intra_predictions of this H265VideoConfiguration.</span>
 
@@ -2175,7 +2175,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_fast_search_for_angular_intra_predictions</span>
 
     <span class="nd">@fast_search_for_angular_intra_predictions</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">fast_search_for_angular_intra_predictions</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fast_search_for_angular_intra_predictions</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">fast_search_for_angular_intra_predictions</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fast_search_for_angular_intra_predictions</span><span class="p">):</span>
         <span class="c1"># type: (bool) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the fast_search_for_angular_intra_predictions of this H265VideoConfiguration.</span>
 
@@ -2192,7 +2192,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_fast_search_for_angular_intra_predictions</span> <span class="o">=</span> <span class="n">fast_search_for_angular_intra_predictions</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">evaluation_of_intra_modes_in_b_slices</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">evaluation_of_intra_modes_in_b_slices</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; bool</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the evaluation_of_intra_modes_in_b_slices of this H265VideoConfiguration.</span>
 
@@ -2204,7 +2204,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_evaluation_of_intra_modes_in_b_slices</span>
 
     <span class="nd">@evaluation_of_intra_modes_in_b_slices</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">evaluation_of_intra_modes_in_b_slices</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">evaluation_of_intra_modes_in_b_slices</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">evaluation_of_intra_modes_in_b_slices</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">evaluation_of_intra_modes_in_b_slices</span><span class="p">):</span>
         <span class="c1"># type: (bool) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the evaluation_of_intra_modes_in_b_slices of this H265VideoConfiguration.</span>
 
@@ -2221,7 +2221,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_evaluation_of_intra_modes_in_b_slices</span> <span class="o">=</span> <span class="n">evaluation_of_intra_modes_in_b_slices</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">sign_hide</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">sign_hide</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; bool</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the sign_hide of this H265VideoConfiguration.</span>
 
@@ -2233,7 +2233,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sign_hide</span>
 
     <span class="nd">@sign_hide</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">sign_hide</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sign_hide</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">sign_hide</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sign_hide</span><span class="p">):</span>
         <span class="c1"># type: (bool) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the sign_hide of this H265VideoConfiguration.</span>
 
@@ -2250,7 +2250,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_sign_hide</span> <span class="o">=</span> <span class="n">sign_hide</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">rate_distortion_level_for_mode_decision</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">rate_distortion_level_for_mode_decision</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the rate_distortion_level_for_mode_decision of this H265VideoConfiguration.</span>
 
@@ -2262,7 +2262,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_rate_distortion_level_for_mode_decision</span>
 
     <span class="nd">@rate_distortion_level_for_mode_decision</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">rate_distortion_level_for_mode_decision</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rate_distortion_level_for_mode_decision</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">rate_distortion_level_for_mode_decision</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rate_distortion_level_for_mode_decision</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the rate_distortion_level_for_mode_decision of this H265VideoConfiguration.</span>
 
@@ -2279,7 +2279,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_rate_distortion_level_for_mode_decision</span> <span class="o">=</span> <span class="n">rate_distortion_level_for_mode_decision</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">rate_distortion_level_for_quantization</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">rate_distortion_level_for_quantization</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; RateDistortionLevelForQuantization</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the rate_distortion_level_for_quantization of this H265VideoConfiguration.</span>
 
@@ -2291,7 +2291,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_rate_distortion_level_for_quantization</span>
 
     <span class="nd">@rate_distortion_level_for_quantization</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">rate_distortion_level_for_quantization</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rate_distortion_level_for_quantization</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">rate_distortion_level_for_quantization</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rate_distortion_level_for_quantization</span><span class="p">):</span>
         <span class="c1"># type: (RateDistortionLevelForQuantization) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the rate_distortion_level_for_quantization of this H265VideoConfiguration.</span>
 
@@ -2308,7 +2308,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_rate_distortion_level_for_quantization</span> <span class="o">=</span> <span class="n">rate_distortion_level_for_quantization</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">qp_min</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">qp_min</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the qp_min of this H265VideoConfiguration.</span>
 
@@ -2320,7 +2320,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_qp_min</span>
 
     <span class="nd">@qp_min</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">qp_min</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">qp_min</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">qp_min</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">qp_min</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the qp_min of this H265VideoConfiguration.</span>
 
@@ -2341,7 +2341,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_qp_min</span> <span class="o">=</span> <span class="n">qp_min</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">qp_max</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">qp_max</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the qp_max of this H265VideoConfiguration.</span>
 
@@ -2353,7 +2353,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_qp_max</span>
 
     <span class="nd">@qp_max</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">qp_max</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">qp_max</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">qp_max</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">qp_max</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the qp_max of this H265VideoConfiguration.</span>
 
@@ -2374,7 +2374,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_qp_max</span> <span class="o">=</span> <span class="n">qp_max</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">wavefront_parallel_processing</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">wavefront_parallel_processing</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; bool</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the wavefront_parallel_processing of this H265VideoConfiguration.</span>
 
@@ -2386,7 +2386,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_wavefront_parallel_processing</span>
 
     <span class="nd">@wavefront_parallel_processing</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">wavefront_parallel_processing</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">wavefront_parallel_processing</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">wavefront_parallel_processing</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">wavefront_parallel_processing</span><span class="p">):</span>
         <span class="c1"># type: (bool) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the wavefront_parallel_processing of this H265VideoConfiguration.</span>
 
@@ -2403,7 +2403,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_wavefront_parallel_processing</span> <span class="o">=</span> <span class="n">wavefront_parallel_processing</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">slices</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">slices</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the slices of this H265VideoConfiguration.</span>
 
@@ -2415,7 +2415,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_slices</span>
 
     <span class="nd">@slices</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">slices</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">slices</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">slices</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">slices</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the slices of this H265VideoConfiguration.</span>
 
@@ -2432,7 +2432,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_slices</span> <span class="o">=</span> <span class="n">slices</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">copy_picture</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">copy_picture</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; bool</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the copy_picture of this H265VideoConfiguration.</span>
 
@@ -2444,7 +2444,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_copy_picture</span>
 
     <span class="nd">@copy_picture</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">copy_picture</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">copy_picture</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">copy_picture</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">copy_picture</span><span class="p">):</span>
         <span class="c1"># type: (bool) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the copy_picture of this H265VideoConfiguration.</span>
 
@@ -2461,7 +2461,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_copy_picture</span> <span class="o">=</span> <span class="n">copy_picture</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">level_high_tier</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">level_high_tier</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; bool</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the level_high_tier of this H265VideoConfiguration.</span>
 
@@ -2473,7 +2473,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_level_high_tier</span>
 
     <span class="nd">@level_high_tier</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">level_high_tier</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">level_high_tier</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">level_high_tier</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">level_high_tier</span><span class="p">):</span>
         <span class="c1"># type: (bool) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the level_high_tier of this H265VideoConfiguration.</span>
 
@@ -2490,7 +2490,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_level_high_tier</span> <span class="o">=</span> <span class="n">level_high_tier</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">skip_split_rate_distortion_analysis</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">skip_split_rate_distortion_analysis</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; bool</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the skip_split_rate_distortion_analysis of this H265VideoConfiguration.</span>
 
@@ -2502,7 +2502,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_skip_split_rate_distortion_analysis</span>
 
     <span class="nd">@skip_split_rate_distortion_analysis</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">skip_split_rate_distortion_analysis</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">skip_split_rate_distortion_analysis</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">skip_split_rate_distortion_analysis</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">skip_split_rate_distortion_analysis</span><span class="p">):</span>
         <span class="c1"># type: (bool) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the skip_split_rate_distortion_analysis of this H265VideoConfiguration.</span>
 
@@ -2519,7 +2519,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_skip_split_rate_distortion_analysis</span> <span class="o">=</span> <span class="n">skip_split_rate_distortion_analysis</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">coding_unit_lossless</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">coding_unit_lossless</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; bool</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the coding_unit_lossless of this H265VideoConfiguration.</span>
 
@@ -2531,7 +2531,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_coding_unit_lossless</span>
 
     <span class="nd">@coding_unit_lossless</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">coding_unit_lossless</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">coding_unit_lossless</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">coding_unit_lossless</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">coding_unit_lossless</span><span class="p">):</span>
         <span class="c1"># type: (bool) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the coding_unit_lossless of this H265VideoConfiguration.</span>
 
@@ -2548,7 +2548,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_coding_unit_lossless</span> <span class="o">=</span> <span class="n">coding_unit_lossless</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">transform_skip</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">transform_skip</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; TransformSkipMode</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the transform_skip of this H265VideoConfiguration.</span>
 
@@ -2560,7 +2560,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_transform_skip</span>
 
     <span class="nd">@transform_skip</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">transform_skip</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">transform_skip</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">transform_skip</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">transform_skip</span><span class="p">):</span>
         <span class="c1"># type: (TransformSkipMode) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the transform_skip of this H265VideoConfiguration.</span>
 
@@ -2577,7 +2577,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_transform_skip</span> <span class="o">=</span> <span class="n">transform_skip</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">refine_rate_distortion_cost</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">refine_rate_distortion_cost</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; bool</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the refine_rate_distortion_cost of this H265VideoConfiguration.</span>
 
@@ -2589,7 +2589,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_refine_rate_distortion_cost</span>
 
     <span class="nd">@refine_rate_distortion_cost</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">refine_rate_distortion_cost</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">refine_rate_distortion_cost</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">refine_rate_distortion_cost</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">refine_rate_distortion_cost</span><span class="p">):</span>
         <span class="c1"># type: (bool) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the refine_rate_distortion_cost of this H265VideoConfiguration.</span>
 
@@ -2606,7 +2606,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_refine_rate_distortion_cost</span> <span class="o">=</span> <span class="n">refine_rate_distortion_cost</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">limit_transform_unit_depth_recursion</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">limit_transform_unit_depth_recursion</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; LimitTransformUnitDepthRecursionMode</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the limit_transform_unit_depth_recursion of this H265VideoConfiguration.</span>
 
@@ -2618,7 +2618,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_limit_transform_unit_depth_recursion</span>
 
     <span class="nd">@limit_transform_unit_depth_recursion</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">limit_transform_unit_depth_recursion</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">limit_transform_unit_depth_recursion</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">limit_transform_unit_depth_recursion</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">limit_transform_unit_depth_recursion</span><span class="p">):</span>
         <span class="c1"># type: (LimitTransformUnitDepthRecursionMode) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the limit_transform_unit_depth_recursion of this H265VideoConfiguration.</span>
 
@@ -2635,7 +2635,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_limit_transform_unit_depth_recursion</span> <span class="o">=</span> <span class="n">limit_transform_unit_depth_recursion</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">noise_reduction_intra</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">noise_reduction_intra</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the noise_reduction_intra of this H265VideoConfiguration.</span>
 
@@ -2647,7 +2647,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_noise_reduction_intra</span>
 
     <span class="nd">@noise_reduction_intra</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">noise_reduction_intra</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">noise_reduction_intra</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">noise_reduction_intra</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">noise_reduction_intra</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the noise_reduction_intra of this H265VideoConfiguration.</span>
 
@@ -2668,7 +2668,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_noise_reduction_intra</span> <span class="o">=</span> <span class="n">noise_reduction_intra</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">noise_reduction_inter</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">noise_reduction_inter</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the noise_reduction_inter of this H265VideoConfiguration.</span>
 
@@ -2680,7 +2680,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_noise_reduction_inter</span>
 
     <span class="nd">@noise_reduction_inter</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">noise_reduction_inter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">noise_reduction_inter</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">noise_reduction_inter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">noise_reduction_inter</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the noise_reduction_inter of this H265VideoConfiguration.</span>
 
@@ -2701,7 +2701,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_noise_reduction_inter</span> <span class="o">=</span> <span class="n">noise_reduction_inter</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">rate_distortion_penalty</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">rate_distortion_penalty</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; RateDistortionPenaltyMode</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the rate_distortion_penalty of this H265VideoConfiguration.</span>
 
@@ -2713,7 +2713,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_rate_distortion_penalty</span>
 
     <span class="nd">@rate_distortion_penalty</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">rate_distortion_penalty</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rate_distortion_penalty</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">rate_distortion_penalty</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rate_distortion_penalty</span><span class="p">):</span>
         <span class="c1"># type: (RateDistortionPenaltyMode) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the rate_distortion_penalty of this H265VideoConfiguration.</span>
 
@@ -2730,7 +2730,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_rate_distortion_penalty</span> <span class="o">=</span> <span class="n">rate_distortion_penalty</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">maximum_transform_unit_size</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">maximum_transform_unit_size</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; MaxTransformUnitSize</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the maximum_transform_unit_size of this H265VideoConfiguration.</span>
 
@@ -2742,7 +2742,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_maximum_transform_unit_size</span>
 
     <span class="nd">@maximum_transform_unit_size</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">maximum_transform_unit_size</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">maximum_transform_unit_size</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">maximum_transform_unit_size</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">maximum_transform_unit_size</span><span class="p">):</span>
         <span class="c1"># type: (MaxTransformUnitSize) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the maximum_transform_unit_size of this H265VideoConfiguration.</span>
 
@@ -2759,7 +2759,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_maximum_transform_unit_size</span> <span class="o">=</span> <span class="n">maximum_transform_unit_size</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">dynamic_rate_distortion_strength</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">dynamic_rate_distortion_strength</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the dynamic_rate_distortion_strength of this H265VideoConfiguration.</span>
 
@@ -2771,7 +2771,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_dynamic_rate_distortion_strength</span>
 
     <span class="nd">@dynamic_rate_distortion_strength</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">dynamic_rate_distortion_strength</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dynamic_rate_distortion_strength</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">dynamic_rate_distortion_strength</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dynamic_rate_distortion_strength</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the dynamic_rate_distortion_strength of this H265VideoConfiguration.</span>
 
@@ -2792,7 +2792,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_dynamic_rate_distortion_strength</span> <span class="o">=</span> <span class="n">dynamic_rate_distortion_strength</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">ssim_rate_distortion_optimization</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">ssim_rate_distortion_optimization</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; bool</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the ssim_rate_distortion_optimization of this H265VideoConfiguration.</span>
 
@@ -2804,7 +2804,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_ssim_rate_distortion_optimization</span>
 
     <span class="nd">@ssim_rate_distortion_optimization</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">ssim_rate_distortion_optimization</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ssim_rate_distortion_optimization</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">ssim_rate_distortion_optimization</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ssim_rate_distortion_optimization</span><span class="p">):</span>
         <span class="c1"># type: (bool) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the ssim_rate_distortion_optimization of this H265VideoConfiguration.</span>
 
@@ -2821,7 +2821,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_ssim_rate_distortion_optimization</span> <span class="o">=</span> <span class="n">ssim_rate_distortion_optimization</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">temporal_motion_vector_predictors</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">temporal_motion_vector_predictors</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; bool</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the temporal_motion_vector_predictors of this H265VideoConfiguration.</span>
 
@@ -2833,7 +2833,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_temporal_motion_vector_predictors</span>
 
     <span class="nd">@temporal_motion_vector_predictors</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">temporal_motion_vector_predictors</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">temporal_motion_vector_predictors</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">temporal_motion_vector_predictors</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">temporal_motion_vector_predictors</span><span class="p">):</span>
         <span class="c1"># type: (bool) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the temporal_motion_vector_predictors of this H265VideoConfiguration.</span>
 
@@ -2850,7 +2850,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_temporal_motion_vector_predictors</span> <span class="o">=</span> <span class="n">temporal_motion_vector_predictors</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">analyze_source_frame_pixels</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">analyze_source_frame_pixels</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; bool</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the analyze_source_frame_pixels of this H265VideoConfiguration.</span>
 
@@ -2862,7 +2862,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_analyze_source_frame_pixels</span>
 
     <span class="nd">@analyze_source_frame_pixels</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">analyze_source_frame_pixels</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">analyze_source_frame_pixels</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">analyze_source_frame_pixels</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">analyze_source_frame_pixels</span><span class="p">):</span>
         <span class="c1"># type: (bool) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the analyze_source_frame_pixels of this H265VideoConfiguration.</span>
 
@@ -2879,7 +2879,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_analyze_source_frame_pixels</span> <span class="o">=</span> <span class="n">analyze_source_frame_pixels</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">strong_intra_smoothing</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">strong_intra_smoothing</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; bool</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the strong_intra_smoothing of this H265VideoConfiguration.</span>
 
@@ -2891,7 +2891,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_strong_intra_smoothing</span>
 
     <span class="nd">@strong_intra_smoothing</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">strong_intra_smoothing</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">strong_intra_smoothing</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">strong_intra_smoothing</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">strong_intra_smoothing</span><span class="p">):</span>
         <span class="c1"># type: (bool) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the strong_intra_smoothing of this H265VideoConfiguration.</span>
 
@@ -2908,7 +2908,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_strong_intra_smoothing</span> <span class="o">=</span> <span class="n">strong_intra_smoothing</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">constrained_intra_prediction</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">constrained_intra_prediction</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; bool</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the constrained_intra_prediction of this H265VideoConfiguration.</span>
 
@@ -2920,7 +2920,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_constrained_intra_prediction</span>
 
     <span class="nd">@constrained_intra_prediction</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">constrained_intra_prediction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">constrained_intra_prediction</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">constrained_intra_prediction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">constrained_intra_prediction</span><span class="p">):</span>
         <span class="c1"># type: (bool) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the constrained_intra_prediction of this H265VideoConfiguration.</span>
 
@@ -2937,7 +2937,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_constrained_intra_prediction</span> <span class="o">=</span> <span class="n">constrained_intra_prediction</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">scenecut_bias</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">scenecut_bias</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; float</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the scenecut_bias of this H265VideoConfiguration.</span>
 
@@ -2949,7 +2949,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_scenecut_bias</span>
 
     <span class="nd">@scenecut_bias</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">scenecut_bias</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">scenecut_bias</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">scenecut_bias</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">scenecut_bias</span><span class="p">):</span>
         <span class="c1"># type: (float) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the scenecut_bias of this H265VideoConfiguration.</span>
 
@@ -2970,7 +2970,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_scenecut_bias</span> <span class="o">=</span> <span class="n">scenecut_bias</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">allowed_radl_before_idr</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">allowed_radl_before_idr</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the allowed_radl_before_idr of this H265VideoConfiguration.</span>
 
@@ -2982,7 +2982,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_allowed_radl_before_idr</span>
 
     <span class="nd">@allowed_radl_before_idr</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">allowed_radl_before_idr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">allowed_radl_before_idr</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">allowed_radl_before_idr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">allowed_radl_before_idr</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the allowed_radl_before_idr of this H265VideoConfiguration.</span>
 
@@ -2999,7 +2999,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_allowed_radl_before_idr</span> <span class="o">=</span> <span class="n">allowed_radl_before_idr</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">gop_lookahead</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">gop_lookahead</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the gop_lookahead of this H265VideoConfiguration.</span>
 
@@ -3011,7 +3011,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_gop_lookahead</span>
 
     <span class="nd">@gop_lookahead</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">gop_lookahead</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">gop_lookahead</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">gop_lookahead</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">gop_lookahead</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the gop_lookahead of this H265VideoConfiguration.</span>
 
@@ -3028,7 +3028,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_gop_lookahead</span> <span class="o">=</span> <span class="n">gop_lookahead</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">bframe_bias</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">bframe_bias</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the bframe_bias of this H265VideoConfiguration.</span>
 
@@ -3040,7 +3040,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_bframe_bias</span>
 
     <span class="nd">@bframe_bias</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">bframe_bias</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bframe_bias</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">bframe_bias</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bframe_bias</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the bframe_bias of this H265VideoConfiguration.</span>
 
@@ -3061,7 +3061,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_bframe_bias</span> <span class="o">=</span> <span class="n">bframe_bias</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">force_flush</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">force_flush</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; ForceFlushMode</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the force_flush of this H265VideoConfiguration.</span>
 
@@ -3073,7 +3073,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_force_flush</span>
 
     <span class="nd">@force_flush</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">force_flush</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">force_flush</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">force_flush</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">force_flush</span><span class="p">):</span>
         <span class="c1"># type: (ForceFlushMode) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the force_flush of this H265VideoConfiguration.</span>
 
@@ -3090,7 +3090,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_force_flush</span> <span class="o">=</span> <span class="n">force_flush</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">adaptive_quantization_strength</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">adaptive_quantization_strength</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; float</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the adaptive_quantization_strength of this H265VideoConfiguration.</span>
 
@@ -3102,7 +3102,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_adaptive_quantization_strength</span>
 
     <span class="nd">@adaptive_quantization_strength</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">adaptive_quantization_strength</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">adaptive_quantization_strength</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">adaptive_quantization_strength</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">adaptive_quantization_strength</span><span class="p">):</span>
         <span class="c1"># type: (float) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the adaptive_quantization_strength of this H265VideoConfiguration.</span>
 
@@ -3123,7 +3123,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_adaptive_quantization_strength</span> <span class="o">=</span> <span class="n">adaptive_quantization_strength</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">adaptive_quantization_motion</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">adaptive_quantization_motion</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; bool</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the adaptive_quantization_motion of this H265VideoConfiguration.</span>
 
@@ -3135,7 +3135,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_adaptive_quantization_motion</span>
 
     <span class="nd">@adaptive_quantization_motion</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">adaptive_quantization_motion</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">adaptive_quantization_motion</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">adaptive_quantization_motion</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">adaptive_quantization_motion</span><span class="p">):</span>
         <span class="c1"># type: (bool) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the adaptive_quantization_motion of this H265VideoConfiguration.</span>
 
@@ -3152,7 +3152,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_adaptive_quantization_motion</span> <span class="o">=</span> <span class="n">adaptive_quantization_motion</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">quantization_group_size</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">quantization_group_size</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; QuantizationGroupSize</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the quantization_group_size of this H265VideoConfiguration.</span>
 
@@ -3164,7 +3164,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_quantization_group_size</span>
 
     <span class="nd">@quantization_group_size</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">quantization_group_size</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">quantization_group_size</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">quantization_group_size</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">quantization_group_size</span><span class="p">):</span>
         <span class="c1"># type: (QuantizationGroupSize) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the quantization_group_size of this H265VideoConfiguration.</span>
 
@@ -3181,7 +3181,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_quantization_group_size</span> <span class="o">=</span> <span class="n">quantization_group_size</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">strict_cbr</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">strict_cbr</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; bool</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the strict_cbr of this H265VideoConfiguration.</span>
 
@@ -3193,7 +3193,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_strict_cbr</span>
 
     <span class="nd">@strict_cbr</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">strict_cbr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">strict_cbr</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">strict_cbr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">strict_cbr</span><span class="p">):</span>
         <span class="c1"># type: (bool) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the strict_cbr of this H265VideoConfiguration.</span>
 
@@ -3210,7 +3210,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_strict_cbr</span> <span class="o">=</span> <span class="n">strict_cbr</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">qp_offset_chroma_cb</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">qp_offset_chroma_cb</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the qp_offset_chroma_cb of this H265VideoConfiguration.</span>
 
@@ -3222,7 +3222,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_qp_offset_chroma_cb</span>
 
     <span class="nd">@qp_offset_chroma_cb</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">qp_offset_chroma_cb</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">qp_offset_chroma_cb</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">qp_offset_chroma_cb</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">qp_offset_chroma_cb</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the qp_offset_chroma_cb of this H265VideoConfiguration.</span>
 
@@ -3243,7 +3243,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_qp_offset_chroma_cb</span> <span class="o">=</span> <span class="n">qp_offset_chroma_cb</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">qp_offset_chroma_cr</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">qp_offset_chroma_cr</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the qp_offset_chroma_cr of this H265VideoConfiguration.</span>
 
@@ -3255,7 +3255,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_qp_offset_chroma_cr</span>
 
     <span class="nd">@qp_offset_chroma_cr</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">qp_offset_chroma_cr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">qp_offset_chroma_cr</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">qp_offset_chroma_cr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">qp_offset_chroma_cr</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the qp_offset_chroma_cr of this H265VideoConfiguration.</span>
 
@@ -3276,7 +3276,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_qp_offset_chroma_cr</span> <span class="o">=</span> <span class="n">qp_offset_chroma_cr</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">ip_ratio</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">ip_ratio</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; float</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the ip_ratio of this H265VideoConfiguration.</span>
 
@@ -3288,7 +3288,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_ip_ratio</span>
 
     <span class="nd">@ip_ratio</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">ip_ratio</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ip_ratio</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">ip_ratio</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ip_ratio</span><span class="p">):</span>
         <span class="c1"># type: (float) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the ip_ratio of this H265VideoConfiguration.</span>
 
@@ -3305,7 +3305,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_ip_ratio</span> <span class="o">=</span> <span class="n">ip_ratio</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">pb_ratio</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">pb_ratio</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; float</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the pb_ratio of this H265VideoConfiguration.</span>
 
@@ -3317,7 +3317,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_pb_ratio</span>
 
     <span class="nd">@pb_ratio</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">pb_ratio</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pb_ratio</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">pb_ratio</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pb_ratio</span><span class="p">):</span>
         <span class="c1"># type: (float) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the pb_ratio of this H265VideoConfiguration.</span>
 
@@ -3334,7 +3334,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_pb_ratio</span> <span class="o">=</span> <span class="n">pb_ratio</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">quantizer_curve_compression_factor</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">quantizer_curve_compression_factor</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; float</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the quantizer_curve_compression_factor of this H265VideoConfiguration.</span>
 
@@ -3346,7 +3346,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_quantizer_curve_compression_factor</span>
 
     <span class="nd">@quantizer_curve_compression_factor</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">quantizer_curve_compression_factor</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">quantizer_curve_compression_factor</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">quantizer_curve_compression_factor</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">quantizer_curve_compression_factor</span><span class="p">):</span>
         <span class="c1"># type: (float) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the quantizer_curve_compression_factor of this H265VideoConfiguration.</span>
 
@@ -3367,7 +3367,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_quantizer_curve_compression_factor</span> <span class="o">=</span> <span class="n">quantizer_curve_compression_factor</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">qp_step</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">qp_step</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the qp_step of this H265VideoConfiguration.</span>
 
@@ -3379,7 +3379,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_qp_step</span>
 
     <span class="nd">@qp_step</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">qp_step</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">qp_step</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">qp_step</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">qp_step</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the qp_step of this H265VideoConfiguration.</span>
 
@@ -3396,7 +3396,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_qp_step</span> <span class="o">=</span> <span class="n">qp_step</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">grain_optimized_rate_control</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">grain_optimized_rate_control</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; bool</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the grain_optimized_rate_control of this H265VideoConfiguration.</span>
 
@@ -3408,7 +3408,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_grain_optimized_rate_control</span>
 
     <span class="nd">@grain_optimized_rate_control</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">grain_optimized_rate_control</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">grain_optimized_rate_control</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">grain_optimized_rate_control</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">grain_optimized_rate_control</span><span class="p">):</span>
         <span class="c1"># type: (bool) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the grain_optimized_rate_control of this H265VideoConfiguration.</span>
 
@@ -3425,7 +3425,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_grain_optimized_rate_control</span> <span class="o">=</span> <span class="n">grain_optimized_rate_control</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">blur_quants</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">blur_quants</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; float</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the blur_quants of this H265VideoConfiguration.</span>
 
@@ -3437,7 +3437,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_blur_quants</span>
 
     <span class="nd">@blur_quants</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">blur_quants</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">blur_quants</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">blur_quants</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">blur_quants</span><span class="p">):</span>
         <span class="c1"># type: (float) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the blur_quants of this H265VideoConfiguration.</span>
 
@@ -3454,7 +3454,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_blur_quants</span> <span class="o">=</span> <span class="n">blur_quants</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">blur_complexity</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">blur_complexity</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; float</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the blur_complexity of this H265VideoConfiguration.</span>
 
@@ -3466,7 +3466,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_blur_complexity</span>
 
     <span class="nd">@blur_complexity</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">blur_complexity</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">blur_complexity</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">blur_complexity</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">blur_complexity</span><span class="p">):</span>
         <span class="c1"># type: (float) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the blur_complexity of this H265VideoConfiguration.</span>
 
@@ -3483,7 +3483,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_blur_complexity</span> <span class="o">=</span> <span class="n">blur_complexity</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">sao_non_deblock</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">sao_non_deblock</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; bool</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the sao_non_deblock of this H265VideoConfiguration.</span>
 
@@ -3495,7 +3495,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sao_non_deblock</span>
 
     <span class="nd">@sao_non_deblock</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">sao_non_deblock</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sao_non_deblock</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">sao_non_deblock</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sao_non_deblock</span><span class="p">):</span>
         <span class="c1"># type: (bool) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the sao_non_deblock of this H265VideoConfiguration.</span>
 
@@ -3512,7 +3512,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_sao_non_deblock</span> <span class="o">=</span> <span class="n">sao_non_deblock</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">limit_sao</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">limit_sao</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; bool</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the limit_sao of this H265VideoConfiguration.</span>
 
@@ -3524,7 +3524,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_limit_sao</span>
 
     <span class="nd">@limit_sao</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">limit_sao</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">limit_sao</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">limit_sao</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">limit_sao</span><span class="p">):</span>
         <span class="c1"># type: (bool) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the limit_sao of this H265VideoConfiguration.</span>
 
@@ -3541,7 +3541,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_limit_sao</span> <span class="o">=</span> <span class="n">limit_sao</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">lowpass_dct</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">lowpass_dct</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; bool</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the lowpass_dct of this H265VideoConfiguration.</span>
 
@@ -3553,7 +3553,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_lowpass_dct</span>
 
     <span class="nd">@lowpass_dct</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">lowpass_dct</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">lowpass_dct</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">lowpass_dct</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">lowpass_dct</span><span class="p">):</span>
         <span class="c1"># type: (bool) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the lowpass_dct of this H265VideoConfiguration.</span>
 
@@ -3570,7 +3570,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_lowpass_dct</span> <span class="o">=</span> <span class="n">lowpass_dct</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">cea608708_subtitle_config</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">cea608708_subtitle_config</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; Cea608708SubtitleConfiguration</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the cea608708_subtitle_config of this H265VideoConfiguration.</span>
 
@@ -3582,7 +3582,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cea608708_subtitle_config</span>
 
     <span class="nd">@cea608708_subtitle_config</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">cea608708_subtitle_config</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cea608708_subtitle_config</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">cea608708_subtitle_config</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cea608708_subtitle_config</span><span class="p">):</span>
         <span class="c1"># type: (Cea608708SubtitleConfiguration) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the cea608708_subtitle_config of this H265VideoConfiguration.</span>
 
@@ -3599,7 +3599,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_cea608708_subtitle_config</span> <span class="o">=</span> <span class="n">cea608708_subtitle_config</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">auto_level_setup</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">auto_level_setup</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; AutoLevelSetup</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the auto_level_setup of this H265VideoConfiguration.</span>
 
@@ -3611,7 +3611,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_auto_level_setup</span>
 
     <span class="nd">@auto_level_setup</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">auto_level_setup</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">auto_level_setup</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">auto_level_setup</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">auto_level_setup</span><span class="p">):</span>
         <span class="c1"># type: (AutoLevelSetup) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the auto_level_setup of this H265VideoConfiguration.</span>
 
@@ -3627,7 +3627,9 @@
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_auto_level_setup</span> <span class="o">=</span> <span class="n">auto_level_setup</span>
 
-<div class="viewcode-block" id="H265VideoConfiguration.to_dict"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.h265_video_configuration.H265VideoConfiguration.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="H265VideoConfiguration.to_dict">
+<a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.h265_video_configuration.H265VideoConfiguration.to_dict">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>
         <span class="n">result</span> <span class="o">=</span> <span class="p">{}</span>
 
@@ -3652,24 +3654,29 @@
 
         <span class="k">return</span> <span class="n">result</span></div>
 
-<div class="viewcode-block" id="H265VideoConfiguration.to_str"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.h265_video_configuration.H265VideoConfiguration.to_str">[docs]</a>    <span class="k">def</span> <span class="nf">to_str</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="H265VideoConfiguration.to_str">
+<a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.h265_video_configuration.H265VideoConfiguration.to_str">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">to_str</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the string representation of the model&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">pprint</span><span class="o">.</span><span class="n">pformat</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">to_dict</span><span class="p">())</span></div>
 
-    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;For `print` and `pprint`&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">to_str</span><span class="p">()</span>
 
-    <span class="k">def</span> <span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns true if both objects are equal&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">H265VideoConfiguration</span><span class="p">):</span>
             <span class="k">return</span> <span class="kc">False</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="vm">__dict__</span>
 
-    <span class="k">def</span> <span class="fm">__ne__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__ne__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns true if both objects are not equal&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="ow">not</span> <span class="bp">self</span> <span class="o">==</span> <span class="n">other</span></div>
+
 </pre></div>
 
            </div>

@@ -19,13 +19,13 @@ bitmovin\_api\_sdk.player.player\_api module
 
 .. automodule:: bitmovin_api_sdk.player.player_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.player
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

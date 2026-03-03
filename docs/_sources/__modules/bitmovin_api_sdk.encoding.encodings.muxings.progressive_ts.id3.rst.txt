@@ -19,21 +19,21 @@ bitmovin\_api\_sdk.encoding.encodings.muxings.progressive\_ts.id3.id3\_api modul
 
 .. automodule:: bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.id3.id3_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 bitmovin\_api\_sdk.encoding.encodings.muxings.progressive\_ts.id3.id3\_tag\_list\_query\_params module
 ------------------------------------------------------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.id3.id3_tag_list_query_params
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.id3
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

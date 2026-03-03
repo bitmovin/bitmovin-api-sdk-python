@@ -9,13 +9,13 @@ bitmovin\_api\_sdk.encoding.outputs.live\_media\_ingest.customdata.customdata\_a
 
 .. automodule:: bitmovin_api_sdk.encoding.outputs.live_media_ingest.customdata.customdata_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.encoding.outputs.live_media_ingest.customdata
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

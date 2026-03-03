@@ -9,21 +9,21 @@ bitmovin\_api\_sdk.encoding.infrastructure.akamai.regions.akamai\_account\_regio
 
 .. automodule:: bitmovin_api_sdk.encoding.infrastructure.akamai.regions.akamai_account_region_settings_list_query_params
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 bitmovin\_api\_sdk.encoding.infrastructure.akamai.regions.regions\_api module
 -----------------------------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.encoding.infrastructure.akamai.regions.regions_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.encoding.infrastructure.akamai.regions
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

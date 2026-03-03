@@ -28,21 +28,21 @@ bitmovin\_api\_sdk.encoding.encodings.streams.stream\_list\_query\_params module
 
 .. automodule:: bitmovin_api_sdk.encoding.encodings.streams.stream_list_query_params
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 bitmovin\_api\_sdk.encoding.encodings.streams.streams\_api module
 -----------------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.encoding.encodings.streams.streams_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.encoding.encodings.streams
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

@@ -9,13 +9,13 @@ bitmovin\_api\_sdk.encoding.encodings.muxings.progressive\_ts.id3.frame\_id.cust
 
 .. automodule:: bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.id3.frame_id.customdata.customdata_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.id3.frame_id.customdata
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

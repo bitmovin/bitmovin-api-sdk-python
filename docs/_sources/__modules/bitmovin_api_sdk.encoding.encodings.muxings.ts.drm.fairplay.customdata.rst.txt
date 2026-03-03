@@ -9,13 +9,13 @@ bitmovin\_api\_sdk.encoding.encodings.muxings.ts.drm.fairplay.customdata.customd
 
 .. automodule:: bitmovin_api_sdk.encoding.encodings.muxings.ts.drm.fairplay.customdata.customdata_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.encoding.encodings.muxings.ts.drm.fairplay.customdata
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

@@ -17,13 +17,13 @@ bitmovin\_api\_sdk.encoding.encodings.input\_streams.subtitles.subtitles\_api mo
 
 .. automodule:: bitmovin_api_sdk.encoding.encodings.input_streams.subtitles.subtitles_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.encoding.encodings.input_streams.subtitles
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

@@ -19,13 +19,13 @@ bitmovin\_api\_sdk.ai\_scene\_analysis.analyses.by\_encoding\_id.by\_encoding\_i
 
 .. automodule:: bitmovin_api_sdk.ai_scene_analysis.analyses.by_encoding_id.by_encoding_id_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.ai_scene_analysis.analyses.by_encoding_id
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

@@ -22,13 +22,13 @@ bitmovin\_api\_sdk.encoding.encodings.live.live\_api module
 
 .. automodule:: bitmovin_api_sdk.encoding.encodings.live.live_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.encoding.encodings.live
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

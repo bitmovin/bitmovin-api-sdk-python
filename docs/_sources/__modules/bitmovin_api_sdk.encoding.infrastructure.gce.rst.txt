@@ -17,21 +17,21 @@ bitmovin\_api\_sdk.encoding.infrastructure.gce.gce\_account\_list\_query\_params
 
 .. automodule:: bitmovin_api_sdk.encoding.infrastructure.gce.gce_account_list_query_params
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 bitmovin\_api\_sdk.encoding.infrastructure.gce.gce\_api module
 --------------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.encoding.infrastructure.gce.gce_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.encoding.infrastructure.gce
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

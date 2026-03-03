@@ -9,13 +9,13 @@ bitmovin\_api\_sdk.analytics.queries.stddev.stddev\_api module
 
 .. automodule:: bitmovin_api_sdk.analytics.queries.stddev.stddev_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.analytics.queries.stddev
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

@@ -17,21 +17,21 @@ bitmovin\_api\_sdk.encoding.filters.audio\_mix.audio\_mix\_api module
 
 .. automodule:: bitmovin_api_sdk.encoding.filters.audio_mix.audio_mix_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 bitmovin\_api\_sdk.encoding.filters.audio\_mix.audio\_mix\_filter\_list\_query\_params module
 ---------------------------------------------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.encoding.filters.audio_mix.audio_mix_filter_list_query_params
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.encoding.filters.audio_mix
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

@@ -20,13 +20,13 @@ bitmovin\_api\_sdk.account.organizations.organizations\_api module
 
 .. automodule:: bitmovin_api_sdk.account.organizations.organizations_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.account.organizations
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

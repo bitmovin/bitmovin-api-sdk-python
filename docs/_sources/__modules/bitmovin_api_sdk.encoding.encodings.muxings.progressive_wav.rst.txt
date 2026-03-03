@@ -18,21 +18,21 @@ bitmovin\_api\_sdk.encoding.encodings.muxings.progressive\_wav.progressive\_wav\
 
 .. automodule:: bitmovin_api_sdk.encoding.encodings.muxings.progressive_wav.progressive_wav_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 bitmovin\_api\_sdk.encoding.encodings.muxings.progressive\_wav.progressive\_wav\_muxing\_list\_query\_params module
 -------------------------------------------------------------------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.encoding.encodings.muxings.progressive_wav.progressive_wav_muxing_list_query_params
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.encoding.encodings.muxings.progressive_wav
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

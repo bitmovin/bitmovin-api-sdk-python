@@ -1,22 +1,20 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="en">
+<html class="writer-html5" lang="en" data-content_root="../../../">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>bitmovin_api_sdk.models.start_encoding_request &mdash; Bitmovin Python API SDK {{packageVersion}} documentation</title>
-      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=9edc463e" />
 
   
-  <!--[if lt IE 9]>
-    <script src="../../../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-        <script src="../../../_static/jquery.js"></script>
-        <script src="../../../_static/underscore.js"></script>
-        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="../../../_static/doctools.js"></script>
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=4dbdf2c3"></script>
+      <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" /> 
@@ -80,23 +78,25 @@
   <h1>Source code for bitmovin_api_sdk.models.start_encoding_request</h1><div class="highlight"><pre>
 <span></span><span class="c1"># coding: utf-8</span>
 
-<span class="kn">from</span> <span class="nn">enum</span> <span class="kn">import</span> <span class="n">Enum</span>
-<span class="kn">from</span> <span class="nn">six</span> <span class="kn">import</span> <span class="n">string_types</span><span class="p">,</span> <span class="n">iteritems</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.common.poscheck</span> <span class="kn">import</span> <span class="n">poscheck_model</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.ai_scene_analysis</span> <span class="kn">import</span> <span class="n">AiSceneAnalysis</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.encoding_mode</span> <span class="kn">import</span> <span class="n">EncodingMode</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.manifest_generator</span> <span class="kn">import</span> <span class="n">ManifestGenerator</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.per_title</span> <span class="kn">import</span> <span class="n">PerTitle</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.scheduling</span> <span class="kn">import</span> <span class="n">Scheduling</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.trimming</span> <span class="kn">import</span> <span class="n">Trimming</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.tweaks</span> <span class="kn">import</span> <span class="n">Tweaks</span>
-<span class="kn">import</span> <span class="nn">pprint</span>
-<span class="kn">import</span> <span class="nn">six</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">enum</span><span class="w"> </span><span class="kn">import</span> <span class="n">Enum</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">six</span><span class="w"> </span><span class="kn">import</span> <span class="n">string_types</span><span class="p">,</span> <span class="n">iteritems</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.common.poscheck</span><span class="w"> </span><span class="kn">import</span> <span class="n">poscheck_model</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.ai_scene_analysis</span><span class="w"> </span><span class="kn">import</span> <span class="n">AiSceneAnalysis</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.encoding_mode</span><span class="w"> </span><span class="kn">import</span> <span class="n">EncodingMode</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.manifest_generator</span><span class="w"> </span><span class="kn">import</span> <span class="n">ManifestGenerator</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.per_title</span><span class="w"> </span><span class="kn">import</span> <span class="n">PerTitle</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.scheduling</span><span class="w"> </span><span class="kn">import</span> <span class="n">Scheduling</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.trimming</span><span class="w"> </span><span class="kn">import</span> <span class="n">Trimming</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.tweaks</span><span class="w"> </span><span class="kn">import</span> <span class="n">Tweaks</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pprint</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">six</span>
 
 
-<div class="viewcode-block" id="StartEncodingRequest"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.start_encoding_request.StartEncodingRequest">[docs]</a><span class="k">class</span> <span class="nc">StartEncodingRequest</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="viewcode-block" id="StartEncodingRequest">
+<a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.start_encoding_request.StartEncodingRequest">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">StartEncodingRequest</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="nd">@poscheck_model</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
                  <span class="n">trimming</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">scheduling</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">tweaks</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
@@ -155,7 +155,7 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">ai_scene_analysis</span> <span class="o">=</span> <span class="n">ai_scene_analysis</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">types</span> <span class="o">=</span> <span class="p">{</span>
             <span class="s1">&#39;trimming&#39;</span><span class="p">:</span> <span class="s1">&#39;Trimming&#39;</span><span class="p">,</span>
             <span class="s1">&#39;scheduling&#39;</span><span class="p">:</span> <span class="s1">&#39;Scheduling&#39;</span><span class="p">,</span>
@@ -175,7 +175,7 @@
         <span class="k">return</span> <span class="n">types</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">attribute_map</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">attribute_map</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">attributes</span> <span class="o">=</span> <span class="p">{</span>
             <span class="s1">&#39;trimming&#39;</span><span class="p">:</span> <span class="s1">&#39;trimming&#39;</span><span class="p">,</span>
             <span class="s1">&#39;scheduling&#39;</span><span class="p">:</span> <span class="s1">&#39;scheduling&#39;</span><span class="p">,</span>
@@ -194,7 +194,7 @@
         <span class="k">return</span> <span class="n">attributes</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">trimming</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">trimming</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; Trimming</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the trimming of this StartEncodingRequest.</span>
 
@@ -206,7 +206,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_trimming</span>
 
     <span class="nd">@trimming</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">trimming</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">trimming</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">trimming</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">trimming</span><span class="p">):</span>
         <span class="c1"># type: (Trimming) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the trimming of this StartEncodingRequest.</span>
 
@@ -223,7 +223,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_trimming</span> <span class="o">=</span> <span class="n">trimming</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">scheduling</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">scheduling</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; Scheduling</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the scheduling of this StartEncodingRequest.</span>
 
@@ -235,7 +235,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_scheduling</span>
 
     <span class="nd">@scheduling</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">scheduling</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">scheduling</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">scheduling</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">scheduling</span><span class="p">):</span>
         <span class="c1"># type: (Scheduling) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the scheduling of this StartEncodingRequest.</span>
 
@@ -252,7 +252,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_scheduling</span> <span class="o">=</span> <span class="n">scheduling</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">tweaks</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">tweaks</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; Tweaks</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the tweaks of this StartEncodingRequest.</span>
 
@@ -264,7 +264,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_tweaks</span>
 
     <span class="nd">@tweaks</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">tweaks</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">tweaks</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">tweaks</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">tweaks</span><span class="p">):</span>
         <span class="c1"># type: (Tweaks) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the tweaks of this StartEncodingRequest.</span>
 
@@ -281,7 +281,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_tweaks</span> <span class="o">=</span> <span class="n">tweaks</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">handle_variable_input_fps</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">handle_variable_input_fps</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; bool</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the handle_variable_input_fps of this StartEncodingRequest.</span>
 
@@ -293,7 +293,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_handle_variable_input_fps</span>
 
     <span class="nd">@handle_variable_input_fps</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">handle_variable_input_fps</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">handle_variable_input_fps</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">handle_variable_input_fps</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">handle_variable_input_fps</span><span class="p">):</span>
         <span class="c1"># type: (bool) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the handle_variable_input_fps of this StartEncodingRequest.</span>
 
@@ -310,7 +310,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_handle_variable_input_fps</span> <span class="o">=</span> <span class="n">handle_variable_input_fps</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">encoding_mode</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">encoding_mode</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; EncodingMode</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the encoding_mode of this StartEncodingRequest.</span>
 
@@ -322,7 +322,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_encoding_mode</span>
 
     <span class="nd">@encoding_mode</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">encoding_mode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">encoding_mode</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">encoding_mode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">encoding_mode</span><span class="p">):</span>
         <span class="c1"># type: (EncodingMode) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the encoding_mode of this StartEncodingRequest.</span>
 
@@ -339,7 +339,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_encoding_mode</span> <span class="o">=</span> <span class="n">encoding_mode</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">preview_dash_manifests</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">preview_dash_manifests</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; list[ManifestResource]</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the preview_dash_manifests of this StartEncodingRequest.</span>
 
@@ -351,7 +351,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_preview_dash_manifests</span>
 
     <span class="nd">@preview_dash_manifests</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">preview_dash_manifests</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">preview_dash_manifests</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">preview_dash_manifests</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">preview_dash_manifests</span><span class="p">):</span>
         <span class="c1"># type: (list) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the preview_dash_manifests of this StartEncodingRequest.</span>
 
@@ -368,7 +368,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_preview_dash_manifests</span> <span class="o">=</span> <span class="n">preview_dash_manifests</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">preview_hls_manifests</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">preview_hls_manifests</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; list[ManifestResource]</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the preview_hls_manifests of this StartEncodingRequest.</span>
 
@@ -380,7 +380,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_preview_hls_manifests</span>
 
     <span class="nd">@preview_hls_manifests</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">preview_hls_manifests</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">preview_hls_manifests</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">preview_hls_manifests</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">preview_hls_manifests</span><span class="p">):</span>
         <span class="c1"># type: (list) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the preview_hls_manifests of this StartEncodingRequest.</span>
 
@@ -397,7 +397,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_preview_hls_manifests</span> <span class="o">=</span> <span class="n">preview_hls_manifests</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">vod_dash_manifests</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">vod_dash_manifests</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; list[ManifestResource]</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the vod_dash_manifests of this StartEncodingRequest.</span>
 
@@ -409,7 +409,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_vod_dash_manifests</span>
 
     <span class="nd">@vod_dash_manifests</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">vod_dash_manifests</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vod_dash_manifests</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">vod_dash_manifests</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vod_dash_manifests</span><span class="p">):</span>
         <span class="c1"># type: (list) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the vod_dash_manifests of this StartEncodingRequest.</span>
 
@@ -426,7 +426,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_vod_dash_manifests</span> <span class="o">=</span> <span class="n">vod_dash_manifests</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">vod_hls_manifests</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">vod_hls_manifests</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; list[ManifestResource]</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the vod_hls_manifests of this StartEncodingRequest.</span>
 
@@ -438,7 +438,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_vod_hls_manifests</span>
 
     <span class="nd">@vod_hls_manifests</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">vod_hls_manifests</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vod_hls_manifests</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">vod_hls_manifests</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vod_hls_manifests</span><span class="p">):</span>
         <span class="c1"># type: (list) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the vod_hls_manifests of this StartEncodingRequest.</span>
 
@@ -455,7 +455,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_vod_hls_manifests</span> <span class="o">=</span> <span class="n">vod_hls_manifests</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">vod_smooth_manifests</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">vod_smooth_manifests</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; list[ManifestResource]</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the vod_smooth_manifests of this StartEncodingRequest.</span>
 
@@ -467,7 +467,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_vod_smooth_manifests</span>
 
     <span class="nd">@vod_smooth_manifests</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">vod_smooth_manifests</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vod_smooth_manifests</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">vod_smooth_manifests</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vod_smooth_manifests</span><span class="p">):</span>
         <span class="c1"># type: (list) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the vod_smooth_manifests of this StartEncodingRequest.</span>
 
@@ -484,7 +484,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_vod_smooth_manifests</span> <span class="o">=</span> <span class="n">vod_smooth_manifests</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">manifest_generator</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">manifest_generator</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; ManifestGenerator</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the manifest_generator of this StartEncodingRequest.</span>
 
@@ -496,7 +496,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_manifest_generator</span>
 
     <span class="nd">@manifest_generator</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">manifest_generator</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">manifest_generator</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">manifest_generator</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">manifest_generator</span><span class="p">):</span>
         <span class="c1"># type: (ManifestGenerator) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the manifest_generator of this StartEncodingRequest.</span>
 
@@ -513,7 +513,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_manifest_generator</span> <span class="o">=</span> <span class="n">manifest_generator</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">per_title</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">per_title</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; PerTitle</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the per_title of this StartEncodingRequest.</span>
 
@@ -525,7 +525,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_per_title</span>
 
     <span class="nd">@per_title</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">per_title</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">per_title</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">per_title</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">per_title</span><span class="p">):</span>
         <span class="c1"># type: (PerTitle) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the per_title of this StartEncodingRequest.</span>
 
@@ -542,7 +542,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_per_title</span> <span class="o">=</span> <span class="n">per_title</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">ai_scene_analysis</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">ai_scene_analysis</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; AiSceneAnalysis</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the ai_scene_analysis of this StartEncodingRequest.</span>
 
@@ -554,7 +554,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_ai_scene_analysis</span>
 
     <span class="nd">@ai_scene_analysis</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">ai_scene_analysis</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ai_scene_analysis</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">ai_scene_analysis</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ai_scene_analysis</span><span class="p">):</span>
         <span class="c1"># type: (AiSceneAnalysis) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the ai_scene_analysis of this StartEncodingRequest.</span>
 
@@ -570,7 +570,9 @@
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_ai_scene_analysis</span> <span class="o">=</span> <span class="n">ai_scene_analysis</span>
 
-<div class="viewcode-block" id="StartEncodingRequest.to_dict"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.start_encoding_request.StartEncodingRequest.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="StartEncodingRequest.to_dict">
+<a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.start_encoding_request.StartEncodingRequest.to_dict">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>
         <span class="n">result</span> <span class="o">=</span> <span class="p">{}</span>
 
@@ -593,24 +595,29 @@
 
         <span class="k">return</span> <span class="n">result</span></div>
 
-<div class="viewcode-block" id="StartEncodingRequest.to_str"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.start_encoding_request.StartEncodingRequest.to_str">[docs]</a>    <span class="k">def</span> <span class="nf">to_str</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="StartEncodingRequest.to_str">
+<a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.start_encoding_request.StartEncodingRequest.to_str">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">to_str</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the string representation of the model&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">pprint</span><span class="o">.</span><span class="n">pformat</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">to_dict</span><span class="p">())</span></div>
 
-    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;For `print` and `pprint`&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">to_str</span><span class="p">()</span>
 
-    <span class="k">def</span> <span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns true if both objects are equal&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">StartEncodingRequest</span><span class="p">):</span>
             <span class="k">return</span> <span class="kc">False</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="vm">__dict__</span>
 
-    <span class="k">def</span> <span class="fm">__ne__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__ne__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns true if both objects are not equal&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="ow">not</span> <span class="bp">self</span> <span class="o">==</span> <span class="n">other</span></div>
+
 </pre></div>
 
            </div>

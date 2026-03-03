@@ -17,21 +17,21 @@ bitmovin\_api\_sdk.encoding.inputs.https.https\_api module
 
 .. automodule:: bitmovin_api_sdk.encoding.inputs.https.https_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 bitmovin\_api\_sdk.encoding.inputs.https.https\_input\_list\_query\_params module
 ---------------------------------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.encoding.inputs.https.https_input_list_query_params
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.encoding.inputs.https
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

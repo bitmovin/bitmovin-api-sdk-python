@@ -9,13 +9,13 @@ bitmovin\_api\_sdk.encoding.filters.deinterlace.customdata.customdata\_api modul
 
 .. automodule:: bitmovin_api_sdk.encoding.filters.deinterlace.customdata.customdata_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.encoding.filters.deinterlace.customdata
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

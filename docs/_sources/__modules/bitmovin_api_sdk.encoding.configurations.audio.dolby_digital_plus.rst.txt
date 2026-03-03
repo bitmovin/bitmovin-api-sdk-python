@@ -17,21 +17,21 @@ bitmovin\_api\_sdk.encoding.configurations.audio.dolby\_digital\_plus.dolby\_dig
 
 .. automodule:: bitmovin_api_sdk.encoding.configurations.audio.dolby_digital_plus.dolby_digital_plus_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 bitmovin\_api\_sdk.encoding.configurations.audio.dolby\_digital\_plus.dolby\_digital\_plus\_audio\_configuration\_list\_query\_params module
 --------------------------------------------------------------------------------------------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.encoding.configurations.audio.dolby_digital_plus.dolby_digital_plus_audio_configuration_list_query_params
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.encoding.configurations.audio.dolby_digital_plus
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

@@ -9,21 +9,21 @@ bitmovin\_api\_sdk.account.organizations.groups.invitations.invitation\_list\_qu
 
 .. automodule:: bitmovin_api_sdk.account.organizations.groups.invitations.invitation_list_query_params
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 bitmovin\_api\_sdk.account.organizations.groups.invitations.invitations\_api module
 -----------------------------------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.account.organizations.groups.invitations.invitations_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.account.organizations.groups.invitations
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

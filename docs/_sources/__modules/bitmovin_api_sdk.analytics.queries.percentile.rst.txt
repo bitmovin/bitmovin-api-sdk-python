@@ -9,13 +9,13 @@ bitmovin\_api\_sdk.analytics.queries.percentile.percentile\_api module
 
 .. automodule:: bitmovin_api_sdk.analytics.queries.percentile.percentile_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.analytics.queries.percentile
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

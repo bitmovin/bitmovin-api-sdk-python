@@ -9,21 +9,21 @@ bitmovin\_api\_sdk.encoding.encodings.keyframes.keyframe\_list\_query\_params mo
 
 .. automodule:: bitmovin_api_sdk.encoding.encodings.keyframes.keyframe_list_query_params
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 bitmovin\_api\_sdk.encoding.encodings.keyframes.keyframes\_api module
 ---------------------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.encoding.encodings.keyframes.keyframes_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.encoding.encodings.keyframes
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

@@ -1,22 +1,20 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="en">
+<html class="writer-html5" lang="en" data-content_root="../../../">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>bitmovin_api_sdk.models.analytics_license &mdash; Bitmovin Python API SDK {{packageVersion}} documentation</title>
-      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=9edc463e" />
 
   
-  <!--[if lt IE 9]>
-    <script src="../../../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-        <script src="../../../_static/jquery.js"></script>
-        <script src="../../../_static/underscore.js"></script>
-        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="../../../_static/doctools.js"></script>
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=4dbdf2c3"></script>
+      <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" /> 
@@ -80,19 +78,21 @@
   <h1>Source code for bitmovin_api_sdk.models.analytics_license</h1><div class="highlight"><pre>
 <span></span><span class="c1"># coding: utf-8</span>
 
-<span class="kn">from</span> <span class="nn">enum</span> <span class="kn">import</span> <span class="n">Enum</span>
-<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
-<span class="kn">from</span> <span class="nn">six</span> <span class="kn">import</span> <span class="n">string_types</span><span class="p">,</span> <span class="n">iteritems</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.common.poscheck</span> <span class="kn">import</span> <span class="n">poscheck_model</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.analytics_license_custom_data_field_labels</span> <span class="kn">import</span> <span class="n">AnalyticsLicenseCustomDataFieldLabels</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.analytics_license_features</span> <span class="kn">import</span> <span class="n">AnalyticsLicenseFeatures</span>
-<span class="kn">import</span> <span class="nn">pprint</span>
-<span class="kn">import</span> <span class="nn">six</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">enum</span><span class="w"> </span><span class="kn">import</span> <span class="n">Enum</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="kn">import</span> <span class="n">datetime</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">six</span><span class="w"> </span><span class="kn">import</span> <span class="n">string_types</span><span class="p">,</span> <span class="n">iteritems</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.common.poscheck</span><span class="w"> </span><span class="kn">import</span> <span class="n">poscheck_model</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.analytics_license_custom_data_field_labels</span><span class="w"> </span><span class="kn">import</span> <span class="n">AnalyticsLicenseCustomDataFieldLabels</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.analytics_license_features</span><span class="w"> </span><span class="kn">import</span> <span class="n">AnalyticsLicenseFeatures</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pprint</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">six</span>
 
 
-<div class="viewcode-block" id="AnalyticsLicense"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.analytics_license.AnalyticsLicense">[docs]</a><span class="k">class</span> <span class="nc">AnalyticsLicense</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="viewcode-block" id="AnalyticsLicense">
+<a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.analytics_license.AnalyticsLicense">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">AnalyticsLicense</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="nd">@poscheck_model</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
                  <span class="n">id_</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">created_at</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">custom_data</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
@@ -191,7 +191,7 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">plan_expired_at</span> <span class="o">=</span> <span class="n">plan_expired_at</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">types</span> <span class="o">=</span> <span class="p">{</span>
             <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
             <span class="s1">&#39;created_at&#39;</span><span class="p">:</span> <span class="s1">&#39;datetime&#39;</span><span class="p">,</span>
@@ -221,7 +221,7 @@
         <span class="k">return</span> <span class="n">types</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">attribute_map</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">attribute_map</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">attributes</span> <span class="o">=</span> <span class="p">{</span>
             <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="s1">&#39;id&#39;</span><span class="p">,</span>
             <span class="s1">&#39;created_at&#39;</span><span class="p">:</span> <span class="s1">&#39;createdAt&#39;</span><span class="p">,</span>
@@ -250,7 +250,7 @@
         <span class="k">return</span> <span class="n">attributes</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">id</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">id</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; string_types</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the id of this AnalyticsLicense.</span>
 
@@ -262,7 +262,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_id</span>
 
     <span class="nd">@id</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">id</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">id_</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">id</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">id_</span><span class="p">):</span>
         <span class="c1"># type: (string_types) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the id of this AnalyticsLicense.</span>
 
@@ -279,7 +279,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_id</span> <span class="o">=</span> <span class="n">id_</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">created_at</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">created_at</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; datetime</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the created_at of this AnalyticsLicense.</span>
 
@@ -291,7 +291,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_created_at</span>
 
     <span class="nd">@created_at</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">created_at</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">created_at</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">created_at</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">created_at</span><span class="p">):</span>
         <span class="c1"># type: (datetime) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the created_at of this AnalyticsLicense.</span>
 
@@ -308,7 +308,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_created_at</span> <span class="o">=</span> <span class="n">created_at</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">custom_data</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">custom_data</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; dict(str, object)</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the custom_data of this AnalyticsLicense.</span>
 
@@ -320,7 +320,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_custom_data</span>
 
     <span class="nd">@custom_data</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">custom_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">custom_data</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">custom_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">custom_data</span><span class="p">):</span>
         <span class="c1"># type: (dict) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the custom_data of this AnalyticsLicense.</span>
 
@@ -337,7 +337,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_custom_data</span> <span class="o">=</span> <span class="n">custom_data</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">license_key</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">license_key</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; string_types</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the license_key of this AnalyticsLicense.</span>
 
@@ -349,7 +349,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_license_key</span>
 
     <span class="nd">@license_key</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">license_key</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">license_key</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">license_key</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">license_key</span><span class="p">):</span>
         <span class="c1"># type: (string_types) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the license_key of this AnalyticsLicense.</span>
 
@@ -366,7 +366,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_license_key</span> <span class="o">=</span> <span class="n">license_key</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; string_types</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the name of this AnalyticsLicense.</span>
 
@@ -378,7 +378,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_name</span>
 
     <span class="nd">@name</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">name</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">name</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
         <span class="c1"># type: (string_types) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the name of this AnalyticsLicense.</span>
 
@@ -395,7 +395,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_name</span> <span class="o">=</span> <span class="n">name</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">industry</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">industry</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; string_types</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the industry of this AnalyticsLicense.</span>
 
@@ -407,7 +407,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_industry</span>
 
     <span class="nd">@industry</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">industry</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">industry</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">industry</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">industry</span><span class="p">):</span>
         <span class="c1"># type: (string_types) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the industry of this AnalyticsLicense.</span>
 
@@ -424,7 +424,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_industry</span> <span class="o">=</span> <span class="n">industry</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">sub_industry</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">sub_industry</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; string_types</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the sub_industry of this AnalyticsLicense.</span>
 
@@ -436,7 +436,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sub_industry</span>
 
     <span class="nd">@sub_industry</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">sub_industry</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sub_industry</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">sub_industry</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sub_industry</span><span class="p">):</span>
         <span class="c1"># type: (string_types) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the sub_industry of this AnalyticsLicense.</span>
 
@@ -453,7 +453,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_sub_industry</span> <span class="o">=</span> <span class="n">sub_industry</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">ignore_dnt</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">ignore_dnt</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; bool</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the ignore_dnt of this AnalyticsLicense.</span>
 
@@ -465,7 +465,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_ignore_dnt</span>
 
     <span class="nd">@ignore_dnt</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">ignore_dnt</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ignore_dnt</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">ignore_dnt</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ignore_dnt</span><span class="p">):</span>
         <span class="c1"># type: (bool) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the ignore_dnt of this AnalyticsLicense.</span>
 
@@ -482,7 +482,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_ignore_dnt</span> <span class="o">=</span> <span class="n">ignore_dnt</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">impressions</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">impressions</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the impressions of this AnalyticsLicense.</span>
 
@@ -494,7 +494,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_impressions</span>
 
     <span class="nd">@impressions</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">impressions</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">impressions</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">impressions</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">impressions</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the impressions of this AnalyticsLicense.</span>
 
@@ -511,7 +511,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_impressions</span> <span class="o">=</span> <span class="n">impressions</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">max_impressions</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">max_impressions</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the max_impressions of this AnalyticsLicense.</span>
 
@@ -523,7 +523,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_max_impressions</span>
 
     <span class="nd">@max_impressions</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">max_impressions</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">max_impressions</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">max_impressions</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">max_impressions</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the max_impressions of this AnalyticsLicense.</span>
 
@@ -540,7 +540,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_max_impressions</span> <span class="o">=</span> <span class="n">max_impressions</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">time_zone</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">time_zone</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; string_types</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the time_zone of this AnalyticsLicense.</span>
 
@@ -552,7 +552,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_time_zone</span>
 
     <span class="nd">@time_zone</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">time_zone</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">time_zone</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">time_zone</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">time_zone</span><span class="p">):</span>
         <span class="c1"># type: (string_types) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the time_zone of this AnalyticsLicense.</span>
 
@@ -569,7 +569,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_time_zone</span> <span class="o">=</span> <span class="n">time_zone</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">retention_time</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">retention_time</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; string_types</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the retention_time of this AnalyticsLicense.</span>
 
@@ -581,7 +581,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_retention_time</span>
 
     <span class="nd">@retention_time</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">retention_time</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">retention_time</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">retention_time</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">retention_time</span><span class="p">):</span>
         <span class="c1"># type: (string_types) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the retention_time of this AnalyticsLicense.</span>
 
@@ -598,7 +598,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_retention_time</span> <span class="o">=</span> <span class="n">retention_time</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">compressed_retention_time</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">compressed_retention_time</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; string_types</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the compressed_retention_time of this AnalyticsLicense.</span>
 
@@ -610,7 +610,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_compressed_retention_time</span>
 
     <span class="nd">@compressed_retention_time</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">compressed_retention_time</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">compressed_retention_time</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">compressed_retention_time</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">compressed_retention_time</span><span class="p">):</span>
         <span class="c1"># type: (string_types) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the compressed_retention_time of this AnalyticsLicense.</span>
 
@@ -627,7 +627,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_compressed_retention_time</span> <span class="o">=</span> <span class="n">compressed_retention_time</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">compression_available_to</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">compression_available_to</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; datetime</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the compression_available_to of this AnalyticsLicense.</span>
 
@@ -639,7 +639,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_compression_available_to</span>
 
     <span class="nd">@compression_available_to</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">compression_available_to</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">compression_available_to</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">compression_available_to</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">compression_available_to</span><span class="p">):</span>
         <span class="c1"># type: (datetime) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the compression_available_to of this AnalyticsLicense.</span>
 
@@ -656,7 +656,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_compression_available_to</span> <span class="o">=</span> <span class="n">compression_available_to</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">domains</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">domains</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; list[AnalyticsLicenseDomain]</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the domains of this AnalyticsLicense.</span>
 
@@ -668,7 +668,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_domains</span>
 
     <span class="nd">@domains</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">domains</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">domains</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">domains</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">domains</span><span class="p">):</span>
         <span class="c1"># type: (list) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the domains of this AnalyticsLicense.</span>
 
@@ -685,7 +685,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_domains</span> <span class="o">=</span> <span class="n">domains</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">player_domains</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">player_domains</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; list[string_types]</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the player_domains of this AnalyticsLicense.</span>
 
@@ -697,7 +697,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_player_domains</span>
 
     <span class="nd">@player_domains</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">player_domains</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">player_domains</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">player_domains</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">player_domains</span><span class="p">):</span>
         <span class="c1"># type: (list) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the player_domains of this AnalyticsLicense.</span>
 
@@ -714,7 +714,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_player_domains</span> <span class="o">=</span> <span class="n">player_domains</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">include_in_insights</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">include_in_insights</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; bool</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the include_in_insights of this AnalyticsLicense.</span>
 
@@ -726,7 +726,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_include_in_insights</span>
 
     <span class="nd">@include_in_insights</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">include_in_insights</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">include_in_insights</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">include_in_insights</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">include_in_insights</span><span class="p">):</span>
         <span class="c1"># type: (bool) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the include_in_insights of this AnalyticsLicense.</span>
 
@@ -743,7 +743,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_include_in_insights</span> <span class="o">=</span> <span class="n">include_in_insights</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">custom_data_field_labels</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">custom_data_field_labels</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; AnalyticsLicenseCustomDataFieldLabels</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the custom_data_field_labels of this AnalyticsLicense.</span>
 
@@ -755,7 +755,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_custom_data_field_labels</span>
 
     <span class="nd">@custom_data_field_labels</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">custom_data_field_labels</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">custom_data_field_labels</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">custom_data_field_labels</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">custom_data_field_labels</span><span class="p">):</span>
         <span class="c1"># type: (AnalyticsLicenseCustomDataFieldLabels) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the custom_data_field_labels of this AnalyticsLicense.</span>
 
@@ -772,7 +772,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_custom_data_field_labels</span> <span class="o">=</span> <span class="n">custom_data_field_labels</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">custom_data_fields_count</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">custom_data_fields_count</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the custom_data_fields_count of this AnalyticsLicense.</span>
 
@@ -784,7 +784,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_custom_data_fields_count</span>
 
     <span class="nd">@custom_data_fields_count</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">custom_data_fields_count</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">custom_data_fields_count</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">custom_data_fields_count</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">custom_data_fields_count</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the custom_data_fields_count of this AnalyticsLicense.</span>
 
@@ -801,7 +801,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_custom_data_fields_count</span> <span class="o">=</span> <span class="n">custom_data_fields_count</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">order_index</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">order_index</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the order_index of this AnalyticsLicense.</span>
 
@@ -813,7 +813,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_order_index</span>
 
     <span class="nd">@order_index</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">order_index</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">order_index</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">order_index</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">order_index</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the order_index of this AnalyticsLicense.</span>
 
@@ -830,7 +830,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_order_index</span> <span class="o">=</span> <span class="n">order_index</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">rate_limit</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">rate_limit</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; string_types</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the rate_limit of this AnalyticsLicense.</span>
 
@@ -842,7 +842,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_rate_limit</span>
 
     <span class="nd">@rate_limit</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">rate_limit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rate_limit</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">rate_limit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rate_limit</span><span class="p">):</span>
         <span class="c1"># type: (string_types) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the rate_limit of this AnalyticsLicense.</span>
 
@@ -859,7 +859,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_rate_limit</span> <span class="o">=</span> <span class="n">rate_limit</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">features</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">features</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; AnalyticsLicenseFeatures</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the features of this AnalyticsLicense.</span>
 
@@ -870,7 +870,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_features</span>
 
     <span class="nd">@features</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">features</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">features</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">features</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">features</span><span class="p">):</span>
         <span class="c1"># type: (AnalyticsLicenseFeatures) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the features of this AnalyticsLicense.</span>
 
@@ -886,7 +886,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_features</span> <span class="o">=</span> <span class="n">features</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">plan_expired_at</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">plan_expired_at</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; datetime</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the plan_expired_at of this AnalyticsLicense.</span>
 
@@ -898,7 +898,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_plan_expired_at</span>
 
     <span class="nd">@plan_expired_at</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">plan_expired_at</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">plan_expired_at</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">plan_expired_at</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">plan_expired_at</span><span class="p">):</span>
         <span class="c1"># type: (datetime) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the plan_expired_at of this AnalyticsLicense.</span>
 
@@ -914,7 +914,9 @@
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_plan_expired_at</span> <span class="o">=</span> <span class="n">plan_expired_at</span>
 
-<div class="viewcode-block" id="AnalyticsLicense.to_dict"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.analytics_license.AnalyticsLicense.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="AnalyticsLicense.to_dict">
+<a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.analytics_license.AnalyticsLicense.to_dict">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>
         <span class="n">result</span> <span class="o">=</span> <span class="p">{}</span>
 
@@ -937,24 +939,29 @@
 
         <span class="k">return</span> <span class="n">result</span></div>
 
-<div class="viewcode-block" id="AnalyticsLicense.to_str"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.analytics_license.AnalyticsLicense.to_str">[docs]</a>    <span class="k">def</span> <span class="nf">to_str</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="AnalyticsLicense.to_str">
+<a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.analytics_license.AnalyticsLicense.to_str">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">to_str</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the string representation of the model&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">pprint</span><span class="o">.</span><span class="n">pformat</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">to_dict</span><span class="p">())</span></div>
 
-    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;For `print` and `pprint`&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">to_str</span><span class="p">()</span>
 
-    <span class="k">def</span> <span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns true if both objects are equal&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">AnalyticsLicense</span><span class="p">):</span>
             <span class="k">return</span> <span class="kc">False</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="vm">__dict__</span>
 
-    <span class="k">def</span> <span class="fm">__ne__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__ne__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns true if both objects are not equal&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="ow">not</span> <span class="bp">self</span> <span class="o">==</span> <span class="n">other</span></div>
+
 </pre></div>
 
            </div>

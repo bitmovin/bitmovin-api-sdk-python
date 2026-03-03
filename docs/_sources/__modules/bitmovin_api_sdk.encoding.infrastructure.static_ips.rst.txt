@@ -9,21 +9,21 @@ bitmovin\_api\_sdk.encoding.infrastructure.static\_ips.static\_ip\_list\_query\_
 
 .. automodule:: bitmovin_api_sdk.encoding.infrastructure.static_ips.static_ip_list_query_params
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 bitmovin\_api\_sdk.encoding.infrastructure.static\_ips.static\_ips\_api module
 ------------------------------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.encoding.infrastructure.static_ips.static_ips_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.encoding.infrastructure.static_ips
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

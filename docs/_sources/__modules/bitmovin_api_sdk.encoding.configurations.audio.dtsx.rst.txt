@@ -17,21 +17,21 @@ bitmovin\_api\_sdk.encoding.configurations.audio.dtsx.dts\_x\_audio\_configurati
 
 .. automodule:: bitmovin_api_sdk.encoding.configurations.audio.dtsx.dts_x_audio_configuration_list_query_params
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 bitmovin\_api\_sdk.encoding.configurations.audio.dtsx.dtsx\_api module
 ----------------------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.encoding.configurations.audio.dtsx.dtsx_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.encoding.configurations.audio.dtsx
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

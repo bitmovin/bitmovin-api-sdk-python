@@ -9,13 +9,13 @@ bitmovin\_api\_sdk.streams.live.stop.stop\_api module
 
 .. automodule:: bitmovin_api_sdk.streams.live.stop.stop_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.streams.live.stop
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

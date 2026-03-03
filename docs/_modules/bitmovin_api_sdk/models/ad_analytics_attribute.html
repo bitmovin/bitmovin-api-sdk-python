@@ -1,22 +1,20 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="en">
+<html class="writer-html5" lang="en" data-content_root="../../../">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>bitmovin_api_sdk.models.ad_analytics_attribute &mdash; Bitmovin Python API SDK {{packageVersion}} documentation</title>
-      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=9edc463e" />
 
   
-  <!--[if lt IE 9]>
-    <script src="../../../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-        <script src="../../../_static/jquery.js"></script>
-        <script src="../../../_static/underscore.js"></script>
-        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="../../../_static/doctools.js"></script>
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=4dbdf2c3"></script>
+      <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" /> 
@@ -80,12 +78,14 @@
   <h1>Source code for bitmovin_api_sdk.models.ad_analytics_attribute</h1><div class="highlight"><pre>
 <span></span><span class="c1"># coding: utf-8</span>
 
-<span class="kn">from</span> <span class="nn">enum</span> <span class="kn">import</span> <span class="n">Enum</span>
-<span class="kn">from</span> <span class="nn">six</span> <span class="kn">import</span> <span class="n">string_types</span><span class="p">,</span> <span class="n">iteritems</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.common.poscheck</span> <span class="kn">import</span> <span class="n">poscheck_model</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">enum</span><span class="w"> </span><span class="kn">import</span> <span class="n">Enum</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">six</span><span class="w"> </span><span class="kn">import</span> <span class="n">string_types</span><span class="p">,</span> <span class="n">iteritems</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.common.poscheck</span><span class="w"> </span><span class="kn">import</span> <span class="n">poscheck_model</span>
 
 
-<div class="viewcode-block" id="AdAnalyticsAttribute"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.ad_analytics_attribute.AdAnalyticsAttribute">[docs]</a><span class="k">class</span> <span class="nc">AdAnalyticsAttribute</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+<div class="viewcode-block" id="AdAnalyticsAttribute">
+<a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.ad_analytics_attribute.AdAnalyticsAttribute">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">AdAnalyticsAttribute</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
     <span class="n">AD_IMPRESSION_ID</span> <span class="o">=</span> <span class="s2">&quot;AD_IMPRESSION_ID&quot;</span>
     <span class="n">AD_CLICKTHROUGH_URL</span> <span class="o">=</span> <span class="s2">&quot;AD_CLICKTHROUGH_URL&quot;</span>
     <span class="n">AD_DESCRIPTION</span> <span class="o">=</span> <span class="s2">&quot;AD_DESCRIPTION&quot;</span>
@@ -164,6 +164,36 @@
     <span class="n">CUSTOM_DATA_28</span> <span class="o">=</span> <span class="s2">&quot;CUSTOM_DATA_28&quot;</span>
     <span class="n">CUSTOM_DATA_29</span> <span class="o">=</span> <span class="s2">&quot;CUSTOM_DATA_29&quot;</span>
     <span class="n">CUSTOM_DATA_30</span> <span class="o">=</span> <span class="s2">&quot;CUSTOM_DATA_30&quot;</span>
+    <span class="n">CUSTOM_DATA_31</span> <span class="o">=</span> <span class="s2">&quot;CUSTOM_DATA_31&quot;</span>
+    <span class="n">CUSTOM_DATA_32</span> <span class="o">=</span> <span class="s2">&quot;CUSTOM_DATA_32&quot;</span>
+    <span class="n">CUSTOM_DATA_33</span> <span class="o">=</span> <span class="s2">&quot;CUSTOM_DATA_33&quot;</span>
+    <span class="n">CUSTOM_DATA_34</span> <span class="o">=</span> <span class="s2">&quot;CUSTOM_DATA_34&quot;</span>
+    <span class="n">CUSTOM_DATA_35</span> <span class="o">=</span> <span class="s2">&quot;CUSTOM_DATA_35&quot;</span>
+    <span class="n">CUSTOM_DATA_36</span> <span class="o">=</span> <span class="s2">&quot;CUSTOM_DATA_36&quot;</span>
+    <span class="n">CUSTOM_DATA_37</span> <span class="o">=</span> <span class="s2">&quot;CUSTOM_DATA_37&quot;</span>
+    <span class="n">CUSTOM_DATA_38</span> <span class="o">=</span> <span class="s2">&quot;CUSTOM_DATA_38&quot;</span>
+    <span class="n">CUSTOM_DATA_39</span> <span class="o">=</span> <span class="s2">&quot;CUSTOM_DATA_39&quot;</span>
+    <span class="n">CUSTOM_DATA_40</span> <span class="o">=</span> <span class="s2">&quot;CUSTOM_DATA_40&quot;</span>
+    <span class="n">CUSTOM_DATA_41</span> <span class="o">=</span> <span class="s2">&quot;CUSTOM_DATA_41&quot;</span>
+    <span class="n">CUSTOM_DATA_42</span> <span class="o">=</span> <span class="s2">&quot;CUSTOM_DATA_42&quot;</span>
+    <span class="n">CUSTOM_DATA_43</span> <span class="o">=</span> <span class="s2">&quot;CUSTOM_DATA_43&quot;</span>
+    <span class="n">CUSTOM_DATA_44</span> <span class="o">=</span> <span class="s2">&quot;CUSTOM_DATA_44&quot;</span>
+    <span class="n">CUSTOM_DATA_45</span> <span class="o">=</span> <span class="s2">&quot;CUSTOM_DATA_45&quot;</span>
+    <span class="n">CUSTOM_DATA_46</span> <span class="o">=</span> <span class="s2">&quot;CUSTOM_DATA_46&quot;</span>
+    <span class="n">CUSTOM_DATA_47</span> <span class="o">=</span> <span class="s2">&quot;CUSTOM_DATA_47&quot;</span>
+    <span class="n">CUSTOM_DATA_48</span> <span class="o">=</span> <span class="s2">&quot;CUSTOM_DATA_48&quot;</span>
+    <span class="n">CUSTOM_DATA_49</span> <span class="o">=</span> <span class="s2">&quot;CUSTOM_DATA_49&quot;</span>
+    <span class="n">CUSTOM_DATA_50</span> <span class="o">=</span> <span class="s2">&quot;CUSTOM_DATA_50&quot;</span>
+    <span class="n">CUSTOM_DATA_51</span> <span class="o">=</span> <span class="s2">&quot;CUSTOM_DATA_51&quot;</span>
+    <span class="n">CUSTOM_DATA_52</span> <span class="o">=</span> <span class="s2">&quot;CUSTOM_DATA_52&quot;</span>
+    <span class="n">CUSTOM_DATA_53</span> <span class="o">=</span> <span class="s2">&quot;CUSTOM_DATA_53&quot;</span>
+    <span class="n">CUSTOM_DATA_54</span> <span class="o">=</span> <span class="s2">&quot;CUSTOM_DATA_54&quot;</span>
+    <span class="n">CUSTOM_DATA_55</span> <span class="o">=</span> <span class="s2">&quot;CUSTOM_DATA_55&quot;</span>
+    <span class="n">CUSTOM_DATA_56</span> <span class="o">=</span> <span class="s2">&quot;CUSTOM_DATA_56&quot;</span>
+    <span class="n">CUSTOM_DATA_57</span> <span class="o">=</span> <span class="s2">&quot;CUSTOM_DATA_57&quot;</span>
+    <span class="n">CUSTOM_DATA_58</span> <span class="o">=</span> <span class="s2">&quot;CUSTOM_DATA_58&quot;</span>
+    <span class="n">CUSTOM_DATA_59</span> <span class="o">=</span> <span class="s2">&quot;CUSTOM_DATA_59&quot;</span>
+    <span class="n">CUSTOM_DATA_60</span> <span class="o">=</span> <span class="s2">&quot;CUSTOM_DATA_60&quot;</span>
     <span class="n">CUSTOM_USER_ID</span> <span class="o">=</span> <span class="s2">&quot;CUSTOM_USER_ID&quot;</span>
     <span class="n">DAY</span> <span class="o">=</span> <span class="s2">&quot;DAY&quot;</span>
     <span class="n">DEAL_ID</span> <span class="o">=</span> <span class="s2">&quot;DEAL_ID&quot;</span>
@@ -230,6 +260,7 @@
     <span class="n">VIDEO_TITLE</span> <span class="o">=</span> <span class="s2">&quot;VIDEO_TITLE&quot;</span>
     <span class="n">VIDEO_WINDOW_HEIGHT</span> <span class="o">=</span> <span class="s2">&quot;VIDEO_WINDOW_HEIGHT&quot;</span>
     <span class="n">VIDEO_WINDOW_WIDTH</span> <span class="o">=</span> <span class="s2">&quot;VIDEO_WINDOW_WIDTH&quot;</span></div>
+
 </pre></div>
 
            </div>

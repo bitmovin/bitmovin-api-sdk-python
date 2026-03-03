@@ -9,21 +9,21 @@ bitmovin\_api\_sdk.analytics.exports.analytics\_export\_task\_list\_query\_param
 
 .. automodule:: bitmovin_api_sdk.analytics.exports.analytics_export_task_list_query_params
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 bitmovin\_api\_sdk.analytics.exports.exports\_api module
 --------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.analytics.exports.exports_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.analytics.exports
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

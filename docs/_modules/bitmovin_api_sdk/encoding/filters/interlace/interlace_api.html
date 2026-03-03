@@ -1,22 +1,20 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="en">
+<html class="writer-html5" lang="en" data-content_root="../../../../../">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>bitmovin_api_sdk.encoding.filters.interlace.interlace_api &mdash; Bitmovin Python API SDK {{packageVersion}} documentation</title>
-      <link rel="stylesheet" type="text/css" href="../../../../../_static/pygments.css" />
-      <link rel="stylesheet" type="text/css" href="../../../../../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/css/theme.css?v=9edc463e" />
 
   
-  <!--[if lt IE 9]>
-    <script src="../../../../../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script data-url_root="../../../../../" id="documentation_options" src="../../../../../_static/documentation_options.js"></script>
-        <script src="../../../../../_static/jquery.js"></script>
-        <script src="../../../../../_static/underscore.js"></script>
-        <script src="../../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="../../../../../_static/doctools.js"></script>
+      <script src="../../../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../../../_static/documentation_options.js?v=4dbdf2c3"></script>
+      <script src="../../../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../../search.html" /> 
@@ -80,21 +78,23 @@
   <h1>Source code for bitmovin_api_sdk.encoding.filters.interlace.interlace_api</h1><div class="highlight"><pre>
 <span></span><span class="c1"># coding: utf-8</span>
 
-<span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">absolute_import</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">__future__</span><span class="w"> </span><span class="kn">import</span> <span class="n">absolute_import</span>
 
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.common</span> <span class="kn">import</span> <span class="n">BaseApi</span><span class="p">,</span> <span class="n">BitmovinApiLoggerBase</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.common.poscheck</span> <span class="kn">import</span> <span class="n">poscheck_except</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.bitmovin_response</span> <span class="kn">import</span> <span class="n">BitmovinResponse</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.interlace_filter</span> <span class="kn">import</span> <span class="n">InterlaceFilter</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.response_envelope</span> <span class="kn">import</span> <span class="n">ResponseEnvelope</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.response_error</span> <span class="kn">import</span> <span class="n">ResponseError</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.encoding.filters.interlace.customdata.customdata_api</span> <span class="kn">import</span> <span class="n">CustomdataApi</span>
-<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.encoding.filters.interlace.interlace_filter_list_query_params</span> <span class="kn">import</span> <span class="n">InterlaceFilterListQueryParams</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.common</span><span class="w"> </span><span class="kn">import</span> <span class="n">BaseApi</span><span class="p">,</span> <span class="n">BitmovinApiLoggerBase</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.common.poscheck</span><span class="w"> </span><span class="kn">import</span> <span class="n">poscheck_except</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.bitmovin_response</span><span class="w"> </span><span class="kn">import</span> <span class="n">BitmovinResponse</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.interlace_filter</span><span class="w"> </span><span class="kn">import</span> <span class="n">InterlaceFilter</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.response_envelope</span><span class="w"> </span><span class="kn">import</span> <span class="n">ResponseEnvelope</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.response_error</span><span class="w"> </span><span class="kn">import</span> <span class="n">ResponseError</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.encoding.filters.interlace.customdata.customdata_api</span><span class="w"> </span><span class="kn">import</span> <span class="n">CustomdataApi</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.encoding.filters.interlace.interlace_filter_list_query_params</span><span class="w"> </span><span class="kn">import</span> <span class="n">InterlaceFilterListQueryParams</span>
 
 
-<div class="viewcode-block" id="InterlaceApi"><a class="viewcode-back" href="../../../../../__modules/bitmovin_api_sdk.encoding.filters.interlace.html#bitmovin_api_sdk.encoding.filters.interlace.interlace_api.InterlaceApi">[docs]</a><span class="k">class</span> <span class="nc">InterlaceApi</span><span class="p">(</span><span class="n">BaseApi</span><span class="p">):</span>
+<div class="viewcode-block" id="InterlaceApi">
+<a class="viewcode-back" href="../../../../../__modules/bitmovin_api_sdk.encoding.filters.interlace.html#bitmovin_api_sdk.encoding.filters.interlace.interlace_api.InterlaceApi">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">InterlaceApi</span><span class="p">(</span><span class="n">BaseApi</span><span class="p">):</span>
     <span class="nd">@poscheck_except</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">api_key</span><span class="p">,</span> <span class="n">tenant_org_id</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">base_url</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">logger</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">api_key</span><span class="p">,</span> <span class="n">tenant_org_id</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">base_url</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">logger</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="c1"># type: (str, str, str, BitmovinApiLoggerBase) -&gt; None</span>
 
         <span class="nb">super</span><span class="p">(</span><span class="n">InterlaceApi</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span>
@@ -111,7 +111,9 @@
             <span class="n">logger</span><span class="o">=</span><span class="n">logger</span>
         <span class="p">)</span>
 
-<div class="viewcode-block" id="InterlaceApi.create"><a class="viewcode-back" href="../../../../../__modules/bitmovin_api_sdk.encoding.filters.interlace.html#bitmovin_api_sdk.encoding.filters.interlace.interlace_api.InterlaceApi.create">[docs]</a>    <span class="k">def</span> <span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">interlace_filter</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<div class="viewcode-block" id="InterlaceApi.create">
+<a class="viewcode-back" href="../../../../../__modules/bitmovin_api_sdk.encoding.filters.interlace.html#bitmovin_api_sdk.encoding.filters.interlace.interlace_api.InterlaceApi.create">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">interlace_filter</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (InterlaceFilter, dict) -&gt; InterlaceFilter</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Create Interlace Filter</span>
 
@@ -128,7 +130,10 @@
             <span class="o">**</span><span class="n">kwargs</span>
         <span class="p">)</span></div>
 
-<div class="viewcode-block" id="InterlaceApi.delete"><a class="viewcode-back" href="../../../../../__modules/bitmovin_api_sdk.encoding.filters.interlace.html#bitmovin_api_sdk.encoding.filters.interlace.interlace_api.InterlaceApi.delete">[docs]</a>    <span class="k">def</span> <span class="nf">delete</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filter_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+<div class="viewcode-block" id="InterlaceApi.delete">
+<a class="viewcode-back" href="../../../../../__modules/bitmovin_api_sdk.encoding.filters.interlace.html#bitmovin_api_sdk.encoding.filters.interlace.interlace_api.InterlaceApi.delete">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">delete</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filter_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, dict) -&gt; BitmovinResponse</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Delete Interlace Filter</span>
 
@@ -145,7 +150,10 @@
             <span class="o">**</span><span class="n">kwargs</span>
         <span class="p">)</span></div>
 
-<div class="viewcode-block" id="InterlaceApi.get"><a class="viewcode-back" href="../../../../../__modules/bitmovin_api_sdk.encoding.filters.interlace.html#bitmovin_api_sdk.encoding.filters.interlace.interlace_api.InterlaceApi.get">[docs]</a>    <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filter_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+<div class="viewcode-block" id="InterlaceApi.get">
+<a class="viewcode-back" href="../../../../../__modules/bitmovin_api_sdk.encoding.filters.interlace.html#bitmovin_api_sdk.encoding.filters.interlace.interlace_api.InterlaceApi.get">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filter_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, dict) -&gt; InterlaceFilter</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Interlace Filter Details</span>
 
@@ -162,7 +170,10 @@
             <span class="o">**</span><span class="n">kwargs</span>
         <span class="p">)</span></div>
 
-<div class="viewcode-block" id="InterlaceApi.list"><a class="viewcode-back" href="../../../../../__modules/bitmovin_api_sdk.encoding.filters.interlace.html#bitmovin_api_sdk.encoding.filters.interlace.interlace_api.InterlaceApi.list">[docs]</a>    <span class="k">def</span> <span class="nf">list</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">query_params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+<div class="viewcode-block" id="InterlaceApi.list">
+<a class="viewcode-back" href="../../../../../__modules/bitmovin_api_sdk.encoding.filters.interlace.html#bitmovin_api_sdk.encoding.filters.interlace.interlace_api.InterlaceApi.list">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">list</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">query_params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (InterlaceFilterListQueryParams, dict) -&gt; InterlaceFilter</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;List Interlace Filters</span>
 
@@ -178,7 +189,9 @@
             <span class="n">pagination_response</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">InterlaceFilter</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>
-        <span class="p">)</span></div></div>
+        <span class="p">)</span></div>
+</div>
+
 </pre></div>
 
            </div>

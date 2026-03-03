@@ -9,13 +9,13 @@ bitmovin\_api\_sdk.encoding.configurations.subtitles.imsc.customdata.customdata\
 
 .. automodule:: bitmovin_api_sdk.encoding.configurations.subtitles.imsc.customdata.customdata_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.encoding.configurations.subtitles.imsc.customdata
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

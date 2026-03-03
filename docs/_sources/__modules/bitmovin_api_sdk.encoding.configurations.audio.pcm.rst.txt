@@ -17,21 +17,21 @@ bitmovin\_api\_sdk.encoding.configurations.audio.pcm.pcm\_api module
 
 .. automodule:: bitmovin_api_sdk.encoding.configurations.audio.pcm.pcm_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 bitmovin\_api\_sdk.encoding.configurations.audio.pcm.pcm\_audio\_configuration\_list\_query\_params module
 ----------------------------------------------------------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.encoding.configurations.audio.pcm.pcm_audio_configuration_list_query_params
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.encoding.configurations.audio.pcm
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

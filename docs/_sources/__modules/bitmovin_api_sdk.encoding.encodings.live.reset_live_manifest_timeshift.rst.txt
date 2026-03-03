@@ -9,13 +9,13 @@ bitmovin\_api\_sdk.encoding.encodings.live.reset\_live\_manifest\_timeshift.rese
 
 .. automodule:: bitmovin_api_sdk.encoding.encodings.live.reset_live_manifest_timeshift.reset_live_manifest_timeshift_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.encoding.encodings.live.reset_live_manifest_timeshift
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

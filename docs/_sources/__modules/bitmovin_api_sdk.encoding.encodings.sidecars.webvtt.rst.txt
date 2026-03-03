@@ -9,21 +9,21 @@ bitmovin\_api\_sdk.encoding.encodings.sidecars.webvtt.web\_vtt\_sidecar\_file\_l
 
 .. automodule:: bitmovin_api_sdk.encoding.encodings.sidecars.webvtt.web_vtt_sidecar_file_list_query_params
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 bitmovin\_api\_sdk.encoding.encodings.sidecars.webvtt.webvtt\_api module
 ------------------------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.encoding.encodings.sidecars.webvtt.webvtt_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.encoding.encodings.sidecars.webvtt
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

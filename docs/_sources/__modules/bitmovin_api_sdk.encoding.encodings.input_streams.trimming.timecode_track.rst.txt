@@ -9,21 +9,21 @@ bitmovin\_api\_sdk.encoding.encodings.input\_streams.trimming.timecode\_track.ti
 
 .. automodule:: bitmovin_api_sdk.encoding.encodings.input_streams.trimming.timecode_track.timecode_track_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 bitmovin\_api\_sdk.encoding.encodings.input\_streams.trimming.timecode\_track.timecode\_track\_trimming\_input\_stream\_list\_query\_params module
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.encoding.encodings.input_streams.trimming.timecode_track.timecode_track_trimming_input_stream_list_query_params
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.encoding.encodings.input_streams.trimming.timecode_track
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

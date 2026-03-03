@@ -9,21 +9,21 @@ bitmovin\_api\_sdk.encoding.live.dns\_mappings.dns\_mapping\_response\_list\_que
 
 .. automodule:: bitmovin_api_sdk.encoding.live.dns_mappings.dns_mapping_response_list_query_params
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 bitmovin\_api\_sdk.encoding.live.dns\_mappings.dns\_mappings\_api module
 ------------------------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.encoding.live.dns_mappings.dns_mappings_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.encoding.live.dns_mappings
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

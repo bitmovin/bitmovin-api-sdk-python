@@ -9,13 +9,13 @@ bitmovin\_api\_sdk.encoding.filters.audio\_volume.customdata.customdata\_api mod
 
 .. automodule:: bitmovin_api_sdk.encoding.filters.audio_volume.customdata.customdata_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.encoding.filters.audio_volume.customdata
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

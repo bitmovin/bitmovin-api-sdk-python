@@ -8,3 +8,4 @@ from bitmovin_api_sdk.common.poscheck import poscheck_model
 class DolbyAtmosInputFormat(Enum):
     DAMF = "DAMF"
     ADM = "ADM"
+    MXF = "MXF"

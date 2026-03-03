@@ -9,21 +9,21 @@ bitmovin\_api\_sdk.encoding.watch\_folders.watch\_folder\_list\_query\_params mo
 
 .. automodule:: bitmovin_api_sdk.encoding.watch_folders.watch_folder_list_query_params
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 bitmovin\_api\_sdk.encoding.watch\_folders.watch\_folders\_api module
 ---------------------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.encoding.watch_folders.watch_folders_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.encoding.watch_folders
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

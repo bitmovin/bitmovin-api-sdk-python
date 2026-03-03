@@ -9,13 +9,13 @@ bitmovin\_api\_sdk.player.licenses.third\_party\_licensing.third\_party\_licensi
 
 .. automodule:: bitmovin_api_sdk.player.licenses.third_party_licensing.third_party_licensing_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.player.licenses.third_party_licensing
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

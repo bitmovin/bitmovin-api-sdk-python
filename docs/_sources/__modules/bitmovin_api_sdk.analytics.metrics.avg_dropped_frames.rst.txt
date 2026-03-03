@@ -9,13 +9,13 @@ bitmovin\_api\_sdk.analytics.metrics.avg\_dropped\_frames.avg\_dropped\_frames\_
 
 .. automodule:: bitmovin_api_sdk.analytics.metrics.avg_dropped_frames.avg_dropped_frames_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.analytics.metrics.avg_dropped_frames
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

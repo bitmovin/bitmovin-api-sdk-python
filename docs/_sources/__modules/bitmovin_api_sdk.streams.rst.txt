@@ -21,13 +21,13 @@ bitmovin\_api\_sdk.streams.streams\_api module
 
 .. automodule:: bitmovin_api_sdk.streams.streams_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.streams
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

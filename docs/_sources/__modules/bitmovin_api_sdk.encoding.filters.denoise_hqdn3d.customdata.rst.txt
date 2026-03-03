@@ -9,13 +9,13 @@ bitmovin\_api\_sdk.encoding.filters.denoise\_hqdn3d.customdata.customdata\_api m
 
 .. automodule:: bitmovin_api_sdk.encoding.filters.denoise_hqdn3d.customdata.customdata_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.encoding.filters.denoise_hqdn3d.customdata
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

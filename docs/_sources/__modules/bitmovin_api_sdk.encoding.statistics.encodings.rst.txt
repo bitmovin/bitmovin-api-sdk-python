@@ -19,13 +19,13 @@ bitmovin\_api\_sdk.encoding.statistics.encodings.encodings\_api module
 
 .. automodule:: bitmovin_api_sdk.encoding.statistics.encodings.encodings_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.encoding.statistics.encodings
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

@@ -9,13 +9,13 @@ bitmovin\_api\_sdk.streams.signing\_keys.signing\_keys\_api module
 
 .. automodule:: bitmovin_api_sdk.streams.signing_keys.signing_keys_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.streams.signing_keys
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

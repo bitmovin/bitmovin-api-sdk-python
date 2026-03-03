@@ -19,13 +19,13 @@ bitmovin\_api\_sdk.account.account\_api module
 
 .. automodule:: bitmovin_api_sdk.account.account_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.account
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

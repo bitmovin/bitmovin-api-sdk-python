@@ -9,13 +9,13 @@ bitmovin\_api\_sdk.encoding.configurations.subtitles.webvtt.customdata.customdat
 
 .. automodule:: bitmovin_api_sdk.encoding.configurations.subtitles.webvtt.customdata.customdata_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.encoding.configurations.subtitles.webvtt.customdata
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

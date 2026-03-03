@@ -18,21 +18,21 @@ bitmovin\_api\_sdk.streams.live.live\_api module
 
 .. automodule:: bitmovin_api_sdk.streams.live.live_api
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 bitmovin\_api\_sdk.streams.live.streams\_live\_response\_list\_query\_params module
 -----------------------------------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.streams.live.streams_live_response_list_query_params
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:
 
 Module contents
 ---------------
 
 .. automodule:: bitmovin_api_sdk.streams.live
    :members:
-   :undoc-members:
    :show-inheritance:
+   :undoc-members:

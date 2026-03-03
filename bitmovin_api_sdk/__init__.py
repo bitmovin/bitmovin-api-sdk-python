@@ -27,6 +27,12 @@ from bitmovin_api_sdk.account.organizations.groups.invitations.invitations_api i
 from bitmovin_api_sdk.account.organizations.groups.invitations.invitations_api import InvitationListQueryParams
 from bitmovin_api_sdk.account.organizations.groups.permissions.permissions_api import PermissionsApi
 
+from bitmovin_api_sdk.agents.agents_api import AgentsApi
+
+from bitmovin_api_sdk.agents.aisa.aisa_api import AisaApi
+
+from bitmovin_api_sdk.agents.aisa.sessions.sessions_api import SessionsApi
+
 from bitmovin_api_sdk.ai_scene_analysis.ai_scene_analysis_api import AiSceneAnalysisApi
 
 from bitmovin_api_sdk.ai_scene_analysis.analyses.analyses_api import AnalysesApi
@@ -1131,6 +1137,17 @@ from bitmovin_api_sdk.models.adaptation_set_type_response import AdaptationSetTy
 from bitmovin_api_sdk.models.adaptive_quant_mode import AdaptiveQuantMode
 from bitmovin_api_sdk.models.aes_encryption_drm import AesEncryptionDrm
 from bitmovin_api_sdk.models.aes_encryption_method import AesEncryptionMethod
+from bitmovin_api_sdk.models.agent_chat_attachment import AgentChatAttachment
+from bitmovin_api_sdk.models.agent_chat_attachments_data import AgentChatAttachmentsData
+from bitmovin_api_sdk.models.agent_chat_attachments_part import AgentChatAttachmentsPart
+from bitmovin_api_sdk.models.agent_chat_message import AgentChatMessage
+from bitmovin_api_sdk.models.agent_chat_message_part import AgentChatMessagePart
+from bitmovin_api_sdk.models.agent_chat_message_part_type import AgentChatMessagePartType
+from bitmovin_api_sdk.models.agent_chat_text_part import AgentChatTextPart
+from bitmovin_api_sdk.models.agent_session_history_response import AgentSessionHistoryResponse
+from bitmovin_api_sdk.models.agent_session_list_item import AgentSessionListItem
+from bitmovin_api_sdk.models.agent_session_list_response import AgentSessionListResponse
+from bitmovin_api_sdk.models.agent_session_response import AgentSessionResponse
 from bitmovin_api_sdk.models.ai_scene_analysis import AiSceneAnalysis
 from bitmovin_api_sdk.models.ai_scene_analysis_asset_description import AiSceneAnalysisAssetDescription
 from bitmovin_api_sdk.models.ai_scene_analysis_automatic_ad_placement import AiSceneAnalysisAutomaticAdPlacement
@@ -1969,4 +1986,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.256.0"
+__version__ = "1.257.0"
