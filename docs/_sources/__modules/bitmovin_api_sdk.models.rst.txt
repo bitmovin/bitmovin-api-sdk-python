@@ -3260,22 +3260,6 @@ bitmovin\_api\_sdk.models.error\_retry\_hint module
    :show-inheritance:
    :undoc-members:
 
-bitmovin\_api\_sdk.models.esam\_condition module
-------------------------------------------------
-
-.. automodule:: bitmovin_api_sdk.models.esam_condition
-   :members:
-   :show-inheritance:
-   :undoc-members:
-
-bitmovin\_api\_sdk.models.esam\_direction module
-------------------------------------------------
-
-.. automodule:: bitmovin_api_sdk.models.esam_direction
-   :members:
-   :show-inheritance:
-   :undoc-members:
-
 bitmovin\_api\_sdk.models.esam\_media\_point module
 ---------------------------------------------------
 

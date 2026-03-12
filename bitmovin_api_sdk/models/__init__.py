@@ -410,8 +410,6 @@ from bitmovin_api_sdk.models.enhanced_deinterlace_parity import EnhancedDeinterl
 from bitmovin_api_sdk.models.enhanced_watermark_filter import EnhancedWatermarkFilter
 from bitmovin_api_sdk.models.error_details import ErrorDetails
 from bitmovin_api_sdk.models.error_retry_hint import ErrorRetryHint
-from bitmovin_api_sdk.models.esam_condition import EsamCondition
-from bitmovin_api_sdk.models.esam_direction import EsamDirection
 from bitmovin_api_sdk.models.esam_media_point import EsamMediaPoint
 from bitmovin_api_sdk.models.esam_settings import EsamSettings
 from bitmovin_api_sdk.models.esam_signal import EsamSignal

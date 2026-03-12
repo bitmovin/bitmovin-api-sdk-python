@@ -92,28 +92,23 @@
     <span class="nd">@poscheck_model</span>
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
                  <span class="n">match_time</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                 <span class="n">signals</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                 <span class="n">conditions</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (datetime, list[EsamSignal], list[EsamCondition]) -&gt; None</span>
+                 <span class="n">signals</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="c1"># type: (datetime, list[EsamSignal]) -&gt; None</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_match_time</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_signals</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_conditions</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>
 
         <span class="k">if</span> <span class="n">match_time</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">match_time</span> <span class="o">=</span> <span class="n">match_time</span>
         <span class="k">if</span> <span class="n">signals</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">signals</span> <span class="o">=</span> <span class="n">signals</span>
-        <span class="k">if</span> <span class="n">conditions</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">conditions</span> <span class="o">=</span> <span class="n">conditions</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">types</span> <span class="o">=</span> <span class="p">{</span>
             <span class="s1">&#39;match_time&#39;</span><span class="p">:</span> <span class="s1">&#39;datetime&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;signals&#39;</span><span class="p">:</span> <span class="s1">&#39;list[EsamSignal]&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;conditions&#39;</span><span class="p">:</span> <span class="s1">&#39;list[EsamCondition]&#39;</span>
+            <span class="s1">&#39;signals&#39;</span><span class="p">:</span> <span class="s1">&#39;list[EsamSignal]&#39;</span>
         <span class="p">}</span>
 
         <span class="k">return</span> <span class="n">types</span>
@@ -122,8 +117,7 @@
     <span class="k">def</span><span class="w"> </span><span class="nf">attribute_map</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">attributes</span> <span class="o">=</span> <span class="p">{</span>
             <span class="s1">&#39;match_time&#39;</span><span class="p">:</span> <span class="s1">&#39;matchTime&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;signals&#39;</span><span class="p">:</span> <span class="s1">&#39;signals&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;conditions&#39;</span><span class="p">:</span> <span class="s1">&#39;conditions&#39;</span>
+            <span class="s1">&#39;signals&#39;</span><span class="p">:</span> <span class="s1">&#39;signals&#39;</span>
         <span class="p">}</span>
         <span class="k">return</span> <span class="n">attributes</span>
 
@@ -184,35 +178,6 @@
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `signals`, type has to be `list[EsamSignal]`&quot;</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_signals</span> <span class="o">=</span> <span class="n">signals</span>
-
-    <span class="nd">@property</span>
-    <span class="k">def</span><span class="w"> </span><span class="nf">conditions</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="c1"># type: () -&gt; list[EsamCondition]</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the conditions of this EsamMediaPoint.</span>
-
-<span class="sd">        Optional array of ESAM conditions with timing offsets and directional markers (OUT/IN) for signaling content boundaries</span>
-
-<span class="sd">        :return: The conditions of this EsamMediaPoint.</span>
-<span class="sd">        :rtype: list[EsamCondition]</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_conditions</span>
-
-    <span class="nd">@conditions</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span><span class="w"> </span><span class="nf">conditions</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">conditions</span><span class="p">):</span>
-        <span class="c1"># type: (list) -&gt; None</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the conditions of this EsamMediaPoint.</span>
-
-<span class="sd">        Optional array of ESAM conditions with timing offsets and directional markers (OUT/IN) for signaling content boundaries</span>
-
-<span class="sd">        :param conditions: The conditions of this EsamMediaPoint.</span>
-<span class="sd">        :type: list[EsamCondition]</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-
-        <span class="k">if</span> <span class="n">conditions</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">conditions</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `conditions`, type has to be `list[EsamCondition]`&quot;</span><span class="p">)</span>
-
-        <span class="bp">self</span><span class="o">.</span><span class="n">_conditions</span> <span class="o">=</span> <span class="n">conditions</span>
 
 <div class="viewcode-block" id="EsamMediaPoint.to_dict">
 <a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.esam_media_point.EsamMediaPoint.to_dict">[docs]</a>
