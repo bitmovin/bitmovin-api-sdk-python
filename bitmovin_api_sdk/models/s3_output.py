@@ -6,6 +6,7 @@ from bitmovin_api_sdk.common.poscheck import poscheck_model
 from bitmovin_api_sdk.models.aws_cloud_region import AwsCloudRegion
 from bitmovin_api_sdk.models.output import Output
 from bitmovin_api_sdk.models.s3_signature_version import S3SignatureVersion
+from bitmovin_api_sdk.models.s3_storage_class import S3StorageClass
 import pprint
 import six
 
@@ -25,8 +26,9 @@ class S3Output(Output):
                  secret_key=None,
                  md5_meta_tag=None,
                  cloud_region=None,
-                 signature_version=None):
-        # type: (string_types, string_types, string_types, datetime, datetime, dict, list[AclEntry], string_types, string_types, string_types, string_types, AwsCloudRegion, S3SignatureVersion) -> None
+                 signature_version=None,
+                 storage_class=None):
+        # type: (string_types, string_types, string_types, datetime, datetime, dict, list[AclEntry], string_types, string_types, string_types, string_types, AwsCloudRegion, S3SignatureVersion, S3StorageClass) -> None
         super(S3Output, self).__init__(id_=id_, name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, acl=acl)
 
         self._bucket_name = None
@@ -35,6 +37,7 @@ class S3Output(Output):
         self._md5_meta_tag = None
         self._cloud_region = None
         self._signature_version = None
+        self._storage_class = None
         self.discriminator = None
 
         if bucket_name is not None:
@@ -49,6 +52,8 @@ class S3Output(Output):
             self.cloud_region = cloud_region
         if signature_version is not None:
             self.signature_version = signature_version
+        if storage_class is not None:
+            self.storage_class = storage_class
 
     @property
     def openapi_types(self):
@@ -63,7 +68,8 @@ class S3Output(Output):
             'secret_key': 'string_types',
             'md5_meta_tag': 'string_types',
             'cloud_region': 'AwsCloudRegion',
-            'signature_version': 'S3SignatureVersion'
+            'signature_version': 'S3SignatureVersion',
+            'storage_class': 'S3StorageClass'
         })
 
         return types
@@ -81,7 +87,8 @@ class S3Output(Output):
             'secret_key': 'secretKey',
             'md5_meta_tag': 'md5MetaTag',
             'cloud_region': 'cloudRegion',
-            'signature_version': 'signatureVersion'
+            'signature_version': 'signatureVersion',
+            'storage_class': 'storageClass'
         })
         return attributes
 
@@ -258,6 +265,35 @@ class S3Output(Output):
                 raise TypeError("Invalid type for `signature_version`, type has to be `S3SignatureVersion`")
 
         self._signature_version = signature_version
+
+    @property
+    def storage_class(self):
+        # type: () -> S3StorageClass
+        """Gets the storage_class of this S3Output.
+
+        Specifies the storage class used for the bucket. This depends on the requirements of workloads, like performance, data access, resiliency, and cost.
+
+        :return: The storage_class of this S3Output.
+        :rtype: S3StorageClass
+        """
+        return self._storage_class
+
+    @storage_class.setter
+    def storage_class(self, storage_class):
+        # type: (S3StorageClass) -> None
+        """Sets the storage_class of this S3Output.
+
+        Specifies the storage class used for the bucket. This depends on the requirements of workloads, like performance, data access, resiliency, and cost.
+
+        :param storage_class: The storage_class of this S3Output.
+        :type: S3StorageClass
+        """
+
+        if storage_class is not None:
+            if not isinstance(storage_class, S3StorageClass):
+                raise TypeError("Invalid type for `storage_class`, type has to be `S3StorageClass`")
+
+        self._storage_class = storage_class
 
     def to_dict(self):
         """Returns the model properties as a dict"""

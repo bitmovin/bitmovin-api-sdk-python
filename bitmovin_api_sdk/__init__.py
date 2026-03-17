@@ -1140,6 +1140,8 @@ from bitmovin_api_sdk.models.aes_encryption_method import AesEncryptionMethod
 from bitmovin_api_sdk.models.agent_chat_attachment import AgentChatAttachment
 from bitmovin_api_sdk.models.agent_chat_attachments_data import AgentChatAttachmentsData
 from bitmovin_api_sdk.models.agent_chat_attachments_part import AgentChatAttachmentsPart
+from bitmovin_api_sdk.models.agent_chat_dynamic_tool_part import AgentChatDynamicToolPart
+from bitmovin_api_sdk.models.agent_chat_dynamic_tool_state import AgentChatDynamicToolState
 from bitmovin_api_sdk.models.agent_chat_message import AgentChatMessage
 from bitmovin_api_sdk.models.agent_chat_message_part import AgentChatMessagePart
 from bitmovin_api_sdk.models.agent_chat_message_part_type import AgentChatMessagePartType
@@ -1790,6 +1792,7 @@ from bitmovin_api_sdk.models.s3_output import S3Output
 from bitmovin_api_sdk.models.s3_role_based_input import S3RoleBasedInput
 from bitmovin_api_sdk.models.s3_role_based_output import S3RoleBasedOutput
 from bitmovin_api_sdk.models.s3_signature_version import S3SignatureVersion
+from bitmovin_api_sdk.models.s3_storage_class import S3StorageClass
 from bitmovin_api_sdk.models.scale_filter import ScaleFilter
 from bitmovin_api_sdk.models.scaling_algorithm import ScalingAlgorithm
 from bitmovin_api_sdk.models.scc_caption import SccCaption
@@ -1984,4 +1987,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.258.0"
+__version__ = "1.259.1"

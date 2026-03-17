@@ -10,7 +10,8 @@ class AgentChatMessagePart(object):
 
     discriminator_value_class_map = {
         'text': 'AgentChatTextPart',
-        'data-attachments': 'AgentChatAttachmentsPart'
+        'data-attachments': 'AgentChatAttachmentsPart',
+        'dynamic-tool': 'AgentChatDynamicToolPart'
     }
 
     def to_dict(self):

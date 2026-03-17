@@ -8,3 +8,4 @@ from bitmovin_api_sdk.common.poscheck import poscheck_model
 class AgentChatMessagePartType(Enum):
     TEXT = "text"
     DATA_ATTACHMENTS = "data-attachments"
+    DYNAMIC_TOOL = "dynamic-tool"

@@ -84,6 +84,7 @@
 <span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.aws_cloud_region</span><span class="w"> </span><span class="kn">import</span> <span class="n">AwsCloudRegion</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.output</span><span class="w"> </span><span class="kn">import</span> <span class="n">Output</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.s3_signature_version</span><span class="w"> </span><span class="kn">import</span> <span class="n">S3SignatureVersion</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.s3_storage_class</span><span class="w"> </span><span class="kn">import</span> <span class="n">S3StorageClass</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">pprint</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">six</span>
 
@@ -105,8 +106,9 @@
                  <span class="n">secret_key</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">md5_meta_tag</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">cloud_region</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                 <span class="n">signature_version</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (string_types, string_types, string_types, datetime, datetime, dict, list[AclEntry], string_types, string_types, string_types, string_types, AwsCloudRegion, S3SignatureVersion) -&gt; None</span>
+                 <span class="n">signature_version</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">storage_class</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="c1"># type: (string_types, string_types, string_types, datetime, datetime, dict, list[AclEntry], string_types, string_types, string_types, string_types, AwsCloudRegion, S3SignatureVersion, S3StorageClass) -&gt; None</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">S3Output</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">id_</span><span class="o">=</span><span class="n">id_</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="n">description</span><span class="p">,</span> <span class="n">created_at</span><span class="o">=</span><span class="n">created_at</span><span class="p">,</span> <span class="n">modified_at</span><span class="o">=</span><span class="n">modified_at</span><span class="p">,</span> <span class="n">custom_data</span><span class="o">=</span><span class="n">custom_data</span><span class="p">,</span> <span class="n">acl</span><span class="o">=</span><span class="n">acl</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_bucket_name</span> <span class="o">=</span> <span class="kc">None</span>
@@ -115,6 +117,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_md5_meta_tag</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_cloud_region</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_signature_version</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_storage_class</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>
 
         <span class="k">if</span> <span class="n">bucket_name</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -129,6 +132,8 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">cloud_region</span> <span class="o">=</span> <span class="n">cloud_region</span>
         <span class="k">if</span> <span class="n">signature_version</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">signature_version</span> <span class="o">=</span> <span class="n">signature_version</span>
+        <span class="k">if</span> <span class="n">storage_class</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">storage_class</span> <span class="o">=</span> <span class="n">storage_class</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -143,7 +148,8 @@
             <span class="s1">&#39;secret_key&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
             <span class="s1">&#39;md5_meta_tag&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
             <span class="s1">&#39;cloud_region&#39;</span><span class="p">:</span> <span class="s1">&#39;AwsCloudRegion&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;signature_version&#39;</span><span class="p">:</span> <span class="s1">&#39;S3SignatureVersion&#39;</span>
+            <span class="s1">&#39;signature_version&#39;</span><span class="p">:</span> <span class="s1">&#39;S3SignatureVersion&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;storage_class&#39;</span><span class="p">:</span> <span class="s1">&#39;S3StorageClass&#39;</span>
         <span class="p">})</span>
 
         <span class="k">return</span> <span class="n">types</span>
@@ -161,7 +167,8 @@
             <span class="s1">&#39;secret_key&#39;</span><span class="p">:</span> <span class="s1">&#39;secretKey&#39;</span><span class="p">,</span>
             <span class="s1">&#39;md5_meta_tag&#39;</span><span class="p">:</span> <span class="s1">&#39;md5MetaTag&#39;</span><span class="p">,</span>
             <span class="s1">&#39;cloud_region&#39;</span><span class="p">:</span> <span class="s1">&#39;cloudRegion&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;signature_version&#39;</span><span class="p">:</span> <span class="s1">&#39;signatureVersion&#39;</span>
+            <span class="s1">&#39;signature_version&#39;</span><span class="p">:</span> <span class="s1">&#39;signatureVersion&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;storage_class&#39;</span><span class="p">:</span> <span class="s1">&#39;storageClass&#39;</span>
         <span class="p">})</span>
         <span class="k">return</span> <span class="n">attributes</span>
 
@@ -338,6 +345,35 @@
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `signature_version`, type has to be `S3SignatureVersion`&quot;</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_signature_version</span> <span class="o">=</span> <span class="n">signature_version</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">storage_class</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; S3StorageClass</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the storage_class of this S3Output.</span>
+
+<span class="sd">        Specifies the storage class used for the bucket. This depends on the requirements of workloads, like performance, data access, resiliency, and cost.</span>
+
+<span class="sd">        :return: The storage_class of this S3Output.</span>
+<span class="sd">        :rtype: S3StorageClass</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_storage_class</span>
+
+    <span class="nd">@storage_class</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">storage_class</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">storage_class</span><span class="p">):</span>
+        <span class="c1"># type: (S3StorageClass) -&gt; None</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the storage_class of this S3Output.</span>
+
+<span class="sd">        Specifies the storage class used for the bucket. This depends on the requirements of workloads, like performance, data access, resiliency, and cost.</span>
+
+<span class="sd">        :param storage_class: The storage_class of this S3Output.</span>
+<span class="sd">        :type: S3StorageClass</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">storage_class</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">storage_class</span><span class="p">,</span> <span class="n">S3StorageClass</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `storage_class`, type has to be `S3StorageClass`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_storage_class</span> <span class="o">=</span> <span class="n">storage_class</span>
 
 <div class="viewcode-block" id="S3Output.to_dict">
 <a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.s3_output.S3Output.to_dict">[docs]</a>
