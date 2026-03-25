@@ -3,6 +3,7 @@
 from enum import Enum
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
+from bitmovin_api_sdk.models.all_scene_boundaries import AllSceneBoundaries
 import pprint
 import six
 
@@ -10,19 +11,24 @@ import six
 class AiSceneAnalysisAutomaticAdPlacement(object):
     @poscheck_model
     def __init__(self,
-                 schedule=None):
-        # type: (list[AutomaticAdPlacementPosition]) -> None
+                 schedule=None,
+                 all_scene_boundaries=None):
+        # type: (list[AutomaticAdPlacementPosition], AllSceneBoundaries) -> None
 
         self._schedule = list()
+        self._all_scene_boundaries = None
         self.discriminator = None
 
         if schedule is not None:
             self.schedule = schedule
+        if all_scene_boundaries is not None:
+            self.all_scene_boundaries = all_scene_boundaries
 
     @property
     def openapi_types(self):
         types = {
-            'schedule': 'list[AutomaticAdPlacementPosition]'
+            'schedule': 'list[AutomaticAdPlacementPosition]',
+            'all_scene_boundaries': 'AllSceneBoundaries'
         }
 
         return types
@@ -30,7 +36,8 @@ class AiSceneAnalysisAutomaticAdPlacement(object):
     @property
     def attribute_map(self):
         attributes = {
-            'schedule': 'schedule'
+            'schedule': 'schedule',
+            'all_scene_boundaries': 'allSceneBoundaries'
         }
         return attributes
 
@@ -62,6 +69,35 @@ class AiSceneAnalysisAutomaticAdPlacement(object):
                 raise TypeError("Invalid type for `schedule`, type has to be `list[AutomaticAdPlacementPosition]`")
 
         self._schedule = schedule
+
+    @property
+    def all_scene_boundaries(self):
+        # type: () -> AllSceneBoundaries
+        """Gets the all_scene_boundaries of this AiSceneAnalysisAutomaticAdPlacement.
+
+        Configuration for placing keyframes and optional cue tags at every detected scene boundary. 
+
+        :return: The all_scene_boundaries of this AiSceneAnalysisAutomaticAdPlacement.
+        :rtype: AllSceneBoundaries
+        """
+        return self._all_scene_boundaries
+
+    @all_scene_boundaries.setter
+    def all_scene_boundaries(self, all_scene_boundaries):
+        # type: (AllSceneBoundaries) -> None
+        """Sets the all_scene_boundaries of this AiSceneAnalysisAutomaticAdPlacement.
+
+        Configuration for placing keyframes and optional cue tags at every detected scene boundary. 
+
+        :param all_scene_boundaries: The all_scene_boundaries of this AiSceneAnalysisAutomaticAdPlacement.
+        :type: AllSceneBoundaries
+        """
+
+        if all_scene_boundaries is not None:
+            if not isinstance(all_scene_boundaries, AllSceneBoundaries):
+                raise TypeError("Invalid type for `all_scene_boundaries`, type has to be `AllSceneBoundaries`")
+
+        self._all_scene_boundaries = all_scene_boundaries
 
     def to_dict(self):
         """Returns the model properties as a dict"""

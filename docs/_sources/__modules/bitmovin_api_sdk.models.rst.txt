@@ -572,6 +572,14 @@ bitmovin\_api\_sdk.models.akamai\_net\_storage\_output module
    :show-inheritance:
    :undoc-members:
 
+bitmovin\_api\_sdk.models.all\_scene\_boundaries module
+-------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.all_scene_boundaries
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
 bitmovin\_api\_sdk.models.analytics\_abstract\_filter module
 ------------------------------------------------------------
 

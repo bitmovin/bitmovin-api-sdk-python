@@ -1163,6 +1163,7 @@ from bitmovin_api_sdk.models.akamai_msl_stream_format import AkamaiMslStreamForm
 from bitmovin_api_sdk.models.akamai_msl_version import AkamaiMslVersion
 from bitmovin_api_sdk.models.akamai_net_storage_input import AkamaiNetStorageInput
 from bitmovin_api_sdk.models.akamai_net_storage_output import AkamaiNetStorageOutput
+from bitmovin_api_sdk.models.all_scene_boundaries import AllSceneBoundaries
 from bitmovin_api_sdk.models.analytics_abstract_filter import AnalyticsAbstractFilter
 from bitmovin_api_sdk.models.analytics_attribute import AnalyticsAttribute
 from bitmovin_api_sdk.models.analytics_avg_concurrent_viewers_response import AnalyticsAvgConcurrentViewersResponse
@@ -1987,4 +1988,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.259.1"
+__version__ = "1.260.0"

@@ -81,6 +81,7 @@
 <span class="kn">from</span><span class="w"> </span><span class="nn">enum</span><span class="w"> </span><span class="kn">import</span> <span class="n">Enum</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">six</span><span class="w"> </span><span class="kn">import</span> <span class="n">string_types</span><span class="p">,</span> <span class="n">iteritems</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.common.poscheck</span><span class="w"> </span><span class="kn">import</span> <span class="n">poscheck_model</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.all_scene_boundaries</span><span class="w"> </span><span class="kn">import</span> <span class="n">AllSceneBoundaries</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">pprint</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">six</span>
 
@@ -90,19 +91,24 @@
 <span class="k">class</span><span class="w"> </span><span class="nc">AiSceneAnalysisAutomaticAdPlacement</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="nd">@poscheck_model</span>
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
-                 <span class="n">schedule</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (list[AutomaticAdPlacementPosition]) -&gt; None</span>
+                 <span class="n">schedule</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">all_scene_boundaries</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="c1"># type: (list[AutomaticAdPlacementPosition], AllSceneBoundaries) -&gt; None</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_schedule</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_all_scene_boundaries</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>
 
         <span class="k">if</span> <span class="n">schedule</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">schedule</span> <span class="o">=</span> <span class="n">schedule</span>
+        <span class="k">if</span> <span class="n">all_scene_boundaries</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">all_scene_boundaries</span> <span class="o">=</span> <span class="n">all_scene_boundaries</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">types</span> <span class="o">=</span> <span class="p">{</span>
-            <span class="s1">&#39;schedule&#39;</span><span class="p">:</span> <span class="s1">&#39;list[AutomaticAdPlacementPosition]&#39;</span>
+            <span class="s1">&#39;schedule&#39;</span><span class="p">:</span> <span class="s1">&#39;list[AutomaticAdPlacementPosition]&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;all_scene_boundaries&#39;</span><span class="p">:</span> <span class="s1">&#39;AllSceneBoundaries&#39;</span>
         <span class="p">}</span>
 
         <span class="k">return</span> <span class="n">types</span>
@@ -110,7 +116,8 @@
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">attribute_map</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">attributes</span> <span class="o">=</span> <span class="p">{</span>
-            <span class="s1">&#39;schedule&#39;</span><span class="p">:</span> <span class="s1">&#39;schedule&#39;</span>
+            <span class="s1">&#39;schedule&#39;</span><span class="p">:</span> <span class="s1">&#39;schedule&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;all_scene_boundaries&#39;</span><span class="p">:</span> <span class="s1">&#39;allSceneBoundaries&#39;</span>
         <span class="p">}</span>
         <span class="k">return</span> <span class="n">attributes</span>
 
@@ -142,6 +149,35 @@
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `schedule`, type has to be `list[AutomaticAdPlacementPosition]`&quot;</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_schedule</span> <span class="o">=</span> <span class="n">schedule</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">all_scene_boundaries</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; AllSceneBoundaries</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the all_scene_boundaries of this AiSceneAnalysisAutomaticAdPlacement.</span>
+
+<span class="sd">        Configuration for placing keyframes and optional cue tags at every detected scene boundary. </span>
+
+<span class="sd">        :return: The all_scene_boundaries of this AiSceneAnalysisAutomaticAdPlacement.</span>
+<span class="sd">        :rtype: AllSceneBoundaries</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_all_scene_boundaries</span>
+
+    <span class="nd">@all_scene_boundaries</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">all_scene_boundaries</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">all_scene_boundaries</span><span class="p">):</span>
+        <span class="c1"># type: (AllSceneBoundaries) -&gt; None</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the all_scene_boundaries of this AiSceneAnalysisAutomaticAdPlacement.</span>
+
+<span class="sd">        Configuration for placing keyframes and optional cue tags at every detected scene boundary. </span>
+
+<span class="sd">        :param all_scene_boundaries: The all_scene_boundaries of this AiSceneAnalysisAutomaticAdPlacement.</span>
+<span class="sd">        :type: AllSceneBoundaries</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">all_scene_boundaries</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">all_scene_boundaries</span><span class="p">,</span> <span class="n">AllSceneBoundaries</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `all_scene_boundaries`, type has to be `AllSceneBoundaries`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_all_scene_boundaries</span> <span class="o">=</span> <span class="n">all_scene_boundaries</span>
 
 <div class="viewcode-block" id="AiSceneAnalysisAutomaticAdPlacement.to_dict">
 <a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.ai_scene_analysis_automatic_ad_placement.AiSceneAnalysisAutomaticAdPlacement.to_dict">[docs]</a>
