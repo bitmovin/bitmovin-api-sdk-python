@@ -1,0 +1,29 @@
+bitmovin\_api\_sdk.agents.assistant package
+===========================================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   bitmovin_api_sdk.agents.assistant.sessions
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.agents.assistant.assistant\_api module
+---------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.agents.assistant.assistant_api
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.agents.assistant
+   :members:
+   :show-inheritance:
+   :undoc-members:

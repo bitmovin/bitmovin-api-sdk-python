@@ -1,0 +1,2 @@
+from bitmovin_api_sdk.agents.assistant.assistant_api import AssistantApi
+from bitmovin_api_sdk.agents.assistant.sessions.sessions_api import SessionsApi

@@ -33,6 +33,10 @@ from bitmovin_api_sdk.agents.aisa.aisa_api import AisaApi
 
 from bitmovin_api_sdk.agents.aisa.sessions.sessions_api import SessionsApi
 
+from bitmovin_api_sdk.agents.assistant.assistant_api import AssistantApi
+
+from bitmovin_api_sdk.agents.assistant.sessions.sessions_api import SessionsApi
+
 from bitmovin_api_sdk.ai_scene_analysis.ai_scene_analysis_api import AiSceneAnalysisApi
 
 from bitmovin_api_sdk.ai_scene_analysis.analyses.analyses_api import AnalysesApi
@@ -1988,4 +1992,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.262.0"
+__version__ = "1.263.0"

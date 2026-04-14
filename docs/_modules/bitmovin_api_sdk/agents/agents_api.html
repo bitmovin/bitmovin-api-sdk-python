@@ -83,6 +83,7 @@
 <span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.common</span><span class="w"> </span><span class="kn">import</span> <span class="n">BaseApi</span><span class="p">,</span> <span class="n">BitmovinApiLoggerBase</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.common.poscheck</span><span class="w"> </span><span class="kn">import</span> <span class="n">poscheck_except</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.agents.aisa.aisa_api</span><span class="w"> </span><span class="kn">import</span> <span class="n">AisaApi</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.agents.assistant.assistant_api</span><span class="w"> </span><span class="kn">import</span> <span class="n">AssistantApi</span>
 
 
 <div class="viewcode-block" id="AgentsApi">
@@ -100,6 +101,13 @@
         <span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">aisa</span> <span class="o">=</span> <span class="n">AisaApi</span><span class="p">(</span>
+            <span class="n">api_key</span><span class="o">=</span><span class="n">api_key</span><span class="p">,</span>
+            <span class="n">tenant_org_id</span><span class="o">=</span><span class="n">tenant_org_id</span><span class="p">,</span>
+            <span class="n">base_url</span><span class="o">=</span><span class="n">base_url</span><span class="p">,</span>
+            <span class="n">logger</span><span class="o">=</span><span class="n">logger</span>
+        <span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">assistant</span> <span class="o">=</span> <span class="n">AssistantApi</span><span class="p">(</span>
             <span class="n">api_key</span><span class="o">=</span><span class="n">api_key</span><span class="p">,</span>
             <span class="n">tenant_org_id</span><span class="o">=</span><span class="n">tenant_org_id</span><span class="p">,</span>
             <span class="n">base_url</span><span class="o">=</span><span class="n">base_url</span><span class="p">,</span>

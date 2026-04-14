@@ -12,25 +12,31 @@ class SceneAnalysisDetailsResponse(object):
     @poscheck_model
     def __init__(self,
                  scenes=None,
+                 duration=None,
                  description=None,
                  keywords=None,
                  ratings=None,
                  sensitive_topics=None,
                  iab_sensitive_topic_taxonomies=None,
+                 input_language_codes=None,
                  metadata=None):
-        # type: (list[Scene], string_types, list[string_types], list[Rating], list[string_types], list[string_types], Metadata) -> None
+        # type: (list[Scene], float, string_types, list[string_types], list[Rating], list[string_types], list[string_types], list[string_types], Metadata) -> None
 
         self._scenes = list()
+        self._duration = None
         self._description = None
         self._keywords = list()
         self._ratings = list()
         self._sensitive_topics = list()
         self._iab_sensitive_topic_taxonomies = list()
+        self._input_language_codes = list()
         self._metadata = None
         self.discriminator = None
 
         if scenes is not None:
             self.scenes = scenes
+        if duration is not None:
+            self.duration = duration
         if description is not None:
             self.description = description
         if keywords is not None:
@@ -41,6 +47,8 @@ class SceneAnalysisDetailsResponse(object):
             self.sensitive_topics = sensitive_topics
         if iab_sensitive_topic_taxonomies is not None:
             self.iab_sensitive_topic_taxonomies = iab_sensitive_topic_taxonomies
+        if input_language_codes is not None:
+            self.input_language_codes = input_language_codes
         if metadata is not None:
             self.metadata = metadata
 
@@ -48,11 +56,13 @@ class SceneAnalysisDetailsResponse(object):
     def openapi_types(self):
         types = {
             'scenes': 'list[Scene]',
+            'duration': 'float',
             'description': 'string_types',
             'keywords': 'list[string_types]',
             'ratings': 'list[Rating]',
             'sensitive_topics': 'list[string_types]',
             'iab_sensitive_topic_taxonomies': 'list[string_types]',
+            'input_language_codes': 'list[string_types]',
             'metadata': 'Metadata'
         }
 
@@ -62,11 +72,13 @@ class SceneAnalysisDetailsResponse(object):
     def attribute_map(self):
         attributes = {
             'scenes': 'scenes',
+            'duration': 'duration',
             'description': 'description',
             'keywords': 'keywords',
             'ratings': 'ratings',
             'sensitive_topics': 'sensitiveTopics',
             'iab_sensitive_topic_taxonomies': 'iabSensitiveTopicTaxonomies',
+            'input_language_codes': 'inputLanguageCodes',
             'metadata': 'metadata'
         }
         return attributes
@@ -97,6 +109,33 @@ class SceneAnalysisDetailsResponse(object):
                 raise TypeError("Invalid type for `scenes`, type has to be `list[Scene]`")
 
         self._scenes = scenes
+
+    @property
+    def duration(self):
+        # type: () -> float
+        """Gets the duration of this SceneAnalysisDetailsResponse.
+
+
+        :return: The duration of this SceneAnalysisDetailsResponse.
+        :rtype: float
+        """
+        return self._duration
+
+    @duration.setter
+    def duration(self, duration):
+        # type: (float) -> None
+        """Sets the duration of this SceneAnalysisDetailsResponse.
+
+
+        :param duration: The duration of this SceneAnalysisDetailsResponse.
+        :type: float
+        """
+
+        if duration is not None:
+            if not isinstance(duration, (float, int)):
+                raise TypeError("Invalid type for `duration`, type has to be `float`")
+
+        self._duration = duration
 
     @property
     def description(self):
@@ -232,6 +271,33 @@ class SceneAnalysisDetailsResponse(object):
                 raise TypeError("Invalid type for `iab_sensitive_topic_taxonomies`, type has to be `list[string_types]`")
 
         self._iab_sensitive_topic_taxonomies = iab_sensitive_topic_taxonomies
+
+    @property
+    def input_language_codes(self):
+        # type: () -> list[string_types]
+        """Gets the input_language_codes of this SceneAnalysisDetailsResponse.
+
+
+        :return: The input_language_codes of this SceneAnalysisDetailsResponse.
+        :rtype: list[string_types]
+        """
+        return self._input_language_codes
+
+    @input_language_codes.setter
+    def input_language_codes(self, input_language_codes):
+        # type: (list) -> None
+        """Sets the input_language_codes of this SceneAnalysisDetailsResponse.
+
+
+        :param input_language_codes: The input_language_codes of this SceneAnalysisDetailsResponse.
+        :type: list[string_types]
+        """
+
+        if input_language_codes is not None:
+            if not isinstance(input_language_codes, list):
+                raise TypeError("Invalid type for `input_language_codes`, type has to be `list[string_types]`")
+
+        self._input_language_codes = input_language_codes
 
     @property
     def metadata(self):

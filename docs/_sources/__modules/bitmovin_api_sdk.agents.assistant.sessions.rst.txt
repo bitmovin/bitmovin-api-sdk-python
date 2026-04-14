@@ -1,0 +1,21 @@
+bitmovin\_api\_sdk.agents.assistant.sessions package
+====================================================
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.agents.assistant.sessions.sessions\_api module
+-----------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.agents.assistant.sessions.sessions_api
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.agents.assistant.sessions
+   :members:
+   :show-inheritance:
+   :undoc-members:
