@@ -23,13 +23,15 @@ class LiveEncodingHeartbeatIngestStream(object):
                  incoming_bitrate=None,
                  key_frame_interval_max=None,
                  key_frame_interval_avg=None,
+                 key_frame_interval_max_last_minute=None,
+                 key_frame_interval_avg_last_minute=None,
                  last_timestamp=None,
                  last_timestamp_timescale=None,
                  number_of_audio_channels=None,
                  audio_channel_format=None,
                  last_arrival_time=None,
                  healthy=None):
-        # type: (string_types, string_types, int, int, float, string_types, string_types, int, float, float, int, float, int, int, int, string_types, datetime, bool) -> None
+        # type: (string_types, string_types, int, int, float, string_types, string_types, int, float, float, int, float, int, float, int, int, int, string_types, datetime, bool) -> None
 
         self._stream_id = None
         self._media_type = None
@@ -43,6 +45,8 @@ class LiveEncodingHeartbeatIngestStream(object):
         self._incoming_bitrate = None
         self._key_frame_interval_max = None
         self._key_frame_interval_avg = None
+        self._key_frame_interval_max_last_minute = None
+        self._key_frame_interval_avg_last_minute = None
         self._last_timestamp = None
         self._last_timestamp_timescale = None
         self._number_of_audio_channels = None
@@ -75,6 +79,10 @@ class LiveEncodingHeartbeatIngestStream(object):
             self.key_frame_interval_max = key_frame_interval_max
         if key_frame_interval_avg is not None:
             self.key_frame_interval_avg = key_frame_interval_avg
+        if key_frame_interval_max_last_minute is not None:
+            self.key_frame_interval_max_last_minute = key_frame_interval_max_last_minute
+        if key_frame_interval_avg_last_minute is not None:
+            self.key_frame_interval_avg_last_minute = key_frame_interval_avg_last_minute
         if last_timestamp is not None:
             self.last_timestamp = last_timestamp
         if last_timestamp_timescale is not None:
@@ -103,6 +111,8 @@ class LiveEncodingHeartbeatIngestStream(object):
             'incoming_bitrate': 'float',
             'key_frame_interval_max': 'int',
             'key_frame_interval_avg': 'float',
+            'key_frame_interval_max_last_minute': 'int',
+            'key_frame_interval_avg_last_minute': 'float',
             'last_timestamp': 'int',
             'last_timestamp_timescale': 'int',
             'number_of_audio_channels': 'int',
@@ -128,6 +138,8 @@ class LiveEncodingHeartbeatIngestStream(object):
             'incoming_bitrate': 'incomingBitrate',
             'key_frame_interval_max': 'keyFrameIntervalMax',
             'key_frame_interval_avg': 'keyFrameIntervalAvg',
+            'key_frame_interval_max_last_minute': 'keyFrameIntervalMaxLastMinute',
+            'key_frame_interval_avg_last_minute': 'keyFrameIntervalAvgLastMinute',
             'last_timestamp': 'lastTimestamp',
             'last_timestamp_timescale': 'lastTimestampTimescale',
             'number_of_audio_channels': 'numberOfAudioChannels',
@@ -484,6 +496,64 @@ class LiveEncodingHeartbeatIngestStream(object):
                 raise TypeError("Invalid type for `key_frame_interval_avg`, type has to be `float`")
 
         self._key_frame_interval_avg = key_frame_interval_avg
+
+    @property
+    def key_frame_interval_max_last_minute(self):
+        # type: () -> int
+        """Gets the key_frame_interval_max_last_minute of this LiveEncodingHeartbeatIngestStream.
+
+        Largest key-frame interval observed over the last minute, in milliseconds. Absent until the rolling window has at least one sample.
+
+        :return: The key_frame_interval_max_last_minute of this LiveEncodingHeartbeatIngestStream.
+        :rtype: int
+        """
+        return self._key_frame_interval_max_last_minute
+
+    @key_frame_interval_max_last_minute.setter
+    def key_frame_interval_max_last_minute(self, key_frame_interval_max_last_minute):
+        # type: (int) -> None
+        """Sets the key_frame_interval_max_last_minute of this LiveEncodingHeartbeatIngestStream.
+
+        Largest key-frame interval observed over the last minute, in milliseconds. Absent until the rolling window has at least one sample.
+
+        :param key_frame_interval_max_last_minute: The key_frame_interval_max_last_minute of this LiveEncodingHeartbeatIngestStream.
+        :type: int
+        """
+
+        if key_frame_interval_max_last_minute is not None:
+            if not isinstance(key_frame_interval_max_last_minute, int):
+                raise TypeError("Invalid type for `key_frame_interval_max_last_minute`, type has to be `int`")
+
+        self._key_frame_interval_max_last_minute = key_frame_interval_max_last_minute
+
+    @property
+    def key_frame_interval_avg_last_minute(self):
+        # type: () -> float
+        """Gets the key_frame_interval_avg_last_minute of this LiveEncodingHeartbeatIngestStream.
+
+        Average key-frame interval over the last minute, in milliseconds. Absent until the rolling window has at least one sample.
+
+        :return: The key_frame_interval_avg_last_minute of this LiveEncodingHeartbeatIngestStream.
+        :rtype: float
+        """
+        return self._key_frame_interval_avg_last_minute
+
+    @key_frame_interval_avg_last_minute.setter
+    def key_frame_interval_avg_last_minute(self, key_frame_interval_avg_last_minute):
+        # type: (float) -> None
+        """Sets the key_frame_interval_avg_last_minute of this LiveEncodingHeartbeatIngestStream.
+
+        Average key-frame interval over the last minute, in milliseconds. Absent until the rolling window has at least one sample.
+
+        :param key_frame_interval_avg_last_minute: The key_frame_interval_avg_last_minute of this LiveEncodingHeartbeatIngestStream.
+        :type: float
+        """
+
+        if key_frame_interval_avg_last_minute is not None:
+            if not isinstance(key_frame_interval_avg_last_minute, (float, int)):
+                raise TypeError("Invalid type for `key_frame_interval_avg_last_minute`, type has to be `float`")
+
+        self._key_frame_interval_avg_last_minute = key_frame_interval_avg_last_minute
 
     @property
     def last_timestamp(self):

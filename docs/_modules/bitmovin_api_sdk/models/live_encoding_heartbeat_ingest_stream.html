@@ -103,13 +103,15 @@
                  <span class="n">incoming_bitrate</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">key_frame_interval_max</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">key_frame_interval_avg</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">key_frame_interval_max_last_minute</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">key_frame_interval_avg_last_minute</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">last_timestamp</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">last_timestamp_timescale</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">number_of_audio_channels</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">audio_channel_format</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">last_arrival_time</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">healthy</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (string_types, string_types, int, int, float, string_types, string_types, int, float, float, int, float, int, int, int, string_types, datetime, bool) -&gt; None</span>
+        <span class="c1"># type: (string_types, string_types, int, int, float, string_types, string_types, int, float, float, int, float, int, float, int, int, int, string_types, datetime, bool) -&gt; None</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_stream_id</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_media_type</span> <span class="o">=</span> <span class="kc">None</span>
@@ -123,6 +125,8 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_incoming_bitrate</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_key_frame_interval_max</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_key_frame_interval_avg</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_key_frame_interval_max_last_minute</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_key_frame_interval_avg_last_minute</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_last_timestamp</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_last_timestamp_timescale</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_number_of_audio_channels</span> <span class="o">=</span> <span class="kc">None</span>
@@ -155,6 +159,10 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">key_frame_interval_max</span> <span class="o">=</span> <span class="n">key_frame_interval_max</span>
         <span class="k">if</span> <span class="n">key_frame_interval_avg</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">key_frame_interval_avg</span> <span class="o">=</span> <span class="n">key_frame_interval_avg</span>
+        <span class="k">if</span> <span class="n">key_frame_interval_max_last_minute</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">key_frame_interval_max_last_minute</span> <span class="o">=</span> <span class="n">key_frame_interval_max_last_minute</span>
+        <span class="k">if</span> <span class="n">key_frame_interval_avg_last_minute</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">key_frame_interval_avg_last_minute</span> <span class="o">=</span> <span class="n">key_frame_interval_avg_last_minute</span>
         <span class="k">if</span> <span class="n">last_timestamp</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">last_timestamp</span> <span class="o">=</span> <span class="n">last_timestamp</span>
         <span class="k">if</span> <span class="n">last_timestamp_timescale</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -183,6 +191,8 @@
             <span class="s1">&#39;incoming_bitrate&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span><span class="p">,</span>
             <span class="s1">&#39;key_frame_interval_max&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
             <span class="s1">&#39;key_frame_interval_avg&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;key_frame_interval_max_last_minute&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;key_frame_interval_avg_last_minute&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span><span class="p">,</span>
             <span class="s1">&#39;last_timestamp&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
             <span class="s1">&#39;last_timestamp_timescale&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
             <span class="s1">&#39;number_of_audio_channels&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
@@ -208,6 +218,8 @@
             <span class="s1">&#39;incoming_bitrate&#39;</span><span class="p">:</span> <span class="s1">&#39;incomingBitrate&#39;</span><span class="p">,</span>
             <span class="s1">&#39;key_frame_interval_max&#39;</span><span class="p">:</span> <span class="s1">&#39;keyFrameIntervalMax&#39;</span><span class="p">,</span>
             <span class="s1">&#39;key_frame_interval_avg&#39;</span><span class="p">:</span> <span class="s1">&#39;keyFrameIntervalAvg&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;key_frame_interval_max_last_minute&#39;</span><span class="p">:</span> <span class="s1">&#39;keyFrameIntervalMaxLastMinute&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;key_frame_interval_avg_last_minute&#39;</span><span class="p">:</span> <span class="s1">&#39;keyFrameIntervalAvgLastMinute&#39;</span><span class="p">,</span>
             <span class="s1">&#39;last_timestamp&#39;</span><span class="p">:</span> <span class="s1">&#39;lastTimestamp&#39;</span><span class="p">,</span>
             <span class="s1">&#39;last_timestamp_timescale&#39;</span><span class="p">:</span> <span class="s1">&#39;lastTimestampTimescale&#39;</span><span class="p">,</span>
             <span class="s1">&#39;number_of_audio_channels&#39;</span><span class="p">:</span> <span class="s1">&#39;numberOfAudioChannels&#39;</span><span class="p">,</span>
@@ -564,6 +576,64 @@
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `key_frame_interval_avg`, type has to be `float`&quot;</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_key_frame_interval_avg</span> <span class="o">=</span> <span class="n">key_frame_interval_avg</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">key_frame_interval_max_last_minute</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; int</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the key_frame_interval_max_last_minute of this LiveEncodingHeartbeatIngestStream.</span>
+
+<span class="sd">        Largest key-frame interval observed over the last minute, in milliseconds. Absent until the rolling window has at least one sample.</span>
+
+<span class="sd">        :return: The key_frame_interval_max_last_minute of this LiveEncodingHeartbeatIngestStream.</span>
+<span class="sd">        :rtype: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_key_frame_interval_max_last_minute</span>
+
+    <span class="nd">@key_frame_interval_max_last_minute</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">key_frame_interval_max_last_minute</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key_frame_interval_max_last_minute</span><span class="p">):</span>
+        <span class="c1"># type: (int) -&gt; None</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the key_frame_interval_max_last_minute of this LiveEncodingHeartbeatIngestStream.</span>
+
+<span class="sd">        Largest key-frame interval observed over the last minute, in milliseconds. Absent until the rolling window has at least one sample.</span>
+
+<span class="sd">        :param key_frame_interval_max_last_minute: The key_frame_interval_max_last_minute of this LiveEncodingHeartbeatIngestStream.</span>
+<span class="sd">        :type: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">key_frame_interval_max_last_minute</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">key_frame_interval_max_last_minute</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `key_frame_interval_max_last_minute`, type has to be `int`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_key_frame_interval_max_last_minute</span> <span class="o">=</span> <span class="n">key_frame_interval_max_last_minute</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">key_frame_interval_avg_last_minute</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; float</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the key_frame_interval_avg_last_minute of this LiveEncodingHeartbeatIngestStream.</span>
+
+<span class="sd">        Average key-frame interval over the last minute, in milliseconds. Absent until the rolling window has at least one sample.</span>
+
+<span class="sd">        :return: The key_frame_interval_avg_last_minute of this LiveEncodingHeartbeatIngestStream.</span>
+<span class="sd">        :rtype: float</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_key_frame_interval_avg_last_minute</span>
+
+    <span class="nd">@key_frame_interval_avg_last_minute</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">key_frame_interval_avg_last_minute</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key_frame_interval_avg_last_minute</span><span class="p">):</span>
+        <span class="c1"># type: (float) -&gt; None</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the key_frame_interval_avg_last_minute of this LiveEncodingHeartbeatIngestStream.</span>
+
+<span class="sd">        Average key-frame interval over the last minute, in milliseconds. Absent until the rolling window has at least one sample.</span>
+
+<span class="sd">        :param key_frame_interval_avg_last_minute: The key_frame_interval_avg_last_minute of this LiveEncodingHeartbeatIngestStream.</span>
+<span class="sd">        :type: float</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">key_frame_interval_avg_last_minute</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">key_frame_interval_avg_last_minute</span><span class="p">,</span> <span class="p">(</span><span class="nb">float</span><span class="p">,</span> <span class="nb">int</span><span class="p">)):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `key_frame_interval_avg_last_minute`, type has to be `float`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_key_frame_interval_avg_last_minute</span> <span class="o">=</span> <span class="n">key_frame_interval_avg_last_minute</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">last_timestamp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
