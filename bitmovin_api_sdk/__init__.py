@@ -1019,6 +1019,10 @@ from bitmovin_api_sdk.notifications.webhooks.encoding.encodings.error.customdata
 
 from bitmovin_api_sdk.notifications.webhooks.encoding.encodings.live_encoding_heartbeat.live_encoding_heartbeat_api import LiveEncodingHeartbeatApi
 from bitmovin_api_sdk.notifications.webhooks.encoding.encodings.live_encoding_heartbeat.live_encoding_heartbeat_api import LiveEncodingHeartbeatWebhookListQueryParams
+from bitmovin_api_sdk.notifications.webhooks.encoding.encodings.live_manifest_ready.live_manifest_ready_api import LiveManifestReadyApi
+from bitmovin_api_sdk.notifications.webhooks.encoding.encodings.live_manifest_ready.live_manifest_ready_api import WebhookListQueryParams, WebhookListByEncodingIdQueryParams
+from bitmovin_api_sdk.notifications.webhooks.encoding.encodings.live_manifest_ready.customdata.customdata_api import CustomdataApi
+
 from bitmovin_api_sdk.notifications.webhooks.encoding.encodings.transfer_error.transfer_error_api import TransferErrorApi
 from bitmovin_api_sdk.notifications.webhooks.encoding.encodings.transfer_error.transfer_error_api import WebhookListQueryParams, WebhookListByEncodingIdQueryParams
 from bitmovin_api_sdk.notifications.webhooks.encoding.encodings.transfer_error.customdata.customdata_api import CustomdataApi
@@ -1271,6 +1275,7 @@ from bitmovin_api_sdk.models.azure_account_region_settings import AzureAccountRe
 from bitmovin_api_sdk.models.azure_cloud_region import AzureCloudRegion
 from bitmovin_api_sdk.models.azure_input import AzureInput
 from bitmovin_api_sdk.models.azure_output import AzureOutput
+from bitmovin_api_sdk.models.azure_service_principal import AzureServicePrincipal
 from bitmovin_api_sdk.models.azure_speech_services_credentials import AzureSpeechServicesCredentials
 from bitmovin_api_sdk.models.azure_speech_to_captions_filter import AzureSpeechToCaptionsFilter
 from bitmovin_api_sdk.models.azure_speech_to_captions_profanity import AzureSpeechToCaptionsProfanity
@@ -1992,4 +1997,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.265.0"
+__version__ = "1.266.0"

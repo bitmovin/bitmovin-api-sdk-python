@@ -3,6 +3,7 @@
 from enum import Enum
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
+from bitmovin_api_sdk.models.azure_service_principal import AzureServicePrincipal
 from bitmovin_api_sdk.models.output import Output
 import pprint
 import six
@@ -20,12 +21,14 @@ class AzureOutput(Output):
                  acl=None,
                  account_name=None,
                  account_key=None,
+                 service_principal=None,
                  container=None):
-        # type: (string_types, string_types, string_types, datetime, datetime, dict, list[AclEntry], string_types, string_types, string_types) -> None
+        # type: (string_types, string_types, string_types, datetime, datetime, dict, list[AclEntry], string_types, string_types, AzureServicePrincipal, string_types) -> None
         super(AzureOutput, self).__init__(id_=id_, name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, acl=acl)
 
         self._account_name = None
         self._account_key = None
+        self._service_principal = None
         self._container = None
         self.discriminator = None
 
@@ -33,6 +36,8 @@ class AzureOutput(Output):
             self.account_name = account_name
         if account_key is not None:
             self.account_key = account_key
+        if service_principal is not None:
+            self.service_principal = service_principal
         if container is not None:
             self.container = container
 
@@ -46,6 +51,7 @@ class AzureOutput(Output):
         types.update({
             'account_name': 'string_types',
             'account_key': 'string_types',
+            'service_principal': 'AzureServicePrincipal',
             'container': 'string_types'
         })
 
@@ -61,6 +67,7 @@ class AzureOutput(Output):
         attributes.update({
             'account_name': 'accountName',
             'account_key': 'accountKey',
+            'service_principal': 'servicePrincipal',
             'container': 'container'
         })
         return attributes
@@ -99,7 +106,7 @@ class AzureOutput(Output):
         # type: () -> string_types
         """Gets the account_key of this AzureOutput.
 
-        Azure Account Key (required)
+        Azure Account Key
 
         :return: The account_key of this AzureOutput.
         :rtype: string_types
@@ -111,7 +118,7 @@ class AzureOutput(Output):
         # type: (string_types) -> None
         """Sets the account_key of this AzureOutput.
 
-        Azure Account Key (required)
+        Azure Account Key
 
         :param account_key: The account_key of this AzureOutput.
         :type: string_types
@@ -122,6 +129,33 @@ class AzureOutput(Output):
                 raise TypeError("Invalid type for `account_key`, type has to be `string_types`")
 
         self._account_key = account_key
+
+    @property
+    def service_principal(self):
+        # type: () -> AzureServicePrincipal
+        """Gets the service_principal of this AzureOutput.
+
+
+        :return: The service_principal of this AzureOutput.
+        :rtype: AzureServicePrincipal
+        """
+        return self._service_principal
+
+    @service_principal.setter
+    def service_principal(self, service_principal):
+        # type: (AzureServicePrincipal) -> None
+        """Sets the service_principal of this AzureOutput.
+
+
+        :param service_principal: The service_principal of this AzureOutput.
+        :type: AzureServicePrincipal
+        """
+
+        if service_principal is not None:
+            if not isinstance(service_principal, AzureServicePrincipal):
+                raise TypeError("Invalid type for `service_principal`, type has to be `AzureServicePrincipal`")
+
+        self._service_principal = service_principal
 
     @property
     def container(self):

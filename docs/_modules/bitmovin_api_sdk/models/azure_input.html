@@ -81,6 +81,7 @@
 <span class="kn">from</span><span class="w"> </span><span class="nn">enum</span><span class="w"> </span><span class="kn">import</span> <span class="n">Enum</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">six</span><span class="w"> </span><span class="kn">import</span> <span class="n">string_types</span><span class="p">,</span> <span class="n">iteritems</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.common.poscheck</span><span class="w"> </span><span class="kn">import</span> <span class="n">poscheck_model</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.azure_service_principal</span><span class="w"> </span><span class="kn">import</span> <span class="n">AzureServicePrincipal</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.input</span><span class="w"> </span><span class="kn">import</span> <span class="n">Input</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">pprint</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">six</span>
@@ -99,12 +100,14 @@
                  <span class="n">custom_data</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">account_name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">account_key</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">service_principal</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">container</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (string_types, string_types, string_types, datetime, datetime, dict, string_types, string_types, string_types) -&gt; None</span>
+        <span class="c1"># type: (string_types, string_types, string_types, datetime, datetime, dict, string_types, string_types, AzureServicePrincipal, string_types) -&gt; None</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">AzureInput</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">id_</span><span class="o">=</span><span class="n">id_</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="n">description</span><span class="p">,</span> <span class="n">created_at</span><span class="o">=</span><span class="n">created_at</span><span class="p">,</span> <span class="n">modified_at</span><span class="o">=</span><span class="n">modified_at</span><span class="p">,</span> <span class="n">custom_data</span><span class="o">=</span><span class="n">custom_data</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_account_name</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_account_key</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_service_principal</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_container</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>
 
@@ -112,6 +115,8 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">account_name</span> <span class="o">=</span> <span class="n">account_name</span>
         <span class="k">if</span> <span class="n">account_key</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">account_key</span> <span class="o">=</span> <span class="n">account_key</span>
+        <span class="k">if</span> <span class="n">service_principal</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">service_principal</span> <span class="o">=</span> <span class="n">service_principal</span>
         <span class="k">if</span> <span class="n">container</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">container</span> <span class="o">=</span> <span class="n">container</span>
 
@@ -125,6 +130,7 @@
         <span class="n">types</span><span class="o">.</span><span class="n">update</span><span class="p">({</span>
             <span class="s1">&#39;account_name&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
             <span class="s1">&#39;account_key&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;service_principal&#39;</span><span class="p">:</span> <span class="s1">&#39;AzureServicePrincipal&#39;</span><span class="p">,</span>
             <span class="s1">&#39;container&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span>
         <span class="p">})</span>
 
@@ -140,6 +146,7 @@
         <span class="n">attributes</span><span class="o">.</span><span class="n">update</span><span class="p">({</span>
             <span class="s1">&#39;account_name&#39;</span><span class="p">:</span> <span class="s1">&#39;accountName&#39;</span><span class="p">,</span>
             <span class="s1">&#39;account_key&#39;</span><span class="p">:</span> <span class="s1">&#39;accountKey&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;service_principal&#39;</span><span class="p">:</span> <span class="s1">&#39;servicePrincipal&#39;</span><span class="p">,</span>
             <span class="s1">&#39;container&#39;</span><span class="p">:</span> <span class="s1">&#39;container&#39;</span>
         <span class="p">})</span>
         <span class="k">return</span> <span class="n">attributes</span>
@@ -178,7 +185,7 @@
         <span class="c1"># type: () -&gt; string_types</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the account_key of this AzureInput.</span>
 
-<span class="sd">        Azure Account Key (required)</span>
+<span class="sd">        Azure Account Key</span>
 
 <span class="sd">        :return: The account_key of this AzureInput.</span>
 <span class="sd">        :rtype: string_types</span>
@@ -190,7 +197,7 @@
         <span class="c1"># type: (string_types) -&gt; None</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the account_key of this AzureInput.</span>
 
-<span class="sd">        Azure Account Key (required)</span>
+<span class="sd">        Azure Account Key</span>
 
 <span class="sd">        :param account_key: The account_key of this AzureInput.</span>
 <span class="sd">        :type: string_types</span>
@@ -201,6 +208,33 @@
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `account_key`, type has to be `string_types`&quot;</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_account_key</span> <span class="o">=</span> <span class="n">account_key</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">service_principal</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; AzureServicePrincipal</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the service_principal of this AzureInput.</span>
+
+
+<span class="sd">        :return: The service_principal of this AzureInput.</span>
+<span class="sd">        :rtype: AzureServicePrincipal</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_service_principal</span>
+
+    <span class="nd">@service_principal</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">service_principal</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">service_principal</span><span class="p">):</span>
+        <span class="c1"># type: (AzureServicePrincipal) -&gt; None</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the service_principal of this AzureInput.</span>
+
+
+<span class="sd">        :param service_principal: The service_principal of this AzureInput.</span>
+<span class="sd">        :type: AzureServicePrincipal</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">service_principal</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">service_principal</span><span class="p">,</span> <span class="n">AzureServicePrincipal</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `service_principal`, type has to be `AzureServicePrincipal`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_service_principal</span> <span class="o">=</span> <span class="n">service_principal</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">container</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>

@@ -1404,6 +1404,14 @@ bitmovin\_api\_sdk.models.azure\_output module
    :show-inheritance:
    :undoc-members:
 
+bitmovin\_api\_sdk.models.azure\_service\_principal module
+----------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.azure_service_principal
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
 bitmovin\_api\_sdk.models.azure\_speech\_services\_credentials module
 ---------------------------------------------------------------------
 
