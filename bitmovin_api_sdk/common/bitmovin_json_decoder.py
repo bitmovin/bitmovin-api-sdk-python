@@ -52,6 +52,9 @@ class BitmovinJsonDecoder(object):
         if issubclass(model, list):
             return result
 
+        if type(result)==list:
+            return result
+
         model_instance = model()
 
         if 'discriminator_value_class_map' in model.__dict__:
