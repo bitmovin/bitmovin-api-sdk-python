@@ -108,8 +108,9 @@
                  <span class="n">marketplace</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">mfa_enabled</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">intercom_id_verification</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                 <span class="n">saml_domain</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (string_types, string_types, string_types, datetime, datetime, dict, string_types, list[AccountApiKey], string_types, string_types, string_types, string_types, bool, Marketplace, bool, string_types, string_types) -&gt; None</span>
+                 <span class="n">saml_domain</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">tos_accepted</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="c1"># type: (string_types, string_types, string_types, datetime, datetime, dict, string_types, list[AccountApiKey], string_types, string_types, string_types, string_types, bool, Marketplace, bool, string_types, string_types, bool) -&gt; None</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">AccountInformation</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">id_</span><span class="o">=</span><span class="n">id_</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="n">description</span><span class="p">,</span> <span class="n">created_at</span><span class="o">=</span><span class="n">created_at</span><span class="p">,</span> <span class="n">modified_at</span><span class="o">=</span><span class="n">modified_at</span><span class="p">,</span> <span class="n">custom_data</span><span class="o">=</span><span class="n">custom_data</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_email</span> <span class="o">=</span> <span class="kc">None</span>
@@ -123,6 +124,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_mfa_enabled</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_intercom_id_verification</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_saml_domain</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_tos_accepted</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>
 
         <span class="k">if</span> <span class="n">email</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -147,6 +149,8 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">intercom_id_verification</span> <span class="o">=</span> <span class="n">intercom_id_verification</span>
         <span class="k">if</span> <span class="n">saml_domain</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">saml_domain</span> <span class="o">=</span> <span class="n">saml_domain</span>
+        <span class="k">if</span> <span class="n">tos_accepted</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">tos_accepted</span> <span class="o">=</span> <span class="n">tos_accepted</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -166,7 +170,8 @@
             <span class="s1">&#39;marketplace&#39;</span><span class="p">:</span> <span class="s1">&#39;Marketplace&#39;</span><span class="p">,</span>
             <span class="s1">&#39;mfa_enabled&#39;</span><span class="p">:</span> <span class="s1">&#39;bool&#39;</span><span class="p">,</span>
             <span class="s1">&#39;intercom_id_verification&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;saml_domain&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span>
+            <span class="s1">&#39;saml_domain&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;tos_accepted&#39;</span><span class="p">:</span> <span class="s1">&#39;bool&#39;</span>
         <span class="p">})</span>
 
         <span class="k">return</span> <span class="n">types</span>
@@ -189,7 +194,8 @@
             <span class="s1">&#39;marketplace&#39;</span><span class="p">:</span> <span class="s1">&#39;marketplace&#39;</span><span class="p">,</span>
             <span class="s1">&#39;mfa_enabled&#39;</span><span class="p">:</span> <span class="s1">&#39;mfaEnabled&#39;</span><span class="p">,</span>
             <span class="s1">&#39;intercom_id_verification&#39;</span><span class="p">:</span> <span class="s1">&#39;intercomIdVerification&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;saml_domain&#39;</span><span class="p">:</span> <span class="s1">&#39;samlDomain&#39;</span>
+            <span class="s1">&#39;saml_domain&#39;</span><span class="p">:</span> <span class="s1">&#39;samlDomain&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;tos_accepted&#39;</span><span class="p">:</span> <span class="s1">&#39;tosAccepted&#39;</span>
         <span class="p">})</span>
         <span class="k">return</span> <span class="n">attributes</span>
 
@@ -503,6 +509,35 @@
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `saml_domain`, type has to be `string_types`&quot;</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_saml_domain</span> <span class="o">=</span> <span class="n">saml_domain</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">tos_accepted</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; bool</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the tos_accepted of this AccountInformation.</span>
+
+<span class="sd">        Whether the user has accepted the Terms of Service. Users created via SAML SSO start as `false` because the SAML flow bypasses the registration form that normally captures TOS acceptance; all other signup paths default to `true`. Acceptance is one-way: sending `true` accepts the TOS, sending `false` is ignored.</span>
+
+<span class="sd">        :return: The tos_accepted of this AccountInformation.</span>
+<span class="sd">        :rtype: bool</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_tos_accepted</span>
+
+    <span class="nd">@tos_accepted</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">tos_accepted</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">tos_accepted</span><span class="p">):</span>
+        <span class="c1"># type: (bool) -&gt; None</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the tos_accepted of this AccountInformation.</span>
+
+<span class="sd">        Whether the user has accepted the Terms of Service. Users created via SAML SSO start as `false` because the SAML flow bypasses the registration form that normally captures TOS acceptance; all other signup paths default to `true`. Acceptance is one-way: sending `true` accepts the TOS, sending `false` is ignored.</span>
+
+<span class="sd">        :param tos_accepted: The tos_accepted of this AccountInformation.</span>
+<span class="sd">        :type: bool</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">tos_accepted</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">tos_accepted</span><span class="p">,</span> <span class="nb">bool</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `tos_accepted`, type has to be `bool`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_tos_accepted</span> <span class="o">=</span> <span class="n">tos_accepted</span>
 
 <div class="viewcode-block" id="AccountInformation.to_dict">
 <a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.account_information.AccountInformation.to_dict">[docs]</a>

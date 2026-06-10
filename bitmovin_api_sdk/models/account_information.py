@@ -28,8 +28,9 @@ class AccountInformation(BitmovinResource):
                  marketplace=None,
                  mfa_enabled=None,
                  intercom_id_verification=None,
-                 saml_domain=None):
-        # type: (string_types, string_types, string_types, datetime, datetime, dict, string_types, list[AccountApiKey], string_types, string_types, string_types, string_types, bool, Marketplace, bool, string_types, string_types) -> None
+                 saml_domain=None,
+                 tos_accepted=None):
+        # type: (string_types, string_types, string_types, datetime, datetime, dict, string_types, list[AccountApiKey], string_types, string_types, string_types, string_types, bool, Marketplace, bool, string_types, string_types, bool) -> None
         super(AccountInformation, self).__init__(id_=id_, name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data)
 
         self._email = None
@@ -43,6 +44,7 @@ class AccountInformation(BitmovinResource):
         self._mfa_enabled = None
         self._intercom_id_verification = None
         self._saml_domain = None
+        self._tos_accepted = None
         self.discriminator = None
 
         if email is not None:
@@ -67,6 +69,8 @@ class AccountInformation(BitmovinResource):
             self.intercom_id_verification = intercom_id_verification
         if saml_domain is not None:
             self.saml_domain = saml_domain
+        if tos_accepted is not None:
+            self.tos_accepted = tos_accepted
 
     @property
     def openapi_types(self):
@@ -86,7 +90,8 @@ class AccountInformation(BitmovinResource):
             'marketplace': 'Marketplace',
             'mfa_enabled': 'bool',
             'intercom_id_verification': 'string_types',
-            'saml_domain': 'string_types'
+            'saml_domain': 'string_types',
+            'tos_accepted': 'bool'
         })
 
         return types
@@ -109,7 +114,8 @@ class AccountInformation(BitmovinResource):
             'marketplace': 'marketplace',
             'mfa_enabled': 'mfaEnabled',
             'intercom_id_verification': 'intercomIdVerification',
-            'saml_domain': 'samlDomain'
+            'saml_domain': 'samlDomain',
+            'tos_accepted': 'tosAccepted'
         })
         return attributes
 
@@ -423,6 +429,35 @@ class AccountInformation(BitmovinResource):
                 raise TypeError("Invalid type for `saml_domain`, type has to be `string_types`")
 
         self._saml_domain = saml_domain
+
+    @property
+    def tos_accepted(self):
+        # type: () -> bool
+        """Gets the tos_accepted of this AccountInformation.
+
+        Whether the user has accepted the Terms of Service. Users created via SAML SSO start as `false` because the SAML flow bypasses the registration form that normally captures TOS acceptance; all other signup paths default to `true`. Acceptance is one-way: sending `true` accepts the TOS, sending `false` is ignored.
+
+        :return: The tos_accepted of this AccountInformation.
+        :rtype: bool
+        """
+        return self._tos_accepted
+
+    @tos_accepted.setter
+    def tos_accepted(self, tos_accepted):
+        # type: (bool) -> None
+        """Sets the tos_accepted of this AccountInformation.
+
+        Whether the user has accepted the Terms of Service. Users created via SAML SSO start as `false` because the SAML flow bypasses the registration form that normally captures TOS acceptance; all other signup paths default to `true`. Acceptance is one-way: sending `true` accepts the TOS, sending `false` is ignored.
+
+        :param tos_accepted: The tos_accepted of this AccountInformation.
+        :type: bool
+        """
+
+        if tos_accepted is not None:
+            if not isinstance(tos_accepted, bool):
+                raise TypeError("Invalid type for `tos_accepted`, type has to be `bool`")
+
+        self._tos_accepted = tos_accepted
 
     def to_dict(self):
         """Returns the model properties as a dict"""

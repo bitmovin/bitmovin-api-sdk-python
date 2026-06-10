@@ -16,14 +16,22 @@ class LiveEncodingHeartbeatIngest(object):
                  healthy=None,
                  ingest_points=None,
                  streams=None,
-                 rtmp_user_ingest_info=None):
-        # type: (LiveEncodingStatus, bool, list[LiveEncodingHeartbeatIngestPoint], list[LiveEncodingHeartbeatIngestStream], RtmpUserIngestInfo) -> None
+                 rtmp_user_ingest_info=None,
+                 dropped_packets_video=None,
+                 dropped_packets_audio=None,
+                 corrupt_packets_video=None,
+                 corrupt_packets_audio=None):
+        # type: (LiveEncodingStatus, bool, list[LiveEncodingHeartbeatIngestPoint], list[LiveEncodingHeartbeatIngestStream], RtmpUserIngestInfo, int, int, int, int) -> None
 
         self._status = None
         self._healthy = None
         self._ingest_points = list()
         self._streams = list()
         self._rtmp_user_ingest_info = None
+        self._dropped_packets_video = None
+        self._dropped_packets_audio = None
+        self._corrupt_packets_video = None
+        self._corrupt_packets_audio = None
         self.discriminator = None
 
         if status is not None:
@@ -36,6 +44,14 @@ class LiveEncodingHeartbeatIngest(object):
             self.streams = streams
         if rtmp_user_ingest_info is not None:
             self.rtmp_user_ingest_info = rtmp_user_ingest_info
+        if dropped_packets_video is not None:
+            self.dropped_packets_video = dropped_packets_video
+        if dropped_packets_audio is not None:
+            self.dropped_packets_audio = dropped_packets_audio
+        if corrupt_packets_video is not None:
+            self.corrupt_packets_video = corrupt_packets_video
+        if corrupt_packets_audio is not None:
+            self.corrupt_packets_audio = corrupt_packets_audio
 
     @property
     def openapi_types(self):
@@ -44,7 +60,11 @@ class LiveEncodingHeartbeatIngest(object):
             'healthy': 'bool',
             'ingest_points': 'list[LiveEncodingHeartbeatIngestPoint]',
             'streams': 'list[LiveEncodingHeartbeatIngestStream]',
-            'rtmp_user_ingest_info': 'RtmpUserIngestInfo'
+            'rtmp_user_ingest_info': 'RtmpUserIngestInfo',
+            'dropped_packets_video': 'int',
+            'dropped_packets_audio': 'int',
+            'corrupt_packets_video': 'int',
+            'corrupt_packets_audio': 'int'
         }
 
         return types
@@ -56,7 +76,11 @@ class LiveEncodingHeartbeatIngest(object):
             'healthy': 'healthy',
             'ingest_points': 'ingestPoints',
             'streams': 'streams',
-            'rtmp_user_ingest_info': 'rtmpUserIngestInfo'
+            'rtmp_user_ingest_info': 'rtmpUserIngestInfo',
+            'dropped_packets_video': 'droppedPacketsVideo',
+            'dropped_packets_audio': 'droppedPacketsAudio',
+            'corrupt_packets_video': 'corruptPacketsVideo',
+            'corrupt_packets_audio': 'corruptPacketsAudio'
         }
         return attributes
 
@@ -200,6 +224,122 @@ class LiveEncodingHeartbeatIngest(object):
                 raise TypeError("Invalid type for `rtmp_user_ingest_info`, type has to be `RtmpUserIngestInfo`")
 
         self._rtmp_user_ingest_info = rtmp_user_ingest_info
+
+    @property
+    def dropped_packets_video(self):
+        # type: () -> int
+        """Gets the dropped_packets_video of this LiveEncodingHeartbeatIngest.
+
+        Total number of dropped video packets since the live encoding started. 
+
+        :return: The dropped_packets_video of this LiveEncodingHeartbeatIngest.
+        :rtype: int
+        """
+        return self._dropped_packets_video
+
+    @dropped_packets_video.setter
+    def dropped_packets_video(self, dropped_packets_video):
+        # type: (int) -> None
+        """Sets the dropped_packets_video of this LiveEncodingHeartbeatIngest.
+
+        Total number of dropped video packets since the live encoding started. 
+
+        :param dropped_packets_video: The dropped_packets_video of this LiveEncodingHeartbeatIngest.
+        :type: int
+        """
+
+        if dropped_packets_video is not None:
+            if not isinstance(dropped_packets_video, int):
+                raise TypeError("Invalid type for `dropped_packets_video`, type has to be `int`")
+
+        self._dropped_packets_video = dropped_packets_video
+
+    @property
+    def dropped_packets_audio(self):
+        # type: () -> int
+        """Gets the dropped_packets_audio of this LiveEncodingHeartbeatIngest.
+
+        Total number of dropped audio packets since the live encoding started. 
+
+        :return: The dropped_packets_audio of this LiveEncodingHeartbeatIngest.
+        :rtype: int
+        """
+        return self._dropped_packets_audio
+
+    @dropped_packets_audio.setter
+    def dropped_packets_audio(self, dropped_packets_audio):
+        # type: (int) -> None
+        """Sets the dropped_packets_audio of this LiveEncodingHeartbeatIngest.
+
+        Total number of dropped audio packets since the live encoding started. 
+
+        :param dropped_packets_audio: The dropped_packets_audio of this LiveEncodingHeartbeatIngest.
+        :type: int
+        """
+
+        if dropped_packets_audio is not None:
+            if not isinstance(dropped_packets_audio, int):
+                raise TypeError("Invalid type for `dropped_packets_audio`, type has to be `int`")
+
+        self._dropped_packets_audio = dropped_packets_audio
+
+    @property
+    def corrupt_packets_video(self):
+        # type: () -> int
+        """Gets the corrupt_packets_video of this LiveEncodingHeartbeatIngest.
+
+        Total number of corrupt video packets since the live encoding started. 
+
+        :return: The corrupt_packets_video of this LiveEncodingHeartbeatIngest.
+        :rtype: int
+        """
+        return self._corrupt_packets_video
+
+    @corrupt_packets_video.setter
+    def corrupt_packets_video(self, corrupt_packets_video):
+        # type: (int) -> None
+        """Sets the corrupt_packets_video of this LiveEncodingHeartbeatIngest.
+
+        Total number of corrupt video packets since the live encoding started. 
+
+        :param corrupt_packets_video: The corrupt_packets_video of this LiveEncodingHeartbeatIngest.
+        :type: int
+        """
+
+        if corrupt_packets_video is not None:
+            if not isinstance(corrupt_packets_video, int):
+                raise TypeError("Invalid type for `corrupt_packets_video`, type has to be `int`")
+
+        self._corrupt_packets_video = corrupt_packets_video
+
+    @property
+    def corrupt_packets_audio(self):
+        # type: () -> int
+        """Gets the corrupt_packets_audio of this LiveEncodingHeartbeatIngest.
+
+        Total number of corrupt audio packets since the live encoding started. 
+
+        :return: The corrupt_packets_audio of this LiveEncodingHeartbeatIngest.
+        :rtype: int
+        """
+        return self._corrupt_packets_audio
+
+    @corrupt_packets_audio.setter
+    def corrupt_packets_audio(self, corrupt_packets_audio):
+        # type: (int) -> None
+        """Sets the corrupt_packets_audio of this LiveEncodingHeartbeatIngest.
+
+        Total number of corrupt audio packets since the live encoding started. 
+
+        :param corrupt_packets_audio: The corrupt_packets_audio of this LiveEncodingHeartbeatIngest.
+        :type: int
+        """
+
+        if corrupt_packets_audio is not None:
+            if not isinstance(corrupt_packets_audio, int):
+                raise TypeError("Invalid type for `corrupt_packets_audio`, type has to be `int`")
+
+        self._corrupt_packets_audio = corrupt_packets_audio
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -96,14 +96,22 @@
                  <span class="n">healthy</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">ingest_points</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">streams</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                 <span class="n">rtmp_user_ingest_info</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (LiveEncodingStatus, bool, list[LiveEncodingHeartbeatIngestPoint], list[LiveEncodingHeartbeatIngestStream], RtmpUserIngestInfo) -&gt; None</span>
+                 <span class="n">rtmp_user_ingest_info</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">dropped_packets_video</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">dropped_packets_audio</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">corrupt_packets_video</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">corrupt_packets_audio</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="c1"># type: (LiveEncodingStatus, bool, list[LiveEncodingHeartbeatIngestPoint], list[LiveEncodingHeartbeatIngestStream], RtmpUserIngestInfo, int, int, int, int) -&gt; None</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_status</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_healthy</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_ingest_points</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_streams</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_rtmp_user_ingest_info</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_dropped_packets_video</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_dropped_packets_audio</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_corrupt_packets_video</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_corrupt_packets_audio</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>
 
         <span class="k">if</span> <span class="n">status</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -116,6 +124,14 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">streams</span> <span class="o">=</span> <span class="n">streams</span>
         <span class="k">if</span> <span class="n">rtmp_user_ingest_info</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">rtmp_user_ingest_info</span> <span class="o">=</span> <span class="n">rtmp_user_ingest_info</span>
+        <span class="k">if</span> <span class="n">dropped_packets_video</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">dropped_packets_video</span> <span class="o">=</span> <span class="n">dropped_packets_video</span>
+        <span class="k">if</span> <span class="n">dropped_packets_audio</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">dropped_packets_audio</span> <span class="o">=</span> <span class="n">dropped_packets_audio</span>
+        <span class="k">if</span> <span class="n">corrupt_packets_video</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">corrupt_packets_video</span> <span class="o">=</span> <span class="n">corrupt_packets_video</span>
+        <span class="k">if</span> <span class="n">corrupt_packets_audio</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">corrupt_packets_audio</span> <span class="o">=</span> <span class="n">corrupt_packets_audio</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -124,7 +140,11 @@
             <span class="s1">&#39;healthy&#39;</span><span class="p">:</span> <span class="s1">&#39;bool&#39;</span><span class="p">,</span>
             <span class="s1">&#39;ingest_points&#39;</span><span class="p">:</span> <span class="s1">&#39;list[LiveEncodingHeartbeatIngestPoint]&#39;</span><span class="p">,</span>
             <span class="s1">&#39;streams&#39;</span><span class="p">:</span> <span class="s1">&#39;list[LiveEncodingHeartbeatIngestStream]&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;rtmp_user_ingest_info&#39;</span><span class="p">:</span> <span class="s1">&#39;RtmpUserIngestInfo&#39;</span>
+            <span class="s1">&#39;rtmp_user_ingest_info&#39;</span><span class="p">:</span> <span class="s1">&#39;RtmpUserIngestInfo&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;dropped_packets_video&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;dropped_packets_audio&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;corrupt_packets_video&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;corrupt_packets_audio&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span>
         <span class="p">}</span>
 
         <span class="k">return</span> <span class="n">types</span>
@@ -136,7 +156,11 @@
             <span class="s1">&#39;healthy&#39;</span><span class="p">:</span> <span class="s1">&#39;healthy&#39;</span><span class="p">,</span>
             <span class="s1">&#39;ingest_points&#39;</span><span class="p">:</span> <span class="s1">&#39;ingestPoints&#39;</span><span class="p">,</span>
             <span class="s1">&#39;streams&#39;</span><span class="p">:</span> <span class="s1">&#39;streams&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;rtmp_user_ingest_info&#39;</span><span class="p">:</span> <span class="s1">&#39;rtmpUserIngestInfo&#39;</span>
+            <span class="s1">&#39;rtmp_user_ingest_info&#39;</span><span class="p">:</span> <span class="s1">&#39;rtmpUserIngestInfo&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;dropped_packets_video&#39;</span><span class="p">:</span> <span class="s1">&#39;droppedPacketsVideo&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;dropped_packets_audio&#39;</span><span class="p">:</span> <span class="s1">&#39;droppedPacketsAudio&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;corrupt_packets_video&#39;</span><span class="p">:</span> <span class="s1">&#39;corruptPacketsVideo&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;corrupt_packets_audio&#39;</span><span class="p">:</span> <span class="s1">&#39;corruptPacketsAudio&#39;</span>
         <span class="p">}</span>
         <span class="k">return</span> <span class="n">attributes</span>
 
@@ -280,6 +304,122 @@
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `rtmp_user_ingest_info`, type has to be `RtmpUserIngestInfo`&quot;</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_rtmp_user_ingest_info</span> <span class="o">=</span> <span class="n">rtmp_user_ingest_info</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">dropped_packets_video</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; int</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the dropped_packets_video of this LiveEncodingHeartbeatIngest.</span>
+
+<span class="sd">        Total number of dropped video packets since the live encoding started. </span>
+
+<span class="sd">        :return: The dropped_packets_video of this LiveEncodingHeartbeatIngest.</span>
+<span class="sd">        :rtype: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_dropped_packets_video</span>
+
+    <span class="nd">@dropped_packets_video</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">dropped_packets_video</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dropped_packets_video</span><span class="p">):</span>
+        <span class="c1"># type: (int) -&gt; None</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the dropped_packets_video of this LiveEncodingHeartbeatIngest.</span>
+
+<span class="sd">        Total number of dropped video packets since the live encoding started. </span>
+
+<span class="sd">        :param dropped_packets_video: The dropped_packets_video of this LiveEncodingHeartbeatIngest.</span>
+<span class="sd">        :type: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">dropped_packets_video</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">dropped_packets_video</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `dropped_packets_video`, type has to be `int`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_dropped_packets_video</span> <span class="o">=</span> <span class="n">dropped_packets_video</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">dropped_packets_audio</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; int</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the dropped_packets_audio of this LiveEncodingHeartbeatIngest.</span>
+
+<span class="sd">        Total number of dropped audio packets since the live encoding started. </span>
+
+<span class="sd">        :return: The dropped_packets_audio of this LiveEncodingHeartbeatIngest.</span>
+<span class="sd">        :rtype: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_dropped_packets_audio</span>
+
+    <span class="nd">@dropped_packets_audio</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">dropped_packets_audio</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dropped_packets_audio</span><span class="p">):</span>
+        <span class="c1"># type: (int) -&gt; None</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the dropped_packets_audio of this LiveEncodingHeartbeatIngest.</span>
+
+<span class="sd">        Total number of dropped audio packets since the live encoding started. </span>
+
+<span class="sd">        :param dropped_packets_audio: The dropped_packets_audio of this LiveEncodingHeartbeatIngest.</span>
+<span class="sd">        :type: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">dropped_packets_audio</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">dropped_packets_audio</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `dropped_packets_audio`, type has to be `int`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_dropped_packets_audio</span> <span class="o">=</span> <span class="n">dropped_packets_audio</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">corrupt_packets_video</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; int</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the corrupt_packets_video of this LiveEncodingHeartbeatIngest.</span>
+
+<span class="sd">        Total number of corrupt video packets since the live encoding started. </span>
+
+<span class="sd">        :return: The corrupt_packets_video of this LiveEncodingHeartbeatIngest.</span>
+<span class="sd">        :rtype: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_corrupt_packets_video</span>
+
+    <span class="nd">@corrupt_packets_video</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">corrupt_packets_video</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">corrupt_packets_video</span><span class="p">):</span>
+        <span class="c1"># type: (int) -&gt; None</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the corrupt_packets_video of this LiveEncodingHeartbeatIngest.</span>
+
+<span class="sd">        Total number of corrupt video packets since the live encoding started. </span>
+
+<span class="sd">        :param corrupt_packets_video: The corrupt_packets_video of this LiveEncodingHeartbeatIngest.</span>
+<span class="sd">        :type: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">corrupt_packets_video</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">corrupt_packets_video</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `corrupt_packets_video`, type has to be `int`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_corrupt_packets_video</span> <span class="o">=</span> <span class="n">corrupt_packets_video</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">corrupt_packets_audio</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; int</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the corrupt_packets_audio of this LiveEncodingHeartbeatIngest.</span>
+
+<span class="sd">        Total number of corrupt audio packets since the live encoding started. </span>
+
+<span class="sd">        :return: The corrupt_packets_audio of this LiveEncodingHeartbeatIngest.</span>
+<span class="sd">        :rtype: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_corrupt_packets_audio</span>
+
+    <span class="nd">@corrupt_packets_audio</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">corrupt_packets_audio</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">corrupt_packets_audio</span><span class="p">):</span>
+        <span class="c1"># type: (int) -&gt; None</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the corrupt_packets_audio of this LiveEncodingHeartbeatIngest.</span>
+
+<span class="sd">        Total number of corrupt audio packets since the live encoding started. </span>
+
+<span class="sd">        :param corrupt_packets_audio: The corrupt_packets_audio of this LiveEncodingHeartbeatIngest.</span>
+<span class="sd">        :type: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">corrupt_packets_audio</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">corrupt_packets_audio</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `corrupt_packets_audio`, type has to be `int`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_corrupt_packets_audio</span> <span class="o">=</span> <span class="n">corrupt_packets_audio</span>
 
 <div class="viewcode-block" id="LiveEncodingHeartbeatIngest.to_dict">
 <a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.live_encoding_heartbeat_ingest.LiveEncodingHeartbeatIngest.to_dict">[docs]</a>
