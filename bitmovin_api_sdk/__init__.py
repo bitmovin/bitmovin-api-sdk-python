@@ -799,6 +799,8 @@ from bitmovin_api_sdk.encoding.encodings.scte35_triggers.scte35_triggers_api imp
 from bitmovin_api_sdk.encoding.encodings.scte35_triggers.scte35_triggers_api import Scte35TriggerListQueryParams
 from bitmovin_api_sdk.encoding.encodings.live.heartbeat.heartbeat_api import HeartbeatApi
 
+from bitmovin_api_sdk.encoding.encodings.live.heartbeat_final.heartbeat_final_api import HeartbeatFinalApi
+
 from bitmovin_api_sdk.encoding.encodings.live.hd.hd_api import HdApi
 
 from bitmovin_api_sdk.encoding.live.live_api import LiveApi
@@ -1625,6 +1627,7 @@ from bitmovin_api_sdk.models.live_encoding_heartbeat_event_type import LiveEncod
 from bitmovin_api_sdk.models.live_encoding_heartbeat_ingest import LiveEncodingHeartbeatIngest
 from bitmovin_api_sdk.models.live_encoding_heartbeat_ingest_point import LiveEncodingHeartbeatIngestPoint
 from bitmovin_api_sdk.models.live_encoding_heartbeat_ingest_stream import LiveEncodingHeartbeatIngestStream
+from bitmovin_api_sdk.models.live_encoding_heartbeat_url_response import LiveEncodingHeartbeatUrlResponse
 from bitmovin_api_sdk.models.live_encoding_heartbeat_webhook import LiveEncodingHeartbeatWebhook
 from bitmovin_api_sdk.models.live_encoding_options_statistics import LiveEncodingOptionsStatistics
 from bitmovin_api_sdk.models.live_encoding_stats import LiveEncodingStats
@@ -1997,4 +2000,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.269.0"
+__version__ = "1.270.0"

@@ -4204,6 +4204,14 @@ bitmovin\_api\_sdk.models.live\_encoding\_heartbeat\_ingest\_stream module
    :show-inheritance:
    :undoc-members:
 
+bitmovin\_api\_sdk.models.live\_encoding\_heartbeat\_url\_response module
+-------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.live_encoding_heartbeat_url_response
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
 bitmovin\_api\_sdk.models.live\_encoding\_heartbeat\_webhook module
 -------------------------------------------------------------------
 

@@ -1,0 +1,21 @@
+bitmovin\_api\_sdk.encoding.encodings.live.heartbeat\_final package
+===================================================================
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.encoding.encodings.live.heartbeat\_final.heartbeat\_final\_api module
+----------------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.encodings.live.heartbeat_final.heartbeat_final_api
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.encoding.encodings.live.heartbeat_final
+   :members:
+   :show-inheritance:
+   :undoc-members:
