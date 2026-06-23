@@ -1,6 +1,6 @@
 class SpekeDrmListQueryParams(object):
     def __init__(self, offset=None, limit=None):
-        # type: (string_types, string_types) -> None
+        # type: (int, int) -> None
         super(SpekeDrmListQueryParams, self).__init__()
 
         self.offset = offset
@@ -9,8 +9,8 @@ class SpekeDrmListQueryParams(object):
     @property
     def openapi_types(self):
         types = {
-            'offset': 'string_types',
-            'limit': 'string_types'
+            'offset': 'int',
+            'limit': 'int'
         }
 
         return types

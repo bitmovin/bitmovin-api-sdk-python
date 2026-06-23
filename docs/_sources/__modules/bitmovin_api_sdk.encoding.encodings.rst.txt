@@ -19,7 +19,6 @@ Subpackages
    bitmovin_api_sdk.encoding.encodings.sidecars
    bitmovin_api_sdk.encoding.encodings.streams
    bitmovin_api_sdk.encoding.encodings.template
-   bitmovin_api_sdk.encoding.encodings.transfer_retries
 
 Submodules
 ----------

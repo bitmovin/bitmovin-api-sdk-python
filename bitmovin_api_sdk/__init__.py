@@ -727,8 +727,6 @@ from bitmovin_api_sdk.encoding.encodings.muxings.mp4.drm.speke.customdata.custom
 
 from bitmovin_api_sdk.encoding.encodings.template.template_api import TemplateApi
 
-from bitmovin_api_sdk.encoding.encodings.transfer_retries.transfer_retries_api import TransferRetriesApi
-from bitmovin_api_sdk.encoding.encodings.transfer_retries.transfer_retries_api import TransferRetryListQueryParams
 from bitmovin_api_sdk.encoding.encodings.streams.filters.filters_api import FiltersApi
 from bitmovin_api_sdk.encoding.encodings.streams.filters.filters_api import StreamFilterListListQueryParams
 from bitmovin_api_sdk.encoding.encodings.streams.burn_in_subtitles.burn_in_subtitles_api import BurnInSubtitlesApi
@@ -1937,7 +1935,6 @@ from bitmovin_api_sdk.models.thumbnail_unit import ThumbnailUnit
 from bitmovin_api_sdk.models.time_based_trimming_input_stream import TimeBasedTrimmingInputStream
 from bitmovin_api_sdk.models.time_span import TimeSpan
 from bitmovin_api_sdk.models.timecode_track_trimming_input_stream import TimecodeTrackTrimmingInputStream
-from bitmovin_api_sdk.models.transfer_retry import TransferRetry
 from bitmovin_api_sdk.models.transfer_version import TransferVersion
 from bitmovin_api_sdk.models.transform_skip_mode import TransformSkipMode
 from bitmovin_api_sdk.models.trimming import Trimming
@@ -2000,4 +1997,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.270.0"
+__version__ = "1.271.1"

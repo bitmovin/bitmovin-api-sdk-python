@@ -838,7 +838,6 @@ from bitmovin_api_sdk.models.thumbnail_unit import ThumbnailUnit
 from bitmovin_api_sdk.models.time_based_trimming_input_stream import TimeBasedTrimmingInputStream
 from bitmovin_api_sdk.models.time_span import TimeSpan
 from bitmovin_api_sdk.models.timecode_track_trimming_input_stream import TimecodeTrackTrimmingInputStream
-from bitmovin_api_sdk.models.transfer_retry import TransferRetry
 from bitmovin_api_sdk.models.transfer_version import TransferVersion
 from bitmovin_api_sdk.models.transform_skip_mode import TransformSkipMode
 from bitmovin_api_sdk.models.trimming import Trimming

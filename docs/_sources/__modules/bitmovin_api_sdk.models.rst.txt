@@ -6684,14 +6684,6 @@ bitmovin\_api\_sdk.models.timecode\_track\_trimming\_input\_stream module
    :show-inheritance:
    :undoc-members:
 
-bitmovin\_api\_sdk.models.transfer\_retry module
-------------------------------------------------
-
-.. automodule:: bitmovin_api_sdk.models.transfer_retry
-   :members:
-   :show-inheritance:
-   :undoc-members:
-
 bitmovin\_api\_sdk.models.transfer\_version module
 --------------------------------------------------
 

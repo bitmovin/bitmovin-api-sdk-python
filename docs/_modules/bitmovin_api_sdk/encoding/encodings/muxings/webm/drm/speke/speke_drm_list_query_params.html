@@ -80,7 +80,7 @@
 <a class="viewcode-back" href="../../../../../../../../__modules/bitmovin_api_sdk.encoding.encodings.muxings.webm.drm.speke.html#bitmovin_api_sdk.encoding.encodings.muxings.webm.drm.speke.speke_drm_list_query_params.SpekeDrmListQueryParams">[docs]</a>
 <span></span><span class="k">class</span><span class="w"> </span><span class="nc">SpekeDrmListQueryParams</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">offset</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (string_types, string_types) -&gt; None</span>
+        <span class="c1"># type: (int, int) -&gt; None</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">SpekeDrmListQueryParams</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">offset</span> <span class="o">=</span> <span class="n">offset</span>
@@ -89,8 +89,8 @@
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">types</span> <span class="o">=</span> <span class="p">{</span>
-            <span class="s1">&#39;offset&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;limit&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span>
+            <span class="s1">&#39;offset&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;limit&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span>
         <span class="p">}</span>
 
         <span class="k">return</span> <span class="n">types</span>
