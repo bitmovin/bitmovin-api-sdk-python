@@ -3636,6 +3636,14 @@ bitmovin\_api\_sdk.models.h265\_per\_title\_configuration module
    :show-inheritance:
    :undoc-members:
 
+bitmovin\_api\_sdk.models.h265\_v2\_per\_title\_configuration module
+--------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.h265_v2_per_title_configuration
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
 bitmovin\_api\_sdk.models.h265\_video\_configuration module
 -----------------------------------------------------------
 

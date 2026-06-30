@@ -1554,6 +1554,7 @@ from bitmovin_api_sdk.models.h264_trellis import H264Trellis
 from bitmovin_api_sdk.models.h264_video_configuration import H264VideoConfiguration
 from bitmovin_api_sdk.models.h265_dynamic_range_format import H265DynamicRangeFormat
 from bitmovin_api_sdk.models.h265_per_title_configuration import H265PerTitleConfiguration
+from bitmovin_api_sdk.models.h265_v2_per_title_configuration import H265V2PerTitleConfiguration
 from bitmovin_api_sdk.models.h265_video_configuration import H265VideoConfiguration
 from bitmovin_api_sdk.models.he_aac_v1_audio_configuration import HeAacV1AudioConfiguration
 from bitmovin_api_sdk.models.he_aac_v1_signaling import HeAacV1Signaling
@@ -1997,4 +1998,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.271.1"
+__version__ = "1.272.0"

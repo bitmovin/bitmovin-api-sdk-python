@@ -6,6 +6,7 @@ from bitmovin_api_sdk.common.poscheck import poscheck_model
 from bitmovin_api_sdk.models.av1_per_title_configuration import Av1PerTitleConfiguration
 from bitmovin_api_sdk.models.h264_per_title_configuration import H264PerTitleConfiguration
 from bitmovin_api_sdk.models.h265_per_title_configuration import H265PerTitleConfiguration
+from bitmovin_api_sdk.models.h265_v2_per_title_configuration import H265V2PerTitleConfiguration
 from bitmovin_api_sdk.models.vp9_per_title_configuration import Vp9PerTitleConfiguration
 import pprint
 import six
@@ -17,13 +18,15 @@ class PerTitle(object):
                  h264_configuration=None,
                  h265_configuration=None,
                  vp9_configuration=None,
-                 av1_configuration=None):
-        # type: (H264PerTitleConfiguration, H265PerTitleConfiguration, Vp9PerTitleConfiguration, Av1PerTitleConfiguration) -> None
+                 av1_configuration=None,
+                 h265_v2_configuration=None):
+        # type: (H264PerTitleConfiguration, H265PerTitleConfiguration, Vp9PerTitleConfiguration, Av1PerTitleConfiguration, H265V2PerTitleConfiguration) -> None
 
         self._h264_configuration = None
         self._h265_configuration = None
         self._vp9_configuration = None
         self._av1_configuration = None
+        self._h265_v2_configuration = None
         self.discriminator = None
 
         if h264_configuration is not None:
@@ -34,6 +37,8 @@ class PerTitle(object):
             self.vp9_configuration = vp9_configuration
         if av1_configuration is not None:
             self.av1_configuration = av1_configuration
+        if h265_v2_configuration is not None:
+            self.h265_v2_configuration = h265_v2_configuration
 
     @property
     def openapi_types(self):
@@ -41,7 +46,8 @@ class PerTitle(object):
             'h264_configuration': 'H264PerTitleConfiguration',
             'h265_configuration': 'H265PerTitleConfiguration',
             'vp9_configuration': 'Vp9PerTitleConfiguration',
-            'av1_configuration': 'Av1PerTitleConfiguration'
+            'av1_configuration': 'Av1PerTitleConfiguration',
+            'h265_v2_configuration': 'H265V2PerTitleConfiguration'
         }
 
         return types
@@ -52,7 +58,8 @@ class PerTitle(object):
             'h264_configuration': 'h264Configuration',
             'h265_configuration': 'h265Configuration',
             'vp9_configuration': 'vp9Configuration',
-            'av1_configuration': 'av1Configuration'
+            'av1_configuration': 'av1Configuration',
+            'h265_v2_configuration': 'h265V2Configuration'
         }
         return attributes
 
@@ -171,6 +178,35 @@ class PerTitle(object):
                 raise TypeError("Invalid type for `av1_configuration`, type has to be `Av1PerTitleConfiguration`")
 
         self._av1_configuration = av1_configuration
+
+    @property
+    def h265_v2_configuration(self):
+        # type: () -> H265V2PerTitleConfiguration
+        """Gets the h265_v2_configuration of this PerTitle.
+
+        Per-Title configuration for H265 V2
+
+        :return: The h265_v2_configuration of this PerTitle.
+        :rtype: H265V2PerTitleConfiguration
+        """
+        return self._h265_v2_configuration
+
+    @h265_v2_configuration.setter
+    def h265_v2_configuration(self, h265_v2_configuration):
+        # type: (H265V2PerTitleConfiguration) -> None
+        """Sets the h265_v2_configuration of this PerTitle.
+
+        Per-Title configuration for H265 V2
+
+        :param h265_v2_configuration: The h265_v2_configuration of this PerTitle.
+        :type: H265V2PerTitleConfiguration
+        """
+
+        if h265_v2_configuration is not None:
+            if not isinstance(h265_v2_configuration, H265V2PerTitleConfiguration):
+                raise TypeError("Invalid type for `h265_v2_configuration`, type has to be `H265V2PerTitleConfiguration`")
+
+        self._h265_v2_configuration = h265_v2_configuration
 
     def to_dict(self):
         """Returns the model properties as a dict"""

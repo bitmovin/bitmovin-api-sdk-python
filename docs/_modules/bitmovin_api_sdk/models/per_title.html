@@ -84,6 +84,7 @@
 <span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.av1_per_title_configuration</span><span class="w"> </span><span class="kn">import</span> <span class="n">Av1PerTitleConfiguration</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.h264_per_title_configuration</span><span class="w"> </span><span class="kn">import</span> <span class="n">H264PerTitleConfiguration</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.h265_per_title_configuration</span><span class="w"> </span><span class="kn">import</span> <span class="n">H265PerTitleConfiguration</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.h265_v2_per_title_configuration</span><span class="w"> </span><span class="kn">import</span> <span class="n">H265V2PerTitleConfiguration</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.vp9_per_title_configuration</span><span class="w"> </span><span class="kn">import</span> <span class="n">Vp9PerTitleConfiguration</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">pprint</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">six</span>
@@ -97,13 +98,15 @@
                  <span class="n">h264_configuration</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">h265_configuration</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">vp9_configuration</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                 <span class="n">av1_configuration</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (H264PerTitleConfiguration, H265PerTitleConfiguration, Vp9PerTitleConfiguration, Av1PerTitleConfiguration) -&gt; None</span>
+                 <span class="n">av1_configuration</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">h265_v2_configuration</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="c1"># type: (H264PerTitleConfiguration, H265PerTitleConfiguration, Vp9PerTitleConfiguration, Av1PerTitleConfiguration, H265V2PerTitleConfiguration) -&gt; None</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_h264_configuration</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_h265_configuration</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_vp9_configuration</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_av1_configuration</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_h265_v2_configuration</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>
 
         <span class="k">if</span> <span class="n">h264_configuration</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -114,6 +117,8 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">vp9_configuration</span> <span class="o">=</span> <span class="n">vp9_configuration</span>
         <span class="k">if</span> <span class="n">av1_configuration</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">av1_configuration</span> <span class="o">=</span> <span class="n">av1_configuration</span>
+        <span class="k">if</span> <span class="n">h265_v2_configuration</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">h265_v2_configuration</span> <span class="o">=</span> <span class="n">h265_v2_configuration</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -121,7 +126,8 @@
             <span class="s1">&#39;h264_configuration&#39;</span><span class="p">:</span> <span class="s1">&#39;H264PerTitleConfiguration&#39;</span><span class="p">,</span>
             <span class="s1">&#39;h265_configuration&#39;</span><span class="p">:</span> <span class="s1">&#39;H265PerTitleConfiguration&#39;</span><span class="p">,</span>
             <span class="s1">&#39;vp9_configuration&#39;</span><span class="p">:</span> <span class="s1">&#39;Vp9PerTitleConfiguration&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;av1_configuration&#39;</span><span class="p">:</span> <span class="s1">&#39;Av1PerTitleConfiguration&#39;</span>
+            <span class="s1">&#39;av1_configuration&#39;</span><span class="p">:</span> <span class="s1">&#39;Av1PerTitleConfiguration&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;h265_v2_configuration&#39;</span><span class="p">:</span> <span class="s1">&#39;H265V2PerTitleConfiguration&#39;</span>
         <span class="p">}</span>
 
         <span class="k">return</span> <span class="n">types</span>
@@ -132,7 +138,8 @@
             <span class="s1">&#39;h264_configuration&#39;</span><span class="p">:</span> <span class="s1">&#39;h264Configuration&#39;</span><span class="p">,</span>
             <span class="s1">&#39;h265_configuration&#39;</span><span class="p">:</span> <span class="s1">&#39;h265Configuration&#39;</span><span class="p">,</span>
             <span class="s1">&#39;vp9_configuration&#39;</span><span class="p">:</span> <span class="s1">&#39;vp9Configuration&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;av1_configuration&#39;</span><span class="p">:</span> <span class="s1">&#39;av1Configuration&#39;</span>
+            <span class="s1">&#39;av1_configuration&#39;</span><span class="p">:</span> <span class="s1">&#39;av1Configuration&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;h265_v2_configuration&#39;</span><span class="p">:</span> <span class="s1">&#39;h265V2Configuration&#39;</span>
         <span class="p">}</span>
         <span class="k">return</span> <span class="n">attributes</span>
 
@@ -251,6 +258,35 @@
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `av1_configuration`, type has to be `Av1PerTitleConfiguration`&quot;</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_av1_configuration</span> <span class="o">=</span> <span class="n">av1_configuration</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">h265_v2_configuration</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; H265V2PerTitleConfiguration</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the h265_v2_configuration of this PerTitle.</span>
+
+<span class="sd">        Per-Title configuration for H265 V2</span>
+
+<span class="sd">        :return: The h265_v2_configuration of this PerTitle.</span>
+<span class="sd">        :rtype: H265V2PerTitleConfiguration</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_h265_v2_configuration</span>
+
+    <span class="nd">@h265_v2_configuration</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">h265_v2_configuration</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">h265_v2_configuration</span><span class="p">):</span>
+        <span class="c1"># type: (H265V2PerTitleConfiguration) -&gt; None</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the h265_v2_configuration of this PerTitle.</span>
+
+<span class="sd">        Per-Title configuration for H265 V2</span>
+
+<span class="sd">        :param h265_v2_configuration: The h265_v2_configuration of this PerTitle.</span>
+<span class="sd">        :type: H265V2PerTitleConfiguration</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">h265_v2_configuration</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">h265_v2_configuration</span><span class="p">,</span> <span class="n">H265V2PerTitleConfiguration</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `h265_v2_configuration`, type has to be `H265V2PerTitleConfiguration`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_h265_v2_configuration</span> <span class="o">=</span> <span class="n">h265_v2_configuration</span>
 
 <div class="viewcode-block" id="PerTitle.to_dict">
 <a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.per_title.PerTitle.to_dict">[docs]</a>
