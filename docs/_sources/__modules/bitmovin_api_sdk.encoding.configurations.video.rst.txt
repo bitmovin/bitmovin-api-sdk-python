@@ -11,6 +11,7 @@ Subpackages
    bitmovin_api_sdk.encoding.configurations.video.h262
    bitmovin_api_sdk.encoding.configurations.video.h264
    bitmovin_api_sdk.encoding.configurations.video.h265
+   bitmovin_api_sdk.encoding.configurations.video.h265v2
    bitmovin_api_sdk.encoding.configurations.video.mjpeg
    bitmovin_api_sdk.encoding.configurations.video.vp8
    bitmovin_api_sdk.encoding.configurations.video.vp9

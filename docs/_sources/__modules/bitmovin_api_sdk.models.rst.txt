@@ -3636,10 +3636,66 @@ bitmovin\_api\_sdk.models.h265\_per\_title\_configuration module
    :show-inheritance:
    :undoc-members:
 
+bitmovin\_api\_sdk.models.h265\_v2\_constant\_bitrate\_mode\_config module
+--------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.h265_v2_constant_bitrate_mode_config
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+bitmovin\_api\_sdk.models.h265\_v2\_motion\_compensated\_temporal\_filtering module
+-----------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.h265_v2_motion_compensated_temporal_filtering
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
 bitmovin\_api\_sdk.models.h265\_v2\_per\_title\_configuration module
 --------------------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.models.h265_v2_per_title_configuration
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+bitmovin\_api\_sdk.models.h265\_v2\_perceptual\_quality\_mode\_config module
+----------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.h265_v2_perceptual_quality_mode_config
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+bitmovin\_api\_sdk.models.h265\_v2\_preset\_configuration module
+----------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.h265_v2_preset_configuration
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+bitmovin\_api\_sdk.models.h265\_v2\_rate\_control\_mode\_config module
+----------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.h265_v2_rate_control_mode_config
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+bitmovin\_api\_sdk.models.h265\_v2\_rate\_control\_mode\_config\_type module
+----------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.h265_v2_rate_control_mode_config_type
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+bitmovin\_api\_sdk.models.h265\_v2\_video\_configuration module
+---------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.h265_v2_video_configuration
    :members:
    :show-inheritance:
    :undoc-members:
@@ -4188,6 +4244,14 @@ bitmovin\_api\_sdk.models.live\_encoding\_heartbeat\_event\_type module
    :show-inheritance:
    :undoc-members:
 
+bitmovin\_api\_sdk.models.live\_encoding\_heartbeat\_hls\_manifest\_stats module
+--------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.live_encoding_heartbeat_hls_manifest_stats
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
 bitmovin\_api\_sdk.models.live\_encoding\_heartbeat\_ingest module
 ------------------------------------------------------------------
 
@@ -4208,6 +4272,70 @@ bitmovin\_api\_sdk.models.live\_encoding\_heartbeat\_ingest\_stream module
 --------------------------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.models.live_encoding_heartbeat_ingest_stream
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+bitmovin\_api\_sdk.models.live\_encoding\_heartbeat\_manifest\_update module
+----------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.live_encoding_heartbeat_manifest_update
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+bitmovin\_api\_sdk.models.live\_encoding\_heartbeat\_manifest\_update\_latency\_stats module
+--------------------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.live_encoding_heartbeat_manifest_update_latency_stats
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+bitmovin\_api\_sdk.models.live\_encoding\_heartbeat\_manifests module
+---------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.live_encoding_heartbeat_manifests
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+bitmovin\_api\_sdk.models.live\_encoding\_heartbeat\_output module
+------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.live_encoding_heartbeat_output
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+bitmovin\_api\_sdk.models.live\_encoding\_heartbeat\_segments module
+--------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.live_encoding_heartbeat_segments
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+bitmovin\_api\_sdk.models.live\_encoding\_heartbeat\_total\_processing\_outlier module
+--------------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.live_encoding_heartbeat_total_processing_outlier
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+bitmovin\_api\_sdk.models.live\_encoding\_heartbeat\_total\_processing\_stats\_ms module
+----------------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.live_encoding_heartbeat_total_processing_stats_ms
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+bitmovin\_api\_sdk.models.live\_encoding\_heartbeat\_upload\_outlier module
+---------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.live_encoding_heartbeat_upload_outlier
    :members:
    :show-inheritance:
    :undoc-members:

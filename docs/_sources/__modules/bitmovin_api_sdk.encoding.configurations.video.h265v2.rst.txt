@@ -1,0 +1,29 @@
+bitmovin\_api\_sdk.encoding.configurations.video.h265v2 package
+===============================================================
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.encoding.configurations.video.h265v2.h265\_v2\_video\_configuration\_list\_query\_params module
+------------------------------------------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.configurations.video.h265v2.h265_v2_video_configuration_list_query_params
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+bitmovin\_api\_sdk.encoding.configurations.video.h265v2.h265v2\_api module
+--------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.configurations.video.h265v2.h265v2_api
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.encoding.configurations.video.h265v2
+   :members:
+   :show-inheritance:
+   :undoc-members:

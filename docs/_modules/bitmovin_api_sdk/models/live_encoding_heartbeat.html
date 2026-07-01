@@ -83,6 +83,7 @@
 <span class="kn">from</span><span class="w"> </span><span class="nn">six</span><span class="w"> </span><span class="kn">import</span> <span class="n">string_types</span><span class="p">,</span> <span class="n">iteritems</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.common.poscheck</span><span class="w"> </span><span class="kn">import</span> <span class="n">poscheck_model</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.live_encoding_heartbeat_ingest</span><span class="w"> </span><span class="kn">import</span> <span class="n">LiveEncodingHeartbeatIngest</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.live_encoding_heartbeat_output</span><span class="w"> </span><span class="kn">import</span> <span class="n">LiveEncodingHeartbeatOutput</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">pprint</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">six</span>
 
@@ -94,12 +95,14 @@
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
                  <span class="n">timestamp</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">ingest</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                 <span class="n">events</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (datetime, LiveEncodingHeartbeatIngest, list[LiveEncodingHeartbeatEvent]) -&gt; None</span>
+                 <span class="n">events</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">output</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="c1"># type: (datetime, LiveEncodingHeartbeatIngest, list[LiveEncodingHeartbeatEvent], LiveEncodingHeartbeatOutput) -&gt; None</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_timestamp</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_ingest</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_events</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_output</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>
 
         <span class="k">if</span> <span class="n">timestamp</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -108,13 +111,16 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">ingest</span> <span class="o">=</span> <span class="n">ingest</span>
         <span class="k">if</span> <span class="n">events</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">events</span> <span class="o">=</span> <span class="n">events</span>
+        <span class="k">if</span> <span class="n">output</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">output</span> <span class="o">=</span> <span class="n">output</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">types</span> <span class="o">=</span> <span class="p">{</span>
             <span class="s1">&#39;timestamp&#39;</span><span class="p">:</span> <span class="s1">&#39;datetime&#39;</span><span class="p">,</span>
             <span class="s1">&#39;ingest&#39;</span><span class="p">:</span> <span class="s1">&#39;LiveEncodingHeartbeatIngest&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;events&#39;</span><span class="p">:</span> <span class="s1">&#39;list[LiveEncodingHeartbeatEvent]&#39;</span>
+            <span class="s1">&#39;events&#39;</span><span class="p">:</span> <span class="s1">&#39;list[LiveEncodingHeartbeatEvent]&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;output&#39;</span><span class="p">:</span> <span class="s1">&#39;LiveEncodingHeartbeatOutput&#39;</span>
         <span class="p">}</span>
 
         <span class="k">return</span> <span class="n">types</span>
@@ -124,7 +130,8 @@
         <span class="n">attributes</span> <span class="o">=</span> <span class="p">{</span>
             <span class="s1">&#39;timestamp&#39;</span><span class="p">:</span> <span class="s1">&#39;timestamp&#39;</span><span class="p">,</span>
             <span class="s1">&#39;ingest&#39;</span><span class="p">:</span> <span class="s1">&#39;ingest&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;events&#39;</span><span class="p">:</span> <span class="s1">&#39;events&#39;</span>
+            <span class="s1">&#39;events&#39;</span><span class="p">:</span> <span class="s1">&#39;events&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;output&#39;</span><span class="p">:</span> <span class="s1">&#39;output&#39;</span>
         <span class="p">}</span>
         <span class="k">return</span> <span class="n">attributes</span>
 
@@ -214,6 +221,35 @@
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `events`, type has to be `list[LiveEncodingHeartbeatEvent]`&quot;</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_events</span> <span class="o">=</span> <span class="n">events</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">output</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; LiveEncodingHeartbeatOutput</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the output of this LiveEncodingHeartbeat.</span>
+
+<span class="sd">        Output statistics for the live encoding </span>
+
+<span class="sd">        :return: The output of this LiveEncodingHeartbeat.</span>
+<span class="sd">        :rtype: LiveEncodingHeartbeatOutput</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_output</span>
+
+    <span class="nd">@output</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">output</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">output</span><span class="p">):</span>
+        <span class="c1"># type: (LiveEncodingHeartbeatOutput) -&gt; None</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the output of this LiveEncodingHeartbeat.</span>
+
+<span class="sd">        Output statistics for the live encoding </span>
+
+<span class="sd">        :param output: The output of this LiveEncodingHeartbeat.</span>
+<span class="sd">        :type: LiveEncodingHeartbeatOutput</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">output</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">output</span><span class="p">,</span> <span class="n">LiveEncodingHeartbeatOutput</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `output`, type has to be `LiveEncodingHeartbeatOutput`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_output</span> <span class="o">=</span> <span class="n">output</span>
 
 <div class="viewcode-block" id="LiveEncodingHeartbeat.to_dict">
 <a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.live_encoding_heartbeat.LiveEncodingHeartbeat.to_dict">[docs]</a>

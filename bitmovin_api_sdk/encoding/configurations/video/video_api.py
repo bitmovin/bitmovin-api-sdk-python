@@ -7,6 +7,7 @@ from bitmovin_api_sdk.common.poscheck import poscheck_except
 from bitmovin_api_sdk.encoding.configurations.video.h262.h262_api import H262Api
 from bitmovin_api_sdk.encoding.configurations.video.h264.h264_api import H264Api
 from bitmovin_api_sdk.encoding.configurations.video.h265.h265_api import H265Api
+from bitmovin_api_sdk.encoding.configurations.video.h265v2.h265v2_api import H265v2Api
 from bitmovin_api_sdk.encoding.configurations.video.vp8.vp8_api import Vp8Api
 from bitmovin_api_sdk.encoding.configurations.video.vp9.vp9_api import Vp9Api
 from bitmovin_api_sdk.encoding.configurations.video.av1.av1_api import Av1Api
@@ -40,6 +41,13 @@ class VideoApi(BaseApi):
         )
 
         self.h265 = H265Api(
+            api_key=api_key,
+            tenant_org_id=tenant_org_id,
+            base_url=base_url,
+            logger=logger
+        )
+
+        self.h265v2 = H265v2Api(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,

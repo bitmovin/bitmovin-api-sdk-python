@@ -36,7 +36,8 @@ class CodecConfiguration(BitmovinResource):
         'H262': 'H262VideoConfiguration',
         'PCM': 'PcmAudioConfiguration',
         'WEBVTT': 'WebVttConfiguration',
-        'IMSC': 'ImscConfiguration'
+        'IMSC': 'ImscConfiguration',
+        'H265V2': 'H265V2VideoConfiguration'
     }
 
     def to_dict(self):

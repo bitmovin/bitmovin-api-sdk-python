@@ -5,6 +5,7 @@ from datetime import datetime
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
 from bitmovin_api_sdk.models.live_encoding_heartbeat_ingest import LiveEncodingHeartbeatIngest
+from bitmovin_api_sdk.models.live_encoding_heartbeat_output import LiveEncodingHeartbeatOutput
 import pprint
 import six
 
@@ -14,12 +15,14 @@ class LiveEncodingHeartbeat(object):
     def __init__(self,
                  timestamp=None,
                  ingest=None,
-                 events=None):
-        # type: (datetime, LiveEncodingHeartbeatIngest, list[LiveEncodingHeartbeatEvent]) -> None
+                 events=None,
+                 output=None):
+        # type: (datetime, LiveEncodingHeartbeatIngest, list[LiveEncodingHeartbeatEvent], LiveEncodingHeartbeatOutput) -> None
 
         self._timestamp = None
         self._ingest = None
         self._events = list()
+        self._output = None
         self.discriminator = None
 
         if timestamp is not None:
@@ -28,13 +31,16 @@ class LiveEncodingHeartbeat(object):
             self.ingest = ingest
         if events is not None:
             self.events = events
+        if output is not None:
+            self.output = output
 
     @property
     def openapi_types(self):
         types = {
             'timestamp': 'datetime',
             'ingest': 'LiveEncodingHeartbeatIngest',
-            'events': 'list[LiveEncodingHeartbeatEvent]'
+            'events': 'list[LiveEncodingHeartbeatEvent]',
+            'output': 'LiveEncodingHeartbeatOutput'
         }
 
         return types
@@ -44,7 +50,8 @@ class LiveEncodingHeartbeat(object):
         attributes = {
             'timestamp': 'timestamp',
             'ingest': 'ingest',
-            'events': 'events'
+            'events': 'events',
+            'output': 'output'
         }
         return attributes
 
@@ -134,6 +141,35 @@ class LiveEncodingHeartbeat(object):
                 raise TypeError("Invalid type for `events`, type has to be `list[LiveEncodingHeartbeatEvent]`")
 
         self._events = events
+
+    @property
+    def output(self):
+        # type: () -> LiveEncodingHeartbeatOutput
+        """Gets the output of this LiveEncodingHeartbeat.
+
+        Output statistics for the live encoding 
+
+        :return: The output of this LiveEncodingHeartbeat.
+        :rtype: LiveEncodingHeartbeatOutput
+        """
+        return self._output
+
+    @output.setter
+    def output(self, output):
+        # type: (LiveEncodingHeartbeatOutput) -> None
+        """Sets the output of this LiveEncodingHeartbeat.
+
+        Output statistics for the live encoding 
+
+        :param output: The output of this LiveEncodingHeartbeat.
+        :type: LiveEncodingHeartbeatOutput
+        """
+
+        if output is not None:
+            if not isinstance(output, LiveEncodingHeartbeatOutput):
+                raise TypeError("Invalid type for `output`, type has to be `LiveEncodingHeartbeatOutput`")
+
+        self._output = output
 
     def to_dict(self):
         """Returns the model properties as a dict"""
