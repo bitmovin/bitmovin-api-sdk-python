@@ -3660,6 +3660,14 @@ bitmovin\_api\_sdk.models.h265\_v2\_per\_title\_configuration module
    :show-inheritance:
    :undoc-members:
 
+bitmovin\_api\_sdk.models.h265\_v2\_perceptual\_encoding\_mode module
+---------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.h265_v2_perceptual_encoding_mode
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
 bitmovin\_api\_sdk.models.h265\_v2\_perceptual\_quality\_mode\_config module
 ----------------------------------------------------------------------------
 

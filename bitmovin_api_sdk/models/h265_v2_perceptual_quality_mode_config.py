@@ -3,6 +3,7 @@
 from enum import Enum
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
+from bitmovin_api_sdk.models.h265_v2_perceptual_encoding_mode import H265V2PerceptualEncodingMode
 from bitmovin_api_sdk.models.h265_v2_rate_control_mode_config import H265V2RateControlModeConfig
 from bitmovin_api_sdk.models.h265_v2_rate_control_mode_config_type import H265V2RateControlModeConfigType
 import pprint
@@ -13,33 +14,33 @@ class H265V2PerceptualQualityModeConfig(H265V2RateControlModeConfig):
     @poscheck_model
     def __init__(self,
                  type_=None,
-                 percept=None,
-                 perc_str=None,
-                 perc_penalty_str=None,
-                 perc_penalty_knee=None,
-                 perc_temporal_str=None,
+                 perceptual_encoding_mode=None,
+                 perceptual_strength=None,
+                 perceptual_penalty_strength=None,
+                 perceptual_penalty_knee=None,
+                 perceptual_temporal_strength=None,
                  pixel_per_degree=None):
-        # type: (H265V2RateControlModeConfigType, int, float, float, float, float, float) -> None
+        # type: (H265V2RateControlModeConfigType, H265V2PerceptualEncodingMode, float, float, float, float, float) -> None
         super(H265V2PerceptualQualityModeConfig, self).__init__(type_=type_)
 
-        self._percept = None
-        self._perc_str = None
-        self._perc_penalty_str = None
-        self._perc_penalty_knee = None
-        self._perc_temporal_str = None
+        self._perceptual_encoding_mode = None
+        self._perceptual_strength = None
+        self._perceptual_penalty_strength = None
+        self._perceptual_penalty_knee = None
+        self._perceptual_temporal_strength = None
         self._pixel_per_degree = None
         self.discriminator = None
 
-        if percept is not None:
-            self.percept = percept
-        if perc_str is not None:
-            self.perc_str = perc_str
-        if perc_penalty_str is not None:
-            self.perc_penalty_str = perc_penalty_str
-        if perc_penalty_knee is not None:
-            self.perc_penalty_knee = perc_penalty_knee
-        if perc_temporal_str is not None:
-            self.perc_temporal_str = perc_temporal_str
+        if perceptual_encoding_mode is not None:
+            self.perceptual_encoding_mode = perceptual_encoding_mode
+        if perceptual_strength is not None:
+            self.perceptual_strength = perceptual_strength
+        if perceptual_penalty_strength is not None:
+            self.perceptual_penalty_strength = perceptual_penalty_strength
+        if perceptual_penalty_knee is not None:
+            self.perceptual_penalty_knee = perceptual_penalty_knee
+        if perceptual_temporal_strength is not None:
+            self.perceptual_temporal_strength = perceptual_temporal_strength
         if pixel_per_degree is not None:
             self.pixel_per_degree = pixel_per_degree
 
@@ -51,11 +52,11 @@ class H265V2PerceptualQualityModeConfig(H265V2RateControlModeConfig):
             types = getattr(super(H265V2PerceptualQualityModeConfig, self), 'openapi_types')
 
         types.update({
-            'percept': 'int',
-            'perc_str': 'float',
-            'perc_penalty_str': 'float',
-            'perc_penalty_knee': 'float',
-            'perc_temporal_str': 'float',
+            'perceptual_encoding_mode': 'H265V2PerceptualEncodingMode',
+            'perceptual_strength': 'float',
+            'perceptual_penalty_strength': 'float',
+            'perceptual_penalty_knee': 'float',
+            'perceptual_temporal_strength': 'float',
             'pixel_per_degree': 'float'
         })
 
@@ -69,159 +70,159 @@ class H265V2PerceptualQualityModeConfig(H265V2RateControlModeConfig):
             attributes = getattr(super(H265V2PerceptualQualityModeConfig, self), 'attribute_map')
 
         attributes.update({
-            'percept': 'percept',
-            'perc_str': 'percStr',
-            'perc_penalty_str': 'percPenaltyStr',
-            'perc_penalty_knee': 'percPenaltyKnee',
-            'perc_temporal_str': 'percTemporalStr',
+            'perceptual_encoding_mode': 'perceptualEncodingMode',
+            'perceptual_strength': 'perceptualStrength',
+            'perceptual_penalty_strength': 'perceptualPenaltyStrength',
+            'perceptual_penalty_knee': 'perceptualPenaltyKnee',
+            'perceptual_temporal_strength': 'perceptualTemporalStrength',
             'pixel_per_degree': 'pixelPerDegree'
         })
         return attributes
 
     @property
-    def percept(self):
-        # type: () -> int
-        """Gets the percept of this H265V2PerceptualQualityModeConfig.
+    def perceptual_encoding_mode(self):
+        # type: () -> H265V2PerceptualEncodingMode
+        """Gets the perceptual_encoding_mode of this H265V2PerceptualQualityModeConfig.
 
-        HVS-based perceptual encoding mode (0:off 1:cudqp 2:+quant).
+        HVS-based perceptual encoding mode.
 
-        :return: The percept of this H265V2PerceptualQualityModeConfig.
-        :rtype: int
+        :return: The perceptual_encoding_mode of this H265V2PerceptualQualityModeConfig.
+        :rtype: H265V2PerceptualEncodingMode
         """
-        return self._percept
+        return self._perceptual_encoding_mode
 
-    @percept.setter
-    def percept(self, percept):
-        # type: (int) -> None
-        """Sets the percept of this H265V2PerceptualQualityModeConfig.
+    @perceptual_encoding_mode.setter
+    def perceptual_encoding_mode(self, perceptual_encoding_mode):
+        # type: (H265V2PerceptualEncodingMode) -> None
+        """Sets the perceptual_encoding_mode of this H265V2PerceptualQualityModeConfig.
 
-        HVS-based perceptual encoding mode (0:off 1:cudqp 2:+quant).
+        HVS-based perceptual encoding mode.
 
-        :param percept: The percept of this H265V2PerceptualQualityModeConfig.
-        :type: int
+        :param perceptual_encoding_mode: The perceptual_encoding_mode of this H265V2PerceptualQualityModeConfig.
+        :type: H265V2PerceptualEncodingMode
         """
 
-        if percept is not None:
-            if not isinstance(percept, int):
-                raise TypeError("Invalid type for `percept`, type has to be `int`")
+        if perceptual_encoding_mode is not None:
+            if not isinstance(perceptual_encoding_mode, H265V2PerceptualEncodingMode):
+                raise TypeError("Invalid type for `perceptual_encoding_mode`, type has to be `H265V2PerceptualEncodingMode`")
 
-        self._percept = percept
+        self._perceptual_encoding_mode = perceptual_encoding_mode
 
     @property
-    def perc_str(self):
+    def perceptual_strength(self):
         # type: () -> float
-        """Gets the perc_str of this H265V2PerceptualQualityModeConfig.
+        """Gets the perceptual_strength of this H265V2PerceptualQualityModeConfig.
 
         Overall strength of perceptual model (0.0-1.0).
 
-        :return: The perc_str of this H265V2PerceptualQualityModeConfig.
+        :return: The perceptual_strength of this H265V2PerceptualQualityModeConfig.
         :rtype: float
         """
-        return self._perc_str
+        return self._perceptual_strength
 
-    @perc_str.setter
-    def perc_str(self, perc_str):
+    @perceptual_strength.setter
+    def perceptual_strength(self, perceptual_strength):
         # type: (float) -> None
-        """Sets the perc_str of this H265V2PerceptualQualityModeConfig.
+        """Sets the perceptual_strength of this H265V2PerceptualQualityModeConfig.
 
         Overall strength of perceptual model (0.0-1.0).
 
-        :param perc_str: The perc_str of this H265V2PerceptualQualityModeConfig.
+        :param perceptual_strength: The perceptual_strength of this H265V2PerceptualQualityModeConfig.
         :type: float
         """
 
-        if perc_str is not None:
-            if not isinstance(perc_str, (float, int)):
-                raise TypeError("Invalid type for `perc_str`, type has to be `float`")
+        if perceptual_strength is not None:
+            if not isinstance(perceptual_strength, (float, int)):
+                raise TypeError("Invalid type for `perceptual_strength`, type has to be `float`")
 
-        self._perc_str = perc_str
+        self._perceptual_strength = perceptual_strength
 
     @property
-    def perc_penalty_str(self):
+    def perceptual_penalty_strength(self):
         # type: () -> float
-        """Gets the perc_penalty_str of this H265V2PerceptualQualityModeConfig.
+        """Gets the perceptual_penalty_strength of this H265V2PerceptualQualityModeConfig.
 
         Strength of penalties from perceptual model (0.0-1.0).
 
-        :return: The perc_penalty_str of this H265V2PerceptualQualityModeConfig.
+        :return: The perceptual_penalty_strength of this H265V2PerceptualQualityModeConfig.
         :rtype: float
         """
-        return self._perc_penalty_str
+        return self._perceptual_penalty_strength
 
-    @perc_penalty_str.setter
-    def perc_penalty_str(self, perc_penalty_str):
+    @perceptual_penalty_strength.setter
+    def perceptual_penalty_strength(self, perceptual_penalty_strength):
         # type: (float) -> None
-        """Sets the perc_penalty_str of this H265V2PerceptualQualityModeConfig.
+        """Sets the perceptual_penalty_strength of this H265V2PerceptualQualityModeConfig.
 
         Strength of penalties from perceptual model (0.0-1.0).
 
-        :param perc_penalty_str: The perc_penalty_str of this H265V2PerceptualQualityModeConfig.
+        :param perceptual_penalty_strength: The perceptual_penalty_strength of this H265V2PerceptualQualityModeConfig.
         :type: float
         """
 
-        if perc_penalty_str is not None:
-            if not isinstance(perc_penalty_str, (float, int)):
-                raise TypeError("Invalid type for `perc_penalty_str`, type has to be `float`")
+        if perceptual_penalty_strength is not None:
+            if not isinstance(perceptual_penalty_strength, (float, int)):
+                raise TypeError("Invalid type for `perceptual_penalty_strength`, type has to be `float`")
 
-        self._perc_penalty_str = perc_penalty_str
+        self._perceptual_penalty_strength = perceptual_penalty_strength
 
     @property
-    def perc_penalty_knee(self):
+    def perceptual_penalty_knee(self):
         # type: () -> float
-        """Gets the perc_penalty_knee of this H265V2PerceptualQualityModeConfig.
+        """Gets the perceptual_penalty_knee of this H265V2PerceptualQualityModeConfig.
 
         Knee point of penalty strength modulation (0.0-1.0).
 
-        :return: The perc_penalty_knee of this H265V2PerceptualQualityModeConfig.
+        :return: The perceptual_penalty_knee of this H265V2PerceptualQualityModeConfig.
         :rtype: float
         """
-        return self._perc_penalty_knee
+        return self._perceptual_penalty_knee
 
-    @perc_penalty_knee.setter
-    def perc_penalty_knee(self, perc_penalty_knee):
+    @perceptual_penalty_knee.setter
+    def perceptual_penalty_knee(self, perceptual_penalty_knee):
         # type: (float) -> None
-        """Sets the perc_penalty_knee of this H265V2PerceptualQualityModeConfig.
+        """Sets the perceptual_penalty_knee of this H265V2PerceptualQualityModeConfig.
 
         Knee point of penalty strength modulation (0.0-1.0).
 
-        :param perc_penalty_knee: The perc_penalty_knee of this H265V2PerceptualQualityModeConfig.
+        :param perceptual_penalty_knee: The perceptual_penalty_knee of this H265V2PerceptualQualityModeConfig.
         :type: float
         """
 
-        if perc_penalty_knee is not None:
-            if not isinstance(perc_penalty_knee, (float, int)):
-                raise TypeError("Invalid type for `perc_penalty_knee`, type has to be `float`")
+        if perceptual_penalty_knee is not None:
+            if not isinstance(perceptual_penalty_knee, (float, int)):
+                raise TypeError("Invalid type for `perceptual_penalty_knee`, type has to be `float`")
 
-        self._perc_penalty_knee = perc_penalty_knee
+        self._perceptual_penalty_knee = perceptual_penalty_knee
 
     @property
-    def perc_temporal_str(self):
+    def perceptual_temporal_strength(self):
         # type: () -> float
-        """Gets the perc_temporal_str of this H265V2PerceptualQualityModeConfig.
+        """Gets the perceptual_temporal_strength of this H265V2PerceptualQualityModeConfig.
 
         Strength of temporal component of perceptual model (0.0-1.0).
 
-        :return: The perc_temporal_str of this H265V2PerceptualQualityModeConfig.
+        :return: The perceptual_temporal_strength of this H265V2PerceptualQualityModeConfig.
         :rtype: float
         """
-        return self._perc_temporal_str
+        return self._perceptual_temporal_strength
 
-    @perc_temporal_str.setter
-    def perc_temporal_str(self, perc_temporal_str):
+    @perceptual_temporal_strength.setter
+    def perceptual_temporal_strength(self, perceptual_temporal_strength):
         # type: (float) -> None
-        """Sets the perc_temporal_str of this H265V2PerceptualQualityModeConfig.
+        """Sets the perceptual_temporal_strength of this H265V2PerceptualQualityModeConfig.
 
         Strength of temporal component of perceptual model (0.0-1.0).
 
-        :param perc_temporal_str: The perc_temporal_str of this H265V2PerceptualQualityModeConfig.
+        :param perceptual_temporal_strength: The perceptual_temporal_strength of this H265V2PerceptualQualityModeConfig.
         :type: float
         """
 
-        if perc_temporal_str is not None:
-            if not isinstance(perc_temporal_str, (float, int)):
-                raise TypeError("Invalid type for `perc_temporal_str`, type has to be `float`")
+        if perceptual_temporal_strength is not None:
+            if not isinstance(perceptual_temporal_strength, (float, int)):
+                raise TypeError("Invalid type for `perceptual_temporal_strength`, type has to be `float`")
 
-        self._perc_temporal_str = perc_temporal_str
+        self._perceptual_temporal_strength = perceptual_temporal_strength
 
     @property
     def pixel_per_degree(self):

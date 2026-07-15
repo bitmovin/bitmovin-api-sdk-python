@@ -81,6 +81,7 @@
 <span class="kn">from</span><span class="w"> </span><span class="nn">enum</span><span class="w"> </span><span class="kn">import</span> <span class="n">Enum</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">six</span><span class="w"> </span><span class="kn">import</span> <span class="n">string_types</span><span class="p">,</span> <span class="n">iteritems</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.common.poscheck</span><span class="w"> </span><span class="kn">import</span> <span class="n">poscheck_model</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.h265_v2_perceptual_encoding_mode</span><span class="w"> </span><span class="kn">import</span> <span class="n">H265V2PerceptualEncodingMode</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.h265_v2_rate_control_mode_config</span><span class="w"> </span><span class="kn">import</span> <span class="n">H265V2RateControlModeConfig</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.h265_v2_rate_control_mode_config_type</span><span class="w"> </span><span class="kn">import</span> <span class="n">H265V2RateControlModeConfigType</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">pprint</span>
@@ -93,33 +94,33 @@
     <span class="nd">@poscheck_model</span>
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
                  <span class="n">type_</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                 <span class="n">percept</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                 <span class="n">perc_str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                 <span class="n">perc_penalty_str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                 <span class="n">perc_penalty_knee</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                 <span class="n">perc_temporal_str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">perceptual_encoding_mode</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">perceptual_strength</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">perceptual_penalty_strength</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">perceptual_penalty_knee</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">perceptual_temporal_strength</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">pixel_per_degree</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (H265V2RateControlModeConfigType, int, float, float, float, float, float) -&gt; None</span>
+        <span class="c1"># type: (H265V2RateControlModeConfigType, H265V2PerceptualEncodingMode, float, float, float, float, float) -&gt; None</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">H265V2PerceptualQualityModeConfig</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">type_</span><span class="o">=</span><span class="n">type_</span><span class="p">)</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">_percept</span> <span class="o">=</span> <span class="kc">None</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_perc_str</span> <span class="o">=</span> <span class="kc">None</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_perc_penalty_str</span> <span class="o">=</span> <span class="kc">None</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_perc_penalty_knee</span> <span class="o">=</span> <span class="kc">None</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_perc_temporal_str</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_perceptual_encoding_mode</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_perceptual_strength</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_perceptual_penalty_strength</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_perceptual_penalty_knee</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_perceptual_temporal_strength</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_pixel_per_degree</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>
 
-        <span class="k">if</span> <span class="n">percept</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">percept</span> <span class="o">=</span> <span class="n">percept</span>
-        <span class="k">if</span> <span class="n">perc_str</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">perc_str</span> <span class="o">=</span> <span class="n">perc_str</span>
-        <span class="k">if</span> <span class="n">perc_penalty_str</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">perc_penalty_str</span> <span class="o">=</span> <span class="n">perc_penalty_str</span>
-        <span class="k">if</span> <span class="n">perc_penalty_knee</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">perc_penalty_knee</span> <span class="o">=</span> <span class="n">perc_penalty_knee</span>
-        <span class="k">if</span> <span class="n">perc_temporal_str</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">perc_temporal_str</span> <span class="o">=</span> <span class="n">perc_temporal_str</span>
+        <span class="k">if</span> <span class="n">perceptual_encoding_mode</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">perceptual_encoding_mode</span> <span class="o">=</span> <span class="n">perceptual_encoding_mode</span>
+        <span class="k">if</span> <span class="n">perceptual_strength</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">perceptual_strength</span> <span class="o">=</span> <span class="n">perceptual_strength</span>
+        <span class="k">if</span> <span class="n">perceptual_penalty_strength</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">perceptual_penalty_strength</span> <span class="o">=</span> <span class="n">perceptual_penalty_strength</span>
+        <span class="k">if</span> <span class="n">perceptual_penalty_knee</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">perceptual_penalty_knee</span> <span class="o">=</span> <span class="n">perceptual_penalty_knee</span>
+        <span class="k">if</span> <span class="n">perceptual_temporal_strength</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">perceptual_temporal_strength</span> <span class="o">=</span> <span class="n">perceptual_temporal_strength</span>
         <span class="k">if</span> <span class="n">pixel_per_degree</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">pixel_per_degree</span> <span class="o">=</span> <span class="n">pixel_per_degree</span>
 
@@ -131,11 +132,11 @@
             <span class="n">types</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="nb">super</span><span class="p">(</span><span class="n">H265V2PerceptualQualityModeConfig</span><span class="p">,</span> <span class="bp">self</span><span class="p">),</span> <span class="s1">&#39;openapi_types&#39;</span><span class="p">)</span>
 
         <span class="n">types</span><span class="o">.</span><span class="n">update</span><span class="p">({</span>
-            <span class="s1">&#39;percept&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;perc_str&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;perc_penalty_str&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;perc_penalty_knee&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;perc_temporal_str&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;perceptual_encoding_mode&#39;</span><span class="p">:</span> <span class="s1">&#39;H265V2PerceptualEncodingMode&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;perceptual_strength&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;perceptual_penalty_strength&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;perceptual_penalty_knee&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;perceptual_temporal_strength&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span><span class="p">,</span>
             <span class="s1">&#39;pixel_per_degree&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span>
         <span class="p">})</span>
 
@@ -149,159 +150,159 @@
             <span class="n">attributes</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="nb">super</span><span class="p">(</span><span class="n">H265V2PerceptualQualityModeConfig</span><span class="p">,</span> <span class="bp">self</span><span class="p">),</span> <span class="s1">&#39;attribute_map&#39;</span><span class="p">)</span>
 
         <span class="n">attributes</span><span class="o">.</span><span class="n">update</span><span class="p">({</span>
-            <span class="s1">&#39;percept&#39;</span><span class="p">:</span> <span class="s1">&#39;percept&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;perc_str&#39;</span><span class="p">:</span> <span class="s1">&#39;percStr&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;perc_penalty_str&#39;</span><span class="p">:</span> <span class="s1">&#39;percPenaltyStr&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;perc_penalty_knee&#39;</span><span class="p">:</span> <span class="s1">&#39;percPenaltyKnee&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;perc_temporal_str&#39;</span><span class="p">:</span> <span class="s1">&#39;percTemporalStr&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;perceptual_encoding_mode&#39;</span><span class="p">:</span> <span class="s1">&#39;perceptualEncodingMode&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;perceptual_strength&#39;</span><span class="p">:</span> <span class="s1">&#39;perceptualStrength&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;perceptual_penalty_strength&#39;</span><span class="p">:</span> <span class="s1">&#39;perceptualPenaltyStrength&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;perceptual_penalty_knee&#39;</span><span class="p">:</span> <span class="s1">&#39;perceptualPenaltyKnee&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;perceptual_temporal_strength&#39;</span><span class="p">:</span> <span class="s1">&#39;perceptualTemporalStrength&#39;</span><span class="p">,</span>
             <span class="s1">&#39;pixel_per_degree&#39;</span><span class="p">:</span> <span class="s1">&#39;pixelPerDegree&#39;</span>
         <span class="p">})</span>
         <span class="k">return</span> <span class="n">attributes</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span><span class="w"> </span><span class="nf">percept</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="c1"># type: () -&gt; int</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the percept of this H265V2PerceptualQualityModeConfig.</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">perceptual_encoding_mode</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; H265V2PerceptualEncodingMode</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the perceptual_encoding_mode of this H265V2PerceptualQualityModeConfig.</span>
 
-<span class="sd">        HVS-based perceptual encoding mode (0:off 1:cudqp 2:+quant).</span>
+<span class="sd">        HVS-based perceptual encoding mode.</span>
 
-<span class="sd">        :return: The percept of this H265V2PerceptualQualityModeConfig.</span>
-<span class="sd">        :rtype: int</span>
+<span class="sd">        :return: The perceptual_encoding_mode of this H265V2PerceptualQualityModeConfig.</span>
+<span class="sd">        :rtype: H265V2PerceptualEncodingMode</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_percept</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_perceptual_encoding_mode</span>
 
-    <span class="nd">@percept</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span><span class="w"> </span><span class="nf">percept</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">percept</span><span class="p">):</span>
-        <span class="c1"># type: (int) -&gt; None</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the percept of this H265V2PerceptualQualityModeConfig.</span>
+    <span class="nd">@perceptual_encoding_mode</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">perceptual_encoding_mode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">perceptual_encoding_mode</span><span class="p">):</span>
+        <span class="c1"># type: (H265V2PerceptualEncodingMode) -&gt; None</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the perceptual_encoding_mode of this H265V2PerceptualQualityModeConfig.</span>
 
-<span class="sd">        HVS-based perceptual encoding mode (0:off 1:cudqp 2:+quant).</span>
+<span class="sd">        HVS-based perceptual encoding mode.</span>
 
-<span class="sd">        :param percept: The percept of this H265V2PerceptualQualityModeConfig.</span>
-<span class="sd">        :type: int</span>
+<span class="sd">        :param perceptual_encoding_mode: The perceptual_encoding_mode of this H265V2PerceptualQualityModeConfig.</span>
+<span class="sd">        :type: H265V2PerceptualEncodingMode</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
-        <span class="k">if</span> <span class="n">percept</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">percept</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `percept`, type has to be `int`&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">perceptual_encoding_mode</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">perceptual_encoding_mode</span><span class="p">,</span> <span class="n">H265V2PerceptualEncodingMode</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `perceptual_encoding_mode`, type has to be `H265V2PerceptualEncodingMode`&quot;</span><span class="p">)</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">_percept</span> <span class="o">=</span> <span class="n">percept</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_perceptual_encoding_mode</span> <span class="o">=</span> <span class="n">perceptual_encoding_mode</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span><span class="w"> </span><span class="nf">perc_str</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">perceptual_strength</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; float</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the perc_str of this H265V2PerceptualQualityModeConfig.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the perceptual_strength of this H265V2PerceptualQualityModeConfig.</span>
 
 <span class="sd">        Overall strength of perceptual model (0.0-1.0).</span>
 
-<span class="sd">        :return: The perc_str of this H265V2PerceptualQualityModeConfig.</span>
+<span class="sd">        :return: The perceptual_strength of this H265V2PerceptualQualityModeConfig.</span>
 <span class="sd">        :rtype: float</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_perc_str</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_perceptual_strength</span>
 
-    <span class="nd">@perc_str</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span><span class="w"> </span><span class="nf">perc_str</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">perc_str</span><span class="p">):</span>
+    <span class="nd">@perceptual_strength</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">perceptual_strength</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">perceptual_strength</span><span class="p">):</span>
         <span class="c1"># type: (float) -&gt; None</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the perc_str of this H265V2PerceptualQualityModeConfig.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the perceptual_strength of this H265V2PerceptualQualityModeConfig.</span>
 
 <span class="sd">        Overall strength of perceptual model (0.0-1.0).</span>
 
-<span class="sd">        :param perc_str: The perc_str of this H265V2PerceptualQualityModeConfig.</span>
+<span class="sd">        :param perceptual_strength: The perceptual_strength of this H265V2PerceptualQualityModeConfig.</span>
 <span class="sd">        :type: float</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
-        <span class="k">if</span> <span class="n">perc_str</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">perc_str</span><span class="p">,</span> <span class="p">(</span><span class="nb">float</span><span class="p">,</span> <span class="nb">int</span><span class="p">)):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `perc_str`, type has to be `float`&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">perceptual_strength</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">perceptual_strength</span><span class="p">,</span> <span class="p">(</span><span class="nb">float</span><span class="p">,</span> <span class="nb">int</span><span class="p">)):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `perceptual_strength`, type has to be `float`&quot;</span><span class="p">)</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">_perc_str</span> <span class="o">=</span> <span class="n">perc_str</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_perceptual_strength</span> <span class="o">=</span> <span class="n">perceptual_strength</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span><span class="w"> </span><span class="nf">perc_penalty_str</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">perceptual_penalty_strength</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; float</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the perc_penalty_str of this H265V2PerceptualQualityModeConfig.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the perceptual_penalty_strength of this H265V2PerceptualQualityModeConfig.</span>
 
 <span class="sd">        Strength of penalties from perceptual model (0.0-1.0).</span>
 
-<span class="sd">        :return: The perc_penalty_str of this H265V2PerceptualQualityModeConfig.</span>
+<span class="sd">        :return: The perceptual_penalty_strength of this H265V2PerceptualQualityModeConfig.</span>
 <span class="sd">        :rtype: float</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_perc_penalty_str</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_perceptual_penalty_strength</span>
 
-    <span class="nd">@perc_penalty_str</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span><span class="w"> </span><span class="nf">perc_penalty_str</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">perc_penalty_str</span><span class="p">):</span>
+    <span class="nd">@perceptual_penalty_strength</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">perceptual_penalty_strength</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">perceptual_penalty_strength</span><span class="p">):</span>
         <span class="c1"># type: (float) -&gt; None</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the perc_penalty_str of this H265V2PerceptualQualityModeConfig.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the perceptual_penalty_strength of this H265V2PerceptualQualityModeConfig.</span>
 
 <span class="sd">        Strength of penalties from perceptual model (0.0-1.0).</span>
 
-<span class="sd">        :param perc_penalty_str: The perc_penalty_str of this H265V2PerceptualQualityModeConfig.</span>
+<span class="sd">        :param perceptual_penalty_strength: The perceptual_penalty_strength of this H265V2PerceptualQualityModeConfig.</span>
 <span class="sd">        :type: float</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
-        <span class="k">if</span> <span class="n">perc_penalty_str</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">perc_penalty_str</span><span class="p">,</span> <span class="p">(</span><span class="nb">float</span><span class="p">,</span> <span class="nb">int</span><span class="p">)):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `perc_penalty_str`, type has to be `float`&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">perceptual_penalty_strength</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">perceptual_penalty_strength</span><span class="p">,</span> <span class="p">(</span><span class="nb">float</span><span class="p">,</span> <span class="nb">int</span><span class="p">)):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `perceptual_penalty_strength`, type has to be `float`&quot;</span><span class="p">)</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">_perc_penalty_str</span> <span class="o">=</span> <span class="n">perc_penalty_str</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_perceptual_penalty_strength</span> <span class="o">=</span> <span class="n">perceptual_penalty_strength</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span><span class="w"> </span><span class="nf">perc_penalty_knee</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">perceptual_penalty_knee</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; float</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the perc_penalty_knee of this H265V2PerceptualQualityModeConfig.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the perceptual_penalty_knee of this H265V2PerceptualQualityModeConfig.</span>
 
 <span class="sd">        Knee point of penalty strength modulation (0.0-1.0).</span>
 
-<span class="sd">        :return: The perc_penalty_knee of this H265V2PerceptualQualityModeConfig.</span>
+<span class="sd">        :return: The perceptual_penalty_knee of this H265V2PerceptualQualityModeConfig.</span>
 <span class="sd">        :rtype: float</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_perc_penalty_knee</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_perceptual_penalty_knee</span>
 
-    <span class="nd">@perc_penalty_knee</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span><span class="w"> </span><span class="nf">perc_penalty_knee</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">perc_penalty_knee</span><span class="p">):</span>
+    <span class="nd">@perceptual_penalty_knee</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">perceptual_penalty_knee</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">perceptual_penalty_knee</span><span class="p">):</span>
         <span class="c1"># type: (float) -&gt; None</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the perc_penalty_knee of this H265V2PerceptualQualityModeConfig.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the perceptual_penalty_knee of this H265V2PerceptualQualityModeConfig.</span>
 
 <span class="sd">        Knee point of penalty strength modulation (0.0-1.0).</span>
 
-<span class="sd">        :param perc_penalty_knee: The perc_penalty_knee of this H265V2PerceptualQualityModeConfig.</span>
+<span class="sd">        :param perceptual_penalty_knee: The perceptual_penalty_knee of this H265V2PerceptualQualityModeConfig.</span>
 <span class="sd">        :type: float</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
-        <span class="k">if</span> <span class="n">perc_penalty_knee</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">perc_penalty_knee</span><span class="p">,</span> <span class="p">(</span><span class="nb">float</span><span class="p">,</span> <span class="nb">int</span><span class="p">)):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `perc_penalty_knee`, type has to be `float`&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">perceptual_penalty_knee</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">perceptual_penalty_knee</span><span class="p">,</span> <span class="p">(</span><span class="nb">float</span><span class="p">,</span> <span class="nb">int</span><span class="p">)):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `perceptual_penalty_knee`, type has to be `float`&quot;</span><span class="p">)</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">_perc_penalty_knee</span> <span class="o">=</span> <span class="n">perc_penalty_knee</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_perceptual_penalty_knee</span> <span class="o">=</span> <span class="n">perceptual_penalty_knee</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span><span class="w"> </span><span class="nf">perc_temporal_str</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">perceptual_temporal_strength</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; float</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the perc_temporal_str of this H265V2PerceptualQualityModeConfig.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the perceptual_temporal_strength of this H265V2PerceptualQualityModeConfig.</span>
 
 <span class="sd">        Strength of temporal component of perceptual model (0.0-1.0).</span>
 
-<span class="sd">        :return: The perc_temporal_str of this H265V2PerceptualQualityModeConfig.</span>
+<span class="sd">        :return: The perceptual_temporal_strength of this H265V2PerceptualQualityModeConfig.</span>
 <span class="sd">        :rtype: float</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_perc_temporal_str</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_perceptual_temporal_strength</span>
 
-    <span class="nd">@perc_temporal_str</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span><span class="w"> </span><span class="nf">perc_temporal_str</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">perc_temporal_str</span><span class="p">):</span>
+    <span class="nd">@perceptual_temporal_strength</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">perceptual_temporal_strength</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">perceptual_temporal_strength</span><span class="p">):</span>
         <span class="c1"># type: (float) -&gt; None</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the perc_temporal_str of this H265V2PerceptualQualityModeConfig.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the perceptual_temporal_strength of this H265V2PerceptualQualityModeConfig.</span>
 
 <span class="sd">        Strength of temporal component of perceptual model (0.0-1.0).</span>
 
-<span class="sd">        :param perc_temporal_str: The perc_temporal_str of this H265V2PerceptualQualityModeConfig.</span>
+<span class="sd">        :param perceptual_temporal_strength: The perceptual_temporal_strength of this H265V2PerceptualQualityModeConfig.</span>
 <span class="sd">        :type: float</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
-        <span class="k">if</span> <span class="n">perc_temporal_str</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">perc_temporal_str</span><span class="p">,</span> <span class="p">(</span><span class="nb">float</span><span class="p">,</span> <span class="nb">int</span><span class="p">)):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `perc_temporal_str`, type has to be `float`&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">perceptual_temporal_strength</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">perceptual_temporal_strength</span><span class="p">,</span> <span class="p">(</span><span class="nb">float</span><span class="p">,</span> <span class="nb">int</span><span class="p">)):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `perceptual_temporal_strength`, type has to be `float`&quot;</span><span class="p">)</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">_perc_temporal_str</span> <span class="o">=</span> <span class="n">perc_temporal_str</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_perceptual_temporal_strength</span> <span class="o">=</span> <span class="n">perceptual_temporal_strength</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">pixel_per_degree</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>

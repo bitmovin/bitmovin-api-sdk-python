@@ -114,18 +114,30 @@
                  <span class="n">display_aspect_ratio</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">encoding_mode</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">preset_configuration</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                 <span class="n">auto_level_setup</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (string_types, string_types, string_types, datetime, datetime, dict, int, int, int, float, PixelFormat, ColorConfig, int, int, DisplayAspectRatio, EncodingMode, Av1PresetConfiguration, AutoLevelSetup) -&gt; None</span>
+                 <span class="n">auto_level_setup</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">master_display</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">max_content_light_level</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">max_picture_average_light_level</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="c1"># type: (string_types, string_types, string_types, datetime, datetime, dict, int, int, int, float, PixelFormat, ColorConfig, int, int, DisplayAspectRatio, EncodingMode, Av1PresetConfiguration, AutoLevelSetup, string_types, int, int) -&gt; None</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">Av1VideoConfiguration</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">id_</span><span class="o">=</span><span class="n">id_</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="n">description</span><span class="p">,</span> <span class="n">created_at</span><span class="o">=</span><span class="n">created_at</span><span class="p">,</span> <span class="n">modified_at</span><span class="o">=</span><span class="n">modified_at</span><span class="p">,</span> <span class="n">custom_data</span><span class="o">=</span><span class="n">custom_data</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="n">height</span><span class="p">,</span> <span class="n">bitrate</span><span class="o">=</span><span class="n">bitrate</span><span class="p">,</span> <span class="n">rate</span><span class="o">=</span><span class="n">rate</span><span class="p">,</span> <span class="n">pixel_format</span><span class="o">=</span><span class="n">pixel_format</span><span class="p">,</span> <span class="n">color_config</span><span class="o">=</span><span class="n">color_config</span><span class="p">,</span> <span class="n">sample_aspect_ratio_numerator</span><span class="o">=</span><span class="n">sample_aspect_ratio_numerator</span><span class="p">,</span> <span class="n">sample_aspect_ratio_denominator</span><span class="o">=</span><span class="n">sample_aspect_ratio_denominator</span><span class="p">,</span> <span class="n">display_aspect_ratio</span><span class="o">=</span><span class="n">display_aspect_ratio</span><span class="p">,</span> <span class="n">encoding_mode</span><span class="o">=</span><span class="n">encoding_mode</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_preset_configuration</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_auto_level_setup</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_master_display</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_max_content_light_level</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_max_picture_average_light_level</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>
 
         <span class="k">if</span> <span class="n">preset_configuration</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">preset_configuration</span> <span class="o">=</span> <span class="n">preset_configuration</span>
         <span class="k">if</span> <span class="n">auto_level_setup</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">auto_level_setup</span> <span class="o">=</span> <span class="n">auto_level_setup</span>
+        <span class="k">if</span> <span class="n">master_display</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">master_display</span> <span class="o">=</span> <span class="n">master_display</span>
+        <span class="k">if</span> <span class="n">max_content_light_level</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">max_content_light_level</span> <span class="o">=</span> <span class="n">max_content_light_level</span>
+        <span class="k">if</span> <span class="n">max_picture_average_light_level</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">max_picture_average_light_level</span> <span class="o">=</span> <span class="n">max_picture_average_light_level</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -136,7 +148,10 @@
 
         <span class="n">types</span><span class="o">.</span><span class="n">update</span><span class="p">({</span>
             <span class="s1">&#39;preset_configuration&#39;</span><span class="p">:</span> <span class="s1">&#39;Av1PresetConfiguration&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;auto_level_setup&#39;</span><span class="p">:</span> <span class="s1">&#39;AutoLevelSetup&#39;</span>
+            <span class="s1">&#39;auto_level_setup&#39;</span><span class="p">:</span> <span class="s1">&#39;AutoLevelSetup&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;master_display&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;max_content_light_level&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;max_picture_average_light_level&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span>
         <span class="p">})</span>
 
         <span class="k">return</span> <span class="n">types</span>
@@ -150,7 +165,10 @@
 
         <span class="n">attributes</span><span class="o">.</span><span class="n">update</span><span class="p">({</span>
             <span class="s1">&#39;preset_configuration&#39;</span><span class="p">:</span> <span class="s1">&#39;presetConfiguration&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;auto_level_setup&#39;</span><span class="p">:</span> <span class="s1">&#39;autoLevelSetup&#39;</span>
+            <span class="s1">&#39;auto_level_setup&#39;</span><span class="p">:</span> <span class="s1">&#39;autoLevelSetup&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;master_display&#39;</span><span class="p">:</span> <span class="s1">&#39;masterDisplay&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;max_content_light_level&#39;</span><span class="p">:</span> <span class="s1">&#39;maxContentLightLevel&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;max_picture_average_light_level&#39;</span><span class="p">:</span> <span class="s1">&#39;maxPictureAverageLightLevel&#39;</span>
         <span class="p">})</span>
         <span class="k">return</span> <span class="n">attributes</span>
 
@@ -211,6 +229,101 @@
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `auto_level_setup`, type has to be `AutoLevelSetup`&quot;</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_auto_level_setup</span> <span class="o">=</span> <span class="n">auto_level_setup</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">master_display</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; string_types</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the master_display of this Av1VideoConfiguration.</span>
+
+<span class="sd">        Set the mastering display color volume metadata. The chromaticity coordinates for the green (G), blue (B), red (R) primaries and the white point (WP) are given in increments of 0.00002 (i.e. multiply the actual value by 50000), and the luminance values (L) are given in increments of 0.0001 cd/m² (i.e. multiply the actual value by 10000). For example `G(13250,34500)B(7500,3000)R(34000,16000)WP(15635,16450)L(10000000,1)` describes a P3D65 1000-nits monitor, where G(x=0.265, y=0.690), B(x=0.150, y=0.060), R(x=0.680, y=0.320), WP(x=0.3127, y=0.3290), L(max=1000, min=0.0001). Part of HDR-10 metadata.</span>
+
+<span class="sd">        :return: The master_display of this Av1VideoConfiguration.</span>
+<span class="sd">        :rtype: string_types</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_master_display</span>
+
+    <span class="nd">@master_display</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">master_display</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">master_display</span><span class="p">):</span>
+        <span class="c1"># type: (string_types) -&gt; None</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the master_display of this Av1VideoConfiguration.</span>
+
+<span class="sd">        Set the mastering display color volume metadata. The chromaticity coordinates for the green (G), blue (B), red (R) primaries and the white point (WP) are given in increments of 0.00002 (i.e. multiply the actual value by 50000), and the luminance values (L) are given in increments of 0.0001 cd/m² (i.e. multiply the actual value by 10000). For example `G(13250,34500)B(7500,3000)R(34000,16000)WP(15635,16450)L(10000000,1)` describes a P3D65 1000-nits monitor, where G(x=0.265, y=0.690), B(x=0.150, y=0.060), R(x=0.680, y=0.320), WP(x=0.3127, y=0.3290), L(max=1000, min=0.0001). Part of HDR-10 metadata.</span>
+
+<span class="sd">        :param master_display: The master_display of this Av1VideoConfiguration.</span>
+<span class="sd">        :type: string_types</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">master_display</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">master_display</span><span class="p">,</span> <span class="n">string_types</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `master_display`, type has to be `string_types`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_master_display</span> <span class="o">=</span> <span class="n">master_display</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">max_content_light_level</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; int</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the max_content_light_level of this Av1VideoConfiguration.</span>
+
+<span class="sd">        Set the max content light level (MaxCLL). Use together with maxPictureAverageLightLevel (which will be 0 if not set). Part of HDR-10 metadata.</span>
+
+<span class="sd">        :return: The max_content_light_level of this Av1VideoConfiguration.</span>
+<span class="sd">        :rtype: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_max_content_light_level</span>
+
+    <span class="nd">@max_content_light_level</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">max_content_light_level</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">max_content_light_level</span><span class="p">):</span>
+        <span class="c1"># type: (int) -&gt; None</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the max_content_light_level of this Av1VideoConfiguration.</span>
+
+<span class="sd">        Set the max content light level (MaxCLL). Use together with maxPictureAverageLightLevel (which will be 0 if not set). Part of HDR-10 metadata.</span>
+
+<span class="sd">        :param max_content_light_level: The max_content_light_level of this Av1VideoConfiguration.</span>
+<span class="sd">        :type: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">max_content_light_level</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">max_content_light_level</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">max_content_light_level</span> <span class="o">&gt;</span> <span class="mi">65535</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid value for `max_content_light_level`, must be a value less than or equal to `65535`&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">max_content_light_level</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">max_content_light_level</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid value for `max_content_light_level`, must be a value greater than or equal to `0`&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">max_content_light_level</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `max_content_light_level`, type has to be `int`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_max_content_light_level</span> <span class="o">=</span> <span class="n">max_content_light_level</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">max_picture_average_light_level</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; int</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the max_picture_average_light_level of this Av1VideoConfiguration.</span>
+
+<span class="sd">        Set the maximum picture average light level (MaxFALL). Use together with maxContentLightLevel (which will be 0 if not set). Part of HDR-10 metadata.</span>
+
+<span class="sd">        :return: The max_picture_average_light_level of this Av1VideoConfiguration.</span>
+<span class="sd">        :rtype: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_max_picture_average_light_level</span>
+
+    <span class="nd">@max_picture_average_light_level</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">max_picture_average_light_level</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">max_picture_average_light_level</span><span class="p">):</span>
+        <span class="c1"># type: (int) -&gt; None</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the max_picture_average_light_level of this Av1VideoConfiguration.</span>
+
+<span class="sd">        Set the maximum picture average light level (MaxFALL). Use together with maxContentLightLevel (which will be 0 if not set). Part of HDR-10 metadata.</span>
+
+<span class="sd">        :param max_picture_average_light_level: The max_picture_average_light_level of this Av1VideoConfiguration.</span>
+<span class="sd">        :type: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">max_picture_average_light_level</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">max_picture_average_light_level</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">max_picture_average_light_level</span> <span class="o">&gt;</span> <span class="mi">65535</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid value for `max_picture_average_light_level`, must be a value less than or equal to `65535`&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">max_picture_average_light_level</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">max_picture_average_light_level</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid value for `max_picture_average_light_level`, must be a value greater than or equal to `0`&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">max_picture_average_light_level</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `max_picture_average_light_level`, type has to be `int`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_max_picture_average_light_level</span> <span class="o">=</span> <span class="n">max_picture_average_light_level</span>
 
 <div class="viewcode-block" id="Av1VideoConfiguration.to_dict">
 <a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.av1_video_configuration.Av1VideoConfiguration.to_dict">[docs]</a>

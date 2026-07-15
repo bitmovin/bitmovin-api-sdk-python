@@ -34,18 +34,30 @@ class Av1VideoConfiguration(VideoConfiguration):
                  display_aspect_ratio=None,
                  encoding_mode=None,
                  preset_configuration=None,
-                 auto_level_setup=None):
-        # type: (string_types, string_types, string_types, datetime, datetime, dict, int, int, int, float, PixelFormat, ColorConfig, int, int, DisplayAspectRatio, EncodingMode, Av1PresetConfiguration, AutoLevelSetup) -> None
+                 auto_level_setup=None,
+                 master_display=None,
+                 max_content_light_level=None,
+                 max_picture_average_light_level=None):
+        # type: (string_types, string_types, string_types, datetime, datetime, dict, int, int, int, float, PixelFormat, ColorConfig, int, int, DisplayAspectRatio, EncodingMode, Av1PresetConfiguration, AutoLevelSetup, string_types, int, int) -> None
         super(Av1VideoConfiguration, self).__init__(id_=id_, name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, width=width, height=height, bitrate=bitrate, rate=rate, pixel_format=pixel_format, color_config=color_config, sample_aspect_ratio_numerator=sample_aspect_ratio_numerator, sample_aspect_ratio_denominator=sample_aspect_ratio_denominator, display_aspect_ratio=display_aspect_ratio, encoding_mode=encoding_mode)
 
         self._preset_configuration = None
         self._auto_level_setup = None
+        self._master_display = None
+        self._max_content_light_level = None
+        self._max_picture_average_light_level = None
         self.discriminator = None
 
         if preset_configuration is not None:
             self.preset_configuration = preset_configuration
         if auto_level_setup is not None:
             self.auto_level_setup = auto_level_setup
+        if master_display is not None:
+            self.master_display = master_display
+        if max_content_light_level is not None:
+            self.max_content_light_level = max_content_light_level
+        if max_picture_average_light_level is not None:
+            self.max_picture_average_light_level = max_picture_average_light_level
 
     @property
     def openapi_types(self):
@@ -56,7 +68,10 @@ class Av1VideoConfiguration(VideoConfiguration):
 
         types.update({
             'preset_configuration': 'Av1PresetConfiguration',
-            'auto_level_setup': 'AutoLevelSetup'
+            'auto_level_setup': 'AutoLevelSetup',
+            'master_display': 'string_types',
+            'max_content_light_level': 'int',
+            'max_picture_average_light_level': 'int'
         })
 
         return types
@@ -70,7 +85,10 @@ class Av1VideoConfiguration(VideoConfiguration):
 
         attributes.update({
             'preset_configuration': 'presetConfiguration',
-            'auto_level_setup': 'autoLevelSetup'
+            'auto_level_setup': 'autoLevelSetup',
+            'master_display': 'masterDisplay',
+            'max_content_light_level': 'maxContentLightLevel',
+            'max_picture_average_light_level': 'maxPictureAverageLightLevel'
         })
         return attributes
 
@@ -131,6 +149,101 @@ class Av1VideoConfiguration(VideoConfiguration):
                 raise TypeError("Invalid type for `auto_level_setup`, type has to be `AutoLevelSetup`")
 
         self._auto_level_setup = auto_level_setup
+
+    @property
+    def master_display(self):
+        # type: () -> string_types
+        """Gets the master_display of this Av1VideoConfiguration.
+
+        Set the mastering display color volume metadata. The chromaticity coordinates for the green (G), blue (B), red (R) primaries and the white point (WP) are given in increments of 0.00002 (i.e. multiply the actual value by 50000), and the luminance values (L) are given in increments of 0.0001 cd/m² (i.e. multiply the actual value by 10000). For example `G(13250,34500)B(7500,3000)R(34000,16000)WP(15635,16450)L(10000000,1)` describes a P3D65 1000-nits monitor, where G(x=0.265, y=0.690), B(x=0.150, y=0.060), R(x=0.680, y=0.320), WP(x=0.3127, y=0.3290), L(max=1000, min=0.0001). Part of HDR-10 metadata.
+
+        :return: The master_display of this Av1VideoConfiguration.
+        :rtype: string_types
+        """
+        return self._master_display
+
+    @master_display.setter
+    def master_display(self, master_display):
+        # type: (string_types) -> None
+        """Sets the master_display of this Av1VideoConfiguration.
+
+        Set the mastering display color volume metadata. The chromaticity coordinates for the green (G), blue (B), red (R) primaries and the white point (WP) are given in increments of 0.00002 (i.e. multiply the actual value by 50000), and the luminance values (L) are given in increments of 0.0001 cd/m² (i.e. multiply the actual value by 10000). For example `G(13250,34500)B(7500,3000)R(34000,16000)WP(15635,16450)L(10000000,1)` describes a P3D65 1000-nits monitor, where G(x=0.265, y=0.690), B(x=0.150, y=0.060), R(x=0.680, y=0.320), WP(x=0.3127, y=0.3290), L(max=1000, min=0.0001). Part of HDR-10 metadata.
+
+        :param master_display: The master_display of this Av1VideoConfiguration.
+        :type: string_types
+        """
+
+        if master_display is not None:
+            if not isinstance(master_display, string_types):
+                raise TypeError("Invalid type for `master_display`, type has to be `string_types`")
+
+        self._master_display = master_display
+
+    @property
+    def max_content_light_level(self):
+        # type: () -> int
+        """Gets the max_content_light_level of this Av1VideoConfiguration.
+
+        Set the max content light level (MaxCLL). Use together with maxPictureAverageLightLevel (which will be 0 if not set). Part of HDR-10 metadata.
+
+        :return: The max_content_light_level of this Av1VideoConfiguration.
+        :rtype: int
+        """
+        return self._max_content_light_level
+
+    @max_content_light_level.setter
+    def max_content_light_level(self, max_content_light_level):
+        # type: (int) -> None
+        """Sets the max_content_light_level of this Av1VideoConfiguration.
+
+        Set the max content light level (MaxCLL). Use together with maxPictureAverageLightLevel (which will be 0 if not set). Part of HDR-10 metadata.
+
+        :param max_content_light_level: The max_content_light_level of this Av1VideoConfiguration.
+        :type: int
+        """
+
+        if max_content_light_level is not None:
+            if max_content_light_level is not None and max_content_light_level > 65535:
+                raise ValueError("Invalid value for `max_content_light_level`, must be a value less than or equal to `65535`")
+            if max_content_light_level is not None and max_content_light_level < 0:
+                raise ValueError("Invalid value for `max_content_light_level`, must be a value greater than or equal to `0`")
+            if not isinstance(max_content_light_level, int):
+                raise TypeError("Invalid type for `max_content_light_level`, type has to be `int`")
+
+        self._max_content_light_level = max_content_light_level
+
+    @property
+    def max_picture_average_light_level(self):
+        # type: () -> int
+        """Gets the max_picture_average_light_level of this Av1VideoConfiguration.
+
+        Set the maximum picture average light level (MaxFALL). Use together with maxContentLightLevel (which will be 0 if not set). Part of HDR-10 metadata.
+
+        :return: The max_picture_average_light_level of this Av1VideoConfiguration.
+        :rtype: int
+        """
+        return self._max_picture_average_light_level
+
+    @max_picture_average_light_level.setter
+    def max_picture_average_light_level(self, max_picture_average_light_level):
+        # type: (int) -> None
+        """Sets the max_picture_average_light_level of this Av1VideoConfiguration.
+
+        Set the maximum picture average light level (MaxFALL). Use together with maxContentLightLevel (which will be 0 if not set). Part of HDR-10 metadata.
+
+        :param max_picture_average_light_level: The max_picture_average_light_level of this Av1VideoConfiguration.
+        :type: int
+        """
+
+        if max_picture_average_light_level is not None:
+            if max_picture_average_light_level is not None and max_picture_average_light_level > 65535:
+                raise ValueError("Invalid value for `max_picture_average_light_level`, must be a value less than or equal to `65535`")
+            if max_picture_average_light_level is not None and max_picture_average_light_level < 0:
+                raise ValueError("Invalid value for `max_picture_average_light_level`, must be a value greater than or equal to `0`")
+            if not isinstance(max_picture_average_light_level, int):
+                raise TypeError("Invalid type for `max_picture_average_light_level`, type has to be `int`")
+
+        self._max_picture_average_light_level = max_picture_average_light_level
 
     def to_dict(self):
         """Returns the model properties as a dict"""
