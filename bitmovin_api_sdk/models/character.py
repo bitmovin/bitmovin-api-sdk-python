@@ -3,6 +3,7 @@
 from enum import Enum
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
+from bitmovin_api_sdk.models.character_appearance import CharacterAppearance
 import pprint
 import six
 
@@ -10,28 +11,33 @@ import six
 class Character(object):
     @poscheck_model
     def __init__(self,
-                 appearance=None,
+                 character_appearance=None,
                  name=None,
+                 played_by=None,
                  description=None):
-        # type: (string_types, string_types, string_types) -> None
+        # type: (CharacterAppearance, string_types, string_types, string_types) -> None
 
-        self._appearance = None
+        self._character_appearance = None
         self._name = None
+        self._played_by = None
         self._description = None
         self.discriminator = None
 
-        if appearance is not None:
-            self.appearance = appearance
+        if character_appearance is not None:
+            self.character_appearance = character_appearance
         if name is not None:
             self.name = name
+        if played_by is not None:
+            self.played_by = played_by
         if description is not None:
             self.description = description
 
     @property
     def openapi_types(self):
         types = {
-            'appearance': 'string_types',
+            'character_appearance': 'CharacterAppearance',
             'name': 'string_types',
+            'played_by': 'string_types',
             'description': 'string_types'
         }
 
@@ -40,38 +46,39 @@ class Character(object):
     @property
     def attribute_map(self):
         attributes = {
-            'appearance': 'appearance',
+            'character_appearance': 'characterAppearance',
             'name': 'name',
+            'played_by': 'playedBy',
             'description': 'description'
         }
         return attributes
 
     @property
-    def appearance(self):
-        # type: () -> string_types
-        """Gets the appearance of this Character.
+    def character_appearance(self):
+        # type: () -> CharacterAppearance
+        """Gets the character_appearance of this Character.
 
 
-        :return: The appearance of this Character.
-        :rtype: string_types
+        :return: The character_appearance of this Character.
+        :rtype: CharacterAppearance
         """
-        return self._appearance
+        return self._character_appearance
 
-    @appearance.setter
-    def appearance(self, appearance):
-        # type: (string_types) -> None
-        """Sets the appearance of this Character.
+    @character_appearance.setter
+    def character_appearance(self, character_appearance):
+        # type: (CharacterAppearance) -> None
+        """Sets the character_appearance of this Character.
 
 
-        :param appearance: The appearance of this Character.
-        :type: string_types
+        :param character_appearance: The character_appearance of this Character.
+        :type: CharacterAppearance
         """
 
-        if appearance is not None:
-            if not isinstance(appearance, string_types):
-                raise TypeError("Invalid type for `appearance`, type has to be `string_types`")
+        if character_appearance is not None:
+            if not isinstance(character_appearance, CharacterAppearance):
+                raise TypeError("Invalid type for `character_appearance`, type has to be `CharacterAppearance`")
 
-        self._appearance = appearance
+        self._character_appearance = character_appearance
 
     @property
     def name(self):
@@ -99,6 +106,33 @@ class Character(object):
                 raise TypeError("Invalid type for `name`, type has to be `string_types`")
 
         self._name = name
+
+    @property
+    def played_by(self):
+        # type: () -> string_types
+        """Gets the played_by of this Character.
+
+
+        :return: The played_by of this Character.
+        :rtype: string_types
+        """
+        return self._played_by
+
+    @played_by.setter
+    def played_by(self, played_by):
+        # type: (string_types) -> None
+        """Sets the played_by of this Character.
+
+
+        :param played_by: The played_by of this Character.
+        :type: string_types
+        """
+
+        if played_by is not None:
+            if not isinstance(played_by, string_types):
+                raise TypeError("Invalid type for `played_by`, type has to be `string_types`")
+
+        self._played_by = played_by
 
     @property
     def description(self):

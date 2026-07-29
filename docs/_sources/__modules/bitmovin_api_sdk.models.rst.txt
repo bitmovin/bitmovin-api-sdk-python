@@ -364,6 +364,14 @@ bitmovin\_api\_sdk.models.aes\_encryption\_method module
    :show-inheritance:
    :undoc-members:
 
+bitmovin\_api\_sdk.models.age\_range module
+-------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.age_range
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
 bitmovin\_api\_sdk.models.agent\_chat\_attachment module
 --------------------------------------------------------
 
@@ -1804,6 +1812,14 @@ bitmovin\_api\_sdk.models.character module
    :show-inheritance:
    :undoc-members:
 
+bitmovin\_api\_sdk.models.character\_appearance module
+------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.character_appearance
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
 bitmovin\_api\_sdk.models.check\_output\_permissions\_request module
 --------------------------------------------------------------------
 
@@ -2032,6 +2048,14 @@ bitmovin\_api\_sdk.models.convert\_scc\_position\_mode module
 -------------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.models.convert_scc_position_mode
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+bitmovin\_api\_sdk.models.credits module
+----------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.credits
    :members:
    :show-inheritance:
    :undoc-members:
@@ -2424,6 +2448,14 @@ bitmovin\_api\_sdk.models.denoise\_hqdn3d\_filter module
 --------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.models.denoise_hqdn3d_filter
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+bitmovin\_api\_sdk.models.department module
+-------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.department
    :members:
    :show-inheritance:
    :undoc-members:
@@ -5164,6 +5196,14 @@ bitmovin\_api\_sdk.models.permission module
    :show-inheritance:
    :undoc-members:
 
+bitmovin\_api\_sdk.models.person module
+---------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.person
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
 bitmovin\_api\_sdk.models.picture\_field\_parity module
 -------------------------------------------------------
 
@@ -5836,6 +5876,22 @@ bitmovin\_api\_sdk.models.scene\_analysis\_languages\_response module
    :show-inheritance:
    :undoc-members:
 
+bitmovin\_api\_sdk.models.scene\_analysis\_list\_item module
+------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.scene_analysis_list_item
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+bitmovin\_api\_sdk.models.scene\_analysis\_list\_sort module
+------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.scene_analysis_list_sort
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
 bitmovin\_api\_sdk.models.scene\_dynamics module
 ------------------------------------------------
 
@@ -6048,6 +6104,14 @@ bitmovin\_api\_sdk.models.smpte\_timecode\_flavor module
 --------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.models.smpte_timecode_flavor
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+bitmovin\_api\_sdk.models.song module
+-------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.song
    :members:
    :show-inheritance:
    :undoc-members:

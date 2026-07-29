@@ -3,6 +3,7 @@
 from enum import Enum
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
+from bitmovin_api_sdk.models.credits import Credits
 from bitmovin_api_sdk.models.metadata import Metadata
 import pprint
 import six
@@ -14,22 +15,26 @@ class SceneAnalysisDetailsResponse(object):
                  scenes=None,
                  duration=None,
                  description=None,
+                 title=None,
                  keywords=None,
                  ratings=None,
                  sensitive_topics=None,
                  iab_sensitive_topic_taxonomies=None,
                  input_language_codes=None,
+                 credits_=None,
                  metadata=None):
-        # type: (list[Scene], float, string_types, list[string_types], list[Rating], list[string_types], list[string_types], list[string_types], Metadata) -> None
+        # type: (list[Scene], float, string_types, string_types, list[string_types], list[Rating], list[string_types], list[string_types], list[string_types], Credits, Metadata) -> None
 
         self._scenes = list()
         self._duration = None
         self._description = None
+        self._title = None
         self._keywords = list()
         self._ratings = list()
         self._sensitive_topics = list()
         self._iab_sensitive_topic_taxonomies = list()
         self._input_language_codes = list()
+        self._credits = None
         self._metadata = None
         self.discriminator = None
 
@@ -39,6 +44,8 @@ class SceneAnalysisDetailsResponse(object):
             self.duration = duration
         if description is not None:
             self.description = description
+        if title is not None:
+            self.title = title
         if keywords is not None:
             self.keywords = keywords
         if ratings is not None:
@@ -49,6 +56,8 @@ class SceneAnalysisDetailsResponse(object):
             self.iab_sensitive_topic_taxonomies = iab_sensitive_topic_taxonomies
         if input_language_codes is not None:
             self.input_language_codes = input_language_codes
+        if credits_ is not None:
+            self.credits = credits_
         if metadata is not None:
             self.metadata = metadata
 
@@ -58,11 +67,13 @@ class SceneAnalysisDetailsResponse(object):
             'scenes': 'list[Scene]',
             'duration': 'float',
             'description': 'string_types',
+            'title': 'string_types',
             'keywords': 'list[string_types]',
             'ratings': 'list[Rating]',
             'sensitive_topics': 'list[string_types]',
             'iab_sensitive_topic_taxonomies': 'list[string_types]',
             'input_language_codes': 'list[string_types]',
+            'credits': 'Credits',
             'metadata': 'Metadata'
         }
 
@@ -74,11 +85,13 @@ class SceneAnalysisDetailsResponse(object):
             'scenes': 'scenes',
             'duration': 'duration',
             'description': 'description',
+            'title': 'title',
             'keywords': 'keywords',
             'ratings': 'ratings',
             'sensitive_topics': 'sensitiveTopics',
             'iab_sensitive_topic_taxonomies': 'iabSensitiveTopicTaxonomies',
             'input_language_codes': 'inputLanguageCodes',
+            'credits': 'credits',
             'metadata': 'metadata'
         }
         return attributes
@@ -163,6 +176,35 @@ class SceneAnalysisDetailsResponse(object):
                 raise TypeError("Invalid type for `description`, type has to be `string_types`")
 
         self._description = description
+
+    @property
+    def title(self):
+        # type: () -> string_types
+        """Gets the title of this SceneAnalysisDetailsResponse.
+
+        Inferred title representing the analyzed content as a whole. If omitted or null, the title is not available.
+
+        :return: The title of this SceneAnalysisDetailsResponse.
+        :rtype: string_types
+        """
+        return self._title
+
+    @title.setter
+    def title(self, title):
+        # type: (string_types) -> None
+        """Sets the title of this SceneAnalysisDetailsResponse.
+
+        Inferred title representing the analyzed content as a whole. If omitted or null, the title is not available.
+
+        :param title: The title of this SceneAnalysisDetailsResponse.
+        :type: string_types
+        """
+
+        if title is not None:
+            if not isinstance(title, string_types):
+                raise TypeError("Invalid type for `title`, type has to be `string_types`")
+
+        self._title = title
 
     @property
     def keywords(self):
@@ -298,6 +340,33 @@ class SceneAnalysisDetailsResponse(object):
                 raise TypeError("Invalid type for `input_language_codes`, type has to be `list[string_types]`")
 
         self._input_language_codes = input_language_codes
+
+    @property
+    def credits(self):
+        # type: () -> Credits
+        """Gets the credits of this SceneAnalysisDetailsResponse.
+
+
+        :return: The credits of this SceneAnalysisDetailsResponse.
+        :rtype: Credits
+        """
+        return self._credits
+
+    @credits.setter
+    def credits(self, credits_):
+        # type: (Credits) -> None
+        """Sets the credits of this SceneAnalysisDetailsResponse.
+
+
+        :param credits_: The credits of this SceneAnalysisDetailsResponse.
+        :type: Credits
+        """
+
+        if credits_ is not None:
+            if not isinstance(credits_, Credits):
+                raise TypeError("Invalid type for `credits`, type has to be `Credits`")
+
+        self._credits = credits_
 
     @property
     def metadata(self):

@@ -48,6 +48,7 @@ from bitmovin_api_sdk.models.adaptation_set_type_response import AdaptationSetTy
 from bitmovin_api_sdk.models.adaptive_quant_mode import AdaptiveQuantMode
 from bitmovin_api_sdk.models.aes_encryption_drm import AesEncryptionDrm
 from bitmovin_api_sdk.models.aes_encryption_method import AesEncryptionMethod
+from bitmovin_api_sdk.models.age_range import AgeRange
 from bitmovin_api_sdk.models.agent_chat_attachment import AgentChatAttachment
 from bitmovin_api_sdk.models.agent_chat_attachments_data import AgentChatAttachmentsData
 from bitmovin_api_sdk.models.agent_chat_attachments_part import AgentChatAttachmentsPart
@@ -228,6 +229,7 @@ from bitmovin_api_sdk.models.cenc_widevine import CencWidevine
 from bitmovin_api_sdk.models.channel_layout import ChannelLayout
 from bitmovin_api_sdk.models.channels_attribute_for_audio import ChannelsAttributeForAudio
 from bitmovin_api_sdk.models.character import Character
+from bitmovin_api_sdk.models.character_appearance import CharacterAppearance
 from bitmovin_api_sdk.models.check_output_permissions_request import CheckOutputPermissionsRequest
 from bitmovin_api_sdk.models.check_output_permissions_response import CheckOutputPermissionsResponse
 from bitmovin_api_sdk.models.chroma_location import ChromaLocation
@@ -257,6 +259,7 @@ from bitmovin_api_sdk.models.content_protection import ContentProtection
 from bitmovin_api_sdk.models.convert_scc_caption import ConvertSccCaption
 from bitmovin_api_sdk.models.convert_scc_caption_web_vtt_settings import ConvertSccCaptionWebVttSettings
 from bitmovin_api_sdk.models.convert_scc_position_mode import ConvertSccPositionMode
+from bitmovin_api_sdk.models.credits import Credits
 from bitmovin_api_sdk.models.crop_filter import CropFilter
 from bitmovin_api_sdk.models.custom_attribute import CustomAttribute
 from bitmovin_api_sdk.models.custom_data import CustomData
@@ -306,6 +309,7 @@ from bitmovin_api_sdk.models.deinterlace_filter import DeinterlaceFilter
 from bitmovin_api_sdk.models.deinterlace_frame_selection_mode import DeinterlaceFrameSelectionMode
 from bitmovin_api_sdk.models.deinterlace_mode import DeinterlaceMode
 from bitmovin_api_sdk.models.denoise_hqdn3d_filter import DenoiseHqdn3dFilter
+from bitmovin_api_sdk.models.department import Department
 from bitmovin_api_sdk.models.direct_file_upload_input import DirectFileUploadInput
 from bitmovin_api_sdk.models.display_aspect_ratio import DisplayAspectRatio
 from bitmovin_api_sdk.models.dns_mapping_request import DnsMappingRequest
@@ -649,6 +653,7 @@ from bitmovin_api_sdk.models.per_title_fixed_resolution_and_bitrate_configuratio
 from bitmovin_api_sdk.models.per_title_fixed_resolution_and_bitrate_configuration_mode import PerTitleFixedResolutionAndBitrateConfigurationMode
 from bitmovin_api_sdk.models.period import Period
 from bitmovin_api_sdk.models.permission import Permission
+from bitmovin_api_sdk.models.person import Person
 from bitmovin_api_sdk.models.picture_field_parity import PictureFieldParity
 from bitmovin_api_sdk.models.pixel_format import PixelFormat
 from bitmovin_api_sdk.models.pixel_format_bit_depth import PixelFormatBitDepth
@@ -732,6 +737,8 @@ from bitmovin_api_sdk.models.scene import Scene
 from bitmovin_api_sdk.models.scene_analysis_ad_placement_metadata_response import SceneAnalysisAdPlacementMetadataResponse
 from bitmovin_api_sdk.models.scene_analysis_details_response import SceneAnalysisDetailsResponse
 from bitmovin_api_sdk.models.scene_analysis_languages_response import SceneAnalysisLanguagesResponse
+from bitmovin_api_sdk.models.scene_analysis_list_item import SceneAnalysisListItem
+from bitmovin_api_sdk.models.scene_analysis_list_sort import SceneAnalysisListSort
 from bitmovin_api_sdk.models.scene_dynamics import SceneDynamics
 from bitmovin_api_sdk.models.scene_object import SceneObject
 from bitmovin_api_sdk.models.scene_pacing import ScenePacing
@@ -759,6 +766,7 @@ from bitmovin_api_sdk.models.smooth_manifest_default_version import SmoothManife
 from bitmovin_api_sdk.models.smooth_streaming_manifest import SmoothStreamingManifest
 from bitmovin_api_sdk.models.smooth_streaming_representation import SmoothStreamingRepresentation
 from bitmovin_api_sdk.models.smpte_timecode_flavor import SmpteTimecodeFlavor
+from bitmovin_api_sdk.models.song import Song
 from bitmovin_api_sdk.models.source_channel import SourceChannel
 from bitmovin_api_sdk.models.source_channel_type import SourceChannelType
 from bitmovin_api_sdk.models.speke_drm import SpekeDrm

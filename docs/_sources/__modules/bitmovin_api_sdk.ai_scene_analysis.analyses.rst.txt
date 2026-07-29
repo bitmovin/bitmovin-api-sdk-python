@@ -20,6 +20,14 @@ bitmovin\_api\_sdk.ai\_scene\_analysis.analyses.analyses\_api module
    :show-inheritance:
    :undoc-members:
 
+bitmovin\_api\_sdk.ai\_scene\_analysis.analyses.scene\_analysis\_list\_item\_list\_query\_params module
+-------------------------------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.ai_scene_analysis.analyses.scene_analysis_list_item_list_query_params
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
 Module contents
 ---------------
 
