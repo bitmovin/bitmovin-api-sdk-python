@@ -66,7 +66,7 @@ class GcsApi(BaseApi):
 
     def get(self, output_id, **kwargs):
         # type: (string_types, dict) -> GcsOutput
-        """GCS Output Details
+        """Get GCS Output details
 
         :param output_id: Id of the output
         :type output_id: string_types, required

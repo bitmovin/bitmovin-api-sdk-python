@@ -67,7 +67,7 @@ class S3Api(BaseApi):
 
     def get(self, input_id, **kwargs):
         # type: (string_types, dict) -> S3Input
-        """S3 Input Details
+        """Get S3 Input details
 
         :param input_id: Id of the input
         :type input_id: string_types, required

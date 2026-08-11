@@ -25,7 +25,7 @@ class IframeApi(BaseApi):
 
     def create(self, manifest_id, stream_id, i_frame_playlist, **kwargs):
         # type: (string_types, string_types, IFramePlaylist, dict) -> IFramePlaylist
-        """Add I-frame playlist to variant stream
+        """Create I-frame playlist to variant stream
 
         :param manifest_id: Id of the hls manifest.
         :type manifest_id: string_types, required
@@ -68,7 +68,7 @@ class IframeApi(BaseApi):
 
     def get(self, manifest_id, stream_id, iframe_id, **kwargs):
         # type: (string_types, string_types, string_types, dict) -> IFramePlaylist
-        """I-frame playlist Details
+        """Get I-frame playlist details
 
         :param manifest_id: Id of the hls manifest.
         :type manifest_id: string_types, required
@@ -89,7 +89,7 @@ class IframeApi(BaseApi):
 
     def list(self, manifest_id, stream_id, query_params=None, **kwargs):
         # type: (string_types, string_types, IFramePlaylistListQueryParams, dict) -> IFramePlaylist
-        """List all I-frame playlists of a variant stream
+        """List I-frame playlists of a variant stream
 
         :param manifest_id: Id of the hls manifest.
         :type manifest_id: string_types, required

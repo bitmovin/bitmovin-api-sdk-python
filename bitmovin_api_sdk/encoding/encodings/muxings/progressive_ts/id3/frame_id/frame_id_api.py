@@ -33,7 +33,7 @@ class FrameIdApi(BaseApi):
 
     def create(self, encoding_id, muxing_id, frame_id_id3_tag, **kwargs):
         # type: (string_types, string_types, FrameIdId3Tag, dict) -> FrameIdId3Tag
-        """Add Frame ID ID3 Tag to a Progressive TS muxing
+        """Create Frame ID ID3 Tag to a Progressive TS muxing
 
         :param encoding_id: ID of the Encoding.
         :type encoding_id: string_types, required
@@ -76,7 +76,7 @@ class FrameIdApi(BaseApi):
 
     def get(self, encoding_id, muxing_id, id3_tag_id, **kwargs):
         # type: (string_types, string_types, string_types, dict) -> FrameIdId3Tag
-        """Frame ID ID3 Tag Details of a Progressive TS muxing
+        """Get Frame ID ID3 Tag of a Progressive TS muxing details
 
         :param encoding_id: ID of the Encoding.
         :type encoding_id: string_types, required

@@ -67,7 +67,7 @@ class DenoiseHqdn3dApi(BaseApi):
 
     def get(self, filter_id, **kwargs):
         # type: (string_types, dict) -> DenoiseHqdn3dFilter
-        """Denoise hqdn3d Filter Details
+        """Get Denoise hqdn3d Filter details
 
         :param filter_id: Id of the denoise hqdn3d filter
         :type filter_id: string_types, required

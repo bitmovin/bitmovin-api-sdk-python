@@ -67,7 +67,7 @@ class InterlaceApi(BaseApi):
 
     def get(self, filter_id, **kwargs):
         # type: (string_types, dict) -> InterlaceFilter
-        """Interlace Filter Details
+        """Get Interlace Filter details
 
         :param filter_id: Id of the Interlace Filter
         :type filter_id: string_types, required

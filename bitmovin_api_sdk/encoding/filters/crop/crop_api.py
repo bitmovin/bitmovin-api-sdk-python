@@ -67,7 +67,7 @@ class CropApi(BaseApi):
 
     def get(self, filter_id, **kwargs):
         # type: (string_types, dict) -> CropFilter
-        """Crop Filter Details
+        """Get Crop Filter details
 
         :param filter_id: Id of the Crop Filter.
         :type filter_id: string_types, required

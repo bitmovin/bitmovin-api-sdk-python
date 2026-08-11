@@ -25,7 +25,7 @@ class TimeBasedApi(BaseApi):
 
     def create(self, encoding_id, time_based_trimming_input_stream, **kwargs):
         # type: (string_types, TimeBasedTrimmingInputStream, dict) -> TimeBasedTrimmingInputStream
-        """Add Time-Based Trimming Input Stream
+        """Create Time-Based Trimming Input Stream
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -64,7 +64,7 @@ class TimeBasedApi(BaseApi):
 
     def get(self, encoding_id, input_stream_id, **kwargs):
         # type: (string_types, string_types, dict) -> TimeBasedTrimmingInputStream
-        """Time-Based Trimming Input Stream Details
+        """Get Time-Based Trimming Input Stream details
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required

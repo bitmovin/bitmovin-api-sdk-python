@@ -23,7 +23,7 @@ class CustomdataApi(BaseApi):
 
     def get(self, encoding_id, stream_id, bif_id, **kwargs):
         # type: (string_types, string_types, string_types, dict) -> CustomData
-        """Bif Custom Data
+        """Get Bif Custom Data
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required

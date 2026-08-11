@@ -25,7 +25,7 @@ class DrmApi(BaseApi):
 
     def create(self, manifest_id, period_id, adaptationset_id, dash_mp4_drm_representation, **kwargs):
         # type: (string_types, string_types, string_types, DashMp4DrmRepresentation, dict) -> DashMp4DrmRepresentation
-        """Add DRM MP4 Representation
+        """Create DRM MP4 Representation
 
         :param manifest_id: Id of the manifest
         :type manifest_id: string_types, required
@@ -72,7 +72,7 @@ class DrmApi(BaseApi):
 
     def get(self, manifest_id, period_id, adaptationset_id, representation_id, **kwargs):
         # type: (string_types, string_types, string_types, string_types, dict) -> DashMp4DrmRepresentation
-        """DRM MP4 Representation Details
+        """Get DRM MP4 Representation details
 
         :param manifest_id: Id of the manifest
         :type manifest_id: string_types, required
@@ -95,7 +95,7 @@ class DrmApi(BaseApi):
 
     def list(self, manifest_id, period_id, adaptationset_id, query_params=None, **kwargs):
         # type: (string_types, string_types, string_types, DashMp4DrmRepresentationListQueryParams, dict) -> DashMp4DrmRepresentation
-        """List all DRM MP4 Representations
+        """List DRM MP4 Representations
 
         :param manifest_id: Id of the manifest
         :type manifest_id: string_types, required

@@ -49,7 +49,7 @@ class SrtApi(BaseApi):
 
     def delete(self, input_id, **kwargs):
         # type: (string_types, dict) -> SrtInput
-        """Delete SRT input
+        """Delete SRT Input
 
         :param input_id: Id of the input
         :type input_id: string_types, required
@@ -66,7 +66,7 @@ class SrtApi(BaseApi):
 
     def get(self, input_id, **kwargs):
         # type: (string_types, dict) -> SrtInput
-        """SRT Input Details
+        """Get SRT Input details
 
         :param input_id: Id of the input
         :type input_id: string_types, required

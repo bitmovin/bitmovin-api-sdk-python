@@ -23,7 +23,7 @@ class CustomdataApi(BaseApi):
 
     def get(self, encoding_id, captions_id, **kwargs):
         # type: (string_types, string_types, dict) -> CustomData
-        """Convert SCC captions Custom Data
+        """Get SCC Caption Conversion Custom Data
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required

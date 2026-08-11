@@ -25,7 +25,7 @@ class AudioApi(BaseApi):
 
     def create(self, manifest_id, audio_media_info, **kwargs):
         # type: (string_types, AudioMediaInfo, dict) -> AudioMediaInfo
-        """Add Audio Media
+        """Create Audio Media
 
         :param manifest_id: Id of the hls manifest.
         :type manifest_id: string_types, required
@@ -64,7 +64,7 @@ class AudioApi(BaseApi):
 
     def get(self, manifest_id, media_id, **kwargs):
         # type: (string_types, string_types, dict) -> AudioMediaInfo
-        """Audio Media Details
+        """Get Audio Media details
 
         :param manifest_id: Id of the hls manifest.
         :type manifest_id: string_types, required
@@ -83,7 +83,7 @@ class AudioApi(BaseApi):
 
     def list(self, manifest_id, query_params=None, **kwargs):
         # type: (string_types, AudioMediaInfoListQueryParams, dict) -> AudioMediaInfo
-        """List all Audio Media
+        """List Audio Media
 
         :param manifest_id: Id of the hls manifest.
         :type manifest_id: string_types, required

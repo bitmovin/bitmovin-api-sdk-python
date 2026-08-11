@@ -33,7 +33,7 @@ class FairplayApi(BaseApi):
 
     def create(self, encoding_id, muxing_id, fair_play_drm, **kwargs):
         # type: (string_types, string_types, FairPlayDrm, dict) -> FairPlayDrm
-        """Add FairPlay DRM to an fMP4 muxing
+        """Create FairPlay DRM to an fMP4 muxing
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -76,7 +76,7 @@ class FairplayApi(BaseApi):
 
     def get(self, encoding_id, muxing_id, drm_id, **kwargs):
         # type: (string_types, string_types, string_types, dict) -> FairPlayDrm
-        """FairPlay DRM Details of an fMP4 muxing
+        """Get FairPlay DRM from an fMP4 muxing details
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required

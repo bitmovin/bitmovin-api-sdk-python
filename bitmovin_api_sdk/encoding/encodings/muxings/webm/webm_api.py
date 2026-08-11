@@ -41,7 +41,7 @@ class WebmApi(BaseApi):
 
     def create(self, encoding_id, webm_muxing, **kwargs):
         # type: (string_types, WebmMuxing, dict) -> WebmMuxing
-        """Add WebM muxing
+        """Create WebM muxing
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -80,7 +80,7 @@ class WebmApi(BaseApi):
 
     def get(self, encoding_id, muxing_id, **kwargs):
         # type: (string_types, string_types, dict) -> WebmMuxing
-        """WebM muxing details
+        """Get WebM muxing details
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required

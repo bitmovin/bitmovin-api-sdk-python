@@ -67,7 +67,7 @@ class WebvttApi(BaseApi):
 
     def get(self, configuration_id, **kwargs):
         # type: (string_types, dict) -> WebVttConfiguration
-        """WebVtt subtitle configuration details
+        """Get WebVtt subtitle configuration details
 
         :param configuration_id: Id of the codec configuration
         :type configuration_id: string_types, required

@@ -23,7 +23,7 @@ class CustomdataApi(BaseApi):
 
     def get(self, filter_id, **kwargs):
         # type: (string_types, dict) -> CustomData
-        """Text Filter Custom Data
+        """Get Text Filter Custom Data
 
         :param filter_id: Id of the Text Filter
         :type filter_id: string_types, required

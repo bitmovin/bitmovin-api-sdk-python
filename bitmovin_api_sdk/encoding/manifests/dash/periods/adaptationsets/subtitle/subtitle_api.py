@@ -25,7 +25,7 @@ class SubtitleApi(BaseApi):
 
     def create(self, manifest_id, period_id, subtitle_adaptation_set, **kwargs):
         # type: (string_types, string_types, SubtitleAdaptationSet, dict) -> SubtitleAdaptationSet
-        """Add Subtitle AdaptationSet
+        """Create Subtitle AdaptationSet
 
         :param manifest_id: Id of the manifest
         :type manifest_id: string_types, required
@@ -68,7 +68,7 @@ class SubtitleApi(BaseApi):
 
     def get(self, manifest_id, period_id, adaptationset_id, **kwargs):
         # type: (string_types, string_types, string_types, dict) -> SubtitleAdaptationSet
-        """Subtitle AdaptationSet Details
+        """Get Subtitle AdaptationSet details
 
         :param manifest_id: Id of the manifest
         :type manifest_id: string_types, required
@@ -89,7 +89,7 @@ class SubtitleApi(BaseApi):
 
     def list(self, manifest_id, period_id, query_params=None, **kwargs):
         # type: (string_types, string_types, SubtitleAdaptationSetListQueryParams, dict) -> SubtitleAdaptationSet
-        """List all Subtitle AdaptationSets
+        """List Subtitle AdaptationSets
 
         :param manifest_id: Id of the manifest
         :type manifest_id: string_types, required

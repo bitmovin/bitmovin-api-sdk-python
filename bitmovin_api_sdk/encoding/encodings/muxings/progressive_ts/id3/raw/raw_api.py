@@ -33,7 +33,7 @@ class RawApi(BaseApi):
 
     def create(self, encoding_id, muxing_id, raw_id3_tag, **kwargs):
         # type: (string_types, string_types, RawId3Tag, dict) -> RawId3Tag
-        """Add Raw ID3 Tag to a Progressive TS muxing
+        """Create Raw ID3 Tag to a Progressive TS muxing
 
         :param encoding_id: ID of the Encoding.
         :type encoding_id: string_types, required
@@ -76,7 +76,7 @@ class RawApi(BaseApi):
 
     def get(self, encoding_id, muxing_id, id3_tag_id, **kwargs):
         # type: (string_types, string_types, string_types, dict) -> RawId3Tag
-        """Raw ID3 Tag Details of a Progressive TS muxing
+        """Get Raw ID3 Tag of a Progressive TS muxing details
 
         :param encoding_id: ID of the Encoding.
         :type encoding_id: string_types, required

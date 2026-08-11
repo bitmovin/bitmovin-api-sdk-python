@@ -25,7 +25,7 @@ class ConcatenationApi(BaseApi):
 
     def create(self, encoding_id, concatenation_input_stream, **kwargs):
         # type: (string_types, ConcatenationInputStream, dict) -> ConcatenationInputStream
-        """Add Concatenation Input Stream
+        """Create Concatenation Input Stream
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -64,7 +64,7 @@ class ConcatenationApi(BaseApi):
 
     def get(self, encoding_id, input_stream_id, **kwargs):
         # type: (string_types, string_types, dict) -> ConcatenationInputStream
-        """Concatenation Input Stream Details
+        """Get Concatenation Input Stream details
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required

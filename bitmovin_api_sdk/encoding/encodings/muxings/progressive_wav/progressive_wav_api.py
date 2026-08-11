@@ -41,7 +41,7 @@ class ProgressiveWavApi(BaseApi):
 
     def create(self, encoding_id, progressive_wav_muxing, **kwargs):
         # type: (string_types, ProgressiveWavMuxing, dict) -> ProgressiveWavMuxing
-        """Add Progressive Wav muxing
+        """Create Progressive Wav muxing
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -80,7 +80,7 @@ class ProgressiveWavApi(BaseApi):
 
     def get(self, encoding_id, muxing_id, **kwargs):
         # type: (string_types, string_types, dict) -> ProgressiveWavMuxing
-        """Progressive WAV muxing details
+        """Get Progressive WAV muxing details
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required

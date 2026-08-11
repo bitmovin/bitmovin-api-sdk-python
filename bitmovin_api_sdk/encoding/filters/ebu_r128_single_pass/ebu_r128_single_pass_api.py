@@ -67,7 +67,7 @@ class EbuR128SinglePassApi(BaseApi):
 
     def get(self, filter_id, **kwargs):
         # type: (string_types, dict) -> EbuR128SinglePassFilter
-        """EBU R128 Single Pass Filter Details
+        """Get EBU R128 Single Pass Filter details
 
         :param filter_id: Id of the EBU R128 Single Pass filter.
         :type filter_id: string_types, required

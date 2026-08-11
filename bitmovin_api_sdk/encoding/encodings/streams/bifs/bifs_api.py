@@ -33,7 +33,7 @@ class BifsApi(BaseApi):
 
     def create(self, encoding_id, stream_id, bif, **kwargs):
         # type: (string_types, string_types, Bif, dict) -> Bif
-        """Add a Roku Bif file
+        """Create a Roku Bif file
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -76,7 +76,7 @@ class BifsApi(BaseApi):
 
     def get(self, encoding_id, stream_id, bif_id, **kwargs):
         # type: (string_types, string_types, string_types, dict) -> Bif
-        """Bif Details
+        """Get Bif details
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required

@@ -49,7 +49,7 @@ class ProgressiveWebmApi(BaseApi):
 
     def create(self, encoding_id, progressive_webm_muxing, **kwargs):
         # type: (string_types, ProgressiveWebmMuxing, dict) -> ProgressiveWebmMuxing
-        """Add Progressive WebM muxing
+        """Create Progressive WebM muxing
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -88,7 +88,7 @@ class ProgressiveWebmApi(BaseApi):
 
     def get(self, encoding_id, muxing_id, **kwargs):
         # type: (string_types, string_types, dict) -> ProgressiveWebmMuxing
-        """Progressive WebM muxing details
+        """Get Progressive WebM muxing details
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required

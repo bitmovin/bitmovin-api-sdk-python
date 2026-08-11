@@ -68,7 +68,7 @@ class NotificationsApi(BaseApi):
 
     def get(self, notification_id, **kwargs):
         # type: (string_types, dict) -> Notification
-        """Get Notification
+        """Get Notification details
 
         :param notification_id: Id of the notification
         :type notification_id: string_types, required
@@ -103,7 +103,7 @@ class NotificationsApi(BaseApi):
 
     def list_by_notification_id(self, notification_id, query_params=None, **kwargs):
         # type: (string_types, NotificationStateEntryListByNotificationIdQueryParams, dict) -> NotificationStateEntry
-        """List Notification State History (All Resources)
+        """List Notification State History
 
         :param notification_id: Id of the notification
         :type notification_id: string_types, required

@@ -23,7 +23,7 @@ class CustomdataApi(BaseApi):
 
     def get(self, encoding_id, muxing_id, **kwargs):
         # type: (string_types, string_types, dict) -> CustomData
-        """Chunked Text muxing custom data
+        """Get Chunked Text muxing Custom Data
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required

@@ -47,7 +47,7 @@ class CustomTagsApi(BaseApi):
 
     def delete(self, manifest_id, stream_id, custom_tag_id, **kwargs):
         # type: (string_types, string_types, string_types, dict) -> BitmovinResponse
-        """Delete Custom Tag
+        """Delete Stream Custom Tag
 
         :param manifest_id: Id of the hls manifest.
         :type manifest_id: string_types, required
@@ -68,7 +68,7 @@ class CustomTagsApi(BaseApi):
 
     def get(self, manifest_id, stream_id, custom_tag_id, **kwargs):
         # type: (string_types, string_types, string_types, dict) -> CustomTag
-        """Custom Tag Details
+        """Stream Custom Tag Details
 
         :param manifest_id: Id of the hls manifest.
         :type manifest_id: string_types, required

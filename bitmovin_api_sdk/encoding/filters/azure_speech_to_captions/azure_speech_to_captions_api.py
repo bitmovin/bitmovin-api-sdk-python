@@ -67,7 +67,7 @@ class AzureSpeechToCaptionsApi(BaseApi):
 
     def get(self, filter_id, **kwargs):
         # type: (string_types, dict) -> AzureSpeechToCaptionsFilter
-        """Azure Speech to captions Filter details
+        """Get Azure Speech to captions Filter details
 
         :param filter_id: Id of the Azure Speech to captions Filter.
         :type filter_id: string_types, required

@@ -23,7 +23,7 @@ class CustomdataApi(BaseApi):
 
     def get(self, filter_id, **kwargs):
         # type: (string_types, dict) -> CustomData
-        """Azure Speech to captions Filter Custom Data
+        """Get Azure Speech to captions Filter Custom Data
 
         :param filter_id: Id of the Azure Speech to captions Filter.
         :type filter_id: string_types, required

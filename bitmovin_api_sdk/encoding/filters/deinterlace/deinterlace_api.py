@@ -67,7 +67,7 @@ class DeinterlaceApi(BaseApi):
 
     def get(self, filter_id, **kwargs):
         # type: (string_types, dict) -> DeinterlaceFilter
-        """Deinterlace Filter Details
+        """Get Deinterlace Filter details
 
         :param filter_id: Id of the Deinterlace Filter
         :type filter_id: string_types, required

@@ -67,7 +67,7 @@ class AkamaiMslApi(BaseApi):
 
     def get(self, output_id, **kwargs):
         # type: (string_types, dict) -> AkamaiMslOutput
-        """Akamai MSL Output Details
+        """Get Akamai MSL Output details
 
         :param output_id: Id of the output
         :type output_id: string_types, required

@@ -2868,6 +2868,30 @@ bitmovin\_api\_sdk.models.dolby\_digital\_three\_db\_attenuation module
    :show-inheritance:
    :undoc-members:
 
+bitmovin\_api\_sdk.models.dolby\_loudness\_content\_form module
+---------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.dolby_loudness_content_form
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+bitmovin\_api\_sdk.models.dolby\_loudness\_dialogue\_intelligence module
+------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.dolby_loudness_dialogue_intelligence
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+bitmovin\_api\_sdk.models.dolby\_loudness\_filter module
+--------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.dolby_loudness_filter
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
 bitmovin\_api\_sdk.models.dolby\_vision\_input\_stream module
 -------------------------------------------------------------
 

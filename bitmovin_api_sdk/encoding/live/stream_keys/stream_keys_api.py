@@ -33,7 +33,7 @@ class StreamKeysApi(BaseApi):
 
     def create(self, stream_key, **kwargs):
         # type: (StreamKey, dict) -> StreamKey
-        """Create new stream key
+        """Create Stream Key
 
         :param stream_key: The stream key to be created
         :type stream_key: StreamKey, required
@@ -67,7 +67,7 @@ class StreamKeysApi(BaseApi):
 
     def get(self, stream_key_id, **kwargs):
         # type: (string_types, dict) -> StreamKey
-        """Stream Key details
+        """Get Stream Key details
 
         :param stream_key_id: Id of the stream key
         :type stream_key_id: string_types, required

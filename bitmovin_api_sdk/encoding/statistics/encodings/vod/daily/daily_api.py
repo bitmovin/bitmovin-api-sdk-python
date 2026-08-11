@@ -23,7 +23,7 @@ class DailyApi(BaseApi):
 
     def list_by_date_range(self, from_, to, **kwargs):
         # type: (date, date, dict) -> EncodingStatistics
-        """List daily VoD encoding statistics within specific dates
+        """List daily VOD encoding statistics within specific dates
 
         :param from_: Start date, format: yyyy-MM-dd
         :type from_: date, required

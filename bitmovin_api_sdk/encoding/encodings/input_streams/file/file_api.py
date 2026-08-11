@@ -25,7 +25,7 @@ class FileApi(BaseApi):
 
     def create(self, encoding_id, file_input_stream, **kwargs):
         # type: (string_types, FileInputStream, dict) -> FileInputStream
-        """Add File input stream
+        """Create File input stream
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -45,7 +45,7 @@ class FileApi(BaseApi):
 
     def delete(self, encoding_id, input_stream_id, **kwargs):
         # type: (string_types, string_types, dict) -> BitmovinResponse
-        """Delete File stream
+        """Delete File Input Stream
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -64,7 +64,7 @@ class FileApi(BaseApi):
 
     def get(self, encoding_id, input_stream_id, **kwargs):
         # type: (string_types, string_types, dict) -> FileInputStream
-        """File input stream details
+        """Get File Input Stream details
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required

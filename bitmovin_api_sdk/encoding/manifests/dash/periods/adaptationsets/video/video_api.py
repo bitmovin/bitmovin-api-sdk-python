@@ -26,7 +26,7 @@ class VideoApi(BaseApi):
 
     def create(self, manifest_id, period_id, video_adaptation_set, **kwargs):
         # type: (string_types, string_types, VideoAdaptationSet, dict) -> VideoAdaptationSet
-        """Add Video AdaptationSet
+        """Create Video AdaptationSet
 
         :param manifest_id: Id of the manifest
         :type manifest_id: string_types, required
@@ -69,7 +69,7 @@ class VideoApi(BaseApi):
 
     def get(self, manifest_id, period_id, adaptationset_id, **kwargs):
         # type: (string_types, string_types, string_types, dict) -> VideoAdaptationSet
-        """Video AdaptationSet Details
+        """Get Video AdaptationSet details
 
         :param manifest_id: Id of the manifest
         :type manifest_id: string_types, required
@@ -90,7 +90,7 @@ class VideoApi(BaseApi):
 
     def list(self, manifest_id, period_id, query_params=None, **kwargs):
         # type: (string_types, string_types, VideoAdaptationSetListQueryParams, dict) -> VideoAdaptationSet
-        """List all Video AdaptationSets
+        """List Video AdaptationSets
 
         :param manifest_id: Id of the manifest
         :type manifest_id: string_types, required

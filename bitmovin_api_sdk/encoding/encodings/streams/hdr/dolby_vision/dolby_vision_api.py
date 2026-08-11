@@ -25,7 +25,7 @@ class DolbyVisionApi(BaseApi):
 
     def create(self, encoding_id, stream_id, dolby_vision_metadata, **kwargs):
         # type: (string_types, string_types, DolbyVisionMetadata, dict) -> DolbyVisionMetadata
-        """Add Dolby Vision Metadata
+        """Create Dolby Vision Metadata
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -68,7 +68,7 @@ class DolbyVisionApi(BaseApi):
 
     def get(self, encoding_id, stream_id, hdr_id, **kwargs):
         # type: (string_types, string_types, string_types, dict) -> DolbyVisionMetadata
-        """Dolby Vision Metadata Details
+        """Get Dolby Vision Metadata details
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required

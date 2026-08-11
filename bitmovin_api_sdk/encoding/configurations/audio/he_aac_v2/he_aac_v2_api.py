@@ -67,7 +67,7 @@ class HeAacV2Api(BaseApi):
 
     def get(self, configuration_id, **kwargs):
         # type: (string_types, dict) -> HeAacV2AudioConfiguration
-        """HE-AAC v2 Codec Configuration Details
+        """Get HE-AAC v2 Codec Configuration details
 
         :param configuration_id: Id of the codec configuration
         :type configuration_id: string_types, required

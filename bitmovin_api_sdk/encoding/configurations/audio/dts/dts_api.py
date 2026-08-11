@@ -67,7 +67,7 @@ class DtsApi(BaseApi):
 
     def get(self, configuration_id, **kwargs):
         # type: (string_types, dict) -> DtsAudioConfiguration
-        """DTS Codec Configuration Details
+        """Get DTS Codec Configuration details
 
         :param configuration_id: Id of the codec configuration
         :type configuration_id: string_types, required

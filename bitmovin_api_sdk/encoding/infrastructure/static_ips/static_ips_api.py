@@ -25,7 +25,7 @@ class StaticIpsApi(BaseApi):
 
     def create(self, static_ip, **kwargs):
         # type: (StaticIp, dict) -> StaticIp
-        """Add Static IP Address
+        """Create Static IP Address
 
         :param static_ip: The static ip to be created
         :type static_ip: StaticIp, required
@@ -59,7 +59,7 @@ class StaticIpsApi(BaseApi):
 
     def get(self, id, **kwargs):
         # type: (string_types, dict) -> StaticIp
-        """Static IP Address Details
+        """Get Static IP Address details
 
         :param id: Id of the Static IP Address
         :type id: string_types, required
@@ -76,7 +76,7 @@ class StaticIpsApi(BaseApi):
 
     def list(self, query_params=None, **kwargs):
         # type: (StaticIpListQueryParams, dict) -> StaticIp
-        """List all Static IP Addresses
+        """List Static IP Addresses
 
         :param query_params: Query parameters
         :type query_params: StaticIpListQueryParams

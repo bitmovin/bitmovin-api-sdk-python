@@ -93,7 +93,7 @@ class SmoothApi(BaseApi):
 
     def get(self, manifest_id, **kwargs):
         # type: (string_types, dict) -> SmoothStreamingManifest
-        """Smooth Streaming Manifest Details
+        """Get Smooth Streaming Manifest details
 
         :param manifest_id: Id of the Smooth Streaming Manifest.
         :type manifest_id: string_types, required
@@ -110,7 +110,7 @@ class SmoothApi(BaseApi):
 
     def get_start_request(self, manifest_id, **kwargs):
         # type: (string_types, dict) -> StartManifestRequest
-        """Manifest Start Details
+        """Smooth Streaming Manifest Start Details
 
         :param manifest_id: Id of the manifest
         :type manifest_id: string_types, required

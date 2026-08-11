@@ -25,7 +25,7 @@ class TimecodeTrackApi(BaseApi):
 
     def create(self, encoding_id, timecode_track_trimming_input_stream, **kwargs):
         # type: (string_types, TimecodeTrackTrimmingInputStream, dict) -> TimecodeTrackTrimmingInputStream
-        """Add Timecode Track Trimming Input Stream
+        """Create Timecode Track Trimming Input Stream
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -64,7 +64,7 @@ class TimecodeTrackApi(BaseApi):
 
     def get(self, encoding_id, input_stream_id, **kwargs):
         # type: (string_types, string_types, dict) -> TimecodeTrackTrimmingInputStream
-        """Timecode Track Trimming Input Stream Details
+        """Get Timecode Track Trimming Input Stream details
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required

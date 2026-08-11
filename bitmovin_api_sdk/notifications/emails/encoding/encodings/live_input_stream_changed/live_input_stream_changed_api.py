@@ -24,7 +24,7 @@ class LiveInputStreamChangedApi(BaseApi):
 
     def create(self, email_notification_with_stream_conditions_request, **kwargs):
         # type: (EmailNotificationWithStreamConditionsRequest, dict) -> EmailNotificationWithStreamConditions
-        """Add Live Input Stream Changed Email Notification (All Encodings)
+        """Create &#39;Live Input Stream Changed&#39; Email Notification
 
         :param email_notification_with_stream_conditions_request: The email notifications object
         :type email_notification_with_stream_conditions_request: EmailNotificationWithStreamConditionsRequest, required
@@ -41,7 +41,7 @@ class LiveInputStreamChangedApi(BaseApi):
 
     def create_by_encoding_id(self, encoding_id, email_notification_with_stream_conditions_request, **kwargs):
         # type: (string_types, EmailNotificationWithStreamConditionsRequest, dict) -> EmailNotificationWithStreamConditions
-        """Add Live Input Stream Changed Email Notification (Specific Encoding)
+        """Create &#39;Live Input Stream Changed&#39; Email Notification for a specific Encoding
 
         :param encoding_id: Id of the encoding resource
         :type encoding_id: string_types, required
@@ -61,7 +61,7 @@ class LiveInputStreamChangedApi(BaseApi):
 
     def update(self, notification_id, email_notification_with_stream_conditions_request, **kwargs):
         # type: (string_types, EmailNotificationWithStreamConditionsRequest, dict) -> EmailNotificationWithStreamConditions
-        """Replace Live Input Stream Changed Email Notification
+        """Update &#39;Live Input Stream Changed&#39; Email Notification
 
         :param notification_id: Id of the email notification
         :type notification_id: string_types, required

@@ -25,7 +25,7 @@ class DvbsubApi(BaseApi):
 
     def create(self, encoding_id, stream_id, burn_in_subtitle_dvb_sub, **kwargs):
         # type: (string_types, string_types, BurnInSubtitleDvbSub, dict) -> BurnInSubtitleDvbSub
-        """Burn-In DVB-SUB Subtitle into Stream
+        """Create Burn-In DVB-SUB Subtitle
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -47,7 +47,7 @@ class DvbsubApi(BaseApi):
 
     def delete(self, encoding_id, stream_id, subtitle_id, **kwargs):
         # type: (string_types, string_types, string_types, dict) -> BitmovinResponse
-        """Delete Burn-In DVB-SUB Subtitle from Stream
+        """Delete Burn-In DVB-SUB Subtitle
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -68,7 +68,7 @@ class DvbsubApi(BaseApi):
 
     def get(self, encoding_id, stream_id, subtitle_id, **kwargs):
         # type: (string_types, string_types, string_types, dict) -> BurnInSubtitleDvbSub
-        """Get Burn-In DVB-SUB Subtitle Details
+        """Get Burn-In DVB-SUB Subtitle details
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -89,7 +89,7 @@ class DvbsubApi(BaseApi):
 
     def list(self, encoding_id, stream_id, query_params=None, **kwargs):
         # type: (string_types, string_types, BurnInSubtitleDvbSubListQueryParams, dict) -> BurnInSubtitleDvbSub
-        """List the Burn-In DVB-SUB subtitles of a stream
+        """List Burn-In DVB-SUB Subtitles
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required

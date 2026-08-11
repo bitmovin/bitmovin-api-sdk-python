@@ -67,7 +67,7 @@ class AudioMixApi(BaseApi):
 
     def get(self, filter_id, **kwargs):
         # type: (string_types, dict) -> AudioMixFilter
-        """Audio Mix Filter Details
+        """Get Audio Mix Filter details
 
         :param filter_id: Id of the Audio Mix Filter.
         :type filter_id: string_types, required

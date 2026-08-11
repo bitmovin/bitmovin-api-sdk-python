@@ -47,7 +47,7 @@ class LiveStatisticsApi(BaseApi):
 
     def get(self, encoding_id, **kwargs):
         # type: (string_types, dict) -> LiveEncodingStats
-        """List Live Statistics from an Encoding
+        """List Live Statistics
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required

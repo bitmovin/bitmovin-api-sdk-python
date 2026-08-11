@@ -23,7 +23,7 @@ class CustomdataApi(BaseApi):
 
     def get(self, configuration_id, **kwargs):
         # type: (string_types, dict) -> CustomData
-        """VP8 Codec Configuration Custom Data
+        """Get VP8 Codec Configuration Custom Data
 
         :param configuration_id: Id of the codec configuration
         :type configuration_id: string_types, required

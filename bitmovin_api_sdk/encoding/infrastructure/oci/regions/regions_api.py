@@ -66,7 +66,7 @@ class RegionsApi(BaseApi):
 
     def get(self, infrastructure_id, region, **kwargs):
         # type: (string_types, OciCloudRegion, dict) -> OciAccountRegionSettings
-        """OCI account region settings details
+        """Get OCI account region settings details
 
         :param infrastructure_id: Id of the OCI account
         :type infrastructure_id: string_types, required

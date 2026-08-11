@@ -24,7 +24,7 @@ class CdnApi(BaseApi):
 
     def get(self, output_id, **kwargs):
         # type: (string_types, dict) -> CdnOutput
-        """CDN Output Details
+        """Get CDN Output details
 
         :param output_id: Id of the output
         :type output_id: string_types, required

@@ -25,7 +25,7 @@ class ContentprotectionApi(BaseApi):
 
     def create(self, manifest_id, period_id, adaptationset_id, content_protection, **kwargs):
         # type: (string_types, string_types, string_types, ContentProtection, dict) -> ContentProtection
-        """Add Content Protection to AdaptationSet
+        """Create Content Protection to AdaptationSet
 
         :param manifest_id: Id of the manifest
         :type manifest_id: string_types, required
@@ -72,7 +72,7 @@ class ContentprotectionApi(BaseApi):
 
     def get(self, manifest_id, period_id, adaptationset_id, contentprotection_id, **kwargs):
         # type: (string_types, string_types, string_types, string_types, dict) -> ContentProtection
-        """AdaptationSet Content Protection Details
+        """Get AdaptationSet Content Protection details
 
         :param manifest_id: Id of the manifest
         :type manifest_id: string_types, required
@@ -95,7 +95,7 @@ class ContentprotectionApi(BaseApi):
 
     def list(self, manifest_id, period_id, adaptationset_id, query_params=None, **kwargs):
         # type: (string_types, string_types, string_types, ContentProtectionListQueryParams, dict) -> ContentProtection
-        """List all AdaptationSet Content Protections
+        """List AdaptationSet Content Protections
 
         :param manifest_id: Id of the manifest
         :type manifest_id: string_types, required

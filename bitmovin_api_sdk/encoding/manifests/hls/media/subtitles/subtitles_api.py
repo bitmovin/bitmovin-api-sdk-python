@@ -25,7 +25,7 @@ class SubtitlesApi(BaseApi):
 
     def create(self, manifest_id, subtitles_media_info, **kwargs):
         # type: (string_types, SubtitlesMediaInfo, dict) -> SubtitlesMediaInfo
-        """Add Subtitles Media
+        """Create Subtitles Media
 
         :param manifest_id: Id of the hls manifest.
         :type manifest_id: string_types, required
@@ -64,7 +64,7 @@ class SubtitlesApi(BaseApi):
 
     def get(self, manifest_id, media_id, **kwargs):
         # type: (string_types, string_types, dict) -> SubtitlesMediaInfo
-        """Subtitles Media Details
+        """Get Subtitles Media details
 
         :param manifest_id: Id of the hls manifest.
         :type manifest_id: string_types, required
@@ -83,7 +83,7 @@ class SubtitlesApi(BaseApi):
 
     def list(self, manifest_id, query_params=None, **kwargs):
         # type: (string_types, SubtitlesMediaInfoListQueryParams, dict) -> SubtitlesMediaInfo
-        """List all Subtitles Media
+        """List Subtitles Media
 
         :param manifest_id: Id of the hls manifest.
         :type manifest_id: string_types, required

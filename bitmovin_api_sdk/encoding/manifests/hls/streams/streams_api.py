@@ -41,7 +41,7 @@ class StreamsApi(BaseApi):
 
     def create(self, manifest_id, stream_info, **kwargs):
         # type: (string_types, StreamInfo, dict) -> StreamInfo
-        """Add Variant Stream
+        """Create Variant Stream
 
         :param manifest_id: Id of the hls manifest.
         :type manifest_id: string_types, required
@@ -80,7 +80,7 @@ class StreamsApi(BaseApi):
 
     def get(self, manifest_id, stream_id, **kwargs):
         # type: (string_types, string_types, dict) -> StreamInfo
-        """Variant Stream Details
+        """Get Variant Stream details
 
         :param manifest_id: Id of the hls manifest.
         :type manifest_id: string_types, required
@@ -99,7 +99,7 @@ class StreamsApi(BaseApi):
 
     def list(self, manifest_id, query_params=None, **kwargs):
         # type: (string_types, StreamInfoListQueryParams, dict) -> StreamInfo
-        """List all Variant Streams
+        """List Variant Streams
 
         :param manifest_id: Id of the hls manifest.
         :type manifest_id: string_types, required

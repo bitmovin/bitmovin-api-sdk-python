@@ -23,7 +23,7 @@ class CustomdataApi(BaseApi):
 
     def get(self, output_id, **kwargs):
         # type: (string_types, dict) -> CustomData
-        """Akamai NetStorage Output Custom Data
+        """Get Akamai NetStorage Output Custom Data
 
         :param output_id: Id of the output
         :type output_id: string_types, required

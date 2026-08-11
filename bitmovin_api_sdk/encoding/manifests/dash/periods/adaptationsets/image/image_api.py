@@ -26,7 +26,7 @@ class ImageApi(BaseApi):
 
     def create(self, manifest_id, period_id, image_adaptation_set, **kwargs):
         # type: (string_types, string_types, ImageAdaptationSet, dict) -> ImageAdaptationSet
-        """Add Image AdaptationSet
+        """Create Image AdaptationSet
 
         :param manifest_id: Id of the manifest
         :type manifest_id: string_types, required
@@ -69,7 +69,7 @@ class ImageApi(BaseApi):
 
     def get(self, manifest_id, period_id, adaptationset_id, **kwargs):
         # type: (string_types, string_types, string_types, dict) -> ImageAdaptationSet
-        """Image AdaptationSet Details
+        """Get Image AdaptationSet details
 
         :param manifest_id: Id of the manifest
         :type manifest_id: string_types, required
@@ -90,7 +90,7 @@ class ImageApi(BaseApi):
 
     def list(self, manifest_id, period_id, query_params=None, **kwargs):
         # type: (string_types, string_types, ImageAdaptationSetListQueryParams, dict) -> ImageAdaptationSet
-        """List all Image AdaptationSets
+        """List Image AdaptationSets
 
         :param manifest_id: Id of the manifest
         :type manifest_id: string_types, required

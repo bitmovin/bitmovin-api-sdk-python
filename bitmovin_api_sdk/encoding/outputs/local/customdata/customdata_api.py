@@ -23,7 +23,7 @@ class CustomdataApi(BaseApi):
 
     def get(self, output_id, **kwargs):
         # type: (string_types, dict) -> CustomData
-        """Local Output Custom Data
+        """Get Local Output Custom Data
 
         :param output_id: Id of the Output
         :type output_id: string_types, required

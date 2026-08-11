@@ -34,7 +34,7 @@ class CmafApi(BaseApi):
 
     def create(self, manifest_id, period_id, adaptationset_id, dash_cmaf_representation, **kwargs):
         # type: (string_types, string_types, string_types, DashCmafRepresentation, dict) -> DashCmafRepresentation
-        """Add CMAF Representation
+        """Create CMAF Representation
 
         :param manifest_id: Id of the manifest
         :type manifest_id: string_types, required
@@ -81,7 +81,7 @@ class CmafApi(BaseApi):
 
     def get(self, manifest_id, period_id, adaptationset_id, representation_id, **kwargs):
         # type: (string_types, string_types, string_types, string_types, dict) -> DashCmafRepresentation
-        """CMAF Representation Details
+        """Get CMAF Representation details
 
         :param manifest_id: Id of the manifest
         :type manifest_id: string_types, required
@@ -104,7 +104,7 @@ class CmafApi(BaseApi):
 
     def list(self, manifest_id, period_id, adaptationset_id, query_params=None, **kwargs):
         # type: (string_types, string_types, string_types, DashCmafRepresentationListQueryParams, dict) -> DashCmafRepresentation
-        """List all CMAF Representations
+        """List CMAF Representations
 
         :param manifest_id: Id of the manifest
         :type manifest_id: string_types, required

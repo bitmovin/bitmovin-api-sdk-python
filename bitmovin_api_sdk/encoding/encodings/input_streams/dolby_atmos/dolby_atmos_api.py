@@ -25,7 +25,7 @@ class DolbyAtmosApi(BaseApi):
 
     def create(self, encoding_id, dolby_atmos_ingest_input_stream, **kwargs):
         # type: (string_types, DolbyAtmosIngestInputStream, dict) -> DolbyAtmosIngestInputStream
-        """Add Dolby Atmos input stream
+        """Create Dolby Atmos input stream
 
         :param encoding_id: Id of the encoding
         :type encoding_id: string_types, required
@@ -64,7 +64,7 @@ class DolbyAtmosApi(BaseApi):
 
     def get(self, encoding_id, input_stream_id, **kwargs):
         # type: (string_types, string_types, dict) -> DolbyAtmosIngestInputStream
-        """Dolby Atmos input stream details
+        """Get Dolby Atmos input stream details
 
         :param encoding_id: Id of the encoding
         :type encoding_id: string_types, required

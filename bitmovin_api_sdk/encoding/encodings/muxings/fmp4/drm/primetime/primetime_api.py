@@ -33,7 +33,7 @@ class PrimetimeApi(BaseApi):
 
     def create(self, encoding_id, muxing_id, prime_time_drm, **kwargs):
         # type: (string_types, string_types, PrimeTimeDrm, dict) -> PrimeTimeDrm
-        """Add PrimeTime DRM to an fMP4 muxing
+        """Create PrimeTime DRM to an fMP4 muxing
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -76,7 +76,7 @@ class PrimetimeApi(BaseApi):
 
     def get(self, encoding_id, muxing_id, drm_id, **kwargs):
         # type: (string_types, string_types, string_types, dict) -> PrimeTimeDrm
-        """PrimeTime DRM Details of an fMP4 muxing
+        """Get PrimeTime DRM from an fMP4 muxing details
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required

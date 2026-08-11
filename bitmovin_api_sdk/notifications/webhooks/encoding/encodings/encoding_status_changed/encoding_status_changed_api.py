@@ -25,7 +25,7 @@ class EncodingStatusChangedApi(BaseApi):
 
     def create(self, webhook_notification_with_stream_conditions_request, **kwargs):
         # type: (WebhookNotificationWithStreamConditionsRequest, dict) -> WebhookNotificationWithStreamConditions
-        """Add Encoding Changed Webhook Notification (All Encodings)
+        """Create &#39;Encoding Status Changed&#39; Webhook
 
         :param webhook_notification_with_stream_conditions_request: The webhook notifications object. For conditions, following attributes are possible: &#39;type&#39;: &#39;Input file download&#39;, &#39;Input file analysis&#39;, &#39;Per-Title analysis&#39;, &#39;Encoding&#39;, &#39;Progressive Muxing&#39; &#39;progress&#39;: number in range of 0-100 &#39;status&#39;: &#39;RUNNING&#39;, &#39;FINISHED&#39;, &#39;ERROR&#39; Examples: To only get notified about the encoding process, create a Condition object and set attribute&#x3D;&#39;type&#39;, value&#x3D;&#39;Encoding&#39;, operator&#x3D;EQUAL To only get notified if a workflow step is finished, create a Condition object and set attribute&#x3D;&#39;status&#39;, value&#x3D;&#39;FINISHED&#39;, operator&#x3D;EQUAL To only get notified if a workflow step is over 50%,  create a Condition object and set attribute&#x3D;&#39;progress&#39;, value&#x3D;&#39;50&#39;, operator&#x3D;GREATER_THAN
         :type webhook_notification_with_stream_conditions_request: WebhookNotificationWithStreamConditionsRequest, required
@@ -42,7 +42,7 @@ class EncodingStatusChangedApi(BaseApi):
 
     def create_by_encoding_id(self, encoding_id, webhook_notification_with_stream_conditions_request, **kwargs):
         # type: (string_types, WebhookNotificationWithStreamConditionsRequest, dict) -> WebhookNotificationWithStreamConditions
-        """Add Encoding Changed Webhook Notification (Specific Encoding)
+        """Create &#39;Encoding Status Changed&#39; Webhook for a specific Encoding
 
         :param encoding_id: Id of the encoding resource
         :type encoding_id: string_types, required
@@ -62,7 +62,7 @@ class EncodingStatusChangedApi(BaseApi):
 
     def delete_by_webhook_id(self, notification_id, **kwargs):
         # type: (string_types, dict) -> BitmovinResponse
-        """Delete Encoding Status Changed Webhook
+        """Delete &#39;Encoding Status Changed&#39; Webhook
 
         :param notification_id: Id of the webhook
         :type notification_id: string_types, required
@@ -79,7 +79,7 @@ class EncodingStatusChangedApi(BaseApi):
 
     def update(self, notification_id, webhook_notification_with_stream_conditions_request, **kwargs):
         # type: (string_types, WebhookNotificationWithStreamConditionsRequest, dict) -> WebhookNotificationWithStreamConditions
-        """Replace Encoding Status Changed Webhook Notification
+        """Update &#39;Encoding Status Changed&#39; Webhook
 
         :param notification_id: Id of the webhook notification
         :type notification_id: string_types, required

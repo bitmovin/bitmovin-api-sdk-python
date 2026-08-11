@@ -23,7 +23,7 @@ class CustomdataApi(BaseApi):
 
     def get(self, encoding_id, stream_id, captions_id, **kwargs):
         # type: (string_types, string_types, string_types, dict) -> CustomData
-        """Embed SRT captions as 608/708 Custom Data
+        """Get SRT captions as 608/708 Custom Data
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required

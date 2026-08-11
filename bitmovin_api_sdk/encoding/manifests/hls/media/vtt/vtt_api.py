@@ -25,7 +25,7 @@ class VttApi(BaseApi):
 
     def create(self, manifest_id, vtt_media_info, **kwargs):
         # type: (string_types, VttMediaInfo, dict) -> VttMediaInfo
-        """Add VTT Media
+        """Create VTT Media
 
         :param manifest_id: Id of the hls manifest.
         :type manifest_id: string_types, required
@@ -64,7 +64,7 @@ class VttApi(BaseApi):
 
     def get(self, manifest_id, media_id, **kwargs):
         # type: (string_types, string_types, dict) -> VttMediaInfo
-        """VTT Media Details
+        """Get VTT Media details
 
         :param manifest_id: Id of the hls manifest.
         :type manifest_id: string_types, required
@@ -83,7 +83,7 @@ class VttApi(BaseApi):
 
     def list(self, manifest_id, query_params=None, **kwargs):
         # type: (string_types, VttMediaInfoListQueryParams, dict) -> VttMediaInfo
-        """List all VTT Media
+        """List VTT Media
 
         :param manifest_id: Id of the hls manifest.
         :type manifest_id: string_types, required

@@ -23,7 +23,7 @@ class TemplateApi(BaseApi):
 
     def get(self, encoding_id, **kwargs):
         # type: (string_types, dict) -> EncodingTemplateUrlResponse
-        """Encoding Template URL
+        """Get Encoding Template URL
 
         :param encoding_id: Id of the Encoding
         :type encoding_id: string_types, required

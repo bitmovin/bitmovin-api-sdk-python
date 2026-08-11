@@ -49,7 +49,7 @@ class Fmp4Api(BaseApi):
 
     def create(self, encoding_id, fmp4_muxing, **kwargs):
         # type: (string_types, Fmp4Muxing, dict) -> Fmp4Muxing
-        """Add fMP4 muxing
+        """Create fMP4 muxing
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -88,7 +88,7 @@ class Fmp4Api(BaseApi):
 
     def get(self, encoding_id, muxing_id, **kwargs):
         # type: (string_types, string_types, dict) -> Fmp4Muxing
-        """fMP4 muxing details
+        """Get fMP4 muxing details
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required

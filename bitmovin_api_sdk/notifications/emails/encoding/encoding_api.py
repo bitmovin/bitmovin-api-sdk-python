@@ -32,7 +32,7 @@ class EncodingApi(BaseApi):
 
     def list(self, query_params=None, **kwargs):
         # type: (EmailNotificationListQueryParams, dict) -> EmailNotification
-        """List Email Notifications (All Encodings)
+        """List Encoding Email Notifications
 
         :param query_params: Query parameters
         :type query_params: EmailNotificationListQueryParams

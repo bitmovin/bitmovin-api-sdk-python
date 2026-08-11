@@ -33,7 +33,7 @@ class SccApi(BaseApi):
 
     def create(self, encoding_id, convert_scc_caption, **kwargs):
         # type: (string_types, ConvertSccCaption, dict) -> ConvertSccCaption
-        """Convert SCC captions
+        """Create SCC Caption Conversion
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -53,7 +53,7 @@ class SccApi(BaseApi):
 
     def delete(self, encoding_id, captions_id, **kwargs):
         # type: (string_types, string_types, dict) -> BitmovinResponse
-        """Delete Convert SCC captions
+        """Delete SCC Caption Conversion
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -72,7 +72,7 @@ class SccApi(BaseApi):
 
     def get(self, encoding_id, captions_id, **kwargs):
         # type: (string_types, string_types, dict) -> ConvertSccCaption
-        """Convert SCC captions Details
+        """Get SCC Caption Conversion details
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -91,7 +91,7 @@ class SccApi(BaseApi):
 
     def list(self, encoding_id, query_params=None, **kwargs):
         # type: (string_types, ConvertSccCaptionListQueryParams, dict) -> ConvertSccCaption
-        """List Convert SCC captions
+        """List SCC Caption Conversions
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required

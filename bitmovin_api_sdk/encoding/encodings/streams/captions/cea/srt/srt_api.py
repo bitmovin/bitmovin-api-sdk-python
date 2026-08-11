@@ -33,7 +33,7 @@ class SrtApi(BaseApi):
 
     def create(self, encoding_id, stream_id, srt_to_cea608708_caption, **kwargs):
         # type: (string_types, string_types, SrtToCea608708Caption, dict) -> SrtToCea608708Caption
-        """Embed SRT captions as 608/708 into Stream
+        """Create SRT captions as 608/708
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -55,7 +55,7 @@ class SrtApi(BaseApi):
 
     def delete(self, encoding_id, stream_id, captions_id, **kwargs):
         # type: (string_types, string_types, string_types, dict) -> BitmovinResponse
-        """Delete SRT captions as 608/708 from Stream
+        """Delete SRT captions as 608/708
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -76,7 +76,7 @@ class SrtApi(BaseApi):
 
     def get(self, encoding_id, stream_id, captions_id, **kwargs):
         # type: (string_types, string_types, string_types, dict) -> SrtToCea608708Caption
-        """Embed SRT captions as 608/708 Details
+        """Get SRT captions as 608/708 details
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -97,7 +97,7 @@ class SrtApi(BaseApi):
 
     def list(self, encoding_id, stream_id, query_params=None, **kwargs):
         # type: (string_types, string_types, SrtToCea608708CaptionListQueryParams, dict) -> SrtToCea608708Caption
-        """List SRT captions as 608/708 from Stream
+        """List SRT captions as 608/708
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required

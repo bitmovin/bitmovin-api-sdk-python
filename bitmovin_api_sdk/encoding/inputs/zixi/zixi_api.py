@@ -49,7 +49,7 @@ class ZixiApi(BaseApi):
 
     def delete(self, input_id, **kwargs):
         # type: (string_types, dict) -> ZixiInput
-        """Delete Zixi input
+        """Delete Zixi Input
 
         :param input_id: Id of the input
         :type input_id: string_types, required
@@ -66,7 +66,7 @@ class ZixiApi(BaseApi):
 
     def get(self, input_id, **kwargs):
         # type: (string_types, dict) -> ZixiInput
-        """Zixi Input Details
+        """Get Zixi Input details
 
         :param input_id: Id of the input
         :type input_id: string_types, required

@@ -60,7 +60,7 @@ class PassthroughApi(BaseApi):
 
     def get(self, configuration_id, **kwargs):
         # type: (string_types, dict) -> PassthroughAudioConfiguration
-        """Audio Passthrough Configuration Details
+        """Get Audio Passthrough Codec Configuration details
 
         :param configuration_id: Id of the audio configuration
         :type configuration_id: string_types, required

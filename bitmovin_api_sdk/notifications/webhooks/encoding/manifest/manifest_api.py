@@ -40,7 +40,7 @@ class ManifestApi(BaseApi):
 
     def list(self, manifest_id, query_params=None, **kwargs):
         # type: (string_types, NotificationListQueryParams, dict) -> Notification
-        """List Webhook Notifications (Specific Manifest)
+        """List Webhooks for a specific Manifest
 
         :param manifest_id: Id of the manifest resource
         :type manifest_id: string_types, required

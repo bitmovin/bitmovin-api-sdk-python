@@ -33,7 +33,7 @@ class DrmApi(BaseApi):
 
     def create(self, manifest_id, period_id, adaptationset_id, dash_fmp4_drm_representation, **kwargs):
         # type: (string_types, string_types, string_types, DashFmp4DrmRepresentation, dict) -> DashFmp4DrmRepresentation
-        """Add DRM fMP4 Representation
+        """Create DRM fMP4 Representation
 
         :param manifest_id: Id of the manifest
         :type manifest_id: string_types, required
@@ -80,7 +80,7 @@ class DrmApi(BaseApi):
 
     def get(self, manifest_id, period_id, adaptationset_id, representation_id, **kwargs):
         # type: (string_types, string_types, string_types, string_types, dict) -> DashFmp4DrmRepresentation
-        """DRM fMP4 Representation Details
+        """Get DRM fMP4 Representation details
 
         :param manifest_id: Id of the manifest
         :type manifest_id: string_types, required
@@ -103,7 +103,7 @@ class DrmApi(BaseApi):
 
     def list(self, manifest_id, period_id, adaptationset_id, query_params=None, **kwargs):
         # type: (string_types, string_types, string_types, DashFmp4DrmRepresentationListQueryParams, dict) -> DashFmp4DrmRepresentation
-        """List all DRM fMP4 Representations
+        """List DRM fMP4 Representations
 
         :param manifest_id: Id of the manifest
         :type manifest_id: string_types, required

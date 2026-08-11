@@ -25,7 +25,7 @@ class VttApi(BaseApi):
 
     def create(self, manifest_id, period_id, adaptationset_id, dash_vtt_representation, **kwargs):
         # type: (string_types, string_types, string_types, DashVttRepresentation, dict) -> DashVttRepresentation
-        """Add VTT Representation
+        """Create VTT Representation
 
         :param manifest_id: Id of the manifest
         :type manifest_id: string_types, required
@@ -72,7 +72,7 @@ class VttApi(BaseApi):
 
     def get(self, manifest_id, period_id, adaptationset_id, representation_id, **kwargs):
         # type: (string_types, string_types, string_types, string_types, dict) -> DashVttRepresentation
-        """VTT Representation Details
+        """Get VTT Representation details
 
         :param manifest_id: Id of the manifest
         :type manifest_id: string_types, required
@@ -95,7 +95,7 @@ class VttApi(BaseApi):
 
     def list(self, manifest_id, period_id, adaptationset_id, query_params=None, **kwargs):
         # type: (string_types, string_types, string_types, DashVttRepresentationListQueryParams, dict) -> DashVttRepresentation
-        """List all VTT Representations
+        """List VTT Representations
 
         :param manifest_id: Id of the manifest
         :type manifest_id: string_types, required

@@ -23,7 +23,7 @@ class CustomdataApi(BaseApi):
 
     def get(self, filter_id, **kwargs):
         # type: (string_types, dict) -> CustomData
-        """Enhanced Watermark Filter Custom Data
+        """Get Enhanced Watermark Filter Custom Data
 
         :param filter_id: Id of the enhanced Watermark Filter.
         :type filter_id: string_types, required

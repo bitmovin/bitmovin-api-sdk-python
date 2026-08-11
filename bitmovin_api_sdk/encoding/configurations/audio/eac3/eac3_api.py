@@ -67,7 +67,7 @@ class Eac3Api(BaseApi):
 
     def get(self, configuration_id, **kwargs):
         # type: (string_types, dict) -> Eac3AudioConfiguration
-        """E-AC3 Codec Configuration Details
+        """Get E-AC3 Codec Configuration details
 
         :param configuration_id: Id of the codec configuration
         :type configuration_id: string_types, required

@@ -25,7 +25,7 @@ class Scte35TriggersApi(BaseApi):
 
     def create(self, encoding_id, scte35_trigger, **kwargs):
         # type: (string_types, Scte35Trigger, dict) -> Scte35Trigger
-        """Create SCTE 35 trigger
+        """Create SCTE 35 Trigger
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -83,7 +83,7 @@ class Scte35TriggersApi(BaseApi):
 
     def list(self, encoding_id, query_params=None, **kwargs):
         # type: (string_types, Scte35TriggerListQueryParams, dict) -> Scte35Trigger
-        """List all SCTE 35 triggers for an encoding
+        """List SCTE 35 Triggers
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required

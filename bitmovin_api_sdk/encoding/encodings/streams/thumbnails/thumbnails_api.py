@@ -33,7 +33,7 @@ class ThumbnailsApi(BaseApi):
 
     def create(self, encoding_id, stream_id, thumbnail, **kwargs):
         # type: (string_types, string_types, Thumbnail, dict) -> Thumbnail
-        """Add Thumbnail
+        """Create Thumbnail
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -76,7 +76,7 @@ class ThumbnailsApi(BaseApi):
 
     def get(self, encoding_id, stream_id, thumbnail_id, **kwargs):
         # type: (string_types, string_types, string_types, dict) -> Thumbnail
-        """Thumbnail Details
+        """Get Thumbnail details
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required

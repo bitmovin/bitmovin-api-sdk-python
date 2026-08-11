@@ -41,7 +41,7 @@ class ProgressiveMovApi(BaseApi):
 
     def create(self, encoding_id, progressive_mov_muxing, **kwargs):
         # type: (string_types, ProgressiveMovMuxing, dict) -> ProgressiveMovMuxing
-        """Add Progressive MOV muxing
+        """Create Progressive MOV muxing
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -80,7 +80,7 @@ class ProgressiveMovApi(BaseApi):
 
     def get(self, encoding_id, muxing_id, **kwargs):
         # type: (string_types, string_types, dict) -> ProgressiveMovMuxing
-        """Progressive MOV muxing details
+        """Get Progressive MOV muxing details
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required

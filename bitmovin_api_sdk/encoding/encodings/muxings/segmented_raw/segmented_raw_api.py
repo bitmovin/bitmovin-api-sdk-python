@@ -33,7 +33,7 @@ class SegmentedRawApi(BaseApi):
 
     def create(self, encoding_id, segmented_raw_muxing, **kwargs):
         # type: (string_types, SegmentedRawMuxing, dict) -> SegmentedRawMuxing
-        """Add Segmented RAW muxing
+        """Create Segmented RAW muxing
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -72,7 +72,7 @@ class SegmentedRawApi(BaseApi):
 
     def get(self, encoding_id, muxing_id, **kwargs):
         # type: (string_types, string_types, dict) -> SegmentedRawMuxing
-        """Segmented RAW muxing details
+        """Get Segmented RAW muxing details
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required

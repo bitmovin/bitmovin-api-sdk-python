@@ -25,7 +25,7 @@ class ContentprotectionApi(BaseApi):
 
     def create(self, manifest_id, smooth_manifest_content_protection, **kwargs):
         # type: (string_types, SmoothManifestContentProtection, dict) -> SmoothManifestContentProtection
-        """Add Content Protection to Smooth Streaming
+        """Create Content Protection to Smooth Streaming
 
         :param manifest_id: Id of the Smooth Streaming manifest.
         :type manifest_id: string_types, required
@@ -45,7 +45,7 @@ class ContentprotectionApi(BaseApi):
 
     def delete(self, manifest_id, protection_id, **kwargs):
         # type: (string_types, string_types, dict) -> BitmovinResponse
-        """Delete Content Protection of Smooth Streaming
+        """Delete Content Protection of Smooth Streaming Representation
 
         :param manifest_id: Id of the Smooth Streaming manifest.
         :type manifest_id: string_types, required
@@ -64,7 +64,7 @@ class ContentprotectionApi(BaseApi):
 
     def get(self, manifest_id, protection_id, **kwargs):
         # type: (string_types, string_types, dict) -> SmoothManifestContentProtection
-        """Content Protection of Smooth Streaming Representation Details
+        """Get Content Protection of Smooth Streaming Representation details
 
         :param manifest_id: Id of the Smooth Streaming manifest.
         :type manifest_id: string_types, required

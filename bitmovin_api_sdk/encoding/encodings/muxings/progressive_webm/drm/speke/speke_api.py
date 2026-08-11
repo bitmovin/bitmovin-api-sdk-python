@@ -33,7 +33,7 @@ class SpekeApi(BaseApi):
 
     def create(self, encoding_id, muxing_id, speke_drm, **kwargs):
         # type: (string_types, string_types, SpekeDrm, dict) -> SpekeDrm
-        """Add SPEKE DRM key provider to Progressive WebM
+        """Create SPEKE DRM key provider to Progressive WebM
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -76,7 +76,7 @@ class SpekeApi(BaseApi):
 
     def get(self, encoding_id, muxing_id, drm_id, **kwargs):
         # type: (string_types, string_types, string_types, dict) -> SpekeDrm
-        """SPEKE DRM Details of a Progressive WebM muxing
+        """Get SPEKE DRM from a Progressive WebM muxing details
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required

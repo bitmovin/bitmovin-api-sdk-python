@@ -68,7 +68,7 @@ class DvbSubtitleApi(BaseApi):
 
     def get(self, configuration_id, **kwargs):
         # type: (string_types, dict) -> DvbSubtitleConfiguration
-        """DVB-SUB subtitle configuration details
+        """Get DVB-SUB subtitle configuration details
 
         :param configuration_id: Id of the codec configuration
         :type configuration_id: string_types, required

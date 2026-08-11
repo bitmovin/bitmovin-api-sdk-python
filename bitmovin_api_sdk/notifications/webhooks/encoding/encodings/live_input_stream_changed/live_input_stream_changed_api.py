@@ -24,7 +24,7 @@ class LiveInputStreamChangedApi(BaseApi):
 
     def create(self, webhook_notification_with_stream_conditions_request, **kwargs):
         # type: (WebhookNotificationWithStreamConditionsRequest, dict) -> WebhookNotificationWithStreamConditions
-        """Add Live Input Stream Changed Webhook Notification (All Encodings)
+        """Create &#39;Live Input Stream Changed&#39; Webhook
 
         :param webhook_notification_with_stream_conditions_request: The webhook notifications object
         :type webhook_notification_with_stream_conditions_request: WebhookNotificationWithStreamConditionsRequest, required
@@ -41,7 +41,7 @@ class LiveInputStreamChangedApi(BaseApi):
 
     def create_by_encoding_id(self, encoding_id, webhook_notification_with_stream_conditions_request, **kwargs):
         # type: (string_types, WebhookNotificationWithStreamConditionsRequest, dict) -> WebhookNotificationWithStreamConditions
-        """Add Live Input Stream Changed Webhook Notification (Specific Encoding)
+        """Create &#39;Live Input Stream Changed&#39; Webhook for a specific Encoding
 
         :param encoding_id: Id of the encoding resource
         :type encoding_id: string_types, required
@@ -61,7 +61,7 @@ class LiveInputStreamChangedApi(BaseApi):
 
     def update(self, notification_id, webhook_notification_with_stream_conditions_request, **kwargs):
         # type: (string_types, WebhookNotificationWithStreamConditionsRequest, dict) -> WebhookNotificationWithStreamConditions
-        """Replace Live Input Stream Changed Webhook Notification
+        """Update &#39;Live Input Stream Changed&#39; Webhook
 
         :param notification_id: Id of the webhook notification
         :type notification_id: string_types, required

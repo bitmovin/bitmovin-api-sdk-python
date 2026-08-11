@@ -67,7 +67,7 @@ class VorbisApi(BaseApi):
 
     def get(self, configuration_id, **kwargs):
         # type: (string_types, dict) -> VorbisAudioConfiguration
-        """Vorbis Codec Configuration Details
+        """Get Vorbis Codec Configuration details
 
         :param configuration_id: Id of the codec configuration
         :type configuration_id: string_types, required

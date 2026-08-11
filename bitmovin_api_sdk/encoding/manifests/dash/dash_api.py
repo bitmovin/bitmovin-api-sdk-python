@@ -85,7 +85,7 @@ class DashApi(BaseApi):
 
     def get(self, manifest_id, **kwargs):
         # type: (string_types, dict) -> DashManifest
-        """DASH Manifest Details
+        """Get DASH Manifest details
 
         :param manifest_id: UUID of the DASH Manifest
         :type manifest_id: string_types, required
@@ -102,7 +102,7 @@ class DashApi(BaseApi):
 
     def get_start_request(self, manifest_id, **kwargs):
         # type: (string_types, dict) -> StartManifestRequest
-        """Manifest Start Details
+        """DASH Manifest Start Details
 
         :param manifest_id: Id of the manifest
         :type manifest_id: string_types, required

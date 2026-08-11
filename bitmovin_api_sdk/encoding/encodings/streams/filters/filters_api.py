@@ -27,7 +27,7 @@ class FiltersApi(BaseApi):
 
     def create(self, encoding_id, stream_id, stream_filter, **kwargs):
         # type: (string_types, string_types, list, dict) -> StreamFilterList
-        """Add Filters to Stream
+        """Create Filters to Stream
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -89,7 +89,7 @@ class FiltersApi(BaseApi):
 
     def list(self, encoding_id, stream_id, query_params=None, **kwargs):
         # type: (string_types, string_types, StreamFilterListListQueryParams, dict) -> StreamFilterList
-        """List the filters of a stream
+        """List Filters of a Stream
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required

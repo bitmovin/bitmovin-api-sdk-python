@@ -25,7 +25,7 @@ class SrtApi(BaseApi):
 
     def list(self, encoding_id, query_params=None, **kwargs):
         # type: (string_types, SrtStatisticsListQueryParams, dict) -> SrtStatistics
-        """List Stream Infos of Live Statistics from an Encoding
+        """List Live Statistics SRT
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required

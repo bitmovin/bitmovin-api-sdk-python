@@ -34,7 +34,7 @@ class ErrorApi(BaseApi):
 
     def create(self, webhook, **kwargs):
         # type: (Webhook, dict) -> Webhook
-        """Add &#39;Encoding Error&#39; Webhook
+        """Create &#39;Encoding Error&#39; Webhook
 
         :param webhook: The &#39;Encoding Error&#39; Webhook to be added.
         :type webhook: Webhook, required
@@ -51,7 +51,7 @@ class ErrorApi(BaseApi):
 
     def create_by_encoding_id(self, encoding_id, webhook, **kwargs):
         # type: (string_types, Webhook, dict) -> Webhook
-        """Add Error Webhook for a specific Encoding
+        """Create &#39;Encoding Error&#39; Webhook for a specific Encoding
 
         :param encoding_id: Id of the encoding
         :type encoding_id: string_types, required
@@ -107,7 +107,7 @@ class ErrorApi(BaseApi):
 
     def get_by_encoding_id_and_webhook_id(self, encoding_id, webhook_id, **kwargs):
         # type: (string_types, string_types, dict) -> Webhook
-        """&#39;Encoding Error&#39; Webhook Details for a specific Encoding
+        """Get &#39;Encoding Error&#39; Webhook details for a specific Encoding
 
         :param encoding_id: Id of the encoding
         :type encoding_id: string_types, required
@@ -126,7 +126,7 @@ class ErrorApi(BaseApi):
 
     def get_by_webhook_id(self, webhook_id, **kwargs):
         # type: (string_types, dict) -> Webhook
-        """&#39;Encoding Error&#39; Webhook Details
+        """Get &#39;Encoding Error&#39; Webhook details
 
         :param webhook_id: Id of the webhook
         :type webhook_id: string_types, required

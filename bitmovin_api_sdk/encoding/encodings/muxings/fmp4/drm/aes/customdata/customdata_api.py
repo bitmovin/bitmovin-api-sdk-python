@@ -23,7 +23,7 @@ class CustomdataApi(BaseApi):
 
     def get(self, encoding_id, muxing_id, drm_id, **kwargs):
         # type: (string_types, string_types, string_types, dict) -> CustomData
-        """AES encryption Custom Data of an fMP4 muxing
+        """Get AES encryption configuration from an fMP4 muxing Custom Data
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required

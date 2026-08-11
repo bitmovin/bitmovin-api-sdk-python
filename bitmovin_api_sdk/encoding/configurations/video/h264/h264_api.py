@@ -67,7 +67,7 @@ class H264Api(BaseApi):
 
     def get(self, configuration_id, **kwargs):
         # type: (string_types, dict) -> H264VideoConfiguration
-        """H264/AVC Codec Configuration Details
+        """Get H264/AVC Codec Configuration details
 
         :param configuration_id: Id of the codec configuration
         :type configuration_id: string_types, required

@@ -32,7 +32,7 @@ class GceApi(BaseApi):
 
     def create(self, gce_account, **kwargs):
         # type: (GceAccount, dict) -> GceAccount
-        """Add GCE Account
+        """Create GCE Account
 
         :param gce_account: The GCE Account to be added
         :type gce_account: GceAccount, required
@@ -66,7 +66,7 @@ class GceApi(BaseApi):
 
     def get(self, infrastructure_id, **kwargs):
         # type: (string_types, dict) -> GceAccount
-        """GCE Account Details
+        """Get GCE Account details
 
         :param infrastructure_id: Id of the GCE account
         :type infrastructure_id: string_types, required

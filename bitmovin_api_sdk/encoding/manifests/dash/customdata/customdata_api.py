@@ -23,7 +23,7 @@ class CustomdataApi(BaseApi):
 
     def get(self, manifest_id, **kwargs):
         # type: (string_types, dict) -> CustomData
-        """DASH Manifest Custom Data
+        """Get DASH Manifest Custom Data
 
         :param manifest_id: UUID of the DASH manifest
         :type manifest_id: string_types, required

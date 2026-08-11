@@ -24,7 +24,7 @@ class StreamsApi(BaseApi):
 
     def list(self, encoding_id, query_params=None, **kwargs):
         # type: (string_types, StreamInfosListQueryParams, dict) -> StreamInfos
-        """List Stream Infos of Live Statistics from an Encoding
+        """List Live Statistics Stream Infos
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required

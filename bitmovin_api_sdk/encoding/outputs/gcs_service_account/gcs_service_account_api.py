@@ -66,7 +66,7 @@ class GcsServiceAccountApi(BaseApi):
 
     def get(self, output_id, **kwargs):
         # type: (string_types, dict) -> GcsServiceAccountOutput
-        """Service Account based GCS Output Details
+        """Get Service Account based GCS Output details
 
         :param output_id: Id of the output
         :type output_id: string_types, required

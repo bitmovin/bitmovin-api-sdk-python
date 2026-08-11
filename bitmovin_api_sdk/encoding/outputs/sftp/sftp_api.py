@@ -66,7 +66,7 @@ class SftpApi(BaseApi):
 
     def get(self, output_id, **kwargs):
         # type: (string_types, dict) -> SftpOutput
-        """SFTP Output Details
+        """Get SFTP Output details
 
         :param output_id: Id of the output
         :type output_id: string_types, required

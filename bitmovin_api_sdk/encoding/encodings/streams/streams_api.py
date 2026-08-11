@@ -121,7 +121,7 @@ class StreamsApi(BaseApi):
 
     def create(self, encoding_id, stream, **kwargs):
         # type: (string_types, Stream, dict) -> Stream
-        """Add Stream
+        """Create Stream
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -160,7 +160,7 @@ class StreamsApi(BaseApi):
 
     def get(self, encoding_id, stream_id, **kwargs):
         # type: (string_types, string_types, dict) -> Stream
-        """Stream Details
+        """Get Stream details
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required

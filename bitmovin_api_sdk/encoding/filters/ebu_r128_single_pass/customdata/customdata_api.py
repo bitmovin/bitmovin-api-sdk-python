@@ -23,7 +23,7 @@ class CustomdataApi(BaseApi):
 
     def get(self, filter_id, **kwargs):
         # type: (string_types, dict) -> CustomData
-        """EBU R128 Single Pass Filter Custom Data
+        """Get EBU R128 Single Pass Filter Custom Data
 
         :param filter_id: Id of the EBU R128 Single Pass filter.
         :type filter_id: string_types, required

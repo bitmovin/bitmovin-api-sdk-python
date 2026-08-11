@@ -23,7 +23,7 @@ class AdPlacementsApi(BaseApi):
 
     def get(self, encoding_id, **kwargs):
         # type: (string_types, dict) -> SceneAnalysisAdPlacementMetadataResponse
-        """Get AI scene analysis ad placements by encoding ID
+        """Get AI Scene Analysis ad placements
 
         :param encoding_id: The encoding ID
         :type encoding_id: string_types, required

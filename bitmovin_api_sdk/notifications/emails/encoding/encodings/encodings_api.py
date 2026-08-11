@@ -40,7 +40,7 @@ class EncodingsApi(BaseApi):
 
     def list(self, encoding_id, query_params=None, **kwargs):
         # type: (string_types, EmailNotificationWithStreamConditionsListQueryParams, dict) -> EmailNotificationWithStreamConditions
-        """List Email Notifications (Specific Encoding)
+        """List Email Notifications for a specific Encoding
 
         :param encoding_id: Id of the encoding resource
         :type encoding_id: string_types, required

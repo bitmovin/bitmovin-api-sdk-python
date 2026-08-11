@@ -67,7 +67,7 @@ class TextApi(BaseApi):
 
     def get(self, filter_id, **kwargs):
         # type: (string_types, dict) -> TextFilter
-        """Text Filter Details
+        """Get Text Filter details
 
         :param filter_id: Id of the Text Filter
         :type filter_id: string_types, required

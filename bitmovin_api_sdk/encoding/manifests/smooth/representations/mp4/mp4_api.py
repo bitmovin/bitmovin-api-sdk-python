@@ -25,7 +25,7 @@ class Mp4Api(BaseApi):
 
     def create(self, manifest_id, smooth_streaming_representation, **kwargs):
         # type: (string_types, SmoothStreamingRepresentation, dict) -> SmoothStreamingRepresentation
-        """Add MP4 Representation to Smooth Streaming Manifest
+        """Create MP4 Representation to Smooth Streaming Manifest
 
         :param manifest_id: Id of the Smooth Streaming manifest.
         :type manifest_id: string_types, required
@@ -64,7 +64,7 @@ class Mp4Api(BaseApi):
 
     def get(self, manifest_id, representation_id, **kwargs):
         # type: (string_types, string_types, dict) -> SmoothStreamingRepresentation
-        """Smooth Streaming MP4 Representation Details
+        """Get Smooth Streaming MP4 Representation details
 
         :param manifest_id: Id of the Smooth Streaming manifest.
         :type manifest_id: string_types, required

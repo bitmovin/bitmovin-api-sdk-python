@@ -24,7 +24,7 @@ class KantarWatermarkApi(BaseApi):
 
     def create(self, encoding_id, kantar_watermark, **kwargs):
         # type: (string_types, KantarWatermark, dict) -> KantarWatermark
-        """Create or replace the Kantar Watermark for an encoding
+        """Create or replace Kantar Watermark
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -44,7 +44,7 @@ class KantarWatermarkApi(BaseApi):
 
     def delete(self, encoding_id, **kwargs):
         # type: (string_types, dict) -> BitmovinResponse
-        """Delete the Kantar Watermark for an encoding
+        """Delete Kantar Watermark
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -61,7 +61,7 @@ class KantarWatermarkApi(BaseApi):
 
     def get(self, encoding_id, **kwargs):
         # type: (string_types, dict) -> KantarWatermark
-        """Get the Kantar Watermark for an encoding
+        """Get Kantar Watermark
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required

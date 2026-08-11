@@ -24,7 +24,7 @@ class ErrorApi(BaseApi):
 
     def create(self, encoding_error_email_notification, **kwargs):
         # type: (EncodingErrorEmailNotification, dict) -> EncodingErrorEmailNotification
-        """Add Encoding Error Email Notification (All Encodings)
+        """Create &#39;Encoding Error&#39; Email Notification
 
         :param encoding_error_email_notification: Add a new email notification if an encoding received an error
         :type encoding_error_email_notification: EncodingErrorEmailNotification, required
@@ -42,7 +42,7 @@ class ErrorApi(BaseApi):
 
     def create_by_encoding_id(self, encoding_id, email_notification, **kwargs):
         # type: (string_types, EmailNotification, dict) -> EmailNotification
-        """Add Encoding Error Email Notification (Specific Encoding)
+        """Create &#39;Encoding Error&#39; Email Notification for a specific Encoding
 
         :param encoding_id: Id of the encoding resource
         :type encoding_id: string_types, required
@@ -62,7 +62,7 @@ class ErrorApi(BaseApi):
 
     def update(self, notification_id, email_notification, **kwargs):
         # type: (string_types, EmailNotification, dict) -> EmailNotification
-        """Replace Encoding Error Email Notification
+        """Update &#39;Encoding Error&#39; Email Notification
 
         :param notification_id: Id of the email notification
         :type notification_id: string_types, required

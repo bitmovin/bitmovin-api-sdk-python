@@ -23,7 +23,7 @@ class CustomdataApi(BaseApi):
 
     def get(self, filter_id, **kwargs):
         # type: (string_types, dict) -> CustomData
-        """Audio Mix Filter Custom Data
+        """Get Audio Mix Filter Custom Data
 
         :param filter_id: Id of the Audio Mix Filter.
         :type filter_id: string_types, required

@@ -26,7 +26,7 @@ class ChunkedTextApi(BaseApi):
 
     def create(self, manifest_id, period_id, adaptationset_id, dash_chunked_text_representation, **kwargs):
         # type: (string_types, string_types, string_types, DashChunkedTextRepresentation, dict) -> DashChunkedTextRepresentation
-        """Add Chunked Text Representation
+        """Create Chunked Text Representation
 
         :param manifest_id: Id of the manifest
         :type manifest_id: string_types, required
@@ -73,7 +73,7 @@ class ChunkedTextApi(BaseApi):
 
     def get(self, manifest_id, period_id, adaptationset_id, representation_id, **kwargs):
         # type: (string_types, string_types, string_types, string_types, dict) -> DashChunkedTextRepresentation
-        """Chunked Text Representation Details
+        """Get Chunked Text Representation details
 
         :param manifest_id: Id of the manifest
         :type manifest_id: string_types, required
@@ -96,7 +96,7 @@ class ChunkedTextApi(BaseApi):
 
     def list(self, manifest_id, period_id, adaptationset_id, query_params=None, **kwargs):
         # type: (string_types, string_types, string_types, DashChunkedTextRepresentationListQueryParams, dict) -> DashChunkedTextRepresentation
-        """List all Chunked Text Representations
+        """List Chunked Text Representations
 
         :param manifest_id: Id of the manifest
         :type manifest_id: string_types, required

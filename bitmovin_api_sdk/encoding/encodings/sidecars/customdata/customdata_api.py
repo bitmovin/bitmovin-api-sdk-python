@@ -23,7 +23,7 @@ class CustomdataApi(BaseApi):
 
     def get(self, encoding_id, sidecar_id, **kwargs):
         # type: (string_types, string_types, dict) -> CustomData
-        """Sidecar Custom Data
+        """Get Sidecar Custom Data
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required

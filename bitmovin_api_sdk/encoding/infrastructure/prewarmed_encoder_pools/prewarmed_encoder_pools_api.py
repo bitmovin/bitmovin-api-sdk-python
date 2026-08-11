@@ -50,7 +50,7 @@ class PrewarmedEncoderPoolsApi(BaseApi):
 
     def delete(self, pool_id, **kwargs):
         # type: (string_types, dict) -> BitmovinResponse
-        """Delete prewarmed encoder pool
+        """Delete Prewarmed encoder pool
 
         :param pool_id: Id of the prewarmed encoder pool
         :type pool_id: string_types, required
@@ -67,7 +67,7 @@ class PrewarmedEncoderPoolsApi(BaseApi):
 
     def get(self, pool_id, **kwargs):
         # type: (string_types, dict) -> PrewarmedEncoderPool
-        """Prewarmed encoder pool details
+        """Get Prewarmed encoder pool details
 
         :param pool_id: Id of the prewarmed encoder pool
         :type pool_id: string_types, required

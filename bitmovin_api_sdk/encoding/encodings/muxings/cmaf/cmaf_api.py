@@ -33,7 +33,7 @@ class CmafApi(BaseApi):
 
     def create(self, encoding_id, cmaf_muxing, **kwargs):
         # type: (string_types, CmafMuxing, dict) -> CmafMuxing
-        """Add CMAF muxing
+        """Create CMAF muxing
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -72,7 +72,7 @@ class CmafApi(BaseApi):
 
     def get(self, encoding_id, muxing_id, **kwargs):
         # type: (string_types, string_types, dict) -> CmafMuxing
-        """CMAF muxing details
+        """Get CMAF muxing details
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required

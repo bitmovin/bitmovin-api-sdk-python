@@ -25,7 +25,7 @@ class AudioApi(BaseApi):
 
     def create(self, manifest_id, period_id, audio_adaptation_set, **kwargs):
         # type: (string_types, string_types, AudioAdaptationSet, dict) -> AudioAdaptationSet
-        """Add Audio AdaptationSet
+        """Create Audio AdaptationSet
 
         :param manifest_id: Id of the manifest
         :type manifest_id: string_types, required
@@ -68,7 +68,7 @@ class AudioApi(BaseApi):
 
     def get(self, manifest_id, period_id, adaptationset_id, **kwargs):
         # type: (string_types, string_types, string_types, dict) -> AudioAdaptationSet
-        """Audio AdaptationSet Details
+        """Get Audio AdaptationSet details
 
         :param manifest_id: Id of the manifest
         :type manifest_id: string_types, required
@@ -89,7 +89,7 @@ class AudioApi(BaseApi):
 
     def list(self, manifest_id, period_id, query_params=None, **kwargs):
         # type: (string_types, string_types, AudioAdaptationSetListQueryParams, dict) -> AudioAdaptationSet
-        """List all Audio AdaptationSets
+        """List Audio AdaptationSets
 
         :param manifest_id: Id of the manifest
         :type manifest_id: string_types, required

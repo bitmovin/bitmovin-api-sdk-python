@@ -67,7 +67,7 @@ class UnsharpApi(BaseApi):
 
     def get(self, filter_id, **kwargs):
         # type: (string_types, dict) -> UnsharpFilter
-        """Unsharp Filter Details
+        """Get Unsharp Filter details
 
         :param filter_id: Id of the unsharp filter
         :type filter_id: string_types, required

@@ -32,7 +32,7 @@ class AwsApi(BaseApi):
 
     def create(self, aws_account, **kwargs):
         # type: (AwsAccount, dict) -> AwsAccount
-        """Add AWS Account
+        """Create AWS Account
 
         :param aws_account: The AWS Account to be added
         :type aws_account: AwsAccount, required
@@ -66,7 +66,7 @@ class AwsApi(BaseApi):
 
     def get(self, infrastructure_id, **kwargs):
         # type: (string_types, dict) -> AwsAccount
-        """AWS Account Details
+        """Get AWS Account details
 
         :param infrastructure_id: Id of the AWS account
         :type infrastructure_id: string_types, required

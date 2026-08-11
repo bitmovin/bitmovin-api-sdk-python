@@ -25,7 +25,7 @@ class DolbyVisionMetadataIngestApi(BaseApi):
 
     def create(self, encoding_id, dolby_vision_metadata_ingest_input_stream, **kwargs):
         # type: (string_types, DolbyVisionMetadataIngestInputStream, dict) -> DolbyVisionMetadataIngestInputStream
-        """Add Dolby Vision Metadata Ingest Input Stream
+        """Create Dolby Vision Metadata Ingest Input Stream
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -64,7 +64,7 @@ class DolbyVisionMetadataIngestApi(BaseApi):
 
     def get(self, encoding_id, input_stream_id, **kwargs):
         # type: (string_types, string_types, dict) -> DolbyVisionMetadataIngestInputStream
-        """Dolby Vision Metadata Ingest Input Stream Details
+        """Get Dolby Vision Metadata Ingest Input Stream details
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required

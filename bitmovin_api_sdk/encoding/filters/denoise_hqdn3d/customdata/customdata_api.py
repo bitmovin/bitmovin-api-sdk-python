@@ -23,7 +23,7 @@ class CustomdataApi(BaseApi):
 
     def get(self, filter_id, **kwargs):
         # type: (string_types, dict) -> CustomData
-        """Denoise hqdn3d Filter Custom Data
+        """Get Denoise hqdn3d Filter Custom Data
 
         :param filter_id: Id of the denoise hqdn3d filter
         :type filter_id: string_types, required

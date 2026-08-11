@@ -64,7 +64,7 @@ class KeyframesApi(BaseApi):
 
     def get(self, encoding_id, keyframe_id, **kwargs):
         # type: (string_types, string_types, dict) -> Keyframe
-        """Keyframe Details
+        """Get Keyframe details
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -83,7 +83,7 @@ class KeyframesApi(BaseApi):
 
     def list(self, encoding_id, query_params=None, **kwargs):
         # type: (string_types, KeyframeListQueryParams, dict) -> Keyframe
-        """List all Keyframes
+        """List Keyframes
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required

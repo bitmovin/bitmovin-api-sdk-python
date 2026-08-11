@@ -24,7 +24,7 @@ class RtmpApi(BaseApi):
 
     def get(self, input_id, **kwargs):
         # type: (string_types, dict) -> RtmpInput
-        """RTMP Input Details
+        """Get RTMP Input details
 
         :param input_id: Id of the input
         :type input_id: string_types, required

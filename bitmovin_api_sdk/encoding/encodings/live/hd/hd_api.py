@@ -25,7 +25,7 @@ class HdApi(BaseApi):
 
     def get_start_request(self, encoding_id, **kwargs):
         # type: (string_types, dict) -> StartLiveChannelEncodingRequest
-        """Live Encoding Start Details
+        """Get Live Encoding Channel Start Details
 
         :param encoding_id: Id of the encoding
         :type encoding_id: string_types, required

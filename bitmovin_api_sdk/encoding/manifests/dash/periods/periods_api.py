@@ -41,7 +41,7 @@ class PeriodsApi(BaseApi):
 
     def create(self, manifest_id, period, **kwargs):
         # type: (string_types, Period, dict) -> Period
-        """Add Period
+        """Create Period
 
         :param manifest_id: Id of the manifest
         :type manifest_id: string_types, required
@@ -80,7 +80,7 @@ class PeriodsApi(BaseApi):
 
     def get(self, manifest_id, period_id, **kwargs):
         # type: (string_types, string_types, dict) -> Period
-        """Period Details
+        """Get Period details
 
         :param manifest_id: Id of the manifest
         :type manifest_id: string_types, required
@@ -99,7 +99,7 @@ class PeriodsApi(BaseApi):
 
     def list(self, manifest_id, query_params=None, **kwargs):
         # type: (string_types, PeriodListQueryParams, dict) -> Period
-        """List all Periods
+        """List Periods
 
         :param manifest_id: Id of the manifest
         :type manifest_id: string_types, required

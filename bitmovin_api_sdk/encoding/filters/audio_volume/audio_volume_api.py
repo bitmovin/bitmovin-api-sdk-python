@@ -67,7 +67,7 @@ class AudioVolumeApi(BaseApi):
 
     def get(self, filter_id, **kwargs):
         # type: (string_types, dict) -> AudioVolumeFilter
-        """Audio Volume Filter Details
+        """Get Audio Volume Filter details
 
         :param filter_id: Id of the Audio Volume Filter.
         :type filter_id: string_types, required

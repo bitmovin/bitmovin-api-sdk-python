@@ -106,7 +106,7 @@
 <a class="viewcode-back" href="../../../../../../../__modules/bitmovin_api_sdk.notifications.webhooks.encoding.manifest.finished.html#bitmovin_api_sdk.notifications.webhooks.encoding.manifest.finished.finished_api.FinishedApi.create">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">webhook</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (Webhook, dict) -&gt; Webhook</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Add &amp;#39;Manifest Finished Successfully&amp;#39; Webhook (All Manifests)</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Create &amp;#39;Manifest Finished&amp;#39; Webhook</span>
 
 <span class="sd">        :param webhook: Add a new webhook notification that triggers if a manifest generation finished successfully. A maximum number of 5 webhooks is allowed</span>
 <span class="sd">        :type webhook: Webhook, required</span>
@@ -126,7 +126,7 @@
 <a class="viewcode-back" href="../../../../../../../__modules/bitmovin_api_sdk.notifications.webhooks.encoding.manifest.finished.html#bitmovin_api_sdk.notifications.webhooks.encoding.manifest.finished.finished_api.FinishedApi.create_by_manifest_id">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">create_by_manifest_id</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">manifest_id</span><span class="p">,</span> <span class="n">webhook</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, Webhook, dict) -&gt; Webhook</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Add &amp;#39;Manifest Finished Successfully&amp;#39; Webhook Notification (Specific Manifest)</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Create &amp;#39;Manifest Finished&amp;#39; Webhook for a specific Manifest</span>
 
 <span class="sd">        :param manifest_id: Id of the manifest resource</span>
 <span class="sd">        :type manifest_id: string_types, required</span>
@@ -149,7 +149,7 @@
 <a class="viewcode-back" href="../../../../../../../__modules/bitmovin_api_sdk.notifications.webhooks.encoding.manifest.finished.html#bitmovin_api_sdk.notifications.webhooks.encoding.manifest.finished.finished_api.FinishedApi.delete">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">delete</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">notification_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, dict) -&gt; BitmovinResponse</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Delete Manifest Finished Webhook</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Delete &amp;#39;Manifest Finished&amp;#39; Webhook</span>
 
 <span class="sd">        :param notification_id: Id of the webhook notification</span>
 <span class="sd">        :type notification_id: string_types, required</span>
@@ -169,7 +169,7 @@
 <a class="viewcode-back" href="../../../../../../../__modules/bitmovin_api_sdk.notifications.webhooks.encoding.manifest.finished.html#bitmovin_api_sdk.notifications.webhooks.encoding.manifest.finished.finished_api.FinishedApi.list">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">list</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (dict) -&gt; Webhook</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get &amp;#39;Manifest Finished&amp;#39; Webhooks (All Manifests)</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;List &amp;#39;Manifest Finished&amp;#39; Webhooks</span>
 
 <span class="sd">        :return: List of notifications</span>
 <span class="sd">        :rtype: Webhook</span>
@@ -187,7 +187,7 @@
 <a class="viewcode-back" href="../../../../../../../__modules/bitmovin_api_sdk.notifications.webhooks.encoding.manifest.finished.html#bitmovin_api_sdk.notifications.webhooks.encoding.manifest.finished.finished_api.FinishedApi.update">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">notification_id</span><span class="p">,</span> <span class="n">webhook</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, Webhook, dict) -&gt; Webhook</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Replace Manifest Finished Webhook Notification</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Update &amp;#39;Manifest Finished&amp;#39; Webhook</span>
 
 <span class="sd">        :param notification_id: Id of the webhook notification</span>
 <span class="sd">        :type notification_id: string_types, required</span>

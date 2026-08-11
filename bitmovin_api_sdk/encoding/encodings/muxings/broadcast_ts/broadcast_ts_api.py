@@ -41,7 +41,7 @@ class BroadcastTsApi(BaseApi):
 
     def create(self, encoding_id, broadcast_ts_muxing, **kwargs):
         # type: (string_types, BroadcastTsMuxing, dict) -> BroadcastTsMuxing
-        """Add Broadcast TS muxing
+        """Create Broadcast TS muxing
 
         :param encoding_id: ID of the encoding.
         :type encoding_id: string_types, required
@@ -80,7 +80,7 @@ class BroadcastTsApi(BaseApi):
 
     def get(self, encoding_id, muxing_id, **kwargs):
         # type: (string_types, string_types, dict) -> BroadcastTsMuxing
-        """Broadcast TS muxing details
+        """Get Broadcast TS muxing details
 
         :param encoding_id: ID of the Encoding.
         :type encoding_id: string_types, required

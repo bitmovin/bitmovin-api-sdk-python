@@ -32,7 +32,7 @@ class AkamaiApi(BaseApi):
 
     def create(self, akamai_account, **kwargs):
         # type: (AkamaiAccount, dict) -> AkamaiAccount
-        """Add Akamai account
+        """Create Akamai account
 
         :param akamai_account: The Akamai account to be added
         :type akamai_account: AkamaiAccount, required
@@ -66,7 +66,7 @@ class AkamaiApi(BaseApi):
 
     def get(self, infrastructure_id, **kwargs):
         # type: (string_types, dict) -> AkamaiAccount
-        """Akamai account details
+        """Get Akamai account details
 
         :param infrastructure_id: Id of the Akamai account
         :type infrastructure_id: string_types, required

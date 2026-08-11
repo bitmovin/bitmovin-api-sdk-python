@@ -23,7 +23,7 @@ class CustomdataApi(BaseApi):
 
     def get(self, filter_id, **kwargs):
         # type: (string_types, dict) -> CustomData
-        """Unsharp Filter Custom Data
+        """Get Unsharp Filter Custom Data
 
         :param filter_id: Id of the unsharp filter
         :type filter_id: string_types, required

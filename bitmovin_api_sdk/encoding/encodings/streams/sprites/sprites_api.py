@@ -33,7 +33,7 @@ class SpritesApi(BaseApi):
 
     def create(self, encoding_id, stream_id, sprite, **kwargs):
         # type: (string_types, string_types, Sprite, dict) -> Sprite
-        """Add Sprite
+        """Create Sprite
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -76,7 +76,7 @@ class SpritesApi(BaseApi):
 
     def get(self, encoding_id, stream_id, sprite_id, **kwargs):
         # type: (string_types, string_types, string_types, dict) -> Sprite
-        """Sprite Details
+        """Get Sprite details
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required

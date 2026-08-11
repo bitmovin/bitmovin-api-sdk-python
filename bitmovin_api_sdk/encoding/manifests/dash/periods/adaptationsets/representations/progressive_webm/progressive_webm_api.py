@@ -25,7 +25,7 @@ class ProgressiveWebmApi(BaseApi):
 
     def create(self, manifest_id, period_id, adaptationset_id, dash_progressive_webm_representation, **kwargs):
         # type: (string_types, string_types, string_types, DashProgressiveWebmRepresentation, dict) -> DashProgressiveWebmRepresentation
-        """Add Progressive WebM Representation
+        """Create Progressive WebM Representation
 
         :param manifest_id: Id of the manifest
         :type manifest_id: string_types, required
@@ -72,7 +72,7 @@ class ProgressiveWebmApi(BaseApi):
 
     def get(self, manifest_id, period_id, adaptationset_id, representation_id, **kwargs):
         # type: (string_types, string_types, string_types, string_types, dict) -> DashProgressiveWebmRepresentation
-        """Progressive WebM Representation Details
+        """Get Progressive WebM Representation details
 
         :param manifest_id: Id of the manifest
         :type manifest_id: string_types, required
@@ -95,7 +95,7 @@ class ProgressiveWebmApi(BaseApi):
 
     def list(self, manifest_id, period_id, adaptationset_id, query_params=None, **kwargs):
         # type: (string_types, string_types, string_types, DashProgressiveWebmRepresentationListQueryParams, dict) -> DashProgressiveWebmRepresentation
-        """List all Progressive WebM Representations
+        """List Progressive WebM Representations
 
         :param manifest_id: Id of the manifest
         :type manifest_id: string_types, required

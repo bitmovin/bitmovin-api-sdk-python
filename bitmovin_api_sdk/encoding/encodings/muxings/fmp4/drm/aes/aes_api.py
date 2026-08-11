@@ -33,7 +33,7 @@ class AesApi(BaseApi):
 
     def create(self, encoding_id, muxing_id, aes_encryption_drm, **kwargs):
         # type: (string_types, string_types, AesEncryptionDrm, dict) -> AesEncryptionDrm
-        """Add AES encryption configuration to fMP4
+        """Create AES encryption configuration to fMP4
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -76,7 +76,7 @@ class AesApi(BaseApi):
 
     def get(self, encoding_id, muxing_id, drm_id, **kwargs):
         # type: (string_types, string_types, string_types, dict) -> AesEncryptionDrm
-        """AES encryption Details of an fMP4 muxing
+        """Get AES encryption configuration from an fMP4 muxing details
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required

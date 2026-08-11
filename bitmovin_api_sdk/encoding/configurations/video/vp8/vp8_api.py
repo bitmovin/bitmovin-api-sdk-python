@@ -67,7 +67,7 @@ class Vp8Api(BaseApi):
 
     def get(self, configuration_id, **kwargs):
         # type: (string_types, dict) -> Vp8VideoConfiguration
-        """VP8 Codec Configuration Details
+        """Get VP8 Codec Configuration details
 
         :param configuration_id: Id of the codec configuration
         :type configuration_id: string_types, required
@@ -84,7 +84,7 @@ class Vp8Api(BaseApi):
 
     def list(self, query_params=None, **kwargs):
         # type: (Vp8VideoConfigurationListQueryParams, dict) -> Vp8VideoConfiguration
-        """get_encoding_configurations_video_vp8
+        """List VP8 Codec Configurations
 
         :param query_params: Query parameters
         :type query_params: Vp8VideoConfigurationListQueryParams

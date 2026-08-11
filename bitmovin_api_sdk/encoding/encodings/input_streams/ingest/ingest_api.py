@@ -25,7 +25,7 @@ class IngestApi(BaseApi):
 
     def create(self, encoding_id, ingest_input_stream, **kwargs):
         # type: (string_types, IngestInputStream, dict) -> IngestInputStream
-        """Add Ingest Input Stream
+        """Create Ingest Input Stream
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -64,7 +64,7 @@ class IngestApi(BaseApi):
 
     def get(self, encoding_id, input_stream_id, **kwargs):
         # type: (string_types, string_types, dict) -> IngestInputStream
-        """Ingest Input Stream Details
+        """Get Ingest Input Stream details
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required

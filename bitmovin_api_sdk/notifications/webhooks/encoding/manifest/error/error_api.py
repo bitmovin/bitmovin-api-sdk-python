@@ -24,7 +24,7 @@ class ErrorApi(BaseApi):
 
     def create(self, webhook, **kwargs):
         # type: (Webhook, dict) -> Webhook
-        """Add &#39;Manifest Error&#39; Webhook (All Manifests)
+        """Create &#39;Manifest Error&#39; Webhook
 
         :param webhook: The &#39;Manifest Error&#39; Webhook to be added.
         :type webhook: Webhook, required
@@ -41,7 +41,7 @@ class ErrorApi(BaseApi):
 
     def create_by_manifest_id(self, manifest_id, webhook, **kwargs):
         # type: (string_types, Webhook, dict) -> Webhook
-        """Add &#39;Manifest Error&#39; Webhook Notification (Specific Manifest)
+        """Create &#39;Manifest Error&#39; Webhook for a specific Manifest
 
         :param manifest_id: Id of the manifest resource
         :type manifest_id: string_types, required
@@ -78,7 +78,7 @@ class ErrorApi(BaseApi):
 
     def list(self, **kwargs):
         # type: (dict) -> Webhook
-        """Get &#39;Manifest Error&#39; Webhooks (All Manifests)
+        """List &#39;Manifest Error&#39; Webhooks
 
         :return: List of notifications
         :rtype: Webhook
@@ -93,7 +93,7 @@ class ErrorApi(BaseApi):
 
     def update(self, notification_id, webhook, **kwargs):
         # type: (string_types, Webhook, dict) -> Webhook
-        """Replace &#39;Manifest Error&#39; Webhook Notification
+        """Update &#39;Manifest Error&#39; Webhook
 
         :param notification_id: Id of the webhook notification
         :type notification_id: string_types, required

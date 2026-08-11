@@ -67,7 +67,7 @@ class AacApi(BaseApi):
 
     def get(self, configuration_id, **kwargs):
         # type: (string_types, dict) -> AacAudioConfiguration
-        """AAC Codec Configuration Details
+        """Get AAC Codec Configuration details
 
         :param configuration_id: Id of the codec configuration
         :type configuration_id: string_types, required

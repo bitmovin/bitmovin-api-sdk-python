@@ -25,7 +25,7 @@ class AssaApi(BaseApi):
 
     def create(self, encoding_id, stream_id, burn_in_subtitle_assa, **kwargs):
         # type: (string_types, string_types, BurnInSubtitleAssa, dict) -> BurnInSubtitleAssa
-        """Burn-In ASSA Subtitle into Stream
+        """Create Burn-In ASSA Subtitle
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -47,7 +47,7 @@ class AssaApi(BaseApi):
 
     def delete(self, encoding_id, stream_id, subtitle_id, **kwargs):
         # type: (string_types, string_types, string_types, dict) -> BitmovinResponse
-        """Delete Burn-In ASSA Subtitle from Stream
+        """Delete Burn-In ASSA Subtitle
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -68,7 +68,7 @@ class AssaApi(BaseApi):
 
     def get(self, encoding_id, stream_id, subtitle_id, **kwargs):
         # type: (string_types, string_types, string_types, dict) -> BurnInSubtitleAssa
-        """Get Burn-In ASSA Subtitle Details
+        """Get Burn-In ASSA Subtitle details
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -89,7 +89,7 @@ class AssaApi(BaseApi):
 
     def list(self, encoding_id, stream_id, query_params=None, **kwargs):
         # type: (string_types, string_types, BurnInSubtitleAssaListQueryParams, dict) -> BurnInSubtitleAssa
-        """List the Burn-In ASSA subtitles of a stream
+        """List Burn-In ASSA Subtitles
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required

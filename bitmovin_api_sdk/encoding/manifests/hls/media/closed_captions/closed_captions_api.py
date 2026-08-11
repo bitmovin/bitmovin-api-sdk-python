@@ -25,7 +25,7 @@ class ClosedCaptionsApi(BaseApi):
 
     def create(self, manifest_id, closed_captions_media_info, **kwargs):
         # type: (string_types, ClosedCaptionsMediaInfo, dict) -> ClosedCaptionsMediaInfo
-        """Add Closed Captions Media
+        """Create Closed Captions Media
 
         :param manifest_id: Id of the hls manifest.
         :type manifest_id: string_types, required
@@ -64,7 +64,7 @@ class ClosedCaptionsApi(BaseApi):
 
     def get(self, manifest_id, media_id, **kwargs):
         # type: (string_types, string_types, dict) -> ClosedCaptionsMediaInfo
-        """Closed Captions Media Details
+        """Get Closed Captions Media details
 
         :param manifest_id: Id of the hls manifest.
         :type manifest_id: string_types, required
@@ -83,7 +83,7 @@ class ClosedCaptionsApi(BaseApi):
 
     def list(self, manifest_id, query_params=None, **kwargs):
         # type: (string_types, ClosedCaptionsMediaInfoListQueryParams, dict) -> ClosedCaptionsMediaInfo
-        """List all Closed Captions Media
+        """List Closed Captions Media
 
         :param manifest_id: Id of the hls manifest.
         :type manifest_id: string_types, required

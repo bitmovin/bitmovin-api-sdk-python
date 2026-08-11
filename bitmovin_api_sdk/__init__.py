@@ -443,6 +443,10 @@ from bitmovin_api_sdk.encoding.filters.ebu_r128_single_pass.ebu_r128_single_pass
 from bitmovin_api_sdk.encoding.filters.ebu_r128_single_pass.ebu_r128_single_pass_api import EbuR128SinglePassFilterListQueryParams
 from bitmovin_api_sdk.encoding.filters.ebu_r128_single_pass.customdata.customdata_api import CustomdataApi
 
+from bitmovin_api_sdk.encoding.filters.dolby_loudness.dolby_loudness_api import DolbyLoudnessApi
+from bitmovin_api_sdk.encoding.filters.dolby_loudness.dolby_loudness_api import DolbyLoudnessFilterListQueryParams
+from bitmovin_api_sdk.encoding.filters.dolby_loudness.customdata.customdata_api import CustomdataApi
+
 from bitmovin_api_sdk.encoding.filters.text.text_api import TextApi
 from bitmovin_api_sdk.encoding.filters.text.text_api import TextFilterListQueryParams
 from bitmovin_api_sdk.encoding.filters.text.customdata.customdata_api import CustomdataApi
@@ -1460,6 +1464,9 @@ from bitmovin_api_sdk.models.dolby_digital_preprocessing import DolbyDigitalPrep
 from bitmovin_api_sdk.models.dolby_digital_surround_mix_level import DolbyDigitalSurroundMixLevel
 from bitmovin_api_sdk.models.dolby_digital_surround_mode import DolbyDigitalSurroundMode
 from bitmovin_api_sdk.models.dolby_digital_three_db_attenuation import DolbyDigitalThreeDbAttenuation
+from bitmovin_api_sdk.models.dolby_loudness_content_form import DolbyLoudnessContentForm
+from bitmovin_api_sdk.models.dolby_loudness_dialogue_intelligence import DolbyLoudnessDialogueIntelligence
+from bitmovin_api_sdk.models.dolby_loudness_filter import DolbyLoudnessFilter
 from bitmovin_api_sdk.models.dolby_vision_input_stream import DolbyVisionInputStream
 from bitmovin_api_sdk.models.dolby_vision_metadata import DolbyVisionMetadata
 from bitmovin_api_sdk.models.dolby_vision_metadata_ingest_input_stream import DolbyVisionMetadataIngestInputStream
@@ -2025,4 +2032,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.276.0"
+__version__ = "1.277.0"

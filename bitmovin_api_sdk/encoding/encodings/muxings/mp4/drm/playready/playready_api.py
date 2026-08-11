@@ -33,7 +33,7 @@ class PlayreadyApi(BaseApi):
 
     def create(self, encoding_id, muxing_id, play_ready_drm, **kwargs):
         # type: (string_types, string_types, PlayReadyDrm, dict) -> PlayReadyDrm
-        """Add PlayReady DRM to an MP4 muxing
+        """Create PlayReady DRM to an MP4 muxing
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -76,7 +76,7 @@ class PlayreadyApi(BaseApi):
 
     def get(self, encoding_id, muxing_id, drm_id, **kwargs):
         # type: (string_types, string_types, string_types, dict) -> PlayReadyDrm
-        """PlayReady DRM Details of an MP4 muxing
+        """Get PlayReady DRM from an MP4 muxing details
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required

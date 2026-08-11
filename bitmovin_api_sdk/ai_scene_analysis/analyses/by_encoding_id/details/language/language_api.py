@@ -23,7 +23,7 @@ class LanguageApi(BaseApi):
 
     def get(self, encoding_id, language_code, **kwargs):
         # type: (string_types, string_types, dict) -> SceneAnalysisDetailsResponse
-        """Get translated AI scene analysis details by encoding ID and language code
+        """Get AI Scene Analysis details in a specific language
 
         :param encoding_id: The encoding ID
         :type encoding_id: string_types, required

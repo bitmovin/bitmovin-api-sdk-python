@@ -45,7 +45,7 @@ class SchedulesApi(BaseApi):
 
     def delete(self, pool_id, schedule_id, **kwargs):
         # type: (string_types, string_types, dict) -> BitmovinResponse
-        """Delete prewarmed encoder pool schedule
+        """Delete Prewarmed encoder pool schedule
 
         :param pool_id: Id of the scheduled encoder pool
         :type pool_id: string_types, required
@@ -64,7 +64,7 @@ class SchedulesApi(BaseApi):
 
     def get(self, pool_id, schedule_id, **kwargs):
         # type: (string_types, string_types, dict) -> PrewarmedEncoderPoolSchedule
-        """Prewarmed encoder pool schedule details
+        """Get Prewarmed encoder pool schedule details
 
         :param pool_id: Id of the scheduled encoder pool
         :type pool_id: string_types, required

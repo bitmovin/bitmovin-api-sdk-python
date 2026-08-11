@@ -33,7 +33,7 @@ class ClearkeyApi(BaseApi):
 
     def create(self, encoding_id, muxing_id, clear_key_drm, **kwargs):
         # type: (string_types, string_types, ClearKeyDrm, dict) -> ClearKeyDrm
-        """Add ClearKey DRM to an MP4 muxing
+        """Create ClearKey DRM to an MP4 muxing
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -76,7 +76,7 @@ class ClearkeyApi(BaseApi):
 
     def get(self, encoding_id, muxing_id, drm_id, **kwargs):
         # type: (string_types, string_types, string_types, dict) -> ClearKeyDrm
-        """ClearKey DRM Details of an MP4 muxing
+        """Get ClearKey DRM from an MP4 muxing details
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required

@@ -66,7 +66,7 @@ class RegionsApi(BaseApi):
 
     def get(self, infrastructure_id, region, **kwargs):
         # type: (string_types, AwsCloudRegion, dict) -> AwsAccountRegionSettings
-        """AWS Region Settings Details
+        """Get AWS Region Settings details
 
         :param infrastructure_id: Id of the AWS account
         :type infrastructure_id: string_types, required

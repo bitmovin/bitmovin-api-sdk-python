@@ -66,7 +66,7 @@ class SftpApi(BaseApi):
 
     def get(self, input_id, **kwargs):
         # type: (string_types, dict) -> SftpInput
-        """SFTP Input Details
+        """Get SFTP Input details
 
         :param input_id: Id of the input
         :type input_id: string_types, required

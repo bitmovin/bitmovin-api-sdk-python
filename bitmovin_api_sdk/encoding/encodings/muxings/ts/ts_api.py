@@ -41,7 +41,7 @@ class TsApi(BaseApi):
 
     def create(self, encoding_id, ts_muxing, **kwargs):
         # type: (string_types, TsMuxing, dict) -> TsMuxing
-        """Add TS muxing
+        """Create TS muxing
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -80,7 +80,7 @@ class TsApi(BaseApi):
 
     def get(self, encoding_id, muxing_id, **kwargs):
         # type: (string_types, string_types, dict) -> TsMuxing
-        """TS muxing details
+        """Get TS muxing details
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required

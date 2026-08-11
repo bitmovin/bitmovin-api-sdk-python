@@ -66,7 +66,7 @@ class RegionsApi(BaseApi):
 
     def get(self, infrastructure_id, region, **kwargs):
         # type: (string_types, AzureCloudRegion, dict) -> AzureAccountRegionSettings
-        """Azure Region Settings Details
+        """Get Azure Region Settings details
 
         :param infrastructure_id: Id of the Azure account
         :type infrastructure_id: string_types, required

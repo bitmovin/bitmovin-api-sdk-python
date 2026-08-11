@@ -31,7 +31,7 @@ class DetailsApi(BaseApi):
 
     def get(self, encoding_id, **kwargs):
         # type: (string_types, dict) -> SceneAnalysisDetailsResponse
-        """Get AI scene analysis details by encoding ID
+        """Get AI Scene Analysis details
 
         :param encoding_id: The encoding ID
         :type encoding_id: string_types, required

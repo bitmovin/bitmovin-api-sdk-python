@@ -8,3 +8,4 @@ from bitmovin_api_sdk.common.poscheck import poscheck_model
 class SceneAnalysisListSort(Enum):
     CREATED_AT_DESC = "createdAt:DESC"
     CREATED_AT_ASC = "createdAt:ASC"
+    RELEVANCE_DESC = "relevance:DESC"

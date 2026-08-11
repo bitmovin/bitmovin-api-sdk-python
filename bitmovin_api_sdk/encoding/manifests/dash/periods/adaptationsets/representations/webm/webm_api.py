@@ -34,7 +34,7 @@ class WebmApi(BaseApi):
 
     def create(self, manifest_id, period_id, adaptationset_id, dash_webm_representation, **kwargs):
         # type: (string_types, string_types, string_types, DashWebmRepresentation, dict) -> DashWebmRepresentation
-        """Add WebM Representation
+        """Create WebM Representation
 
         :param manifest_id: Id of the manifest
         :type manifest_id: string_types, required
@@ -81,7 +81,7 @@ class WebmApi(BaseApi):
 
     def get(self, manifest_id, period_id, adaptationset_id, representation_id, **kwargs):
         # type: (string_types, string_types, string_types, string_types, dict) -> DashWebmRepresentation
-        """WebM Representation Details
+        """Get WebM Representation details
 
         :param manifest_id: Id of the manifest
         :type manifest_id: string_types, required
@@ -104,7 +104,7 @@ class WebmApi(BaseApi):
 
     def list(self, manifest_id, period_id, adaptationset_id, query_params=None, **kwargs):
         # type: (string_types, string_types, string_types, DashWebmRepresentationListQueryParams, dict) -> DashWebmRepresentation
-        """List all WebM Representations
+        """List WebM Representations
 
         :param manifest_id: Id of the manifest
         :type manifest_id: string_types, required

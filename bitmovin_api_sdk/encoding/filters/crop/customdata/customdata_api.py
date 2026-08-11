@@ -23,7 +23,7 @@ class CustomdataApi(BaseApi):
 
     def get(self, filter_id, **kwargs):
         # type: (string_types, dict) -> CustomData
-        """Crop Filter Custom Data
+        """Get Crop Filter Custom Data
 
         :param filter_id: Id of the Crop Filter.
         :type filter_id: string_types, required

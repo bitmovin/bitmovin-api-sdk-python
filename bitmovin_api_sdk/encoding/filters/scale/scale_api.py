@@ -67,7 +67,7 @@ class ScaleApi(BaseApi):
 
     def get(self, filter_id, **kwargs):
         # type: (string_types, dict) -> ScaleFilter
-        """Scale Filter Details
+        """Get Scale Filter details
 
         :param filter_id: Id of the scale filter
         :type filter_id: string_types, required

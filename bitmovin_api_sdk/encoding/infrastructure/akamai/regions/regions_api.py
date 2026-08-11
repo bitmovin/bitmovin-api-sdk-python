@@ -66,7 +66,7 @@ class RegionsApi(BaseApi):
 
     def get(self, infrastructure_id, region, **kwargs):
         # type: (string_types, AkamaiCloudRegion, dict) -> AkamaiAccountRegionSettings
-        """Akamai account region settings details
+        """Get Akamai account region settings details
 
         :param infrastructure_id: Id of the Akamai account
         :type infrastructure_id: string_types, required

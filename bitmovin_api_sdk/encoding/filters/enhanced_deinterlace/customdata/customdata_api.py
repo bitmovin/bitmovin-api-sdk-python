@@ -23,7 +23,7 @@ class CustomdataApi(BaseApi):
 
     def get(self, filter_id, **kwargs):
         # type: (string_types, dict) -> CustomData
-        """Enhanced Deinterlace Filter Custom Data
+        """Get Enhanced Deinterlace Filter Custom Data
 
         :param filter_id: Id of the Enhanced Deinterlace Filter
         :type filter_id: string_types, required

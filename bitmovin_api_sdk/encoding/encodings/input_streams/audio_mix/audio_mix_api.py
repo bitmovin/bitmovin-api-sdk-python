@@ -25,7 +25,7 @@ class AudioMixApi(BaseApi):
 
     def create(self, encoding_id, audio_mix_input_stream, **kwargs):
         # type: (string_types, AudioMixInputStream, dict) -> AudioMixInputStream
-        """Add audio mix input stream
+        """Create audio mix input stream
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -45,7 +45,7 @@ class AudioMixApi(BaseApi):
 
     def delete(self, encoding_id, input_stream_id, **kwargs):
         # type: (string_types, string_types, dict) -> BitmovinResponse
-        """Delete audio mix input stream
+        """Delete Audio mix input stream
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -64,7 +64,7 @@ class AudioMixApi(BaseApi):
 
     def get(self, encoding_id, input_stream_id, **kwargs):
         # type: (string_types, string_types, dict) -> AudioMixInputStream
-        """Audio mix input stream details
+        """Get Audio mix input stream details
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required

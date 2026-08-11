@@ -33,7 +33,7 @@ class MxfApi(BaseApi):
 
     def create(self, encoding_id, mxf_muxing, **kwargs):
         # type: (string_types, MxfMuxing, dict) -> MxfMuxing
-        """Add MXF muxing
+        """Create MXF muxing
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -72,7 +72,7 @@ class MxfApi(BaseApi):
 
     def get(self, encoding_id, muxing_id, **kwargs):
         # type: (string_types, string_types, dict) -> MxfMuxing
-        """MXF muxing details
+        """Get MXF muxing details
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required

@@ -66,7 +66,7 @@ class RegionsApi(BaseApi):
 
     def get(self, infrastructure_id, region, **kwargs):
         # type: (string_types, GoogleCloudRegion, dict) -> GceAccountRegionSettings
-        """Google Cloud Region Settings Details
+        """Get Google Cloud Region Settings details
 
         :param infrastructure_id: Id of the Google Cloud Connect infrastructure resource
         :type infrastructure_id: string_types, required

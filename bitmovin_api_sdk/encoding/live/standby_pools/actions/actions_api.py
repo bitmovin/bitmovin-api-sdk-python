@@ -44,7 +44,7 @@ class ActionsApi(BaseApi):
 
     def delete_error_encodings(self, pool_id, **kwargs):
         # type: (string_types, dict) -> LiveStandbyPoolEncoding
-        """Delete error encodings from the standby pool
+        """Delete Error Encodings from Standby Pool
 
         :param pool_id: Id of the standby pool
         :type pool_id: string_types, required

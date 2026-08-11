@@ -23,7 +23,7 @@ class CustomdataApi(BaseApi):
 
     def get(self, configuration_id, **kwargs):
         # type: (string_types, dict) -> CustomData
-        """WebVtt subtitle configuration custom data
+        """Get WebVtt subtitle configuration Custom Data
 
         :param configuration_id: Id of the codec configuration
         :type configuration_id: string_types, required

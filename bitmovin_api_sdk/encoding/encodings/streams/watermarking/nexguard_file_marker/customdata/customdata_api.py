@@ -23,7 +23,7 @@ class CustomdataApi(BaseApi):
 
     def get(self, encoding_id, stream_id, nexguard_id, **kwargs):
         # type: (string_types, string_types, string_types, dict) -> CustomData
-        """Nexguard file marker watermarking configuration Custom Data
+        """Get Nexguard file marker watermarking configurations Custom Data
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required

@@ -58,7 +58,7 @@ class HlsApi(BaseApi):
 
     def get(self, input_id, **kwargs):
         # type: (string_types, dict) -> HlsInput
-        """HLS Input Details
+        """Get HLS Input details
 
         :param input_id: Id of the input
         :type input_id: string_types, required

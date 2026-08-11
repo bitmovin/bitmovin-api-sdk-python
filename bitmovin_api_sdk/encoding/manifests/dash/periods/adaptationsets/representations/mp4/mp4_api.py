@@ -33,7 +33,7 @@ class Mp4Api(BaseApi):
 
     def create(self, manifest_id, period_id, adaptationset_id, dash_mp4_representation, **kwargs):
         # type: (string_types, string_types, string_types, DashMp4Representation, dict) -> DashMp4Representation
-        """Add MP4 Representation
+        """Create MP4 Representation
 
         :param manifest_id: Id of the manifest
         :type manifest_id: string_types, required
@@ -80,7 +80,7 @@ class Mp4Api(BaseApi):
 
     def get(self, manifest_id, period_id, adaptationset_id, representation_id, **kwargs):
         # type: (string_types, string_types, string_types, string_types, dict) -> DashMp4Representation
-        """MP4 Representation Details
+        """Get MP4 Representation details
 
         :param manifest_id: Id of the manifest
         :type manifest_id: string_types, required
@@ -103,7 +103,7 @@ class Mp4Api(BaseApi):
 
     def list(self, manifest_id, period_id, adaptationset_id, query_params=None, **kwargs):
         # type: (string_types, string_types, string_types, DashMp4RepresentationListQueryParams, dict) -> DashMp4Representation
-        """List all MP4 Representations
+        """List MP4 Representations
 
         :param manifest_id: Id of the manifest
         :type manifest_id: string_types, required

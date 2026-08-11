@@ -23,7 +23,7 @@ class ActionsApi(BaseApi):
 
     def unassign(self, stream_keys_unassign_action, **kwargs):
         # type: (StreamKeysUnassignAction, dict) -> StreamKeysUnassignAction
-        """Unassign stream keys
+        """Unassign Stream Keys
 
         :param stream_keys_unassign_action: The action payload for unassigning stream keys
         :type stream_keys_unassign_action: StreamKeysUnassignAction, required

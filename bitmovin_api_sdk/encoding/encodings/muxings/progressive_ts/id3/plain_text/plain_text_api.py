@@ -33,7 +33,7 @@ class PlainTextApi(BaseApi):
 
     def create(self, encoding_id, muxing_id, plaintext_id3_tag, **kwargs):
         # type: (string_types, string_types, PlaintextId3Tag, dict) -> PlaintextId3Tag
-        """Add Plain Text ID3 Tag to a Progressive TS muxing
+        """Create Plain Text ID3 Tag to a Progressive TS muxing
 
         :param encoding_id: ID of the Encoding.
         :type encoding_id: string_types, required
@@ -76,7 +76,7 @@ class PlainTextApi(BaseApi):
 
     def get(self, encoding_id, muxing_id, id3_tag_id, **kwargs):
         # type: (string_types, string_types, string_types, dict) -> PlaintextId3Tag
-        """Plain Text ID3 Tag Details of a Progressive TS muxing
+        """Get Plain Text ID3 Tag of a Progressive TS muxing details
 
         :param encoding_id: ID of the Encoding.
         :type encoding_id: string_types, required

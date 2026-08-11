@@ -67,7 +67,7 @@ class WatermarkApi(BaseApi):
 
     def get(self, filter_id, **kwargs):
         # type: (string_types, dict) -> WatermarkFilter
-        """Watermark Filter Details
+        """Get Watermark Filter details
 
         :param filter_id: Id of the Watermark Filter.
         :type filter_id: string_types, required

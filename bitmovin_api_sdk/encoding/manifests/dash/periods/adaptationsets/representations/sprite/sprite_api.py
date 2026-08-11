@@ -25,7 +25,7 @@ class SpriteApi(BaseApi):
 
     def create(self, manifest_id, period_id, adaptationset_id, sprite_representation, **kwargs):
         # type: (string_types, string_types, string_types, SpriteRepresentation, dict) -> SpriteRepresentation
-        """Add Sprite Representation
+        """Create Sprite Representation
 
         :param manifest_id: Id of the manifest
         :type manifest_id: string_types, required
@@ -72,7 +72,7 @@ class SpriteApi(BaseApi):
 
     def get(self, manifest_id, period_id, adaptationset_id, representation_id, **kwargs):
         # type: (string_types, string_types, string_types, string_types, dict) -> SpriteRepresentation
-        """Sprite Representation Details
+        """Get Sprite Representation details
 
         :param manifest_id: Id of the manifest
         :type manifest_id: string_types, required
@@ -95,7 +95,7 @@ class SpriteApi(BaseApi):
 
     def list(self, manifest_id, period_id, adaptationset_id, query_params=None, **kwargs):
         # type: (string_types, string_types, string_types, SpriteRepresentationListQueryParams, dict) -> SpriteRepresentation
-        """List all Sprite Representations
+        """List Sprite Representations
 
         :param manifest_id: Id of the manifest
         :type manifest_id: string_types, required

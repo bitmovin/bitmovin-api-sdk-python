@@ -25,7 +25,7 @@ class H264PictureTimingApi(BaseApi):
 
     def create(self, encoding_id, h264_picture_timing_trimming_input_stream, **kwargs):
         # type: (string_types, H264PictureTimingTrimmingInputStream, dict) -> H264PictureTimingTrimmingInputStream
-        """Add H264 Picture Timing Trimming Input Stream
+        """Create H264 Picture Timing Trimming Input Stream
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -64,7 +64,7 @@ class H264PictureTimingApi(BaseApi):
 
     def get(self, encoding_id, input_stream_id, **kwargs):
         # type: (string_types, string_types, dict) -> H264PictureTimingTrimmingInputStream
-        """H264 Picture Timing Trimming Input Stream Details
+        """Get H264 Picture Timing Trimming Input Stream details
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required

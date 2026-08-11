@@ -45,7 +45,7 @@ class WebvttApi(BaseApi):
 
     def delete(self, encoding_id, sidecar_id, **kwargs):
         # type: (string_types, string_types, dict) -> BitmovinResponse
-        """Delete Sidecar
+        """Delete WebVTT Sidecar
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -64,7 +64,7 @@ class WebvttApi(BaseApi):
 
     def get(self, encoding_id, sidecar_id, **kwargs):
         # type: (string_types, string_types, dict) -> WebVttSidecarFile
-        """WebVTT Sidecar Details
+        """Get WebVTT Sidecar details
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required

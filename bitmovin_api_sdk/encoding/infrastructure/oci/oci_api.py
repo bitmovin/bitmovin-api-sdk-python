@@ -32,7 +32,7 @@ class OciApi(BaseApi):
 
     def create(self, oci_account, **kwargs):
         # type: (OciAccount, dict) -> OciAccount
-        """Add OCI account
+        """Create OCI account
 
         :param oci_account: The OCI account to be added
         :type oci_account: OciAccount, required
@@ -66,7 +66,7 @@ class OciApi(BaseApi):
 
     def get(self, infrastructure_id, **kwargs):
         # type: (string_types, dict) -> OciAccount
-        """OCI account details
+        """Get OCI account details
 
         :param infrastructure_id: Id of the OCI account
         :type infrastructure_id: string_types, required

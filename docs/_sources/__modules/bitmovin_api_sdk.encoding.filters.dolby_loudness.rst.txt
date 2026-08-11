@@ -1,0 +1,37 @@
+bitmovin\_api\_sdk.encoding.filters.dolby\_loudness package
+===========================================================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   bitmovin_api_sdk.encoding.filters.dolby_loudness.customdata
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.encoding.filters.dolby\_loudness.dolby\_loudness\_api module
+-------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.filters.dolby_loudness.dolby_loudness_api
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+bitmovin\_api\_sdk.encoding.filters.dolby\_loudness.dolby\_loudness\_filter\_list\_query\_params module
+-------------------------------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.filters.dolby_loudness.dolby_loudness_filter_list_query_params
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.encoding.filters.dolby_loudness
+   :members:
+   :show-inheritance:
+   :undoc-members:

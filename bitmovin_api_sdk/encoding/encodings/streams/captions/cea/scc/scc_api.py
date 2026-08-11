@@ -33,7 +33,7 @@ class SccApi(BaseApi):
 
     def create(self, encoding_id, stream_id, scc_caption, **kwargs):
         # type: (string_types, string_types, SccCaption, dict) -> SccCaption
-        """Embed SCC captions as 608/708 into Stream
+        """Create SCC captions as 608/708
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -55,7 +55,7 @@ class SccApi(BaseApi):
 
     def delete(self, encoding_id, stream_id, captions_id, **kwargs):
         # type: (string_types, string_types, string_types, dict) -> BitmovinResponse
-        """Delete SCC captions as 608/708 from Stream
+        """Delete SCC captions as 608/708
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -76,7 +76,7 @@ class SccApi(BaseApi):
 
     def get(self, encoding_id, stream_id, captions_id, **kwargs):
         # type: (string_types, string_types, string_types, dict) -> SccCaption
-        """Embed SCC captions as 608/708 Details
+        """Get SCC captions as 608/708 details
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -97,7 +97,7 @@ class SccApi(BaseApi):
 
     def list(self, encoding_id, stream_id, query_params=None, **kwargs):
         # type: (string_types, string_types, SccCaptionListQueryParams, dict) -> SccCaption
-        """List SCC captions as 608/708 from Stream
+        """List SCC captions as 608/708
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required

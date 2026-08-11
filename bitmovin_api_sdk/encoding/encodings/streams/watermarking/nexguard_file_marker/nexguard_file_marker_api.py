@@ -33,7 +33,7 @@ class NexguardFileMarkerApi(BaseApi):
 
     def create(self, encoding_id, stream_id, nex_guard_file_marker, **kwargs):
         # type: (string_types, string_types, NexGuardFileMarker, dict) -> NexGuardFileMarker
-        """Add a nexguard file marker watermarking configurations
+        """Create a nexguard file marker watermarking configurations
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -55,7 +55,7 @@ class NexguardFileMarkerApi(BaseApi):
 
     def delete(self, encoding_id, stream_id, nexguard_id, **kwargs):
         # type: (string_types, string_types, string_types, dict) -> BitmovinResponse
-        """Delete nexguard file marker watermarking configurations
+        """Delete Nexguard file marker watermarking configurations
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -76,7 +76,7 @@ class NexguardFileMarkerApi(BaseApi):
 
     def get(self, encoding_id, stream_id, nexguard_id, **kwargs):
         # type: (string_types, string_types, string_types, dict) -> NexGuardFileMarker
-        """Nexguard file marker watermarking configurations details
+        """Get Nexguard file marker watermarking configurations details
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required

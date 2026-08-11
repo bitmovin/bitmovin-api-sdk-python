@@ -25,7 +25,7 @@ class DvbSubtitleApi(BaseApi):
 
     def create(self, encoding_id, dvb_subtitle_input_stream, **kwargs):
         # type: (string_types, DvbSubtitleInputStream, dict) -> DvbSubtitleInputStream
-        """Add DVB Subtitle Input Stream
+        """Create DVB Subtitle Input Stream
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -64,7 +64,7 @@ class DvbSubtitleApi(BaseApi):
 
     def get(self, encoding_id, input_stream_id, **kwargs):
         # type: (string_types, string_types, dict) -> DvbSubtitleInputStream
-        """DVB Subtitle Input Stream Details
+        """Get DVB Subtitle Input Stream details
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required

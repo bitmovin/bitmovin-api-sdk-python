@@ -59,7 +59,7 @@ class WatchFoldersApi(BaseApi):
 
     def get(self, watch_folder_id, **kwargs):
         # type: (string_types, dict) -> WatchFolder
-        """Watch Folder details
+        """Get Watch Folder details
 
         :param watch_folder_id: Id of the Watch Folder
         :type watch_folder_id: string_types, required
@@ -76,7 +76,7 @@ class WatchFoldersApi(BaseApi):
 
     def list(self, query_params=None, **kwargs):
         # type: (WatchFolderListQueryParams, dict) -> WatchFolder
-        """List all Watch Folders
+        """List Watch Folders
 
         :param query_params: Query parameters
         :type query_params: WatchFolderListQueryParams

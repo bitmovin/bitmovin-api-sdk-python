@@ -25,7 +25,7 @@ class LiveEncodingHeartbeatApi(BaseApi):
 
     def create(self, live_encoding_heartbeat_webhook, **kwargs):
         # type: (LiveEncodingHeartbeatWebhook, dict) -> LiveEncodingHeartbeatWebhook
-        """Add &#39;Live Encoding Heartbeat&#39; Webhook
+        """Create &#39;Live Encoding Heartbeat&#39; Webhook
 
         :param live_encoding_heartbeat_webhook: The &#39;Live Encoding Heartbeat&#39; Webhook to be added.
         :type live_encoding_heartbeat_webhook: LiveEncodingHeartbeatWebhook, required
@@ -59,7 +59,7 @@ class LiveEncodingHeartbeatApi(BaseApi):
 
     def get_by_webhook_id(self, webhook_id, **kwargs):
         # type: (string_types, dict) -> LiveEncodingHeartbeatWebhook
-        """&#39;Live Encoding Heartbeat&#39; Webhook Details
+        """Get &#39;Live Encoding Heartbeat&#39; Webhook details
 
         :param webhook_id: Id of the webhook
         :type webhook_id: string_types, required

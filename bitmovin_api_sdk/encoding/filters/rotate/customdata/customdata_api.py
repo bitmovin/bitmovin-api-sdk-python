@@ -23,7 +23,7 @@ class CustomdataApi(BaseApi):
 
     def get(self, filter_id, **kwargs):
         # type: (string_types, dict) -> CustomData
-        """Rotate Filter Custom Data
+        """Get Rotate Filter Custom Data
 
         :param filter_id: Id of the Rotate Filter.
         :type filter_id: string_types, required

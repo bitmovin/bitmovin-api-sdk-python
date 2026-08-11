@@ -47,7 +47,7 @@ class EncodingsApi(BaseApi):
 
     def get(self, encoding_id, **kwargs):
         # type: (string_types, dict) -> EncodingStats
-        """Get Statistics from an Encoding
+        """Get Encoding Statistics
 
         :param encoding_id: Id of the encoding
         :type encoding_id: string_types, required

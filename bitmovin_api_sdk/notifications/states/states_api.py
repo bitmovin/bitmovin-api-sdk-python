@@ -24,7 +24,7 @@ class StatesApi(BaseApi):
 
     def list(self, notification_id, resource_id, query_params=None, **kwargs):
         # type: (string_types, string_types, NotificationStateEntryListQueryParams, dict) -> NotificationStateEntry
-        """List Notification State History (Specific Resource)
+        """List Notification State History for a specific Resource
 
         :param notification_id: Id of the notification
         :type notification_id: string_types, required

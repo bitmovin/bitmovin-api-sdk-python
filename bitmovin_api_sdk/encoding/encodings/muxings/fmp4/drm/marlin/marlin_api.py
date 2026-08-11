@@ -33,7 +33,7 @@ class MarlinApi(BaseApi):
 
     def create(self, encoding_id, muxing_id, marlin_drm, **kwargs):
         # type: (string_types, string_types, MarlinDrm, dict) -> MarlinDrm
-        """Add Marlin DRM to an fMP4 muxing
+        """Create Marlin DRM to an fMP4 muxing
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -76,7 +76,7 @@ class MarlinApi(BaseApi):
 
     def get(self, encoding_id, muxing_id, drm_id, **kwargs):
         # type: (string_types, string_types, string_types, dict) -> MarlinDrm
-        """Marlin DRM Details of an fMP4 muxing
+        """Get Marlin DRM from an fMP4 muxing details
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required

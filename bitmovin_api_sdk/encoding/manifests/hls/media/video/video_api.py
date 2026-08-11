@@ -26,7 +26,7 @@ class VideoApi(BaseApi):
 
     def create(self, manifest_id, video_media_info, **kwargs):
         # type: (string_types, VideoMediaInfo, dict) -> VideoMediaInfo
-        """Add Video Media
+        """Create Video Media
 
         :param manifest_id: Id of the hls manifest.
         :type manifest_id: string_types, required
@@ -65,7 +65,7 @@ class VideoApi(BaseApi):
 
     def get(self, manifest_id, media_id, **kwargs):
         # type: (string_types, string_types, dict) -> VideoMediaInfo
-        """Video Media Details
+        """Get Video Media details
 
         :param manifest_id: Id of the hls manifest.
         :type manifest_id: string_types, required
@@ -84,7 +84,7 @@ class VideoApi(BaseApi):
 
     def list(self, manifest_id, query_params=None, **kwargs):
         # type: (string_types, VideoMediaInfoListQueryParams, dict) -> VideoMediaInfo
-        """List all Video Media
+        """List Video Media
 
         :param manifest_id: Id of the hls manifest.
         :type manifest_id: string_types, required

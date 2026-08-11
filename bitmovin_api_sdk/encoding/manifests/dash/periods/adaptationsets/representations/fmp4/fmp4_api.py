@@ -42,7 +42,7 @@ class Fmp4Api(BaseApi):
 
     def create(self, manifest_id, period_id, adaptationset_id, dash_fmp4_representation, **kwargs):
         # type: (string_types, string_types, string_types, DashFmp4Representation, dict) -> DashFmp4Representation
-        """Add fMP4 Representation
+        """Create fMP4 Representation
 
         :param manifest_id: Id of the manifest
         :type manifest_id: string_types, required
@@ -89,7 +89,7 @@ class Fmp4Api(BaseApi):
 
     def get(self, manifest_id, period_id, adaptationset_id, representation_id, **kwargs):
         # type: (string_types, string_types, string_types, string_types, dict) -> DashFmp4Representation
-        """fMP4 Representation Details
+        """Get fMP4 Representation details
 
         :param manifest_id: Id of the manifest
         :type manifest_id: string_types, required
@@ -112,7 +112,7 @@ class Fmp4Api(BaseApi):
 
     def list(self, manifest_id, period_id, adaptationset_id, query_params=None, **kwargs):
         # type: (string_types, string_types, string_types, DashFmp4RepresentationListQueryParams, dict) -> DashFmp4Representation
-        """List all fMP4 Representations
+        """List fMP4 Representations
 
         :param manifest_id: Id of the manifest
         :type manifest_id: string_types, required

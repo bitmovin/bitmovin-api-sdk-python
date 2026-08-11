@@ -12,6 +12,7 @@ from bitmovin_api_sdk.encoding.filters.enhanced_deinterlace.enhanced_deinterlace
 from bitmovin_api_sdk.encoding.filters.audio_mix.audio_mix_api import AudioMixApi
 from bitmovin_api_sdk.encoding.filters.denoise_hqdn3d.denoise_hqdn3d_api import DenoiseHqdn3dApi
 from bitmovin_api_sdk.encoding.filters.ebu_r128_single_pass.ebu_r128_single_pass_api import EbuR128SinglePassApi
+from bitmovin_api_sdk.encoding.filters.dolby_loudness.dolby_loudness_api import DolbyLoudnessApi
 from bitmovin_api_sdk.encoding.filters.text.text_api import TextApi
 from bitmovin_api_sdk.encoding.filters.interlace.interlace_api import InterlaceApi
 from bitmovin_api_sdk.encoding.filters.unsharp.unsharp_api import UnsharpApi

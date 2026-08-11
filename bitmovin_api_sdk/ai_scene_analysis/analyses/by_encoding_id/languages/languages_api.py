@@ -23,7 +23,7 @@ class LanguagesApi(BaseApi):
 
     def get(self, encoding_id, **kwargs):
         # type: (string_types, dict) -> SceneAnalysisLanguagesResponse
-        """Get AI scene analysis languages by encoding ID
+        """Get AI Scene Analysis languages
 
         :param encoding_id: The encoding ID
         :type encoding_id: string_types, required

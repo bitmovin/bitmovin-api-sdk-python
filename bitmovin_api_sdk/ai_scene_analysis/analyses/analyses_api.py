@@ -33,7 +33,7 @@ class AnalysesApi(BaseApi):
 
     def list(self, query_params=None, **kwargs):
         # type: (SceneAnalysisListItemListQueryParams, dict) -> SceneAnalysisListItem
-        """List AI scene analyses
+        """List AI Scene Analyses
 
         :param query_params: Query parameters
         :type query_params: SceneAnalysisListItemListQueryParams

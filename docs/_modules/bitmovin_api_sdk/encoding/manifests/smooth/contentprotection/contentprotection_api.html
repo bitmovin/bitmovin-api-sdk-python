@@ -107,7 +107,7 @@
 <a class="viewcode-back" href="../../../../../../__modules/bitmovin_api_sdk.encoding.manifests.smooth.contentprotection.html#bitmovin_api_sdk.encoding.manifests.smooth.contentprotection.contentprotection_api.ContentprotectionApi.create">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">manifest_id</span><span class="p">,</span> <span class="n">smooth_manifest_content_protection</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, SmoothManifestContentProtection, dict) -&gt; SmoothManifestContentProtection</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Add Content Protection to Smooth Streaming</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Create Content Protection to Smooth Streaming</span>
 
 <span class="sd">        :param manifest_id: Id of the Smooth Streaming manifest.</span>
 <span class="sd">        :type manifest_id: string_types, required</span>
@@ -130,7 +130,7 @@
 <a class="viewcode-back" href="../../../../../../__modules/bitmovin_api_sdk.encoding.manifests.smooth.contentprotection.html#bitmovin_api_sdk.encoding.manifests.smooth.contentprotection.contentprotection_api.ContentprotectionApi.delete">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">delete</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">manifest_id</span><span class="p">,</span> <span class="n">protection_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, string_types, dict) -&gt; BitmovinResponse</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Delete Content Protection of Smooth Streaming</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Delete Content Protection of Smooth Streaming Representation</span>
 
 <span class="sd">        :param manifest_id: Id of the Smooth Streaming manifest.</span>
 <span class="sd">        :type manifest_id: string_types, required</span>
@@ -152,7 +152,7 @@
 <a class="viewcode-back" href="../../../../../../__modules/bitmovin_api_sdk.encoding.manifests.smooth.contentprotection.html#bitmovin_api_sdk.encoding.manifests.smooth.contentprotection.contentprotection_api.ContentprotectionApi.get">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">manifest_id</span><span class="p">,</span> <span class="n">protection_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, string_types, dict) -&gt; SmoothManifestContentProtection</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Content Protection of Smooth Streaming Representation Details</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get Content Protection of Smooth Streaming Representation details</span>
 
 <span class="sd">        :param manifest_id: Id of the Smooth Streaming manifest.</span>
 <span class="sd">        :type manifest_id: string_types, required</span>

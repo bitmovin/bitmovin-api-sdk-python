@@ -120,7 +120,7 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="bitmovin_api_sdk.notifications.webhooks.encoding.encodings.encoding_status_changed.encoding_status_changed_api.EncodingStatusChangedApi.create">
 <span class="sig-name descname"><span class="pre">create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">webhook_notification_with_stream_conditions_request</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/notifications/webhooks/encoding/encodings/encoding_status_changed/encoding_status_changed_api.html#EncodingStatusChangedApi.create"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bitmovin_api_sdk.notifications.webhooks.encoding.encodings.encoding_status_changed.encoding_status_changed_api.EncodingStatusChangedApi.create" title="Link to this definition"></a></dt>
-<dd><p>Add Encoding Changed Webhook Notification (All Encodings)</p>
+<dd><p>Create 'Encoding Status Changed' Webhook</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>webhook_notification_with_stream_conditions_request</strong> (<a class="reference internal" href="bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.webhook_notification_with_stream_conditions_request.WebhookNotificationWithStreamConditionsRequest" title="bitmovin_api_sdk.models.webhook_notification_with_stream_conditions_request.WebhookNotificationWithStreamConditionsRequest"><em>WebhookNotificationWithStreamConditionsRequest</em></a><em>, </em><em>required</em>) – The webhook notifications object. For conditions, following attributes are possible: 'type': 'Input file download', 'Input file analysis', 'Per-Title analysis', 'Encoding', 'Progressive Muxing' 'progress': number in range of 0-100 'status': 'RUNNING', 'FINISHED', 'ERROR' Examples: To only get notified about the encoding process, create a Condition object and set attribute&amp;#x3D;'type', value&amp;#x3D;'Encoding', operator&amp;#x3D;EQUAL To only get notified if a workflow step is finished, create a Condition object and set attribute&amp;#x3D;'status', value&amp;#x3D;'FINISHED', operator&amp;#x3D;EQUAL To only get notified if a workflow step is over 50%,  create a Condition object and set attribute&amp;#x3D;'progress', value&amp;#x3D;'50', operator&amp;#x3D;GREATER_THAN</p>
@@ -137,7 +137,7 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="bitmovin_api_sdk.notifications.webhooks.encoding.encodings.encoding_status_changed.encoding_status_changed_api.EncodingStatusChangedApi.create_by_encoding_id">
 <span class="sig-name descname"><span class="pre">create_by_encoding_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">encoding_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">webhook_notification_with_stream_conditions_request</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/notifications/webhooks/encoding/encodings/encoding_status_changed/encoding_status_changed_api.html#EncodingStatusChangedApi.create_by_encoding_id"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bitmovin_api_sdk.notifications.webhooks.encoding.encodings.encoding_status_changed.encoding_status_changed_api.EncodingStatusChangedApi.create_by_encoding_id" title="Link to this definition"></a></dt>
-<dd><p>Add Encoding Changed Webhook Notification (Specific Encoding)</p>
+<dd><p>Create 'Encoding Status Changed' Webhook for a specific Encoding</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -157,7 +157,7 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="bitmovin_api_sdk.notifications.webhooks.encoding.encodings.encoding_status_changed.encoding_status_changed_api.EncodingStatusChangedApi.delete_by_webhook_id">
 <span class="sig-name descname"><span class="pre">delete_by_webhook_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">notification_id</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/notifications/webhooks/encoding/encodings/encoding_status_changed/encoding_status_changed_api.html#EncodingStatusChangedApi.delete_by_webhook_id"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bitmovin_api_sdk.notifications.webhooks.encoding.encodings.encoding_status_changed.encoding_status_changed_api.EncodingStatusChangedApi.delete_by_webhook_id" title="Link to this definition"></a></dt>
-<dd><p>Delete Encoding Status Changed Webhook</p>
+<dd><p>Delete 'Encoding Status Changed' Webhook</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>notification_id</strong> (<em>string_types</em><em>, </em><em>required</em>) – Id of the webhook</p>
@@ -174,7 +174,7 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="bitmovin_api_sdk.notifications.webhooks.encoding.encodings.encoding_status_changed.encoding_status_changed_api.EncodingStatusChangedApi.update">
 <span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">notification_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">webhook_notification_with_stream_conditions_request</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/notifications/webhooks/encoding/encodings/encoding_status_changed/encoding_status_changed_api.html#EncodingStatusChangedApi.update"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bitmovin_api_sdk.notifications.webhooks.encoding.encodings.encoding_status_changed.encoding_status_changed_api.EncodingStatusChangedApi.update" title="Link to this definition"></a></dt>
-<dd><p>Replace Encoding Status Changed Webhook Notification</p>
+<dd><p>Update 'Encoding Status Changed' Webhook</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">

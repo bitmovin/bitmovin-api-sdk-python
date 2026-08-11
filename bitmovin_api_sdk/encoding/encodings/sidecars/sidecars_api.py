@@ -41,7 +41,7 @@ class SidecarsApi(BaseApi):
 
     def create(self, encoding_id, sidecar_file, **kwargs):
         # type: (string_types, SidecarFile, dict) -> SidecarFile
-        """Add Sidecar
+        """Create Sidecar
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -80,7 +80,7 @@ class SidecarsApi(BaseApi):
 
     def get(self, encoding_id, sidecar_id, **kwargs):
         # type: (string_types, string_types, dict) -> SidecarFile
-        """Sidecar Details
+        """Get Sidecar details
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required

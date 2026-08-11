@@ -25,7 +25,7 @@ class SrtApi(BaseApi):
 
     def create(self, encoding_id, stream_id, burn_in_subtitle_srt, **kwargs):
         # type: (string_types, string_types, BurnInSubtitleSrt, dict) -> BurnInSubtitleSrt
-        """Burn-In SRT Subtitle into Stream
+        """Create Burn-In SRT Subtitle
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -47,7 +47,7 @@ class SrtApi(BaseApi):
 
     def delete(self, encoding_id, stream_id, subtitle_id, **kwargs):
         # type: (string_types, string_types, string_types, dict) -> BitmovinResponse
-        """Delete Burn-In SRT Subtitle from Stream
+        """Delete Burn-In SRT Subtitle
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -68,7 +68,7 @@ class SrtApi(BaseApi):
 
     def get(self, encoding_id, stream_id, subtitle_id, **kwargs):
         # type: (string_types, string_types, string_types, dict) -> BurnInSubtitleSrt
-        """Get Burn-In SRT Subtitle Details
+        """Get Burn-In SRT Subtitle details
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -89,7 +89,7 @@ class SrtApi(BaseApi):
 
     def list(self, encoding_id, stream_id, query_params=None, **kwargs):
         # type: (string_types, string_types, BurnInSubtitleSrtListQueryParams, dict) -> BurnInSubtitleSrt
-        """List the Burn-In SRT subtitles of a stream
+        """List Burn-In SRT Subtitles
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required

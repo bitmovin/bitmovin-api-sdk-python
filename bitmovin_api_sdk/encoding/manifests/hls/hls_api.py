@@ -93,7 +93,7 @@ class HlsApi(BaseApi):
 
     def get(self, manifest_id, **kwargs):
         # type: (string_types, dict) -> HlsManifest
-        """HLS Manifest Details
+        """Get HLS Manifest details
 
         :param manifest_id: Id of the HLS Manifest.
         :type manifest_id: string_types, required
@@ -110,7 +110,7 @@ class HlsApi(BaseApi):
 
     def get_start_request(self, manifest_id, **kwargs):
         # type: (string_types, dict) -> StartManifestRequest
-        """Manifest Start Details
+        """HLS Manifest Start Details
 
         :param manifest_id: ID of the manifest
         :type manifest_id: string_types, required

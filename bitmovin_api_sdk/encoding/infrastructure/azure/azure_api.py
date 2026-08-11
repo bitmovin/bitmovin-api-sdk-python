@@ -32,7 +32,7 @@ class AzureApi(BaseApi):
 
     def create(self, azure_account, **kwargs):
         # type: (AzureAccount, dict) -> AzureAccount
-        """Add Azure Account
+        """Create Azure Account
 
         :param azure_account: The Azure Account to be added
         :type azure_account: AzureAccount, required
@@ -66,7 +66,7 @@ class AzureApi(BaseApi):
 
     def get(self, infrastructure_id, **kwargs):
         # type: (string_types, dict) -> AzureAccount
-        """Azure Account Details
+        """Get Azure Account details
 
         :param infrastructure_id: Id of the Azure account
         :type infrastructure_id: string_types, required

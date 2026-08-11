@@ -49,7 +49,7 @@ class PackedAudioApi(BaseApi):
 
     def create(self, encoding_id, packed_audio_muxing, **kwargs):
         # type: (string_types, PackedAudioMuxing, dict) -> PackedAudioMuxing
-        """Add Packed Audio muxing
+        """Create Packed Audio muxing
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -88,7 +88,7 @@ class PackedAudioApi(BaseApi):
 
     def get(self, encoding_id, muxing_id, **kwargs):
         # type: (string_types, string_types, dict) -> PackedAudioMuxing
-        """Packed Audio muxing details
+        """Get Packed Audio muxing details
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required

@@ -67,7 +67,7 @@ class Vp9Api(BaseApi):
 
     def get(self, configuration_id, **kwargs):
         # type: (string_types, dict) -> Vp9VideoConfiguration
-        """VP9 Codec Configuration Details
+        """Get VP9 Codec Configuration details
 
         :param configuration_id: Id of the codec configuration
         :type configuration_id: string_types, required

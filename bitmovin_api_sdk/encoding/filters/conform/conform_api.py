@@ -67,7 +67,7 @@ class ConformApi(BaseApi):
 
     def get(self, filter_id, **kwargs):
         # type: (string_types, dict) -> ConformFilter
-        """Conform Filter Details
+        """Get Conform Filter details
 
         :param filter_id: Id of the conform filter
         :type filter_id: string_types, required

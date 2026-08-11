@@ -25,7 +25,7 @@ class ContentprotectionApi(BaseApi):
 
     def create(self, manifest_id, period_id, adaptationset_id, representation_id, content_protection, **kwargs):
         # type: (string_types, string_types, string_types, string_types, ContentProtection, dict) -> ContentProtection
-        """Add Content Protection to fMP4 Representation
+        """Create Content Protection to fMP4 Representation
 
         :param manifest_id: Id of the manifest
         :type manifest_id: string_types, required
@@ -76,7 +76,7 @@ class ContentprotectionApi(BaseApi):
 
     def get(self, manifest_id, period_id, adaptationset_id, representation_id, contentprotection_id, **kwargs):
         # type: (string_types, string_types, string_types, string_types, string_types, dict) -> ContentProtection
-        """fMP4 Representation Content Protection Details
+        """Get fMP4 Representation Content Protection details
 
         :param manifest_id: Id of the manifest
         :type manifest_id: string_types, required
@@ -101,7 +101,7 @@ class ContentprotectionApi(BaseApi):
 
     def list(self, manifest_id, period_id, adaptationset_id, representation_id, query_params=None, **kwargs):
         # type: (string_types, string_types, string_types, string_types, ContentProtectionListQueryParams, dict) -> ContentProtection
-        """List all fMP4 Representation Content Protections
+        """List fMP4 Representation Content Protections
 
         :param manifest_id: Id of the manifest
         :type manifest_id: string_types, required

@@ -25,7 +25,7 @@ class CustomXmlElementsApi(BaseApi):
 
     def create(self, manifest_id, period_id, custom_xml_element, **kwargs):
         # type: (string_types, string_types, CustomXmlElement, dict) -> CustomXmlElement
-        """Add Custom XML Element to Period
+        """Create Custom XML Element to Period
 
         :param manifest_id: Id of the manifest
         :type manifest_id: string_types, required
@@ -68,7 +68,7 @@ class CustomXmlElementsApi(BaseApi):
 
     def get(self, manifest_id, period_id, custom_xml_element_id, **kwargs):
         # type: (string_types, string_types, string_types, dict) -> CustomXmlElement
-        """Custom XML Element Details
+        """Get Custom XML Element details
 
         :param manifest_id: Id of the manifest
         :type manifest_id: string_types, required
@@ -89,7 +89,7 @@ class CustomXmlElementsApi(BaseApi):
 
     def list(self, manifest_id, period_id, query_params=None, **kwargs):
         # type: (string_types, string_types, CustomXmlElementListQueryParams, dict) -> CustomXmlElement
-        """List all Custom XML Elements of Period
+        """List Custom XML Elements of Period
 
         :param manifest_id: Id of the manifest
         :type manifest_id: string_types, required

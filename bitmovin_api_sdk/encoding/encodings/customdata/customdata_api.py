@@ -23,7 +23,7 @@ class CustomdataApi(BaseApi):
 
     def get(self, encoding_id, **kwargs):
         # type: (string_types, dict) -> CustomData
-        """Encoding Custom Data
+        """Get Encoding Custom Data
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required

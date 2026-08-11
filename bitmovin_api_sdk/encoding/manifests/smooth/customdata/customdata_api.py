@@ -23,7 +23,7 @@ class CustomdataApi(BaseApi):
 
     def get(self, manifest_id, **kwargs):
         # type: (string_types, dict) -> CustomData
-        """Smooth Streaming Manifest Custom Data
+        """Get Smooth Streaming Manifest Custom Data
 
         :param manifest_id: UUID of the Smooth Streaming manifest
         :type manifest_id: string_types, required

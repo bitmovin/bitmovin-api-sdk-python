@@ -161,7 +161,7 @@ class EncodingsApi(BaseApi):
 
     def get(self, encoding_id, **kwargs):
         # type: (string_types, dict) -> Encoding
-        """Encoding Details
+        """Get Encoding details
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
@@ -178,7 +178,7 @@ class EncodingsApi(BaseApi):
 
     def get_start_request(self, encoding_id, **kwargs):
         # type: (string_types, dict) -> StartEncodingRequest
-        """Encoding Start Details
+        """Get Encoding Start Details
 
         :param encoding_id: Id of the encoding
         :type encoding_id: string_types, required
@@ -195,7 +195,7 @@ class EncodingsApi(BaseApi):
 
     def list(self, query_params=None, **kwargs):
         # type: (EncodingListQueryParams, dict) -> Encoding
-        """List all Encodings
+        """List Encodings
 
         :param query_params: Query parameters
         :type query_params: EncodingListQueryParams
@@ -253,7 +253,7 @@ class EncodingsApi(BaseApi):
 
     def start(self, encoding_id, start_encoding_request=None, **kwargs):
         # type: (string_types, StartEncodingRequest, dict) -> BitmovinResponse
-        """Start VoD Encoding
+        """Start VOD Encoding
 
         :param encoding_id: Id of the encoding
         :type encoding_id: string_types, required
@@ -273,7 +273,7 @@ class EncodingsApi(BaseApi):
 
     def status(self, encoding_id, **kwargs):
         # type: (string_types, dict) -> Task
-        """Encoding Status
+        """Get Encoding Status
 
         :param encoding_id: Id of the encoding
         :type encoding_id: string_types, required
@@ -290,7 +290,7 @@ class EncodingsApi(BaseApi):
 
     def stop(self, encoding_id, **kwargs):
         # type: (string_types, dict) -> BitmovinResponse
-        """Stop Encoding
+        """Stop VOD Encoding
 
         :param encoding_id: Id of the encoding
         :type encoding_id: string_types, required

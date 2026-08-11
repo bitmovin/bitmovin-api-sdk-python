@@ -24,7 +24,7 @@ class ActionsApi(BaseApi):
 
     def patch(self, encoding_id, update_encoding_rtmp_ingest_point_request, **kwargs):
         # type: (string_types, UpdateEncodingRtmpIngestPointRequest, dict) -> UpdateEncodingRtmpIngestPointResponse
-        """Update the ingest points of a Redundant RTMP Input
+        """Update Ingest Points of a Redundant RTMP Input
 
         :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
