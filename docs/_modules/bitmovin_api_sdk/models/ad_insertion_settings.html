@@ -107,8 +107,8 @@
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">types</span> <span class="o">=</span> <span class="p">{</span>
-            <span class="s1">&#39;enable_esam_media_point_insertion&#39;</span><span class="p">:</span> <span class="s1">&#39;bool&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;clock_synchronization_mode&#39;</span><span class="p">:</span> <span class="s1">&#39;ClockSynchronizationMode&#39;</span>
+            <span class="s1">'enable_esam_media_point_insertion'</span><span class="p">:</span> <span class="s1">'bool'</span><span class="p">,</span>
+            <span class="s1">'clock_synchronization_mode'</span><span class="p">:</span> <span class="s1">'ClockSynchronizationMode'</span>
         <span class="p">}</span>
 
         <span class="k">return</span> <span class="n">types</span>
@@ -116,73 +116,73 @@
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">attribute_map</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">attributes</span> <span class="o">=</span> <span class="p">{</span>
-            <span class="s1">&#39;enable_esam_media_point_insertion&#39;</span><span class="p">:</span> <span class="s1">&#39;enableEsamMediaPointInsertion&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;clock_synchronization_mode&#39;</span><span class="p">:</span> <span class="s1">&#39;clockSynchronizationMode&#39;</span>
+            <span class="s1">'enable_esam_media_point_insertion'</span><span class="p">:</span> <span class="s1">'enableEsamMediaPointInsertion'</span><span class="p">,</span>
+            <span class="s1">'clock_synchronization_mode'</span><span class="p">:</span> <span class="s1">'clockSynchronizationMode'</span>
         <span class="p">}</span>
         <span class="k">return</span> <span class="n">attributes</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">enable_esam_media_point_insertion</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; bool</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the enable_esam_media_point_insertion of this AdInsertionSettings.</span>
+<span class="w">        </span><span class="sd">"""Gets the enable_esam_media_point_insertion of this AdInsertionSettings.</span>
 
 <span class="sd">        Enabling this allows on-demand insertion of ESAM MediaPoints. When enabled, the encoder ensures that at least one SCTE-35 data stream is available.</span>
 
 <span class="sd">        :return: The enable_esam_media_point_insertion of this AdInsertionSettings.</span>
 <span class="sd">        :rtype: bool</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_enable_esam_media_point_insertion</span>
 
     <span class="nd">@enable_esam_media_point_insertion</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">enable_esam_media_point_insertion</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">enable_esam_media_point_insertion</span><span class="p">):</span>
         <span class="c1"># type: (bool) -&gt; None</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the enable_esam_media_point_insertion of this AdInsertionSettings.</span>
+<span class="w">        </span><span class="sd">"""Sets the enable_esam_media_point_insertion of this AdInsertionSettings.</span>
 
 <span class="sd">        Enabling this allows on-demand insertion of ESAM MediaPoints. When enabled, the encoder ensures that at least one SCTE-35 data stream is available.</span>
 
 <span class="sd">        :param enable_esam_media_point_insertion: The enable_esam_media_point_insertion of this AdInsertionSettings.</span>
 <span class="sd">        :type: bool</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">if</span> <span class="n">enable_esam_media_point_insertion</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">enable_esam_media_point_insertion</span><span class="p">,</span> <span class="nb">bool</span><span class="p">):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `enable_esam_media_point_insertion`, type has to be `bool`&quot;</span><span class="p">)</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Invalid type for `enable_esam_media_point_insertion`, type has to be `bool`"</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_enable_esam_media_point_insertion</span> <span class="o">=</span> <span class="n">enable_esam_media_point_insertion</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">clock_synchronization_mode</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; ClockSynchronizationMode</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the clock_synchronization_mode of this AdInsertionSettings.</span>
+<span class="w">        </span><span class="sd">"""Gets the clock_synchronization_mode of this AdInsertionSettings.</span>
 
-<span class="sd">        Mode of clock synchronization during ad insertion.  If an HLS manifest is configured that has a PDT source set, the encoder defaults to the equivalent clockSynchronizationMode.  If both, HLS PDT source and clockSynchronizationMode, are set and don&#39;t match, the encoding will fail. </span>
+<span class="sd">        Mode of clock synchronization during ad insertion.  If an HLS manifest is configured that has a PDT source set, the encoder defaults to the equivalent clockSynchronizationMode.  If both, HLS PDT source and clockSynchronizationMode, are set and don't match, the encoding will fail. </span>
 
 <span class="sd">        :return: The clock_synchronization_mode of this AdInsertionSettings.</span>
 <span class="sd">        :rtype: ClockSynchronizationMode</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_clock_synchronization_mode</span>
 
     <span class="nd">@clock_synchronization_mode</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">clock_synchronization_mode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">clock_synchronization_mode</span><span class="p">):</span>
         <span class="c1"># type: (ClockSynchronizationMode) -&gt; None</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the clock_synchronization_mode of this AdInsertionSettings.</span>
+<span class="w">        </span><span class="sd">"""Sets the clock_synchronization_mode of this AdInsertionSettings.</span>
 
-<span class="sd">        Mode of clock synchronization during ad insertion.  If an HLS manifest is configured that has a PDT source set, the encoder defaults to the equivalent clockSynchronizationMode.  If both, HLS PDT source and clockSynchronizationMode, are set and don&#39;t match, the encoding will fail. </span>
+<span class="sd">        Mode of clock synchronization during ad insertion.  If an HLS manifest is configured that has a PDT source set, the encoder defaults to the equivalent clockSynchronizationMode.  If both, HLS PDT source and clockSynchronizationMode, are set and don't match, the encoding will fail. </span>
 
 <span class="sd">        :param clock_synchronization_mode: The clock_synchronization_mode of this AdInsertionSettings.</span>
 <span class="sd">        :type: ClockSynchronizationMode</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">if</span> <span class="n">clock_synchronization_mode</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">clock_synchronization_mode</span><span class="p">,</span> <span class="n">ClockSynchronizationMode</span><span class="p">):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `clock_synchronization_mode`, type has to be `ClockSynchronizationMode`&quot;</span><span class="p">)</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Invalid type for `clock_synchronization_mode`, type has to be `ClockSynchronizationMode`"</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_clock_synchronization_mode</span> <span class="o">=</span> <span class="n">clock_synchronization_mode</span>
 
 <div class="viewcode-block" id="AdInsertionSettings.to_dict">
 <a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.ad_insertion_settings.AdInsertionSettings.to_dict">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""Returns the model properties as a dict"""</span>
         <span class="n">result</span> <span class="o">=</span> <span class="p">{}</span>
 
         <span class="k">for</span> <span class="n">attr</span><span class="p">,</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">six</span><span class="o">.</span><span class="n">iteritems</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">openapi_types</span><span class="p">):</span>
@@ -192,13 +192,13 @@
             <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
                 <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
                     <span class="k">continue</span>
-                <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="p">[</span><span class="n">y</span><span class="o">.</span><span class="n">value</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">Enum</span><span class="p">)</span> <span class="k">else</span> <span class="n">y</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span> <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="s2">&quot;to_dict&quot;</span><span class="p">)</span> <span class="k">else</span> <span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">value</span><span class="p">]]</span>
-            <span class="k">elif</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="s2">&quot;to_dict&quot;</span><span class="p">):</span>
+                <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="p">[</span><span class="n">y</span><span class="o">.</span><span class="n">value</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">Enum</span><span class="p">)</span> <span class="k">else</span> <span class="n">y</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span> <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="s2">"to_dict"</span><span class="p">)</span> <span class="k">else</span> <span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">value</span><span class="p">]]</span>
+            <span class="k">elif</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="s2">"to_dict"</span><span class="p">):</span>
                 <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="n">value</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span>
             <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">Enum</span><span class="p">):</span>
                 <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="n">value</span><span class="o">.</span><span class="n">value</span>
             <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
-                <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="p">(</span><span class="n">v</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span> <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="s2">&quot;to_dict&quot;</span><span class="p">)</span> <span class="k">else</span> <span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span> <span class="ow">in</span> <span class="n">value</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
+                <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="p">(</span><span class="n">v</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span> <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="s2">"to_dict"</span><span class="p">)</span> <span class="k">else</span> <span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span> <span class="ow">in</span> <span class="n">value</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
             <span class="k">else</span><span class="p">:</span>
                 <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="n">value</span>
 
@@ -208,23 +208,23 @@
 <div class="viewcode-block" id="AdInsertionSettings.to_str">
 <a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.ad_insertion_settings.AdInsertionSettings.to_str">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">to_str</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the string representation of the model&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""Returns the string representation of the model"""</span>
         <span class="k">return</span> <span class="n">pprint</span><span class="o">.</span><span class="n">pformat</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">to_dict</span><span class="p">())</span></div>
 
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;For `print` and `pprint`&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""For `print` and `pprint`"""</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">to_str</span><span class="p">()</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns true if both objects are equal&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""Returns true if both objects are equal"""</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">AdInsertionSettings</span><span class="p">):</span>
             <span class="k">return</span> <span class="kc">False</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="vm">__dict__</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__ne__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns true if both objects are not equal&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""Returns true if both objects are not equal"""</span>
         <span class="k">return</span> <span class="ow">not</span> <span class="bp">self</span> <span class="o">==</span> <span class="n">other</span></div>
 
 </pre></div>

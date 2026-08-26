@@ -124,12 +124,12 @@
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">types</span> <span class="o">=</span> <span class="p">{</span>
-            <span class="s1">&#39;manifest_id&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;timeshift&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;live_edge_offset&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;insert_program_date_time&#39;</span><span class="p">:</span> <span class="s1">&#39;bool&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;program_date_time_settings&#39;</span><span class="p">:</span> <span class="s1">&#39;ProgramDateTimeSettings&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;ad_marker_settings&#39;</span><span class="p">:</span> <span class="s1">&#39;HlsManifestAdMarkerSettings&#39;</span>
+            <span class="s1">'manifest_id'</span><span class="p">:</span> <span class="s1">'string_types'</span><span class="p">,</span>
+            <span class="s1">'timeshift'</span><span class="p">:</span> <span class="s1">'float'</span><span class="p">,</span>
+            <span class="s1">'live_edge_offset'</span><span class="p">:</span> <span class="s1">'float'</span><span class="p">,</span>
+            <span class="s1">'insert_program_date_time'</span><span class="p">:</span> <span class="s1">'bool'</span><span class="p">,</span>
+            <span class="s1">'program_date_time_settings'</span><span class="p">:</span> <span class="s1">'ProgramDateTimeSettings'</span><span class="p">,</span>
+            <span class="s1">'ad_marker_settings'</span><span class="p">:</span> <span class="s1">'HlsManifestAdMarkerSettings'</span>
         <span class="p">}</span>
 
         <span class="k">return</span> <span class="n">types</span>
@@ -137,193 +137,193 @@
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">attribute_map</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">attributes</span> <span class="o">=</span> <span class="p">{</span>
-            <span class="s1">&#39;manifest_id&#39;</span><span class="p">:</span> <span class="s1">&#39;manifestId&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;timeshift&#39;</span><span class="p">:</span> <span class="s1">&#39;timeshift&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;live_edge_offset&#39;</span><span class="p">:</span> <span class="s1">&#39;liveEdgeOffset&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;insert_program_date_time&#39;</span><span class="p">:</span> <span class="s1">&#39;insertProgramDateTime&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;program_date_time_settings&#39;</span><span class="p">:</span> <span class="s1">&#39;programDateTimeSettings&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;ad_marker_settings&#39;</span><span class="p">:</span> <span class="s1">&#39;adMarkerSettings&#39;</span>
+            <span class="s1">'manifest_id'</span><span class="p">:</span> <span class="s1">'manifestId'</span><span class="p">,</span>
+            <span class="s1">'timeshift'</span><span class="p">:</span> <span class="s1">'timeshift'</span><span class="p">,</span>
+            <span class="s1">'live_edge_offset'</span><span class="p">:</span> <span class="s1">'liveEdgeOffset'</span><span class="p">,</span>
+            <span class="s1">'insert_program_date_time'</span><span class="p">:</span> <span class="s1">'insertProgramDateTime'</span><span class="p">,</span>
+            <span class="s1">'program_date_time_settings'</span><span class="p">:</span> <span class="s1">'programDateTimeSettings'</span><span class="p">,</span>
+            <span class="s1">'ad_marker_settings'</span><span class="p">:</span> <span class="s1">'adMarkerSettings'</span>
         <span class="p">}</span>
         <span class="k">return</span> <span class="n">attributes</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">manifest_id</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; string_types</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the manifest_id of this LiveHlsManifest.</span>
+<span class="w">        </span><span class="sd">"""Gets the manifest_id of this LiveHlsManifest.</span>
 
 <span class="sd">        HLS manifest id (required)</span>
 
 <span class="sd">        :return: The manifest_id of this LiveHlsManifest.</span>
 <span class="sd">        :rtype: string_types</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_manifest_id</span>
 
     <span class="nd">@manifest_id</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">manifest_id</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">manifest_id</span><span class="p">):</span>
         <span class="c1"># type: (string_types) -&gt; None</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the manifest_id of this LiveHlsManifest.</span>
+<span class="w">        </span><span class="sd">"""Sets the manifest_id of this LiveHlsManifest.</span>
 
 <span class="sd">        HLS manifest id (required)</span>
 
 <span class="sd">        :param manifest_id: The manifest_id of this LiveHlsManifest.</span>
 <span class="sd">        :type: string_types</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">if</span> <span class="n">manifest_id</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">manifest_id</span><span class="p">,</span> <span class="n">string_types</span><span class="p">):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `manifest_id`, type has to be `string_types`&quot;</span><span class="p">)</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Invalid type for `manifest_id`, type has to be `string_types`"</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_manifest_id</span> <span class="o">=</span> <span class="n">manifest_id</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">timeshift</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; float</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the timeshift of this LiveHlsManifest.</span>
+<span class="w">        </span><span class="sd">"""Gets the timeshift of this LiveHlsManifest.</span>
 
 <span class="sd">        Timeshift in seconds. We recommend to use a timeshift value not greater than 3 hours (10800.0 seconds). Longer values could negatively impact the manifest update frequency. </span>
 
 <span class="sd">        :return: The timeshift of this LiveHlsManifest.</span>
 <span class="sd">        :rtype: float</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_timeshift</span>
 
     <span class="nd">@timeshift</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">timeshift</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">timeshift</span><span class="p">):</span>
         <span class="c1"># type: (float) -&gt; None</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the timeshift of this LiveHlsManifest.</span>
+<span class="w">        </span><span class="sd">"""Sets the timeshift of this LiveHlsManifest.</span>
 
 <span class="sd">        Timeshift in seconds. We recommend to use a timeshift value not greater than 3 hours (10800.0 seconds). Longer values could negatively impact the manifest update frequency. </span>
 
 <span class="sd">        :param timeshift: The timeshift of this LiveHlsManifest.</span>
 <span class="sd">        :type: float</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">if</span> <span class="n">timeshift</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">timeshift</span><span class="p">,</span> <span class="p">(</span><span class="nb">float</span><span class="p">,</span> <span class="nb">int</span><span class="p">)):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `timeshift`, type has to be `float`&quot;</span><span class="p">)</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Invalid type for `timeshift`, type has to be `float`"</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_timeshift</span> <span class="o">=</span> <span class="n">timeshift</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">live_edge_offset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; float</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the live_edge_offset of this LiveHlsManifest.</span>
+<span class="w">        </span><span class="sd">"""Gets the live_edge_offset of this LiveHlsManifest.</span>
 
 <span class="sd">        Live edge offset in seconds</span>
 
 <span class="sd">        :return: The live_edge_offset of this LiveHlsManifest.</span>
 <span class="sd">        :rtype: float</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_live_edge_offset</span>
 
     <span class="nd">@live_edge_offset</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">live_edge_offset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">live_edge_offset</span><span class="p">):</span>
         <span class="c1"># type: (float) -&gt; None</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the live_edge_offset of this LiveHlsManifest.</span>
+<span class="w">        </span><span class="sd">"""Sets the live_edge_offset of this LiveHlsManifest.</span>
 
 <span class="sd">        Live edge offset in seconds</span>
 
 <span class="sd">        :param live_edge_offset: The live_edge_offset of this LiveHlsManifest.</span>
 <span class="sd">        :type: float</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">if</span> <span class="n">live_edge_offset</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">live_edge_offset</span><span class="p">,</span> <span class="p">(</span><span class="nb">float</span><span class="p">,</span> <span class="nb">int</span><span class="p">)):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `live_edge_offset`, type has to be `float`&quot;</span><span class="p">)</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Invalid type for `live_edge_offset`, type has to be `float`"</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_live_edge_offset</span> <span class="o">=</span> <span class="n">live_edge_offset</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">insert_program_date_time</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; bool</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the insert_program_date_time of this LiveHlsManifest.</span>
+<span class="w">        </span><span class="sd">"""Gets the insert_program_date_time of this LiveHlsManifest.</span>
 
 <span class="sd">        Specifies if the EXT-X-PROGRAM-DATETIME tag will be included</span>
 
 <span class="sd">        :return: The insert_program_date_time of this LiveHlsManifest.</span>
 <span class="sd">        :rtype: bool</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_insert_program_date_time</span>
 
     <span class="nd">@insert_program_date_time</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">insert_program_date_time</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">insert_program_date_time</span><span class="p">):</span>
         <span class="c1"># type: (bool) -&gt; None</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the insert_program_date_time of this LiveHlsManifest.</span>
+<span class="w">        </span><span class="sd">"""Sets the insert_program_date_time of this LiveHlsManifest.</span>
 
 <span class="sd">        Specifies if the EXT-X-PROGRAM-DATETIME tag will be included</span>
 
 <span class="sd">        :param insert_program_date_time: The insert_program_date_time of this LiveHlsManifest.</span>
 <span class="sd">        :type: bool</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">if</span> <span class="n">insert_program_date_time</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">insert_program_date_time</span><span class="p">,</span> <span class="nb">bool</span><span class="p">):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `insert_program_date_time`, type has to be `bool`&quot;</span><span class="p">)</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Invalid type for `insert_program_date_time`, type has to be `bool`"</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_insert_program_date_time</span> <span class="o">=</span> <span class="n">insert_program_date_time</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">program_date_time_settings</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; ProgramDateTimeSettings</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the program_date_time_settings of this LiveHlsManifest.</span>
+<span class="w">        </span><span class="sd">"""Gets the program_date_time_settings of this LiveHlsManifest.</span>
 
 <span class="sd">        Configuration for the EXT-X-PROGRAM-DATETIME tag</span>
 
 <span class="sd">        :return: The program_date_time_settings of this LiveHlsManifest.</span>
 <span class="sd">        :rtype: ProgramDateTimeSettings</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_program_date_time_settings</span>
 
     <span class="nd">@program_date_time_settings</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">program_date_time_settings</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">program_date_time_settings</span><span class="p">):</span>
         <span class="c1"># type: (ProgramDateTimeSettings) -&gt; None</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the program_date_time_settings of this LiveHlsManifest.</span>
+<span class="w">        </span><span class="sd">"""Sets the program_date_time_settings of this LiveHlsManifest.</span>
 
 <span class="sd">        Configuration for the EXT-X-PROGRAM-DATETIME tag</span>
 
 <span class="sd">        :param program_date_time_settings: The program_date_time_settings of this LiveHlsManifest.</span>
 <span class="sd">        :type: ProgramDateTimeSettings</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">if</span> <span class="n">program_date_time_settings</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">program_date_time_settings</span><span class="p">,</span> <span class="n">ProgramDateTimeSettings</span><span class="p">):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `program_date_time_settings`, type has to be `ProgramDateTimeSettings`&quot;</span><span class="p">)</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Invalid type for `program_date_time_settings`, type has to be `ProgramDateTimeSettings`"</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_program_date_time_settings</span> <span class="o">=</span> <span class="n">program_date_time_settings</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">ad_marker_settings</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; HlsManifestAdMarkerSettings</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the ad_marker_settings of this LiveHlsManifest.</span>
+<span class="w">        </span><span class="sd">"""Gets the ad_marker_settings of this LiveHlsManifest.</span>
 
 <span class="sd">        Configuration for tags related to ad markers (e.g. Scte35)</span>
 
 <span class="sd">        :return: The ad_marker_settings of this LiveHlsManifest.</span>
 <span class="sd">        :rtype: HlsManifestAdMarkerSettings</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_ad_marker_settings</span>
 
     <span class="nd">@ad_marker_settings</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">ad_marker_settings</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ad_marker_settings</span><span class="p">):</span>
         <span class="c1"># type: (HlsManifestAdMarkerSettings) -&gt; None</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the ad_marker_settings of this LiveHlsManifest.</span>
+<span class="w">        </span><span class="sd">"""Sets the ad_marker_settings of this LiveHlsManifest.</span>
 
 <span class="sd">        Configuration for tags related to ad markers (e.g. Scte35)</span>
 
 <span class="sd">        :param ad_marker_settings: The ad_marker_settings of this LiveHlsManifest.</span>
 <span class="sd">        :type: HlsManifestAdMarkerSettings</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">if</span> <span class="n">ad_marker_settings</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">ad_marker_settings</span><span class="p">,</span> <span class="n">HlsManifestAdMarkerSettings</span><span class="p">):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `ad_marker_settings`, type has to be `HlsManifestAdMarkerSettings`&quot;</span><span class="p">)</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Invalid type for `ad_marker_settings`, type has to be `HlsManifestAdMarkerSettings`"</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_ad_marker_settings</span> <span class="o">=</span> <span class="n">ad_marker_settings</span>
 
 <div class="viewcode-block" id="LiveHlsManifest.to_dict">
 <a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.live_hls_manifest.LiveHlsManifest.to_dict">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""Returns the model properties as a dict"""</span>
         <span class="n">result</span> <span class="o">=</span> <span class="p">{}</span>
 
         <span class="k">for</span> <span class="n">attr</span><span class="p">,</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">six</span><span class="o">.</span><span class="n">iteritems</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">openapi_types</span><span class="p">):</span>
@@ -333,13 +333,13 @@
             <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
                 <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
                     <span class="k">continue</span>
-                <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="p">[</span><span class="n">y</span><span class="o">.</span><span class="n">value</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">Enum</span><span class="p">)</span> <span class="k">else</span> <span class="n">y</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span> <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="s2">&quot;to_dict&quot;</span><span class="p">)</span> <span class="k">else</span> <span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">value</span><span class="p">]]</span>
-            <span class="k">elif</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="s2">&quot;to_dict&quot;</span><span class="p">):</span>
+                <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="p">[</span><span class="n">y</span><span class="o">.</span><span class="n">value</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">Enum</span><span class="p">)</span> <span class="k">else</span> <span class="n">y</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span> <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="s2">"to_dict"</span><span class="p">)</span> <span class="k">else</span> <span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">value</span><span class="p">]]</span>
+            <span class="k">elif</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="s2">"to_dict"</span><span class="p">):</span>
                 <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="n">value</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span>
             <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">Enum</span><span class="p">):</span>
                 <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="n">value</span><span class="o">.</span><span class="n">value</span>
             <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
-                <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="p">(</span><span class="n">v</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span> <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="s2">&quot;to_dict&quot;</span><span class="p">)</span> <span class="k">else</span> <span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span> <span class="ow">in</span> <span class="n">value</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
+                <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="p">(</span><span class="n">v</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span> <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="s2">"to_dict"</span><span class="p">)</span> <span class="k">else</span> <span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span> <span class="ow">in</span> <span class="n">value</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
             <span class="k">else</span><span class="p">:</span>
                 <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="n">value</span>
 
@@ -349,23 +349,23 @@
 <div class="viewcode-block" id="LiveHlsManifest.to_str">
 <a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.live_hls_manifest.LiveHlsManifest.to_str">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">to_str</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the string representation of the model&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""Returns the string representation of the model"""</span>
         <span class="k">return</span> <span class="n">pprint</span><span class="o">.</span><span class="n">pformat</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">to_dict</span><span class="p">())</span></div>
 
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;For `print` and `pprint`&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""For `print` and `pprint`"""</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">to_str</span><span class="p">()</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns true if both objects are equal&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""Returns true if both objects are equal"""</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">LiveHlsManifest</span><span class="p">):</span>
             <span class="k">return</span> <span class="kc">False</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="vm">__dict__</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__ne__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns true if both objects are not equal&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""Returns true if both objects are not equal"""</span>
         <span class="k">return</span> <span class="ow">not</span> <span class="bp">self</span> <span class="o">==</span> <span class="n">other</span></div>
 
 </pre></div>

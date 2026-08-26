@@ -105,7 +105,7 @@
 <a class="viewcode-back" href="../../../../../../../../__modules/bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.type.html#bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.type.type_api.TypeApi.get">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">manifest_id</span><span class="p">,</span> <span class="n">period_id</span><span class="p">,</span> <span class="n">adaptationset_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, string_types, string_types, dict) -&gt; AdaptationSetTypeResponse</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get adaptation set type</span>
+<span class="w">        </span><span class="sd">"""Get adaptation set type</span>
 
 <span class="sd">        :param manifest_id: Id of the manifest</span>
 <span class="sd">        :type manifest_id: string_types, required</span>
@@ -115,11 +115,11 @@
 <span class="sd">        :type adaptationset_id: string_types, required</span>
 <span class="sd">        :return: AdaptationSet type response</span>
 <span class="sd">        :rtype: AdaptationSetTypeResponse</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
-            <span class="s1">&#39;/encoding/manifests/dash/</span><span class="si">{manifest_id}</span><span class="s1">/periods/</span><span class="si">{period_id}</span><span class="s1">/adaptationsets/</span><span class="si">{adaptationset_id}</span><span class="s1">/type&#39;</span><span class="p">,</span>
-            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;manifest_id&#39;</span><span class="p">:</span> <span class="n">manifest_id</span><span class="p">,</span> <span class="s1">&#39;period_id&#39;</span><span class="p">:</span> <span class="n">period_id</span><span class="p">,</span> <span class="s1">&#39;adaptationset_id&#39;</span><span class="p">:</span> <span class="n">adaptationset_id</span><span class="p">},</span>
+            <span class="s1">'/encoding/manifests/dash/</span><span class="si">{manifest_id}</span><span class="s1">/periods/</span><span class="si">{period_id}</span><span class="s1">/adaptationsets/</span><span class="si">{adaptationset_id}</span><span class="s1">/type'</span><span class="p">,</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">'manifest_id'</span><span class="p">:</span> <span class="n">manifest_id</span><span class="p">,</span> <span class="s1">'period_id'</span><span class="p">:</span> <span class="n">period_id</span><span class="p">,</span> <span class="s1">'adaptationset_id'</span><span class="p">:</span> <span class="n">adaptationset_id</span><span class="p">},</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">AdaptationSetTypeResponse</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>
         <span class="p">)</span></div>

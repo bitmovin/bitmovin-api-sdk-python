@@ -106,16 +106,16 @@
 <a class="viewcode-back" href="../../../../../__modules/bitmovin_api_sdk.analytics.metrics.avg_concurrentviewers.html#bitmovin_api_sdk.analytics.metrics.avg_concurrentviewers.avg_concurrentviewers_api.AvgConcurrentviewersApi.create">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">analytics_metrics_query_request</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (AnalyticsMetricsQueryRequest, dict) -&gt; AnalyticsAvgConcurrentViewersResponse</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get metrics data</span>
+<span class="w">        </span><span class="sd">"""Get metrics data</span>
 
 <span class="sd">        :param analytics_metrics_query_request: Analytics metrics query object</span>
 <span class="sd">        :type analytics_metrics_query_request: AnalyticsMetricsQueryRequest, required</span>
 <span class="sd">        :return: Service specific result</span>
 <span class="sd">        :rtype: AnalyticsAvgConcurrentViewersResponse</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">post</span><span class="p">(</span>
-            <span class="s1">&#39;/analytics/metrics/avg-concurrentviewers&#39;</span><span class="p">,</span>
+            <span class="s1">'/analytics/metrics/avg-concurrentviewers'</span><span class="p">,</span>
             <span class="n">analytics_metrics_query_request</span><span class="p">,</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">AnalyticsAvgConcurrentViewersResponse</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>

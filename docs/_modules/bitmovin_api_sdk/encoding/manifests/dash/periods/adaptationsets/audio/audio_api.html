@@ -107,7 +107,7 @@
 <a class="viewcode-back" href="../../../../../../../../__modules/bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.audio.html#bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.audio.audio_api.AudioApi.create">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">manifest_id</span><span class="p">,</span> <span class="n">period_id</span><span class="p">,</span> <span class="n">audio_adaptation_set</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, string_types, AudioAdaptationSet, dict) -&gt; AudioAdaptationSet</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Create Audio AdaptationSet</span>
+<span class="w">        </span><span class="sd">"""Create Audio AdaptationSet</span>
 
 <span class="sd">        :param manifest_id: Id of the manifest</span>
 <span class="sd">        :type manifest_id: string_types, required</span>
@@ -117,12 +117,12 @@
 <span class="sd">        :type audio_adaptation_set: AudioAdaptationSet, required</span>
 <span class="sd">        :return: AudioAdaptationSet</span>
 <span class="sd">        :rtype: AudioAdaptationSet</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">post</span><span class="p">(</span>
-            <span class="s1">&#39;/encoding/manifests/dash/</span><span class="si">{manifest_id}</span><span class="s1">/periods/</span><span class="si">{period_id}</span><span class="s1">/adaptationsets/audio&#39;</span><span class="p">,</span>
+            <span class="s1">'/encoding/manifests/dash/</span><span class="si">{manifest_id}</span><span class="s1">/periods/</span><span class="si">{period_id}</span><span class="s1">/adaptationsets/audio'</span><span class="p">,</span>
             <span class="n">audio_adaptation_set</span><span class="p">,</span>
-            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;manifest_id&#39;</span><span class="p">:</span> <span class="n">manifest_id</span><span class="p">,</span> <span class="s1">&#39;period_id&#39;</span><span class="p">:</span> <span class="n">period_id</span><span class="p">},</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">'manifest_id'</span><span class="p">:</span> <span class="n">manifest_id</span><span class="p">,</span> <span class="s1">'period_id'</span><span class="p">:</span> <span class="n">period_id</span><span class="p">},</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">AudioAdaptationSet</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>
         <span class="p">)</span></div>
@@ -132,7 +132,7 @@
 <a class="viewcode-back" href="../../../../../../../../__modules/bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.audio.html#bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.audio.audio_api.AudioApi.delete">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">delete</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">manifest_id</span><span class="p">,</span> <span class="n">period_id</span><span class="p">,</span> <span class="n">adaptationset_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, string_types, string_types, dict) -&gt; BitmovinResponse</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Delete Audio AdaptationSet</span>
+<span class="w">        </span><span class="sd">"""Delete Audio AdaptationSet</span>
 
 <span class="sd">        :param manifest_id: Id of the manifest</span>
 <span class="sd">        :type manifest_id: string_types, required</span>
@@ -142,11 +142,11 @@
 <span class="sd">        :type adaptationset_id: string_types, required</span>
 <span class="sd">        :return: Id of the Audio AdaptationSet</span>
 <span class="sd">        :rtype: BitmovinResponse</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span>
-            <span class="s1">&#39;/encoding/manifests/dash/</span><span class="si">{manifest_id}</span><span class="s1">/periods/</span><span class="si">{period_id}</span><span class="s1">/adaptationsets/audio/</span><span class="si">{adaptationset_id}</span><span class="s1">&#39;</span><span class="p">,</span>
-            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;manifest_id&#39;</span><span class="p">:</span> <span class="n">manifest_id</span><span class="p">,</span> <span class="s1">&#39;period_id&#39;</span><span class="p">:</span> <span class="n">period_id</span><span class="p">,</span> <span class="s1">&#39;adaptationset_id&#39;</span><span class="p">:</span> <span class="n">adaptationset_id</span><span class="p">},</span>
+            <span class="s1">'/encoding/manifests/dash/</span><span class="si">{manifest_id}</span><span class="s1">/periods/</span><span class="si">{period_id}</span><span class="s1">/adaptationsets/audio/</span><span class="si">{adaptationset_id}</span><span class="s1">'</span><span class="p">,</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">'manifest_id'</span><span class="p">:</span> <span class="n">manifest_id</span><span class="p">,</span> <span class="s1">'period_id'</span><span class="p">:</span> <span class="n">period_id</span><span class="p">,</span> <span class="s1">'adaptationset_id'</span><span class="p">:</span> <span class="n">adaptationset_id</span><span class="p">},</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">BitmovinResponse</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>
         <span class="p">)</span></div>
@@ -156,7 +156,7 @@
 <a class="viewcode-back" href="../../../../../../../../__modules/bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.audio.html#bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.audio.audio_api.AudioApi.get">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">manifest_id</span><span class="p">,</span> <span class="n">period_id</span><span class="p">,</span> <span class="n">adaptationset_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, string_types, string_types, dict) -&gt; AudioAdaptationSet</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get Audio AdaptationSet details</span>
+<span class="w">        </span><span class="sd">"""Get Audio AdaptationSet details</span>
 
 <span class="sd">        :param manifest_id: Id of the manifest</span>
 <span class="sd">        :type manifest_id: string_types, required</span>
@@ -166,11 +166,11 @@
 <span class="sd">        :type adaptationset_id: string_types, required</span>
 <span class="sd">        :return: Audio AdaptationSet details</span>
 <span class="sd">        :rtype: AudioAdaptationSet</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
-            <span class="s1">&#39;/encoding/manifests/dash/</span><span class="si">{manifest_id}</span><span class="s1">/periods/</span><span class="si">{period_id}</span><span class="s1">/adaptationsets/audio/</span><span class="si">{adaptationset_id}</span><span class="s1">&#39;</span><span class="p">,</span>
-            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;manifest_id&#39;</span><span class="p">:</span> <span class="n">manifest_id</span><span class="p">,</span> <span class="s1">&#39;period_id&#39;</span><span class="p">:</span> <span class="n">period_id</span><span class="p">,</span> <span class="s1">&#39;adaptationset_id&#39;</span><span class="p">:</span> <span class="n">adaptationset_id</span><span class="p">},</span>
+            <span class="s1">'/encoding/manifests/dash/</span><span class="si">{manifest_id}</span><span class="s1">/periods/</span><span class="si">{period_id}</span><span class="s1">/adaptationsets/audio/</span><span class="si">{adaptationset_id}</span><span class="s1">'</span><span class="p">,</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">'manifest_id'</span><span class="p">:</span> <span class="n">manifest_id</span><span class="p">,</span> <span class="s1">'period_id'</span><span class="p">:</span> <span class="n">period_id</span><span class="p">,</span> <span class="s1">'adaptationset_id'</span><span class="p">:</span> <span class="n">adaptationset_id</span><span class="p">},</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">AudioAdaptationSet</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>
         <span class="p">)</span></div>
@@ -180,7 +180,7 @@
 <a class="viewcode-back" href="../../../../../../../../__modules/bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.audio.html#bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.audio.audio_api.AudioApi.list">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">list</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">manifest_id</span><span class="p">,</span> <span class="n">period_id</span><span class="p">,</span> <span class="n">query_params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, string_types, AudioAdaptationSetListQueryParams, dict) -&gt; AudioAdaptationSet</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;List Audio AdaptationSets</span>
+<span class="w">        </span><span class="sd">"""List Audio AdaptationSets</span>
 
 <span class="sd">        :param manifest_id: Id of the manifest</span>
 <span class="sd">        :type manifest_id: string_types, required</span>
@@ -190,11 +190,11 @@
 <span class="sd">        :type query_params: AudioAdaptationSetListQueryParams</span>
 <span class="sd">        :return: List of Audio AdaptationSets</span>
 <span class="sd">        :rtype: AudioAdaptationSet</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
-            <span class="s1">&#39;/encoding/manifests/dash/</span><span class="si">{manifest_id}</span><span class="s1">/periods/</span><span class="si">{period_id}</span><span class="s1">/adaptationsets/audio&#39;</span><span class="p">,</span>
-            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;manifest_id&#39;</span><span class="p">:</span> <span class="n">manifest_id</span><span class="p">,</span> <span class="s1">&#39;period_id&#39;</span><span class="p">:</span> <span class="n">period_id</span><span class="p">},</span>
+            <span class="s1">'/encoding/manifests/dash/</span><span class="si">{manifest_id}</span><span class="s1">/periods/</span><span class="si">{period_id}</span><span class="s1">/adaptationsets/audio'</span><span class="p">,</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">'manifest_id'</span><span class="p">:</span> <span class="n">manifest_id</span><span class="p">,</span> <span class="s1">'period_id'</span><span class="p">:</span> <span class="n">period_id</span><span class="p">},</span>
             <span class="n">query_params</span><span class="o">=</span><span class="n">query_params</span><span class="p">,</span>
             <span class="n">pagination_response</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">AudioAdaptationSet</span><span class="p">,</span>

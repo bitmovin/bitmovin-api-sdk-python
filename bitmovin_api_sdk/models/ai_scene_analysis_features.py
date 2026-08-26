@@ -6,6 +6,7 @@ from bitmovin_api_sdk.common.poscheck import poscheck_model
 from bitmovin_api_sdk.models.ai_scene_analysis_asset_description import AiSceneAnalysisAssetDescription
 from bitmovin_api_sdk.models.ai_scene_analysis_automatic_ad_placement import AiSceneAnalysisAutomaticAdPlacement
 from bitmovin_api_sdk.models.ai_scene_analysis_output_language_codes import AiSceneAnalysisOutputLanguageCodes
+from bitmovin_api_sdk.models.ai_scene_analysis_regulatory_advisories import AiSceneAnalysisRegulatoryAdvisories
 import pprint
 import six
 
@@ -15,12 +16,14 @@ class AiSceneAnalysisFeatures(object):
     def __init__(self,
                  asset_description=None,
                  automatic_ad_placement=None,
-                 output_language_codes=None):
-        # type: (AiSceneAnalysisAssetDescription, AiSceneAnalysisAutomaticAdPlacement, AiSceneAnalysisOutputLanguageCodes) -> None
+                 output_language_codes=None,
+                 regulatory_advisories=None):
+        # type: (AiSceneAnalysisAssetDescription, AiSceneAnalysisAutomaticAdPlacement, AiSceneAnalysisOutputLanguageCodes, AiSceneAnalysisRegulatoryAdvisories) -> None
 
         self._asset_description = None
         self._automatic_ad_placement = None
         self._output_language_codes = None
+        self._regulatory_advisories = None
         self.discriminator = None
 
         if asset_description is not None:
@@ -29,13 +32,16 @@ class AiSceneAnalysisFeatures(object):
             self.automatic_ad_placement = automatic_ad_placement
         if output_language_codes is not None:
             self.output_language_codes = output_language_codes
+        if regulatory_advisories is not None:
+            self.regulatory_advisories = regulatory_advisories
 
     @property
     def openapi_types(self):
         types = {
             'asset_description': 'AiSceneAnalysisAssetDescription',
             'automatic_ad_placement': 'AiSceneAnalysisAutomaticAdPlacement',
-            'output_language_codes': 'AiSceneAnalysisOutputLanguageCodes'
+            'output_language_codes': 'AiSceneAnalysisOutputLanguageCodes',
+            'regulatory_advisories': 'AiSceneAnalysisRegulatoryAdvisories'
         }
 
         return types
@@ -45,7 +51,8 @@ class AiSceneAnalysisFeatures(object):
         attributes = {
             'asset_description': 'assetDescription',
             'automatic_ad_placement': 'automaticAdPlacement',
-            'output_language_codes': 'outputLanguageCodes'
+            'output_language_codes': 'outputLanguageCodes',
+            'regulatory_advisories': 'regulatoryAdvisories'
         }
         return attributes
 
@@ -135,6 +142,35 @@ class AiSceneAnalysisFeatures(object):
                 raise TypeError("Invalid type for `output_language_codes`, type has to be `AiSceneAnalysisOutputLanguageCodes`")
 
         self._output_language_codes = output_language_codes
+
+    @property
+    def regulatory_advisories(self):
+        # type: () -> AiSceneAnalysisRegulatoryAdvisories
+        """Gets the regulatory_advisories of this AiSceneAnalysisFeatures.
+
+        AI scene analysis will screen the asset for content requiring a statutory on-screen advisory and report the findings per shot in the asset description. Requires assetDescription. Contact support to enable this feature for your organization. 
+
+        :return: The regulatory_advisories of this AiSceneAnalysisFeatures.
+        :rtype: AiSceneAnalysisRegulatoryAdvisories
+        """
+        return self._regulatory_advisories
+
+    @regulatory_advisories.setter
+    def regulatory_advisories(self, regulatory_advisories):
+        # type: (AiSceneAnalysisRegulatoryAdvisories) -> None
+        """Sets the regulatory_advisories of this AiSceneAnalysisFeatures.
+
+        AI scene analysis will screen the asset for content requiring a statutory on-screen advisory and report the findings per shot in the asset description. Requires assetDescription. Contact support to enable this feature for your organization. 
+
+        :param regulatory_advisories: The regulatory_advisories of this AiSceneAnalysisFeatures.
+        :type: AiSceneAnalysisRegulatoryAdvisories
+        """
+
+        if regulatory_advisories is not None:
+            if not isinstance(regulatory_advisories, AiSceneAnalysisRegulatoryAdvisories):
+                raise TypeError("Invalid type for `regulatory_advisories`, type has to be `AiSceneAnalysisRegulatoryAdvisories`")
+
+        self._regulatory_advisories = regulatory_advisories
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -105,16 +105,16 @@
 <a class="viewcode-back" href="../../../../../../__modules/bitmovin_api_sdk.encoding.manifests.hls.default.html#bitmovin_api_sdk.encoding.manifests.hls.default.default_api.DefaultApi.create">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">hls_manifest_default</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (HlsManifestDefault, dict) -&gt; HlsManifestDefault</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Create Default HLS Manifest</span>
+<span class="w">        </span><span class="sd">"""Create Default HLS Manifest</span>
 
 <span class="sd">        :param hls_manifest_default: The Default HLS Manifest to be created.</span>
 <span class="sd">        :type hls_manifest_default: HlsManifestDefault, required</span>
 <span class="sd">        :return: HLS manifest</span>
 <span class="sd">        :rtype: HlsManifestDefault</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">post</span><span class="p">(</span>
-            <span class="s1">&#39;/encoding/manifests/hls/default&#39;</span><span class="p">,</span>
+            <span class="s1">'/encoding/manifests/hls/default'</span><span class="p">,</span>
             <span class="n">hls_manifest_default</span><span class="p">,</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">HlsManifestDefault</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>

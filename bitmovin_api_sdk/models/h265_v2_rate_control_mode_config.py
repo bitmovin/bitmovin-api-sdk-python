@@ -36,8 +36,7 @@ class H265V2RateControlModeConfig(object):
         return attributes
 
     discriminator_value_class_map = {
-        'PERCEPTUAL_QUALITY_MODE': 'H265V2PerceptualQualityModeConfig',
-        'CONSTANT_BITRATE_MODE': 'H265V2ConstantBitrateModeConfig'
+        'PERCEPTUAL_QUALITY_MODE': 'H265V2PerceptualQualityModeConfig'
     }
 
     @property

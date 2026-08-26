@@ -119,11 +119,11 @@
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">types</span> <span class="o">=</span> <span class="p">{</span>
-            <span class="s1">&#39;output_id&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;output_type&#39;</span><span class="p">:</span> <span class="s1">&#39;OutputType&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;path&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;passed&#39;</span><span class="p">:</span> <span class="s1">&#39;bool&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;failure_reason&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span>
+            <span class="s1">'output_id'</span><span class="p">:</span> <span class="s1">'string_types'</span><span class="p">,</span>
+            <span class="s1">'output_type'</span><span class="p">:</span> <span class="s1">'OutputType'</span><span class="p">,</span>
+            <span class="s1">'path'</span><span class="p">:</span> <span class="s1">'string_types'</span><span class="p">,</span>
+            <span class="s1">'passed'</span><span class="p">:</span> <span class="s1">'bool'</span><span class="p">,</span>
+            <span class="s1">'failure_reason'</span><span class="p">:</span> <span class="s1">'string_types'</span>
         <span class="p">}</span>
 
         <span class="k">return</span> <span class="n">types</span>
@@ -131,163 +131,163 @@
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">attribute_map</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">attributes</span> <span class="o">=</span> <span class="p">{</span>
-            <span class="s1">&#39;output_id&#39;</span><span class="p">:</span> <span class="s1">&#39;outputId&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;output_type&#39;</span><span class="p">:</span> <span class="s1">&#39;outputType&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;path&#39;</span><span class="p">:</span> <span class="s1">&#39;path&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;passed&#39;</span><span class="p">:</span> <span class="s1">&#39;passed&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;failure_reason&#39;</span><span class="p">:</span> <span class="s1">&#39;failureReason&#39;</span>
+            <span class="s1">'output_id'</span><span class="p">:</span> <span class="s1">'outputId'</span><span class="p">,</span>
+            <span class="s1">'output_type'</span><span class="p">:</span> <span class="s1">'outputType'</span><span class="p">,</span>
+            <span class="s1">'path'</span><span class="p">:</span> <span class="s1">'path'</span><span class="p">,</span>
+            <span class="s1">'passed'</span><span class="p">:</span> <span class="s1">'passed'</span><span class="p">,</span>
+            <span class="s1">'failure_reason'</span><span class="p">:</span> <span class="s1">'failureReason'</span>
         <span class="p">}</span>
         <span class="k">return</span> <span class="n">attributes</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">output_id</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; string_types</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the output_id of this CheckOutputPermissionsResponse.</span>
+<span class="w">        </span><span class="sd">"""Gets the output_id of this CheckOutputPermissionsResponse.</span>
 
 <span class="sd">        Id of the output for which permissions were checked</span>
 
 <span class="sd">        :return: The output_id of this CheckOutputPermissionsResponse.</span>
 <span class="sd">        :rtype: string_types</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_output_id</span>
 
     <span class="nd">@output_id</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">output_id</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">output_id</span><span class="p">):</span>
         <span class="c1"># type: (string_types) -&gt; None</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the output_id of this CheckOutputPermissionsResponse.</span>
+<span class="w">        </span><span class="sd">"""Sets the output_id of this CheckOutputPermissionsResponse.</span>
 
 <span class="sd">        Id of the output for which permissions were checked</span>
 
 <span class="sd">        :param output_id: The output_id of this CheckOutputPermissionsResponse.</span>
 <span class="sd">        :type: string_types</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">if</span> <span class="n">output_id</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">output_id</span><span class="p">,</span> <span class="n">string_types</span><span class="p">):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `output_id`, type has to be `string_types`&quot;</span><span class="p">)</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Invalid type for `output_id`, type has to be `string_types`"</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_output_id</span> <span class="o">=</span> <span class="n">output_id</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">output_type</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; OutputType</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the output_type of this CheckOutputPermissionsResponse.</span>
+<span class="w">        </span><span class="sd">"""Gets the output_type of this CheckOutputPermissionsResponse.</span>
 
 <span class="sd">        The type of the output for which permissions were checked</span>
 
 <span class="sd">        :return: The output_type of this CheckOutputPermissionsResponse.</span>
 <span class="sd">        :rtype: OutputType</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_output_type</span>
 
     <span class="nd">@output_type</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">output_type</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">output_type</span><span class="p">):</span>
         <span class="c1"># type: (OutputType) -&gt; None</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the output_type of this CheckOutputPermissionsResponse.</span>
+<span class="w">        </span><span class="sd">"""Sets the output_type of this CheckOutputPermissionsResponse.</span>
 
 <span class="sd">        The type of the output for which permissions were checked</span>
 
 <span class="sd">        :param output_type: The output_type of this CheckOutputPermissionsResponse.</span>
 <span class="sd">        :type: OutputType</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">if</span> <span class="n">output_type</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">output_type</span><span class="p">,</span> <span class="n">OutputType</span><span class="p">):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `output_type`, type has to be `OutputType`&quot;</span><span class="p">)</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Invalid type for `output_type`, type has to be `OutputType`"</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_output_type</span> <span class="o">=</span> <span class="n">output_type</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">path</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; string_types</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the path of this CheckOutputPermissionsResponse.</span>
+<span class="w">        </span><span class="sd">"""Gets the path of this CheckOutputPermissionsResponse.</span>
 
-<span class="sd">        The path on the storage for which permissions were checked. In AWS S3 terminology, this corresponds to a \&quot;prefix\&quot;. An empty string corresponds to the root directory.</span>
+<span class="sd">        The path on the storage for which permissions were checked. In AWS S3 terminology, this corresponds to a \"prefix\". An empty string corresponds to the root directory.</span>
 
 <span class="sd">        :return: The path of this CheckOutputPermissionsResponse.</span>
 <span class="sd">        :rtype: string_types</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_path</span>
 
     <span class="nd">@path</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">path</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">):</span>
         <span class="c1"># type: (string_types) -&gt; None</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the path of this CheckOutputPermissionsResponse.</span>
+<span class="w">        </span><span class="sd">"""Sets the path of this CheckOutputPermissionsResponse.</span>
 
-<span class="sd">        The path on the storage for which permissions were checked. In AWS S3 terminology, this corresponds to a \&quot;prefix\&quot;. An empty string corresponds to the root directory.</span>
+<span class="sd">        The path on the storage for which permissions were checked. In AWS S3 terminology, this corresponds to a \"prefix\". An empty string corresponds to the root directory.</span>
 
 <span class="sd">        :param path: The path of this CheckOutputPermissionsResponse.</span>
 <span class="sd">        :type: string_types</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">if</span> <span class="n">path</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">string_types</span><span class="p">):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `path`, type has to be `string_types`&quot;</span><span class="p">)</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Invalid type for `path`, type has to be `string_types`"</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_path</span> <span class="o">=</span> <span class="n">path</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">passed</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; bool</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the passed of this CheckOutputPermissionsResponse.</span>
+<span class="w">        </span><span class="sd">"""Gets the passed of this CheckOutputPermissionsResponse.</span>
 
-<span class="sd">        Indicates if permissions on the storage are configured correctly to be used as output target by the Bitmovin encoder. If \&quot;false\&quot;, *failureReason* will provide additional information.</span>
+<span class="sd">        Indicates if permissions on the storage are configured correctly to be used as output target by the Bitmovin encoder. If \"false\", *failureReason* will provide additional information.</span>
 
 <span class="sd">        :return: The passed of this CheckOutputPermissionsResponse.</span>
 <span class="sd">        :rtype: bool</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_passed</span>
 
     <span class="nd">@passed</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">passed</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">passed</span><span class="p">):</span>
         <span class="c1"># type: (bool) -&gt; None</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the passed of this CheckOutputPermissionsResponse.</span>
+<span class="w">        </span><span class="sd">"""Sets the passed of this CheckOutputPermissionsResponse.</span>
 
-<span class="sd">        Indicates if permissions on the storage are configured correctly to be used as output target by the Bitmovin encoder. If \&quot;false\&quot;, *failureReason* will provide additional information.</span>
+<span class="sd">        Indicates if permissions on the storage are configured correctly to be used as output target by the Bitmovin encoder. If \"false\", *failureReason* will provide additional information.</span>
 
 <span class="sd">        :param passed: The passed of this CheckOutputPermissionsResponse.</span>
 <span class="sd">        :type: bool</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">if</span> <span class="n">passed</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">passed</span><span class="p">,</span> <span class="nb">bool</span><span class="p">):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `passed`, type has to be `bool`&quot;</span><span class="p">)</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Invalid type for `passed`, type has to be `bool`"</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_passed</span> <span class="o">=</span> <span class="n">passed</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">failure_reason</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; string_types</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the failure_reason of this CheckOutputPermissionsResponse.</span>
+<span class="w">        </span><span class="sd">"""Gets the failure_reason of this CheckOutputPermissionsResponse.</span>
 
 <span class="sd">        Contains nothing if the check succeeded. Otherwise, contains a message explaining why it failed.</span>
 
 <span class="sd">        :return: The failure_reason of this CheckOutputPermissionsResponse.</span>
 <span class="sd">        :rtype: string_types</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_failure_reason</span>
 
     <span class="nd">@failure_reason</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">failure_reason</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">failure_reason</span><span class="p">):</span>
         <span class="c1"># type: (string_types) -&gt; None</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the failure_reason of this CheckOutputPermissionsResponse.</span>
+<span class="w">        </span><span class="sd">"""Sets the failure_reason of this CheckOutputPermissionsResponse.</span>
 
 <span class="sd">        Contains nothing if the check succeeded. Otherwise, contains a message explaining why it failed.</span>
 
 <span class="sd">        :param failure_reason: The failure_reason of this CheckOutputPermissionsResponse.</span>
 <span class="sd">        :type: string_types</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">if</span> <span class="n">failure_reason</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">failure_reason</span><span class="p">,</span> <span class="n">string_types</span><span class="p">):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `failure_reason`, type has to be `string_types`&quot;</span><span class="p">)</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Invalid type for `failure_reason`, type has to be `string_types`"</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_failure_reason</span> <span class="o">=</span> <span class="n">failure_reason</span>
 
 <div class="viewcode-block" id="CheckOutputPermissionsResponse.to_dict">
 <a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.check_output_permissions_response.CheckOutputPermissionsResponse.to_dict">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""Returns the model properties as a dict"""</span>
         <span class="n">result</span> <span class="o">=</span> <span class="p">{}</span>
 
         <span class="k">for</span> <span class="n">attr</span><span class="p">,</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">six</span><span class="o">.</span><span class="n">iteritems</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">openapi_types</span><span class="p">):</span>
@@ -297,13 +297,13 @@
             <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
                 <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
                     <span class="k">continue</span>
-                <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="p">[</span><span class="n">y</span><span class="o">.</span><span class="n">value</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">Enum</span><span class="p">)</span> <span class="k">else</span> <span class="n">y</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span> <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="s2">&quot;to_dict&quot;</span><span class="p">)</span> <span class="k">else</span> <span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">value</span><span class="p">]]</span>
-            <span class="k">elif</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="s2">&quot;to_dict&quot;</span><span class="p">):</span>
+                <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="p">[</span><span class="n">y</span><span class="o">.</span><span class="n">value</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">Enum</span><span class="p">)</span> <span class="k">else</span> <span class="n">y</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span> <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="s2">"to_dict"</span><span class="p">)</span> <span class="k">else</span> <span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">value</span><span class="p">]]</span>
+            <span class="k">elif</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="s2">"to_dict"</span><span class="p">):</span>
                 <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="n">value</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span>
             <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">Enum</span><span class="p">):</span>
                 <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="n">value</span><span class="o">.</span><span class="n">value</span>
             <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
-                <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="p">(</span><span class="n">v</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span> <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="s2">&quot;to_dict&quot;</span><span class="p">)</span> <span class="k">else</span> <span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span> <span class="ow">in</span> <span class="n">value</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
+                <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="p">(</span><span class="n">v</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span> <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="s2">"to_dict"</span><span class="p">)</span> <span class="k">else</span> <span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span> <span class="ow">in</span> <span class="n">value</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
             <span class="k">else</span><span class="p">:</span>
                 <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="n">value</span>
 
@@ -313,23 +313,23 @@
 <div class="viewcode-block" id="CheckOutputPermissionsResponse.to_str">
 <a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.check_output_permissions_response.CheckOutputPermissionsResponse.to_str">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">to_str</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the string representation of the model&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""Returns the string representation of the model"""</span>
         <span class="k">return</span> <span class="n">pprint</span><span class="o">.</span><span class="n">pformat</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">to_dict</span><span class="p">())</span></div>
 
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;For `print` and `pprint`&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""For `print` and `pprint`"""</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">to_str</span><span class="p">()</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns true if both objects are equal&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""Returns true if both objects are equal"""</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">CheckOutputPermissionsResponse</span><span class="p">):</span>
             <span class="k">return</span> <span class="kc">False</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="vm">__dict__</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__ne__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns true if both objects are not equal&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""Returns true if both objects are not equal"""</span>
         <span class="k">return</span> <span class="ow">not</span> <span class="bp">self</span> <span class="o">==</span> <span class="n">other</span></div>
 
 </pre></div>

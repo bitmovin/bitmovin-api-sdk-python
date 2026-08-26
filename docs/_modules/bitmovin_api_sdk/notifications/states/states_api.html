@@ -106,7 +106,7 @@
 <a class="viewcode-back" href="../../../../__modules/bitmovin_api_sdk.notifications.states.html#bitmovin_api_sdk.notifications.states.states_api.StatesApi.list">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">list</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">notification_id</span><span class="p">,</span> <span class="n">resource_id</span><span class="p">,</span> <span class="n">query_params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, string_types, NotificationStateEntryListQueryParams, dict) -&gt; NotificationStateEntry</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;List Notification State History for a specific Resource</span>
+<span class="w">        </span><span class="sd">"""List Notification State History for a specific Resource</span>
 
 <span class="sd">        :param notification_id: Id of the notification</span>
 <span class="sd">        :type notification_id: string_types, required</span>
@@ -116,11 +116,11 @@
 <span class="sd">        :type query_params: NotificationStateEntryListQueryParams</span>
 <span class="sd">        :return: List of state entries</span>
 <span class="sd">        :rtype: NotificationStateEntry</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
-            <span class="s1">&#39;/notifications/</span><span class="si">{notification_id}</span><span class="s1">/states/</span><span class="si">{resource_id}</span><span class="s1">&#39;</span><span class="p">,</span>
-            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;notification_id&#39;</span><span class="p">:</span> <span class="n">notification_id</span><span class="p">,</span> <span class="s1">&#39;resource_id&#39;</span><span class="p">:</span> <span class="n">resource_id</span><span class="p">},</span>
+            <span class="s1">'/notifications/</span><span class="si">{notification_id}</span><span class="s1">/states/</span><span class="si">{resource_id}</span><span class="s1">'</span><span class="p">,</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">'notification_id'</span><span class="p">:</span> <span class="n">notification_id</span><span class="p">,</span> <span class="s1">'resource_id'</span><span class="p">:</span> <span class="n">resource_id</span><span class="p">},</span>
             <span class="n">query_params</span><span class="o">=</span><span class="n">query_params</span><span class="p">,</span>
             <span class="n">pagination_response</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">NotificationStateEntry</span><span class="p">,</span>

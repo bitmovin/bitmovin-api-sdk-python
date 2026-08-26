@@ -3,6 +3,7 @@
 from enum import Enum
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
+from bitmovin_api_sdk.models.shot_advisories import ShotAdvisories
 import pprint
 import six
 
@@ -14,14 +15,16 @@ class Shot(object):
                  end_in_seconds=None,
                  detailed_description=None,
                  keywords=None,
-                 main_subjects=None):
-        # type: (float, float, string_types, list[string_types], list[MainSubject]) -> None
+                 main_subjects=None,
+                 shot_advisories=None):
+        # type: (float, float, string_types, list[string_types], list[MainSubject], ShotAdvisories) -> None
 
         self._start_in_seconds = None
         self._end_in_seconds = None
         self._detailed_description = None
         self._keywords = list()
         self._main_subjects = list()
+        self._shot_advisories = None
         self.discriminator = None
 
         if start_in_seconds is not None:
@@ -34,6 +37,8 @@ class Shot(object):
             self.keywords = keywords
         if main_subjects is not None:
             self.main_subjects = main_subjects
+        if shot_advisories is not None:
+            self.shot_advisories = shot_advisories
 
     @property
     def openapi_types(self):
@@ -42,7 +47,8 @@ class Shot(object):
             'end_in_seconds': 'float',
             'detailed_description': 'string_types',
             'keywords': 'list[string_types]',
-            'main_subjects': 'list[MainSubject]'
+            'main_subjects': 'list[MainSubject]',
+            'shot_advisories': 'ShotAdvisories'
         }
 
         return types
@@ -54,7 +60,8 @@ class Shot(object):
             'end_in_seconds': 'endInSeconds',
             'detailed_description': 'detailedDescription',
             'keywords': 'keywords',
-            'main_subjects': 'mainSubjects'
+            'main_subjects': 'mainSubjects',
+            'shot_advisories': 'shotAdvisories'
         }
         return attributes
 
@@ -202,6 +209,35 @@ class Shot(object):
                 raise TypeError("Invalid type for `main_subjects`, type has to be `list[MainSubject]`")
 
         self._main_subjects = main_subjects
+
+    @property
+    def shot_advisories(self):
+        # type: () -> ShotAdvisories
+        """Gets the shot_advisories of this Shot.
+
+        Content advisory detection results for this shot, such as tobacco or vaping imagery
+
+        :return: The shot_advisories of this Shot.
+        :rtype: ShotAdvisories
+        """
+        return self._shot_advisories
+
+    @shot_advisories.setter
+    def shot_advisories(self, shot_advisories):
+        # type: (ShotAdvisories) -> None
+        """Sets the shot_advisories of this Shot.
+
+        Content advisory detection results for this shot, such as tobacco or vaping imagery
+
+        :param shot_advisories: The shot_advisories of this Shot.
+        :type: ShotAdvisories
+        """
+
+        if shot_advisories is not None:
+            if not isinstance(shot_advisories, ShotAdvisories):
+                raise TypeError("Invalid type for `shot_advisories`, type has to be `ShotAdvisories`")
+
+        self._shot_advisories = shot_advisories
 
     def to_dict(self):
         """Returns the model properties as a dict"""

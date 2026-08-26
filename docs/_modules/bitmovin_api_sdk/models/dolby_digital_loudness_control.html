@@ -121,11 +121,11 @@
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">types</span> <span class="o">=</span> <span class="p">{</span>
-            <span class="s1">&#39;dialnorm&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;dialogue_intelligence&#39;</span><span class="p">:</span> <span class="s1">&#39;DolbyDigitalDialogueIntelligence&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;mode&#39;</span><span class="p">:</span> <span class="s1">&#39;DolbyDigitalLoudnessControlMode&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;peak_limit&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;regulation_type&#39;</span><span class="p">:</span> <span class="s1">&#39;DolbyDigitalLoudnessControlRegulationType&#39;</span>
+            <span class="s1">'dialnorm'</span><span class="p">:</span> <span class="s1">'int'</span><span class="p">,</span>
+            <span class="s1">'dialogue_intelligence'</span><span class="p">:</span> <span class="s1">'DolbyDigitalDialogueIntelligence'</span><span class="p">,</span>
+            <span class="s1">'mode'</span><span class="p">:</span> <span class="s1">'DolbyDigitalLoudnessControlMode'</span><span class="p">,</span>
+            <span class="s1">'peak_limit'</span><span class="p">:</span> <span class="s1">'float'</span><span class="p">,</span>
+            <span class="s1">'regulation_type'</span><span class="p">:</span> <span class="s1">'DolbyDigitalLoudnessControlRegulationType'</span>
         <span class="p">}</span>
 
         <span class="k">return</span> <span class="n">types</span>
@@ -133,169 +133,169 @@
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">attribute_map</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">attributes</span> <span class="o">=</span> <span class="p">{</span>
-            <span class="s1">&#39;dialnorm&#39;</span><span class="p">:</span> <span class="s1">&#39;dialnorm&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;dialogue_intelligence&#39;</span><span class="p">:</span> <span class="s1">&#39;dialogueIntelligence&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;mode&#39;</span><span class="p">:</span> <span class="s1">&#39;mode&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;peak_limit&#39;</span><span class="p">:</span> <span class="s1">&#39;peakLimit&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;regulation_type&#39;</span><span class="p">:</span> <span class="s1">&#39;regulationType&#39;</span>
+            <span class="s1">'dialnorm'</span><span class="p">:</span> <span class="s1">'dialnorm'</span><span class="p">,</span>
+            <span class="s1">'dialogue_intelligence'</span><span class="p">:</span> <span class="s1">'dialogueIntelligence'</span><span class="p">,</span>
+            <span class="s1">'mode'</span><span class="p">:</span> <span class="s1">'mode'</span><span class="p">,</span>
+            <span class="s1">'peak_limit'</span><span class="p">:</span> <span class="s1">'peakLimit'</span><span class="p">,</span>
+            <span class="s1">'regulation_type'</span><span class="p">:</span> <span class="s1">'regulationType'</span>
         <span class="p">}</span>
         <span class="k">return</span> <span class="n">attributes</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">dialnorm</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the dialnorm of this DolbyDigitalLoudnessControl.</span>
+<span class="w">        </span><span class="sd">"""Gets the dialnorm of this DolbyDigitalLoudnessControl.</span>
 
 <span class="sd">        Dialogue Normalization value to be set on the bitstream metadata. Required if the mode is `PASSTHROUGH`, or if the mode is `CORRECTION` and regulationType is `MANUAL`. For all other combinations dialnorm must not be set.</span>
 
 <span class="sd">        :return: The dialnorm of this DolbyDigitalLoudnessControl.</span>
 <span class="sd">        :rtype: int</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_dialnorm</span>
 
     <span class="nd">@dialnorm</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">dialnorm</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dialnorm</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the dialnorm of this DolbyDigitalLoudnessControl.</span>
+<span class="w">        </span><span class="sd">"""Sets the dialnorm of this DolbyDigitalLoudnessControl.</span>
 
 <span class="sd">        Dialogue Normalization value to be set on the bitstream metadata. Required if the mode is `PASSTHROUGH`, or if the mode is `CORRECTION` and regulationType is `MANUAL`. For all other combinations dialnorm must not be set.</span>
 
 <span class="sd">        :param dialnorm: The dialnorm of this DolbyDigitalLoudnessControl.</span>
 <span class="sd">        :type: int</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">if</span> <span class="n">dialnorm</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">if</span> <span class="n">dialnorm</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">dialnorm</span> <span class="o">&gt;</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
-                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid value for `dialnorm`, must be a value less than or equal to `-1`&quot;</span><span class="p">)</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">"Invalid value for `dialnorm`, must be a value less than or equal to `-1`"</span><span class="p">)</span>
             <span class="k">if</span> <span class="n">dialnorm</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">dialnorm</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mi">31</span><span class="p">:</span>
-                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid value for `dialnorm`, must be a value greater than or equal to `-31`&quot;</span><span class="p">)</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">"Invalid value for `dialnorm`, must be a value greater than or equal to `-31`"</span><span class="p">)</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">dialnorm</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `dialnorm`, type has to be `int`&quot;</span><span class="p">)</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Invalid type for `dialnorm`, type has to be `int`"</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_dialnorm</span> <span class="o">=</span> <span class="n">dialnorm</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">dialogue_intelligence</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; DolbyDigitalDialogueIntelligence</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the dialogue_intelligence of this DolbyDigitalLoudnessControl.</span>
+<span class="w">        </span><span class="sd">"""Gets the dialogue_intelligence of this DolbyDigitalLoudnessControl.</span>
 
 <span class="sd">        This may only be set if the mode is `PASSTHROUGH`, or if the mode is `CORRECTION` and regulationType is `MANUAL`. For all other combinations dialogueIntelligence must not be set.</span>
 
 <span class="sd">        :return: The dialogue_intelligence of this DolbyDigitalLoudnessControl.</span>
 <span class="sd">        :rtype: DolbyDigitalDialogueIntelligence</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_dialogue_intelligence</span>
 
     <span class="nd">@dialogue_intelligence</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">dialogue_intelligence</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dialogue_intelligence</span><span class="p">):</span>
         <span class="c1"># type: (DolbyDigitalDialogueIntelligence) -&gt; None</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the dialogue_intelligence of this DolbyDigitalLoudnessControl.</span>
+<span class="w">        </span><span class="sd">"""Sets the dialogue_intelligence of this DolbyDigitalLoudnessControl.</span>
 
 <span class="sd">        This may only be set if the mode is `PASSTHROUGH`, or if the mode is `CORRECTION` and regulationType is `MANUAL`. For all other combinations dialogueIntelligence must not be set.</span>
 
 <span class="sd">        :param dialogue_intelligence: The dialogue_intelligence of this DolbyDigitalLoudnessControl.</span>
 <span class="sd">        :type: DolbyDigitalDialogueIntelligence</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">if</span> <span class="n">dialogue_intelligence</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">dialogue_intelligence</span><span class="p">,</span> <span class="n">DolbyDigitalDialogueIntelligence</span><span class="p">):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `dialogue_intelligence`, type has to be `DolbyDigitalDialogueIntelligence`&quot;</span><span class="p">)</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Invalid type for `dialogue_intelligence`, type has to be `DolbyDigitalDialogueIntelligence`"</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_dialogue_intelligence</span> <span class="o">=</span> <span class="n">dialogue_intelligence</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">mode</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; DolbyDigitalLoudnessControlMode</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the mode of this DolbyDigitalLoudnessControl.</span>
+<span class="w">        </span><span class="sd">"""Gets the mode of this DolbyDigitalLoudnessControl.</span>
 
 
 <span class="sd">        :return: The mode of this DolbyDigitalLoudnessControl.</span>
 <span class="sd">        :rtype: DolbyDigitalLoudnessControlMode</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mode</span>
 
     <span class="nd">@mode</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">mode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mode</span><span class="p">):</span>
         <span class="c1"># type: (DolbyDigitalLoudnessControlMode) -&gt; None</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the mode of this DolbyDigitalLoudnessControl.</span>
+<span class="w">        </span><span class="sd">"""Sets the mode of this DolbyDigitalLoudnessControl.</span>
 
 
 <span class="sd">        :param mode: The mode of this DolbyDigitalLoudnessControl.</span>
 <span class="sd">        :type: DolbyDigitalLoudnessControlMode</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">if</span> <span class="n">mode</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">mode</span><span class="p">,</span> <span class="n">DolbyDigitalLoudnessControlMode</span><span class="p">):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `mode`, type has to be `DolbyDigitalLoudnessControlMode`&quot;</span><span class="p">)</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Invalid type for `mode`, type has to be `DolbyDigitalLoudnessControlMode`"</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_mode</span> <span class="o">=</span> <span class="n">mode</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">peak_limit</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; float</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the peak_limit of this DolbyDigitalLoudnessControl.</span>
+<span class="w">        </span><span class="sd">"""Gets the peak_limit of this DolbyDigitalLoudnessControl.</span>
 
 <span class="sd">        The peak value in dB to use for loudness correction. This may only be set if the mode is `PASSTHROUGH`, or if the mode is `CORRECTION` and regulationType is `MANUAL`. For all other combinations peakLimit must not be set.</span>
 
 <span class="sd">        :return: The peak_limit of this DolbyDigitalLoudnessControl.</span>
 <span class="sd">        :rtype: float</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_peak_limit</span>
 
     <span class="nd">@peak_limit</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">peak_limit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">peak_limit</span><span class="p">):</span>
         <span class="c1"># type: (float) -&gt; None</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the peak_limit of this DolbyDigitalLoudnessControl.</span>
+<span class="w">        </span><span class="sd">"""Sets the peak_limit of this DolbyDigitalLoudnessControl.</span>
 
 <span class="sd">        The peak value in dB to use for loudness correction. This may only be set if the mode is `PASSTHROUGH`, or if the mode is `CORRECTION` and regulationType is `MANUAL`. For all other combinations peakLimit must not be set.</span>
 
 <span class="sd">        :param peak_limit: The peak_limit of this DolbyDigitalLoudnessControl.</span>
 <span class="sd">        :type: float</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">if</span> <span class="n">peak_limit</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">if</span> <span class="n">peak_limit</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">peak_limit</span> <span class="o">&gt;</span> <span class="o">-</span><span class="mf">0.1</span><span class="p">:</span>
-                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid value for `peak_limit`, must be a value less than or equal to `-0.1`&quot;</span><span class="p">)</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">"Invalid value for `peak_limit`, must be a value less than or equal to `-0.1`"</span><span class="p">)</span>
             <span class="k">if</span> <span class="n">peak_limit</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">peak_limit</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mi">8</span><span class="p">:</span>
-                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid value for `peak_limit`, must be a value greater than or equal to `-8`&quot;</span><span class="p">)</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">"Invalid value for `peak_limit`, must be a value greater than or equal to `-8`"</span><span class="p">)</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">peak_limit</span><span class="p">,</span> <span class="p">(</span><span class="nb">float</span><span class="p">,</span> <span class="nb">int</span><span class="p">)):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `peak_limit`, type has to be `float`&quot;</span><span class="p">)</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Invalid type for `peak_limit`, type has to be `float`"</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_peak_limit</span> <span class="o">=</span> <span class="n">peak_limit</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">regulation_type</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; DolbyDigitalLoudnessControlRegulationType</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the regulation_type of this DolbyDigitalLoudnessControl.</span>
+<span class="w">        </span><span class="sd">"""Gets the regulation_type of this DolbyDigitalLoudnessControl.</span>
 
-<span class="sd">        This is only allowed if the mode is CORRECTION. &lt;table&gt; &lt;tr&gt;&lt;th colspan=4 align=\&quot;left\&quot;&gt; Predefined values for each regulation type: &lt;/th&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt; Regulation Type &lt;/td&gt;&lt;td&gt; EBU R128 &lt;/td&gt;&lt;td&gt; ATSC A/85 Fixed &lt;/td&gt;&lt;td&gt; ATSC A/85 Agile&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt; Limit Mode &lt;/td&gt;&lt;td&gt; `True Peak` &lt;/td&gt;&lt;td&gt; `True Peak` &lt;/td&gt;&lt;td&gt; `True Peak` &lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt; Correction Mode &lt;/td&gt;&lt;td&gt; `PCM Normalization` &lt;/td&gt;&lt;td&gt; `PCM Normalization` &lt;/td&gt;&lt;td&gt; `Metadata Update` &lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt; Peak Limit &lt;/td&gt;&lt;td&gt; `–3 dBTP` &lt;/td&gt;&lt;td&gt; `–2 dBTP` &lt;/td&gt;&lt;td&gt; `N/A` &lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt; Dialogue Intelligence &lt;/td&gt;&lt;td&gt; `Off` &lt;/td&gt;&lt;td&gt; `On` &lt;/td&gt;&lt;td&gt; `On` &lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt; Meter Mode &lt;/td&gt;&lt;td&gt; `ITU-R BS.1770-3` &lt;/td&gt;&lt;td&gt; `ITU-R BS.1770-3` &lt;/td&gt;&lt;td&gt; `ITU-R BS.1770-3` &lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt; Speech Threshold &lt;/td&gt;&lt;td&gt; `20` &lt;/td&gt;&lt;td&gt; `20` &lt;/td&gt;&lt;td&gt; `20` &lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt; Dialogue Normalization &lt;/td&gt;&lt;td&gt; `-23 dB` &lt;/td&gt;&lt;td&gt; `-24 dB` &lt;/td&gt;&lt;td&gt; `Set to measured loudness` &lt;/td&gt;&lt;/tr&gt; &lt;/table&gt; </span>
+<span class="sd">        This is only allowed if the mode is CORRECTION. &lt;table&gt; &lt;tr&gt;&lt;th colspan=4 align=\"left\"&gt; Predefined values for each regulation type: &lt;/th&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt; Regulation Type &lt;/td&gt;&lt;td&gt; EBU R128 &lt;/td&gt;&lt;td&gt; ATSC A/85 Fixed &lt;/td&gt;&lt;td&gt; ATSC A/85 Agile&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt; Limit Mode &lt;/td&gt;&lt;td&gt; `True Peak` &lt;/td&gt;&lt;td&gt; `True Peak` &lt;/td&gt;&lt;td&gt; `True Peak` &lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt; Correction Mode &lt;/td&gt;&lt;td&gt; `PCM Normalization` &lt;/td&gt;&lt;td&gt; `PCM Normalization` &lt;/td&gt;&lt;td&gt; `Metadata Update` &lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt; Peak Limit &lt;/td&gt;&lt;td&gt; `–3 dBTP` &lt;/td&gt;&lt;td&gt; `–2 dBTP` &lt;/td&gt;&lt;td&gt; `N/A` &lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt; Dialogue Intelligence &lt;/td&gt;&lt;td&gt; `Off` &lt;/td&gt;&lt;td&gt; `On` &lt;/td&gt;&lt;td&gt; `On` &lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt; Meter Mode &lt;/td&gt;&lt;td&gt; `ITU-R BS.1770-3` &lt;/td&gt;&lt;td&gt; `ITU-R BS.1770-3` &lt;/td&gt;&lt;td&gt; `ITU-R BS.1770-3` &lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt; Speech Threshold &lt;/td&gt;&lt;td&gt; `20` &lt;/td&gt;&lt;td&gt; `20` &lt;/td&gt;&lt;td&gt; `20` &lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt; Dialogue Normalization &lt;/td&gt;&lt;td&gt; `-23 dB` &lt;/td&gt;&lt;td&gt; `-24 dB` &lt;/td&gt;&lt;td&gt; `Set to measured loudness` &lt;/td&gt;&lt;/tr&gt; &lt;/table&gt; </span>
 
 <span class="sd">        :return: The regulation_type of this DolbyDigitalLoudnessControl.</span>
 <span class="sd">        :rtype: DolbyDigitalLoudnessControlRegulationType</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_regulation_type</span>
 
     <span class="nd">@regulation_type</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">regulation_type</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">regulation_type</span><span class="p">):</span>
         <span class="c1"># type: (DolbyDigitalLoudnessControlRegulationType) -&gt; None</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the regulation_type of this DolbyDigitalLoudnessControl.</span>
+<span class="w">        </span><span class="sd">"""Sets the regulation_type of this DolbyDigitalLoudnessControl.</span>
 
-<span class="sd">        This is only allowed if the mode is CORRECTION. &lt;table&gt; &lt;tr&gt;&lt;th colspan=4 align=\&quot;left\&quot;&gt; Predefined values for each regulation type: &lt;/th&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt; Regulation Type &lt;/td&gt;&lt;td&gt; EBU R128 &lt;/td&gt;&lt;td&gt; ATSC A/85 Fixed &lt;/td&gt;&lt;td&gt; ATSC A/85 Agile&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt; Limit Mode &lt;/td&gt;&lt;td&gt; `True Peak` &lt;/td&gt;&lt;td&gt; `True Peak` &lt;/td&gt;&lt;td&gt; `True Peak` &lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt; Correction Mode &lt;/td&gt;&lt;td&gt; `PCM Normalization` &lt;/td&gt;&lt;td&gt; `PCM Normalization` &lt;/td&gt;&lt;td&gt; `Metadata Update` &lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt; Peak Limit &lt;/td&gt;&lt;td&gt; `–3 dBTP` &lt;/td&gt;&lt;td&gt; `–2 dBTP` &lt;/td&gt;&lt;td&gt; `N/A` &lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt; Dialogue Intelligence &lt;/td&gt;&lt;td&gt; `Off` &lt;/td&gt;&lt;td&gt; `On` &lt;/td&gt;&lt;td&gt; `On` &lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt; Meter Mode &lt;/td&gt;&lt;td&gt; `ITU-R BS.1770-3` &lt;/td&gt;&lt;td&gt; `ITU-R BS.1770-3` &lt;/td&gt;&lt;td&gt; `ITU-R BS.1770-3` &lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt; Speech Threshold &lt;/td&gt;&lt;td&gt; `20` &lt;/td&gt;&lt;td&gt; `20` &lt;/td&gt;&lt;td&gt; `20` &lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt; Dialogue Normalization &lt;/td&gt;&lt;td&gt; `-23 dB` &lt;/td&gt;&lt;td&gt; `-24 dB` &lt;/td&gt;&lt;td&gt; `Set to measured loudness` &lt;/td&gt;&lt;/tr&gt; &lt;/table&gt; </span>
+<span class="sd">        This is only allowed if the mode is CORRECTION. &lt;table&gt; &lt;tr&gt;&lt;th colspan=4 align=\"left\"&gt; Predefined values for each regulation type: &lt;/th&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt; Regulation Type &lt;/td&gt;&lt;td&gt; EBU R128 &lt;/td&gt;&lt;td&gt; ATSC A/85 Fixed &lt;/td&gt;&lt;td&gt; ATSC A/85 Agile&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt; Limit Mode &lt;/td&gt;&lt;td&gt; `True Peak` &lt;/td&gt;&lt;td&gt; `True Peak` &lt;/td&gt;&lt;td&gt; `True Peak` &lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt; Correction Mode &lt;/td&gt;&lt;td&gt; `PCM Normalization` &lt;/td&gt;&lt;td&gt; `PCM Normalization` &lt;/td&gt;&lt;td&gt; `Metadata Update` &lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt; Peak Limit &lt;/td&gt;&lt;td&gt; `–3 dBTP` &lt;/td&gt;&lt;td&gt; `–2 dBTP` &lt;/td&gt;&lt;td&gt; `N/A` &lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt; Dialogue Intelligence &lt;/td&gt;&lt;td&gt; `Off` &lt;/td&gt;&lt;td&gt; `On` &lt;/td&gt;&lt;td&gt; `On` &lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt; Meter Mode &lt;/td&gt;&lt;td&gt; `ITU-R BS.1770-3` &lt;/td&gt;&lt;td&gt; `ITU-R BS.1770-3` &lt;/td&gt;&lt;td&gt; `ITU-R BS.1770-3` &lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt; Speech Threshold &lt;/td&gt;&lt;td&gt; `20` &lt;/td&gt;&lt;td&gt; `20` &lt;/td&gt;&lt;td&gt; `20` &lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt; Dialogue Normalization &lt;/td&gt;&lt;td&gt; `-23 dB` &lt;/td&gt;&lt;td&gt; `-24 dB` &lt;/td&gt;&lt;td&gt; `Set to measured loudness` &lt;/td&gt;&lt;/tr&gt; &lt;/table&gt; </span>
 
 <span class="sd">        :param regulation_type: The regulation_type of this DolbyDigitalLoudnessControl.</span>
 <span class="sd">        :type: DolbyDigitalLoudnessControlRegulationType</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">if</span> <span class="n">regulation_type</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">regulation_type</span><span class="p">,</span> <span class="n">DolbyDigitalLoudnessControlRegulationType</span><span class="p">):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `regulation_type`, type has to be `DolbyDigitalLoudnessControlRegulationType`&quot;</span><span class="p">)</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Invalid type for `regulation_type`, type has to be `DolbyDigitalLoudnessControlRegulationType`"</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_regulation_type</span> <span class="o">=</span> <span class="n">regulation_type</span>
 
 <div class="viewcode-block" id="DolbyDigitalLoudnessControl.to_dict">
 <a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.dolby_digital_loudness_control.DolbyDigitalLoudnessControl.to_dict">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""Returns the model properties as a dict"""</span>
         <span class="n">result</span> <span class="o">=</span> <span class="p">{}</span>
 
         <span class="k">for</span> <span class="n">attr</span><span class="p">,</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">six</span><span class="o">.</span><span class="n">iteritems</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">openapi_types</span><span class="p">):</span>
@@ -305,13 +305,13 @@
             <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
                 <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
                     <span class="k">continue</span>
-                <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="p">[</span><span class="n">y</span><span class="o">.</span><span class="n">value</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">Enum</span><span class="p">)</span> <span class="k">else</span> <span class="n">y</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span> <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="s2">&quot;to_dict&quot;</span><span class="p">)</span> <span class="k">else</span> <span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">value</span><span class="p">]]</span>
-            <span class="k">elif</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="s2">&quot;to_dict&quot;</span><span class="p">):</span>
+                <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="p">[</span><span class="n">y</span><span class="o">.</span><span class="n">value</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">Enum</span><span class="p">)</span> <span class="k">else</span> <span class="n">y</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span> <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="s2">"to_dict"</span><span class="p">)</span> <span class="k">else</span> <span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">value</span><span class="p">]]</span>
+            <span class="k">elif</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="s2">"to_dict"</span><span class="p">):</span>
                 <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="n">value</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span>
             <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">Enum</span><span class="p">):</span>
                 <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="n">value</span><span class="o">.</span><span class="n">value</span>
             <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
-                <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="p">(</span><span class="n">v</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span> <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="s2">&quot;to_dict&quot;</span><span class="p">)</span> <span class="k">else</span> <span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span> <span class="ow">in</span> <span class="n">value</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
+                <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="p">(</span><span class="n">v</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span> <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="s2">"to_dict"</span><span class="p">)</span> <span class="k">else</span> <span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span> <span class="ow">in</span> <span class="n">value</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
             <span class="k">else</span><span class="p">:</span>
                 <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="n">value</span>
 
@@ -321,23 +321,23 @@
 <div class="viewcode-block" id="DolbyDigitalLoudnessControl.to_str">
 <a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.dolby_digital_loudness_control.DolbyDigitalLoudnessControl.to_str">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">to_str</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the string representation of the model&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""Returns the string representation of the model"""</span>
         <span class="k">return</span> <span class="n">pprint</span><span class="o">.</span><span class="n">pformat</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">to_dict</span><span class="p">())</span></div>
 
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;For `print` and `pprint`&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""For `print` and `pprint`"""</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">to_str</span><span class="p">()</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns true if both objects are equal&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""Returns true if both objects are equal"""</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">DolbyDigitalLoudnessControl</span><span class="p">):</span>
             <span class="k">return</span> <span class="kc">False</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="vm">__dict__</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__ne__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns true if both objects are not equal&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""Returns true if both objects are not equal"""</span>
         <span class="k">return</span> <span class="ow">not</span> <span class="bp">self</span> <span class="o">==</span> <span class="n">other</span></div>
 
 </pre></div>

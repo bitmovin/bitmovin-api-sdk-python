@@ -141,16 +141,16 @@
 <a class="viewcode-back" href="../../../../../__modules/bitmovin_api_sdk.encoding.manifests.smooth.html#bitmovin_api_sdk.encoding.manifests.smooth.smooth_api.SmoothApi.create">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">smooth_streaming_manifest</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (SmoothStreamingManifest, dict) -&gt; SmoothStreamingManifest</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Create Smooth Streaming Manifest</span>
+<span class="w">        </span><span class="sd">"""Create Smooth Streaming Manifest</span>
 
 <span class="sd">        :param smooth_streaming_manifest: The Custom Smooth Streaming Manifest to be created.</span>
 <span class="sd">        :type smooth_streaming_manifest: SmoothStreamingManifest, required</span>
 <span class="sd">        :return: Smooth Streaming manifest</span>
 <span class="sd">        :rtype: SmoothStreamingManifest</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">post</span><span class="p">(</span>
-            <span class="s1">&#39;/encoding/manifests/smooth&#39;</span><span class="p">,</span>
+            <span class="s1">'/encoding/manifests/smooth'</span><span class="p">,</span>
             <span class="n">smooth_streaming_manifest</span><span class="p">,</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">SmoothStreamingManifest</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>
@@ -161,17 +161,17 @@
 <a class="viewcode-back" href="../../../../../__modules/bitmovin_api_sdk.encoding.manifests.smooth.html#bitmovin_api_sdk.encoding.manifests.smooth.smooth_api.SmoothApi.delete">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">delete</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">manifest_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, dict) -&gt; BitmovinResponse</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Delete Smooth Streaming Manifest</span>
+<span class="w">        </span><span class="sd">"""Delete Smooth Streaming Manifest</span>
 
 <span class="sd">        :param manifest_id: Id of the Smooth Streaming Manifest.</span>
 <span class="sd">        :type manifest_id: string_types, required</span>
 <span class="sd">        :return: Id of the manifest</span>
 <span class="sd">        :rtype: BitmovinResponse</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span>
-            <span class="s1">&#39;/encoding/manifests/smooth/</span><span class="si">{manifest_id}</span><span class="s1">&#39;</span><span class="p">,</span>
-            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;manifest_id&#39;</span><span class="p">:</span> <span class="n">manifest_id</span><span class="p">},</span>
+            <span class="s1">'/encoding/manifests/smooth/</span><span class="si">{manifest_id}</span><span class="s1">'</span><span class="p">,</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">'manifest_id'</span><span class="p">:</span> <span class="n">manifest_id</span><span class="p">},</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">BitmovinResponse</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>
         <span class="p">)</span></div>
@@ -181,17 +181,17 @@
 <a class="viewcode-back" href="../../../../../__modules/bitmovin_api_sdk.encoding.manifests.smooth.html#bitmovin_api_sdk.encoding.manifests.smooth.smooth_api.SmoothApi.get">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">manifest_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, dict) -&gt; SmoothStreamingManifest</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get Smooth Streaming Manifest details</span>
+<span class="w">        </span><span class="sd">"""Get Smooth Streaming Manifest details</span>
 
 <span class="sd">        :param manifest_id: Id of the Smooth Streaming Manifest.</span>
 <span class="sd">        :type manifest_id: string_types, required</span>
 <span class="sd">        :return: Manifest details</span>
 <span class="sd">        :rtype: SmoothStreamingManifest</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
-            <span class="s1">&#39;/encoding/manifests/smooth/</span><span class="si">{manifest_id}</span><span class="s1">&#39;</span><span class="p">,</span>
-            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;manifest_id&#39;</span><span class="p">:</span> <span class="n">manifest_id</span><span class="p">},</span>
+            <span class="s1">'/encoding/manifests/smooth/</span><span class="si">{manifest_id}</span><span class="s1">'</span><span class="p">,</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">'manifest_id'</span><span class="p">:</span> <span class="n">manifest_id</span><span class="p">},</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">SmoothStreamingManifest</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>
         <span class="p">)</span></div>
@@ -201,17 +201,17 @@
 <a class="viewcode-back" href="../../../../../__modules/bitmovin_api_sdk.encoding.manifests.smooth.html#bitmovin_api_sdk.encoding.manifests.smooth.smooth_api.SmoothApi.get_start_request">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">get_start_request</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">manifest_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, dict) -&gt; StartManifestRequest</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Smooth Streaming Manifest Start Details</span>
+<span class="w">        </span><span class="sd">"""Smooth Streaming Manifest Start Details</span>
 
 <span class="sd">        :param manifest_id: Id of the manifest</span>
 <span class="sd">        :type manifest_id: string_types, required</span>
 <span class="sd">        :return: Service specific result</span>
 <span class="sd">        :rtype: StartManifestRequest</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
-            <span class="s1">&#39;/encoding/manifests/smooth/</span><span class="si">{manifest_id}</span><span class="s1">/start&#39;</span><span class="p">,</span>
-            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;manifest_id&#39;</span><span class="p">:</span> <span class="n">manifest_id</span><span class="p">},</span>
+            <span class="s1">'/encoding/manifests/smooth/</span><span class="si">{manifest_id}</span><span class="s1">/start'</span><span class="p">,</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">'manifest_id'</span><span class="p">:</span> <span class="n">manifest_id</span><span class="p">},</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">StartManifestRequest</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>
         <span class="p">)</span></div>
@@ -221,16 +221,16 @@
 <a class="viewcode-back" href="../../../../../__modules/bitmovin_api_sdk.encoding.manifests.smooth.html#bitmovin_api_sdk.encoding.manifests.smooth.smooth_api.SmoothApi.list">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">list</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">query_params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (SmoothStreamingManifestListQueryParams, dict) -&gt; SmoothStreamingManifest</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;List Smooth Streaming Manifests</span>
+<span class="w">        </span><span class="sd">"""List Smooth Streaming Manifests</span>
 
 <span class="sd">        :param query_params: Query parameters</span>
 <span class="sd">        :type query_params: SmoothStreamingManifestListQueryParams</span>
 <span class="sd">        :return: Manifest results</span>
 <span class="sd">        :rtype: SmoothStreamingManifest</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
-            <span class="s1">&#39;/encoding/manifests/smooth&#39;</span><span class="p">,</span>
+            <span class="s1">'/encoding/manifests/smooth'</span><span class="p">,</span>
             <span class="n">query_params</span><span class="o">=</span><span class="n">query_params</span><span class="p">,</span>
             <span class="n">pagination_response</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">SmoothStreamingManifest</span><span class="p">,</span>
@@ -242,7 +242,7 @@
 <a class="viewcode-back" href="../../../../../__modules/bitmovin_api_sdk.encoding.manifests.smooth.html#bitmovin_api_sdk.encoding.manifests.smooth.smooth_api.SmoothApi.start">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">start</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">manifest_id</span><span class="p">,</span> <span class="n">start_manifest_request</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, StartManifestRequest, dict) -&gt; BitmovinResponse</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Start Smooth Streaming manifest generation</span>
+<span class="w">        </span><span class="sd">"""Start Smooth Streaming manifest generation</span>
 
 <span class="sd">        :param manifest_id: Id of the Smooth Streaming Manifest.</span>
 <span class="sd">        :type manifest_id: string_types, required</span>
@@ -250,12 +250,12 @@
 <span class="sd">        :type start_manifest_request: StartManifestRequest</span>
 <span class="sd">        :return: Id of the manifest</span>
 <span class="sd">        :rtype: BitmovinResponse</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">post</span><span class="p">(</span>
-            <span class="s1">&#39;/encoding/manifests/smooth/</span><span class="si">{manifest_id}</span><span class="s1">/start&#39;</span><span class="p">,</span>
+            <span class="s1">'/encoding/manifests/smooth/</span><span class="si">{manifest_id}</span><span class="s1">/start'</span><span class="p">,</span>
             <span class="n">start_manifest_request</span><span class="p">,</span>
-            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;manifest_id&#39;</span><span class="p">:</span> <span class="n">manifest_id</span><span class="p">},</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">'manifest_id'</span><span class="p">:</span> <span class="n">manifest_id</span><span class="p">},</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">BitmovinResponse</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>
         <span class="p">)</span></div>
@@ -265,17 +265,17 @@
 <a class="viewcode-back" href="../../../../../__modules/bitmovin_api_sdk.encoding.manifests.smooth.html#bitmovin_api_sdk.encoding.manifests.smooth.smooth_api.SmoothApi.status">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">status</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">manifest_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, dict) -&gt; Task</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Smooth Streaming manifest generation status</span>
+<span class="w">        </span><span class="sd">"""Smooth Streaming manifest generation status</span>
 
 <span class="sd">        :param manifest_id: Id of the Smooth Streaming Manifest.</span>
 <span class="sd">        :type manifest_id: string_types, required</span>
 <span class="sd">        :return: Status of manifest generation</span>
 <span class="sd">        :rtype: Task</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
-            <span class="s1">&#39;/encoding/manifests/smooth/</span><span class="si">{manifest_id}</span><span class="s1">/status&#39;</span><span class="p">,</span>
-            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;manifest_id&#39;</span><span class="p">:</span> <span class="n">manifest_id</span><span class="p">},</span>
+            <span class="s1">'/encoding/manifests/smooth/</span><span class="si">{manifest_id}</span><span class="s1">/status'</span><span class="p">,</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">'manifest_id'</span><span class="p">:</span> <span class="n">manifest_id</span><span class="p">},</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">Task</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>
         <span class="p">)</span></div>
@@ -285,17 +285,17 @@
 <a class="viewcode-back" href="../../../../../__modules/bitmovin_api_sdk.encoding.manifests.smooth.html#bitmovin_api_sdk.encoding.manifests.smooth.smooth_api.SmoothApi.stop">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">stop</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">manifest_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, dict) -&gt; BitmovinResponse</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Stop Smooth Streaming manifest generation</span>
+<span class="w">        </span><span class="sd">"""Stop Smooth Streaming manifest generation</span>
 
 <span class="sd">        :param manifest_id: Id of the Smooth Streaming Manifest.</span>
 <span class="sd">        :type manifest_id: string_types, required</span>
 <span class="sd">        :return: Id of the Smooth Streaming Manifest</span>
 <span class="sd">        :rtype: BitmovinResponse</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">post</span><span class="p">(</span>
-            <span class="s1">&#39;/encoding/manifests/smooth/</span><span class="si">{manifest_id}</span><span class="s1">/stop&#39;</span><span class="p">,</span>
-            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;manifest_id&#39;</span><span class="p">:</span> <span class="n">manifest_id</span><span class="p">},</span>
+            <span class="s1">'/encoding/manifests/smooth/</span><span class="si">{manifest_id}</span><span class="s1">/stop'</span><span class="p">,</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">'manifest_id'</span><span class="p">:</span> <span class="n">manifest_id</span><span class="p">},</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">BitmovinResponse</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>
         <span class="p">)</span></div>

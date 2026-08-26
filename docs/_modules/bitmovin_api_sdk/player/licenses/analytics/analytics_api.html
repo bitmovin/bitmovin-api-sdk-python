@@ -105,7 +105,7 @@
 <a class="viewcode-back" href="../../../../../__modules/bitmovin_api_sdk.player.licenses.analytics.html#bitmovin_api_sdk.player.licenses.analytics.analytics_api.AnalyticsApi.create">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">license_id</span><span class="p">,</span> <span class="n">player_license_analytics</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, PlayerLicenseAnalytics, dict) -&gt; PlayerLicenseAnalytics</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Activate Analytics</span>
+<span class="w">        </span><span class="sd">"""Activate Analytics</span>
 
 <span class="sd">        :param license_id: Id of the Player License</span>
 <span class="sd">        :type license_id: string_types, required</span>
@@ -113,12 +113,12 @@
 <span class="sd">        :type player_license_analytics: PlayerLicenseAnalytics, required</span>
 <span class="sd">        :return: Analytics details</span>
 <span class="sd">        :rtype: PlayerLicenseAnalytics</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">post</span><span class="p">(</span>
-            <span class="s1">&#39;/player/licenses/</span><span class="si">{license_id}</span><span class="s1">/analytics&#39;</span><span class="p">,</span>
+            <span class="s1">'/player/licenses/</span><span class="si">{license_id}</span><span class="s1">/analytics'</span><span class="p">,</span>
             <span class="n">player_license_analytics</span><span class="p">,</span>
-            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;license_id&#39;</span><span class="p">:</span> <span class="n">license_id</span><span class="p">},</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">'license_id'</span><span class="p">:</span> <span class="n">license_id</span><span class="p">},</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">PlayerLicenseAnalytics</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>
         <span class="p">)</span></div>
@@ -128,17 +128,17 @@
 <a class="viewcode-back" href="../../../../../__modules/bitmovin_api_sdk.player.licenses.analytics.html#bitmovin_api_sdk.player.licenses.analytics.analytics_api.AnalyticsApi.delete">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">delete</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">license_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, dict) -&gt; PlayerLicenseAnalytics</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Deactivate Analytics</span>
+<span class="w">        </span><span class="sd">"""Deactivate Analytics</span>
 
 <span class="sd">        :param license_id: Id of license</span>
 <span class="sd">        :type license_id: string_types, required</span>
 <span class="sd">        :return: Analytics details that have just been deactivated</span>
 <span class="sd">        :rtype: PlayerLicenseAnalytics</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span>
-            <span class="s1">&#39;/player/licenses/</span><span class="si">{license_id}</span><span class="s1">/analytics&#39;</span><span class="p">,</span>
-            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;license_id&#39;</span><span class="p">:</span> <span class="n">license_id</span><span class="p">},</span>
+            <span class="s1">'/player/licenses/</span><span class="si">{license_id}</span><span class="s1">/analytics'</span><span class="p">,</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">'license_id'</span><span class="p">:</span> <span class="n">license_id</span><span class="p">},</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">PlayerLicenseAnalytics</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>
         <span class="p">)</span></div>

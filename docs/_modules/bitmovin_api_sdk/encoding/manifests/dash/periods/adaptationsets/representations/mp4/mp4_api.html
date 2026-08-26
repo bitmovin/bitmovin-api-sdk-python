@@ -115,7 +115,7 @@
 <a class="viewcode-back" href="../../../../../../../../../__modules/bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.mp4.html#bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.mp4.mp4_api.Mp4Api.create">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">manifest_id</span><span class="p">,</span> <span class="n">period_id</span><span class="p">,</span> <span class="n">adaptationset_id</span><span class="p">,</span> <span class="n">dash_mp4_representation</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, string_types, string_types, DashMp4Representation, dict) -&gt; DashMp4Representation</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Create MP4 Representation</span>
+<span class="w">        </span><span class="sd">"""Create MP4 Representation</span>
 
 <span class="sd">        :param manifest_id: Id of the manifest</span>
 <span class="sd">        :type manifest_id: string_types, required</span>
@@ -127,12 +127,12 @@
 <span class="sd">        :type dash_mp4_representation: DashMp4Representation, required</span>
 <span class="sd">        :return: MP4 representation</span>
 <span class="sd">        :rtype: DashMp4Representation</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">post</span><span class="p">(</span>
-            <span class="s1">&#39;/encoding/manifests/dash/</span><span class="si">{manifest_id}</span><span class="s1">/periods/</span><span class="si">{period_id}</span><span class="s1">/adaptationsets/</span><span class="si">{adaptationset_id}</span><span class="s1">/representations/mp4&#39;</span><span class="p">,</span>
+            <span class="s1">'/encoding/manifests/dash/</span><span class="si">{manifest_id}</span><span class="s1">/periods/</span><span class="si">{period_id}</span><span class="s1">/adaptationsets/</span><span class="si">{adaptationset_id}</span><span class="s1">/representations/mp4'</span><span class="p">,</span>
             <span class="n">dash_mp4_representation</span><span class="p">,</span>
-            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;manifest_id&#39;</span><span class="p">:</span> <span class="n">manifest_id</span><span class="p">,</span> <span class="s1">&#39;period_id&#39;</span><span class="p">:</span> <span class="n">period_id</span><span class="p">,</span> <span class="s1">&#39;adaptationset_id&#39;</span><span class="p">:</span> <span class="n">adaptationset_id</span><span class="p">},</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">'manifest_id'</span><span class="p">:</span> <span class="n">manifest_id</span><span class="p">,</span> <span class="s1">'period_id'</span><span class="p">:</span> <span class="n">period_id</span><span class="p">,</span> <span class="s1">'adaptationset_id'</span><span class="p">:</span> <span class="n">adaptationset_id</span><span class="p">},</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">DashMp4Representation</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>
         <span class="p">)</span></div>
@@ -142,7 +142,7 @@
 <a class="viewcode-back" href="../../../../../../../../../__modules/bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.mp4.html#bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.mp4.mp4_api.Mp4Api.delete">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">delete</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">manifest_id</span><span class="p">,</span> <span class="n">period_id</span><span class="p">,</span> <span class="n">adaptationset_id</span><span class="p">,</span> <span class="n">representation_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, string_types, string_types, string_types, dict) -&gt; BitmovinResponse</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Delete MP4 Representation</span>
+<span class="w">        </span><span class="sd">"""Delete MP4 Representation</span>
 
 <span class="sd">        :param manifest_id: Id of the manifest</span>
 <span class="sd">        :type manifest_id: string_types, required</span>
@@ -154,11 +154,11 @@
 <span class="sd">        :type representation_id: string_types, required</span>
 <span class="sd">        :return: Id of the MP4 Representation</span>
 <span class="sd">        :rtype: BitmovinResponse</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span>
-            <span class="s1">&#39;/encoding/manifests/dash/</span><span class="si">{manifest_id}</span><span class="s1">/periods/</span><span class="si">{period_id}</span><span class="s1">/adaptationsets/</span><span class="si">{adaptationset_id}</span><span class="s1">/representations/mp4/</span><span class="si">{representation_id}</span><span class="s1">&#39;</span><span class="p">,</span>
-            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;manifest_id&#39;</span><span class="p">:</span> <span class="n">manifest_id</span><span class="p">,</span> <span class="s1">&#39;period_id&#39;</span><span class="p">:</span> <span class="n">period_id</span><span class="p">,</span> <span class="s1">&#39;adaptationset_id&#39;</span><span class="p">:</span> <span class="n">adaptationset_id</span><span class="p">,</span> <span class="s1">&#39;representation_id&#39;</span><span class="p">:</span> <span class="n">representation_id</span><span class="p">},</span>
+            <span class="s1">'/encoding/manifests/dash/</span><span class="si">{manifest_id}</span><span class="s1">/periods/</span><span class="si">{period_id}</span><span class="s1">/adaptationsets/</span><span class="si">{adaptationset_id}</span><span class="s1">/representations/mp4/</span><span class="si">{representation_id}</span><span class="s1">'</span><span class="p">,</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">'manifest_id'</span><span class="p">:</span> <span class="n">manifest_id</span><span class="p">,</span> <span class="s1">'period_id'</span><span class="p">:</span> <span class="n">period_id</span><span class="p">,</span> <span class="s1">'adaptationset_id'</span><span class="p">:</span> <span class="n">adaptationset_id</span><span class="p">,</span> <span class="s1">'representation_id'</span><span class="p">:</span> <span class="n">representation_id</span><span class="p">},</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">BitmovinResponse</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>
         <span class="p">)</span></div>
@@ -168,7 +168,7 @@
 <a class="viewcode-back" href="../../../../../../../../../__modules/bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.mp4.html#bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.mp4.mp4_api.Mp4Api.get">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">manifest_id</span><span class="p">,</span> <span class="n">period_id</span><span class="p">,</span> <span class="n">adaptationset_id</span><span class="p">,</span> <span class="n">representation_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, string_types, string_types, string_types, dict) -&gt; DashMp4Representation</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get MP4 Representation details</span>
+<span class="w">        </span><span class="sd">"""Get MP4 Representation details</span>
 
 <span class="sd">        :param manifest_id: Id of the manifest</span>
 <span class="sd">        :type manifest_id: string_types, required</span>
@@ -180,11 +180,11 @@
 <span class="sd">        :type representation_id: string_types, required</span>
 <span class="sd">        :return: MP4 Representation details</span>
 <span class="sd">        :rtype: DashMp4Representation</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
-            <span class="s1">&#39;/encoding/manifests/dash/</span><span class="si">{manifest_id}</span><span class="s1">/periods/</span><span class="si">{period_id}</span><span class="s1">/adaptationsets/</span><span class="si">{adaptationset_id}</span><span class="s1">/representations/mp4/</span><span class="si">{representation_id}</span><span class="s1">&#39;</span><span class="p">,</span>
-            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;manifest_id&#39;</span><span class="p">:</span> <span class="n">manifest_id</span><span class="p">,</span> <span class="s1">&#39;period_id&#39;</span><span class="p">:</span> <span class="n">period_id</span><span class="p">,</span> <span class="s1">&#39;adaptationset_id&#39;</span><span class="p">:</span> <span class="n">adaptationset_id</span><span class="p">,</span> <span class="s1">&#39;representation_id&#39;</span><span class="p">:</span> <span class="n">representation_id</span><span class="p">},</span>
+            <span class="s1">'/encoding/manifests/dash/</span><span class="si">{manifest_id}</span><span class="s1">/periods/</span><span class="si">{period_id}</span><span class="s1">/adaptationsets/</span><span class="si">{adaptationset_id}</span><span class="s1">/representations/mp4/</span><span class="si">{representation_id}</span><span class="s1">'</span><span class="p">,</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">'manifest_id'</span><span class="p">:</span> <span class="n">manifest_id</span><span class="p">,</span> <span class="s1">'period_id'</span><span class="p">:</span> <span class="n">period_id</span><span class="p">,</span> <span class="s1">'adaptationset_id'</span><span class="p">:</span> <span class="n">adaptationset_id</span><span class="p">,</span> <span class="s1">'representation_id'</span><span class="p">:</span> <span class="n">representation_id</span><span class="p">},</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">DashMp4Representation</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>
         <span class="p">)</span></div>
@@ -194,7 +194,7 @@
 <a class="viewcode-back" href="../../../../../../../../../__modules/bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.mp4.html#bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.mp4.mp4_api.Mp4Api.list">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">list</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">manifest_id</span><span class="p">,</span> <span class="n">period_id</span><span class="p">,</span> <span class="n">adaptationset_id</span><span class="p">,</span> <span class="n">query_params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, string_types, string_types, DashMp4RepresentationListQueryParams, dict) -&gt; DashMp4Representation</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;List MP4 Representations</span>
+<span class="w">        </span><span class="sd">"""List MP4 Representations</span>
 
 <span class="sd">        :param manifest_id: Id of the manifest</span>
 <span class="sd">        :type manifest_id: string_types, required</span>
@@ -206,11 +206,11 @@
 <span class="sd">        :type query_params: DashMp4RepresentationListQueryParams</span>
 <span class="sd">        :return: List of MP4 Representations</span>
 <span class="sd">        :rtype: DashMp4Representation</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
-            <span class="s1">&#39;/encoding/manifests/dash/</span><span class="si">{manifest_id}</span><span class="s1">/periods/</span><span class="si">{period_id}</span><span class="s1">/adaptationsets/</span><span class="si">{adaptationset_id}</span><span class="s1">/representations/mp4&#39;</span><span class="p">,</span>
-            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;manifest_id&#39;</span><span class="p">:</span> <span class="n">manifest_id</span><span class="p">,</span> <span class="s1">&#39;period_id&#39;</span><span class="p">:</span> <span class="n">period_id</span><span class="p">,</span> <span class="s1">&#39;adaptationset_id&#39;</span><span class="p">:</span> <span class="n">adaptationset_id</span><span class="p">},</span>
+            <span class="s1">'/encoding/manifests/dash/</span><span class="si">{manifest_id}</span><span class="s1">/periods/</span><span class="si">{period_id}</span><span class="s1">/adaptationsets/</span><span class="si">{adaptationset_id}</span><span class="s1">/representations/mp4'</span><span class="p">,</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">'manifest_id'</span><span class="p">:</span> <span class="n">manifest_id</span><span class="p">,</span> <span class="s1">'period_id'</span><span class="p">:</span> <span class="n">period_id</span><span class="p">,</span> <span class="s1">'adaptationset_id'</span><span class="p">:</span> <span class="n">adaptationset_id</span><span class="p">},</span>
             <span class="n">query_params</span><span class="o">=</span><span class="n">query_params</span><span class="p">,</span>
             <span class="n">pagination_response</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">DashMp4Representation</span><span class="p">,</span>

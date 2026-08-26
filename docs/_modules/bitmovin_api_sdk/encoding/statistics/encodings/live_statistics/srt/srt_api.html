@@ -107,7 +107,7 @@
 <a class="viewcode-back" href="../../../../../../../__modules/bitmovin_api_sdk.encoding.statistics.encodings.live_statistics.srt.html#bitmovin_api_sdk.encoding.statistics.encodings.live_statistics.srt.srt_api.SrtApi.list">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">list</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">encoding_id</span><span class="p">,</span> <span class="n">query_params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, SrtStatisticsListQueryParams, dict) -&gt; SrtStatistics</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;List Live Statistics SRT</span>
+<span class="w">        </span><span class="sd">"""List Live Statistics SRT</span>
 
 <span class="sd">        :param encoding_id: Id of the encoding.</span>
 <span class="sd">        :type encoding_id: string_types, required</span>
@@ -115,11 +115,11 @@
 <span class="sd">        :type query_params: SrtStatisticsListQueryParams</span>
 <span class="sd">        :return: List of statistics</span>
 <span class="sd">        :rtype: SrtStatistics</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
-            <span class="s1">&#39;/encoding/statistics/encodings/</span><span class="si">{encoding_id}</span><span class="s1">/live-statistics/srt&#39;</span><span class="p">,</span>
-            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;encoding_id&#39;</span><span class="p">:</span> <span class="n">encoding_id</span><span class="p">},</span>
+            <span class="s1">'/encoding/statistics/encodings/</span><span class="si">{encoding_id}</span><span class="s1">/live-statistics/srt'</span><span class="p">,</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">'encoding_id'</span><span class="p">:</span> <span class="n">encoding_id</span><span class="p">},</span>
             <span class="n">query_params</span><span class="o">=</span><span class="n">query_params</span><span class="p">,</span>
             <span class="n">pagination_response</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">SrtStatistics</span><span class="p">,</span>
@@ -131,7 +131,7 @@
 <a class="viewcode-back" href="../../../../../../../__modules/bitmovin_api_sdk.encoding.statistics.encodings.live_statistics.srt.html#bitmovin_api_sdk.encoding.statistics.encodings.live_statistics.srt.srt_api.SrtApi.list_by_srt_input_id">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">list_by_srt_input_id</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">encoding_id</span><span class="p">,</span> <span class="n">srt_input_id</span><span class="p">,</span> <span class="n">query_params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, string_types, SrtStatisticsListBySrtInputIdQueryParams, dict) -&gt; SrtStatistics</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;List Statistics For SRT Live Stream Input</span>
+<span class="w">        </span><span class="sd">"""List Statistics For SRT Live Stream Input</span>
 
 <span class="sd">        :param encoding_id: Id of the encoding.</span>
 <span class="sd">        :type encoding_id: string_types, required</span>
@@ -141,11 +141,11 @@
 <span class="sd">        :type query_params: SrtStatisticsListBySrtInputIdQueryParams</span>
 <span class="sd">        :return: List of statistics</span>
 <span class="sd">        :rtype: SrtStatistics</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
-            <span class="s1">&#39;/encoding/statistics/encodings/</span><span class="si">{encoding_id}</span><span class="s1">/live-statistics/srt/</span><span class="si">{srt_input_id}</span><span class="s1">&#39;</span><span class="p">,</span>
-            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;encoding_id&#39;</span><span class="p">:</span> <span class="n">encoding_id</span><span class="p">,</span> <span class="s1">&#39;srt_input_id&#39;</span><span class="p">:</span> <span class="n">srt_input_id</span><span class="p">},</span>
+            <span class="s1">'/encoding/statistics/encodings/</span><span class="si">{encoding_id}</span><span class="s1">/live-statistics/srt/</span><span class="si">{srt_input_id}</span><span class="s1">'</span><span class="p">,</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">'encoding_id'</span><span class="p">:</span> <span class="n">encoding_id</span><span class="p">,</span> <span class="s1">'srt_input_id'</span><span class="p">:</span> <span class="n">srt_input_id</span><span class="p">},</span>
             <span class="n">query_params</span><span class="o">=</span><span class="n">query_params</span><span class="p">,</span>
             <span class="n">pagination_response</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">SrtStatistics</span><span class="p">,</span>

@@ -105,7 +105,7 @@
 <a class="viewcode-back" href="../../../../../../__modules/bitmovin_api_sdk.encoding.encodings.live.reset_live_manifest_timeshift.html#bitmovin_api_sdk.encoding.encodings.live.reset_live_manifest_timeshift.reset_live_manifest_timeshift_api.ResetLiveManifestTimeshiftApi.create">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">encoding_id</span><span class="p">,</span> <span class="n">reset_live_manifest_time_shift</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, ResetLiveManifestTimeShift, dict) -&gt; ResetLiveManifestTimeShift</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Reset Live manifest time-shift</span>
+<span class="w">        </span><span class="sd">"""Reset Live manifest time-shift</span>
 
 <span class="sd">        :param encoding_id: Id of the encoding.</span>
 <span class="sd">        :type encoding_id: string_types, required</span>
@@ -113,12 +113,12 @@
 <span class="sd">        :type reset_live_manifest_time_shift: ResetLiveManifestTimeShift, required</span>
 <span class="sd">        :return: Reset Live manifest time-shift request</span>
 <span class="sd">        :rtype: ResetLiveManifestTimeShift</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">post</span><span class="p">(</span>
-            <span class="s1">&#39;/encoding/encodings/</span><span class="si">{encoding_id}</span><span class="s1">/live/reset-live-manifest-timeshift&#39;</span><span class="p">,</span>
+            <span class="s1">'/encoding/encodings/</span><span class="si">{encoding_id}</span><span class="s1">/live/reset-live-manifest-timeshift'</span><span class="p">,</span>
             <span class="n">reset_live_manifest_time_shift</span><span class="p">,</span>
-            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;encoding_id&#39;</span><span class="p">:</span> <span class="n">encoding_id</span><span class="p">},</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">'encoding_id'</span><span class="p">:</span> <span class="n">encoding_id</span><span class="p">},</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">ResetLiveManifestTimeShift</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>
         <span class="p">)</span></div>

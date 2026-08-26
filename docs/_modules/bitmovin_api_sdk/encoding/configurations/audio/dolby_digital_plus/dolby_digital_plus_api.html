@@ -115,16 +115,16 @@
 <a class="viewcode-back" href="../../../../../../__modules/bitmovin_api_sdk.encoding.configurations.audio.dolby_digital_plus.html#bitmovin_api_sdk.encoding.configurations.audio.dolby_digital_plus.dolby_digital_plus_api.DolbyDigitalPlusApi.create">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dolby_digital_plus_audio_configuration</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (DolbyDigitalPlusAudioConfiguration, dict) -&gt; DolbyDigitalPlusAudioConfiguration</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Create Dolby Digital Plus Codec Configuration</span>
+<span class="w">        </span><span class="sd">"""Create Dolby Digital Plus Codec Configuration</span>
 
 <span class="sd">        :param dolby_digital_plus_audio_configuration: The Dolby Digital Plus Codec Configuration to be created (Dolby Encoder v3.17).  Dolby Digital Plus enables high-resolution multichannel audio at lower bit rates than with Dolby Digital. </span>
 <span class="sd">        :type dolby_digital_plus_audio_configuration: DolbyDigitalPlusAudioConfiguration, required</span>
 <span class="sd">        :return: Dolby Digital Plus Audio Configuration</span>
 <span class="sd">        :rtype: DolbyDigitalPlusAudioConfiguration</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">post</span><span class="p">(</span>
-            <span class="s1">&#39;/encoding/configurations/audio/dolby-digital-plus&#39;</span><span class="p">,</span>
+            <span class="s1">'/encoding/configurations/audio/dolby-digital-plus'</span><span class="p">,</span>
             <span class="n">dolby_digital_plus_audio_configuration</span><span class="p">,</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">DolbyDigitalPlusAudioConfiguration</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>
@@ -135,17 +135,17 @@
 <a class="viewcode-back" href="../../../../../../__modules/bitmovin_api_sdk.encoding.configurations.audio.dolby_digital_plus.html#bitmovin_api_sdk.encoding.configurations.audio.dolby_digital_plus.dolby_digital_plus_api.DolbyDigitalPlusApi.delete">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">delete</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">configuration_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, dict) -&gt; BitmovinResponse</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Delete Dolby Digital Plus Codec Configuration</span>
+<span class="w">        </span><span class="sd">"""Delete Dolby Digital Plus Codec Configuration</span>
 
 <span class="sd">        :param configuration_id: Id of the codec configuration</span>
 <span class="sd">        :type configuration_id: string_types, required</span>
 <span class="sd">        :return: Id of the codec configuration</span>
 <span class="sd">        :rtype: BitmovinResponse</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span>
-            <span class="s1">&#39;/encoding/configurations/audio/dolby-digital-plus/</span><span class="si">{configuration_id}</span><span class="s1">&#39;</span><span class="p">,</span>
-            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;configuration_id&#39;</span><span class="p">:</span> <span class="n">configuration_id</span><span class="p">},</span>
+            <span class="s1">'/encoding/configurations/audio/dolby-digital-plus/</span><span class="si">{configuration_id}</span><span class="s1">'</span><span class="p">,</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">'configuration_id'</span><span class="p">:</span> <span class="n">configuration_id</span><span class="p">},</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">BitmovinResponse</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>
         <span class="p">)</span></div>
@@ -155,17 +155,17 @@
 <a class="viewcode-back" href="../../../../../../__modules/bitmovin_api_sdk.encoding.configurations.audio.dolby_digital_plus.html#bitmovin_api_sdk.encoding.configurations.audio.dolby_digital_plus.dolby_digital_plus_api.DolbyDigitalPlusApi.get">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">configuration_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, dict) -&gt; DolbyDigitalPlusAudioConfiguration</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get Dolby Digital Plus Codec Configuration details</span>
+<span class="w">        </span><span class="sd">"""Get Dolby Digital Plus Codec Configuration details</span>
 
 <span class="sd">        :param configuration_id: Id of the codec configuration</span>
 <span class="sd">        :type configuration_id: string_types, required</span>
 <span class="sd">        :return: Dolby Digital Plus Audio Configuration</span>
 <span class="sd">        :rtype: DolbyDigitalPlusAudioConfiguration</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
-            <span class="s1">&#39;/encoding/configurations/audio/dolby-digital-plus/</span><span class="si">{configuration_id}</span><span class="s1">&#39;</span><span class="p">,</span>
-            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;configuration_id&#39;</span><span class="p">:</span> <span class="n">configuration_id</span><span class="p">},</span>
+            <span class="s1">'/encoding/configurations/audio/dolby-digital-plus/</span><span class="si">{configuration_id}</span><span class="s1">'</span><span class="p">,</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">'configuration_id'</span><span class="p">:</span> <span class="n">configuration_id</span><span class="p">},</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">DolbyDigitalPlusAudioConfiguration</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>
         <span class="p">)</span></div>
@@ -175,16 +175,16 @@
 <a class="viewcode-back" href="../../../../../../__modules/bitmovin_api_sdk.encoding.configurations.audio.dolby_digital_plus.html#bitmovin_api_sdk.encoding.configurations.audio.dolby_digital_plus.dolby_digital_plus_api.DolbyDigitalPlusApi.list">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">list</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">query_params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (DolbyDigitalPlusAudioConfigurationListQueryParams, dict) -&gt; DolbyDigitalPlusAudioConfiguration</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;List Dolby Digital Plus Codec Configurations</span>
+<span class="w">        </span><span class="sd">"""List Dolby Digital Plus Codec Configurations</span>
 
 <span class="sd">        :param query_params: Query parameters</span>
 <span class="sd">        :type query_params: DolbyDigitalPlusAudioConfigurationListQueryParams</span>
 <span class="sd">        :return: List of Dolby Digital Plus codec configurations</span>
 <span class="sd">        :rtype: DolbyDigitalPlusAudioConfiguration</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
-            <span class="s1">&#39;/encoding/configurations/audio/dolby-digital-plus&#39;</span><span class="p">,</span>
+            <span class="s1">'/encoding/configurations/audio/dolby-digital-plus'</span><span class="p">,</span>
             <span class="n">query_params</span><span class="o">=</span><span class="n">query_params</span><span class="p">,</span>
             <span class="n">pagination_response</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">DolbyDigitalPlusAudioConfiguration</span><span class="p">,</span>

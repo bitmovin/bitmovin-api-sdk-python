@@ -132,7 +132,7 @@
 <a class="viewcode-back" href="../../../../../__modules/bitmovin_api_sdk.account.organizations.groups.html#bitmovin_api_sdk.account.organizations.groups.groups_api.GroupsApi.create">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">organization_id</span><span class="p">,</span> <span class="n">group</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, Group, dict) -&gt; Group</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Add Group</span>
+<span class="w">        </span><span class="sd">"""Add Group</span>
 
 <span class="sd">        :param organization_id: Id of the organization</span>
 <span class="sd">        :type organization_id: string_types, required</span>
@@ -140,12 +140,12 @@
 <span class="sd">        :type group: Group, required</span>
 <span class="sd">        :return: Tenatn Group details</span>
 <span class="sd">        :rtype: Group</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">post</span><span class="p">(</span>
-            <span class="s1">&#39;/account/organizations/</span><span class="si">{organization_id}</span><span class="s1">/groups&#39;</span><span class="p">,</span>
+            <span class="s1">'/account/organizations/</span><span class="si">{organization_id}</span><span class="s1">/groups'</span><span class="p">,</span>
             <span class="n">group</span><span class="p">,</span>
-            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;organization_id&#39;</span><span class="p">:</span> <span class="n">organization_id</span><span class="p">},</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">'organization_id'</span><span class="p">:</span> <span class="n">organization_id</span><span class="p">},</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">Group</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>
         <span class="p">)</span></div>
@@ -155,7 +155,7 @@
 <a class="viewcode-back" href="../../../../../__modules/bitmovin_api_sdk.account.organizations.groups.html#bitmovin_api_sdk.account.organizations.groups.groups_api.GroupsApi.delete">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">delete</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">organization_id</span><span class="p">,</span> <span class="n">group_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, string_types, dict) -&gt; BitmovinResponse</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Delete Group</span>
+<span class="w">        </span><span class="sd">"""Delete Group</span>
 
 <span class="sd">        :param organization_id: Id of the organization</span>
 <span class="sd">        :type organization_id: string_types, required</span>
@@ -163,11 +163,11 @@
 <span class="sd">        :type group_id: string_types, required</span>
 <span class="sd">        :return: Id of the group</span>
 <span class="sd">        :rtype: BitmovinResponse</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span>
-            <span class="s1">&#39;/account/organizations/</span><span class="si">{organization_id}</span><span class="s1">/groups/</span><span class="si">{group_id}</span><span class="s1">&#39;</span><span class="p">,</span>
-            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;organization_id&#39;</span><span class="p">:</span> <span class="n">organization_id</span><span class="p">,</span> <span class="s1">&#39;group_id&#39;</span><span class="p">:</span> <span class="n">group_id</span><span class="p">},</span>
+            <span class="s1">'/account/organizations/</span><span class="si">{organization_id}</span><span class="s1">/groups/</span><span class="si">{group_id}</span><span class="s1">'</span><span class="p">,</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">'organization_id'</span><span class="p">:</span> <span class="n">organization_id</span><span class="p">,</span> <span class="s1">'group_id'</span><span class="p">:</span> <span class="n">group_id</span><span class="p">},</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">BitmovinResponse</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>
         <span class="p">)</span></div>
@@ -177,7 +177,7 @@
 <a class="viewcode-back" href="../../../../../__modules/bitmovin_api_sdk.account.organizations.groups.html#bitmovin_api_sdk.account.organizations.groups.groups_api.GroupsApi.get">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">organization_id</span><span class="p">,</span> <span class="n">group_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, string_types, dict) -&gt; Group</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Group Details</span>
+<span class="w">        </span><span class="sd">"""Group Details</span>
 
 <span class="sd">        :param organization_id: Id of the organization</span>
 <span class="sd">        :type organization_id: string_types, required</span>
@@ -185,11 +185,11 @@
 <span class="sd">        :type group_id: string_types, required</span>
 <span class="sd">        :return: Encoding transer details</span>
 <span class="sd">        :rtype: Group</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
-            <span class="s1">&#39;/account/organizations/</span><span class="si">{organization_id}</span><span class="s1">/groups/</span><span class="si">{group_id}</span><span class="s1">&#39;</span><span class="p">,</span>
-            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;organization_id&#39;</span><span class="p">:</span> <span class="n">organization_id</span><span class="p">,</span> <span class="s1">&#39;group_id&#39;</span><span class="p">:</span> <span class="n">group_id</span><span class="p">},</span>
+            <span class="s1">'/account/organizations/</span><span class="si">{organization_id}</span><span class="s1">/groups/</span><span class="si">{group_id}</span><span class="s1">'</span><span class="p">,</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">'organization_id'</span><span class="p">:</span> <span class="n">organization_id</span><span class="p">,</span> <span class="s1">'group_id'</span><span class="p">:</span> <span class="n">group_id</span><span class="p">},</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">Group</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>
         <span class="p">)</span></div>
@@ -199,7 +199,7 @@
 <a class="viewcode-back" href="../../../../../__modules/bitmovin_api_sdk.account.organizations.groups.html#bitmovin_api_sdk.account.organizations.groups.groups_api.GroupsApi.list">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">list</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">organization_id</span><span class="p">,</span> <span class="n">query_params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, GroupListQueryParams, dict) -&gt; Group</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;List Groups</span>
+<span class="w">        </span><span class="sd">"""List Groups</span>
 
 <span class="sd">        :param organization_id: Id of the organization</span>
 <span class="sd">        :type organization_id: string_types, required</span>
@@ -207,11 +207,11 @@
 <span class="sd">        :type query_params: GroupListQueryParams</span>
 <span class="sd">        :return: Service specific result</span>
 <span class="sd">        :rtype: Group</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
-            <span class="s1">&#39;/account/organizations/</span><span class="si">{organization_id}</span><span class="s1">/groups&#39;</span><span class="p">,</span>
-            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;organization_id&#39;</span><span class="p">:</span> <span class="n">organization_id</span><span class="p">},</span>
+            <span class="s1">'/account/organizations/</span><span class="si">{organization_id}</span><span class="s1">/groups'</span><span class="p">,</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">'organization_id'</span><span class="p">:</span> <span class="n">organization_id</span><span class="p">},</span>
             <span class="n">query_params</span><span class="o">=</span><span class="n">query_params</span><span class="p">,</span>
             <span class="n">pagination_response</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">Group</span><span class="p">,</span>

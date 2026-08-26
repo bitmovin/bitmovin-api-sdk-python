@@ -106,7 +106,7 @@
 <a class="viewcode-back" href="../../../../../__modules/bitmovin_api_sdk.player.licenses.domains.html#bitmovin_api_sdk.player.licenses.domains.domains_api.DomainsApi.create">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">license_id</span><span class="p">,</span> <span class="n">domain</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, Domain, dict) -&gt; Domain</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Add Domain</span>
+<span class="w">        </span><span class="sd">"""Add Domain</span>
 
 <span class="sd">        :param license_id: Id of the Player License</span>
 <span class="sd">        :type license_id: string_types, required</span>
@@ -114,12 +114,12 @@
 <span class="sd">        :type domain: Domain, required</span>
 <span class="sd">        :return: Domain details</span>
 <span class="sd">        :rtype: Domain</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">post</span><span class="p">(</span>
-            <span class="s1">&#39;/player/licenses/</span><span class="si">{license_id}</span><span class="s1">/domains&#39;</span><span class="p">,</span>
+            <span class="s1">'/player/licenses/</span><span class="si">{license_id}</span><span class="s1">/domains'</span><span class="p">,</span>
             <span class="n">domain</span><span class="p">,</span>
-            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;license_id&#39;</span><span class="p">:</span> <span class="n">license_id</span><span class="p">},</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">'license_id'</span><span class="p">:</span> <span class="n">license_id</span><span class="p">},</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">Domain</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>
         <span class="p">)</span></div>
@@ -129,7 +129,7 @@
 <a class="viewcode-back" href="../../../../../__modules/bitmovin_api_sdk.player.licenses.domains.html#bitmovin_api_sdk.player.licenses.domains.domains_api.DomainsApi.delete">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">delete</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">license_id</span><span class="p">,</span> <span class="n">domain_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, string_types, dict) -&gt; BitmovinResponse</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Delete Domain</span>
+<span class="w">        </span><span class="sd">"""Delete Domain</span>
 
 <span class="sd">        :param license_id: Id of license</span>
 <span class="sd">        :type license_id: string_types, required</span>
@@ -137,11 +137,11 @@
 <span class="sd">        :type domain_id: string_types, required</span>
 <span class="sd">        :return: Id of the domain</span>
 <span class="sd">        :rtype: BitmovinResponse</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span>
-            <span class="s1">&#39;/player/licenses/</span><span class="si">{license_id}</span><span class="s1">/domains/</span><span class="si">{domain_id}</span><span class="s1">&#39;</span><span class="p">,</span>
-            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;license_id&#39;</span><span class="p">:</span> <span class="n">license_id</span><span class="p">,</span> <span class="s1">&#39;domain_id&#39;</span><span class="p">:</span> <span class="n">domain_id</span><span class="p">},</span>
+            <span class="s1">'/player/licenses/</span><span class="si">{license_id}</span><span class="s1">/domains/</span><span class="si">{domain_id}</span><span class="s1">'</span><span class="p">,</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">'license_id'</span><span class="p">:</span> <span class="n">license_id</span><span class="p">,</span> <span class="s1">'domain_id'</span><span class="p">:</span> <span class="n">domain_id</span><span class="p">},</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">BitmovinResponse</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>
         <span class="p">)</span></div>
@@ -151,17 +151,17 @@
 <a class="viewcode-back" href="../../../../../__modules/bitmovin_api_sdk.player.licenses.domains.html#bitmovin_api_sdk.player.licenses.domains.domains_api.DomainsApi.list">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">list</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">license_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, dict) -&gt; Domain</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;List allowed Domains for Player License</span>
+<span class="w">        </span><span class="sd">"""List allowed Domains for Player License</span>
 
 <span class="sd">        :param license_id: Id of the Player License</span>
 <span class="sd">        :type license_id: string_types, required</span>
 <span class="sd">        :return: Service specific result</span>
 <span class="sd">        :rtype: Domain</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
-            <span class="s1">&#39;/player/licenses/</span><span class="si">{license_id}</span><span class="s1">/domains&#39;</span><span class="p">,</span>
-            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;license_id&#39;</span><span class="p">:</span> <span class="n">license_id</span><span class="p">},</span>
+            <span class="s1">'/player/licenses/</span><span class="si">{license_id}</span><span class="s1">/domains'</span><span class="p">,</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">'license_id'</span><span class="p">:</span> <span class="n">license_id</span><span class="p">},</span>
             <span class="n">pagination_response</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">Domain</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>

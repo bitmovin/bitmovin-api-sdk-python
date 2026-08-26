@@ -114,16 +114,16 @@
 <a class="viewcode-back" href="../../../../../__modules/bitmovin_api_sdk.encoding.outputs.gcs.html#bitmovin_api_sdk.encoding.outputs.gcs.gcs_api.GcsApi.create">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">gcs_output</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (GcsOutput, dict) -&gt; GcsOutput</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Create GCS Output</span>
+<span class="w">        </span><span class="sd">"""Create GCS Output</span>
 
 <span class="sd">        :param gcs_output: The GCS output to be created</span>
 <span class="sd">        :type gcs_output: GcsOutput, required</span>
 <span class="sd">        :return: GCS output</span>
 <span class="sd">        :rtype: GcsOutput</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">post</span><span class="p">(</span>
-            <span class="s1">&#39;/encoding/outputs/gcs&#39;</span><span class="p">,</span>
+            <span class="s1">'/encoding/outputs/gcs'</span><span class="p">,</span>
             <span class="n">gcs_output</span><span class="p">,</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">GcsOutput</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>
@@ -134,17 +134,17 @@
 <a class="viewcode-back" href="../../../../../__modules/bitmovin_api_sdk.encoding.outputs.gcs.html#bitmovin_api_sdk.encoding.outputs.gcs.gcs_api.GcsApi.delete">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">delete</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">output_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, dict) -&gt; GcsOutput</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Delete GCS Output</span>
+<span class="w">        </span><span class="sd">"""Delete GCS Output</span>
 
 <span class="sd">        :param output_id: Id of the output</span>
 <span class="sd">        :type output_id: string_types, required</span>
 <span class="sd">        :return: Id of the output</span>
 <span class="sd">        :rtype: GcsOutput</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span>
-            <span class="s1">&#39;/encoding/outputs/gcs/</span><span class="si">{output_id}</span><span class="s1">&#39;</span><span class="p">,</span>
-            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;output_id&#39;</span><span class="p">:</span> <span class="n">output_id</span><span class="p">},</span>
+            <span class="s1">'/encoding/outputs/gcs/</span><span class="si">{output_id}</span><span class="s1">'</span><span class="p">,</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">'output_id'</span><span class="p">:</span> <span class="n">output_id</span><span class="p">},</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">GcsOutput</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>
         <span class="p">)</span></div>
@@ -154,17 +154,17 @@
 <a class="viewcode-back" href="../../../../../__modules/bitmovin_api_sdk.encoding.outputs.gcs.html#bitmovin_api_sdk.encoding.outputs.gcs.gcs_api.GcsApi.get">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">output_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, dict) -&gt; GcsOutput</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get GCS Output details</span>
+<span class="w">        </span><span class="sd">"""Get GCS Output details</span>
 
 <span class="sd">        :param output_id: Id of the output</span>
 <span class="sd">        :type output_id: string_types, required</span>
 <span class="sd">        :return: GCS output</span>
 <span class="sd">        :rtype: GcsOutput</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
-            <span class="s1">&#39;/encoding/outputs/gcs/</span><span class="si">{output_id}</span><span class="s1">&#39;</span><span class="p">,</span>
-            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;output_id&#39;</span><span class="p">:</span> <span class="n">output_id</span><span class="p">},</span>
+            <span class="s1">'/encoding/outputs/gcs/</span><span class="si">{output_id}</span><span class="s1">'</span><span class="p">,</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">'output_id'</span><span class="p">:</span> <span class="n">output_id</span><span class="p">},</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">GcsOutput</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>
         <span class="p">)</span></div>
@@ -174,16 +174,16 @@
 <a class="viewcode-back" href="../../../../../__modules/bitmovin_api_sdk.encoding.outputs.gcs.html#bitmovin_api_sdk.encoding.outputs.gcs.gcs_api.GcsApi.list">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">list</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">query_params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (GcsOutputListQueryParams, dict) -&gt; GcsOutput</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;List GCS Outputs</span>
+<span class="w">        </span><span class="sd">"""List GCS Outputs</span>
 
 <span class="sd">        :param query_params: Query parameters</span>
 <span class="sd">        :type query_params: GcsOutputListQueryParams</span>
 <span class="sd">        :return: List of GCS outputs</span>
 <span class="sd">        :rtype: GcsOutput</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
-            <span class="s1">&#39;/encoding/outputs/gcs&#39;</span><span class="p">,</span>
+            <span class="s1">'/encoding/outputs/gcs'</span><span class="p">,</span>
             <span class="n">query_params</span><span class="o">=</span><span class="n">query_params</span><span class="p">,</span>
             <span class="n">pagination_response</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">GcsOutput</span><span class="p">,</span>

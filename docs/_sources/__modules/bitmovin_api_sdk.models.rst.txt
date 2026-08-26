@@ -348,6 +348,30 @@ bitmovin\_api\_sdk.models.adaptive\_quant\_mode module
    :show-inheritance:
    :undoc-members:
 
+bitmovin\_api\_sdk.models.advisory\_analysis\_status module
+-----------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.advisory_analysis_status
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+bitmovin\_api\_sdk.models.advisory\_category module
+---------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.advisory_category
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+bitmovin\_api\_sdk.models.advisory\_confidence module
+-----------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.advisory_confidence
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
 bitmovin\_api\_sdk.models.aes\_encryption\_drm module
 -----------------------------------------------------
 
@@ -512,6 +536,14 @@ bitmovin\_api\_sdk.models.ai\_scene\_analysis\_output\_language\_codes module
 -----------------------------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.models.ai_scene_analysis_output_language_codes
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+bitmovin\_api\_sdk.models.ai\_scene\_analysis\_regulatory\_advisories module
+----------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.ai_scene_analysis_regulatory_advisories
    :members:
    :show-inheritance:
    :undoc-members:
@@ -2016,6 +2048,14 @@ bitmovin\_api\_sdk.models.content module
 ----------------------------------------
 
 .. automodule:: bitmovin_api_sdk.models.content
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+bitmovin\_api\_sdk.models.content\_advisory module
+--------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.content_advisory
    :members:
    :show-inheritance:
    :undoc-members:
@@ -3692,14 +3732,6 @@ bitmovin\_api\_sdk.models.h265\_per\_title\_configuration module
    :show-inheritance:
    :undoc-members:
 
-bitmovin\_api\_sdk.models.h265\_v2\_constant\_bitrate\_mode\_config module
---------------------------------------------------------------------------
-
-.. automodule:: bitmovin_api_sdk.models.h265_v2_constant_bitrate_mode_config
-   :members:
-   :show-inheritance:
-   :undoc-members:
-
 bitmovin\_api\_sdk.models.h265\_v2\_motion\_compensated\_temporal\_filtering module
 -----------------------------------------------------------------------------------
 
@@ -4860,6 +4892,14 @@ bitmovin\_api\_sdk.models.mp4\_muxing\_information module
    :show-inheritance:
    :undoc-members:
 
+bitmovin\_api\_sdk.models.msl\_publishing\_authentication module
+----------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.msl_publishing_authentication
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
 bitmovin\_api\_sdk.models.muxing module
 ---------------------------------------
 
@@ -5652,6 +5692,14 @@ bitmovin\_api\_sdk.models.redundant\_rtmp\_input module
    :show-inheritance:
    :undoc-members:
 
+bitmovin\_api\_sdk.models.regulatory\_advisory\_topic module
+------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.regulatory_advisory_topic
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
 bitmovin\_api\_sdk.models.reprioritize\_encoding\_request module
 ----------------------------------------------------------------
 
@@ -5916,6 +5964,14 @@ bitmovin\_api\_sdk.models.scene\_analysis\_list\_sort module
    :show-inheritance:
    :undoc-members:
 
+bitmovin\_api\_sdk.models.scene\_analysis\_matching\_segment module
+-------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.scene_analysis_matching_segment
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
 bitmovin\_api\_sdk.models.scene\_dynamics module
 ------------------------------------------------
 
@@ -6040,6 +6096,14 @@ bitmovin\_api\_sdk.models.shot module
 -------------------------------------
 
 .. automodule:: bitmovin_api_sdk.models.shot
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+bitmovin\_api\_sdk.models.shot\_advisories module
+-------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.shot_advisories
    :members:
    :show-inheritance:
    :undoc-members:

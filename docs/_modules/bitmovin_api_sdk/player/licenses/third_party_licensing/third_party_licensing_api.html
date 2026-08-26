@@ -106,7 +106,7 @@
 <a class="viewcode-back" href="../../../../../__modules/bitmovin_api_sdk.player.licenses.third_party_licensing.html#bitmovin_api_sdk.player.licenses.third_party_licensing.third_party_licensing_api.ThirdPartyLicensingApi.create">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">license_id</span><span class="p">,</span> <span class="n">player_third_party_licensing</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, PlayerThirdPartyLicensing, dict) -&gt; PlayerThirdPartyLicensing</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Enable Third Party Licensing</span>
+<span class="w">        </span><span class="sd">"""Enable Third Party Licensing</span>
 
 <span class="sd">        :param license_id: Id of the Player License</span>
 <span class="sd">        :type license_id: string_types, required</span>
@@ -114,12 +114,12 @@
 <span class="sd">        :type player_third_party_licensing: PlayerThirdPartyLicensing, required</span>
 <span class="sd">        :return: Third party licensing details</span>
 <span class="sd">        :rtype: PlayerThirdPartyLicensing</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">post</span><span class="p">(</span>
-            <span class="s1">&#39;/player/licenses/</span><span class="si">{license_id}</span><span class="s1">/third-party-licensing&#39;</span><span class="p">,</span>
+            <span class="s1">'/player/licenses/</span><span class="si">{license_id}</span><span class="s1">/third-party-licensing'</span><span class="p">,</span>
             <span class="n">player_third_party_licensing</span><span class="p">,</span>
-            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;license_id&#39;</span><span class="p">:</span> <span class="n">license_id</span><span class="p">},</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">'license_id'</span><span class="p">:</span> <span class="n">license_id</span><span class="p">},</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">PlayerThirdPartyLicensing</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>
         <span class="p">)</span></div>
@@ -129,17 +129,17 @@
 <a class="viewcode-back" href="../../../../../__modules/bitmovin_api_sdk.player.licenses.third_party_licensing.html#bitmovin_api_sdk.player.licenses.third_party_licensing.third_party_licensing_api.ThirdPartyLicensingApi.delete">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">delete</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">license_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, dict) -&gt; BitmovinResponse</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Delete Third Party Licensing Configuration</span>
+<span class="w">        </span><span class="sd">"""Delete Third Party Licensing Configuration</span>
 
 <span class="sd">        :param license_id: Id of the Player License</span>
 <span class="sd">        :type license_id: string_types, required</span>
 <span class="sd">        :return: Id of the deleted Third Party Licensing Configuration</span>
 <span class="sd">        :rtype: BitmovinResponse</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span>
-            <span class="s1">&#39;/player/licenses/</span><span class="si">{license_id}</span><span class="s1">/third-party-licensing&#39;</span><span class="p">,</span>
-            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;license_id&#39;</span><span class="p">:</span> <span class="n">license_id</span><span class="p">},</span>
+            <span class="s1">'/player/licenses/</span><span class="si">{license_id}</span><span class="s1">/third-party-licensing'</span><span class="p">,</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">'license_id'</span><span class="p">:</span> <span class="n">license_id</span><span class="p">},</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">BitmovinResponse</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>
         <span class="p">)</span></div>
@@ -149,17 +149,17 @@
 <a class="viewcode-back" href="../../../../../__modules/bitmovin_api_sdk.player.licenses.third_party_licensing.html#bitmovin_api_sdk.player.licenses.third_party_licensing.third_party_licensing_api.ThirdPartyLicensingApi.get">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">license_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, dict) -&gt; PlayerThirdPartyLicensing</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get Third Party Licensing Configuration</span>
+<span class="w">        </span><span class="sd">"""Get Third Party Licensing Configuration</span>
 
 <span class="sd">        :param license_id: Id of the Player License</span>
 <span class="sd">        :type license_id: string_types, required</span>
 <span class="sd">        :return: Third party licensing details</span>
 <span class="sd">        :rtype: PlayerThirdPartyLicensing</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
-            <span class="s1">&#39;/player/licenses/</span><span class="si">{license_id}</span><span class="s1">/third-party-licensing&#39;</span><span class="p">,</span>
-            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;license_id&#39;</span><span class="p">:</span> <span class="n">license_id</span><span class="p">},</span>
+            <span class="s1">'/player/licenses/</span><span class="si">{license_id}</span><span class="s1">/third-party-licensing'</span><span class="p">,</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">'license_id'</span><span class="p">:</span> <span class="n">license_id</span><span class="p">},</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">PlayerThirdPartyLicensing</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>
         <span class="p">)</span></div>

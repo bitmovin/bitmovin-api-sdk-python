@@ -118,10 +118,10 @@
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">types</span> <span class="o">=</span> <span class="p">{</span>
-            <span class="s1">&#39;dynamic_range_compression&#39;</span><span class="p">:</span> <span class="s1">&#39;DolbyDigitalPlusDynamicRangeCompression&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;lfe_low_pass_filter&#39;</span><span class="p">:</span> <span class="s1">&#39;DolbyDigitalPlusLfeLowPassFilter&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;ninety_degree_phase_shift&#39;</span><span class="p">:</span> <span class="s1">&#39;DolbyDigitalPlusNinetyDegreePhaseShift&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;three_db_attenuation&#39;</span><span class="p">:</span> <span class="s1">&#39;DolbyDigitalPlusThreeDbAttenuation&#39;</span>
+            <span class="s1">'dynamic_range_compression'</span><span class="p">:</span> <span class="s1">'DolbyDigitalPlusDynamicRangeCompression'</span><span class="p">,</span>
+            <span class="s1">'lfe_low_pass_filter'</span><span class="p">:</span> <span class="s1">'DolbyDigitalPlusLfeLowPassFilter'</span><span class="p">,</span>
+            <span class="s1">'ninety_degree_phase_shift'</span><span class="p">:</span> <span class="s1">'DolbyDigitalPlusNinetyDegreePhaseShift'</span><span class="p">,</span>
+            <span class="s1">'three_db_attenuation'</span><span class="p">:</span> <span class="s1">'DolbyDigitalPlusThreeDbAttenuation'</span>
         <span class="p">}</span>
 
         <span class="k">return</span> <span class="n">types</span>
@@ -129,129 +129,129 @@
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">attribute_map</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">attributes</span> <span class="o">=</span> <span class="p">{</span>
-            <span class="s1">&#39;dynamic_range_compression&#39;</span><span class="p">:</span> <span class="s1">&#39;dynamicRangeCompression&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;lfe_low_pass_filter&#39;</span><span class="p">:</span> <span class="s1">&#39;lfeLowPassFilter&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;ninety_degree_phase_shift&#39;</span><span class="p">:</span> <span class="s1">&#39;ninetyDegreePhaseShift&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;three_db_attenuation&#39;</span><span class="p">:</span> <span class="s1">&#39;threeDbAttenuation&#39;</span>
+            <span class="s1">'dynamic_range_compression'</span><span class="p">:</span> <span class="s1">'dynamicRangeCompression'</span><span class="p">,</span>
+            <span class="s1">'lfe_low_pass_filter'</span><span class="p">:</span> <span class="s1">'lfeLowPassFilter'</span><span class="p">,</span>
+            <span class="s1">'ninety_degree_phase_shift'</span><span class="p">:</span> <span class="s1">'ninetyDegreePhaseShift'</span><span class="p">,</span>
+            <span class="s1">'three_db_attenuation'</span><span class="p">:</span> <span class="s1">'threeDbAttenuation'</span>
         <span class="p">}</span>
         <span class="k">return</span> <span class="n">attributes</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">dynamic_range_compression</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; DolbyDigitalPlusDynamicRangeCompression</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the dynamic_range_compression of this DolbyDigitalPlusPreprocessing.</span>
+<span class="w">        </span><span class="sd">"""Gets the dynamic_range_compression of this DolbyDigitalPlusPreprocessing.</span>
 
 <span class="sd">        It indicates a gain change to be applied in the Dolby Digital decoder in order to implement dynamic range compression.  The values typically indicate gain reductions (cut) during loud passages and gain increases (boost) during quiet passages based on desired compression characteristics. </span>
 
 <span class="sd">        :return: The dynamic_range_compression of this DolbyDigitalPlusPreprocessing.</span>
 <span class="sd">        :rtype: DolbyDigitalPlusDynamicRangeCompression</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_dynamic_range_compression</span>
 
     <span class="nd">@dynamic_range_compression</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">dynamic_range_compression</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dynamic_range_compression</span><span class="p">):</span>
         <span class="c1"># type: (DolbyDigitalPlusDynamicRangeCompression) -&gt; None</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the dynamic_range_compression of this DolbyDigitalPlusPreprocessing.</span>
+<span class="w">        </span><span class="sd">"""Sets the dynamic_range_compression of this DolbyDigitalPlusPreprocessing.</span>
 
 <span class="sd">        It indicates a gain change to be applied in the Dolby Digital decoder in order to implement dynamic range compression.  The values typically indicate gain reductions (cut) during loud passages and gain increases (boost) during quiet passages based on desired compression characteristics. </span>
 
 <span class="sd">        :param dynamic_range_compression: The dynamic_range_compression of this DolbyDigitalPlusPreprocessing.</span>
 <span class="sd">        :type: DolbyDigitalPlusDynamicRangeCompression</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">if</span> <span class="n">dynamic_range_compression</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">dynamic_range_compression</span><span class="p">,</span> <span class="n">DolbyDigitalPlusDynamicRangeCompression</span><span class="p">):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `dynamic_range_compression`, type has to be `DolbyDigitalPlusDynamicRangeCompression`&quot;</span><span class="p">)</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Invalid type for `dynamic_range_compression`, type has to be `DolbyDigitalPlusDynamicRangeCompression`"</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_dynamic_range_compression</span> <span class="o">=</span> <span class="n">dynamic_range_compression</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">lfe_low_pass_filter</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; DolbyDigitalPlusLfeLowPassFilter</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the lfe_low_pass_filter of this DolbyDigitalPlusPreprocessing.</span>
+<span class="w">        </span><span class="sd">"""Gets the lfe_low_pass_filter of this DolbyDigitalPlusPreprocessing.</span>
 
 <span class="sd">        It applies a 120 Hz low-pass filter to the low-frequency effects (LFE) channel.  This is only allowed if the `channelLayout` contains a LFE channel. </span>
 
 <span class="sd">        :return: The lfe_low_pass_filter of this DolbyDigitalPlusPreprocessing.</span>
 <span class="sd">        :rtype: DolbyDigitalPlusLfeLowPassFilter</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_lfe_low_pass_filter</span>
 
     <span class="nd">@lfe_low_pass_filter</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">lfe_low_pass_filter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">lfe_low_pass_filter</span><span class="p">):</span>
         <span class="c1"># type: (DolbyDigitalPlusLfeLowPassFilter) -&gt; None</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the lfe_low_pass_filter of this DolbyDigitalPlusPreprocessing.</span>
+<span class="w">        </span><span class="sd">"""Sets the lfe_low_pass_filter of this DolbyDigitalPlusPreprocessing.</span>
 
 <span class="sd">        It applies a 120 Hz low-pass filter to the low-frequency effects (LFE) channel.  This is only allowed if the `channelLayout` contains a LFE channel. </span>
 
 <span class="sd">        :param lfe_low_pass_filter: The lfe_low_pass_filter of this DolbyDigitalPlusPreprocessing.</span>
 <span class="sd">        :type: DolbyDigitalPlusLfeLowPassFilter</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">if</span> <span class="n">lfe_low_pass_filter</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">lfe_low_pass_filter</span><span class="p">,</span> <span class="n">DolbyDigitalPlusLfeLowPassFilter</span><span class="p">):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `lfe_low_pass_filter`, type has to be `DolbyDigitalPlusLfeLowPassFilter`&quot;</span><span class="p">)</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Invalid type for `lfe_low_pass_filter`, type has to be `DolbyDigitalPlusLfeLowPassFilter`"</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_lfe_low_pass_filter</span> <span class="o">=</span> <span class="n">lfe_low_pass_filter</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">ninety_degree_phase_shift</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; DolbyDigitalPlusNinetyDegreePhaseShift</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the ninety_degree_phase_shift of this DolbyDigitalPlusPreprocessing.</span>
+<span class="w">        </span><span class="sd">"""Gets the ninety_degree_phase_shift of this DolbyDigitalPlusPreprocessing.</span>
 
 
 <span class="sd">        :return: The ninety_degree_phase_shift of this DolbyDigitalPlusPreprocessing.</span>
 <span class="sd">        :rtype: DolbyDigitalPlusNinetyDegreePhaseShift</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_ninety_degree_phase_shift</span>
 
     <span class="nd">@ninety_degree_phase_shift</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">ninety_degree_phase_shift</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ninety_degree_phase_shift</span><span class="p">):</span>
         <span class="c1"># type: (DolbyDigitalPlusNinetyDegreePhaseShift) -&gt; None</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the ninety_degree_phase_shift of this DolbyDigitalPlusPreprocessing.</span>
+<span class="w">        </span><span class="sd">"""Sets the ninety_degree_phase_shift of this DolbyDigitalPlusPreprocessing.</span>
 
 
 <span class="sd">        :param ninety_degree_phase_shift: The ninety_degree_phase_shift of this DolbyDigitalPlusPreprocessing.</span>
 <span class="sd">        :type: DolbyDigitalPlusNinetyDegreePhaseShift</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">if</span> <span class="n">ninety_degree_phase_shift</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">ninety_degree_phase_shift</span><span class="p">,</span> <span class="n">DolbyDigitalPlusNinetyDegreePhaseShift</span><span class="p">):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `ninety_degree_phase_shift`, type has to be `DolbyDigitalPlusNinetyDegreePhaseShift`&quot;</span><span class="p">)</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Invalid type for `ninety_degree_phase_shift`, type has to be `DolbyDigitalPlusNinetyDegreePhaseShift`"</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_ninety_degree_phase_shift</span> <span class="o">=</span> <span class="n">ninety_degree_phase_shift</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">three_db_attenuation</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; DolbyDigitalPlusThreeDbAttenuation</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the three_db_attenuation of this DolbyDigitalPlusPreprocessing.</span>
+<span class="w">        </span><span class="sd">"""Gets the three_db_attenuation of this DolbyDigitalPlusPreprocessing.</span>
 
 
 <span class="sd">        :return: The three_db_attenuation of this DolbyDigitalPlusPreprocessing.</span>
 <span class="sd">        :rtype: DolbyDigitalPlusThreeDbAttenuation</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_three_db_attenuation</span>
 
     <span class="nd">@three_db_attenuation</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">three_db_attenuation</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">three_db_attenuation</span><span class="p">):</span>
         <span class="c1"># type: (DolbyDigitalPlusThreeDbAttenuation) -&gt; None</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the three_db_attenuation of this DolbyDigitalPlusPreprocessing.</span>
+<span class="w">        </span><span class="sd">"""Sets the three_db_attenuation of this DolbyDigitalPlusPreprocessing.</span>
 
 
 <span class="sd">        :param three_db_attenuation: The three_db_attenuation of this DolbyDigitalPlusPreprocessing.</span>
 <span class="sd">        :type: DolbyDigitalPlusThreeDbAttenuation</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">if</span> <span class="n">three_db_attenuation</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">three_db_attenuation</span><span class="p">,</span> <span class="n">DolbyDigitalPlusThreeDbAttenuation</span><span class="p">):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `three_db_attenuation`, type has to be `DolbyDigitalPlusThreeDbAttenuation`&quot;</span><span class="p">)</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Invalid type for `three_db_attenuation`, type has to be `DolbyDigitalPlusThreeDbAttenuation`"</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_three_db_attenuation</span> <span class="o">=</span> <span class="n">three_db_attenuation</span>
 
 <div class="viewcode-block" id="DolbyDigitalPlusPreprocessing.to_dict">
 <a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.dolby_digital_plus_preprocessing.DolbyDigitalPlusPreprocessing.to_dict">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""Returns the model properties as a dict"""</span>
         <span class="n">result</span> <span class="o">=</span> <span class="p">{}</span>
 
         <span class="k">for</span> <span class="n">attr</span><span class="p">,</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">six</span><span class="o">.</span><span class="n">iteritems</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">openapi_types</span><span class="p">):</span>
@@ -261,13 +261,13 @@
             <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
                 <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
                     <span class="k">continue</span>
-                <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="p">[</span><span class="n">y</span><span class="o">.</span><span class="n">value</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">Enum</span><span class="p">)</span> <span class="k">else</span> <span class="n">y</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span> <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="s2">&quot;to_dict&quot;</span><span class="p">)</span> <span class="k">else</span> <span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">value</span><span class="p">]]</span>
-            <span class="k">elif</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="s2">&quot;to_dict&quot;</span><span class="p">):</span>
+                <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="p">[</span><span class="n">y</span><span class="o">.</span><span class="n">value</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">Enum</span><span class="p">)</span> <span class="k">else</span> <span class="n">y</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span> <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="s2">"to_dict"</span><span class="p">)</span> <span class="k">else</span> <span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">value</span><span class="p">]]</span>
+            <span class="k">elif</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="s2">"to_dict"</span><span class="p">):</span>
                 <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="n">value</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span>
             <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">Enum</span><span class="p">):</span>
                 <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="n">value</span><span class="o">.</span><span class="n">value</span>
             <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
-                <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="p">(</span><span class="n">v</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span> <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="s2">&quot;to_dict&quot;</span><span class="p">)</span> <span class="k">else</span> <span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span> <span class="ow">in</span> <span class="n">value</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
+                <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="p">(</span><span class="n">v</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span> <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="s2">"to_dict"</span><span class="p">)</span> <span class="k">else</span> <span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span> <span class="ow">in</span> <span class="n">value</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
             <span class="k">else</span><span class="p">:</span>
                 <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="n">value</span>
 
@@ -277,23 +277,23 @@
 <div class="viewcode-block" id="DolbyDigitalPlusPreprocessing.to_str">
 <a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.dolby_digital_plus_preprocessing.DolbyDigitalPlusPreprocessing.to_str">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">to_str</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the string representation of the model&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""Returns the string representation of the model"""</span>
         <span class="k">return</span> <span class="n">pprint</span><span class="o">.</span><span class="n">pformat</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">to_dict</span><span class="p">())</span></div>
 
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;For `print` and `pprint`&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""For `print` and `pprint`"""</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">to_str</span><span class="p">()</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns true if both objects are equal&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""Returns true if both objects are equal"""</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">DolbyDigitalPlusPreprocessing</span><span class="p">):</span>
             <span class="k">return</span> <span class="kc">False</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="vm">__dict__</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__ne__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns true if both objects are not equal&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""Returns true if both objects are not equal"""</span>
         <span class="k">return</span> <span class="ow">not</span> <span class="bp">self</span> <span class="o">==</span> <span class="n">other</span></div>
 
 </pre></div>

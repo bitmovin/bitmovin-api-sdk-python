@@ -115,16 +115,16 @@
 <a class="viewcode-back" href="../../../../../__modules/bitmovin_api_sdk.encoding.filters.azure_speech_to_captions.html#bitmovin_api_sdk.encoding.filters.azure_speech_to_captions.azure_speech_to_captions_api.AzureSpeechToCaptionsApi.create">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">azure_speech_to_captions_filter</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (AzureSpeechToCaptionsFilter, dict) -&gt; AzureSpeechToCaptionsFilter</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Create Azure Speech to captions Filter</span>
+<span class="w">        </span><span class="sd">"""Create Azure Speech to captions Filter</span>
 
 <span class="sd">        :param azure_speech_to_captions_filter: The Azure Speech to captions Filter to be created</span>
 <span class="sd">        :type azure_speech_to_captions_filter: AzureSpeechToCaptionsFilter, required</span>
 <span class="sd">        :return: Azure Speech to captions details</span>
 <span class="sd">        :rtype: AzureSpeechToCaptionsFilter</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">post</span><span class="p">(</span>
-            <span class="s1">&#39;/encoding/filters/azure-speech-to-captions&#39;</span><span class="p">,</span>
+            <span class="s1">'/encoding/filters/azure-speech-to-captions'</span><span class="p">,</span>
             <span class="n">azure_speech_to_captions_filter</span><span class="p">,</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">AzureSpeechToCaptionsFilter</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>
@@ -135,17 +135,17 @@
 <a class="viewcode-back" href="../../../../../__modules/bitmovin_api_sdk.encoding.filters.azure_speech_to_captions.html#bitmovin_api_sdk.encoding.filters.azure_speech_to_captions.azure_speech_to_captions_api.AzureSpeechToCaptionsApi.delete">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">delete</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filter_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, dict) -&gt; BitmovinResponse</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Delete Azure Speech to captions Filter</span>
+<span class="w">        </span><span class="sd">"""Delete Azure Speech to captions Filter</span>
 
 <span class="sd">        :param filter_id: Id of the Azure Speech to captions Filter.</span>
 <span class="sd">        :type filter_id: string_types, required</span>
 <span class="sd">        :return: Id of the Azure Speech to captions filter.</span>
 <span class="sd">        :rtype: BitmovinResponse</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span>
-            <span class="s1">&#39;/encoding/filters/azure-speech-to-captions/</span><span class="si">{filter_id}</span><span class="s1">&#39;</span><span class="p">,</span>
-            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;filter_id&#39;</span><span class="p">:</span> <span class="n">filter_id</span><span class="p">},</span>
+            <span class="s1">'/encoding/filters/azure-speech-to-captions/</span><span class="si">{filter_id}</span><span class="s1">'</span><span class="p">,</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">'filter_id'</span><span class="p">:</span> <span class="n">filter_id</span><span class="p">},</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">BitmovinResponse</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>
         <span class="p">)</span></div>
@@ -155,17 +155,17 @@
 <a class="viewcode-back" href="../../../../../__modules/bitmovin_api_sdk.encoding.filters.azure_speech_to_captions.html#bitmovin_api_sdk.encoding.filters.azure_speech_to_captions.azure_speech_to_captions_api.AzureSpeechToCaptionsApi.get">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filter_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, dict) -&gt; AzureSpeechToCaptionsFilter</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get Azure Speech to captions Filter details</span>
+<span class="w">        </span><span class="sd">"""Get Azure Speech to captions Filter details</span>
 
 <span class="sd">        :param filter_id: Id of the Azure Speech to captions Filter.</span>
 <span class="sd">        :type filter_id: string_types, required</span>
 <span class="sd">        :return: Azure Speech to captions filter details</span>
 <span class="sd">        :rtype: AzureSpeechToCaptionsFilter</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
-            <span class="s1">&#39;/encoding/filters/azure-speech-to-captions/</span><span class="si">{filter_id}</span><span class="s1">&#39;</span><span class="p">,</span>
-            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;filter_id&#39;</span><span class="p">:</span> <span class="n">filter_id</span><span class="p">},</span>
+            <span class="s1">'/encoding/filters/azure-speech-to-captions/</span><span class="si">{filter_id}</span><span class="s1">'</span><span class="p">,</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">'filter_id'</span><span class="p">:</span> <span class="n">filter_id</span><span class="p">},</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">AzureSpeechToCaptionsFilter</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>
         <span class="p">)</span></div>
@@ -175,16 +175,16 @@
 <a class="viewcode-back" href="../../../../../__modules/bitmovin_api_sdk.encoding.filters.azure_speech_to_captions.html#bitmovin_api_sdk.encoding.filters.azure_speech_to_captions.azure_speech_to_captions_api.AzureSpeechToCaptionsApi.list">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">list</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">query_params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (AzureSpeechToCaptionsFilterListQueryParams, dict) -&gt; AzureSpeechToCaptionsFilter</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;List Azure Speech to captions Filters</span>
+<span class="w">        </span><span class="sd">"""List Azure Speech to captions Filters</span>
 
 <span class="sd">        :param query_params: Query parameters</span>
 <span class="sd">        :type query_params: AzureSpeechToCaptionsFilterListQueryParams</span>
 <span class="sd">        :return: List of Azure Speech to captions Filters</span>
 <span class="sd">        :rtype: AzureSpeechToCaptionsFilter</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
-            <span class="s1">&#39;/encoding/filters/azure-speech-to-captions&#39;</span><span class="p">,</span>
+            <span class="s1">'/encoding/filters/azure-speech-to-captions'</span><span class="p">,</span>
             <span class="n">query_params</span><span class="o">=</span><span class="n">query_params</span><span class="p">,</span>
             <span class="n">pagination_response</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">AzureSpeechToCaptionsFilter</span><span class="p">,</span>

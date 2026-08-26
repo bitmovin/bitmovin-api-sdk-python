@@ -106,16 +106,16 @@
 <a class="viewcode-back" href="../../../../../__modules/bitmovin_api_sdk.encoding.live.dns_mappings.html#bitmovin_api_sdk.encoding.live.dns_mappings.dns_mappings_api.DnsMappingsApi.list">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">list</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">query_params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (DnsMappingResponseListQueryParams, dict) -&gt; DnsMappingResponse</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;List DNS Mappings</span>
+<span class="w">        </span><span class="sd">"""List DNS Mappings</span>
 
 <span class="sd">        :param query_params: Query parameters</span>
 <span class="sd">        :type query_params: DnsMappingResponseListQueryParams</span>
 <span class="sd">        :return: List of DNS mappings</span>
 <span class="sd">        :rtype: DnsMappingResponse</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
-            <span class="s1">&#39;/encoding/live/dns-mappings&#39;</span><span class="p">,</span>
+            <span class="s1">'/encoding/live/dns-mappings'</span><span class="p">,</span>
             <span class="n">query_params</span><span class="o">=</span><span class="n">query_params</span><span class="p">,</span>
             <span class="n">pagination_response</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">DnsMappingResponse</span><span class="p">,</span>

@@ -4,6 +4,7 @@ from enum import Enum
 from datetime import datetime
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
+from bitmovin_api_sdk.models.scene_analysis_matching_segment import SceneAnalysisMatchingSegment
 import pprint
 import six
 
@@ -18,8 +19,9 @@ class SceneAnalysisListItem(object):
                  title=None,
                  keywords=None,
                  scene_count=None,
-                 output_language_codes=None):
-        # type: (string_types, string_types, datetime, string_types, string_types, list[string_types], int, list[string_types]) -> None
+                 output_language_codes=None,
+                 matching_segment=None):
+        # type: (string_types, string_types, datetime, string_types, string_types, list[string_types], int, list[string_types], SceneAnalysisMatchingSegment) -> None
 
         self._id = None
         self._encoding_id = None
@@ -29,6 +31,7 @@ class SceneAnalysisListItem(object):
         self._keywords = list()
         self._scene_count = None
         self._output_language_codes = list()
+        self._matching_segment = None
         self.discriminator = None
 
         if id_ is not None:
@@ -47,6 +50,8 @@ class SceneAnalysisListItem(object):
             self.scene_count = scene_count
         if output_language_codes is not None:
             self.output_language_codes = output_language_codes
+        if matching_segment is not None:
+            self.matching_segment = matching_segment
 
     @property
     def openapi_types(self):
@@ -58,7 +63,8 @@ class SceneAnalysisListItem(object):
             'title': 'string_types',
             'keywords': 'list[string_types]',
             'scene_count': 'int',
-            'output_language_codes': 'list[string_types]'
+            'output_language_codes': 'list[string_types]',
+            'matching_segment': 'SceneAnalysisMatchingSegment'
         }
 
         return types
@@ -73,7 +79,8 @@ class SceneAnalysisListItem(object):
             'title': 'title',
             'keywords': 'keywords',
             'scene_count': 'sceneCount',
-            'output_language_codes': 'outputLanguageCodes'
+            'output_language_codes': 'outputLanguageCodes',
+            'matching_segment': 'matchingSegment'
         }
         return attributes
 
@@ -310,6 +317,35 @@ class SceneAnalysisListItem(object):
                 raise TypeError("Invalid type for `output_language_codes`, type has to be `list[string_types]`")
 
         self._output_language_codes = output_language_codes
+
+    @property
+    def matching_segment(self):
+        # type: () -> SceneAnalysisMatchingSegment
+        """Gets the matching_segment of this SceneAnalysisListItem.
+
+        The scene segment that best matches searchText. Present only for semantic-search requests with a non-blank searchText; omitted from ordinary list results.
+
+        :return: The matching_segment of this SceneAnalysisListItem.
+        :rtype: SceneAnalysisMatchingSegment
+        """
+        return self._matching_segment
+
+    @matching_segment.setter
+    def matching_segment(self, matching_segment):
+        # type: (SceneAnalysisMatchingSegment) -> None
+        """Sets the matching_segment of this SceneAnalysisListItem.
+
+        The scene segment that best matches searchText. Present only for semantic-search requests with a non-blank searchText; omitted from ordinary list results.
+
+        :param matching_segment: The matching_segment of this SceneAnalysisListItem.
+        :type: SceneAnalysisMatchingSegment
+        """
+
+        if matching_segment is not None:
+            if not isinstance(matching_segment, SceneAnalysisMatchingSegment):
+                raise TypeError("Invalid type for `matching_segment`, type has to be `SceneAnalysisMatchingSegment`")
+
+        self._matching_segment = matching_segment
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -105,17 +105,17 @@
 <a class="viewcode-back" href="../../../../../../__modules/bitmovin_api_sdk.encoding.filters.azure_speech_to_captions.customdata.html#bitmovin_api_sdk.encoding.filters.azure_speech_to_captions.customdata.customdata_api.CustomdataApi.get">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filter_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, dict) -&gt; CustomData</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get Azure Speech to captions Filter Custom Data</span>
+<span class="w">        </span><span class="sd">"""Get Azure Speech to captions Filter Custom Data</span>
 
 <span class="sd">        :param filter_id: Id of the Azure Speech to captions Filter.</span>
 <span class="sd">        :type filter_id: string_types, required</span>
 <span class="sd">        :return: Azure Speech to captions custom data</span>
 <span class="sd">        :rtype: CustomData</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
-            <span class="s1">&#39;/encoding/filters/azure-speech-to-captions/</span><span class="si">{filter_id}</span><span class="s1">/customData&#39;</span><span class="p">,</span>
-            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;filter_id&#39;</span><span class="p">:</span> <span class="n">filter_id</span><span class="p">},</span>
+            <span class="s1">'/encoding/filters/azure-speech-to-captions/</span><span class="si">{filter_id}</span><span class="s1">/customData'</span><span class="p">,</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">'filter_id'</span><span class="p">:</span> <span class="n">filter_id</span><span class="p">},</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">CustomData</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>
         <span class="p">)</span></div>

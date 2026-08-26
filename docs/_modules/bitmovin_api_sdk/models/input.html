@@ -90,38 +90,38 @@
 <span class="k">class</span><span class="w"> </span><span class="nc">Input</span><span class="p">(</span><span class="n">BitmovinResource</span><span class="p">):</span>
 
     <span class="n">discriminator_value_class_map</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="s1">&#39;AKAMAI_NETSTORAGE&#39;</span><span class="p">:</span> <span class="s1">&#39;AkamaiNetStorageInput&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;ASPERA&#39;</span><span class="p">:</span> <span class="s1">&#39;AsperaInput&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;AZURE&#39;</span><span class="p">:</span> <span class="s1">&#39;AzureInput&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;REDUNDANT_RTMP&#39;</span><span class="p">:</span> <span class="s1">&#39;RedundantRtmpInput&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;FTP&#39;</span><span class="p">:</span> <span class="s1">&#39;FtpInput&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;GENERIC_S3&#39;</span><span class="p">:</span> <span class="s1">&#39;GenericS3Input&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;GCS&#39;</span><span class="p">:</span> <span class="s1">&#39;GcsInput&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;HTTP&#39;</span><span class="p">:</span> <span class="s1">&#39;HttpInput&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;HTTPS&#39;</span><span class="p">:</span> <span class="s1">&#39;HttpsInput&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;HLS&#39;</span><span class="p">:</span> <span class="s1">&#39;HlsInput&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;LOCAL&#39;</span><span class="p">:</span> <span class="s1">&#39;LocalInput&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;RTMP&#39;</span><span class="p">:</span> <span class="s1">&#39;RtmpInput&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;S3&#39;</span><span class="p">:</span> <span class="s1">&#39;S3Input&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;S3_ROLE_BASED&#39;</span><span class="p">:</span> <span class="s1">&#39;S3RoleBasedInput&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;SFTP&#39;</span><span class="p">:</span> <span class="s1">&#39;SftpInput&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;ZIXI&#39;</span><span class="p">:</span> <span class="s1">&#39;ZixiInput&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;SRT&#39;</span><span class="p">:</span> <span class="s1">&#39;SrtInput&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;GCS_SERVICE_ACCOUNT&#39;</span><span class="p">:</span> <span class="s1">&#39;GcsServiceAccountInput&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;DIRECT_FILE_UPLOAD&#39;</span><span class="p">:</span> <span class="s1">&#39;DirectFileUploadInput&#39;</span>
+        <span class="s1">'AKAMAI_NETSTORAGE'</span><span class="p">:</span> <span class="s1">'AkamaiNetStorageInput'</span><span class="p">,</span>
+        <span class="s1">'ASPERA'</span><span class="p">:</span> <span class="s1">'AsperaInput'</span><span class="p">,</span>
+        <span class="s1">'AZURE'</span><span class="p">:</span> <span class="s1">'AzureInput'</span><span class="p">,</span>
+        <span class="s1">'REDUNDANT_RTMP'</span><span class="p">:</span> <span class="s1">'RedundantRtmpInput'</span><span class="p">,</span>
+        <span class="s1">'FTP'</span><span class="p">:</span> <span class="s1">'FtpInput'</span><span class="p">,</span>
+        <span class="s1">'GENERIC_S3'</span><span class="p">:</span> <span class="s1">'GenericS3Input'</span><span class="p">,</span>
+        <span class="s1">'GCS'</span><span class="p">:</span> <span class="s1">'GcsInput'</span><span class="p">,</span>
+        <span class="s1">'HTTP'</span><span class="p">:</span> <span class="s1">'HttpInput'</span><span class="p">,</span>
+        <span class="s1">'HTTPS'</span><span class="p">:</span> <span class="s1">'HttpsInput'</span><span class="p">,</span>
+        <span class="s1">'HLS'</span><span class="p">:</span> <span class="s1">'HlsInput'</span><span class="p">,</span>
+        <span class="s1">'LOCAL'</span><span class="p">:</span> <span class="s1">'LocalInput'</span><span class="p">,</span>
+        <span class="s1">'RTMP'</span><span class="p">:</span> <span class="s1">'RtmpInput'</span><span class="p">,</span>
+        <span class="s1">'S3'</span><span class="p">:</span> <span class="s1">'S3Input'</span><span class="p">,</span>
+        <span class="s1">'S3_ROLE_BASED'</span><span class="p">:</span> <span class="s1">'S3RoleBasedInput'</span><span class="p">,</span>
+        <span class="s1">'SFTP'</span><span class="p">:</span> <span class="s1">'SftpInput'</span><span class="p">,</span>
+        <span class="s1">'ZIXI'</span><span class="p">:</span> <span class="s1">'ZixiInput'</span><span class="p">,</span>
+        <span class="s1">'SRT'</span><span class="p">:</span> <span class="s1">'SrtInput'</span><span class="p">,</span>
+        <span class="s1">'GCS_SERVICE_ACCOUNT'</span><span class="p">:</span> <span class="s1">'GcsServiceAccountInput'</span><span class="p">,</span>
+        <span class="s1">'DIRECT_FILE_UPLOAD'</span><span class="p">:</span> <span class="s1">'DirectFileUploadInput'</span>
     <span class="p">}</span>
 
 <div class="viewcode-block" id="Input.to_dict">
 <a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.input.Input.to_dict">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""Returns the model properties as a dict"""</span>
         <span class="n">result</span> <span class="o">=</span> <span class="p">{}</span>
 
-        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="nb">super</span><span class="p">(</span><span class="n">Input</span><span class="p">,</span> <span class="bp">self</span><span class="p">),</span> <span class="s2">&quot;to_dict&quot;</span><span class="p">):</span>
+        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="nb">super</span><span class="p">(</span><span class="n">Input</span><span class="p">,</span> <span class="bp">self</span><span class="p">),</span> <span class="s2">"to_dict"</span><span class="p">):</span>
             <span class="n">result</span> <span class="o">=</span> <span class="nb">super</span><span class="p">(</span><span class="n">Input</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span>
         <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">iteritems</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">discriminator_value_class_map</span><span class="p">):</span>
             <span class="k">if</span> <span class="n">v</span> <span class="o">==</span> <span class="nb">type</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="p">:</span>
-                <span class="n">result</span><span class="p">[</span><span class="s1">&#39;type&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">k</span>
+                <span class="n">result</span><span class="p">[</span><span class="s1">'type'</span><span class="p">]</span> <span class="o">=</span> <span class="n">k</span>
                 <span class="k">break</span>
         <span class="k">return</span> <span class="n">result</span></div>
 
@@ -129,23 +129,23 @@
 <div class="viewcode-block" id="Input.to_str">
 <a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.input.Input.to_str">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">to_str</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the string representation of the model&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""Returns the string representation of the model"""</span>
         <span class="k">return</span> <span class="n">pprint</span><span class="o">.</span><span class="n">pformat</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">to_dict</span><span class="p">())</span></div>
 
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;For `print` and `pprint`&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""For `print` and `pprint`"""</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">to_str</span><span class="p">()</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns true if both objects are equal&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""Returns true if both objects are equal"""</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">Input</span><span class="p">):</span>
             <span class="k">return</span> <span class="kc">False</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="vm">__dict__</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__ne__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns true if both objects are not equal&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""Returns true if both objects are not equal"""</span>
         <span class="k">return</span> <span class="ow">not</span> <span class="bp">self</span> <span class="o">==</span> <span class="n">other</span></div>
 
 </pre></div>

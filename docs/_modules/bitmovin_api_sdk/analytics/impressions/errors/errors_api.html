@@ -106,7 +106,7 @@
 <a class="viewcode-back" href="../../../../../__modules/bitmovin_api_sdk.analytics.impressions.errors.html#bitmovin_api_sdk.analytics.impressions.errors.errors_api.ErrorsApi.create">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">impression_id</span><span class="p">,</span> <span class="n">analytics_license_key</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, AnalyticsLicenseKey, dict) -&gt; AnalyticsErrorDetailsResponse</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Impression Error Details</span>
+<span class="w">        </span><span class="sd">"""Impression Error Details</span>
 
 <span class="sd">        :param impression_id: Impression id</span>
 <span class="sd">        :type impression_id: string_types, required</span>
@@ -114,12 +114,12 @@
 <span class="sd">        :type analytics_license_key: AnalyticsLicenseKey, required</span>
 <span class="sd">        :return: List of error details for impression</span>
 <span class="sd">        :rtype: AnalyticsErrorDetailsResponse</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">post</span><span class="p">(</span>
-            <span class="s1">&#39;/analytics/impressions/</span><span class="si">{impression_id}</span><span class="s1">/errors&#39;</span><span class="p">,</span>
+            <span class="s1">'/analytics/impressions/</span><span class="si">{impression_id}</span><span class="s1">/errors'</span><span class="p">,</span>
             <span class="n">analytics_license_key</span><span class="p">,</span>
-            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;impression_id&#39;</span><span class="p">:</span> <span class="n">impression_id</span><span class="p">},</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">'impression_id'</span><span class="p">:</span> <span class="n">impression_id</span><span class="p">},</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">AnalyticsErrorDetailsResponse</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>
         <span class="p">)</span></div>

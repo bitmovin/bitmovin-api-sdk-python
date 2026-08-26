@@ -90,36 +90,36 @@
 <span class="k">class</span><span class="w"> </span><span class="nc">Filter</span><span class="p">(</span><span class="n">BitmovinResource</span><span class="p">):</span>
 
     <span class="n">discriminator_value_class_map</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="s1">&#39;CROP&#39;</span><span class="p">:</span> <span class="s1">&#39;CropFilter&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;CONFORM&#39;</span><span class="p">:</span> <span class="s1">&#39;ConformFilter&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;WATERMARK&#39;</span><span class="p">:</span> <span class="s1">&#39;WatermarkFilter&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;ENHANCED_WATERMARK&#39;</span><span class="p">:</span> <span class="s1">&#39;EnhancedWatermarkFilter&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;ROTATE&#39;</span><span class="p">:</span> <span class="s1">&#39;RotateFilter&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;DEINTERLACE&#39;</span><span class="p">:</span> <span class="s1">&#39;DeinterlaceFilter&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;ENHANCED_DEINTERLACE&#39;</span><span class="p">:</span> <span class="s1">&#39;EnhancedDeinterlaceFilter&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;AUDIO_MIX&#39;</span><span class="p">:</span> <span class="s1">&#39;AudioMixFilter&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;DENOISE_HQDN3D&#39;</span><span class="p">:</span> <span class="s1">&#39;DenoiseHqdn3dFilter&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;TEXT&#39;</span><span class="p">:</span> <span class="s1">&#39;TextFilter&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;UNSHARP&#39;</span><span class="p">:</span> <span class="s1">&#39;UnsharpFilter&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;SCALE&#39;</span><span class="p">:</span> <span class="s1">&#39;ScaleFilter&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;INTERLACE&#39;</span><span class="p">:</span> <span class="s1">&#39;InterlaceFilter&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;AUDIO_VOLUME&#39;</span><span class="p">:</span> <span class="s1">&#39;AudioVolumeFilter&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;EBU_R128_SINGLE_PASS&#39;</span><span class="p">:</span> <span class="s1">&#39;EbuR128SinglePassFilter&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;AZURE_SPEECH_TO_CAPTIONS&#39;</span><span class="p">:</span> <span class="s1">&#39;AzureSpeechToCaptionsFilter&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;DOLBY_LOUDNESS&#39;</span><span class="p">:</span> <span class="s1">&#39;DolbyLoudnessFilter&#39;</span>
+        <span class="s1">'CROP'</span><span class="p">:</span> <span class="s1">'CropFilter'</span><span class="p">,</span>
+        <span class="s1">'CONFORM'</span><span class="p">:</span> <span class="s1">'ConformFilter'</span><span class="p">,</span>
+        <span class="s1">'WATERMARK'</span><span class="p">:</span> <span class="s1">'WatermarkFilter'</span><span class="p">,</span>
+        <span class="s1">'ENHANCED_WATERMARK'</span><span class="p">:</span> <span class="s1">'EnhancedWatermarkFilter'</span><span class="p">,</span>
+        <span class="s1">'ROTATE'</span><span class="p">:</span> <span class="s1">'RotateFilter'</span><span class="p">,</span>
+        <span class="s1">'DEINTERLACE'</span><span class="p">:</span> <span class="s1">'DeinterlaceFilter'</span><span class="p">,</span>
+        <span class="s1">'ENHANCED_DEINTERLACE'</span><span class="p">:</span> <span class="s1">'EnhancedDeinterlaceFilter'</span><span class="p">,</span>
+        <span class="s1">'AUDIO_MIX'</span><span class="p">:</span> <span class="s1">'AudioMixFilter'</span><span class="p">,</span>
+        <span class="s1">'DENOISE_HQDN3D'</span><span class="p">:</span> <span class="s1">'DenoiseHqdn3dFilter'</span><span class="p">,</span>
+        <span class="s1">'TEXT'</span><span class="p">:</span> <span class="s1">'TextFilter'</span><span class="p">,</span>
+        <span class="s1">'UNSHARP'</span><span class="p">:</span> <span class="s1">'UnsharpFilter'</span><span class="p">,</span>
+        <span class="s1">'SCALE'</span><span class="p">:</span> <span class="s1">'ScaleFilter'</span><span class="p">,</span>
+        <span class="s1">'INTERLACE'</span><span class="p">:</span> <span class="s1">'InterlaceFilter'</span><span class="p">,</span>
+        <span class="s1">'AUDIO_VOLUME'</span><span class="p">:</span> <span class="s1">'AudioVolumeFilter'</span><span class="p">,</span>
+        <span class="s1">'EBU_R128_SINGLE_PASS'</span><span class="p">:</span> <span class="s1">'EbuR128SinglePassFilter'</span><span class="p">,</span>
+        <span class="s1">'AZURE_SPEECH_TO_CAPTIONS'</span><span class="p">:</span> <span class="s1">'AzureSpeechToCaptionsFilter'</span><span class="p">,</span>
+        <span class="s1">'DOLBY_LOUDNESS'</span><span class="p">:</span> <span class="s1">'DolbyLoudnessFilter'</span>
     <span class="p">}</span>
 
 <div class="viewcode-block" id="Filter.to_dict">
 <a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.filter.Filter.to_dict">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""Returns the model properties as a dict"""</span>
         <span class="n">result</span> <span class="o">=</span> <span class="p">{}</span>
 
-        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="nb">super</span><span class="p">(</span><span class="n">Filter</span><span class="p">,</span> <span class="bp">self</span><span class="p">),</span> <span class="s2">&quot;to_dict&quot;</span><span class="p">):</span>
+        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="nb">super</span><span class="p">(</span><span class="n">Filter</span><span class="p">,</span> <span class="bp">self</span><span class="p">),</span> <span class="s2">"to_dict"</span><span class="p">):</span>
             <span class="n">result</span> <span class="o">=</span> <span class="nb">super</span><span class="p">(</span><span class="n">Filter</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span>
         <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">iteritems</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">discriminator_value_class_map</span><span class="p">):</span>
             <span class="k">if</span> <span class="n">v</span> <span class="o">==</span> <span class="nb">type</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="p">:</span>
-                <span class="n">result</span><span class="p">[</span><span class="s1">&#39;type&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">k</span>
+                <span class="n">result</span><span class="p">[</span><span class="s1">'type'</span><span class="p">]</span> <span class="o">=</span> <span class="n">k</span>
                 <span class="k">break</span>
         <span class="k">return</span> <span class="n">result</span></div>
 
@@ -127,23 +127,23 @@
 <div class="viewcode-block" id="Filter.to_str">
 <a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.filter.Filter.to_str">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">to_str</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the string representation of the model&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""Returns the string representation of the model"""</span>
         <span class="k">return</span> <span class="n">pprint</span><span class="o">.</span><span class="n">pformat</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">to_dict</span><span class="p">())</span></div>
 
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;For `print` and `pprint`&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""For `print` and `pprint`"""</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">to_str</span><span class="p">()</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns true if both objects are equal&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""Returns true if both objects are equal"""</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">Filter</span><span class="p">):</span>
             <span class="k">return</span> <span class="kc">False</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="vm">__dict__</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__ne__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns true if both objects are not equal&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""Returns true if both objects are not equal"""</span>
         <span class="k">return</span> <span class="ow">not</span> <span class="bp">self</span> <span class="o">==</span> <span class="n">other</span></div>
 
 </pre></div>

@@ -105,16 +105,16 @@
 <a class="viewcode-back" href="../../../../../../__modules/bitmovin_api_sdk.encoding.manifests.dash.default.html#bitmovin_api_sdk.encoding.manifests.dash.default.default_api.DefaultApi.create">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dash_manifest_default</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (DashManifestDefault, dict) -&gt; DashManifestDefault</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Create Default DASH Manifest</span>
+<span class="w">        </span><span class="sd">"""Create Default DASH Manifest</span>
 
 <span class="sd">        :param dash_manifest_default: The Default DASH Manifest to be created.</span>
 <span class="sd">        :type dash_manifest_default: DashManifestDefault, required</span>
 <span class="sd">        :return: Id of the DASH Manifest</span>
 <span class="sd">        :rtype: DashManifestDefault</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">post</span><span class="p">(</span>
-            <span class="s1">&#39;/encoding/manifests/dash/default&#39;</span><span class="p">,</span>
+            <span class="s1">'/encoding/manifests/dash/default'</span><span class="p">,</span>
             <span class="n">dash_manifest_default</span><span class="p">,</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">DashManifestDefault</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>

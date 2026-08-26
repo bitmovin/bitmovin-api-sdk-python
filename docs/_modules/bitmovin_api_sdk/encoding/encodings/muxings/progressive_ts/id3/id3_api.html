@@ -130,7 +130,7 @@
 <a class="viewcode-back" href="../../../../../../../__modules/bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.id3.html#bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.id3.id3_api.Id3Api.list">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">list</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">encoding_id</span><span class="p">,</span> <span class="n">muxing_id</span><span class="p">,</span> <span class="n">query_params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, string_types, Id3TagListQueryParams, dict) -&gt; Id3Tag</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;List all ID3 Tags of a Progressive TS muxing</span>
+<span class="w">        </span><span class="sd">"""List all ID3 Tags of a Progressive TS muxing</span>
 
 <span class="sd">        :param encoding_id: ID of the Encoding.</span>
 <span class="sd">        :type encoding_id: string_types, required</span>
@@ -140,11 +140,11 @@
 <span class="sd">        :type query_params: Id3TagListQueryParams</span>
 <span class="sd">        :return: List of ID3 Tags including type attribute</span>
 <span class="sd">        :rtype: Id3Tag</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
-            <span class="s1">&#39;/encoding/encodings/</span><span class="si">{encoding_id}</span><span class="s1">/muxings/progressive-ts/</span><span class="si">{muxing_id}</span><span class="s1">/id3&#39;</span><span class="p">,</span>
-            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;encoding_id&#39;</span><span class="p">:</span> <span class="n">encoding_id</span><span class="p">,</span> <span class="s1">&#39;muxing_id&#39;</span><span class="p">:</span> <span class="n">muxing_id</span><span class="p">},</span>
+            <span class="s1">'/encoding/encodings/</span><span class="si">{encoding_id}</span><span class="s1">/muxings/progressive-ts/</span><span class="si">{muxing_id}</span><span class="s1">/id3'</span><span class="p">,</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">'encoding_id'</span><span class="p">:</span> <span class="n">encoding_id</span><span class="p">,</span> <span class="s1">'muxing_id'</span><span class="p">:</span> <span class="n">muxing_id</span><span class="p">},</span>
             <span class="n">query_params</span><span class="o">=</span><span class="n">query_params</span><span class="p">,</span>
             <span class="n">pagination_response</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">Id3Tag</span><span class="p">,</span>

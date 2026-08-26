@@ -106,7 +106,7 @@
 <a class="viewcode-back" href="../../../../../__modules/bitmovin_api_sdk.encoding.encodings.kantar_watermark.html#bitmovin_api_sdk.encoding.encodings.kantar_watermark.kantar_watermark_api.KantarWatermarkApi.create">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">encoding_id</span><span class="p">,</span> <span class="n">kantar_watermark</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, KantarWatermark, dict) -&gt; KantarWatermark</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Create or replace Kantar Watermark</span>
+<span class="w">        </span><span class="sd">"""Create or replace Kantar Watermark</span>
 
 <span class="sd">        :param encoding_id: Id of the encoding.</span>
 <span class="sd">        :type encoding_id: string_types, required</span>
@@ -114,12 +114,12 @@
 <span class="sd">        :type kantar_watermark: KantarWatermark, required</span>
 <span class="sd">        :return: Kantar Watermark</span>
 <span class="sd">        :rtype: KantarWatermark</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">post</span><span class="p">(</span>
-            <span class="s1">&#39;/encoding/encodings/</span><span class="si">{encoding_id}</span><span class="s1">/kantar-watermark&#39;</span><span class="p">,</span>
+            <span class="s1">'/encoding/encodings/</span><span class="si">{encoding_id}</span><span class="s1">/kantar-watermark'</span><span class="p">,</span>
             <span class="n">kantar_watermark</span><span class="p">,</span>
-            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;encoding_id&#39;</span><span class="p">:</span> <span class="n">encoding_id</span><span class="p">},</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">'encoding_id'</span><span class="p">:</span> <span class="n">encoding_id</span><span class="p">},</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">KantarWatermark</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>
         <span class="p">)</span></div>
@@ -129,17 +129,17 @@
 <a class="viewcode-back" href="../../../../../__modules/bitmovin_api_sdk.encoding.encodings.kantar_watermark.html#bitmovin_api_sdk.encoding.encodings.kantar_watermark.kantar_watermark_api.KantarWatermarkApi.delete">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">delete</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">encoding_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, dict) -&gt; BitmovinResponse</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Delete Kantar Watermark</span>
+<span class="w">        </span><span class="sd">"""Delete Kantar Watermark</span>
 
 <span class="sd">        :param encoding_id: Id of the encoding.</span>
 <span class="sd">        :type encoding_id: string_types, required</span>
 <span class="sd">        :return: Id of the Kantar Watermark</span>
 <span class="sd">        :rtype: BitmovinResponse</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span>
-            <span class="s1">&#39;/encoding/encodings/</span><span class="si">{encoding_id}</span><span class="s1">/kantar-watermark&#39;</span><span class="p">,</span>
-            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;encoding_id&#39;</span><span class="p">:</span> <span class="n">encoding_id</span><span class="p">},</span>
+            <span class="s1">'/encoding/encodings/</span><span class="si">{encoding_id}</span><span class="s1">/kantar-watermark'</span><span class="p">,</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">'encoding_id'</span><span class="p">:</span> <span class="n">encoding_id</span><span class="p">},</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">BitmovinResponse</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>
         <span class="p">)</span></div>
@@ -149,17 +149,17 @@
 <a class="viewcode-back" href="../../../../../__modules/bitmovin_api_sdk.encoding.encodings.kantar_watermark.html#bitmovin_api_sdk.encoding.encodings.kantar_watermark.kantar_watermark_api.KantarWatermarkApi.get">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">encoding_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, dict) -&gt; KantarWatermark</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get Kantar Watermark</span>
+<span class="w">        </span><span class="sd">"""Get Kantar Watermark</span>
 
 <span class="sd">        :param encoding_id: Id of the encoding.</span>
 <span class="sd">        :type encoding_id: string_types, required</span>
 <span class="sd">        :return:</span>
 <span class="sd">        :rtype: KantarWatermark</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
-            <span class="s1">&#39;/encoding/encodings/</span><span class="si">{encoding_id}</span><span class="s1">/kantar-watermark&#39;</span><span class="p">,</span>
-            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;encoding_id&#39;</span><span class="p">:</span> <span class="n">encoding_id</span><span class="p">},</span>
+            <span class="s1">'/encoding/encodings/</span><span class="si">{encoding_id}</span><span class="s1">/kantar-watermark'</span><span class="p">,</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">'encoding_id'</span><span class="p">:</span> <span class="n">encoding_id</span><span class="p">},</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">KantarWatermark</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>
         <span class="p">)</span></div>

@@ -107,7 +107,7 @@
 <a class="viewcode-back" href="../../../../../../../../../../__modules/bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.webm.contentprotection.html#bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.webm.contentprotection.contentprotection_api.ContentprotectionApi.create">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">manifest_id</span><span class="p">,</span> <span class="n">period_id</span><span class="p">,</span> <span class="n">adaptationset_id</span><span class="p">,</span> <span class="n">representation_id</span><span class="p">,</span> <span class="n">content_protection</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, string_types, string_types, string_types, ContentProtection, dict) -&gt; ContentProtection</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Create Content Protection to WebM Representation</span>
+<span class="w">        </span><span class="sd">"""Create Content Protection to WebM Representation</span>
 
 <span class="sd">        :param manifest_id: Id of the manifest</span>
 <span class="sd">        :type manifest_id: string_types, required</span>
@@ -121,12 +121,12 @@
 <span class="sd">        :type content_protection: ContentProtection, required</span>
 <span class="sd">        :return: Id of the DRM WebM representation</span>
 <span class="sd">        :rtype: ContentProtection</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">post</span><span class="p">(</span>
-            <span class="s1">&#39;/encoding/manifests/dash/</span><span class="si">{manifest_id}</span><span class="s1">/periods/</span><span class="si">{period_id}</span><span class="s1">/adaptationsets/</span><span class="si">{adaptationset_id}</span><span class="s1">/representations/webm/</span><span class="si">{representation_id}</span><span class="s1">/contentprotection&#39;</span><span class="p">,</span>
+            <span class="s1">'/encoding/manifests/dash/</span><span class="si">{manifest_id}</span><span class="s1">/periods/</span><span class="si">{period_id}</span><span class="s1">/adaptationsets/</span><span class="si">{adaptationset_id}</span><span class="s1">/representations/webm/</span><span class="si">{representation_id}</span><span class="s1">/contentprotection'</span><span class="p">,</span>
             <span class="n">content_protection</span><span class="p">,</span>
-            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;manifest_id&#39;</span><span class="p">:</span> <span class="n">manifest_id</span><span class="p">,</span> <span class="s1">&#39;period_id&#39;</span><span class="p">:</span> <span class="n">period_id</span><span class="p">,</span> <span class="s1">&#39;adaptationset_id&#39;</span><span class="p">:</span> <span class="n">adaptationset_id</span><span class="p">,</span> <span class="s1">&#39;representation_id&#39;</span><span class="p">:</span> <span class="n">representation_id</span><span class="p">},</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">'manifest_id'</span><span class="p">:</span> <span class="n">manifest_id</span><span class="p">,</span> <span class="s1">'period_id'</span><span class="p">:</span> <span class="n">period_id</span><span class="p">,</span> <span class="s1">'adaptationset_id'</span><span class="p">:</span> <span class="n">adaptationset_id</span><span class="p">,</span> <span class="s1">'representation_id'</span><span class="p">:</span> <span class="n">representation_id</span><span class="p">},</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">ContentProtection</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>
         <span class="p">)</span></div>
@@ -136,7 +136,7 @@
 <a class="viewcode-back" href="../../../../../../../../../../__modules/bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.webm.contentprotection.html#bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.webm.contentprotection.contentprotection_api.ContentprotectionApi.delete">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">delete</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">manifest_id</span><span class="p">,</span> <span class="n">period_id</span><span class="p">,</span> <span class="n">adaptationset_id</span><span class="p">,</span> <span class="n">representation_id</span><span class="p">,</span> <span class="n">contentprotection_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, string_types, string_types, string_types, string_types, dict) -&gt; BitmovinResponse</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Delete WebM Representation Content Protection</span>
+<span class="w">        </span><span class="sd">"""Delete WebM Representation Content Protection</span>
 
 <span class="sd">        :param manifest_id: Id of the manifest</span>
 <span class="sd">        :type manifest_id: string_types, required</span>
@@ -150,11 +150,11 @@
 <span class="sd">        :type contentprotection_id: string_types, required</span>
 <span class="sd">        :return: Id of the WebM Representation Content Protection</span>
 <span class="sd">        :rtype: BitmovinResponse</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span>
-            <span class="s1">&#39;/encoding/manifests/dash/</span><span class="si">{manifest_id}</span><span class="s1">/periods/</span><span class="si">{period_id}</span><span class="s1">/adaptationsets/</span><span class="si">{adaptationset_id}</span><span class="s1">/representations/webm/</span><span class="si">{representation_id}</span><span class="s1">/contentprotection/</span><span class="si">{contentprotection_id}</span><span class="s1">&#39;</span><span class="p">,</span>
-            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;manifest_id&#39;</span><span class="p">:</span> <span class="n">manifest_id</span><span class="p">,</span> <span class="s1">&#39;period_id&#39;</span><span class="p">:</span> <span class="n">period_id</span><span class="p">,</span> <span class="s1">&#39;adaptationset_id&#39;</span><span class="p">:</span> <span class="n">adaptationset_id</span><span class="p">,</span> <span class="s1">&#39;representation_id&#39;</span><span class="p">:</span> <span class="n">representation_id</span><span class="p">,</span> <span class="s1">&#39;contentprotection_id&#39;</span><span class="p">:</span> <span class="n">contentprotection_id</span><span class="p">},</span>
+            <span class="s1">'/encoding/manifests/dash/</span><span class="si">{manifest_id}</span><span class="s1">/periods/</span><span class="si">{period_id}</span><span class="s1">/adaptationsets/</span><span class="si">{adaptationset_id}</span><span class="s1">/representations/webm/</span><span class="si">{representation_id}</span><span class="s1">/contentprotection/</span><span class="si">{contentprotection_id}</span><span class="s1">'</span><span class="p">,</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">'manifest_id'</span><span class="p">:</span> <span class="n">manifest_id</span><span class="p">,</span> <span class="s1">'period_id'</span><span class="p">:</span> <span class="n">period_id</span><span class="p">,</span> <span class="s1">'adaptationset_id'</span><span class="p">:</span> <span class="n">adaptationset_id</span><span class="p">,</span> <span class="s1">'representation_id'</span><span class="p">:</span> <span class="n">representation_id</span><span class="p">,</span> <span class="s1">'contentprotection_id'</span><span class="p">:</span> <span class="n">contentprotection_id</span><span class="p">},</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">BitmovinResponse</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>
         <span class="p">)</span></div>
@@ -164,7 +164,7 @@
 <a class="viewcode-back" href="../../../../../../../../../../__modules/bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.webm.contentprotection.html#bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.webm.contentprotection.contentprotection_api.ContentprotectionApi.get">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">manifest_id</span><span class="p">,</span> <span class="n">period_id</span><span class="p">,</span> <span class="n">adaptationset_id</span><span class="p">,</span> <span class="n">representation_id</span><span class="p">,</span> <span class="n">contentprotection_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, string_types, string_types, string_types, string_types, dict) -&gt; ContentProtection</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get WebM Representation Content Protection details</span>
+<span class="w">        </span><span class="sd">"""Get WebM Representation Content Protection details</span>
 
 <span class="sd">        :param manifest_id: Id of the manifest</span>
 <span class="sd">        :type manifest_id: string_types, required</span>
@@ -178,11 +178,11 @@
 <span class="sd">        :type contentprotection_id: string_types, required</span>
 <span class="sd">        :return: WebM Representation Content Protection details</span>
 <span class="sd">        :rtype: ContentProtection</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
-            <span class="s1">&#39;/encoding/manifests/dash/</span><span class="si">{manifest_id}</span><span class="s1">/periods/</span><span class="si">{period_id}</span><span class="s1">/adaptationsets/</span><span class="si">{adaptationset_id}</span><span class="s1">/representations/webm/</span><span class="si">{representation_id}</span><span class="s1">/contentprotection/</span><span class="si">{contentprotection_id}</span><span class="s1">&#39;</span><span class="p">,</span>
-            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;manifest_id&#39;</span><span class="p">:</span> <span class="n">manifest_id</span><span class="p">,</span> <span class="s1">&#39;period_id&#39;</span><span class="p">:</span> <span class="n">period_id</span><span class="p">,</span> <span class="s1">&#39;adaptationset_id&#39;</span><span class="p">:</span> <span class="n">adaptationset_id</span><span class="p">,</span> <span class="s1">&#39;representation_id&#39;</span><span class="p">:</span> <span class="n">representation_id</span><span class="p">,</span> <span class="s1">&#39;contentprotection_id&#39;</span><span class="p">:</span> <span class="n">contentprotection_id</span><span class="p">},</span>
+            <span class="s1">'/encoding/manifests/dash/</span><span class="si">{manifest_id}</span><span class="s1">/periods/</span><span class="si">{period_id}</span><span class="s1">/adaptationsets/</span><span class="si">{adaptationset_id}</span><span class="s1">/representations/webm/</span><span class="si">{representation_id}</span><span class="s1">/contentprotection/</span><span class="si">{contentprotection_id}</span><span class="s1">'</span><span class="p">,</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">'manifest_id'</span><span class="p">:</span> <span class="n">manifest_id</span><span class="p">,</span> <span class="s1">'period_id'</span><span class="p">:</span> <span class="n">period_id</span><span class="p">,</span> <span class="s1">'adaptationset_id'</span><span class="p">:</span> <span class="n">adaptationset_id</span><span class="p">,</span> <span class="s1">'representation_id'</span><span class="p">:</span> <span class="n">representation_id</span><span class="p">,</span> <span class="s1">'contentprotection_id'</span><span class="p">:</span> <span class="n">contentprotection_id</span><span class="p">},</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">ContentProtection</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>
         <span class="p">)</span></div>
@@ -192,7 +192,7 @@
 <a class="viewcode-back" href="../../../../../../../../../../__modules/bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.webm.contentprotection.html#bitmovin_api_sdk.encoding.manifests.dash.periods.adaptationsets.representations.webm.contentprotection.contentprotection_api.ContentprotectionApi.list">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">list</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">manifest_id</span><span class="p">,</span> <span class="n">period_id</span><span class="p">,</span> <span class="n">adaptationset_id</span><span class="p">,</span> <span class="n">representation_id</span><span class="p">,</span> <span class="n">query_params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, string_types, string_types, string_types, ContentProtectionListQueryParams, dict) -&gt; ContentProtection</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;List WebM Representation Content Protections</span>
+<span class="w">        </span><span class="sd">"""List WebM Representation Content Protections</span>
 
 <span class="sd">        :param manifest_id: Id of the manifest</span>
 <span class="sd">        :type manifest_id: string_types, required</span>
@@ -206,11 +206,11 @@
 <span class="sd">        :type query_params: ContentProtectionListQueryParams</span>
 <span class="sd">        :return: List of WebM Representation Content Protections</span>
 <span class="sd">        :rtype: ContentProtection</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
-            <span class="s1">&#39;/encoding/manifests/dash/</span><span class="si">{manifest_id}</span><span class="s1">/periods/</span><span class="si">{period_id}</span><span class="s1">/adaptationsets/</span><span class="si">{adaptationset_id}</span><span class="s1">/representations/webm/</span><span class="si">{representation_id}</span><span class="s1">/contentprotection&#39;</span><span class="p">,</span>
-            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;manifest_id&#39;</span><span class="p">:</span> <span class="n">manifest_id</span><span class="p">,</span> <span class="s1">&#39;period_id&#39;</span><span class="p">:</span> <span class="n">period_id</span><span class="p">,</span> <span class="s1">&#39;adaptationset_id&#39;</span><span class="p">:</span> <span class="n">adaptationset_id</span><span class="p">,</span> <span class="s1">&#39;representation_id&#39;</span><span class="p">:</span> <span class="n">representation_id</span><span class="p">},</span>
+            <span class="s1">'/encoding/manifests/dash/</span><span class="si">{manifest_id}</span><span class="s1">/periods/</span><span class="si">{period_id}</span><span class="s1">/adaptationsets/</span><span class="si">{adaptationset_id}</span><span class="s1">/representations/webm/</span><span class="si">{representation_id}</span><span class="s1">/contentprotection'</span><span class="p">,</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">'manifest_id'</span><span class="p">:</span> <span class="n">manifest_id</span><span class="p">,</span> <span class="s1">'period_id'</span><span class="p">:</span> <span class="n">period_id</span><span class="p">,</span> <span class="s1">'adaptationset_id'</span><span class="p">:</span> <span class="n">adaptationset_id</span><span class="p">,</span> <span class="s1">'representation_id'</span><span class="p">:</span> <span class="n">representation_id</span><span class="p">},</span>
             <span class="n">query_params</span><span class="o">=</span><span class="n">query_params</span><span class="p">,</span>
             <span class="n">pagination_response</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">ContentProtection</span><span class="p">,</span>

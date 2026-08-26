@@ -107,16 +107,16 @@
 <a class="viewcode-back" href="../../../../../__modules/bitmovin_api_sdk.analytics.queries.avg.html#bitmovin_api_sdk.analytics.queries.avg.avg_api.AvgApi.create">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">analytics_avg_query_request</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (AnalyticsAvgQueryRequest, dict) -&gt; AnalyticsResponse</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Avg</span>
+<span class="w">        </span><span class="sd">"""Avg</span>
 
 <span class="sd">        :param analytics_avg_query_request: Analytics Query Object</span>
 <span class="sd">        :type analytics_avg_query_request: AnalyticsAvgQueryRequest, required</span>
 <span class="sd">        :return: Service specific result</span>
 <span class="sd">        :rtype: AnalyticsResponse</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">post</span><span class="p">(</span>
-            <span class="s1">&#39;/analytics/queries/avg&#39;</span><span class="p">,</span>
+            <span class="s1">'/analytics/queries/avg'</span><span class="p">,</span>
             <span class="n">analytics_avg_query_request</span><span class="p">,</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">AnalyticsResponse</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>

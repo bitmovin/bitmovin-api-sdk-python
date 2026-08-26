@@ -105,17 +105,17 @@
 <a class="viewcode-back" href="../../../../../__modules/bitmovin_api_sdk.account.organizations.invitations.html#bitmovin_api_sdk.account.organizations.invitations.invitations_api.InvitationsApi.list">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">list</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">organization_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, dict) -&gt; OrganizationPendingInvitation</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;List all pending invitations of an org id</span>
+<span class="w">        </span><span class="sd">"""List all pending invitations of an org id</span>
 
 <span class="sd">        :param organization_id: Id of the organization</span>
 <span class="sd">        :type organization_id: string_types, required</span>
 <span class="sd">        :return: List of pending invitations</span>
 <span class="sd">        :rtype: OrganizationPendingInvitation</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
-            <span class="s1">&#39;/account/organizations/</span><span class="si">{organization_id}</span><span class="s1">/invitations&#39;</span><span class="p">,</span>
-            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;organization_id&#39;</span><span class="p">:</span> <span class="n">organization_id</span><span class="p">},</span>
+            <span class="s1">'/account/organizations/</span><span class="si">{organization_id}</span><span class="s1">/invitations'</span><span class="p">,</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">'organization_id'</span><span class="p">:</span> <span class="n">organization_id</span><span class="p">},</span>
             <span class="n">pagination_response</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">OrganizationPendingInvitation</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>

@@ -107,16 +107,16 @@
 <a class="viewcode-back" href="../../../../__modules/bitmovin_api_sdk.encoding.watch_folders.html#bitmovin_api_sdk.encoding.watch_folders.watch_folders_api.WatchFoldersApi.create">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">watch_folder</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (WatchFolder, dict) -&gt; WatchFolder</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Create Watch Folder</span>
+<span class="w">        </span><span class="sd">"""Create Watch Folder</span>
 
 <span class="sd">        :param watch_folder: The Watch Folder to be created</span>
 <span class="sd">        :type watch_folder: WatchFolder, required</span>
 <span class="sd">        :return: Watch Folder</span>
 <span class="sd">        :rtype: WatchFolder</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">post</span><span class="p">(</span>
-            <span class="s1">&#39;/encoding/watch-folders&#39;</span><span class="p">,</span>
+            <span class="s1">'/encoding/watch-folders'</span><span class="p">,</span>
             <span class="n">watch_folder</span><span class="p">,</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">WatchFolder</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>
@@ -127,17 +127,17 @@
 <a class="viewcode-back" href="../../../../__modules/bitmovin_api_sdk.encoding.watch_folders.html#bitmovin_api_sdk.encoding.watch_folders.watch_folders_api.WatchFoldersApi.delete">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">delete</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">watch_folder_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, dict) -&gt; BitmovinResponse</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Delete Watch Folder</span>
+<span class="w">        </span><span class="sd">"""Delete Watch Folder</span>
 
 <span class="sd">        :param watch_folder_id: Id of the Watch Folder</span>
 <span class="sd">        :type watch_folder_id: string_types, required</span>
 <span class="sd">        :return: Id of the Watch Folder that was deleted</span>
 <span class="sd">        :rtype: BitmovinResponse</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span>
-            <span class="s1">&#39;/encoding/watch-folders/</span><span class="si">{watch_folder_id}</span><span class="s1">&#39;</span><span class="p">,</span>
-            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;watch_folder_id&#39;</span><span class="p">:</span> <span class="n">watch_folder_id</span><span class="p">},</span>
+            <span class="s1">'/encoding/watch-folders/</span><span class="si">{watch_folder_id}</span><span class="s1">'</span><span class="p">,</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">'watch_folder_id'</span><span class="p">:</span> <span class="n">watch_folder_id</span><span class="p">},</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">BitmovinResponse</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>
         <span class="p">)</span></div>
@@ -147,17 +147,17 @@
 <a class="viewcode-back" href="../../../../__modules/bitmovin_api_sdk.encoding.watch_folders.html#bitmovin_api_sdk.encoding.watch_folders.watch_folders_api.WatchFoldersApi.get">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">watch_folder_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, dict) -&gt; WatchFolder</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get Watch Folder details</span>
+<span class="w">        </span><span class="sd">"""Get Watch Folder details</span>
 
 <span class="sd">        :param watch_folder_id: Id of the Watch Folder</span>
 <span class="sd">        :type watch_folder_id: string_types, required</span>
 <span class="sd">        :return: Watch Folder</span>
 <span class="sd">        :rtype: WatchFolder</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
-            <span class="s1">&#39;/encoding/watch-folders/</span><span class="si">{watch_folder_id}</span><span class="s1">&#39;</span><span class="p">,</span>
-            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;watch_folder_id&#39;</span><span class="p">:</span> <span class="n">watch_folder_id</span><span class="p">},</span>
+            <span class="s1">'/encoding/watch-folders/</span><span class="si">{watch_folder_id}</span><span class="s1">'</span><span class="p">,</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">'watch_folder_id'</span><span class="p">:</span> <span class="n">watch_folder_id</span><span class="p">},</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">WatchFolder</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>
         <span class="p">)</span></div>
@@ -167,16 +167,16 @@
 <a class="viewcode-back" href="../../../../__modules/bitmovin_api_sdk.encoding.watch_folders.html#bitmovin_api_sdk.encoding.watch_folders.watch_folders_api.WatchFoldersApi.list">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">list</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">query_params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (WatchFolderListQueryParams, dict) -&gt; WatchFolder</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;List Watch Folders</span>
+<span class="w">        </span><span class="sd">"""List Watch Folders</span>
 
 <span class="sd">        :param query_params: Query parameters</span>
 <span class="sd">        :type query_params: WatchFolderListQueryParams</span>
 <span class="sd">        :return: List of Watch Folders</span>
 <span class="sd">        :rtype: WatchFolder</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
-            <span class="s1">&#39;/encoding/watch-folders&#39;</span><span class="p">,</span>
+            <span class="s1">'/encoding/watch-folders'</span><span class="p">,</span>
             <span class="n">query_params</span><span class="o">=</span><span class="n">query_params</span><span class="p">,</span>
             <span class="n">pagination_response</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">WatchFolder</span><span class="p">,</span>
@@ -188,17 +188,17 @@
 <a class="viewcode-back" href="../../../../__modules/bitmovin_api_sdk.encoding.watch_folders.html#bitmovin_api_sdk.encoding.watch_folders.watch_folders_api.WatchFoldersApi.start">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">start</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">watch_folder_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, dict) -&gt; BitmovinResponse</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Start Watch Folder</span>
+<span class="w">        </span><span class="sd">"""Start Watch Folder</span>
 
 <span class="sd">        :param watch_folder_id: Id of the Watch Folder</span>
 <span class="sd">        :type watch_folder_id: string_types, required</span>
 <span class="sd">        :return: Id of the Watch Folder</span>
 <span class="sd">        :rtype: BitmovinResponse</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">post</span><span class="p">(</span>
-            <span class="s1">&#39;/encoding/watch-folders/</span><span class="si">{watch_folder_id}</span><span class="s1">/start&#39;</span><span class="p">,</span>
-            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;watch_folder_id&#39;</span><span class="p">:</span> <span class="n">watch_folder_id</span><span class="p">},</span>
+            <span class="s1">'/encoding/watch-folders/</span><span class="si">{watch_folder_id}</span><span class="s1">/start'</span><span class="p">,</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">'watch_folder_id'</span><span class="p">:</span> <span class="n">watch_folder_id</span><span class="p">},</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">BitmovinResponse</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>
         <span class="p">)</span></div>
@@ -208,17 +208,17 @@
 <a class="viewcode-back" href="../../../../__modules/bitmovin_api_sdk.encoding.watch_folders.html#bitmovin_api_sdk.encoding.watch_folders.watch_folders_api.WatchFoldersApi.stop">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">stop</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">watch_folder_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, dict) -&gt; BitmovinResponse</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Stop Watch Folder</span>
+<span class="w">        </span><span class="sd">"""Stop Watch Folder</span>
 
 <span class="sd">        :param watch_folder_id: Id of the Watch Folder</span>
 <span class="sd">        :type watch_folder_id: string_types, required</span>
 <span class="sd">        :return: Id of the Watch Folder</span>
 <span class="sd">        :rtype: BitmovinResponse</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">post</span><span class="p">(</span>
-            <span class="s1">&#39;/encoding/watch-folders/</span><span class="si">{watch_folder_id}</span><span class="s1">/stop&#39;</span><span class="p">,</span>
-            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;watch_folder_id&#39;</span><span class="p">:</span> <span class="n">watch_folder_id</span><span class="p">},</span>
+            <span class="s1">'/encoding/watch-folders/</span><span class="si">{watch_folder_id}</span><span class="s1">/stop'</span><span class="p">,</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">'watch_folder_id'</span><span class="p">:</span> <span class="n">watch_folder_id</span><span class="p">},</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">BitmovinResponse</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>
         <span class="p">)</span></div>

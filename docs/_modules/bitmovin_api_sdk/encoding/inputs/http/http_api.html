@@ -114,16 +114,16 @@
 <a class="viewcode-back" href="../../../../../__modules/bitmovin_api_sdk.encoding.inputs.http.html#bitmovin_api_sdk.encoding.inputs.http.http_api.HttpApi.create">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">http_input</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (HttpInput, dict) -&gt; HttpInput</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Create HTTP Input</span>
+<span class="w">        </span><span class="sd">"""Create HTTP Input</span>
 
 <span class="sd">        :param http_input: The HTTP input to be created</span>
 <span class="sd">        :type http_input: HttpInput, required</span>
 <span class="sd">        :return: HTTP input</span>
 <span class="sd">        :rtype: HttpInput</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">post</span><span class="p">(</span>
-            <span class="s1">&#39;/encoding/inputs/http&#39;</span><span class="p">,</span>
+            <span class="s1">'/encoding/inputs/http'</span><span class="p">,</span>
             <span class="n">http_input</span><span class="p">,</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">HttpInput</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>
@@ -134,17 +134,17 @@
 <a class="viewcode-back" href="../../../../../__modules/bitmovin_api_sdk.encoding.inputs.http.html#bitmovin_api_sdk.encoding.inputs.http.http_api.HttpApi.delete">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">delete</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, dict) -&gt; HttpInput</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Delete HTTP Input</span>
+<span class="w">        </span><span class="sd">"""Delete HTTP Input</span>
 
 <span class="sd">        :param input_id: Id of the input</span>
 <span class="sd">        :type input_id: string_types, required</span>
 <span class="sd">        :return: Id of the input</span>
 <span class="sd">        :rtype: HttpInput</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span>
-            <span class="s1">&#39;/encoding/inputs/http/</span><span class="si">{input_id}</span><span class="s1">&#39;</span><span class="p">,</span>
-            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;input_id&#39;</span><span class="p">:</span> <span class="n">input_id</span><span class="p">},</span>
+            <span class="s1">'/encoding/inputs/http/</span><span class="si">{input_id}</span><span class="s1">'</span><span class="p">,</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">'input_id'</span><span class="p">:</span> <span class="n">input_id</span><span class="p">},</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">HttpInput</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>
         <span class="p">)</span></div>
@@ -154,17 +154,17 @@
 <a class="viewcode-back" href="../../../../../__modules/bitmovin_api_sdk.encoding.inputs.http.html#bitmovin_api_sdk.encoding.inputs.http.http_api.HttpApi.get">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, dict) -&gt; HttpInput</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get HTTP Input details</span>
+<span class="w">        </span><span class="sd">"""Get HTTP Input details</span>
 
 <span class="sd">        :param input_id: Id of the input</span>
 <span class="sd">        :type input_id: string_types, required</span>
 <span class="sd">        :return: HTTP input</span>
 <span class="sd">        :rtype: HttpInput</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
-            <span class="s1">&#39;/encoding/inputs/http/</span><span class="si">{input_id}</span><span class="s1">&#39;</span><span class="p">,</span>
-            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;input_id&#39;</span><span class="p">:</span> <span class="n">input_id</span><span class="p">},</span>
+            <span class="s1">'/encoding/inputs/http/</span><span class="si">{input_id}</span><span class="s1">'</span><span class="p">,</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">'input_id'</span><span class="p">:</span> <span class="n">input_id</span><span class="p">},</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">HttpInput</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>
         <span class="p">)</span></div>
@@ -174,16 +174,16 @@
 <a class="viewcode-back" href="../../../../../__modules/bitmovin_api_sdk.encoding.inputs.http.html#bitmovin_api_sdk.encoding.inputs.http.http_api.HttpApi.list">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">list</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">query_params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (HttpInputListQueryParams, dict) -&gt; HttpInput</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;List HTTP Inputs</span>
+<span class="w">        </span><span class="sd">"""List HTTP Inputs</span>
 
 <span class="sd">        :param query_params: Query parameters</span>
 <span class="sd">        :type query_params: HttpInputListQueryParams</span>
 <span class="sd">        :return: List of HTTP inputs</span>
 <span class="sd">        :rtype: HttpInput</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
-            <span class="s1">&#39;/encoding/inputs/http&#39;</span><span class="p">,</span>
+            <span class="s1">'/encoding/inputs/http'</span><span class="p">,</span>
             <span class="n">query_params</span><span class="o">=</span><span class="n">query_params</span><span class="p">,</span>
             <span class="n">pagination_response</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">HttpInput</span><span class="p">,</span>

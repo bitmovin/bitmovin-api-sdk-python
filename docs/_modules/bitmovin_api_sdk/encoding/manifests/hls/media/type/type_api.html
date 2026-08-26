@@ -105,7 +105,7 @@
 <a class="viewcode-back" href="../../../../../../../__modules/bitmovin_api_sdk.encoding.manifests.hls.media.type.html#bitmovin_api_sdk.encoding.manifests.hls.media.type.type_api.TypeApi.get">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">manifest_id</span><span class="p">,</span> <span class="n">media_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, string_types, dict) -&gt; MediaInfoTypeResponse</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;HLS Media Type</span>
+<span class="w">        </span><span class="sd">"""HLS Media Type</span>
 
 <span class="sd">        :param manifest_id: Id of the hls manifest.</span>
 <span class="sd">        :type manifest_id: string_types, required</span>
@@ -113,11 +113,11 @@
 <span class="sd">        :type media_id: string_types, required</span>
 <span class="sd">        :return: Media-type</span>
 <span class="sd">        :rtype: MediaInfoTypeResponse</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
-            <span class="s1">&#39;/encoding/manifests/hls/</span><span class="si">{manifest_id}</span><span class="s1">/media/</span><span class="si">{media_id}</span><span class="s1">/type&#39;</span><span class="p">,</span>
-            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;manifest_id&#39;</span><span class="p">:</span> <span class="n">manifest_id</span><span class="p">,</span> <span class="s1">&#39;media_id&#39;</span><span class="p">:</span> <span class="n">media_id</span><span class="p">},</span>
+            <span class="s1">'/encoding/manifests/hls/</span><span class="si">{manifest_id}</span><span class="s1">/media/</span><span class="si">{media_id}</span><span class="s1">/type'</span><span class="p">,</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">'manifest_id'</span><span class="p">:</span> <span class="n">manifest_id</span><span class="p">,</span> <span class="s1">'media_id'</span><span class="p">:</span> <span class="n">media_id</span><span class="p">},</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">MediaInfoTypeResponse</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>
         <span class="p">)</span></div>

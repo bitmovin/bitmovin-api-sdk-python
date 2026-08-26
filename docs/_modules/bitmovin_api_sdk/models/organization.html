@@ -137,17 +137,17 @@
     <span class="k">def</span><span class="w"> </span><span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">types</span> <span class="o">=</span> <span class="p">{}</span>
 
-        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="nb">super</span><span class="p">(</span><span class="n">Organization</span><span class="p">,</span> <span class="bp">self</span><span class="p">),</span> <span class="s1">&#39;openapi_types&#39;</span><span class="p">):</span>
-            <span class="n">types</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="nb">super</span><span class="p">(</span><span class="n">Organization</span><span class="p">,</span> <span class="bp">self</span><span class="p">),</span> <span class="s1">&#39;openapi_types&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="nb">super</span><span class="p">(</span><span class="n">Organization</span><span class="p">,</span> <span class="bp">self</span><span class="p">),</span> <span class="s1">'openapi_types'</span><span class="p">):</span>
+            <span class="n">types</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="nb">super</span><span class="p">(</span><span class="n">Organization</span><span class="p">,</span> <span class="bp">self</span><span class="p">),</span> <span class="s1">'openapi_types'</span><span class="p">)</span>
 
         <span class="n">types</span><span class="o">.</span><span class="n">update</span><span class="p">({</span>
-            <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;OrganizationType&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;parent_id&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;label_color&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;limits_per_resource&#39;</span><span class="p">:</span> <span class="s1">&#39;list[ResourceLimitContainer]&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;signup_source&#39;</span><span class="p">:</span> <span class="s1">&#39;SignupSource&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;mfa_required&#39;</span><span class="p">:</span> <span class="s1">&#39;bool&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;owner_user_id&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span>
+            <span class="s1">'type'</span><span class="p">:</span> <span class="s1">'OrganizationType'</span><span class="p">,</span>
+            <span class="s1">'parent_id'</span><span class="p">:</span> <span class="s1">'string_types'</span><span class="p">,</span>
+            <span class="s1">'label_color'</span><span class="p">:</span> <span class="s1">'string_types'</span><span class="p">,</span>
+            <span class="s1">'limits_per_resource'</span><span class="p">:</span> <span class="s1">'list[ResourceLimitContainer]'</span><span class="p">,</span>
+            <span class="s1">'signup_source'</span><span class="p">:</span> <span class="s1">'SignupSource'</span><span class="p">,</span>
+            <span class="s1">'mfa_required'</span><span class="p">:</span> <span class="s1">'bool'</span><span class="p">,</span>
+            <span class="s1">'owner_user_id'</span><span class="p">:</span> <span class="s1">'string_types'</span>
         <span class="p">})</span>
 
         <span class="k">return</span> <span class="n">types</span>
@@ -156,228 +156,228 @@
     <span class="k">def</span><span class="w"> </span><span class="nf">attribute_map</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">attributes</span> <span class="o">=</span> <span class="p">{}</span>
 
-        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="nb">super</span><span class="p">(</span><span class="n">Organization</span><span class="p">,</span> <span class="bp">self</span><span class="p">),</span> <span class="s1">&#39;attribute_map&#39;</span><span class="p">):</span>
-            <span class="n">attributes</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="nb">super</span><span class="p">(</span><span class="n">Organization</span><span class="p">,</span> <span class="bp">self</span><span class="p">),</span> <span class="s1">&#39;attribute_map&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="nb">super</span><span class="p">(</span><span class="n">Organization</span><span class="p">,</span> <span class="bp">self</span><span class="p">),</span> <span class="s1">'attribute_map'</span><span class="p">):</span>
+            <span class="n">attributes</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="nb">super</span><span class="p">(</span><span class="n">Organization</span><span class="p">,</span> <span class="bp">self</span><span class="p">),</span> <span class="s1">'attribute_map'</span><span class="p">)</span>
 
         <span class="n">attributes</span><span class="o">.</span><span class="n">update</span><span class="p">({</span>
-            <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;type&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;parent_id&#39;</span><span class="p">:</span> <span class="s1">&#39;parentId&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;label_color&#39;</span><span class="p">:</span> <span class="s1">&#39;labelColor&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;limits_per_resource&#39;</span><span class="p">:</span> <span class="s1">&#39;limitsPerResource&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;signup_source&#39;</span><span class="p">:</span> <span class="s1">&#39;signupSource&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;mfa_required&#39;</span><span class="p">:</span> <span class="s1">&#39;mfaRequired&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;owner_user_id&#39;</span><span class="p">:</span> <span class="s1">&#39;ownerUserId&#39;</span>
+            <span class="s1">'type'</span><span class="p">:</span> <span class="s1">'type'</span><span class="p">,</span>
+            <span class="s1">'parent_id'</span><span class="p">:</span> <span class="s1">'parentId'</span><span class="p">,</span>
+            <span class="s1">'label_color'</span><span class="p">:</span> <span class="s1">'labelColor'</span><span class="p">,</span>
+            <span class="s1">'limits_per_resource'</span><span class="p">:</span> <span class="s1">'limitsPerResource'</span><span class="p">,</span>
+            <span class="s1">'signup_source'</span><span class="p">:</span> <span class="s1">'signupSource'</span><span class="p">,</span>
+            <span class="s1">'mfa_required'</span><span class="p">:</span> <span class="s1">'mfaRequired'</span><span class="p">,</span>
+            <span class="s1">'owner_user_id'</span><span class="p">:</span> <span class="s1">'ownerUserId'</span>
         <span class="p">})</span>
         <span class="k">return</span> <span class="n">attributes</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">type</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; OrganizationType</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the type of this Organization.</span>
+<span class="w">        </span><span class="sd">"""Gets the type of this Organization.</span>
 
 <span class="sd">        Specifies the type of the organization in the hierachy. Only sub-organizations can be newly created. (required)</span>
 
 <span class="sd">        :return: The type of this Organization.</span>
 <span class="sd">        :rtype: OrganizationType</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_type</span>
 
     <span class="nd">@type</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">type</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">type_</span><span class="p">):</span>
         <span class="c1"># type: (OrganizationType) -&gt; None</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the type of this Organization.</span>
+<span class="w">        </span><span class="sd">"""Sets the type of this Organization.</span>
 
 <span class="sd">        Specifies the type of the organization in the hierachy. Only sub-organizations can be newly created. (required)</span>
 
 <span class="sd">        :param type_: The type of this Organization.</span>
 <span class="sd">        :type: OrganizationType</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">if</span> <span class="n">type_</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">type_</span><span class="p">,</span> <span class="n">OrganizationType</span><span class="p">):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `type`, type has to be `OrganizationType`&quot;</span><span class="p">)</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Invalid type for `type`, type has to be `OrganizationType`"</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_type</span> <span class="o">=</span> <span class="n">type_</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">parent_id</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; string_types</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the parent_id of this Organization.</span>
+<span class="w">        </span><span class="sd">"""Gets the parent_id of this Organization.</span>
 
 <span class="sd">        ID of the parent organization</span>
 
 <span class="sd">        :return: The parent_id of this Organization.</span>
 <span class="sd">        :rtype: string_types</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_parent_id</span>
 
     <span class="nd">@parent_id</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">parent_id</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent_id</span><span class="p">):</span>
         <span class="c1"># type: (string_types) -&gt; None</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the parent_id of this Organization.</span>
+<span class="w">        </span><span class="sd">"""Sets the parent_id of this Organization.</span>
 
 <span class="sd">        ID of the parent organization</span>
 
 <span class="sd">        :param parent_id: The parent_id of this Organization.</span>
 <span class="sd">        :type: string_types</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">if</span> <span class="n">parent_id</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">parent_id</span><span class="p">,</span> <span class="n">string_types</span><span class="p">):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `parent_id`, type has to be `string_types`&quot;</span><span class="p">)</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Invalid type for `parent_id`, type has to be `string_types`"</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_parent_id</span> <span class="o">=</span> <span class="n">parent_id</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">label_color</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; string_types</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the label_color of this Organization.</span>
+<span class="w">        </span><span class="sd">"""Gets the label_color of this Organization.</span>
 
 <span class="sd">        Hexadecimal color</span>
 
 <span class="sd">        :return: The label_color of this Organization.</span>
 <span class="sd">        :rtype: string_types</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_label_color</span>
 
     <span class="nd">@label_color</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">label_color</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">label_color</span><span class="p">):</span>
         <span class="c1"># type: (string_types) -&gt; None</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the label_color of this Organization.</span>
+<span class="w">        </span><span class="sd">"""Sets the label_color of this Organization.</span>
 
 <span class="sd">        Hexadecimal color</span>
 
 <span class="sd">        :param label_color: The label_color of this Organization.</span>
 <span class="sd">        :type: string_types</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">if</span> <span class="n">label_color</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">label_color</span><span class="p">,</span> <span class="n">string_types</span><span class="p">):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `label_color`, type has to be `string_types`&quot;</span><span class="p">)</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Invalid type for `label_color`, type has to be `string_types`"</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_label_color</span> <span class="o">=</span> <span class="n">label_color</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">limits_per_resource</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; list[ResourceLimitContainer]</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the limits_per_resource of this Organization.</span>
+<span class="w">        </span><span class="sd">"""Gets the limits_per_resource of this Organization.</span>
 
 
 <span class="sd">        :return: The limits_per_resource of this Organization.</span>
 <span class="sd">        :rtype: list[ResourceLimitContainer]</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_limits_per_resource</span>
 
     <span class="nd">@limits_per_resource</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">limits_per_resource</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">limits_per_resource</span><span class="p">):</span>
         <span class="c1"># type: (list) -&gt; None</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the limits_per_resource of this Organization.</span>
+<span class="w">        </span><span class="sd">"""Sets the limits_per_resource of this Organization.</span>
 
 
 <span class="sd">        :param limits_per_resource: The limits_per_resource of this Organization.</span>
 <span class="sd">        :type: list[ResourceLimitContainer]</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">if</span> <span class="n">limits_per_resource</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">limits_per_resource</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `limits_per_resource`, type has to be `list[ResourceLimitContainer]`&quot;</span><span class="p">)</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Invalid type for `limits_per_resource`, type has to be `list[ResourceLimitContainer]`"</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_limits_per_resource</span> <span class="o">=</span> <span class="n">limits_per_resource</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">signup_source</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; SignupSource</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the signup_source of this Organization.</span>
+<span class="w">        </span><span class="sd">"""Gets the signup_source of this Organization.</span>
 
 <span class="sd">        which platform initiated organisation creation</span>
 
 <span class="sd">        :return: The signup_source of this Organization.</span>
 <span class="sd">        :rtype: SignupSource</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_signup_source</span>
 
     <span class="nd">@signup_source</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">signup_source</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">signup_source</span><span class="p">):</span>
         <span class="c1"># type: (SignupSource) -&gt; None</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the signup_source of this Organization.</span>
+<span class="w">        </span><span class="sd">"""Sets the signup_source of this Organization.</span>
 
 <span class="sd">        which platform initiated organisation creation</span>
 
 <span class="sd">        :param signup_source: The signup_source of this Organization.</span>
 <span class="sd">        :type: SignupSource</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">if</span> <span class="n">signup_source</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">signup_source</span><span class="p">,</span> <span class="n">SignupSource</span><span class="p">):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `signup_source`, type has to be `SignupSource`&quot;</span><span class="p">)</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Invalid type for `signup_source`, type has to be `SignupSource`"</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_signup_source</span> <span class="o">=</span> <span class="n">signup_source</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">mfa_required</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; bool</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the mfa_required of this Organization.</span>
+<span class="w">        </span><span class="sd">"""Gets the mfa_required of this Organization.</span>
 
 <span class="sd">        Flag indicating if MFA is required for the organization</span>
 
 <span class="sd">        :return: The mfa_required of this Organization.</span>
 <span class="sd">        :rtype: bool</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mfa_required</span>
 
     <span class="nd">@mfa_required</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">mfa_required</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mfa_required</span><span class="p">):</span>
         <span class="c1"># type: (bool) -&gt; None</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the mfa_required of this Organization.</span>
+<span class="w">        </span><span class="sd">"""Sets the mfa_required of this Organization.</span>
 
 <span class="sd">        Flag indicating if MFA is required for the organization</span>
 
 <span class="sd">        :param mfa_required: The mfa_required of this Organization.</span>
 <span class="sd">        :type: bool</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">if</span> <span class="n">mfa_required</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">mfa_required</span><span class="p">,</span> <span class="nb">bool</span><span class="p">):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `mfa_required`, type has to be `bool`&quot;</span><span class="p">)</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Invalid type for `mfa_required`, type has to be `bool`"</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_mfa_required</span> <span class="o">=</span> <span class="n">mfa_required</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">owner_user_id</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; string_types</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the owner_user_id of this Organization.</span>
+<span class="w">        </span><span class="sd">"""Gets the owner_user_id of this Organization.</span>
 
 <span class="sd">        ID of the user who owns the organization</span>
 
 <span class="sd">        :return: The owner_user_id of this Organization.</span>
 <span class="sd">        :rtype: string_types</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_owner_user_id</span>
 
     <span class="nd">@owner_user_id</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">owner_user_id</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">owner_user_id</span><span class="p">):</span>
         <span class="c1"># type: (string_types) -&gt; None</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the owner_user_id of this Organization.</span>
+<span class="w">        </span><span class="sd">"""Sets the owner_user_id of this Organization.</span>
 
 <span class="sd">        ID of the user who owns the organization</span>
 
 <span class="sd">        :param owner_user_id: The owner_user_id of this Organization.</span>
 <span class="sd">        :type: string_types</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">if</span> <span class="n">owner_user_id</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">owner_user_id</span><span class="p">,</span> <span class="n">string_types</span><span class="p">):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `owner_user_id`, type has to be `string_types`&quot;</span><span class="p">)</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Invalid type for `owner_user_id`, type has to be `string_types`"</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_owner_user_id</span> <span class="o">=</span> <span class="n">owner_user_id</span>
 
 <div class="viewcode-block" id="Organization.to_dict">
 <a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.organization.Organization.to_dict">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""Returns the model properties as a dict"""</span>
         <span class="n">result</span> <span class="o">=</span> <span class="p">{}</span>
 
-        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="nb">super</span><span class="p">(</span><span class="n">Organization</span><span class="p">,</span> <span class="bp">self</span><span class="p">),</span> <span class="s2">&quot;to_dict&quot;</span><span class="p">):</span>
+        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="nb">super</span><span class="p">(</span><span class="n">Organization</span><span class="p">,</span> <span class="bp">self</span><span class="p">),</span> <span class="s2">"to_dict"</span><span class="p">):</span>
             <span class="n">result</span> <span class="o">=</span> <span class="nb">super</span><span class="p">(</span><span class="n">Organization</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span>
         <span class="k">for</span> <span class="n">attr</span><span class="p">,</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">six</span><span class="o">.</span><span class="n">iteritems</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">openapi_types</span><span class="p">):</span>
             <span class="n">value</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">attr</span><span class="p">)</span>
@@ -386,13 +386,13 @@
             <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
                 <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
                     <span class="k">continue</span>
-                <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="p">[</span><span class="n">y</span><span class="o">.</span><span class="n">value</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">Enum</span><span class="p">)</span> <span class="k">else</span> <span class="n">y</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span> <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="s2">&quot;to_dict&quot;</span><span class="p">)</span> <span class="k">else</span> <span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">value</span><span class="p">]]</span>
-            <span class="k">elif</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="s2">&quot;to_dict&quot;</span><span class="p">):</span>
+                <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="p">[</span><span class="n">y</span><span class="o">.</span><span class="n">value</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">Enum</span><span class="p">)</span> <span class="k">else</span> <span class="n">y</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span> <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="s2">"to_dict"</span><span class="p">)</span> <span class="k">else</span> <span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">value</span><span class="p">]]</span>
+            <span class="k">elif</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="s2">"to_dict"</span><span class="p">):</span>
                 <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="n">value</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span>
             <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">Enum</span><span class="p">):</span>
                 <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="n">value</span><span class="o">.</span><span class="n">value</span>
             <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
-                <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="p">(</span><span class="n">v</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span> <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="s2">&quot;to_dict&quot;</span><span class="p">)</span> <span class="k">else</span> <span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span> <span class="ow">in</span> <span class="n">value</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
+                <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="p">(</span><span class="n">v</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span> <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="s2">"to_dict"</span><span class="p">)</span> <span class="k">else</span> <span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span> <span class="ow">in</span> <span class="n">value</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
             <span class="k">else</span><span class="p">:</span>
                 <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="n">value</span>
 
@@ -402,23 +402,23 @@
 <div class="viewcode-block" id="Organization.to_str">
 <a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.organization.Organization.to_str">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">to_str</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the string representation of the model&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""Returns the string representation of the model"""</span>
         <span class="k">return</span> <span class="n">pprint</span><span class="o">.</span><span class="n">pformat</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">to_dict</span><span class="p">())</span></div>
 
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;For `print` and `pprint`&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""For `print` and `pprint`"""</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">to_str</span><span class="p">()</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns true if both objects are equal&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""Returns true if both objects are equal"""</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">Organization</span><span class="p">):</span>
             <span class="k">return</span> <span class="kc">False</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="vm">__dict__</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__ne__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns true if both objects are not equal&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""Returns true if both objects are not equal"""</span>
         <span class="k">return</span> <span class="ow">not</span> <span class="bp">self</span> <span class="o">==</span> <span class="n">other</span></div>
 
 </pre></div>

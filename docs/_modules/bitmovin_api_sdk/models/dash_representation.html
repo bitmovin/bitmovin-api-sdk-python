@@ -90,31 +90,31 @@
 <span class="k">class</span><span class="w"> </span><span class="nc">DashRepresentation</span><span class="p">(</span><span class="n">BitmovinResponse</span><span class="p">):</span>
 
     <span class="n">discriminator_value_class_map</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="s1">&#39;DRM_FMP4&#39;</span><span class="p">:</span> <span class="s1">&#39;DashFmp4DrmRepresentation&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;FMP4&#39;</span><span class="p">:</span> <span class="s1">&#39;DashFmp4Representation&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;WEBM&#39;</span><span class="p">:</span> <span class="s1">&#39;DashWebmRepresentation&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;CMAF&#39;</span><span class="p">:</span> <span class="s1">&#39;DashCmafRepresentation&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;CHUNKED_TEXT&#39;</span><span class="p">:</span> <span class="s1">&#39;DashChunkedTextRepresentation&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;MP4&#39;</span><span class="p">:</span> <span class="s1">&#39;DashMp4Representation&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;DRM_MP4&#39;</span><span class="p">:</span> <span class="s1">&#39;DashMp4DrmRepresentation&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;PROGRESSIVE_WEBM&#39;</span><span class="p">:</span> <span class="s1">&#39;DashProgressiveWebmRepresentation&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;VTT&#39;</span><span class="p">:</span> <span class="s1">&#39;DashVttRepresentation&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;SPRITE&#39;</span><span class="p">:</span> <span class="s1">&#39;SpriteRepresentation&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;IMSC&#39;</span><span class="p">:</span> <span class="s1">&#39;DashImscRepresentation&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;CONTENT_PROTECTION&#39;</span><span class="p">:</span> <span class="s1">&#39;ContentProtection&#39;</span>
+        <span class="s1">'DRM_FMP4'</span><span class="p">:</span> <span class="s1">'DashFmp4DrmRepresentation'</span><span class="p">,</span>
+        <span class="s1">'FMP4'</span><span class="p">:</span> <span class="s1">'DashFmp4Representation'</span><span class="p">,</span>
+        <span class="s1">'WEBM'</span><span class="p">:</span> <span class="s1">'DashWebmRepresentation'</span><span class="p">,</span>
+        <span class="s1">'CMAF'</span><span class="p">:</span> <span class="s1">'DashCmafRepresentation'</span><span class="p">,</span>
+        <span class="s1">'CHUNKED_TEXT'</span><span class="p">:</span> <span class="s1">'DashChunkedTextRepresentation'</span><span class="p">,</span>
+        <span class="s1">'MP4'</span><span class="p">:</span> <span class="s1">'DashMp4Representation'</span><span class="p">,</span>
+        <span class="s1">'DRM_MP4'</span><span class="p">:</span> <span class="s1">'DashMp4DrmRepresentation'</span><span class="p">,</span>
+        <span class="s1">'PROGRESSIVE_WEBM'</span><span class="p">:</span> <span class="s1">'DashProgressiveWebmRepresentation'</span><span class="p">,</span>
+        <span class="s1">'VTT'</span><span class="p">:</span> <span class="s1">'DashVttRepresentation'</span><span class="p">,</span>
+        <span class="s1">'SPRITE'</span><span class="p">:</span> <span class="s1">'SpriteRepresentation'</span><span class="p">,</span>
+        <span class="s1">'IMSC'</span><span class="p">:</span> <span class="s1">'DashImscRepresentation'</span><span class="p">,</span>
+        <span class="s1">'CONTENT_PROTECTION'</span><span class="p">:</span> <span class="s1">'ContentProtection'</span>
     <span class="p">}</span>
 
 <div class="viewcode-block" id="DashRepresentation.to_dict">
 <a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.dash_representation.DashRepresentation.to_dict">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""Returns the model properties as a dict"""</span>
         <span class="n">result</span> <span class="o">=</span> <span class="p">{}</span>
 
-        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="nb">super</span><span class="p">(</span><span class="n">DashRepresentation</span><span class="p">,</span> <span class="bp">self</span><span class="p">),</span> <span class="s2">&quot;to_dict&quot;</span><span class="p">):</span>
+        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="nb">super</span><span class="p">(</span><span class="n">DashRepresentation</span><span class="p">,</span> <span class="bp">self</span><span class="p">),</span> <span class="s2">"to_dict"</span><span class="p">):</span>
             <span class="n">result</span> <span class="o">=</span> <span class="nb">super</span><span class="p">(</span><span class="n">DashRepresentation</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span>
         <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">iteritems</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">discriminator_value_class_map</span><span class="p">):</span>
             <span class="k">if</span> <span class="n">v</span> <span class="o">==</span> <span class="nb">type</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="p">:</span>
-                <span class="n">result</span><span class="p">[</span><span class="s1">&#39;typeDiscriminator&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">k</span>
+                <span class="n">result</span><span class="p">[</span><span class="s1">'typeDiscriminator'</span><span class="p">]</span> <span class="o">=</span> <span class="n">k</span>
                 <span class="k">break</span>
         <span class="k">return</span> <span class="n">result</span></div>
 
@@ -122,23 +122,23 @@
 <div class="viewcode-block" id="DashRepresentation.to_str">
 <a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.dash_representation.DashRepresentation.to_str">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">to_str</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the string representation of the model&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""Returns the string representation of the model"""</span>
         <span class="k">return</span> <span class="n">pprint</span><span class="o">.</span><span class="n">pformat</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">to_dict</span><span class="p">())</span></div>
 
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;For `print` and `pprint`&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""For `print` and `pprint`"""</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">to_str</span><span class="p">()</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns true if both objects are equal&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""Returns true if both objects are equal"""</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">DashRepresentation</span><span class="p">):</span>
             <span class="k">return</span> <span class="kc">False</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="vm">__dict__</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__ne__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns true if both objects are not equal&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""Returns true if both objects are not equal"""</span>
         <span class="k">return</span> <span class="ow">not</span> <span class="bp">self</span> <span class="o">==</span> <span class="n">other</span></div>
 
 </pre></div>

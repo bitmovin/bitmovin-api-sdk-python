@@ -106,7 +106,7 @@
 <a class="viewcode-back" href="../../../../../../__modules/bitmovin_api_sdk.account.organizations.groups.permissions.html#bitmovin_api_sdk.account.organizations.groups.permissions.permissions_api.PermissionsApi.create">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">organization_id</span><span class="p">,</span> <span class="n">group_id</span><span class="p">,</span> <span class="n">acl</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, string_types, Acl, dict) -&gt; Acl</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Set Group Permissions</span>
+<span class="w">        </span><span class="sd">"""Set Group Permissions</span>
 
 <span class="sd">        :param organization_id: Id of the organization</span>
 <span class="sd">        :type organization_id: string_types, required</span>
@@ -116,12 +116,12 @@
 <span class="sd">        :type acl: Acl, required</span>
 <span class="sd">        :return: Tenant details</span>
 <span class="sd">        :rtype: Acl</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">post</span><span class="p">(</span>
-            <span class="s1">&#39;/account/organizations/</span><span class="si">{organization_id}</span><span class="s1">/groups/</span><span class="si">{group_id}</span><span class="s1">/permissions&#39;</span><span class="p">,</span>
+            <span class="s1">'/account/organizations/</span><span class="si">{organization_id}</span><span class="s1">/groups/</span><span class="si">{group_id}</span><span class="s1">/permissions'</span><span class="p">,</span>
             <span class="n">acl</span><span class="p">,</span>
-            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;organization_id&#39;</span><span class="p">:</span> <span class="n">organization_id</span><span class="p">,</span> <span class="s1">&#39;group_id&#39;</span><span class="p">:</span> <span class="n">group_id</span><span class="p">},</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">'organization_id'</span><span class="p">:</span> <span class="n">organization_id</span><span class="p">,</span> <span class="s1">'group_id'</span><span class="p">:</span> <span class="n">group_id</span><span class="p">},</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">Acl</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>
         <span class="p">)</span></div>
@@ -131,7 +131,7 @@
 <a class="viewcode-back" href="../../../../../../__modules/bitmovin_api_sdk.account.organizations.groups.permissions.html#bitmovin_api_sdk.account.organizations.groups.permissions.permissions_api.PermissionsApi.delete">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">delete</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">organization_id</span><span class="p">,</span> <span class="n">group_id</span><span class="p">,</span> <span class="n">permission_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, string_types, string_types, dict) -&gt; BitmovinResponse</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Delete Permission</span>
+<span class="w">        </span><span class="sd">"""Delete Permission</span>
 
 <span class="sd">        :param organization_id: Id of the organization</span>
 <span class="sd">        :type organization_id: string_types, required</span>
@@ -141,11 +141,11 @@
 <span class="sd">        :type permission_id: string_types, required</span>
 <span class="sd">        :return:</span>
 <span class="sd">        :rtype: BitmovinResponse</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span>
-            <span class="s1">&#39;/account/organizations/</span><span class="si">{organization_id}</span><span class="s1">/groups/</span><span class="si">{group_id}</span><span class="s1">/permissions/</span><span class="si">{permission_id}</span><span class="s1">&#39;</span><span class="p">,</span>
-            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;organization_id&#39;</span><span class="p">:</span> <span class="n">organization_id</span><span class="p">,</span> <span class="s1">&#39;group_id&#39;</span><span class="p">:</span> <span class="n">group_id</span><span class="p">,</span> <span class="s1">&#39;permission_id&#39;</span><span class="p">:</span> <span class="n">permission_id</span><span class="p">},</span>
+            <span class="s1">'/account/organizations/</span><span class="si">{organization_id}</span><span class="s1">/groups/</span><span class="si">{group_id}</span><span class="s1">/permissions/</span><span class="si">{permission_id}</span><span class="s1">'</span><span class="p">,</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">'organization_id'</span><span class="p">:</span> <span class="n">organization_id</span><span class="p">,</span> <span class="s1">'group_id'</span><span class="p">:</span> <span class="n">group_id</span><span class="p">,</span> <span class="s1">'permission_id'</span><span class="p">:</span> <span class="n">permission_id</span><span class="p">},</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">BitmovinResponse</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>
         <span class="p">)</span></div>
@@ -155,7 +155,7 @@
 <a class="viewcode-back" href="../../../../../../__modules/bitmovin_api_sdk.account.organizations.groups.permissions.html#bitmovin_api_sdk.account.organizations.groups.permissions.permissions_api.PermissionsApi.list">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">list</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">organization_id</span><span class="p">,</span> <span class="n">group_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, string_types, dict) -&gt; Acl</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get Group Permissions</span>
+<span class="w">        </span><span class="sd">"""Get Group Permissions</span>
 
 <span class="sd">        :param organization_id: Id of the organization</span>
 <span class="sd">        :type organization_id: string_types, required</span>
@@ -163,11 +163,11 @@
 <span class="sd">        :type group_id: string_types, required</span>
 <span class="sd">        :return: Service specific result</span>
 <span class="sd">        :rtype: Acl</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
-            <span class="s1">&#39;/account/organizations/</span><span class="si">{organization_id}</span><span class="s1">/groups/</span><span class="si">{group_id}</span><span class="s1">/permissions&#39;</span><span class="p">,</span>
-            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;organization_id&#39;</span><span class="p">:</span> <span class="n">organization_id</span><span class="p">,</span> <span class="s1">&#39;group_id&#39;</span><span class="p">:</span> <span class="n">group_id</span><span class="p">},</span>
+            <span class="s1">'/account/organizations/</span><span class="si">{organization_id}</span><span class="s1">/groups/</span><span class="si">{group_id}</span><span class="s1">/permissions'</span><span class="p">,</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">'organization_id'</span><span class="p">:</span> <span class="n">organization_id</span><span class="p">,</span> <span class="s1">'group_id'</span><span class="p">:</span> <span class="n">group_id</span><span class="p">},</span>
             <span class="n">pagination_response</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">Acl</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>

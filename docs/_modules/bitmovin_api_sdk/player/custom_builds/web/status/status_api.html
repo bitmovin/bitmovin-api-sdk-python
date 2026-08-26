@@ -105,17 +105,17 @@
 <a class="viewcode-back" href="../../../../../../__modules/bitmovin_api_sdk.player.custom_builds.web.status.html#bitmovin_api_sdk.player.custom_builds.web.status.status_api.StatusApi.get">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">custom_build_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, dict) -&gt; CustomPlayerBuildStatus</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Custom Web Player Build Status</span>
+<span class="w">        </span><span class="sd">"""Custom Web Player Build Status</span>
 
 <span class="sd">        :param custom_build_id: Id of the custom player build</span>
 <span class="sd">        :type custom_build_id: string_types, required</span>
 <span class="sd">        :return: Custom player build status</span>
 <span class="sd">        :rtype: CustomPlayerBuildStatus</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
-            <span class="s1">&#39;/player/custom-builds/web/</span><span class="si">{custom_build_id}</span><span class="s1">/status&#39;</span><span class="p">,</span>
-            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;custom_build_id&#39;</span><span class="p">:</span> <span class="n">custom_build_id</span><span class="p">},</span>
+            <span class="s1">'/player/custom-builds/web/</span><span class="si">{custom_build_id}</span><span class="s1">/status'</span><span class="p">,</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">'custom_build_id'</span><span class="p">:</span> <span class="n">custom_build_id</span><span class="p">},</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">CustomPlayerBuildStatus</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>
         <span class="p">)</span></div>

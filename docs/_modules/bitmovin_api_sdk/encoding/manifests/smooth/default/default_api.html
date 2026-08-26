@@ -105,16 +105,16 @@
 <a class="viewcode-back" href="../../../../../../__modules/bitmovin_api_sdk.encoding.manifests.smooth.default.html#bitmovin_api_sdk.encoding.manifests.smooth.default.default_api.DefaultApi.create">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">smooth_manifest_default</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (SmoothManifestDefault, dict) -&gt; SmoothManifestDefault</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Create Default Smooth Streaming Manifest</span>
+<span class="w">        </span><span class="sd">"""Create Default Smooth Streaming Manifest</span>
 
 <span class="sd">        :param smooth_manifest_default: The Default Smooth Streaming Manifest to be created.</span>
 <span class="sd">        :type smooth_manifest_default: SmoothManifestDefault, required</span>
 <span class="sd">        :return: Smooth Streaming Manifest</span>
 <span class="sd">        :rtype: SmoothManifestDefault</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">post</span><span class="p">(</span>
-            <span class="s1">&#39;/encoding/manifests/smooth/default&#39;</span><span class="p">,</span>
+            <span class="s1">'/encoding/manifests/smooth/default'</span><span class="p">,</span>
             <span class="n">smooth_manifest_default</span><span class="p">,</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">SmoothManifestDefault</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>

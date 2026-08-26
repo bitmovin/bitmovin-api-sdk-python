@@ -150,17 +150,17 @@
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">types</span> <span class="o">=</span> <span class="p">{</span>
-            <span class="s1">&#39;stream_key&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;hls_manifests&#39;</span><span class="p">:</span> <span class="s1">&#39;list[LiveHlsManifest]&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;dash_manifests&#39;</span><span class="p">:</span> <span class="s1">&#39;list[LiveDashManifest]&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;live_encoding_mode&#39;</span><span class="p">:</span> <span class="s1">&#39;EncodingMode&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;reupload_settings&#39;</span><span class="p">:</span> <span class="s1">&#39;ReuploadSettings&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;manifest_generator&#39;</span><span class="p">:</span> <span class="s1">&#39;ManifestGenerator&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;auto_restart_configuration&#39;</span><span class="p">:</span> <span class="s1">&#39;AutoRestartConfiguration&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;auto_shutdown_configuration&#39;</span><span class="p">:</span> <span class="s1">&#39;LiveAutoShutdownConfiguration&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;esam_settings&#39;</span><span class="p">:</span> <span class="s1">&#39;EsamSettings&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;cache_control_settings&#39;</span><span class="p">:</span> <span class="s1">&#39;CacheControlSettings&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;ad_insertion_settings&#39;</span><span class="p">:</span> <span class="s1">&#39;AdInsertionSettings&#39;</span>
+            <span class="s1">'stream_key'</span><span class="p">:</span> <span class="s1">'string_types'</span><span class="p">,</span>
+            <span class="s1">'hls_manifests'</span><span class="p">:</span> <span class="s1">'list[LiveHlsManifest]'</span><span class="p">,</span>
+            <span class="s1">'dash_manifests'</span><span class="p">:</span> <span class="s1">'list[LiveDashManifest]'</span><span class="p">,</span>
+            <span class="s1">'live_encoding_mode'</span><span class="p">:</span> <span class="s1">'EncodingMode'</span><span class="p">,</span>
+            <span class="s1">'reupload_settings'</span><span class="p">:</span> <span class="s1">'ReuploadSettings'</span><span class="p">,</span>
+            <span class="s1">'manifest_generator'</span><span class="p">:</span> <span class="s1">'ManifestGenerator'</span><span class="p">,</span>
+            <span class="s1">'auto_restart_configuration'</span><span class="p">:</span> <span class="s1">'AutoRestartConfiguration'</span><span class="p">,</span>
+            <span class="s1">'auto_shutdown_configuration'</span><span class="p">:</span> <span class="s1">'LiveAutoShutdownConfiguration'</span><span class="p">,</span>
+            <span class="s1">'esam_settings'</span><span class="p">:</span> <span class="s1">'EsamSettings'</span><span class="p">,</span>
+            <span class="s1">'cache_control_settings'</span><span class="p">:</span> <span class="s1">'CacheControlSettings'</span><span class="p">,</span>
+            <span class="s1">'ad_insertion_settings'</span><span class="p">:</span> <span class="s1">'AdInsertionSettings'</span>
         <span class="p">}</span>
 
         <span class="k">return</span> <span class="n">types</span>
@@ -168,343 +168,343 @@
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">attribute_map</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">attributes</span> <span class="o">=</span> <span class="p">{</span>
-            <span class="s1">&#39;stream_key&#39;</span><span class="p">:</span> <span class="s1">&#39;streamKey&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;hls_manifests&#39;</span><span class="p">:</span> <span class="s1">&#39;hlsManifests&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;dash_manifests&#39;</span><span class="p">:</span> <span class="s1">&#39;dashManifests&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;live_encoding_mode&#39;</span><span class="p">:</span> <span class="s1">&#39;liveEncodingMode&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;reupload_settings&#39;</span><span class="p">:</span> <span class="s1">&#39;reuploadSettings&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;manifest_generator&#39;</span><span class="p">:</span> <span class="s1">&#39;manifestGenerator&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;auto_restart_configuration&#39;</span><span class="p">:</span> <span class="s1">&#39;autoRestartConfiguration&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;auto_shutdown_configuration&#39;</span><span class="p">:</span> <span class="s1">&#39;autoShutdownConfiguration&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;esam_settings&#39;</span><span class="p">:</span> <span class="s1">&#39;esamSettings&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;cache_control_settings&#39;</span><span class="p">:</span> <span class="s1">&#39;cacheControlSettings&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;ad_insertion_settings&#39;</span><span class="p">:</span> <span class="s1">&#39;adInsertionSettings&#39;</span>
+            <span class="s1">'stream_key'</span><span class="p">:</span> <span class="s1">'streamKey'</span><span class="p">,</span>
+            <span class="s1">'hls_manifests'</span><span class="p">:</span> <span class="s1">'hlsManifests'</span><span class="p">,</span>
+            <span class="s1">'dash_manifests'</span><span class="p">:</span> <span class="s1">'dashManifests'</span><span class="p">,</span>
+            <span class="s1">'live_encoding_mode'</span><span class="p">:</span> <span class="s1">'liveEncodingMode'</span><span class="p">,</span>
+            <span class="s1">'reupload_settings'</span><span class="p">:</span> <span class="s1">'reuploadSettings'</span><span class="p">,</span>
+            <span class="s1">'manifest_generator'</span><span class="p">:</span> <span class="s1">'manifestGenerator'</span><span class="p">,</span>
+            <span class="s1">'auto_restart_configuration'</span><span class="p">:</span> <span class="s1">'autoRestartConfiguration'</span><span class="p">,</span>
+            <span class="s1">'auto_shutdown_configuration'</span><span class="p">:</span> <span class="s1">'autoShutdownConfiguration'</span><span class="p">,</span>
+            <span class="s1">'esam_settings'</span><span class="p">:</span> <span class="s1">'esamSettings'</span><span class="p">,</span>
+            <span class="s1">'cache_control_settings'</span><span class="p">:</span> <span class="s1">'cacheControlSettings'</span><span class="p">,</span>
+            <span class="s1">'ad_insertion_settings'</span><span class="p">:</span> <span class="s1">'adInsertionSettings'</span>
         <span class="p">}</span>
         <span class="k">return</span> <span class="n">attributes</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">stream_key</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; string_types</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the stream_key of this StartLiveEncodingRequest.</span>
+<span class="w">        </span><span class="sd">"""Gets the stream_key of this StartLiveEncodingRequest.</span>
 
 <span class="sd">        Key for the stream. (a-zA-Z, 3-20 characters) (required)</span>
 
 <span class="sd">        :return: The stream_key of this StartLiveEncodingRequest.</span>
 <span class="sd">        :rtype: string_types</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_stream_key</span>
 
     <span class="nd">@stream_key</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">stream_key</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">stream_key</span><span class="p">):</span>
         <span class="c1"># type: (string_types) -&gt; None</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the stream_key of this StartLiveEncodingRequest.</span>
+<span class="w">        </span><span class="sd">"""Sets the stream_key of this StartLiveEncodingRequest.</span>
 
 <span class="sd">        Key for the stream. (a-zA-Z, 3-20 characters) (required)</span>
 
 <span class="sd">        :param stream_key: The stream_key of this StartLiveEncodingRequest.</span>
 <span class="sd">        :type: string_types</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">if</span> <span class="n">stream_key</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">stream_key</span><span class="p">,</span> <span class="n">string_types</span><span class="p">):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `stream_key`, type has to be `string_types`&quot;</span><span class="p">)</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Invalid type for `stream_key`, type has to be `string_types`"</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_stream_key</span> <span class="o">=</span> <span class="n">stream_key</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">hls_manifests</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; list[LiveHlsManifest]</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the hls_manifests of this StartLiveEncodingRequest.</span>
+<span class="w">        </span><span class="sd">"""Gets the hls_manifests of this StartLiveEncodingRequest.</span>
 
 <span class="sd">        HLS manifests to be generated during the encoding. See [documentation](https://developer.bitmovin.com/encoding/docs/how-to-create-manifests-for-your-encodings#just-in-time-jit)</span>
 
 <span class="sd">        :return: The hls_manifests of this StartLiveEncodingRequest.</span>
 <span class="sd">        :rtype: list[LiveHlsManifest]</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_hls_manifests</span>
 
     <span class="nd">@hls_manifests</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">hls_manifests</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">hls_manifests</span><span class="p">):</span>
         <span class="c1"># type: (list) -&gt; None</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the hls_manifests of this StartLiveEncodingRequest.</span>
+<span class="w">        </span><span class="sd">"""Sets the hls_manifests of this StartLiveEncodingRequest.</span>
 
 <span class="sd">        HLS manifests to be generated during the encoding. See [documentation](https://developer.bitmovin.com/encoding/docs/how-to-create-manifests-for-your-encodings#just-in-time-jit)</span>
 
 <span class="sd">        :param hls_manifests: The hls_manifests of this StartLiveEncodingRequest.</span>
 <span class="sd">        :type: list[LiveHlsManifest]</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">if</span> <span class="n">hls_manifests</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">hls_manifests</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `hls_manifests`, type has to be `list[LiveHlsManifest]`&quot;</span><span class="p">)</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Invalid type for `hls_manifests`, type has to be `list[LiveHlsManifest]`"</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_hls_manifests</span> <span class="o">=</span> <span class="n">hls_manifests</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">dash_manifests</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; list[LiveDashManifest]</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the dash_manifests of this StartLiveEncodingRequest.</span>
+<span class="w">        </span><span class="sd">"""Gets the dash_manifests of this StartLiveEncodingRequest.</span>
 
 <span class="sd">        DASH manifests to be generated during the encoding. See [documentation](https://developer.bitmovin.com/encoding/docs/how-to-create-manifests-for-your-encodings#just-in-time-jit)</span>
 
 <span class="sd">        :return: The dash_manifests of this StartLiveEncodingRequest.</span>
 <span class="sd">        :rtype: list[LiveDashManifest]</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_dash_manifests</span>
 
     <span class="nd">@dash_manifests</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">dash_manifests</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dash_manifests</span><span class="p">):</span>
         <span class="c1"># type: (list) -&gt; None</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the dash_manifests of this StartLiveEncodingRequest.</span>
+<span class="w">        </span><span class="sd">"""Sets the dash_manifests of this StartLiveEncodingRequest.</span>
 
 <span class="sd">        DASH manifests to be generated during the encoding. See [documentation](https://developer.bitmovin.com/encoding/docs/how-to-create-manifests-for-your-encodings#just-in-time-jit)</span>
 
 <span class="sd">        :param dash_manifests: The dash_manifests of this StartLiveEncodingRequest.</span>
 <span class="sd">        :type: list[LiveDashManifest]</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">if</span> <span class="n">dash_manifests</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">dash_manifests</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `dash_manifests`, type has to be `list[LiveDashManifest]`&quot;</span><span class="p">)</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Invalid type for `dash_manifests`, type has to be `list[LiveDashManifest]`"</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_dash_manifests</span> <span class="o">=</span> <span class="n">dash_manifests</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">live_encoding_mode</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; EncodingMode</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the live_encoding_mode of this StartLiveEncodingRequest.</span>
+<span class="w">        </span><span class="sd">"""Gets the live_encoding_mode of this StartLiveEncodingRequest.</span>
 
 <span class="sd">        The pass mode of the encoding. Must only be set when `encodingMode` is not set on any codec configuration used by this encoding.</span>
 
 <span class="sd">        :return: The live_encoding_mode of this StartLiveEncodingRequest.</span>
 <span class="sd">        :rtype: EncodingMode</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_live_encoding_mode</span>
 
     <span class="nd">@live_encoding_mode</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">live_encoding_mode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">live_encoding_mode</span><span class="p">):</span>
         <span class="c1"># type: (EncodingMode) -&gt; None</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the live_encoding_mode of this StartLiveEncodingRequest.</span>
+<span class="w">        </span><span class="sd">"""Sets the live_encoding_mode of this StartLiveEncodingRequest.</span>
 
 <span class="sd">        The pass mode of the encoding. Must only be set when `encodingMode` is not set on any codec configuration used by this encoding.</span>
 
 <span class="sd">        :param live_encoding_mode: The live_encoding_mode of this StartLiveEncodingRequest.</span>
 <span class="sd">        :type: EncodingMode</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">if</span> <span class="n">live_encoding_mode</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">live_encoding_mode</span><span class="p">,</span> <span class="n">EncodingMode</span><span class="p">):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `live_encoding_mode`, type has to be `EncodingMode`&quot;</span><span class="p">)</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Invalid type for `live_encoding_mode`, type has to be `EncodingMode`"</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_live_encoding_mode</span> <span class="o">=</span> <span class="n">live_encoding_mode</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">reupload_settings</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; ReuploadSettings</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the reupload_settings of this StartLiveEncodingRequest.</span>
+<span class="w">        </span><span class="sd">"""Gets the reupload_settings of this StartLiveEncodingRequest.</span>
 
 <span class="sd">        Reupload specific files during a live encoding. This can be helpful if an automatic life cycle policy is enabled on the output storage</span>
 
 <span class="sd">        :return: The reupload_settings of this StartLiveEncodingRequest.</span>
 <span class="sd">        :rtype: ReuploadSettings</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_reupload_settings</span>
 
     <span class="nd">@reupload_settings</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">reupload_settings</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">reupload_settings</span><span class="p">):</span>
         <span class="c1"># type: (ReuploadSettings) -&gt; None</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the reupload_settings of this StartLiveEncodingRequest.</span>
+<span class="w">        </span><span class="sd">"""Sets the reupload_settings of this StartLiveEncodingRequest.</span>
 
 <span class="sd">        Reupload specific files during a live encoding. This can be helpful if an automatic life cycle policy is enabled on the output storage</span>
 
 <span class="sd">        :param reupload_settings: The reupload_settings of this StartLiveEncodingRequest.</span>
 <span class="sd">        :type: ReuploadSettings</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">if</span> <span class="n">reupload_settings</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">reupload_settings</span><span class="p">,</span> <span class="n">ReuploadSettings</span><span class="p">):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `reupload_settings`, type has to be `ReuploadSettings`&quot;</span><span class="p">)</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Invalid type for `reupload_settings`, type has to be `ReuploadSettings`"</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_reupload_settings</span> <span class="o">=</span> <span class="n">reupload_settings</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">manifest_generator</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; ManifestGenerator</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the manifest_generator of this StartLiveEncodingRequest.</span>
+<span class="w">        </span><span class="sd">"""Gets the manifest_generator of this StartLiveEncodingRequest.</span>
 
 <span class="sd">        Major version of the manifest generator to be used for manifests referenced in this request (by properties dashManifests, dashManifests). `V2` is available for encoder versions 2.70.0 and above and is the recommended option. The default value depends on the sign-up date of your organization. See [documentation](https://developer.bitmovin.com/encoding/docs/manifest-generator-v2) page for a detailed explanation. </span>
 
 <span class="sd">        :return: The manifest_generator of this StartLiveEncodingRequest.</span>
 <span class="sd">        :rtype: ManifestGenerator</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_manifest_generator</span>
 
     <span class="nd">@manifest_generator</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">manifest_generator</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">manifest_generator</span><span class="p">):</span>
         <span class="c1"># type: (ManifestGenerator) -&gt; None</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the manifest_generator of this StartLiveEncodingRequest.</span>
+<span class="w">        </span><span class="sd">"""Sets the manifest_generator of this StartLiveEncodingRequest.</span>
 
 <span class="sd">        Major version of the manifest generator to be used for manifests referenced in this request (by properties dashManifests, dashManifests). `V2` is available for encoder versions 2.70.0 and above and is the recommended option. The default value depends on the sign-up date of your organization. See [documentation](https://developer.bitmovin.com/encoding/docs/manifest-generator-v2) page for a detailed explanation. </span>
 
 <span class="sd">        :param manifest_generator: The manifest_generator of this StartLiveEncodingRequest.</span>
 <span class="sd">        :type: ManifestGenerator</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">if</span> <span class="n">manifest_generator</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">manifest_generator</span><span class="p">,</span> <span class="n">ManifestGenerator</span><span class="p">):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `manifest_generator`, type has to be `ManifestGenerator`&quot;</span><span class="p">)</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Invalid type for `manifest_generator`, type has to be `ManifestGenerator`"</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_manifest_generator</span> <span class="o">=</span> <span class="n">manifest_generator</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">auto_restart_configuration</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; AutoRestartConfiguration</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the auto_restart_configuration of this StartLiveEncodingRequest.</span>
+<span class="w">        </span><span class="sd">"""Gets the auto_restart_configuration of this StartLiveEncodingRequest.</span>
 
 <span class="sd">        Configuration for auto restarting the live encoding</span>
 
 <span class="sd">        :return: The auto_restart_configuration of this StartLiveEncodingRequest.</span>
 <span class="sd">        :rtype: AutoRestartConfiguration</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_auto_restart_configuration</span>
 
     <span class="nd">@auto_restart_configuration</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">auto_restart_configuration</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">auto_restart_configuration</span><span class="p">):</span>
         <span class="c1"># type: (AutoRestartConfiguration) -&gt; None</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the auto_restart_configuration of this StartLiveEncodingRequest.</span>
+<span class="w">        </span><span class="sd">"""Sets the auto_restart_configuration of this StartLiveEncodingRequest.</span>
 
 <span class="sd">        Configuration for auto restarting the live encoding</span>
 
 <span class="sd">        :param auto_restart_configuration: The auto_restart_configuration of this StartLiveEncodingRequest.</span>
 <span class="sd">        :type: AutoRestartConfiguration</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">if</span> <span class="n">auto_restart_configuration</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">auto_restart_configuration</span><span class="p">,</span> <span class="n">AutoRestartConfiguration</span><span class="p">):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `auto_restart_configuration`, type has to be `AutoRestartConfiguration`&quot;</span><span class="p">)</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Invalid type for `auto_restart_configuration`, type has to be `AutoRestartConfiguration`"</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_auto_restart_configuration</span> <span class="o">=</span> <span class="n">auto_restart_configuration</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">auto_shutdown_configuration</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; LiveAutoShutdownConfiguration</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the auto_shutdown_configuration of this StartLiveEncodingRequest.</span>
+<span class="w">        </span><span class="sd">"""Gets the auto_shutdown_configuration of this StartLiveEncodingRequest.</span>
 
 <span class="sd">        Configuration for auto shutdown of the live encoding</span>
 
 <span class="sd">        :return: The auto_shutdown_configuration of this StartLiveEncodingRequest.</span>
 <span class="sd">        :rtype: LiveAutoShutdownConfiguration</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_auto_shutdown_configuration</span>
 
     <span class="nd">@auto_shutdown_configuration</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">auto_shutdown_configuration</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">auto_shutdown_configuration</span><span class="p">):</span>
         <span class="c1"># type: (LiveAutoShutdownConfiguration) -&gt; None</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the auto_shutdown_configuration of this StartLiveEncodingRequest.</span>
+<span class="w">        </span><span class="sd">"""Sets the auto_shutdown_configuration of this StartLiveEncodingRequest.</span>
 
 <span class="sd">        Configuration for auto shutdown of the live encoding</span>
 
 <span class="sd">        :param auto_shutdown_configuration: The auto_shutdown_configuration of this StartLiveEncodingRequest.</span>
 <span class="sd">        :type: LiveAutoShutdownConfiguration</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">if</span> <span class="n">auto_shutdown_configuration</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">auto_shutdown_configuration</span><span class="p">,</span> <span class="n">LiveAutoShutdownConfiguration</span><span class="p">):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `auto_shutdown_configuration`, type has to be `LiveAutoShutdownConfiguration`&quot;</span><span class="p">)</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Invalid type for `auto_shutdown_configuration`, type has to be `LiveAutoShutdownConfiguration`"</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_auto_shutdown_configuration</span> <span class="o">=</span> <span class="n">auto_shutdown_configuration</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">esam_settings</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; EsamSettings</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the esam_settings of this StartLiveEncodingRequest.</span>
+<span class="w">        </span><span class="sd">"""Gets the esam_settings of this StartLiveEncodingRequest.</span>
 
-<span class="sd">        Configuration for Event Signaling and Management (ESAM) system,  allowing the encoder to communicate with an ESAM server for signal processing and dynamic ad insertion update.&#39; </span>
+<span class="sd">        Configuration for Event Signaling and Management (ESAM) system,  allowing the encoder to communicate with an ESAM server for signal processing and dynamic ad insertion update.' </span>
 
 <span class="sd">        :return: The esam_settings of this StartLiveEncodingRequest.</span>
 <span class="sd">        :rtype: EsamSettings</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_esam_settings</span>
 
     <span class="nd">@esam_settings</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">esam_settings</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">esam_settings</span><span class="p">):</span>
         <span class="c1"># type: (EsamSettings) -&gt; None</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the esam_settings of this StartLiveEncodingRequest.</span>
+<span class="w">        </span><span class="sd">"""Sets the esam_settings of this StartLiveEncodingRequest.</span>
 
-<span class="sd">        Configuration for Event Signaling and Management (ESAM) system,  allowing the encoder to communicate with an ESAM server for signal processing and dynamic ad insertion update.&#39; </span>
+<span class="sd">        Configuration for Event Signaling and Management (ESAM) system,  allowing the encoder to communicate with an ESAM server for signal processing and dynamic ad insertion update.' </span>
 
 <span class="sd">        :param esam_settings: The esam_settings of this StartLiveEncodingRequest.</span>
 <span class="sd">        :type: EsamSettings</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">if</span> <span class="n">esam_settings</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">esam_settings</span><span class="p">,</span> <span class="n">EsamSettings</span><span class="p">):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `esam_settings`, type has to be `EsamSettings`&quot;</span><span class="p">)</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Invalid type for `esam_settings`, type has to be `EsamSettings`"</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_esam_settings</span> <span class="o">=</span> <span class="n">esam_settings</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">cache_control_settings</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; CacheControlSettings</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the cache_control_settings of this StartLiveEncodingRequest.</span>
+<span class="w">        </span><span class="sd">"""Gets the cache_control_settings of this StartLiveEncodingRequest.</span>
 
 <span class="sd">        Configuration of cache control policies for media segments, HLS, and DASH manifests.  You can set caching for the HLS multivariant playlist, HLS media playlist, DASH timeline manifest,  DASH template manifest, initialization segment, and media segment. </span>
 
 <span class="sd">        :return: The cache_control_settings of this StartLiveEncodingRequest.</span>
 <span class="sd">        :rtype: CacheControlSettings</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cache_control_settings</span>
 
     <span class="nd">@cache_control_settings</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">cache_control_settings</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cache_control_settings</span><span class="p">):</span>
         <span class="c1"># type: (CacheControlSettings) -&gt; None</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the cache_control_settings of this StartLiveEncodingRequest.</span>
+<span class="w">        </span><span class="sd">"""Sets the cache_control_settings of this StartLiveEncodingRequest.</span>
 
 <span class="sd">        Configuration of cache control policies for media segments, HLS, and DASH manifests.  You can set caching for the HLS multivariant playlist, HLS media playlist, DASH timeline manifest,  DASH template manifest, initialization segment, and media segment. </span>
 
 <span class="sd">        :param cache_control_settings: The cache_control_settings of this StartLiveEncodingRequest.</span>
 <span class="sd">        :type: CacheControlSettings</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">if</span> <span class="n">cache_control_settings</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">cache_control_settings</span><span class="p">,</span> <span class="n">CacheControlSettings</span><span class="p">):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `cache_control_settings`, type has to be `CacheControlSettings`&quot;</span><span class="p">)</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Invalid type for `cache_control_settings`, type has to be `CacheControlSettings`"</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_cache_control_settings</span> <span class="o">=</span> <span class="n">cache_control_settings</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">ad_insertion_settings</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; AdInsertionSettings</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the ad_insertion_settings of this StartLiveEncodingRequest.</span>
+<span class="w">        </span><span class="sd">"""Gets the ad_insertion_settings of this StartLiveEncodingRequest.</span>
 
 <span class="sd">        Configuration for ad insertion features like ESAM MediaPoint insertion</span>
 
 <span class="sd">        :return: The ad_insertion_settings of this StartLiveEncodingRequest.</span>
 <span class="sd">        :rtype: AdInsertionSettings</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_ad_insertion_settings</span>
 
     <span class="nd">@ad_insertion_settings</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">ad_insertion_settings</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ad_insertion_settings</span><span class="p">):</span>
         <span class="c1"># type: (AdInsertionSettings) -&gt; None</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the ad_insertion_settings of this StartLiveEncodingRequest.</span>
+<span class="w">        </span><span class="sd">"""Sets the ad_insertion_settings of this StartLiveEncodingRequest.</span>
 
 <span class="sd">        Configuration for ad insertion features like ESAM MediaPoint insertion</span>
 
 <span class="sd">        :param ad_insertion_settings: The ad_insertion_settings of this StartLiveEncodingRequest.</span>
 <span class="sd">        :type: AdInsertionSettings</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">if</span> <span class="n">ad_insertion_settings</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">ad_insertion_settings</span><span class="p">,</span> <span class="n">AdInsertionSettings</span><span class="p">):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `ad_insertion_settings`, type has to be `AdInsertionSettings`&quot;</span><span class="p">)</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Invalid type for `ad_insertion_settings`, type has to be `AdInsertionSettings`"</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_ad_insertion_settings</span> <span class="o">=</span> <span class="n">ad_insertion_settings</span>
 
 <div class="viewcode-block" id="StartLiveEncodingRequest.to_dict">
 <a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.start_live_encoding_request.StartLiveEncodingRequest.to_dict">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""Returns the model properties as a dict"""</span>
         <span class="n">result</span> <span class="o">=</span> <span class="p">{}</span>
 
         <span class="k">for</span> <span class="n">attr</span><span class="p">,</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">six</span><span class="o">.</span><span class="n">iteritems</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">openapi_types</span><span class="p">):</span>
@@ -514,13 +514,13 @@
             <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
                 <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
                     <span class="k">continue</span>
-                <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="p">[</span><span class="n">y</span><span class="o">.</span><span class="n">value</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">Enum</span><span class="p">)</span> <span class="k">else</span> <span class="n">y</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span> <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="s2">&quot;to_dict&quot;</span><span class="p">)</span> <span class="k">else</span> <span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">value</span><span class="p">]]</span>
-            <span class="k">elif</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="s2">&quot;to_dict&quot;</span><span class="p">):</span>
+                <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="p">[</span><span class="n">y</span><span class="o">.</span><span class="n">value</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">Enum</span><span class="p">)</span> <span class="k">else</span> <span class="n">y</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span> <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="s2">"to_dict"</span><span class="p">)</span> <span class="k">else</span> <span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">value</span><span class="p">]]</span>
+            <span class="k">elif</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="s2">"to_dict"</span><span class="p">):</span>
                 <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="n">value</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span>
             <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">Enum</span><span class="p">):</span>
                 <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="n">value</span><span class="o">.</span><span class="n">value</span>
             <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
-                <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="p">(</span><span class="n">v</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span> <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="s2">&quot;to_dict&quot;</span><span class="p">)</span> <span class="k">else</span> <span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span> <span class="ow">in</span> <span class="n">value</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
+                <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="p">(</span><span class="n">v</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span> <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="s2">"to_dict"</span><span class="p">)</span> <span class="k">else</span> <span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span> <span class="ow">in</span> <span class="n">value</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
             <span class="k">else</span><span class="p">:</span>
                 <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="n">value</span>
 
@@ -530,23 +530,23 @@
 <div class="viewcode-block" id="StartLiveEncodingRequest.to_str">
 <a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.start_live_encoding_request.StartLiveEncodingRequest.to_str">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">to_str</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the string representation of the model&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""Returns the string representation of the model"""</span>
         <span class="k">return</span> <span class="n">pprint</span><span class="o">.</span><span class="n">pformat</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">to_dict</span><span class="p">())</span></div>
 
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;For `print` and `pprint`&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""For `print` and `pprint`"""</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">to_str</span><span class="p">()</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns true if both objects are equal&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""Returns true if both objects are equal"""</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">StartLiveEncodingRequest</span><span class="p">):</span>
             <span class="k">return</span> <span class="kc">False</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="vm">__dict__</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__ne__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns true if both objects are not equal&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""Returns true if both objects are not equal"""</span>
         <span class="k">return</span> <span class="ow">not</span> <span class="bp">self</span> <span class="o">==</span> <span class="n">other</span></div>
 
 </pre></div>

@@ -114,16 +114,16 @@
 <a class="viewcode-back" href="../../../../../__modules/bitmovin_api_sdk.encoding.inputs.srt.html#bitmovin_api_sdk.encoding.inputs.srt.srt_api.SrtApi.create">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">srt_input</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (SrtInput, dict) -&gt; SrtInput</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Create SRT input</span>
+<span class="w">        </span><span class="sd">"""Create SRT input</span>
 
 <span class="sd">        :param srt_input: The SrtInput to be created</span>
 <span class="sd">        :type srt_input: SrtInput, required</span>
 <span class="sd">        :return: SRT input</span>
 <span class="sd">        :rtype: SrtInput</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">post</span><span class="p">(</span>
-            <span class="s1">&#39;/encoding/inputs/srt&#39;</span><span class="p">,</span>
+            <span class="s1">'/encoding/inputs/srt'</span><span class="p">,</span>
             <span class="n">srt_input</span><span class="p">,</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">SrtInput</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>
@@ -134,17 +134,17 @@
 <a class="viewcode-back" href="../../../../../__modules/bitmovin_api_sdk.encoding.inputs.srt.html#bitmovin_api_sdk.encoding.inputs.srt.srt_api.SrtApi.delete">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">delete</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, dict) -&gt; SrtInput</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Delete SRT Input</span>
+<span class="w">        </span><span class="sd">"""Delete SRT Input</span>
 
 <span class="sd">        :param input_id: Id of the input</span>
 <span class="sd">        :type input_id: string_types, required</span>
 <span class="sd">        :return: Id of the input</span>
 <span class="sd">        :rtype: SrtInput</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span>
-            <span class="s1">&#39;/encoding/inputs/srt/</span><span class="si">{input_id}</span><span class="s1">&#39;</span><span class="p">,</span>
-            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;input_id&#39;</span><span class="p">:</span> <span class="n">input_id</span><span class="p">},</span>
+            <span class="s1">'/encoding/inputs/srt/</span><span class="si">{input_id}</span><span class="s1">'</span><span class="p">,</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">'input_id'</span><span class="p">:</span> <span class="n">input_id</span><span class="p">},</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">SrtInput</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>
         <span class="p">)</span></div>
@@ -154,17 +154,17 @@
 <a class="viewcode-back" href="../../../../../__modules/bitmovin_api_sdk.encoding.inputs.srt.html#bitmovin_api_sdk.encoding.inputs.srt.srt_api.SrtApi.get">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, dict) -&gt; SrtInput</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get SRT Input details</span>
+<span class="w">        </span><span class="sd">"""Get SRT Input details</span>
 
 <span class="sd">        :param input_id: Id of the input</span>
 <span class="sd">        :type input_id: string_types, required</span>
 <span class="sd">        :return: SRT input</span>
 <span class="sd">        :rtype: SrtInput</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
-            <span class="s1">&#39;/encoding/inputs/srt/</span><span class="si">{input_id}</span><span class="s1">&#39;</span><span class="p">,</span>
-            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;input_id&#39;</span><span class="p">:</span> <span class="n">input_id</span><span class="p">},</span>
+            <span class="s1">'/encoding/inputs/srt/</span><span class="si">{input_id}</span><span class="s1">'</span><span class="p">,</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">'input_id'</span><span class="p">:</span> <span class="n">input_id</span><span class="p">},</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">SrtInput</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>
         <span class="p">)</span></div>
@@ -174,16 +174,16 @@
 <a class="viewcode-back" href="../../../../../__modules/bitmovin_api_sdk.encoding.inputs.srt.html#bitmovin_api_sdk.encoding.inputs.srt.srt_api.SrtApi.list">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">list</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">query_params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (SrtInputListQueryParams, dict) -&gt; SrtInput</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;List SRT inputs</span>
+<span class="w">        </span><span class="sd">"""List SRT inputs</span>
 
 <span class="sd">        :param query_params: Query parameters</span>
 <span class="sd">        :type query_params: SrtInputListQueryParams</span>
 <span class="sd">        :return: List of SRT inputs</span>
 <span class="sd">        :rtype: SrtInput</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
-            <span class="s1">&#39;/encoding/inputs/srt&#39;</span><span class="p">,</span>
+            <span class="s1">'/encoding/inputs/srt'</span><span class="p">,</span>
             <span class="n">query_params</span><span class="o">=</span><span class="n">query_params</span><span class="p">,</span>
             <span class="n">pagination_response</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">SrtInput</span><span class="p">,</span>

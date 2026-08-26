@@ -139,7 +139,7 @@
 <a class="viewcode-back" href="../../../../../../__modules/bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.html#bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.progressive_ts_api.ProgressiveTsApi.create">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">encoding_id</span><span class="p">,</span> <span class="n">progressive_ts_muxing</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, ProgressiveTsMuxing, dict) -&gt; ProgressiveTsMuxing</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Create Progressive TS muxing</span>
+<span class="w">        </span><span class="sd">"""Create Progressive TS muxing</span>
 
 <span class="sd">        :param encoding_id: ID of the encoding.</span>
 <span class="sd">        :type encoding_id: string_types, required</span>
@@ -147,12 +147,12 @@
 <span class="sd">        :type progressive_ts_muxing: ProgressiveTsMuxing, required</span>
 <span class="sd">        :return: Progressive TS muxing</span>
 <span class="sd">        :rtype: ProgressiveTsMuxing</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">post</span><span class="p">(</span>
-            <span class="s1">&#39;/encoding/encodings/</span><span class="si">{encoding_id}</span><span class="s1">/muxings/progressive-ts&#39;</span><span class="p">,</span>
+            <span class="s1">'/encoding/encodings/</span><span class="si">{encoding_id}</span><span class="s1">/muxings/progressive-ts'</span><span class="p">,</span>
             <span class="n">progressive_ts_muxing</span><span class="p">,</span>
-            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;encoding_id&#39;</span><span class="p">:</span> <span class="n">encoding_id</span><span class="p">},</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">'encoding_id'</span><span class="p">:</span> <span class="n">encoding_id</span><span class="p">},</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">ProgressiveTsMuxing</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>
         <span class="p">)</span></div>
@@ -162,7 +162,7 @@
 <a class="viewcode-back" href="../../../../../../__modules/bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.html#bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.progressive_ts_api.ProgressiveTsApi.delete">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">delete</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">encoding_id</span><span class="p">,</span> <span class="n">muxing_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, string_types, dict) -&gt; BitmovinResponse</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Delete Progressive TS muxing</span>
+<span class="w">        </span><span class="sd">"""Delete Progressive TS muxing</span>
 
 <span class="sd">        :param encoding_id: ID of the Encoding.</span>
 <span class="sd">        :type encoding_id: string_types, required</span>
@@ -170,11 +170,11 @@
 <span class="sd">        :type muxing_id: string_types, required</span>
 <span class="sd">        :return: ID of the Progressive TS muxing</span>
 <span class="sd">        :rtype: BitmovinResponse</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span>
-            <span class="s1">&#39;/encoding/encodings/</span><span class="si">{encoding_id}</span><span class="s1">/muxings/progressive-ts/</span><span class="si">{muxing_id}</span><span class="s1">&#39;</span><span class="p">,</span>
-            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;encoding_id&#39;</span><span class="p">:</span> <span class="n">encoding_id</span><span class="p">,</span> <span class="s1">&#39;muxing_id&#39;</span><span class="p">:</span> <span class="n">muxing_id</span><span class="p">},</span>
+            <span class="s1">'/encoding/encodings/</span><span class="si">{encoding_id}</span><span class="s1">/muxings/progressive-ts/</span><span class="si">{muxing_id}</span><span class="s1">'</span><span class="p">,</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">'encoding_id'</span><span class="p">:</span> <span class="n">encoding_id</span><span class="p">,</span> <span class="s1">'muxing_id'</span><span class="p">:</span> <span class="n">muxing_id</span><span class="p">},</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">BitmovinResponse</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>
         <span class="p">)</span></div>
@@ -184,7 +184,7 @@
 <a class="viewcode-back" href="../../../../../../__modules/bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.html#bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.progressive_ts_api.ProgressiveTsApi.get">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">encoding_id</span><span class="p">,</span> <span class="n">muxing_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, string_types, dict) -&gt; ProgressiveTsMuxing</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get Progressive TS muxing details</span>
+<span class="w">        </span><span class="sd">"""Get Progressive TS muxing details</span>
 
 <span class="sd">        :param encoding_id: ID of the Encoding.</span>
 <span class="sd">        :type encoding_id: string_types, required</span>
@@ -192,11 +192,11 @@
 <span class="sd">        :type muxing_id: string_types, required</span>
 <span class="sd">        :return: Progressive TS muxing</span>
 <span class="sd">        :rtype: ProgressiveTsMuxing</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
-            <span class="s1">&#39;/encoding/encodings/</span><span class="si">{encoding_id}</span><span class="s1">/muxings/progressive-ts/</span><span class="si">{muxing_id}</span><span class="s1">&#39;</span><span class="p">,</span>
-            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;encoding_id&#39;</span><span class="p">:</span> <span class="n">encoding_id</span><span class="p">,</span> <span class="s1">&#39;muxing_id&#39;</span><span class="p">:</span> <span class="n">muxing_id</span><span class="p">},</span>
+            <span class="s1">'/encoding/encodings/</span><span class="si">{encoding_id}</span><span class="s1">/muxings/progressive-ts/</span><span class="si">{muxing_id}</span><span class="s1">'</span><span class="p">,</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">'encoding_id'</span><span class="p">:</span> <span class="n">encoding_id</span><span class="p">,</span> <span class="s1">'muxing_id'</span><span class="p">:</span> <span class="n">muxing_id</span><span class="p">},</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">ProgressiveTsMuxing</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>
         <span class="p">)</span></div>
@@ -206,7 +206,7 @@
 <a class="viewcode-back" href="../../../../../../__modules/bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.html#bitmovin_api_sdk.encoding.encodings.muxings.progressive_ts.progressive_ts_api.ProgressiveTsApi.list">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">list</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">encoding_id</span><span class="p">,</span> <span class="n">query_params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, ProgressiveTsMuxingListQueryParams, dict) -&gt; ProgressiveTsMuxing</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;List Progressive TS muxings</span>
+<span class="w">        </span><span class="sd">"""List Progressive TS muxings</span>
 
 <span class="sd">        :param encoding_id: ID of the Encoding.</span>
 <span class="sd">        :type encoding_id: string_types, required</span>
@@ -214,11 +214,11 @@
 <span class="sd">        :type query_params: ProgressiveTsMuxingListQueryParams</span>
 <span class="sd">        :return: List of Progressive TS muxings</span>
 <span class="sd">        :rtype: ProgressiveTsMuxing</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
-            <span class="s1">&#39;/encoding/encodings/</span><span class="si">{encoding_id}</span><span class="s1">/muxings/progressive-ts&#39;</span><span class="p">,</span>
-            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;encoding_id&#39;</span><span class="p">:</span> <span class="n">encoding_id</span><span class="p">},</span>
+            <span class="s1">'/encoding/encodings/</span><span class="si">{encoding_id}</span><span class="s1">/muxings/progressive-ts'</span><span class="p">,</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">'encoding_id'</span><span class="p">:</span> <span class="n">encoding_id</span><span class="p">},</span>
             <span class="n">query_params</span><span class="o">=</span><span class="n">query_params</span><span class="p">,</span>
             <span class="n">pagination_response</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">ProgressiveTsMuxing</span><span class="p">,</span>

@@ -123,11 +123,11 @@
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">types</span> <span class="o">=</span> <span class="p">{</span>
-            <span class="s1">&#39;h264_configuration&#39;</span><span class="p">:</span> <span class="s1">&#39;H264PerTitleConfiguration&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;h265_configuration&#39;</span><span class="p">:</span> <span class="s1">&#39;H265PerTitleConfiguration&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;vp9_configuration&#39;</span><span class="p">:</span> <span class="s1">&#39;Vp9PerTitleConfiguration&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;av1_configuration&#39;</span><span class="p">:</span> <span class="s1">&#39;Av1PerTitleConfiguration&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;h265_v2_configuration&#39;</span><span class="p">:</span> <span class="s1">&#39;H265V2PerTitleConfiguration&#39;</span>
+            <span class="s1">'h264_configuration'</span><span class="p">:</span> <span class="s1">'H264PerTitleConfiguration'</span><span class="p">,</span>
+            <span class="s1">'h265_configuration'</span><span class="p">:</span> <span class="s1">'H265PerTitleConfiguration'</span><span class="p">,</span>
+            <span class="s1">'vp9_configuration'</span><span class="p">:</span> <span class="s1">'Vp9PerTitleConfiguration'</span><span class="p">,</span>
+            <span class="s1">'av1_configuration'</span><span class="p">:</span> <span class="s1">'Av1PerTitleConfiguration'</span><span class="p">,</span>
+            <span class="s1">'h265_v2_configuration'</span><span class="p">:</span> <span class="s1">'H265V2PerTitleConfiguration'</span>
         <span class="p">}</span>
 
         <span class="k">return</span> <span class="n">types</span>
@@ -135,163 +135,163 @@
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">attribute_map</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">attributes</span> <span class="o">=</span> <span class="p">{</span>
-            <span class="s1">&#39;h264_configuration&#39;</span><span class="p">:</span> <span class="s1">&#39;h264Configuration&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;h265_configuration&#39;</span><span class="p">:</span> <span class="s1">&#39;h265Configuration&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;vp9_configuration&#39;</span><span class="p">:</span> <span class="s1">&#39;vp9Configuration&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;av1_configuration&#39;</span><span class="p">:</span> <span class="s1">&#39;av1Configuration&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;h265_v2_configuration&#39;</span><span class="p">:</span> <span class="s1">&#39;h265V2Configuration&#39;</span>
+            <span class="s1">'h264_configuration'</span><span class="p">:</span> <span class="s1">'h264Configuration'</span><span class="p">,</span>
+            <span class="s1">'h265_configuration'</span><span class="p">:</span> <span class="s1">'h265Configuration'</span><span class="p">,</span>
+            <span class="s1">'vp9_configuration'</span><span class="p">:</span> <span class="s1">'vp9Configuration'</span><span class="p">,</span>
+            <span class="s1">'av1_configuration'</span><span class="p">:</span> <span class="s1">'av1Configuration'</span><span class="p">,</span>
+            <span class="s1">'h265_v2_configuration'</span><span class="p">:</span> <span class="s1">'h265V2Configuration'</span>
         <span class="p">}</span>
         <span class="k">return</span> <span class="n">attributes</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">h264_configuration</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; H264PerTitleConfiguration</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the h264_configuration of this PerTitle.</span>
+<span class="w">        </span><span class="sd">"""Gets the h264_configuration of this PerTitle.</span>
 
 <span class="sd">        Per-Title configuration for H264</span>
 
 <span class="sd">        :return: The h264_configuration of this PerTitle.</span>
 <span class="sd">        :rtype: H264PerTitleConfiguration</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_h264_configuration</span>
 
     <span class="nd">@h264_configuration</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">h264_configuration</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">h264_configuration</span><span class="p">):</span>
         <span class="c1"># type: (H264PerTitleConfiguration) -&gt; None</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the h264_configuration of this PerTitle.</span>
+<span class="w">        </span><span class="sd">"""Sets the h264_configuration of this PerTitle.</span>
 
 <span class="sd">        Per-Title configuration for H264</span>
 
 <span class="sd">        :param h264_configuration: The h264_configuration of this PerTitle.</span>
 <span class="sd">        :type: H264PerTitleConfiguration</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">if</span> <span class="n">h264_configuration</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">h264_configuration</span><span class="p">,</span> <span class="n">H264PerTitleConfiguration</span><span class="p">):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `h264_configuration`, type has to be `H264PerTitleConfiguration`&quot;</span><span class="p">)</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Invalid type for `h264_configuration`, type has to be `H264PerTitleConfiguration`"</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_h264_configuration</span> <span class="o">=</span> <span class="n">h264_configuration</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">h265_configuration</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; H265PerTitleConfiguration</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the h265_configuration of this PerTitle.</span>
+<span class="w">        </span><span class="sd">"""Gets the h265_configuration of this PerTitle.</span>
 
 <span class="sd">        Per-Title configuration for H265</span>
 
 <span class="sd">        :return: The h265_configuration of this PerTitle.</span>
 <span class="sd">        :rtype: H265PerTitleConfiguration</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_h265_configuration</span>
 
     <span class="nd">@h265_configuration</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">h265_configuration</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">h265_configuration</span><span class="p">):</span>
         <span class="c1"># type: (H265PerTitleConfiguration) -&gt; None</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the h265_configuration of this PerTitle.</span>
+<span class="w">        </span><span class="sd">"""Sets the h265_configuration of this PerTitle.</span>
 
 <span class="sd">        Per-Title configuration for H265</span>
 
 <span class="sd">        :param h265_configuration: The h265_configuration of this PerTitle.</span>
 <span class="sd">        :type: H265PerTitleConfiguration</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">if</span> <span class="n">h265_configuration</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">h265_configuration</span><span class="p">,</span> <span class="n">H265PerTitleConfiguration</span><span class="p">):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `h265_configuration`, type has to be `H265PerTitleConfiguration`&quot;</span><span class="p">)</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Invalid type for `h265_configuration`, type has to be `H265PerTitleConfiguration`"</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_h265_configuration</span> <span class="o">=</span> <span class="n">h265_configuration</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">vp9_configuration</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; Vp9PerTitleConfiguration</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the vp9_configuration of this PerTitle.</span>
+<span class="w">        </span><span class="sd">"""Gets the vp9_configuration of this PerTitle.</span>
 
 <span class="sd">        Per-Title configuration for VP9</span>
 
 <span class="sd">        :return: The vp9_configuration of this PerTitle.</span>
 <span class="sd">        :rtype: Vp9PerTitleConfiguration</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_vp9_configuration</span>
 
     <span class="nd">@vp9_configuration</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">vp9_configuration</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vp9_configuration</span><span class="p">):</span>
         <span class="c1"># type: (Vp9PerTitleConfiguration) -&gt; None</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the vp9_configuration of this PerTitle.</span>
+<span class="w">        </span><span class="sd">"""Sets the vp9_configuration of this PerTitle.</span>
 
 <span class="sd">        Per-Title configuration for VP9</span>
 
 <span class="sd">        :param vp9_configuration: The vp9_configuration of this PerTitle.</span>
 <span class="sd">        :type: Vp9PerTitleConfiguration</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">if</span> <span class="n">vp9_configuration</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">vp9_configuration</span><span class="p">,</span> <span class="n">Vp9PerTitleConfiguration</span><span class="p">):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `vp9_configuration`, type has to be `Vp9PerTitleConfiguration`&quot;</span><span class="p">)</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Invalid type for `vp9_configuration`, type has to be `Vp9PerTitleConfiguration`"</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_vp9_configuration</span> <span class="o">=</span> <span class="n">vp9_configuration</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">av1_configuration</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; Av1PerTitleConfiguration</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the av1_configuration of this PerTitle.</span>
+<span class="w">        </span><span class="sd">"""Gets the av1_configuration of this PerTitle.</span>
 
 <span class="sd">        Per-Title configuration for AV1</span>
 
 <span class="sd">        :return: The av1_configuration of this PerTitle.</span>
 <span class="sd">        :rtype: Av1PerTitleConfiguration</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_av1_configuration</span>
 
     <span class="nd">@av1_configuration</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">av1_configuration</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">av1_configuration</span><span class="p">):</span>
         <span class="c1"># type: (Av1PerTitleConfiguration) -&gt; None</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the av1_configuration of this PerTitle.</span>
+<span class="w">        </span><span class="sd">"""Sets the av1_configuration of this PerTitle.</span>
 
 <span class="sd">        Per-Title configuration for AV1</span>
 
 <span class="sd">        :param av1_configuration: The av1_configuration of this PerTitle.</span>
 <span class="sd">        :type: Av1PerTitleConfiguration</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">if</span> <span class="n">av1_configuration</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">av1_configuration</span><span class="p">,</span> <span class="n">Av1PerTitleConfiguration</span><span class="p">):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `av1_configuration`, type has to be `Av1PerTitleConfiguration`&quot;</span><span class="p">)</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Invalid type for `av1_configuration`, type has to be `Av1PerTitleConfiguration`"</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_av1_configuration</span> <span class="o">=</span> <span class="n">av1_configuration</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">h265_v2_configuration</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; H265V2PerTitleConfiguration</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the h265_v2_configuration of this PerTitle.</span>
+<span class="w">        </span><span class="sd">"""Gets the h265_v2_configuration of this PerTitle.</span>
 
 <span class="sd">        Per-Title configuration for H265 V2</span>
 
 <span class="sd">        :return: The h265_v2_configuration of this PerTitle.</span>
 <span class="sd">        :rtype: H265V2PerTitleConfiguration</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_h265_v2_configuration</span>
 
     <span class="nd">@h265_v2_configuration</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">h265_v2_configuration</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">h265_v2_configuration</span><span class="p">):</span>
         <span class="c1"># type: (H265V2PerTitleConfiguration) -&gt; None</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the h265_v2_configuration of this PerTitle.</span>
+<span class="w">        </span><span class="sd">"""Sets the h265_v2_configuration of this PerTitle.</span>
 
 <span class="sd">        Per-Title configuration for H265 V2</span>
 
 <span class="sd">        :param h265_v2_configuration: The h265_v2_configuration of this PerTitle.</span>
 <span class="sd">        :type: H265V2PerTitleConfiguration</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">if</span> <span class="n">h265_v2_configuration</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">h265_v2_configuration</span><span class="p">,</span> <span class="n">H265V2PerTitleConfiguration</span><span class="p">):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `h265_v2_configuration`, type has to be `H265V2PerTitleConfiguration`&quot;</span><span class="p">)</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Invalid type for `h265_v2_configuration`, type has to be `H265V2PerTitleConfiguration`"</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_h265_v2_configuration</span> <span class="o">=</span> <span class="n">h265_v2_configuration</span>
 
 <div class="viewcode-block" id="PerTitle.to_dict">
 <a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.per_title.PerTitle.to_dict">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""Returns the model properties as a dict"""</span>
         <span class="n">result</span> <span class="o">=</span> <span class="p">{}</span>
 
         <span class="k">for</span> <span class="n">attr</span><span class="p">,</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">six</span><span class="o">.</span><span class="n">iteritems</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">openapi_types</span><span class="p">):</span>
@@ -301,13 +301,13 @@
             <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
                 <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
                     <span class="k">continue</span>
-                <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="p">[</span><span class="n">y</span><span class="o">.</span><span class="n">value</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">Enum</span><span class="p">)</span> <span class="k">else</span> <span class="n">y</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span> <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="s2">&quot;to_dict&quot;</span><span class="p">)</span> <span class="k">else</span> <span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">value</span><span class="p">]]</span>
-            <span class="k">elif</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="s2">&quot;to_dict&quot;</span><span class="p">):</span>
+                <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="p">[</span><span class="n">y</span><span class="o">.</span><span class="n">value</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">Enum</span><span class="p">)</span> <span class="k">else</span> <span class="n">y</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span> <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="s2">"to_dict"</span><span class="p">)</span> <span class="k">else</span> <span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">value</span><span class="p">]]</span>
+            <span class="k">elif</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="s2">"to_dict"</span><span class="p">):</span>
                 <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="n">value</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span>
             <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">Enum</span><span class="p">):</span>
                 <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="n">value</span><span class="o">.</span><span class="n">value</span>
             <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
-                <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="p">(</span><span class="n">v</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span> <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="s2">&quot;to_dict&quot;</span><span class="p">)</span> <span class="k">else</span> <span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span> <span class="ow">in</span> <span class="n">value</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
+                <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="p">(</span><span class="n">v</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span> <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="s2">"to_dict"</span><span class="p">)</span> <span class="k">else</span> <span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span> <span class="ow">in</span> <span class="n">value</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
             <span class="k">else</span><span class="p">:</span>
                 <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="n">value</span>
 
@@ -317,23 +317,23 @@
 <div class="viewcode-block" id="PerTitle.to_str">
 <a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.per_title.PerTitle.to_str">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">to_str</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the string representation of the model&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""Returns the string representation of the model"""</span>
         <span class="k">return</span> <span class="n">pprint</span><span class="o">.</span><span class="n">pformat</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">to_dict</span><span class="p">())</span></div>
 
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;For `print` and `pprint`&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""For `print` and `pprint`"""</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">to_str</span><span class="p">()</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns true if both objects are equal&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""Returns true if both objects are equal"""</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">PerTitle</span><span class="p">):</span>
             <span class="k">return</span> <span class="kc">False</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="vm">__dict__</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__ne__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns true if both objects are not equal&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""Returns true if both objects are not equal"""</span>
         <span class="k">return</span> <span class="ow">not</span> <span class="bp">self</span> <span class="o">==</span> <span class="n">other</span></div>
 
 </pre></div>

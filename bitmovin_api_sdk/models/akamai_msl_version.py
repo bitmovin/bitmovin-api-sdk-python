@@ -7,3 +7,4 @@ from bitmovin_api_sdk.common.poscheck import poscheck_model
 
 class AkamaiMslVersion(Enum):
     MSL4 = "MSL4"
+    MSL5 = "MSL5"

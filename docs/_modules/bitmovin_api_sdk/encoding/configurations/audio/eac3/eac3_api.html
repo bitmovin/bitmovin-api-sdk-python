@@ -115,16 +115,16 @@
 <a class="viewcode-back" href="../../../../../../__modules/bitmovin_api_sdk.encoding.configurations.audio.eac3.html#bitmovin_api_sdk.encoding.configurations.audio.eac3.eac3_api.Eac3Api.create">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">eac3_audio_configuration</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (Eac3AudioConfiguration, dict) -&gt; Eac3AudioConfiguration</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Create E-AC3 Codec Configuration</span>
+<span class="w">        </span><span class="sd">"""Create E-AC3 Codec Configuration</span>
 
 <span class="sd">        :param eac3_audio_configuration: The E-AC3 Codec Configuration to be created</span>
 <span class="sd">        :type eac3_audio_configuration: Eac3AudioConfiguration, required</span>
 <span class="sd">        :return: E-AC3 Audio Configuration</span>
 <span class="sd">        :rtype: Eac3AudioConfiguration</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">post</span><span class="p">(</span>
-            <span class="s1">&#39;/encoding/configurations/audio/eac3&#39;</span><span class="p">,</span>
+            <span class="s1">'/encoding/configurations/audio/eac3'</span><span class="p">,</span>
             <span class="n">eac3_audio_configuration</span><span class="p">,</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">Eac3AudioConfiguration</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>
@@ -135,17 +135,17 @@
 <a class="viewcode-back" href="../../../../../../__modules/bitmovin_api_sdk.encoding.configurations.audio.eac3.html#bitmovin_api_sdk.encoding.configurations.audio.eac3.eac3_api.Eac3Api.delete">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">delete</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">configuration_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, dict) -&gt; BitmovinResponse</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Delete E-AC3 Codec Configuration</span>
+<span class="w">        </span><span class="sd">"""Delete E-AC3 Codec Configuration</span>
 
 <span class="sd">        :param configuration_id: Id of the codec configuration</span>
 <span class="sd">        :type configuration_id: string_types, required</span>
 <span class="sd">        :return: Id of the codec configuration</span>
 <span class="sd">        :rtype: BitmovinResponse</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span>
-            <span class="s1">&#39;/encoding/configurations/audio/eac3/</span><span class="si">{configuration_id}</span><span class="s1">&#39;</span><span class="p">,</span>
-            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;configuration_id&#39;</span><span class="p">:</span> <span class="n">configuration_id</span><span class="p">},</span>
+            <span class="s1">'/encoding/configurations/audio/eac3/</span><span class="si">{configuration_id}</span><span class="s1">'</span><span class="p">,</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">'configuration_id'</span><span class="p">:</span> <span class="n">configuration_id</span><span class="p">},</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">BitmovinResponse</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>
         <span class="p">)</span></div>
@@ -155,17 +155,17 @@
 <a class="viewcode-back" href="../../../../../../__modules/bitmovin_api_sdk.encoding.configurations.audio.eac3.html#bitmovin_api_sdk.encoding.configurations.audio.eac3.eac3_api.Eac3Api.get">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">configuration_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, dict) -&gt; Eac3AudioConfiguration</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get E-AC3 Codec Configuration details</span>
+<span class="w">        </span><span class="sd">"""Get E-AC3 Codec Configuration details</span>
 
 <span class="sd">        :param configuration_id: Id of the codec configuration</span>
 <span class="sd">        :type configuration_id: string_types, required</span>
 <span class="sd">        :return: E-AC3 Audio Configuration</span>
 <span class="sd">        :rtype: Eac3AudioConfiguration</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
-            <span class="s1">&#39;/encoding/configurations/audio/eac3/</span><span class="si">{configuration_id}</span><span class="s1">&#39;</span><span class="p">,</span>
-            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;configuration_id&#39;</span><span class="p">:</span> <span class="n">configuration_id</span><span class="p">},</span>
+            <span class="s1">'/encoding/configurations/audio/eac3/</span><span class="si">{configuration_id}</span><span class="s1">'</span><span class="p">,</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">'configuration_id'</span><span class="p">:</span> <span class="n">configuration_id</span><span class="p">},</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">Eac3AudioConfiguration</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>
         <span class="p">)</span></div>
@@ -175,16 +175,16 @@
 <a class="viewcode-back" href="../../../../../../__modules/bitmovin_api_sdk.encoding.configurations.audio.eac3.html#bitmovin_api_sdk.encoding.configurations.audio.eac3.eac3_api.Eac3Api.list">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">list</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">query_params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (Eac3AudioConfigurationListQueryParams, dict) -&gt; Eac3AudioConfiguration</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;List E-AC3 Configurations</span>
+<span class="w">        </span><span class="sd">"""List E-AC3 Configurations</span>
 
 <span class="sd">        :param query_params: Query parameters</span>
 <span class="sd">        :type query_params: Eac3AudioConfigurationListQueryParams</span>
 <span class="sd">        :return: List of E-AC3 codec configurations</span>
 <span class="sd">        :rtype: Eac3AudioConfiguration</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
-            <span class="s1">&#39;/encoding/configurations/audio/eac3&#39;</span><span class="p">,</span>
+            <span class="s1">'/encoding/configurations/audio/eac3'</span><span class="p">,</span>
             <span class="n">query_params</span><span class="o">=</span><span class="n">query_params</span><span class="p">,</span>
             <span class="n">pagination_response</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">Eac3AudioConfiguration</span><span class="p">,</span>

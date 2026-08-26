@@ -5,6 +5,7 @@ from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
 from bitmovin_api_sdk.models.akamai_msl_stream_format import AkamaiMslStreamFormat
 from bitmovin_api_sdk.models.akamai_msl_version import AkamaiMslVersion
+from bitmovin_api_sdk.models.msl_publishing_authentication import MslPublishingAuthentication
 from bitmovin_api_sdk.models.output import Output
 import pprint
 import six
@@ -23,14 +24,16 @@ class AkamaiMslOutput(Output):
                  stream_id=None,
                  event_name=None,
                  stream_format=None,
-                 msl_version=None):
-        # type: (string_types, string_types, string_types, datetime, datetime, dict, list[AclEntry], int, string_types, AkamaiMslStreamFormat, AkamaiMslVersion) -> None
+                 msl_version=None,
+                 publishing_authentication=None):
+        # type: (string_types, string_types, string_types, datetime, datetime, dict, list[AclEntry], int, string_types, AkamaiMslStreamFormat, AkamaiMslVersion, MslPublishingAuthentication) -> None
         super(AkamaiMslOutput, self).__init__(id_=id_, name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, acl=acl)
 
         self._stream_id = None
         self._event_name = None
         self._stream_format = None
         self._msl_version = None
+        self._publishing_authentication = None
         self.discriminator = None
 
         if stream_id is not None:
@@ -41,6 +44,8 @@ class AkamaiMslOutput(Output):
             self.stream_format = stream_format
         if msl_version is not None:
             self.msl_version = msl_version
+        if publishing_authentication is not None:
+            self.publishing_authentication = publishing_authentication
 
     @property
     def openapi_types(self):
@@ -53,7 +58,8 @@ class AkamaiMslOutput(Output):
             'stream_id': 'int',
             'event_name': 'string_types',
             'stream_format': 'AkamaiMslStreamFormat',
-            'msl_version': 'AkamaiMslVersion'
+            'msl_version': 'AkamaiMslVersion',
+            'publishing_authentication': 'MslPublishingAuthentication'
         })
 
         return types
@@ -69,7 +75,8 @@ class AkamaiMslOutput(Output):
             'stream_id': 'streamId',
             'event_name': 'eventName',
             'stream_format': 'streamFormat',
-            'msl_version': 'mslVersion'
+            'msl_version': 'mslVersion',
+            'publishing_authentication': 'publishingAuthentication'
         })
         return attributes
 
@@ -165,7 +172,7 @@ class AkamaiMslOutput(Output):
         # type: () -> AkamaiMslVersion
         """Gets the msl_version of this AkamaiMslOutput.
 
-        The Akamai MSL Version. Only MSL4 is supported at the moment. (required)
+        The Akamai MSL Version. MSL4 and MSL5 are supported. (required)
 
         :return: The msl_version of this AkamaiMslOutput.
         :rtype: AkamaiMslVersion
@@ -177,7 +184,7 @@ class AkamaiMslOutput(Output):
         # type: (AkamaiMslVersion) -> None
         """Sets the msl_version of this AkamaiMslOutput.
 
-        The Akamai MSL Version. Only MSL4 is supported at the moment. (required)
+        The Akamai MSL Version. MSL4 and MSL5 are supported. (required)
 
         :param msl_version: The msl_version of this AkamaiMslOutput.
         :type: AkamaiMslVersion
@@ -188,6 +195,35 @@ class AkamaiMslOutput(Output):
                 raise TypeError("Invalid type for `msl_version`, type has to be `AkamaiMslVersion`")
 
         self._msl_version = msl_version
+
+    @property
+    def publishing_authentication(self):
+        # type: () -> MslPublishingAuthentication
+        """Gets the publishing_authentication of this AkamaiMslOutput.
+
+        MSL5 only. HTTP Digest publishing credentials. Sending this field with `mslVersion: MSL4` is rejected. Credentials (username, password) are write-only and not returned in responses. 
+
+        :return: The publishing_authentication of this AkamaiMslOutput.
+        :rtype: MslPublishingAuthentication
+        """
+        return self._publishing_authentication
+
+    @publishing_authentication.setter
+    def publishing_authentication(self, publishing_authentication):
+        # type: (MslPublishingAuthentication) -> None
+        """Sets the publishing_authentication of this AkamaiMslOutput.
+
+        MSL5 only. HTTP Digest publishing credentials. Sending this field with `mslVersion: MSL4` is rejected. Credentials (username, password) are write-only and not returned in responses. 
+
+        :param publishing_authentication: The publishing_authentication of this AkamaiMslOutput.
+        :type: MslPublishingAuthentication
+        """
+
+        if publishing_authentication is not None:
+            if not isinstance(publishing_authentication, MslPublishingAuthentication):
+                raise TypeError("Invalid type for `publishing_authentication`, type has to be `MslPublishingAuthentication`")
+
+        self._publishing_authentication = publishing_authentication
 
     def to_dict(self):
         """Returns the model properties as a dict"""

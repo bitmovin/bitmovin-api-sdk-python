@@ -106,17 +106,17 @@
 <a class="viewcode-back" href="../../../../../../__modules/bitmovin_api_sdk.analytics.insights.organizations.settings.html#bitmovin_api_sdk.analytics.insights.organizations.settings.settings_api.SettingsApi.get">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">organization_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, dict) -&gt; AnalyticsInsightsOrganizationSettings</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get the current organization settings for industry insights</span>
+<span class="w">        </span><span class="sd">"""Get the current organization settings for industry insights</span>
 
 <span class="sd">        :param organization_id: Organization id</span>
 <span class="sd">        :type organization_id: string_types, required</span>
 <span class="sd">        :return: Analytics organization settings</span>
 <span class="sd">        :rtype: AnalyticsInsightsOrganizationSettings</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
-            <span class="s1">&#39;/analytics/insights/organizations/</span><span class="si">{organization_id}</span><span class="s1">/settings&#39;</span><span class="p">,</span>
-            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;organization_id&#39;</span><span class="p">:</span> <span class="n">organization_id</span><span class="p">},</span>
+            <span class="s1">'/analytics/insights/organizations/</span><span class="si">{organization_id}</span><span class="s1">/settings'</span><span class="p">,</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">'organization_id'</span><span class="p">:</span> <span class="n">organization_id</span><span class="p">},</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">AnalyticsInsightsOrganizationSettings</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>
         <span class="p">)</span></div>
@@ -126,7 +126,7 @@
 <a class="viewcode-back" href="../../../../../../__modules/bitmovin_api_sdk.analytics.insights.organizations.settings.html#bitmovin_api_sdk.analytics.insights.organizations.settings.settings_api.SettingsApi.update">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">organization_id</span><span class="p">,</span> <span class="n">analytics_insights_organization_settings_request</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, AnalyticsInsightsOrganizationSettingsRequest, dict) -&gt; AnalyticsInsightsOrganizationSettings</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Update the organization settings for industry insights</span>
+<span class="w">        </span><span class="sd">"""Update the organization settings for industry insights</span>
 
 <span class="sd">        :param organization_id: Organization id</span>
 <span class="sd">        :type organization_id: string_types, required</span>
@@ -134,12 +134,12 @@
 <span class="sd">        :type analytics_insights_organization_settings_request: AnalyticsInsightsOrganizationSettingsRequest, required</span>
 <span class="sd">        :return: Updated analytics organization settings</span>
 <span class="sd">        :rtype: AnalyticsInsightsOrganizationSettings</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">put</span><span class="p">(</span>
-            <span class="s1">&#39;/analytics/insights/organizations/</span><span class="si">{organization_id}</span><span class="s1">/settings&#39;</span><span class="p">,</span>
+            <span class="s1">'/analytics/insights/organizations/</span><span class="si">{organization_id}</span><span class="s1">/settings'</span><span class="p">,</span>
             <span class="n">analytics_insights_organization_settings_request</span><span class="p">,</span>
-            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;organization_id&#39;</span><span class="p">:</span> <span class="n">organization_id</span><span class="p">},</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">'organization_id'</span><span class="p">:</span> <span class="n">organization_id</span><span class="p">},</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">AnalyticsInsightsOrganizationSettings</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>
         <span class="p">)</span></div>

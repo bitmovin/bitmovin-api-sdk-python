@@ -190,29 +190,29 @@
     <span class="k">def</span><span class="w"> </span><span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">types</span> <span class="o">=</span> <span class="p">{}</span>
 
-        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="nb">super</span><span class="p">(</span><span class="n">Encoding</span><span class="p">,</span> <span class="bp">self</span><span class="p">),</span> <span class="s1">&#39;openapi_types&#39;</span><span class="p">):</span>
-            <span class="n">types</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="nb">super</span><span class="p">(</span><span class="n">Encoding</span><span class="p">,</span> <span class="bp">self</span><span class="p">),</span> <span class="s1">&#39;openapi_types&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="nb">super</span><span class="p">(</span><span class="n">Encoding</span><span class="p">,</span> <span class="bp">self</span><span class="p">),</span> <span class="s1">'openapi_types'</span><span class="p">):</span>
+            <span class="n">types</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="nb">super</span><span class="p">(</span><span class="n">Encoding</span><span class="p">,</span> <span class="bp">self</span><span class="p">),</span> <span class="s1">'openapi_types'</span><span class="p">)</span>
 
         <span class="n">types</span><span class="o">.</span><span class="n">update</span><span class="p">({</span>
-            <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;EncodingType&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;started_at&#39;</span><span class="p">:</span> <span class="s1">&#39;datetime&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;queued_at&#39;</span><span class="p">:</span> <span class="s1">&#39;datetime&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;running_at&#39;</span><span class="p">:</span> <span class="s1">&#39;datetime&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;finished_at&#39;</span><span class="p">:</span> <span class="s1">&#39;datetime&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;error_at&#39;</span><span class="p">:</span> <span class="s1">&#39;datetime&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;progress&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;cloud_region&#39;</span><span class="p">:</span> <span class="s1">&#39;CloudRegion&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;fallback_cloud_regions&#39;</span><span class="p">:</span> <span class="s1">&#39;list[CloudRegion]&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;encoder_version&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;infrastructure&#39;</span><span class="p">:</span> <span class="s1">&#39;InfrastructureSettings&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;static_ip_id&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;selected_encoder_version&#39;</span><span class="p">:</span> <span class="s1">&#39;string_types&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;selected_encoding_mode&#39;</span><span class="p">:</span> <span class="s1">&#39;EncodingMode&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;selected_cloud_region&#39;</span><span class="p">:</span> <span class="s1">&#39;CloudRegion&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;selected_fallback_cloud_regions&#39;</span><span class="p">:</span> <span class="s1">&#39;list[CloudRegion]&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;status&#39;</span><span class="p">:</span> <span class="s1">&#39;Status&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;labels&#39;</span><span class="p">:</span> <span class="s1">&#39;list[string_types]&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;live_options_type&#39;</span><span class="p">:</span> <span class="s1">&#39;LiveOptionsType&#39;</span>
+            <span class="s1">'type'</span><span class="p">:</span> <span class="s1">'EncodingType'</span><span class="p">,</span>
+            <span class="s1">'started_at'</span><span class="p">:</span> <span class="s1">'datetime'</span><span class="p">,</span>
+            <span class="s1">'queued_at'</span><span class="p">:</span> <span class="s1">'datetime'</span><span class="p">,</span>
+            <span class="s1">'running_at'</span><span class="p">:</span> <span class="s1">'datetime'</span><span class="p">,</span>
+            <span class="s1">'finished_at'</span><span class="p">:</span> <span class="s1">'datetime'</span><span class="p">,</span>
+            <span class="s1">'error_at'</span><span class="p">:</span> <span class="s1">'datetime'</span><span class="p">,</span>
+            <span class="s1">'progress'</span><span class="p">:</span> <span class="s1">'int'</span><span class="p">,</span>
+            <span class="s1">'cloud_region'</span><span class="p">:</span> <span class="s1">'CloudRegion'</span><span class="p">,</span>
+            <span class="s1">'fallback_cloud_regions'</span><span class="p">:</span> <span class="s1">'list[CloudRegion]'</span><span class="p">,</span>
+            <span class="s1">'encoder_version'</span><span class="p">:</span> <span class="s1">'string_types'</span><span class="p">,</span>
+            <span class="s1">'infrastructure'</span><span class="p">:</span> <span class="s1">'InfrastructureSettings'</span><span class="p">,</span>
+            <span class="s1">'static_ip_id'</span><span class="p">:</span> <span class="s1">'string_types'</span><span class="p">,</span>
+            <span class="s1">'selected_encoder_version'</span><span class="p">:</span> <span class="s1">'string_types'</span><span class="p">,</span>
+            <span class="s1">'selected_encoding_mode'</span><span class="p">:</span> <span class="s1">'EncodingMode'</span><span class="p">,</span>
+            <span class="s1">'selected_cloud_region'</span><span class="p">:</span> <span class="s1">'CloudRegion'</span><span class="p">,</span>
+            <span class="s1">'selected_fallback_cloud_regions'</span><span class="p">:</span> <span class="s1">'list[CloudRegion]'</span><span class="p">,</span>
+            <span class="s1">'status'</span><span class="p">:</span> <span class="s1">'Status'</span><span class="p">,</span>
+            <span class="s1">'labels'</span><span class="p">:</span> <span class="s1">'list[string_types]'</span><span class="p">,</span>
+            <span class="s1">'live_options_type'</span><span class="p">:</span> <span class="s1">'LiveOptionsType'</span>
         <span class="p">})</span>
 
         <span class="k">return</span> <span class="n">types</span>
@@ -221,586 +221,586 @@
     <span class="k">def</span><span class="w"> </span><span class="nf">attribute_map</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">attributes</span> <span class="o">=</span> <span class="p">{}</span>
 
-        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="nb">super</span><span class="p">(</span><span class="n">Encoding</span><span class="p">,</span> <span class="bp">self</span><span class="p">),</span> <span class="s1">&#39;attribute_map&#39;</span><span class="p">):</span>
-            <span class="n">attributes</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="nb">super</span><span class="p">(</span><span class="n">Encoding</span><span class="p">,</span> <span class="bp">self</span><span class="p">),</span> <span class="s1">&#39;attribute_map&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="nb">super</span><span class="p">(</span><span class="n">Encoding</span><span class="p">,</span> <span class="bp">self</span><span class="p">),</span> <span class="s1">'attribute_map'</span><span class="p">):</span>
+            <span class="n">attributes</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="nb">super</span><span class="p">(</span><span class="n">Encoding</span><span class="p">,</span> <span class="bp">self</span><span class="p">),</span> <span class="s1">'attribute_map'</span><span class="p">)</span>
 
         <span class="n">attributes</span><span class="o">.</span><span class="n">update</span><span class="p">({</span>
-            <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;type&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;started_at&#39;</span><span class="p">:</span> <span class="s1">&#39;startedAt&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;queued_at&#39;</span><span class="p">:</span> <span class="s1">&#39;queuedAt&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;running_at&#39;</span><span class="p">:</span> <span class="s1">&#39;runningAt&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;finished_at&#39;</span><span class="p">:</span> <span class="s1">&#39;finishedAt&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;error_at&#39;</span><span class="p">:</span> <span class="s1">&#39;errorAt&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;progress&#39;</span><span class="p">:</span> <span class="s1">&#39;progress&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;cloud_region&#39;</span><span class="p">:</span> <span class="s1">&#39;cloudRegion&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;fallback_cloud_regions&#39;</span><span class="p">:</span> <span class="s1">&#39;fallbackCloudRegions&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;encoder_version&#39;</span><span class="p">:</span> <span class="s1">&#39;encoderVersion&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;infrastructure&#39;</span><span class="p">:</span> <span class="s1">&#39;infrastructure&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;static_ip_id&#39;</span><span class="p">:</span> <span class="s1">&#39;staticIpId&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;selected_encoder_version&#39;</span><span class="p">:</span> <span class="s1">&#39;selectedEncoderVersion&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;selected_encoding_mode&#39;</span><span class="p">:</span> <span class="s1">&#39;selectedEncodingMode&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;selected_cloud_region&#39;</span><span class="p">:</span> <span class="s1">&#39;selectedCloudRegion&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;selected_fallback_cloud_regions&#39;</span><span class="p">:</span> <span class="s1">&#39;selectedFallbackCloudRegions&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;status&#39;</span><span class="p">:</span> <span class="s1">&#39;status&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;labels&#39;</span><span class="p">:</span> <span class="s1">&#39;labels&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;live_options_type&#39;</span><span class="p">:</span> <span class="s1">&#39;liveOptionsType&#39;</span>
+            <span class="s1">'type'</span><span class="p">:</span> <span class="s1">'type'</span><span class="p">,</span>
+            <span class="s1">'started_at'</span><span class="p">:</span> <span class="s1">'startedAt'</span><span class="p">,</span>
+            <span class="s1">'queued_at'</span><span class="p">:</span> <span class="s1">'queuedAt'</span><span class="p">,</span>
+            <span class="s1">'running_at'</span><span class="p">:</span> <span class="s1">'runningAt'</span><span class="p">,</span>
+            <span class="s1">'finished_at'</span><span class="p">:</span> <span class="s1">'finishedAt'</span><span class="p">,</span>
+            <span class="s1">'error_at'</span><span class="p">:</span> <span class="s1">'errorAt'</span><span class="p">,</span>
+            <span class="s1">'progress'</span><span class="p">:</span> <span class="s1">'progress'</span><span class="p">,</span>
+            <span class="s1">'cloud_region'</span><span class="p">:</span> <span class="s1">'cloudRegion'</span><span class="p">,</span>
+            <span class="s1">'fallback_cloud_regions'</span><span class="p">:</span> <span class="s1">'fallbackCloudRegions'</span><span class="p">,</span>
+            <span class="s1">'encoder_version'</span><span class="p">:</span> <span class="s1">'encoderVersion'</span><span class="p">,</span>
+            <span class="s1">'infrastructure'</span><span class="p">:</span> <span class="s1">'infrastructure'</span><span class="p">,</span>
+            <span class="s1">'static_ip_id'</span><span class="p">:</span> <span class="s1">'staticIpId'</span><span class="p">,</span>
+            <span class="s1">'selected_encoder_version'</span><span class="p">:</span> <span class="s1">'selectedEncoderVersion'</span><span class="p">,</span>
+            <span class="s1">'selected_encoding_mode'</span><span class="p">:</span> <span class="s1">'selectedEncodingMode'</span><span class="p">,</span>
+            <span class="s1">'selected_cloud_region'</span><span class="p">:</span> <span class="s1">'selectedCloudRegion'</span><span class="p">,</span>
+            <span class="s1">'selected_fallback_cloud_regions'</span><span class="p">:</span> <span class="s1">'selectedFallbackCloudRegions'</span><span class="p">,</span>
+            <span class="s1">'status'</span><span class="p">:</span> <span class="s1">'status'</span><span class="p">,</span>
+            <span class="s1">'labels'</span><span class="p">:</span> <span class="s1">'labels'</span><span class="p">,</span>
+            <span class="s1">'live_options_type'</span><span class="p">:</span> <span class="s1">'liveOptionsType'</span>
         <span class="p">})</span>
         <span class="k">return</span> <span class="n">attributes</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">type</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; EncodingType</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the type of this Encoding.</span>
+<span class="w">        </span><span class="sd">"""Gets the type of this Encoding.</span>
 
 <span class="sd">        Type of the encoding</span>
 
 <span class="sd">        :return: The type of this Encoding.</span>
 <span class="sd">        :rtype: EncodingType</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_type</span>
 
     <span class="nd">@type</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">type</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">type_</span><span class="p">):</span>
         <span class="c1"># type: (EncodingType) -&gt; None</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the type of this Encoding.</span>
+<span class="w">        </span><span class="sd">"""Sets the type of this Encoding.</span>
 
 <span class="sd">        Type of the encoding</span>
 
 <span class="sd">        :param type_: The type of this Encoding.</span>
 <span class="sd">        :type: EncodingType</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">if</span> <span class="n">type_</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">type_</span><span class="p">,</span> <span class="n">EncodingType</span><span class="p">):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `type`, type has to be `EncodingType`&quot;</span><span class="p">)</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Invalid type for `type`, type has to be `EncodingType`"</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_type</span> <span class="o">=</span> <span class="n">type_</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">started_at</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; datetime</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the started_at of this Encoding.</span>
+<span class="w">        </span><span class="sd">"""Gets the started_at of this Encoding.</span>
 
 <span class="sd">        Timestamp when the encoding was started, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ</span>
 
 <span class="sd">        :return: The started_at of this Encoding.</span>
 <span class="sd">        :rtype: datetime</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_started_at</span>
 
     <span class="nd">@started_at</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">started_at</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">started_at</span><span class="p">):</span>
         <span class="c1"># type: (datetime) -&gt; None</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the started_at of this Encoding.</span>
+<span class="w">        </span><span class="sd">"""Sets the started_at of this Encoding.</span>
 
 <span class="sd">        Timestamp when the encoding was started, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ</span>
 
 <span class="sd">        :param started_at: The started_at of this Encoding.</span>
 <span class="sd">        :type: datetime</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">if</span> <span class="n">started_at</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">started_at</span><span class="p">,</span> <span class="n">datetime</span><span class="p">):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `started_at`, type has to be `datetime`&quot;</span><span class="p">)</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Invalid type for `started_at`, type has to be `datetime`"</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_started_at</span> <span class="o">=</span> <span class="n">started_at</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">queued_at</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; datetime</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the queued_at of this Encoding.</span>
+<span class="w">        </span><span class="sd">"""Gets the queued_at of this Encoding.</span>
 
-<span class="sd">        Timestamp when the encoding status changed to \&quot;QUEUED\&quot;, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ</span>
+<span class="sd">        Timestamp when the encoding status changed to \"QUEUED\", returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ</span>
 
 <span class="sd">        :return: The queued_at of this Encoding.</span>
 <span class="sd">        :rtype: datetime</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_queued_at</span>
 
     <span class="nd">@queued_at</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">queued_at</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">queued_at</span><span class="p">):</span>
         <span class="c1"># type: (datetime) -&gt; None</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the queued_at of this Encoding.</span>
+<span class="w">        </span><span class="sd">"""Sets the queued_at of this Encoding.</span>
 
-<span class="sd">        Timestamp when the encoding status changed to \&quot;QUEUED\&quot;, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ</span>
+<span class="sd">        Timestamp when the encoding status changed to \"QUEUED\", returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ</span>
 
 <span class="sd">        :param queued_at: The queued_at of this Encoding.</span>
 <span class="sd">        :type: datetime</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">if</span> <span class="n">queued_at</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">queued_at</span><span class="p">,</span> <span class="n">datetime</span><span class="p">):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `queued_at`, type has to be `datetime`&quot;</span><span class="p">)</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Invalid type for `queued_at`, type has to be `datetime`"</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_queued_at</span> <span class="o">=</span> <span class="n">queued_at</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">running_at</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; datetime</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the running_at of this Encoding.</span>
+<span class="w">        </span><span class="sd">"""Gets the running_at of this Encoding.</span>
 
-<span class="sd">        Timestamp when the encoding status changed to \&quot;RUNNING\&quot;, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ</span>
+<span class="sd">        Timestamp when the encoding status changed to \"RUNNING\", returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ</span>
 
 <span class="sd">        :return: The running_at of this Encoding.</span>
 <span class="sd">        :rtype: datetime</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_running_at</span>
 
     <span class="nd">@running_at</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">running_at</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">running_at</span><span class="p">):</span>
         <span class="c1"># type: (datetime) -&gt; None</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the running_at of this Encoding.</span>
+<span class="w">        </span><span class="sd">"""Sets the running_at of this Encoding.</span>
 
-<span class="sd">        Timestamp when the encoding status changed to \&quot;RUNNING\&quot;, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ</span>
+<span class="sd">        Timestamp when the encoding status changed to \"RUNNING\", returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ</span>
 
 <span class="sd">        :param running_at: The running_at of this Encoding.</span>
 <span class="sd">        :type: datetime</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">if</span> <span class="n">running_at</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">running_at</span><span class="p">,</span> <span class="n">datetime</span><span class="p">):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `running_at`, type has to be `datetime`&quot;</span><span class="p">)</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Invalid type for `running_at`, type has to be `datetime`"</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_running_at</span> <span class="o">=</span> <span class="n">running_at</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">finished_at</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; datetime</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the finished_at of this Encoding.</span>
+<span class="w">        </span><span class="sd">"""Gets the finished_at of this Encoding.</span>
 
-<span class="sd">        Timestamp when the encoding status changed to &#39;FINISHED&#39;, &#39;ERROR&#39;, &#39;CANCELED&#39;, or &#39;TRANSFER_ERROR&#39;, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ  Note that this timestamp might be inaccurate for encodings which ran prior to the [1.50.0 REST API release](https://bitmovin.com/docs/encoding/changelogs/rest). </span>
+<span class="sd">        Timestamp when the encoding status changed to 'FINISHED', 'ERROR', 'CANCELED', or 'TRANSFER_ERROR', returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ  Note that this timestamp might be inaccurate for encodings which ran prior to the [1.50.0 REST API release](https://bitmovin.com/docs/encoding/changelogs/rest). </span>
 
 <span class="sd">        :return: The finished_at of this Encoding.</span>
 <span class="sd">        :rtype: datetime</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_finished_at</span>
 
     <span class="nd">@finished_at</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">finished_at</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">finished_at</span><span class="p">):</span>
         <span class="c1"># type: (datetime) -&gt; None</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the finished_at of this Encoding.</span>
+<span class="w">        </span><span class="sd">"""Sets the finished_at of this Encoding.</span>
 
-<span class="sd">        Timestamp when the encoding status changed to &#39;FINISHED&#39;, &#39;ERROR&#39;, &#39;CANCELED&#39;, or &#39;TRANSFER_ERROR&#39;, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ  Note that this timestamp might be inaccurate for encodings which ran prior to the [1.50.0 REST API release](https://bitmovin.com/docs/encoding/changelogs/rest). </span>
+<span class="sd">        Timestamp when the encoding status changed to 'FINISHED', 'ERROR', 'CANCELED', or 'TRANSFER_ERROR', returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ  Note that this timestamp might be inaccurate for encodings which ran prior to the [1.50.0 REST API release](https://bitmovin.com/docs/encoding/changelogs/rest). </span>
 
 <span class="sd">        :param finished_at: The finished_at of this Encoding.</span>
 <span class="sd">        :type: datetime</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">if</span> <span class="n">finished_at</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">finished_at</span><span class="p">,</span> <span class="n">datetime</span><span class="p">):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `finished_at`, type has to be `datetime`&quot;</span><span class="p">)</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Invalid type for `finished_at`, type has to be `datetime`"</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_finished_at</span> <span class="o">=</span> <span class="n">finished_at</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">error_at</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; datetime</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the error_at of this Encoding.</span>
+<span class="w">        </span><span class="sd">"""Gets the error_at of this Encoding.</span>
 
-<span class="sd">        Timestamp when the encoding status changed to &#39;ERROR&#39;, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ  Note that this timestamp is deprecated and is equivalent to finishedAt in case of an &#39;ERROR&#39;. </span>
+<span class="sd">        Timestamp when the encoding status changed to 'ERROR', returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ  Note that this timestamp is deprecated and is equivalent to finishedAt in case of an 'ERROR'. </span>
 
 <span class="sd">        :return: The error_at of this Encoding.</span>
 <span class="sd">        :rtype: datetime</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_error_at</span>
 
     <span class="nd">@error_at</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">error_at</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">error_at</span><span class="p">):</span>
         <span class="c1"># type: (datetime) -&gt; None</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the error_at of this Encoding.</span>
+<span class="w">        </span><span class="sd">"""Sets the error_at of this Encoding.</span>
 
-<span class="sd">        Timestamp when the encoding status changed to &#39;ERROR&#39;, returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ  Note that this timestamp is deprecated and is equivalent to finishedAt in case of an &#39;ERROR&#39;. </span>
+<span class="sd">        Timestamp when the encoding status changed to 'ERROR', returned as UTC expressed in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ  Note that this timestamp is deprecated and is equivalent to finishedAt in case of an 'ERROR'. </span>
 
 <span class="sd">        :param error_at: The error_at of this Encoding.</span>
 <span class="sd">        :type: datetime</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">if</span> <span class="n">error_at</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">error_at</span><span class="p">,</span> <span class="n">datetime</span><span class="p">):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `error_at`, type has to be `datetime`&quot;</span><span class="p">)</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Invalid type for `error_at`, type has to be `datetime`"</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_error_at</span> <span class="o">=</span> <span class="n">error_at</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">progress</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the progress of this Encoding.</span>
+<span class="w">        </span><span class="sd">"""Gets the progress of this Encoding.</span>
 
 <span class="sd">        Progress of the encoding in percent</span>
 
 <span class="sd">        :return: The progress of this Encoding.</span>
 <span class="sd">        :rtype: int</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_progress</span>
 
     <span class="nd">@progress</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">progress</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">progress</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the progress of this Encoding.</span>
+<span class="w">        </span><span class="sd">"""Sets the progress of this Encoding.</span>
 
 <span class="sd">        Progress of the encoding in percent</span>
 
 <span class="sd">        :param progress: The progress of this Encoding.</span>
 <span class="sd">        :type: int</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">if</span> <span class="n">progress</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">progress</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `progress`, type has to be `int`&quot;</span><span class="p">)</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Invalid type for `progress`, type has to be `int`"</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_progress</span> <span class="o">=</span> <span class="n">progress</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">cloud_region</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; CloudRegion</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the cloud_region of this Encoding.</span>
+<span class="w">        </span><span class="sd">"""Gets the cloud_region of this Encoding.</span>
 
 
 <span class="sd">        :return: The cloud_region of this Encoding.</span>
 <span class="sd">        :rtype: CloudRegion</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cloud_region</span>
 
     <span class="nd">@cloud_region</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">cloud_region</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cloud_region</span><span class="p">):</span>
         <span class="c1"># type: (CloudRegion) -&gt; None</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the cloud_region of this Encoding.</span>
+<span class="w">        </span><span class="sd">"""Sets the cloud_region of this Encoding.</span>
 
 
 <span class="sd">        :param cloud_region: The cloud_region of this Encoding.</span>
 <span class="sd">        :type: CloudRegion</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">if</span> <span class="n">cloud_region</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">cloud_region</span><span class="p">,</span> <span class="n">CloudRegion</span><span class="p">):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `cloud_region`, type has to be `CloudRegion`&quot;</span><span class="p">)</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Invalid type for `cloud_region`, type has to be `CloudRegion`"</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_cloud_region</span> <span class="o">=</span> <span class="n">cloud_region</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">fallback_cloud_regions</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; list[CloudRegion]</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the fallback_cloud_regions of this Encoding.</span>
+<span class="w">        </span><span class="sd">"""Gets the fallback_cloud_regions of this Encoding.</span>
 
 <span class="sd">        Specify a list of regions which are used in case the preferred region is down. Currently there are several restrictions. - The region has to be specific or AUTO - The region has to be for the same cloud provider as the default one - You can only configure at most 3 fallback regions </span>
 
 <span class="sd">        :return: The fallback_cloud_regions of this Encoding.</span>
 <span class="sd">        :rtype: list[CloudRegion]</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_fallback_cloud_regions</span>
 
     <span class="nd">@fallback_cloud_regions</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">fallback_cloud_regions</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fallback_cloud_regions</span><span class="p">):</span>
         <span class="c1"># type: (list) -&gt; None</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the fallback_cloud_regions of this Encoding.</span>
+<span class="w">        </span><span class="sd">"""Sets the fallback_cloud_regions of this Encoding.</span>
 
 <span class="sd">        Specify a list of regions which are used in case the preferred region is down. Currently there are several restrictions. - The region has to be specific or AUTO - The region has to be for the same cloud provider as the default one - You can only configure at most 3 fallback regions </span>
 
 <span class="sd">        :param fallback_cloud_regions: The fallback_cloud_regions of this Encoding.</span>
 <span class="sd">        :type: list[CloudRegion]</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">if</span> <span class="n">fallback_cloud_regions</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">fallback_cloud_regions</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `fallback_cloud_regions`, type has to be `list[CloudRegion]`&quot;</span><span class="p">)</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Invalid type for `fallback_cloud_regions`, type has to be `list[CloudRegion]`"</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_fallback_cloud_regions</span> <span class="o">=</span> <span class="n">fallback_cloud_regions</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">encoder_version</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; string_types</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the encoder_version of this Encoding.</span>
+<span class="w">        </span><span class="sd">"""Gets the encoder_version of this Encoding.</span>
 
 <span class="sd">        Version of the encoder</span>
 
 <span class="sd">        :return: The encoder_version of this Encoding.</span>
 <span class="sd">        :rtype: string_types</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_encoder_version</span>
 
     <span class="nd">@encoder_version</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">encoder_version</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">encoder_version</span><span class="p">):</span>
         <span class="c1"># type: (string_types) -&gt; None</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the encoder_version of this Encoding.</span>
+<span class="w">        </span><span class="sd">"""Sets the encoder_version of this Encoding.</span>
 
 <span class="sd">        Version of the encoder</span>
 
 <span class="sd">        :param encoder_version: The encoder_version of this Encoding.</span>
 <span class="sd">        :type: string_types</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">if</span> <span class="n">encoder_version</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">encoder_version</span><span class="p">,</span> <span class="n">string_types</span><span class="p">):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `encoder_version`, type has to be `string_types`&quot;</span><span class="p">)</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Invalid type for `encoder_version`, type has to be `string_types`"</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_encoder_version</span> <span class="o">=</span> <span class="n">encoder_version</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">infrastructure</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; InfrastructureSettings</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the infrastructure of this Encoding.</span>
+<span class="w">        </span><span class="sd">"""Gets the infrastructure of this Encoding.</span>
 
 
 <span class="sd">        :return: The infrastructure of this Encoding.</span>
 <span class="sd">        :rtype: InfrastructureSettings</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_infrastructure</span>
 
     <span class="nd">@infrastructure</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">infrastructure</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">infrastructure</span><span class="p">):</span>
         <span class="c1"># type: (InfrastructureSettings) -&gt; None</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the infrastructure of this Encoding.</span>
+<span class="w">        </span><span class="sd">"""Sets the infrastructure of this Encoding.</span>
 
 
 <span class="sd">        :param infrastructure: The infrastructure of this Encoding.</span>
 <span class="sd">        :type: InfrastructureSettings</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">if</span> <span class="n">infrastructure</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">infrastructure</span><span class="p">,</span> <span class="n">InfrastructureSettings</span><span class="p">):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `infrastructure`, type has to be `InfrastructureSettings`&quot;</span><span class="p">)</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Invalid type for `infrastructure`, type has to be `InfrastructureSettings`"</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_infrastructure</span> <span class="o">=</span> <span class="n">infrastructure</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">static_ip_id</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; string_types</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the static_ip_id of this Encoding.</span>
+<span class="w">        </span><span class="sd">"""Gets the static_ip_id of this Encoding.</span>
 
 <span class="sd">        Specify an ID of a Static IP infrastructure resource this encoding should use. A Static IP cannot be used by multiple encodings at once. The encoding will go to an error state if the Static IP is already in use. This is currently only supported for live encodings.</span>
 
 <span class="sd">        :return: The static_ip_id of this Encoding.</span>
 <span class="sd">        :rtype: string_types</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_static_ip_id</span>
 
     <span class="nd">@static_ip_id</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">static_ip_id</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">static_ip_id</span><span class="p">):</span>
         <span class="c1"># type: (string_types) -&gt; None</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the static_ip_id of this Encoding.</span>
+<span class="w">        </span><span class="sd">"""Sets the static_ip_id of this Encoding.</span>
 
 <span class="sd">        Specify an ID of a Static IP infrastructure resource this encoding should use. A Static IP cannot be used by multiple encodings at once. The encoding will go to an error state if the Static IP is already in use. This is currently only supported for live encodings.</span>
 
 <span class="sd">        :param static_ip_id: The static_ip_id of this Encoding.</span>
 <span class="sd">        :type: string_types</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">if</span> <span class="n">static_ip_id</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">static_ip_id</span><span class="p">,</span> <span class="n">string_types</span><span class="p">):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `static_ip_id`, type has to be `string_types`&quot;</span><span class="p">)</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Invalid type for `static_ip_id`, type has to be `string_types`"</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_static_ip_id</span> <span class="o">=</span> <span class="n">static_ip_id</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">selected_encoder_version</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; string_types</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the selected_encoder_version of this Encoding.</span>
+<span class="w">        </span><span class="sd">"""Gets the selected_encoder_version of this Encoding.</span>
 
 <span class="sd">        After the encoding has been started, this will contain the encoder version that was actually used. Especially useful when starting an encoding with a version tag like STABLE or BETA.</span>
 
 <span class="sd">        :return: The selected_encoder_version of this Encoding.</span>
 <span class="sd">        :rtype: string_types</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_selected_encoder_version</span>
 
     <span class="nd">@selected_encoder_version</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">selected_encoder_version</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">selected_encoder_version</span><span class="p">):</span>
         <span class="c1"># type: (string_types) -&gt; None</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the selected_encoder_version of this Encoding.</span>
+<span class="w">        </span><span class="sd">"""Sets the selected_encoder_version of this Encoding.</span>
 
 <span class="sd">        After the encoding has been started, this will contain the encoder version that was actually used. Especially useful when starting an encoding with a version tag like STABLE or BETA.</span>
 
 <span class="sd">        :param selected_encoder_version: The selected_encoder_version of this Encoding.</span>
 <span class="sd">        :type: string_types</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">if</span> <span class="n">selected_encoder_version</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">selected_encoder_version</span><span class="p">,</span> <span class="n">string_types</span><span class="p">):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `selected_encoder_version`, type has to be `string_types`&quot;</span><span class="p">)</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Invalid type for `selected_encoder_version`, type has to be `string_types`"</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_selected_encoder_version</span> <span class="o">=</span> <span class="n">selected_encoder_version</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">selected_encoding_mode</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; EncodingMode</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the selected_encoding_mode of this Encoding.</span>
+<span class="w">        </span><span class="sd">"""Gets the selected_encoding_mode of this Encoding.</span>
 
 <span class="sd">        After the encoding has been started, this will contain the encoding mode that was actually used. Especially useful when `encodingMode` was not set explicitly or set to STANDARD (which translates to one of the other possible values on encoding start).</span>
 
 <span class="sd">        :return: The selected_encoding_mode of this Encoding.</span>
 <span class="sd">        :rtype: EncodingMode</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_selected_encoding_mode</span>
 
     <span class="nd">@selected_encoding_mode</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">selected_encoding_mode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">selected_encoding_mode</span><span class="p">):</span>
         <span class="c1"># type: (EncodingMode) -&gt; None</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the selected_encoding_mode of this Encoding.</span>
+<span class="w">        </span><span class="sd">"""Sets the selected_encoding_mode of this Encoding.</span>
 
 <span class="sd">        After the encoding has been started, this will contain the encoding mode that was actually used. Especially useful when `encodingMode` was not set explicitly or set to STANDARD (which translates to one of the other possible values on encoding start).</span>
 
 <span class="sd">        :param selected_encoding_mode: The selected_encoding_mode of this Encoding.</span>
 <span class="sd">        :type: EncodingMode</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">if</span> <span class="n">selected_encoding_mode</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">selected_encoding_mode</span><span class="p">,</span> <span class="n">EncodingMode</span><span class="p">):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `selected_encoding_mode`, type has to be `EncodingMode`&quot;</span><span class="p">)</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Invalid type for `selected_encoding_mode`, type has to be `EncodingMode`"</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_selected_encoding_mode</span> <span class="o">=</span> <span class="n">selected_encoding_mode</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">selected_cloud_region</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; CloudRegion</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the selected_cloud_region of this Encoding.</span>
+<span class="w">        </span><span class="sd">"""Gets the selected_cloud_region of this Encoding.</span>
 
-<span class="sd">        After the encoding has been started, this will contain the cloud region that was actually used. This will differ from cloudRegion if cloudRegion was set to an unspecific region (e.g. &#39;AUTO&#39;)</span>
+<span class="sd">        After the encoding has been started, this will contain the cloud region that was actually used. This will differ from cloudRegion if cloudRegion was set to an unspecific region (e.g. 'AUTO')</span>
 
 <span class="sd">        :return: The selected_cloud_region of this Encoding.</span>
 <span class="sd">        :rtype: CloudRegion</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_selected_cloud_region</span>
 
     <span class="nd">@selected_cloud_region</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">selected_cloud_region</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">selected_cloud_region</span><span class="p">):</span>
         <span class="c1"># type: (CloudRegion) -&gt; None</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the selected_cloud_region of this Encoding.</span>
+<span class="w">        </span><span class="sd">"""Sets the selected_cloud_region of this Encoding.</span>
 
-<span class="sd">        After the encoding has been started, this will contain the cloud region that was actually used. This will differ from cloudRegion if cloudRegion was set to an unspecific region (e.g. &#39;AUTO&#39;)</span>
+<span class="sd">        After the encoding has been started, this will contain the cloud region that was actually used. This will differ from cloudRegion if cloudRegion was set to an unspecific region (e.g. 'AUTO')</span>
 
 <span class="sd">        :param selected_cloud_region: The selected_cloud_region of this Encoding.</span>
 <span class="sd">        :type: CloudRegion</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">if</span> <span class="n">selected_cloud_region</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">selected_cloud_region</span><span class="p">,</span> <span class="n">CloudRegion</span><span class="p">):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `selected_cloud_region`, type has to be `CloudRegion`&quot;</span><span class="p">)</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Invalid type for `selected_cloud_region`, type has to be `CloudRegion`"</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_selected_cloud_region</span> <span class="o">=</span> <span class="n">selected_cloud_region</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">selected_fallback_cloud_regions</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; list[CloudRegion]</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the selected_fallback_cloud_regions of this Encoding.</span>
+<span class="w">        </span><span class="sd">"""Gets the selected_fallback_cloud_regions of this Encoding.</span>
 
-<span class="sd">        After the encoding has been started, this will contain the fallback cloud regions that were actually used. This will differ from fallbackCloudRegions if any of the fallbackCloudRegions were set to an unspecific region (e.g. &#39;AUTO&#39;)</span>
+<span class="sd">        After the encoding has been started, this will contain the fallback cloud regions that were actually used. This will differ from fallbackCloudRegions if any of the fallbackCloudRegions were set to an unspecific region (e.g. 'AUTO')</span>
 
 <span class="sd">        :return: The selected_fallback_cloud_regions of this Encoding.</span>
 <span class="sd">        :rtype: list[CloudRegion]</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_selected_fallback_cloud_regions</span>
 
     <span class="nd">@selected_fallback_cloud_regions</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">selected_fallback_cloud_regions</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">selected_fallback_cloud_regions</span><span class="p">):</span>
         <span class="c1"># type: (list) -&gt; None</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the selected_fallback_cloud_regions of this Encoding.</span>
+<span class="w">        </span><span class="sd">"""Sets the selected_fallback_cloud_regions of this Encoding.</span>
 
-<span class="sd">        After the encoding has been started, this will contain the fallback cloud regions that were actually used. This will differ from fallbackCloudRegions if any of the fallbackCloudRegions were set to an unspecific region (e.g. &#39;AUTO&#39;)</span>
+<span class="sd">        After the encoding has been started, this will contain the fallback cloud regions that were actually used. This will differ from fallbackCloudRegions if any of the fallbackCloudRegions were set to an unspecific region (e.g. 'AUTO')</span>
 
 <span class="sd">        :param selected_fallback_cloud_regions: The selected_fallback_cloud_regions of this Encoding.</span>
 <span class="sd">        :type: list[CloudRegion]</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">if</span> <span class="n">selected_fallback_cloud_regions</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">selected_fallback_cloud_regions</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `selected_fallback_cloud_regions`, type has to be `list[CloudRegion]`&quot;</span><span class="p">)</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Invalid type for `selected_fallback_cloud_regions`, type has to be `list[CloudRegion]`"</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_selected_fallback_cloud_regions</span> <span class="o">=</span> <span class="n">selected_fallback_cloud_regions</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">status</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; Status</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the status of this Encoding.</span>
+<span class="w">        </span><span class="sd">"""Gets the status of this Encoding.</span>
 
 <span class="sd">        The current status of the encoding.</span>
 
 <span class="sd">        :return: The status of this Encoding.</span>
 <span class="sd">        :rtype: Status</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_status</span>
 
     <span class="nd">@status</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">status</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">status</span><span class="p">):</span>
         <span class="c1"># type: (Status) -&gt; None</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the status of this Encoding.</span>
+<span class="w">        </span><span class="sd">"""Sets the status of this Encoding.</span>
 
 <span class="sd">        The current status of the encoding.</span>
 
 <span class="sd">        :param status: The status of this Encoding.</span>
 <span class="sd">        :type: Status</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">if</span> <span class="n">status</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">status</span><span class="p">,</span> <span class="n">Status</span><span class="p">):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `status`, type has to be `Status`&quot;</span><span class="p">)</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Invalid type for `status`, type has to be `Status`"</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_status</span> <span class="o">=</span> <span class="n">status</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">labels</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; list[string_types]</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the labels of this Encoding.</span>
+<span class="w">        </span><span class="sd">"""Gets the labels of this Encoding.</span>
 
 <span class="sd">        You may pass a list of groups associated with this encoding. This will enable you to group results in the statistics resource</span>
 
 <span class="sd">        :return: The labels of this Encoding.</span>
 <span class="sd">        :rtype: list[string_types]</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_labels</span>
 
     <span class="nd">@labels</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">labels</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">labels</span><span class="p">):</span>
         <span class="c1"># type: (list) -&gt; None</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the labels of this Encoding.</span>
+<span class="w">        </span><span class="sd">"""Sets the labels of this Encoding.</span>
 
 <span class="sd">        You may pass a list of groups associated with this encoding. This will enable you to group results in the statistics resource</span>
 
 <span class="sd">        :param labels: The labels of this Encoding.</span>
 <span class="sd">        :type: list[string_types]</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">if</span> <span class="n">labels</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">labels</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `labels`, type has to be `list[string_types]`&quot;</span><span class="p">)</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Invalid type for `labels`, type has to be `list[string_types]`"</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_labels</span> <span class="o">=</span> <span class="n">labels</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">live_options_type</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; LiveOptionsType</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the live_options_type of this Encoding.</span>
+<span class="w">        </span><span class="sd">"""Gets the live_options_type of this Encoding.</span>
 
 <span class="sd">        The chosen live option type of the live encoding</span>
 
 <span class="sd">        :return: The live_options_type of this Encoding.</span>
 <span class="sd">        :rtype: LiveOptionsType</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_live_options_type</span>
 
     <span class="nd">@live_options_type</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">live_options_type</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">live_options_type</span><span class="p">):</span>
         <span class="c1"># type: (LiveOptionsType) -&gt; None</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the live_options_type of this Encoding.</span>
+<span class="w">        </span><span class="sd">"""Sets the live_options_type of this Encoding.</span>
 
 <span class="sd">        The chosen live option type of the live encoding</span>
 
 <span class="sd">        :param live_options_type: The live_options_type of this Encoding.</span>
 <span class="sd">        :type: LiveOptionsType</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">if</span> <span class="n">live_options_type</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">live_options_type</span><span class="p">,</span> <span class="n">LiveOptionsType</span><span class="p">):</span>
-                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `live_options_type`, type has to be `LiveOptionsType`&quot;</span><span class="p">)</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Invalid type for `live_options_type`, type has to be `LiveOptionsType`"</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_live_options_type</span> <span class="o">=</span> <span class="n">live_options_type</span>
 
 <div class="viewcode-block" id="Encoding.to_dict">
 <a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.encoding.Encoding.to_dict">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""Returns the model properties as a dict"""</span>
         <span class="n">result</span> <span class="o">=</span> <span class="p">{}</span>
 
-        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="nb">super</span><span class="p">(</span><span class="n">Encoding</span><span class="p">,</span> <span class="bp">self</span><span class="p">),</span> <span class="s2">&quot;to_dict&quot;</span><span class="p">):</span>
+        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="nb">super</span><span class="p">(</span><span class="n">Encoding</span><span class="p">,</span> <span class="bp">self</span><span class="p">),</span> <span class="s2">"to_dict"</span><span class="p">):</span>
             <span class="n">result</span> <span class="o">=</span> <span class="nb">super</span><span class="p">(</span><span class="n">Encoding</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span>
         <span class="k">for</span> <span class="n">attr</span><span class="p">,</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">six</span><span class="o">.</span><span class="n">iteritems</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">openapi_types</span><span class="p">):</span>
             <span class="n">value</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">attr</span><span class="p">)</span>
@@ -809,13 +809,13 @@
             <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
                 <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
                     <span class="k">continue</span>
-                <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="p">[</span><span class="n">y</span><span class="o">.</span><span class="n">value</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">Enum</span><span class="p">)</span> <span class="k">else</span> <span class="n">y</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span> <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="s2">&quot;to_dict&quot;</span><span class="p">)</span> <span class="k">else</span> <span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">value</span><span class="p">]]</span>
-            <span class="k">elif</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="s2">&quot;to_dict&quot;</span><span class="p">):</span>
+                <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="p">[</span><span class="n">y</span><span class="o">.</span><span class="n">value</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">Enum</span><span class="p">)</span> <span class="k">else</span> <span class="n">y</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span> <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="s2">"to_dict"</span><span class="p">)</span> <span class="k">else</span> <span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">value</span><span class="p">]]</span>
+            <span class="k">elif</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="s2">"to_dict"</span><span class="p">):</span>
                 <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="n">value</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span>
             <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">Enum</span><span class="p">):</span>
                 <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="n">value</span><span class="o">.</span><span class="n">value</span>
             <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
-                <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="p">(</span><span class="n">v</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span> <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="s2">&quot;to_dict&quot;</span><span class="p">)</span> <span class="k">else</span> <span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span> <span class="ow">in</span> <span class="n">value</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
+                <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="p">(</span><span class="n">v</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span> <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="s2">"to_dict"</span><span class="p">)</span> <span class="k">else</span> <span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span> <span class="ow">in</span> <span class="n">value</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
             <span class="k">else</span><span class="p">:</span>
                 <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="n">value</span>
 
@@ -825,23 +825,23 @@
 <div class="viewcode-block" id="Encoding.to_str">
 <a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.encoding.Encoding.to_str">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">to_str</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the string representation of the model&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""Returns the string representation of the model"""</span>
         <span class="k">return</span> <span class="n">pprint</span><span class="o">.</span><span class="n">pformat</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">to_dict</span><span class="p">())</span></div>
 
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;For `print` and `pprint`&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""For `print` and `pprint`"""</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">to_str</span><span class="p">()</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns true if both objects are equal&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""Returns true if both objects are equal"""</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">Encoding</span><span class="p">):</span>
             <span class="k">return</span> <span class="kc">False</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="vm">__dict__</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__ne__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns true if both objects are not equal&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""Returns true if both objects are not equal"""</span>
         <span class="k">return</span> <span class="ow">not</span> <span class="bp">self</span> <span class="o">==</span> <span class="n">other</span></div>
 
 </pre></div>

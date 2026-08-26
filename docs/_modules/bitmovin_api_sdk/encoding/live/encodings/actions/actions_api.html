@@ -106,7 +106,7 @@
 <a class="viewcode-back" href="../../../../../../__modules/bitmovin_api_sdk.encoding.live.encodings.actions.html#bitmovin_api_sdk.encoding.live.encodings.actions.actions_api.ActionsApi.patch">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">patch</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">encoding_id</span><span class="p">,</span> <span class="n">update_encoding_rtmp_ingest_point_request</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, UpdateEncodingRtmpIngestPointRequest, dict) -&gt; UpdateEncodingRtmpIngestPointResponse</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Update Ingest Points of a Redundant RTMP Input</span>
+<span class="w">        </span><span class="sd">"""Update Ingest Points of a Redundant RTMP Input</span>
 
 <span class="sd">        :param encoding_id: Id of the encoding.</span>
 <span class="sd">        :type encoding_id: string_types, required</span>
@@ -114,12 +114,12 @@
 <span class="sd">        :type update_encoding_rtmp_ingest_point_request: UpdateEncodingRtmpIngestPointRequest, required</span>
 <span class="sd">        :return:</span>
 <span class="sd">        :rtype: UpdateEncodingRtmpIngestPointResponse</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">patch</span><span class="p">(</span>
-            <span class="s1">&#39;/encoding/live/encodings/</span><span class="si">{encoding_id}</span><span class="s1">/actions/update-rtmp-ingest-points&#39;</span><span class="p">,</span>
+            <span class="s1">'/encoding/live/encodings/</span><span class="si">{encoding_id}</span><span class="s1">/actions/update-rtmp-ingest-points'</span><span class="p">,</span>
             <span class="n">update_encoding_rtmp_ingest_point_request</span><span class="p">,</span>
-            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;encoding_id&#39;</span><span class="p">:</span> <span class="n">encoding_id</span><span class="p">},</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">'encoding_id'</span><span class="p">:</span> <span class="n">encoding_id</span><span class="p">},</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">UpdateEncodingRtmpIngestPointResponse</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>
         <span class="p">)</span></div>

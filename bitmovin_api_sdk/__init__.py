@@ -1149,6 +1149,9 @@ from bitmovin_api_sdk.models.adaptation_set_role import AdaptationSetRole
 from bitmovin_api_sdk.models.adaptation_set_type import AdaptationSetType
 from bitmovin_api_sdk.models.adaptation_set_type_response import AdaptationSetTypeResponse
 from bitmovin_api_sdk.models.adaptive_quant_mode import AdaptiveQuantMode
+from bitmovin_api_sdk.models.advisory_analysis_status import AdvisoryAnalysisStatus
+from bitmovin_api_sdk.models.advisory_category import AdvisoryCategory
+from bitmovin_api_sdk.models.advisory_confidence import AdvisoryConfidence
 from bitmovin_api_sdk.models.aes_encryption_drm import AesEncryptionDrm
 from bitmovin_api_sdk.models.aes_encryption_method import AesEncryptionMethod
 from bitmovin_api_sdk.models.age_range import AgeRange
@@ -1170,6 +1173,7 @@ from bitmovin_api_sdk.models.ai_scene_analysis_asset_description import AiSceneA
 from bitmovin_api_sdk.models.ai_scene_analysis_automatic_ad_placement import AiSceneAnalysisAutomaticAdPlacement
 from bitmovin_api_sdk.models.ai_scene_analysis_features import AiSceneAnalysisFeatures
 from bitmovin_api_sdk.models.ai_scene_analysis_output_language_codes import AiSceneAnalysisOutputLanguageCodes
+from bitmovin_api_sdk.models.ai_scene_analysis_regulatory_advisories import AiSceneAnalysisRegulatoryAdvisories
 from bitmovin_api_sdk.models.akamai_account import AkamaiAccount
 from bitmovin_api_sdk.models.akamai_account_region_settings import AkamaiAccountRegionSettings
 from bitmovin_api_sdk.models.akamai_cloud_region import AkamaiCloudRegion
@@ -1358,6 +1362,7 @@ from bitmovin_api_sdk.models.condition_operator import ConditionOperator
 from bitmovin_api_sdk.models.condition_type import ConditionType
 from bitmovin_api_sdk.models.conform_filter import ConformFilter
 from bitmovin_api_sdk.models.content import Content
+from bitmovin_api_sdk.models.content_advisory import ContentAdvisory
 from bitmovin_api_sdk.models.content_protection import ContentProtection
 from bitmovin_api_sdk.models.convert_scc_caption import ConvertSccCaption
 from bitmovin_api_sdk.models.convert_scc_caption_web_vtt_settings import ConvertSccCaptionWebVttSettings
@@ -1567,7 +1572,6 @@ from bitmovin_api_sdk.models.h264_trellis import H264Trellis
 from bitmovin_api_sdk.models.h264_video_configuration import H264VideoConfiguration
 from bitmovin_api_sdk.models.h265_dynamic_range_format import H265DynamicRangeFormat
 from bitmovin_api_sdk.models.h265_per_title_configuration import H265PerTitleConfiguration
-from bitmovin_api_sdk.models.h265_v2_constant_bitrate_mode_config import H265V2ConstantBitrateModeConfig
 from bitmovin_api_sdk.models.h265_v2_motion_compensated_temporal_filtering import H265V2MotionCompensatedTemporalFiltering
 from bitmovin_api_sdk.models.h265_v2_per_title_configuration import H265V2PerTitleConfiguration
 from bitmovin_api_sdk.models.h265_v2_perceptual_encoding_mode import H265V2PerceptualEncodingMode
@@ -1713,6 +1717,7 @@ from bitmovin_api_sdk.models.mp3_muxing import Mp3Muxing
 from bitmovin_api_sdk.models.mp3_muxing_information import Mp3MuxingInformation
 from bitmovin_api_sdk.models.mp4_muxing import Mp4Muxing
 from bitmovin_api_sdk.models.mp4_muxing_information import Mp4MuxingInformation
+from bitmovin_api_sdk.models.msl_publishing_authentication import MslPublishingAuthentication
 from bitmovin_api_sdk.models.muxing import Muxing
 from bitmovin_api_sdk.models.muxing_information_audio_track import MuxingInformationAudioTrack
 from bitmovin_api_sdk.models.muxing_information_video_track import MuxingInformationVideoTrack
@@ -1812,6 +1817,7 @@ from bitmovin_api_sdk.models.rate_distortion_penalty_mode import RateDistortionP
 from bitmovin_api_sdk.models.rating import Rating
 from bitmovin_api_sdk.models.raw_id3_tag import RawId3Tag
 from bitmovin_api_sdk.models.redundant_rtmp_input import RedundantRtmpInput
+from bitmovin_api_sdk.models.regulatory_advisory_topic import RegulatoryAdvisoryTopic
 from bitmovin_api_sdk.models.reprioritize_encoding_request import ReprioritizeEncodingRequest
 from bitmovin_api_sdk.models.reschedule_encoding_request import RescheduleEncodingRequest
 from bitmovin_api_sdk.models.reset_live_manifest_time_shift import ResetLiveManifestTimeShift
@@ -1845,6 +1851,7 @@ from bitmovin_api_sdk.models.scene_analysis_details_response import SceneAnalysi
 from bitmovin_api_sdk.models.scene_analysis_languages_response import SceneAnalysisLanguagesResponse
 from bitmovin_api_sdk.models.scene_analysis_list_item import SceneAnalysisListItem
 from bitmovin_api_sdk.models.scene_analysis_list_sort import SceneAnalysisListSort
+from bitmovin_api_sdk.models.scene_analysis_matching_segment import SceneAnalysisMatchingSegment
 from bitmovin_api_sdk.models.scene_dynamics import SceneDynamics
 from bitmovin_api_sdk.models.scene_object import SceneObject
 from bitmovin_api_sdk.models.scene_pacing import ScenePacing
@@ -1861,6 +1868,7 @@ from bitmovin_api_sdk.models.setting import Setting
 from bitmovin_api_sdk.models.sftp_input import SftpInput
 from bitmovin_api_sdk.models.sftp_output import SftpOutput
 from bitmovin_api_sdk.models.shot import Shot
+from bitmovin_api_sdk.models.shot_advisories import ShotAdvisories
 from bitmovin_api_sdk.models.sidecar_error_mode import SidecarErrorMode
 from bitmovin_api_sdk.models.sidecar_file import SidecarFile
 from bitmovin_api_sdk.models.sidecar_file_type import SidecarFileType
@@ -2032,4 +2040,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.277.0"
+__version__ = "1.278.0"

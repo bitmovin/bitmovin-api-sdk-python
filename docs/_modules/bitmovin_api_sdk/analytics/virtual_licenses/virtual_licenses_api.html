@@ -108,16 +108,16 @@
 <a class="viewcode-back" href="../../../../__modules/bitmovin_api_sdk.analytics.virtual_licenses.html#bitmovin_api_sdk.analytics.virtual_licenses.virtual_licenses_api.VirtualLicensesApi.create">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">analytics_virtual_license_request</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (AnalyticsVirtualLicenseRequest, dict) -&gt; AnalyticsVirtualLicense</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Create Analytics Virtual License</span>
+<span class="w">        </span><span class="sd">"""Create Analytics Virtual License</span>
 
 <span class="sd">        :param analytics_virtual_license_request: Analytics Virtual License to be created</span>
 <span class="sd">        :type analytics_virtual_license_request: AnalyticsVirtualLicenseRequest, required</span>
 <span class="sd">        :return: Created Analytics Virtual license</span>
 <span class="sd">        :rtype: AnalyticsVirtualLicense</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">post</span><span class="p">(</span>
-            <span class="s1">&#39;/analytics/virtual-licenses&#39;</span><span class="p">,</span>
+            <span class="s1">'/analytics/virtual-licenses'</span><span class="p">,</span>
             <span class="n">analytics_virtual_license_request</span><span class="p">,</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">AnalyticsVirtualLicense</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>
@@ -128,17 +128,17 @@
 <a class="viewcode-back" href="../../../../__modules/bitmovin_api_sdk.analytics.virtual_licenses.html#bitmovin_api_sdk.analytics.virtual_licenses.virtual_licenses_api.VirtualLicensesApi.delete">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">delete</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">virtual_license_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, dict) -&gt; BitmovinResponse</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Delete Analytics Virtual License</span>
+<span class="w">        </span><span class="sd">"""Delete Analytics Virtual License</span>
 
 <span class="sd">        :param virtual_license_id: Virtual License id</span>
 <span class="sd">        :type virtual_license_id: string_types, required</span>
 <span class="sd">        :return: Id of deleted Virtual License</span>
 <span class="sd">        :rtype: BitmovinResponse</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span>
-            <span class="s1">&#39;/analytics/virtual-licenses/</span><span class="si">{virtual_license_id}</span><span class="s1">&#39;</span><span class="p">,</span>
-            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;virtual_license_id&#39;</span><span class="p">:</span> <span class="n">virtual_license_id</span><span class="p">},</span>
+            <span class="s1">'/analytics/virtual-licenses/</span><span class="si">{virtual_license_id}</span><span class="s1">'</span><span class="p">,</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">'virtual_license_id'</span><span class="p">:</span> <span class="n">virtual_license_id</span><span class="p">},</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">BitmovinResponse</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>
         <span class="p">)</span></div>
@@ -148,17 +148,17 @@
 <a class="viewcode-back" href="../../../../__modules/bitmovin_api_sdk.analytics.virtual_licenses.html#bitmovin_api_sdk.analytics.virtual_licenses.virtual_licenses_api.VirtualLicensesApi.get">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">virtual_license_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, dict) -&gt; AnalyticsVirtualLicense</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Analytics Virtual License</span>
+<span class="w">        </span><span class="sd">"""Analytics Virtual License</span>
 
 <span class="sd">        :param virtual_license_id: Virtual license id</span>
 <span class="sd">        :type virtual_license_id: string_types, required</span>
 <span class="sd">        :return: Analytics Virtual License</span>
 <span class="sd">        :rtype: AnalyticsVirtualLicense</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
-            <span class="s1">&#39;/analytics/virtual-licenses/</span><span class="si">{virtual_license_id}</span><span class="s1">&#39;</span><span class="p">,</span>
-            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;virtual_license_id&#39;</span><span class="p">:</span> <span class="n">virtual_license_id</span><span class="p">},</span>
+            <span class="s1">'/analytics/virtual-licenses/</span><span class="si">{virtual_license_id}</span><span class="s1">'</span><span class="p">,</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">'virtual_license_id'</span><span class="p">:</span> <span class="n">virtual_license_id</span><span class="p">},</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">AnalyticsVirtualLicense</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>
         <span class="p">)</span></div>
@@ -168,16 +168,16 @@
 <a class="viewcode-back" href="../../../../__modules/bitmovin_api_sdk.analytics.virtual_licenses.html#bitmovin_api_sdk.analytics.virtual_licenses.virtual_licenses_api.VirtualLicensesApi.list">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">list</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">query_params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (AnalyticsVirtualLicenseListQueryParams, dict) -&gt; AnalyticsVirtualLicense</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;List Analytics Virtual Licenses</span>
+<span class="w">        </span><span class="sd">"""List Analytics Virtual Licenses</span>
 
 <span class="sd">        :param query_params: Query parameters</span>
 <span class="sd">        :type query_params: AnalyticsVirtualLicenseListQueryParams</span>
 <span class="sd">        :return: List of Analytics Virtual licenses</span>
 <span class="sd">        :rtype: AnalyticsVirtualLicense</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
-            <span class="s1">&#39;/analytics/virtual-licenses&#39;</span><span class="p">,</span>
+            <span class="s1">'/analytics/virtual-licenses'</span><span class="p">,</span>
             <span class="n">query_params</span><span class="o">=</span><span class="n">query_params</span><span class="p">,</span>
             <span class="n">pagination_response</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">AnalyticsVirtualLicense</span><span class="p">,</span>
@@ -189,7 +189,7 @@
 <a class="viewcode-back" href="../../../../__modules/bitmovin_api_sdk.analytics.virtual_licenses.html#bitmovin_api_sdk.analytics.virtual_licenses.virtual_licenses_api.VirtualLicensesApi.update">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">virtual_license_id</span><span class="p">,</span> <span class="n">analytics_virtual_license_request</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, AnalyticsVirtualLicenseRequest, dict) -&gt; AnalyticsVirtualLicense</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Update Analytics Virtual License</span>
+<span class="w">        </span><span class="sd">"""Update Analytics Virtual License</span>
 
 <span class="sd">        :param virtual_license_id: Virtual license id</span>
 <span class="sd">        :type virtual_license_id: string_types, required</span>
@@ -197,12 +197,12 @@
 <span class="sd">        :type analytics_virtual_license_request: AnalyticsVirtualLicenseRequest, required</span>
 <span class="sd">        :return: Updated Analytics Virtual License</span>
 <span class="sd">        :rtype: AnalyticsVirtualLicense</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">put</span><span class="p">(</span>
-            <span class="s1">&#39;/analytics/virtual-licenses/</span><span class="si">{virtual_license_id}</span><span class="s1">&#39;</span><span class="p">,</span>
+            <span class="s1">'/analytics/virtual-licenses/</span><span class="si">{virtual_license_id}</span><span class="s1">'</span><span class="p">,</span>
             <span class="n">analytics_virtual_license_request</span><span class="p">,</span>
-            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;virtual_license_id&#39;</span><span class="p">:</span> <span class="n">virtual_license_id</span><span class="p">},</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">'virtual_license_id'</span><span class="p">:</span> <span class="n">virtual_license_id</span><span class="p">},</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">AnalyticsVirtualLicense</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>
         <span class="p">)</span></div>

@@ -115,16 +115,16 @@
 <a class="viewcode-back" href="../../../../../__modules/bitmovin_api_sdk.encoding.outputs.live_media_ingest.html#bitmovin_api_sdk.encoding.outputs.live_media_ingest.live_media_ingest_api.LiveMediaIngestApi.create">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">live_media_ingest_output</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (LiveMediaIngestOutput, dict) -&gt; LiveMediaIngestOutput</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Create Live Media Ingest Output</span>
+<span class="w">        </span><span class="sd">"""Create Live Media Ingest Output</span>
 
 <span class="sd">        :param live_media_ingest_output: The Live Media Ingest output to be created</span>
 <span class="sd">        :type live_media_ingest_output: LiveMediaIngestOutput, required</span>
 <span class="sd">        :return: Live Media Ingest output</span>
 <span class="sd">        :rtype: LiveMediaIngestOutput</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">post</span><span class="p">(</span>
-            <span class="s1">&#39;/encoding/outputs/live-media-ingest&#39;</span><span class="p">,</span>
+            <span class="s1">'/encoding/outputs/live-media-ingest'</span><span class="p">,</span>
             <span class="n">live_media_ingest_output</span><span class="p">,</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">LiveMediaIngestOutput</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>
@@ -135,17 +135,17 @@
 <a class="viewcode-back" href="../../../../../__modules/bitmovin_api_sdk.encoding.outputs.live_media_ingest.html#bitmovin_api_sdk.encoding.outputs.live_media_ingest.live_media_ingest_api.LiveMediaIngestApi.delete">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">delete</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">output_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, dict) -&gt; BitmovinResponse</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Delete Live Media Ingest Output</span>
+<span class="w">        </span><span class="sd">"""Delete Live Media Ingest Output</span>
 
 <span class="sd">        :param output_id: Id of the output</span>
 <span class="sd">        :type output_id: string_types, required</span>
 <span class="sd">        :return: Id of the output</span>
 <span class="sd">        :rtype: BitmovinResponse</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span>
-            <span class="s1">&#39;/encoding/outputs/live-media-ingest/</span><span class="si">{output_id}</span><span class="s1">&#39;</span><span class="p">,</span>
-            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;output_id&#39;</span><span class="p">:</span> <span class="n">output_id</span><span class="p">},</span>
+            <span class="s1">'/encoding/outputs/live-media-ingest/</span><span class="si">{output_id}</span><span class="s1">'</span><span class="p">,</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">'output_id'</span><span class="p">:</span> <span class="n">output_id</span><span class="p">},</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">BitmovinResponse</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>
         <span class="p">)</span></div>
@@ -155,17 +155,17 @@
 <a class="viewcode-back" href="../../../../../__modules/bitmovin_api_sdk.encoding.outputs.live_media_ingest.html#bitmovin_api_sdk.encoding.outputs.live_media_ingest.live_media_ingest_api.LiveMediaIngestApi.get">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">output_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, dict) -&gt; LiveMediaIngestOutput</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get Live Media Ingest Output details</span>
+<span class="w">        </span><span class="sd">"""Get Live Media Ingest Output details</span>
 
 <span class="sd">        :param output_id: Id of the output</span>
 <span class="sd">        :type output_id: string_types, required</span>
 <span class="sd">        :return: Live Media Ingest output</span>
 <span class="sd">        :rtype: LiveMediaIngestOutput</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
-            <span class="s1">&#39;/encoding/outputs/live-media-ingest/</span><span class="si">{output_id}</span><span class="s1">&#39;</span><span class="p">,</span>
-            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;output_id&#39;</span><span class="p">:</span> <span class="n">output_id</span><span class="p">},</span>
+            <span class="s1">'/encoding/outputs/live-media-ingest/</span><span class="si">{output_id}</span><span class="s1">'</span><span class="p">,</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">'output_id'</span><span class="p">:</span> <span class="n">output_id</span><span class="p">},</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">LiveMediaIngestOutput</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>
         <span class="p">)</span></div>
@@ -175,16 +175,16 @@
 <a class="viewcode-back" href="../../../../../__modules/bitmovin_api_sdk.encoding.outputs.live_media_ingest.html#bitmovin_api_sdk.encoding.outputs.live_media_ingest.live_media_ingest_api.LiveMediaIngestApi.list">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">list</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">query_params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (LiveMediaIngestOutputListQueryParams, dict) -&gt; LiveMediaIngestOutput</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;List Live Media Ingest Outputs</span>
+<span class="w">        </span><span class="sd">"""List Live Media Ingest Outputs</span>
 
 <span class="sd">        :param query_params: Query parameters</span>
 <span class="sd">        :type query_params: LiveMediaIngestOutputListQueryParams</span>
 <span class="sd">        :return: List of Live Media Ingest outputs</span>
 <span class="sd">        :rtype: LiveMediaIngestOutput</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
-            <span class="s1">&#39;/encoding/outputs/live-media-ingest&#39;</span><span class="p">,</span>
+            <span class="s1">'/encoding/outputs/live-media-ingest'</span><span class="p">,</span>
             <span class="n">query_params</span><span class="o">=</span><span class="n">query_params</span><span class="p">,</span>
             <span class="n">pagination_response</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">LiveMediaIngestOutput</span><span class="p">,</span>

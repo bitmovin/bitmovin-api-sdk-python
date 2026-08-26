@@ -105,7 +105,7 @@
 <a class="viewcode-back" href="../../../../../../__modules/bitmovin_api_sdk.encoding.live.standby_pools.logs.html#bitmovin_api_sdk.encoding.live.standby_pools.logs.logs_api.LogsApi.list">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">list</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pool_id</span><span class="p">,</span> <span class="n">query_params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, LiveStandbyPoolEventLogListQueryParams, dict) -&gt; LiveStandbyPoolEventLog</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;List event logs for a standby pool</span>
+<span class="w">        </span><span class="sd">"""List event logs for a standby pool</span>
 
 <span class="sd">        :param pool_id: Id of the standby pool</span>
 <span class="sd">        :type pool_id: string_types, required</span>
@@ -113,11 +113,11 @@
 <span class="sd">        :type query_params: LiveStandbyPoolEventLogListQueryParams</span>
 <span class="sd">        :return: Standby pool event logs list response</span>
 <span class="sd">        :rtype: LiveStandbyPoolEventLog</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
-            <span class="s1">&#39;/encoding/live/standby-pools/</span><span class="si">{pool_id}</span><span class="s1">/logs&#39;</span><span class="p">,</span>
-            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;pool_id&#39;</span><span class="p">:</span> <span class="n">pool_id</span><span class="p">},</span>
+            <span class="s1">'/encoding/live/standby-pools/</span><span class="si">{pool_id}</span><span class="s1">/logs'</span><span class="p">,</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">'pool_id'</span><span class="p">:</span> <span class="n">pool_id</span><span class="p">},</span>
             <span class="n">query_params</span><span class="o">=</span><span class="n">query_params</span><span class="p">,</span>
             <span class="n">pagination_response</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">LiveStandbyPoolEventLog</span><span class="p">,</span>

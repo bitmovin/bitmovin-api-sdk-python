@@ -107,16 +107,16 @@
 <a class="viewcode-back" href="../../../../../__modules/bitmovin_api_sdk.analytics.queries.sum.html#bitmovin_api_sdk.analytics.queries.sum.sum_api.SumApi.create">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">analytics_sum_query_request</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (AnalyticsSumQueryRequest, dict) -&gt; AnalyticsResponse</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sum</span>
+<span class="w">        </span><span class="sd">"""Sum</span>
 
 <span class="sd">        :param analytics_sum_query_request: Analytics Query Object</span>
 <span class="sd">        :type analytics_sum_query_request: AnalyticsSumQueryRequest, required</span>
 <span class="sd">        :return: Service specific result</span>
 <span class="sd">        :rtype: AnalyticsResponse</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">post</span><span class="p">(</span>
-            <span class="s1">&#39;/analytics/queries/sum&#39;</span><span class="p">,</span>
+            <span class="s1">'/analytics/queries/sum'</span><span class="p">,</span>
             <span class="n">analytics_sum_query_request</span><span class="p">,</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">AnalyticsResponse</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>

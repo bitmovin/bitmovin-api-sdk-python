@@ -107,7 +107,7 @@
 <a class="viewcode-back" href="../../../../../../../__modules/bitmovin_api_sdk.encoding.manifests.hls.streams.iframe.html#bitmovin_api_sdk.encoding.manifests.hls.streams.iframe.iframe_api.IframeApi.create">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">manifest_id</span><span class="p">,</span> <span class="n">stream_id</span><span class="p">,</span> <span class="n">i_frame_playlist</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, string_types, IFramePlaylist, dict) -&gt; IFramePlaylist</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Create I-frame playlist to variant stream</span>
+<span class="w">        </span><span class="sd">"""Create I-frame playlist to variant stream</span>
 
 <span class="sd">        :param manifest_id: Id of the hls manifest.</span>
 <span class="sd">        :type manifest_id: string_types, required</span>
@@ -117,12 +117,12 @@
 <span class="sd">        :type i_frame_playlist: IFramePlaylist, required</span>
 <span class="sd">        :return: Iframe-Playlist details</span>
 <span class="sd">        :rtype: IFramePlaylist</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">post</span><span class="p">(</span>
-            <span class="s1">&#39;/encoding/manifests/hls/</span><span class="si">{manifest_id}</span><span class="s1">/streams/</span><span class="si">{stream_id}</span><span class="s1">/iframe&#39;</span><span class="p">,</span>
+            <span class="s1">'/encoding/manifests/hls/</span><span class="si">{manifest_id}</span><span class="s1">/streams/</span><span class="si">{stream_id}</span><span class="s1">/iframe'</span><span class="p">,</span>
             <span class="n">i_frame_playlist</span><span class="p">,</span>
-            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;manifest_id&#39;</span><span class="p">:</span> <span class="n">manifest_id</span><span class="p">,</span> <span class="s1">&#39;stream_id&#39;</span><span class="p">:</span> <span class="n">stream_id</span><span class="p">},</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">'manifest_id'</span><span class="p">:</span> <span class="n">manifest_id</span><span class="p">,</span> <span class="s1">'stream_id'</span><span class="p">:</span> <span class="n">stream_id</span><span class="p">},</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">IFramePlaylist</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>
         <span class="p">)</span></div>
@@ -132,7 +132,7 @@
 <a class="viewcode-back" href="../../../../../../../__modules/bitmovin_api_sdk.encoding.manifests.hls.streams.iframe.html#bitmovin_api_sdk.encoding.manifests.hls.streams.iframe.iframe_api.IframeApi.delete">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">delete</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">manifest_id</span><span class="p">,</span> <span class="n">stream_id</span><span class="p">,</span> <span class="n">iframe_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, string_types, string_types, dict) -&gt; BitmovinResponse</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Delete I-frame playlist</span>
+<span class="w">        </span><span class="sd">"""Delete I-frame playlist</span>
 
 <span class="sd">        :param manifest_id: Id of the hls manifest.</span>
 <span class="sd">        :type manifest_id: string_types, required</span>
@@ -142,11 +142,11 @@
 <span class="sd">        :type iframe_id: string_types, required</span>
 <span class="sd">        :return: Id of the custom tag</span>
 <span class="sd">        :rtype: BitmovinResponse</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span>
-            <span class="s1">&#39;/encoding/manifests/hls/</span><span class="si">{manifest_id}</span><span class="s1">/streams/</span><span class="si">{stream_id}</span><span class="s1">/iframe/</span><span class="si">{iframe_id}</span><span class="s1">&#39;</span><span class="p">,</span>
-            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;manifest_id&#39;</span><span class="p">:</span> <span class="n">manifest_id</span><span class="p">,</span> <span class="s1">&#39;stream_id&#39;</span><span class="p">:</span> <span class="n">stream_id</span><span class="p">,</span> <span class="s1">&#39;iframe_id&#39;</span><span class="p">:</span> <span class="n">iframe_id</span><span class="p">},</span>
+            <span class="s1">'/encoding/manifests/hls/</span><span class="si">{manifest_id}</span><span class="s1">/streams/</span><span class="si">{stream_id}</span><span class="s1">/iframe/</span><span class="si">{iframe_id}</span><span class="s1">'</span><span class="p">,</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">'manifest_id'</span><span class="p">:</span> <span class="n">manifest_id</span><span class="p">,</span> <span class="s1">'stream_id'</span><span class="p">:</span> <span class="n">stream_id</span><span class="p">,</span> <span class="s1">'iframe_id'</span><span class="p">:</span> <span class="n">iframe_id</span><span class="p">},</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">BitmovinResponse</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>
         <span class="p">)</span></div>
@@ -156,7 +156,7 @@
 <a class="viewcode-back" href="../../../../../../../__modules/bitmovin_api_sdk.encoding.manifests.hls.streams.iframe.html#bitmovin_api_sdk.encoding.manifests.hls.streams.iframe.iframe_api.IframeApi.get">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">manifest_id</span><span class="p">,</span> <span class="n">stream_id</span><span class="p">,</span> <span class="n">iframe_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, string_types, string_types, dict) -&gt; IFramePlaylist</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get I-frame playlist details</span>
+<span class="w">        </span><span class="sd">"""Get I-frame playlist details</span>
 
 <span class="sd">        :param manifest_id: Id of the hls manifest.</span>
 <span class="sd">        :type manifest_id: string_types, required</span>
@@ -166,11 +166,11 @@
 <span class="sd">        :type iframe_id: string_types, required</span>
 <span class="sd">        :return: Custom tag details</span>
 <span class="sd">        :rtype: IFramePlaylist</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
-            <span class="s1">&#39;/encoding/manifests/hls/</span><span class="si">{manifest_id}</span><span class="s1">/streams/</span><span class="si">{stream_id}</span><span class="s1">/iframe/</span><span class="si">{iframe_id}</span><span class="s1">&#39;</span><span class="p">,</span>
-            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;manifest_id&#39;</span><span class="p">:</span> <span class="n">manifest_id</span><span class="p">,</span> <span class="s1">&#39;stream_id&#39;</span><span class="p">:</span> <span class="n">stream_id</span><span class="p">,</span> <span class="s1">&#39;iframe_id&#39;</span><span class="p">:</span> <span class="n">iframe_id</span><span class="p">},</span>
+            <span class="s1">'/encoding/manifests/hls/</span><span class="si">{manifest_id}</span><span class="s1">/streams/</span><span class="si">{stream_id}</span><span class="s1">/iframe/</span><span class="si">{iframe_id}</span><span class="s1">'</span><span class="p">,</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">'manifest_id'</span><span class="p">:</span> <span class="n">manifest_id</span><span class="p">,</span> <span class="s1">'stream_id'</span><span class="p">:</span> <span class="n">stream_id</span><span class="p">,</span> <span class="s1">'iframe_id'</span><span class="p">:</span> <span class="n">iframe_id</span><span class="p">},</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">IFramePlaylist</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>
         <span class="p">)</span></div>
@@ -180,7 +180,7 @@
 <a class="viewcode-back" href="../../../../../../../__modules/bitmovin_api_sdk.encoding.manifests.hls.streams.iframe.html#bitmovin_api_sdk.encoding.manifests.hls.streams.iframe.iframe_api.IframeApi.list">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">list</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">manifest_id</span><span class="p">,</span> <span class="n">stream_id</span><span class="p">,</span> <span class="n">query_params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="c1"># type: (string_types, string_types, IFramePlaylistListQueryParams, dict) -&gt; IFramePlaylist</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;List I-frame playlists of a variant stream</span>
+<span class="w">        </span><span class="sd">"""List I-frame playlists of a variant stream</span>
 
 <span class="sd">        :param manifest_id: Id of the hls manifest.</span>
 <span class="sd">        :type manifest_id: string_types, required</span>
@@ -190,11 +190,11 @@
 <span class="sd">        :type query_params: IFramePlaylistListQueryParams</span>
 <span class="sd">        :return: Video media</span>
 <span class="sd">        :rtype: IFramePlaylist</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="sd">        """</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
-            <span class="s1">&#39;/encoding/manifests/hls/</span><span class="si">{manifest_id}</span><span class="s1">/streams/</span><span class="si">{stream_id}</span><span class="s1">/iframe&#39;</span><span class="p">,</span>
-            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;manifest_id&#39;</span><span class="p">:</span> <span class="n">manifest_id</span><span class="p">,</span> <span class="s1">&#39;stream_id&#39;</span><span class="p">:</span> <span class="n">stream_id</span><span class="p">},</span>
+            <span class="s1">'/encoding/manifests/hls/</span><span class="si">{manifest_id}</span><span class="s1">/streams/</span><span class="si">{stream_id}</span><span class="s1">/iframe'</span><span class="p">,</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">'manifest_id'</span><span class="p">:</span> <span class="n">manifest_id</span><span class="p">,</span> <span class="s1">'stream_id'</span><span class="p">:</span> <span class="n">stream_id</span><span class="p">},</span>
             <span class="n">query_params</span><span class="o">=</span><span class="n">query_params</span><span class="p">,</span>
             <span class="n">pagination_response</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">IFramePlaylist</span><span class="p">,</span>

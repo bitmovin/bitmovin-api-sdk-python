@@ -23,14 +23,12 @@ class H265V2PerTitleConfiguration(PerTitleConfiguration):
                  resolution_scale_factor=None,
                  codec_min_bitrate_factor=None,
                  codec_max_bitrate_factor=None,
-                 codec_bufsize_factor=None,
                  target_quality_qp=None):
-        # type: (int, int, float, float, AutoRepresentation, float, PerTitleFixedResolutionAndBitrateConfiguration, float, float, float, float, int) -> None
+        # type: (int, int, float, float, AutoRepresentation, float, PerTitleFixedResolutionAndBitrateConfiguration, float, float, float, int) -> None
         super(H265V2PerTitleConfiguration, self).__init__(min_bitrate=min_bitrate, max_bitrate=max_bitrate, min_bitrate_step_size=min_bitrate_step_size, max_bitrate_step_size=max_bitrate_step_size, auto_representations=auto_representations, complexity_factor=complexity_factor, fixed_resolution_and_bitrate_configuration=fixed_resolution_and_bitrate_configuration, resolution_scale_factor=resolution_scale_factor)
 
         self._codec_min_bitrate_factor = None
         self._codec_max_bitrate_factor = None
-        self._codec_bufsize_factor = None
         self._target_quality_qp = None
         self.discriminator = None
 
@@ -38,8 +36,6 @@ class H265V2PerTitleConfiguration(PerTitleConfiguration):
             self.codec_min_bitrate_factor = codec_min_bitrate_factor
         if codec_max_bitrate_factor is not None:
             self.codec_max_bitrate_factor = codec_max_bitrate_factor
-        if codec_bufsize_factor is not None:
-            self.codec_bufsize_factor = codec_bufsize_factor
         if target_quality_qp is not None:
             self.target_quality_qp = target_quality_qp
 
@@ -53,7 +49,6 @@ class H265V2PerTitleConfiguration(PerTitleConfiguration):
         types.update({
             'codec_min_bitrate_factor': 'float',
             'codec_max_bitrate_factor': 'float',
-            'codec_bufsize_factor': 'float',
             'target_quality_qp': 'int'
         })
 
@@ -69,7 +64,6 @@ class H265V2PerTitleConfiguration(PerTitleConfiguration):
         attributes.update({
             'codec_min_bitrate_factor': 'codecMinBitrateFactor',
             'codec_max_bitrate_factor': 'codecMaxBitrateFactor',
-            'codec_bufsize_factor': 'codecBufsizeFactor',
             'target_quality_qp': 'targetQualityQp'
         })
         return attributes
@@ -131,35 +125,6 @@ class H265V2PerTitleConfiguration(PerTitleConfiguration):
                 raise TypeError("Invalid type for `codec_max_bitrate_factor`, type has to be `float`")
 
         self._codec_max_bitrate_factor = codec_max_bitrate_factor
-
-    @property
-    def codec_bufsize_factor(self):
-        # type: () -> float
-        """Gets the codec_bufsize_factor of this H265V2PerTitleConfiguration.
-
-        This factor is used to calculate the bufsize of the codec configuration for the generated representations as a multiple of the targetBitrate
-
-        :return: The codec_bufsize_factor of this H265V2PerTitleConfiguration.
-        :rtype: float
-        """
-        return self._codec_bufsize_factor
-
-    @codec_bufsize_factor.setter
-    def codec_bufsize_factor(self, codec_bufsize_factor):
-        # type: (float) -> None
-        """Sets the codec_bufsize_factor of this H265V2PerTitleConfiguration.
-
-        This factor is used to calculate the bufsize of the codec configuration for the generated representations as a multiple of the targetBitrate
-
-        :param codec_bufsize_factor: The codec_bufsize_factor of this H265V2PerTitleConfiguration.
-        :type: float
-        """
-
-        if codec_bufsize_factor is not None:
-            if not isinstance(codec_bufsize_factor, (float, int)):
-                raise TypeError("Invalid type for `codec_bufsize_factor`, type has to be `float`")
-
-        self._codec_bufsize_factor = codec_bufsize_factor
 
     @property
     def target_quality_qp(self):
