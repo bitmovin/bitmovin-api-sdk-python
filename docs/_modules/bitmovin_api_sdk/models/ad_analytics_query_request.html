@@ -101,9 +101,10 @@
                  <span class="n">dimension</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">interval</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">group_by</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">include_context</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">limit</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">offset</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (datetime, datetime, string_types, list[AdAnalyticsAbstractFilter], list[AdAnalyticsOrderByEntry], AdAnalyticsAttribute, AnalyticsInterval, list[AdAnalyticsAttribute], int, int) -&gt; None</span>
+        <span class="c1"># type: (datetime, datetime, string_types, list[AdAnalyticsAbstractFilter], list[AdAnalyticsOrderByEntry], AdAnalyticsAttribute, AnalyticsInterval, list[AdAnalyticsAttribute], bool, int, int) -&gt; None</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">AdAnalyticsQueryRequest</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="n">end</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_license_key</span> <span class="o">=</span> <span class="kc">None</span>
@@ -112,6 +113,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_dimension</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_interval</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_group_by</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_include_context</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_limit</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_offset</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>
@@ -128,6 +130,8 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">interval</span> <span class="o">=</span> <span class="n">interval</span>
         <span class="k">if</span> <span class="n">group_by</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">group_by</span> <span class="o">=</span> <span class="n">group_by</span>
+        <span class="k">if</span> <span class="n">include_context</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">include_context</span> <span class="o">=</span> <span class="n">include_context</span>
         <span class="k">if</span> <span class="n">limit</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">limit</span> <span class="o">=</span> <span class="n">limit</span>
         <span class="k">if</span> <span class="n">offset</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -147,6 +151,7 @@
             <span class="s1">'dimension'</span><span class="p">:</span> <span class="s1">'AdAnalyticsAttribute'</span><span class="p">,</span>
             <span class="s1">'interval'</span><span class="p">:</span> <span class="s1">'AnalyticsInterval'</span><span class="p">,</span>
             <span class="s1">'group_by'</span><span class="p">:</span> <span class="s1">'list[AdAnalyticsAttribute]'</span><span class="p">,</span>
+            <span class="s1">'include_context'</span><span class="p">:</span> <span class="s1">'bool'</span><span class="p">,</span>
             <span class="s1">'limit'</span><span class="p">:</span> <span class="s1">'int'</span><span class="p">,</span>
             <span class="s1">'offset'</span><span class="p">:</span> <span class="s1">'int'</span>
         <span class="p">})</span>
@@ -167,6 +172,7 @@
             <span class="s1">'dimension'</span><span class="p">:</span> <span class="s1">'dimension'</span><span class="p">,</span>
             <span class="s1">'interval'</span><span class="p">:</span> <span class="s1">'interval'</span><span class="p">,</span>
             <span class="s1">'group_by'</span><span class="p">:</span> <span class="s1">'groupBy'</span><span class="p">,</span>
+            <span class="s1">'include_context'</span><span class="p">:</span> <span class="s1">'includeContext'</span><span class="p">,</span>
             <span class="s1">'limit'</span><span class="p">:</span> <span class="s1">'limit'</span><span class="p">,</span>
             <span class="s1">'offset'</span><span class="p">:</span> <span class="s1">'offset'</span>
         <span class="p">})</span>
@@ -337,6 +343,35 @@
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Invalid type for `group_by`, type has to be `list[AdAnalyticsAttribute]`"</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_group_by</span> <span class="o">=</span> <span class="n">group_by</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">include_context</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; bool</span>
+<span class="w">        </span><span class="sd">"""Gets the include_context of this AdAnalyticsQueryRequest.</span>
+
+<span class="sd">        Whether context data should be included in the response</span>
+
+<span class="sd">        :return: The include_context of this AdAnalyticsQueryRequest.</span>
+<span class="sd">        :rtype: bool</span>
+<span class="sd">        """</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_include_context</span>
+
+    <span class="nd">@include_context</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">include_context</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">include_context</span><span class="p">):</span>
+        <span class="c1"># type: (bool) -&gt; None</span>
+<span class="w">        </span><span class="sd">"""Sets the include_context of this AdAnalyticsQueryRequest.</span>
+
+<span class="sd">        Whether context data should be included in the response</span>
+
+<span class="sd">        :param include_context: The include_context of this AdAnalyticsQueryRequest.</span>
+<span class="sd">        :type: bool</span>
+<span class="sd">        """</span>
+
+        <span class="k">if</span> <span class="n">include_context</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">include_context</span><span class="p">,</span> <span class="nb">bool</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Invalid type for `include_context`, type has to be `bool`"</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_include_context</span> <span class="o">=</span> <span class="n">include_context</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">limit</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>

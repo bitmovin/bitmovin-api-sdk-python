@@ -5,7 +5,6 @@ from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
 from bitmovin_api_sdk.models.audio_configuration import AudioConfiguration
 from bitmovin_api_sdk.models.dts_x_channel_layout import DtsXChannelLayout
-from bitmovin_api_sdk.models.media_config_bitrate import MediaConfigBitrate
 from bitmovin_api_sdk.models.ott_loudness_mode import OttLoudnessMode
 import pprint
 import six

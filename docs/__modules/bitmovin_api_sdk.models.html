@@ -586,6 +586,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#bitmovin_api_sdk.models.ad_analytics_query_request.AdAnalyticsQueryRequest.dimension"><code class="docutils literal notranslate"><span class="pre">AdAnalyticsQueryRequest.dimension</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#bitmovin_api_sdk.models.ad_analytics_query_request.AdAnalyticsQueryRequest.filters"><code class="docutils literal notranslate"><span class="pre">AdAnalyticsQueryRequest.filters</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#bitmovin_api_sdk.models.ad_analytics_query_request.AdAnalyticsQueryRequest.group_by"><code class="docutils literal notranslate"><span class="pre">AdAnalyticsQueryRequest.group_by</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#bitmovin_api_sdk.models.ad_analytics_query_request.AdAnalyticsQueryRequest.include_context"><code class="docutils literal notranslate"><span class="pre">AdAnalyticsQueryRequest.include_context</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#bitmovin_api_sdk.models.ad_analytics_query_request.AdAnalyticsQueryRequest.interval"><code class="docutils literal notranslate"><span class="pre">AdAnalyticsQueryRequest.interval</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#bitmovin_api_sdk.models.ad_analytics_query_request.AdAnalyticsQueryRequest.license_key"><code class="docutils literal notranslate"><span class="pre">AdAnalyticsQueryRequest.license_key</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#bitmovin_api_sdk.models.ad_analytics_query_request.AdAnalyticsQueryRequest.limit"><code class="docutils literal notranslate"><span class="pre">AdAnalyticsQueryRequest.limit</span></code></a></li>
@@ -8330,20 +8331,6 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.media_config_bitrate">bitmovin_api_sdk.models.media_config_bitrate module</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#bitmovin_api_sdk.models.media_config_bitrate.MediaConfigBitrate"><code class="docutils literal notranslate"><span class="pre">MediaConfigBitrate</span></code></a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#bitmovin_api_sdk.models.media_config_bitrate.MediaConfigBitrate.MCB_160000"><code class="docutils literal notranslate"><span class="pre">MediaConfigBitrate.MCB_160000</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#bitmovin_api_sdk.models.media_config_bitrate.MediaConfigBitrate.MCB_192000"><code class="docutils literal notranslate"><span class="pre">MediaConfigBitrate.MCB_192000</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#bitmovin_api_sdk.models.media_config_bitrate.MediaConfigBitrate.MCB_224000"><code class="docutils literal notranslate"><span class="pre">MediaConfigBitrate.MCB_224000</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#bitmovin_api_sdk.models.media_config_bitrate.MediaConfigBitrate.MCB_256000"><code class="docutils literal notranslate"><span class="pre">MediaConfigBitrate.MCB_256000</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#bitmovin_api_sdk.models.media_config_bitrate.MediaConfigBitrate.MCB_288000"><code class="docutils literal notranslate"><span class="pre">MediaConfigBitrate.MCB_288000</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#bitmovin_api_sdk.models.media_config_bitrate.MediaConfigBitrate.MCB_320000"><code class="docutils literal notranslate"><span class="pre">MediaConfigBitrate.MCB_320000</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#bitmovin_api_sdk.models.media_config_bitrate.MediaConfigBitrate.MCB_384000"><code class="docutils literal notranslate"><span class="pre">MediaConfigBitrate.MCB_384000</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#bitmovin_api_sdk.models.media_config_bitrate.MediaConfigBitrate.MCB_448000"><code class="docutils literal notranslate"><span class="pre">MediaConfigBitrate.MCB_448000</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
 <li class="toctree-l2"><a class="reference internal" href="#module-bitmovin_api_sdk.models.media_info_type">bitmovin_api_sdk.models.media_info_type module</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#bitmovin_api_sdk.models.media_info_type.MediaInfoType"><code class="docutils literal notranslate"><span class="pre">MediaInfoType</span></code></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#bitmovin_api_sdk.models.media_info_type.MediaInfoType.AUDIO"><code class="docutils literal notranslate"><span class="pre">MediaInfoType.AUDIO</span></code></a></li>
@@ -15113,6 +15100,21 @@
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p>list[<a class="reference internal" href="#bitmovin_api_sdk.models.ad_analytics_attribute.AdAnalyticsAttribute" title="bitmovin_api_sdk.models.ad_analytics_attribute.AdAnalyticsAttribute">AdAnalyticsAttribute</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="bitmovin_api_sdk.models.ad_analytics_query_request.AdAnalyticsQueryRequest.include_context">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">include_context</span></span><a class="headerlink" href="#bitmovin_api_sdk.models.ad_analytics_query_request.AdAnalyticsQueryRequest.include_context" title="Link to this definition"></a></dt>
+<dd><p>Gets the include_context of this AdAnalyticsQueryRequest.</p>
+<p>Whether context data should be included in the response</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The include_context of this AdAnalyticsQueryRequest.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>bool</p>
 </dd>
 </dl>
 </dd></dl>
@@ -56330,55 +56332,6 @@
 <dl class="py attribute">
 <dt class="sig sig-object py" id="bitmovin_api_sdk.models.max_transform_unit_size.MaxTransformUnitSize.MTU_8x8">
 <span class="sig-name descname"><span class="pre">MTU_8x8</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'MTU_8x8'</span></em><a class="headerlink" href="#bitmovin_api_sdk.models.max_transform_unit_size.MaxTransformUnitSize.MTU_8x8" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-</section>
-<section id="module-bitmovin_api_sdk.models.media_config_bitrate">
-<span id="bitmovin-api-sdk-models-media-config-bitrate-module"></span><h2>bitmovin_api_sdk.models.media_config_bitrate module<a class="headerlink" href="#module-bitmovin_api_sdk.models.media_config_bitrate" title="Link to this heading"></a></h2>
-<dl class="py class">
-<dt class="sig sig-object py" id="bitmovin_api_sdk.models.media_config_bitrate.MediaConfigBitrate">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bitmovin_api_sdk.models.media_config_bitrate.</span></span><span class="sig-name descname"><span class="pre">MediaConfigBitrate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">values</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bitmovin_api_sdk/models/media_config_bitrate.html#MediaConfigBitrate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bitmovin_api_sdk.models.media_config_bitrate.MediaConfigBitrate" title="Link to this definition"></a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
-<dl class="py attribute">
-<dt class="sig sig-object py" id="bitmovin_api_sdk.models.media_config_bitrate.MediaConfigBitrate.MCB_160000">
-<span class="sig-name descname"><span class="pre">MCB_160000</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'160000'</span></em><a class="headerlink" href="#bitmovin_api_sdk.models.media_config_bitrate.MediaConfigBitrate.MCB_160000" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="bitmovin_api_sdk.models.media_config_bitrate.MediaConfigBitrate.MCB_192000">
-<span class="sig-name descname"><span class="pre">MCB_192000</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'192000'</span></em><a class="headerlink" href="#bitmovin_api_sdk.models.media_config_bitrate.MediaConfigBitrate.MCB_192000" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="bitmovin_api_sdk.models.media_config_bitrate.MediaConfigBitrate.MCB_224000">
-<span class="sig-name descname"><span class="pre">MCB_224000</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'224000'</span></em><a class="headerlink" href="#bitmovin_api_sdk.models.media_config_bitrate.MediaConfigBitrate.MCB_224000" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="bitmovin_api_sdk.models.media_config_bitrate.MediaConfigBitrate.MCB_256000">
-<span class="sig-name descname"><span class="pre">MCB_256000</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'256000'</span></em><a class="headerlink" href="#bitmovin_api_sdk.models.media_config_bitrate.MediaConfigBitrate.MCB_256000" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="bitmovin_api_sdk.models.media_config_bitrate.MediaConfigBitrate.MCB_288000">
-<span class="sig-name descname"><span class="pre">MCB_288000</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'288000'</span></em><a class="headerlink" href="#bitmovin_api_sdk.models.media_config_bitrate.MediaConfigBitrate.MCB_288000" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="bitmovin_api_sdk.models.media_config_bitrate.MediaConfigBitrate.MCB_320000">
-<span class="sig-name descname"><span class="pre">MCB_320000</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'320000'</span></em><a class="headerlink" href="#bitmovin_api_sdk.models.media_config_bitrate.MediaConfigBitrate.MCB_320000" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="bitmovin_api_sdk.models.media_config_bitrate.MediaConfigBitrate.MCB_384000">
-<span class="sig-name descname"><span class="pre">MCB_384000</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'384000'</span></em><a class="headerlink" href="#bitmovin_api_sdk.models.media_config_bitrate.MediaConfigBitrate.MCB_384000" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="bitmovin_api_sdk.models.media_config_bitrate.MediaConfigBitrate.MCB_448000">
-<span class="sig-name descname"><span class="pre">MCB_448000</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'448000'</span></em><a class="headerlink" href="#bitmovin_api_sdk.models.media_config_bitrate.MediaConfigBitrate.MCB_448000" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>

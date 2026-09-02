@@ -21,9 +21,10 @@ class AdAnalyticsQueryRequest(AnalyticsQueryTimeframe):
                  dimension=None,
                  interval=None,
                  group_by=None,
+                 include_context=None,
                  limit=None,
                  offset=None):
-        # type: (datetime, datetime, string_types, list[AdAnalyticsAbstractFilter], list[AdAnalyticsOrderByEntry], AdAnalyticsAttribute, AnalyticsInterval, list[AdAnalyticsAttribute], int, int) -> None
+        # type: (datetime, datetime, string_types, list[AdAnalyticsAbstractFilter], list[AdAnalyticsOrderByEntry], AdAnalyticsAttribute, AnalyticsInterval, list[AdAnalyticsAttribute], bool, int, int) -> None
         super(AdAnalyticsQueryRequest, self).__init__(start=start, end=end)
 
         self._license_key = None
@@ -32,6 +33,7 @@ class AdAnalyticsQueryRequest(AnalyticsQueryTimeframe):
         self._dimension = None
         self._interval = None
         self._group_by = list()
+        self._include_context = None
         self._limit = None
         self._offset = None
         self.discriminator = None
@@ -48,6 +50,8 @@ class AdAnalyticsQueryRequest(AnalyticsQueryTimeframe):
             self.interval = interval
         if group_by is not None:
             self.group_by = group_by
+        if include_context is not None:
+            self.include_context = include_context
         if limit is not None:
             self.limit = limit
         if offset is not None:
@@ -67,6 +71,7 @@ class AdAnalyticsQueryRequest(AnalyticsQueryTimeframe):
             'dimension': 'AdAnalyticsAttribute',
             'interval': 'AnalyticsInterval',
             'group_by': 'list[AdAnalyticsAttribute]',
+            'include_context': 'bool',
             'limit': 'int',
             'offset': 'int'
         })
@@ -87,6 +92,7 @@ class AdAnalyticsQueryRequest(AnalyticsQueryTimeframe):
             'dimension': 'dimension',
             'interval': 'interval',
             'group_by': 'groupBy',
+            'include_context': 'includeContext',
             'limit': 'limit',
             'offset': 'offset'
         })
@@ -257,6 +263,35 @@ class AdAnalyticsQueryRequest(AnalyticsQueryTimeframe):
                 raise TypeError("Invalid type for `group_by`, type has to be `list[AdAnalyticsAttribute]`")
 
         self._group_by = group_by
+
+    @property
+    def include_context(self):
+        # type: () -> bool
+        """Gets the include_context of this AdAnalyticsQueryRequest.
+
+        Whether context data should be included in the response
+
+        :return: The include_context of this AdAnalyticsQueryRequest.
+        :rtype: bool
+        """
+        return self._include_context
+
+    @include_context.setter
+    def include_context(self, include_context):
+        # type: (bool) -> None
+        """Sets the include_context of this AdAnalyticsQueryRequest.
+
+        Whether context data should be included in the response
+
+        :param include_context: The include_context of this AdAnalyticsQueryRequest.
+        :type: bool
+        """
+
+        if include_context is not None:
+            if not isinstance(include_context, bool):
+                raise TypeError("Invalid type for `include_context`, type has to be `bool`")
+
+        self._include_context = include_context
 
     @property
     def limit(self):

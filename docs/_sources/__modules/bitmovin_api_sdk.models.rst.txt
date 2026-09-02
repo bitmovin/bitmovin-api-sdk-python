@@ -4756,14 +4756,6 @@ bitmovin\_api\_sdk.models.max\_transform\_unit\_size module
    :show-inheritance:
    :undoc-members:
 
-bitmovin\_api\_sdk.models.media\_config\_bitrate module
--------------------------------------------------------
-
-.. automodule:: bitmovin_api_sdk.models.media_config_bitrate
-   :members:
-   :show-inheritance:
-   :undoc-members:
-
 bitmovin\_api\_sdk.models.media\_info\_type module
 --------------------------------------------------
 

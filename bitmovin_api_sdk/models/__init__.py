@@ -597,7 +597,6 @@ from bitmovin_api_sdk.models.marketplace import Marketplace
 from bitmovin_api_sdk.models.marlin_drm import MarlinDrm
 from bitmovin_api_sdk.models.max_ctu_size import MaxCtuSize
 from bitmovin_api_sdk.models.max_transform_unit_size import MaxTransformUnitSize
-from bitmovin_api_sdk.models.media_config_bitrate import MediaConfigBitrate
 from bitmovin_api_sdk.models.media_info_type import MediaInfoType
 from bitmovin_api_sdk.models.media_info_type_response import MediaInfoTypeResponse
 from bitmovin_api_sdk.models.media_stream import MediaStream
