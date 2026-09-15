@@ -1,0 +1,468 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>bitmovin_api_sdk.models.pcc_combination_evidence &mdash; Bitmovin Python API SDK {{packageVersion}} documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=9edc463e" />
+
+  
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=4dbdf2c3"></script>
+      <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: blue" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            Bitmovin Python API SDK
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../__modules/modules.html">python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../__modules/bitmovin_api_sdk.encoding.html">bitmovin_api_sdk.encoding package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../__modules/bitmovin_api_sdk.analytics.html">bitmovin_api_sdk.analytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../__modules/bitmovin_api_sdk.player.html">bitmovin_api_sdk.player package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../__modules/bitmovin_api_sdk.account.html">bitmovin_api_sdk.account package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../__modules/bitmovin_api_sdk.notifications.html">bitmovin_api_sdk.notifications package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../__modules/bitmovin_api_sdk.general.html">bitmovin_api_sdk.general package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../__modules/bitmovin_api_sdk.common.html">bitmovin_api_sdk.common package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../__modules/bitmovin_api_sdk.models.html">bitmovin_api_sdk.models package</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: blue" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Bitmovin Python API SDK</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">bitmovin_api_sdk.models.pcc_combination_evidence</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for bitmovin_api_sdk.models.pcc_combination_evidence</h1><div class="highlight"><pre>
+<span></span><span class="c1"># coding: utf-8</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">enum</span><span class="w"> </span><span class="kn">import</span> <span class="n">Enum</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">six</span><span class="w"> </span><span class="kn">import</span> <span class="n">string_types</span><span class="p">,</span> <span class="n">iteritems</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.common.poscheck</span><span class="w"> </span><span class="kn">import</span> <span class="n">poscheck_model</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pprint</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">six</span>
+
+
+<div class="viewcode-block" id="PccCombinationEvidence">
+<a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.pcc_combination_evidence.PccCombinationEvidence">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">PccCombinationEvidence</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="nd">@poscheck_model</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                 <span class="n">codec</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">protection</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">played_by</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">claimed_not_played_by</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">measured_by</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">not_applicable</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">asset_hosts</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">license_servers</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="c1"># type: (string_types, string_types, float, float, float, bool, list[string_types], list[string_types]) -&gt; None</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_codec</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_protection</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_played_by</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_claimed_not_played_by</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_measured_by</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_not_applicable</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_asset_hosts</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_license_servers</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="k">if</span> <span class="n">codec</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">codec</span> <span class="o">=</span> <span class="n">codec</span>
+        <span class="k">if</span> <span class="n">protection</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">protection</span> <span class="o">=</span> <span class="n">protection</span>
+        <span class="k">if</span> <span class="n">played_by</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">played_by</span> <span class="o">=</span> <span class="n">played_by</span>
+        <span class="k">if</span> <span class="n">claimed_not_played_by</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">claimed_not_played_by</span> <span class="o">=</span> <span class="n">claimed_not_played_by</span>
+        <span class="k">if</span> <span class="n">measured_by</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">measured_by</span> <span class="o">=</span> <span class="n">measured_by</span>
+        <span class="k">if</span> <span class="n">not_applicable</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">not_applicable</span> <span class="o">=</span> <span class="n">not_applicable</span>
+        <span class="k">if</span> <span class="n">asset_hosts</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">asset_hosts</span> <span class="o">=</span> <span class="n">asset_hosts</span>
+        <span class="k">if</span> <span class="n">license_servers</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">license_servers</span> <span class="o">=</span> <span class="n">license_servers</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">types</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">'codec'</span><span class="p">:</span> <span class="s1">'string_types'</span><span class="p">,</span>
+            <span class="s1">'protection'</span><span class="p">:</span> <span class="s1">'string_types'</span><span class="p">,</span>
+            <span class="s1">'played_by'</span><span class="p">:</span> <span class="s1">'float'</span><span class="p">,</span>
+            <span class="s1">'claimed_not_played_by'</span><span class="p">:</span> <span class="s1">'float'</span><span class="p">,</span>
+            <span class="s1">'measured_by'</span><span class="p">:</span> <span class="s1">'float'</span><span class="p">,</span>
+            <span class="s1">'not_applicable'</span><span class="p">:</span> <span class="s1">'bool'</span><span class="p">,</span>
+            <span class="s1">'asset_hosts'</span><span class="p">:</span> <span class="s1">'list[string_types]'</span><span class="p">,</span>
+            <span class="s1">'license_servers'</span><span class="p">:</span> <span class="s1">'list[string_types]'</span>
+        <span class="p">}</span>
+
+        <span class="k">return</span> <span class="n">types</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">attribute_map</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">attributes</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">'codec'</span><span class="p">:</span> <span class="s1">'codec'</span><span class="p">,</span>
+            <span class="s1">'protection'</span><span class="p">:</span> <span class="s1">'protection'</span><span class="p">,</span>
+            <span class="s1">'played_by'</span><span class="p">:</span> <span class="s1">'playedBy'</span><span class="p">,</span>
+            <span class="s1">'claimed_not_played_by'</span><span class="p">:</span> <span class="s1">'claimedNotPlayedBy'</span><span class="p">,</span>
+            <span class="s1">'measured_by'</span><span class="p">:</span> <span class="s1">'measuredBy'</span><span class="p">,</span>
+            <span class="s1">'not_applicable'</span><span class="p">:</span> <span class="s1">'notApplicable'</span><span class="p">,</span>
+            <span class="s1">'asset_hosts'</span><span class="p">:</span> <span class="s1">'assetHosts'</span><span class="p">,</span>
+            <span class="s1">'license_servers'</span><span class="p">:</span> <span class="s1">'licenseServers'</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">attributes</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">codec</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; string_types</span>
+<span class="w">        </span><span class="sd">"""Gets the codec of this PccCombinationEvidence.</span>
+
+<span class="sd">        The codec, as the shared contract spells it. (required)</span>
+
+<span class="sd">        :return: The codec of this PccCombinationEvidence.</span>
+<span class="sd">        :rtype: string_types</span>
+<span class="sd">        """</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_codec</span>
+
+    <span class="nd">@codec</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">codec</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">codec</span><span class="p">):</span>
+        <span class="c1"># type: (string_types) -&gt; None</span>
+<span class="w">        </span><span class="sd">"""Sets the codec of this PccCombinationEvidence.</span>
+
+<span class="sd">        The codec, as the shared contract spells it. (required)</span>
+
+<span class="sd">        :param codec: The codec of this PccCombinationEvidence.</span>
+<span class="sd">        :type: string_types</span>
+<span class="sd">        """</span>
+
+        <span class="k">if</span> <span class="n">codec</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">codec</span><span class="p">,</span> <span class="n">string_types</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Invalid type for `codec`, type has to be `string_types`"</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_codec</span> <span class="o">=</span> <span class="n">codec</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">protection</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; string_types</span>
+<span class="w">        </span><span class="sd">"""Gets the protection of this PccCombinationEvidence.</span>
+
+<span class="sd">        The content protection, as the shared contract spells it. (required)</span>
+
+<span class="sd">        :return: The protection of this PccCombinationEvidence.</span>
+<span class="sd">        :rtype: string_types</span>
+<span class="sd">        """</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_protection</span>
+
+    <span class="nd">@protection</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">protection</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">protection</span><span class="p">):</span>
+        <span class="c1"># type: (string_types) -&gt; None</span>
+<span class="w">        </span><span class="sd">"""Sets the protection of this PccCombinationEvidence.</span>
+
+<span class="sd">        The content protection, as the shared contract spells it. (required)</span>
+
+<span class="sd">        :param protection: The protection of this PccCombinationEvidence.</span>
+<span class="sd">        :type: string_types</span>
+<span class="sd">        """</span>
+
+        <span class="k">if</span> <span class="n">protection</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">protection</span><span class="p">,</span> <span class="n">string_types</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Invalid type for `protection`, type has to be `string_types`"</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_protection</span> <span class="o">=</span> <span class="n">protection</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">played_by</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; float</span>
+<span class="w">        </span><span class="sd">"""Gets the played_by of this PccCombinationEvidence.</span>
+
+<span class="sd">        Device pools that played it, which is what proves the stream behind it works at all. (required)</span>
+
+<span class="sd">        :return: The played_by of this PccCombinationEvidence.</span>
+<span class="sd">        :rtype: float</span>
+<span class="sd">        """</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_played_by</span>
+
+    <span class="nd">@played_by</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">played_by</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">played_by</span><span class="p">):</span>
+        <span class="c1"># type: (float) -&gt; None</span>
+<span class="w">        </span><span class="sd">"""Sets the played_by of this PccCombinationEvidence.</span>
+
+<span class="sd">        Device pools that played it, which is what proves the stream behind it works at all. (required)</span>
+
+<span class="sd">        :param played_by: The played_by of this PccCombinationEvidence.</span>
+<span class="sd">        :type: float</span>
+<span class="sd">        """</span>
+
+        <span class="k">if</span> <span class="n">played_by</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">played_by</span><span class="p">,</span> <span class="p">(</span><span class="nb">float</span><span class="p">,</span> <span class="nb">int</span><span class="p">)):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Invalid type for `played_by`, type has to be `float`"</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_played_by</span> <span class="o">=</span> <span class="n">played_by</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">claimed_not_played_by</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; float</span>
+<span class="w">        </span><span class="sd">"""Gets the claimed_not_played_by of this PccCombinationEvidence.</span>
+
+<span class="sd">        Device pools that reported support for it and then failed to play it. (required)</span>
+
+<span class="sd">        :return: The claimed_not_played_by of this PccCombinationEvidence.</span>
+<span class="sd">        :rtype: float</span>
+<span class="sd">        """</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_claimed_not_played_by</span>
+
+    <span class="nd">@claimed_not_played_by</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">claimed_not_played_by</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">claimed_not_played_by</span><span class="p">):</span>
+        <span class="c1"># type: (float) -&gt; None</span>
+<span class="w">        </span><span class="sd">"""Sets the claimed_not_played_by of this PccCombinationEvidence.</span>
+
+<span class="sd">        Device pools that reported support for it and then failed to play it. (required)</span>
+
+<span class="sd">        :param claimed_not_played_by: The claimed_not_played_by of this PccCombinationEvidence.</span>
+<span class="sd">        :type: float</span>
+<span class="sd">        """</span>
+
+        <span class="k">if</span> <span class="n">claimed_not_played_by</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">claimed_not_played_by</span><span class="p">,</span> <span class="p">(</span><span class="nb">float</span><span class="p">,</span> <span class="nb">int</span><span class="p">)):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Invalid type for `claimed_not_played_by`, type has to be `float`"</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_claimed_not_played_by</span> <span class="o">=</span> <span class="n">claimed_not_played_by</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">measured_by</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; float</span>
+<span class="w">        </span><span class="sd">"""Gets the measured_by of this PccCombinationEvidence.</span>
+
+<span class="sd">        Device pools that produced an answer either way. (required)</span>
+
+<span class="sd">        :return: The measured_by of this PccCombinationEvidence.</span>
+<span class="sd">        :rtype: float</span>
+<span class="sd">        """</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_measured_by</span>
+
+    <span class="nd">@measured_by</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">measured_by</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">measured_by</span><span class="p">):</span>
+        <span class="c1"># type: (float) -&gt; None</span>
+<span class="w">        </span><span class="sd">"""Sets the measured_by of this PccCombinationEvidence.</span>
+
+<span class="sd">        Device pools that produced an answer either way. (required)</span>
+
+<span class="sd">        :param measured_by: The measured_by of this PccCombinationEvidence.</span>
+<span class="sd">        :type: float</span>
+<span class="sd">        """</span>
+
+        <span class="k">if</span> <span class="n">measured_by</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">measured_by</span><span class="p">,</span> <span class="p">(</span><span class="nb">float</span><span class="p">,</span> <span class="nb">int</span><span class="p">)):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Invalid type for `measured_by`, type has to be `float`"</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_measured_by</span> <span class="o">=</span> <span class="n">measured_by</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">not_applicable</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; bool</span>
+<span class="w">        </span><span class="sd">"""Gets the not_applicable of this PccCombinationEvidence.</span>
+
+<span class="sd">        No conformant stream can exist for this pairing, so it is neither gap nor result. (required)</span>
+
+<span class="sd">        :return: The not_applicable of this PccCombinationEvidence.</span>
+<span class="sd">        :rtype: bool</span>
+<span class="sd">        """</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_not_applicable</span>
+
+    <span class="nd">@not_applicable</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">not_applicable</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">not_applicable</span><span class="p">):</span>
+        <span class="c1"># type: (bool) -&gt; None</span>
+<span class="w">        </span><span class="sd">"""Sets the not_applicable of this PccCombinationEvidence.</span>
+
+<span class="sd">        No conformant stream can exist for this pairing, so it is neither gap nor result. (required)</span>
+
+<span class="sd">        :param not_applicable: The not_applicable of this PccCombinationEvidence.</span>
+<span class="sd">        :type: bool</span>
+<span class="sd">        """</span>
+
+        <span class="k">if</span> <span class="n">not_applicable</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">not_applicable</span><span class="p">,</span> <span class="nb">bool</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Invalid type for `not_applicable`, type has to be `bool`"</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_not_applicable</span> <span class="o">=</span> <span class="n">not_applicable</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">asset_hosts</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; list[string_types]</span>
+<span class="w">        </span><span class="sd">"""Gets the asset_hosts of this PccCombinationEvidence.</span>
+
+<span class="sd">        Hosts that served its stream. A host only — never a path and never a URL. (required)</span>
+
+<span class="sd">        :return: The asset_hosts of this PccCombinationEvidence.</span>
+<span class="sd">        :rtype: list[string_types]</span>
+<span class="sd">        """</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_asset_hosts</span>
+
+    <span class="nd">@asset_hosts</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">asset_hosts</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">asset_hosts</span><span class="p">):</span>
+        <span class="c1"># type: (list) -&gt; None</span>
+<span class="w">        </span><span class="sd">"""Sets the asset_hosts of this PccCombinationEvidence.</span>
+
+<span class="sd">        Hosts that served its stream. A host only — never a path and never a URL. (required)</span>
+
+<span class="sd">        :param asset_hosts: The asset_hosts of this PccCombinationEvidence.</span>
+<span class="sd">        :type: list[string_types]</span>
+<span class="sd">        """</span>
+
+        <span class="k">if</span> <span class="n">asset_hosts</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">asset_hosts</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Invalid type for `asset_hosts`, type has to be `list[string_types]`"</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_asset_hosts</span> <span class="o">=</span> <span class="n">asset_hosts</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">license_servers</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; list[string_types]</span>
+<span class="w">        </span><span class="sd">"""Gets the license_servers of this PccCombinationEvidence.</span>
+
+<span class="sd">        Hosts that licensed it. A separate axis from the one above: without both, a device refusing a codec cannot be told from a stream that stopped being served. (required)</span>
+
+<span class="sd">        :return: The license_servers of this PccCombinationEvidence.</span>
+<span class="sd">        :rtype: list[string_types]</span>
+<span class="sd">        """</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_license_servers</span>
+
+    <span class="nd">@license_servers</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">license_servers</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">license_servers</span><span class="p">):</span>
+        <span class="c1"># type: (list) -&gt; None</span>
+<span class="w">        </span><span class="sd">"""Sets the license_servers of this PccCombinationEvidence.</span>
+
+<span class="sd">        Hosts that licensed it. A separate axis from the one above: without both, a device refusing a codec cannot be told from a stream that stopped being served. (required)</span>
+
+<span class="sd">        :param license_servers: The license_servers of this PccCombinationEvidence.</span>
+<span class="sd">        :type: list[string_types]</span>
+<span class="sd">        """</span>
+
+        <span class="k">if</span> <span class="n">license_servers</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">license_servers</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Invalid type for `license_servers`, type has to be `list[string_types]`"</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_license_servers</span> <span class="o">=</span> <span class="n">license_servers</span>
+
+<div class="viewcode-block" id="PccCombinationEvidence.to_dict">
+<a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.pcc_combination_evidence.PccCombinationEvidence.to_dict">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">"""Returns the model properties as a dict"""</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="p">{}</span>
+
+        <span class="k">for</span> <span class="n">attr</span><span class="p">,</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">six</span><span class="o">.</span><span class="n">iteritems</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">openapi_types</span><span class="p">):</span>
+            <span class="n">value</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">attr</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="k">continue</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+                <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="k">continue</span>
+                <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="p">[</span><span class="n">y</span><span class="o">.</span><span class="n">value</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">Enum</span><span class="p">)</span> <span class="k">else</span> <span class="n">y</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span> <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="s2">"to_dict"</span><span class="p">)</span> <span class="k">else</span> <span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">value</span><span class="p">]]</span>
+            <span class="k">elif</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="s2">"to_dict"</span><span class="p">):</span>
+                <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="n">value</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span>
+            <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">Enum</span><span class="p">):</span>
+                <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="n">value</span><span class="o">.</span><span class="n">value</span>
+            <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+                <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="p">(</span><span class="n">v</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span> <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="s2">"to_dict"</span><span class="p">)</span> <span class="k">else</span> <span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span> <span class="ow">in</span> <span class="n">value</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">result</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">attribute_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">)]</span> <span class="o">=</span> <span class="n">value</span>
+
+        <span class="k">return</span> <span class="n">result</span></div>
+
+
+<div class="viewcode-block" id="PccCombinationEvidence.to_str">
+<a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.pcc_combination_evidence.PccCombinationEvidence.to_str">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">to_str</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">"""Returns the string representation of the model"""</span>
+        <span class="k">return</span> <span class="n">pprint</span><span class="o">.</span><span class="n">pformat</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">to_dict</span><span class="p">())</span></div>
+
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">"""For `print` and `pprint`"""</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">to_str</span><span class="p">()</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">"""Returns true if both objects are equal"""</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">PccCombinationEvidence</span><span class="p">):</span>
+            <span class="k">return</span> <span class="kc">False</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="vm">__dict__</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__ne__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">"""Returns true if both objects are not equal"""</span>
+        <span class="k">return</span> <span class="ow">not</span> <span class="bp">self</span> <span class="o">==</span> <span class="n">other</span></div>
+
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020, Bitmovin Inc.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

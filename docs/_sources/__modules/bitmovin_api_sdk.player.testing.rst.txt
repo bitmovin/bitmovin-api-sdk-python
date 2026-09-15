@@ -1,0 +1,29 @@
+bitmovin\_api\_sdk.player.testing package
+=========================================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   bitmovin_api_sdk.player.testing.codec_compatibility
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.player.testing.testing\_api module
+-----------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.player.testing.testing_api
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.player.testing
+   :members:
+   :show-inheritance:
+   :undoc-members:

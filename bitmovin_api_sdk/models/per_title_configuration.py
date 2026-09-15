@@ -286,7 +286,7 @@ class PerTitleConfiguration(object):
         # type: () -> float
         """Gets the resolution_scale_factor of this PerTitleConfiguration.
 
-        This factor influences the resolution selection of the per-title algorithm. The default value is 0.0. negative values will lead to results where the algorithm will choose lower resolutions for given bitrates. A positive value will result in higher resolutions to be selected. The range of the factor is -5.0 to +5.0. Please note that changing this factor might also lead to slightly different bitrate selection by the algorithm.
+        This factor influences the resolution selection of the per-title algorithm. The default value is 0.0. negative values will lead to results where the algorithm will choose lower resolutions for given bitrates. A positive value will result in higher resolutions to be selected. The range of the factor is -15.0 to +15.0. Please note that changing this factor might also lead to slightly different bitrate selection by the algorithm.
 
         :return: The resolution_scale_factor of this PerTitleConfiguration.
         :rtype: float
@@ -298,7 +298,7 @@ class PerTitleConfiguration(object):
         # type: (float) -> None
         """Sets the resolution_scale_factor of this PerTitleConfiguration.
 
-        This factor influences the resolution selection of the per-title algorithm. The default value is 0.0. negative values will lead to results where the algorithm will choose lower resolutions for given bitrates. A positive value will result in higher resolutions to be selected. The range of the factor is -5.0 to +5.0. Please note that changing this factor might also lead to slightly different bitrate selection by the algorithm.
+        This factor influences the resolution selection of the per-title algorithm. The default value is 0.0. negative values will lead to results where the algorithm will choose lower resolutions for given bitrates. A positive value will result in higher resolutions to be selected. The range of the factor is -15.0 to +15.0. Please note that changing this factor might also lead to slightly different bitrate selection by the algorithm.
 
         :param resolution_scale_factor: The resolution_scale_factor of this PerTitleConfiguration.
         :type: float

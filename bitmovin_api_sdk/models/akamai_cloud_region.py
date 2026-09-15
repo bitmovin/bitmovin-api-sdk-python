@@ -6,6 +6,7 @@ from bitmovin_api_sdk.common.poscheck import poscheck_model
 
 
 class AkamaiCloudRegion(Enum):
+    AU_MEL = "AU_MEL"
     BR_GRU = "BR_GRU"
     ES_MAD = "ES_MAD"
     FR_PAR = "FR_PAR"

@@ -1,0 +1,2 @@
+from bitmovin_api_sdk.player.testing.testing_api import TestingApi
+from bitmovin_api_sdk.player.testing.codec_compatibility.codec_compatibility_api import CodecCompatibilityApi

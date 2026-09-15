@@ -1024,7 +1024,9 @@ from bitmovin_api_sdk.notifications.webhooks.encoding.encodings.error.error_api 
 from bitmovin_api_sdk.notifications.webhooks.encoding.encodings.error.customdata.customdata_api import CustomdataApi
 
 from bitmovin_api_sdk.notifications.webhooks.encoding.encodings.live_encoding_heartbeat.live_encoding_heartbeat_api import LiveEncodingHeartbeatApi
-from bitmovin_api_sdk.notifications.webhooks.encoding.encodings.live_encoding_heartbeat.live_encoding_heartbeat_api import LiveEncodingHeartbeatWebhookListQueryParams
+from bitmovin_api_sdk.notifications.webhooks.encoding.encodings.live_encoding_heartbeat.live_encoding_heartbeat_api import LiveEncodingHeartbeatWebhookListQueryParams, LiveEncodingHeartbeatWebhookListByEncodingIdQueryParams
+from bitmovin_api_sdk.notifications.webhooks.encoding.encodings.live_encoding_heartbeat.customdata.customdata_api import CustomdataApi
+
 from bitmovin_api_sdk.notifications.webhooks.encoding.encodings.live_manifest_ready.live_manifest_ready_api import LiveManifestReadyApi
 from bitmovin_api_sdk.notifications.webhooks.encoding.encodings.live_manifest_ready.live_manifest_ready_api import WebhookListQueryParams, WebhookListByEncodingIdQueryParams
 from bitmovin_api_sdk.notifications.webhooks.encoding.encodings.live_manifest_ready.customdata.customdata_api import CustomdataApi
@@ -1083,6 +1085,10 @@ from bitmovin_api_sdk.player.custom_builds.web.status.status_api import StatusAp
 
 from bitmovin_api_sdk.player.custom_builds.web.download.download_api import DownloadApi
 
+from bitmovin_api_sdk.player.testing.testing_api import TestingApi
+
+from bitmovin_api_sdk.player.testing.codec_compatibility.codec_compatibility_api import CodecCompatibilityApi
+from bitmovin_api_sdk.player.testing.codec_compatibility.codec_compatibility_api import PccReportGetQueryParams
 from bitmovin_api_sdk.encoding.encodings.live.scte35_cue.scte35_cue_api import Scte35CueApi
 
 from bitmovin_api_sdk.streams.streams_api import StreamsApi
@@ -1753,6 +1759,34 @@ from bitmovin_api_sdk.models.padding_sequence import PaddingSequence
 from bitmovin_api_sdk.models.pagination_response import PaginationResponse
 from bitmovin_api_sdk.models.passthrough_audio_configuration import PassthroughAudioConfiguration
 from bitmovin_api_sdk.models.passthrough_mode import PassthroughMode
+from bitmovin_api_sdk.models.pcc_cell import PccCell
+from bitmovin_api_sdk.models.pcc_codec_device_type_reach import PccCodecDeviceTypeReach
+from bitmovin_api_sdk.models.pcc_codec_reach import PccCodecReach
+from bitmovin_api_sdk.models.pcc_combination import PccCombination
+from bitmovin_api_sdk.models.pcc_combination_evidence import PccCombinationEvidence
+from bitmovin_api_sdk.models.pcc_compatibility_matrix import PccCompatibilityMatrix
+from bitmovin_api_sdk.models.pcc_coverage import PccCoverage
+from bitmovin_api_sdk.models.pcc_device import PccDevice
+from bitmovin_api_sdk.models.pcc_device_hdr_verdict import PccDeviceHdrVerdict
+from bitmovin_api_sdk.models.pcc_device_type_share import PccDeviceTypeShare
+from bitmovin_api_sdk.models.pcc_device_unit import PccDeviceUnit
+from bitmovin_api_sdk.models.pcc_hdr_confidence import PccHdrConfidence
+from bitmovin_api_sdk.models.pcc_hdr_device import PccHdrDevice
+from bitmovin_api_sdk.models.pcc_hdr_finding import PccHdrFinding
+from bitmovin_api_sdk.models.pcc_hdr_legend_entry import PccHdrLegendEntry
+from bitmovin_api_sdk.models.pcc_hdr_outcome import PccHdrOutcome
+from bitmovin_api_sdk.models.pcc_hdr_outcome_count import PccHdrOutcomeCount
+from bitmovin_api_sdk.models.pcc_hdr_share import PccHdrShare
+from bitmovin_api_sdk.models.pcc_hdr_summary import PccHdrSummary
+from bitmovin_api_sdk.models.pcc_overview import PccOverview
+from bitmovin_api_sdk.models.pcc_picture import PccPicture
+from bitmovin_api_sdk.models.pcc_report import PccReport
+from bitmovin_api_sdk.models.pcc_report_view import PccReportView
+from bitmovin_api_sdk.models.pcc_summary import PccSummary
+from bitmovin_api_sdk.models.pcc_support_share import PccSupportShare
+from bitmovin_api_sdk.models.pcc_verdict import PccVerdict
+from bitmovin_api_sdk.models.pcc_verdict_legend_entry import PccVerdictLegendEntry
+from bitmovin_api_sdk.models.pcc_verdict_share import PccVerdictShare
 from bitmovin_api_sdk.models.pcm_audio_configuration import PcmAudioConfiguration
 from bitmovin_api_sdk.models.pcm_channel_layout import PcmChannelLayout
 from bitmovin_api_sdk.models.pcm_preset_configuration import PcmPresetConfiguration
@@ -2039,4 +2073,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.279.0"
+__version__ = "1.280.0"

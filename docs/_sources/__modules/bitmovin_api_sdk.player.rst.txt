@@ -10,6 +10,7 @@ Subpackages
    bitmovin_api_sdk.player.channels
    bitmovin_api_sdk.player.custom_builds
    bitmovin_api_sdk.player.licenses
+   bitmovin_api_sdk.player.testing
 
 Submodules
 ----------

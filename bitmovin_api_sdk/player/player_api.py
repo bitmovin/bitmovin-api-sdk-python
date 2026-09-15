@@ -7,6 +7,7 @@ from bitmovin_api_sdk.common.poscheck import poscheck_except
 from bitmovin_api_sdk.player.channels.channels_api import ChannelsApi
 from bitmovin_api_sdk.player.licenses.licenses_api import LicensesApi
 from bitmovin_api_sdk.player.custom_builds.custom_builds_api import CustomBuildsApi
+from bitmovin_api_sdk.player.testing.testing_api import TestingApi
 
 
 class PlayerApi(BaseApi):
@@ -36,6 +37,13 @@ class PlayerApi(BaseApi):
         )
 
         self.custom_builds = CustomBuildsApi(
+            api_key=api_key,
+            tenant_org_id=tenant_org_id,
+            base_url=base_url,
+            logger=logger
+        )
+
+        self.testing = TestingApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,

@@ -5172,6 +5172,230 @@ bitmovin\_api\_sdk.models.passthrough\_mode module
    :show-inheritance:
    :undoc-members:
 
+bitmovin\_api\_sdk.models.pcc\_cell module
+------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.pcc_cell
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+bitmovin\_api\_sdk.models.pcc\_codec\_device\_type\_reach module
+----------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.pcc_codec_device_type_reach
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+bitmovin\_api\_sdk.models.pcc\_codec\_reach module
+--------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.pcc_codec_reach
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+bitmovin\_api\_sdk.models.pcc\_combination module
+-------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.pcc_combination
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+bitmovin\_api\_sdk.models.pcc\_combination\_evidence module
+-----------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.pcc_combination_evidence
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+bitmovin\_api\_sdk.models.pcc\_compatibility\_matrix module
+-----------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.pcc_compatibility_matrix
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+bitmovin\_api\_sdk.models.pcc\_coverage module
+----------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.pcc_coverage
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+bitmovin\_api\_sdk.models.pcc\_device module
+--------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.pcc_device
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+bitmovin\_api\_sdk.models.pcc\_device\_hdr\_verdict module
+----------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.pcc_device_hdr_verdict
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+bitmovin\_api\_sdk.models.pcc\_device\_type\_share module
+---------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.pcc_device_type_share
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+bitmovin\_api\_sdk.models.pcc\_device\_unit module
+--------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.pcc_device_unit
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+bitmovin\_api\_sdk.models.pcc\_hdr\_confidence module
+-----------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.pcc_hdr_confidence
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+bitmovin\_api\_sdk.models.pcc\_hdr\_device module
+-------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.pcc_hdr_device
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+bitmovin\_api\_sdk.models.pcc\_hdr\_finding module
+--------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.pcc_hdr_finding
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+bitmovin\_api\_sdk.models.pcc\_hdr\_legend\_entry module
+--------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.pcc_hdr_legend_entry
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+bitmovin\_api\_sdk.models.pcc\_hdr\_outcome module
+--------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.pcc_hdr_outcome
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+bitmovin\_api\_sdk.models.pcc\_hdr\_outcome\_count module
+---------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.pcc_hdr_outcome_count
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+bitmovin\_api\_sdk.models.pcc\_hdr\_share module
+------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.pcc_hdr_share
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+bitmovin\_api\_sdk.models.pcc\_hdr\_summary module
+--------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.pcc_hdr_summary
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+bitmovin\_api\_sdk.models.pcc\_overview module
+----------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.pcc_overview
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+bitmovin\_api\_sdk.models.pcc\_picture module
+---------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.pcc_picture
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+bitmovin\_api\_sdk.models.pcc\_report module
+--------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.pcc_report
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+bitmovin\_api\_sdk.models.pcc\_report\_view module
+--------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.pcc_report_view
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+bitmovin\_api\_sdk.models.pcc\_summary module
+---------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.pcc_summary
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+bitmovin\_api\_sdk.models.pcc\_support\_share module
+----------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.pcc_support_share
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+bitmovin\_api\_sdk.models.pcc\_verdict module
+---------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.pcc_verdict
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+bitmovin\_api\_sdk.models.pcc\_verdict\_legend\_entry module
+------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.pcc_verdict_legend_entry
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+bitmovin\_api\_sdk.models.pcc\_verdict\_share module
+----------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.pcc_verdict_share
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
 bitmovin\_api\_sdk.models.pcm\_audio\_configuration module
 ----------------------------------------------------------
 

@@ -86,7 +86,9 @@
 <span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.live_encoding_heartbeat_webhook</span><span class="w"> </span><span class="kn">import</span> <span class="n">LiveEncodingHeartbeatWebhook</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.response_envelope</span><span class="w"> </span><span class="kn">import</span> <span class="n">ResponseEnvelope</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.response_error</span><span class="w"> </span><span class="kn">import</span> <span class="n">ResponseError</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.notifications.webhooks.encoding.encodings.live_encoding_heartbeat.customdata.customdata_api</span><span class="w"> </span><span class="kn">import</span> <span class="n">CustomdataApi</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.notifications.webhooks.encoding.encodings.live_encoding_heartbeat.live_encoding_heartbeat_webhook_list_query_params</span><span class="w"> </span><span class="kn">import</span> <span class="n">LiveEncodingHeartbeatWebhookListQueryParams</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.notifications.webhooks.encoding.encodings.live_encoding_heartbeat.live_encoding_heartbeat_webhook_list_by_encoding_id_query_params</span><span class="w"> </span><span class="kn">import</span> <span class="n">LiveEncodingHeartbeatWebhookListByEncodingIdQueryParams</span>
 
 
 <div class="viewcode-block" id="LiveEncodingHeartbeatApi">
@@ -97,6 +99,13 @@
         <span class="c1"># type: (str, str, str, BitmovinApiLoggerBase) -&gt; None</span>
 
         <span class="nb">super</span><span class="p">(</span><span class="n">LiveEncodingHeartbeatApi</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span>
+            <span class="n">api_key</span><span class="o">=</span><span class="n">api_key</span><span class="p">,</span>
+            <span class="n">tenant_org_id</span><span class="o">=</span><span class="n">tenant_org_id</span><span class="p">,</span>
+            <span class="n">base_url</span><span class="o">=</span><span class="n">base_url</span><span class="p">,</span>
+            <span class="n">logger</span><span class="o">=</span><span class="n">logger</span>
+        <span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">customdata</span> <span class="o">=</span> <span class="n">CustomdataApi</span><span class="p">(</span>
             <span class="n">api_key</span><span class="o">=</span><span class="n">api_key</span><span class="p">,</span>
             <span class="n">tenant_org_id</span><span class="o">=</span><span class="n">tenant_org_id</span><span class="p">,</span>
             <span class="n">base_url</span><span class="o">=</span><span class="n">base_url</span><span class="p">,</span>
@@ -123,6 +132,51 @@
         <span class="p">)</span></div>
 
 
+<div class="viewcode-block" id="LiveEncodingHeartbeatApi.create_by_encoding_id">
+<a class="viewcode-back" href="../../../../../../../__modules/bitmovin_api_sdk.notifications.webhooks.encoding.encodings.live_encoding_heartbeat.html#bitmovin_api_sdk.notifications.webhooks.encoding.encodings.live_encoding_heartbeat.live_encoding_heartbeat_api.LiveEncodingHeartbeatApi.create_by_encoding_id">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">create_by_encoding_id</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">encoding_id</span><span class="p">,</span> <span class="n">live_encoding_heartbeat_webhook</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="c1"># type: (string_types, LiveEncodingHeartbeatWebhook, dict) -&gt; LiveEncodingHeartbeatWebhook</span>
+<span class="w">        </span><span class="sd">"""Create &amp;#39;Live Encoding Heartbeat&amp;#39; Webhook for a specific Encoding</span>
+
+<span class="sd">        :param encoding_id: Id of the encoding</span>
+<span class="sd">        :type encoding_id: string_types, required</span>
+<span class="sd">        :param live_encoding_heartbeat_webhook: The &amp;#39;Live Encoding Heartbeat&amp;#39; Webhook to be added.</span>
+<span class="sd">        :type live_encoding_heartbeat_webhook: LiveEncodingHeartbeatWebhook, required</span>
+<span class="sd">        :return: Webhook Details</span>
+<span class="sd">        :rtype: LiveEncodingHeartbeatWebhook</span>
+<span class="sd">        """</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">post</span><span class="p">(</span>
+            <span class="s1">'/notifications/webhooks/encoding/encodings/</span><span class="si">{encoding_id}</span><span class="s1">/live-encoding-heartbeat'</span><span class="p">,</span>
+            <span class="n">live_encoding_heartbeat_webhook</span><span class="p">,</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">'encoding_id'</span><span class="p">:</span> <span class="n">encoding_id</span><span class="p">},</span>
+            <span class="nb">type</span><span class="o">=</span><span class="n">LiveEncodingHeartbeatWebhook</span><span class="p">,</span>
+            <span class="o">**</span><span class="n">kwargs</span>
+        <span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="LiveEncodingHeartbeatApi.delete_by_encoding_id_and_webhook_id">
+<a class="viewcode-back" href="../../../../../../../__modules/bitmovin_api_sdk.notifications.webhooks.encoding.encodings.live_encoding_heartbeat.html#bitmovin_api_sdk.notifications.webhooks.encoding.encodings.live_encoding_heartbeat.live_encoding_heartbeat_api.LiveEncodingHeartbeatApi.delete_by_encoding_id_and_webhook_id">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">delete_by_encoding_id_and_webhook_id</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">encoding_id</span><span class="p">,</span> <span class="n">webhook_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="c1"># type: (string_types, string_types, dict) -&gt; BitmovinResponse</span>
+<span class="w">        </span><span class="sd">"""Delete &amp;#39;Live Encoding Heartbeat&amp;#39; Webhook for a specific Encoding</span>
+
+<span class="sd">        :param encoding_id: Id of the encoding</span>
+<span class="sd">        :type encoding_id: string_types, required</span>
+<span class="sd">        :param webhook_id: Id of the webhook</span>
+<span class="sd">        :type webhook_id: string_types, required</span>
+<span class="sd">        :return: Id of the webhook</span>
+<span class="sd">        :rtype: BitmovinResponse</span>
+<span class="sd">        """</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span>
+            <span class="s1">'/notifications/webhooks/encoding/encodings/</span><span class="si">{encoding_id}</span><span class="s1">/live-encoding-heartbeat/</span><span class="si">{webhook_id}</span><span class="s1">'</span><span class="p">,</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">'encoding_id'</span><span class="p">:</span> <span class="n">encoding_id</span><span class="p">,</span> <span class="s1">'webhook_id'</span><span class="p">:</span> <span class="n">webhook_id</span><span class="p">},</span>
+            <span class="nb">type</span><span class="o">=</span><span class="n">BitmovinResponse</span><span class="p">,</span>
+            <span class="o">**</span><span class="n">kwargs</span>
+        <span class="p">)</span></div>
+
+
 <div class="viewcode-block" id="LiveEncodingHeartbeatApi.delete_by_webhook_id">
 <a class="viewcode-back" href="../../../../../../../__modules/bitmovin_api_sdk.notifications.webhooks.encoding.encodings.live_encoding_heartbeat.html#bitmovin_api_sdk.notifications.webhooks.encoding.encodings.live_encoding_heartbeat.live_encoding_heartbeat_api.LiveEncodingHeartbeatApi.delete_by_webhook_id">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">delete_by_webhook_id</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">webhook_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
@@ -139,6 +193,28 @@
             <span class="s1">'/notifications/webhooks/encoding/encodings/live-encoding-heartbeat/</span><span class="si">{webhook_id}</span><span class="s1">'</span><span class="p">,</span>
             <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">'webhook_id'</span><span class="p">:</span> <span class="n">webhook_id</span><span class="p">},</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">BitmovinResponse</span><span class="p">,</span>
+            <span class="o">**</span><span class="n">kwargs</span>
+        <span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="LiveEncodingHeartbeatApi.get_by_encoding_id_and_webhook_id">
+<a class="viewcode-back" href="../../../../../../../__modules/bitmovin_api_sdk.notifications.webhooks.encoding.encodings.live_encoding_heartbeat.html#bitmovin_api_sdk.notifications.webhooks.encoding.encodings.live_encoding_heartbeat.live_encoding_heartbeat_api.LiveEncodingHeartbeatApi.get_by_encoding_id_and_webhook_id">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_by_encoding_id_and_webhook_id</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">encoding_id</span><span class="p">,</span> <span class="n">webhook_id</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="c1"># type: (string_types, string_types, dict) -&gt; LiveEncodingHeartbeatWebhook</span>
+<span class="w">        </span><span class="sd">"""Get &amp;#39;Live Encoding Heartbeat&amp;#39; Webhook details for a specific Encoding</span>
+
+<span class="sd">        :param encoding_id: Id of the encoding</span>
+<span class="sd">        :type encoding_id: string_types, required</span>
+<span class="sd">        :param webhook_id: Id of the webhook</span>
+<span class="sd">        :type webhook_id: string_types, required</span>
+<span class="sd">        :return: Webhook Details</span>
+<span class="sd">        :rtype: LiveEncodingHeartbeatWebhook</span>
+<span class="sd">        """</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+            <span class="s1">'/notifications/webhooks/encoding/encodings/</span><span class="si">{encoding_id}</span><span class="s1">/live-encoding-heartbeat/</span><span class="si">{webhook_id}</span><span class="s1">'</span><span class="p">,</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">'encoding_id'</span><span class="p">:</span> <span class="n">encoding_id</span><span class="p">,</span> <span class="s1">'webhook_id'</span><span class="p">:</span> <span class="n">webhook_id</span><span class="p">},</span>
+            <span class="nb">type</span><span class="o">=</span><span class="n">LiveEncodingHeartbeatWebhook</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span>
         <span class="p">)</span></div>
 
@@ -177,6 +253,30 @@
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
             <span class="s1">'/notifications/webhooks/encoding/encodings/live-encoding-heartbeat'</span><span class="p">,</span>
+            <span class="n">query_params</span><span class="o">=</span><span class="n">query_params</span><span class="p">,</span>
+            <span class="n">pagination_response</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+            <span class="nb">type</span><span class="o">=</span><span class="n">LiveEncodingHeartbeatWebhook</span><span class="p">,</span>
+            <span class="o">**</span><span class="n">kwargs</span>
+        <span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="LiveEncodingHeartbeatApi.list_by_encoding_id">
+<a class="viewcode-back" href="../../../../../../../__modules/bitmovin_api_sdk.notifications.webhooks.encoding.encodings.live_encoding_heartbeat.html#bitmovin_api_sdk.notifications.webhooks.encoding.encodings.live_encoding_heartbeat.live_encoding_heartbeat_api.LiveEncodingHeartbeatApi.list_by_encoding_id">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">list_by_encoding_id</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">encoding_id</span><span class="p">,</span> <span class="n">query_params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="c1"># type: (string_types, LiveEncodingHeartbeatWebhookListByEncodingIdQueryParams, dict) -&gt; LiveEncodingHeartbeatWebhook</span>
+<span class="w">        </span><span class="sd">"""List &amp;#39;Live Encoding Heartbeat&amp;#39; Webhooks for a specific Encoding</span>
+
+<span class="sd">        :param encoding_id: Id of the encoding</span>
+<span class="sd">        :type encoding_id: string_types, required</span>
+<span class="sd">        :param query_params: Query parameters</span>
+<span class="sd">        :type query_params: LiveEncodingHeartbeatWebhookListByEncodingIdQueryParams</span>
+<span class="sd">        :return: List of 'Live Encoding Heartbeat' Webhooks</span>
+<span class="sd">        :rtype: LiveEncodingHeartbeatWebhook</span>
+<span class="sd">        """</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+            <span class="s1">'/notifications/webhooks/encoding/encodings/</span><span class="si">{encoding_id}</span><span class="s1">/live-encoding-heartbeat'</span><span class="p">,</span>
+            <span class="n">path_params</span><span class="o">=</span><span class="p">{</span><span class="s1">'encoding_id'</span><span class="p">:</span> <span class="n">encoding_id</span><span class="p">},</span>
             <span class="n">query_params</span><span class="o">=</span><span class="n">query_params</span><span class="p">,</span>
             <span class="n">pagination_response</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
             <span class="nb">type</span><span class="o">=</span><span class="n">LiveEncodingHeartbeatWebhook</span><span class="p">,</span>

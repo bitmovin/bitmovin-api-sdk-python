@@ -8,7 +8,9 @@ from bitmovin_api_sdk.models.bitmovin_response import BitmovinResponse
 from bitmovin_api_sdk.models.live_encoding_heartbeat_webhook import LiveEncodingHeartbeatWebhook
 from bitmovin_api_sdk.models.response_envelope import ResponseEnvelope
 from bitmovin_api_sdk.models.response_error import ResponseError
+from bitmovin_api_sdk.notifications.webhooks.encoding.encodings.live_encoding_heartbeat.customdata.customdata_api import CustomdataApi
 from bitmovin_api_sdk.notifications.webhooks.encoding.encodings.live_encoding_heartbeat.live_encoding_heartbeat_webhook_list_query_params import LiveEncodingHeartbeatWebhookListQueryParams
+from bitmovin_api_sdk.notifications.webhooks.encoding.encodings.live_encoding_heartbeat.live_encoding_heartbeat_webhook_list_by_encoding_id_query_params import LiveEncodingHeartbeatWebhookListByEncodingIdQueryParams
 
 
 class LiveEncodingHeartbeatApi(BaseApi):
@@ -17,6 +19,13 @@ class LiveEncodingHeartbeatApi(BaseApi):
         # type: (str, str, str, BitmovinApiLoggerBase) -> None
 
         super(LiveEncodingHeartbeatApi, self).__init__(
+            api_key=api_key,
+            tenant_org_id=tenant_org_id,
+            base_url=base_url,
+            logger=logger
+        )
+
+        self.customdata = CustomdataApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,
@@ -40,6 +49,45 @@ class LiveEncodingHeartbeatApi(BaseApi):
             **kwargs
         )
 
+    def create_by_encoding_id(self, encoding_id, live_encoding_heartbeat_webhook, **kwargs):
+        # type: (string_types, LiveEncodingHeartbeatWebhook, dict) -> LiveEncodingHeartbeatWebhook
+        """Create &#39;Live Encoding Heartbeat&#39; Webhook for a specific Encoding
+
+        :param encoding_id: Id of the encoding
+        :type encoding_id: string_types, required
+        :param live_encoding_heartbeat_webhook: The &#39;Live Encoding Heartbeat&#39; Webhook to be added.
+        :type live_encoding_heartbeat_webhook: LiveEncodingHeartbeatWebhook, required
+        :return: Webhook Details
+        :rtype: LiveEncodingHeartbeatWebhook
+        """
+
+        return self.api_client.post(
+            '/notifications/webhooks/encoding/encodings/{encoding_id}/live-encoding-heartbeat',
+            live_encoding_heartbeat_webhook,
+            path_params={'encoding_id': encoding_id},
+            type=LiveEncodingHeartbeatWebhook,
+            **kwargs
+        )
+
+    def delete_by_encoding_id_and_webhook_id(self, encoding_id, webhook_id, **kwargs):
+        # type: (string_types, string_types, dict) -> BitmovinResponse
+        """Delete &#39;Live Encoding Heartbeat&#39; Webhook for a specific Encoding
+
+        :param encoding_id: Id of the encoding
+        :type encoding_id: string_types, required
+        :param webhook_id: Id of the webhook
+        :type webhook_id: string_types, required
+        :return: Id of the webhook
+        :rtype: BitmovinResponse
+        """
+
+        return self.api_client.delete(
+            '/notifications/webhooks/encoding/encodings/{encoding_id}/live-encoding-heartbeat/{webhook_id}',
+            path_params={'encoding_id': encoding_id, 'webhook_id': webhook_id},
+            type=BitmovinResponse,
+            **kwargs
+        )
+
     def delete_by_webhook_id(self, webhook_id, **kwargs):
         # type: (string_types, dict) -> BitmovinResponse
         """Delete &#39;Live Encoding Heartbeat&#39; Webhook
@@ -54,6 +102,25 @@ class LiveEncodingHeartbeatApi(BaseApi):
             '/notifications/webhooks/encoding/encodings/live-encoding-heartbeat/{webhook_id}',
             path_params={'webhook_id': webhook_id},
             type=BitmovinResponse,
+            **kwargs
+        )
+
+    def get_by_encoding_id_and_webhook_id(self, encoding_id, webhook_id, **kwargs):
+        # type: (string_types, string_types, dict) -> LiveEncodingHeartbeatWebhook
+        """Get &#39;Live Encoding Heartbeat&#39; Webhook details for a specific Encoding
+
+        :param encoding_id: Id of the encoding
+        :type encoding_id: string_types, required
+        :param webhook_id: Id of the webhook
+        :type webhook_id: string_types, required
+        :return: Webhook Details
+        :rtype: LiveEncodingHeartbeatWebhook
+        """
+
+        return self.api_client.get(
+            '/notifications/webhooks/encoding/encodings/{encoding_id}/live-encoding-heartbeat/{webhook_id}',
+            path_params={'encoding_id': encoding_id, 'webhook_id': webhook_id},
+            type=LiveEncodingHeartbeatWebhook,
             **kwargs
         )
 
@@ -86,6 +153,27 @@ class LiveEncodingHeartbeatApi(BaseApi):
 
         return self.api_client.get(
             '/notifications/webhooks/encoding/encodings/live-encoding-heartbeat',
+            query_params=query_params,
+            pagination_response=True,
+            type=LiveEncodingHeartbeatWebhook,
+            **kwargs
+        )
+
+    def list_by_encoding_id(self, encoding_id, query_params=None, **kwargs):
+        # type: (string_types, LiveEncodingHeartbeatWebhookListByEncodingIdQueryParams, dict) -> LiveEncodingHeartbeatWebhook
+        """List &#39;Live Encoding Heartbeat&#39; Webhooks for a specific Encoding
+
+        :param encoding_id: Id of the encoding
+        :type encoding_id: string_types, required
+        :param query_params: Query parameters
+        :type query_params: LiveEncodingHeartbeatWebhookListByEncodingIdQueryParams
+        :return: List of 'Live Encoding Heartbeat' Webhooks
+        :rtype: LiveEncodingHeartbeatWebhook
+        """
+
+        return self.api_client.get(
+            '/notifications/webhooks/encoding/encodings/{encoding_id}/live-encoding-heartbeat',
+            path_params={'encoding_id': encoding_id},
             query_params=query_params,
             pagination_response=True,
             type=LiveEncodingHeartbeatWebhook,

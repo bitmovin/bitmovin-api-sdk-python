@@ -90,19 +90,29 @@
 <span class="k">class</span><span class="w"> </span><span class="nc">StreamMetadata</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="nd">@poscheck_model</span>
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
-                 <span class="n">language</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (string_types) -&gt; None</span>
+                 <span class="n">language</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">label</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">switching_set_id</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="c1"># type: (string_types, string_types, string_types) -&gt; None</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_language</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_label</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_switching_set_id</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>
 
         <span class="k">if</span> <span class="n">language</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">language</span> <span class="o">=</span> <span class="n">language</span>
+        <span class="k">if</span> <span class="n">label</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">label</span> <span class="o">=</span> <span class="n">label</span>
+        <span class="k">if</span> <span class="n">switching_set_id</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">switching_set_id</span> <span class="o">=</span> <span class="n">switching_set_id</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">types</span> <span class="o">=</span> <span class="p">{</span>
-            <span class="s1">'language'</span><span class="p">:</span> <span class="s1">'string_types'</span>
+            <span class="s1">'language'</span><span class="p">:</span> <span class="s1">'string_types'</span><span class="p">,</span>
+            <span class="s1">'label'</span><span class="p">:</span> <span class="s1">'string_types'</span><span class="p">,</span>
+            <span class="s1">'switching_set_id'</span><span class="p">:</span> <span class="s1">'string_types'</span>
         <span class="p">}</span>
 
         <span class="k">return</span> <span class="n">types</span>
@@ -110,7 +120,9 @@
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">attribute_map</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">attributes</span> <span class="o">=</span> <span class="p">{</span>
-            <span class="s1">'language'</span><span class="p">:</span> <span class="s1">'language'</span>
+            <span class="s1">'language'</span><span class="p">:</span> <span class="s1">'language'</span><span class="p">,</span>
+            <span class="s1">'label'</span><span class="p">:</span> <span class="s1">'label'</span><span class="p">,</span>
+            <span class="s1">'switching_set_id'</span><span class="p">:</span> <span class="s1">'switchingSetId'</span>
         <span class="p">}</span>
         <span class="k">return</span> <span class="n">attributes</span>
 
@@ -142,6 +154,68 @@
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Invalid type for `language`, type has to be `string_types`"</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_language</span> <span class="o">=</span> <span class="n">language</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">label</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; string_types</span>
+<span class="w">        </span><span class="sd">"""Gets the label of this StreamMetadata.</span>
+
+<span class="sd">        Display name of the Stream, for example to tell apart multiple audio tracks that share the same language. For CMAF muxings it is written as a 'labl' box (ISO/IEC 14496-12) into the user data of the track. Downstream packagers use it for the Label element in DASH manifests and the NAME attribute of EXT-X-MEDIA tags in HLS playlists. If the value is not set, no label is written.</span>
+
+<span class="sd">        :return: The label of this StreamMetadata.</span>
+<span class="sd">        :rtype: string_types</span>
+<span class="sd">        """</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_label</span>
+
+    <span class="nd">@label</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">label</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">label</span><span class="p">):</span>
+        <span class="c1"># type: (string_types) -&gt; None</span>
+<span class="w">        </span><span class="sd">"""Sets the label of this StreamMetadata.</span>
+
+<span class="sd">        Display name of the Stream, for example to tell apart multiple audio tracks that share the same language. For CMAF muxings it is written as a 'labl' box (ISO/IEC 14496-12) into the user data of the track. Downstream packagers use it for the Label element in DASH manifests and the NAME attribute of EXT-X-MEDIA tags in HLS playlists. If the value is not set, no label is written.</span>
+
+<span class="sd">        :param label: The label of this StreamMetadata.</span>
+<span class="sd">        :type: string_types</span>
+<span class="sd">        """</span>
+
+        <span class="k">if</span> <span class="n">label</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">label</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">label</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">255</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">"Invalid value for `label`, length must be less than or equal to `255`"</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">label</span><span class="p">,</span> <span class="n">string_types</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Invalid type for `label`, type has to be `string_types`"</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_label</span> <span class="o">=</span> <span class="n">label</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">switching_set_id</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; string_types</span>
+<span class="w">        </span><span class="sd">"""Gets the switching_set_id of this StreamMetadata.</span>
+
+<span class="sd">        Identifier of the switching set the Stream belongs to. For CMAF muxings it is written as a 'kind' box with schemeURI urn:dashif:ingest:switchingset_id (DASH-IF Live Media Ingest) into the user data of the track. Downstream packagers group tracks with the same identifier into one switching set and use it in segment URLs. Only letters, digits, hyphens and underscores are allowed. If the value is not set and a label is set, an identifier is derived from the properties of the Stream, including the label. Without a label, no identifier is written. Set it explicitly when segment URLs have to stay stable across configuration updates.</span>
+
+<span class="sd">        :return: The switching_set_id of this StreamMetadata.</span>
+<span class="sd">        :rtype: string_types</span>
+<span class="sd">        """</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_switching_set_id</span>
+
+    <span class="nd">@switching_set_id</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">switching_set_id</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">switching_set_id</span><span class="p">):</span>
+        <span class="c1"># type: (string_types) -&gt; None</span>
+<span class="w">        </span><span class="sd">"""Sets the switching_set_id of this StreamMetadata.</span>
+
+<span class="sd">        Identifier of the switching set the Stream belongs to. For CMAF muxings it is written as a 'kind' box with schemeURI urn:dashif:ingest:switchingset_id (DASH-IF Live Media Ingest) into the user data of the track. Downstream packagers group tracks with the same identifier into one switching set and use it in segment URLs. Only letters, digits, hyphens and underscores are allowed. If the value is not set and a label is set, an identifier is derived from the properties of the Stream, including the label. Without a label, no identifier is written. Set it explicitly when segment URLs have to stay stable across configuration updates.</span>
+
+<span class="sd">        :param switching_set_id: The switching_set_id of this StreamMetadata.</span>
+<span class="sd">        :type: string_types</span>
+<span class="sd">        """</span>
+
+        <span class="k">if</span> <span class="n">switching_set_id</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">switching_set_id</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">switching_set_id</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">64</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">"Invalid value for `switching_set_id`, length must be less than or equal to `64`"</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">switching_set_id</span><span class="p">,</span> <span class="n">string_types</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Invalid type for `switching_set_id`, type has to be `string_types`"</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_switching_set_id</span> <span class="o">=</span> <span class="n">switching_set_id</span>
 
 <div class="viewcode-block" id="StreamMetadata.to_dict">
 <a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.stream_metadata.StreamMetadata.to_dict">[docs]</a>
