@@ -1,2 +1,3 @@
 from bitmovin_api_sdk.ai_scene_analysis.ai_scene_analysis_api import AiSceneAnalysisApi
 from bitmovin_api_sdk.ai_scene_analysis.analyses.analyses_api import AnalysesApi
+from bitmovin_api_sdk.ai_scene_analysis.live_analyses.live_analyses_api import LiveAnalysesApi

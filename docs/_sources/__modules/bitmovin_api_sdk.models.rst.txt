@@ -532,6 +532,102 @@ bitmovin\_api\_sdk.models.ai\_scene\_analysis\_features module
    :show-inheritance:
    :undoc-members:
 
+bitmovin\_api\_sdk.models.ai\_scene\_analysis\_live\_create\_request module
+---------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.ai_scene_analysis_live_create_request
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+bitmovin\_api\_sdk.models.ai\_scene\_analysis\_live\_error module
+-----------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.ai_scene_analysis_live_error
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+bitmovin\_api\_sdk.models.ai\_scene\_analysis\_live\_observation module
+-----------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.ai_scene_analysis_live_observation
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+bitmovin\_api\_sdk.models.ai\_scene\_analysis\_live\_output module
+------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.ai_scene_analysis_live_output
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+bitmovin\_api\_sdk.models.ai\_scene\_analysis\_live\_recording module
+---------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.ai_scene_analysis_live_recording
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+bitmovin\_api\_sdk.models.ai\_scene\_analysis\_live\_recording\_request module
+------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.ai_scene_analysis_live_recording_request
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+bitmovin\_api\_sdk.models.ai\_scene\_analysis\_live\_response module
+--------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.ai_scene_analysis_live_response
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+bitmovin\_api\_sdk.models.ai\_scene\_analysis\_live\_result module
+------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.ai_scene_analysis_live_result
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+bitmovin\_api\_sdk.models.ai\_scene\_analysis\_live\_result\_metadata module
+----------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.ai_scene_analysis_live_result_metadata
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+bitmovin\_api\_sdk.models.ai\_scene\_analysis\_live\_source\_gap module
+-----------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.ai_scene_analysis_live_source_gap
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+bitmovin\_api\_sdk.models.ai\_scene\_analysis\_live\_source\_gap\_reason module
+-------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.ai_scene_analysis_live_source_gap_reason
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+bitmovin\_api\_sdk.models.ai\_scene\_analysis\_live\_status module
+------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.ai_scene_analysis_live_status
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
 bitmovin\_api\_sdk.models.ai\_scene\_analysis\_output\_language\_codes module
 -----------------------------------------------------------------------------
 

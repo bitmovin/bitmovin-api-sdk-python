@@ -1,0 +1,37 @@
+bitmovin\_api\_sdk.ai\_scene\_analysis.live\_analyses package
+=============================================================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   bitmovin_api_sdk.ai_scene_analysis.live_analyses.results
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.ai\_scene\_analysis.live\_analyses.ai\_scene\_analysis\_live\_response\_list\_query\_params module
+---------------------------------------------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.ai_scene_analysis.live_analyses.ai_scene_analysis_live_response_list_query_params
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+bitmovin\_api\_sdk.ai\_scene\_analysis.live\_analyses.live\_analyses\_api module
+--------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.ai_scene_analysis.live_analyses.live_analyses_api
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.ai_scene_analysis.live_analyses
+   :members:
+   :show-inheritance:
+   :undoc-members:

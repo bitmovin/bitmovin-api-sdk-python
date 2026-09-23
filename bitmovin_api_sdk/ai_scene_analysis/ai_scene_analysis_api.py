@@ -5,6 +5,7 @@ from __future__ import absolute_import
 from bitmovin_api_sdk.common import BaseApi, BitmovinApiLoggerBase
 from bitmovin_api_sdk.common.poscheck import poscheck_except
 from bitmovin_api_sdk.ai_scene_analysis.analyses.analyses_api import AnalysesApi
+from bitmovin_api_sdk.ai_scene_analysis.live_analyses.live_analyses_api import LiveAnalysesApi
 
 
 class AiSceneAnalysisApi(BaseApi):
@@ -20,6 +21,13 @@ class AiSceneAnalysisApi(BaseApi):
         )
 
         self.analyses = AnalysesApi(
+            api_key=api_key,
+            tenant_org_id=tenant_org_id,
+            base_url=base_url,
+            logger=logger
+        )
+
+        self.live_analyses = LiveAnalysesApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,
