@@ -1444,6 +1444,14 @@ bitmovin\_api\_sdk.models.automatic\_ad\_placement\_position module
    :show-inheritance:
    :undoc-members:
 
+bitmovin\_api\_sdk.models.av1\_dynamic\_range\_format module
+------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.av1_dynamic_range_format
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
 bitmovin\_api\_sdk.models.av1\_per\_title\_configuration module
 ---------------------------------------------------------------
 
@@ -4316,6 +4324,14 @@ bitmovin\_api\_sdk.models.label module
    :show-inheritance:
    :undoc-members:
 
+bitmovin\_api\_sdk.models.level\_av1 module
+-------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.level_av1
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
 bitmovin\_api\_sdk.models.level\_h262 module
 --------------------------------------------
 
@@ -4368,6 +4384,22 @@ bitmovin\_api\_sdk.models.live\_auto\_shutdown\_configuration module
 --------------------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.models.live_auto_shutdown_configuration
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+bitmovin\_api\_sdk.models.live\_auto\_shutdown\_configuration\_update\_request module
+-------------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.live_auto_shutdown_configuration_update_request
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+bitmovin\_api\_sdk.models.live\_auto\_shutdown\_configuration\_update\_response module
+--------------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.live_auto_shutdown_configuration_update_response
    :members:
    :show-inheritance:
    :undoc-members:

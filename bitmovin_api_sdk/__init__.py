@@ -519,6 +519,8 @@ from bitmovin_api_sdk.encoding.encodings.input_streams.dolby_vision.dolby_vision
 from bitmovin_api_sdk.encoding.encodings.input_streams.dolby_vision.dolby_vision_api import DolbyVisionInputStreamListQueryParams
 from bitmovin_api_sdk.encoding.encodings.live.reset_live_manifest_timeshift.reset_live_manifest_timeshift_api import ResetLiveManifestTimeshiftApi
 
+from bitmovin_api_sdk.encoding.encodings.live.update_autoshutdown_config.update_autoshutdown_config_api import UpdateAutoshutdownConfigApi
+
 from bitmovin_api_sdk.encoding.encodings.muxings.muxings_api import MuxingsApi
 from bitmovin_api_sdk.encoding.encodings.muxings.muxings_api import MuxingListQueryParams
 from bitmovin_api_sdk.encoding.encodings.muxings.type.type_api import TypeApi
@@ -1298,6 +1300,7 @@ from bitmovin_api_sdk.models.auto_level_setup import AutoLevelSetup
 from bitmovin_api_sdk.models.auto_representation import AutoRepresentation
 from bitmovin_api_sdk.models.auto_restart_configuration import AutoRestartConfiguration
 from bitmovin_api_sdk.models.automatic_ad_placement_position import AutomaticAdPlacementPosition
+from bitmovin_api_sdk.models.av1_dynamic_range_format import Av1DynamicRangeFormat
 from bitmovin_api_sdk.models.av1_per_title_configuration import Av1PerTitleConfiguration
 from bitmovin_api_sdk.models.av1_preset_configuration import Av1PresetConfiguration
 from bitmovin_api_sdk.models.av1_video_configuration import Av1VideoConfiguration
@@ -1657,6 +1660,7 @@ from bitmovin_api_sdk.models.iv_size import IvSize
 from bitmovin_api_sdk.models.kantar_watermark import KantarWatermark
 from bitmovin_api_sdk.models.keyframe import Keyframe
 from bitmovin_api_sdk.models.label import Label
+from bitmovin_api_sdk.models.level_av1 import LevelAv1
 from bitmovin_api_sdk.models.level_h262 import LevelH262
 from bitmovin_api_sdk.models.level_h264 import LevelH264
 from bitmovin_api_sdk.models.level_h265 import LevelH265
@@ -1664,6 +1668,8 @@ from bitmovin_api_sdk.models.limit_references import LimitReferences
 from bitmovin_api_sdk.models.limit_transform_unit_depth_recursion_mode import LimitTransformUnitDepthRecursionMode
 from bitmovin_api_sdk.models.link import Link
 from bitmovin_api_sdk.models.live_auto_shutdown_configuration import LiveAutoShutdownConfiguration
+from bitmovin_api_sdk.models.live_auto_shutdown_configuration_update_request import LiveAutoShutdownConfigurationUpdateRequest
+from bitmovin_api_sdk.models.live_auto_shutdown_configuration_update_response import LiveAutoShutdownConfigurationUpdateResponse
 from bitmovin_api_sdk.models.live_dash_manifest import LiveDashManifest
 from bitmovin_api_sdk.models.live_encoding import LiveEncoding
 from bitmovin_api_sdk.models.live_encoding_codec import LiveEncodingCodec
@@ -2091,4 +2097,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.281.0"
+__version__ = "1.282.0"

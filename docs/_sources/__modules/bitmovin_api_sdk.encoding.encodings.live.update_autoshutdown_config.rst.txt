@@ -1,0 +1,21 @@
+bitmovin\_api\_sdk.encoding.encodings.live.update\_autoshutdown\_config package
+===============================================================================
+
+Submodules
+----------
+
+bitmovin\_api\_sdk.encoding.encodings.live.update\_autoshutdown\_config.update\_autoshutdown\_config\_api module
+----------------------------------------------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.encoding.encodings.live.update_autoshutdown_config.update_autoshutdown_config_api
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+Module contents
+---------------
+
+.. automodule:: bitmovin_api_sdk.encoding.encodings.live.update_autoshutdown_config
+   :members:
+   :show-inheritance:
+   :undoc-members:

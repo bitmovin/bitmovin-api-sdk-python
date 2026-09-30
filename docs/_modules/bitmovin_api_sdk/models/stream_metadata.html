@@ -92,11 +92,13 @@
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
                  <span class="n">language</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">label</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">label_language</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">switching_set_id</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (string_types, string_types, string_types) -&gt; None</span>
+        <span class="c1"># type: (string_types, string_types, string_types, string_types) -&gt; None</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_language</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_label</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_label_language</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_switching_set_id</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>
 
@@ -104,6 +106,8 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">language</span> <span class="o">=</span> <span class="n">language</span>
         <span class="k">if</span> <span class="n">label</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">label</span> <span class="o">=</span> <span class="n">label</span>
+        <span class="k">if</span> <span class="n">label_language</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">label_language</span> <span class="o">=</span> <span class="n">label_language</span>
         <span class="k">if</span> <span class="n">switching_set_id</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">switching_set_id</span> <span class="o">=</span> <span class="n">switching_set_id</span>
 
@@ -112,6 +116,7 @@
         <span class="n">types</span> <span class="o">=</span> <span class="p">{</span>
             <span class="s1">'language'</span><span class="p">:</span> <span class="s1">'string_types'</span><span class="p">,</span>
             <span class="s1">'label'</span><span class="p">:</span> <span class="s1">'string_types'</span><span class="p">,</span>
+            <span class="s1">'label_language'</span><span class="p">:</span> <span class="s1">'string_types'</span><span class="p">,</span>
             <span class="s1">'switching_set_id'</span><span class="p">:</span> <span class="s1">'string_types'</span>
         <span class="p">}</span>
 
@@ -122,6 +127,7 @@
         <span class="n">attributes</span> <span class="o">=</span> <span class="p">{</span>
             <span class="s1">'language'</span><span class="p">:</span> <span class="s1">'language'</span><span class="p">,</span>
             <span class="s1">'label'</span><span class="p">:</span> <span class="s1">'label'</span><span class="p">,</span>
+            <span class="s1">'label_language'</span><span class="p">:</span> <span class="s1">'labelLanguage'</span><span class="p">,</span>
             <span class="s1">'switching_set_id'</span><span class="p">:</span> <span class="s1">'switchingSetId'</span>
         <span class="p">}</span>
         <span class="k">return</span> <span class="n">attributes</span>
@@ -131,7 +137,7 @@
         <span class="c1"># type: () -&gt; string_types</span>
 <span class="w">        </span><span class="sd">"""Gets the language of this StreamMetadata.</span>
 
-<span class="sd">        Language of the media contained in the stream. If the value is not set, then no metadata tag is set for the media stream.</span>
+<span class="sd">        Language of the media contained in the stream, given as an ISO 639-2 code or a BCP 47 tag, for example 'eng' or 'en-US'. If the value is not set, then no metadata tag is set for the media stream.</span>
 
 <span class="sd">        :return: The language of this StreamMetadata.</span>
 <span class="sd">        :rtype: string_types</span>
@@ -143,7 +149,7 @@
         <span class="c1"># type: (string_types) -&gt; None</span>
 <span class="w">        </span><span class="sd">"""Sets the language of this StreamMetadata.</span>
 
-<span class="sd">        Language of the media contained in the stream. If the value is not set, then no metadata tag is set for the media stream.</span>
+<span class="sd">        Language of the media contained in the stream, given as an ISO 639-2 code or a BCP 47 tag, for example 'eng' or 'en-US'. If the value is not set, then no metadata tag is set for the media stream.</span>
 
 <span class="sd">        :param language: The language of this StreamMetadata.</span>
 <span class="sd">        :type: string_types</span>
@@ -160,7 +166,7 @@
         <span class="c1"># type: () -&gt; string_types</span>
 <span class="w">        </span><span class="sd">"""Gets the label of this StreamMetadata.</span>
 
-<span class="sd">        Display name of the Stream, for example to tell apart multiple audio tracks that share the same language. For CMAF muxings it is written as a 'labl' box (ISO/IEC 14496-12) into the user data of the track. Downstream packagers use it for the Label element in DASH manifests and the NAME attribute of EXT-X-MEDIA tags in HLS playlists. If the value is not set, no label is written.</span>
+<span class="sd">        Display name of the Stream, for example to tell apart multiple audio tracks that share the same language. For CMAF muxings it is written as a 'labl' box (ISO/IEC 14496-12) into the user data of the track. Downstream packagers use it for the Label element in DASH manifests and the NAME attribute of EXT-X-MEDIA tags in HLS playlists. If the value is not set, no label is written. Use 'labelLanguage' to declare which language the label itself is written in.</span>
 
 <span class="sd">        :return: The label of this StreamMetadata.</span>
 <span class="sd">        :rtype: string_types</span>
@@ -172,7 +178,7 @@
         <span class="c1"># type: (string_types) -&gt; None</span>
 <span class="w">        </span><span class="sd">"""Sets the label of this StreamMetadata.</span>
 
-<span class="sd">        Display name of the Stream, for example to tell apart multiple audio tracks that share the same language. For CMAF muxings it is written as a 'labl' box (ISO/IEC 14496-12) into the user data of the track. Downstream packagers use it for the Label element in DASH manifests and the NAME attribute of EXT-X-MEDIA tags in HLS playlists. If the value is not set, no label is written.</span>
+<span class="sd">        Display name of the Stream, for example to tell apart multiple audio tracks that share the same language. For CMAF muxings it is written as a 'labl' box (ISO/IEC 14496-12) into the user data of the track. Downstream packagers use it for the Label element in DASH manifests and the NAME attribute of EXT-X-MEDIA tags in HLS playlists. If the value is not set, no label is written. Use 'labelLanguage' to declare which language the label itself is written in.</span>
 
 <span class="sd">        :param label: The label of this StreamMetadata.</span>
 <span class="sd">        :type: string_types</span>
@@ -185,6 +191,37 @@
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Invalid type for `label`, type has to be `string_types`"</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_label</span> <span class="o">=</span> <span class="n">label</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">label_language</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; string_types</span>
+<span class="w">        </span><span class="sd">"""Gets the label_language of this StreamMetadata.</span>
+
+<span class="sd">        Language the 'label' itself is written in, which is not necessarily the language of the media. A Spanish audio track can carry an English label, for example. For CMAF muxings it is written into the 'labl' box next to the label, and downstream packagers use it for the lang attribute of the Label element in DASH manifests. The value is written as given and downstream packagers expose it unchanged, so set a BCP 47 tag such as 'en' when the manifest should carry that form. The value has to be shaped like a BCP 47 tag: a primary subtag of two or three letters, optionally followed by subtags of up to eight letters or digits, each separated by a hyphen, for example 'en', 'en-US' or 'es-419'. If the value is not set and a label is set, 'language' is used as given, for example 'eng'. Without either, the label language is written as 'und' (undetermined). HLS playlists are not affected, as EXT-X-MEDIA has no equivalent attribute.</span>
+
+<span class="sd">        :return: The label_language of this StreamMetadata.</span>
+<span class="sd">        :rtype: string_types</span>
+<span class="sd">        """</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_label_language</span>
+
+    <span class="nd">@label_language</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">label_language</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">label_language</span><span class="p">):</span>
+        <span class="c1"># type: (string_types) -&gt; None</span>
+<span class="w">        </span><span class="sd">"""Sets the label_language of this StreamMetadata.</span>
+
+<span class="sd">        Language the 'label' itself is written in, which is not necessarily the language of the media. A Spanish audio track can carry an English label, for example. For CMAF muxings it is written into the 'labl' box next to the label, and downstream packagers use it for the lang attribute of the Label element in DASH manifests. The value is written as given and downstream packagers expose it unchanged, so set a BCP 47 tag such as 'en' when the manifest should carry that form. The value has to be shaped like a BCP 47 tag: a primary subtag of two or three letters, optionally followed by subtags of up to eight letters or digits, each separated by a hyphen, for example 'en', 'en-US' or 'es-419'. If the value is not set and a label is set, 'language' is used as given, for example 'eng'. Without either, the label language is written as 'und' (undetermined). HLS playlists are not affected, as EXT-X-MEDIA has no equivalent attribute.</span>
+
+<span class="sd">        :param label_language: The label_language of this StreamMetadata.</span>
+<span class="sd">        :type: string_types</span>
+<span class="sd">        """</span>
+
+        <span class="k">if</span> <span class="n">label_language</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">label_language</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">label_language</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">35</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">"Invalid value for `label_language`, length must be less than or equal to `35`"</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">label_language</span><span class="p">,</span> <span class="n">string_types</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Invalid type for `label_language`, type has to be `string_types`"</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_label_language</span> <span class="o">=</span> <span class="n">label_language</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">switching_set_id</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>

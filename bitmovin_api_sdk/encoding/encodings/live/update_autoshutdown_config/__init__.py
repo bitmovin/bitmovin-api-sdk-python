@@ -1,0 +1,1 @@
+from bitmovin_api_sdk.encoding.encodings.live.update_autoshutdown_config.update_autoshutdown_config_api import UpdateAutoshutdownConfigApi

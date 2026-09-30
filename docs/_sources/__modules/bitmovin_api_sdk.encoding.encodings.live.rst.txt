@@ -14,6 +14,7 @@ Subpackages
    bitmovin_api_sdk.encoding.encodings.live.insertable_content
    bitmovin_api_sdk.encoding.encodings.live.reset_live_manifest_timeshift
    bitmovin_api_sdk.encoding.encodings.live.scte35_cue
+   bitmovin_api_sdk.encoding.encodings.live.update_autoshutdown_config
 
 Submodules
 ----------

@@ -16,18 +16,20 @@ class AiSceneAnalysisLiveResult(object):
                  encoding_id=None,
                  sequence=None,
                  produced_at=None,
+                 media_time_origin_unix_ms=None,
                  is_final=None,
                  analyzed_start_time_seconds=None,
                  analyzed_end_time_seconds=None,
                  source_gaps=None,
                  metadata=None,
                  observations=None):
-        # type: (string_types, string_types, int, datetime, bool, float, float, list[AiSceneAnalysisLiveSourceGap], AiSceneAnalysisLiveResultMetadata, list[AiSceneAnalysisLiveObservation]) -> None
+        # type: (string_types, string_types, int, datetime, int, bool, float, float, list[AiSceneAnalysisLiveSourceGap], AiSceneAnalysisLiveResultMetadata, list[AiSceneAnalysisLiveObservation]) -> None
 
         self._analysis_id = None
         self._encoding_id = None
         self._sequence = None
         self._produced_at = None
+        self._media_time_origin_unix_ms = None
         self._is_final = None
         self._analyzed_start_time_seconds = None
         self._analyzed_end_time_seconds = None
@@ -44,6 +46,8 @@ class AiSceneAnalysisLiveResult(object):
             self.sequence = sequence
         if produced_at is not None:
             self.produced_at = produced_at
+        if media_time_origin_unix_ms is not None:
+            self.media_time_origin_unix_ms = media_time_origin_unix_ms
         if is_final is not None:
             self.is_final = is_final
         if analyzed_start_time_seconds is not None:
@@ -64,6 +68,7 @@ class AiSceneAnalysisLiveResult(object):
             'encoding_id': 'string_types',
             'sequence': 'int',
             'produced_at': 'datetime',
+            'media_time_origin_unix_ms': 'int',
             'is_final': 'bool',
             'analyzed_start_time_seconds': 'float',
             'analyzed_end_time_seconds': 'float',
@@ -81,6 +86,7 @@ class AiSceneAnalysisLiveResult(object):
             'encoding_id': 'encodingId',
             'sequence': 'sequence',
             'produced_at': 'producedAt',
+            'media_time_origin_unix_ms': 'mediaTimeOriginUnixMs',
             'is_final': 'isFinal',
             'analyzed_start_time_seconds': 'analyzedStartTimeSeconds',
             'analyzed_end_time_seconds': 'analyzedEndTimeSeconds',
@@ -207,6 +213,37 @@ class AiSceneAnalysisLiveResult(object):
                 raise TypeError("Invalid type for `produced_at`, type has to be `datetime`")
 
         self._produced_at = produced_at
+
+    @property
+    def media_time_origin_unix_ms(self):
+        # type: () -> int
+        """Gets the media_time_origin_unix_ms of this AiSceneAnalysisLiveResult.
+
+        UTC presentation-clock time in Unix milliseconds corresponding to media time zero. This origin is fixed for the Live Analysis; coverage, observation, and source-gap times remain relative to it. It is not the source capture time or result publication time. (required)
+
+        :return: The media_time_origin_unix_ms of this AiSceneAnalysisLiveResult.
+        :rtype: int
+        """
+        return self._media_time_origin_unix_ms
+
+    @media_time_origin_unix_ms.setter
+    def media_time_origin_unix_ms(self, media_time_origin_unix_ms):
+        # type: (int) -> None
+        """Sets the media_time_origin_unix_ms of this AiSceneAnalysisLiveResult.
+
+        UTC presentation-clock time in Unix milliseconds corresponding to media time zero. This origin is fixed for the Live Analysis; coverage, observation, and source-gap times remain relative to it. It is not the source capture time or result publication time. (required)
+
+        :param media_time_origin_unix_ms: The media_time_origin_unix_ms of this AiSceneAnalysisLiveResult.
+        :type: int
+        """
+
+        if media_time_origin_unix_ms is not None:
+            if media_time_origin_unix_ms is not None and media_time_origin_unix_ms < 1:
+                raise ValueError("Invalid value for `media_time_origin_unix_ms`, must be a value greater than or equal to `1`")
+            if not isinstance(media_time_origin_unix_ms, int):
+                raise TypeError("Invalid type for `media_time_origin_unix_ms`, type has to be `int`")
+
+        self._media_time_origin_unix_ms = media_time_origin_unix_ms
 
     @property
     def is_final(self):

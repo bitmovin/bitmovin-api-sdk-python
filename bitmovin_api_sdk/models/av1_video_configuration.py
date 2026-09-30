@@ -4,10 +4,12 @@ from enum import Enum
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
 from bitmovin_api_sdk.models.auto_level_setup import AutoLevelSetup
+from bitmovin_api_sdk.models.av1_dynamic_range_format import Av1DynamicRangeFormat
 from bitmovin_api_sdk.models.av1_preset_configuration import Av1PresetConfiguration
 from bitmovin_api_sdk.models.color_config import ColorConfig
 from bitmovin_api_sdk.models.display_aspect_ratio import DisplayAspectRatio
 from bitmovin_api_sdk.models.encoding_mode import EncodingMode
+from bitmovin_api_sdk.models.level_av1 import LevelAv1
 from bitmovin_api_sdk.models.pixel_format import PixelFormat
 from bitmovin_api_sdk.models.video_configuration import VideoConfiguration
 import pprint
@@ -35,14 +37,18 @@ class Av1VideoConfiguration(VideoConfiguration):
                  encoding_mode=None,
                  preset_configuration=None,
                  auto_level_setup=None,
+                 max_level=None,
+                 dynamic_range_format=None,
                  master_display=None,
                  max_content_light_level=None,
                  max_picture_average_light_level=None):
-        # type: (string_types, string_types, string_types, datetime, datetime, dict, int, int, int, float, PixelFormat, ColorConfig, int, int, DisplayAspectRatio, EncodingMode, Av1PresetConfiguration, AutoLevelSetup, string_types, int, int) -> None
+        # type: (string_types, string_types, string_types, datetime, datetime, dict, int, int, int, float, PixelFormat, ColorConfig, int, int, DisplayAspectRatio, EncodingMode, Av1PresetConfiguration, AutoLevelSetup, LevelAv1, Av1DynamicRangeFormat, string_types, int, int) -> None
         super(Av1VideoConfiguration, self).__init__(id_=id_, name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, width=width, height=height, bitrate=bitrate, rate=rate, pixel_format=pixel_format, color_config=color_config, sample_aspect_ratio_numerator=sample_aspect_ratio_numerator, sample_aspect_ratio_denominator=sample_aspect_ratio_denominator, display_aspect_ratio=display_aspect_ratio, encoding_mode=encoding_mode)
 
         self._preset_configuration = None
         self._auto_level_setup = None
+        self._max_level = None
+        self._dynamic_range_format = None
         self._master_display = None
         self._max_content_light_level = None
         self._max_picture_average_light_level = None
@@ -52,6 +58,10 @@ class Av1VideoConfiguration(VideoConfiguration):
             self.preset_configuration = preset_configuration
         if auto_level_setup is not None:
             self.auto_level_setup = auto_level_setup
+        if max_level is not None:
+            self.max_level = max_level
+        if dynamic_range_format is not None:
+            self.dynamic_range_format = dynamic_range_format
         if master_display is not None:
             self.master_display = master_display
         if max_content_light_level is not None:
@@ -69,6 +79,8 @@ class Av1VideoConfiguration(VideoConfiguration):
         types.update({
             'preset_configuration': 'Av1PresetConfiguration',
             'auto_level_setup': 'AutoLevelSetup',
+            'max_level': 'LevelAv1',
+            'dynamic_range_format': 'Av1DynamicRangeFormat',
             'master_display': 'string_types',
             'max_content_light_level': 'int',
             'max_picture_average_light_level': 'int'
@@ -86,6 +98,8 @@ class Av1VideoConfiguration(VideoConfiguration):
         attributes.update({
             'preset_configuration': 'presetConfiguration',
             'auto_level_setup': 'autoLevelSetup',
+            'max_level': 'maxLevel',
+            'dynamic_range_format': 'dynamicRangeFormat',
             'master_display': 'masterDisplay',
             'max_content_light_level': 'maxContentLightLevel',
             'max_picture_average_light_level': 'maxPictureAverageLightLevel'
@@ -149,6 +163,64 @@ class Av1VideoConfiguration(VideoConfiguration):
                 raise TypeError("Invalid type for `auto_level_setup`, type has to be `AutoLevelSetup`")
 
         self._auto_level_setup = auto_level_setup
+
+    @property
+    def max_level(self):
+        # type: () -> LevelAv1
+        """Gets the max_level of this Av1VideoConfiguration.
+
+        Upper bound for the automatically calculated level. The level determined by autoLevelSetup is clamped to this value, so the encoder never signals a level higher than the one given here. If the target bitrate does not fit within this level, the encoder constrains the bitrate distribution to stay conformant rather than raising the level. Has no effect when autoLevelSetup is disabled.
+
+        :return: The max_level of this Av1VideoConfiguration.
+        :rtype: LevelAv1
+        """
+        return self._max_level
+
+    @max_level.setter
+    def max_level(self, max_level):
+        # type: (LevelAv1) -> None
+        """Sets the max_level of this Av1VideoConfiguration.
+
+        Upper bound for the automatically calculated level. The level determined by autoLevelSetup is clamped to this value, so the encoder never signals a level higher than the one given here. If the target bitrate does not fit within this level, the encoder constrains the bitrate distribution to stay conformant rather than raising the level. Has no effect when autoLevelSetup is disabled.
+
+        :param max_level: The max_level of this Av1VideoConfiguration.
+        :type: LevelAv1
+        """
+
+        if max_level is not None:
+            if not isinstance(max_level, LevelAv1):
+                raise TypeError("Invalid type for `max_level`, type has to be `LevelAv1`")
+
+        self._max_level = max_level
+
+    @property
+    def dynamic_range_format(self):
+        # type: () -> Av1DynamicRangeFormat
+        """Gets the dynamic_range_format of this Av1VideoConfiguration.
+
+        Configures what kind of dynamic range the output should conform to.
+
+        :return: The dynamic_range_format of this Av1VideoConfiguration.
+        :rtype: Av1DynamicRangeFormat
+        """
+        return self._dynamic_range_format
+
+    @dynamic_range_format.setter
+    def dynamic_range_format(self, dynamic_range_format):
+        # type: (Av1DynamicRangeFormat) -> None
+        """Sets the dynamic_range_format of this Av1VideoConfiguration.
+
+        Configures what kind of dynamic range the output should conform to.
+
+        :param dynamic_range_format: The dynamic_range_format of this Av1VideoConfiguration.
+        :type: Av1DynamicRangeFormat
+        """
+
+        if dynamic_range_format is not None:
+            if not isinstance(dynamic_range_format, Av1DynamicRangeFormat):
+                raise TypeError("Invalid type for `dynamic_range_format`, type has to be `Av1DynamicRangeFormat`")
+
+        self._dynamic_range_format = dynamic_range_format
 
     @property
     def master_display(self):

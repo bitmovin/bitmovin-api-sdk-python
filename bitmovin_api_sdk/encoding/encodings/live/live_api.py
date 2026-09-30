@@ -11,6 +11,7 @@ from bitmovin_api_sdk.models.response_error import ResponseError
 from bitmovin_api_sdk.models.start_live_encoding_request import StartLiveEncodingRequest
 from bitmovin_api_sdk.encoding.encodings.live.esam.esam_api import EsamApi
 from bitmovin_api_sdk.encoding.encodings.live.reset_live_manifest_timeshift.reset_live_manifest_timeshift_api import ResetLiveManifestTimeshiftApi
+from bitmovin_api_sdk.encoding.encodings.live.update_autoshutdown_config.update_autoshutdown_config_api import UpdateAutoshutdownConfigApi
 from bitmovin_api_sdk.encoding.encodings.live.heartbeat.heartbeat_api import HeartbeatApi
 from bitmovin_api_sdk.encoding.encodings.live.heartbeat_final.heartbeat_final_api import HeartbeatFinalApi
 from bitmovin_api_sdk.encoding.encodings.live.hd.hd_api import HdApi
@@ -38,6 +39,13 @@ class LiveApi(BaseApi):
         )
 
         self.reset_live_manifest_timeshift = ResetLiveManifestTimeshiftApi(
+            api_key=api_key,
+            tenant_org_id=tenant_org_id,
+            base_url=base_url,
+            logger=logger
+        )
+
+        self.update_autoshutdown_config = UpdateAutoshutdownConfigApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,

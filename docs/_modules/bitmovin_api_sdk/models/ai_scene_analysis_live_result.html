@@ -96,18 +96,20 @@
                  <span class="n">encoding_id</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">sequence</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">produced_at</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">media_time_origin_unix_ms</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">is_final</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">analyzed_start_time_seconds</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">analyzed_end_time_seconds</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">source_gaps</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">metadata</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">observations</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (string_types, string_types, int, datetime, bool, float, float, list[AiSceneAnalysisLiveSourceGap], AiSceneAnalysisLiveResultMetadata, list[AiSceneAnalysisLiveObservation]) -&gt; None</span>
+        <span class="c1"># type: (string_types, string_types, int, datetime, int, bool, float, float, list[AiSceneAnalysisLiveSourceGap], AiSceneAnalysisLiveResultMetadata, list[AiSceneAnalysisLiveObservation]) -&gt; None</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_analysis_id</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_encoding_id</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_sequence</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_produced_at</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_media_time_origin_unix_ms</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_is_final</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_analyzed_start_time_seconds</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_analyzed_end_time_seconds</span> <span class="o">=</span> <span class="kc">None</span>
@@ -124,6 +126,8 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">sequence</span> <span class="o">=</span> <span class="n">sequence</span>
         <span class="k">if</span> <span class="n">produced_at</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">produced_at</span> <span class="o">=</span> <span class="n">produced_at</span>
+        <span class="k">if</span> <span class="n">media_time_origin_unix_ms</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">media_time_origin_unix_ms</span> <span class="o">=</span> <span class="n">media_time_origin_unix_ms</span>
         <span class="k">if</span> <span class="n">is_final</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">is_final</span> <span class="o">=</span> <span class="n">is_final</span>
         <span class="k">if</span> <span class="n">analyzed_start_time_seconds</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -144,6 +148,7 @@
             <span class="s1">'encoding_id'</span><span class="p">:</span> <span class="s1">'string_types'</span><span class="p">,</span>
             <span class="s1">'sequence'</span><span class="p">:</span> <span class="s1">'int'</span><span class="p">,</span>
             <span class="s1">'produced_at'</span><span class="p">:</span> <span class="s1">'datetime'</span><span class="p">,</span>
+            <span class="s1">'media_time_origin_unix_ms'</span><span class="p">:</span> <span class="s1">'int'</span><span class="p">,</span>
             <span class="s1">'is_final'</span><span class="p">:</span> <span class="s1">'bool'</span><span class="p">,</span>
             <span class="s1">'analyzed_start_time_seconds'</span><span class="p">:</span> <span class="s1">'float'</span><span class="p">,</span>
             <span class="s1">'analyzed_end_time_seconds'</span><span class="p">:</span> <span class="s1">'float'</span><span class="p">,</span>
@@ -161,6 +166,7 @@
             <span class="s1">'encoding_id'</span><span class="p">:</span> <span class="s1">'encodingId'</span><span class="p">,</span>
             <span class="s1">'sequence'</span><span class="p">:</span> <span class="s1">'sequence'</span><span class="p">,</span>
             <span class="s1">'produced_at'</span><span class="p">:</span> <span class="s1">'producedAt'</span><span class="p">,</span>
+            <span class="s1">'media_time_origin_unix_ms'</span><span class="p">:</span> <span class="s1">'mediaTimeOriginUnixMs'</span><span class="p">,</span>
             <span class="s1">'is_final'</span><span class="p">:</span> <span class="s1">'isFinal'</span><span class="p">,</span>
             <span class="s1">'analyzed_start_time_seconds'</span><span class="p">:</span> <span class="s1">'analyzedStartTimeSeconds'</span><span class="p">,</span>
             <span class="s1">'analyzed_end_time_seconds'</span><span class="p">:</span> <span class="s1">'analyzedEndTimeSeconds'</span><span class="p">,</span>
@@ -287,6 +293,37 @@
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Invalid type for `produced_at`, type has to be `datetime`"</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_produced_at</span> <span class="o">=</span> <span class="n">produced_at</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">media_time_origin_unix_ms</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; int</span>
+<span class="w">        </span><span class="sd">"""Gets the media_time_origin_unix_ms of this AiSceneAnalysisLiveResult.</span>
+
+<span class="sd">        UTC presentation-clock time in Unix milliseconds corresponding to media time zero. This origin is fixed for the Live Analysis; coverage, observation, and source-gap times remain relative to it. It is not the source capture time or result publication time. (required)</span>
+
+<span class="sd">        :return: The media_time_origin_unix_ms of this AiSceneAnalysisLiveResult.</span>
+<span class="sd">        :rtype: int</span>
+<span class="sd">        """</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_media_time_origin_unix_ms</span>
+
+    <span class="nd">@media_time_origin_unix_ms</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">media_time_origin_unix_ms</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">media_time_origin_unix_ms</span><span class="p">):</span>
+        <span class="c1"># type: (int) -&gt; None</span>
+<span class="w">        </span><span class="sd">"""Sets the media_time_origin_unix_ms of this AiSceneAnalysisLiveResult.</span>
+
+<span class="sd">        UTC presentation-clock time in Unix milliseconds corresponding to media time zero. This origin is fixed for the Live Analysis; coverage, observation, and source-gap times remain relative to it. It is not the source capture time or result publication time. (required)</span>
+
+<span class="sd">        :param media_time_origin_unix_ms: The media_time_origin_unix_ms of this AiSceneAnalysisLiveResult.</span>
+<span class="sd">        :type: int</span>
+<span class="sd">        """</span>
+
+        <span class="k">if</span> <span class="n">media_time_origin_unix_ms</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">media_time_origin_unix_ms</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">media_time_origin_unix_ms</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">"Invalid value for `media_time_origin_unix_ms`, must be a value greater than or equal to `1`"</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">media_time_origin_unix_ms</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Invalid type for `media_time_origin_unix_ms`, type has to be `int`"</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_media_time_origin_unix_ms</span> <span class="o">=</span> <span class="n">media_time_origin_unix_ms</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">is_final</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
