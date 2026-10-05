@@ -208,7 +208,7 @@
         <span class="c1"># type: () -&gt; Cea608ChannelType</span>
 <span class="w">        </span><span class="sd">"""Gets the channel of this Cea608CaptionInputStream.</span>
 
-<span class="sd">        The channel number of the subtitle on the respective stream position (required)</span>
+<span class="sd">        The CEA-608 caption channel to extract, as defined in ANSI/CTA-608-E. Only the primary channel of each field is selectable: CC1 on field 1 and CC3 on field 2. (required)</span>
 
 <span class="sd">        :return: The channel of this Cea608CaptionInputStream.</span>
 <span class="sd">        :rtype: Cea608ChannelType</span>
@@ -220,7 +220,7 @@
         <span class="c1"># type: (Cea608ChannelType) -&gt; None</span>
 <span class="w">        </span><span class="sd">"""Sets the channel of this Cea608CaptionInputStream.</span>
 
-<span class="sd">        The channel number of the subtitle on the respective stream position (required)</span>
+<span class="sd">        The CEA-608 caption channel to extract, as defined in ANSI/CTA-608-E. Only the primary channel of each field is selectable: CC1 on field 1 and CC3 on field 2. (required)</span>
 
 <span class="sd">        :param channel: The channel of this Cea608CaptionInputStream.</span>
 <span class="sd">        :type: Cea608ChannelType</span>

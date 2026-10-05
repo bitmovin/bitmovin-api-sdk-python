@@ -128,7 +128,7 @@ class Cea608CaptionInputStream(InputStream):
         # type: () -> Cea608ChannelType
         """Gets the channel of this Cea608CaptionInputStream.
 
-        The channel number of the subtitle on the respective stream position (required)
+        The CEA-608 caption channel to extract, as defined in ANSI/CTA-608-E. Only the primary channel of each field is selectable: CC1 on field 1 and CC3 on field 2. (required)
 
         :return: The channel of this Cea608CaptionInputStream.
         :rtype: Cea608ChannelType
@@ -140,7 +140,7 @@ class Cea608CaptionInputStream(InputStream):
         # type: (Cea608ChannelType) -> None
         """Sets the channel of this Cea608CaptionInputStream.
 
-        The channel number of the subtitle on the respective stream position (required)
+        The CEA-608 caption channel to extract, as defined in ANSI/CTA-608-E. Only the primary channel of each field is selectable: CC1 on field 1 and CC3 on field 2. (required)
 
         :param channel: The channel of this Cea608CaptionInputStream.
         :type: Cea608ChannelType

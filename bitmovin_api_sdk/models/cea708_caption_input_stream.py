@@ -127,7 +127,7 @@ class Cea708CaptionInputStream(InputStream):
         # type: () -> int
         """Gets the channel of this Cea708CaptionInputStream.
 
-        The channel number of the subtitle on the respective stream position. Must not be smaller than 1 (required)
+        The CEA-708 caption service to extract, as defined in ANSI/CTA-708-E. Service 1 is the primary caption service and is used when this value is not set. Which services a stream carries depends on the source, so check it before selecting anything other than service 1.
 
         :return: The channel of this Cea708CaptionInputStream.
         :rtype: int
@@ -139,13 +139,17 @@ class Cea708CaptionInputStream(InputStream):
         # type: (int) -> None
         """Sets the channel of this Cea708CaptionInputStream.
 
-        The channel number of the subtitle on the respective stream position. Must not be smaller than 1 (required)
+        The CEA-708 caption service to extract, as defined in ANSI/CTA-708-E. Service 1 is the primary caption service and is used when this value is not set. Which services a stream carries depends on the source, so check it before selecting anything other than service 1.
 
         :param channel: The channel of this Cea708CaptionInputStream.
         :type: int
         """
 
         if channel is not None:
+            if channel is not None and channel > 63:
+                raise ValueError("Invalid value for `channel`, must be a value less than or equal to `63`")
+            if channel is not None and channel < 1:
+                raise ValueError("Invalid value for `channel`, must be a value greater than or equal to `1`")
             if not isinstance(channel, int):
                 raise TypeError("Invalid type for `channel`, type has to be `int`")
 

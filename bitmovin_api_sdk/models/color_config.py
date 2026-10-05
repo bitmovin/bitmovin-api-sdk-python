@@ -300,7 +300,7 @@ class ColorConfig(object):
         # type: () -> ColorSpace
         """Gets the color_space of this ColorConfig.
 
-        The color space to be applied. If used on a Dolby Vision stream, this value must be set to UNSPECIFIED.
+        The color space to be applied.
 
         :return: The color_space of this ColorConfig.
         :rtype: ColorSpace
@@ -312,7 +312,7 @@ class ColorConfig(object):
         # type: (ColorSpace) -> None
         """Sets the color_space of this ColorConfig.
 
-        The color space to be applied. If used on a Dolby Vision stream, this value must be set to UNSPECIFIED.
+        The color space to be applied.
 
         :param color_space: The color_space of this ColorConfig.
         :type: ColorSpace
@@ -329,7 +329,7 @@ class ColorConfig(object):
         # type: () -> ColorPrimaries
         """Gets the color_primaries of this ColorConfig.
 
-        The color primaries to be applied. If used on a Dolby Vision stream, this value must be set to UNSPECIFIED.
+        The color primaries to be applied.
 
         :return: The color_primaries of this ColorConfig.
         :rtype: ColorPrimaries
@@ -341,7 +341,7 @@ class ColorConfig(object):
         # type: (ColorPrimaries) -> None
         """Sets the color_primaries of this ColorConfig.
 
-        The color primaries to be applied. If used on a Dolby Vision stream, this value must be set to UNSPECIFIED.
+        The color primaries to be applied.
 
         :param color_primaries: The color_primaries of this ColorConfig.
         :type: ColorPrimaries
@@ -358,7 +358,7 @@ class ColorConfig(object):
         # type: () -> ColorRange
         """Gets the color_range of this ColorConfig.
 
-        The color range to be applied. If used on a Dolby Vision stream, this value must be set to JPEG.
+        The color range to be applied.
 
         :return: The color_range of this ColorConfig.
         :rtype: ColorRange
@@ -370,7 +370,7 @@ class ColorConfig(object):
         # type: (ColorRange) -> None
         """Sets the color_range of this ColorConfig.
 
-        The color range to be applied. If used on a Dolby Vision stream, this value must be set to JPEG.
+        The color range to be applied.
 
         :param color_range: The color_range of this ColorConfig.
         :type: ColorRange
@@ -387,7 +387,7 @@ class ColorConfig(object):
         # type: () -> ColorTransfer
         """Gets the color_transfer of this ColorConfig.
 
-        The color transfer to be applied. If used on a Dolby Vision stream, this value must be set to UNSPECIFIED.
+        The color transfer to be applied.
 
         :return: The color_transfer of this ColorConfig.
         :rtype: ColorTransfer
@@ -399,7 +399,7 @@ class ColorConfig(object):
         # type: (ColorTransfer) -> None
         """Sets the color_transfer of this ColorConfig.
 
-        The color transfer to be applied. If used on a Dolby Vision stream, this value must be set to UNSPECIFIED.
+        The color transfer to be applied.
 
         :param color_transfer: The color_transfer of this ColorConfig.
         :type: ColorTransfer

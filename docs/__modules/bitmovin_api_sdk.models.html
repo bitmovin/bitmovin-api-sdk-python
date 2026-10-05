@@ -1459,6 +1459,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#bitmovin_api_sdk.models.analytics_attribute.AnalyticsAttribute.SEQUENCE_NUMBER"><code class="docutils literal notranslate"><span class="pre">AnalyticsAttribute.SEQUENCE_NUMBER</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#bitmovin_api_sdk.models.analytics_attribute.AnalyticsAttribute.SIZE"><code class="docutils literal notranslate"><span class="pre">AnalyticsAttribute.SIZE</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#bitmovin_api_sdk.models.analytics_attribute.AnalyticsAttribute.STARTUPTIME"><code class="docutils literal notranslate"><span class="pre">AnalyticsAttribute.STARTUPTIME</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#bitmovin_api_sdk.models.analytics_attribute.AnalyticsAttribute.START_FAILURE_PERCENTAGE"><code class="docutils literal notranslate"><span class="pre">AnalyticsAttribute.START_FAILURE_PERCENTAGE</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#bitmovin_api_sdk.models.analytics_attribute.AnalyticsAttribute.STREAM_FORMAT"><code class="docutils literal notranslate"><span class="pre">AnalyticsAttribute.STREAM_FORMAT</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#bitmovin_api_sdk.models.analytics_attribute.AnalyticsAttribute.SUPPORTED_VIDEO_CODECS"><code class="docutils literal notranslate"><span class="pre">AnalyticsAttribute.SUPPORTED_VIDEO_CODECS</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#bitmovin_api_sdk.models.analytics_attribute.AnalyticsAttribute.TARGET_LATENCY"><code class="docutils literal notranslate"><span class="pre">AnalyticsAttribute.TARGET_LATENCY</span></code></a></li>
@@ -20160,6 +20161,11 @@
 <dd></dd></dl>
 
 <dl class="py attribute">
+<dt class="sig sig-object py" id="bitmovin_api_sdk.models.analytics_attribute.AnalyticsAttribute.START_FAILURE_PERCENTAGE">
+<span class="sig-name descname"><span class="pre">START_FAILURE_PERCENTAGE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'START_FAILURE_PERCENTAGE'</span></em><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_attribute.AnalyticsAttribute.START_FAILURE_PERCENTAGE" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
 <dt class="sig sig-object py" id="bitmovin_api_sdk.models.analytics_attribute.AnalyticsAttribute.STREAM_FORMAT">
 <span class="sig-name descname"><span class="pre">STREAM_FORMAT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'STREAM_FORMAT'</span></em><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_attribute.AnalyticsAttribute.STREAM_FORMAT" title="Link to this definition"></a></dt>
 <dd></dd></dl>
@@ -32587,7 +32593,7 @@
 <dt class="sig sig-object py" id="bitmovin_api_sdk.models.cea608_caption_input_stream.Cea608CaptionInputStream.channel">
 <em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">channel</span></span><a class="headerlink" href="#bitmovin_api_sdk.models.cea608_caption_input_stream.Cea608CaptionInputStream.channel" title="Link to this definition"></a></dt>
 <dd><p>Gets the channel of this Cea608CaptionInputStream.</p>
-<p>The channel number of the subtitle on the respective stream position (required)</p>
+<p>The CEA-608 caption channel to extract, as defined in ANSI/CTA-608-E. Only the primary channel of each field is selectable: CC1 on field 1 and CC3 on field 2. (required)</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>The channel of this Cea608CaptionInputStream.</p>
@@ -32682,7 +32688,7 @@
 <dt class="sig sig-object py" id="bitmovin_api_sdk.models.cea708_caption_input_stream.Cea708CaptionInputStream.channel">
 <em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">channel</span></span><a class="headerlink" href="#bitmovin_api_sdk.models.cea708_caption_input_stream.Cea708CaptionInputStream.channel" title="Link to this definition"></a></dt>
 <dd><p>Gets the channel of this Cea708CaptionInputStream.</p>
-<p>The channel number of the subtitle on the respective stream position. Must not be smaller than 1 (required)</p>
+<p>The CEA-708 caption service to extract, as defined in ANSI/CTA-708-E. Service 1 is the primary caption service and is used when this value is not set. Which services a stream carries depends on the source, so check it before selecting anything other than service 1.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>The channel of this Cea708CaptionInputStream.</p>
@@ -34683,7 +34689,7 @@
 <dt class="sig sig-object py" id="bitmovin_api_sdk.models.color_config.ColorConfig.color_primaries">
 <em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">color_primaries</span></span><a class="headerlink" href="#bitmovin_api_sdk.models.color_config.ColorConfig.color_primaries" title="Link to this definition"></a></dt>
 <dd><p>Gets the color_primaries of this ColorConfig.</p>
-<p>The color primaries to be applied. If used on a Dolby Vision stream, this value must be set to UNSPECIFIED.</p>
+<p>The color primaries to be applied.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>The color_primaries of this ColorConfig.</p>
@@ -34698,7 +34704,7 @@
 <dt class="sig sig-object py" id="bitmovin_api_sdk.models.color_config.ColorConfig.color_range">
 <em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">color_range</span></span><a class="headerlink" href="#bitmovin_api_sdk.models.color_config.ColorConfig.color_range" title="Link to this definition"></a></dt>
 <dd><p>Gets the color_range of this ColorConfig.</p>
-<p>The color range to be applied. If used on a Dolby Vision stream, this value must be set to JPEG.</p>
+<p>The color range to be applied.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>The color_range of this ColorConfig.</p>
@@ -34713,7 +34719,7 @@
 <dt class="sig sig-object py" id="bitmovin_api_sdk.models.color_config.ColorConfig.color_space">
 <em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">color_space</span></span><a class="headerlink" href="#bitmovin_api_sdk.models.color_config.ColorConfig.color_space" title="Link to this definition"></a></dt>
 <dd><p>Gets the color_space of this ColorConfig.</p>
-<p>The color space to be applied. If used on a Dolby Vision stream, this value must be set to UNSPECIFIED.</p>
+<p>The color space to be applied.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>The color_space of this ColorConfig.</p>
@@ -34728,7 +34734,7 @@
 <dt class="sig sig-object py" id="bitmovin_api_sdk.models.color_config.ColorConfig.color_transfer">
 <em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">color_transfer</span></span><a class="headerlink" href="#bitmovin_api_sdk.models.color_config.ColorConfig.color_transfer" title="Link to this definition"></a></dt>
 <dd><p>Gets the color_transfer of this ColorConfig.</p>
-<p>The color transfer to be applied. If used on a Dolby Vision stream, this value must be set to UNSPECIFIED.</p>
+<p>The color transfer to be applied.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>The color_transfer of this ColorConfig.</p>
@@ -67904,7 +67910,7 @@
 <dt class="sig sig-object py" id="bitmovin_api_sdk.models.reset_live_manifest_time_shift.ResetLiveManifestTimeShift.manifest_ids">
 <em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">manifest_ids</span></span><a class="headerlink" href="#bitmovin_api_sdk.models.reset_live_manifest_time_shift.ResetLiveManifestTimeShift.manifest_ids" title="Link to this definition"></a></dt>
 <dd><p>Gets the manifest_ids of this ResetLiveManifestTimeShift.</p>
-<p>The ids of the manifests to update. If this property is not set, all manifests tied to the encoding are updated.</p>
+<p>The IDs of the manifests to update. If omitted, all supported manifests associated with the encoding are updated. HLS live manifests are supported. DASH live manifests require encoder version 2.235.0 or later.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>The manifest_ids of this ResetLiveManifestTimeShift.</p>
@@ -67919,7 +67925,7 @@
 <dt class="sig sig-object py" id="bitmovin_api_sdk.models.reset_live_manifest_time_shift.ResetLiveManifestTimeShift.offset_in_seconds">
 <em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">offset_in_seconds</span></span><a class="headerlink" href="#bitmovin_api_sdk.models.reset_live_manifest_time_shift.ResetLiveManifestTimeShift.offset_in_seconds" title="Link to this definition"></a></dt>
 <dd><p>Gets the offset_in_seconds of this ResetLiveManifestTimeShift.</p>
-<p>Offset in seconds from the start of the live event, defining the point from which all segments within that duration will be removed from the given manifests. E.g.: The segment length is 2 seconds and a timeshift of 120 seconds (2 minutes) is configured.  The manifest contains 60 segments with the last segment number being 80 (<cite>segment_80.ts</cite>).  This means the manifest contains <cite>segment_20.ts</cite> to <cite>segment_80.ts</cite> (timeshift of 2 minutes equals 60 segments in manifest) If you set <cite>offsetInSeconds</cite> to <cite>120</cite>, all segments below segment number 60 (<cite>segment_60.ts</cite>) will be removed. (<cite>targetSegmentNumber = offsetInSeconds / segmentLength</cite>) The manifests will then contain <cite>segment_60.ts</cite> to <cite>segment_80.ts</cite> <em>Note:</em> Only <cite>offsetInSeconds</cite> or <cite>residualPeriodInSeconds</cite> can be set.</p>
+<p>Specifies an offset, in seconds, from the start of the live event. All segments before this position are removed from the affected manifests. For example, assume a segment length of 2 seconds and a configured <cite>timeshift</cite> of 120 seconds (2 minutes). If the most recent segment is <cite>segment_80.ts</cite>, the manifest contains 60 segments, from <cite>segment_21.ts</cite> through <cite>segment_80.ts</cite>. Setting <cite>offsetInSeconds</cite> to <cite>120</cite> sets the target segment number to 60 (<cite>targetSegmentNumber = offsetInSeconds / segmentLength</cite>). All segments before <cite>segment_60.ts</cite> are removed. Each affected manifest then contains <cite>segment_60.ts</cite> through <cite>segment_80.ts</cite>.  <em>Note:</em> Do not set both <cite>offsetInSeconds</cite> and <cite>residualPeriodInSeconds</cite>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>The offset_in_seconds of this ResetLiveManifestTimeShift.</p>
@@ -67939,7 +67945,7 @@
 <dt class="sig sig-object py" id="bitmovin_api_sdk.models.reset_live_manifest_time_shift.ResetLiveManifestTimeShift.residual_period_in_seconds">
 <em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">residual_period_in_seconds</span></span><a class="headerlink" href="#bitmovin_api_sdk.models.reset_live_manifest_time_shift.ResetLiveManifestTimeShift.residual_period_in_seconds" title="Link to this definition"></a></dt>
 <dd><p>Gets the residual_period_in_seconds of this ResetLiveManifestTimeShift.</p>
-<p>Determines how many seconds will be left in the manifest after segments are removed. If this is not set, all but one segment will be removed.</p>
+<p>Specifies how many seconds of content remain in the manifest after older segments are removed. At least one segment is always retained. If neither <cite>residualPeriodInSeconds</cite> nor <cite>offsetInSeconds</cite> is set, all segments except the most recent are removed. For DASH manifests that use SegmentTemplate, the retained duration also includes the value configured for <cite>liveEdgeOffset</cite>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>The residual_period_in_seconds of this ResetLiveManifestTimeShift.</p>

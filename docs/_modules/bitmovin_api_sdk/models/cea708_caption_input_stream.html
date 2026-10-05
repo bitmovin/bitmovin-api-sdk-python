@@ -207,7 +207,7 @@
         <span class="c1"># type: () -&gt; int</span>
 <span class="w">        </span><span class="sd">"""Gets the channel of this Cea708CaptionInputStream.</span>
 
-<span class="sd">        The channel number of the subtitle on the respective stream position. Must not be smaller than 1 (required)</span>
+<span class="sd">        The CEA-708 caption service to extract, as defined in ANSI/CTA-708-E. Service 1 is the primary caption service and is used when this value is not set. Which services a stream carries depends on the source, so check it before selecting anything other than service 1.</span>
 
 <span class="sd">        :return: The channel of this Cea708CaptionInputStream.</span>
 <span class="sd">        :rtype: int</span>
@@ -219,13 +219,17 @@
         <span class="c1"># type: (int) -&gt; None</span>
 <span class="w">        </span><span class="sd">"""Sets the channel of this Cea708CaptionInputStream.</span>
 
-<span class="sd">        The channel number of the subtitle on the respective stream position. Must not be smaller than 1 (required)</span>
+<span class="sd">        The CEA-708 caption service to extract, as defined in ANSI/CTA-708-E. Service 1 is the primary caption service and is used when this value is not set. Which services a stream carries depends on the source, so check it before selecting anything other than service 1.</span>
 
 <span class="sd">        :param channel: The channel of this Cea708CaptionInputStream.</span>
 <span class="sd">        :type: int</span>
 <span class="sd">        """</span>
 
         <span class="k">if</span> <span class="n">channel</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">channel</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">channel</span> <span class="o">&gt;</span> <span class="mi">63</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">"Invalid value for `channel`, must be a value less than or equal to `63`"</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">channel</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">channel</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">"Invalid value for `channel`, must be a value greater than or equal to `1`"</span><span class="p">)</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">channel</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Invalid type for `channel`, type has to be `int`"</span><span class="p">)</span>
 

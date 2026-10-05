@@ -47,7 +47,7 @@ class Cea708Api(BaseApi):
         # type: (string_types, string_types, dict) -> BitmovinResponse
         """Delete CEA 708 Input Stream
 
-        :param encoding_id: Id of the Encoding
+        :param encoding_id: Id of the encoding.
         :type encoding_id: string_types, required
         :param input_stream_id: Id of the CEA 708 input stream.
         :type input_stream_id: string_types, required
