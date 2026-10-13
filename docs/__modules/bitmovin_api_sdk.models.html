@@ -998,6 +998,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#bitmovin_api_sdk.models.ai_scene_analysis_live_create_request.AiSceneAnalysisLiveCreateRequest"><code class="docutils literal notranslate"><span class="pre">AiSceneAnalysisLiveCreateRequest</span></code></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#bitmovin_api_sdk.models.ai_scene_analysis_live_create_request.AiSceneAnalysisLiveCreateRequest.attribute_map"><code class="docutils literal notranslate"><span class="pre">AiSceneAnalysisLiveCreateRequest.attribute_map</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#bitmovin_api_sdk.models.ai_scene_analysis_live_create_request.AiSceneAnalysisLiveCreateRequest.cloud_region"><code class="docutils literal notranslate"><span class="pre">AiSceneAnalysisLiveCreateRequest.cloud_region</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#bitmovin_api_sdk.models.ai_scene_analysis_live_create_request.AiSceneAnalysisLiveCreateRequest.encoder_version"><code class="docutils literal notranslate"><span class="pre">AiSceneAnalysisLiveCreateRequest.encoder_version</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#bitmovin_api_sdk.models.ai_scene_analysis_live_create_request.AiSceneAnalysisLiveCreateRequest.name"><code class="docutils literal notranslate"><span class="pre">AiSceneAnalysisLiveCreateRequest.name</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#bitmovin_api_sdk.models.ai_scene_analysis_live_create_request.AiSceneAnalysisLiveCreateRequest.openapi_types"><code class="docutils literal notranslate"><span class="pre">AiSceneAnalysisLiveCreateRequest.openapi_types</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#bitmovin_api_sdk.models.ai_scene_analysis_live_create_request.AiSceneAnalysisLiveCreateRequest.outputs"><code class="docutils literal notranslate"><span class="pre">AiSceneAnalysisLiveCreateRequest.outputs</span></code></a></li>
@@ -1429,6 +1430,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#bitmovin_api_sdk.models.analytics_attribute.AnalyticsAttribute.IS_PROGRAM_CHANGE"><code class="docutils literal notranslate"><span class="pre">AnalyticsAttribute.IS_PROGRAM_CHANGE</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#bitmovin_api_sdk.models.analytics_attribute.AnalyticsAttribute.LANGUAGE"><code class="docutils literal notranslate"><span class="pre">AnalyticsAttribute.LANGUAGE</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#bitmovin_api_sdk.models.analytics_attribute.AnalyticsAttribute.LATENCY"><code class="docutils literal notranslate"><span class="pre">AnalyticsAttribute.LATENCY</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#bitmovin_api_sdk.models.analytics_attribute.AnalyticsAttribute.LATENCY_DELTA"><code class="docutils literal notranslate"><span class="pre">AnalyticsAttribute.LATENCY_DELTA</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#bitmovin_api_sdk.models.analytics_attribute.AnalyticsAttribute.LICENSE_KEY"><code class="docutils literal notranslate"><span class="pre">AnalyticsAttribute.LICENSE_KEY</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#bitmovin_api_sdk.models.analytics_attribute.AnalyticsAttribute.M3U8_URL"><code class="docutils literal notranslate"><span class="pre">AnalyticsAttribute.M3U8_URL</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#bitmovin_api_sdk.models.analytics_attribute.AnalyticsAttribute.MINUTE"><code class="docutils literal notranslate"><span class="pre">AnalyticsAttribute.MINUTE</span></code></a></li>
@@ -17703,6 +17705,21 @@
 </dd></dl>
 
 <dl class="py property">
+<dt class="sig sig-object py" id="bitmovin_api_sdk.models.ai_scene_analysis_live_create_request.AiSceneAnalysisLiveCreateRequest.encoder_version">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">encoder_version</span></span><a class="headerlink" href="#bitmovin_api_sdk.models.ai_scene_analysis_live_create_request.AiSceneAnalysisLiveCreateRequest.encoder_version" title="Link to this definition"></a></dt>
+<dd><p>Gets the encoder_version of this AiSceneAnalysisLiveCreateRequest.</p>
+<p>Encoder release for the backing Live Encoding, using the same values and validation as <cite>Encoding.encoderVersion</cite> (for example, <cite>LATEST</cite> or a supported release version). Passed unchanged to the Encoding Resource Service. If omitted, the server default is used. Selects the full encoder release; component header overrides remain separate.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The encoder_version of this AiSceneAnalysisLiveCreateRequest.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>string_types</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
 <dt class="sig sig-object py" id="bitmovin_api_sdk.models.ai_scene_analysis_live_create_request.AiSceneAnalysisLiveCreateRequest.name">
 <em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#bitmovin_api_sdk.models.ai_scene_analysis_live_create_request.AiSceneAnalysisLiveCreateRequest.name" title="Link to this definition"></a></dt>
 <dd><p>Gets the name of this AiSceneAnalysisLiveCreateRequest.</p>
@@ -20008,6 +20025,11 @@
 <dl class="py attribute">
 <dt class="sig sig-object py" id="bitmovin_api_sdk.models.analytics_attribute.AnalyticsAttribute.LATENCY">
 <span class="sig-name descname"><span class="pre">LATENCY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'LATENCY'</span></em><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_attribute.AnalyticsAttribute.LATENCY" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="bitmovin_api_sdk.models.analytics_attribute.AnalyticsAttribute.LATENCY_DELTA">
+<span class="sig-name descname"><span class="pre">LATENCY_DELTA</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'LATENCY_DELTA'</span></em><a class="headerlink" href="#bitmovin_api_sdk.models.analytics_attribute.AnalyticsAttribute.LATENCY_DELTA" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">

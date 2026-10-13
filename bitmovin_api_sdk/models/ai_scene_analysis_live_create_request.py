@@ -15,13 +15,15 @@ class AiSceneAnalysisLiveCreateRequest(object):
                  name=None,
                  stream_key=None,
                  cloud_region=None,
+                 encoder_version=None,
                  recording=None,
                  outputs=None):
-        # type: (string_types, string_types, CloudRegion, AiSceneAnalysisLiveRecordingRequest, list[AiSceneAnalysisLiveOutput]) -> None
+        # type: (string_types, string_types, CloudRegion, string_types, AiSceneAnalysisLiveRecordingRequest, list[AiSceneAnalysisLiveOutput]) -> None
 
         self._name = None
         self._stream_key = None
         self._cloud_region = None
+        self._encoder_version = None
         self._recording = None
         self._outputs = list()
         self.discriminator = None
@@ -32,6 +34,8 @@ class AiSceneAnalysisLiveCreateRequest(object):
             self.stream_key = stream_key
         if cloud_region is not None:
             self.cloud_region = cloud_region
+        if encoder_version is not None:
+            self.encoder_version = encoder_version
         if recording is not None:
             self.recording = recording
         if outputs is not None:
@@ -43,6 +47,7 @@ class AiSceneAnalysisLiveCreateRequest(object):
             'name': 'string_types',
             'stream_key': 'string_types',
             'cloud_region': 'CloudRegion',
+            'encoder_version': 'string_types',
             'recording': 'AiSceneAnalysisLiveRecordingRequest',
             'outputs': 'list[AiSceneAnalysisLiveOutput]'
         }
@@ -55,6 +60,7 @@ class AiSceneAnalysisLiveCreateRequest(object):
             'name': 'name',
             'stream_key': 'streamKey',
             'cloud_region': 'cloudRegion',
+            'encoder_version': 'encoderVersion',
             'recording': 'recording',
             'outputs': 'outputs'
         }
@@ -152,6 +158,35 @@ class AiSceneAnalysisLiveCreateRequest(object):
                 raise TypeError("Invalid type for `cloud_region`, type has to be `CloudRegion`")
 
         self._cloud_region = cloud_region
+
+    @property
+    def encoder_version(self):
+        # type: () -> string_types
+        """Gets the encoder_version of this AiSceneAnalysisLiveCreateRequest.
+
+        Encoder release for the backing Live Encoding, using the same values and validation as `Encoding.encoderVersion` (for example, `LATEST` or a supported release version). Passed unchanged to the Encoding Resource Service. If omitted, the server default is used. Selects the full encoder release; component header overrides remain separate.
+
+        :return: The encoder_version of this AiSceneAnalysisLiveCreateRequest.
+        :rtype: string_types
+        """
+        return self._encoder_version
+
+    @encoder_version.setter
+    def encoder_version(self, encoder_version):
+        # type: (string_types) -> None
+        """Sets the encoder_version of this AiSceneAnalysisLiveCreateRequest.
+
+        Encoder release for the backing Live Encoding, using the same values and validation as `Encoding.encoderVersion` (for example, `LATEST` or a supported release version). Passed unchanged to the Encoding Resource Service. If omitted, the server default is used. Selects the full encoder release; component header overrides remain separate.
+
+        :param encoder_version: The encoder_version of this AiSceneAnalysisLiveCreateRequest.
+        :type: string_types
+        """
+
+        if encoder_version is not None:
+            if not isinstance(encoder_version, string_types):
+                raise TypeError("Invalid type for `encoder_version`, type has to be `string_types`")
+
+        self._encoder_version = encoder_version
 
     @property
     def recording(self):

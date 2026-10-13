@@ -95,13 +95,15 @@
                  <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">stream_key</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">cloud_region</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">encoder_version</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">recording</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">outputs</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (string_types, string_types, CloudRegion, AiSceneAnalysisLiveRecordingRequest, list[AiSceneAnalysisLiveOutput]) -&gt; None</span>
+        <span class="c1"># type: (string_types, string_types, CloudRegion, string_types, AiSceneAnalysisLiveRecordingRequest, list[AiSceneAnalysisLiveOutput]) -&gt; None</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_name</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_stream_key</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_cloud_region</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_encoder_version</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_recording</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_outputs</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>
@@ -112,6 +114,8 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">stream_key</span> <span class="o">=</span> <span class="n">stream_key</span>
         <span class="k">if</span> <span class="n">cloud_region</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">cloud_region</span> <span class="o">=</span> <span class="n">cloud_region</span>
+        <span class="k">if</span> <span class="n">encoder_version</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">encoder_version</span> <span class="o">=</span> <span class="n">encoder_version</span>
         <span class="k">if</span> <span class="n">recording</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">recording</span> <span class="o">=</span> <span class="n">recording</span>
         <span class="k">if</span> <span class="n">outputs</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -123,6 +127,7 @@
             <span class="s1">'name'</span><span class="p">:</span> <span class="s1">'string_types'</span><span class="p">,</span>
             <span class="s1">'stream_key'</span><span class="p">:</span> <span class="s1">'string_types'</span><span class="p">,</span>
             <span class="s1">'cloud_region'</span><span class="p">:</span> <span class="s1">'CloudRegion'</span><span class="p">,</span>
+            <span class="s1">'encoder_version'</span><span class="p">:</span> <span class="s1">'string_types'</span><span class="p">,</span>
             <span class="s1">'recording'</span><span class="p">:</span> <span class="s1">'AiSceneAnalysisLiveRecordingRequest'</span><span class="p">,</span>
             <span class="s1">'outputs'</span><span class="p">:</span> <span class="s1">'list[AiSceneAnalysisLiveOutput]'</span>
         <span class="p">}</span>
@@ -135,6 +140,7 @@
             <span class="s1">'name'</span><span class="p">:</span> <span class="s1">'name'</span><span class="p">,</span>
             <span class="s1">'stream_key'</span><span class="p">:</span> <span class="s1">'streamKey'</span><span class="p">,</span>
             <span class="s1">'cloud_region'</span><span class="p">:</span> <span class="s1">'cloudRegion'</span><span class="p">,</span>
+            <span class="s1">'encoder_version'</span><span class="p">:</span> <span class="s1">'encoderVersion'</span><span class="p">,</span>
             <span class="s1">'recording'</span><span class="p">:</span> <span class="s1">'recording'</span><span class="p">,</span>
             <span class="s1">'outputs'</span><span class="p">:</span> <span class="s1">'outputs'</span>
         <span class="p">}</span>
@@ -232,6 +238,35 @@
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Invalid type for `cloud_region`, type has to be `CloudRegion`"</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_cloud_region</span> <span class="o">=</span> <span class="n">cloud_region</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">encoder_version</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; string_types</span>
+<span class="w">        </span><span class="sd">"""Gets the encoder_version of this AiSceneAnalysisLiveCreateRequest.</span>
+
+<span class="sd">        Encoder release for the backing Live Encoding, using the same values and validation as `Encoding.encoderVersion` (for example, `LATEST` or a supported release version). Passed unchanged to the Encoding Resource Service. If omitted, the server default is used. Selects the full encoder release; component header overrides remain separate.</span>
+
+<span class="sd">        :return: The encoder_version of this AiSceneAnalysisLiveCreateRequest.</span>
+<span class="sd">        :rtype: string_types</span>
+<span class="sd">        """</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_encoder_version</span>
+
+    <span class="nd">@encoder_version</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">encoder_version</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">encoder_version</span><span class="p">):</span>
+        <span class="c1"># type: (string_types) -&gt; None</span>
+<span class="w">        </span><span class="sd">"""Sets the encoder_version of this AiSceneAnalysisLiveCreateRequest.</span>
+
+<span class="sd">        Encoder release for the backing Live Encoding, using the same values and validation as `Encoding.encoderVersion` (for example, `LATEST` or a supported release version). Passed unchanged to the Encoding Resource Service. If omitted, the server default is used. Selects the full encoder release; component header overrides remain separate.</span>
+
+<span class="sd">        :param encoder_version: The encoder_version of this AiSceneAnalysisLiveCreateRequest.</span>
+<span class="sd">        :type: string_types</span>
+<span class="sd">        """</span>
+
+        <span class="k">if</span> <span class="n">encoder_version</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">encoder_version</span><span class="p">,</span> <span class="n">string_types</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Invalid type for `encoder_version`, type has to be `string_types`"</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_encoder_version</span> <span class="o">=</span> <span class="n">encoder_version</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">recording</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
