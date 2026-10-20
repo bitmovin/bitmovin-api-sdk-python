@@ -57,7 +57,7 @@ class AiSceneAnalysisLiveObservation(object):
         # type: () -> string_types
         """Gets the id of this AiSceneAnalysisLiveObservation.
 
-        Stable opaque observation ID that remains unchanged across cumulative result generations (required)
+        Stable opaque observation ID that remains unchanged during the observation's lifetime and is never reused after removal (required)
 
         :return: The id of this AiSceneAnalysisLiveObservation.
         :rtype: string_types
@@ -69,7 +69,7 @@ class AiSceneAnalysisLiveObservation(object):
         # type: (string_types) -> None
         """Sets the id of this AiSceneAnalysisLiveObservation.
 
-        Stable opaque observation ID that remains unchanged across cumulative result generations (required)
+        Stable opaque observation ID that remains unchanged during the observation's lifetime and is never reused after removal (required)
 
         :param id_: The id of this AiSceneAnalysisLiveObservation.
         :type: string_types

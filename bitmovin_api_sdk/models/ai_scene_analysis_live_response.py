@@ -237,7 +237,7 @@ class AiSceneAnalysisLiveResponse(object):
         # type: () -> list[EncodingOutput]
         """Gets the outputs of this AiSceneAnalysisLiveResponse.
 
-        Resolved Encoding Output ID references for cumulative AI analysis results (required)
+        Resolved Encoding Output ID references for incremental Live Analysis result batches (required)
 
         :return: The outputs of this AiSceneAnalysisLiveResponse.
         :rtype: list[EncodingOutput]
@@ -249,7 +249,7 @@ class AiSceneAnalysisLiveResponse(object):
         # type: (list) -> None
         """Sets the outputs of this AiSceneAnalysisLiveResponse.
 
-        Resolved Encoding Output ID references for cumulative AI analysis results (required)
+        Resolved Encoding Output ID references for incremental Live Analysis result batches (required)
 
         :param outputs: The outputs of this AiSceneAnalysisLiveResponse.
         :type: list[EncodingOutput]

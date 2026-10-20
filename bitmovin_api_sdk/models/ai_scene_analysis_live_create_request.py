@@ -222,7 +222,7 @@ class AiSceneAnalysisLiveCreateRequest(object):
         # type: () -> list[AiSceneAnalysisLiveOutput]
         """Gets the outputs of this AiSceneAnalysisLiveCreateRequest.
 
-        Destinations for cumulative AI analysis results (required)
+        Destinations for incremental Live Analysis result batches (required)
 
         :return: The outputs of this AiSceneAnalysisLiveCreateRequest.
         :rtype: list[AiSceneAnalysisLiveOutput]
@@ -234,7 +234,7 @@ class AiSceneAnalysisLiveCreateRequest(object):
         # type: (list) -> None
         """Sets the outputs of this AiSceneAnalysisLiveCreateRequest.
 
-        Destinations for cumulative AI analysis results (required)
+        Destinations for incremental Live Analysis result batches (required)
 
         :param outputs: The outputs of this AiSceneAnalysisLiveCreateRequest.
         :type: list[AiSceneAnalysisLiveOutput]

@@ -22,8 +22,9 @@ class AiSceneAnalysisLiveResult(object):
                  analyzed_end_time_seconds=None,
                  source_gaps=None,
                  metadata=None,
-                 observations=None):
-        # type: (string_types, string_types, int, datetime, int, bool, float, float, list[AiSceneAnalysisLiveSourceGap], AiSceneAnalysisLiveResultMetadata, list[AiSceneAnalysisLiveObservation]) -> None
+                 observations=None,
+                 key_moments=None):
+        # type: (string_types, string_types, int, datetime, int, bool, float, float, list[AiSceneAnalysisLiveSourceGap], AiSceneAnalysisLiveResultMetadata, list[AiSceneAnalysisLiveObservation], list[AiSceneAnalysisLiveKeyMoment]) -> None
 
         self._analysis_id = None
         self._encoding_id = None
@@ -36,6 +37,7 @@ class AiSceneAnalysisLiveResult(object):
         self._source_gaps = list()
         self._metadata = None
         self._observations = list()
+        self._key_moments = list()
         self.discriminator = None
 
         if analysis_id is not None:
@@ -60,6 +62,8 @@ class AiSceneAnalysisLiveResult(object):
             self.metadata = metadata
         if observations is not None:
             self.observations = observations
+        if key_moments is not None:
+            self.key_moments = key_moments
 
     @property
     def openapi_types(self):
@@ -74,7 +78,8 @@ class AiSceneAnalysisLiveResult(object):
             'analyzed_end_time_seconds': 'float',
             'source_gaps': 'list[AiSceneAnalysisLiveSourceGap]',
             'metadata': 'AiSceneAnalysisLiveResultMetadata',
-            'observations': 'list[AiSceneAnalysisLiveObservation]'
+            'observations': 'list[AiSceneAnalysisLiveObservation]',
+            'key_moments': 'list[AiSceneAnalysisLiveKeyMoment]'
         }
 
         return types
@@ -92,7 +97,8 @@ class AiSceneAnalysisLiveResult(object):
             'analyzed_end_time_seconds': 'analyzedEndTimeSeconds',
             'source_gaps': 'sourceGaps',
             'metadata': 'metadata',
-            'observations': 'observations'
+            'observations': 'observations',
+            'key_moments': 'keyMoments'
         }
         return attributes
 
@@ -159,7 +165,7 @@ class AiSceneAnalysisLiveResult(object):
         # type: () -> int
         """Gets the sequence of this AiSceneAnalysisLiveResult.
 
-        Monotonically increasing generation sequence, starting at 1 (required)
+        Monotonically increasing result sequence, starting at 1 (required)
 
         :return: The sequence of this AiSceneAnalysisLiveResult.
         :rtype: int
@@ -171,7 +177,7 @@ class AiSceneAnalysisLiveResult(object):
         # type: (int) -> None
         """Sets the sequence of this AiSceneAnalysisLiveResult.
 
-        Monotonically increasing generation sequence, starting at 1 (required)
+        Monotonically increasing result sequence, starting at 1 (required)
 
         :param sequence: The sequence of this AiSceneAnalysisLiveResult.
         :type: int
@@ -190,7 +196,7 @@ class AiSceneAnalysisLiveResult(object):
         # type: () -> datetime
         """Gets the produced_at of this AiSceneAnalysisLiveResult.
 
-        Time at which the AI analysis produced this result generation (required)
+        Time at which the AI analysis produced this result snapshot (required)
 
         :return: The produced_at of this AiSceneAnalysisLiveResult.
         :rtype: datetime
@@ -202,7 +208,7 @@ class AiSceneAnalysisLiveResult(object):
         # type: (datetime) -> None
         """Sets the produced_at of this AiSceneAnalysisLiveResult.
 
-        Time at which the AI analysis produced this result generation (required)
+        Time at which the AI analysis produced this result snapshot (required)
 
         :param produced_at: The produced_at of this AiSceneAnalysisLiveResult.
         :type: datetime
@@ -219,7 +225,7 @@ class AiSceneAnalysisLiveResult(object):
         # type: () -> int
         """Gets the media_time_origin_unix_ms of this AiSceneAnalysisLiveResult.
 
-        UTC presentation-clock time in Unix milliseconds corresponding to media time zero. This origin is fixed for the Live Analysis; coverage, observation, and source-gap times remain relative to it. It is not the source capture time or result publication time. (required)
+        UTC presentation-clock time in Unix milliseconds corresponding to media time zero. This origin is fixed for the Live Analysis; coverage, observation, key-moment, and source-gap times remain relative to it. It is not the source capture time or result publication time. (required)
 
         :return: The media_time_origin_unix_ms of this AiSceneAnalysisLiveResult.
         :rtype: int
@@ -231,7 +237,7 @@ class AiSceneAnalysisLiveResult(object):
         # type: (int) -> None
         """Sets the media_time_origin_unix_ms of this AiSceneAnalysisLiveResult.
 
-        UTC presentation-clock time in Unix milliseconds corresponding to media time zero. This origin is fixed for the Live Analysis; coverage, observation, and source-gap times remain relative to it. It is not the source capture time or result publication time. (required)
+        UTC presentation-clock time in Unix milliseconds corresponding to media time zero. This origin is fixed for the Live Analysis; coverage, observation, key-moment, and source-gap times remain relative to it. It is not the source capture time or result publication time. (required)
 
         :param media_time_origin_unix_ms: The media_time_origin_unix_ms of this AiSceneAnalysisLiveResult.
         :type: int
@@ -250,7 +256,7 @@ class AiSceneAnalysisLiveResult(object):
         # type: () -> bool
         """Gets the is_final of this AiSceneAnalysisLiveResult.
 
-        Whether AI analysis produced this as the final result generation. This does not by itself imply that the Analysis completed successfully. (required)
+        Whether this is the final result snapshot. This does not by itself imply that the Analysis completed successfully. (required)
 
         :return: The is_final of this AiSceneAnalysisLiveResult.
         :rtype: bool
@@ -262,7 +268,7 @@ class AiSceneAnalysisLiveResult(object):
         # type: (bool) -> None
         """Sets the is_final of this AiSceneAnalysisLiveResult.
 
-        Whether AI analysis produced this as the final result generation. This does not by itself imply that the Analysis completed successfully. (required)
+        Whether this is the final result snapshot. This does not by itself imply that the Analysis completed successfully. (required)
 
         :param is_final: The is_final of this AiSceneAnalysisLiveResult.
         :type: bool
@@ -341,7 +347,7 @@ class AiSceneAnalysisLiveResult(object):
         # type: () -> list[AiSceneAnalysisLiveSourceGap]
         """Gets the source_gaps of this AiSceneAnalysisLiveResult.
 
-        Cumulative closed source gaps on the monotonic analysis timeline (required)
+        Cumulative closed source gaps on the monotonic analysis timeline. An empty or omitted array means there are no closed source gaps in this snapshot, not that the previous collection is unchanged.
 
         :return: The source_gaps of this AiSceneAnalysisLiveResult.
         :rtype: list[AiSceneAnalysisLiveSourceGap]
@@ -353,7 +359,7 @@ class AiSceneAnalysisLiveResult(object):
         # type: (list) -> None
         """Sets the source_gaps of this AiSceneAnalysisLiveResult.
 
-        Cumulative closed source gaps on the monotonic analysis timeline (required)
+        Cumulative closed source gaps on the monotonic analysis timeline. An empty or omitted array means there are no closed source gaps in this snapshot, not that the previous collection is unchanged.
 
         :param source_gaps: The source_gaps of this AiSceneAnalysisLiveResult.
         :type: list[AiSceneAnalysisLiveSourceGap]
@@ -370,7 +376,7 @@ class AiSceneAnalysisLiveResult(object):
         # type: () -> AiSceneAnalysisLiveResultMetadata
         """Gets the metadata of this AiSceneAnalysisLiveResult.
 
-        Producer metadata for this generation (required)
+        Metadata for this result snapshot (required)
 
         :return: The metadata of this AiSceneAnalysisLiveResult.
         :rtype: AiSceneAnalysisLiveResultMetadata
@@ -382,7 +388,7 @@ class AiSceneAnalysisLiveResult(object):
         # type: (AiSceneAnalysisLiveResultMetadata) -> None
         """Sets the metadata of this AiSceneAnalysisLiveResult.
 
-        Producer metadata for this generation (required)
+        Metadata for this result snapshot (required)
 
         :param metadata: The metadata of this AiSceneAnalysisLiveResult.
         :type: AiSceneAnalysisLiveResultMetadata
@@ -399,7 +405,7 @@ class AiSceneAnalysisLiveResult(object):
         # type: () -> list[AiSceneAnalysisLiveObservation]
         """Gets the observations of this AiSceneAnalysisLiveResult.
 
-        Cumulative immutable observations. Existing observations retain the same ID and content across later generations. Each time range identifies the analyzed media window that produced the observation, not an exact event location. (required)
+        Complete set of active observations for this result sequence. An empty or omitted array means there are no active observations in this snapshot, not that the previous collection is unchanged. Observations may be removed in later sequences. Observation IDs identify immutable observation content and are never reused. Each time range identifies the analyzed media window that produced the observation, not an exact event location.
 
         :return: The observations of this AiSceneAnalysisLiveResult.
         :rtype: list[AiSceneAnalysisLiveObservation]
@@ -411,7 +417,7 @@ class AiSceneAnalysisLiveResult(object):
         # type: (list) -> None
         """Sets the observations of this AiSceneAnalysisLiveResult.
 
-        Cumulative immutable observations. Existing observations retain the same ID and content across later generations. Each time range identifies the analyzed media window that produced the observation, not an exact event location. (required)
+        Complete set of active observations for this result sequence. An empty or omitted array means there are no active observations in this snapshot, not that the previous collection is unchanged. Observations may be removed in later sequences. Observation IDs identify immutable observation content and are never reused. Each time range identifies the analyzed media window that produced the observation, not an exact event location.
 
         :param observations: The observations of this AiSceneAnalysisLiveResult.
         :type: list[AiSceneAnalysisLiveObservation]
@@ -422,6 +428,35 @@ class AiSceneAnalysisLiveResult(object):
                 raise TypeError("Invalid type for `observations`, type has to be `list[AiSceneAnalysisLiveObservation]`")
 
         self._observations = observations
+
+    @property
+    def key_moments(self):
+        # type: () -> list[AiSceneAnalysisLiveKeyMoment]
+        """Gets the key_moments of this AiSceneAnalysisLiveResult.
+
+        Complete set of current key moments for this result sequence, ordered by ascending startInSeconds. Ordering of moments with equal start times is unspecified. An empty or omitted array means there are no current key moments in this snapshot, not that the previous collection is unchanged.  Moments may be refined or withdrawn in later result sequences until the final result. A refined moment retains its ID; a withdrawn moment is absent from subsequent snapshots and its ID is never reused. Consumers identify moments by ID and detect changes through lastUpdatedSequence, not array position. Changing array position alone or marking the result final does not change lastUpdatedSequence.  Every referenced observation is active in the same result snapshot. Moment references are updated or moments withdrawn when supporting observations are replaced or removed. 
+
+        :return: The key_moments of this AiSceneAnalysisLiveResult.
+        :rtype: list[AiSceneAnalysisLiveKeyMoment]
+        """
+        return self._key_moments
+
+    @key_moments.setter
+    def key_moments(self, key_moments):
+        # type: (list) -> None
+        """Sets the key_moments of this AiSceneAnalysisLiveResult.
+
+        Complete set of current key moments for this result sequence, ordered by ascending startInSeconds. Ordering of moments with equal start times is unspecified. An empty or omitted array means there are no current key moments in this snapshot, not that the previous collection is unchanged.  Moments may be refined or withdrawn in later result sequences until the final result. A refined moment retains its ID; a withdrawn moment is absent from subsequent snapshots and its ID is never reused. Consumers identify moments by ID and detect changes through lastUpdatedSequence, not array position. Changing array position alone or marking the result final does not change lastUpdatedSequence.  Every referenced observation is active in the same result snapshot. Moment references are updated or moments withdrawn when supporting observations are replaced or removed. 
+
+        :param key_moments: The key_moments of this AiSceneAnalysisLiveResult.
+        :type: list[AiSceneAnalysisLiveKeyMoment]
+        """
+
+        if key_moments is not None:
+            if not isinstance(key_moments, list):
+                raise TypeError("Invalid type for `key_moments`, type has to be `list[AiSceneAnalysisLiveKeyMoment]`")
+
+        self._key_moments = key_moments
 
     def to_dict(self):
         """Returns the model properties as a dict"""

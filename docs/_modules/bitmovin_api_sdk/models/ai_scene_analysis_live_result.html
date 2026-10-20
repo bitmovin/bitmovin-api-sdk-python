@@ -102,8 +102,9 @@
                  <span class="n">analyzed_end_time_seconds</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">source_gaps</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">metadata</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                 <span class="n">observations</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (string_types, string_types, int, datetime, int, bool, float, float, list[AiSceneAnalysisLiveSourceGap], AiSceneAnalysisLiveResultMetadata, list[AiSceneAnalysisLiveObservation]) -&gt; None</span>
+                 <span class="n">observations</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">key_moments</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="c1"># type: (string_types, string_types, int, datetime, int, bool, float, float, list[AiSceneAnalysisLiveSourceGap], AiSceneAnalysisLiveResultMetadata, list[AiSceneAnalysisLiveObservation], list[AiSceneAnalysisLiveKeyMoment]) -&gt; None</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_analysis_id</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_encoding_id</span> <span class="o">=</span> <span class="kc">None</span>
@@ -116,6 +117,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_source_gaps</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_metadata</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_observations</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_key_moments</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>
 
         <span class="k">if</span> <span class="n">analysis_id</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -140,6 +142,8 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">metadata</span> <span class="o">=</span> <span class="n">metadata</span>
         <span class="k">if</span> <span class="n">observations</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">observations</span> <span class="o">=</span> <span class="n">observations</span>
+        <span class="k">if</span> <span class="n">key_moments</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">key_moments</span> <span class="o">=</span> <span class="n">key_moments</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -154,7 +158,8 @@
             <span class="s1">'analyzed_end_time_seconds'</span><span class="p">:</span> <span class="s1">'float'</span><span class="p">,</span>
             <span class="s1">'source_gaps'</span><span class="p">:</span> <span class="s1">'list[AiSceneAnalysisLiveSourceGap]'</span><span class="p">,</span>
             <span class="s1">'metadata'</span><span class="p">:</span> <span class="s1">'AiSceneAnalysisLiveResultMetadata'</span><span class="p">,</span>
-            <span class="s1">'observations'</span><span class="p">:</span> <span class="s1">'list[AiSceneAnalysisLiveObservation]'</span>
+            <span class="s1">'observations'</span><span class="p">:</span> <span class="s1">'list[AiSceneAnalysisLiveObservation]'</span><span class="p">,</span>
+            <span class="s1">'key_moments'</span><span class="p">:</span> <span class="s1">'list[AiSceneAnalysisLiveKeyMoment]'</span>
         <span class="p">}</span>
 
         <span class="k">return</span> <span class="n">types</span>
@@ -172,7 +177,8 @@
             <span class="s1">'analyzed_end_time_seconds'</span><span class="p">:</span> <span class="s1">'analyzedEndTimeSeconds'</span><span class="p">,</span>
             <span class="s1">'source_gaps'</span><span class="p">:</span> <span class="s1">'sourceGaps'</span><span class="p">,</span>
             <span class="s1">'metadata'</span><span class="p">:</span> <span class="s1">'metadata'</span><span class="p">,</span>
-            <span class="s1">'observations'</span><span class="p">:</span> <span class="s1">'observations'</span>
+            <span class="s1">'observations'</span><span class="p">:</span> <span class="s1">'observations'</span><span class="p">,</span>
+            <span class="s1">'key_moments'</span><span class="p">:</span> <span class="s1">'keyMoments'</span>
         <span class="p">}</span>
         <span class="k">return</span> <span class="n">attributes</span>
 
@@ -239,7 +245,7 @@
         <span class="c1"># type: () -&gt; int</span>
 <span class="w">        </span><span class="sd">"""Gets the sequence of this AiSceneAnalysisLiveResult.</span>
 
-<span class="sd">        Monotonically increasing generation sequence, starting at 1 (required)</span>
+<span class="sd">        Monotonically increasing result sequence, starting at 1 (required)</span>
 
 <span class="sd">        :return: The sequence of this AiSceneAnalysisLiveResult.</span>
 <span class="sd">        :rtype: int</span>
@@ -251,7 +257,7 @@
         <span class="c1"># type: (int) -&gt; None</span>
 <span class="w">        </span><span class="sd">"""Sets the sequence of this AiSceneAnalysisLiveResult.</span>
 
-<span class="sd">        Monotonically increasing generation sequence, starting at 1 (required)</span>
+<span class="sd">        Monotonically increasing result sequence, starting at 1 (required)</span>
 
 <span class="sd">        :param sequence: The sequence of this AiSceneAnalysisLiveResult.</span>
 <span class="sd">        :type: int</span>
@@ -270,7 +276,7 @@
         <span class="c1"># type: () -&gt; datetime</span>
 <span class="w">        </span><span class="sd">"""Gets the produced_at of this AiSceneAnalysisLiveResult.</span>
 
-<span class="sd">        Time at which the AI analysis produced this result generation (required)</span>
+<span class="sd">        Time at which the AI analysis produced this result snapshot (required)</span>
 
 <span class="sd">        :return: The produced_at of this AiSceneAnalysisLiveResult.</span>
 <span class="sd">        :rtype: datetime</span>
@@ -282,7 +288,7 @@
         <span class="c1"># type: (datetime) -&gt; None</span>
 <span class="w">        </span><span class="sd">"""Sets the produced_at of this AiSceneAnalysisLiveResult.</span>
 
-<span class="sd">        Time at which the AI analysis produced this result generation (required)</span>
+<span class="sd">        Time at which the AI analysis produced this result snapshot (required)</span>
 
 <span class="sd">        :param produced_at: The produced_at of this AiSceneAnalysisLiveResult.</span>
 <span class="sd">        :type: datetime</span>
@@ -299,7 +305,7 @@
         <span class="c1"># type: () -&gt; int</span>
 <span class="w">        </span><span class="sd">"""Gets the media_time_origin_unix_ms of this AiSceneAnalysisLiveResult.</span>
 
-<span class="sd">        UTC presentation-clock time in Unix milliseconds corresponding to media time zero. This origin is fixed for the Live Analysis; coverage, observation, and source-gap times remain relative to it. It is not the source capture time or result publication time. (required)</span>
+<span class="sd">        UTC presentation-clock time in Unix milliseconds corresponding to media time zero. This origin is fixed for the Live Analysis; coverage, observation, key-moment, and source-gap times remain relative to it. It is not the source capture time or result publication time. (required)</span>
 
 <span class="sd">        :return: The media_time_origin_unix_ms of this AiSceneAnalysisLiveResult.</span>
 <span class="sd">        :rtype: int</span>
@@ -311,7 +317,7 @@
         <span class="c1"># type: (int) -&gt; None</span>
 <span class="w">        </span><span class="sd">"""Sets the media_time_origin_unix_ms of this AiSceneAnalysisLiveResult.</span>
 
-<span class="sd">        UTC presentation-clock time in Unix milliseconds corresponding to media time zero. This origin is fixed for the Live Analysis; coverage, observation, and source-gap times remain relative to it. It is not the source capture time or result publication time. (required)</span>
+<span class="sd">        UTC presentation-clock time in Unix milliseconds corresponding to media time zero. This origin is fixed for the Live Analysis; coverage, observation, key-moment, and source-gap times remain relative to it. It is not the source capture time or result publication time. (required)</span>
 
 <span class="sd">        :param media_time_origin_unix_ms: The media_time_origin_unix_ms of this AiSceneAnalysisLiveResult.</span>
 <span class="sd">        :type: int</span>
@@ -330,7 +336,7 @@
         <span class="c1"># type: () -&gt; bool</span>
 <span class="w">        </span><span class="sd">"""Gets the is_final of this AiSceneAnalysisLiveResult.</span>
 
-<span class="sd">        Whether AI analysis produced this as the final result generation. This does not by itself imply that the Analysis completed successfully. (required)</span>
+<span class="sd">        Whether this is the final result snapshot. This does not by itself imply that the Analysis completed successfully. (required)</span>
 
 <span class="sd">        :return: The is_final of this AiSceneAnalysisLiveResult.</span>
 <span class="sd">        :rtype: bool</span>
@@ -342,7 +348,7 @@
         <span class="c1"># type: (bool) -&gt; None</span>
 <span class="w">        </span><span class="sd">"""Sets the is_final of this AiSceneAnalysisLiveResult.</span>
 
-<span class="sd">        Whether AI analysis produced this as the final result generation. This does not by itself imply that the Analysis completed successfully. (required)</span>
+<span class="sd">        Whether this is the final result snapshot. This does not by itself imply that the Analysis completed successfully. (required)</span>
 
 <span class="sd">        :param is_final: The is_final of this AiSceneAnalysisLiveResult.</span>
 <span class="sd">        :type: bool</span>
@@ -421,7 +427,7 @@
         <span class="c1"># type: () -&gt; list[AiSceneAnalysisLiveSourceGap]</span>
 <span class="w">        </span><span class="sd">"""Gets the source_gaps of this AiSceneAnalysisLiveResult.</span>
 
-<span class="sd">        Cumulative closed source gaps on the monotonic analysis timeline (required)</span>
+<span class="sd">        Cumulative closed source gaps on the monotonic analysis timeline. An empty or omitted array means there are no closed source gaps in this snapshot, not that the previous collection is unchanged.</span>
 
 <span class="sd">        :return: The source_gaps of this AiSceneAnalysisLiveResult.</span>
 <span class="sd">        :rtype: list[AiSceneAnalysisLiveSourceGap]</span>
@@ -433,7 +439,7 @@
         <span class="c1"># type: (list) -&gt; None</span>
 <span class="w">        </span><span class="sd">"""Sets the source_gaps of this AiSceneAnalysisLiveResult.</span>
 
-<span class="sd">        Cumulative closed source gaps on the monotonic analysis timeline (required)</span>
+<span class="sd">        Cumulative closed source gaps on the monotonic analysis timeline. An empty or omitted array means there are no closed source gaps in this snapshot, not that the previous collection is unchanged.</span>
 
 <span class="sd">        :param source_gaps: The source_gaps of this AiSceneAnalysisLiveResult.</span>
 <span class="sd">        :type: list[AiSceneAnalysisLiveSourceGap]</span>
@@ -450,7 +456,7 @@
         <span class="c1"># type: () -&gt; AiSceneAnalysisLiveResultMetadata</span>
 <span class="w">        </span><span class="sd">"""Gets the metadata of this AiSceneAnalysisLiveResult.</span>
 
-<span class="sd">        Producer metadata for this generation (required)</span>
+<span class="sd">        Metadata for this result snapshot (required)</span>
 
 <span class="sd">        :return: The metadata of this AiSceneAnalysisLiveResult.</span>
 <span class="sd">        :rtype: AiSceneAnalysisLiveResultMetadata</span>
@@ -462,7 +468,7 @@
         <span class="c1"># type: (AiSceneAnalysisLiveResultMetadata) -&gt; None</span>
 <span class="w">        </span><span class="sd">"""Sets the metadata of this AiSceneAnalysisLiveResult.</span>
 
-<span class="sd">        Producer metadata for this generation (required)</span>
+<span class="sd">        Metadata for this result snapshot (required)</span>
 
 <span class="sd">        :param metadata: The metadata of this AiSceneAnalysisLiveResult.</span>
 <span class="sd">        :type: AiSceneAnalysisLiveResultMetadata</span>
@@ -479,7 +485,7 @@
         <span class="c1"># type: () -&gt; list[AiSceneAnalysisLiveObservation]</span>
 <span class="w">        </span><span class="sd">"""Gets the observations of this AiSceneAnalysisLiveResult.</span>
 
-<span class="sd">        Cumulative immutable observations. Existing observations retain the same ID and content across later generations. Each time range identifies the analyzed media window that produced the observation, not an exact event location. (required)</span>
+<span class="sd">        Complete set of active observations for this result sequence. An empty or omitted array means there are no active observations in this snapshot, not that the previous collection is unchanged. Observations may be removed in later sequences. Observation IDs identify immutable observation content and are never reused. Each time range identifies the analyzed media window that produced the observation, not an exact event location.</span>
 
 <span class="sd">        :return: The observations of this AiSceneAnalysisLiveResult.</span>
 <span class="sd">        :rtype: list[AiSceneAnalysisLiveObservation]</span>
@@ -491,7 +497,7 @@
         <span class="c1"># type: (list) -&gt; None</span>
 <span class="w">        </span><span class="sd">"""Sets the observations of this AiSceneAnalysisLiveResult.</span>
 
-<span class="sd">        Cumulative immutable observations. Existing observations retain the same ID and content across later generations. Each time range identifies the analyzed media window that produced the observation, not an exact event location. (required)</span>
+<span class="sd">        Complete set of active observations for this result sequence. An empty or omitted array means there are no active observations in this snapshot, not that the previous collection is unchanged. Observations may be removed in later sequences. Observation IDs identify immutable observation content and are never reused. Each time range identifies the analyzed media window that produced the observation, not an exact event location.</span>
 
 <span class="sd">        :param observations: The observations of this AiSceneAnalysisLiveResult.</span>
 <span class="sd">        :type: list[AiSceneAnalysisLiveObservation]</span>
@@ -502,6 +508,35 @@
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Invalid type for `observations`, type has to be `list[AiSceneAnalysisLiveObservation]`"</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_observations</span> <span class="o">=</span> <span class="n">observations</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">key_moments</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; list[AiSceneAnalysisLiveKeyMoment]</span>
+<span class="w">        </span><span class="sd">"""Gets the key_moments of this AiSceneAnalysisLiveResult.</span>
+
+<span class="sd">        Complete set of current key moments for this result sequence, ordered by ascending startInSeconds. Ordering of moments with equal start times is unspecified. An empty or omitted array means there are no current key moments in this snapshot, not that the previous collection is unchanged.  Moments may be refined or withdrawn in later result sequences until the final result. A refined moment retains its ID; a withdrawn moment is absent from subsequent snapshots and its ID is never reused. Consumers identify moments by ID and detect changes through lastUpdatedSequence, not array position. Changing array position alone or marking the result final does not change lastUpdatedSequence.  Every referenced observation is active in the same result snapshot. Moment references are updated or moments withdrawn when supporting observations are replaced or removed. </span>
+
+<span class="sd">        :return: The key_moments of this AiSceneAnalysisLiveResult.</span>
+<span class="sd">        :rtype: list[AiSceneAnalysisLiveKeyMoment]</span>
+<span class="sd">        """</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_key_moments</span>
+
+    <span class="nd">@key_moments</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">key_moments</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key_moments</span><span class="p">):</span>
+        <span class="c1"># type: (list) -&gt; None</span>
+<span class="w">        </span><span class="sd">"""Sets the key_moments of this AiSceneAnalysisLiveResult.</span>
+
+<span class="sd">        Complete set of current key moments for this result sequence, ordered by ascending startInSeconds. Ordering of moments with equal start times is unspecified. An empty or omitted array means there are no current key moments in this snapshot, not that the previous collection is unchanged.  Moments may be refined or withdrawn in later result sequences until the final result. A refined moment retains its ID; a withdrawn moment is absent from subsequent snapshots and its ID is never reused. Consumers identify moments by ID and detect changes through lastUpdatedSequence, not array position. Changing array position alone or marking the result final does not change lastUpdatedSequence.  Every referenced observation is active in the same result snapshot. Moment references are updated or moments withdrawn when supporting observations are replaced or removed. </span>
+
+<span class="sd">        :param key_moments: The key_moments of this AiSceneAnalysisLiveResult.</span>
+<span class="sd">        :type: list[AiSceneAnalysisLiveKeyMoment]</span>
+<span class="sd">        """</span>
+
+        <span class="k">if</span> <span class="n">key_moments</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">key_moments</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Invalid type for `key_moments`, type has to be `list[AiSceneAnalysisLiveKeyMoment]`"</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_key_moments</span> <span class="o">=</span> <span class="n">key_moments</span>
 
 <div class="viewcode-block" id="AiSceneAnalysisLiveResult.to_dict">
 <a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.ai_scene_analysis_live_result.AiSceneAnalysisLiveResult.to_dict">[docs]</a>

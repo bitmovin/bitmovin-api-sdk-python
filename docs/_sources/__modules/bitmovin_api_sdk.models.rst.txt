@@ -548,6 +548,14 @@ bitmovin\_api\_sdk.models.ai\_scene\_analysis\_live\_error module
    :show-inheritance:
    :undoc-members:
 
+bitmovin\_api\_sdk.models.ai\_scene\_analysis\_live\_key\_moment module
+-----------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.ai_scene_analysis_live_key_moment
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
 bitmovin\_api\_sdk.models.ai\_scene\_analysis\_live\_observation module
 -----------------------------------------------------------------------
 
