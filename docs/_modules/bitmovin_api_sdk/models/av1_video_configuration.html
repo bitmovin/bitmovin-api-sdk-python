@@ -82,6 +82,7 @@
 <span class="kn">from</span><span class="w"> </span><span class="nn">six</span><span class="w"> </span><span class="kn">import</span> <span class="n">string_types</span><span class="p">,</span> <span class="n">iteritems</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.common.poscheck</span><span class="w"> </span><span class="kn">import</span> <span class="n">poscheck_model</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.auto_level_setup</span><span class="w"> </span><span class="kn">import</span> <span class="n">AutoLevelSetup</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.av1_detail_preservation_mode</span><span class="w"> </span><span class="kn">import</span> <span class="n">Av1DetailPreservationMode</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.av1_dynamic_range_format</span><span class="w"> </span><span class="kn">import</span> <span class="n">Av1DynamicRangeFormat</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.av1_preset_configuration</span><span class="w"> </span><span class="kn">import</span> <span class="n">Av1PresetConfiguration</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">bitmovin_api_sdk.models.color_config</span><span class="w"> </span><span class="kn">import</span> <span class="n">ColorConfig</span>
@@ -118,16 +119,18 @@
                  <span class="n">preset_configuration</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">auto_level_setup</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">max_level</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">detail_preservation_mode</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">dynamic_range_format</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">master_display</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">max_content_light_level</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">max_picture_average_light_level</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (string_types, string_types, string_types, datetime, datetime, dict, int, int, int, float, PixelFormat, ColorConfig, int, int, DisplayAspectRatio, EncodingMode, Av1PresetConfiguration, AutoLevelSetup, LevelAv1, Av1DynamicRangeFormat, string_types, int, int) -&gt; None</span>
+        <span class="c1"># type: (string_types, string_types, string_types, datetime, datetime, dict, int, int, int, float, PixelFormat, ColorConfig, int, int, DisplayAspectRatio, EncodingMode, Av1PresetConfiguration, AutoLevelSetup, LevelAv1, Av1DetailPreservationMode, Av1DynamicRangeFormat, string_types, int, int) -&gt; None</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">Av1VideoConfiguration</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">id_</span><span class="o">=</span><span class="n">id_</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="n">description</span><span class="p">,</span> <span class="n">created_at</span><span class="o">=</span><span class="n">created_at</span><span class="p">,</span> <span class="n">modified_at</span><span class="o">=</span><span class="n">modified_at</span><span class="p">,</span> <span class="n">custom_data</span><span class="o">=</span><span class="n">custom_data</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="n">height</span><span class="p">,</span> <span class="n">bitrate</span><span class="o">=</span><span class="n">bitrate</span><span class="p">,</span> <span class="n">rate</span><span class="o">=</span><span class="n">rate</span><span class="p">,</span> <span class="n">pixel_format</span><span class="o">=</span><span class="n">pixel_format</span><span class="p">,</span> <span class="n">color_config</span><span class="o">=</span><span class="n">color_config</span><span class="p">,</span> <span class="n">sample_aspect_ratio_numerator</span><span class="o">=</span><span class="n">sample_aspect_ratio_numerator</span><span class="p">,</span> <span class="n">sample_aspect_ratio_denominator</span><span class="o">=</span><span class="n">sample_aspect_ratio_denominator</span><span class="p">,</span> <span class="n">display_aspect_ratio</span><span class="o">=</span><span class="n">display_aspect_ratio</span><span class="p">,</span> <span class="n">encoding_mode</span><span class="o">=</span><span class="n">encoding_mode</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_preset_configuration</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_auto_level_setup</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_max_level</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_detail_preservation_mode</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_dynamic_range_format</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_master_display</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_max_content_light_level</span> <span class="o">=</span> <span class="kc">None</span>
@@ -140,6 +143,8 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">auto_level_setup</span> <span class="o">=</span> <span class="n">auto_level_setup</span>
         <span class="k">if</span> <span class="n">max_level</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">max_level</span> <span class="o">=</span> <span class="n">max_level</span>
+        <span class="k">if</span> <span class="n">detail_preservation_mode</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">detail_preservation_mode</span> <span class="o">=</span> <span class="n">detail_preservation_mode</span>
         <span class="k">if</span> <span class="n">dynamic_range_format</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">dynamic_range_format</span> <span class="o">=</span> <span class="n">dynamic_range_format</span>
         <span class="k">if</span> <span class="n">master_display</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -160,6 +165,7 @@
             <span class="s1">'preset_configuration'</span><span class="p">:</span> <span class="s1">'Av1PresetConfiguration'</span><span class="p">,</span>
             <span class="s1">'auto_level_setup'</span><span class="p">:</span> <span class="s1">'AutoLevelSetup'</span><span class="p">,</span>
             <span class="s1">'max_level'</span><span class="p">:</span> <span class="s1">'LevelAv1'</span><span class="p">,</span>
+            <span class="s1">'detail_preservation_mode'</span><span class="p">:</span> <span class="s1">'Av1DetailPreservationMode'</span><span class="p">,</span>
             <span class="s1">'dynamic_range_format'</span><span class="p">:</span> <span class="s1">'Av1DynamicRangeFormat'</span><span class="p">,</span>
             <span class="s1">'master_display'</span><span class="p">:</span> <span class="s1">'string_types'</span><span class="p">,</span>
             <span class="s1">'max_content_light_level'</span><span class="p">:</span> <span class="s1">'int'</span><span class="p">,</span>
@@ -179,6 +185,7 @@
             <span class="s1">'preset_configuration'</span><span class="p">:</span> <span class="s1">'presetConfiguration'</span><span class="p">,</span>
             <span class="s1">'auto_level_setup'</span><span class="p">:</span> <span class="s1">'autoLevelSetup'</span><span class="p">,</span>
             <span class="s1">'max_level'</span><span class="p">:</span> <span class="s1">'maxLevel'</span><span class="p">,</span>
+            <span class="s1">'detail_preservation_mode'</span><span class="p">:</span> <span class="s1">'detailPreservationMode'</span><span class="p">,</span>
             <span class="s1">'dynamic_range_format'</span><span class="p">:</span> <span class="s1">'dynamicRangeFormat'</span><span class="p">,</span>
             <span class="s1">'master_display'</span><span class="p">:</span> <span class="s1">'masterDisplay'</span><span class="p">,</span>
             <span class="s1">'max_content_light_level'</span><span class="p">:</span> <span class="s1">'maxContentLightLevel'</span><span class="p">,</span>
@@ -272,6 +279,35 @@
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Invalid type for `max_level`, type has to be `LevelAv1`"</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_max_level</span> <span class="o">=</span> <span class="n">max_level</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">detail_preservation_mode</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; Av1DetailPreservationMode</span>
+<span class="w">        </span><span class="sd">"""Gets the detail_preservation_mode of this Av1VideoConfiguration.</span>
+
+<span class="sd">        Tunes the encoder to preserve film grain and fine detail. Defaults to OFF.</span>
+
+<span class="sd">        :return: The detail_preservation_mode of this Av1VideoConfiguration.</span>
+<span class="sd">        :rtype: Av1DetailPreservationMode</span>
+<span class="sd">        """</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_detail_preservation_mode</span>
+
+    <span class="nd">@detail_preservation_mode</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">detail_preservation_mode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">detail_preservation_mode</span><span class="p">):</span>
+        <span class="c1"># type: (Av1DetailPreservationMode) -&gt; None</span>
+<span class="w">        </span><span class="sd">"""Sets the detail_preservation_mode of this Av1VideoConfiguration.</span>
+
+<span class="sd">        Tunes the encoder to preserve film grain and fine detail. Defaults to OFF.</span>
+
+<span class="sd">        :param detail_preservation_mode: The detail_preservation_mode of this Av1VideoConfiguration.</span>
+<span class="sd">        :type: Av1DetailPreservationMode</span>
+<span class="sd">        """</span>
+
+        <span class="k">if</span> <span class="n">detail_preservation_mode</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">detail_preservation_mode</span><span class="p">,</span> <span class="n">Av1DetailPreservationMode</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Invalid type for `detail_preservation_mode`, type has to be `Av1DetailPreservationMode`"</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_detail_preservation_mode</span> <span class="o">=</span> <span class="n">detail_preservation_mode</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">dynamic_range_format</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>

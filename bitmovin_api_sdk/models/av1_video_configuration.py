@@ -4,6 +4,7 @@ from enum import Enum
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
 from bitmovin_api_sdk.models.auto_level_setup import AutoLevelSetup
+from bitmovin_api_sdk.models.av1_detail_preservation_mode import Av1DetailPreservationMode
 from bitmovin_api_sdk.models.av1_dynamic_range_format import Av1DynamicRangeFormat
 from bitmovin_api_sdk.models.av1_preset_configuration import Av1PresetConfiguration
 from bitmovin_api_sdk.models.color_config import ColorConfig
@@ -38,16 +39,18 @@ class Av1VideoConfiguration(VideoConfiguration):
                  preset_configuration=None,
                  auto_level_setup=None,
                  max_level=None,
+                 detail_preservation_mode=None,
                  dynamic_range_format=None,
                  master_display=None,
                  max_content_light_level=None,
                  max_picture_average_light_level=None):
-        # type: (string_types, string_types, string_types, datetime, datetime, dict, int, int, int, float, PixelFormat, ColorConfig, int, int, DisplayAspectRatio, EncodingMode, Av1PresetConfiguration, AutoLevelSetup, LevelAv1, Av1DynamicRangeFormat, string_types, int, int) -> None
+        # type: (string_types, string_types, string_types, datetime, datetime, dict, int, int, int, float, PixelFormat, ColorConfig, int, int, DisplayAspectRatio, EncodingMode, Av1PresetConfiguration, AutoLevelSetup, LevelAv1, Av1DetailPreservationMode, Av1DynamicRangeFormat, string_types, int, int) -> None
         super(Av1VideoConfiguration, self).__init__(id_=id_, name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, width=width, height=height, bitrate=bitrate, rate=rate, pixel_format=pixel_format, color_config=color_config, sample_aspect_ratio_numerator=sample_aspect_ratio_numerator, sample_aspect_ratio_denominator=sample_aspect_ratio_denominator, display_aspect_ratio=display_aspect_ratio, encoding_mode=encoding_mode)
 
         self._preset_configuration = None
         self._auto_level_setup = None
         self._max_level = None
+        self._detail_preservation_mode = None
         self._dynamic_range_format = None
         self._master_display = None
         self._max_content_light_level = None
@@ -60,6 +63,8 @@ class Av1VideoConfiguration(VideoConfiguration):
             self.auto_level_setup = auto_level_setup
         if max_level is not None:
             self.max_level = max_level
+        if detail_preservation_mode is not None:
+            self.detail_preservation_mode = detail_preservation_mode
         if dynamic_range_format is not None:
             self.dynamic_range_format = dynamic_range_format
         if master_display is not None:
@@ -80,6 +85,7 @@ class Av1VideoConfiguration(VideoConfiguration):
             'preset_configuration': 'Av1PresetConfiguration',
             'auto_level_setup': 'AutoLevelSetup',
             'max_level': 'LevelAv1',
+            'detail_preservation_mode': 'Av1DetailPreservationMode',
             'dynamic_range_format': 'Av1DynamicRangeFormat',
             'master_display': 'string_types',
             'max_content_light_level': 'int',
@@ -99,6 +105,7 @@ class Av1VideoConfiguration(VideoConfiguration):
             'preset_configuration': 'presetConfiguration',
             'auto_level_setup': 'autoLevelSetup',
             'max_level': 'maxLevel',
+            'detail_preservation_mode': 'detailPreservationMode',
             'dynamic_range_format': 'dynamicRangeFormat',
             'master_display': 'masterDisplay',
             'max_content_light_level': 'maxContentLightLevel',
@@ -192,6 +199,35 @@ class Av1VideoConfiguration(VideoConfiguration):
                 raise TypeError("Invalid type for `max_level`, type has to be `LevelAv1`")
 
         self._max_level = max_level
+
+    @property
+    def detail_preservation_mode(self):
+        # type: () -> Av1DetailPreservationMode
+        """Gets the detail_preservation_mode of this Av1VideoConfiguration.
+
+        Tunes the encoder to preserve film grain and fine detail. Defaults to OFF.
+
+        :return: The detail_preservation_mode of this Av1VideoConfiguration.
+        :rtype: Av1DetailPreservationMode
+        """
+        return self._detail_preservation_mode
+
+    @detail_preservation_mode.setter
+    def detail_preservation_mode(self, detail_preservation_mode):
+        # type: (Av1DetailPreservationMode) -> None
+        """Sets the detail_preservation_mode of this Av1VideoConfiguration.
+
+        Tunes the encoder to preserve film grain and fine detail. Defaults to OFF.
+
+        :param detail_preservation_mode: The detail_preservation_mode of this Av1VideoConfiguration.
+        :type: Av1DetailPreservationMode
+        """
+
+        if detail_preservation_mode is not None:
+            if not isinstance(detail_preservation_mode, Av1DetailPreservationMode):
+                raise TypeError("Invalid type for `detail_preservation_mode`, type has to be `Av1DetailPreservationMode`")
+
+        self._detail_preservation_mode = detail_preservation_mode
 
     @property
     def dynamic_range_format(self):
