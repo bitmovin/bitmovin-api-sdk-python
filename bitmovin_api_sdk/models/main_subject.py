@@ -14,14 +14,16 @@ class MainSubject(object):
                  description=None,
                  appearance_time_in_seconds=None,
                  center_x=None,
-                 center_y=None):
-        # type: (string_types, string_types, float, float, float) -> None
+                 center_y=None,
+                 box2d=None):
+        # type: (string_types, string_types, float, float, float, list[int]) -> None
 
         self._classification = None
         self._description = None
         self._appearance_time_in_seconds = None
         self._center_x = None
         self._center_y = None
+        self._box2d = list()
         self.discriminator = None
 
         if classification is not None:
@@ -34,6 +36,8 @@ class MainSubject(object):
             self.center_x = center_x
         if center_y is not None:
             self.center_y = center_y
+        if box2d is not None:
+            self.box2d = box2d
 
     @property
     def openapi_types(self):
@@ -42,7 +46,8 @@ class MainSubject(object):
             'description': 'string_types',
             'appearance_time_in_seconds': 'float',
             'center_x': 'float',
-            'center_y': 'float'
+            'center_y': 'float',
+            'box2d': 'list[int]'
         }
 
         return types
@@ -54,7 +59,8 @@ class MainSubject(object):
             'description': 'description',
             'appearance_time_in_seconds': 'appearanceTimeInSeconds',
             'center_x': 'centerX',
-            'center_y': 'centerY'
+            'center_y': 'centerY',
+            'box2d': 'box2d'
         }
         return attributes
 
@@ -63,7 +69,7 @@ class MainSubject(object):
         # type: () -> string_types
         """Gets the classification of this MainSubject.
 
-        The category or type of the detected subject based on the YOLOv8 OIv7 (Open Images V7) object detection model (e.g., 'person', 'vehicle', 'building') (required)
+        Category of the subject, usually an Open Images V7 class name such as Person or Vehicle. Other values can occur. Retains its original value in language-specific results. (required)
 
         :return: The classification of this MainSubject.
         :rtype: string_types
@@ -75,7 +81,7 @@ class MainSubject(object):
         # type: (string_types) -> None
         """Sets the classification of this MainSubject.
 
-        The category or type of the detected subject based on the YOLOv8 OIv7 (Open Images V7) object detection model (e.g., 'person', 'vehicle', 'building') (required)
+        Category of the subject, usually an Open Images V7 class name such as Person or Vehicle. Other values can occur. Retains its original value in language-specific results. (required)
 
         :param classification: The classification of this MainSubject.
         :type: string_types
@@ -121,7 +127,7 @@ class MainSubject(object):
         # type: () -> float
         """Gets the appearance_time_in_seconds of this MainSubject.
 
-        The timestamp in seconds when this subject first appears or is most prominently visible in the shot (required)
+        Time in seconds from the start of this shot when the subject first appears. (required)
 
         :return: The appearance_time_in_seconds of this MainSubject.
         :rtype: float
@@ -133,7 +139,7 @@ class MainSubject(object):
         # type: (float) -> None
         """Sets the appearance_time_in_seconds of this MainSubject.
 
-        The timestamp in seconds when this subject first appears or is most prominently visible in the shot (required)
+        Time in seconds from the start of this shot when the subject first appears. (required)
 
         :param appearance_time_in_seconds: The appearance_time_in_seconds of this MainSubject.
         :type: float
@@ -202,6 +208,35 @@ class MainSubject(object):
                 raise TypeError("Invalid type for `center_y`, type has to be `float`")
 
         self._center_y = center_y
+
+    @property
+    def box2d(self):
+        # type: () -> list[int]
+        """Gets the box2d of this MainSubject.
+
+        Bounding box at the subject's sampled appearance, in [ymin, xmin, ymax, xmax] order. Coordinates use a 0-1000 scale with a top-left origin, normalized independently against the full frame height and width. Omitted when no bounding box is available; the center coordinates remain valid.
+
+        :return: The box2d of this MainSubject.
+        :rtype: list[int]
+        """
+        return self._box2d
+
+    @box2d.setter
+    def box2d(self, box2d):
+        # type: (list) -> None
+        """Sets the box2d of this MainSubject.
+
+        Bounding box at the subject's sampled appearance, in [ymin, xmin, ymax, xmax] order. Coordinates use a 0-1000 scale with a top-left origin, normalized independently against the full frame height and width. Omitted when no bounding box is available; the center coordinates remain valid.
+
+        :param box2d: The box2d of this MainSubject.
+        :type: list[int]
+        """
+
+        if box2d is not None:
+            if not isinstance(box2d, list):
+                raise TypeError("Invalid type for `box2d`, type has to be `list[int]`")
+
+        self._box2d = box2d
 
     def to_dict(self):
         """Returns the model properties as a dict"""

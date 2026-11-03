@@ -27,7 +27,7 @@ class LanguageApi(BaseApi):
 
         :param encoding_id: The encoding ID
         :type encoding_id: string_types, required
-        :param language_code: The language code
+        :param language_code: Language code of an available result returned by Get AI Scene Analysis languages
         :type language_code: string_types, required
         :return:
         :rtype: SceneAnalysisDetailsResponse

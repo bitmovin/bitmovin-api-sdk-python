@@ -74,6 +74,7 @@ class AiSceneAnalysisAssetDescription(object):
         # type: () -> list[EncodingOutput]
         """Gets the outputs of this AiSceneAnalysisAssetDescription.
 
+        Output destinations in which the generated asset-description JSON files are stored.
 
         :return: The outputs of this AiSceneAnalysisAssetDescription.
         :rtype: list[EncodingOutput]
@@ -85,6 +86,7 @@ class AiSceneAnalysisAssetDescription(object):
         # type: (list) -> None
         """Sets the outputs of this AiSceneAnalysisAssetDescription.
 
+        Output destinations in which the generated asset-description JSON files are stored.
 
         :param outputs: The outputs of this AiSceneAnalysisAssetDescription.
         :type: list[EncodingOutput]

@@ -53,7 +53,7 @@ class ContentAdvisory(object):
         # type: () -> AdvisoryCategory
         """Gets the category of this ContentAdvisory.
 
-        The kind of advisory-relevant imagery that was detected (required)
+        Kind of advisory-relevant imagery reported, or conservatively assumed when the shot has status BLOCKED. (required)
 
         :return: The category of this ContentAdvisory.
         :rtype: AdvisoryCategory
@@ -65,7 +65,7 @@ class ContentAdvisory(object):
         # type: (AdvisoryCategory) -> None
         """Sets the category of this ContentAdvisory.
 
-        The kind of advisory-relevant imagery that was detected (required)
+        Kind of advisory-relevant imagery reported, or conservatively assumed when the shot has status BLOCKED. (required)
 
         :param category: The category of this ContentAdvisory.
         :type: AdvisoryCategory
@@ -82,7 +82,7 @@ class ContentAdvisory(object):
         # type: () -> AdvisoryConfidence
         """Gets the confidence of this ContentAdvisory.
 
-        The model's own certainty in this detection. Intended to help prioritise human review rather than as a threshold for discarding advisories: detection is tuned to flag uncertain cases rather than miss them, and shots that could not be analysed are reported with LOW confidence (required)
+        Confidence tier derived from the visual evidence reported by the analysis, for prioritizing human review rather than as a calibrated probability. (required)
 
         :return: The confidence of this ContentAdvisory.
         :rtype: AdvisoryConfidence
@@ -94,7 +94,7 @@ class ContentAdvisory(object):
         # type: (AdvisoryConfidence) -> None
         """Sets the confidence of this ContentAdvisory.
 
-        The model's own certainty in this detection. Intended to help prioritise human review rather than as a threshold for discarding advisories: detection is tuned to flag uncertain cases rather than miss them, and shots that could not be analysed are reported with LOW confidence (required)
+        Confidence tier derived from the visual evidence reported by the analysis, for prioritizing human review rather than as a calibrated probability. (required)
 
         :param confidence: The confidence of this ContentAdvisory.
         :type: AdvisoryConfidence
@@ -111,7 +111,7 @@ class ContentAdvisory(object):
         # type: () -> string_types
         """Gets the reason of this ContentAdvisory.
 
-        A short explanation of what was seen in the shot
+        Explanation of the reported visual evidence, or of the conservative assumption when the shot could not be assessed. Retains its original value in language-specific results.
 
         :return: The reason of this ContentAdvisory.
         :rtype: string_types
@@ -123,7 +123,7 @@ class ContentAdvisory(object):
         # type: (string_types) -> None
         """Sets the reason of this ContentAdvisory.
 
-        A short explanation of what was seen in the shot
+        Explanation of the reported visual evidence, or of the conservative assumption when the shot could not be assessed. Retains its original value in language-specific results.
 
         :param reason: The reason of this ContentAdvisory.
         :type: string_types

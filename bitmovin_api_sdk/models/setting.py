@@ -53,6 +53,7 @@ class Setting(object):
         # type: () -> Location
         """Gets the location of this Setting.
 
+        Location of the scene.
 
         :return: The location of this Setting.
         :rtype: Location
@@ -64,6 +65,7 @@ class Setting(object):
         # type: (Location) -> None
         """Sets the location of this Setting.
 
+        Location of the scene.
 
         :param location: The location of this Setting.
         :type: Location
@@ -80,6 +82,7 @@ class Setting(object):
         # type: () -> string_types
         """Gets the time_of_day of this Setting.
 
+        Time of day described by the analysis, in free text rather than a fixed vocabulary.
 
         :return: The time_of_day of this Setting.
         :rtype: string_types
@@ -91,6 +94,7 @@ class Setting(object):
         # type: (string_types) -> None
         """Sets the time_of_day of this Setting.
 
+        Time of day described by the analysis, in free text rather than a fixed vocabulary.
 
         :param time_of_day: The time_of_day of this Setting.
         :type: string_types
@@ -107,6 +111,7 @@ class Setting(object):
         # type: () -> Atmosphere
         """Gets the atmosphere of this Setting.
 
+        Description of the setting's atmosphere.
 
         :return: The atmosphere of this Setting.
         :rtype: Atmosphere
@@ -118,6 +123,7 @@ class Setting(object):
         # type: (Atmosphere) -> None
         """Sets the atmosphere of this Setting.
 
+        Description of the setting's atmosphere.
 
         :param atmosphere: The atmosphere of this Setting.
         :type: Atmosphere

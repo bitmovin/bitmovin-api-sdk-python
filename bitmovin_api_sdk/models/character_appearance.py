@@ -94,6 +94,7 @@ class CharacterAppearance(object):
         # type: () -> string_types
         """Gets the summary of this CharacterAppearance.
 
+        Summary of the character's visible appearance.
 
         :return: The summary of this CharacterAppearance.
         :rtype: string_types
@@ -105,6 +106,7 @@ class CharacterAppearance(object):
         # type: (string_types) -> None
         """Sets the summary of this CharacterAppearance.
 
+        Summary of the character's visible appearance.
 
         :param summary: The summary of this CharacterAppearance.
         :type: string_types
@@ -121,6 +123,7 @@ class CharacterAppearance(object):
         # type: () -> string_types
         """Gets the gender of this CharacterAppearance.
 
+        Apparent gender, described in free text.
 
         :return: The gender of this CharacterAppearance.
         :rtype: string_types
@@ -132,6 +135,7 @@ class CharacterAppearance(object):
         # type: (string_types) -> None
         """Sets the gender of this CharacterAppearance.
 
+        Apparent gender, described in free text.
 
         :param gender: The gender of this CharacterAppearance.
         :type: string_types
@@ -177,6 +181,7 @@ class CharacterAppearance(object):
         # type: () -> string_types
         """Gets the hair_color of this CharacterAppearance.
 
+        Hair color.
 
         :return: The hair_color of this CharacterAppearance.
         :rtype: string_types
@@ -188,6 +193,7 @@ class CharacterAppearance(object):
         # type: (string_types) -> None
         """Sets the hair_color of this CharacterAppearance.
 
+        Hair color.
 
         :param hair_color: The hair_color of this CharacterAppearance.
         :type: string_types
@@ -204,6 +210,7 @@ class CharacterAppearance(object):
         # type: () -> string_types
         """Gets the hair_style of this CharacterAppearance.
 
+        Hairstyle.
 
         :return: The hair_style of this CharacterAppearance.
         :rtype: string_types
@@ -215,6 +222,7 @@ class CharacterAppearance(object):
         # type: (string_types) -> None
         """Sets the hair_style of this CharacterAppearance.
 
+        Hairstyle.
 
         :param hair_style: The hair_style of this CharacterAppearance.
         :type: string_types
@@ -231,6 +239,7 @@ class CharacterAppearance(object):
         # type: () -> string_types
         """Gets the hair_fullness of this CharacterAppearance.
 
+        Hair fullness or coverage.
 
         :return: The hair_fullness of this CharacterAppearance.
         :rtype: string_types
@@ -242,6 +251,7 @@ class CharacterAppearance(object):
         # type: (string_types) -> None
         """Sets the hair_fullness of this CharacterAppearance.
 
+        Hair fullness or coverage.
 
         :param hair_fullness: The hair_fullness of this CharacterAppearance.
         :type: string_types
@@ -258,6 +268,7 @@ class CharacterAppearance(object):
         # type: () -> string_types
         """Gets the facial_hair of this CharacterAppearance.
 
+        Facial hair. Can be empty when no description is available.
 
         :return: The facial_hair of this CharacterAppearance.
         :rtype: string_types
@@ -269,6 +280,7 @@ class CharacterAppearance(object):
         # type: (string_types) -> None
         """Sets the facial_hair of this CharacterAppearance.
 
+        Facial hair. Can be empty when no description is available.
 
         :param facial_hair: The facial_hair of this CharacterAppearance.
         :type: string_types
@@ -285,6 +297,7 @@ class CharacterAppearance(object):
         # type: () -> string_types
         """Gets the physical_build of this CharacterAppearance.
 
+        The character's physical build.
 
         :return: The physical_build of this CharacterAppearance.
         :rtype: string_types
@@ -296,6 +309,7 @@ class CharacterAppearance(object):
         # type: (string_types) -> None
         """Sets the physical_build of this CharacterAppearance.
 
+        The character's physical build.
 
         :param physical_build: The physical_build of this CharacterAppearance.
         :type: string_types
@@ -312,6 +326,7 @@ class CharacterAppearance(object):
         # type: () -> string_types
         """Gets the distinguishing_features of this CharacterAppearance.
 
+        Distinctive visible features, such as glasses or markings.
 
         :return: The distinguishing_features of this CharacterAppearance.
         :rtype: string_types
@@ -323,6 +338,7 @@ class CharacterAppearance(object):
         # type: (string_types) -> None
         """Sets the distinguishing_features of this CharacterAppearance.
 
+        Distinctive visible features, such as glasses or markings.
 
         :param distinguishing_features: The distinguishing_features of this CharacterAppearance.
         :type: string_types
@@ -339,6 +355,7 @@ class CharacterAppearance(object):
         # type: () -> string_types
         """Gets the clothing of this CharacterAppearance.
 
+        The character's clothing.
 
         :return: The clothing of this CharacterAppearance.
         :rtype: string_types
@@ -350,6 +367,7 @@ class CharacterAppearance(object):
         # type: (string_types) -> None
         """Sets the clothing of this CharacterAppearance.
 
+        The character's clothing.
 
         :param clothing: The clothing of this CharacterAppearance.
         :type: string_types

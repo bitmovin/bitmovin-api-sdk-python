@@ -94,14 +94,16 @@
                  <span class="n">description</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">appearance_time_in_seconds</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">center_x</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                 <span class="n">center_y</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (string_types, string_types, float, float, float) -&gt; None</span>
+                 <span class="n">center_y</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">box2d</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="c1"># type: (string_types, string_types, float, float, float, list[int]) -&gt; None</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_classification</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_description</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_appearance_time_in_seconds</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_center_x</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_center_y</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_box2d</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>
 
         <span class="k">if</span> <span class="n">classification</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -114,6 +116,8 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">center_x</span> <span class="o">=</span> <span class="n">center_x</span>
         <span class="k">if</span> <span class="n">center_y</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">center_y</span> <span class="o">=</span> <span class="n">center_y</span>
+        <span class="k">if</span> <span class="n">box2d</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">box2d</span> <span class="o">=</span> <span class="n">box2d</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -122,7 +126,8 @@
             <span class="s1">'description'</span><span class="p">:</span> <span class="s1">'string_types'</span><span class="p">,</span>
             <span class="s1">'appearance_time_in_seconds'</span><span class="p">:</span> <span class="s1">'float'</span><span class="p">,</span>
             <span class="s1">'center_x'</span><span class="p">:</span> <span class="s1">'float'</span><span class="p">,</span>
-            <span class="s1">'center_y'</span><span class="p">:</span> <span class="s1">'float'</span>
+            <span class="s1">'center_y'</span><span class="p">:</span> <span class="s1">'float'</span><span class="p">,</span>
+            <span class="s1">'box2d'</span><span class="p">:</span> <span class="s1">'list[int]'</span>
         <span class="p">}</span>
 
         <span class="k">return</span> <span class="n">types</span>
@@ -134,7 +139,8 @@
             <span class="s1">'description'</span><span class="p">:</span> <span class="s1">'description'</span><span class="p">,</span>
             <span class="s1">'appearance_time_in_seconds'</span><span class="p">:</span> <span class="s1">'appearanceTimeInSeconds'</span><span class="p">,</span>
             <span class="s1">'center_x'</span><span class="p">:</span> <span class="s1">'centerX'</span><span class="p">,</span>
-            <span class="s1">'center_y'</span><span class="p">:</span> <span class="s1">'centerY'</span>
+            <span class="s1">'center_y'</span><span class="p">:</span> <span class="s1">'centerY'</span><span class="p">,</span>
+            <span class="s1">'box2d'</span><span class="p">:</span> <span class="s1">'box2d'</span>
         <span class="p">}</span>
         <span class="k">return</span> <span class="n">attributes</span>
 
@@ -143,7 +149,7 @@
         <span class="c1"># type: () -&gt; string_types</span>
 <span class="w">        </span><span class="sd">"""Gets the classification of this MainSubject.</span>
 
-<span class="sd">        The category or type of the detected subject based on the YOLOv8 OIv7 (Open Images V7) object detection model (e.g., 'person', 'vehicle', 'building') (required)</span>
+<span class="sd">        Category of the subject, usually an Open Images V7 class name such as Person or Vehicle. Other values can occur. Retains its original value in language-specific results. (required)</span>
 
 <span class="sd">        :return: The classification of this MainSubject.</span>
 <span class="sd">        :rtype: string_types</span>
@@ -155,7 +161,7 @@
         <span class="c1"># type: (string_types) -&gt; None</span>
 <span class="w">        </span><span class="sd">"""Sets the classification of this MainSubject.</span>
 
-<span class="sd">        The category or type of the detected subject based on the YOLOv8 OIv7 (Open Images V7) object detection model (e.g., 'person', 'vehicle', 'building') (required)</span>
+<span class="sd">        Category of the subject, usually an Open Images V7 class name such as Person or Vehicle. Other values can occur. Retains its original value in language-specific results. (required)</span>
 
 <span class="sd">        :param classification: The classification of this MainSubject.</span>
 <span class="sd">        :type: string_types</span>
@@ -201,7 +207,7 @@
         <span class="c1"># type: () -&gt; float</span>
 <span class="w">        </span><span class="sd">"""Gets the appearance_time_in_seconds of this MainSubject.</span>
 
-<span class="sd">        The timestamp in seconds when this subject first appears or is most prominently visible in the shot (required)</span>
+<span class="sd">        Time in seconds from the start of this shot when the subject first appears. (required)</span>
 
 <span class="sd">        :return: The appearance_time_in_seconds of this MainSubject.</span>
 <span class="sd">        :rtype: float</span>
@@ -213,7 +219,7 @@
         <span class="c1"># type: (float) -&gt; None</span>
 <span class="w">        </span><span class="sd">"""Sets the appearance_time_in_seconds of this MainSubject.</span>
 
-<span class="sd">        The timestamp in seconds when this subject first appears or is most prominently visible in the shot (required)</span>
+<span class="sd">        Time in seconds from the start of this shot when the subject first appears. (required)</span>
 
 <span class="sd">        :param appearance_time_in_seconds: The appearance_time_in_seconds of this MainSubject.</span>
 <span class="sd">        :type: float</span>
@@ -282,6 +288,35 @@
                 <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Invalid type for `center_y`, type has to be `float`"</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_center_y</span> <span class="o">=</span> <span class="n">center_y</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">box2d</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; list[int]</span>
+<span class="w">        </span><span class="sd">"""Gets the box2d of this MainSubject.</span>
+
+<span class="sd">        Bounding box at the subject's sampled appearance, in [ymin, xmin, ymax, xmax] order. Coordinates use a 0-1000 scale with a top-left origin, normalized independently against the full frame height and width. Omitted when no bounding box is available; the center coordinates remain valid.</span>
+
+<span class="sd">        :return: The box2d of this MainSubject.</span>
+<span class="sd">        :rtype: list[int]</span>
+<span class="sd">        """</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_box2d</span>
+
+    <span class="nd">@box2d</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">box2d</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">box2d</span><span class="p">):</span>
+        <span class="c1"># type: (list) -&gt; None</span>
+<span class="w">        </span><span class="sd">"""Sets the box2d of this MainSubject.</span>
+
+<span class="sd">        Bounding box at the subject's sampled appearance, in [ymin, xmin, ymax, xmax] order. Coordinates use a 0-1000 scale with a top-left origin, normalized independently against the full frame height and width. Omitted when no bounding box is available; the center coordinates remain valid.</span>
+
+<span class="sd">        :param box2d: The box2d of this MainSubject.</span>
+<span class="sd">        :type: list[int]</span>
+<span class="sd">        """</span>
+
+        <span class="k">if</span> <span class="n">box2d</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">box2d</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Invalid type for `box2d`, type has to be `list[int]`"</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_box2d</span> <span class="o">=</span> <span class="n">box2d</span>
 
 <div class="viewcode-block" id="MainSubject.to_dict">
 <a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.main_subject.MainSubject.to_dict">[docs]</a>

@@ -58,6 +58,7 @@ class Content(object):
         # type: () -> list[Character]
         """Gets the characters of this Content.
 
+        Selected people or characters described in this scene. An empty or omitted list can mean that no characters were identified or that character descriptions were unavailable. (required)
 
         :return: The characters of this Content.
         :rtype: list[Character]
@@ -69,6 +70,7 @@ class Content(object):
         # type: (list) -> None
         """Sets the characters of this Content.
 
+        Selected people or characters described in this scene. An empty or omitted list can mean that no characters were identified or that character descriptions were unavailable. (required)
 
         :param characters: The characters of this Content.
         :type: list[Character]
@@ -85,6 +87,7 @@ class Content(object):
         # type: () -> list[SceneObject]
         """Gets the objects of this Content.
 
+        Selected notable objects described in this scene; not an exhaustive object inventory. (required)
 
         :return: The objects of this Content.
         :rtype: list[SceneObject]
@@ -96,6 +99,7 @@ class Content(object):
         # type: (list) -> None
         """Sets the objects of this Content.
 
+        Selected notable objects described in this scene; not an exhaustive object inventory. (required)
 
         :param objects: The objects of this Content.
         :type: list[SceneObject]
@@ -112,6 +116,7 @@ class Content(object):
         # type: () -> list[Setting]
         """Gets the settings of this Content.
 
+        Places and environmental conditions described in this scene. More than one setting can be reported. (required)
 
         :return: The settings of this Content.
         :rtype: list[Setting]
@@ -123,6 +128,7 @@ class Content(object):
         # type: (list) -> None
         """Sets the settings of this Content.
 
+        Places and environmental conditions described in this scene. More than one setting can be reported. (required)
 
         :param settings: The settings of this Content.
         :type: list[Setting]
@@ -139,6 +145,7 @@ class Content(object):
         # type: () -> SceneDynamics
         """Gets the dynamics of this Content.
 
+        Narrative dynamics of this scene.
 
         :return: The dynamics of this Content.
         :rtype: SceneDynamics
@@ -150,6 +157,7 @@ class Content(object):
         # type: (SceneDynamics) -> None
         """Sets the dynamics of this Content.
 
+        Narrative dynamics of this scene.
 
         :param dynamics: The dynamics of this Content.
         :type: SceneDynamics

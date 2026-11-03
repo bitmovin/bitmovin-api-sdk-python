@@ -52,6 +52,7 @@ class Person(object):
         # type: () -> string_types
         """Gets the name of this Person.
 
+        Name of the credited person extracted from the credit text.
 
         :return: The name of this Person.
         :rtype: string_types
@@ -63,6 +64,7 @@ class Person(object):
         # type: (string_types) -> None
         """Sets the name of this Person.
 
+        Name of the credited person extracted from the credit text.
 
         :param name: The name of this Person.
         :type: string_types
@@ -79,6 +81,7 @@ class Person(object):
         # type: () -> string_types
         """Gets the role of this Person.
 
+        Credited role, or the portrayed character for acting credits when available.
 
         :return: The role of this Person.
         :rtype: string_types
@@ -90,6 +93,7 @@ class Person(object):
         # type: (string_types) -> None
         """Sets the role of this Person.
 
+        Credited role, or the portrayed character for acting credits when available.
 
         :param role: The role of this Person.
         :type: string_types

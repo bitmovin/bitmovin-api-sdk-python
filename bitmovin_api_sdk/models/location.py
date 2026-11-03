@@ -45,6 +45,7 @@ class Location(object):
         # type: () -> string_types
         """Gets the name of this Location.
 
+        Short descriptive name of the place, which need not identify a real geographic location.
 
         :return: The name of this Location.
         :rtype: string_types
@@ -56,6 +57,7 @@ class Location(object):
         # type: (string_types) -> None
         """Sets the name of this Location.
 
+        Short descriptive name of the place, which need not identify a real geographic location.
 
         :param name: The name of this Location.
         :type: string_types
@@ -72,6 +74,7 @@ class Location(object):
         # type: () -> string_types
         """Gets the description of this Location.
 
+        Free-text description of the place.
 
         :return: The description of this Location.
         :rtype: string_types
@@ -83,6 +86,7 @@ class Location(object):
         # type: (string_types) -> None
         """Sets the description of this Location.
 
+        Free-text description of the place.
 
         :param description: The description of this Location.
         :type: string_types

@@ -46,7 +46,7 @@ class ShotAdvisories(object):
         # type: () -> AdvisoryAnalysisStatus
         """Gets the status of this ShotAdvisories.
 
-        Whether and how the shot was assessed for content advisories (required)
+        Outcome of the advisory assessment for this shot. (required)
 
         :return: The status of this ShotAdvisories.
         :rtype: AdvisoryAnalysisStatus
@@ -58,7 +58,7 @@ class ShotAdvisories(object):
         # type: (AdvisoryAnalysisStatus) -> None
         """Sets the status of this ShotAdvisories.
 
-        Whether and how the shot was assessed for content advisories (required)
+        Outcome of the advisory assessment for this shot. (required)
 
         :param status: The status of this ShotAdvisories.
         :type: AdvisoryAnalysisStatus
@@ -75,7 +75,7 @@ class ShotAdvisories(object):
         # type: () -> list[ContentAdvisory]
         """Gets the advisories of this ShotAdvisories.
 
-        The advisory-relevant imagery detected in this shot. Empty when the shot was assessed and nothing was found, or when it was not assessed at all (required)
+        Advisories reported for this shot. Consult status before interpreting an empty or omitted list. (required)
 
         :return: The advisories of this ShotAdvisories.
         :rtype: list[ContentAdvisory]
@@ -87,7 +87,7 @@ class ShotAdvisories(object):
         # type: (list) -> None
         """Sets the advisories of this ShotAdvisories.
 
-        The advisory-relevant imagery detected in this shot. Empty when the shot was assessed and nothing was found, or when it was not assessed at all (required)
+        Advisories reported for this shot. Consult status before interpreting an empty or omitted list. (required)
 
         :param advisories: The advisories of this ShotAdvisories.
         :type: list[ContentAdvisory]

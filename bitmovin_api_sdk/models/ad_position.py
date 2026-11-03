@@ -45,6 +45,7 @@ class AdPosition(object):
         # type: () -> float
         """Gets the position of this AdPosition.
 
+        Selected ad break position in seconds from the beginning of the video.
 
         :return: The position of this AdPosition.
         :rtype: float
@@ -56,6 +57,7 @@ class AdPosition(object):
         # type: (float) -> None
         """Sets the position of this AdPosition.
 
+        Selected ad break position in seconds from the beginning of the video.
 
         :param position: The position of this AdPosition.
         :type: float
@@ -72,6 +74,7 @@ class AdPosition(object):
         # type: () -> float
         """Gets the duration of this AdPosition.
 
+        Ad duration in seconds requested for this placement. Not set for breaks added at all scene boundaries, when the schedule entry has no duration, or when the encoder does not support ad durations.
 
         :return: The duration of this AdPosition.
         :rtype: float
@@ -83,6 +86,7 @@ class AdPosition(object):
         # type: (float) -> None
         """Sets the duration of this AdPosition.
 
+        Ad duration in seconds requested for this placement. Not set for breaks added at all scene boundaries, when the schedule entry has no duration, or when the encoder does not support ad durations.
 
         :param duration: The duration of this AdPosition.
         :type: float

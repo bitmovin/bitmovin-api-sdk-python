@@ -45,6 +45,7 @@ class Song(object):
         # type: () -> string_types
         """Gets the name of this Song.
 
+        Song title extracted from the credit text.
 
         :return: The name of this Song.
         :rtype: string_types
@@ -56,6 +57,7 @@ class Song(object):
         # type: (string_types) -> None
         """Sets the name of this Song.
 
+        Song title extracted from the credit text.
 
         :param name: The name of this Song.
         :type: string_types
@@ -72,6 +74,7 @@ class Song(object):
         # type: () -> string_types
         """Gets the artist of this Song.
 
+        Artist associated with the song in the credit text.
 
         :return: The artist of this Song.
         :rtype: string_types
@@ -83,6 +86,7 @@ class Song(object):
         # type: (string_types) -> None
         """Sets the artist of this Song.
 
+        Artist associated with the song in the credit text.
 
         :param artist: The artist of this Song.
         :type: string_types

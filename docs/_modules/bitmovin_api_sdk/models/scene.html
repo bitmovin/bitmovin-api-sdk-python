@@ -195,6 +195,7 @@
         <span class="c1"># type: () -&gt; string_types</span>
 <span class="w">        </span><span class="sd">"""Gets the title of this Scene.</span>
 
+<span class="sd">        Short AI-generated title describing the scene.</span>
 
 <span class="sd">        :return: The title of this Scene.</span>
 <span class="sd">        :rtype: string_types</span>
@@ -206,6 +207,7 @@
         <span class="c1"># type: (string_types) -&gt; None</span>
 <span class="w">        </span><span class="sd">"""Sets the title of this Scene.</span>
 
+<span class="sd">        Short AI-generated title describing the scene.</span>
 
 <span class="sd">        :param title: The title of this Scene.</span>
 <span class="sd">        :type: string_types</span>
@@ -222,6 +224,7 @@
         <span class="c1"># type: () -&gt; float</span>
 <span class="w">        </span><span class="sd">"""Gets the start_in_seconds of this Scene.</span>
 
+<span class="sd">        Start time of the scene in seconds from the beginning of the video.</span>
 
 <span class="sd">        :return: The start_in_seconds of this Scene.</span>
 <span class="sd">        :rtype: float</span>
@@ -233,6 +236,7 @@
         <span class="c1"># type: (float) -&gt; None</span>
 <span class="w">        </span><span class="sd">"""Sets the start_in_seconds of this Scene.</span>
 
+<span class="sd">        Start time of the scene in seconds from the beginning of the video.</span>
 
 <span class="sd">        :param start_in_seconds: The start_in_seconds of this Scene.</span>
 <span class="sd">        :type: float</span>
@@ -249,6 +253,7 @@
         <span class="c1"># type: () -&gt; float</span>
 <span class="w">        </span><span class="sd">"""Gets the end_in_seconds of this Scene.</span>
 
+<span class="sd">        End time of the scene in seconds from the beginning of the video.</span>
 
 <span class="sd">        :return: The end_in_seconds of this Scene.</span>
 <span class="sd">        :rtype: float</span>
@@ -260,6 +265,7 @@
         <span class="c1"># type: (float) -&gt; None</span>
 <span class="w">        </span><span class="sd">"""Sets the end_in_seconds of this Scene.</span>
 
+<span class="sd">        End time of the scene in seconds from the beginning of the video.</span>
 
 <span class="sd">        :param end_in_seconds: The end_in_seconds of this Scene.</span>
 <span class="sd">        :type: float</span>
@@ -276,6 +282,7 @@
         <span class="c1"># type: () -&gt; string_types</span>
 <span class="w">        </span><span class="sd">"""Gets the id of this Scene.</span>
 
+<span class="sd">        Identifier assigned to this scene within the analysis result.</span>
 
 <span class="sd">        :return: The id of this Scene.</span>
 <span class="sd">        :rtype: string_types</span>
@@ -287,6 +294,7 @@
         <span class="c1"># type: (string_types) -&gt; None</span>
 <span class="w">        </span><span class="sd">"""Sets the id of this Scene.</span>
 
+<span class="sd">        Identifier assigned to this scene within the analysis result.</span>
 
 <span class="sd">        :param id_: The id of this Scene.</span>
 <span class="sd">        :type: string_types</span>
@@ -303,6 +311,7 @@
         <span class="c1"># type: () -&gt; Content</span>
 <span class="w">        </span><span class="sd">"""Gets the content of this Scene.</span>
 
+<span class="sd">        Structured description of this scene.</span>
 
 <span class="sd">        :return: The content of this Scene.</span>
 <span class="sd">        :rtype: Content</span>
@@ -314,6 +323,7 @@
         <span class="c1"># type: (Content) -&gt; None</span>
 <span class="w">        </span><span class="sd">"""Sets the content of this Scene.</span>
 
+<span class="sd">        Structured description of this scene.</span>
 
 <span class="sd">        :param content: The content of this Scene.</span>
 <span class="sd">        :type: Content</span>
@@ -330,6 +340,7 @@
         <span class="c1"># type: () -&gt; string_types</span>
 <span class="w">        </span><span class="sd">"""Gets the summary of this Scene.</span>
 
+<span class="sd">        Concise summary of the scene.</span>
 
 <span class="sd">        :return: The summary of this Scene.</span>
 <span class="sd">        :rtype: string_types</span>
@@ -341,6 +352,7 @@
         <span class="c1"># type: (string_types) -&gt; None</span>
 <span class="w">        </span><span class="sd">"""Sets the summary of this Scene.</span>
 
+<span class="sd">        Concise summary of the scene.</span>
 
 <span class="sd">        :param summary: The summary of this Scene.</span>
 <span class="sd">        :type: string_types</span>
@@ -357,6 +369,7 @@
         <span class="c1"># type: () -&gt; string_types</span>
 <span class="w">        </span><span class="sd">"""Gets the verbose_summary of this Scene.</span>
 
+<span class="sd">        Detailed description of the scene, providing more context than summary.</span>
 
 <span class="sd">        :return: The verbose_summary of this Scene.</span>
 <span class="sd">        :rtype: string_types</span>
@@ -368,6 +381,7 @@
         <span class="c1"># type: (string_types) -&gt; None</span>
 <span class="w">        </span><span class="sd">"""Sets the verbose_summary of this Scene.</span>
 
+<span class="sd">        Detailed description of the scene, providing more context than summary.</span>
 
 <span class="sd">        :param verbose_summary: The verbose_summary of this Scene.</span>
 <span class="sd">        :type: string_types</span>
@@ -384,6 +398,7 @@
         <span class="c1"># type: () -&gt; list[string_types]</span>
 <span class="w">        </span><span class="sd">"""Gets the sensitive_topics of this Scene.</span>
 
+<span class="sd">        Sensitive topics identified in this scene, expressed as free text rather than taxonomy identifiers. (required)</span>
 
 <span class="sd">        :return: The sensitive_topics of this Scene.</span>
 <span class="sd">        :rtype: list[string_types]</span>
@@ -395,6 +410,7 @@
         <span class="c1"># type: (list) -&gt; None</span>
 <span class="w">        </span><span class="sd">"""Sets the sensitive_topics of this Scene.</span>
 
+<span class="sd">        Sensitive topics identified in this scene, expressed as free text rather than taxonomy identifiers. (required)</span>
 
 <span class="sd">        :param sensitive_topics: The sensitive_topics of this Scene.</span>
 <span class="sd">        :type: list[string_types]</span>
@@ -411,6 +427,7 @@
         <span class="c1"># type: () -&gt; list[string_types]</span>
 <span class="w">        </span><span class="sd">"""Gets the keywords of this Scene.</span>
 
+<span class="sd">        Free-text keywords describing this scene. Preserve the returned spelling and case. (required)</span>
 
 <span class="sd">        :return: The keywords of this Scene.</span>
 <span class="sd">        :rtype: list[string_types]</span>
@@ -422,6 +439,7 @@
         <span class="c1"># type: (list) -&gt; None</span>
 <span class="w">        </span><span class="sd">"""Sets the keywords of this Scene.</span>
 
+<span class="sd">        Free-text keywords describing this scene. Preserve the returned spelling and case. (required)</span>
 
 <span class="sd">        :param keywords: The keywords of this Scene.</span>
 <span class="sd">        :type: list[string_types]</span>
@@ -438,6 +456,7 @@
         <span class="c1"># type: () -&gt; IABTaxonomy</span>
 <span class="w">        </span><span class="sd">"""Gets the iab of this Scene.</span>
 
+<span class="sd">        IAB classification of this scene.</span>
 
 <span class="sd">        :return: The iab of this Scene.</span>
 <span class="sd">        :rtype: IABTaxonomy</span>
@@ -449,6 +468,7 @@
         <span class="c1"># type: (IABTaxonomy) -&gt; None</span>
 <span class="w">        </span><span class="sd">"""Sets the iab of this Scene.</span>
 
+<span class="sd">        IAB classification of this scene.</span>
 
 <span class="sd">        :param iab: The iab of this Scene.</span>
 <span class="sd">        :type: IABTaxonomy</span>
@@ -494,7 +514,7 @@
         <span class="c1"># type: () -&gt; list[Shot]</span>
 <span class="w">        </span><span class="sd">"""Gets the shots of this Scene.</span>
 
-<span class="sd">        A detailed breakdown of individual camera shots within this scene, providing granular analysis of visual content and subjects</span>
+<span class="sd">        Camera shots with available analysis associated with this scene. The list can be empty or omitted and need not include every shot.</span>
 
 <span class="sd">        :return: The shots of this Scene.</span>
 <span class="sd">        :rtype: list[Shot]</span>
@@ -506,7 +526,7 @@
         <span class="c1"># type: (list) -&gt; None</span>
 <span class="w">        </span><span class="sd">"""Sets the shots of this Scene.</span>
 
-<span class="sd">        A detailed breakdown of individual camera shots within this scene, providing granular analysis of visual content and subjects</span>
+<span class="sd">        Camera shots with available analysis associated with this scene. The list can be empty or omitted and need not include every shot.</span>
 
 <span class="sd">        :param shots: The shots of this Scene.</span>
 <span class="sd">        :type: list[Shot]</span>
@@ -523,6 +543,7 @@
         <span class="c1"># type: () -&gt; AdOpportunity</span>
 <span class="w">        </span><span class="sd">"""Gets the ad_opportunity_information of this Scene.</span>
 
+<span class="sd">        Suitability assessment for an ad break at the end of this scene. This does not confirm that an ad was placed.</span>
 
 <span class="sd">        :return: The ad_opportunity_information of this Scene.</span>
 <span class="sd">        :rtype: AdOpportunity</span>
@@ -534,6 +555,7 @@
         <span class="c1"># type: (AdOpportunity) -&gt; None</span>
 <span class="w">        </span><span class="sd">"""Sets the ad_opportunity_information of this Scene.</span>
 
+<span class="sd">        Suitability assessment for an ad break at the end of this scene. This does not confirm that an ad was placed.</span>
 
 <span class="sd">        :param ad_opportunity_information: The ad_opportunity_information of this Scene.</span>
 <span class="sd">        :type: AdOpportunity</span>

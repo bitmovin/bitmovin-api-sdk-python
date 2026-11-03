@@ -181,6 +181,7 @@
         <span class="c1"># type: () -&gt; list[Scene]</span>
 <span class="w">        </span><span class="sd">"""Gets the scenes of this SceneAnalysisDetailsResponse.</span>
 
+<span class="sd">        Scenes identified in the video. (required)</span>
 
 <span class="sd">        :return: The scenes of this SceneAnalysisDetailsResponse.</span>
 <span class="sd">        :rtype: list[Scene]</span>
@@ -192,6 +193,7 @@
         <span class="c1"># type: (list) -&gt; None</span>
 <span class="w">        </span><span class="sd">"""Sets the scenes of this SceneAnalysisDetailsResponse.</span>
 
+<span class="sd">        Scenes identified in the video. (required)</span>
 
 <span class="sd">        :param scenes: The scenes of this SceneAnalysisDetailsResponse.</span>
 <span class="sd">        :type: list[Scene]</span>
@@ -208,6 +210,7 @@
         <span class="c1"># type: () -&gt; float</span>
 <span class="w">        </span><span class="sd">"""Gets the duration of this SceneAnalysisDetailsResponse.</span>
 
+<span class="sd">        Duration of the analyzed video in seconds.</span>
 
 <span class="sd">        :return: The duration of this SceneAnalysisDetailsResponse.</span>
 <span class="sd">        :rtype: float</span>
@@ -219,6 +222,7 @@
         <span class="c1"># type: (float) -&gt; None</span>
 <span class="w">        </span><span class="sd">"""Sets the duration of this SceneAnalysisDetailsResponse.</span>
 
+<span class="sd">        Duration of the analyzed video in seconds.</span>
 
 <span class="sd">        :param duration: The duration of this SceneAnalysisDetailsResponse.</span>
 <span class="sd">        :type: float</span>
@@ -235,6 +239,7 @@
         <span class="c1"># type: () -&gt; string_types</span>
 <span class="w">        </span><span class="sd">"""Gets the description of this SceneAnalysisDetailsResponse.</span>
 
+<span class="sd">        AI-generated summary of the video as a whole. (required)</span>
 
 <span class="sd">        :return: The description of this SceneAnalysisDetailsResponse.</span>
 <span class="sd">        :rtype: string_types</span>
@@ -246,6 +251,7 @@
         <span class="c1"># type: (string_types) -&gt; None</span>
 <span class="w">        </span><span class="sd">"""Sets the description of this SceneAnalysisDetailsResponse.</span>
 
+<span class="sd">        AI-generated summary of the video as a whole. (required)</span>
 
 <span class="sd">        :param description: The description of this SceneAnalysisDetailsResponse.</span>
 <span class="sd">        :type: string_types</span>
@@ -291,6 +297,7 @@
         <span class="c1"># type: () -&gt; list[string_types]</span>
 <span class="w">        </span><span class="sd">"""Gets the keywords of this SceneAnalysisDetailsResponse.</span>
 
+<span class="sd">        Free-text keywords describing the video as a whole. Preserve the returned spelling and case. (required)</span>
 
 <span class="sd">        :return: The keywords of this SceneAnalysisDetailsResponse.</span>
 <span class="sd">        :rtype: list[string_types]</span>
@@ -302,6 +309,7 @@
         <span class="c1"># type: (list) -&gt; None</span>
 <span class="w">        </span><span class="sd">"""Sets the keywords of this SceneAnalysisDetailsResponse.</span>
 
+<span class="sd">        Free-text keywords describing the video as a whole. Preserve the returned spelling and case. (required)</span>
 
 <span class="sd">        :param keywords: The keywords of this SceneAnalysisDetailsResponse.</span>
 <span class="sd">        :type: list[string_types]</span>
@@ -318,6 +326,7 @@
         <span class="c1"># type: () -&gt; list[Rating]</span>
 <span class="w">        </span><span class="sd">"""Gets the ratings of this SceneAnalysisDetailsResponse.</span>
 
+<span class="sd">        AI-estimated content ratings for the indicated regions and rating systems. (required)</span>
 
 <span class="sd">        :return: The ratings of this SceneAnalysisDetailsResponse.</span>
 <span class="sd">        :rtype: list[Rating]</span>
@@ -329,6 +338,7 @@
         <span class="c1"># type: (list) -&gt; None</span>
 <span class="w">        </span><span class="sd">"""Sets the ratings of this SceneAnalysisDetailsResponse.</span>
 
+<span class="sd">        AI-estimated content ratings for the indicated regions and rating systems. (required)</span>
 
 <span class="sd">        :param ratings: The ratings of this SceneAnalysisDetailsResponse.</span>
 <span class="sd">        :type: list[Rating]</span>
@@ -345,6 +355,7 @@
         <span class="c1"># type: () -&gt; list[string_types]</span>
 <span class="w">        </span><span class="sd">"""Gets the sensitive_topics of this SceneAnalysisDetailsResponse.</span>
 
+<span class="sd">        Sensitive topics for the video as a whole, in free text. This list can differ from the combined scene-level topics. (required)</span>
 
 <span class="sd">        :return: The sensitive_topics of this SceneAnalysisDetailsResponse.</span>
 <span class="sd">        :rtype: list[string_types]</span>
@@ -356,6 +367,7 @@
         <span class="c1"># type: (list) -&gt; None</span>
 <span class="w">        </span><span class="sd">"""Sets the sensitive_topics of this SceneAnalysisDetailsResponse.</span>
 
+<span class="sd">        Sensitive topics for the video as a whole, in free text. This list can differ from the combined scene-level topics. (required)</span>
 
 <span class="sd">        :param sensitive_topics: The sensitive_topics of this SceneAnalysisDetailsResponse.</span>
 <span class="sd">        :type: list[string_types]</span>
@@ -372,6 +384,7 @@
         <span class="c1"># type: () -&gt; list[string_types]</span>
 <span class="w">        </span><span class="sd">"""Gets the iab_sensitive_topic_taxonomies of this SceneAnalysisDetailsResponse.</span>
 
+<span class="sd">        Distinct IAB Content Taxonomy identifiers drawn from the scenes' IAB sensitive-topic annotations. The list can be empty or unavailable even when individual scenes have topic annotations. (required)</span>
 
 <span class="sd">        :return: The iab_sensitive_topic_taxonomies of this SceneAnalysisDetailsResponse.</span>
 <span class="sd">        :rtype: list[string_types]</span>
@@ -383,6 +396,7 @@
         <span class="c1"># type: (list) -&gt; None</span>
 <span class="w">        </span><span class="sd">"""Sets the iab_sensitive_topic_taxonomies of this SceneAnalysisDetailsResponse.</span>
 
+<span class="sd">        Distinct IAB Content Taxonomy identifiers drawn from the scenes' IAB sensitive-topic annotations. The list can be empty or unavailable even when individual scenes have topic annotations. (required)</span>
 
 <span class="sd">        :param iab_sensitive_topic_taxonomies: The iab_sensitive_topic_taxonomies of this SceneAnalysisDetailsResponse.</span>
 <span class="sd">        :type: list[string_types]</span>
@@ -399,6 +413,7 @@
         <span class="c1"># type: () -&gt; list[string_types]</span>
 <span class="w">        </span><span class="sd">"""Gets the input_language_codes of this SceneAnalysisDetailsResponse.</span>
 
+<span class="sd">        Language codes identified for spoken dialogue or narration in the source content. Theme-song vocals, lyrics, music and written text are excluded. The list can be empty when no codes were identified, including when the input has no audio stream. These codes do not indicate available translations.</span>
 
 <span class="sd">        :return: The input_language_codes of this SceneAnalysisDetailsResponse.</span>
 <span class="sd">        :rtype: list[string_types]</span>
@@ -410,6 +425,7 @@
         <span class="c1"># type: (list) -&gt; None</span>
 <span class="w">        </span><span class="sd">"""Sets the input_language_codes of this SceneAnalysisDetailsResponse.</span>
 
+<span class="sd">        Language codes identified for spoken dialogue or narration in the source content. Theme-song vocals, lyrics, music and written text are excluded. The list can be empty when no codes were identified, including when the input has no audio stream. These codes do not indicate available translations.</span>
 
 <span class="sd">        :param input_language_codes: The input_language_codes of this SceneAnalysisDetailsResponse.</span>
 <span class="sd">        :type: list[string_types]</span>
@@ -426,6 +442,7 @@
         <span class="c1"># type: () -&gt; Credits</span>
 <span class="w">        </span><span class="sd">"""Gets the credits of this SceneAnalysisDetailsResponse.</span>
 
+<span class="sd">        Credits extracted from the video's on-screen text.</span>
 
 <span class="sd">        :return: The credits of this SceneAnalysisDetailsResponse.</span>
 <span class="sd">        :rtype: Credits</span>
@@ -437,6 +454,7 @@
         <span class="c1"># type: (Credits) -&gt; None</span>
 <span class="w">        </span><span class="sd">"""Sets the credits of this SceneAnalysisDetailsResponse.</span>
 
+<span class="sd">        Credits extracted from the video's on-screen text.</span>
 
 <span class="sd">        :param credits_: The credits of this SceneAnalysisDetailsResponse.</span>
 <span class="sd">        :type: Credits</span>
@@ -453,6 +471,7 @@
         <span class="c1"># type: () -&gt; Metadata</span>
 <span class="w">        </span><span class="sd">"""Gets the metadata of this SceneAnalysisDetailsResponse.</span>
 
+<span class="sd">        Information about the analysis that generated this result. (required)</span>
 
 <span class="sd">        :return: The metadata of this SceneAnalysisDetailsResponse.</span>
 <span class="sd">        :rtype: Metadata</span>
@@ -464,6 +483,7 @@
         <span class="c1"># type: (Metadata) -&gt; None</span>
 <span class="w">        </span><span class="sd">"""Sets the metadata of this SceneAnalysisDetailsResponse.</span>
 
+<span class="sd">        Information about the analysis that generated this result. (required)</span>
 
 <span class="sd">        :param metadata: The metadata of this SceneAnalysisDetailsResponse.</span>
 <span class="sd">        :type: Metadata</span>

@@ -45,6 +45,7 @@ class SceneObject(object):
         # type: () -> string_types
         """Gets the description of this SceneObject.
 
+        Free-text description of the object in this scene.
 
         :return: The description of this SceneObject.
         :rtype: string_types
@@ -56,6 +57,7 @@ class SceneObject(object):
         # type: (string_types) -> None
         """Sets the description of this SceneObject.
 
+        Free-text description of the object in this scene.
 
         :param description: The description of this SceneObject.
         :type: string_types
@@ -72,6 +74,7 @@ class SceneObject(object):
         # type: () -> string_types
         """Gets the category of this SceneObject.
 
+        Kind of object in free text rather than a fixed category list.
 
         :return: The category of this SceneObject.
         :rtype: string_types
@@ -83,6 +86,7 @@ class SceneObject(object):
         # type: (string_types) -> None
         """Sets the category of this SceneObject.
 
+        Kind of object in free text rather than a fixed category list.
 
         :param category: The category of this SceneObject.
         :type: string_types

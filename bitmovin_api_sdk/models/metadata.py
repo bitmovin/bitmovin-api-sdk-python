@@ -45,6 +45,7 @@ class Metadata(object):
         # type: () -> string_types
         """Gets the version of this Metadata.
 
+        Version of the analysis software used to generate this result.
 
         :return: The version of this Metadata.
         :rtype: string_types
@@ -56,6 +57,7 @@ class Metadata(object):
         # type: (string_types) -> None
         """Sets the version of this Metadata.
 
+        Version of the analysis software used to generate this result.
 
         :param version: The version of this Metadata.
         :type: string_types
@@ -72,6 +74,7 @@ class Metadata(object):
         # type: () -> string_types
         """Gets the disclaimer of this Metadata.
 
+        Attribution or disclaimer attached to the generated analysis.
 
         :return: The disclaimer of this Metadata.
         :rtype: string_types
@@ -83,6 +86,7 @@ class Metadata(object):
         # type: (string_types) -> None
         """Sets the disclaimer of this Metadata.
 
+        Attribution or disclaimer attached to the generated analysis.
 
         :param disclaimer: The disclaimer of this Metadata.
         :type: string_types

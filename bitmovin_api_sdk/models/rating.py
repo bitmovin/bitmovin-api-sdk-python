@@ -51,6 +51,7 @@ class Rating(object):
         # type: () -> string_types
         """Gets the region of this Rating.
 
+        Region to which this estimated rating applies, such as US, UK or EU.
 
         :return: The region of this Rating.
         :rtype: string_types
@@ -62,6 +63,7 @@ class Rating(object):
         # type: (string_types) -> None
         """Sets the region of this Rating.
 
+        Region to which this estimated rating applies, such as US, UK or EU.
 
         :param region: The region of this Rating.
         :type: string_types
@@ -78,6 +80,7 @@ class Rating(object):
         # type: () -> string_types
         """Gets the system of this Rating.
 
+        Name of the movie or television rating system used for this estimate.
 
         :return: The system of this Rating.
         :rtype: string_types
@@ -89,6 +92,7 @@ class Rating(object):
         # type: (string_types) -> None
         """Sets the system of this Rating.
 
+        Name of the movie or television rating system used for this estimate.
 
         :param system: The system of this Rating.
         :type: string_types
@@ -105,6 +109,7 @@ class Rating(object):
         # type: () -> string_types
         """Gets the rating of this Rating.
 
+        AI-estimated rating label within the indicated system. Can be empty when no estimate is available.
 
         :return: The rating of this Rating.
         :rtype: string_types
@@ -116,6 +121,7 @@ class Rating(object):
         # type: (string_types) -> None
         """Sets the rating of this Rating.
 
+        AI-estimated rating label within the indicated system. Can be empty when no estimate is available.
 
         :param rating: The rating of this Rating.
         :type: string_types

@@ -128,7 +128,7 @@ class Shot(object):
         # type: () -> string_types
         """Gets the detailed_description of this Shot.
 
-        A comprehensive textual description of the visual content, action, and context within this shot
+        Description of the shot's visual content, action and context.
 
         :return: The detailed_description of this Shot.
         :rtype: string_types
@@ -140,7 +140,7 @@ class Shot(object):
         # type: (string_types) -> None
         """Sets the detailed_description of this Shot.
 
-        A comprehensive textual description of the visual content, action, and context within this shot
+        Description of the shot's visual content, action and context.
 
         :param detailed_description: The detailed_description of this Shot.
         :type: string_types
@@ -157,7 +157,7 @@ class Shot(object):
         # type: () -> list[string_types]
         """Gets the keywords of this Shot.
 
-        A list of relevant keywords and tags that describe the content, themes, or notable elements in this shot
+        Keywords describing the shot's content, themes or notable elements.
 
         :return: The keywords of this Shot.
         :rtype: list[string_types]
@@ -169,7 +169,7 @@ class Shot(object):
         # type: (list) -> None
         """Sets the keywords of this Shot.
 
-        A list of relevant keywords and tags that describe the content, themes, or notable elements in this shot
+        Keywords describing the shot's content, themes or notable elements.
 
         :param keywords: The keywords of this Shot.
         :type: list[string_types]
@@ -186,7 +186,7 @@ class Shot(object):
         # type: () -> list[MainSubject]
         """Gets the main_subjects of this Shot.
 
-        A collection of the primary subjects or objects detected and tracked within this shot, including their positions and characteristics
+        Selected subjects or objects identified in this shot.
 
         :return: The main_subjects of this Shot.
         :rtype: list[MainSubject]
@@ -198,7 +198,7 @@ class Shot(object):
         # type: (list) -> None
         """Sets the main_subjects of this Shot.
 
-        A collection of the primary subjects or objects detected and tracked within this shot, including their positions and characteristics
+        Selected subjects or objects identified in this shot.
 
         :param main_subjects: The main_subjects of this Shot.
         :type: list[MainSubject]
@@ -215,7 +215,7 @@ class Shot(object):
         # type: () -> ShotAdvisories
         """Gets the shot_advisories of this Shot.
 
-        Content advisory detection results for this shot, such as tobacco or vaping imagery
+        Content advisory results for this shot, or null when no assessment is available. Availability depends on whether advisory analysis was enabled and supported by the analysis version.
 
         :return: The shot_advisories of this Shot.
         :rtype: ShotAdvisories
@@ -227,7 +227,7 @@ class Shot(object):
         # type: (ShotAdvisories) -> None
         """Sets the shot_advisories of this Shot.
 
-        Content advisory detection results for this shot, such as tobacco or vaping imagery
+        Content advisory results for this shot, or null when no assessment is available. Availability depends on whether advisory analysis was enabled and supported by the analysis version.
 
         :param shot_advisories: The shot_advisories of this Shot.
         :type: ShotAdvisories

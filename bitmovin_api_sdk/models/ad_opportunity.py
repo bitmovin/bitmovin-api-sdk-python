@@ -45,7 +45,7 @@ class AdOpportunity(object):
         # type: () -> string_types
         """Gets the reason of this AdOpportunity.
 
-        The reason why the scene was rated with a certain score
+        Explanation of the scene boundary's suitability for an ad break, including low or zero suitability.
 
         :return: The reason of this AdOpportunity.
         :rtype: string_types
@@ -57,7 +57,7 @@ class AdOpportunity(object):
         # type: (string_types) -> None
         """Sets the reason of this AdOpportunity.
 
-        The reason why the scene was rated with a certain score
+        Explanation of the scene boundary's suitability for an ad break, including low or zero suitability.
 
         :param reason: The reason of this AdOpportunity.
         :type: string_types
@@ -74,7 +74,7 @@ class AdOpportunity(object):
         # type: () -> float
         """Gets the score of this AdOpportunity.
 
-        Score from 0.0 to 1.0 rating the ad placement suitability at the end of a scene based on content analysis
+        Suitability of placing an ad break at the end of the scene. Higher scores indicate greater suitability. A score of 0.5 can also mean that no assessment is available.
 
         :return: The score of this AdOpportunity.
         :rtype: float
@@ -86,7 +86,7 @@ class AdOpportunity(object):
         # type: (float) -> None
         """Sets the score of this AdOpportunity.
 
-        Score from 0.0 to 1.0 rating the ad placement suitability at the end of a scene based on content analysis
+        Suitability of placing an ad break at the end of the scene. Higher scores indicate greater suitability. A score of 0.5 can also mean that no assessment is available.
 
         :param score: The score of this AdOpportunity.
         :type: float

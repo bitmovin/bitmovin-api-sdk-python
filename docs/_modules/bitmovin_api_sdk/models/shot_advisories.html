@@ -126,7 +126,7 @@
         <span class="c1"># type: () -&gt; AdvisoryAnalysisStatus</span>
 <span class="w">        </span><span class="sd">"""Gets the status of this ShotAdvisories.</span>
 
-<span class="sd">        Whether and how the shot was assessed for content advisories (required)</span>
+<span class="sd">        Outcome of the advisory assessment for this shot. (required)</span>
 
 <span class="sd">        :return: The status of this ShotAdvisories.</span>
 <span class="sd">        :rtype: AdvisoryAnalysisStatus</span>
@@ -138,7 +138,7 @@
         <span class="c1"># type: (AdvisoryAnalysisStatus) -&gt; None</span>
 <span class="w">        </span><span class="sd">"""Sets the status of this ShotAdvisories.</span>
 
-<span class="sd">        Whether and how the shot was assessed for content advisories (required)</span>
+<span class="sd">        Outcome of the advisory assessment for this shot. (required)</span>
 
 <span class="sd">        :param status: The status of this ShotAdvisories.</span>
 <span class="sd">        :type: AdvisoryAnalysisStatus</span>
@@ -155,7 +155,7 @@
         <span class="c1"># type: () -&gt; list[ContentAdvisory]</span>
 <span class="w">        </span><span class="sd">"""Gets the advisories of this ShotAdvisories.</span>
 
-<span class="sd">        The advisory-relevant imagery detected in this shot. Empty when the shot was assessed and nothing was found, or when it was not assessed at all (required)</span>
+<span class="sd">        Advisories reported for this shot. Consult status before interpreting an empty or omitted list. (required)</span>
 
 <span class="sd">        :return: The advisories of this ShotAdvisories.</span>
 <span class="sd">        :rtype: list[ContentAdvisory]</span>
@@ -167,7 +167,7 @@
         <span class="c1"># type: (list) -&gt; None</span>
 <span class="w">        </span><span class="sd">"""Sets the advisories of this ShotAdvisories.</span>
 
-<span class="sd">        The advisory-relevant imagery detected in this shot. Empty when the shot was assessed and nothing was found, or when it was not assessed at all (required)</span>
+<span class="sd">        Advisories reported for this shot. Consult status before interpreting an empty or omitted list. (required)</span>
 
 <span class="sd">        :param advisories: The advisories of this ShotAdvisories.</span>
 <span class="sd">        :type: list[ContentAdvisory]</span>

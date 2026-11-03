@@ -58,6 +58,7 @@ class Character(object):
         # type: () -> CharacterAppearance
         """Gets the character_appearance of this Character.
 
+        Description of the character's visible appearance.
 
         :return: The character_appearance of this Character.
         :rtype: CharacterAppearance
@@ -69,6 +70,7 @@ class Character(object):
         # type: (CharacterAppearance) -> None
         """Sets the character_appearance of this Character.
 
+        Description of the character's visible appearance.
 
         :param character_appearance: The character_appearance of this Character.
         :type: CharacterAppearance
@@ -85,6 +87,7 @@ class Character(object):
         # type: () -> string_types
         """Gets the name of this Character.
 
+        Name assigned to the character when identified. Can be null or an empty string, even when a summary names the person.
 
         :return: The name of this Character.
         :rtype: string_types
@@ -96,6 +99,7 @@ class Character(object):
         # type: (string_types) -> None
         """Sets the name of this Character.
 
+        Name assigned to the character when identified. Can be null or an empty string, even when a summary names the person.
 
         :param name: The name of this Character.
         :type: string_types
@@ -112,6 +116,7 @@ class Character(object):
         # type: () -> string_types
         """Gets the played_by of this Character.
 
+        Name of the performer credited for the resolved character role when uniquely matched. Can be null or an empty string when identity or the role-to-performer match is unresolved. Retains its original value in language-specific results.
 
         :return: The played_by of this Character.
         :rtype: string_types
@@ -123,6 +128,7 @@ class Character(object):
         # type: (string_types) -> None
         """Sets the played_by of this Character.
 
+        Name of the performer credited for the resolved character role when uniquely matched. Can be null or an empty string when identity or the role-to-performer match is unresolved. Retains its original value in language-specific results.
 
         :param played_by: The played_by of this Character.
         :type: string_types
@@ -139,6 +145,7 @@ class Character(object):
         # type: () -> string_types
         """Gets the description of this Character.
 
+        Free-text description of the character and their role or actions in this scene.
 
         :return: The description of this Character.
         :rtype: string_types
@@ -150,6 +157,7 @@ class Character(object):
         # type: (string_types) -> None
         """Sets the description of this Character.
 
+        Free-text description of the character and their role or actions in this scene.
 
         :param description: The description of this Character.
         :type: string_types

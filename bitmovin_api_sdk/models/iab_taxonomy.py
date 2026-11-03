@@ -63,6 +63,7 @@ class IABTaxonomy(object):
         # type: () -> string_types
         """Gets the content_version of this IABTaxonomy.
 
+        Version of the IAB Content Taxonomy used for contentTaxonomies and sensitiveTopicTaxonomies.
 
         :return: The content_version of this IABTaxonomy.
         :rtype: string_types
@@ -74,6 +75,7 @@ class IABTaxonomy(object):
         # type: (string_types) -> None
         """Sets the content_version of this IABTaxonomy.
 
+        Version of the IAB Content Taxonomy used for contentTaxonomies and sensitiveTopicTaxonomies.
 
         :param content_version: The content_version of this IABTaxonomy.
         :type: string_types
@@ -90,6 +92,7 @@ class IABTaxonomy(object):
         # type: () -> string_types
         """Gets the ad_product_version of this IABTaxonomy.
 
+        Version of the IAB Ad Product Taxonomy used for adOpportunityTaxonomies.
 
         :return: The ad_product_version of this IABTaxonomy.
         :rtype: string_types
@@ -101,6 +104,7 @@ class IABTaxonomy(object):
         # type: (string_types) -> None
         """Sets the ad_product_version of this IABTaxonomy.
 
+        Version of the IAB Ad Product Taxonomy used for adOpportunityTaxonomies.
 
         :param ad_product_version: The ad_product_version of this IABTaxonomy.
         :type: string_types
@@ -117,6 +121,7 @@ class IABTaxonomy(object):
         # type: () -> list[string_types]
         """Gets the content_taxonomies of this IABTaxonomy.
 
+        IAB Content Taxonomy identifiers describing the scene's subject matter. Values are identifiers, not category names. (required)
 
         :return: The content_taxonomies of this IABTaxonomy.
         :rtype: list[string_types]
@@ -128,6 +133,7 @@ class IABTaxonomy(object):
         # type: (list) -> None
         """Sets the content_taxonomies of this IABTaxonomy.
 
+        IAB Content Taxonomy identifiers describing the scene's subject matter. Values are identifiers, not category names. (required)
 
         :param content_taxonomies: The content_taxonomies of this IABTaxonomy.
         :type: list[string_types]
@@ -144,6 +150,7 @@ class IABTaxonomy(object):
         # type: () -> list[string_types]
         """Gets the ad_opportunity_taxonomies of this IABTaxonomy.
 
+        IAB Ad Product Taxonomy identifiers describing advertising categories relevant to this scene. Values are identifiers, not category names. (required)
 
         :return: The ad_opportunity_taxonomies of this IABTaxonomy.
         :rtype: list[string_types]
@@ -155,6 +162,7 @@ class IABTaxonomy(object):
         # type: (list) -> None
         """Sets the ad_opportunity_taxonomies of this IABTaxonomy.
 
+        IAB Ad Product Taxonomy identifiers describing advertising categories relevant to this scene. Values are identifiers, not category names. (required)
 
         :param ad_opportunity_taxonomies: The ad_opportunity_taxonomies of this IABTaxonomy.
         :type: list[string_types]
@@ -171,6 +179,7 @@ class IABTaxonomy(object):
         # type: () -> list[string_types]
         """Gets the sensitive_topic_taxonomies of this IABTaxonomy.
 
+        IAB Content Taxonomy identifiers for sensitive topics associated with this scene. Values are identifiers, not category names. (required)
 
         :return: The sensitive_topic_taxonomies of this IABTaxonomy.
         :rtype: list[string_types]
@@ -182,6 +191,7 @@ class IABTaxonomy(object):
         # type: (list) -> None
         """Sets the sensitive_topic_taxonomies of this IABTaxonomy.
 
+        IAB Content Taxonomy identifiers for sensitive topics associated with this scene. Values are identifiers, not category names. (required)
 
         :param sensitive_topic_taxonomies: The sensitive_topic_taxonomies of this IABTaxonomy.
         :type: list[string_types]

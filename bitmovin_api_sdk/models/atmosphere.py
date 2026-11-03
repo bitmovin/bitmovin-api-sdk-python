@@ -51,6 +51,7 @@ class Atmosphere(object):
         # type: () -> string_types
         """Gets the mood of this Atmosphere.
 
+        Mood or tone of the setting, in free text.
 
         :return: The mood of this Atmosphere.
         :rtype: string_types
@@ -62,6 +63,7 @@ class Atmosphere(object):
         # type: (string_types) -> None
         """Sets the mood of this Atmosphere.
 
+        Mood or tone of the setting, in free text.
 
         :param mood: The mood of this Atmosphere.
         :type: string_types
@@ -78,6 +80,7 @@ class Atmosphere(object):
         # type: () -> string_types
         """Gets the lighting of this Atmosphere.
 
+        Description of the lighting in free text.
 
         :return: The lighting of this Atmosphere.
         :rtype: string_types
@@ -89,6 +92,7 @@ class Atmosphere(object):
         # type: (string_types) -> None
         """Sets the lighting of this Atmosphere.
 
+        Description of the lighting in free text.
 
         :param lighting: The lighting of this Atmosphere.
         :type: string_types
@@ -105,6 +109,7 @@ class Atmosphere(object):
         # type: () -> string_types
         """Gets the weather of this Atmosphere.
 
+        Weather or indoor conditions described by the analysis, in free text.
 
         :return: The weather of this Atmosphere.
         :rtype: string_types
@@ -116,6 +121,7 @@ class Atmosphere(object):
         # type: (string_types) -> None
         """Sets the weather of this Atmosphere.
 
+        Weather or indoor conditions described by the analysis, in free text.
 
         :param weather: The weather of this Atmosphere.
         :type: string_types

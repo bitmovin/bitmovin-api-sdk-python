@@ -46,6 +46,7 @@ class SceneAnalysisAdPlacementMetadataResponse(object):
         # type: () -> list[AdPosition]
         """Gets the placed_ads of this SceneAnalysisAdPlacementMetadataResponse.
 
+        Ad breaks selected for this encoding. Empty or omitted when none were selected.
 
         :return: The placed_ads of this SceneAnalysisAdPlacementMetadataResponse.
         :rtype: list[AdPosition]
@@ -57,6 +58,7 @@ class SceneAnalysisAdPlacementMetadataResponse(object):
         # type: (list) -> None
         """Sets the placed_ads of this SceneAnalysisAdPlacementMetadataResponse.
 
+        Ad breaks selected for this encoding. Empty or omitted when none were selected.
 
         :param placed_ads: The placed_ads of this SceneAnalysisAdPlacementMetadataResponse.
         :type: list[AdPosition]
@@ -73,6 +75,7 @@ class SceneAnalysisAdPlacementMetadataResponse(object):
         # type: () -> AiSceneAnalysisAutomaticAdPlacement
         """Gets the automatic_ad_placement of this SceneAnalysisAdPlacementMetadataResponse.
 
+        Placement settings for this encoding. The schedule includes only entries that produced an ad break, with their requested positions.
 
         :return: The automatic_ad_placement of this SceneAnalysisAdPlacementMetadataResponse.
         :rtype: AiSceneAnalysisAutomaticAdPlacement
@@ -84,6 +87,7 @@ class SceneAnalysisAdPlacementMetadataResponse(object):
         # type: (AiSceneAnalysisAutomaticAdPlacement) -> None
         """Sets the automatic_ad_placement of this SceneAnalysisAdPlacementMetadataResponse.
 
+        Placement settings for this encoding. The schedule includes only entries that produced an ad break, with their requested positions.
 
         :param automatic_ad_placement: The automatic_ad_placement of this SceneAnalysisAdPlacementMetadataResponse.
         :type: AiSceneAnalysisAutomaticAdPlacement

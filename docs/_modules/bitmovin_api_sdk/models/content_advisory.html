@@ -133,7 +133,7 @@
         <span class="c1"># type: () -&gt; AdvisoryCategory</span>
 <span class="w">        </span><span class="sd">"""Gets the category of this ContentAdvisory.</span>
 
-<span class="sd">        The kind of advisory-relevant imagery that was detected (required)</span>
+<span class="sd">        Kind of advisory-relevant imagery reported, or conservatively assumed when the shot has status BLOCKED. (required)</span>
 
 <span class="sd">        :return: The category of this ContentAdvisory.</span>
 <span class="sd">        :rtype: AdvisoryCategory</span>
@@ -145,7 +145,7 @@
         <span class="c1"># type: (AdvisoryCategory) -&gt; None</span>
 <span class="w">        </span><span class="sd">"""Sets the category of this ContentAdvisory.</span>
 
-<span class="sd">        The kind of advisory-relevant imagery that was detected (required)</span>
+<span class="sd">        Kind of advisory-relevant imagery reported, or conservatively assumed when the shot has status BLOCKED. (required)</span>
 
 <span class="sd">        :param category: The category of this ContentAdvisory.</span>
 <span class="sd">        :type: AdvisoryCategory</span>
@@ -162,7 +162,7 @@
         <span class="c1"># type: () -&gt; AdvisoryConfidence</span>
 <span class="w">        </span><span class="sd">"""Gets the confidence of this ContentAdvisory.</span>
 
-<span class="sd">        The model's own certainty in this detection. Intended to help prioritise human review rather than as a threshold for discarding advisories: detection is tuned to flag uncertain cases rather than miss them, and shots that could not be analysed are reported with LOW confidence (required)</span>
+<span class="sd">        Confidence tier derived from the visual evidence reported by the analysis, for prioritizing human review rather than as a calibrated probability. (required)</span>
 
 <span class="sd">        :return: The confidence of this ContentAdvisory.</span>
 <span class="sd">        :rtype: AdvisoryConfidence</span>
@@ -174,7 +174,7 @@
         <span class="c1"># type: (AdvisoryConfidence) -&gt; None</span>
 <span class="w">        </span><span class="sd">"""Sets the confidence of this ContentAdvisory.</span>
 
-<span class="sd">        The model's own certainty in this detection. Intended to help prioritise human review rather than as a threshold for discarding advisories: detection is tuned to flag uncertain cases rather than miss them, and shots that could not be analysed are reported with LOW confidence (required)</span>
+<span class="sd">        Confidence tier derived from the visual evidence reported by the analysis, for prioritizing human review rather than as a calibrated probability. (required)</span>
 
 <span class="sd">        :param confidence: The confidence of this ContentAdvisory.</span>
 <span class="sd">        :type: AdvisoryConfidence</span>
@@ -191,7 +191,7 @@
         <span class="c1"># type: () -&gt; string_types</span>
 <span class="w">        </span><span class="sd">"""Gets the reason of this ContentAdvisory.</span>
 
-<span class="sd">        A short explanation of what was seen in the shot</span>
+<span class="sd">        Explanation of the reported visual evidence, or of the conservative assumption when the shot could not be assessed. Retains its original value in language-specific results.</span>
 
 <span class="sd">        :return: The reason of this ContentAdvisory.</span>
 <span class="sd">        :rtype: string_types</span>
@@ -203,7 +203,7 @@
         <span class="c1"># type: (string_types) -&gt; None</span>
 <span class="w">        </span><span class="sd">"""Sets the reason of this ContentAdvisory.</span>
 
-<span class="sd">        A short explanation of what was seen in the shot</span>
+<span class="sd">        Explanation of the reported visual evidence, or of the conservative assumption when the shot could not be assessed. Retains its original value in language-specific results.</span>
 
 <span class="sd">        :param reason: The reason of this ContentAdvisory.</span>
 <span class="sd">        :type: string_types</span>

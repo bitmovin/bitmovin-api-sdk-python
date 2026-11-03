@@ -101,6 +101,7 @@ class SceneAnalysisDetailsResponse(object):
         # type: () -> list[Scene]
         """Gets the scenes of this SceneAnalysisDetailsResponse.
 
+        Scenes identified in the video. (required)
 
         :return: The scenes of this SceneAnalysisDetailsResponse.
         :rtype: list[Scene]
@@ -112,6 +113,7 @@ class SceneAnalysisDetailsResponse(object):
         # type: (list) -> None
         """Sets the scenes of this SceneAnalysisDetailsResponse.
 
+        Scenes identified in the video. (required)
 
         :param scenes: The scenes of this SceneAnalysisDetailsResponse.
         :type: list[Scene]
@@ -128,6 +130,7 @@ class SceneAnalysisDetailsResponse(object):
         # type: () -> float
         """Gets the duration of this SceneAnalysisDetailsResponse.
 
+        Duration of the analyzed video in seconds.
 
         :return: The duration of this SceneAnalysisDetailsResponse.
         :rtype: float
@@ -139,6 +142,7 @@ class SceneAnalysisDetailsResponse(object):
         # type: (float) -> None
         """Sets the duration of this SceneAnalysisDetailsResponse.
 
+        Duration of the analyzed video in seconds.
 
         :param duration: The duration of this SceneAnalysisDetailsResponse.
         :type: float
@@ -155,6 +159,7 @@ class SceneAnalysisDetailsResponse(object):
         # type: () -> string_types
         """Gets the description of this SceneAnalysisDetailsResponse.
 
+        AI-generated summary of the video as a whole. (required)
 
         :return: The description of this SceneAnalysisDetailsResponse.
         :rtype: string_types
@@ -166,6 +171,7 @@ class SceneAnalysisDetailsResponse(object):
         # type: (string_types) -> None
         """Sets the description of this SceneAnalysisDetailsResponse.
 
+        AI-generated summary of the video as a whole. (required)
 
         :param description: The description of this SceneAnalysisDetailsResponse.
         :type: string_types
@@ -211,6 +217,7 @@ class SceneAnalysisDetailsResponse(object):
         # type: () -> list[string_types]
         """Gets the keywords of this SceneAnalysisDetailsResponse.
 
+        Free-text keywords describing the video as a whole. Preserve the returned spelling and case. (required)
 
         :return: The keywords of this SceneAnalysisDetailsResponse.
         :rtype: list[string_types]
@@ -222,6 +229,7 @@ class SceneAnalysisDetailsResponse(object):
         # type: (list) -> None
         """Sets the keywords of this SceneAnalysisDetailsResponse.
 
+        Free-text keywords describing the video as a whole. Preserve the returned spelling and case. (required)
 
         :param keywords: The keywords of this SceneAnalysisDetailsResponse.
         :type: list[string_types]
@@ -238,6 +246,7 @@ class SceneAnalysisDetailsResponse(object):
         # type: () -> list[Rating]
         """Gets the ratings of this SceneAnalysisDetailsResponse.
 
+        AI-estimated content ratings for the indicated regions and rating systems. (required)
 
         :return: The ratings of this SceneAnalysisDetailsResponse.
         :rtype: list[Rating]
@@ -249,6 +258,7 @@ class SceneAnalysisDetailsResponse(object):
         # type: (list) -> None
         """Sets the ratings of this SceneAnalysisDetailsResponse.
 
+        AI-estimated content ratings for the indicated regions and rating systems. (required)
 
         :param ratings: The ratings of this SceneAnalysisDetailsResponse.
         :type: list[Rating]
@@ -265,6 +275,7 @@ class SceneAnalysisDetailsResponse(object):
         # type: () -> list[string_types]
         """Gets the sensitive_topics of this SceneAnalysisDetailsResponse.
 
+        Sensitive topics for the video as a whole, in free text. This list can differ from the combined scene-level topics. (required)
 
         :return: The sensitive_topics of this SceneAnalysisDetailsResponse.
         :rtype: list[string_types]
@@ -276,6 +287,7 @@ class SceneAnalysisDetailsResponse(object):
         # type: (list) -> None
         """Sets the sensitive_topics of this SceneAnalysisDetailsResponse.
 
+        Sensitive topics for the video as a whole, in free text. This list can differ from the combined scene-level topics. (required)
 
         :param sensitive_topics: The sensitive_topics of this SceneAnalysisDetailsResponse.
         :type: list[string_types]
@@ -292,6 +304,7 @@ class SceneAnalysisDetailsResponse(object):
         # type: () -> list[string_types]
         """Gets the iab_sensitive_topic_taxonomies of this SceneAnalysisDetailsResponse.
 
+        Distinct IAB Content Taxonomy identifiers drawn from the scenes' IAB sensitive-topic annotations. The list can be empty or unavailable even when individual scenes have topic annotations. (required)
 
         :return: The iab_sensitive_topic_taxonomies of this SceneAnalysisDetailsResponse.
         :rtype: list[string_types]
@@ -303,6 +316,7 @@ class SceneAnalysisDetailsResponse(object):
         # type: (list) -> None
         """Sets the iab_sensitive_topic_taxonomies of this SceneAnalysisDetailsResponse.
 
+        Distinct IAB Content Taxonomy identifiers drawn from the scenes' IAB sensitive-topic annotations. The list can be empty or unavailable even when individual scenes have topic annotations. (required)
 
         :param iab_sensitive_topic_taxonomies: The iab_sensitive_topic_taxonomies of this SceneAnalysisDetailsResponse.
         :type: list[string_types]
@@ -319,6 +333,7 @@ class SceneAnalysisDetailsResponse(object):
         # type: () -> list[string_types]
         """Gets the input_language_codes of this SceneAnalysisDetailsResponse.
 
+        Language codes identified for spoken dialogue or narration in the source content. Theme-song vocals, lyrics, music and written text are excluded. The list can be empty when no codes were identified, including when the input has no audio stream. These codes do not indicate available translations.
 
         :return: The input_language_codes of this SceneAnalysisDetailsResponse.
         :rtype: list[string_types]
@@ -330,6 +345,7 @@ class SceneAnalysisDetailsResponse(object):
         # type: (list) -> None
         """Sets the input_language_codes of this SceneAnalysisDetailsResponse.
 
+        Language codes identified for spoken dialogue or narration in the source content. Theme-song vocals, lyrics, music and written text are excluded. The list can be empty when no codes were identified, including when the input has no audio stream. These codes do not indicate available translations.
 
         :param input_language_codes: The input_language_codes of this SceneAnalysisDetailsResponse.
         :type: list[string_types]
@@ -346,6 +362,7 @@ class SceneAnalysisDetailsResponse(object):
         # type: () -> Credits
         """Gets the credits of this SceneAnalysisDetailsResponse.
 
+        Credits extracted from the video's on-screen text.
 
         :return: The credits of this SceneAnalysisDetailsResponse.
         :rtype: Credits
@@ -357,6 +374,7 @@ class SceneAnalysisDetailsResponse(object):
         # type: (Credits) -> None
         """Sets the credits of this SceneAnalysisDetailsResponse.
 
+        Credits extracted from the video's on-screen text.
 
         :param credits_: The credits of this SceneAnalysisDetailsResponse.
         :type: Credits
@@ -373,6 +391,7 @@ class SceneAnalysisDetailsResponse(object):
         # type: () -> Metadata
         """Gets the metadata of this SceneAnalysisDetailsResponse.
 
+        Information about the analysis that generated this result. (required)
 
         :return: The metadata of this SceneAnalysisDetailsResponse.
         :rtype: Metadata
@@ -384,6 +403,7 @@ class SceneAnalysisDetailsResponse(object):
         # type: (Metadata) -> None
         """Sets the metadata of this SceneAnalysisDetailsResponse.
 
+        Information about the analysis that generated this result. (required)
 
         :param metadata: The metadata of this SceneAnalysisDetailsResponse.
         :type: Metadata

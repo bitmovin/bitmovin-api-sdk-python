@@ -115,6 +115,7 @@ class Scene(object):
         # type: () -> string_types
         """Gets the title of this Scene.
 
+        Short AI-generated title describing the scene.
 
         :return: The title of this Scene.
         :rtype: string_types
@@ -126,6 +127,7 @@ class Scene(object):
         # type: (string_types) -> None
         """Sets the title of this Scene.
 
+        Short AI-generated title describing the scene.
 
         :param title: The title of this Scene.
         :type: string_types
@@ -142,6 +144,7 @@ class Scene(object):
         # type: () -> float
         """Gets the start_in_seconds of this Scene.
 
+        Start time of the scene in seconds from the beginning of the video.
 
         :return: The start_in_seconds of this Scene.
         :rtype: float
@@ -153,6 +156,7 @@ class Scene(object):
         # type: (float) -> None
         """Sets the start_in_seconds of this Scene.
 
+        Start time of the scene in seconds from the beginning of the video.
 
         :param start_in_seconds: The start_in_seconds of this Scene.
         :type: float
@@ -169,6 +173,7 @@ class Scene(object):
         # type: () -> float
         """Gets the end_in_seconds of this Scene.
 
+        End time of the scene in seconds from the beginning of the video.
 
         :return: The end_in_seconds of this Scene.
         :rtype: float
@@ -180,6 +185,7 @@ class Scene(object):
         # type: (float) -> None
         """Sets the end_in_seconds of this Scene.
 
+        End time of the scene in seconds from the beginning of the video.
 
         :param end_in_seconds: The end_in_seconds of this Scene.
         :type: float
@@ -196,6 +202,7 @@ class Scene(object):
         # type: () -> string_types
         """Gets the id of this Scene.
 
+        Identifier assigned to this scene within the analysis result.
 
         :return: The id of this Scene.
         :rtype: string_types
@@ -207,6 +214,7 @@ class Scene(object):
         # type: (string_types) -> None
         """Sets the id of this Scene.
 
+        Identifier assigned to this scene within the analysis result.
 
         :param id_: The id of this Scene.
         :type: string_types
@@ -223,6 +231,7 @@ class Scene(object):
         # type: () -> Content
         """Gets the content of this Scene.
 
+        Structured description of this scene.
 
         :return: The content of this Scene.
         :rtype: Content
@@ -234,6 +243,7 @@ class Scene(object):
         # type: (Content) -> None
         """Sets the content of this Scene.
 
+        Structured description of this scene.
 
         :param content: The content of this Scene.
         :type: Content
@@ -250,6 +260,7 @@ class Scene(object):
         # type: () -> string_types
         """Gets the summary of this Scene.
 
+        Concise summary of the scene.
 
         :return: The summary of this Scene.
         :rtype: string_types
@@ -261,6 +272,7 @@ class Scene(object):
         # type: (string_types) -> None
         """Sets the summary of this Scene.
 
+        Concise summary of the scene.
 
         :param summary: The summary of this Scene.
         :type: string_types
@@ -277,6 +289,7 @@ class Scene(object):
         # type: () -> string_types
         """Gets the verbose_summary of this Scene.
 
+        Detailed description of the scene, providing more context than summary.
 
         :return: The verbose_summary of this Scene.
         :rtype: string_types
@@ -288,6 +301,7 @@ class Scene(object):
         # type: (string_types) -> None
         """Sets the verbose_summary of this Scene.
 
+        Detailed description of the scene, providing more context than summary.
 
         :param verbose_summary: The verbose_summary of this Scene.
         :type: string_types
@@ -304,6 +318,7 @@ class Scene(object):
         # type: () -> list[string_types]
         """Gets the sensitive_topics of this Scene.
 
+        Sensitive topics identified in this scene, expressed as free text rather than taxonomy identifiers. (required)
 
         :return: The sensitive_topics of this Scene.
         :rtype: list[string_types]
@@ -315,6 +330,7 @@ class Scene(object):
         # type: (list) -> None
         """Sets the sensitive_topics of this Scene.
 
+        Sensitive topics identified in this scene, expressed as free text rather than taxonomy identifiers. (required)
 
         :param sensitive_topics: The sensitive_topics of this Scene.
         :type: list[string_types]
@@ -331,6 +347,7 @@ class Scene(object):
         # type: () -> list[string_types]
         """Gets the keywords of this Scene.
 
+        Free-text keywords describing this scene. Preserve the returned spelling and case. (required)
 
         :return: The keywords of this Scene.
         :rtype: list[string_types]
@@ -342,6 +359,7 @@ class Scene(object):
         # type: (list) -> None
         """Sets the keywords of this Scene.
 
+        Free-text keywords describing this scene. Preserve the returned spelling and case. (required)
 
         :param keywords: The keywords of this Scene.
         :type: list[string_types]
@@ -358,6 +376,7 @@ class Scene(object):
         # type: () -> IABTaxonomy
         """Gets the iab of this Scene.
 
+        IAB classification of this scene.
 
         :return: The iab of this Scene.
         :rtype: IABTaxonomy
@@ -369,6 +388,7 @@ class Scene(object):
         # type: (IABTaxonomy) -> None
         """Sets the iab of this Scene.
 
+        IAB classification of this scene.
 
         :param iab: The iab of this Scene.
         :type: IABTaxonomy
@@ -414,7 +434,7 @@ class Scene(object):
         # type: () -> list[Shot]
         """Gets the shots of this Scene.
 
-        A detailed breakdown of individual camera shots within this scene, providing granular analysis of visual content and subjects
+        Camera shots with available analysis associated with this scene. The list can be empty or omitted and need not include every shot.
 
         :return: The shots of this Scene.
         :rtype: list[Shot]
@@ -426,7 +446,7 @@ class Scene(object):
         # type: (list) -> None
         """Sets the shots of this Scene.
 
-        A detailed breakdown of individual camera shots within this scene, providing granular analysis of visual content and subjects
+        Camera shots with available analysis associated with this scene. The list can be empty or omitted and need not include every shot.
 
         :param shots: The shots of this Scene.
         :type: list[Shot]
@@ -443,6 +463,7 @@ class Scene(object):
         # type: () -> AdOpportunity
         """Gets the ad_opportunity_information of this Scene.
 
+        Suitability assessment for an ad break at the end of this scene. This does not confirm that an ad was placed.
 
         :return: The ad_opportunity_information of this Scene.
         :rtype: AdOpportunity
@@ -454,6 +475,7 @@ class Scene(object):
         # type: (AdOpportunity) -> None
         """Sets the ad_opportunity_information of this Scene.
 
+        Suitability assessment for an ad break at the end of this scene. This does not confirm that an ad was placed.
 
         :param ad_opportunity_information: The ad_opportunity_information of this Scene.
         :type: AdOpportunity

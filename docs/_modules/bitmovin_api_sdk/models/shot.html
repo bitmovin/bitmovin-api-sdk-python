@@ -208,7 +208,7 @@
         <span class="c1"># type: () -&gt; string_types</span>
 <span class="w">        </span><span class="sd">"""Gets the detailed_description of this Shot.</span>
 
-<span class="sd">        A comprehensive textual description of the visual content, action, and context within this shot</span>
+<span class="sd">        Description of the shot's visual content, action and context.</span>
 
 <span class="sd">        :return: The detailed_description of this Shot.</span>
 <span class="sd">        :rtype: string_types</span>
@@ -220,7 +220,7 @@
         <span class="c1"># type: (string_types) -&gt; None</span>
 <span class="w">        </span><span class="sd">"""Sets the detailed_description of this Shot.</span>
 
-<span class="sd">        A comprehensive textual description of the visual content, action, and context within this shot</span>
+<span class="sd">        Description of the shot's visual content, action and context.</span>
 
 <span class="sd">        :param detailed_description: The detailed_description of this Shot.</span>
 <span class="sd">        :type: string_types</span>
@@ -237,7 +237,7 @@
         <span class="c1"># type: () -&gt; list[string_types]</span>
 <span class="w">        </span><span class="sd">"""Gets the keywords of this Shot.</span>
 
-<span class="sd">        A list of relevant keywords and tags that describe the content, themes, or notable elements in this shot</span>
+<span class="sd">        Keywords describing the shot's content, themes or notable elements.</span>
 
 <span class="sd">        :return: The keywords of this Shot.</span>
 <span class="sd">        :rtype: list[string_types]</span>
@@ -249,7 +249,7 @@
         <span class="c1"># type: (list) -&gt; None</span>
 <span class="w">        </span><span class="sd">"""Sets the keywords of this Shot.</span>
 
-<span class="sd">        A list of relevant keywords and tags that describe the content, themes, or notable elements in this shot</span>
+<span class="sd">        Keywords describing the shot's content, themes or notable elements.</span>
 
 <span class="sd">        :param keywords: The keywords of this Shot.</span>
 <span class="sd">        :type: list[string_types]</span>
@@ -266,7 +266,7 @@
         <span class="c1"># type: () -&gt; list[MainSubject]</span>
 <span class="w">        </span><span class="sd">"""Gets the main_subjects of this Shot.</span>
 
-<span class="sd">        A collection of the primary subjects or objects detected and tracked within this shot, including their positions and characteristics</span>
+<span class="sd">        Selected subjects or objects identified in this shot.</span>
 
 <span class="sd">        :return: The main_subjects of this Shot.</span>
 <span class="sd">        :rtype: list[MainSubject]</span>
@@ -278,7 +278,7 @@
         <span class="c1"># type: (list) -&gt; None</span>
 <span class="w">        </span><span class="sd">"""Sets the main_subjects of this Shot.</span>
 
-<span class="sd">        A collection of the primary subjects or objects detected and tracked within this shot, including their positions and characteristics</span>
+<span class="sd">        Selected subjects or objects identified in this shot.</span>
 
 <span class="sd">        :param main_subjects: The main_subjects of this Shot.</span>
 <span class="sd">        :type: list[MainSubject]</span>
@@ -295,7 +295,7 @@
         <span class="c1"># type: () -&gt; ShotAdvisories</span>
 <span class="w">        </span><span class="sd">"""Gets the shot_advisories of this Shot.</span>
 
-<span class="sd">        Content advisory detection results for this shot, such as tobacco or vaping imagery</span>
+<span class="sd">        Content advisory results for this shot, or null when no assessment is available. Availability depends on whether advisory analysis was enabled and supported by the analysis version.</span>
 
 <span class="sd">        :return: The shot_advisories of this Shot.</span>
 <span class="sd">        :rtype: ShotAdvisories</span>
@@ -307,7 +307,7 @@
         <span class="c1"># type: (ShotAdvisories) -&gt; None</span>
 <span class="w">        </span><span class="sd">"""Sets the shot_advisories of this Shot.</span>
 
-<span class="sd">        Content advisory detection results for this shot, such as tobacco or vaping imagery</span>
+<span class="sd">        Content advisory results for this shot, or null when no assessment is available. Availability depends on whether advisory analysis was enabled and supported by the analysis version.</span>
 
 <span class="sd">        :param shot_advisories: The shot_advisories of this Shot.</span>
 <span class="sd">        :type: ShotAdvisories</span>

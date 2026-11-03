@@ -125,7 +125,7 @@
         <span class="c1"># type: () -&gt; string_types</span>
 <span class="w">        </span><span class="sd">"""Gets the reason of this AdOpportunity.</span>
 
-<span class="sd">        The reason why the scene was rated with a certain score</span>
+<span class="sd">        Explanation of the scene boundary's suitability for an ad break, including low or zero suitability.</span>
 
 <span class="sd">        :return: The reason of this AdOpportunity.</span>
 <span class="sd">        :rtype: string_types</span>
@@ -137,7 +137,7 @@
         <span class="c1"># type: (string_types) -&gt; None</span>
 <span class="w">        </span><span class="sd">"""Sets the reason of this AdOpportunity.</span>
 
-<span class="sd">        The reason why the scene was rated with a certain score</span>
+<span class="sd">        Explanation of the scene boundary's suitability for an ad break, including low or zero suitability.</span>
 
 <span class="sd">        :param reason: The reason of this AdOpportunity.</span>
 <span class="sd">        :type: string_types</span>
@@ -154,7 +154,7 @@
         <span class="c1"># type: () -&gt; float</span>
 <span class="w">        </span><span class="sd">"""Gets the score of this AdOpportunity.</span>
 
-<span class="sd">        Score from 0.0 to 1.0 rating the ad placement suitability at the end of a scene based on content analysis</span>
+<span class="sd">        Suitability of placing an ad break at the end of the scene. Higher scores indicate greater suitability. A score of 0.5 can also mean that no assessment is available.</span>
 
 <span class="sd">        :return: The score of this AdOpportunity.</span>
 <span class="sd">        :rtype: float</span>
@@ -166,7 +166,7 @@
         <span class="c1"># type: (float) -&gt; None</span>
 <span class="w">        </span><span class="sd">"""Sets the score of this AdOpportunity.</span>
 
-<span class="sd">        Score from 0.0 to 1.0 rating the ad placement suitability at the end of a scene based on content analysis</span>
+<span class="sd">        Suitability of placing an ad break at the end of the scene. Higher scores indicate greater suitability. A score of 0.5 can also mean that no assessment is available.</span>
 
 <span class="sd">        :param score: The score of this AdOpportunity.</span>
 <span class="sd">        :type: float</span>

@@ -39,6 +39,7 @@ class SceneAnalysisLanguagesResponse(object):
         # type: () -> list[string_types]
         """Gets the output_language_codes of this SceneAnalysisLanguagesResponse.
 
+        Language codes registered for available analysis details. The base English result can be included even when no translations were requested; this is not the list of detected input languages.
 
         :return: The output_language_codes of this SceneAnalysisLanguagesResponse.
         :rtype: list[string_types]
@@ -50,6 +51,7 @@ class SceneAnalysisLanguagesResponse(object):
         # type: (list) -> None
         """Sets the output_language_codes of this SceneAnalysisLanguagesResponse.
 
+        Language codes registered for available analysis details. The base English result can be included even when no translations were requested; this is not the list of detected input languages.
 
         :param output_language_codes: The output_language_codes of this SceneAnalysisLanguagesResponse.
         :type: list[string_types]
