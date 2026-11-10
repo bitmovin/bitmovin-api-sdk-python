@@ -4868,6 +4868,22 @@ bitmovin\_api\_sdk.models.mjpeg\_video\_configuration module
    :show-inheritance:
    :undoc-members:
 
+bitmovin\_api\_sdk.models.moq\_draft\_version module
+----------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.moq_draft_version
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+bitmovin\_api\_sdk.models.moq\_output module
+--------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.moq_output
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
 bitmovin\_api\_sdk.models.motion\_search module
 -----------------------------------------------
 

@@ -45,7 +45,7 @@ class AiSceneAnalysisAssetDescription(object):
         # type: () -> string_types
         """Gets the filename of this AiSceneAnalysisAssetDescription.
 
-        Name of the output json file
+        Name of the output JSON file. The [asset-description JSON Schema](https://storage.googleapis.com/ai-scene-analysis-demo-content/schemas/asset-description.schema.json) describes the structure of newly written original and translated files.
 
         :return: The filename of this AiSceneAnalysisAssetDescription.
         :rtype: string_types
@@ -57,7 +57,7 @@ class AiSceneAnalysisAssetDescription(object):
         # type: (string_types) -> None
         """Sets the filename of this AiSceneAnalysisAssetDescription.
 
-        Name of the output json file
+        Name of the output JSON file. The [asset-description JSON Schema](https://storage.googleapis.com/ai-scene-analysis-demo-content/schemas/asset-description.schema.json) describes the structure of newly written original and translated files.
 
         :param filename: The filename of this AiSceneAnalysisAssetDescription.
         :type: string_types

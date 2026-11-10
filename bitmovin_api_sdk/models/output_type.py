@@ -19,3 +19,4 @@ class OutputType(Enum):
     LIVE_MEDIA_INGEST = "LIVE_MEDIA_INGEST"
     GCS_SERVICE_ACCOUNT = "GCS_SERVICE_ACCOUNT"
     CDN = "CDN"
+    MOQ = "MOQ"

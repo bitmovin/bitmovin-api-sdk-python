@@ -611,6 +611,8 @@ from bitmovin_api_sdk.models.message_type import MessageType
 from bitmovin_api_sdk.models.metadata import Metadata
 from bitmovin_api_sdk.models.min_coding_unit_size import MinCodingUnitSize
 from bitmovin_api_sdk.models.mjpeg_video_configuration import MjpegVideoConfiguration
+from bitmovin_api_sdk.models.moq_draft_version import MoqDraftVersion
+from bitmovin_api_sdk.models.moq_output import MoqOutput
 from bitmovin_api_sdk.models.motion_search import MotionSearch
 from bitmovin_api_sdk.models.mp2_audio_configuration import Mp2AudioConfiguration
 from bitmovin_api_sdk.models.mp3_audio_configuration import Mp3AudioConfiguration

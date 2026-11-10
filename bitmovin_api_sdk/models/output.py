@@ -65,7 +65,8 @@ class Output(BitmovinResource):
         'SFTP': 'SftpOutput',
         'AKAMAI_MSL': 'AkamaiMslOutput',
         'LIVE_MEDIA_INGEST': 'LiveMediaIngestOutput',
-        'GCS_SERVICE_ACCOUNT': 'GcsServiceAccountOutput'
+        'GCS_SERVICE_ACCOUNT': 'GcsServiceAccountOutput',
+        'MOQ': 'MoqOutput'
     }
 
     @property

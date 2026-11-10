@@ -17,6 +17,7 @@ Subpackages
    bitmovin_api_sdk.encoding.outputs.generic_s3
    bitmovin_api_sdk.encoding.outputs.live_media_ingest
    bitmovin_api_sdk.encoding.outputs.local
+   bitmovin_api_sdk.encoding.outputs.moq
    bitmovin_api_sdk.encoding.outputs.s3
    bitmovin_api_sdk.encoding.outputs.s3_role_based
    bitmovin_api_sdk.encoding.outputs.sftp

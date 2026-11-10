@@ -271,6 +271,10 @@ from bitmovin_api_sdk.encoding.outputs.live_media_ingest.live_media_ingest_api i
 from bitmovin_api_sdk.encoding.outputs.live_media_ingest.live_media_ingest_api import LiveMediaIngestOutputListQueryParams
 from bitmovin_api_sdk.encoding.outputs.live_media_ingest.customdata.customdata_api import CustomdataApi
 
+from bitmovin_api_sdk.encoding.outputs.moq.moq_api import MoqApi
+from bitmovin_api_sdk.encoding.outputs.moq.moq_api import MoqOutputListQueryParams
+from bitmovin_api_sdk.encoding.outputs.moq.customdata.customdata_api import CustomdataApi
+
 from bitmovin_api_sdk.encoding.outputs.cdn.cdn_api import CdnApi
 from bitmovin_api_sdk.encoding.outputs.cdn.cdn_api import CdnOutputListQueryParams
 from bitmovin_api_sdk.encoding.configurations.configurations_api import ConfigurationsApi
@@ -1722,6 +1726,8 @@ from bitmovin_api_sdk.models.message_type import MessageType
 from bitmovin_api_sdk.models.metadata import Metadata
 from bitmovin_api_sdk.models.min_coding_unit_size import MinCodingUnitSize
 from bitmovin_api_sdk.models.mjpeg_video_configuration import MjpegVideoConfiguration
+from bitmovin_api_sdk.models.moq_draft_version import MoqDraftVersion
+from bitmovin_api_sdk.models.moq_output import MoqOutput
 from bitmovin_api_sdk.models.motion_search import MotionSearch
 from bitmovin_api_sdk.models.mp2_audio_configuration import Mp2AudioConfiguration
 from bitmovin_api_sdk.models.mp3_audio_configuration import Mp3AudioConfiguration
@@ -2080,4 +2086,4 @@ from bitmovin_api_sdk.models.xml_namespace import XmlNamespace
 from bitmovin_api_sdk.models.zixi_input import ZixiInput
 
 
-__version__ = "1.287.0"
+__version__ = "1.288.0"
